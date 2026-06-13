@@ -1,0 +1,44 @@
+name: ➕ Add Tool
+description: Submit a tool to the Arsenal
+title: "[TOOL] "
+labels: ["content: tool", "needs-review"]
+body:
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool Name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Primary URL
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line Description
+      description: Max 160 characters.
+    validations:
+      required: true
+  - type: dropdown
+    id: job
+    attributes:
+      label: Primary Job
+      options: [prototyping, production-serving, fine-tuning, evaluation, deployment, orchestration, vector-search, memory-management, web-scraping, structured-output, prompt-management, data-labeling, model-registry, security-and-guardrails]
+    validations:
+      required: true
+  - type: dropdown
+    id: cost-model
+    attributes:
+      label: Cost Model
+      options: [open-source, freemium, paid, self-hostable, usage-based]
+    validations:
+      required: true
+  - type: textarea
+    id: why-arsenal
+    attributes:
+      label: Why does this belong in the Arsenal?
+    validations:
+      required: true

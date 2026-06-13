@@ -1,0 +1,45 @@
+name: Data Release Refresh
+
+on:
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: data-release-refresh
+  cancel-in-progress: true
+
+jobs:
+  publish-data-release:
+    name: Publish Generated JSON to data-release Branch
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run update:stars
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: pnpm run update:trending
+      - run: pnpm run generate:all
+      - run: pnpm run check:stale
+      - run: pnpm run prepare:data-release -- --out=.data-release
+      - name: Publish data-release branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: data-release
+          publish_dir: .data-release
+          force_orphan: true
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_message: "chore(data): publish generated data release"

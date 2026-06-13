@@ -1,0 +1,56 @@
+name: Manual Maintenance
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: Maintenance task to run
+        required: true
+        default: validate
+        type: choice
+        options:
+          - validate
+          - generate
+          - update-stars
+          - check-links
+          - draft-trending
+          - create-monthly-digest
+
+jobs:
+  run-task:
+    name: Run Manual Task
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - run: pnpm install --frozen-lockfile
+      - name: Validate
+        if: inputs.task == 'validate'
+        run: pnpm run ci
+      - name: Generate
+        if: inputs.task == 'generate'
+        run: pnpm run generate:all
+      - name: Update Stars
+        if: inputs.task == 'update-stars'
+        run: pnpm run update:stars
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check Links
+        if: inputs.task == 'check-links'
+        run: pnpm run check:links
+      - name: Draft Trending
+        if: inputs.task == 'draft-trending'
+        run: pnpm run generate && node scripts/draft-trending.js
+      - name: Create Monthly Digest
+        if: inputs.task == 'create-monthly-digest'
+        run: node scripts/create-monthly-digest.js
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        if: inputs.task != 'validate' && inputs.task != 'check-links'
+        with:
+          commit_message: "chore: run manual maintenance task [skip ci]"
+          file_pattern: "content/**/*.md data/*.json CONTEXT.md"

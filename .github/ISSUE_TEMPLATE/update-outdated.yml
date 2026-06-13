@@ -1,0 +1,22 @@
+name: ♻️ Update Outdated Content
+description: Flag stale or outdated content
+title: "[STALE] "
+labels: ["stale", "needs-review"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: Affected File
+      placeholder: "content/projects/.../example.md"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is outdated?
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-update
+    attributes:
+      label: Suggested update or source

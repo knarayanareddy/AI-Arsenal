@@ -1,0 +1,28 @@
+name: 🧱 Add Build Example
+description: Submit a build example idea or implementation
+title: "[BUILD] "
+labels: ["content: build-example", "needs-review"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Build Example Title
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options: [starter, intermediate, advanced]
+    validations:
+      required: true
+  - type: input
+    id: repo-url
+    attributes:
+      label: Repository URL
+  - type: textarea
+    id: description
+    attributes:
+      label: What does it build?
+    validations:
+      required: true

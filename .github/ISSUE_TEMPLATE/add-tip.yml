@@ -1,0 +1,38 @@
+name: 💡 Add Tip
+description: Submit a tip or trick
+title: "[TIP] "
+labels: ["content: tip", "needs-review"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Tip Title
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [prompting, inference-optimization, rag-tuning, cost-reduction, debugging-llm-apps, latency-optimization, context-window-management, agent-reliability, production-gotchas, local-model-tips, security-best-practices]
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options: [beginner, intermediate, advanced]
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options: [low, medium, high]
+    validations:
+      required: true
+  - type: textarea
+    id: body
+    attributes:
+      label: Tip Details
+    validations:
+      required: true

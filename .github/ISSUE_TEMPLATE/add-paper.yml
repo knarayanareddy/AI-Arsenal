@@ -1,0 +1,31 @@
+name: 📄 Add Paper
+description: Submit a research paper summary request
+title: "[PAPER] "
+labels: ["content: paper", "needs-review"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper Title
+    validations:
+      required: true
+  - type: input
+    id: arxiv-url
+    attributes:
+      label: arXiv URL
+      placeholder: "https://arxiv.org/abs/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: importance
+    attributes:
+      label: Importance
+      options: [foundational, sota, incremental, benchmark, survey]
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why does it matter?
+    validations:
+      required: true

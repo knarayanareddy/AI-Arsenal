@@ -1,0 +1,72 @@
+name: ➕ Add Project
+description: Submit an open source project to the Arsenal
+title: "[PROJECT] "
+labels: ["content: project", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill this out completely. Incomplete submissions may be closed.
+        Before submitting, check that this project is not already in the Arsenal.
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      placeholder: "e.g., LangGraph"
+    validations:
+      required: true
+  - type: input
+    id: github-url
+    attributes:
+      label: GitHub URL
+      placeholder: "https://github.com/org/repo"
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line Description
+      description: Max 160 characters. Plain language. No marketing.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary Category
+      options: [agents, llms, rag, observability, multimodal, voice-audio, code-generation, data-pipelines, evaluation, tooling]
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Maturity Level
+      options: [experimental, alpha, beta, production]
+    validations:
+      required: true
+  - type: textarea
+    id: why-arsenal
+    attributes:
+      label: Why does this belong in the Arsenal?
+    validations:
+      required: true
+  - type: textarea
+    id: buzz-sources
+    attributes:
+      label: Where is it getting buzz?
+  - type: input
+    id: alternatives
+    attributes:
+      label: Known Alternatives (comma-separated IDs)
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I searched the Arsenal and this is not already listed
+          required: true
+        - label: The project has a GitHub repo with a real README
+          required: true
+        - label: The project has at least one release or meaningful commits
+          required: true
+        - label: I am not the creator of this project or have disclosed I am
+          required: true

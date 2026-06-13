@@ -1,0 +1,22 @@
+# Each section has at least one designated maintainer
+
+/schemas/ @lead-maintainer
+/scripts/ @lead-maintainer @infra-maintainer
+/.github/workflows/ @lead-maintainer @infra-maintainer
+/data/ @lead-maintainer
+
+/content/projects/agents/ @agents-maintainer @lead-maintainer
+/content/projects/llms/ @llm-maintainer @lead-maintainer
+/content/projects/rag/ @rag-maintainer @lead-maintainer
+/content/projects/observability/ @obs-maintainer @lead-maintainer
+/content/observability/ @obs-maintainer @lead-maintainer
+/content/research/ @research-maintainer @lead-maintainer
+/content/tools/ @tools-maintainer @lead-maintainer
+/content/architectures/ @arch-maintainer @lead-maintainer
+/content/skills/ @lead-maintainer
+/content/tips-and-tricks/ @lead-maintainer
+/content/build-examples/ @lead-maintainer
+/content/community/ @community-maintainer
+/content/trending/ @trending-maintainer
+
+* @lead-maintainer

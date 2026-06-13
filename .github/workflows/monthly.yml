@@ -1,0 +1,46 @@
+name: Monthly Digest & Snapshot
+
+on:
+  schedule:
+    - cron: '0 10 1 * *'
+  workflow_dispatch:
+
+concurrency:
+  group: monthly-digest
+  cancel-in-progress: true
+
+jobs:
+  monthly-maintenance-pr:
+    name: Monthly Digest, Stale Report, and Stats PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run generate
+      - run: node scripts/create-monthly-digest.js
+      - run: pnpm run check:stale
+      - run: pnpm run generate:stats
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: bot/monthly-digest
+          delete-branch: true
+          commit-message: "chore(monthly): create digest and stale report"
+          title: "chore(monthly): create digest and stale report"
+          body: |
+            Monthly maintenance PR with digest draft, stale report, and statistics.
+          labels: automation, monthly-digest
+          add-paths: |
+            content/digests/**
+            data/stats.json
+            data/stale-report.json

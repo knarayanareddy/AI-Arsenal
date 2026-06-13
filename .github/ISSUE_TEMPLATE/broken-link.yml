@@ -1,0 +1,21 @@
+name: 🔗 Broken Link
+description: Report a broken URL
+title: "[BROKEN LINK] "
+labels: ["broken-link", "needs-review"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File containing the broken link
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Broken URL
+    validations:
+      required: true
+  - type: textarea
+    id: replacement
+    attributes:
+      label: Replacement URL or notes

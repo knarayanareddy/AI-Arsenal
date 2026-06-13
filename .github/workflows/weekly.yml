@@ -1,0 +1,55 @@
+name: Weekly Refresh
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-refresh
+  cancel-in-progress: true
+
+jobs:
+  weekly-maintenance-pr:
+    name: Weekly Metrics, Links, and Trending PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run update:stars
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: pnpm run update:trending
+      - run: pnpm run generate:all
+      - run: node scripts/draft-trending.js
+      - run: pnpm run check:links
+        continue-on-error: true
+      - run: node scripts/create-link-issues.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+      - uses: peter-evans/create-pull-request@v6
+        with:
+          branch: bot/weekly-refresh
+          delete-branch: true
+          commit-message: "chore(weekly): refresh metrics and trending"
+          title: "chore(weekly): refresh metrics and trending"
+          body: |
+            Weekly maintenance refresh. This is batched into a PR to avoid direct generated-file commits on main.
+          labels: automation, weekly-refresh
+          add-paths: |
+            content/**/*.md
+            data/*.json
+            CONTEXT.md

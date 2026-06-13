@@ -1,0 +1,61 @@
+#!/usr/bin/env node
+import chalk from 'chalk';
+import { getEntryFiles, readMarkdown, inferEntryType } from './utils/frontmatter.js';
+import { parseTaxonomy, requireAllowed, requireAllowedArray } from './utils/taxonomy.js';
+import { getChangedMarkdownFiles, isContentEntryCandidate } from './utils/changed-files.js';
+
+const changedOnly = process.argv.includes('--changed-only');
+const taxonomy = await parseTaxonomy();
+const files = await getEntryFiles(changedOnly ? getChangedMarkdownFiles().filter(isContentEntryCandidate) : null);
+const errors = [];
+let checked = 0;
+
+for (const file of files) {
+  const { data, hasFrontmatter } = await readMarkdown(file);
+  if (!hasFrontmatter) continue; // validate-schema reports this.
+  const type = inferEntryType(file, data);
+
+  if (data.id && taxonomy.reservedIds.has(data.id) && type !== 'guide') {
+    errors.push(`${file}: id=${JSON.stringify(data.id)} is reserved in TAXONOMY.md`);
+  }
+  requireAllowedArray(errors, file, 'tags', data.tags, taxonomy.allTags);
+  requireAllowed(errors, file, 'maturity', data.maturity, taxonomy.maturityLevels);
+  requireAllowed(errors, file, 'cost_model', data.cost_model, taxonomy.costModels);
+  requireAllowed(errors, file, 'status', data.status, taxonomy.statusValues);
+
+  if (type === 'project') {
+    requireAllowed(errors, file, 'type', data.type, taxonomy.projectTypes);
+    requireAllowed(errors, file, 'category', data.category, taxonomy.projectCategories);
+    requireAllowed(errors, file, 'subcategory', data.subcategory, taxonomy.projectSubcategories);
+    requireAllowed(errors, file, 'primary_language', data.primary_language, taxonomy.primaryLanguages);
+    for (const buzz of data.buzz_sources ?? []) requireAllowed(errors, file, 'buzz_sources.source', buzz.source, taxonomy.buzzSources);
+  }
+
+  if (type === 'tool') {
+    requireAllowedArray(errors, file, 'job', data.job, taxonomy.toolJobs);
+    requireAllowedArray(errors, file, 'stack', data.stack, taxonomy.stackLanguages);
+    requireAllowed(errors, file, 'verdict', data.verdict, taxonomy.verdictValues);
+  }
+
+  if (type === 'paper') {
+    requireAllowed(errors, file, 'category', data.category, taxonomy.paperCategories);
+    requireAllowed(errors, file, 'importance', data.importance, taxonomy.importanceValues);
+  }
+
+  if (type === 'tip') {
+    requireAllowed(errors, file, 'category', data.category, taxonomy.tipCategories);
+    requireAllowed(errors, file, 'difficulty', data.difficulty, taxonomy.difficultyValues);
+    requireAllowed(errors, file, 'impact', data.impact, taxonomy.impactValues);
+  }
+
+  if (type === 'build-example') requireAllowed(errors, file, 'difficulty', data.difficulty, taxonomy.buildDifficulties);
+  checked += 1;
+}
+
+if (errors.length) {
+  console.error(chalk.red(`Taxonomy validation failed with ${errors.length} error(s):`));
+  for (const error of errors) console.error(chalk.red(`- ${error}`));
+  process.exit(1);
+}
+
+console.log(chalk.green(`Taxonomy validation passed. Checked ${checked} content entr${checked === 1 ? 'y' : 'ies'}.`));
