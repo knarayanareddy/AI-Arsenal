@@ -1,81 +1,64 @@
 ---
-id: "direct-preference-optimization"
-title: "Direct Preference Optimization"
+id: direct-preference-optimization
+title: Direct Preference Optimization
 authors:
-  - "Rafailov, R."
-  - "Sharma, A."
-published_date: "2023-05-29"
-venue: "NeurIPS 2023"
-arxiv_id: "2305.18290"
-arxiv_url: "https://arxiv.org/abs/2305.18290"
-pdf_url: "https://arxiv.org/pdf/2305.18290"
+  - 'Rafailov, R.'
+  - 'Sharma, A.'
+published_date: '2023-05-29'
+venue: NeurIPS 2023
+arxiv_id: '2305.18290'
+arxiv_url: 'https://arxiv.org/abs/2305.18290'
+pdf_url: 'https://arxiv.org/pdf/2305.18290'
 tags:
   - alignment
   - rlhf
   - llm
-category: "alignment"
-importance: "sota"
+category: alignment
+importance: sota
 citation_count: 0
 has_code: false
 code_url: null
 benchmark_improvements: []
-tldr: "Simplifies preference optimization for aligning language models"
-why_it_matters: "This paper is included because it shaped practical AI engineering decisions, model behavior, evaluation, or architecture patterns."
-added_date: "2026-06-13"
-added_by: "maintainer"
+tldr: Simplifies preference optimization for aligning language models
+why_it_matters: >-
+  This paper is included because it shaped practical AI engineering decisions,
+  model behavior, evaluation, or architecture patterns.
+added_date: '2026-06-13'
+added_by: maintainer
 ---
+> **TL;DR:** Simplifies preference optimization for aligning language models.
+> **Why it matters:** This paper is included because it shaped practical AI engineering decisions, model behavior, evaluation, or architecture patterns.
 
-## Overview
+## The Problem It Solved
 
-Direct Preference Optimization is a curated paper entry included to make the Arsenal more useful for practical AI engineering decisions.
+Direct Preference Optimization addresses a practical gap in building, evaluating, aligning, or operating modern LLM systems.
 
-## Why It's in the Arsenal
+## Key Contribution
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+Simplifies preference optimization for aligning language models.
 
-## Key Features
+## Results / Key Numbers
 
-- Clear scope and practical applicability
-- Structured metadata for filtering and search
-- Canonical location for future updates
+See the original paper for exact benchmark tables and ablations. This Arsenal entry does not copy headline numbers unless they are directly verified and maintained.
 
-## Architecture / How It Works
+Do not reuse these numbers as current SOTA claims without checking newer leaderboards; they describe the paper's reported results and context.
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+## How to Apply This Today
 
-## Getting Started
+Use the paper as a design reference when building evals, alignment loops, RAG systems, agent workflows, or model comparison pipelines. Convert the takeaway into a testable hypothesis before changing production systems.
 
-```bash
-# Read the entry and follow the linked resources.
-```
+## Code / Implementation
 
-## Use Cases
+- No official implementation link captured in this entry. Check the paper page and community implementations before using code.
+- [arXiv abstract](https://arxiv.org/abs/2305.18290)
+- [PDF](https://arxiv.org/pdf/2305.18290)
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+## Further Reading
 
-## Strengths
-
-- Concise enough for quick browsing
-- Structured enough for generated data and search
-
-## Limitations / When NOT to Use
-
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
-
-## Integration Patterns
-
-Use this entry as a canonical reference from guides, stacks, and generated data views.
-
-## Resources
-
-- [Primary Resource](https://arxiv.org/abs/2305.18290)
-
-## Buzz & Reception
-
-Reception notes should be updated with verified sources during maintenance reviews.
+- [Must-read papers guide](../must-read-papers.md)
+- [SOTA benchmarks](../sota-benchmarks.md)
+- [Emerging techniques](../emerging-techniques.md)
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

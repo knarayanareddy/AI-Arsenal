@@ -5,25 +5,32 @@ type: framework
 category: rag
 subcategory: frameworks
 description: >-
-  An open-source framework for production search, question answering, and RAG
+  Modular framework for production search, RAG, agents, routing, and generation
   pipelines
 github_url: 'https://github.com/deepset-ai/haystack'
 license: Apache-2.0
-primary_language: Python
+primary_language: Other
 tags:
   - rag
   - retrieval
-  - embeddings
-  - evaluation
+  - orchestration
+  - agents
 maturity: production
 cost_model: open-source
 github_stars: 25559
-trending_score: 70
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-12'
-docs_url: null
+docs_url: 'https://docs.haystack.deepset.ai/'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -33,60 +40,75 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 25559
 ---
+
+> **TL;DR:** Haystack is a modular pipeline framework for search, RAG, routing, generation, and agent workflows. Use it when explicit pipeline components matter.
 
 ## Overview
 
-Haystack is included as a notable rag project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+Haystack is retrieval-first and production-oriented, with explicit components for pipelines, retrievers, generators, routers, and agents.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+It is a strong fit for teams that want RAG pipelines to be inspectable and modular instead of hidden inside a single chain.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Pipeline/component architecture
+- Strong retrieval and search foundation
+- RAG and agent workflows
+- Production-oriented integrations
+- Apache-2.0 open source
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+Haystack composes applications as directed pipelines of components such as converters, embedders, retrievers, rankers, generators, and agents.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/deepset-ai/haystack
+pip install haystack-ai
+```
+
+```python
+from haystack import Pipeline
+
+pipe = Pipeline()
+# Add components such as retrievers and generators per official docs.
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the rag ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Production RAG/search systems
+2. **Scenario**: Explicit retrieval pipelines
+3. **Scenario**: Teams that want modular component control
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Clear pipeline structure
+- Strong retrieval heritage
+- Good fit for production search/RAG
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Less popular for quick demos than LangChain/LlamaIndex
+- Requires component design discipline
+- Agent abstractions are not the main community narrative
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Use with Qdrant, Weaviate, OpenSearch, or custom document stores
+- Pair with eval pipelines for retrieval quality
+- Use explicit routing for multi-index systems
 
 ## Resources
 
-- [GitHub Repository](https://github.com/deepset-ai/haystack)
+- [GitHub](https://github.com/deepset-ai/haystack)
+- [Docs](https://docs.haystack.deepset.ai/)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because this project is frequently evaluated in production RAG architecture decisions.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

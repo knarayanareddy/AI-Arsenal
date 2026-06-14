@@ -18,55 +18,106 @@ status: "active"
 
 ## Overview
 
-Vector database choice depends on scale, metadata filtering, operations skill, and whether the existing database can handle retrieval.
+> **TL;DR:** Start with your existing database and scale requirements before chasing vector DB features. Use pgvector for simplicity, Qdrant/Weaviate for production self-hosted search, Pinecone for managed ops, and Milvus for larger distributed scale.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+Vector database choice is one of the most common RAG architecture decisions. It affects retrieval quality, filtering, latency, operations, and cost.
 
 ## Key Features
 
-- Use Postgres with pgvector for simple stacks and existing Postgres teams
-- Use Qdrant or Weaviate when vector search is a first-class production workload
-- Use Chroma for prototypes and local experimentation
+- Covers self-hosting, hybrid search, scale, Postgres reuse, and multitenancy
+- Links every leaf node to a canonical vector database entry
+- Encourages teams to start with operational simplicity before adding infrastructure
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+```mermaid
+flowchart TD
+    START([🚀 Start]) --> PG{Already using Postgres?}
+    PG -->|Yes, <10M vectors / simple ops| PGV[✅ pgvector]
+    PG -->|No or scale/features exceed Postgres| SELF{Need self-hosted?}
+    SELF -->|No, prefer managed| MANAGED{Need minimum ops?}
+    MANAGED -->|Yes| PINE[✅ Pinecone]
+    MANAGED -->|Want OSS-compatible managed path| QDRANTCLOUD[✅ Qdrant Cloud / Weaviate Cloud / Zilliz]
+    SELF -->|Yes| SCALE{Scale?}
+    SCALE -->|<1M vectors, prototype| CHROMA[✅ Chroma or LanceDB]
+    SCALE -->|1M-100M| FEATURES{Need hybrid/schema/multitenancy?}
+    SCALE -->|>100M / distributed| MILVUS[✅ Milvus / Zilliz]
+    FEATURES -->|Filtering/performance| QDRANT[✅ Qdrant]
+    FEATURES -->|Schema-rich hybrid search| WEAVIATE[✅ Weaviate]
+    FEATURES -->|Embedded/multimodal| LANCE[✅ LanceDB]
+```
+
+Plain-language tree:
+
+1. If you already use Postgres and your vector needs are moderate, start with pgvector.
+2. If you want managed infrastructure, evaluate Pinecone first, then managed Qdrant/Weaviate/Milvus options.
+3. If you need local prototyping, use Chroma or LanceDB.
+4. If you need production self-hosted filtering and performance, start with Qdrant.
+5. If your data model benefits from object schemas and hybrid retrieval, evaluate Weaviate.
+6. If you need very large distributed vector workloads, evaluate Milvus.
+
+### Quick Reference Table
+
+| Constraint | Recommended Start | Canonical Entry |
+|---|---|---|
+| Existing Postgres | pgvector | [pgvector](../../projects/rag/vector-databases/pgvector.md) |
+| Fast local prototype | Chroma | [Chroma](../../projects/rag/vector-databases/chroma.md) |
+| Self-hosted production | Qdrant | [Qdrant](../../projects/rag/vector-databases/qdrant.md) |
+| Schema-rich hybrid search | Weaviate | [Weaviate](../../projects/rag/vector-databases/weaviate.md) |
+| Large distributed scale | Milvus | [Milvus](../../projects/rag/vector-databases/milvus.md) |
+| Managed only | Pinecone | [Pinecone](../../projects/rag/vector-databases/pinecone-vector-db.md) |
+| Embedded/multimodal | LanceDB | [LanceDB](../../projects/rag/vector-databases/lancedb.md) |
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# Simple local prototype
+pip install chromadb
+
+# Postgres path
+CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: You need a fast shortlist without reading every project entry first
+2. **Scenario**: You want to explain an architecture choice to a teammate or reviewer
+3. **Scenario**: You are giving an LLM/agent structured context for stack selection
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Converts a broad tool category into explicit decision logic
+- Links leaf-node recommendations to canonical Arsenal entries
+- Includes both Mermaid and plain-text forms for humans and LLMs
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on benchmarks with your actual data and traffic
+- Pricing, model availability, quotas, and hosted-service limits can change
+- Regulated environments still require legal, security, and compliance review
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Start with the Mermaid tree for fast orientation.
+- Use the text decision tree when copying into LLM context or design docs.
+- Open the linked canonical entries before making a production commitment.
+- Run a proof of concept and evaluation before standardizing on a tool.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- [Weaviate](../../projects/rag/vector-databases/weaviate.md)
+- [Chroma](../../projects/rag/vector-databases/chroma.md)
+- [Milvus](../../projects/rag/vector-databases/milvus.md)
+- [Pinecone](../../projects/rag/vector-databases/pinecone-vector-db.md)
+- [pgvector](../../projects/rag/vector-databases/pgvector.md)
+- [LanceDB](../../projects/rag/vector-databases/lancedb.md)
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Decision-tree pages are maintained as high-value LLM/agent routing context. They should be updated whenever major tooling or model defaults shift.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

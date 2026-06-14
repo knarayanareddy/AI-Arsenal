@@ -38,7 +38,10 @@ for (const file of await getEntryFiles()) {
   if (type === 'project') {
     if (p[0] !== 'content' || p[1] !== 'projects') errors.push(`${file}: project entries must live under content/projects/`);
     if (parsed.data.category && p[2] !== parsed.data.category) errors.push(`${file}: project category "${parsed.data.category}" must match folder "${p[2]}"`);
-    if (parsed.data.subcategory && p[3] !== parsed.data.subcategory) warnings.push(`${file}: subcategory "${parsed.data.subcategory}" does not match folder "${p[3]}"; allowed for legacy agent-frameworks/frameworks mapping but review it`);
+    if (parsed.data.subcategory && p[3] !== parsed.data.subcategory) {
+      const allowedAlias = parsed.data.category === 'agents' && p[3] === 'frameworks' && parsed.data.subcategory === 'agent-frameworks';
+      if (!allowedAlias) warnings.push(`${file}: subcategory "${parsed.data.subcategory}" does not match folder "${p[3]}"`);
+    }
   }
   if (type === 'paper' && !file.startsWith('content/research/papers/')) errors.push(`${file}: paper entries must live in content/research/papers/`);
   if (type === 'tip' && !file.startsWith('content/tips-and-tricks/')) errors.push(`${file}: tip entries must live in content/tips-and-tricks/`);

@@ -10,16 +10,16 @@
 
 ## Recently Added
 
-- [Add Evals Before Prompt Refactors](./add-evals-before-refactors.md)
-- [Add Human Review for High-Impact Actions](./add-human-review-for-high-impact-actions.md)
-- [Benchmark with Production-Shaped Inputs](./benchmark-with-production-shaped-inputs.md)
-- [Budget Context Before Adding Tools](./budget-context-before-adding-tools.md)
-- [Cache Stable Embedding Calls](./cache-stable-embedding-calls.md)
-- [Cap Agent Tool Retries](./cap-agent-tool-retries.md)
-- [Log Retrieved Context for Every RAG Answer](./log-retrieved-context.md)
-- [Measure First Token Latency Separately](./measure-first-token-latency.md)
-- [Prefer ID References over Copying Metadata](./prefer-id-references-over-copying.md)
-- [Prefer Reranking Before Rechunking](./prefer-reranking-before-rechunking.md)
+- [Add A Max Step Budget To Every Agent](./add-a-max-step-budget-to-every-agent.md)
+- [Add A Minimal Reproduction Prompt](./add-a-minimal-reproduction-prompt.md)
+- [Add Hybrid Search for Exact Terms](./add-hybrid-search-for-exact-terms.md)
+- [Add Output Examples for Edge Cases](./add-output-examples-for-edge-cases.md)
+- [Add Provider Timeout And Retry Policies](./add-provider-timeout-and-retry-policies.md)
+- [Add Reranking After Recall Is Acceptable](./add-reranking-after-recall-is-acceptable.md)
+- [Allowlist Tools Per Agent Role](./allowlist-tools-per-agent-role.md)
+- [Ask For Missing Inputs Before Solving](./ask-for-missing-inputs-before-solving.md)
+- [Benchmark On The User Hardware](./benchmark-on-the-user-hardware.md)
+- [Benchmark With Real Context Lengths](./benchmark-with-real-context-lengths.md)
 
 ## Most Popular
 
@@ -27,23 +27,53 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Add A Max Step Budget To Every Agent](./add-a-max-step-budget-to-every-agent.md) — 
+- [Add A Minimal Reproduction Prompt](./add-a-minimal-reproduction-prompt.md) — 
 - [Add Evals Before Prompt Refactors](./add-evals-before-refactors.md) — 
 - [Add Human Review for High-Impact Actions](./add-human-review-for-high-impact-actions.md) — 
+- [Add Hybrid Search for Exact Terms](./add-hybrid-search-for-exact-terms.md) — 
+- [Add Output Examples for Edge Cases](./add-output-examples-for-edge-cases.md) — 
+- [Add Provider Timeout And Retry Policies](./add-provider-timeout-and-retry-policies.md) — 
+- [Add Reranking After Recall Is Acceptable](./add-reranking-after-recall-is-acceptable.md) — 
+- [Allowlist Tools Per Agent Role](./allowlist-tools-per-agent-role.md) — 
+- [Ask For Missing Inputs Before Solving](./ask-for-missing-inputs-before-solving.md) — 
+- [Benchmark On The User Hardware](./benchmark-on-the-user-hardware.md) — 
 - [Benchmark with Production-Shaped Inputs](./benchmark-with-production-shaped-inputs.md) — 
+- [Benchmark With Real Context Lengths](./benchmark-with-real-context-lengths.md) — 
 - [Budget Context Before Adding Tools](./budget-context-before-adding-tools.md) — 
+- [Cache Embeddings By Content Hash](./cache-embeddings-by-content-hash.md) — 
 - [Cache Stable Embedding Calls](./cache-stable-embedding-calls.md) — 
+- [Cache Stable System Prompts](./cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries](./cap-agent-tool-retries.md) — 
+- [Checkpoint Agent State After Each Tool Call](./checkpoint-agent-state-after-each-tool-call.md) — 
+- [Choose Chunk Size by Answer Span Length](./choose-chunk-size-by-answer-span-length.md) — 
+- [Choose INT4 Only After Quality Tests](./choose-int4-only-after-quality-tests.md) — 
+- [Classify Failures Before Fixing Prompts](./classify-failures-before-fixing-prompts.md) — 
+- [Compress Retrieved Context Before Generation](./compress-retrieved-context-before-generation.md) — 
+- [Define Fallbacks For Tool Failures](./define-fallbacks-for-tool-failures.md) — 
+- [Detect Context Truncation In Tests](./detect-context-truncation-in-tests.md) — 
+- [Detect Multi Hop Questions Explicitly](./detect-multi-hop-questions-explicitly.md) — 
+- [Detect Repeated Tool Calls](./detect-repeated-tool-calls.md) — 
+- [Do Not Launch Without Trace Sampling](./do-not-launch-without-trace-sampling.md) — 
+- [Drop Unused Conversation History](./drop-unused-conversation-history.md) — 
+- [Evaluate Embedding Models Before Rechunking](./evaluate-embedding-models-before-rechunking.md) — 
+- [Inspect Retrieved Chunks Beside The Answer](./inspect-retrieved-chunks-beside-the-answer.md) — 
+- [Keep A Kill Switch For Agent Actions](./keep-a-kill-switch-for-agent-actions.md) — 
+- [Keep Instructions Outside Retrieved Context](./keep-instructions-outside-retrieved-context.md) — 
+- [Keep Model Files Out Of Git](./keep-model-files-out-of-git.md) — 
+- [Keep Source Page and Section Metadata](./keep-source-page-and-section-metadata.md) — 
+- [Log Agent State Transitions](./log-agent-state-transitions.md) — 
+- [Log Raw And Parsed Model Outputs](./log-raw-and-parsed-model-outputs.md) — 
 - [Log Retrieved Context for Every RAG Answer](./log-retrieved-context.md) — 
+- [Make Success Criteria Machine Checkable](./make-success-criteria-machine-checkable.md) — 
+- [Match Context Length To RAM](./match-context-length-to-ram.md) — 
 - [Measure First Token Latency Separately](./measure-first-token-latency.md) — 
-- [Prefer ID References over Copying Metadata](./prefer-id-references-over-copying.md) — 
-- [Prefer Reranking Before Rechunking](./prefer-reranking-before-rechunking.md) — 
-- [Prefer Small Model Routing for Simple Tasks](./prefer-small-model-routing.md) — 
-- [Tune Chunk Overlap Before Chunk Size](./rag-chunk-overlap-tuning.md) — 
-- [Separate System and Task Prompts](./separate-system-and-task-prompts.md) — 
-- [Store Prompts with Release Versions](./store-prompts-with-release-versions.md) — 
-- [Summarize Long-Running Agent State](./summarize-long-running-agent-state.md) — 
-- [Test Prompts with Adversarial Inputs](./test-prompts-with-adversarial-inputs.md) — 
-- [Track Cost per Feature](./track-cost-per-feature.md) — 
-- [Use JSON Schema for Critical Outputs](./use-json-schema-for-outputs.md) — 
-- [Use Local Models for Sensitive Prototyping](./use-local-models-for-sensitive-prototyping.md) — 
-- [Version Your Eval Datasets](./version-your-eval-datasets.md) — 
+- [Measure KV Cache Hit Rate](./measure-kv-cache-hit-rate.md) — 
+- [Measure Queue Time Separately](./measure-queue-time-separately.md) — 
+- [Measure Retrieval Recall Before Answer Quality](./measure-retrieval-recall-before-answer-quality.md) — 
+- [Name The Audience In The Prompt](./name-the-audience-in-the-prompt.md) — 
+- [Order Few Shot Examples by Similarity](./order-few-shot-examples-by-similarity.md) — 
+- [Parallelize Independent Retrieval Calls](./parallelize-independent-retrieval-calls.md) — 
+- [Pin Dependencies For Inference Images](./pin-dependencies-for-inference-images.md) — 
+- [Pin Model And Runtime Versions](./pin-model-and-runtime-versions.md) — 
+- [Precompute Expensive Static Context](./precompute-expensive-static-context.md) — 

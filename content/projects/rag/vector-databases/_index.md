@@ -11,23 +11,29 @@
 ## Recently Added
 
 - [Chroma](./chroma.md)
+- [LanceDB](./lancedb.md)
 - [Milvus](./milvus.md)
 - [pgvector](./pgvector.md)
+- [Pinecone](./pinecone-vector-db.md)
 - [Qdrant](./qdrant.md)
 - [Weaviate](./weaviate.md)
 
 ## Most Popular
 
 - [Milvus](./milvus.md) — ⭐ 44762
-- [Qdrant](./qdrant.md) — ⭐ 32149
-- [Chroma](./chroma.md) — ⭐ 28418
-- [pgvector](./pgvector.md) — ⭐ 21735
+- [Qdrant](./qdrant.md) — ⭐ 32155
+- [Chroma](./chroma.md) — ⭐ 28419
+- [pgvector](./pgvector.md) — ⭐ 21738
 - [Weaviate](./weaviate.md) — ⭐ 16323
+- [LanceDB](./lancedb.md) — ⭐ 10594
+- [Pinecone](./pinecone-vector-db.md) — ⭐ 0
 
 ## Browse All
 
-- [Chroma](./chroma.md) — An embeddings database optimized for AI application prototyping and local workflows
-- [Milvus](./milvus.md) — A scalable open-source vector database for embedding search at large scale
-- [pgvector](./pgvector.md) — A PostgreSQL extension that adds vector similarity search to existing databases
-- [Qdrant](./qdrant.md) — A vector database for similarity search with filtering and production operations
-- [Weaviate](./weaviate.md) — An open-source vector database with hybrid search and modular integrations
+- [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
+- [LanceDB](./lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
+- [Milvus](./milvus.md) — Cloud-native vector database for large-scale ANN search and production vector workloads
+- [pgvector](./pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
+- [Pinecone](./pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
+- [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
+- [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval

@@ -3,8 +3,8 @@ id: crewai
 name: CrewAI
 type: framework
 category: agents
-subcategory: frameworks
-description: A role-based framework for orchestrating collaborative AI agent teams
+subcategory: agent-frameworks
+description: Role-based framework for orchestrating collaborative AI agent crews and flows
 github_url: 'https://github.com/crewAIInc/crewAI'
 license: MIT
 primary_language: Python
@@ -15,76 +15,92 @@ tags:
   - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 53461
-trending_score: 70
+github_stars: 53462
+github_stars_last_30d: 0
+trending_score: 40
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://docs.crewai.com/'
 demo_url: null
 paper_url: null
 paper_id: null
-alternatives: []
+alternatives:
+  - langgraph
+  - metagpt
+  - autogpt
 integrates_with: []
 added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: []
+buzz_sources:
+  - source: newsletter
+    url: 'https://docs.crewai.com/'
+    date: '2026-06-13'
+    description: Official CrewAI documentation
 featured: false
 status: active
-github_stars_last_30d: 53461
 ---
+
+> **TL;DR:** CrewAI is a role-based agent framework for organizing AI workers into crews and event-driven flows. Use it when your mental model is teams, roles, tasks, and delegation.
 
 ## Overview
 
-CrewAI is included as a notable agents project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
-
-## Why It's in the Arsenal
-
-It represents a useful reference point for engineers comparing options in the agents category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+- CrewAI emphasizes agent roles, tasks, crews, and flows rather than graph primitives.
+- It is popular for business-process automation, research assistants, and multi-role workflows where responsibilities are easy to name.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Role-based agents with goals and backstories
+- Task and crew abstractions for collaborative work
+- Flows for event-driven orchestration
+- Tool integration for external actions
+- Independent framework rather than a LangChain wrapper
+- Large community and fast-moving ecosystem
 
-## Architecture / How It Works
+## Architecture Model
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+CrewAI models systems as crews of agents assigned to tasks, plus flows for structured event-driven execution. The architecture is closer to organizational delegation than graph-state programming.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/crewAIInc/crewAI
+pip install crewai
 ```
 
-## Use Cases
+```python
+from crewai import Agent, Task, Crew
 
-1. **Scenario**: When evaluating options in the agents ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+researcher = Agent(role="Researcher", goal="Summarize a topic", backstory="Concise analyst")
+task = Task(description="Summarize CrewAI in 3 bullets", expected_output="3 bullets", agent=researcher)
+crew = Crew(agents=[researcher], tasks=[task])
+crew.kickoff()
+```
 
-## Strengths
+## Best For
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Role-playing multi-agent business workflows
+- Research or content pipelines with distinct responsibilities
+- Teams that want a higher-level abstraction than graph nodes
 
-## Limitations / When NOT to Use
+## Not Ideal For
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Precise state-machine control
+- Very small single-agent tasks
+- Teams that need strict deterministic workflow semantics from day one
 
-## Integration Patterns
+## Comparison Context
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+Compared with LangGraph, CrewAI is easier to explain in role/task terms but less explicit about graph state. Compared with AutoGPT, it is more framework-like and less focused on autonomous long-horizon execution.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/crewAIInc/crewAI)
+- [GitHub](https://github.com/crewAIInc/crewAI)
+- [Docs](https://docs.crewai.com/)
+- [CrewAI examples](https://github.com/crewAIInc/crewAI-examples)
 
-## Buzz & Reception
+## Community Buzz
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- [Official CrewAI documentation](https://docs.crewai.com/)
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

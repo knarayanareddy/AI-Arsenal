@@ -3,11 +3,10 @@ id: "deployment"
 title: "Deployment Tools"
 entry_type: "guide"
 section: "tools"
-description: "Curated shortlist for deploying AI services"
+description: "Curated tools for deployment workflows in AI engineering"
 tags:
-  - cloud
-  - serverless
-  - docker
+  - llm
+  - data
 related_entries: []
 added_date: "2026-06-13"
 last_reviewed: "2026-06-13"
@@ -17,55 +16,189 @@ status: "active"
 
 ## Overview
 
-Deployment choices should reflect traffic shape, GPU needs, data locality, and team operations skill.
+This guide compares tools for the `deployment` job. Use it as a routing page, then open the linked canonical project or tool entry for full details.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
 
 ## Key Features
 
-- Use managed hosting for prototypes
-- Use containers for portable production services
-- Use Kubernetes only when platform maturity justifies it
+- Job-focused shortlist
+- Links to canonical entries instead of duplicating long-form content
+- Scannable TL;DR cards for each tool
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# Pick one tool from the shortlist and validate it with a small proof of concept.
 ```
+
+## Tool Shortlist
+
+### Modal — 🔄
+
+> **TL;DR:** Modal is a candidate for `deployment` workflows. Full details: [Modal](./modal.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Modal](./modal.md)
+**Alternatives:** Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio, Google Vertex AI
+
+### Replicate — 🔄
+
+> **TL;DR:** Replicate is a candidate for `deployment` workflows. Full details: [Replicate](./replicate.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Replicate](./replicate.md)
+**Alternatives:** Modal, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio, Google Vertex AI
+
+### Hugging Face Inference Endpoints — 🔄
+
+> **TL;DR:** Hugging Face Inference Endpoints is a candidate for `deployment` workflows. Full details: [Hugging Face Inference Endpoints](./hf-inference-endpoints.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Hugging Face Inference Endpoints](./hf-inference-endpoints.md)
+**Alternatives:** Modal, Replicate, AWS Bedrock, Azure AI Studio, Google Vertex AI
+
+### AWS Bedrock — 🔄
+
+> **TL;DR:** AWS Bedrock is a candidate for `deployment` workflows. Full details: [AWS Bedrock](./aws-bedrock.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [AWS Bedrock](./aws-bedrock.md)
+**Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, Azure AI Studio, Google Vertex AI
+
+### Azure AI Studio — 🔄
+
+> **TL;DR:** Azure AI Studio is a candidate for `deployment` workflows. Full details: [Azure AI Studio](./azure-ai-studio.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Azure AI Studio](./azure-ai-studio.md)
+**Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Google Vertex AI
+
+### Google Vertex AI — 🔄
+
+> **TL;DR:** Google Vertex AI is a candidate for `deployment` workflows. Full details: [Google Vertex AI](./google-vertex-ai.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Google Vertex AI](./google-vertex-ai.md)
+**Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio
+
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Selecting tools for `deployment` in a new AI application
+2. **Scenario**: Comparing open-source and managed options before a production decision
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Fast shortlist for humans and LLM agents
+- Avoids duplicate long-form tool descriptions
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on evaluation
+- Tool pricing and support policies must be verified before adoption
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Link to canonical project/tool IDs in architecture docs
+- Pair production tools with observability and evaluation
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Modal](./modal.md)
+- [Replicate](./replicate.md)
+- [Hugging Face Inference Endpoints](./hf-inference-endpoints.md)
+- [AWS Bedrock](./aws-bedrock.md)
+- [Azure AI Studio](./azure-ai-studio.md)
+- [Google Vertex AI](./google-vertex-ai.md)
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

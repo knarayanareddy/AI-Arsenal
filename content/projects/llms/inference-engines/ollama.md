@@ -4,7 +4,9 @@ name: Ollama
 type: platform
 category: llms
 subcategory: inference-engines
-description: A local runtime for downloading and running open-weight language models
+description: >-
+  Local runtime for downloading, running, and serving open-weight models on
+  developer machines
 github_url: 'https://github.com/ollama/ollama'
 license: MIT
 primary_language: Go
@@ -15,13 +17,21 @@ tags:
   - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 174056
-trending_score: 70
+github_stars: 174059
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://ollama.com/'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: true
+supported_formats:
+  - GGUF
+api_compatible: openai
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -31,60 +41,81 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 174056
 ---
 
 ## Overview
 
-Ollama is included as a notable llms project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+> **TL;DR:** Ollama is the easiest local runtime for pulling and running open-weight models on a laptop or workstation. Use it for local development, demos, and privacy-first prototypes.
+
+- **API compatibility:** openai
+- **Formats:** GGUF
+- **Quantization support:** Yes
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+Ollama is the default local-first path for many developers because install, model download, serving, and chat UX are simple.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Simple model pull/run workflow
+- Local HTTP API
+- OpenAI-compatible API support
+- Large model library
+- Works well with developer laptops and workstations
+- Good companion for local RAG demos
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+Ollama packages model management, local runtime, and serving API around quantized model artifacts.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/ollama/ollama
+curl -fsSL https://ollama.com/install.sh | sh
 ```
+
+```bash
+ollama pull llama3.1
+ollama run llama3.1
+```
+
+## Performance Benchmarks
+
+No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the llms ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Local LLM development
+2. **Scenario**: Privacy-sensitive prototypes
+3. **Scenario**: Simple RAG/chatbot demos without cloud APIs
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Very low setup friction
+- Excellent local developer experience
+- Broad community model catalog
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Not a high-throughput production serving engine
+- GPU/server scaling story is simpler than vLLM/SGLang
+- Model packaging differs from raw Hugging Face workflows
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Put an API gateway or observability layer in front of production inference endpoints.
+- Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.
+- Track model format and quantization separately from serving engine choice.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ollama/ollama)
+- [GitHub](https://github.com/ollama/ollama)
+- [Website](https://ollama.com/)
+- [API docs](https://github.com/ollama/ollama/blob/main/docs/api.md)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

@@ -3,88 +3,104 @@ id: autogen
 name: AutoGen
 type: framework
 category: agents
-subcategory: frameworks
-description: A Microsoft framework for building conversational multi-agent applications
+subcategory: agent-frameworks
+description: >-
+  Microsoft multi-agent framework now maintained as legacy after Agent Framework
+  convergence
 github_url: 'https://github.com/microsoft/autogen'
-license: MIT
+license: CC-BY-4.0
 primary_language: Python
 tags:
   - agents
   - orchestration
-  - tool-use
   - planning
+  - tool-use
 maturity: production
 cost_model: open-source
 github_stars: 58925
-trending_score: 70
+github_stars_last_30d: 0
+trending_score: 40
 last_commit: '2026-04-15'
-docs_url: null
+docs_url: 'https://microsoft.github.io/autogen/'
 demo_url: null
 paper_url: null
 paper_id: null
-alternatives: []
+alternatives:
+  - microsoft-agent-framework
 integrates_with: []
 added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: []
+buzz_sources:
+  - source: github-trending
+    url: 'https://github.com/microsoft/autogen/discussions/7066'
+    date: '2026-06-13'
+    description: AutoGen update discussion
 featured: false
-status: active
-github_stars_last_30d: 58925
+status: deprecated
 ---
+
+> **TL;DR:** AutoGen popularized Microsoft’s open-source multi-agent orchestration patterns. For new projects, prefer Microsoft Agent Framework because AutoGen is maintained for fixes rather than major new features.
 
 ## Overview
 
-AutoGen is included as a notable agents project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
-
-## Why It's in the Arsenal
-
-It represents a useful reference point for engineers comparing options in the agents category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+- AutoGen remains historically important and still useful for existing applications.
+- Microsoft maintainers announced that AutoGen and Semantic Kernel are merging into Microsoft Agent Framework, with AutoGen continuing for critical fixes and security patches.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Conversational multi-agent abstractions
+- Agent collaboration and handoff patterns
+- Large installed base and many examples
+- Still available for existing AutoGen applications
+- Migration path to Microsoft Agent Framework
+- Important historical influence on agent orchestration
 
-## Architecture / How It Works
+## Architecture Model
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+AutoGen models applications as collaborating conversational agents. Agents exchange messages, call tools, and can coordinate through group chat or orchestration patterns.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/microsoft/autogen
+pip install autogen-agentchat autogen-ext[openai]
 ```
 
-## Use Cases
+```python
+from autogen_agentchat.agents import AssistantAgent
+from autogen_ext.models.openai import OpenAIChatCompletionClient
 
-1. **Scenario**: When evaluating options in the agents ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
+agent = AssistantAgent("assistant", model_client=model_client)
+# See official docs for running team and UI examples.
+```
 
-## Strengths
+## Best For
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Maintaining existing AutoGen applications
+- Studying conversational multi-agent patterns
+- Migrating older Microsoft agent systems to Agent Framework
 
-## Limitations / When NOT to Use
+## Not Ideal For
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- New Microsoft-stack agent projects
+- Teams wanting the newest Microsoft workflow API
+- Projects that require long-term feature development in AutoGen itself
 
-## Integration Patterns
+## Comparison Context
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+Compared with Microsoft Agent Framework, AutoGen is the legacy predecessor. Compared with CrewAI, AutoGen is more conversation-centric and research-oriented.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/microsoft/autogen)
+- [GitHub](https://github.com/microsoft/autogen)
+- [Docs](https://microsoft.github.io/autogen/)
+- [Migration discussion](https://github.com/microsoft/autogen/discussions/7066)
 
-## Buzz & Reception
+## Community Buzz
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- [AutoGen update discussion](https://github.com/microsoft/autogen/discussions/7066)
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

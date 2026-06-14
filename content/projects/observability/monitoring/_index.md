@@ -10,12 +10,12 @@
 
 ## Recently Added
 
-- [Helicone](./helicone.md)
+_No entries yet._
 
 ## Most Popular
 
-- [Helicone](./helicone.md) — ⭐ 5809
+_No star-tracked entries yet._
 
 ## Browse All
 
-- [Helicone](./helicone.md) — An open-source observability platform for LLM logging, cost tracking, and analytics
+_No entries yet._

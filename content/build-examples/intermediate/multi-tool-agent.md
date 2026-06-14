@@ -2,74 +2,93 @@
 id: "multi-tool-agent"
 title: "Multi-Tool Agent"
 difficulty: "intermediate"
-description: "Build an agent that calls multiple tools with traceable state and bounded retries"
+description: "Blueprint for a LangGraph agent that uses multiple validated tools and structured outputs"
 tags:
   - agents
   - tool-use
-  - tracing
+  - structured-output
 stack:
   - python
   - langgraph
-estimated_time: "1 day"
+  - instructor
+  - langfuse
+estimated_time: "1-2 days"
 repo_url: null
 demo_url: null
-added_date: "2026-06-13"
+added_date: "2026-06-14"
 added_by: "maintainer"
-last_reviewed: "2026-06-13"
+last_reviewed: "2026-06-14"
 status: "active"
 ---
 
-## Overview
+> **TL;DR:** Builds a bounded multi-tool agent. Stack: LangGraph, validated Python tools, Instructor, Langfuse. Best for controlled automation.
 
-Multi-Tool Agent is a curated build example entry included to make the Arsenal more useful for practical AI engineering decisions.
+## What You're Building
 
-## Why It's in the Arsenal
+You will build an agent that can choose among multiple tools, validate tool arguments, produce structured outputs, and stop safely when budget or policy limits are reached. The user sees a final answer plus optionally trace/debug metadata.
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+## Architecture Overview
 
-## Key Features
-
-- Clear scope and practical applicability
-- Structured metadata for filtering and search
-- Canonical location for future updates
-
-## Architecture / How It Works
-
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
-
-## Getting Started
-
-```bash
-# Read the entry and follow the linked resources.
+```mermaid
+flowchart TD
+    U[User request] --> G[LangGraph controller]
+    G --> ROUTE{Choose tool?}
+    ROUTE --> SEARCH[Search tool]
+    ROUTE --> DB[Database lookup]
+    ROUTE --> CALC[Calculator/API tool]
+    SEARCH --> VALID[Schema validation]
+    DB --> VALID
+    CALC --> VALID
+    VALID --> LLM[LLM]
+    G --> OBS[Langfuse trace]
+    LLM --> OUT[Structured output]
+    OUT --> U
 ```
 
-## Use Cases
+## Stack
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+| Component | Tool | Why |
+|---|---|---|
+| Orchestration | LangGraph | State and routing control |
+| Structured output | Instructor | Typed responses and validation |
+| Tools | Python functions | Small auditable tool surface |
+| Observability | Langfuse | Trace each tool call and model step |
 
-## Strengths
+## Prerequisites
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
+- [ ] At least two safe tools
+- [ ] Pydantic schema knowledge
+- [ ] Clear success criteria
+- [ ] Tool timeouts and max-step policy
 
-## Limitations / When NOT to Use
+## Key Implementation Steps
 
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
+1. **Define tool schemas** — Specify exact inputs, outputs, permissions, and failure modes for each tool.
+2. **Build routing graph** — Use LangGraph nodes/edges or a prebuilt agent with step budgets.
+3. **Validate outputs** — Use Instructor/Pydantic schemas for final answers.
+4. **Add observability** — Record state, tool args, tool outputs, and model choices.
+5. **Add human approval** — Gate risky or irreversible tools.
 
-## Integration Patterns
+## Gotchas & Tips
 
-Use this entry as a canonical reference from guides, stacks, and generated data views.
+- Tool descriptions are part of the prompt surface; keep them precise.
+- Validate before execution, not after.
+- Separate planner and executor permissions.
+- Make success criteria machine-checkable.
 
-## Resources
+## Full Reference Implementations
 
-- [Primary Resource](https://example.com)
+- [LangGraph repository](https://github.com/langchain-ai/langgraph) — Agent orchestration
+- [Instructor repository](https://github.com/instructor-ai/instructor) — Structured output
+- [Langfuse repository](https://github.com/langfuse/langfuse) — Observability
 
-## Buzz & Reception
+## Related Entries
 
-Reception notes should be updated with verified sources during maintenance reviews.
+- Framework: [LangGraph](../../projects/agents/frameworks/langgraph.md)
+- Tool: [Instructor](../../tools/by-job/instructor.md)
+- Tip: [Validate tool arguments](../../tips-and-tricks/validate-tool-arguments-before-execution.md)
+- Tip: [Separate planner and executor](../../tips-and-tricks/separate-planner-and-executor-permissions.md)
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

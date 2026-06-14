@@ -3,7 +3,7 @@ id: "production-rag"
 title: "Production RAG Stack"
 entry_type: "guide"
 section: "architectures"
-description: "Reference architecture for reliable retrieval-augmented generation"
+description: "Reference architecture for production retrieval-augmented generation applications"
 tags:
   - rag
   - retrieval
@@ -16,72 +16,130 @@ added_by: "maintainer"
 status: "active"
 ---
 
+> **TL;DR:** Production stack for user-facing RAG systems. Separates ingestion, retrieval, generation, evaluation, serving, and observability.
+
 ## Overview
 
-Production RAG requires ingestion, retrieval, generation, evaluation, monitoring, and feedback loops as separate concerns.
+This reference stack is an opinionated baseline. It is not the only valid architecture, but it gives teams a coherent starting point with known component boundaries.
 
+## Stack at a Glance
 
-### Production Checklist
-
-| Layer | Requirement | Failure Mode Prevented |
+| Layer | Tool | Why This Choice |
 |---|---|---|
-| Ingestion | deterministic parsing, chunking, metadata | unreproducible retrieval changes |
-| Retrieval | hybrid search, filters, reranking | irrelevant or stale context |
-| Generation | prompt versioning, structured outputs | silent behavior drift |
-| Evaluation | golden sets and regression runs | shipping degraded retrieval |
-| Observability | traces, cost, latency, feedback | inability to debug production failures |
-
-### Minimum Launch Bar
-
-A production RAG system should not launch without trace capture, source attribution, a fallback path when retrieval confidence is low, and at least one task-specific evaluation set.
+| API | FastAPI | Typed Python API around retrieval/generation workflows |
+| RAG Framework | LlamaIndex or LangChain | Retrieval pipeline and query orchestration |
+| Document Processing | Docling or Unstructured | Reliable parsing before chunking/indexing |
+| Vector DB | Qdrant or pgvector | Qdrant for vector workload, pgvector for Postgres-first teams |
+| LLM | Hosted API or vLLM | Hosted for fastest launch, vLLM for self-hosted economics/control |
+| Evaluation | RAGAS + Phoenix | Measure retrieval and answer quality |
+| Observability | Langfuse / Phoenix | Trace retrieval, prompts, cost, and evals |
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+A stack is more useful than a list of tools when the components are selected to work together. This page shows the tradeoffs, operating assumptions, and links to canonical entries.
 
 ## Key Features
 
-- Document pipeline with chunking and metadata
-- Vector search with reranking and filters
-- Tracing, evals, and cost tracking
+- Treats ingestion as a first-class system, not a script
+- Includes eval and observability from day one
+- Supports managed or self-hosted model serving
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+```mermaid
+flowchart TD
+    USER[User] --> API[FastAPI]
+    API --> RET[RAG Framework]
+    RET --> VDB[Qdrant / pgvector]
+    DOCS[Documents] --> PARSE[Docling / Unstructured]
+    PARSE --> CHUNK[Chunk + metadata]
+    CHUNK --> VDB
+    RET --> LLM[Hosted LLM / vLLM]
+    API --> OBS[Langfuse / Phoenix]
+    OBS --> EVAL[RAGAS / eval datasets]
+    LLM --> API --> USER
+```
+
+## When to Use This Stack
+
+1. **Scenario**: Startup deploying document Q&A to real users
+2. **Scenario**: Internal knowledge assistant with measurable quality needs
+3. **Scenario**: RAG app that must support source attribution and regression tests
+
+## When NOT to Use This Stack
+
+- No stable document corpus yet
+- Need only a simple FAQ bot
+- No team capacity for evals, tracing, or ingestion operations
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+pip install fastapi llama-index qdrant-client ragas arize-phoenix langfuse
+# 1. Parse docs
+# 2. Build index
+# 3. Add traces
+# 4. Create eval dataset before launch
 ```
+
+## Cost Estimate
+
+| Usage Level | Expected Monthly Cost | Main Cost Drivers |
+|---|---:|---|
+| Hobbyist | $20-$100 | Hosted LLM calls and small vector DB |
+| Small startup | $300-$2,000 | Token volume, vector DB, observability retention |
+| Scale | $2,000+ | Inference, reranking, storage, eval/trace volume |
+
+> Cost estimates are directional. Verify provider pricing, token volume, GPU availability, data storage, and observability retention before committing.
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Startup deploying document Q&A to real users
+2. **Scenario**: Internal knowledge assistant with measurable quality needs
+3. **Scenario**: RAG app that must support source attribution and regression tests
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Components map cleanly to responsibilities, making the system easier to debug.
+- Each major layer has a canonical Arsenal entry for deeper comparison.
+- The stack can be simplified or scaled without changing the whole architecture at once.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- No stable document corpus yet
+- Need only a simple FAQ bot
+- No team capacity for evals, tracing, or ingestion operations
+
+## Component Deep Dives
+
+- **LlamaIndex**: [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
+- **LangChain for RAG**: [LangChain for RAG](../../projects/rag/frameworks/langchain-rag.md)
+- **Qdrant**: [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- **pgvector**: [pgvector](../../projects/rag/vector-databases/pgvector.md)
+- **Docling**: [Docling](../../projects/rag/document-processing/docling.md)
+- **RAGAS**: [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+- **Phoenix**: [Phoenix](../../projects/observability/tracing/phoenix.md)
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Keep application code, model serving, retrieval, and observability as separate layers.
+- Attach trace IDs across user requests, retrieval calls, model calls, and tool calls.
+- Promote production failures into evaluation datasets before changing prompts or retrievers.
+- Start with managed components when speed matters; move to self-hosted components only when control or economics justify it.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
+- [LangChain for RAG](../../projects/rag/frameworks/langchain-rag.md)
+- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- [pgvector](../../projects/rag/vector-databases/pgvector.md)
+- [Docling](../../projects/rag/document-processing/docling.md)
+- [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+- [Phoenix](../../projects/observability/tracing/phoenix.md)
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Reference stacks are maintained as opinionated starting points. They should be revisited whenever model pricing, tool maturity, or deployment patterns change.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

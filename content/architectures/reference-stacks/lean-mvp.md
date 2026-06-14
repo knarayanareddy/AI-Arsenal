@@ -3,7 +3,7 @@ id: "lean-mvp"
 title: "Lean MVP Stack"
 entry_type: "guide"
 section: "architectures"
-description: "Opinionated stack for a fast AI product prototype"
+description: "Opinionated stack for solo developers and fast AI product prototypes"
 tags:
   - llm
   - rag
@@ -16,57 +16,122 @@ added_by: "maintainer"
 status: "active"
 ---
 
+> **TL;DR:** Solo dev stack for proving an AI idea quickly. Uses hosted models, simple RAG, lightweight UI, and minimal infrastructure.
+
 ## Overview
 
-A minimal stack should reduce integration count while preserving observability and an upgrade path.
+This reference stack is an opinionated baseline. It is not the only valid architecture, but it gives teams a coherent starting point with known component boundaries.
+
+## Stack at a Glance
+
+| Layer | Tool | Why This Choice |
+|---|---|---|
+| UI | Gradio or Streamlit | Fastest Python-first path to a working demo |
+| LLM | Hosted API or Ollama | Hosted for quality/speed; Ollama for local/private demos |
+| RAG Framework | LlamaIndex | Fast ingestion and retrieval abstractions |
+| Vector DB | Chroma | Minimal local setup for prototypes |
+| Observability | Langfuse or LangSmith | Basic traces before users test the app |
+| Deployment | Railway or Fly.io | Low-friction hosting for MVP APIs/apps |
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+A stack is more useful than a list of tools when the components are selected to work together. This page shows the tradeoffs, operating assumptions, and links to canonical entries.
 
 ## Key Features
 
-- Hosted LLM API for quality and speed
-- Simple web app plus one retrieval layer
-- Basic tracing from day one
+- Prioritizes build speed over perfect architecture
+- Keeps all components swappable
+- Uses tracing early to avoid debugging blind spots
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+```mermaid
+flowchart TD
+    U[User] --> UI[Gradio / Streamlit]
+    UI --> API[FastAPI or app logic]
+    API --> RET[LlamaIndex Retriever]
+    RET --> VDB[Chroma]
+    API --> LLM[Hosted LLM API or Ollama]
+    API --> OBS[Langfuse / LangSmith]
+    LLM --> API --> UI --> U
+```
+
+## When to Use This Stack
+
+1. **Scenario**: Weekend prototype or internal demo
+2. **Scenario**: Solo developer validating product demand
+3. **Scenario**: Small RAG app over a few documents
+
+## When NOT to Use This Stack
+
+- Strict enterprise compliance requirements
+- High-throughput production serving
+- Large multi-tenant workloads with strict isolation
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+pip install gradio llama-index chromadb langfuse
+# Build UI + ingestion + query path first
+# Add deployment only after local eval passes
 ```
+
+## Cost Estimate
+
+| Usage Level | Expected Monthly Cost | Main Cost Drivers |
+|---|---:|---|
+| Hobbyist | $0-$50 | Hosted model tokens or local compute |
+| Small startup | $50-$300 | API tokens, hosting, observability retention |
+| Scale | Not recommended | Move to production RAG stack |
+
+> Cost estimates are directional. Verify provider pricing, token volume, GPU availability, data storage, and observability retention before committing.
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Weekend prototype or internal demo
+2. **Scenario**: Solo developer validating product demand
+3. **Scenario**: Small RAG app over a few documents
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Components map cleanly to responsibilities, making the system easier to debug.
+- Each major layer has a canonical Arsenal entry for deeper comparison.
+- The stack can be simplified or scaled without changing the whole architecture at once.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Strict enterprise compliance requirements
+- High-throughput production serving
+- Large multi-tenant workloads with strict isolation
+
+## Component Deep Dives
+
+- **Gradio**: [Gradio](../../tools/by-job/gradio.md)
+- **Streamlit**: [Streamlit](../../tools/by-job/streamlit.md)
+- **LlamaIndex**: [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
+- **Chroma**: [Chroma](../../projects/rag/vector-databases/chroma.md)
+- **Ollama**: [Ollama](../../projects/llms/inference-engines/ollama.md)
+- **Railway**: [Railway](../../tools/by-job/railway.md)
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Keep application code, model serving, retrieval, and observability as separate layers.
+- Attach trace IDs across user requests, retrieval calls, model calls, and tool calls.
+- Promote production failures into evaluation datasets before changing prompts or retrievers.
+- Start with managed components when speed matters; move to self-hosted components only when control or economics justify it.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Gradio](../../tools/by-job/gradio.md)
+- [Streamlit](../../tools/by-job/streamlit.md)
+- [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
+- [Chroma](../../projects/rag/vector-databases/chroma.md)
+- [Ollama](../../projects/llms/inference-engines/ollama.md)
+- [Railway](../../tools/by-job/railway.md)
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Reference stacks are maintained as opinionated starting points. They should be revisited whenever model pricing, tool maturity, or deployment patterns change.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

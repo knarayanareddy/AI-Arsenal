@@ -1,79 +1,130 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-13T20:30:54.571Z",
+  "generated_at": "2026-06-14T11:20:23.235Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 25,
+      "count": 56,
       "types": {
-        "tip": 4,
-        "project": 7,
-        "tool": 1,
-        "guide": 8,
-        "build-example": 2,
-        "paper": 3
+        "tip": 14,
+        "guide": 9,
+        "project": 18,
+        "tool": 5,
+        "person": 3,
+        "build-example": 3,
+        "paper": 4
       },
       "entries": [
+        "add-a-max-step-budget-to-every-agent",
         "add-human-review-for-high-impact-actions",
+        "agent-builder",
+        "ai-engineer",
         "autogen",
+        "autogpt",
         "budget-context-before-adding-tools",
         "cap-agent-tool-retries",
         "chainlit",
+        "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
         "choose-eval-framework",
         "choose-memory-solution",
         "crewai",
-        "evaluation",
+        "define-fallbacks-for-tool-failures",
+        "detect-repeated-tool-calls",
+        "dify",
+        "discord-communities",
+        "google-adk",
+        "harrison-chase",
+        "haystack",
+        "haystack-agents",
         "langchain",
         "langgraph",
+        "letta",
+        "lilian-weng",
+        "log-agent-state-transitions",
+        "logankilpatrick",
+        "make-success-criteria-machine-checkable",
         "mastra",
+        "mem0",
+        "metagpt",
+        "microsoft-agent-framework",
         "multi-agent-research-system",
         "multi-agent-system",
         "multi-tool-agent",
-        "orchestration",
+        "openai-agents-sdk",
+        "openhands",
         "people-to-follow",
+        "podcasts",
         "pydantic-ai",
+        "pydantic-ai-tool",
+        "ragflow",
         "react",
+        "require-human-approval-for-irreversible-actions",
+        "sandbox-code-execution-tools",
         "semantic-kernel",
+        "separate-planner-and-executor-permissions",
+        "simple-react-agent",
+        "smolagents",
         "summarize-long-running-agent-state",
         "swe-agent",
         "toolformer",
-        "youtube-channels"
+        "tree-of-thoughts",
+        "validate-tool-arguments-before-execution",
+        "zep"
       ]
     },
     {
       "id": "alignment",
       "label": "Alignment",
-      "count": 2,
+      "count": 7,
       "types": {
-        "paper": 2
+        "person": 4,
+        "paper": 3
       },
       "entries": [
+        "arvind-narayanan",
         "constitutional-ai",
-        "direct-preference-optimization"
+        "dario-amodei",
+        "direct-preference-optimization",
+        "instructgpt",
+        "lilian-weng",
+        "nathan-lambert"
       ]
     },
     {
       "id": "attention",
       "label": "Attention",
-      "count": 1,
+      "count": 2,
       "types": {
-        "paper": 1
+        "paper": 1,
+        "guide": 1
       },
       "entries": [
-        "attention-is-all-you-need"
+        "attention-is-all-you-need",
+        "transformers"
       ]
     },
     {
       "id": "batching",
       "label": "Batching",
-      "count": 2,
+      "count": 12,
       "types": {
-        "project": 2
+        "tip": 9,
+        "project": 3
       },
       "entries": [
+        "benchmark-with-real-context-lengths",
+        "choose-int4-only-after-quality-tests",
+        "measure-kv-cache-hit-rate",
+        "pin-model-and-runtime-versions",
+        "separate-offline-batch-jobs-from-chat-serving",
+        "sglang",
+        "stream-user-facing-responses",
         "text-generation-inference",
+        "tune-batch-size-against-tail-latency",
+        "use-int8-for-safer-compression",
+        "use-speculative-decoding-for-latency-critical-paths",
         "vllm"
       ]
     },
@@ -91,24 +142,45 @@
     {
       "id": "benchmark",
       "label": "Benchmark",
-      "count": 1,
+      "count": 2,
       "types": {
-        "paper": 1
+        "paper": 1,
+        "guide": 1
       },
       "entries": [
-        "llm-as-a-judge"
+        "llm-as-a-judge",
+        "sota-benchmarks"
       ]
     },
     {
       "id": "caching",
       "label": "Caching",
-      "count": 2,
+      "count": 20,
       "types": {
-        "tip": 1,
+        "tip": 18,
+        "tool": 1,
         "project": 1
       },
       "entries": [
+        "benchmark-with-real-context-lengths",
+        "cache-embeddings-by-content-hash",
         "cache-stable-embedding-calls",
+        "cache-stable-system-prompts",
+        "choose-int4-only-after-quality-tests",
+        "compress-retrieved-context-before-generation",
+        "drop-unused-conversation-history",
+        "measure-kv-cache-hit-rate",
+        "pin-model-and-runtime-versions",
+        "redis-memory",
+        "route-simple-tasks-to-smaller-models",
+        "separate-offline-batch-jobs-from-chat-serving",
+        "set-token-budgets-per-feature",
+        "stream-user-facing-responses",
+        "track-cost-per-successful-outcome",
+        "tune-batch-size-against-tail-latency",
+        "use-int8-for-safer-compression",
+        "use-semantic-cache-for-repeated-questions",
+        "use-speculative-decoding-for-latency-critical-paths",
         "vllm"
       ]
     },
@@ -126,46 +198,91 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 20,
+      "count": 61,
       "types": {
-        "tool": 11,
-        "guide": 7,
-        "project": 1,
-        "tip": 1
+        "tip": 14,
+        "project": 12,
+        "tool": 29,
+        "guide": 5,
+        "person": 1
       },
       "entries": [
+        "add-provider-timeout-and-retry-policies",
+        "agenta",
+        "airflow",
+        "autogpt",
+        "aws-bedrock",
+        "azure-ai-studio",
         "bentoml",
+        "braintrust",
+        "cache-embeddings-by-content-hash",
+        "cache-stable-system-prompts",
         "choose-deployment-target",
         "choose-llm",
+        "compress-retrieved-context-before-generation",
         "cost-tracking",
-        "deployment",
+        "dify",
+        "do-not-launch-without-trace-sampling",
+        "drop-unused-conversation-history",
         "enterprise-scale",
+        "fastapi",
+        "firecrawl",
+        "firecrawl-tool",
         "fireworks-ai",
+        "fly-io",
+        "google-vertex-ai",
         "gradio",
         "helicone",
+        "hf-inference-endpoints",
         "humanloop",
+        "jina-reader",
+        "keep-a-kill-switch-for-agent-actions",
         "label-studio",
         "lean-mvp",
         "litellm",
+        "llamaparse",
+        "lmdeploy",
+        "logankilpatrick",
+        "lunary",
+        "mesop",
+        "microsoft-agent-framework",
+        "mlflow",
         "modal",
+        "pin-dependencies-for-inference-images",
         "pinecone",
+        "pinecone-vector-db",
+        "playwright",
         "portkey",
-        "prototyping",
+        "prefect",
+        "promptlayer",
+        "puppeteer",
+        "ragflow",
+        "railway",
         "replicate",
+        "review-data-retention-for-prompts",
+        "route-simple-tasks-to-smaller-models",
+        "scale-ai",
+        "set-token-budgets-per-feature",
         "streamlit",
-        "track-cost-per-feature"
+        "track-cost-per-feature",
+        "track-cost-per-successful-outcome",
+        "use-semantic-cache-for-repeated-questions",
+        "weights-biases"
       ]
     },
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 2,
+      "count": 5,
       "types": {
-        "project": 1,
+        "project": 4,
         "paper": 1
       },
       "entries": [
+        "metagpt",
+        "openhands",
         "qwen",
+        "qwen-2-5",
         "swe-agent"
       ]
     },
@@ -183,114 +300,230 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 5,
+      "count": 45,
       "types": {
-        "tool": 2,
-        "tip": 2,
-        "guide": 1
+        "tool": 17,
+        "person": 4,
+        "project": 5,
+        "guide": 16,
+        "build-example": 1,
+        "tip": 2
       },
       "entries": [
+        "airflow",
+        "argilla",
+        "chip-huyen",
+        "clem-delangue",
+        "crawl4ai",
+        "crawl4ai-tool",
+        "dagster",
+        "data-labeling",
+        "deployment",
+        "docling",
+        "document-qa-pipeline",
+        "dvc",
+        "eugene-yan",
+        "evaluation",
+        "fine-tuning",
+        "firecrawl",
+        "firecrawl-tool",
+        "hugging-face-hub",
+        "jina-reader",
         "label-studio",
+        "llamaparse",
+        "memory-management",
+        "mesop",
+        "ml-engineer",
+        "mlflow",
+        "model-registry",
+        "orchestration",
+        "playwright",
+        "prefect",
         "prefer-id-references-over-copying",
+        "prodigy",
+        "production-serving",
+        "prompt-management",
+        "prototyping",
+        "puppeteer",
         "research-platform",
+        "scale-ai",
+        "security-and-guardrails",
+        "shreya-shankar",
         "streamlit",
-        "version-your-eval-datasets"
+        "structured-output",
+        "unstructured",
+        "vector-search",
+        "version-your-eval-datasets",
+        "web-scraping"
       ]
     },
     {
       "id": "docker",
       "label": "Docker",
+      "count": 1,
+      "types": {
+        "tool": 1
+      },
+      "entries": [
+        "bentoml"
+      ]
+    },
+    {
+      "id": "edge",
+      "label": "Edge",
       "count": 2,
       "types": {
         "tool": 1,
-        "guide": 1
+        "project": 1
       },
       "entries": [
-        "bentoml",
-        "deployment"
+        "fly-io",
+        "llamafile"
       ]
     },
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 1,
+      "count": 7,
       "types": {
-        "paper": 1
+        "project": 4,
+        "paper": 2,
+        "tool": 1
       },
       "entries": [
-        "lora"
+        "deepseek-v3-r1",
+        "falcon-3",
+        "lora",
+        "mistral-models",
+        "phi-4",
+        "speculative-decoding",
+        "unsloth"
       ]
     },
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 12,
+      "count": 29,
       "types": {
-        "tip": 1,
+        "tip": 14,
         "guide": 3,
-        "project": 7,
+        "project": 9,
+        "paper": 1,
+        "person": 1,
         "tool": 1
       },
       "entries": [
+        "add-hybrid-search-for-exact-terms",
+        "add-reranking-after-recall-is-acceptable",
         "cache-stable-embedding-calls",
+        "choose-chunk-size-by-answer-span-length",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
-        "haystack",
+        "detect-multi-hop-questions-explicitly",
+        "embeddings",
+        "evaluate-embedding-models-before-rechunking",
+        "hyde",
+        "jay-alammar",
+        "keep-source-page-and-section-metadata",
+        "lancedb",
         "llamaindex",
+        "measure-retrieval-recall-before-answer-quality",
         "milvus",
         "pgvector",
         "pinecone",
+        "pinecone-vector-db",
         "qdrant",
-        "vector-search",
+        "start-with-zero-chunk-overlap",
+        "store-parser-version-with-every-chunk",
+        "txtai",
+        "use-metadata-filters-before-similarity-search",
+        "use-parent-child-chunking-for-long-documents",
+        "use-query-rewriting-for-vague-questions",
+        "use-sentence-windows-for-dense-manuals",
         "weaviate"
       ]
     },
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 32,
+      "count": 66,
       "types": {
-        "tip": 6,
-        "guide": 9,
-        "project": 7,
-        "tool": 6,
+        "tip": 15,
+        "project": 11,
+        "guide": 13,
+        "tool": 14,
+        "person": 9,
         "paper": 3,
         "build-example": 1
       },
       "entries": [
+        "add-a-minimal-reproduction-prompt",
         "add-evals-before-refactors",
+        "agenta",
+        "ai-engineer",
+        "argilla",
+        "arvind-narayanan",
+        "azure-ai-studio",
         "benchmark-with-production-shaped-inputs",
+        "braintrust",
+        "chip-huyen",
         "choose-eval-framework",
+        "choose-observability-tool",
+        "classify-failures-before-fixing-prompts",
         "deepeval",
         "dspy",
         "enterprise-scale",
-        "evaluation",
+        "eugene-yan",
         "evaluation-pipelines",
-        "haystack",
+        "francois-chollet",
+        "fundamentals",
+        "giskard",
+        "google-vertex-ai",
+        "hamel-husain",
         "humanloop",
+        "inspect-retrieved-chunks-beside-the-answer",
+        "jason-liu",
         "langfuse",
+        "langfuse-prompts",
         "langsmith",
+        "langsmith-hub",
+        "langsmith-platform",
         "llm-as-a-judge",
+        "llm-researcher",
+        "log-raw-and-parsed-model-outputs",
         "mastra",
-        "must-read-papers",
+        "melanie-mitchell",
+        "ml-engineer",
         "openai-evals",
+        "opik",
         "overview",
         "phoenix",
         "prefer-reranking-before-rechunking",
+        "prodigy",
         "production-rag",
         "promptfoo",
         "rag-vs-fine-tuning",
         "ragas",
         "ragas-paper",
+        "ragas-rag-evaluation",
+        "replay-the-same-trace-with-one-variable-changed",
         "research-platform",
         "self-correcting-rag",
         "self-refine",
+        "separate-model-errors-from-app-errors",
+        "shreya-shankar",
+        "simon-willison",
+        "sota-benchmarks",
+        "store-prompt-version-in-every-trace",
         "store-prompts-with-release-versions",
         "test-prompts-with-adversarial-inputs",
+        "trace-tool-inputs-and-outputs",
         "trulens",
+        "use-golden-questions-for-every-bug-fix",
         "version-your-eval-datasets",
-        "wandb-weave"
+        "wandb-weave",
+        "weights-biases"
       ]
     },
     {
@@ -308,320 +541,595 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 4,
+      "count": 9,
       "types": {
-        "guide": 2,
-        "paper": 2
+        "tool": 6,
+        "paper": 2,
+        "guide": 1
       },
       "entries": [
-        "fine-tuning",
+        "axolotl",
+        "llamafactory",
         "lora",
+        "mlx-lm",
+        "peft",
         "qlora",
-        "rag-vs-fine-tuning"
+        "rag-vs-fine-tuning",
+        "torchtune",
+        "unsloth"
       ]
     },
     {
       "id": "foundational",
       "label": "Foundational",
-      "count": 8,
+      "count": 16,
       "types": {
-        "paper": 5,
-        "guide": 2,
+        "person": 5,
+        "paper": 6,
+        "guide": 4,
         "tool": 1
       },
       "entries": [
+        "andrej-karpathy",
+        "andrew-ng",
         "attention-is-all-you-need",
         "bert",
         "chain-of-thought-prompting",
         "hall-of-fame",
+        "jay-alammar",
+        "jeremy-howard",
         "language-models-are-few-shot-learners",
+        "llama-3-herd-of-models",
         "must-read-papers",
         "openai-evals",
-        "retrieval-augmented-generation"
+        "retrieval-augmented-generation",
+        "transformers",
+        "yann-lecun",
+        "youtube-channels"
       ]
     },
     {
       "id": "graphs",
       "label": "Graphs",
-      "count": 1,
+      "count": 4,
       "types": {
-        "project": 1
+        "project": 3,
+        "paper": 1
       },
       "entries": [
-        "langgraph"
+        "google-adk",
+        "graphrag",
+        "langgraph",
+        "microsoft-agent-framework"
       ]
     },
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 5,
+      "count": 16,
       "types": {
-        "tip": 3,
-        "tool": 2
+        "tip": 8,
+        "tool": 7,
+        "project": 1
       },
       "entries": [
         "add-human-review-for-high-impact-actions",
+        "allowlist-tools-per-agent-role",
+        "giskard",
         "guardrails-ai",
+        "guidance",
+        "llamaguard",
+        "nemo-guardrails",
+        "openai-agents-sdk",
         "portkey",
+        "rebuff",
+        "redact-secrets-before-tracing",
+        "run-prompt-injection-regression-tests",
+        "separate-user-content-from-system-instructions",
         "test-prompts-with-adversarial-inputs",
+        "treat-retrieved-text-as-untrusted",
         "use-json-schema-for-outputs"
+      ]
+    },
+    {
+      "id": "huggingface",
+      "label": "Huggingface",
+      "count": 4,
+      "types": {
+        "person": 2,
+        "tool": 2
+      },
+      "entries": [
+        "clem-delangue",
+        "hugging-face-hub",
+        "peft",
+        "thomas-wolf"
       ]
     },
     {
       "id": "inference",
       "label": "Inference",
-      "count": 24,
+      "count": 56,
       "types": {
-        "tip": 3,
-        "tool": 5,
-        "guide": 6,
-        "project": 9,
+        "tip": 21,
+        "tool": 6,
+        "guide": 7,
+        "project": 19,
+        "paper": 2,
         "build-example": 1
       },
       "entries": [
+        "benchmark-on-the-user-hardware",
         "benchmark-with-production-shaped-inputs",
+        "benchmark-with-real-context-lengths",
         "bentoml",
         "choose-deployment-target",
+        "choose-int4-only-after-quality-tests",
         "choose-llm",
         "cost-tracking",
+        "deepseek-v3-r1",
+        "emerging-techniques",
+        "falcon-3",
         "fireworks-ai",
         "gemma",
+        "gemma-3",
+        "gptq",
+        "hf-inference-endpoints",
+        "keep-model-files-out-of-git",
+        "llama-3",
         "llama-cpp",
         "llama-models",
+        "llamafile",
+        "lmdeploy",
         "local-first",
-        "local-llm-setup",
+        "local-llm-chat",
+        "match-context-length-to-ram",
         "measure-first-token-latency",
+        "measure-kv-cache-hit-rate",
+        "measure-queue-time-separately",
         "mistral-inference",
+        "mistral-models",
+        "ml-engineer",
         "modal",
         "ollama",
         "outlines",
+        "parallelize-independent-retrieval-calls",
         "phi-cookbook",
+        "pin-model-and-runtime-versions",
+        "precompute-expensive-static-context",
+        "prefer-gguf-for-llama-cpp-workflows",
         "prefer-small-model-routing",
-        "production-serving",
         "qwen",
+        "qwen-2-5",
         "replicate",
         "research-platform",
+        "separate-offline-batch-jobs-from-chat-serving",
+        "sglang",
+        "speculative-decoding",
+        "start-with-a-smaller-quantized-model",
+        "stream-user-facing-responses",
         "text-generation-inference",
-        "vllm"
+        "tune-batch-size-against-tail-latency",
+        "use-int8-for-safer-compression",
+        "use-smaller-models-for-classification-steps",
+        "use-speculative-decoding-for-latency-critical-paths",
+        "vllm",
+        "yi"
       ]
     },
     {
       "id": "kubernetes",
       "label": "Kubernetes",
-      "count": 3,
+      "count": 2,
       "types": {
-        "guide": 2,
+        "guide": 1,
         "project": 1
       },
       "entries": [
         "enterprise-scale",
-        "milvus",
-        "production-serving"
+        "milvus"
       ]
     },
     {
       "id": "langchain",
       "label": "Langchain",
-      "count": 1,
+      "count": 5,
       "types": {
-        "tool": 1
+        "person": 1,
+        "project": 2,
+        "tool": 2
       },
       "entries": [
-        "langsmith"
+        "harrison-chase",
+        "langchain-rag",
+        "langsmith",
+        "langsmith-hub",
+        "langsmith-platform"
       ]
     },
     {
       "id": "llamaindex",
       "label": "Llamaindex",
-      "count": 1,
+      "count": 3,
       "types": {
-        "project": 1
+        "person": 1,
+        "project": 2
       },
       "entries": [
-        "llamaindex"
+        "jerry-liu",
+        "llamaindex",
+        "llamaparse"
       ]
     },
     {
       "id": "llm",
       "label": "Llm",
-      "count": 49,
+      "count": 150,
       "types": {
-        "tip": 5,
-        "paper": 11,
+        "tip": 31,
+        "guide": 30,
+        "person": 15,
+        "tool": 31,
+        "paper": 17,
         "build-example": 2,
-        "tool": 10,
-        "guide": 9,
-        "project": 12
+        "project": 24
       },
       "entries": [
         "add-evals-before-refactors",
+        "add-output-examples-for-edge-cases",
+        "ai-engineer",
+        "andrej-karpathy",
+        "andrew-ng",
+        "argilla",
+        "ask-for-missing-inputs-before-solving",
         "attention-is-all-you-need",
+        "aws-bedrock",
+        "axolotl",
+        "azure-ai-studio",
         "basic-rag-chatbot",
         "bert",
+        "cache-embeddings-by-content-hash",
+        "cache-stable-system-prompts",
         "chain-of-thought-prompting",
         "chainlit",
         "choose-llm",
+        "clem-delangue",
+        "command-r-plus",
+        "compress-retrieved-context-before-generation",
         "constitutional-ai",
+        "dario-amodei",
+        "data-labeling",
         "deepeval",
+        "deepseek-r1",
+        "deepseek-v3-r1",
+        "deployment",
+        "detect-context-truncation-in-tests",
         "direct-preference-optimization",
+        "discord-communities",
+        "drop-unused-conversation-history",
         "dspy",
+        "evaluation",
+        "falcon-3",
+        "fastapi",
         "fine-tuning",
         "fireworks-ai",
+        "francois-chollet",
+        "fundamentals",
         "gemma",
+        "gemma-3",
+        "google-vertex-ai",
+        "gptq",
         "gradio",
+        "guidance",
+        "hamel-husain",
+        "hf-inference-endpoints",
+        "hugging-face-hub",
         "humanloop",
+        "instructgpt",
         "instructor",
+        "jason-liu",
+        "keep-instructions-outside-retrieved-context",
         "langchain",
+        "langfuse-prompts",
+        "langsmith-hub",
         "language-models-are-few-shot-learners",
         "lean-mvp",
         "litellm",
+        "llama-3",
+        "llama-3-herd-of-models",
         "llama-cpp",
         "llama-models",
+        "llamafactory",
+        "llamafile",
+        "llamaguard",
         "llm-as-a-judge",
+        "llm-researcher",
+        "lmdeploy",
         "local-first",
-        "local-llm-setup",
+        "local-llm-chat",
+        "logankilpatrick",
         "lora",
+        "memory-management",
+        "mesop",
         "mistral-inference",
+        "mistral-models",
+        "ml-engineer",
+        "mlx-lm",
+        "model-registry",
         "must-read-papers",
+        "name-the-audience-in-the-prompt",
+        "nemo-guardrails",
         "newsletters",
+        "noam-shazeer",
         "ollama",
         "openai-evals",
+        "orchestration",
+        "order-few-shot-examples-by-similarity",
         "outlines",
+        "peft",
         "people-to-follow",
+        "phi-4",
         "phi-cookbook",
+        "podcasts",
         "prefer-small-model-routing",
+        "production-serving",
+        "prompt-management",
+        "prompt-patterns-catalog",
         "promptfoo",
+        "promptlayer",
         "prototyping",
+        "put-task-inputs-after-instructions",
         "qlora",
         "qwen",
+        "qwen-2-5",
+        "qwen2-5-math",
+        "rank-context-by-expected-usefulness",
+        "rebuff",
+        "reserve-output-tokens-before-adding-context",
+        "route-simple-tasks-to-smaller-models",
+        "sebastian-bubeck",
+        "sebastian-raschka",
+        "security-and-guardrails",
         "self-refine",
+        "separate-policy-from-task-instructions",
         "separate-system-and-task-prompts",
+        "set-temperature-by-decision-risk",
+        "set-token-budgets-per-feature",
+        "sglang",
+        "shreya-shankar",
+        "simon-willison",
+        "sota-benchmarks",
+        "speculative-decoding",
+        "state-negative-constraints-as-testable-rules",
         "store-prompts-with-release-versions",
         "streamlit",
+        "structured-output",
+        "summarize-repeated-conversation-blocks",
         "text-generation-inference",
+        "thomas-wolf",
         "toolformer",
+        "torchtune",
+        "track-cost-per-successful-outcome",
+        "transformers",
+        "unsloth",
+        "use-context-budgets-per-section",
+        "use-delimiters-around-retrieved-context",
+        "use-json-only-for-machine-parsed-outputs",
         "use-local-models-for-sensitive-prototyping",
+        "use-semantic-cache-for-repeated-questions",
+        "use-xml-tags-for-long-prompt-sections",
+        "vector-search",
+        "version-system-prompts-like-code",
         "vllm",
+        "web-scraping",
+        "yann-lecun",
+        "yi",
         "youtube-channels"
       ]
     },
     {
       "id": "local",
       "label": "Local",
-      "count": 12,
+      "count": 28,
       "types": {
-        "project": 7,
-        "tool": 1,
+        "tip": 6,
         "guide": 2,
-        "build-example": 1,
-        "tip": 1
+        "project": 16,
+        "tool": 3,
+        "build-example": 1
       },
       "entries": [
+        "benchmark-on-the-user-hardware",
+        "choose-llm",
         "chroma",
+        "crawl4ai",
+        "crawl4ai-tool",
+        "falcon-3",
         "gemma",
+        "gemma-3",
         "gradio",
+        "keep-model-files-out-of-git",
+        "llama-3",
         "llama-cpp",
         "llama-models",
+        "llamafile",
         "local-first",
-        "local-llm-setup",
+        "local-llm-chat",
+        "match-context-length-to-ram",
         "mistral-inference",
+        "mistral-models",
+        "mlx-lm",
         "ollama",
+        "phi-4",
         "phi-cookbook",
-        "prototyping",
-        "use-local-models-for-sensitive-prototyping"
+        "prefer-gguf-for-llama-cpp-workflows",
+        "smolagents",
+        "start-with-a-smaller-quantized-model",
+        "use-local-models-for-sensitive-prototyping",
+        "yi"
       ]
     },
     {
       "id": "memory",
       "label": "Memory",
-      "count": 5,
+      "count": 16,
       "types": {
-        "tip": 2,
-        "guide": 2,
+        "guide": 3,
+        "tip": 8,
+        "tool": 4,
         "project": 1
       },
       "entries": [
+        "agent-builder",
         "budget-context-before-adding-tools",
         "choose-memory-solution",
+        "detect-context-truncation-in-tests",
+        "keep-instructions-outside-retrieved-context",
+        "letta",
         "mastra",
+        "mem0",
         "multi-agent-system",
-        "summarize-long-running-agent-state"
+        "rank-context-by-expected-usefulness",
+        "redis-memory",
+        "reserve-output-tokens-before-adding-context",
+        "summarize-long-running-agent-state",
+        "summarize-repeated-conversation-blocks",
+        "use-context-budgets-per-section",
+        "zep"
       ]
     },
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 10,
+      "count": 37,
       "types": {
-        "tip": 2,
-        "project": 4,
-        "tool": 2,
-        "guide": 2
+        "tip": 21,
+        "person": 1,
+        "guide": 3,
+        "tool": 6,
+        "project": 6
       },
       "entries": [
+        "add-a-max-step-budget-to-every-agent",
+        "add-provider-timeout-and-retry-policies",
         "cap-agent-tool-retries",
+        "checkpoint-agent-state-after-each-tool-call",
+        "chip-huyen",
+        "choose-observability-tool",
+        "dagster",
         "deepeval",
+        "define-fallbacks-for-tool-failures",
+        "detect-repeated-tool-calls",
+        "do-not-launch-without-trace-sampling",
+        "dvc",
         "helicone",
+        "keep-a-kill-switch-for-agent-actions",
         "litellm",
+        "log-agent-state-transitions",
+        "make-success-criteria-machine-checkable",
         "measure-first-token-latency",
+        "measure-queue-time-separately",
+        "mlflow",
         "openlit",
+        "openllmetry",
+        "opik",
         "overview",
+        "parallelize-independent-retrieval-calls",
         "phoenix",
+        "pin-dependencies-for-inference-images",
+        "precompute-expensive-static-context",
         "promptfoo",
-        "tracing-and-monitoring"
+        "require-human-approval-for-irreversible-actions",
+        "review-data-retention-for-prompts",
+        "sandbox-code-execution-tools",
+        "separate-planner-and-executor-permissions",
+        "tracing-and-monitoring",
+        "use-smaller-models-for-classification-steps",
+        "validate-tool-arguments-before-execution",
+        "weights-biases"
       ]
     },
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 2,
+      "count": 8,
       "types": {
-        "project": 2
+        "project": 8
       },
       "entries": [
+        "command-r-plus",
         "gemma",
-        "qwen"
+        "gemma-3",
+        "lancedb",
+        "llama-3",
+        "qwen",
+        "sglang",
+        "yi"
       ]
     },
     {
       "id": "new-arrival",
       "label": "New Arrival",
-      "count": 1,
+      "count": 2,
       "types": {
-        "guide": 1
+        "guide": 2
       },
       "entries": [
-        "this-week"
+        "this-week",
+        "weekly-arxiv-picks"
       ]
     },
     {
       "id": "observability",
       "label": "Observability",
-      "count": 18,
+      "count": 39,
       "types": {
-        "guide": 6,
-        "project": 6,
-        "tool": 3,
-        "tip": 3
+        "tip": 12,
+        "project": 13,
+        "guide": 7,
+        "person": 1,
+        "tool": 5,
+        "build-example": 1
       },
       "entries": [
+        "add-a-minimal-reproduction-prompt",
+        "agenta",
+        "braintrust",
         "choose-eval-framework",
+        "choose-observability-tool",
+        "classify-failures-before-fixing-prompts",
         "cost-tracking",
         "deepeval",
         "evaluation-pipelines",
+        "hamel-husain",
         "helicone",
+        "inspect-retrieved-chunks-beside-the-answer",
         "langfuse",
+        "langfuse-prompts",
         "langsmith",
+        "langsmith-platform",
+        "log-raw-and-parsed-model-outputs",
         "log-retrieved-context",
+        "lunary",
         "openlit",
+        "openllmetry",
+        "opik",
         "overview",
         "phoenix",
         "portkey",
         "prefer-id-references-over-copying",
         "production-rag",
+        "production-rag-api",
+        "promptlayer",
         "ragas",
+        "ragas-rag-evaluation",
+        "replay-the-same-trace-with-one-variable-changed",
+        "separate-model-errors-from-app-errors",
+        "store-prompt-version-in-every-trace",
+        "trace-tool-inputs-and-outputs",
         "tracing-and-monitoring",
         "track-cost-per-feature",
+        "use-golden-questions-for-every-bug-fix",
         "wandb-weave"
       ]
     },
@@ -639,188 +1147,326 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 9,
+      "count": 19,
       "types": {
-        "project": 6,
-        "guide": 3
+        "tool": 3,
+        "project": 14,
+        "guide": 2
       },
       "entries": [
+        "airflow",
         "autogen",
         "choose-agent-framework",
         "crewai",
+        "dagster",
+        "dify",
+        "google-adk",
+        "haystack",
+        "haystack-agents",
         "langchain",
+        "langchain-rag",
         "langgraph",
         "mastra",
+        "metagpt",
+        "microsoft-agent-framework",
         "multi-agent-system",
-        "orchestration",
-        "semantic-kernel"
+        "prefect",
+        "semantic-kernel",
+        "txtai"
       ]
     },
     {
       "id": "planning",
       "label": "Planning",
-      "count": 7,
+      "count": 12,
       "types": {
-        "project": 3,
-        "guide": 2,
+        "guide": 3,
+        "project": 6,
         "build-example": 1,
-        "tip": 1
+        "tip": 1,
+        "paper": 1
       },
       "entries": [
+        "agent-builder",
         "autogen",
+        "autogpt",
         "choose-agent-framework",
         "crewai",
+        "metagpt",
         "multi-agent-research-system",
         "multi-agent-system",
+        "openhands",
         "semantic-kernel",
-        "summarize-long-running-agent-state"
+        "summarize-long-running-agent-state",
+        "tree-of-thoughts"
       ]
     },
     {
       "id": "pytorch",
       "label": "Pytorch",
-      "count": 2,
+      "count": 7,
       "types": {
-        "guide": 2
+        "tool": 4,
+        "person": 2,
+        "guide": 1
       },
       "entries": [
-        "fine-tuning",
-        "research-platform"
+        "axolotl",
+        "jeremy-howard",
+        "llamafactory",
+        "research-platform",
+        "sebastian-raschka",
+        "torchtune",
+        "unsloth"
       ]
     },
     {
       "id": "quantization",
       "label": "Quantization",
-      "count": 2,
+      "count": 4,
       "types": {
-        "project": 1,
-        "paper": 1
+        "paper": 2,
+        "project": 2
       },
       "entries": [
+        "gptq",
         "llama-cpp",
+        "lmdeploy",
         "qlora"
       ]
     },
     {
       "id": "rag",
       "label": "Rag",
-      "count": 31,
+      "count": 71,
       "types": {
-        "build-example": 3,
-        "tip": 4,
+        "tip": 17,
         "guide": 10,
-        "project": 10,
-        "tool": 2,
-        "paper": 2
+        "build-example": 5,
+        "project": 25,
+        "tool": 6,
+        "person": 3,
+        "paper": 5
       },
       "entries": [
+        "add-hybrid-search-for-exact-terms",
+        "add-reranking-after-recall-is-acceptable",
+        "ai-engineer",
         "basic-rag-chatbot",
         "cache-stable-embedding-calls",
+        "choose-chunk-size-by-answer-span-length",
         "choose-eval-framework",
         "choose-vector-db",
         "chroma",
+        "command-r-plus",
+        "crawl4ai",
+        "crawl4ai-tool",
+        "detect-multi-hop-questions-explicitly",
+        "dify",
+        "discord-communities",
+        "docling",
+        "document-qa-pipeline",
         "dspy",
-        "evaluation",
+        "embeddings",
+        "eugene-yan",
+        "evaluate-embedding-models-before-rechunking",
         "evaluation-pipelines",
+        "firecrawl",
+        "firecrawl-tool",
+        "graphrag",
+        "harrison-chase",
         "haystack",
+        "haystack-agents",
+        "hyde",
+        "jerry-liu",
+        "jina-reader",
+        "keep-source-page-and-section-metadata",
+        "lancedb",
         "langchain",
+        "langchain-rag",
         "lean-mvp",
         "llamaindex",
+        "llamaparse",
         "log-retrieved-context",
+        "lunary",
+        "measure-retrieval-recall-before-answer-quality",
+        "mem0",
         "milvus",
         "multi-agent-research-system",
         "people-to-follow",
         "pgvector",
         "pinecone",
+        "pinecone-vector-db",
         "prefer-reranking-before-rechunking",
         "production-rag",
+        "production-rag-api",
         "qdrant",
         "rag-chunk-overlap-tuning",
         "rag-vs-fine-tuning",
         "ragas",
         "ragas-paper",
+        "ragas-rag-evaluation",
+        "ragflow",
+        "raptor",
         "retrieval-augmented-generation",
         "self-correcting-rag",
+        "start-with-zero-chunk-overlap",
+        "store-parser-version-with-every-chunk",
         "trulens",
-        "vector-search",
-        "weaviate",
-        "youtube-channels"
+        "txtai",
+        "unstructured",
+        "use-metadata-filters-before-similarity-search",
+        "use-parent-child-chunking-for-long-documents",
+        "use-query-rewriting-for-vague-questions",
+        "use-sentence-windows-for-dense-manuals",
+        "weaviate"
       ]
     },
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 6,
+      "count": 22,
       "types": {
-        "paper": 4,
-        "project": 2
+        "paper": 8,
+        "project": 6,
+        "guide": 3,
+        "person": 4,
+        "build-example": 1
       },
       "entries": [
         "chain-of-thought-prompting",
+        "deepseek-r1",
+        "deepseek-v3-r1",
         "dspy",
+        "emerging-techniques",
+        "francois-chollet",
         "language-models-are-few-shot-learners",
+        "llm-researcher",
+        "melanie-mitchell",
+        "nathan-lambert",
+        "phi-4",
         "phi-cookbook",
+        "prompt-patterns-catalog",
+        "qwen-2-5",
+        "qwen2-5-math",
+        "raptor",
         "react",
-        "self-refine"
+        "sebastian-bubeck",
+        "self-refine",
+        "simple-react-agent",
+        "smolagents",
+        "tree-of-thoughts"
       ]
     },
     {
       "id": "research",
       "label": "Research",
-      "count": 1,
+      "count": 11,
       "types": {
-        "guide": 1
+        "guide": 6,
+        "person": 5
       },
       "entries": [
-        "newsletters"
+        "emerging-techniques",
+        "lilian-weng",
+        "llm-researcher",
+        "melanie-mitchell",
+        "must-read-papers",
+        "newsletters",
+        "noam-shazeer",
+        "podcasts",
+        "sebastian-bubeck",
+        "weekly-arxiv-picks",
+        "yann-lecun"
       ]
     },
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 21,
+      "count": 57,
       "types": {
-        "build-example": 2,
+        "tip": 22,
+        "build-example": 4,
         "guide": 5,
-        "project": 8,
-        "tip": 3,
-        "tool": 1,
-        "paper": 2
+        "project": 17,
+        "paper": 5,
+        "person": 1,
+        "tool": 3
       },
       "entries": [
+        "add-hybrid-search-for-exact-terms",
+        "add-reranking-after-recall-is-acceptable",
         "basic-rag-chatbot",
+        "choose-chunk-size-by-answer-span-length",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
+        "detect-context-truncation-in-tests",
+        "detect-multi-hop-questions-explicitly",
+        "docling",
+        "document-qa-pipeline",
+        "embeddings",
+        "evaluate-embedding-models-before-rechunking",
+        "graphrag",
         "haystack",
+        "haystack-agents",
+        "hyde",
+        "jerry-liu",
+        "keep-instructions-outside-retrieved-context",
+        "keep-source-page-and-section-metadata",
+        "lancedb",
+        "langchain-rag",
         "llamaindex",
         "log-retrieved-context",
+        "measure-retrieval-recall-before-answer-quality",
         "milvus",
         "pgvector",
         "pinecone",
+        "pinecone-vector-db",
         "prefer-reranking-before-rechunking",
         "production-rag",
+        "production-rag-api",
         "qdrant",
         "rag-chunk-overlap-tuning",
         "rag-vs-fine-tuning",
         "ragas",
         "ragas-paper",
+        "ragas-rag-evaluation",
+        "ragflow",
+        "rank-context-by-expected-usefulness",
+        "raptor",
+        "redis-memory",
+        "reserve-output-tokens-before-adding-context",
         "retrieval-augmented-generation",
         "self-correcting-rag",
-        "vector-search",
-        "weaviate"
+        "start-with-zero-chunk-overlap",
+        "store-parser-version-with-every-chunk",
+        "summarize-repeated-conversation-blocks",
+        "txtai",
+        "unstructured",
+        "use-context-budgets-per-section",
+        "use-metadata-filters-before-similarity-search",
+        "use-parent-child-chunking-for-long-documents",
+        "use-query-rewriting-for-vague-questions",
+        "use-sentence-windows-for-dense-manuals",
+        "weaviate",
+        "zep"
       ]
     },
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 2,
+      "count": 5,
       "types": {
-        "paper": 2
+        "paper": 4,
+        "person": 1
       },
       "entries": [
         "constitutional-ai",
-        "direct-preference-optimization"
+        "deepseek-r1",
+        "direct-preference-optimization",
+        "instructgpt",
+        "nathan-lambert"
       ]
     },
     {
@@ -837,41 +1483,65 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 4,
+      "count": 22,
       "types": {
-        "tip": 2,
-        "guide": 1,
-        "tool": 1
+        "tip": 12,
+        "person": 3,
+        "tool": 6,
+        "guide": 1
       },
       "entries": [
         "add-human-review-for-high-impact-actions",
+        "add-provider-timeout-and-retry-policies",
+        "allowlist-tools-per-agent-role",
+        "arvind-narayanan",
+        "aws-bedrock",
+        "dario-amodei",
+        "do-not-launch-without-trace-sampling",
         "enterprise-scale",
+        "giskard",
         "guardrails-ai",
-        "test-prompts-with-adversarial-inputs"
+        "keep-a-kill-switch-for-agent-actions",
+        "llamaguard",
+        "nemo-guardrails",
+        "pin-dependencies-for-inference-images",
+        "rebuff",
+        "redact-secrets-before-tracing",
+        "review-data-retention-for-prompts",
+        "run-prompt-injection-regression-tests",
+        "separate-user-content-from-system-instructions",
+        "simon-willison",
+        "test-prompts-with-adversarial-inputs",
+        "treat-retrieved-text-as-untrusted"
       ]
     },
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 13,
+      "count": 18,
       "types": {
-        "guide": 4,
-        "project": 7,
-        "tool": 1,
-        "tip": 1
+        "tip": 6,
+        "guide": 3,
+        "project": 8,
+        "tool": 1
       },
       "entries": [
+        "benchmark-on-the-user-hardware",
         "choose-deployment-target",
-        "choose-llm",
         "choose-vector-db",
         "helicone",
+        "keep-model-files-out-of-git",
         "label-studio",
         "langfuse",
         "local-first",
+        "match-context-length-to-ram",
         "ollama",
         "openlit",
+        "openllmetry",
         "pgvector",
+        "prefer-gguf-for-llama-cpp-workflows",
         "qdrant",
+        "start-with-a-smaller-quantized-model",
         "use-local-models-for-sensitive-prototyping",
         "weaviate"
       ]
@@ -879,143 +1549,228 @@
     {
       "id": "serverless",
       "label": "Serverless",
-      "count": 5,
+      "count": 6,
       "types": {
-        "guide": 3,
-        "tool": 2
+        "guide": 1,
+        "tool": 5
       },
       "entries": [
         "choose-deployment-target",
-        "deployment",
+        "fastapi",
+        "fly-io",
         "modal",
-        "production-serving",
+        "railway",
         "replicate"
       ]
     },
     {
       "id": "stateful",
       "label": "Stateful",
-      "count": 1,
+      "count": 2,
       "types": {
-        "project": 1
+        "project": 1,
+        "tool": 1
       },
       "entries": [
-        "langgraph"
+        "langgraph",
+        "letta"
       ]
     },
     {
       "id": "streaming",
       "label": "Streaming",
-      "count": 2,
+      "count": 6,
       "types": {
-        "tip": 1,
+        "tip": 5,
         "project": 1
       },
       "entries": [
         "measure-first-token-latency",
-        "text-generation-inference"
+        "measure-queue-time-separately",
+        "parallelize-independent-retrieval-calls",
+        "precompute-expensive-static-context",
+        "text-generation-inference",
+        "use-smaller-models-for-classification-steps"
       ]
     },
     {
       "id": "structured-output",
       "label": "Structured Output",
-      "count": 6,
+      "count": 24,
       "types": {
-        "tool": 3,
-        "project": 1,
-        "tip": 2
+        "tip": 14,
+        "guide": 2,
+        "tool": 5,
+        "person": 1,
+        "build-example": 1,
+        "project": 1
       },
       "entries": [
+        "add-output-examples-for-edge-cases",
+        "ask-for-missing-inputs-before-solving",
+        "fundamentals",
         "guardrails-ai",
+        "guidance",
         "instructor",
+        "jason-liu",
+        "multi-tool-agent",
+        "name-the-audience-in-the-prompt",
+        "order-few-shot-examples-by-similarity",
         "outlines",
+        "prompt-patterns-catalog",
+        "put-task-inputs-after-instructions",
         "pydantic-ai",
+        "pydantic-ai-tool",
+        "separate-policy-from-task-instructions",
         "separate-system-and-task-prompts",
-        "use-json-schema-for-outputs"
+        "set-temperature-by-decision-risk",
+        "state-negative-constraints-as-testable-rules",
+        "use-delimiters-around-retrieved-context",
+        "use-json-only-for-machine-parsed-outputs",
+        "use-json-schema-for-outputs",
+        "use-xml-tags-for-long-prompt-sections",
+        "version-system-prompts-like-code"
       ]
     },
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 13,
+      "count": 37,
       "types": {
-        "project": 5,
-        "tip": 2,
+        "tip": 17,
         "guide": 2,
-        "build-example": 1,
+        "project": 12,
+        "build-example": 2,
+        "tool": 1,
         "paper": 3
       },
       "entries": [
+        "add-a-max-step-budget-to-every-agent",
+        "agent-builder",
+        "allowlist-tools-per-agent-role",
         "autogen",
+        "autogpt",
         "budget-context-before-adding-tools",
         "cap-agent-tool-retries",
+        "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
+        "command-r-plus",
         "crewai",
+        "define-fallbacks-for-tool-failures",
+        "detect-repeated-tool-calls",
+        "google-adk",
         "langgraph",
+        "log-agent-state-transitions",
+        "make-success-criteria-machine-checkable",
+        "microsoft-agent-framework",
         "multi-tool-agent",
-        "orchestration",
+        "openai-agents-sdk",
+        "openhands",
         "pydantic-ai",
+        "pydantic-ai-tool",
         "react",
+        "redact-secrets-before-tracing",
+        "require-human-approval-for-irreversible-actions",
+        "run-prompt-injection-regression-tests",
+        "sandbox-code-execution-tools",
         "semantic-kernel",
+        "separate-planner-and-executor-permissions",
+        "separate-user-content-from-system-instructions",
+        "simple-react-agent",
+        "smolagents",
         "swe-agent",
-        "toolformer"
+        "toolformer",
+        "treat-retrieved-text-as-untrusted",
+        "validate-tool-arguments-before-execution"
       ]
     },
     {
       "id": "tracing",
       "label": "Tracing",
-      "count": 10,
+      "count": 26,
       "types": {
+        "tip": 9,
+        "project": 10,
         "tool": 4,
-        "project": 3,
-        "build-example": 1,
-        "guide": 2
+        "guide": 3
       },
       "entries": [
+        "add-a-minimal-reproduction-prompt",
+        "agenta",
+        "braintrust",
         "chainlit",
+        "choose-observability-tool",
+        "classify-failures-before-fixing-prompts",
+        "inspect-retrieved-chunks-beside-the-answer",
         "langfuse",
         "langsmith",
-        "multi-tool-agent",
+        "langsmith-platform",
+        "log-raw-and-parsed-model-outputs",
+        "lunary",
+        "openai-agents-sdk",
         "openlit",
+        "openllmetry",
+        "opik",
         "overview",
         "phoenix",
+        "replay-the-same-trace-with-one-variable-changed",
+        "separate-model-errors-from-app-errors",
+        "store-prompt-version-in-every-trace",
+        "trace-tool-inputs-and-outputs",
         "tracing-and-monitoring",
         "trulens",
+        "use-golden-questions-for-every-bug-fix",
         "wandb-weave"
       ]
     },
     {
       "id": "training",
       "label": "Training",
-      "count": 1,
+      "count": 7,
       "types": {
-        "paper": 1
+        "person": 3,
+        "paper": 3,
+        "guide": 1
       },
       "entries": [
-        "bert"
+        "andrew-ng",
+        "bert",
+        "jeremy-howard",
+        "llama-3-herd-of-models",
+        "qwen2-5-math",
+        "sebastian-raschka",
+        "youtube-channels"
       ]
     },
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 1,
+      "count": 6,
       "types": {
-        "paper": 1
+        "person": 4,
+        "paper": 1,
+        "guide": 1
       },
       "entries": [
-        "attention-is-all-you-need"
+        "andrej-karpathy",
+        "attention-is-all-you-need",
+        "jay-alammar",
+        "noam-shazeer",
+        "thomas-wolf",
+        "transformers"
       ]
     },
     {
       "id": "trending",
       "label": "Trending",
-      "count": 2,
+      "count": 3,
       "types": {
-        "guide": 2
+        "guide": 3
       },
       "entries": [
         "newsletters",
-        "this-week"
+        "this-week",
+        "weekly-arxiv-picks"
       ]
     }
   ]

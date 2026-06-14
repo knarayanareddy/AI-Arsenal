@@ -3,71 +3,117 @@ id: "newsletters"
 title: "AI Newsletters"
 entry_type: "guide"
 section: "community"
-description: "Curated guide to newsletters for AI engineering and research updates"
+description: "Curated newsletters for AI engineering, open models, research, and product signals"
 tags:
   - llm
-  - trending
   - research
+  - trending
 related_entries: []
-added_date: "2026-06-13"
-last_reviewed: "2026-06-13"
+added_date: "2026-06-14"
+last_reviewed: "2026-06-14"
 added_by: "maintainer"
 status: "active"
 ---
 
 ## Overview
 
-AI Newsletters is a curated guide entry included to make the Arsenal more useful for practical AI engineering decisions.
+Curated newsletters for AI engineering, open models, research, and product signals
 
 ## Why It's in the Arsenal
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+Community resources help builders keep up with ecosystem changes, tutorials, product launches, and field-tested practices.
 
 ## Key Features
 
-- Tracks high-signal recurring sources
-- Useful for monthly digest preparation
-- Avoids broad low-signal aggregation
-- Structured metadata for filtering and search
-- Canonical location for future updates
+- Curated for practical AI engineering relevance
+- Includes why each source is worth following
+- Avoids follower-count claims that quickly go stale
 
 ## Architecture / How It Works
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+Use this guide as a routing page. Follow only the sources that match your current learning or building goal.
 
 ## Getting Started
 
 ```bash
-# Read the entry and follow the linked resources.
+# Pick one source and turn one useful post/video into an Arsenal tip or entry update.
 ```
+
+## Directory
+
+### The Batch
+
+> **Focus:** AI education and news
+
+**Why follow:** Accessible weekly AI updates from DeepLearning.AI
+
+**Link:** [The Batch](https://www.deeplearning.ai/the-batch/)
+
+### Import AI
+
+> **Focus:** AI research and policy
+
+**Why follow:** Long-running AI research/policy newsletter
+
+**Link:** [Import AI](https://jack-clark.net/)
+
+### Interconnects
+
+> **Focus:** Open models and post-training
+
+**Why follow:** High-signal analysis of RLHF, open models, and reasoning systems
+
+**Link:** [Interconnects](https://www.interconnects.ai)
+
+### Simon Willison Weblog
+
+> **Focus:** Practical LLM engineering
+
+**Why follow:** Hands-on notes about LLM tools, security, and software development
+
+**Link:** [Simon Willison Weblog](https://simonwillison.net/)
+
+### Latent Space
+
+> **Focus:** AI engineer ecosystem
+
+**Why follow:** Builder-focused AI engineering newsletter and podcast
+
+**Link:** [Latent Space](https://www.latent.space/)
+
 
 ## Use Cases
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+1. **Scenario**: Building a learning feed
+2. **Scenario**: Finding high-signal tutorials or community discussion
 
 ## Strengths
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
+- Scannable source list
+- Practical focus
 
 ## Limitations / When NOT to Use
 
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
+- Not exhaustive
+- Source activity and quality can change
 
 ## Integration Patterns
 
-Use this entry as a canonical reference from guides, stacks, and generated data views.
+- Promote durable insights into tips, papers, or architecture docs.
+- Avoid adding time-sensitive claims without review dates.
 
 ## Resources
 
-- [Primary Resource](https://example.com)
+- [The Batch](https://www.deeplearning.ai/the-batch/)
+- [Import AI](https://jack-clark.net/)
+- [Interconnects](https://www.interconnects.ai)
+- [Simon Willison Weblog](https://simonwillison.net/)
+- [Latent Space](https://www.latent.space/)
 
 ## Buzz & Reception
 
-Reception notes should be updated with verified sources during maintenance reviews.
+Community sources should be refreshed after major ecosystem shifts.
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

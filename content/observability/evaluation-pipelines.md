@@ -3,7 +3,7 @@ id: "evaluation-pipelines"
 title: "Evaluation Pipelines"
 entry_type: "guide"
 section: "observability"
-description: "Guide to building repeatable evaluation pipelines for AI applications"
+description: "Guide to repeatable LLM, RAG, and agent evaluation workflows"
 tags:
   - evaluation
   - observability
@@ -17,55 +17,90 @@ status: "active"
 
 ## Overview
 
-Evaluation pipelines turn product expectations into tests that run before and after deployment.
+Evaluation pipelines turn AI quality expectations into repeatable checks that can run before and after deployment.
+
+For RAG and agents, evaluations should inspect more than final answers. They should also inspect retrieved context, tool calls, faithfulness, latency, and cost.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+LLM apps regress in non-obvious ways. Evaluation pipelines create a feedback loop between production failures, datasets, scorers, traces, and release decisions.
 
 ## Key Features
 
-- Maintain golden datasets
-- Run regression evals in CI
-- Compare outputs by task-specific rubrics
+### What to evaluate
+
+| Layer | What to Check | Example Tooling |
+|---|---|---|
+| Retrieval | relevance, recall, context precision | RAGAS, Phoenix |
+| Generation | correctness, faithfulness, style | DeepEval, Braintrust, Opik |
+| Agents | tool correctness, loop avoidance, final outcome | LangSmith, Langfuse, Phoenix |
+| Cost/latency | token budget, time to first token | Helicone, Langfuse, Braintrust |
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+A practical evaluation pipeline:
+
+1. Capture production traces.
+2. Promote failures or edge cases into a versioned dataset.
+3. Run deterministic checks where possible.
+4. Add model-graded scores only where human labels are too expensive.
+5. Gate prompt/model/retriever changes in CI.
+6. Review score drift with trace examples, not just averages.
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# Pseudocode CI flow
+# 1. load eval dataset
+# 2. run app version against dataset
+# 3. score outputs
+# 4. fail build if critical score drops
 ```
+
+Recommended starting points:
+
+- RAG quality: RAGAS or Phoenix evals
+- General LLM app tests: DeepEval or Braintrust
+- LangGraph/LangChain workflows: LangSmith plus custom eval datasets
+- Prompt regression: Opik, Agenta, Braintrust, or Langfuse
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Selecting an observability stack before launching an LLM application
+2. **Scenario**: Debugging quality, cost, and latency problems in production
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Gives engineers a shared vocabulary for observability tradeoffs
+- Links directly to canonical tool/project entries
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on evaluation with your own traces
+- Pricing, limits, and hosted/self-hosted features must be verified before purchase
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Instrument model calls, retrievers, tool calls, and agent state transitions.
+- Attach user, session, environment, feature, model, and prompt-version metadata.
+- Convert production failures into evaluation examples.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Langfuse](../projects/observability/tracing/langfuse.md) — sdk/self-host
+- [LangSmith](../projects/observability/tracing/langsmith-platform.md) — platform/managed
+- [Phoenix](../projects/observability/tracing/phoenix.md) — otel-native
+- [Helicone](../projects/observability/tracing/helicone.md) — proxy
+- [Opik](../projects/observability/tracing/opik.md) — platform
+- [OpenLIT](../projects/observability/tracing/openlit.md) — otel-native
+- [OpenLLMetry](../projects/observability/tracing/openllmetry.md) — otel-native
+- [Lunary](../projects/observability/tracing/lunary.md) — sdk
+- [Braintrust](../projects/observability/tracing/braintrust.md) — platform/eval-first
+- [Agenta](../projects/observability/tracing/agenta.md) — platform
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Observability is now a core production requirement for LLM apps because model behavior, retrieval quality, latency, and cost can all regress independently.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

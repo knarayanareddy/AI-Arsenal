@@ -5,8 +5,8 @@ type: platform
 category: rag
 subcategory: vector-databases
 description: >-
-  A vector database for similarity search with filtering and production
-  operations
+  Rust vector database for high-performance similarity search with filtering and
+  hybrid search
 github_url: 'https://github.com/qdrant/qdrant'
 license: Apache-2.0
 primary_language: Rust
@@ -17,13 +17,20 @@ tags:
   - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 32149
-trending_score: 70
+github_stars: 32155
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://qdrant.tech/documentation/'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -33,60 +40,88 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 32149
 ---
+
+> **TL;DR:** Qdrant is a Rust vector database with strong filtering, performance, and self-hosting support. Use it when vector search is a production workload and you want operational control.
 
 ## Overview
 
-Qdrant is included as a notable rag project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+Qdrant is a purpose-built vector database available as open source and managed cloud. It is a common RAG choice when metadata filtering and production operations matter.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+Qdrant is one of the most frequently compared vector databases for production RAG because it balances performance, features, and self-hostability.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Vector and payload filtering
+- Hybrid search support
+- Self-hosted and cloud options
+- Rust implementation
+- Collections and payload indexes
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+Qdrant stores vectors with payload metadata and exposes search/filter APIs through HTTP/gRPC clients.
+
+## Vector Database Comparison
+
+| Feature | This DB |
+|---|---|
+| Self-hostable | Yes |
+| Cloud managed | Yes |
+| Hybrid search | Yes |
+| Disk-based index | Yes |
+| Multi-tenancy | Yes, via collections/payload design |
+| Free tier | Yes, OSS and cloud free tier options |
+| Open source | Yes, Apache-2.0 |
+| Best for | Production RAG with filtering and self-hosting |
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/qdrant/qdrant
+pip install qdrant-client
+```
+
+```python
+from qdrant_client import QdrantClient
+
+client = QdrantClient(":memory:")
+print(client.get_collections())
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the rag ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Production RAG with metadata filters
+2. **Scenario**: Self-hosted vector search
+3. **Scenario**: Teams wanting Rust-based vector infrastructure
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Strong filtering story
+- Good self-host/cloud balance
+- Production-oriented APIs
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Requires operating a database if self-hosted
+- Not as minimal as embedded stores
+- Schema/index choices still require testing
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Pair with LlamaIndex, LangChain, Haystack, or custom retrieval code.
+- Store document IDs and metadata alongside vectors so answers can cite sources.
+- Benchmark recall, latency, filtering, and ingestion under production-shaped data.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/qdrant/qdrant)
+- [GitHub](https://github.com/qdrant/qdrant)
+- [Docs](https://qdrant.tech/documentation/)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because vector database choice is one of the most common RAG architecture decisions.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

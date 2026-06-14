@@ -4,6 +4,7 @@ title: "QLoRA: Efficient Finetuning of Quantized LLMs"
 authors:
   - "Dettmers, T."
   - "Pagnoni, A."
+  - "Holtzman, A."
 published_date: "2023-05-23"
 venue: "NeurIPS 2023"
 arxiv_id: "2305.14314"
@@ -16,66 +17,48 @@ tags:
 category: "training"
 importance: "foundational"
 citation_count: 0
-has_code: false
-code_url: null
+has_code: true
+code_url: "https://github.com/artidoro/qlora"
 benchmark_improvements: []
-tldr: "Enables efficient fine-tuning of quantized language models"
-why_it_matters: "This paper is included because it shaped practical AI engineering decisions, model behavior, evaluation, or architecture patterns."
-added_date: "2026-06-13"
+tldr: "Enabled fine-tuning quantized LLMs with low memory using 4-bit quantization plus LoRA"
+why_it_matters: "The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed."
+added_date: "2026-06-14"
 added_by: "maintainer"
 ---
 
-## Overview
+> **TL;DR:** Enabled fine-tuning quantized LLMs with low memory using 4-bit quantization plus LoRA.
+> **Why it matters:** The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed.
 
-QLoRA: Efficient Finetuning of Quantized LLMs is a curated paper entry included to make the Arsenal more useful for practical AI engineering decisions.
+## The Problem It Solved
 
-## Why It's in the Arsenal
+Made high-quality fine-tuning accessible on smaller GPU setups.
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+## Key Contribution
 
-## Key Features
+Enabled fine-tuning quantized LLMs with low memory using 4-bit quantization plus LoRA.
 
-- Clear scope and practical applicability
-- Structured metadata for filtering and search
-- Canonical location for future updates
+## Results / Key Numbers
 
-## Architecture / How It Works
+Reported Guanaco models reaching strong chatbot benchmark performance with efficient training.
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+Do not reuse these numbers as current SOTA claims without checking newer leaderboards; they describe the paper's reported results and context.
 
-## Getting Started
+## How to Apply This Today
 
-```bash
-# Read the entry and follow the linked resources.
-```
+Use QLoRA when adapting open models under tight GPU memory constraints.
 
-## Use Cases
+## Code / Implementation
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+- [Implementation / code](https://github.com/artidoro/qlora)
+- [arXiv abstract](https://arxiv.org/abs/2305.14314)
+- [PDF](https://arxiv.org/pdf/2305.14314)
 
-## Strengths
+## Further Reading
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
-
-## Limitations / When NOT to Use
-
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
-
-## Integration Patterns
-
-Use this entry as a canonical reference from guides, stacks, and generated data views.
-
-## Resources
-
-- [Primary Resource](https://arxiv.org/abs/2305.14314)
-
-## Buzz & Reception
-
-Reception notes should be updated with verified sources during maintenance reviews.
+- [Must-read papers guide](../must-read-papers.md)
+- [SOTA benchmarks](../sota-benchmarks.md)
+- [Emerging techniques](../emerging-techniques.md)
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

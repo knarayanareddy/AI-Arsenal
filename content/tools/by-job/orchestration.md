@@ -3,11 +3,10 @@ id: "orchestration"
 title: "Orchestration Tools"
 entry_type: "guide"
 section: "tools"
-description: "Curated shortlist for coordinating chains, tools, agents, and workflows"
+description: "Curated tools for orchestration workflows in AI engineering"
 tags:
-  - orchestration
-  - agents
-  - tool-use
+  - llm
+  - data
 related_entries: []
 added_date: "2026-06-13"
 last_reviewed: "2026-06-13"
@@ -17,55 +16,123 @@ status: "active"
 
 ## Overview
 
-Orchestration should make state, retries, and boundaries explicit.
+This guide compares tools for the `orchestration` job. Use it as a routing page, then open the linked canonical project or tool entry for full details.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+Tool-by-job pages help builders quickly shortlist options by task instead of browsing the entire repository.
 
 ## Key Features
 
-- Use graph orchestration for branching agents
-- Use workflow engines for long-running business processes
-- Use plain functions when control flow is simple
+- Job-focused shortlist
+- Links to canonical entries instead of duplicating long-form content
+- Scannable TL;DR cards for each tool
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# Pick one tool from the shortlist and validate it with a small proof of concept.
 ```
+
+## Tool Shortlist
+
+### Prefect — 🏠
+
+> **TL;DR:** Prefect is a candidate for `orchestration` workflows. Full details: [Prefect](./prefect.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Prefect](./prefect.md)
+**Alternatives:** Dagster, Airflow
+
+### Dagster — 🏠
+
+> **TL;DR:** Dagster is a candidate for `orchestration` workflows. Full details: [Dagster](./dagster.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Dagster](./dagster.md)
+**Alternatives:** Prefect, Airflow
+
+### Airflow — 🏠
+
+> **TL;DR:** Airflow is a candidate for `orchestration` workflows. Full details: [Airflow](./airflow.md).
+
+| Field | Value |
+|---|---|
+| **Cost** | Check linked entry |
+| **Open Source** | Check linked entry |
+| **Self-hostable** | Check linked entry |
+| **Stack** | Check linked entry |
+
+**Strengths:**
+- Good fit when its operational model matches your stack
+- Worth comparing against adjacent tools before adoption
+
+**Limitations:**
+- Pricing, hosting, and integration details change; verify before production
+
+**Get started:** See [Airflow](./airflow.md)
+**Alternatives:** Prefect, Dagster
+
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Selecting tools for `orchestration` in a new AI application
+2. **Scenario**: Comparing open-source and managed options before a production decision
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Fast shortlist for humans and LLM agents
+- Avoids duplicate long-form tool descriptions
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on evaluation
+- Tool pricing and support policies must be verified before adoption
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Link to canonical project/tool IDs in architecture docs
+- Pair production tools with observability and evaluation
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Prefect](./prefect.md)
+- [Dagster](./dagster.md)
+- [Airflow](./airflow.md)
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

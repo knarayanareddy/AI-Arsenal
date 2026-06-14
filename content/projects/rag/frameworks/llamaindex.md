@@ -4,7 +4,9 @@ name: LlamaIndex
 type: framework
 category: rag
 subcategory: frameworks
-description: A data framework for building retrieval-augmented generation applications
+description: >-
+  Data framework for building document agents, retrieval pipelines, and
+  production RAG systems
 github_url: 'https://github.com/run-llama/llama_index'
 license: MIT
 primary_language: Python
@@ -16,12 +18,19 @@ tags:
 maturity: production
 cost_model: open-source
 github_stars: 50109
-trending_score: 70
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-12'
-docs_url: null
+docs_url: 'https://developers.llamaindex.ai/'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -31,60 +40,76 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 50109
 ---
+
+> **TL;DR:** LlamaIndex is a data framework for connecting private data to LLM applications. Use it when ingestion, indexing, retrieval, and document-agent workflows are central.
 
 ## Overview
 
-LlamaIndex is included as a notable rag project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+LlamaIndex focuses on the data side of LLM applications: loaders, parsing, indexes, retrievers, query engines, and agent/document workflows.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+RAG quality often depends more on data pipelines and retrieval design than on the final prompt; LlamaIndex gives builders structured primitives for that layer.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Document loaders and ingestion pipelines
+- Index, retriever, and query-engine abstractions
+- Document-agent and workflow patterns
+- Integrations with vector databases and model providers
+- Strong examples for RAG application builders
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+LlamaIndex models RAG as data ingestion, node parsing, indexing, retrieval, synthesis, and optional agent/workflow layers.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/run-llama/llama_index
+pip install llama-index
+```
+
+```python
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
+
+docs = SimpleDirectoryReader("data").load_data()
+index = VectorStoreIndex.from_documents(docs)
+print(index.as_query_engine().query("Summarize the docs"))
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the rag ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Document Q&A over private data
+2. **Scenario**: RAG prototypes that need many loaders
+3. **Scenario**: Production retrieval workflows with indexing choices
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Excellent RAG-specific abstractions
+- Large integration ecosystem
+- Good fit for document-heavy applications
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Abstraction layers can hide retrieval details
+- Production tuning still requires evals and observability
+- May be more framework than needed for tiny demos
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Use with Qdrant, Chroma, pgvector, Pinecone, or Weaviate as vector stores
+- Use LlamaParse or document processors before indexing complex PDFs
+- Pair with RAGAS/DeepEval/Phoenix for retrieval evaluation
 
 ## Resources
 
-- [GitHub Repository](https://github.com/run-llama/llama_index)
+- [GitHub](https://github.com/run-llama/llama_index)
+- [Docs](https://developers.llamaindex.ai/)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because this project is frequently evaluated in production RAG architecture decisions.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

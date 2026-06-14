@@ -3,12 +3,12 @@ id: "overview"
 title: "AI Observability Overview"
 entry_type: "guide"
 section: "observability"
-description: "Overview of why observability matters for LLM and agent systems"
+description: "Overview of LLM observability pillars and tool selection"
 tags:
   - observability
   - tracing
-  - monitoring
   - evaluation
+  - monitoring
 related_entries: []
 added_date: "2026-06-13"
 last_reviewed: "2026-06-13"
@@ -18,67 +18,90 @@ status: "active"
 
 ## Overview
 
-AI observability captures prompts, outputs, tool calls, retrieval context, latency, cost, and evaluation outcomes.
+LLM observability is the practice of recording enough context to explain why an AI system produced an answer, how much it cost, how long it took, and whether it met quality expectations.
 
-
-### Observability Dimensions
-
-| Dimension | What to Capture | Why It Matters |
-|---|---|---|
-| Prompt/input | system prompt, user input, parameters | reproduce and debug behavior |
-| Retrieval | query, filters, chunks, scores | diagnose hallucinations and missing context |
-| Tool calls | arguments, results, errors, retries | understand agent reliability |
-| Model output | raw output, parsed output, validation errors | detect drift and schema failures |
-| Cost/latency | tokens, provider cost, time to first token | control unit economics and UX |
-| Feedback/evals | user ratings, golden-set results | close the quality loop |
+For production AI systems, logs alone are not enough. You need traces across model calls, retrieval, tools, prompts, evaluations, costs, and user feedback.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+Observability is the trust layer for AI applications. Without it, teams cannot debug hallucinations, retrieval failures, tool errors, prompt regressions, or cost spikes.
 
 ## Key Features
 
-- Trace every production request
-- Connect traces to evals and user feedback
-- Track cost and latency as first-class quality dimensions
+- **Tracing**: model calls, prompts, retrieved context, tool calls, spans
+- **Evaluation**: regression tests, scorers, datasets, human feedback
+- **Cost tracking**: tokens, provider spend, feature/user attribution
+- **Alerting**: latency, failures, quality drops, runaway usage
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+```mermaid
+flowchart TD
+    START([Need observability?]) --> SELF{Need self-hosted?}
+    SELF -->|Yes| OTel{OpenTelemetry-first?}
+    SELF -->|No| STACK{Already LangChain/LangGraph?}
+    OTel -->|Yes| PHOENIX[Phoenix / OpenLIT / OpenLLMetry]
+    OTel -->|No| LANGFUSE[Langfuse / Opik]
+    STACK -->|Yes| LANGSMITH[LangSmith]
+    STACK -->|No| PROXY{Want proxy setup?}
+    PROXY -->|Yes| HELICONE[Helicone]
+    PROXY -->|No| EVAL{Eval-first?}
+    EVAL -->|Yes| BRAINTRUST[Braintrust / Opik]
+    EVAL -->|No| LUNARY[Lunary / Agenta]
+```
+
+Plain-language decision flow:
+
+1. Need self-hosting and data ownership? Start with Langfuse, Phoenix, Opik, OpenLIT, or Lunary.
+2. Already deep in LangChain/LangGraph? Start with LangSmith.
+3. Want minimal code changes through a gateway? Evaluate Helicone.
+4. Need OpenTelemetry alignment? Evaluate Phoenix, OpenLIT, or OpenLLMetry.
+5. Need eval-first workflows? Evaluate Braintrust, Opik, Langfuse, or Phoenix.
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# Pick one tool, instrument one critical path, then inspect one trace end-to-end.
+pnpm run check:links
 ```
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Selecting an observability stack before launching an LLM application
+2. **Scenario**: Debugging quality, cost, and latency problems in production
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Gives engineers a shared vocabulary for observability tradeoffs
+- Links directly to canonical tool/project entries
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on evaluation with your own traces
+- Pricing, limits, and hosted/self-hosted features must be verified before purchase
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Instrument model calls, retrievers, tool calls, and agent state transitions.
+- Attach user, session, environment, feature, model, and prompt-version metadata.
+- Convert production failures into evaluation examples.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Langfuse](../projects/observability/tracing/langfuse.md) — sdk/self-host
+- [LangSmith](../projects/observability/tracing/langsmith-platform.md) — platform/managed
+- [Phoenix](../projects/observability/tracing/phoenix.md) — otel-native
+- [Helicone](../projects/observability/tracing/helicone.md) — proxy
+- [Opik](../projects/observability/tracing/opik.md) — platform
+- [OpenLIT](../projects/observability/tracing/openlit.md) — otel-native
+- [OpenLLMetry](../projects/observability/tracing/openllmetry.md) — otel-native
+- [Lunary](../projects/observability/tracing/lunary.md) — sdk
+- [Braintrust](../projects/observability/tracing/braintrust.md) — platform/eval-first
+- [Agenta](../projects/observability/tracing/agenta.md) — platform
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Observability is now a core production requirement for LLM apps because model behavior, retrieval quality, latency, and cost can all regress independently.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

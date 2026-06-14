@@ -50,8 +50,8 @@ function crossFieldChecks(file, type, data, errors, warnings) {
   }
 
   if (type === 'project') {
-    if (!String(data.github_url ?? '').startsWith('https://github.com/')) warnings.push(`${file}: project github_url should be a GitHub repository URL`);
-    if ((data.github_stars ?? 0) === 0 && data.status === 'active') warnings.push(`${file}: github_stars is 0; run update-star-counts.js before public launch`);
+    if (!String(data.github_url ?? '').startsWith('https://github.com/') && !(type === 'project' && (data.type === 'model' && data.hf_url || ['service', 'platform'].includes(data.type)))) warnings.push(`${file}: project github_url should be a GitHub repository URL`);
+    if ((data.github_stars ?? 0) === 0 && data.status === 'active' && !(data.type === 'model' && data.hf_url) && !(data.type === 'service' && !String(data.github_url ?? '').startsWith('https://github.com/'))) warnings.push(`${file}: github_stars is 0; run update-star-counts.js before public launch`);
     if (data.last_reviewed && data.added_date && data.last_reviewed < data.added_date) errors.push(`${file}: last_reviewed cannot be earlier than added_date`);
   }
 

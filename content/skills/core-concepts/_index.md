@@ -10,7 +10,8 @@
 
 ## Recently Added
 
-_No entries yet._
+- [Embeddings](./embeddings.md)
+- [Transformers](./transformers.md)
 
 ## Most Popular
 
@@ -18,4 +19,5 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-_No entries yet._
+- [Embeddings](./embeddings.md) — Practical guide to embeddings for retrieval, clustering, semantic search, and RAG
+- [Transformers](./transformers.md) — Conceptual guide to transformer architecture and why it matters for LLM systems

@@ -1,17 +1,55 @@
 {
   "meta": {
-    "generated_at": "2026-06-13T20:30:54.571Z",
-    "total_projects": 30,
-    "total_tools": 20,
-    "total_papers": 15,
-    "total_tips": 20,
-    "total_people": 0,
+    "generated_at": "2026-06-14T11:20:23.235Z",
+    "total_projects": 68,
+    "total_tools": 62,
+    "total_papers": 25,
+    "total_tips": 106,
+    "total_people": 25,
     "total_digests": 0,
-    "total_guides": 30,
-    "total_build_examples": 5,
+    "total_guides": 51,
+    "total_build_examples": 8,
     "schema_version": "1.0.0"
   },
   "entries": [
+    {
+      "id": "add-a-max-step-budget-to-every-agent",
+      "type": "tip",
+      "name": "Add A Max Step Budget To Every Agent",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/add-a-max-step-budget-to-every-agent.md",
+      "url": "content/tips-and-tricks/add-a-max-step-budget-to-every-agent",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "add-a-minimal-reproduction-prompt",
+      "type": "tip",
+      "name": "Add A Minimal Reproduction Prompt",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/add-a-minimal-reproduction-prompt.md",
+      "url": "content/tips-and-tricks/add-a-minimal-reproduction-prompt",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
     {
       "id": "add-evals-before-refactors",
       "type": "tip",
@@ -50,10 +88,277 @@
       "featured": false
     },
     {
+      "id": "add-hybrid-search-for-exact-terms",
+      "type": "tip",
+      "name": "Add Hybrid Search for Exact Terms",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/add-hybrid-search-for-exact-terms.md",
+      "url": "content/tips-and-tricks/add-hybrid-search-for-exact-terms",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "add-output-examples-for-edge-cases",
+      "type": "tip",
+      "name": "Add Output Examples for Edge Cases",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/add-output-examples-for-edge-cases.md",
+      "url": "content/tips-and-tricks/add-output-examples-for-edge-cases",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "add-provider-timeout-and-retry-policies",
+      "type": "tip",
+      "name": "Add Provider Timeout And Retry Policies",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "security",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/add-provider-timeout-and-retry-policies.md",
+      "url": "content/tips-and-tricks/add-provider-timeout-and-retry-policies",
+      "last_updated": "2026-06-14",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "add-reranking-after-recall-is-acceptable",
+      "type": "tip",
+      "name": "Add Reranking After Recall Is Acceptable",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/add-reranking-after-recall-is-acceptable.md",
+      "url": "content/tips-and-tricks/add-reranking-after-recall-is-acceptable",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "agent-builder",
+      "type": "guide",
+      "name": "Agent Builder Learning Path",
+      "description": "Project-first path for building reliable tool-using agents and multi-agent systems",
+      "tags": [
+        "agents",
+        "tool-use",
+        "planning",
+        "memory"
+      ],
+      "path": "content/skills/learning-paths/agent-builder.md",
+      "url": "content/skills/learning-paths/agent-builder",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agenta",
+      "type": "project",
+      "name": "Agenta",
+      "description": "Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds",
+      "tags": [
+        "observability",
+        "evaluation",
+        "tracing",
+        "cloud"
+      ],
+      "path": "content/projects/observability/tracing/agenta.md",
+      "url": "content/projects/observability/tracing/agenta",
+      "last_updated": "2026-06-13",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ai-engineer",
+      "type": "guide",
+      "name": "AI Engineer Learning Path",
+      "description": "Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems",
+      "tags": [
+        "llm",
+        "rag",
+        "agents",
+        "evaluation"
+      ],
+      "path": "content/skills/learning-paths/ai-engineer.md",
+      "url": "content/skills/learning-paths/ai-engineer",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "airflow",
+      "type": "tool",
+      "name": "Apache Airflow",
+      "description": "Mature workflow scheduler for batch data, ML, and AI pipeline orchestration",
+      "tags": [
+        "data",
+        "orchestration",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/airflow.md",
+      "url": "content/tools/by-job/airflow",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "allowlist-tools-per-agent-role",
+      "type": "tip",
+      "name": "Allowlist Tools Per Agent Role",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "tool-use"
+      ],
+      "path": "content/tips-and-tricks/allowlist-tools-per-agent-role.md",
+      "url": "content/tips-and-tricks/allowlist-tools-per-agent-role",
+      "last_updated": "2026-06-14",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "andrej-karpathy",
+      "type": "person",
+      "name": "Andrej Karpathy",
+      "description": "Explains neural networks, transformers, and LLMs with unusually clear engineering intuition",
+      "tags": [
+        "llm",
+        "transformers",
+        "foundational"
+      ],
+      "path": "content/community/people/andrej-karpathy.md",
+      "url": "content/community/people/andrej-karpathy",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "andrew-ng",
+      "type": "person",
+      "name": "Andrew Ng",
+      "description": "Popularizes practical AI education and structured learning paths",
+      "tags": [
+        "llm",
+        "foundational",
+        "training"
+      ],
+      "path": "content/community/people/andrew-ng.md",
+      "url": "content/community/people/andrew-ng",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "argilla",
+      "type": "tool",
+      "name": "Argilla",
+      "description": "Open-source platform for human and AI feedback, data curation, and evaluation datasets",
+      "tags": [
+        "data",
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tools/by-job/argilla.md",
+      "url": "content/tools/by-job/argilla",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "arvind-narayanan",
+      "type": "person",
+      "name": "Arvind Narayanan",
+      "description": "Writes critically about AI evaluation, policy, risks, and societal impact",
+      "tags": [
+        "evaluation",
+        "security",
+        "alignment"
+      ],
+      "path": "content/community/people/arvind-narayanan.md",
+      "url": "content/community/people/arvind-narayanan",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ask-for-missing-inputs-before-solving",
+      "type": "tip",
+      "name": "Ask For Missing Inputs Before Solving",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/ask-for-missing-inputs-before-solving.md",
+      "url": "content/tips-and-tricks/ask-for-missing-inputs-before-solving",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "attention-is-all-you-need",
       "type": "paper",
       "name": "Attention Is All You Need",
-      "description": "Introduces the Transformer architecture that became the basis of modern LLMs",
+      "description": "Introduced the Transformer architecture that became the foundation for modern LLMs",
       "tags": [
         "transformers",
         "attention",
@@ -62,7 +367,7 @@
       ],
       "path": "content/research/papers/attention-is-all-you-need.md",
       "url": "content/research/papers/attention-is-all-you-need",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "architecture",
       "maturity": null,
       "cost_model": null,
@@ -73,15 +378,35 @@
       "id": "autogen",
       "type": "project",
       "name": "AutoGen",
-      "description": "A Microsoft framework for building conversational multi-agent applications",
+      "description": "Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence",
       "tags": [
         "agents",
         "orchestration",
-        "tool-use",
-        "planning"
+        "planning",
+        "tool-use"
       ],
       "path": "content/projects/agents/frameworks/autogen.md",
       "url": "content/projects/agents/frameworks/autogen",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "deprecated",
+      "featured": false
+    },
+    {
+      "id": "autogpt",
+      "type": "project",
+      "name": "AutoGPT",
+      "description": "Autonomous agent platform and classic agent project for accessible AI automation",
+      "tags": [
+        "agents",
+        "planning",
+        "tool-use",
+        "cloud"
+      ],
+      "path": "content/projects/agents/frameworks/autogpt.md",
+      "url": "content/projects/agents/frameworks/autogpt",
       "last_updated": "2026-06-13",
       "category": "agents",
       "maturity": "production",
@@ -90,10 +415,67 @@
       "featured": false
     },
     {
+      "id": "aws-bedrock",
+      "type": "tool",
+      "name": "AWS Bedrock",
+      "description": "AWS managed service for accessing foundation models and building generative AI apps",
+      "tags": [
+        "cloud",
+        "llm",
+        "security"
+      ],
+      "path": "content/tools/by-job/aws-bedrock.md",
+      "url": "content/tools/by-job/aws-bedrock",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "axolotl",
+      "type": "tool",
+      "name": "Axolotl",
+      "description": "Configuration-driven fine-tuning framework for many open-weight LLM families",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "pytorch"
+      ],
+      "path": "content/tools/by-job/axolotl.md",
+      "url": "content/tools/by-job/axolotl",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "azure-ai-studio",
+      "type": "tool",
+      "name": "Azure AI Studio",
+      "description": "Microsoft Azure platform for building, evaluating, and deploying AI applications",
+      "tags": [
+        "cloud",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/azure-ai-studio.md",
+      "url": "content/tools/by-job/azure-ai-studio",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "basic-rag-chatbot",
       "type": "build-example",
       "name": "Basic RAG Chatbot",
-      "description": "Build a minimal retrieval-augmented chatbot over a small document set",
+      "description": "Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio",
       "tags": [
         "rag",
         "retrieval",
@@ -101,11 +483,30 @@
       ],
       "path": "content/build-examples/starter/basic-rag-chatbot.md",
       "url": "content/build-examples/starter/basic-rag-chatbot",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": null,
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "benchmark-on-the-user-hardware",
+      "type": "tip",
+      "name": "Benchmark On The User Hardware",
+      "description": "",
+      "tags": [
+        "local",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/tips-and-tricks/benchmark-on-the-user-hardware.md",
+      "url": "content/tips-and-tricks/benchmark-on-the-user-hardware",
+      "last_updated": "2026-06-14",
+      "category": "local-model-tips",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -120,6 +521,25 @@
       "path": "content/tips-and-tricks/benchmark-with-production-shaped-inputs.md",
       "url": "content/tips-and-tricks/benchmark-with-production-shaped-inputs",
       "last_updated": "2026-06-13",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "benchmark-with-real-context-lengths",
+      "type": "tip",
+      "name": "Benchmark With Real Context Lengths",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/benchmark-with-real-context-lengths.md",
+      "url": "content/tips-and-tricks/benchmark-with-real-context-lengths",
+      "last_updated": "2026-06-14",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -149,19 +569,39 @@
       "id": "bert",
       "type": "paper",
       "name": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-      "description": "Introduces bidirectional pretraining for language understanding tasks",
+      "description": "Introduced bidirectional masked-language-model pretraining for language understanding",
       "tags": [
         "llm",
-        "foundational",
-        "training"
+        "training",
+        "foundational"
       ],
       "path": "content/research/papers/bert.md",
       "url": "content/research/papers/bert",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "training",
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "braintrust",
+      "type": "project",
+      "name": "Braintrust",
+      "description": "Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates",
+      "tags": [
+        "observability",
+        "evaluation",
+        "tracing",
+        "cloud"
+      ],
+      "path": "content/projects/observability/tracing/braintrust.md",
+      "url": "content/projects/observability/tracing/braintrust",
+      "last_updated": "2026-06-13",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -184,6 +624,25 @@
       "featured": false
     },
     {
+      "id": "cache-embeddings-by-content-hash",
+      "type": "tip",
+      "name": "Cache Embeddings By Content Hash",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/cache-embeddings-by-content-hash.md",
+      "url": "content/tips-and-tricks/cache-embeddings-by-content-hash",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "cache-stable-embedding-calls",
       "type": "tip",
       "name": "Cache Stable Embedding Calls",
@@ -196,6 +655,25 @@
       "path": "content/tips-and-tricks/cache-stable-embedding-calls.md",
       "url": "content/tips-and-tricks/cache-stable-embedding-calls",
       "last_updated": "2026-06-13",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "cache-stable-system-prompts",
+      "type": "tip",
+      "name": "Cache Stable System Prompts",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/cache-stable-system-prompts.md",
+      "url": "content/tips-and-tricks/cache-stable-system-prompts",
+      "last_updated": "2026-06-14",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -225,7 +703,7 @@
       "id": "chain-of-thought-prompting",
       "type": "paper",
       "name": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
-      "description": "Shows that intermediate reasoning prompts improve performance on reasoning tasks",
+      "description": "Showed that prompting models to produce intermediate reasoning improves multi-step reasoning tasks",
       "tags": [
         "reasoning",
         "llm",
@@ -233,7 +711,7 @@
       ],
       "path": "content/research/papers/chain-of-thought-prompting.md",
       "url": "content/research/papers/chain-of-thought-prompting",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "training",
       "maturity": null,
       "cost_model": null,
@@ -260,6 +738,44 @@
       "featured": false
     },
     {
+      "id": "checkpoint-agent-state-after-each-tool-call",
+      "type": "tip",
+      "name": "Checkpoint Agent State After Each Tool Call",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/checkpoint-agent-state-after-each-tool-call.md",
+      "url": "content/tips-and-tricks/checkpoint-agent-state-after-each-tool-call",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "chip-huyen",
+      "type": "person",
+      "name": "Chip Huyen",
+      "description": "Writes about ML systems, data, evaluation, and production AI engineering",
+      "tags": [
+        "evaluation",
+        "data",
+        "monitoring"
+      ],
+      "path": "content/community/people/chip-huyen.md",
+      "url": "content/community/people/chip-huyen",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "choose-agent-framework",
       "type": "guide",
       "name": "Choose an Agent Framework",
@@ -280,10 +796,29 @@
       "featured": false
     },
     {
+      "id": "choose-chunk-size-by-answer-span-length",
+      "type": "tip",
+      "name": "Choose Chunk Size by Answer Span Length",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/choose-chunk-size-by-answer-span-length.md",
+      "url": "content/tips-and-tricks/choose-chunk-size-by-answer-span-length",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "choose-deployment-target",
       "type": "guide",
       "name": "Choose a Deployment Target",
-      "description": "Decision tree for deploying AI applications and inference services",
+      "description": "Decision tree for deploying AI apps, APIs, agents, and inference services",
       "tags": [
         "inference",
         "cloud",
@@ -320,14 +855,33 @@
       "featured": false
     },
     {
+      "id": "choose-int4-only-after-quality-tests",
+      "type": "tip",
+      "name": "Choose INT4 Only After Quality Tests",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/choose-int4-only-after-quality-tests.md",
+      "url": "content/tips-and-tricks/choose-int4-only-after-quality-tests",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "choose-llm",
       "type": "guide",
-      "name": "Choose an LLM",
-      "description": "Decision tree for choosing hosted, open-weight, local, or fine-tuned models",
+      "name": "Which LLM Should I Use?",
+      "description": "Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models",
       "tags": [
         "llm",
         "inference",
-        "self-hosted",
+        "local",
         "cloud"
       ],
       "path": "content/architectures/decision-trees/choose-llm.md",
@@ -343,7 +897,7 @@
       "id": "choose-memory-solution",
       "type": "guide",
       "name": "Choose a Memory Solution",
-      "description": "Decision tree for selecting short-term, long-term, and semantic memory",
+      "description": "Decision tree for short-term, long-term, semantic, and agent memory systems",
       "tags": [
         "agents",
         "memory",
@@ -352,6 +906,26 @@
       ],
       "path": "content/architectures/decision-trees/choose-memory-solution.md",
       "url": "content/architectures/decision-trees/choose-memory-solution",
+      "last_updated": "2026-06-13",
+      "category": "architectures",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-observability-tool",
+      "type": "guide",
+      "name": "Choose an Observability Tool",
+      "description": "Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation",
+        "monitoring"
+      ],
+      "path": "content/architectures/decision-trees/choose-observability-tool.md",
+      "url": "content/architectures/decision-trees/choose-observability-tool",
       "last_updated": "2026-06-13",
       "category": "architectures",
       "maturity": null,
@@ -383,7 +957,7 @@
       "id": "chroma",
       "type": "project",
       "name": "Chroma",
-      "description": "An embeddings database optimized for AI application prototyping and local workflows",
+      "description": "Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG",
       "tags": [
         "rag",
         "embeddings",
@@ -400,10 +974,87 @@
       "featured": false
     },
     {
+      "id": "classify-failures-before-fixing-prompts",
+      "type": "tip",
+      "name": "Classify Failures Before Fixing Prompts",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/classify-failures-before-fixing-prompts.md",
+      "url": "content/tips-and-tricks/classify-failures-before-fixing-prompts",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "clem-delangue",
+      "type": "person",
+      "name": "Clément Delangue",
+      "description": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
+      "tags": [
+        "huggingface",
+        "llm",
+        "data"
+      ],
+      "path": "content/community/people/clem-delangue.md",
+      "url": "content/community/people/clem-delangue",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "command-r-plus",
+      "type": "project",
+      "name": "Command R+",
+      "description": "Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows",
+      "tags": [
+        "llm",
+        "rag",
+        "tool-use",
+        "multimodal"
+      ],
+      "path": "content/projects/llms/open-source-models/command-r-plus.md",
+      "url": "content/projects/llms/open-source-models/command-r-plus",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "compress-retrieved-context-before-generation",
+      "type": "tip",
+      "name": "Compress Retrieved Context Before Generation",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/compress-retrieved-context-before-generation.md",
+      "url": "content/tips-and-tricks/compress-retrieved-context-before-generation",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "constitutional-ai",
       "type": "paper",
       "name": "Constitutional AI: Harmlessness from AI Feedback",
-      "description": "Introduces AI-feedback-based alignment for harmless assistants",
+      "description": "Introduced a framework for training helpful and harmless assistants using constitutional principles and AI feedback",
       "tags": [
         "alignment",
         "rlhf",
@@ -411,7 +1062,7 @@
       ],
       "path": "content/research/papers/constitutional-ai.md",
       "url": "content/research/papers/constitutional-ai",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "alignment",
       "maturity": null,
       "cost_model": null,
@@ -422,7 +1073,7 @@
       "id": "cost-tracking",
       "type": "guide",
       "name": "Cost Tracking",
-      "description": "Guide to tracking token, inference, and infrastructure costs",
+      "description": "Guide to token cost math and cost observability for LLM applications",
       "tags": [
         "observability",
         "cloud",
@@ -438,10 +1089,48 @@
       "featured": false
     },
     {
+      "id": "crawl4ai",
+      "type": "project",
+      "name": "Crawl4AI",
+      "description": "Open-source crawler and scraper designed to produce LLM-friendly web content",
+      "tags": [
+        "rag",
+        "data",
+        "local"
+      ],
+      "path": "content/projects/rag/document-processing/crawl4ai.md",
+      "url": "content/projects/rag/document-processing/crawl4ai",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "crawl4ai-tool",
+      "type": "tool",
+      "name": "Crawl4AI",
+      "description": "Python crawler and scraper designed for LLM-friendly web content extraction",
+      "tags": [
+        "rag",
+        "data",
+        "local"
+      ],
+      "path": "content/tools/by-job/crawl4ai-tool.md",
+      "url": "content/tools/by-job/crawl4ai-tool",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "crewai",
       "type": "project",
       "name": "CrewAI",
-      "description": "A role-based framework for orchestrating collaborative AI agent teams",
+      "description": "Role-based framework for orchestrating collaborative AI agent crews and flows",
       "tags": [
         "agents",
         "orchestration",
@@ -454,6 +1143,62 @@
       "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "dagster",
+      "type": "tool",
+      "name": "Dagster",
+      "description": "Data orchestration platform for assets, pipelines, schedules, and observability",
+      "tags": [
+        "data",
+        "orchestration",
+        "monitoring"
+      ],
+      "path": "content/tools/by-job/dagster.md",
+      "url": "content/tools/by-job/dagster",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "dario-amodei",
+      "type": "person",
+      "name": "Dario Amodei",
+      "description": "Leads a major AI lab focused on frontier models and AI safety",
+      "tags": [
+        "alignment",
+        "security",
+        "llm"
+      ],
+      "path": "content/community/people/dario-amodei.md",
+      "url": "content/community/people/dario-amodei",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "data-labeling",
+      "type": "guide",
+      "name": "Data Labeling Tools",
+      "description": "Curated tools for data labeling workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/data-labeling.md",
+      "url": "content/tools/by-job/data-labeling",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -478,14 +1223,71 @@
       "featured": false
     },
     {
+      "id": "deepseek-r1",
+      "type": "paper",
+      "name": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "description": "Presented DeepSeek-R1, an open reasoning model trained with reinforcement learning and distilled variants",
+      "tags": [
+        "reasoning",
+        "llm",
+        "rlhf"
+      ],
+      "path": "content/research/papers/deepseek-r1.md",
+      "url": "content/research/papers/deepseek-r1",
+      "last_updated": "2026-06-14",
+      "category": "training",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "deepseek-v3-r1",
+      "type": "project",
+      "name": "DeepSeek-V3 / R1",
+      "description": "DeepSeek open-weight MoE and reasoning model family known for strong cost-performance",
+      "tags": [
+        "llm",
+        "reasoning",
+        "inference",
+        "efficiency"
+      ],
+      "path": "content/projects/llms/open-source-models/deepseek-v3-r1.md",
+      "url": "content/projects/llms/open-source-models/deepseek-v3-r1",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "define-fallbacks-for-tool-failures",
+      "type": "tip",
+      "name": "Define Fallbacks For Tool Failures",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/define-fallbacks-for-tool-failures.md",
+      "url": "content/tips-and-tricks/define-fallbacks-for-tool-failures",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "deployment",
       "type": "guide",
       "name": "Deployment Tools",
-      "description": "Curated shortlist for deploying AI services",
+      "description": "Curated tools for deployment workflows in AI engineering",
       "tags": [
-        "cloud",
-        "serverless",
-        "docker"
+        "llm",
+        "data"
       ],
       "path": "content/tools/by-job/deployment.md",
       "url": "content/tools/by-job/deployment",
@@ -493,6 +1295,83 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "detect-context-truncation-in-tests",
+      "type": "tip",
+      "name": "Detect Context Truncation In Tests",
+      "description": "",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/detect-context-truncation-in-tests.md",
+      "url": "content/tips-and-tricks/detect-context-truncation-in-tests",
+      "last_updated": "2026-06-14",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "detect-multi-hop-questions-explicitly",
+      "type": "tip",
+      "name": "Detect Multi Hop Questions Explicitly",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/detect-multi-hop-questions-explicitly.md",
+      "url": "content/tips-and-tricks/detect-multi-hop-questions-explicitly",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "detect-repeated-tool-calls",
+      "type": "tip",
+      "name": "Detect Repeated Tool Calls",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/detect-repeated-tool-calls.md",
+      "url": "content/tips-and-tricks/detect-repeated-tool-calls",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "dify",
+      "type": "project",
+      "name": "Dify",
+      "description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
+      "tags": [
+        "agents",
+        "orchestration",
+        "rag",
+        "cloud"
+      ],
+      "path": "content/projects/agents/frameworks/dify.md",
+      "url": "content/projects/agents/frameworks/dify",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -510,6 +1389,101 @@
       "url": "content/research/papers/direct-preference-optimization",
       "last_updated": "2026-06-13",
       "category": "alignment",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "discord-communities",
+      "type": "guide",
+      "name": "Discord and Community Spaces",
+      "description": "Community spaces for AI engineering tools, open models, and builders",
+      "tags": [
+        "llm",
+        "agents",
+        "rag"
+      ],
+      "path": "content/community/discord-communities.md",
+      "url": "content/community/discord-communities",
+      "last_updated": "2026-06-14",
+      "category": "community",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "do-not-launch-without-trace-sampling",
+      "type": "tip",
+      "name": "Do Not Launch Without Trace Sampling",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "security",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/do-not-launch-without-trace-sampling.md",
+      "url": "content/tips-and-tricks/do-not-launch-without-trace-sampling",
+      "last_updated": "2026-06-14",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "docling",
+      "type": "project",
+      "name": "Docling",
+      "description": "IBM-origin open-source toolkit for parsing and exporting documents for generative AI",
+      "tags": [
+        "rag",
+        "data",
+        "retrieval"
+      ],
+      "path": "content/projects/rag/document-processing/docling.md",
+      "url": "content/projects/rag/document-processing/docling",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "document-qa-pipeline",
+      "type": "build-example",
+      "name": "Document Q&A Pipeline",
+      "description": "Blueprint for document ingestion, parsing, indexing, and question answering with pgvector",
+      "tags": [
+        "rag",
+        "data",
+        "retrieval"
+      ],
+      "path": "content/build-examples/intermediate/document-qa-pipeline.md",
+      "url": "content/build-examples/intermediate/document-qa-pipeline",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "drop-unused-conversation-history",
+      "type": "tip",
+      "name": "Drop Unused Conversation History",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/drop-unused-conversation-history.md",
+      "url": "content/tips-and-tricks/drop-unused-conversation-history",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -536,10 +1510,66 @@
       "featured": false
     },
     {
+      "id": "dvc",
+      "type": "tool",
+      "name": "DVC",
+      "description": "Open-source data and model versioning tool for ML projects and pipelines",
+      "tags": [
+        "data",
+        "monitoring"
+      ],
+      "path": "content/tools/by-job/dvc.md",
+      "url": "content/tools/by-job/dvc",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "embeddings",
+      "type": "guide",
+      "name": "Embeddings",
+      "description": "Practical guide to embeddings for retrieval, clustering, semantic search, and RAG",
+      "tags": [
+        "embeddings",
+        "rag",
+        "retrieval"
+      ],
+      "path": "content/skills/core-concepts/embeddings.md",
+      "url": "content/skills/core-concepts/embeddings",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "emerging-techniques",
+      "type": "guide",
+      "name": "Emerging AI Techniques",
+      "description": "Current techniques worth tracking across reasoning, context, inference, and multimodal systems",
+      "tags": [
+        "research",
+        "reasoning",
+        "inference"
+      ],
+      "path": "content/research/emerging-techniques.md",
+      "url": "content/research/emerging-techniques",
+      "last_updated": "2026-06-14",
+      "category": "research",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "enterprise-scale",
       "type": "guide",
       "name": "Enterprise-Scale AI Stack",
-      "description": "Reference architecture for governed enterprise AI systems",
+      "description": "Reference architecture for governed enterprise AI systems with security and platform integration",
       "tags": [
         "cloud",
         "kubernetes",
@@ -556,14 +1586,51 @@
       "featured": false
     },
     {
+      "id": "eugene-yan",
+      "type": "person",
+      "name": "Eugene Yan",
+      "description": "Writes practical essays on retrieval, recommendation, evaluation, and ML systems",
+      "tags": [
+        "rag",
+        "evaluation",
+        "data"
+      ],
+      "path": "content/community/people/eugene-yan.md",
+      "url": "content/community/people/eugene-yan",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "evaluate-embedding-models-before-rechunking",
+      "type": "tip",
+      "name": "Evaluate Embedding Models Before Rechunking",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/evaluate-embedding-models-before-rechunking.md",
+      "url": "content/tips-and-tricks/evaluate-embedding-models-before-rechunking",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "evaluation",
       "type": "guide",
       "name": "Evaluation Tools",
-      "description": "Curated shortlist for LLM, RAG, and agent evaluation",
+      "description": "Curated tools for evaluation workflows in AI engineering",
       "tags": [
-        "evaluation",
-        "rag",
-        "agents"
+        "llm",
+        "data"
       ],
       "path": "content/tools/by-job/evaluation.md",
       "url": "content/tools/by-job/evaluation",
@@ -578,7 +1645,7 @@
       "id": "evaluation-pipelines",
       "type": "guide",
       "name": "Evaluation Pipelines",
-      "description": "Guide to building repeatable evaluation pipelines for AI applications",
+      "description": "Guide to repeatable LLM, RAG, and agent evaluation workflows",
       "tags": [
         "evaluation",
         "observability",
@@ -594,14 +1661,52 @@
       "featured": false
     },
     {
+      "id": "falcon-3",
+      "type": "project",
+      "name": "Falcon 3",
+      "description": "TII open model family with compact 1B to 10B text-only variants for local deployment",
+      "tags": [
+        "llm",
+        "inference",
+        "local",
+        "efficiency"
+      ],
+      "path": "content/projects/llms/open-source-models/falcon-3.md",
+      "url": "content/projects/llms/open-source-models/falcon-3",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fastapi",
+      "type": "tool",
+      "name": "FastAPI",
+      "description": "Python web framework for building APIs around AI services and model workflows",
+      "tags": [
+        "llm",
+        "cloud",
+        "serverless"
+      ],
+      "path": "content/tools/by-job/fastapi.md",
+      "url": "content/tools/by-job/fastapi",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "fine-tuning",
       "type": "guide",
-      "name": "Fine-Tuning Tools",
-      "description": "Curated shortlist of fine-tuning tools for open and hosted models",
+      "name": "Fine Tuning Tools",
+      "description": "Curated tools for fine tuning workflows in AI engineering",
       "tags": [
-        "fine-tuning",
         "llm",
-        "pytorch"
+        "data"
       ],
       "path": "content/tools/by-job/fine-tuning.md",
       "url": "content/tools/by-job/fine-tuning",
@@ -609,6 +1714,44 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "firecrawl",
+      "type": "project",
+      "name": "Firecrawl",
+      "description": "Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data",
+      "tags": [
+        "rag",
+        "data",
+        "cloud"
+      ],
+      "path": "content/projects/rag/document-processing/firecrawl.md",
+      "url": "content/projects/rag/document-processing/firecrawl",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "firecrawl-tool",
+      "type": "tool",
+      "name": "Firecrawl",
+      "description": "API and open-source project for scraping and crawling websites into LLM-ready Markdown",
+      "tags": [
+        "rag",
+        "data",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/firecrawl-tool.md",
+      "url": "content/tools/by-job/firecrawl-tool",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -628,6 +1771,63 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fly-io",
+      "type": "tool",
+      "name": "Fly.io",
+      "description": "Application hosting platform with global machines and GPU options for AI services",
+      "tags": [
+        "cloud",
+        "edge",
+        "serverless"
+      ],
+      "path": "content/tools/by-job/fly-io.md",
+      "url": "content/tools/by-job/fly-io",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "francois-chollet",
+      "type": "person",
+      "name": "François Chollet",
+      "description": "Writes about abstraction, intelligence, benchmarks, and deep learning practice",
+      "tags": [
+        "llm",
+        "evaluation",
+        "reasoning"
+      ],
+      "path": "content/community/people/francois-chollet.md",
+      "url": "content/community/people/francois-chollet",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fundamentals",
+      "type": "guide",
+      "name": "Prompt Engineering Fundamentals",
+      "description": "Practical prompt engineering fundamentals for production LLM applications",
+      "tags": [
+        "llm",
+        "structured-output",
+        "evaluation"
+      ],
+      "path": "content/skills/prompt-engineering/fundamentals.md",
+      "url": "content/skills/prompt-engineering/fundamentals",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -652,6 +1852,103 @@
       "featured": false
     },
     {
+      "id": "gemma-3",
+      "type": "project",
+      "name": "Gemma 3",
+      "description": "Google open model family with efficient text and multimodal variants for local and hosted use",
+      "tags": [
+        "llm",
+        "inference",
+        "multimodal",
+        "local"
+      ],
+      "path": "content/projects/llms/open-source-models/gemma-3.md",
+      "url": "content/projects/llms/open-source-models/gemma-3",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "giskard",
+      "type": "tool",
+      "name": "Giskard",
+      "description": "Testing platform for evaluating and scanning ML and LLM applications",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/tools/by-job/giskard.md",
+      "url": "content/tools/by-job/giskard",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "google-adk",
+      "type": "project",
+      "name": "Google ADK",
+      "description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
+      "tags": [
+        "agents",
+        "orchestration",
+        "graphs",
+        "tool-use"
+      ],
+      "path": "content/projects/agents/frameworks/google-adk.md",
+      "url": "content/projects/agents/frameworks/google-adk",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "google-vertex-ai",
+      "type": "tool",
+      "name": "Google Vertex AI",
+      "description": "Google Cloud platform for model APIs, training, evaluation, and AI application deployment",
+      "tags": [
+        "cloud",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/google-vertex-ai.md",
+      "url": "content/tools/by-job/google-vertex-ai",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gptq",
+      "type": "paper",
+      "name": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+      "description": "Introduced accurate post-training quantization methods for large generative transformers",
+      "tags": [
+        "quantization",
+        "inference",
+        "llm"
+      ],
+      "path": "content/research/papers/gptq.md",
+      "url": "content/research/papers/gptq",
+      "last_updated": "2026-06-14",
+      "category": "efficiency",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "gradio",
       "type": "tool",
       "name": "Gradio",
@@ -668,6 +1965,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "graphrag",
+      "type": "paper",
+      "name": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+      "description": "Introduced a graph-based RAG approach for global summarization over private datasets",
+      "tags": [
+        "rag",
+        "retrieval",
+        "graphs"
+      ],
+      "path": "content/research/papers/graphrag.md",
+      "url": "content/research/papers/graphrag",
+      "last_updated": "2026-06-14",
+      "category": "rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -690,6 +2006,25 @@
       "featured": false
     },
     {
+      "id": "guidance",
+      "type": "tool",
+      "name": "Guidance",
+      "description": "Microsoft guidance library for controlling and constraining language model generation",
+      "tags": [
+        "structured-output",
+        "llm",
+        "guardrails"
+      ],
+      "path": "content/tools/by-job/guidance.md",
+      "url": "content/tools/by-job/guidance",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "hall-of-fame",
       "type": "guide",
       "name": "AI Arsenal Hall of Fame",
@@ -708,15 +2043,53 @@
       "featured": false
     },
     {
+      "id": "hamel-husain",
+      "type": "person",
+      "name": "Hamel Husain",
+      "description": "Focuses on practical LLM evaluation, error analysis, and product-quality workflows",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "path": "content/community/people/hamel-husain.md",
+      "url": "content/community/people/hamel-husain",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "harrison-chase",
+      "type": "person",
+      "name": "Harrison Chase",
+      "description": "Builder behind LangChain and LangGraph ecosystem for LLM apps and agents",
+      "tags": [
+        "agents",
+        "rag",
+        "langchain"
+      ],
+      "path": "content/community/people/harrison-chase.md",
+      "url": "content/community/people/harrison-chase",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "haystack",
       "type": "project",
       "name": "Haystack",
-      "description": "An open-source framework for production search, question answering, and RAG pipelines",
+      "description": "Modular framework for production search, RAG, agents, routing, and generation pipelines",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings",
-        "evaluation"
+        "orchestration",
+        "agents"
       ],
       "path": "content/projects/rag/frameworks/haystack.md",
       "url": "content/projects/rag/frameworks/haystack",
@@ -728,22 +2101,80 @@
       "featured": false
     },
     {
+      "id": "haystack-agents",
+      "type": "project",
+      "name": "Haystack",
+      "description": "Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines",
+      "tags": [
+        "agents",
+        "rag",
+        "orchestration",
+        "retrieval"
+      ],
+      "path": "content/projects/agents/frameworks/haystack-agents.md",
+      "url": "content/projects/agents/frameworks/haystack-agents",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "helicone",
       "type": "project",
       "name": "Helicone",
-      "description": "An open-source observability platform for LLM logging, cost tracking, and analytics",
+      "description": "Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics",
       "tags": [
         "observability",
         "monitoring",
         "cloud",
         "self-hosted"
       ],
-      "path": "content/projects/observability/monitoring/helicone.md",
-      "url": "content/projects/observability/monitoring/helicone",
+      "path": "content/projects/observability/tracing/helicone.md",
+      "url": "content/projects/observability/tracing/helicone",
       "last_updated": "2026-06-13",
       "category": "observability",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "hf-inference-endpoints",
+      "type": "tool",
+      "name": "Hugging Face Inference Endpoints",
+      "description": "Managed Hugging Face service for deploying models as production inference endpoints",
+      "tags": [
+        "llm",
+        "inference",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/hf-inference-endpoints.md",
+      "url": "content/tools/by-job/hf-inference-endpoints",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "hugging-face-hub",
+      "type": "tool",
+      "name": "Hugging Face Hub",
+      "description": "Model, dataset, and Space hosting platform for sharing and versioning AI artifacts",
+      "tags": [
+        "huggingface",
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/hugging-face-hub.md",
+      "url": "content/tools/by-job/hugging-face-hub",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -767,6 +2198,63 @@
       "featured": false
     },
     {
+      "id": "hyde",
+      "type": "paper",
+      "name": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "description": "Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/research/papers/hyde.md",
+      "url": "content/research/papers/hyde",
+      "last_updated": "2026-06-14",
+      "category": "rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "inspect-retrieved-chunks-beside-the-answer",
+      "type": "tip",
+      "name": "Inspect Retrieved Chunks Beside The Answer",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer.md",
+      "url": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "instructgpt",
+      "type": "paper",
+      "name": "Training Language Models to Follow Instructions with Human Feedback",
+      "description": "Introduced the InstructGPT RLHF recipe for making language models follow user instructions better",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "llm"
+      ],
+      "path": "content/research/papers/instructgpt.md",
+      "url": "content/research/papers/instructgpt",
+      "last_updated": "2026-06-14",
+      "category": "alignment",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "instructor",
       "type": "tool",
       "name": "Instructor",
@@ -786,6 +2274,177 @@
       "featured": false
     },
     {
+      "id": "jason-liu",
+      "type": "person",
+      "name": "Jason Liu",
+      "description": "Works on structured extraction, Instructor, evals, and practical LLM app patterns",
+      "tags": [
+        "structured-output",
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/community/people/jason-liu.md",
+      "url": "content/community/people/jason-liu",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "jay-alammar",
+      "type": "person",
+      "name": "Jay Alammar",
+      "description": "Creates visual explanations of transformers, embeddings, and language models",
+      "tags": [
+        "transformers",
+        "embeddings",
+        "foundational"
+      ],
+      "path": "content/community/people/jay-alammar.md",
+      "url": "content/community/people/jay-alammar",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "jeremy-howard",
+      "type": "person",
+      "name": "Jeremy Howard",
+      "description": "Teaches practical deep learning and makes AI education accessible to builders",
+      "tags": [
+        "pytorch",
+        "training",
+        "foundational"
+      ],
+      "path": "content/community/people/jeremy-howard.md",
+      "url": "content/community/people/jeremy-howard",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "jerry-liu",
+      "type": "person",
+      "name": "Jerry Liu",
+      "description": "Builder focused on data frameworks, RAG, document agents, and retrieval workflows",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llamaindex"
+      ],
+      "path": "content/community/people/jerry-liu.md",
+      "url": "content/community/people/jerry-liu",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "jina-reader",
+      "type": "tool",
+      "name": "Jina AI Reader",
+      "description": "Reader endpoint for converting web pages into LLM-friendly text and Markdown",
+      "tags": [
+        "data",
+        "rag",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/jina-reader.md",
+      "url": "content/tools/by-job/jina-reader",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "keep-a-kill-switch-for-agent-actions",
+      "type": "tip",
+      "name": "Keep A Kill Switch For Agent Actions",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "security",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/keep-a-kill-switch-for-agent-actions.md",
+      "url": "content/tips-and-tricks/keep-a-kill-switch-for-agent-actions",
+      "last_updated": "2026-06-14",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "keep-instructions-outside-retrieved-context",
+      "type": "tip",
+      "name": "Keep Instructions Outside Retrieved Context",
+      "description": "",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/keep-instructions-outside-retrieved-context.md",
+      "url": "content/tips-and-tricks/keep-instructions-outside-retrieved-context",
+      "last_updated": "2026-06-14",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "keep-model-files-out-of-git",
+      "type": "tip",
+      "name": "Keep Model Files Out Of Git",
+      "description": "",
+      "tags": [
+        "local",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/tips-and-tricks/keep-model-files-out-of-git.md",
+      "url": "content/tips-and-tricks/keep-model-files-out-of-git",
+      "last_updated": "2026-06-14",
+      "category": "local-model-tips",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "keep-source-page-and-section-metadata",
+      "type": "tip",
+      "name": "Keep Source Page and Section Metadata",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/keep-source-page-and-section-metadata.md",
+      "url": "content/tips-and-tricks/keep-source-page-and-section-metadata",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "label-studio",
       "type": "tool",
       "name": "Label Studio",
@@ -801,6 +2460,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lancedb",
+      "type": "project",
+      "name": "LanceDB",
+      "description": "Developer-friendly embedded and serverless vector database for multimodal AI retrieval",
+      "tags": [
+        "rag",
+        "embeddings",
+        "retrieval",
+        "multimodal"
+      ],
+      "path": "content/projects/rag/vector-databases/lancedb.md",
+      "url": "content/projects/rag/vector-databases/lancedb",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -825,10 +2504,30 @@
       "featured": false
     },
     {
+      "id": "langchain-rag",
+      "type": "project",
+      "name": "LangChain for RAG",
+      "description": "LangChain components for retrieval chains, retrievers, loaders, and RAG application composition",
+      "tags": [
+        "rag",
+        "retrieval",
+        "langchain",
+        "orchestration"
+      ],
+      "path": "content/projects/rag/frameworks/langchain-rag.md",
+      "url": "content/projects/rag/frameworks/langchain-rag",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "langfuse",
       "type": "project",
       "name": "Langfuse",
-      "description": "An open-source observability platform for LLM traces, prompts, evals, and metrics",
+      "description": "Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets",
       "tags": [
         "observability",
         "tracing",
@@ -840,7 +2539,26 @@
       "last_updated": "2026-06-13",
       "category": "observability",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "langfuse-prompts",
+      "type": "tool",
+      "name": "Langfuse Prompts",
+      "description": "Prompt management and versioning workflows inside the Langfuse observability platform",
+      "tags": [
+        "observability",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/langfuse-prompts.md",
+      "url": "content/tools/by-job/langfuse-prompts",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -848,7 +2566,7 @@
       "id": "langgraph",
       "type": "project",
       "name": "LangGraph",
-      "description": "A graph-based framework for building stateful LLM agents and workflows",
+      "description": "Graph-based framework for building stateful, durable LLM agents and workflows",
       "tags": [
         "agents",
         "orchestration",
@@ -863,7 +2581,7 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "featured": false
+      "featured": true
     },
     {
       "id": "langsmith",
@@ -886,10 +2604,49 @@
       "featured": false
     },
     {
+      "id": "langsmith-hub",
+      "type": "tool",
+      "name": "LangSmith Hub",
+      "description": "LangSmith prompt and dataset workflows for LangChain and LangGraph applications",
+      "tags": [
+        "langchain",
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tools/by-job/langsmith-hub.md",
+      "url": "content/tools/by-job/langsmith-hub",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "langsmith-platform",
+      "type": "project",
+      "name": "LangSmith",
+      "description": "Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation",
+        "langchain"
+      ],
+      "path": "content/projects/observability/tracing/langsmith-platform.md",
+      "url": "content/projects/observability/tracing/langsmith-platform",
+      "last_updated": "2026-06-13",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "language-models-are-few-shot-learners",
       "type": "paper",
       "name": "Language Models are Few-Shot Learners",
-      "description": "Shows scaling language models enables broad few-shot task performance",
+      "description": "Showed that scaling language models enables broad few-shot and in-context learning behavior",
       "tags": [
         "llm",
         "reasoning",
@@ -897,7 +2654,7 @@
       ],
       "path": "content/research/papers/language-models-are-few-shot-learners.md",
       "url": "content/research/papers/language-models-are-few-shot-learners",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "training",
       "maturity": null,
       "cost_model": null,
@@ -908,7 +2665,7 @@
       "id": "lean-mvp",
       "type": "guide",
       "name": "Lean MVP Stack",
-      "description": "Opinionated stack for a fast AI product prototype",
+      "description": "Opinionated stack for solo developers and fast AI product prototypes",
       "tags": [
         "llm",
         "rag",
@@ -919,6 +2676,44 @@
       "url": "content/architectures/reference-stacks/lean-mvp",
       "last_updated": "2026-06-13",
       "category": "architectures",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "letta",
+      "type": "tool",
+      "name": "Letta",
+      "description": "Stateful agent framework and memory system formerly known as MemGPT",
+      "tags": [
+        "memory",
+        "agents",
+        "stateful"
+      ],
+      "path": "content/tools/by-job/letta.md",
+      "url": "content/tools/by-job/letta",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lilian-weng",
+      "type": "person",
+      "name": "Lilian Weng",
+      "description": "Publishes deeply researched explainers on agents, alignment, diffusion, and LLM techniques",
+      "tags": [
+        "agents",
+        "alignment",
+        "research"
+      ],
+      "path": "content/community/people/lilian-weng.md",
+      "url": "content/community/people/lilian-weng",
+      "last_updated": "2026-06-14",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -944,10 +2739,49 @@
       "featured": false
     },
     {
+      "id": "llama-3",
+      "type": "project",
+      "name": "Llama 3.x",
+      "description": "Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications",
+      "tags": [
+        "llm",
+        "inference",
+        "local",
+        "multimodal"
+      ],
+      "path": "content/projects/llms/open-source-models/llama-3.md",
+      "url": "content/projects/llms/open-source-models/llama-3",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llama-3-herd-of-models",
+      "type": "paper",
+      "name": "The Llama 3 Herd of Models",
+      "description": "Documented Meta’s Llama 3 model family, training recipe, safety work, and evaluations",
+      "tags": [
+        "llm",
+        "training",
+        "foundational"
+      ],
+      "path": "content/research/papers/llama-3-herd-of-models.md",
+      "url": "content/research/papers/llama-3-herd-of-models",
+      "last_updated": "2026-06-14",
+      "category": "training",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "llama-cpp",
       "type": "project",
       "name": "llama.cpp",
-      "description": "A C++ inference engine for running quantized LLMs locally and on edge devices",
+      "description": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
       "tags": [
         "llm",
         "inference",
@@ -984,10 +2818,68 @@
       "featured": false
     },
     {
+      "id": "llamafactory",
+      "type": "tool",
+      "name": "LLaMA-Factory",
+      "description": "Unified fine-tuning framework and UI for many LLMs and training methods",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "pytorch"
+      ],
+      "path": "content/tools/by-job/llamafactory.md",
+      "url": "content/tools/by-job/llamafactory",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llamafile",
+      "type": "project",
+      "name": "Llamafile",
+      "description": "Mozilla project for distributing and running LLMs as a single executable file",
+      "tags": [
+        "llm",
+        "inference",
+        "local",
+        "edge"
+      ],
+      "path": "content/projects/llms/inference-engines/llamafile.md",
+      "url": "content/projects/llms/inference-engines/llamafile",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llamaguard",
+      "type": "tool",
+      "name": "Llama Guard",
+      "description": "Meta safety model family for classifying and moderating LLM inputs and outputs",
+      "tags": [
+        "security",
+        "guardrails",
+        "llm"
+      ],
+      "path": "content/tools/by-job/llamaguard.md",
+      "url": "content/tools/by-job/llamaguard",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llamaindex",
       "type": "project",
       "name": "LlamaIndex",
-      "description": "A data framework for building retrieval-augmented generation applications",
+      "description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
       "tags": [
         "rag",
         "retrieval",
@@ -1000,6 +2892,26 @@
       "category": "rag",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llamaparse",
+      "type": "project",
+      "name": "LlamaParse",
+      "description": "Managed document parser from LlamaIndex for turning complex files into RAG-ready text",
+      "tags": [
+        "rag",
+        "data",
+        "llamaindex",
+        "cloud"
+      ],
+      "path": "content/projects/rag/document-processing/llamaparse.md",
+      "url": "content/projects/rag/document-processing/llamaparse",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -1023,10 +2935,50 @@
       "featured": false
     },
     {
+      "id": "llm-researcher",
+      "type": "guide",
+      "name": "LLM Researcher Learning Path",
+      "description": "Math-heavy and paper-first path for studying model architecture, alignment, reasoning, and evaluation",
+      "tags": [
+        "research",
+        "llm",
+        "reasoning",
+        "evaluation"
+      ],
+      "path": "content/skills/learning-paths/llm-researcher.md",
+      "url": "content/skills/learning-paths/llm-researcher",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lmdeploy",
+      "type": "project",
+      "name": "LMDeploy",
+      "description": "Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends",
+      "tags": [
+        "llm",
+        "inference",
+        "quantization",
+        "cloud"
+      ],
+      "path": "content/projects/llms/inference-engines/lmdeploy.md",
+      "url": "content/projects/llms/inference-engines/lmdeploy",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "local-first",
       "type": "guide",
       "name": "Local-First AI Stack",
-      "description": "Reference stack for local and privacy-sensitive AI applications",
+      "description": "Reference stack for privacy-first local AI applications without cloud model APIs",
       "tags": [
         "local",
         "self-hosted",
@@ -1043,22 +2995,60 @@
       "featured": false
     },
     {
-      "id": "local-llm-setup",
+      "id": "local-llm-chat",
       "type": "build-example",
-      "name": "Local LLM Setup",
-      "description": "Run a local open-weight model with a simple chat interface",
+      "name": "Local LLM Chat",
+      "description": "Blueprint for a private local chat app using Ollama and Open WebUI-style deployment",
       "tags": [
         "local",
         "llm",
         "inference"
       ],
-      "path": "content/build-examples/starter/local-llm-setup.md",
-      "url": "content/build-examples/starter/local-llm-setup",
-      "last_updated": "2026-06-13",
+      "path": "content/build-examples/starter/local-llm-chat.md",
+      "url": "content/build-examples/starter/local-llm-chat",
+      "last_updated": "2026-06-14",
       "category": null,
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "log-agent-state-transitions",
+      "type": "tip",
+      "name": "Log Agent State Transitions",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/log-agent-state-transitions.md",
+      "url": "content/tips-and-tricks/log-agent-state-transitions",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "log-raw-and-parsed-model-outputs",
+      "type": "tip",
+      "name": "Log Raw And Parsed Model Outputs",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/log-raw-and-parsed-model-outputs.md",
+      "url": "content/tips-and-tricks/log-raw-and-parsed-model-outputs",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1081,10 +3071,29 @@
       "featured": false
     },
     {
+      "id": "logankilpatrick",
+      "type": "person",
+      "name": "Logan Kilpatrick",
+      "description": "Shares practical AI developer ecosystem updates and product-building context",
+      "tags": [
+        "llm",
+        "agents",
+        "cloud"
+      ],
+      "path": "content/community/people/logankilpatrick.md",
+      "url": "content/community/people/logankilpatrick",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lora",
       "type": "paper",
       "name": "LoRA: Low-Rank Adaptation of Large Language Models",
-      "description": "Introduces parameter-efficient low-rank adaptation for large language models",
+      "description": "Introduced low-rank adapters for parameter-efficient fine-tuning of large models",
       "tags": [
         "fine-tuning",
         "llm",
@@ -1092,8 +3101,47 @@
       ],
       "path": "content/research/papers/lora.md",
       "url": "content/research/papers/lora",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "training",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "lunary",
+      "type": "project",
+      "name": "Lunary",
+      "description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
+      "tags": [
+        "observability",
+        "tracing",
+        "rag",
+        "cloud"
+      ],
+      "path": "content/projects/observability/tracing/lunary.md",
+      "url": "content/projects/observability/tracing/lunary",
+      "last_updated": "2026-06-13",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "make-success-criteria-machine-checkable",
+      "type": "tip",
+      "name": "Make Success Criteria Machine Checkable",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/make-success-criteria-machine-checkable.md",
+      "url": "content/tips-and-tricks/make-success-criteria-machine-checkable",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -1103,7 +3151,7 @@
       "id": "mastra",
       "type": "project",
       "name": "Mastra",
-      "description": "A TypeScript agent framework for workflows, tools, memory, and evals",
+      "description": "TypeScript framework for building AI agents, workflows, evals, and application backends",
       "tags": [
         "agents",
         "orchestration",
@@ -1114,9 +3162,28 @@
       "url": "content/projects/agents/frameworks/mastra",
       "last_updated": "2026-06-13",
       "category": "agents",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "match-context-length-to-ram",
+      "type": "tip",
+      "name": "Match Context Length To RAM",
+      "description": "",
+      "tags": [
+        "local",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/tips-and-tricks/match-context-length-to-ram.md",
+      "url": "content/tips-and-tricks/match-context-length-to-ram",
+      "last_updated": "2026-06-14",
+      "category": "local-model-tips",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1139,10 +3206,183 @@
       "featured": false
     },
     {
+      "id": "measure-kv-cache-hit-rate",
+      "type": "tip",
+      "name": "Measure KV Cache Hit Rate",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/measure-kv-cache-hit-rate.md",
+      "url": "content/tips-and-tricks/measure-kv-cache-hit-rate",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "measure-queue-time-separately",
+      "type": "tip",
+      "name": "Measure Queue Time Separately",
+      "description": "",
+      "tags": [
+        "inference",
+        "streaming",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/measure-queue-time-separately.md",
+      "url": "content/tips-and-tricks/measure-queue-time-separately",
+      "last_updated": "2026-06-14",
+      "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "measure-retrieval-recall-before-answer-quality",
+      "type": "tip",
+      "name": "Measure Retrieval Recall Before Answer Quality",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/measure-retrieval-recall-before-answer-quality.md",
+      "url": "content/tips-and-tricks/measure-retrieval-recall-before-answer-quality",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "melanie-mitchell",
+      "type": "person",
+      "name": "Melanie Mitchell",
+      "description": "Writes about reasoning, analogy, complexity, and limits of AI systems",
+      "tags": [
+        "reasoning",
+        "evaluation",
+        "research"
+      ],
+      "path": "content/community/people/melanie-mitchell.md",
+      "url": "content/community/people/melanie-mitchell",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mem0",
+      "type": "tool",
+      "name": "Mem0",
+      "description": "Memory layer for AI agents and assistants with long-term user and session memory",
+      "tags": [
+        "memory",
+        "agents",
+        "rag"
+      ],
+      "path": "content/tools/by-job/mem0.md",
+      "url": "content/tools/by-job/mem0",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "memory-management",
+      "type": "guide",
+      "name": "Memory Management Tools",
+      "description": "Curated tools for memory management workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/memory-management.md",
+      "url": "content/tools/by-job/memory-management",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mesop",
+      "type": "tool",
+      "name": "Mesop",
+      "description": "Google Python UI framework for building web apps and AI prototypes",
+      "tags": [
+        "llm",
+        "cloud",
+        "data"
+      ],
+      "path": "content/tools/by-job/mesop.md",
+      "url": "content/tools/by-job/mesop",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "metagpt",
+      "type": "project",
+      "name": "MetaGPT",
+      "description": "Multi-agent framework that simulates software-company roles for natural-language programming",
+      "tags": [
+        "agents",
+        "orchestration",
+        "planning",
+        "code-gen"
+      ],
+      "path": "content/projects/agents/frameworks/metagpt.md",
+      "url": "content/projects/agents/frameworks/metagpt",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "microsoft-agent-framework",
+      "type": "project",
+      "name": "Microsoft Agent Framework",
+      "description": "Microsoft framework for Python and .NET agents, workflows, and production orchestration",
+      "tags": [
+        "agents",
+        "orchestration",
+        "graphs",
+        "cloud",
+        "tool-use"
+      ],
+      "path": "content/projects/agents/frameworks/microsoft-agent-framework.md",
+      "url": "content/projects/agents/frameworks/microsoft-agent-framework",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "milvus",
       "type": "project",
       "name": "Milvus",
-      "description": "A scalable open-source vector database for embedding search at large scale",
+      "description": "Cloud-native vector database for large-scale ANN search and production vector workloads",
       "tags": [
         "rag",
         "embeddings",
@@ -1179,6 +3419,84 @@
       "featured": false
     },
     {
+      "id": "mistral-models",
+      "type": "project",
+      "name": "Mistral / Mixtral",
+      "description": "Mistral open-weight model family including dense and mixture-of-experts language models",
+      "tags": [
+        "llm",
+        "inference",
+        "local",
+        "efficiency"
+      ],
+      "path": "content/projects/llms/open-source-models/mistral-models.md",
+      "url": "content/projects/llms/open-source-models/mistral-models",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "archived",
+      "featured": false
+    },
+    {
+      "id": "ml-engineer",
+      "type": "guide",
+      "name": "ML Engineer to AI Engineer Bridge",
+      "description": "Bridge path for ML engineers moving from training workflows to production LLM applications",
+      "tags": [
+        "llm",
+        "evaluation",
+        "inference",
+        "data"
+      ],
+      "path": "content/skills/learning-paths/ml-engineer.md",
+      "url": "content/skills/learning-paths/ml-engineer",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mlflow",
+      "type": "tool",
+      "name": "MLflow",
+      "description": "Open-source platform for experiment tracking, model registry, and ML lifecycle management",
+      "tags": [
+        "data",
+        "monitoring",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/mlflow.md",
+      "url": "content/tools/by-job/mlflow",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mlx-lm",
+      "type": "tool",
+      "name": "MLX-LM",
+      "description": "Apple MLX library for running and fine-tuning LLMs on Apple Silicon",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "local"
+      ],
+      "path": "content/tools/by-job/mlx-lm.md",
+      "url": "content/tools/by-job/mlx-lm",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "modal",
       "type": "tool",
       "name": "Modal",
@@ -1198,10 +3516,28 @@
       "featured": false
     },
     {
+      "id": "model-registry",
+      "type": "guide",
+      "name": "Model Registry Tools",
+      "description": "Curated tools for model registry workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/model-registry.md",
+      "url": "content/tools/by-job/model-registry",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "multi-agent-research-system",
       "type": "build-example",
       "name": "Multi-Agent Research System",
-      "description": "Build a multi-agent research assistant with planning, retrieval, and review loops",
+      "description": "Blueprint for a research assistant with planning, retrieval, writing, review, and traceable agent state",
       "tags": [
         "agents",
         "planning",
@@ -1209,7 +3545,7 @@
       ],
       "path": "content/build-examples/advanced/multi-agent-research-system.md",
       "url": "content/build-examples/advanced/multi-agent-research-system",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -1220,7 +3556,7 @@
       "id": "multi-agent-system",
       "type": "guide",
       "name": "Multi-Agent System Stack",
-      "description": "Reference stack for stateful multi-agent applications",
+      "description": "Reference stack for complex task automation with multiple AI roles and durable state",
       "tags": [
         "agents",
         "orchestration",
@@ -1240,15 +3576,15 @@
       "id": "multi-tool-agent",
       "type": "build-example",
       "name": "Multi-Tool Agent",
-      "description": "Build an agent that calls multiple tools with traceable state and bounded retries",
+      "description": "Blueprint for a LangGraph agent that uses multiple validated tools and structured outputs",
       "tags": [
         "agents",
         "tool-use",
-        "tracing"
+        "structured-output"
       ],
       "path": "content/build-examples/intermediate/multi-tool-agent.md",
       "url": "content/build-examples/intermediate/multi-tool-agent",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -1259,15 +3595,15 @@
       "id": "must-read-papers",
       "type": "guide",
       "name": "Must-Read AI Papers",
-      "description": "Curated reading guide for foundational and high-leverage AI papers",
+      "description": "Categorized reading guide for foundational and high-leverage AI papers",
       "tags": [
         "foundational",
         "llm",
-        "evaluation"
+        "research"
       ],
       "path": "content/research/must-read-papers.md",
       "url": "content/research/must-read-papers",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "research",
       "maturity": null,
       "cost_model": null,
@@ -1275,19 +3611,94 @@
       "featured": false
     },
     {
+      "id": "name-the-audience-in-the-prompt",
+      "type": "tip",
+      "name": "Name The Audience In The Prompt",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/name-the-audience-in-the-prompt.md",
+      "url": "content/tips-and-tricks/name-the-audience-in-the-prompt",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "nathan-lambert",
+      "type": "person",
+      "name": "Nathan Lambert",
+      "description": "Writes about RLHF, post-training, open models, and reasoning systems",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "reasoning"
+      ],
+      "path": "content/community/people/nathan-lambert.md",
+      "url": "content/community/people/nathan-lambert",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "nemo-guardrails",
+      "type": "tool",
+      "name": "NeMo Guardrails",
+      "description": "NVIDIA framework for adding programmable guardrails to LLM applications",
+      "tags": [
+        "security",
+        "guardrails",
+        "llm"
+      ],
+      "path": "content/tools/by-job/nemo-guardrails.md",
+      "url": "content/tools/by-job/nemo-guardrails",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "newsletters",
       "type": "guide",
       "name": "AI Newsletters",
-      "description": "Curated guide to newsletters for AI engineering and research updates",
+      "description": "Curated newsletters for AI engineering, open models, research, and product signals",
       "tags": [
         "llm",
-        "trending",
-        "research"
+        "research",
+        "trending"
       ],
       "path": "content/community/newsletters.md",
       "url": "content/community/newsletters",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "community",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "noam-shazeer",
+      "type": "person",
+      "name": "Noam Shazeer",
+      "description": "Influential contributor to Transformers, mixture-of-experts, and large-scale model architecture",
+      "tags": [
+        "transformers",
+        "llm",
+        "research"
+      ],
+      "path": "content/community/people/noam-shazeer.md",
+      "url": "content/community/people/noam-shazeer",
+      "last_updated": "2026-06-14",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -1297,7 +3708,7 @@
       "id": "ollama",
       "type": "project",
       "name": "Ollama",
-      "description": "A local runtime for downloading and running open-weight language models",
+      "description": "Local runtime for downloading, running, and serving open-weight models on developer machines",
       "tags": [
         "llm",
         "inference",
@@ -1308,6 +3719,26 @@
       "url": "content/projects/llms/inference-engines/ollama",
       "last_updated": "2026-06-13",
       "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openai-agents-sdk",
+      "type": "project",
+      "name": "OpenAI Agents SDK",
+      "description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
+      "tags": [
+        "agents",
+        "tool-use",
+        "guardrails",
+        "tracing"
+      ],
+      "path": "content/projects/agents/frameworks/openai-agents-sdk.md",
+      "url": "content/projects/agents/frameworks/openai-agents-sdk",
+      "last_updated": "2026-06-13",
+      "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -1333,10 +3764,30 @@
       "featured": false
     },
     {
+      "id": "openhands",
+      "type": "project",
+      "name": "OpenHands",
+      "description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
+      "tags": [
+        "agents",
+        "code-gen",
+        "tool-use",
+        "planning"
+      ],
+      "path": "content/projects/agents/frameworks/openhands.md",
+      "url": "content/projects/agents/frameworks/openhands",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openlit",
       "type": "project",
       "name": "OpenLIT",
-      "description": "An OpenTelemetry-native observability platform for LLM and GPU applications",
+      "description": "OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails",
       "tags": [
         "observability",
         "tracing",
@@ -1353,14 +3804,53 @@
       "featured": false
     },
     {
+      "id": "openllmetry",
+      "type": "project",
+      "name": "OpenLLMetry",
+      "description": "OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop",
+      "tags": [
+        "observability",
+        "tracing",
+        "monitoring",
+        "self-hosted"
+      ],
+      "path": "content/projects/observability/tracing/openllmetry.md",
+      "url": "content/projects/observability/tracing/openllmetry",
+      "last_updated": "2026-06-13",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "opik",
+      "type": "project",
+      "name": "Opik",
+      "description": "Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation",
+        "monitoring"
+      ],
+      "path": "content/projects/observability/tracing/opik.md",
+      "url": "content/projects/observability/tracing/opik",
+      "last_updated": "2026-06-13",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "orchestration",
       "type": "guide",
       "name": "Orchestration Tools",
-      "description": "Curated shortlist for coordinating chains, tools, agents, and workflows",
+      "description": "Curated tools for orchestration workflows in AI engineering",
       "tags": [
-        "orchestration",
-        "agents",
-        "tool-use"
+        "llm",
+        "data"
       ],
       "path": "content/tools/by-job/orchestration.md",
       "url": "content/tools/by-job/orchestration",
@@ -1369,6 +3859,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "order-few-shot-examples-by-similarity",
+      "type": "tip",
+      "name": "Order Few Shot Examples by Similarity",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/order-few-shot-examples-by-similarity.md",
+      "url": "content/tips-and-tricks/order-few-shot-examples-by-similarity",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1394,12 +3902,12 @@
       "id": "overview",
       "type": "guide",
       "name": "AI Observability Overview",
-      "description": "Overview of why observability matters for LLM and agent systems",
+      "description": "Overview of LLM observability pillars and tool selection",
       "tags": [
         "observability",
         "tracing",
-        "monitoring",
-        "evaluation"
+        "evaluation",
+        "monitoring"
       ],
       "path": "content/observability/overview.md",
       "url": "content/observability/overview",
@@ -1411,10 +3919,48 @@
       "featured": false
     },
     {
+      "id": "parallelize-independent-retrieval-calls",
+      "type": "tip",
+      "name": "Parallelize Independent Retrieval Calls",
+      "description": "",
+      "tags": [
+        "inference",
+        "streaming",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/parallelize-independent-retrieval-calls.md",
+      "url": "content/tips-and-tricks/parallelize-independent-retrieval-calls",
+      "last_updated": "2026-06-14",
+      "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "peft",
+      "type": "tool",
+      "name": "PEFT",
+      "description": "Hugging Face library for parameter-efficient fine-tuning methods",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "huggingface"
+      ],
+      "path": "content/tools/by-job/peft.md",
+      "url": "content/tools/by-job/peft",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "people-to-follow",
       "type": "guide",
       "name": "People to Follow",
-      "description": "Curated guide to AI builders, researchers, and educators worth following",
+      "description": "Curated guide to AI builders, researchers, educators, and maintainers worth following",
       "tags": [
         "llm",
         "agents",
@@ -1422,7 +3968,7 @@
       ],
       "path": "content/community/people-to-follow.md",
       "url": "content/community/people-to-follow",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "community",
       "maturity": null,
       "cost_model": null,
@@ -1433,7 +3979,7 @@
       "id": "pgvector",
       "type": "project",
       "name": "pgvector",
-      "description": "A PostgreSQL extension that adds vector similarity search to existing databases",
+      "description": "PostgreSQL extension for vector similarity search inside an existing relational database",
       "tags": [
         "rag",
         "embeddings",
@@ -1444,6 +3990,26 @@
       "url": "content/projects/rag/vector-databases/pgvector",
       "last_updated": "2026-06-13",
       "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "phi-4",
+      "type": "project",
+      "name": "Phi-4",
+      "description": "Microsoft small language model family optimized for efficient reasoning and local-friendly deployment",
+      "tags": [
+        "llm",
+        "reasoning",
+        "local",
+        "efficiency"
+      ],
+      "path": "content/projects/llms/open-source-models/phi-4.md",
+      "url": "content/projects/llms/open-source-models/phi-4",
+      "last_updated": "2026-06-13",
+      "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -1473,7 +4039,7 @@
       "id": "phoenix",
       "type": "project",
       "name": "Phoenix",
-      "description": "An open-source AI observability and evaluation platform from Arize",
+      "description": "Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems",
       "tags": [
         "observability",
         "tracing",
@@ -1487,6 +4053,44 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pin-dependencies-for-inference-images",
+      "type": "tip",
+      "name": "Pin Dependencies For Inference Images",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "security",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/pin-dependencies-for-inference-images.md",
+      "url": "content/tips-and-tricks/pin-dependencies-for-inference-images",
+      "last_updated": "2026-06-14",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "pin-model-and-runtime-versions",
+      "type": "tip",
+      "name": "Pin Model And Runtime Versions",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/pin-model-and-runtime-versions.md",
+      "url": "content/tips-and-tricks/pin-model-and-runtime-versions",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1510,6 +4114,63 @@
       "featured": false
     },
     {
+      "id": "pinecone-vector-db",
+      "type": "project",
+      "name": "Pinecone",
+      "description": "Managed vector database service for production semantic search and RAG applications",
+      "tags": [
+        "rag",
+        "embeddings",
+        "retrieval",
+        "cloud"
+      ],
+      "path": "content/projects/rag/vector-databases/pinecone-vector-db.md",
+      "url": "content/projects/rag/vector-databases/pinecone-vector-db",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "playwright",
+      "type": "tool",
+      "name": "Playwright",
+      "description": "Browser automation framework for reliable end-to-end tests and web scraping workflows",
+      "tags": [
+        "data",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/playwright.md",
+      "url": "content/tools/by-job/playwright",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "podcasts",
+      "type": "guide",
+      "name": "AI Podcasts",
+      "description": "Curated podcasts for AI builders, researchers, and product teams",
+      "tags": [
+        "llm",
+        "agents",
+        "research"
+      ],
+      "path": "content/community/podcasts.md",
+      "url": "content/community/podcasts",
+      "last_updated": "2026-06-14",
+      "category": "community",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "portkey",
       "type": "tool",
       "name": "Portkey",
@@ -1526,6 +4187,63 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "precompute-expensive-static-context",
+      "type": "tip",
+      "name": "Precompute Expensive Static Context",
+      "description": "",
+      "tags": [
+        "inference",
+        "streaming",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/precompute-expensive-static-context.md",
+      "url": "content/tips-and-tricks/precompute-expensive-static-context",
+      "last_updated": "2026-06-14",
+      "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "prefect",
+      "type": "tool",
+      "name": "Prefect",
+      "description": "Python workflow orchestration framework useful for AI data, eval, and batch jobs",
+      "tags": [
+        "data",
+        "orchestration",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/prefect.md",
+      "url": "content/tools/by-job/prefect",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "prefer-gguf-for-llama-cpp-workflows",
+      "type": "tip",
+      "name": "Prefer GGUF For llama cpp Workflows",
+      "description": "",
+      "tags": [
+        "local",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/tips-and-tricks/prefer-gguf-for-llama-cpp-workflows.md",
+      "url": "content/tips-and-tricks/prefer-gguf-for-llama-cpp-workflows",
+      "last_updated": "2026-06-14",
+      "category": "local-model-tips",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1585,10 +4303,28 @@
       "featured": false
     },
     {
+      "id": "prodigy",
+      "type": "tool",
+      "name": "Prodigy",
+      "description": "Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows",
+      "tags": [
+        "data",
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/prodigy.md",
+      "url": "content/tools/by-job/prodigy",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "production-rag",
       "type": "guide",
       "name": "Production RAG Stack",
-      "description": "Reference architecture for reliable retrieval-augmented generation",
+      "description": "Reference architecture for production retrieval-augmented generation applications",
       "tags": [
         "rag",
         "retrieval",
@@ -1605,19 +4341,74 @@
       "featured": false
     },
     {
+      "id": "production-rag-api",
+      "type": "build-example",
+      "name": "Production RAG API",
+      "description": "Blueprint for a production-ready RAG API with FastAPI, Qdrant, LlamaIndex, and Langfuse",
+      "tags": [
+        "rag",
+        "retrieval",
+        "observability"
+      ],
+      "path": "content/build-examples/intermediate/production-rag-api.md",
+      "url": "content/build-examples/intermediate/production-rag-api",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "production-serving",
       "type": "guide",
       "name": "Production Serving Tools",
-      "description": "Curated shortlist for serving models and AI APIs in production",
+      "description": "Curated tools for production serving workflows in AI engineering",
       "tags": [
-        "inference",
-        "serverless",
-        "kubernetes"
+        "llm",
+        "data"
       ],
       "path": "content/tools/by-job/production-serving.md",
       "url": "content/tools/by-job/production-serving",
       "last_updated": "2026-06-13",
       "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "prompt-management",
+      "type": "guide",
+      "name": "Prompt Management Tools",
+      "description": "Curated tools for prompt management workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/prompt-management.md",
+      "url": "content/tools/by-job/prompt-management",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "prompt-patterns-catalog",
+      "type": "guide",
+      "name": "Prompt Patterns Catalog",
+      "description": "Catalog of practical prompt patterns for structured LLM application behavior",
+      "tags": [
+        "llm",
+        "structured-output",
+        "reasoning"
+      ],
+      "path": "content/skills/prompt-engineering/prompt-patterns-catalog.md",
+      "url": "content/skills/prompt-engineering/prompt-patterns-catalog",
+      "last_updated": "2026-06-14",
+      "category": "skills",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -1643,14 +4434,32 @@
       "featured": false
     },
     {
+      "id": "promptlayer",
+      "type": "tool",
+      "name": "PromptLayer",
+      "description": "Prompt management and logging platform for versioning, collaboration, and observability",
+      "tags": [
+        "llm",
+        "observability",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/promptlayer.md",
+      "url": "content/tools/by-job/promptlayer",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "prototyping",
       "type": "guide",
       "name": "Prototyping Tools",
-      "description": "Curated shortlist for quickly building AI demos and internal prototypes",
+      "description": "Curated tools for prototyping workflows in AI engineering",
       "tags": [
         "llm",
-        "cloud",
-        "local"
+        "data"
       ],
       "path": "content/tools/by-job/prototyping.md",
       "url": "content/tools/by-job/prototyping",
@@ -1659,6 +4468,42 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "puppeteer",
+      "type": "tool",
+      "name": "Puppeteer",
+      "description": "Node.js browser automation library for Chrome and Chromium workflows",
+      "tags": [
+        "data",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/puppeteer.md",
+      "url": "content/tools/by-job/puppeteer",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "put-task-inputs-after-instructions",
+      "type": "tip",
+      "name": "Put Task Inputs After Instructions",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/put-task-inputs-after-instructions.md",
+      "url": "content/tips-and-tricks/put-task-inputs-after-instructions",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1681,10 +4526,29 @@
       "featured": false
     },
     {
+      "id": "pydantic-ai-tool",
+      "type": "tool",
+      "name": "Pydantic AI",
+      "description": "Pydantic agent framework focused on typed outputs, tools, and production Python apps",
+      "tags": [
+        "structured-output",
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/tools/by-job/pydantic-ai-tool.md",
+      "url": "content/tools/by-job/pydantic-ai-tool",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "qdrant",
       "type": "project",
       "name": "Qdrant",
-      "description": "A vector database for similarity search with filtering and production operations",
+      "description": "Rust vector database for high-performance similarity search with filtering and hybrid search",
       "tags": [
         "rag",
         "embeddings",
@@ -1704,7 +4568,7 @@
       "id": "qlora",
       "type": "paper",
       "name": "QLoRA: Efficient Finetuning of Quantized LLMs",
-      "description": "Enables efficient fine-tuning of quantized language models",
+      "description": "Enabled fine-tuning quantized LLMs with low memory using 4-bit quantization plus LoRA",
       "tags": [
         "fine-tuning",
         "quantization",
@@ -1712,7 +4576,7 @@
       ],
       "path": "content/research/papers/qlora.md",
       "url": "content/research/papers/qlora",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "training",
       "maturity": null,
       "cost_model": null,
@@ -1740,6 +4604,45 @@
       "featured": false
     },
     {
+      "id": "qwen-2-5",
+      "type": "project",
+      "name": "Qwen 2.5 / QwQ",
+      "description": "Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models",
+      "tags": [
+        "llm",
+        "inference",
+        "reasoning",
+        "code-gen"
+      ],
+      "path": "content/projects/llms/open-source-models/qwen-2-5.md",
+      "url": "content/projects/llms/open-source-models/qwen-2-5",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "qwen2-5-math",
+      "type": "paper",
+      "name": "Qwen2.5-Math Technical Report",
+      "description": "Presented Qwen2.5-Math models and a self-improvement pipeline for mathematical reasoning",
+      "tags": [
+        "reasoning",
+        "llm",
+        "training"
+      ],
+      "path": "content/research/papers/qwen2-5-math.md",
+      "url": "content/research/papers/qwen2-5-math",
+      "last_updated": "2026-06-14",
+      "category": "training",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "rag-chunk-overlap-tuning",
       "type": "tip",
       "name": "Tune Chunk Overlap Before Chunk Size",
@@ -1762,7 +4665,7 @@
       "id": "rag-vs-fine-tuning",
       "type": "guide",
       "name": "RAG vs Fine-Tuning",
-      "description": "Decision tree for choosing retrieval, fine-tuning, or both",
+      "description": "Decision tree for choosing retrieval, fine-tuning, or hybrid model adaptation",
       "tags": [
         "rag",
         "fine-tuning",
@@ -1818,10 +4721,106 @@
       "featured": false
     },
     {
+      "id": "ragas-rag-evaluation",
+      "type": "project",
+      "name": "Ragas for RAG Evaluation",
+      "description": "Evaluation framework for measuring retrieval-augmented generation quality and regressions",
+      "tags": [
+        "rag",
+        "evaluation",
+        "retrieval",
+        "observability"
+      ],
+      "path": "content/projects/rag/frameworks/ragas-rag-evaluation.md",
+      "url": "content/projects/rag/frameworks/ragas-rag-evaluation",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ragflow",
+      "type": "project",
+      "name": "RAGFlow",
+      "description": "Open-source RAG engine combining document understanding, retrieval, and agent capabilities",
+      "tags": [
+        "rag",
+        "retrieval",
+        "agents",
+        "cloud"
+      ],
+      "path": "content/projects/rag/frameworks/ragflow.md",
+      "url": "content/projects/rag/frameworks/ragflow",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "railway",
+      "type": "tool",
+      "name": "Railway",
+      "description": "Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes",
+      "tags": [
+        "cloud",
+        "serverless"
+      ],
+      "path": "content/tools/by-job/railway.md",
+      "url": "content/tools/by-job/railway",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "rank-context-by-expected-usefulness",
+      "type": "tip",
+      "name": "Rank Context By Expected Usefulness",
+      "description": "",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/rank-context-by-expected-usefulness.md",
+      "url": "content/tips-and-tricks/rank-context-by-expected-usefulness",
+      "last_updated": "2026-06-14",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "raptor",
+      "type": "paper",
+      "name": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "description": "Introduced hierarchical retrieval over recursively summarized document clusters",
+      "tags": [
+        "rag",
+        "retrieval",
+        "reasoning"
+      ],
+      "path": "content/research/papers/raptor.md",
+      "url": "content/research/papers/raptor",
+      "last_updated": "2026-06-14",
+      "category": "rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "react",
       "type": "paper",
       "name": "ReAct: Synergizing Reasoning and Acting in Language Models",
-      "description": "Combines reasoning traces with actions for tool-using language agents",
+      "description": "Combined reasoning traces with actions so language models can think and use tools interleaved",
       "tags": [
         "agents",
         "reasoning",
@@ -1829,8 +4828,84 @@
       ],
       "path": "content/research/papers/react.md",
       "url": "content/research/papers/react",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "rebuff",
+      "type": "tool",
+      "name": "Rebuff",
+      "description": "Prompt injection detection and guardrail toolkit for LLM applications",
+      "tags": [
+        "security",
+        "guardrails",
+        "llm"
+      ],
+      "path": "content/tools/by-job/rebuff.md",
+      "url": "content/tools/by-job/rebuff",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "redact-secrets-before-tracing",
+      "type": "tip",
+      "name": "Redact Secrets Before Tracing",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "tool-use"
+      ],
+      "path": "content/tips-and-tricks/redact-secrets-before-tracing.md",
+      "url": "content/tips-and-tricks/redact-secrets-before-tracing",
+      "last_updated": "2026-06-14",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "redis-memory",
+      "type": "tool",
+      "name": "Redis",
+      "description": "In-memory data store commonly used for caching, session memory, queues, and vector search",
+      "tags": [
+        "memory",
+        "caching",
+        "retrieval"
+      ],
+      "path": "content/tools/by-job/redis-memory.md",
+      "url": "content/tools/by-job/redis-memory",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "replay-the-same-trace-with-one-variable-changed",
+      "type": "tip",
+      "name": "Replay The Same Trace With One Variable Changed",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed.md",
+      "url": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -1856,10 +4931,29 @@
       "featured": false
     },
     {
+      "id": "require-human-approval-for-irreversible-actions",
+      "type": "tip",
+      "name": "Require Human Approval For Irreversible Actions",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/require-human-approval-for-irreversible-actions.md",
+      "url": "content/tips-and-tricks/require-human-approval-for-irreversible-actions",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "research-platform",
       "type": "guide",
       "name": "AI Research Platform Stack",
-      "description": "Reference platform for repeatable experiments and model research",
+      "description": "Reference platform for repeatable model, agent, and retrieval experiments",
       "tags": [
         "pytorch",
         "evaluation",
@@ -1876,10 +4970,29 @@
       "featured": false
     },
     {
+      "id": "reserve-output-tokens-before-adding-context",
+      "type": "tip",
+      "name": "Reserve Output Tokens Before Adding Context",
+      "description": "",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/reserve-output-tokens-before-adding-context.md",
+      "url": "content/tips-and-tricks/reserve-output-tokens-before-adding-context",
+      "last_updated": "2026-06-14",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "retrieval-augmented-generation",
       "type": "paper",
       "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
-      "description": "Introduces retrieval-augmented generation for knowledge-intensive tasks",
+      "description": "Introduced retrieval-augmented generation as a way to combine parametric models with external knowledge",
       "tags": [
         "rag",
         "retrieval",
@@ -1887,7 +5000,7 @@
       ],
       "path": "content/research/papers/retrieval-augmented-generation.md",
       "url": "content/research/papers/retrieval-augmented-generation",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "rag",
       "maturity": null,
       "cost_model": null,
@@ -1895,18 +5008,168 @@
       "featured": false
     },
     {
+      "id": "review-data-retention-for-prompts",
+      "type": "tip",
+      "name": "Review Data Retention For Prompts",
+      "description": "",
+      "tags": [
+        "monitoring",
+        "security",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/review-data-retention-for-prompts.md",
+      "url": "content/tips-and-tricks/review-data-retention-for-prompts",
+      "last_updated": "2026-06-14",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "route-simple-tasks-to-smaller-models",
+      "type": "tip",
+      "name": "Route Simple Tasks To Smaller Models",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/route-simple-tasks-to-smaller-models.md",
+      "url": "content/tips-and-tricks/route-simple-tasks-to-smaller-models",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "run-prompt-injection-regression-tests",
+      "type": "tip",
+      "name": "Run Prompt Injection Regression Tests",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "tool-use"
+      ],
+      "path": "content/tips-and-tricks/run-prompt-injection-regression-tests.md",
+      "url": "content/tips-and-tricks/run-prompt-injection-regression-tests",
+      "last_updated": "2026-06-14",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "sandbox-code-execution-tools",
+      "type": "tip",
+      "name": "Sandbox Code Execution Tools",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/sandbox-code-execution-tools.md",
+      "url": "content/tips-and-tricks/sandbox-code-execution-tools",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "scale-ai",
+      "type": "tool",
+      "name": "Scale AI",
+      "description": "Managed data labeling and data engine platform for enterprise AI datasets",
+      "tags": [
+        "data",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/scale-ai.md",
+      "url": "content/tools/by-job/scale-ai",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sebastian-bubeck",
+      "type": "person",
+      "name": "Sébastien Bubeck",
+      "description": "Researches reasoning, small models, and theoretical aspects of AI systems",
+      "tags": [
+        "reasoning",
+        "llm",
+        "research"
+      ],
+      "path": "content/community/people/sebastian-bubeck.md",
+      "url": "content/community/people/sebastian-bubeck",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sebastian-raschka",
+      "type": "person",
+      "name": "Sebastian Raschka",
+      "description": "Explains machine learning, LLMs, PyTorch, and model training with practical depth",
+      "tags": [
+        "llm",
+        "pytorch",
+        "training"
+      ],
+      "path": "content/community/people/sebastian-raschka.md",
+      "url": "content/community/people/sebastian-raschka",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "security-and-guardrails",
+      "type": "guide",
+      "name": "Security And Guardrails Tools",
+      "description": "Curated tools for security and guardrails workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/security-and-guardrails.md",
+      "url": "content/tools/by-job/security-and-guardrails",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "self-correcting-rag",
       "type": "build-example",
       "name": "Self-Correcting RAG",
-      "description": "Build a RAG pipeline that detects weak retrieval and retries with improved queries",
+      "description": "Blueprint for a RAG pipeline that detects weak retrieval and retries with query rewriting or fallback",
       "tags": [
         "rag",
         "evaluation",
         "retrieval"
       ],
-      "path": "content/build-examples/intermediate/self-correcting-rag.md",
-      "url": "content/build-examples/intermediate/self-correcting-rag",
-      "last_updated": "2026-06-13",
+      "path": "content/build-examples/advanced/self-correcting-rag.md",
+      "url": "content/build-examples/advanced/self-correcting-rag",
+      "last_updated": "2026-06-14",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -1953,6 +5216,81 @@
       "featured": false
     },
     {
+      "id": "separate-model-errors-from-app-errors",
+      "type": "tip",
+      "name": "Separate Model Errors From App Errors",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/separate-model-errors-from-app-errors.md",
+      "url": "content/tips-and-tricks/separate-model-errors-from-app-errors",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "separate-offline-batch-jobs-from-chat-serving",
+      "type": "tip",
+      "name": "Separate Offline Batch Jobs From Chat Serving",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/separate-offline-batch-jobs-from-chat-serving.md",
+      "url": "content/tips-and-tricks/separate-offline-batch-jobs-from-chat-serving",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "separate-planner-and-executor-permissions",
+      "type": "tip",
+      "name": "Separate Planner And Executor Permissions",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/separate-planner-and-executor-permissions.md",
+      "url": "content/tips-and-tricks/separate-planner-and-executor-permissions",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "separate-policy-from-task-instructions",
+      "type": "tip",
+      "name": "Separate Policy From Task Instructions",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/separate-policy-from-task-instructions.md",
+      "url": "content/tips-and-tricks/separate-policy-from-task-instructions",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "separate-system-and-task-prompts",
       "type": "tip",
       "name": "Separate System and Task Prompts",
@@ -1971,6 +5309,291 @@
       "featured": false
     },
     {
+      "id": "separate-user-content-from-system-instructions",
+      "type": "tip",
+      "name": "Separate User Content From System Instructions",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "tool-use"
+      ],
+      "path": "content/tips-and-tricks/separate-user-content-from-system-instructions.md",
+      "url": "content/tips-and-tricks/separate-user-content-from-system-instructions",
+      "last_updated": "2026-06-14",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-temperature-by-decision-risk",
+      "type": "tip",
+      "name": "Set Temperature by Decision Risk",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/set-temperature-by-decision-risk.md",
+      "url": "content/tips-and-tricks/set-temperature-by-decision-risk",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-token-budgets-per-feature",
+      "type": "tip",
+      "name": "Set Token Budgets Per Feature",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/set-token-budgets-per-feature.md",
+      "url": "content/tips-and-tricks/set-token-budgets-per-feature",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "sglang",
+      "type": "project",
+      "name": "SGLang",
+      "description": "High-performance serving framework for large language and multimodal models",
+      "tags": [
+        "llm",
+        "inference",
+        "batching",
+        "multimodal"
+      ],
+      "path": "content/projects/llms/inference-engines/sglang.md",
+      "url": "content/projects/llms/inference-engines/sglang",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "shreya-shankar",
+      "type": "person",
+      "name": "Shreya Shankar",
+      "description": "Researches data, evaluation, and reliable systems for ML and LLM applications",
+      "tags": [
+        "evaluation",
+        "data",
+        "llm"
+      ],
+      "path": "content/community/people/shreya-shankar.md",
+      "url": "content/community/people/shreya-shankar",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "simon-willison",
+      "type": "person",
+      "name": "Simon Willison",
+      "description": "Tracks practical LLM tooling, prompt injection, evals, and developer workflows",
+      "tags": [
+        "llm",
+        "security",
+        "evaluation"
+      ],
+      "path": "content/community/people/simon-willison.md",
+      "url": "content/community/people/simon-willison",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "simple-react-agent",
+      "type": "build-example",
+      "name": "Simple ReAct Agent",
+      "description": "Blueprint for a small ReAct-style tool-using agent with LangGraph and typed tools",
+      "tags": [
+        "agents",
+        "tool-use",
+        "reasoning"
+      ],
+      "path": "content/build-examples/starter/simple-react-agent.md",
+      "url": "content/build-examples/starter/simple-react-agent",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "smolagents",
+      "type": "project",
+      "name": "Smolagents",
+      "description": "Hugging Face library for lightweight agents that can reason and act through code",
+      "tags": [
+        "agents",
+        "tool-use",
+        "reasoning",
+        "local"
+      ],
+      "path": "content/projects/agents/frameworks/smolagents.md",
+      "url": "content/projects/agents/frameworks/smolagents",
+      "last_updated": "2026-06-13",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sota-benchmarks",
+      "type": "guide",
+      "name": "SOTA Benchmarks",
+      "description": "Reference table of model, agent, code, math, and safety benchmark leaderboards",
+      "tags": [
+        "benchmark",
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/research/sota-benchmarks.md",
+      "url": "content/research/sota-benchmarks",
+      "last_updated": "2026-06-14",
+      "category": "research",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "speculative-decoding",
+      "type": "paper",
+      "name": "Fast Inference from Transformers via Speculative Decoding",
+      "description": "Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model",
+      "tags": [
+        "inference",
+        "efficiency",
+        "llm"
+      ],
+      "path": "content/research/papers/speculative-decoding.md",
+      "url": "content/research/papers/speculative-decoding",
+      "last_updated": "2026-06-14",
+      "category": "inference",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "start-with-a-smaller-quantized-model",
+      "type": "tip",
+      "name": "Start With A Smaller Quantized Model",
+      "description": "",
+      "tags": [
+        "local",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/tips-and-tricks/start-with-a-smaller-quantized-model.md",
+      "url": "content/tips-and-tricks/start-with-a-smaller-quantized-model",
+      "last_updated": "2026-06-14",
+      "category": "local-model-tips",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "start-with-zero-chunk-overlap",
+      "type": "tip",
+      "name": "Start With Zero Chunk Overlap",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/start-with-zero-chunk-overlap.md",
+      "url": "content/tips-and-tricks/start-with-zero-chunk-overlap",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "state-negative-constraints-as-testable-rules",
+      "type": "tip",
+      "name": "State Negative Constraints As Testable Rules",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/state-negative-constraints-as-testable-rules.md",
+      "url": "content/tips-and-tricks/state-negative-constraints-as-testable-rules",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "store-parser-version-with-every-chunk",
+      "type": "tip",
+      "name": "Store Parser Version With Every Chunk",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/store-parser-version-with-every-chunk.md",
+      "url": "content/tips-and-tricks/store-parser-version-with-every-chunk",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "store-prompt-version-in-every-trace",
+      "type": "tip",
+      "name": "Store Prompt Version In Every Trace",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/store-prompt-version-in-every-trace.md",
+      "url": "content/tips-and-tricks/store-prompt-version-in-every-trace",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "store-prompts-with-release-versions",
       "type": "tip",
       "name": "Store Prompts with Release Versions",
@@ -1983,6 +5606,25 @@
       "url": "content/tips-and-tricks/store-prompts-with-release-versions",
       "last_updated": "2026-06-13",
       "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "stream-user-facing-responses",
+      "type": "tip",
+      "name": "Stream User Facing Responses",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/stream-user-facing-responses.md",
+      "url": "content/tips-and-tricks/stream-user-facing-responses",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -2008,6 +5650,24 @@
       "featured": false
     },
     {
+      "id": "structured-output",
+      "type": "guide",
+      "name": "Structured Output Tools",
+      "description": "Curated tools for structured output workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/structured-output.md",
+      "url": "content/tools/by-job/structured-output",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "summarize-long-running-agent-state",
       "type": "tip",
       "name": "Summarize Long-Running Agent State",
@@ -2020,6 +5680,25 @@
       "path": "content/tips-and-tricks/summarize-long-running-agent-state.md",
       "url": "content/tips-and-tricks/summarize-long-running-agent-state",
       "last_updated": "2026-06-13",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "summarize-repeated-conversation-blocks",
+      "type": "tip",
+      "name": "Summarize Repeated Conversation Blocks",
+      "description": "",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/summarize-repeated-conversation-blocks.md",
+      "url": "content/tips-and-tricks/summarize-repeated-conversation-blocks",
+      "last_updated": "2026-06-14",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -2068,7 +5747,7 @@
       "id": "text-generation-inference",
       "type": "project",
       "name": "Text Generation Inference",
-      "description": "A production inference server for text generation models from Hugging Face",
+      "description": "Hugging Face inference server for serving large text-generation models in production",
       "tags": [
         "llm",
         "inference",
@@ -2103,10 +5782,29 @@
       "featured": false
     },
     {
+      "id": "thomas-wolf",
+      "type": "person",
+      "name": "Thomas Wolf",
+      "description": "Key figure in open-source transformer tooling and model ecosystem development",
+      "tags": [
+        "huggingface",
+        "transformers",
+        "llm"
+      ],
+      "path": "content/community/people/thomas-wolf.md",
+      "url": "content/community/people/thomas-wolf",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "toolformer",
       "type": "paper",
       "name": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-      "description": "Shows language models can learn API/tool-use patterns from self-supervised data",
+      "description": "Showed that language models can learn to call tools using self-supervised API-call annotations",
       "tags": [
         "tool-use",
         "agents",
@@ -2114,8 +5812,46 @@
       ],
       "path": "content/research/papers/toolformer.md",
       "url": "content/research/papers/toolformer",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "torchtune",
+      "type": "tool",
+      "name": "torchtune",
+      "description": "PyTorch-native library for fine-tuning and experimenting with LLMs",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "pytorch"
+      ],
+      "path": "content/tools/by-job/torchtune.md",
+      "url": "content/tools/by-job/torchtune",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "trace-tool-inputs-and-outputs",
+      "type": "tip",
+      "name": "Trace Tool Inputs And Outputs",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/trace-tool-inputs-and-outputs.md",
+      "url": "content/tips-and-tricks/trace-tool-inputs-and-outputs",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -2125,7 +5861,7 @@
       "id": "tracing-and-monitoring",
       "type": "guide",
       "name": "Tracing and Monitoring",
-      "description": "Guide to traces, spans, logs, metrics, and dashboards for AI systems",
+      "description": "Comparison of tracing approaches for LLM and agent systems",
       "tags": [
         "observability",
         "tracing",
@@ -2159,6 +5895,83 @@
       "featured": false
     },
     {
+      "id": "track-cost-per-successful-outcome",
+      "type": "tip",
+      "name": "Track Cost Per Successful Outcome",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/track-cost-per-successful-outcome.md",
+      "url": "content/tips-and-tricks/track-cost-per-successful-outcome",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "transformers",
+      "type": "guide",
+      "name": "Transformers",
+      "description": "Conceptual guide to transformer architecture and why it matters for LLM systems",
+      "tags": [
+        "llm",
+        "transformers",
+        "attention",
+        "foundational"
+      ],
+      "path": "content/skills/core-concepts/transformers.md",
+      "url": "content/skills/core-concepts/transformers",
+      "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "treat-retrieved-text-as-untrusted",
+      "type": "tip",
+      "name": "Treat Retrieved Text As Untrusted",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "tool-use"
+      ],
+      "path": "content/tips-and-tricks/treat-retrieved-text-as-untrusted.md",
+      "url": "content/tips-and-tricks/treat-retrieved-text-as-untrusted",
+      "last_updated": "2026-06-14",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "tree-of-thoughts",
+      "type": "paper",
+      "name": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "description": "Introduced search over multiple reasoning paths instead of a single left-to-right chain",
+      "tags": [
+        "reasoning",
+        "agents",
+        "planning"
+      ],
+      "path": "content/research/papers/tree-of-thoughts.md",
+      "url": "content/research/papers/tree-of-thoughts",
+      "last_updated": "2026-06-14",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "trulens",
       "type": "tool",
       "name": "TruLens",
@@ -2175,6 +5988,177 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tune-batch-size-against-tail-latency",
+      "type": "tip",
+      "name": "Tune Batch Size Against Tail Latency",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/tune-batch-size-against-tail-latency.md",
+      "url": "content/tips-and-tricks/tune-batch-size-against-tail-latency",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "txtai",
+      "type": "project",
+      "name": "txtai",
+      "description": "All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows",
+      "tags": [
+        "rag",
+        "embeddings",
+        "retrieval",
+        "orchestration"
+      ],
+      "path": "content/projects/rag/frameworks/txtai.md",
+      "url": "content/projects/rag/frameworks/txtai",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "unsloth",
+      "type": "tool",
+      "name": "Unsloth",
+      "description": "Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "pytorch",
+        "efficiency"
+      ],
+      "path": "content/tools/by-job/unsloth.md",
+      "url": "content/tools/by-job/unsloth",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "unstructured",
+      "type": "project",
+      "name": "Unstructured",
+      "description": "Open-source document ETL for converting complex files into structured data for LLM pipelines",
+      "tags": [
+        "rag",
+        "data",
+        "retrieval"
+      ],
+      "path": "content/projects/rag/document-processing/unstructured.md",
+      "url": "content/projects/rag/document-processing/unstructured",
+      "last_updated": "2026-06-13",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "use-context-budgets-per-section",
+      "type": "tip",
+      "name": "Use Context Budgets Per Section",
+      "description": "",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/use-context-budgets-per-section.md",
+      "url": "content/tips-and-tricks/use-context-budgets-per-section",
+      "last_updated": "2026-06-14",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-delimiters-around-retrieved-context",
+      "type": "tip",
+      "name": "Use Delimiters Around Retrieved Context",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/use-delimiters-around-retrieved-context.md",
+      "url": "content/tips-and-tricks/use-delimiters-around-retrieved-context",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-golden-questions-for-every-bug-fix",
+      "type": "tip",
+      "name": "Use Golden Questions For Every Bug Fix",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix.md",
+      "url": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix",
+      "last_updated": "2026-06-14",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-int8-for-safer-compression",
+      "type": "tip",
+      "name": "Use INT8 For Safer Compression",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/use-int8-for-safer-compression.md",
+      "url": "content/tips-and-tricks/use-int8-for-safer-compression",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-json-only-for-machine-parsed-outputs",
+      "type": "tip",
+      "name": "Use JSON Only for Machine Parsed Outputs",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/use-json-only-for-machine-parsed-outputs.md",
+      "url": "content/tips-and-tricks/use-json-only-for-machine-parsed-outputs",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2215,14 +6199,183 @@
       "featured": false
     },
     {
+      "id": "use-metadata-filters-before-similarity-search",
+      "type": "tip",
+      "name": "Use Metadata Filters Before Similarity Search",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/use-metadata-filters-before-similarity-search.md",
+      "url": "content/tips-and-tricks/use-metadata-filters-before-similarity-search",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-parent-child-chunking-for-long-documents",
+      "type": "tip",
+      "name": "Use Parent Child Chunking for Long Documents",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/use-parent-child-chunking-for-long-documents.md",
+      "url": "content/tips-and-tricks/use-parent-child-chunking-for-long-documents",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-query-rewriting-for-vague-questions",
+      "type": "tip",
+      "name": "Use Query Rewriting for Vague Questions",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/use-query-rewriting-for-vague-questions.md",
+      "url": "content/tips-and-tricks/use-query-rewriting-for-vague-questions",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-semantic-cache-for-repeated-questions",
+      "type": "tip",
+      "name": "Use Semantic Cache For Repeated Questions",
+      "description": "",
+      "tags": [
+        "llm",
+        "caching",
+        "cloud"
+      ],
+      "path": "content/tips-and-tricks/use-semantic-cache-for-repeated-questions.md",
+      "url": "content/tips-and-tricks/use-semantic-cache-for-repeated-questions",
+      "last_updated": "2026-06-14",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-sentence-windows-for-dense-manuals",
+      "type": "tip",
+      "name": "Use Sentence Windows for Dense Manuals",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/use-sentence-windows-for-dense-manuals.md",
+      "url": "content/tips-and-tricks/use-sentence-windows-for-dense-manuals",
+      "last_updated": "2026-06-14",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-smaller-models-for-classification-steps",
+      "type": "tip",
+      "name": "Use Smaller Models For Classification Steps",
+      "description": "",
+      "tags": [
+        "inference",
+        "streaming",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/use-smaller-models-for-classification-steps.md",
+      "url": "content/tips-and-tricks/use-smaller-models-for-classification-steps",
+      "last_updated": "2026-06-14",
+      "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-speculative-decoding-for-latency-critical-paths",
+      "type": "tip",
+      "name": "Use Speculative Decoding For Latency Critical Paths",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "caching"
+      ],
+      "path": "content/tips-and-tricks/use-speculative-decoding-for-latency-critical-paths.md",
+      "url": "content/tips-and-tricks/use-speculative-decoding-for-latency-critical-paths",
+      "last_updated": "2026-06-14",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-xml-tags-for-long-prompt-sections",
+      "type": "tip",
+      "name": "Use XML Tags for Long Prompt Sections",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/use-xml-tags-for-long-prompt-sections.md",
+      "url": "content/tips-and-tricks/use-xml-tags-for-long-prompt-sections",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "validate-tool-arguments-before-execution",
+      "type": "tip",
+      "name": "Validate Tool Arguments Before Execution",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/validate-tool-arguments-before-execution.md",
+      "url": "content/tips-and-tricks/validate-tool-arguments-before-execution",
+      "last_updated": "2026-06-14",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "vector-search",
       "type": "guide",
       "name": "Vector Search Tools",
-      "description": "Curated shortlist of vector search tools and selection criteria",
+      "description": "Curated tools for vector search workflows in AI engineering",
       "tags": [
-        "rag",
-        "embeddings",
-        "retrieval"
+        "llm",
+        "data"
       ],
       "path": "content/tools/by-job/vector-search.md",
       "url": "content/tools/by-job/vector-search",
@@ -2231,6 +6384,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "version-system-prompts-like-code",
+      "type": "tip",
+      "name": "Version System Prompts Like Code",
+      "description": "",
+      "tags": [
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/version-system-prompts-like-code.md",
+      "url": "content/tips-and-tricks/version-system-prompts-like-code",
+      "last_updated": "2026-06-14",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2255,7 +6426,7 @@
       "id": "vllm",
       "type": "project",
       "name": "vLLM",
-      "description": "A high-throughput inference engine for serving large language models",
+      "description": "High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs",
       "tags": [
         "llm",
         "inference",
@@ -2294,7 +6465,7 @@
       "id": "weaviate",
       "type": "project",
       "name": "Weaviate",
-      "description": "An open-source vector database with hybrid search and modular integrations",
+      "description": "Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval",
       "tags": [
         "rag",
         "embeddings",
@@ -2311,21 +6482,135 @@
       "featured": false
     },
     {
+      "id": "web-scraping",
+      "type": "guide",
+      "name": "Web Scraping Tools",
+      "description": "Curated tools for web scraping workflows in AI engineering",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-job/web-scraping.md",
+      "url": "content/tools/by-job/web-scraping",
+      "last_updated": "2026-06-13",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "weekly-arxiv-picks",
+      "type": "guide",
+      "name": "Weekly ArXiv Picks",
+      "description": "Template for weekly AI engineering paper picks and maintainer review",
+      "tags": [
+        "research",
+        "trending",
+        "new-arrival"
+      ],
+      "path": "content/research/weekly-arxiv-picks.md",
+      "url": "content/research/weekly-arxiv-picks",
+      "last_updated": "2026-06-14",
+      "category": "research",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "weights-biases",
+      "type": "tool",
+      "name": "Weights & Biases",
+      "description": "Experiment tracking and model management platform for ML and AI teams",
+      "tags": [
+        "evaluation",
+        "monitoring",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/weights-biases.md",
+      "url": "content/tools/by-job/weights-biases",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "yann-lecun",
+      "type": "person",
+      "name": "Yann LeCun",
+      "description": "Longtime AI researcher with influential perspective on representation learning and AI systems",
+      "tags": [
+        "foundational",
+        "research",
+        "llm"
+      ],
+      "path": "content/community/people/yann-lecun.md",
+      "url": "content/community/people/yann-lecun",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "yi",
+      "type": "project",
+      "name": "Yi",
+      "description": "01.AI open model family with bilingual and long-context variants from small to mid-large sizes",
+      "tags": [
+        "llm",
+        "inference",
+        "local",
+        "multimodal"
+      ],
+      "path": "content/projects/llms/open-source-models/yi.md",
+      "url": "content/projects/llms/open-source-models/yi",
+      "last_updated": "2026-06-13",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "watching",
+      "featured": false
+    },
+    {
       "id": "youtube-channels",
       "type": "guide",
       "name": "YouTube Channels",
-      "description": "Curated guide to useful AI engineering video channels",
+      "description": "Curated YouTube channels for AI engineering, ML foundations, and practical LLM building",
       "tags": [
         "llm",
-        "rag",
-        "agents"
+        "training",
+        "foundational"
       ],
       "path": "content/community/youtube-channels.md",
       "url": "content/community/youtube-channels",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-06-14",
       "category": "community",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "zep",
+      "type": "tool",
+      "name": "Zep",
+      "description": "Memory and context engineering platform for AI agents and assistants",
+      "tags": [
+        "memory",
+        "agents",
+        "retrieval"
+      ],
+      "path": "content/tools/by-job/zep.md",
+      "url": "content/tools/by-job/zep",
+      "last_updated": "2026-06-13",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     }

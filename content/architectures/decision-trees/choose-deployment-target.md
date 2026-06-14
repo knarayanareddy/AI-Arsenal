@@ -3,7 +3,7 @@ id: "choose-deployment-target"
 title: "Choose a Deployment Target"
 entry_type: "guide"
 section: "architectures"
-description: "Decision tree for deploying AI applications and inference services"
+description: "Decision tree for deploying AI apps, APIs, agents, and inference services"
 tags:
   - inference
   - cloud
@@ -18,55 +18,107 @@ status: "active"
 
 ## Overview
 
-Deployment target choice depends on latency SLOs, GPU needs, privacy boundaries, and operations capability.
+> **TL;DR:** Deploy the application and the model separately unless you are intentionally building a small all-in-one prototype. Choose by GPU need, traffic shape, cloud commitment, and operations maturity.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+Deployment is where prototypes become expensive, slow, or unreliable. AI systems often need separate choices for app hosting, model serving, data stores, observability, and batch jobs.
 
 ## Key Features
 
-- Use managed APIs for fastest launch
-- Use serverless for bursty non-GPU workloads
-- Use dedicated GPU serving for high-throughput inference
+- Covers serverless vs always-on, GPU, cloud providers, autoscaling, and budget
+- Links deployment tools from Sprint 5 and inference engines from Sprint 2
+- Encourages separate app and model serving decisions
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+```mermaid
+flowchart TD
+    START([🚀 Start]) --> GPU{Do you need to host model GPUs?}
+    GPU -->|No, using model API| APP{App traffic shape?}
+    APP -->|Small/MVP| RAIL[✅ Railway / Fly.io / FastAPI on simple host]
+    APP -->|Burst/serverless| MODAL[✅ Modal / serverless containers]
+    APP -->|Enterprise cloud| CLOUD{Existing cloud?}
+    CLOUD -->|AWS| BEDROCK[✅ AWS Bedrock + AWS app hosting]
+    CLOUD -->|Azure| AZURE[✅ Azure AI Studio]
+    CLOUD -->|GCP| VERTEX[✅ Vertex AI]
+    GPU -->|Yes| SERVE{Need high-throughput open-model serving?}
+    SERVE -->|Yes| VLLM[✅ vLLM / SGLang on GPU nodes]
+    SERVE -->|No, managed endpoint okay| HF[✅ Hugging Face Inference Endpoints / Replicate]
+    SERVE -->|Prototype GPU jobs| MODALGPU[✅ Modal / Replicate]
+```
+
+Plain-language tree:
+
+1. If you use hosted model APIs, deploy your app separately from model serving.
+2. For MVPs, use Railway, Fly.io, or a simple FastAPI deployment.
+3. For bursty Python/GPU jobs, evaluate Modal.
+4. For managed model APIs in a cloud commitment, use Bedrock, Azure AI Studio, or Vertex AI.
+5. For self-hosted high-throughput open models, benchmark vLLM or SGLang on GPU infrastructure.
+6. For managed model endpoints, evaluate Hugging Face Inference Endpoints, Replicate, or provider-specific services.
+
+### Quick Reference Table
+
+| Need | Recommended Start | Canonical Entry |
+|---|---|---|
+| Simple API wrapper | FastAPI + Railway/Fly.io | [FastAPI](../../tools/by-job/fastapi.md), [Railway](../../tools/by-job/railway.md), [Fly.io](../../tools/by-job/fly-io.md) |
+| Serverless Python/GPU jobs | Modal | [Modal](../../tools/by-job/modal.md) |
+| Managed model endpoint | HF Endpoints / Replicate | [HF Inference Endpoints](../../tools/by-job/hf-inference-endpoints.md), [Replicate](../../tools/by-job/replicate.md) |
+| AWS enterprise | Bedrock | [AWS Bedrock](../../tools/by-job/aws-bedrock.md) |
+| Azure enterprise | Azure AI Studio | [Azure AI Studio](../../tools/by-job/azure-ai-studio.md) |
+| GCP enterprise | Vertex AI | [Google Vertex AI](../../tools/by-job/google-vertex-ai.md) |
+| Self-host open models | vLLM / SGLang | [vLLM](../../projects/llms/inference-engines/vllm.md), [SGLang](../../projects/llms/inference-engines/sglang.md) |
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# App API baseline
+pip install fastapi uvicorn
+
+# Model serving baseline
+pip install vllm
+vllm serve Qwen/Qwen2.5-7B-Instruct
 ```
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: You need a fast shortlist without reading every project entry first
+2. **Scenario**: You want to explain an architecture choice to a teammate or reviewer
+3. **Scenario**: You are giving an LLM/agent structured context for stack selection
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Converts a broad tool category into explicit decision logic
+- Links leaf-node recommendations to canonical Arsenal entries
+- Includes both Mermaid and plain-text forms for humans and LLMs
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on benchmarks with your actual data and traffic
+- Pricing, model availability, quotas, and hosted-service limits can change
+- Regulated environments still require legal, security, and compliance review
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Start with the Mermaid tree for fast orientation.
+- Use the text decision tree when copying into LLM context or design docs.
+- Open the linked canonical entries before making a production commitment.
+- Run a proof of concept and evaluation before standardizing on a tool.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Modal](../../tools/by-job/modal.md)
+- [BentoML](../../tools/by-job/bentoml.md)
+- [Replicate](../../tools/by-job/replicate.md)
+- [Fly.io](../../tools/by-job/fly-io.md)
+- [Railway](../../tools/by-job/railway.md)
+- [AWS Bedrock](../../tools/by-job/aws-bedrock.md)
+- [Azure AI Studio](../../tools/by-job/azure-ai-studio.md)
+- [Google Vertex AI](../../tools/by-job/google-vertex-ai.md)
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Decision-tree pages are maintained as high-value LLM/agent routing context. They should be updated whenever major tooling or model defaults shift.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

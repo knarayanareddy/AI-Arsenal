@@ -3,7 +3,7 @@ id: "cost-tracking"
 title: "Cost Tracking"
 entry_type: "guide"
 section: "observability"
-description: "Guide to tracking token, inference, and infrastructure costs"
+description: "Guide to token cost math and cost observability for LLM applications"
 tags:
   - observability
   - cloud
@@ -17,55 +17,97 @@ status: "active"
 
 ## Overview
 
-Cost tracking prevents AI systems from becoming unpredictable as usage, context size, and tool calls grow.
+LLM cost tracking means attributing spend to models, users, features, prompts, environments, and workflows.
+
+The goal is not just to know the bill. The goal is to catch regressions when prompts grow, retrieval adds too much context, agents loop, or a model route escalates too often.
 
 ## Why It's in the Arsenal
 
-This guide turns scattered AI engineering tradeoffs into a repeatable decision process. It keeps recommendations structured enough for humans to browse and agents to route.
+AI unit economics can break silently. A prompt change or agent retry loop can multiply costs before users notice quality changes.
 
 ## Key Features
 
-- Track cost per request and per user
-- Budget by environment and feature
-- Alert on prompt or retrieval regressions
+### Token cost math
+
+```text
+request_cost = (input_tokens / 1_000_000 * input_price_per_1m)
+             + (output_tokens / 1_000_000 * output_price_per_1m)
+```
+
+For a feature:
+
+```text
+feature_cost = sum(request_cost for all calls in workflow)
+cost_per_success = total_feature_cost / successful_user_outcomes
+```
+
+### Manual tracking template
+
+| Date | Feature | Model | Input Tokens | Output Tokens | Cost | User/Team | Notes |
+|---|---|---:|---:|---:|---:|---|---|
+| YYYY-MM-DD | support-rag | model-name | 0 | 0 | $0.00 | team | note |
 
 ## Architecture / How It Works
 
-Use the constraints first: privacy, latency, budget, team skill, data sensitivity, expected traffic, and operational maturity. Then select the simplest stack that satisfies the hard constraints before optimizing optional dimensions.
+Cost tracking works best when every trace includes:
+
+- model name
+- provider
+- prompt version
+- feature name
+- environment
+- user/team/tenant ID
+- input tokens
+- output tokens
+- latency
+- success/failure state
+
+Tools with cost dashboards or cost attribution include Langfuse, LangSmith, Helicone, Braintrust, and several gateway/proxy platforms.
 
 ## Getting Started
 
 ```bash
-# Read this guide, identify your constraints, then compare the linked tools and projects.
+# Add cost tags before optimization.
+# You cannot optimize what you do not attribute.
 ```
 
 ## Use Cases
 
-1. **Scenario**: When selecting components for a new AI application
-2. **Scenario**: When reviewing an existing architecture for missing pieces
+1. **Scenario**: Selecting an observability stack before launching an LLM application
+2. **Scenario**: Debugging quality, cost, and latency problems in production
 
 ## Strengths
 
-- Compresses common decision paths into a single reviewable artifact
-- Encourages explicit tradeoffs instead of trend-following
+- Gives engineers a shared vocabulary for observability tradeoffs
+- Links directly to canonical tool/project entries
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on benchmarking for production workloads
-- Must be revisited when latency, privacy, or scale requirements change
+- Does not replace hands-on evaluation with your own traces
+- Pricing, limits, and hosted/self-hosted features must be verified before purchase
 
 ## Integration Patterns
 
-Use this guide alongside the generated data layer and relevant project/tool entries. For agent workflows, load `AGENT.md` first, then this file, then only the specific entries referenced by the decision.
+- Instrument model calls, retrievers, tool calls, and agent state transitions.
+- Attach user, session, environment, feature, model, and prompt-version metadata.
+- Convert production failures into evaluation examples.
 
 ## Resources
 
-- [AI Arsenal Taxonomy](../../../TAXONOMY.md)
-- [AI Arsenal Agent Map](../../../AGENT.md)
+- [Langfuse](../projects/observability/tracing/langfuse.md) — sdk/self-host
+- [LangSmith](../projects/observability/tracing/langsmith-platform.md) — platform/managed
+- [Phoenix](../projects/observability/tracing/phoenix.md) — otel-native
+- [Helicone](../projects/observability/tracing/helicone.md) — proxy
+- [Opik](../projects/observability/tracing/opik.md) — platform
+- [OpenLIT](../projects/observability/tracing/openlit.md) — otel-native
+- [OpenLLMetry](../projects/observability/tracing/openllmetry.md) — otel-native
+- [Lunary](../projects/observability/tracing/lunary.md) — sdk
+- [Braintrust](../projects/observability/tracing/braintrust.md) — platform/eval-first
+- [Agenta](../projects/observability/tracing/agenta.md) — platform
 
 ## Buzz & Reception
 
-This is a foundational guidance page intended to evolve as the ecosystem changes.
+Observability is now a core production requirement for LLM apps because model behavior, retrieval quality, latency, and cost can all regress independently.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

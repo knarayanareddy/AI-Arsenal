@@ -5,8 +5,8 @@ type: library
 category: rag
 subcategory: vector-databases
 description: >-
-  A PostgreSQL extension that adds vector similarity search to existing
-  databases
+  PostgreSQL extension for vector similarity search inside an existing
+  relational database
 github_url: 'https://github.com/pgvector/pgvector'
 license: PostgreSQL
 primary_language: C++
@@ -17,13 +17,20 @@ tags:
   - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 21735
-trending_score: 70
+github_stars: 21738
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-11'
-docs_url: null
+docs_url: 'https://github.com/pgvector/pgvector'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -33,60 +40,86 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 21735
 ---
+
+> **TL;DR:** pgvector adds vector similarity search to PostgreSQL. Use it when your app already runs on Postgres and vector search is not yet a separate platform problem.
 
 ## Overview
 
-pgvector is included as a notable rag project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+pgvector is often the simplest production choice because it keeps vectors, metadata, permissions, and application data in Postgres.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+Many teams should start with pgvector before adding a separate vector database because operational simplicity is a feature.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Postgres extension
+- Vector indexes and similarity search
+- Keeps metadata and relational data together
+- Works with existing backups/ops/security
+- Open-source extension
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+pgvector stores embedding vectors in Postgres columns and provides distance operators and indexes for similarity search.
+
+## Vector Database Comparison
+
+| Feature | This DB |
+|---|---|
+| Self-hostable | Yes |
+| Cloud managed | Yes, through Postgres providers that support it |
+| Hybrid search | Use SQL/full-text plus vector patterns |
+| Disk-based index | Yes, Postgres storage/indexes |
+| Multi-tenancy | Yes, using normal Postgres schema/RLS patterns |
+| Free tier | Yes |
+| Open source | Yes |
+| Best for | Apps already using Postgres |
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/pgvector/pgvector
+CREATE EXTENSION vector;
+```
+
+```python
+-- SQL
+CREATE EXTENSION IF NOT EXISTS vector;
+CREATE TABLE docs (id bigserial PRIMARY KEY, embedding vector(3));
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the rag ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Existing Postgres applications
+2. **Scenario**: Small-to-medium RAG systems
+3. **Scenario**: Teams wanting fewer databases
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Operational simplicity
+- Relational metadata and vectors together
+- Great first production default for many apps
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Not always best for massive ANN scale
+- Requires Postgres tuning knowledge
+- Feature set differs from dedicated vector DBs
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Pair with LlamaIndex, LangChain, Haystack, or custom retrieval code.
+- Store document IDs and metadata alongside vectors so answers can cite sources.
+- Benchmark recall, latency, filtering, and ingestion under production-shaped data.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/pgvector/pgvector)
+- [GitHub](https://github.com/pgvector/pgvector)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because vector database choice is one of the most common RAG architecture decisions.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

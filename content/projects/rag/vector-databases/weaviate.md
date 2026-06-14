@@ -4,7 +4,9 @@ name: Weaviate
 type: platform
 category: rag
 subcategory: vector-databases
-description: An open-source vector database with hybrid search and modular integrations
+description: >-
+  Open-source vector database combining object storage, vector search,
+  filtering, and hybrid retrieval
 github_url: 'https://github.com/weaviate/weaviate'
 license: BSD-3-Clause
 primary_language: Go
@@ -16,12 +18,19 @@ tags:
 maturity: production
 cost_model: open-source
 github_stars: 16323
-trending_score: 70
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-12'
-docs_url: null
+docs_url: 'https://weaviate.io/developers/weaviate/'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -31,60 +40,89 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 16323
 ---
+
+> **TL;DR:** Weaviate is an open-source vector database with object storage, filters, modules, and hybrid search. Use it when schema-rich vector search and managed/self-host options matter.
 
 ## Overview
 
-Weaviate is included as a notable rag project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+Weaviate stores objects and vectors together, making it useful when retrieval depends on both semantic similarity and structured metadata.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+Weaviate is a major vector DB option because it combines vector search with schema, object storage, hybrid retrieval, and cloud-native deployment.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Object-plus-vector data model
+- Hybrid search
+- Structured filtering
+- Self-hosted and cloud options
+- Module/integration ecosystem
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+Weaviate stores objects with vector embeddings and serves semantic, keyword, hybrid, and filtered retrieval APIs.
+
+## Vector Database Comparison
+
+| Feature | This DB |
+|---|---|
+| Self-hostable | Yes |
+| Cloud managed | Yes |
+| Hybrid search | Yes |
+| Disk-based index | Yes |
+| Multi-tenancy | Yes, with multi-tenancy features |
+| Free tier | Yes, OSS and cloud options |
+| Open source | Yes, BSD-3-Clause |
+| Best for | Schema-rich RAG and hybrid retrieval |
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/weaviate/weaviate
+pip install weaviate-client
+```
+
+```python
+import weaviate
+
+client = weaviate.connect_to_local()
+print(client.is_ready())
+client.close()
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the rag ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Hybrid search applications
+2. **Scenario**: Schema-rich knowledge bases
+3. **Scenario**: Teams wanting cloud and self-host paths
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Object/vector model is expressive
+- Hybrid search is a first-class story
+- Mature ecosystem and docs
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- More concepts than simple embedded stores
+- Cluster operations require planning
+- May be overkill for small prototypes
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Pair with LlamaIndex, LangChain, Haystack, or custom retrieval code.
+- Store document IDs and metadata alongside vectors so answers can cite sources.
+- Benchmark recall, latency, filtering, and ingestion under production-shaped data.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/weaviate/weaviate)
+- [GitHub](https://github.com/weaviate/weaviate)
+- [Docs](https://weaviate.io/developers/weaviate/)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because vector database choice is one of the most common RAG architecture decisions.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

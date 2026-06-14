@@ -2,7 +2,7 @@
 id: "multi-agent-research-system"
 title: "Multi-Agent Research System"
 difficulty: "advanced"
-description: "Build a multi-agent research assistant with planning, retrieval, and review loops"
+description: "Blueprint for a research assistant with planning, retrieval, writing, review, and traceable agent state"
 tags:
   - agents
   - planning
@@ -11,66 +11,86 @@ stack:
   - python
   - langgraph
   - qdrant
-estimated_time: "3 days"
+  - langsmith
+estimated_time: "3-5 days"
 repo_url: null
 demo_url: null
-added_date: "2026-06-13"
+added_date: "2026-06-14"
 added_by: "maintainer"
-last_reviewed: "2026-06-13"
+last_reviewed: "2026-06-14"
 status: "active"
 ---
 
-## Overview
+> **TL;DR:** Builds a multi-agent research assistant. Stack: LangGraph, retrieval, reviewer loop, LangSmith or Langfuse. Best for complex research workflows.
 
-Multi-Agent Research System is a curated build example entry included to make the Arsenal more useful for practical AI engineering decisions.
+## What You're Building
 
-## Why It's in the Arsenal
+You will build a system where a planner decomposes a research question, a researcher gathers evidence, a writer drafts an answer, and a reviewer checks claims before final output. Users receive a cited research brief rather than a raw chat answer.
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+## Architecture Overview
 
-## Key Features
-
-- Clear scope and practical applicability
-- Structured metadata for filtering and search
-- Canonical location for future updates
-
-## Architecture / How It Works
-
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
-
-## Getting Started
-
-```bash
-# Read the entry and follow the linked resources.
+```mermaid
+flowchart TD
+    U[Research question] --> PLAN[Planner agent]
+    PLAN --> SEARCH[Research agent]
+    SEARCH --> RAG[Retriever / web search]
+    RAG --> VDB[Qdrant / document index]
+    SEARCH --> WRITE[Writer agent]
+    WRITE --> REVIEW[Reviewer agent]
+    REVIEW -->|needs fixes| SEARCH
+    REVIEW -->|approved| FINAL[Final cited brief]
+    PLAN --> OBS[LangSmith / Langfuse]
+    SEARCH --> OBS
+    WRITE --> OBS
+    REVIEW --> OBS
+    FINAL --> U
 ```
 
-## Use Cases
+## Stack
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+| Component | Tool | Why |
+|---|---|---|
+| Agent graph | LangGraph | Explicit state and review loops |
+| Role pattern | CrewAI-style roles | Clear planning/research/writing/review responsibilities |
+| Retriever | Qdrant + RAG framework | Evidence gathering over indexed sources |
+| Observability | LangSmith or Langfuse | Trace every agent step |
+| Evaluation | Golden research questions | Regression checks for citation quality |
 
-## Strengths
+## Prerequisites
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
+- [ ] A trusted document corpus or approved web source list
+- [ ] Clear citation requirements
+- [ ] Human review policy for high-impact outputs
+- [ ] Trace storage and eval dataset
 
-## Limitations / When NOT to Use
+## Key Implementation Steps
 
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
+1. **Define roles** — Planner, researcher, writer, and reviewer should have separate responsibilities and permissions.
+2. **Create graph state** — Persist plan, evidence, draft, review comments, and final answer.
+3. **Add retrieval** — Limit sources to approved indexes or tools.
+4. **Add review loop** — Reviewer must cite missing evidence or approve final answer.
+5. **Evaluate outputs** — Score citation coverage, faithfulness, and completeness.
 
-## Integration Patterns
+## Gotchas & Tips
 
-Use this entry as a canonical reference from guides, stacks, and generated data views.
+- Do not let the writer invent citations.
+- Reviewer must inspect evidence, not only prose.
+- Limit loop count to avoid runaway research.
+- Human approval is required for regulated or external-facing reports.
 
-## Resources
+## Full Reference Implementations
 
-- [Primary Resource](https://example.com)
+- [LangGraph repository](https://github.com/langchain-ai/langgraph) — Graph orchestration
+- [CrewAI repository](https://github.com/crewAIInc/crewAI) — Role-based agent patterns
+- [Qdrant repository](https://github.com/qdrant/qdrant) — Vector retrieval
 
-## Buzz & Reception
+## Related Entries
 
-Reception notes should be updated with verified sources during maintenance reviews.
+- Stack reference: [Multi-agent system](../../architectures/reference-stacks/multi-agent-system.md)
+- Framework: [LangGraph](../../projects/agents/frameworks/langgraph.md)
+- Framework: [CrewAI](../../projects/agents/frameworks/crewai.md)
+- Tip: [Cap retries](../../tips-and-tricks/cap-agent-tool-retries.md)
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

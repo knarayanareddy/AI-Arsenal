@@ -10,7 +10,8 @@
 
 ## Recently Added
 
-_No entries yet._
+- [Prompt Engineering Fundamentals](./fundamentals.md)
+- [Prompt Patterns Catalog](./prompt-patterns-catalog.md)
 
 ## Most Popular
 
@@ -18,4 +19,5 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-_No entries yet._
+- [Prompt Engineering Fundamentals](./fundamentals.md) — Practical prompt engineering fundamentals for production LLM applications
+- [Prompt Patterns Catalog](./prompt-patterns-catalog.md) — Catalog of practical prompt patterns for structured LLM application behavior

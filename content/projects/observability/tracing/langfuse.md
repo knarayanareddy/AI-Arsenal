@@ -5,10 +5,10 @@ type: platform
 category: observability
 subcategory: tracing
 description: >-
-  An open-source observability platform for LLM traces, prompts, evals, and
-  metrics
+  Open-source LLM observability platform for traces, evals, prompts, metrics,
+  and datasets
 github_url: 'https://github.com/langfuse/langfuse'
-license: MIT
+license: MIT core / Enterprise
 primary_language: TypeScript
 tags:
   - observability
@@ -16,16 +16,30 @@ tags:
   - evaluation
   - self-hosted
 maturity: production
-cost_model: open-source
-github_stars: 29019
-trending_score: 70
+cost_model: freemium
+github_stars: 29021
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://langfuse.com/docs'
 demo_url: null
 paper_url: null
 paper_id: null
-alternatives: []
-integrates_with: []
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
+approach: sdk
+alternatives:
+  - langsmith-platform
+  - phoenix
+  - helicone
+  - opik
+integrates_with:
+  - langchain
+  - langgraph
 added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: maintainer
@@ -33,60 +47,81 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 29019
 ---
+
+> **TL;DR:** Langfuse is a self-hostable LLM observability platform for traces, evals, prompts, and datasets. Use it when data ownership and open-source deployment matter.
 
 ## Overview
 
-Langfuse is included as a notable observability project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+Langfuse covers tracing, prompt management, evaluations, datasets, metrics, and playground workflows for LLM applications. It has both cloud and self-hosted deployment options.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the observability category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+It is one of the strongest defaults for teams that want an open-source observability layer rather than a purely managed service.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Tracing for LLM calls and agents
+- Prompt management and playground workflows
+- Datasets and evaluation support
+- OpenTelemetry integrations
+- Self-hosted and cloud options
+- Broad SDK/provider integrations
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+**Approach:** `sdk`
+
+Langfuse typically instruments application code through SDKs or integrations and records observations, traces, prompts, scores, and metadata in the Langfuse backend.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/langfuse/langfuse
+pip install langfuse
+```
+
+## Integration Snippet
+
+```python
+from langfuse import observe
+
+@observe()
+def answer(question: str):
+    return "instrumented response"
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the observability ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Self-hosted LLM observability
+2. **Scenario**: Prompt/version/eval workflows
+3. **Scenario**: Teams wanting one platform for traces and evaluation
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Strong open-source/self-host story
+- Combines tracing, prompts, evals, and datasets
+- Broad ecosystem integrations
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Enterprise features and cloud limits require pricing review
+- Self-hosting still needs database/infra operations
+- Deep custom eval pipelines require design work
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Use SDK decorators or framework integrations for traces
+- Attach user/session/tenant metadata to every trace
+- Run eval datasets against production trace samples
 
 ## Resources
 
-- [GitHub Repository](https://github.com/langfuse/langfuse)
+- [GitHub](https://github.com/langfuse/langfuse)
+- [Docs](https://langfuse.com/docs)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because observability choice shapes debugging, evals, cost control, and production trust for LLM systems.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

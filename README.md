@@ -83,6 +83,8 @@ Use `AGENT.md`, `CONTEXT.md`, and `/data/*.json` to route, retrieve, filter, and
 
 ## What Is Included
 
+Population progress is tracked in [`PROGRESS.md`](./PROGRESS.md).
+
 Current generated stats:
 
 | Type | Count |

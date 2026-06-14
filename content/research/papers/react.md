@@ -4,6 +4,7 @@ title: "ReAct: Synergizing Reasoning and Acting in Language Models"
 authors:
   - "Yao, S."
   - "Zhao, J."
+  - "Yu, D."
 published_date: "2022-10-06"
 venue: "ICLR 2023"
 arxiv_id: "2210.03629"
@@ -16,66 +17,48 @@ tags:
 category: "agents"
 importance: "foundational"
 citation_count: 0
-has_code: false
-code_url: null
+has_code: true
+code_url: "https://github.com/ysymyth/ReAct"
 benchmark_improvements: []
-tldr: "Combines reasoning traces with actions for tool-using language agents"
-why_it_matters: "This paper is included because it shaped practical AI engineering decisions, model behavior, evaluation, or architecture patterns."
-added_date: "2026-06-13"
+tldr: "Combined reasoning traces with actions so language models can think and use tools interleaved"
+why_it_matters: "The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed."
+added_date: "2026-06-14"
 added_by: "maintainer"
 ---
 
-## Overview
+> **TL;DR:** Combined reasoning traces with actions so language models can think and use tools interleaved.
+> **Why it matters:** The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed.
 
-ReAct: Synergizing Reasoning and Acting in Language Models is a curated paper entry included to make the Arsenal more useful for practical AI engineering decisions.
+## The Problem It Solved
 
-## Why It's in the Arsenal
+Addressed static chain-of-thought limitations when external actions are needed.
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+## Key Contribution
 
-## Key Features
+Combined reasoning traces with actions so language models can think and use tools interleaved.
 
-- Clear scope and practical applicability
-- Structured metadata for filtering and search
-- Canonical location for future updates
+## Results / Key Numbers
 
-## Architecture / How It Works
+Showed strong results on knowledge-intensive and decision-making tasks in the paper setting.
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+Do not reuse these numbers as current SOTA claims without checking newer leaderboards; they describe the paper's reported results and context.
 
-## Getting Started
+## How to Apply This Today
 
-```bash
-# Read the entry and follow the linked resources.
-```
+Use ReAct as the conceptual basis for tool-using agents and traceable action loops.
 
-## Use Cases
+## Code / Implementation
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+- [Implementation / code](https://github.com/ysymyth/ReAct)
+- [arXiv abstract](https://arxiv.org/abs/2210.03629)
+- [PDF](https://arxiv.org/pdf/2210.03629)
 
-## Strengths
+## Further Reading
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
-
-## Limitations / When NOT to Use
-
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
-
-## Integration Patterns
-
-Use this entry as a canonical reference from guides, stacks, and generated data views.
-
-## Resources
-
-- [Primary Resource](https://arxiv.org/abs/2210.03629)
-
-## Buzz & Reception
-
-Reception notes should be updated with verified sources during maintenance reviews.
+- [Must-read papers guide](../must-read-papers.md)
+- [SOTA benchmarks](../sota-benchmarks.md)
+- [Emerging techniques](../emerging-techniques.md)
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

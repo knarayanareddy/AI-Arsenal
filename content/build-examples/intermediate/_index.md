@@ -10,8 +10,9 @@
 
 ## Recently Added
 
+- [Document Q&A Pipeline](./document-qa-pipeline.md)
 - [Multi-Tool Agent](./multi-tool-agent.md)
-- [Self-Correcting RAG](./self-correcting-rag.md)
+- [Production RAG API](./production-rag-api.md)
 
 ## Most Popular
 
@@ -19,5 +20,6 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-- [Multi-Tool Agent](./multi-tool-agent.md) — Build an agent that calls multiple tools with traceable state and bounded retries
-- [Self-Correcting RAG](./self-correcting-rag.md) — Build a RAG pipeline that detects weak retrieval and retries with improved queries
+- [Document Q&A Pipeline](./document-qa-pipeline.md) — Blueprint for document ingestion, parsing, indexing, and question answering with pgvector
+- [Multi-Tool Agent](./multi-tool-agent.md) — Blueprint for a LangGraph agent that uses multiple validated tools and structured outputs
+- [Production RAG API](./production-rag-api.md) — Blueprint for a production-ready RAG API with FastAPI, Qdrant, LlamaIndex, and Langfuse

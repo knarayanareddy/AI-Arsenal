@@ -4,7 +4,9 @@ name: Milvus
 type: platform
 category: rag
 subcategory: vector-databases
-description: A scalable open-source vector database for embedding search at large scale
+description: >-
+  Cloud-native vector database for large-scale ANN search and production vector
+  workloads
 github_url: 'https://github.com/milvus-io/milvus'
 license: Apache-2.0
 primary_language: Go
@@ -16,12 +18,19 @@ tags:
 maturity: production
 cost_model: open-source
 github_stars: 44762
-trending_score: 70
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://github.com/milvus-io/milvus'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -31,60 +40,88 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 44762
 ---
+
+> **TL;DR:** Milvus is a cloud-native vector database built for scalable ANN search. Use it when large-scale vector search and distributed operations are central.
 
 ## Overview
 
-Milvus is included as a notable rag project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+Milvus is one of the longest-running purpose-built vector databases and is often considered for high-scale vector search infrastructure.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+Milvus is a key option when vector volume, distributed operations, and cloud-native deployment matter more than prototype simplicity.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Distributed vector database architecture
+- High-scale ANN search
+- Cloud-native deployment options
+- Apache-2.0 open source
+- Ecosystem around Zilliz Cloud
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+Milvus separates vector storage, indexing, query, and coordination components for scalable ANN search.
+
+## Vector Database Comparison
+
+| Feature | This DB |
+|---|---|
+| Self-hostable | Yes |
+| Cloud managed | Yes, via Zilliz Cloud |
+| Hybrid search | Yes / supported patterns |
+| Disk-based index | Yes |
+| Multi-tenancy | Yes, via databases/collections/partitions patterns |
+| Free tier | Yes, OSS and cloud trials/options |
+| Open source | Yes, Apache-2.0 |
+| Best for | Large-scale vector search |
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/milvus-io/milvus
+pip install pymilvus
+```
+
+```python
+from pymilvus import MilvusClient
+
+client = MilvusClient("./milvus_demo.db")
+print(client.list_collections())
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the rag ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Large vector collections
+2. **Scenario**: Teams with platform/infra maturity
+3. **Scenario**: Cloud-native vector infrastructure
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Designed for scale
+- Mature vector database project
+- Good managed path through Zilliz
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Heavier operations than Chroma/pgvector
+- Overkill for small apps
+- Requires careful index/cluster planning
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Pair with LlamaIndex, LangChain, Haystack, or custom retrieval code.
+- Store document IDs and metadata alongside vectors so answers can cite sources.
+- Benchmark recall, latency, filtering, and ingestion under production-shaped data.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/milvus-io/milvus)
+- [GitHub](https://github.com/milvus-io/milvus)
+- [Docs](https://github.com/milvus-io/milvus)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because vector database choice is one of the most common RAG architecture decisions.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

@@ -4,7 +4,9 @@ name: Phoenix
 type: platform
 category: observability
 subcategory: tracing
-description: An open-source AI observability and evaluation platform from Arize
+description: >-
+  Arize Phoenix open-source observability and evaluation platform for LLM, RAG,
+  and agent systems
 github_url: 'https://github.com/Arize-ai/phoenix'
 license: Elastic-2.0
 primary_language: Python
@@ -16,13 +18,25 @@ tags:
 maturity: production
 cost_model: open-source
 github_stars: 10124
-trending_score: 70
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://arize.com/docs/phoenix'
 demo_url: null
 paper_url: null
 paper_id: null
-alternatives: []
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: false
+supported_formats: []
+api_compatible: null
+approach: otel-native
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - helicone
+  - opik
 integrates_with: []
 added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
@@ -31,60 +45,79 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 10124
 ---
+
+> **TL;DR:** Phoenix is an open-source observability and evaluation platform for LLM, RAG, and agent systems. Use it when OpenTelemetry and RAG debugging are priorities.
 
 ## Overview
 
-Phoenix is included as a notable observability project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+Phoenix focuses on traces, evaluations, experimentation, and RAG/agent debugging with open-source local/self-host options and Arize ecosystem integration.
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the observability category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+It is a strong choice for ML/AI engineers who want standards-oriented tracing and RAG evaluation workflows.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- OpenTelemetry-oriented tracing
+- RAG and agent evaluation workflows
+- Notebook/local debugging story
+- Self-hostable Phoenix app
+- Integration with Arize ecosystem
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+**Approach:** `otel-native`
+
+Phoenix ingests traces and spans, often through OpenTelemetry instrumentation, then supports analysis, evals, and debugging workflows.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/Arize-ai/phoenix
+pip install arize-phoenix openinference-instrumentation-openai
+```
+
+## Integration Snippet
+
+```python
+import phoenix as px
+
+session = px.launch_app()
+print(session.url)
 ```
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the observability ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: RAG debugging and evals
+2. **Scenario**: OpenTelemetry-first AI observability
+3. **Scenario**: Notebook-to-production investigation workflows
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Strong RAG/ML observability orientation
+- Open-source local workflow
+- Standards-friendly instrumentation
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- License is not MIT/Apache
+- Product surface differs from prompt-management-first tools
+- Teams need to design eval datasets separately
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Instrument model calls and retrievers with OpenInference/OpenTelemetry
+- Inspect retrieved documents and generation spans together
+- Use Phoenix evals to compare RAG changes
 
 ## Resources
 
-- [GitHub Repository](https://github.com/Arize-ai/phoenix)
+- [GitHub](https://github.com/Arize-ai/phoenix)
+- [Docs](https://arize.com/docs/phoenix)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because observability choice shapes debugging, evals, cost control, and production trust for LLM systems.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

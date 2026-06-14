@@ -3,8 +3,8 @@ id: langgraph
 name: LangGraph
 type: framework
 category: agents
-subcategory: frameworks
-description: A graph-based framework for building stateful LLM agents and workflows
+subcategory: agent-frameworks
+description: 'Graph-based framework for building stateful, durable LLM agents and workflows'
 github_url: 'https://github.com/langchain-ai/langgraph'
 license: MIT
 primary_language: Python
@@ -16,76 +16,93 @@ tags:
   - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 34643
-trending_score: 70
+github_stars: 34644
+github_stars_last_30d: 0
+trending_score: 40
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://docs.langchain.com/oss/python/langgraph/'
 demo_url: null
 paper_url: null
 paper_id: null
-alternatives: []
+alternatives:
+  - crewai
+  - openai-agents-sdk
+  - google-adk
 integrates_with: []
 added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: []
-featured: false
+buzz_sources:
+  - source: newsletter
+    url: 'https://docs.langchain.com/oss/python/langgraph/'
+    date: '2026-06-13'
+    description: LangGraph launch and ecosystem docs
+featured: true
 status: active
-github_stars_last_30d: 34643
 ---
+
+> **TL;DR:** LangGraph is a graph-based orchestration framework for durable, stateful LLM agents. Use it when agent state, branching, retries, and production control matter more than quick demos.
 
 ## Overview
 
-LangGraph is included as a notable agents project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
-
-## Why It's in the Arsenal
-
-It represents a useful reference point for engineers comparing options in the agents category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+- Part of the LangChain ecosystem, but focused on explicit graph execution rather than linear chains.
+- Best known for state machines, human-in-the-loop pauses, persistence, streaming, and multi-agent workflows.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Graph/state-machine execution model
+- Durable state and checkpointing for long-running workflows
+- Human-in-the-loop and interruption support
+- Works with LangChain tools and model integrations
+- Strong fit for production agents that need observability and retries
+- Large ecosystem around LangSmith, LangChain, and LangGraph Platform
 
-## Architecture / How It Works
+## Architecture Model
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+LangGraph models an agent application as a directed graph of nodes and edges. Nodes perform work, edges route state, and the graph state is persisted across steps when checkpointing is enabled.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/langchain-ai/langgraph
+pip install -U langgraph
 ```
 
-## Use Cases
+```python
+from langgraph.prebuilt import create_react_agent
 
-1. **Scenario**: When evaluating options in the agents ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+def get_weather(city: str) -> str:
+    return f"Weather lookup for {city}"
 
-## Strengths
+agent = create_react_agent("openai:gpt-4.1-mini", tools=[get_weather])
+result = agent.invoke({"messages": [{"role": "user", "content": "Weather in Paris?"}]})
+```
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+## Best For
 
-## Limitations / When NOT to Use
+- Stateful agents with branching control flow
+- Human-review workflows that pause and resume
+- Production workflows needing retries, persistence, and tracing
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+## Not Ideal For
 
-## Integration Patterns
+- Tiny one-shot prompt wrappers
+- Teams that want a no-code visual builder
+- Use cases where a simple function call pipeline is easier to operate
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+## Comparison Context
+
+Compared with CrewAI, LangGraph is lower-level and more explicit about state and control flow. Compared with OpenAI Agents SDK, it is less provider-specific and better for complex graph workflows.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/langchain-ai/langgraph)
+- [GitHub](https://github.com/langchain-ai/langgraph)
+- [Docs](https://docs.langchain.com/oss/python/langgraph/)
+- [LangGraph Academy](https://academy.langchain.com/courses/intro-to-langgraph)
 
-## Buzz & Reception
+## Community Buzz
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- [LangGraph launch and ecosystem docs](https://docs.langchain.com/oss/python/langgraph/)
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

@@ -6,7 +6,7 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [dashboards](./dashboards/) | 0 entries | 2026-06-13 |
+| [dashboards](./dashboards/) | 0 entries | 2026-06-14 |
 
 ## Recently Added
 
@@ -21,7 +21,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-- [Cost Tracking](./cost-tracking.md) — Guide to tracking token, inference, and infrastructure costs
-- [Evaluation Pipelines](./evaluation-pipelines.md) — Guide to building repeatable evaluation pipelines for AI applications
-- [AI Observability Overview](./overview.md) — Overview of why observability matters for LLM and agent systems
-- [Tracing and Monitoring](./tracing-and-monitoring.md) — Guide to traces, spans, logs, metrics, and dashboards for AI systems
+- [Cost Tracking](./cost-tracking.md) — Guide to token cost math and cost observability for LLM applications
+- [Evaluation Pipelines](./evaluation-pipelines.md) — Guide to repeatable LLM, RAG, and agent evaluation workflows
+- [AI Observability Overview](./overview.md) — Overview of LLM observability pillars and tool selection
+- [Tracing and Monitoring](./tracing-and-monitoring.md) — Comparison of tracing approaches for LLM and agent systems

@@ -23,9 +23,9 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-- [Enterprise-Scale AI Stack](./enterprise-scale.md) — Reference architecture for governed enterprise AI systems
-- [Lean MVP Stack](./lean-mvp.md) — Opinionated stack for a fast AI product prototype
-- [Local-First AI Stack](./local-first.md) — Reference stack for local and privacy-sensitive AI applications
-- [Multi-Agent System Stack](./multi-agent-system.md) — Reference stack for stateful multi-agent applications
-- [Production RAG Stack](./production-rag.md) — Reference architecture for reliable retrieval-augmented generation
-- [AI Research Platform Stack](./research-platform.md) — Reference platform for repeatable experiments and model research
+- [Enterprise-Scale AI Stack](./enterprise-scale.md) — Reference architecture for governed enterprise AI systems with security and platform integration
+- [Lean MVP Stack](./lean-mvp.md) — Opinionated stack for solo developers and fast AI product prototypes
+- [Local-First AI Stack](./local-first.md) — Reference stack for privacy-first local AI applications without cloud model APIs
+- [Multi-Agent System Stack](./multi-agent-system.md) — Reference stack for complex task automation with multiple AI roles and durable state
+- [Production RAG Stack](./production-rag.md) — Reference architecture for production retrieval-augmented generation applications
+- [AI Research Platform Stack](./research-platform.md) — Reference platform for repeatable model, agent, and retrieval experiments

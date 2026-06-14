@@ -4,7 +4,9 @@ name: vLLM
 type: library
 category: llms
 subcategory: inference-engines
-description: A high-throughput inference engine for serving large language models
+description: >-
+  High-throughput inference and serving engine for LLMs with batching and
+  OpenAI-compatible APIs
 github_url: 'https://github.com/vllm-project/vllm'
 license: Apache-2.0
 primary_language: Python
@@ -15,13 +17,24 @@ tags:
   - caching
 maturity: production
 cost_model: open-source
-github_stars: 82770
-trending_score: 70
+github_stars: 82772
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://github.com/vllm-project/vllm'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: true
+supported_formats:
+  - HF
+  - AWQ
+  - GPTQ
+  - FP8
+api_compatible: openai
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -31,60 +44,81 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 82770
 ---
 
 ## Overview
 
-vLLM is included as a notable llms project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+> **TL;DR:** vLLM is a high-throughput serving engine for production LLM inference. Use it when throughput, batching, and OpenAI-compatible serving matter.
+
+- **API compatibility:** openai
+- **Formats:** HF, AWQ, GPTQ, FP8
+- **Quantization support:** Yes
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+vLLM is one of the most important production inference engines because it targets high throughput and memory-efficient serving.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- Continuous batching and efficient memory management
+- OpenAI-compatible API server
+- Broad Hugging Face model support
+- Tensor/pipeline parallel options
+- Quantization support through supported backends/formats
+- Strong production serving ecosystem
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+vLLM is a server/runtime optimized for LLM token generation throughput, scheduling, and memory efficiency.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/vllm-project/vllm
+pip install vllm
 ```
+
+```bash
+vllm serve meta-llama/Llama-3.1-8B-Instruct
+# then call http://localhost:8000/v1/chat/completions
+```
+
+## Performance Benchmarks
+
+No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the llms ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: Production self-hosted inference
+2. **Scenario**: High-throughput API serving
+3. **Scenario**: Serving Hugging Face models behind OpenAI-compatible endpoints
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Strong throughput reputation
+- Large ecosystem support
+- Good default for GPU-backed open model serving
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Requires GPU operations knowledge
+- Not the simplest local laptop UX
+- Performance depends heavily on model, GPU, and config
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Put an API gateway or observability layer in front of production inference endpoints.
+- Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.
+- Track model format and quantization separately from serving engine choice.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/vllm-project/vllm)
+- [GitHub](https://github.com/vllm-project/vllm)
+- [Docs](https://github.com/vllm-project/vllm)
+- [OpenAI-compatible server docs](https://github.com/vllm-project/vllm)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

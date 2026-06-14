@@ -4,7 +4,9 @@ name: llama.cpp
 type: library
 category: llms
 subcategory: inference-engines
-description: A C++ inference engine for running quantized LLMs locally and on edge devices
+description: >-
+  C and C++ inference engine for running GGUF-quantized LLMs locally and on edge
+  devices
 github_url: 'https://github.com/ggml-org/llama.cpp'
 license: MIT
 primary_language: C++
@@ -15,13 +17,21 @@ tags:
   - local
 maturity: production
 cost_model: open-source
-github_stars: 116394
-trending_score: 70
+github_stars: 116399
+github_stars_last_30d: 0
+trending_score: 30
 last_commit: '2026-06-13'
-docs_url: null
+docs_url: 'https://github.com/ggml-org/llama.cpp'
 demo_url: null
 paper_url: null
 paper_id: null
+hf_url: null
+model_sizes: []
+benchmark_scores: []
+supports_quantization: true
+supported_formats:
+  - GGUF
+api_compatible: openai
 alternatives: []
 integrates_with: []
 added_date: '2026-06-13'
@@ -31,60 +41,80 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 status: active
-github_stars_last_30d: 116394
 ---
 
 ## Overview
 
-llama.cpp is included as a notable llms project because it addresses a recurring AI engineering need with a visible open-source implementation and ecosystem adoption.
+> **TL;DR:** llama.cpp is the core local inference engine for GGUF-quantized models across CPU, GPU, and edge environments. Use it when portability and local deployment matter.
+
+- **API compatibility:** openai
+- **Formats:** GGUF
+- **Quantization support:** Yes
 
 ## Why It's in the Arsenal
 
-It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role.
+llama.cpp underpins much of the local LLM ecosystem and is the reference path for GGUF quantized inference.
 
 ## Key Features
 
-- Addresses a concrete AI engineering workflow rather than a generic software problem
-- Provides a public repository that can be inspected, forked, or studied
-- Fits the repository taxonomy for curated comparison and future UI filtering
+- C/C++ portable runtime
+- GGUF model format support
+- CPU and GPU acceleration paths
+- Server mode with OpenAI-compatible API options
+- Foundation for many local LLM wrappers
+- Strong quantization ecosystem
 
 ## Architecture / How It Works
 
-Review the upstream repository and documentation to understand its runtime model, extension points, deployment expectations, and operational requirements. For production use, pair evaluation and observability with any model-facing component.
+llama.cpp is a low-level inference runtime built around ggml/gguf model execution and portable hardware backends.
 
 ## Getting Started
 
 ```bash
-# Visit the upstream repository and follow its official quickstart.
-# Repository: https://github.com/ggml-org/llama.cpp
+brew install llama.cpp
 ```
+
+```bash
+llama-server -hf ggml-org/gemma-3-1b-it-GGUF
+# then call the local server API
+```
+
+## Performance Benchmarks
+
+No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.
 
 ## Use Cases
 
-1. **Scenario**: When evaluating options in the llms ecosystem
-2. **Scenario**: When looking for implementation patterns to study before building a similar system
+1. **Scenario**: CPU/local inference
+2. **Scenario**: Edge deployments
+3. **Scenario**: Quantized model experiments
 
 ## Strengths
 
-- Publicly inspectable implementation
-- Useful anchor for comparisons with alternatives in the same category
+- Extremely portable
+- Best-known GGUF runtime
+- Works where heavyweight Python serving stacks are impractical
 
 ## Limitations / When NOT to Use
 
-- Validate license, hosting, and operational constraints before production use
-- Benchmark against your own workload rather than relying on ecosystem popularity
+- Lower-level UX than Ollama
+- Production multi-tenant serving requires extra infrastructure
+- Model conversion/quantization details can be confusing
 
 ## Integration Patterns
 
-Use this entry as a canonical reference and link to it from tools, decision trees, stack guides, and build examples rather than duplicating metadata elsewhere.
+- Put an API gateway or observability layer in front of production inference endpoints.
+- Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.
+- Track model format and quantization separately from serving engine choice.
 
 ## Resources
 
-- [GitHub Repository](https://github.com/ggml-org/llama.cpp)
+- [GitHub](https://github.com/ggml-org/llama.cpp)
+- [llama.cpp server docs](https://github.com/ggml-org/llama.cpp/tree/master/tools/server)
 
 ## Buzz & Reception
 
-Buzz sources are intentionally empty at bootstrap and should be populated with verified links during freshness reviews.
+- Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*

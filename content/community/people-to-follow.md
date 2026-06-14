@@ -3,71 +3,122 @@ id: "people-to-follow"
 title: "People to Follow"
 entry_type: "guide"
 section: "community"
-description: "Curated guide to AI builders, researchers, and educators worth following"
+description: "Curated guide to AI builders, researchers, educators, and maintainers worth following"
 tags:
   - llm
   - agents
   - rag
 related_entries: []
-added_date: "2026-06-13"
-last_reviewed: "2026-06-13"
+added_date: "2026-06-14"
+last_reviewed: "2026-06-14"
 added_by: "maintainer"
 status: "active"
 ---
 
 ## Overview
 
-People to Follow is a curated guide entry included to make the Arsenal more useful for practical AI engineering decisions.
+This guide routes readers to individual people entries. It favors durable educational value and practical AI engineering signal over follower counts.
 
 ## Why It's in the Arsenal
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+Community sources help builders notice ecosystem changes, learn from practitioners, and find primary explanations from researchers and maintainers.
 
 ## Key Features
 
-- Focuses on high-signal builders and researchers
-- Prioritizes educational value over popularity
-- Maintained as a guide, not a ranking
-- Structured metadata for filtering and search
-- Canonical location for future updates
+- Researchers, educators, open-source maintainers, and AI product builders
+- Individual schema-valid person entries under `content/community/people/`
+- Focus on why each person is useful to follow
 
 ## Architecture / How It Works
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+People are tracked as individual entries so agents and UIs can filter by tags, role, and channel.
 
 ## Getting Started
 
 ```bash
-# Read the entry and follow the linked resources.
+# Pick 3 people: one researcher, one practitioner, one maintainer.
 ```
+
+## Browse People
+
+- [Andrej Karpathy](people/andrej-karpathy.md) — AI educator and researcher
+- [Simon Willison](people/simon-willison.md) — Independent AI engineer and writer
+- [Lilian Weng](people/lilian-weng.md) — AI researcher and technical writer
+- [Harrison Chase](people/harrison-chase.md) — LangChain cofounder
+- [Jerry Liu](people/jerry-liu.md) — LlamaIndex cofounder
+- [Sebastian Raschka](people/sebastian-raschka.md) — ML researcher and educator
+- [Chip Huyen](people/chip-huyen.md) — ML systems author and engineer
+- [Eugene Yan](people/eugene-yan.md) — Applied ML engineer and writer
+- [Hamel Husain](people/hamel-husain.md) — LLM evaluation practitioner
+- [Jay Alammar](people/jay-alammar.md) — Visual AI educator
+- [Jason Liu](people/jason-liu.md) — Structured output and eval practitioner
+- [Jeremy Howard](people/jeremy-howard.md) — AI educator and fast.ai cofounder
+- [François Chollet](people/francois-chollet.md) — AI researcher and Keras creator
+- [Thomas Wolf](people/thomas-wolf.md) — Hugging Face cofounder
+- [Clément Delangue](people/clem-delangue.md) — Hugging Face cofounder
+- [Nathan Lambert](people/nathan-lambert.md) — AI researcher and writer
+- [Shreya Shankar](people/shreya-shankar.md) — AI systems researcher
+- [Andrew Ng](people/andrew-ng.md) — AI educator and founder
+- [Yann LeCun](people/yann-lecun.md) — AI researcher
+- [Dario Amodei](people/dario-amodei.md) — Anthropic cofounder
+- [Noam Shazeer](people/noam-shazeer.md) — AI researcher and model architect
+- [Arvind Narayanan](people/arvind-narayanan.md) — AI accountability researcher
+- [Melanie Mitchell](people/melanie-mitchell.md) — AI researcher and author
+- [Sébastien Bubeck](people/sebastian-bubeck.md) — AI researcher
+- [Logan Kilpatrick](people/logankilpatrick.md) — Developer relations and AI builder
 
 ## Use Cases
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+1. **Scenario**: Finding high-signal AI engineering sources
+2. **Scenario**: Building a learning feed for a specific AI role
 
 ## Strengths
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
+- Durable sources rather than trend-only links
+- Mix of research, engineering, product, and education perspectives
 
 ## Limitations / When NOT to Use
 
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
+- Not a popularity ranking
+- Follower counts are intentionally not tracked because they change and are easy to game
 
 ## Integration Patterns
 
-Use this entry as a canonical reference from guides, stacks, and generated data views.
+- Link people entries from learning paths and community guides.
+- Use people tags to identify researchers, maintainers, and builders for a topic.
 
 ## Resources
 
-- [Primary Resource](https://example.com)
+- [Andrej Karpathy](people/andrej-karpathy.md) — AI educator and researcher
+- [Simon Willison](people/simon-willison.md) — Independent AI engineer and writer
+- [Lilian Weng](people/lilian-weng.md) — AI researcher and technical writer
+- [Harrison Chase](people/harrison-chase.md) — LangChain cofounder
+- [Jerry Liu](people/jerry-liu.md) — LlamaIndex cofounder
+- [Sebastian Raschka](people/sebastian-raschka.md) — ML researcher and educator
+- [Chip Huyen](people/chip-huyen.md) — ML systems author and engineer
+- [Eugene Yan](people/eugene-yan.md) — Applied ML engineer and writer
+- [Hamel Husain](people/hamel-husain.md) — LLM evaluation practitioner
+- [Jay Alammar](people/jay-alammar.md) — Visual AI educator
+- [Jason Liu](people/jason-liu.md) — Structured output and eval practitioner
+- [Jeremy Howard](people/jeremy-howard.md) — AI educator and fast.ai cofounder
+- [François Chollet](people/francois-chollet.md) — AI researcher and Keras creator
+- [Thomas Wolf](people/thomas-wolf.md) — Hugging Face cofounder
+- [Clément Delangue](people/clem-delangue.md) — Hugging Face cofounder
+- [Nathan Lambert](people/nathan-lambert.md) — AI researcher and writer
+- [Shreya Shankar](people/shreya-shankar.md) — AI systems researcher
+- [Andrew Ng](people/andrew-ng.md) — AI educator and founder
+- [Yann LeCun](people/yann-lecun.md) — AI researcher
+- [Dario Amodei](people/dario-amodei.md) — Anthropic cofounder
+- [Noam Shazeer](people/noam-shazeer.md) — AI researcher and model architect
+- [Arvind Narayanan](people/arvind-narayanan.md) — AI accountability researcher
+- [Melanie Mitchell](people/melanie-mitchell.md) — AI researcher and author
+- [Sébastien Bubeck](people/sebastian-bubeck.md) — AI researcher
+- [Logan Kilpatrick](people/logankilpatrick.md) — Developer relations and AI builder
 
 ## Buzz & Reception
 
-Reception notes should be updated with verified sources during maintenance reviews.
+Community guides should be reviewed periodically to remove inactive sources and add emerging maintainers.
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 

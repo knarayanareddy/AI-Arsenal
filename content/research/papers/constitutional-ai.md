@@ -4,6 +4,7 @@ title: "Constitutional AI: Harmlessness from AI Feedback"
 authors:
   - "Bai, Y."
   - "Kadavath, S."
+  - "Kundu, S."
 published_date: "2022-12-15"
 venue: "arXiv"
 arxiv_id: "2212.08073"
@@ -16,66 +17,48 @@ tags:
 category: "alignment"
 importance: "foundational"
 citation_count: 0
-has_code: false
-code_url: null
+has_code: true
+code_url: "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"
 benchmark_improvements: []
-tldr: "Introduces AI-feedback-based alignment for harmless assistants"
-why_it_matters: "This paper is included because it shaped practical AI engineering decisions, model behavior, evaluation, or architecture patterns."
-added_date: "2026-06-13"
+tldr: "Introduced a framework for training helpful and harmless assistants using constitutional principles and AI feedback"
+why_it_matters: "The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed."
+added_date: "2026-06-14"
 added_by: "maintainer"
 ---
 
-## Overview
+> **TL;DR:** Introduced a framework for training helpful and harmless assistants using constitutional principles and AI feedback.
+> **Why it matters:** The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed.
 
-Constitutional AI: Harmlessness from AI Feedback is a curated paper entry included to make the Arsenal more useful for practical AI engineering decisions.
+## The Problem It Solved
 
-## Why It's in the Arsenal
+Reduced dependence on human preference labels for every alignment step.
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+## Key Contribution
 
-## Key Features
+Introduced a framework for training helpful and harmless assistants using constitutional principles and AI feedback.
 
-- Clear scope and practical applicability
-- Structured metadata for filtering and search
-- Canonical location for future updates
+## Results / Key Numbers
 
-## Architecture / How It Works
+Reported harmlessness improvements while maintaining helpfulness in assistant behavior.
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+Do not reuse these numbers as current SOTA claims without checking newer leaderboards; they describe the paper's reported results and context.
 
-## Getting Started
+## How to Apply This Today
 
-```bash
-# Read the entry and follow the linked resources.
-```
+Use the idea of explicit principles to design policy prompts, critique loops, and review workflows.
 
-## Use Cases
+## Code / Implementation
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+- [Implementation / code](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
+- [arXiv abstract](https://arxiv.org/abs/2212.08073)
+- [PDF](https://arxiv.org/pdf/2212.08073)
 
-## Strengths
+## Further Reading
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
-
-## Limitations / When NOT to Use
-
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
-
-## Integration Patterns
-
-Use this entry as a canonical reference from guides, stacks, and generated data views.
-
-## Resources
-
-- [Primary Resource](https://arxiv.org/abs/2212.08073)
-
-## Buzz & Reception
-
-Reception notes should be updated with verified sources during maintenance reviews.
+- [Must-read papers guide](../must-read-papers.md)
+- [SOTA benchmarks](../sota-benchmarks.md)
+- [Emerging techniques](../emerging-techniques.md)
 
 ---
-*Last reviewed: 2026-06-13 by @maintainer*
+*Last reviewed: 2026-06-14 by @maintainer*
 
