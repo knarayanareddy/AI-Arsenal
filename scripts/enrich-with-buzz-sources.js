@@ -4,7 +4,7 @@
 // newsletter, which feeds into trending-score calculations and search facets.
 
 import fs from 'node:fs/promises';
-import path from 'node:path';
+
 import matter from 'gray-matter';
 import chalk from 'chalk';
 
