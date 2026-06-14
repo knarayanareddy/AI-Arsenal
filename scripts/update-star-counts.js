@@ -5,15 +5,56 @@ import matter from 'gray-matter';
 import chalk from 'chalk';
 import { getEntryFiles, readMarkdown, inferEntryType } from './utils/frontmatter.js';
 import { fetchGitHubRepo, parseGitHubRepo } from './utils/github-api.js';
+import { sanitizeRepoCache } from './utils/cache-guard.js';
 
 const dryRun = process.argv.includes('--dry-run');
 const cachePath = 'data/github-cache.json';
+const lockPath = 'data/.star-lock';
+const skipTokenCheck = process.env.AI_ARSENAL_SKIP_TOKEN_CHECK === 'true';
+
+// In CI we require a GITHUB_TOKEN to avoid hitting the 60-req/hour
+// anonymous rate limit. Set AI_ARSENAL_SKIP_TOKEN_CHECK=true to opt out.
+if (!process.env.GITHUB_TOKEN && !skipTokenCheck && process.env.CI === 'true') {
+  console.error(chalk.red('GITHUB_TOKEN is required for star refresh in CI. Set AI_ARSENAL_SKIP_TOKEN_CHECK=true to override.'));
+  process.exit(2);
+}
+
+// Refuse to run if another concurrent run holds the lock.
+let lockHandle;
+try {
+  lockHandle = await fs.open(lockPath, 'wx');
+  await lockHandle.writeFile(`${process.pid}\n`);
+} catch (error) {
+  if (error.code === 'EEXIST') {
+    console.error(chalk.red(`Another star-refresh is in progress (lock at ${lockPath}). Refusing to run.`));
+    process.exit(3);
+  }
+  throw error;
+}
+async function releaseLock() {
+  if (!lockHandle) return;
+  await lockHandle.close().catch(() => {});
+  await fs.unlink(lockPath).catch(() => {});
+}
+process.on('exit', releaseLock);
+
 let cache = { generated_at: null, repos: {} };
-try { cache = JSON.parse(await fs.readFile(cachePath, 'utf8')); } catch {}
+try { cache = sanitizeRepoCache(JSON.parse(await fs.readFile(cachePath, 'utf8'))); } catch {}
 
 function repoKey(url) {
   const parsed = parseGitHubRepo(url);
   return parsed ? `${parsed.owner}/${parsed.repo}` : null;
+}
+
+function calculateTrendingScore(data, repoData) {
+  const now = new Date();
+  const velocityScore = Math.min(((data.github_stars_last_30d ?? repoData?.stars_last_30d ?? 0) / 500) * 40, 40);
+  const recentBuzz = (data.buzz_sources ?? []).filter((b) => (now - new Date(b.date)) / 86400000 < 30).length;
+  const buzzScore = Math.min(recentBuzz * 10, 30);
+  const daysOld = data.added_date ? (now - new Date(`${data.added_date}T00:00:00Z`)) / 86400000 : 999;
+  const recencyBonus = daysOld < 14 ? 15 : daysOld < 30 ? 8 : 0;
+  const starScore = Math.min(Math.log10((data.github_stars ?? repoData?.stars ?? 0) + 1) * 5, 15);
+  return Math.max(0, Math.min(100, Math.round(velocityScore + buzzScore + recencyBonus + starScore)));
 }
 
 let checked = 0;
@@ -48,9 +89,12 @@ for (const file of await getEntryFiles()) {
       checked_at: new Date().toISOString()
     };
     if (repo.archived && parsed.data.status === 'active') parsed.data.status = 'archived';
+    // Recompute trending score immediately so that running only this
+    // script still yields a consistent data layer (S-23 fix).
+    parsed.data.trending_score = calculateTrendingScore(parsed.data, cache.repos[key]);
     if (!dryRun) await fs.writeFile(file, matter.stringify(parsed.content, parsed.data));
     updated += 1;
-    await new Promise((resolve) => setTimeout(resolve, 150));
+    await new Promise((resolve) => setTimeout(resolve, 200));
   } catch (error) {
     skipped += 1;
     failures.push(`${file}: ${error.message}`);

@@ -1,0 +1,42 @@
+name: CodeQL
+
+# Free static analysis for JavaScript. Catches the kind of mistakes that
+# passed review (sanitize-html option is no-op, hardcoded URL parsing,
+# regex DoS, etc.).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '32 13 * * 1'
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["javascript"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@4a0875b8b0a55fb22bfa90f8e7849f5725ab8b76 # v3.27.5
+        with:
+          languages: ${{ matrix.language }}
+          queries: security-and-quality
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@4a0875b8b0a55fb22bfa90f8e7849f5725ab8b76 # v3.27.5
+        with:
+          category: "/language:${{ matrix.language }}"

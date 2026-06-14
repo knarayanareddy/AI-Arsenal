@@ -15,24 +15,33 @@ concurrency:
   group: post-merge-verification-main
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   verify-generated-state:
     name: Verify Generated State Without Committing
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v6.0.0
         with:
           node-version: '20'
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da218398039d4dd # v4.1.0
         with:
           version: 8
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run ci
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run full CI
+        run: pnpm run ci
       - name: Upload generated data artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.4.3
         with:
           name: generated-data-${{ github.sha }}
           path: |

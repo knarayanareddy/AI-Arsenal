@@ -13,8 +13,8 @@ const args = Object.fromEntries(process.argv.slice(2).map((arg) => {
 const type = args.type;
 const today = new Date().toISOString().slice(0, 10);
 
-function slugify(value) {
-  return value.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+export function slugify(value) {
+  return String(value).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
 
 async function ask(prompt, fallback = '') {
@@ -23,6 +23,22 @@ async function ask(prompt, fallback = '') {
   const answer = await rl.question(`${prompt}${fallback ? ` (${fallback})` : ''}: `);
   rl.close();
   return answer.trim() || fallback;
+}
+
+// Validate that a destination path resolves under `content/`. Prevents
+// path traversal via crafted --category=../schemas etc.
+export function assertSafeDestination(destination) {
+  const resolved = path.resolve(destination);
+  const contentRoot = path.resolve('content');
+  if (resolved !== contentRoot && !resolved.startsWith(contentRoot + path.sep)) {
+    throw new Error(`Refusing to write outside content/: ${destination}`);
+  }
+  // Also reject filenames that escape via a NUL, control char, or are not kebab-case.
+  const base = path.basename(resolved);
+  if (!/^[a-z0-9][a-z0-9-]*\.md$/.test(base)) {
+    throw new Error(`Refusing non-kebab-case destination filename: ${base}`);
+  }
+  return resolved;
 }
 
 const templateByType = {
@@ -42,31 +58,40 @@ if (!templateByType[type]) {
 
 const name = await ask('name', `Example ${type}`);
 const id = slugify(await ask('id', name));
-const username = await ask('github_username', 'github-username');
-let destination;
+if (!id) throw new Error('Cannot derive a valid kebab-case id from input.');
 
+const username = await ask('github_username', 'github-username');
+// GitHub username must match the schema regex.
+if (!/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$/.test(username)) {
+  throw new Error(`Invalid GitHub username: ${username}`);
+}
+
+let destination;
 if (type === 'project') {
-  const category = await ask('category', 'agents');
-  const subcategory = await ask('subcategory', 'frameworks');
+  const category = slugify(await ask('category', 'agents'));
+  const subcategory = slugify(await ask('subcategory', 'frameworks'));
   destination = `content/projects/${category}/${subcategory}/${id}.md`;
 } else if (type === 'tool') {
-  const job = await ask('job', 'evaluation');
   destination = `content/tools/by-job/${id}.md`;
-  void job;
 } else if (type === 'paper') {
   destination = `content/research/papers/${id}.md`;
 } else if (type === 'tip') {
-  const category = await ask('category', 'rag-tuning');
   destination = `content/tips-and-tricks/${id}.md`;
-  void category;
 } else if (type === 'build-example') {
-  const difficulty = await ask('difficulty', 'starter');
+  const difficulty = slugify(await ask('difficulty', 'starter'));
+  if (!['starter', 'intermediate', 'advanced'].includes(difficulty)) {
+    throw new Error(`Invalid difficulty for build-example: ${difficulty}`);
+  }
   destination = `content/build-examples/${difficulty}/${id}.md`;
 } else if (type === 'person') {
   destination = `content/community/${id}.md`;
 } else if (type === 'digest') {
+  // For digest the id is expected to be YYYY-MM; validate format.
+  if (!/^\d{4}-\d{2}$/.test(id)) throw new Error(`Digest id must be YYYY-MM format, got: ${id}`);
   destination = `content/digests/${id}/digest.md`;
 }
+
+assertSafeDestination(destination);
 
 let body = await fs.readFile(path.join('templates', templateByType[type]), 'utf8');
 body = body

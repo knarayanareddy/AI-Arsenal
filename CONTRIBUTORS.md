@@ -1,21 +1,30 @@
 # Contributors
 
-AI Arsenal recognizes every meaningful merged contribution.
+This file lists the people who have contributed to AI Arsenal. Recognition is granted per the ladder in [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## Maintainers
 
-- `@lead-maintainer` — bootstrap owner and final architecture reviewer
+### Lead Maintainer (BDFL)
+
+- [@knarayanareddy](https://github.com/knarayanareddy) — repository founder, schema architect, automation design.
+
+### Section Maintainers
+
+> _(vacant — see [continuity plan](./docs/policies/continuity.md))_
 
 ## Contributors
 
-Contributors will be added here after their first merged PR.
+> _(additions go here in the order they first contribute)_
 
-## Recognition Milestones
+<!--
+Template for adding a new contributor:
 
-| Contribution Type | Recognition |
-|---|---|
-| First merged PR | Added here plus first-contribution recognition |
-| 5+ merged PRs | Listed in README contributors section |
-| 10+ merged PRs | Invited to become section maintainer |
-| Maintains a section for 3+ months | Eligible for full maintainer role |
+### [@username](https://github.com/username)
 
+- **First PR:** #NNN — brief description
+- **Notable contributions:**
+  - ...
+  - ...
+- **Recognition tier:** _(see CONTRIBUTING.md)_
+
+-->

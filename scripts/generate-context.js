@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
+import { escapeMarkdownCell, escapeMarkdownInline } from './utils/markdown-escape.js';
 
 function top(items, n = 5, sorter = (a, b) => String(a.id).localeCompare(String(b.id))) {
   return [...items].sort(sorter).slice(0, n);
 }
 function line(item) {
-  const name = item.name ?? item.title ?? item.display_name ?? item.id;
+  const name = escapeMarkdownInline(item.name ?? item.title ?? item.display_name ?? item.id);
+  const description = escapeMarkdownCell(item.description ?? item.tldr ?? item.summary ?? '');
   const score = item.trending_score !== undefined ? `, score:${item.trending_score}` : '';
   const stars = item.github_stars !== undefined ? `⭐${item.github_stars}${score}` : '';
   const meta = stars ? ` (${stars})` : '';
-  return `- ${name}${meta} — ${item.description ?? item.tldr ?? item.summary ?? ''}`;
+  return `- ${name}${meta} — ${description}`;
 }
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch { return fallback; } }
 
@@ -55,11 +57,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Top Projects by Category
 
-${categories.map((category) => `### ${category}\n${top(projects.filter((p) => p.category === category), 5, (a, b) => (b.trending_score ?? 0) - (a.trending_score ?? 0) || (b.github_stars ?? 0) - (a.github_stars ?? 0)).map(line).join('\n') || '_None_'}`).join('\n\n')}
+${categories.map((category) => `### ${escapeMarkdownInline(category)}\n${top(projects.filter((p) => p.category === category), 5, (a, b) => (b.trending_score ?? 0) - (a.trending_score ?? 0) || (b.github_stars ?? 0) - (a.github_stars ?? 0)).map(line).join('\n') || '_None_'}`).join('\n\n')}
 
 ## Top Tools by Job
 
-${jobs.map((job) => `### ${job}\n${top(tools.filter((t) => (t.job ?? []).includes(job)), 5, (a, b) => a.name.localeCompare(b.name)).map(line).join('\n') || '_None_'}`).join('\n\n')}
+${jobs.map((job) => `### ${escapeMarkdownInline(job)}\n${top(tools.filter((t) => (t.job ?? []).includes(job)), 5, (a, b) => a.name.localeCompare(b.name)).map(line).join('\n') || '_None_'}`).join('\n\n')}
 
 ## Architecture Quick Refs
 

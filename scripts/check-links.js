@@ -4,12 +4,16 @@ import { execFileSync } from 'node:child_process';
 import chalk from 'chalk';
 import { getMarkdownFiles, readMarkdown } from './utils/frontmatter.js';
 import { extractUrls } from './utils/markdown.js';
+import { parseSafeUrl, assertPublicHostname, hostCallAllowed, domainAllowed, resetHostCallCounts } from './utils/network-guard.js';
 
 const args = new Set(process.argv.slice(2));
 const changedOnly = args.has('--changed-only');
 const writeReport = !args.has('--no-report');
 const concurrency = Number(process.env.LINK_CHECK_CONCURRENCY ?? 8);
 const timeoutMs = Number(process.env.LINK_CHECK_TIMEOUT_MS ?? 15000);
+const maxUrls = Number(process.env.LINK_CHECK_MAX_URLS ?? 500);
+const maxPerHost = Number(process.env.LINK_CHECK_MAX_URLS_PER_HOST ?? 10);
+const allowList = (process.env.LINK_CHECK_ALLOW_DOMAINS ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 const ignoredPatterns = (process.env.LINK_CHECK_IGNORE ?? '').split(',').filter(Boolean).map((s) => new RegExp(s));
 
 async function filesToCheck() {
@@ -25,30 +29,59 @@ async function filesToCheck() {
   }
 }
 
-function shouldIgnore(url) {
-  if (!url.startsWith('http')) return true;
-  if (url.includes('localhost') || url.includes('127.0.0.1')) return true;
-  // The generated data-release branch may not exist until the first scheduled/manual publish.
-  if (url.includes('raw.githubusercontent.com') && url.includes('/data-release')) return true;
+function shouldIgnoreByPattern(url) {
   return ignoredPatterns.some((pattern) => pattern.test(url));
 }
 
-async function checkUrl(url) {
-  if (shouldIgnore(url)) return { url, ok: true, ignored: true };
+async function checkUrl(rawUrl) {
+  // Hard limits before any network activity.
+  if (rawUrl.length > 2048) return { url: rawUrl, ok: false, error: 'url-too-long' };
+  if (shouldIgnoreByPattern(rawUrl)) return { url: rawUrl, ok: true, ignored: true };
+
+  const parsed = parseSafeUrl(rawUrl);
+  if (!parsed.ok) return { url: rawUrl, ok: false, error: parsed.reason };
+  const { url } = parsed;
+
+  // The generated data-release branch may not exist until first publish.
+  if (url.hostname === 'raw.githubusercontent.com' && url.pathname.includes('/data-release/')) {
+    return { url: rawUrl, ok: true, ignored: true };
+  }
+
+  if (!domainAllowed(url.hostname, allowList)) return { url: rawUrl, ok: false, error: 'domain-not-allowlisted' };
+  if (!hostCallAllowed(url.hostname, maxPerHost)) return { url: rawUrl, ok: false, error: 'host-rate-limited' };
+
+  // Resolve hostname → IP. Reject if any record is private/loopback/link-local.
+  const dns = await assertPublicHostname(url.hostname);
+  if (!dns.ok) return { url: rawUrl, ok: false, error: dns.reason };
+
   for (const method of ['HEAD', 'GET']) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const response = await fetch(url, { method, redirect: 'follow', signal: controller.signal, headers: { 'User-Agent': 'AI-Arsenal-Link-Checker/1.0 (+https://github.com/knarayanareddy/AI-Arsenal)' } });
+      const response = await fetch(url, {
+        method,
+        redirect: 'manual', // refuse to follow redirects; we'll re-check.
+        signal: controller.signal,
+        headers: { 'User-Agent': 'AI-Arsenal-Link-Checker/1.0 (+https://github.com/knarayanareddy/AI-Arsenal)' }
+      });
       clearTimeout(timeout);
-      if (response.status < 400 || [401, 403, 429].includes(response.status)) return { url, ok: true, status: response.status };
-      if (![405, 501].includes(response.status) && method === 'GET') return { url, ok: false, status: response.status };
+
+      // 3xx redirect: re-validate the Location header against SSRF rules.
+      if (response.status >= 300 && response.status < 400) {
+        const location = response.headers.get('location');
+        if (!location) return { url: rawUrl, ok: false, status: response.status, error: 'redirect-without-location' };
+        const recheck = await checkUrl(location);
+        if (!recheck.ok) return { url: rawUrl, ok: false, status: response.status, error: `redirect-unsafe:${recheck.error}` };
+        return { url: rawUrl, ok: true, status: response.status };
+      }
+      if (response.status < 400 || [401, 403, 429].includes(response.status)) return { url: rawUrl, ok: true, status: response.status };
+      if (![405, 501].includes(response.status) && method === 'GET') return { url: rawUrl, ok: false, status: response.status };
     } catch (error) {
       clearTimeout(timeout);
-      if (method === 'GET') return { url, ok: false, error: error.message };
+      if (method === 'GET') return { url: rawUrl, ok: false, error: error.message };
     }
   }
-  return { url, ok: false, error: 'unknown link check failure' };
+  return { url: rawUrl, ok: false, error: 'unknown link check failure' };
 }
 
 async function pool(items, worker) {
@@ -56,8 +89,8 @@ async function pool(items, worker) {
   let index = 0;
   async function run() {
     while (index < items.length) {
-      const current = items[index++];
-      results.push(await worker(current));
+      const current = index++;
+      results.push(await worker(items[current]));
     }
   }
   await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, run));
@@ -74,9 +107,23 @@ for (const file of files) {
   }
 }
 
-const results = await pool([...urlToFiles.keys()], checkUrl);
+const allUrls = [...urlToFiles.keys()];
+if (allUrls.length > maxUrls) {
+  console.error(chalk.red(`Refusing to check ${allUrls.length} URLs (> ${maxUrls}). Possible amplification. Reduce URL count or set LINK_CHECK_MAX_URLS.`));
+  process.exit(1);
+}
+
+resetHostCallCounts();
+const results = await pool(allUrls, checkUrl);
 const broken = results.filter((r) => !r.ok).map((r) => ({ ...r, files: urlToFiles.get(r.url) }));
-const report = { generated_at: new Date().toISOString(), mode: changedOnly ? 'changed-only' : 'all', files_checked: files.length, urls_checked: results.length, broken_links: broken };
+const report = {
+  generated_at: new Date().toISOString(),
+  mode: changedOnly ? 'changed-only' : 'all',
+  files_checked: files.length,
+  urls_checked: results.length,
+  max_urls_per_host: maxPerHost,
+  broken_links: broken
+};
 if (writeReport) {
   await fs.mkdir('data', { recursive: true });
   await fs.writeFile('data/link-check-report.json', `${JSON.stringify(report, null, 2)}\n`);
@@ -84,7 +131,7 @@ if (writeReport) {
 
 if (broken.length) {
   console.error(chalk.red(`Link check failed with ${broken.length} broken URL(s):`));
-  for (const item of broken) console.error(chalk.red(`- ${item.url} (${item.status ?? item.error}) in ${item.files.join(', ')}`));
+  for (const item of broken.slice(0, 50)) console.error(chalk.red(`- ${item.url} (${item.status ?? item.error}) in ${item.files.join(', ')}`));
   process.exit(1);
 }
 console.log(chalk.green(`Link check passed. Checked ${results.length} unique URL(s) in ${files.length} file(s).`));

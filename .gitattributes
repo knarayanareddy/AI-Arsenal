@@ -1,0 +1,32 @@
+# Git attributes for AI Arsenal. Line-ending and binary-file rules.
+
+# Normalize text files to LF on commit and on checkout.
+*               text=auto eol=lf
+
+# Generated JSON files MUST keep LF line endings to satisfy the data
+# contract validators.
+*.json          text eol=lf
+
+# Markdown keeps LF too (CRLF breaks Mermaid code fences in some renderers).
+*.md            text eol=lf
+
+# Workflow YAML files.
+*.yml           text eol=lf
+*.yaml          text eol=lf
+
+# Don't diff or merge generated data files; they are bot output.
+# (We keep them in main for now but mark them as generated.)
+data/*.json     diff=json merge=binary linguist-generated=true
+CONTEXT.md      linguist-generated=true
+content/**/_index.md      linguist-generated=true
+content/**/_registry.md   linguist-generated=true
+
+# Lockfile is always LF and treated as a single entity.
+pnpm-lock.yaml  text eol=lf
+
+# Binaries (none expected, but safe to declare).
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary

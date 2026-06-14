@@ -1,0 +1,21 @@
+AI Arsenal — Content License (CC-BY-4.0)
+
+The curated content (Markdown files under `content/`) of this repository is licensed under the Creative Commons Attribution 4.0 International License (CC-BY-4.0).
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format.
+- Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+
+Under the following terms:
+
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Code (scripts, schemas, workflows) remains under the MIT License per `LICENSE`. This separation is important because:
+
+1. Code has a different reuse pattern than content.
+2. Content may include third-party copyrighted material (project descriptions, paper abstracts) used under fair use or with permission noted in the entry.
+3. MIT + CC-BY-4.0 together cover both the technical artifact and the human-readable corpus.
