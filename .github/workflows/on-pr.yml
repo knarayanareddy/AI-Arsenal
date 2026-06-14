@@ -112,5 +112,5 @@ jobs:
         env:
           # Cap per-host amplification; reject private/loopback IPs by default.
           LINK_CHECK_MAX_URLS: '500'
-          LINK_CHECK_MAX_URLS_PER_HOST: '10'
+          LINK_CHECK_MAX_URLS_PER_HOST: '100'
         run: pnpm run validate:links
