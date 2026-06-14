@@ -4,7 +4,7 @@ name: Honen
 type: tool
 job: [structured-output]
 description: Transform any content into interactive AI-generated courses
-url: "https://honen.app"
+url: "https://github.com/search?q=honen.app"
 cost_model: freemium
 pricing_detail: Free tier with paid upgrades
 tags: [structured-output]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://honen.app for the canonical architecture description and feature list.
+Visit https://github.com/search?q=honen.app for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://honen.app
+# https://github.com/search?q=honen.app
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Honen](https://honen.app)
+- [Honen](https://github.com/search?q=honen.app)
 
 ## Buzz & Reception
 

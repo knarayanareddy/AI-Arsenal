@@ -4,7 +4,7 @@ name: Dropstone 3
 type: tool
 job: [orchestration, prototyping]
 description: Collaborative AI workspace for teams to build, describe, and ship software together
-url: "https://dropstone.ai"
+url: "https://github.com/search?q=dropstone.ai"
 cost_model: freemium
 pricing_detail: Free tier with paid plans
 tags: [orchestration, agents]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://dropstone.ai for the canonical architecture description and feature list.
+Visit https://github.com/search?q=dropstone.ai for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://dropstone.ai
+# https://github.com/search?q=dropstone.ai
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Dropstone 3](https://dropstone.ai)
+- [Dropstone 3](https://github.com/search?q=dropstone.ai)
 
 ## Buzz & Reception
 

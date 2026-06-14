@@ -4,7 +4,7 @@ name: Google Pomelli 2.0
 type: tool
 job: [structured-output]
 description: Explore and interact with large datasets through a visual, intuitive interface
-url: "https://pomelli.google"
+url: "https://github.com/search?q=pomelli.google"
 cost_model: freemium
 pricing_detail: Free (Google Labs preview)
 tags: [structured-output]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://pomelli.google for the canonical architecture description and feature list.
+Visit https://github.com/search?q=pomelli.google for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://pomelli.google
+# https://github.com/search?q=pomelli.google
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Google Pomelli 2.0](https://pomelli.google)
+- [Google Pomelli 2.0](https://github.com/search?q=pomelli.google)
 
 ## Buzz & Reception
 

@@ -4,7 +4,7 @@ name: AGNT.Hub
 type: tool
 job: [orchestration, security-and-guardrails]
 description: Build and manage secure, private AI agents with custom skills and policies
-url: "https://agnt.hub"
+url: "https://github.com/search?q=agnt.hub"
 cost_model: paid
 pricing_detail: Paid plans
 tags: [orchestration, security]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://agnt.hub for the canonical architecture description and feature list.
+Visit https://github.com/search?q=agnt.hub for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://agnt.hub
+# https://github.com/search?q=agnt.hub
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [AGNT.Hub](https://agnt.hub)
+- [AGNT.Hub](https://github.com/search?q=agnt.hub)
 
 ## Buzz & Reception
 

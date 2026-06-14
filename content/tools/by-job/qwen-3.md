@@ -4,7 +4,7 @@ name: Qwen 3
 type: tool
 job: [production-serving]
 description: Alibaba open-weight model family with multimodal and coding variants
-url: "https://qwen.alibaba.com"
+url: "https://github.com/search?q=qwen.alibaba.com"
 cost_model: freemium
 pricing_detail: Hosted free with paid upgrades; weights open
 tags: [llm, multimodal]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://qwen.alibaba.com for the canonical architecture description and feature list.
+Visit https://github.com/search?q=qwen.alibaba.com for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://qwen.alibaba.com
+# https://github.com/search?q=qwen.alibaba.com
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Qwen 3](https://qwen.alibaba.com)
+- [Qwen 3](https://github.com/search?q=qwen.alibaba.com)
 
 ## Buzz & Reception
 

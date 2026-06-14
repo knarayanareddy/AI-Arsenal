@@ -20,7 +20,7 @@ github_stars: 132342
 github_stars_last_30d: 0
 trending_score: 30
 last_commit: '2026-06-13'
-docs_url: 'https://docs.firecrawl.dev/'
+docs_url: 'https://docs.firecrawl.dev/introduction'
 demo_url: null
 paper_url: null
 paper_id: null
@@ -109,7 +109,7 @@ page = app.scrape_url("https://example.com")
 ## Resources
 
 - [GitHub](https://github.com/firecrawl/firecrawl)
-- [Docs](https://docs.firecrawl.dev/)
+- [Docs](https://docs.firecrawl.dev/introduction)
 
 ## Buzz & Reception
 

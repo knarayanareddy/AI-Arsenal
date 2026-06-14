@@ -4,7 +4,7 @@ name: Agent Browser Shield
 type: tool
 job: [security-and-guardrails, web-scraping]
 description: Secure AI web browsing by cleaning content and masking PII during agent runs
-url: "https://agentbrowsershield.com"
+url: "https://github.com/pixiebrix/agent-browser-shield"
 cost_model: freemium
 pricing_detail: Free tier with paid upgrades
 tags: [security, retrieval]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://agentbrowsershield.com for the canonical architecture description and feature list.
+Visit https://github.com/pixiebrix/agent-browser-shield for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://agentbrowsershield.com
+# https://github.com/pixiebrix/agent-browser-shield
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Agent Browser Shield](https://agentbrowsershield.com)
+- [Agent Browser Shield](https://github.com/pixiebrix/agent-browser-shield)
 
 ## Buzz & Reception
 

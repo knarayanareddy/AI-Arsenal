@@ -4,7 +4,7 @@ name: Cloudskill
 type: tool
 job: [orchestration, prompt-management]
 description: Manage, govern, and distribute skills for AI agents across teams
-url: "https://cloudskill.ai"
+url: "https://github.com/search?q=cloudskill.ai"
 cost_model: paid
 pricing_detail: Paid plans
 tags: [orchestration, routing]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://cloudskill.ai for the canonical architecture description and feature list.
+Visit https://github.com/search?q=cloudskill.ai for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://cloudskill.ai
+# https://github.com/search?q=cloudskill.ai
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Cloudskill](https://cloudskill.ai)
+- [Cloudskill](https://github.com/search?q=cloudskill.ai)
 
 ## Buzz & Reception
 

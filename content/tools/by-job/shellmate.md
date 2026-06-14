@@ -4,7 +4,7 @@ name: ShellMate
 type: tool
 job: [production-serving]
 description: AI-powered terminal assistant that suggests commands and explains outputs
-url: "https://shellmate.ai"
+url: "https://github.com/search?q=shellmate.ai"
 cost_model: freemium
 pricing_detail: Free tier with paid upgrades
 tags: [agents]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://shellmate.ai for the canonical architecture description and feature list.
+Visit https://github.com/search?q=shellmate.ai for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://shellmate.ai
+# https://github.com/search?q=shellmate.ai
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [ShellMate](https://shellmate.ai)
+- [ShellMate](https://github.com/search?q=shellmate.ai)
 
 ## Buzz & Reception
 

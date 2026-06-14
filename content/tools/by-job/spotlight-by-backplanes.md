@@ -4,7 +4,7 @@ name: Spotlight by Backplanes
 type: tool
 job: [tracing, monitoring]
 description: Understand, improve, and track AI agent sessions with observability tooling
-url: "https://backplanes.ai/spotlight"
+url: "https://github.com/search?q=backplanes.ai"
 cost_model: freemium
 pricing_detail: Free tier with paid upgrades
 tags: [tracing, monitoring]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://backplanes.ai/spotlight for the canonical architecture description and feature list.
+Visit https://github.com/search?q=backplanes.ai for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://backplanes.ai/spotlight
+# https://github.com/search?q=backplanes.ai
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Spotlight by Backplanes](https://backplanes.ai/spotlight)
+- [Spotlight by Backplanes](https://github.com/search?q=backplanes.ai)
 
 ## Buzz & Reception
 

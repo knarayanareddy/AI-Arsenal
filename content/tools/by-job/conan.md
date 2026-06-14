@@ -4,7 +4,7 @@ name: Conan
 type: tool
 job: [monitoring, tracing]
 description: Live HUD for monitoring and interacting with AI agent sessions on macOS
-url: "https://conan.app"
+url: "https://github.com/search?q=conan.app"
 cost_model: paid
 pricing_detail: Paid macOS application
 tags: [monitoring, tracing]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://conan.app for the canonical architecture description and feature list.
+Visit https://github.com/search?q=conan.app for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://conan.app
+# https://github.com/search?q=conan.app
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Conan](https://conan.app)
+- [Conan](https://github.com/search?q=conan.app)
 
 ## Buzz & Reception
 

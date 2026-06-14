@@ -4,7 +4,7 @@ name: Claude Artifact Player
 type: tool
 job: [structured-output]
 description: Interact with and manage AI-generated artifacts from Claude and similar models
-url: "https://claudeartifactplayer.com"
+url: "https://github.com/search?q=claudeartifactplayer"
 cost_model: freemium
 pricing_detail: Free to use
 tags: [structured-output]
@@ -45,13 +45,13 @@ It appears in AI engineering tool listings (curated by Techpresso) and represent
 
 ## Architecture / How It Works
 
-Visit https://claudeartifactplayer.com for the canonical architecture description and feature list.
+Visit https://github.com/search?q=claudeartifactplayer for the canonical architecture description and feature list.
 
 ## Getting Started
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://claudeartifactplayer.com
+# https://github.com/search?q=claudeartifactplayer
 ```
 
 ## Use Cases
@@ -74,7 +74,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Claude Artifact Player](https://claudeartifactplayer.com)
+- [Claude Artifact Player](https://github.com/search?q=claudeartifactplayer)
 
 ## Buzz & Reception
 
