@@ -1,0 +1,56 @@
+name: Release
+
+# Manual dispatch: cut a release tag on main and publish a generated
+# CHANGELOG section to GitHub Releases.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Semver tag (e.g. v1.2.3). Leave empty for auto-bump from main.'
+        required: false
+        type: string
+      notes:
+        description: 'Optional release notes (will be prepended to the auto-generated changelog).'
+        required: false
+        type: string
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  cut-release:
+    name: Cut Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Resolve tag
+        id: tag
+        run: |
+          if [ -n "${{ inputs.version }}" ]; then
+            echo "value=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
+          else
+            # Bump patch from the latest tag.
+            latest=$(git tag --sort=-version:refname | head -1 || echo "v1.0.0")
+            echo "value=${latest%.${latest##*.}.*}" >> "$GITHUB_OUTPUT"
+            echo "::warning::Auto-bump from latest tag is conservative. Review before tagging."
+          fi
+      - name: Generate changelog
+        run: pnpm install --frozen-lockfile && node scripts/generate-changelog.js
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@c4f2347f9bd5d4ac4dd15d84246ddd1c7e3e4ac7 # v2.2.1
+        with:
+          tag_name: ${{ steps.tag.outputs.value }}
+          name: ${{ steps.tag.outputs.value }}
+          generate_release_notes: true
+          body: |
+            ${{ inputs.notes }}
+            See CHANGELOG.md for the full project history.

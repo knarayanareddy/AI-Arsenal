@@ -6,6 +6,7 @@ import html from 'remark-html';
 import chalk from 'chalk';
 import { loadEntries, SCHEMA_VERSION, entryDisplayName, entryDescription, entryDate, canonicalUrl, writeJson, publicEntry } from './utils/entries.js';
 import { stripMarkdown, extractHeadings } from './utils/markdown.js';
+import { sanitizeBodyHtml } from './utils/html-sanitizer.js';
 
 const generatedAt = new Date().toISOString();
 const collections = { project: [], tool: [], paper: [], tip: [], person: [], digest: [], 'build-example': [], guide: [] };
@@ -16,9 +17,10 @@ function readingTime(text) {
   return { words, minutes: Math.max(1, Math.ceil(words / 220)) };
 }
 
-async function renderHtml(markdown) {
-  const result = await remark().use(html, { sanitize: true }).process(markdown);
-  return String(result);
+async function renderSafeHtml(markdown) {
+  // remark-html sanitize option is no-op in v14+, so we explicitly sanitize.
+  const raw = await remark().use(html).process(markdown);
+  return sanitizeBodyHtml(String(raw));
 }
 
 for (const entry of await loadEntries()) {
@@ -38,7 +40,7 @@ for (const entry of await loadEntries()) {
     headings: extractHeadings(entry.content ?? ''),
     reading_time_minutes: rt.minutes,
     word_count: rt.words,
-    body_html: await renderHtml(entry.content ?? ''),
+    body_html: await renderSafeHtml(entry.content ?? ''),
     body_text: bodyText
   };
   collections[entry.type].push(item);

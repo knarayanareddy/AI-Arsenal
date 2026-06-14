@@ -1,5 +1,11 @@
 name: Manual Maintenance
 
+# This workflow is operator-only. It does NOT commit back to main.
+# Maintenance tasks must always be merged via a PR (see data-refresh.yml,
+# weekly.yml, monthly.yml). Direct auto-commits to main were removed for
+# security: an attacker who obtains a maintainer PAT and triggers this
+# workflow could otherwise push arbitrary content to main with no review.
+
 on:
   workflow_dispatch:
     inputs:
@@ -15,42 +21,80 @@ on:
           - check-links
           - draft-trending
           - create-monthly-digest
+          - check-stale
+
+concurrency:
+  group: manual-${{ github.event.inputs.task }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
   run-task:
     name: Run Manual Task
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v6.0.0
         with:
           node-version: '20'
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da218398039d4dd # v4.1.0
         with:
           version: 8
-      - run: pnpm install --frozen-lockfile
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       - name: Validate
         if: inputs.task == 'validate'
         run: pnpm run ci
-      - name: Generate
+      - name: Generate (no commit)
         if: inputs.task == 'generate'
-        run: pnpm run generate:all
-      - name: Update Stars
+        run: |
+          pnpm run generate:all
+          echo "::warning::Generated files are NOT auto-committed. Open a PR with the diff for review."
+      - name: Update stars (no commit)
         if: inputs.task == 'update-stars'
-        run: pnpm run update:stars
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Check Links
+        run: |
+          pnpm run update:stars
+          echo "::warning::Updated stars are NOT auto-committed. Open a PR with the diff for review."
+      - name: Check links (changed-only)
         if: inputs.task == 'check-links'
-        run: pnpm run check:links
-      - name: Draft Trending
+        env:
+          LINK_CHECK_MAX_URLS: '500'
+          LINK_CHECK_MAX_URLS_PER_HOST: '10'
+        run: pnpm run validate:links
+      - name: Draft trending (no commit)
         if: inputs.task == 'draft-trending'
-        run: pnpm run generate && node scripts/draft-trending.js
-      - name: Create Monthly Digest
+        run: |
+          pnpm run generate
+          node scripts/draft-trending.js
+          echo "::warning::Trending draft is NOT auto-committed. Open a PR with the diff for review."
+      - name: Create monthly digest draft (no commit)
         if: inputs.task == 'create-monthly-digest'
-        run: node scripts/create-monthly-digest.js
-      - uses: stefanzweifel/git-auto-commit-action@v5
+        run: |
+          node scripts/create-monthly-digest.js
+          echo "::warning::Monthly digest draft is NOT auto-committed. Open a PR with the diff for review."
+      - name: Check stale (no commit)
+        if: inputs.task == 'check-stale'
+        run: |
+          pnpm run check:stale
+          echo "Stale report written to data/stale-report.json. Open a PR with the diff for review."
+      - name: Upload artifacts for review
         if: inputs.task != 'validate' && inputs.task != 'check-links'
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.4.3
         with:
-          commit_message: "chore: run manual maintenance task [skip ci]"
-          file_pattern: "content/**/*.md data/*.json CONTEXT.md"
+          name: manual-task-${{ inputs.task }}
+          path: |
+            data/*.json
+            content/trending/*.md
+            content/digests/**/*.md
+            CONTEXT.md
+          retention-days: 7

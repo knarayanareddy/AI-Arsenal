@@ -1,0 +1,51 @@
+name: No-Skip-CI Enforcement
+
+# Fails any PR whose commits contain `[skip ci]` markers. This string
+# is reserved for automation (per CONTRIBUTING.md). Human commits
+# must always trigger the full validation pipeline.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: no-skip-ci
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check-skip-ci:
+    name: Reject [skip ci] in commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          fetch-depth: 50
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Inspect commit messages
+        run: |
+          # List commits in this PR / push.
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            range="${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}"
+          else
+            range="${{ github.event.before }}...${{ github.event.after }}"
+          fi
+          if [ -z "$range" ] || [ "$range" = "..." ] || [ "$range" = "0000000000000000000000000000000000000000...${{ github.sha }}" ]; then
+            # Fallback: check HEAD against origin/main.
+            range="origin/main...HEAD"
+          fi
+          bad=$(git log --pretty=format:'%s' "$range" 2>/dev/null | grep -E '\[skip ci\]|\[ci skip\]|\[no ci\]' || true)
+          if [ -n "$bad" ]; then
+            echo "❌ Found [skip ci] markers in commits:"
+            echo "$bad"
+            echo ""
+            echo "Per CONTRIBUTING.md, [skip ci] is reserved for automation."
+            echo "Human PRs must always run CI."
+            exit 1
+          fi
+          echo "✅ No [skip ci] markers in commits."

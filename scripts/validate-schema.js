@@ -61,11 +61,19 @@ function crossFieldChecks(file, type, data, errors, warnings) {
   }
 }
 
+// S-26 fix: compile schemas once with a per-type promise to avoid races.
 const ajv = new Ajv({ allErrors: true, strict: false });
-const validators = {};
-for (const [type, schemaFile] of Object.entries(schemaByType)) {
-  const schema = JSON.parse(await fs.readFile(path.join('schemas', schemaFile), 'utf8'));
-  validators[type] = ajv.compile(schema);
+const validatorPromises = new Map();
+async function getValidator(type) {
+  if (validatorPromises.has(type)) return validatorPromises.get(type);
+  const schemaFile = schemaByType[type];
+  if (!schemaFile) return null;
+  const promise = (async () => {
+    const schema = JSON.parse(await fs.readFile(path.join('schemas', schemaFile), 'utf8'));
+    return ajv.compile(schema);
+  })();
+  validatorPromises.set(type, promise);
+  return promise;
 }
 
 const candidateFiles = changedOnly ? getChangedMarkdownFiles().filter(isContentEntryCandidate) : null;
@@ -82,7 +90,8 @@ async function validateFile(file) {
     return;
   }
   const entryType = inferEntryType(file, parsed.data);
-  if (!entryType || !validators[entryType]) {
+  const validate = entryType ? await getValidator(entryType) : null;
+  if (!validate) {
     errors.push(`${file}: unable to infer entry type from path. Move file under a schema-governed content section.`);
     return;
   }
@@ -92,7 +101,6 @@ async function validateFile(file) {
     errors.push(`${file}: id "${parsed.data.id}" must match filename-derived id "${expectedId}"`);
   }
 
-  const validate = validators[entryType];
   if (!validate(parsed.data)) {
     for (const error of validate.errors ?? []) errors.push(`${file}: ${formatAjvError(error)}`);
   }
