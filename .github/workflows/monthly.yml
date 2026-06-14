@@ -9,6 +9,9 @@ concurrency:
   group: monthly-digest
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   monthly-maintenance-pr:
     name: Monthly Digest, Stale Report, and Stats PR
@@ -17,21 +20,31 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v6.0.0
         with:
           node-version: '20'
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da218398039d4dd # v4.1.0
         with:
           version: 8
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run generate
-      - run: node scripts/create-monthly-digest.js
-      - run: pnpm run check:stale
-      - run: pnpm run generate:stats
-      - uses: peter-evans/create-pull-request@v6
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Generate data
+        run: pnpm run generate
+      - name: Create monthly digest draft
+        run: node scripts/create-monthly-digest.js
+      - name: Check stale entries
+        run: pnpm run check:stale
+      - name: Generate stats
+        run: pnpm run generate:stats
+      - name: Open batched monthly PR
+        uses: peter-evans/create-pull-request@c0a242abab4a4d9c172b3df2ec0e84c9d4f77251 # v6.0.5
         with:
           branch: bot/monthly-digest
           delete-branch: true

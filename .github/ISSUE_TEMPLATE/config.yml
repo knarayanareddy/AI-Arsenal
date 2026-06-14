@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Questions and discussion
+  - name: 💬 Questions and discussion
     url: https://github.com/knarayanareddy/AI-Arsenal/discussions
     about: Ask questions or propose major changes in Discussions.
+  - name: 🔒 Security disclosures
+    url: https://github.com/knarayanareddy/AI-Arsenal/security/advisories/new
+    about: 'DO NOT file security issues publicly. Use GitHub Security Advisories for private disclosure. See SECURITY.md for our 90-day coordinated disclosure policy.'

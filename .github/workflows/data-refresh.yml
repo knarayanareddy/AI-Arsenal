@@ -9,32 +9,43 @@ concurrency:
   group: data-release-refresh
   cancel-in-progress: true
 
+permissions:
+  contents: write
+
 jobs:
   publish-data-release:
     name: Publish Generated JSON to data-release Branch
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@0a44ba7841725637a19e28fa30b79a866c81b0a6 # v6.0.0
         with:
           node-version: '20'
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da218398039d4dd # v4.1.0
         with:
           version: 8
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run update:stars
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Update GitHub stars
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: pnpm run update:trending
-      - run: pnpm run generate:all
-      - run: pnpm run check:stale
-      - run: pnpm run prepare:data-release -- --out=.data-release
+        run: pnpm run update:stars
+      - name: Recalculate trending scores
+        run: pnpm run update:trending
+      - name: Generate data layer
+        run: pnpm run generate:all
+      - name: Check stale entries
+        run: pnpm run check:stale
+      - name: Prepare data-release directory
+        run: pnpm run prepare:data-release -- --out=.data-release
       - name: Publish data-release branch
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@4f0f97dc1ff64e30b1a51e3b0e26919c61e3d97a # v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: data-release

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: |
+  If you use AI Arsenal in academic work, please cite it as:
+  Kiran Reddy. (2026). AI Arsenal (Version 1.0.0) [Knowledge base].
+  https://github.com/knarayanareddy/AI-Arsenal
+type: software
+title: AI Arsenal
+version: 1.0.0
+date-released: 2026-06-14
+license: MIT
+license-url: https://opensource.org/licenses/MIT
+repository-code: https://github.com/knarayanareddy/AI-Arsenal
+repository: https://github.com/knarayanareddy/AI-Arsenal
+keywords:
+  - ai
+  - llm
+  - knowledge-base
+  - curated
+  - schema-first
+  - json-schema
+authors:
+  - family-names: Reddy
+    given-names: Kiran
+    alias: knarayanareddy
+    affiliation: Independent
+    orcid: ''
+contact:
+  - family-names: Reddy
+    given-names: Kiran
+    email: ''
+    alias: knarayanareddy
+    affiliation: Independent

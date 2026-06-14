@@ -1,0 +1,60 @@
+version: 2
+
+# Dependabot for npm + GitHub Actions. Grouped to reduce PR noise and
+# limit blast radius. CI must remain green at all times; Dependabot PRs
+# auto-resolve via the on-pr.yml workflow.
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 8
+    groups:
+      runtime-minor-and-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+      runtime-major:
+        patterns: ["*"]
+        update-types: ["major", "version-update"]
+      development:
+        patterns: ["prettier"]
+        update-types: ["minor", "patch", "major"]
+    # Never auto-update these (security-sensitive; require manual review):
+    ignore:
+      - dependency-name: "ajv"
+        update-types: ["version-update"]
+      - dependency-name: "gray-matter"
+        update-types: ["version-update"]
+      - dependency-name: "js-yaml"
+        update-types: ["version-update"]
+      - dependency-name: "sanitize-html"
+        update-types: ["version-update"]
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "npm"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    groups:
+      actions-minor-and-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"

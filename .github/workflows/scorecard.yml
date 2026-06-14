@@ -1,0 +1,42 @@
+name: OSSF Scorecard
+
+# Public OSSF Scorecard compliance check. Posts results as SARIF to the
+# Security tab and opens an issue on regressions.
+
+on:
+  branch_protection_rule:
+  schedule:
+    - cron: '37 4 * * 1'
+
+concurrency:
+  group: scorecard
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  analysis:
+    name: Scorecard Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - name: Run Scorecard
+        uses: ossf/scorecard-action@62b66e369c6122e9e30644a93bbf6c0547e3374f # v2.4.0
+        with:
+          results_file: results.sarif
+          results_format: sarif
+          publish_results: true
+      - name: Upload SARIF
+        if: always()
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.4.3
+        with:
+          name: scorecard-results
+          path: results.sarif
+          retention-days: 7

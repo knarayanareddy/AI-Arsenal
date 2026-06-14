@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
+import { truncate } from './utils/markdown-escape.js';
 
 const datasets = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples'];
 const docs = [];
@@ -30,7 +31,8 @@ for (const dataset of datasets) {
         boost_title: name,
         boost_tags: tags.join(' '),
         boost_description: description,
-        body: [name, description, tags.join(' '), item.category, item.subcategory, item.section, item.body_text].filter(Boolean).join(' ')
+        // S-10 fix: truncate body text in the lightweight index.
+        body: [name, description, tags.join(' '), item.category, item.subcategory, item.section, truncate(item.body_text ?? '', 600)].filter(Boolean).join(' ')
       });
     }
   } catch {}
