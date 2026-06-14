@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [TranslateGemma](./translategemma.md)
 - [Command R+](./command-r-plus.md)
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md)
 - [Falcon 3](./falcon-3.md)
@@ -19,7 +20,6 @@
 - [Llama Models](./llama-models.md)
 - [Mistral Inference](./mistral-inference.md)
 - [Mistral / Mixtral](./mistral-models.md)
-- [Phi-4](./phi-4.md)
 
 ## Most Popular
 
@@ -32,7 +32,7 @@
 - [Yi](./yi.md) — ⭐ 7820
 - [Llama Models](./llama-models.md) — ⭐ 7628
 - [Gemma](./gemma.md) — ⭐ 5410
-- [Phi Cookbook](./phi-cookbook.md) — ⭐ 3750
+- [TranslateGemma](./translategemma.md) — ⭐ 5000
 
 ## Browse All
 
@@ -49,4 +49,5 @@
 - [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
+- [TranslateGemma](./translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
 - [Yi](./yi.md) — 01.AI open model family with bilingual and long-context variants from small to mid-large sizes

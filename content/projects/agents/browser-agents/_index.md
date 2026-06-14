@@ -10,12 +10,12 @@
 
 ## Recently Added
 
-_No entries yet._
+- [Stagehand](./stagehand.md)
 
 ## Most Popular
 
-_No star-tracked entries yet._
+- [Stagehand](./stagehand.md) — ⭐ 5400
 
 ## Browse All
 
-_No entries yet._
+- [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions

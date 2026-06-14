@@ -6,16 +6,16 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| _No sub-sections_ | 0 entries | — |
+| [platforms](./platforms/) | 1 entries | 2026-06-14 |
 
 ## Recently Added
 
-_No entries yet._
+- [Uiverse Design](./platforms/uiverse-design.md)
 
 ## Most Popular
 
-_No star-tracked entries yet._
+- [Uiverse Design](./platforms/uiverse-design.md) — ⭐ 11000
 
 ## Browse All
 
-_No entries yet._
+- [Uiverse Design](./platforms/uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development

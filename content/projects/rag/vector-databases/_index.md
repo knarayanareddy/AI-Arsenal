@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [SurrealDB](./surrealdb.md)
 - [Chroma](./chroma.md)
 - [LanceDB](./lancedb.md)
 - [Milvus](./milvus.md)
@@ -23,6 +24,7 @@
 - [Milvus](./milvus.md) — ⭐ 44762
 - [Qdrant](./qdrant.md) — ⭐ 32155
 - [Chroma](./chroma.md) — ⭐ 28419
+- [SurrealDB](./surrealdb.md) — ⭐ 28000
 - [pgvector](./pgvector.md) — ⭐ 21738
 - [Weaviate](./weaviate.md) — ⭐ 16323
 - [LanceDB](./lancedb.md) — ⭐ 10594
@@ -36,4 +38,5 @@
 - [pgvector](./pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Pinecone](./pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
 - [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
+- [SurrealDB](./surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
 - [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval

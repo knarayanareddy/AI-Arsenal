@@ -20,7 +20,7 @@ github_stars: 132342
 github_stars_last_30d: 0
 trending_score: 30
 last_commit: '2026-06-13'
-docs_url: 'https://docs.firecrawl.dev/'
+docs_url: 'https://docs.firecrawl.dev/introduction'
 demo_url: null
 paper_url: null
 paper_id: null
@@ -36,7 +36,13 @@ added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: []
+buzz_sources:
+  - source: newsletter
+    url: 'https://toolradar.com/featured/techpresso'
+    date: '2026-06-14'
+    description: >-
+      Featured in Techpresso (including Firecrawl MCP variant) as an LLM-ready
+      data extraction tool
 featured: false
 status: active
 ---
@@ -103,7 +109,7 @@ page = app.scrape_url("https://example.com")
 ## Resources
 
 - [GitHub](https://github.com/firecrawl/firecrawl)
-- [Docs](https://docs.firecrawl.dev/)
+- [Docs](https://docs.firecrawl.dev/introduction)
 
 ## Buzz & Reception
 

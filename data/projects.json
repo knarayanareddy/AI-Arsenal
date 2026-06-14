@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-14T14:52:08.332Z",
-  "count": 68,
+  "generated_at": "2026-06-14T19:48:58.252Z",
+  "count": 73,
   "items": [
     {
       "id": "agenta",
@@ -1002,7 +1002,14 @@
       "last_reviewed": "2026-06-13",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
-      "buzz_sources": [],
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso (including Firecrawl MCP variant) as an LLM-ready data extraction tool"
+        }
+      ],
       "featured": false,
       "status": "active",
       "entry_type": "project",
@@ -1443,6 +1450,74 @@
       "word_count": 241,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Helicone is a proxy-based observability platform for LLM requests, costs, caching, experiments, and analytics. Use it when you want fast rollout through a gateway/proxy pattern.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Helicone sits between your app and model provider, making it attractive for quick request logging, cost tracking, caching, and experimentation.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Proxy-based observability can be much easier to adopt than SDK instrumentation when many services call LLM providers.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Proxy/gateway integration</li>\n<li>Request logs and cost analytics</li>\n<li>Caching and rate/usage controls</li>\n<li>Prompt experiments and datasets</li>\n<li>Cloud and self-host options</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p><strong>Approach:</strong> <code>proxy</code></p>\n<p>Helicone observes traffic by routing provider requests through a proxy/gateway, capturing request/response metadata with minimal application instrumentation.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install openai\n</code></pre>\n<h2>Integration Snippet</h2>\n<pre><code class=\"language-python\">from openai import OpenAI\n\nclient = OpenAI(base_url=\"HELICONE_OPENAI_BASE_URL\", api_key=\"OPENAI_API_KEY\")\n# add Helicone auth headers per docs\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Fast provider-level logging</li>\n<li><strong>Scenario</strong>: Cost tracking across services</li>\n<li><strong>Scenario</strong>: Teams that prefer gateway observability</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Low-friction proxy rollout</li>\n<li>Good request/cost visibility</li>\n<li>Works across apps if traffic routes through gateway</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Proxy pattern may not capture internal tool/retrieval spans</li>\n<li>Evaluation depth is not the main differentiator</li>\n<li>Requires routing sensitive traffic through the proxy/self-host</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use proxy for centralized logging and budgets</li>\n<li>Add SDK tracing separately for complex agents</li>\n<li>Tag requests by user, feature, and environment</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/Helicone/helicone\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.helicone.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because observability choice shapes debugging, evals, cost control, and production trust for LLM systems.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Helicone is a proxy based observability platform for LLM requests, costs, caching, experiments, and analytics. Use it when you want fast rollout through a gateway/proxy pattern. Overview Helicone sits between your app and model provider, making it attractive for quick request logging, cost tracking, caching, and experimentation. Why It's in the Arsenal Proxy based observability can be much easier to adopt than SDK instrumentation when many services call LLM providers. Key Features Proxy/gateway integration Request logs and cost analytics Caching and rate/usage controls Prompt experiments and datasets Cloud and self host options Architecture / How It Works Approach: proxy Helicone observes traffic by routing provider requests through a proxy/gateway, capturing request/response metadata with minimal application instrumentation. Getting Started Integration Snippet Use Cases 1. Scenario : Fast provider level logging 2. Scenario : Cost tracking across services 3. Scenario : Teams that prefer gateway observability Strengths Low friction proxy rollout Good request/cost visibility Works across apps if traffic routes through gateway Limitations / When NOT to Use Proxy pattern may not capture internal tool/retrieval spans Evaluation depth is not the main differentiator Requires routing sensitive traffic through the proxy/self host Integration Patterns Use proxy for centralized logging and budgets Add SDK tracing separately for complex agents Tag requests by user, feature, and environment Resources GitHub Docs Buzz & Reception Included because observability choice shapes debugging, evals, cost control, and production trust for LLM systems. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "insforge",
+      "name": "InsForge",
+      "type": "platform",
+      "category": "agents",
+      "subcategory": "coding-agents",
+      "description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
+      "github_url": "https://github.com/InsForge/InsForge",
+      "license": "MIT",
+      "primary_language": "TypeScript",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 2300,
+      "github_stars_last_30d": 0,
+      "trending_score": 40,
+      "last_commit": "2026-06-13",
+      "docs_url": null,
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "alternatives": [
+        "supabase"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso under coding-agents"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/agents/coding-agents/insforge.md",
+      "url": "content/projects/agents/coding-agents/insforge",
+      "slug": "insforge",
+      "section_path": "content/projects/agents/coding-agents",
+      "display_name": "InsForge",
+      "summary": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 151,
+      "body_html": "<h2>Overview</h2>\n<p>InsForge is a open-source AI engineering project.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It covers the agents category with the coding-agents subcategory and complements existing Arsenal entries.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway</li>\n<li>Open source at the canonical repository</li>\n<li>License: MIT</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>See https://github.com/InsForge/InsForge for architecture documentation and contributor guidelines.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/InsForge/InsForge\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> Production AI engineering in the agents category.</li>\n<li><strong>Scenario:</strong> Self-hosted alternative to commercial offerings.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Mature open-source project in the agents category</li>\n<li>Active contributors and recent commits</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify maintenance cadence before pinning to a release.</li>\n<li>Review the LICENSE for your downstream use case.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/InsForge/InsForge\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview InsForge is a open source AI engineering project. Why It's in the Arsenal It covers the agents category with the coding agents subcategory and complements existing Arsenal entries. Key Features Open source backend platform giving AI coding agents database, auth, storage, and AI gateway Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/InsForge/InsForge for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the agents category. 2. Scenario: Self hosted alternative to commercial offerings. Strengths Mature open source project in the agents category Active contributors and recent commits Limitations / When NOT to Use Verify maintenance cadence before pinning to a release. Review the LICENSE for your downstream use case. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources GitHub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "lancedb",
@@ -4273,6 +4348,147 @@
       "body_text": "TL;DR: Smolagents is Hugging Face’s minimal agent library with first class support for code agents. Use it when you want small abstractions, Python native tools, and Hugging Face model integrations. Overview Smolagents intentionally keeps abstractions small and emphasizes agents that think in executable code. It works well for experiments, tool use, and Hugging Face centered workflows. Key Features Small codebase and minimal abstractions CodeAgent abstraction for code based reasoning/action Hugging Face model and tool ecosystem integration Supports managed and local model backends Good educational surface area Useful for quick agent experiments Architecture Model Smolagents centers on agents that produce and execute code through controlled tools. Its architecture is lighter than graph frameworks and optimized for direct Python experimentation. Getting Started Best For Code agent experiments Hugging Face model workflows Small teams that want minimal abstractions Not Ideal For Enterprise workflow governance Complex stateful multi agent graphs No code agent builders Comparison Context Compared with LangGraph, Smolagents is smaller and less workflow heavy. Compared with OpenAI Agents SDK, it is more Hugging Face/open model friendly. Resources GitHub Docs Agents course Community Buzz Hugging Face docs Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "stagehand",
+      "name": "Stagehand",
+      "type": "framework",
+      "category": "agents",
+      "subcategory": "browser-agents",
+      "description": "Open-source browser-AI framework for reliable AI agent web interactions",
+      "github_url": "https://github.com/browserbase/stagehand",
+      "license": "MIT",
+      "primary_language": "TypeScript",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 5400,
+      "github_stars_last_30d": 0,
+      "trending_score": 50,
+      "last_commit": "2026-06-13",
+      "docs_url": null,
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "alternatives": [
+        "playwright",
+        "firecrawl"
+      ],
+      "integrates_with": [
+        "browserbase"
+      ],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso under browser-agents"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/agents/browser-agents/stagehand.md",
+      "url": "content/projects/agents/browser-agents/stagehand",
+      "slug": "stagehand",
+      "section_path": "content/projects/agents/browser-agents",
+      "display_name": "Stagehand",
+      "summary": "Open-source browser-AI framework for reliable AI agent web interactions",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 148,
+      "body_html": "<h2>Overview</h2>\n<p>Stagehand is a open-source AI engineering project.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It covers the agents category with the browser-agents subcategory and complements existing Arsenal entries.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Open-source browser-AI framework for reliable AI agent web interactions</li>\n<li>Open source at the canonical repository</li>\n<li>License: MIT</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>See https://github.com/browserbase/stagehand for architecture documentation and contributor guidelines.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/browserbase/stagehand\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> Production AI engineering in the agents category.</li>\n<li><strong>Scenario:</strong> Self-hosted alternative to commercial offerings.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Mature open-source project in the agents category</li>\n<li>Active contributors and recent commits</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify maintenance cadence before pinning to a release.</li>\n<li>Review the LICENSE for your downstream use case.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/browserbase/stagehand\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Stagehand is a open source AI engineering project. Why It's in the Arsenal It covers the agents category with the browser agents subcategory and complements existing Arsenal entries. Key Features Open source browser AI framework for reliable AI agent web interactions Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/browserbase/stagehand for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the agents category. 2. Scenario: Self hosted alternative to commercial offerings. Strengths Mature open source project in the agents category Active contributors and recent commits Limitations / When NOT to Use Verify maintenance cadence before pinning to a release. Review the LICENSE for your downstream use case. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources GitHub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "surrealdb",
+      "name": "SurrealDB",
+      "type": "platform",
+      "category": "rag",
+      "subcategory": "vector-databases",
+      "description": "Multi-model database combining graph, document, vector, and time-series for AI agents",
+      "github_url": "https://github.com/surrealdb/surrealdb",
+      "license": "Apache-2.0",
+      "primary_language": "Rust",
+      "tags": [
+        "rag",
+        "retrieval",
+        "agents"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 28000,
+      "github_stars_last_30d": 0,
+      "trending_score": 60,
+      "last_commit": "2026-06-13",
+      "docs_url": null,
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "alternatives": [
+        "milvus",
+        "lancedb"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso under vector-databases"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/rag/vector-databases/surrealdb.md",
+      "url": "content/projects/rag/vector-databases/surrealdb",
+      "slug": "surrealdb",
+      "section_path": "content/projects/rag/vector-databases",
+      "display_name": "SurrealDB",
+      "summary": "Multi-model database combining graph, document, vector, and time-series for AI agents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 151,
+      "body_html": "<h2>Overview</h2>\n<p>SurrealDB is a open-source AI engineering project.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It covers the rag category with the vector-databases subcategory and complements existing Arsenal entries.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Multi-model database combining graph, document, vector, and time-series for AI agents</li>\n<li>Open source at the canonical repository</li>\n<li>License: Apache-2.0</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>See https://github.com/surrealdb/surrealdb for architecture documentation and contributor guidelines.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/surrealdb/surrealdb\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> Production AI engineering in the rag category.</li>\n<li><strong>Scenario:</strong> Self-hosted alternative to commercial offerings.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Mature open-source project in the rag category</li>\n<li>Active contributors and recent commits</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify maintenance cadence before pinning to a release.</li>\n<li>Review the LICENSE for your downstream use case.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/surrealdb/surrealdb\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview SurrealDB is a open source AI engineering project. Why It's in the Arsenal It covers the rag category with the vector databases subcategory and complements existing Arsenal entries. Key Features Multi model database combining graph, document, vector, and time series for AI agents Open source at the canonical repository License: Apache 2.0 Architecture / How It Works See https://github.com/surrealdb/surrealdb for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the rag category. 2. Scenario: Self hosted alternative to commercial offerings. Strengths Mature open source project in the rag category Active contributors and recent commits Limitations / When NOT to Use Verify maintenance cadence before pinning to a release. Review the LICENSE for your downstream use case. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources GitHub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "text-generation-inference",
       "name": "Text Generation Inference",
       "type": "platform",
@@ -4345,6 +4561,74 @@
       "body_text": "Overview TL;DR: Text Generation Inference is Hugging Face’s production inference server for text generation models. Treat it as important but check repository status because the GitHub repo is currently archived. API compatibility: openai Formats: HF, GPTQ, AWQ Quantization support: Yes Why It's in the Arsenal TGI influenced many production open model deployments and remains relevant for teams using Hugging Face infrastructure and docs. Key Features Production text generation server Streaming and batching support Hugging Face model ecosystem integration Docker deployment path Quantization support for supported formats OpenAI compatible serving documentation Architecture / How It Works TGI is a model server optimized for serving Hugging Face text generation models over HTTP APIs. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : Hugging Face centered serving 2. Scenario : Dockerized inference deployments 3. Scenario : Teams already using TGI compatible infrastructure Strengths Strong Hugging Face ecosystem fit Production server features Well known deployment path Limitations / When NOT to Use Repository is archived as of fetched GitHub metadata May not be the best default for new greenfield deployments Check current Hugging Face docs before adopting Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "translategemma",
+      "name": "TranslateGemma",
+      "type": "model",
+      "category": "llms",
+      "subcategory": "open-source-models",
+      "description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
+      "github_url": "https://github.com/google-deepmind/gemma",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "tags": [
+        "multimodal",
+        "llm"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 5000,
+      "github_stars_last_30d": 0,
+      "trending_score": 50,
+      "last_commit": "2026-06-13",
+      "docs_url": null,
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "alternatives": [
+        "gemma-3"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso under open-source-models"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/llms/open-source-models/translategemma.md",
+      "url": "content/projects/llms/open-source-models/translategemma",
+      "slug": "translategemma",
+      "section_path": "content/projects/llms/open-source-models",
+      "display_name": "TranslateGemma",
+      "summary": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>TranslateGemma is a open-source AI engineering project.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It covers the llms category with the open-source-models subcategory and complements existing Arsenal entries.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Open translation model family built on Gemma 3 supporting 55 languages efficiently</li>\n<li>Open source at the canonical repository</li>\n<li>License: Apache-2.0</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>See https://github.com/google-deepmind/gemma for architecture documentation and contributor guidelines.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/google-deepmind/gemma\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> Production AI engineering in the llms category.</li>\n<li><strong>Scenario:</strong> Self-hosted alternative to commercial offerings.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Mature open-source project in the llms category</li>\n<li>Active contributors and recent commits</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify maintenance cadence before pinning to a release.</li>\n<li>Review the LICENSE for your downstream use case.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/google-deepmind/gemma\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview TranslateGemma is a open source AI engineering project. Why It's in the Arsenal It covers the llms category with the open source models subcategory and complements existing Arsenal entries. Key Features Open translation model family built on Gemma 3 supporting 55 languages efficiently Open source at the canonical repository License: Apache 2.0 Architecture / How It Works See https://github.com/google deepmind/gemma for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the llms category. 2. Scenario: Self hosted alternative to commercial offerings. Strengths Mature open source project in the llms category Active contributors and recent commits Limitations / When NOT to Use Verify maintenance cadence before pinning to a release. Review the LICENSE for your downstream use case. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources GitHub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "txtai",
       "name": "txtai",
       "type": "framework",
@@ -4410,6 +4694,71 @@
       "word_count": 225,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> txtai is an all-in-one Python framework for semantic search, embeddings, LLM orchestration, and workflows. Use it for compact semantic-search/RAG systems with fewer moving parts.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>txtai combines embeddings, vector search, workflows, and LLM orchestration in a single Python-first framework.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It is a pragmatic option when a team wants semantic search and RAG without assembling many separate packages.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Embeddings and semantic search</li>\n<li>Workflow orchestration primitives</li>\n<li>LLM pipeline support</li>\n<li>Local-first friendly architecture</li>\n<li>Apache-2.0 open source</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>txtai centers on embeddings indexes and workflows that can connect search, extraction, generation, and other language tasks.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install txtai\n</code></pre>\n<pre><code class=\"language-python\">from txtai import Embeddings\n\nembeddings = Embeddings()\nembeddings.index([\"AI Arsenal tracks AI engineering tools.\"])\nprint(embeddings.search(\"AI tools\", 1))\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Small semantic search apps</li>\n<li><strong>Scenario</strong>: Local RAG prototypes</li>\n<li><strong>Scenario</strong>: Teams that want fewer dependencies</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Compact all-in-one package</li>\n<li>Good semantic-search primitives</li>\n<li>Simple Python developer experience</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Smaller ecosystem than LangChain/LlamaIndex</li>\n<li>May be less flexible for complex enterprise pipelines</li>\n<li>Use specialized vector DBs for very large scale</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Start with txtai for embedded semantic search</li>\n<li>Move to external vector DBs if scale/ops needs grow</li>\n<li>Use evaluation before changing embeddings or retrieval config</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/neuml/txtai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://neuml.github.io/txtai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this project is frequently evaluated in production RAG architecture decisions.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: txtai is an all in one Python framework for semantic search, embeddings, LLM orchestration, and workflows. Use it for compact semantic search/RAG systems with fewer moving parts. Overview txtai combines embeddings, vector search, workflows, and LLM orchestration in a single Python first framework. Why It's in the Arsenal It is a pragmatic option when a team wants semantic search and RAG without assembling many separate packages. Key Features Embeddings and semantic search Workflow orchestration primitives LLM pipeline support Local first friendly architecture Apache 2.0 open source Architecture / How It Works txtai centers on embeddings indexes and workflows that can connect search, extraction, generation, and other language tasks. Getting Started Use Cases 1. Scenario : Small semantic search apps 2. Scenario : Local RAG prototypes 3. Scenario : Teams that want fewer dependencies Strengths Compact all in one package Good semantic search primitives Simple Python developer experience Limitations / When NOT to Use Smaller ecosystem than LangChain/LlamaIndex May be less flexible for complex enterprise pipelines Use specialized vector DBs for very large scale Integration Patterns Start with txtai for embedded semantic search Move to external vector DBs if scale/ops needs grow Use evaluation before changing embeddings or retrieval config Resources GitHub Docs Buzz & Reception Included because this project is frequently evaluated in production RAG architecture decisions. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "uiverse-design",
+      "name": "Uiverse Design",
+      "type": "platform",
+      "category": "tooling",
+      "subcategory": "platforms",
+      "description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
+      "github_url": "https://github.com/uiverse-io/galaxy",
+      "license": "MIT",
+      "primary_language": "Other",
+      "tags": [
+        "agents"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 11000,
+      "github_stars_last_30d": 0,
+      "trending_score": 40,
+      "last_commit": "2026-06-13",
+      "docs_url": null,
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso under platforms"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/tooling/platforms/uiverse-design.md",
+      "url": "content/projects/tooling/platforms/uiverse-design",
+      "slug": "uiverse-design",
+      "section_path": "content/projects/tooling/platforms",
+      "display_name": "Uiverse Design",
+      "summary": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Uiverse Design is a open-source AI engineering project.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It covers the tooling category with the platforms subcategory and complements existing Arsenal entries.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Open-source library of community-made CSS/Tailwind UI elements for faster front-end development</li>\n<li>Open source at the canonical repository</li>\n<li>License: MIT</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>See https://github.com/uiverse-io/galaxy for architecture documentation and contributor guidelines.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/uiverse-io/galaxy\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> Production AI engineering in the tooling category.</li>\n<li><strong>Scenario:</strong> Self-hosted alternative to commercial offerings.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Mature open-source project in the tooling category</li>\n<li>Active contributors and recent commits</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify maintenance cadence before pinning to a release.</li>\n<li>Review the LICENSE for your downstream use case.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/uiverse-io/galaxy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Uiverse Design is a open source AI engineering project. Why It's in the Arsenal It covers the tooling category with the platforms subcategory and complements existing Arsenal entries. Key Features Open source library of community made CSS/Tailwind UI elements for faster front end development Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/uiverse io/galaxy for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the tooling category. 2. Scenario: Self hosted alternative to commercial offerings. Strengths Mature open source project in the tooling category Active contributors and recent commits Limitations / When NOT to Use Verify maintenance cadence before pinning to a release. Review the LICENSE for your downstream use case. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources GitHub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "unstructured",

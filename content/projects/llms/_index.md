@@ -8,11 +8,12 @@
 |---|---:|---|
 | [fine tuning](./fine-tuning/) | 0 entries | 2026-06-14 |
 | [inference engines](./inference-engines/) | 7 entries | 2026-06-14 |
-| [open source models](./open-source-models/) | 14 entries | 2026-06-14 |
+| [open source models](./open-source-models/) | 15 entries | 2026-06-14 |
 | [quantization](./quantization/) | 0 entries | 2026-06-14 |
 
 ## Recently Added
 
+- [TranslateGemma](./open-source-models/translategemma.md)
 - [Command R+](./open-source-models/command-r-plus.md)
 - [DeepSeek-V3 / R1](./open-source-models/deepseek-v3-r1.md)
 - [Falcon 3](./open-source-models/falcon-3.md)
@@ -22,7 +23,6 @@
 - [llama.cpp](./inference-engines/llama-cpp.md)
 - [Llama Models](./open-source-models/llama-models.md)
 - [Llamafile](./inference-engines/llamafile.md)
-- [LMDeploy](./inference-engines/lmdeploy.md)
 
 ## Most Popular
 
@@ -58,5 +58,6 @@
 - [Qwen 2.5 / QwQ](./open-source-models/qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [SGLang](./inference-engines/sglang.md) — High-performance serving framework for large language and multimodal models
 - [Text Generation Inference](./inference-engines/text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
+- [TranslateGemma](./open-source-models/translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
 - [vLLM](./inference-engines/vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
 - [Yi](./open-source-models/yi.md) — 01.AI open model family with bilingual and long-context variants from small to mid-large sizes

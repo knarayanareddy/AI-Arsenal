@@ -35,7 +35,6 @@ async function parseFrontmatter(raw) {
   }
   return { data, body };
 }
-
 test('project schema compiles and accepts a valid project', async () => {
   const schema = await loadSchema('project.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
@@ -81,7 +80,7 @@ test('project schema rejects reserved IDs', async () => {
   const schema = await loadSchema('project.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
-  for (const reserved of ['index', 'registry', 'overview', 'introduction', 'readme', 'agent', 'context']) {
+  for (const reserved of ['index', 'registry', 'overview', 'introduction', 'readme', 'agent', 'context', 'taxonomy', 'contributing', 'governance', 'changelog', 'security', 'template', 'all', 'none', 'undefined', 'null', 'true', 'false']) {
     const valid = validate({
       id: reserved,
       name: 'X',
@@ -193,6 +192,67 @@ test('tool schema requires job to be a non-empty array of allowed values', async
   assert.equal(valid, false);
 });
 
+test('tool schema accepts buzz_sources as optional', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate({
+    id: 'sample-tool-with-buzz',
+    name: 'Sample Tool with Buzz',
+    type: 'tool',
+    job: ['evaluation'],
+    description: 'A sample tool entry with buzz_sources',
+    url: 'https://example.com/sample',
+    cost_model: 'freemium',
+    pricing_detail: 'Free tier available',
+    tags: ['evaluation'],
+    maturity: 'production',
+    stack: ['python'],
+    free_tier: true,
+    self_hostable: false,
+    open_source: false,
+    added_date: '2026-06-13',
+    last_reviewed: '2026-06-13',
+    added_by: 'tester',
+    verdict: 'recommended',
+    verdict_rationale: 'Tested and verified',
+    status: 'active',
+    buzz_sources: [
+      { source: 'newsletter', url: 'https://example.com/news', date: '2026-06-13', description: 'Featured in newsletter' }
+    ]
+  });
+  assert.equal(valid, true);
+});
+
+test('tool schema rejects malformed buzz_sources', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate({
+    id: 'sample-tool-bad-buzz',
+    name: 'Sample Tool Bad Buzz',
+    type: 'tool',
+    job: ['evaluation'],
+    description: 'A sample tool entry with bad buzz_sources',
+    url: 'https://example.com/sample',
+    cost_model: 'freemium',
+    pricing_detail: 'Free tier available',
+    tags: ['evaluation'],
+    maturity: 'production',
+    stack: ['python'],
+    free_tier: true,
+    self_hostable: false,
+    open_source: false,
+    added_date: '2026-06-13',
+    last_reviewed: '2026-06-13',
+    added_by: 'tester',
+    verdict: 'recommended',
+    verdict_rationale: 'Tested',
+    status: 'active',
+    buzz_sources: [{ source: 'bogus-source', url: 'https://example.com', date: '2026-06-13', description: 'test' }]
+  });
+  assert.equal(valid, false);
+});
 test('tip schema requires valid category', async () => {
   const schema = await loadSchema('tip.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
