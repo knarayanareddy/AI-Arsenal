@@ -1,21 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-14T14:20:12.681Z",
+  "generated_at": "2026-06-14T19:18:48.235Z",
   "entries": {
-    "total": 345,
-    "projects": 68,
-    "tools": 62,
+    "total": 380,
+    "projects": 73,
+    "tools": 92,
     "papers": 25,
     "tips": 106,
     "people": 25,
     "digests": 0,
     "guides": 51,
     "build_examples": 8
-  },
-  "tags": {
-    "total": 56
-  },
-  "content": {
-    "total_words": 85210
   }
 }

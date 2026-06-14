@@ -1,37 +1,44 @@
 ---
-id: "instructor"
-name: "Instructor"
-type: "tool"
+id: instructor
+name: Instructor
+type: tool
 job:
-  - "structured-output"
-description: "A library for extracting typed structured outputs from language models"
-url: "https://github.com/instructor-ai/instructor"
-cost_model: "open-source"
-pricing_detail: "Open-source repository"
+  - structured-output
+description: A library for extracting typed structured outputs from language models
+url: 'https://github.com/instructor-ai/instructor'
+cost_model: open-source
+pricing_detail: Open-source repository
 tags:
   - structured-output
   - llm
   - openai
-maturity: "production"
+maturity: production
 stack:
   - python
   - typescript
 free_tier: true
-free_tier_limits: "See official pricing page; limits may change"
+free_tier_limits: See official pricing page; limits may change
 self_hostable: true
 open_source: true
-source_url: "https://github.com/instructor-ai/instructor"
+source_url: 'https://github.com/instructor-ai/instructor'
 docs_url: null
-github_url: "https://github.com/instructor-ai/instructor"
+github_url: 'https://github.com/instructor-ai/instructor'
 alternatives: []
 integrates_with: []
-added_date: "2026-06-13"
-last_reviewed: "2026-06-13"
-added_by: "maintainer"
-reviewed_by: "maintainer"
-verdict: "best-in-class"
-verdict_rationale: "Useful option for structured-output workflows when it matches your stack and cost constraints"
-status: "active"
+added_date: '2026-06-13'
+last_reviewed: '2026-06-13'
+added_by: maintainer
+reviewed_by: maintainer
+verdict: best-in-class
+verdict_rationale: >-
+  Useful option for structured-output workflows when it matches your stack and
+  cost constraints
+status: active
+buzz_sources:
+  - source: newsletter
+    url: 'https://toolradar.com/featured/techpresso'
+    date: '2026-06-14'
+    description: Featured in Techpresso as a structured-output library used by AI engineers
 ---
 
 ## Overview

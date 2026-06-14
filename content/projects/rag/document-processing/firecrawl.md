@@ -36,7 +36,13 @@ added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: []
+buzz_sources:
+  - source: newsletter
+    url: 'https://toolradar.com/featured/techpresso'
+    date: '2026-06-14'
+    description: >-
+      Featured in Techpresso (including Firecrawl MCP variant) as an LLM-ready
+      data extraction tool
 featured: false
 status: active
 ---

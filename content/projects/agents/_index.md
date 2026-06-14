@@ -7,13 +7,15 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [autonomous](./autonomous/) | 0 entries | 2026-06-14 |
-| [browser agents](./browser-agents/) | 0 entries | 2026-06-14 |
-| [coding agents](./coding-agents/) | 0 entries | 2026-06-14 |
+| [browser agents](./browser-agents/) | 1 entries | 2026-06-14 |
+| [coding agents](./coding-agents/) | 1 entries | 2026-06-14 |
 | [frameworks](./frameworks/) | 15 entries | 2026-06-14 |
 | [multi agent](./multi-agent/) | 0 entries | 2026-06-14 |
 
 ## Recently Added
 
+- [InsForge](./coding-agents/insforge.md)
+- [Stagehand](./browser-agents/stagehand.md)
 - [AutoGen](./frameworks/autogen.md)
 - [AutoGPT](./frameworks/autogpt.md)
 - [CrewAI](./frameworks/crewai.md)
@@ -22,8 +24,6 @@
 - [Haystack](./frameworks/haystack-agents.md)
 - [LangGraph](./frameworks/langgraph.md)
 - [Mastra](./frameworks/mastra.md)
-- [MetaGPT](./frameworks/metagpt.md)
-- [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md)
 
 ## Most Popular
 
@@ -46,6 +46,7 @@
 - [Dify](./frameworks/dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [Google ADK](./frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [Haystack](./frameworks/haystack-agents.md) — Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines
+- [InsForge](./coding-agents/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [LangGraph](./frameworks/langgraph.md) — Graph-based framework for building stateful, durable LLM agents and workflows
 - [Mastra](./frameworks/mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
 - [MetaGPT](./frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
@@ -55,3 +56,4 @@
 - [Pydantic AI](./frameworks/pydantic-ai.md) — A Python agent framework built around typed models and structured outputs
 - [Semantic Kernel](./frameworks/semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
 - [Smolagents](./frameworks/smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
+- [Stagehand](./browser-agents/stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions

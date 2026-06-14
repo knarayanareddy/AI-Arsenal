@@ -7,33 +7,9 @@ import Ajv from 'ajv/dist/2020.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SCHEMAS = path.join(__dirname, '..', 'schemas');
-const FIXTURES = path.join(__dirname, 'fixtures');
 
 async function loadSchema(name) {
   return JSON.parse(await fs.readFile(path.join(SCHEMAS, name), 'utf8'));
-}
-
-async function loadFixture(name) {
-  return (await fs.readFile(path.join(FIXTURES, name), 'utf8')).replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
-}
-
-async function parseFrontmatter(raw) {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
-  if (!match) return null;
-  // We don't want a YAML dependency in tests; use a tiny parser.
-  const yaml = match[1];
-  const body = match[2];
-  const data = {};
-  for (const line of yaml.split(/\r?\n/)) {
-    const m = line.match(/^([a-z_]+):\s*(.*)$/);
-    if (m) {
-      let value = m[2];
-      if (value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
-      if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
-      data[m[1]] = value;
-    }
-  }
-  return { data, body };
 }
 
 test('project schema compiles and accepts a valid project', async () => {
@@ -71,7 +47,6 @@ test('project schema rejects missing required fields', async () => {
   const valid = validate({
     id: 'incomplete',
     name: 'Incomplete Project'
-    // most fields missing on purpose
   });
   assert.equal(valid, false);
   assert.ok(validate.errors.length > 0);
@@ -81,7 +56,7 @@ test('project schema rejects reserved IDs', async () => {
   const schema = await loadSchema('project.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
-  for (const reserved of ['index', 'registry', 'overview', 'introduction', 'readme', 'agent', 'context']) {
+  for (const reserved of ['index', 'registry', 'overview', 'introduction', 'readme', 'agent', 'context', 'taxonomy', 'contributing', 'governance', 'changelog', 'security', 'template', 'all', 'none', 'undefined', 'null', 'true', 'false']) {
     const valid = validate({
       id: reserved,
       name: 'X',
@@ -155,7 +130,7 @@ test('project schema rejects invalid date format', async () => {
     cost_model: 'open-source',
     github_stars: 0,
     trending_score: 0,
-    last_commit: '06/13/2026', // wrong format
+    last_commit: '06/13/2026',
     added_date: '2026-06-13',
     last_reviewed: '2026-06-13',
     added_by: 'tester',
@@ -193,6 +168,68 @@ test('tool schema requires job to be a non-empty array of allowed values', async
   assert.equal(valid, false);
 });
 
+test('tool schema accepts buzz_sources as optional', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate({
+    id: 'sample-tool-with-buzz',
+    name: 'Sample Tool with Buzz',
+    type: 'tool',
+    job: ['evaluation'],
+    description: 'A sample tool entry with buzz_sources',
+    url: 'https://example.com/sample',
+    cost_model: 'freemium',
+    pricing_detail: 'Free tier available',
+    tags: ['evaluation'],
+    maturity: 'production',
+    stack: ['python'],
+    free_tier: true,
+    self_hostable: false,
+    open_source: false,
+    added_date: '2026-06-13',
+    last_reviewed: '2026-06-13',
+    added_by: 'tester',
+    verdict: 'recommended',
+    verdict_rationale: 'Tested and verified',
+    status: 'active',
+    buzz_sources: [
+      { source: 'newsletter', url: 'https://example.com/news', date: '2026-06-13', description: 'Featured in newsletter' }
+    ]
+  });
+  assert.equal(valid, true);
+});
+
+test('tool schema rejects malformed buzz_sources', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate({
+    id: 'sample-tool-bad-buzz',
+    name: 'Sample Tool Bad Buzz',
+    type: 'tool',
+    job: ['evaluation'],
+    description: 'A sample tool entry with bad buzz_sources',
+    url: 'https://example.com/sample',
+    cost_model: 'freemium',
+    pricing_detail: 'Free tier available',
+    tags: ['evaluation'],
+    maturity: 'production',
+    stack: ['python'],
+    free_tier: true,
+    self_hostable: false,
+    open_source: false,
+    added_date: '2026-06-13',
+    last_reviewed: '2026-06-13',
+    added_by: 'tester',
+    verdict: 'recommended',
+    verdict_rationale: 'Tested',
+    status: 'active',
+    buzz_sources: [{ source: 'bogus-source', url: 'https://example.com', date: '2026-06-13', description: 'test' }]
+  });
+  assert.equal(valid, false);
+});
+
 test('tip schema requires valid category', async () => {
   const schema = await loadSchema('tip.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
@@ -216,8 +253,6 @@ test('paper schema enforces arxiv_id regex', async () => {
   const schema = await loadSchema('paper.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
-  // arxiv_id regex is `^\d{4}\.\d{4,5}(v\d+)?$` — exactly 4 digits prefix
-  // and 4-5 digit suffix, optionally followed by version (vN).
   for (const [valid_id, ok] of [['2303.08774', true], ['2406.00000v2', true], ['bogus', false], ['23.123', false], ['99999.99999', false]]) {
     const valid = validate({
       id: 'attention-paper',
@@ -278,7 +313,7 @@ test('digest schema enforces YYYY-MM id regex', async () => {
   assert.equal(valid, true);
 
   const invalid = validate({
-    id: 'june-2026', // wrong format
+    id: 'june-2026',
     title: 'X',
     period: '2026-06',
     published_date: '2026-06-30',

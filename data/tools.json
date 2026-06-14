@@ -1,8 +1,146 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-14T14:20:12.681Z",
-  "count": 62,
+  "generated_at": "2026-06-14T19:18:46.137Z",
+  "count": 92,
   "items": [
+    {
+      "id": "agent-browser-shield",
+      "name": "Agent Browser Shield",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails",
+        "web-scraping"
+      ],
+      "description": "Secure AI web browsing by cleaning content and masking PII during agent runs",
+      "url": "content/tools/by-job/agent-browser-shield",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "security",
+        "retrieval"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "New PII-masking browser layer; verify coverage of your data classes",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a security-and-guardrails tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/agent-browser-shield.md",
+      "slug": "agent-browser-shield",
+      "section_path": "content/tools/by-job",
+      "display_name": "Agent Browser Shield",
+      "summary": "Secure AI web browsing by cleaning content and masking PII during agent runs",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 163,
+      "body_html": "<h2>Overview</h2>\n<p>Agent Browser Shield is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: security-and-guardrails, web-scraping.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Secure AI web browsing by cleaning content and masking PII during agent runs</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://agentbrowsershield.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://agentbrowsershield.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When security-and-guardrails is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: security-and-guardrails, web-scraping</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://agentbrowsershield.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Agent Browser Shield</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Agent Browser Shield is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: security and guardrails, web scraping. Key Features Secure AI web browsing by cleaning content and masking PII during agent runs Cost model: freemium Stack: python Architecture / How It Works Visit https://agentbrowsershield.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When security and guardrails is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: security and guardrails, web scraping Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Agent Browser Shield Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "agnt-hub",
+      "name": "AGNT.Hub",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "security-and-guardrails"
+      ],
+      "description": "Build and manage secure, private AI agents with custom skills and policies",
+      "url": "content/tools/by-job/agnt-hub",
+      "cost_model": "paid",
+      "pricing_detail": "Paid plans",
+      "tags": [
+        "orchestration",
+        "security"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Private agent platform; compare against on-prem agent frameworks",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/agnt-hub.md",
+      "slug": "agnt-hub",
+      "section_path": "content/tools/by-job",
+      "display_name": "AGNT.Hub",
+      "summary": "Build and manage secure, private AI agents with custom skills and policies",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 154,
+      "body_html": "<h2>Overview</h2>\n<p>AGNT.Hub is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, security-and-guardrails.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Build and manage secure, private AI agents with custom skills and policies</li>\n<li>Cost model: paid</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://agnt.hub for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://agnt.hub\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration, security-and-guardrails</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://agnt.hub\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AGNT.Hub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview AGNT.Hub is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, security and guardrails. Key Features Build and manage secure, private AI agents with custom skills and policies Cost model: paid Stack: python Architecture / How It Works Visit https://agnt.hub for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration, security and guardrails Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources AGNT.Hub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
     {
       "id": "airflow",
       "name": "Apache Airflow",
@@ -125,6 +263,75 @@
       "word_count": 217,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Open-source platform for human and AI feedback, data curation, and evaluation datasets. Open source or free to start. Best for human feedback datasets.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Argilla is included as a tool for data-labeling, evaluation workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open-source status, and operational model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Human feedback UI</li>\n<li>Dataset curation</li>\n<li>LLM evaluation data</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Argilla helps teams collect, curate, and review data for training and evaluating AI systems.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install argilla\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Human evaluation sets</li>\n<li><strong>Scenario</strong>: Preference data collection</li>\n<li><strong>Scenario</strong>: Dataset review workflows</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Open-source labeling/eval focus</li>\n<li>Good human-in-loop workflow</li>\n<li>Useful for LLM datasets</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Requires annotation process design</li>\n<li>Not a model evaluator alone</li>\n<li>Hosted/self-host details need planning</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>argilla</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/argilla-io/argilla\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/argilla-io/argilla\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/argilla-io/argilla\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for data-labeling, evaluation.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Open source platform for human and AI feedback, data curation, and evaluation datasets. Open source or free to start. Best for human feedback datasets. Overview Argilla is included as a tool for data labeling, evaluation workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Human feedback UI Dataset curation LLM evaluation data Architecture / How It Works Argilla helps teams collect, curate, and review data for training and evaluating AI systems. Getting Started Use Cases 1. Scenario : Human evaluation sets 2. Scenario : Preference data collection 3. Scenario : Dataset review workflows Strengths Open source labeling/eval focus Good human in loop workflow Useful for LLM datasets Limitations / When NOT to Use Requires annotation process design Not a model evaluator alone Hosted/self host details need planning Integration Patterns Link this tool from job guides using its canonical ID argilla. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for data labeling, evaluation. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "astra-autonomous-pentest",
+      "name": "Astra Autonomous Pentest",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails",
+        "evaluation"
+      ],
+      "description": "Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure",
+      "url": "content/tools/by-job/astra-autonomous-pentest",
+      "cost_model": "paid",
+      "pricing_detail": "Paid plans",
+      "tags": [
+        "security",
+        "evaluation"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Closed-source pentest automation; combine with manual security reviews",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a security-and-guardrails tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/astra-autonomous-pentest.md",
+      "slug": "astra-autonomous-pentest",
+      "section_path": "content/tools/by-job",
+      "display_name": "Astra Autonomous Pentest",
+      "summary": "Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 159,
+      "body_html": "<h2>Overview</h2>\n<p>Astra Autonomous Pentest is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: security-and-guardrails, evaluation.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure</li>\n<li>Cost model: paid</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://astra.security for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://astra.security\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When security-and-guardrails is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: security-and-guardrails, evaluation</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://astra.security\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Astra Autonomous Pentest</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Astra Autonomous Pentest is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: security and guardrails, evaluation. Key Features Continuous AI powered penetration testing for applications, APIs, and cloud infrastructure Cost model: paid Stack: python Architecture / How It Works Visit https://astra.security for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When security and guardrails is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: security and guardrails, evaluation Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Astra Autonomous Pentest Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "aws-bedrock",
@@ -310,6 +517,73 @@
       "body_text": "TL;DR: Microsoft Azure platform for building, evaluating, and deploying AI applications. Azure usage based pricing. Best for Azure enterprise AI development. Overview Azure AI Studio is included as a tool for deployment workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Azure model access Evaluation and deployment workflows Enterprise identity/security Architecture / How It Works Azure AI Studio provides hosted workflows for model selection, prompt/app development, evaluation, and deployment. Getting Started Use Cases 1. Scenario : Microsoft/Azure enterprise teams 2. Scenario : Managed AI app deployment 3. Scenario : Governance heavy AI projects Strengths Azure ecosystem integration Enterprise controls Model catalog and evaluation tooling Limitations / When NOT to Use Azure lock in Service names/features change Not a local/open source tool Integration Patterns Link this tool from job guides using its canonical ID azure ai studio. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "basedash",
+      "name": "Basedash",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "AI-native platform for generating dashboards, reports, and insights from natural-language queries",
+      "url": "content/tools/by-job/basedash",
+      "cost_model": "paid",
+      "pricing_detail": "Paid plans",
+      "tags": [
+        "structured-output"
+      ],
+      "maturity": "production",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Commercial BI alternative; compare against open-source Metabase and Superset",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a structured-output tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/basedash.md",
+      "slug": "basedash",
+      "section_path": "content/tools/by-job",
+      "display_name": "Basedash",
+      "summary": "AI-native platform for generating dashboards, reports, and insights from natural-language queries",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Basedash is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured-output.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI-native platform for generating dashboards, reports, and insights from natural-language queries</li>\n<li>Cost model: paid</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://basedash.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://basedash.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When structured-output is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: structured-output</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://basedash.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Basedash</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Basedash is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features AI native platform for generating dashboards, reports, and insights from natural language queries Cost model: paid Stack: typescript Architecture / How It Works Visit https://basedash.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: structured output Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Basedash Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "bentoml",
       "name": "BentoML",
       "type": "tool",
@@ -434,6 +708,278 @@
       "body_text": "Overview Chainlit is a tool for prototyping workflows in AI engineering systems. Why It's in the Arsenal It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model. Key Features Supports one or more common AI engineering jobs Has a concrete adoption path for prototypes or production systems Exposes metadata that enables future filtering and comparison Architecture / How It Works Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate. Getting Started Use Cases 1. Scenario : When your system needs prototyping support 2. Scenario : When comparing tools by cost model, maturity, and stack compatibility Strengths Clear job fit in the AI engineering lifecycle Structured metadata makes it comparable with alternatives Limitations / When NOT to Use Validate pricing, data policies, and self hosting needs before committing Avoid adding operational tools before you have a workflow they directly support Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID chainlit rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "claude-artifact-player",
+      "name": "Claude Artifact Player",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "Interact with and manage AI-generated artifacts from Claude and similar models",
+      "url": "content/tools/by-job/claude-artifact-player",
+      "cost_model": "freemium",
+      "pricing_detail": "Free to use",
+      "tags": [
+        "structured-output"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Free utility; useful for Claude users wanting artifact control",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a structured-output tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/claude-artifact-player.md",
+      "slug": "claude-artifact-player",
+      "section_path": "content/tools/by-job",
+      "display_name": "Claude Artifact Player",
+      "summary": "Interact with and manage AI-generated artifacts from Claude and similar models",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 155,
+      "body_html": "<h2>Overview</h2>\n<p>Claude Artifact Player is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured-output.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Interact with and manage AI-generated artifacts from Claude and similar models</li>\n<li>Cost model: freemium</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://claudeartifactplayer.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://claudeartifactplayer.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When structured-output is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: structured-output</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://claudeartifactplayer.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Claude Artifact Player</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Claude Artifact Player is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Interact with and manage AI generated artifacts from Claude and similar models Cost model: freemium Stack: typescript Architecture / How It Works Visit https://claudeartifactplayer.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: structured output Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Claude Artifact Player Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "cloudskill",
+      "name": "Cloudskill",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "prompt-management"
+      ],
+      "description": "Manage, govern, and distribute skills for AI agents across teams",
+      "url": "content/tools/by-job/cloudskill",
+      "cost_model": "paid",
+      "pricing_detail": "Paid plans",
+      "tags": [
+        "orchestration",
+        "routing"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Agent-skills registry; evaluate fit for multi-team agent deployments",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/cloudskill.md",
+      "slug": "cloudskill",
+      "section_path": "content/tools/by-job",
+      "display_name": "Cloudskill",
+      "summary": "Manage, govern, and distribute skills for AI agents across teams",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 150,
+      "body_html": "<h2>Overview</h2>\n<p>Cloudskill is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, prompt-management.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Manage, govern, and distribute skills for AI agents across teams</li>\n<li>Cost model: paid</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://cloudskill.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://cloudskill.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration, prompt-management</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://cloudskill.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Cloudskill</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Cloudskill is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, prompt management. Key Features Manage, govern, and distribute skills for AI agents across teams Cost model: paid Stack: python Architecture / How It Works Visit https://cloudskill.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration, prompt management Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Cloudskill Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "code-arena",
+      "name": "Code Arena",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "Benchmark and compare AI models in a competitive coding environment",
+      "url": "content/tools/by-job/code-arena",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "evaluation"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Benchmarking tool; useful alongside existing evaluation frameworks",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a evaluation tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/code-arena.md",
+      "slug": "code-arena",
+      "section_path": "content/tools/by-job",
+      "display_name": "Code Arena",
+      "summary": "Benchmark and compare AI models in a competitive coding environment",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 148,
+      "body_html": "<h2>Overview</h2>\n<p>Code Arena is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: evaluation.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Benchmark and compare AI models in a competitive coding environment</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://codearena.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://codearena.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When evaluation is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: evaluation</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://codearena.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Code Arena</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Code Arena is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: evaluation. Key Features Benchmark and compare AI models in a competitive coding environment Cost model: freemium Stack: python Architecture / How It Works Visit https://codearena.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When evaluation is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: evaluation Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Code Arena Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "conan",
+      "name": "Conan",
+      "type": "tool",
+      "job": [
+        "monitoring",
+        "tracing"
+      ],
+      "description": "Live HUD for monitoring and interacting with AI agent sessions on macOS",
+      "url": "content/tools/by-job/conan",
+      "cost_model": "paid",
+      "pricing_detail": "Paid macOS application",
+      "tags": [
+        "monitoring",
+        "tracing"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "macOS-only; verify coverage for your agent framework",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a monitoring tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/conan.md",
+      "slug": "conan",
+      "section_path": "content/tools/by-job",
+      "display_name": "Conan",
+      "summary": "Live HUD for monitoring and interacting with AI agent sessions on macOS",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 150,
+      "body_html": "<h2>Overview</h2>\n<p>Conan is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, tracing.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Live HUD for monitoring and interacting with AI agent sessions on macOS</li>\n<li>Cost model: paid</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://conan.app for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://conan.app\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When monitoring is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: monitoring, tracing</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://conan.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Conan</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Conan is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, tracing. Key Features Live HUD for monitoring and interacting with AI agent sessions on macOS Cost model: paid Stack: python Architecture / How It Works Visit https://conan.app for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When monitoring is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: monitoring, tracing Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Conan Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "crawl4ai-tool",
       "name": "Crawl4AI",
       "type": "tool",
@@ -556,6 +1102,75 @@
       "body_text": "TL;DR: Data orchestration platform for assets, pipelines, schedules, and observability. Open source or free to start. Best for asset centric AI pipelines. Overview Dagster is included as a tool for orchestration workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Asset based orchestration Schedules/sensors Data lineage Architecture / How It Works Dagster models pipelines as software defined assets, useful for AI data and evaluation pipelines. Getting Started Use Cases 1. Scenario : Embedding/index build pipelines 2. Scenario : Dataset/eval asset management 3. Scenario : Production data workflows Strengths Strong data asset model Good lineage story Production grade orchestration Limitations / When NOT to Use More data platform than agent tool Learning curve Requires infra choices Integration Patterns Link this tool from job guides using its canonical ID dagster. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for orchestration. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "dropstone-3",
+      "name": "Dropstone 3",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "prototyping"
+      ],
+      "description": "Collaborative AI workspace for teams to build, describe, and ship software together",
+      "url": "content/tools/by-job/dropstone-3",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid plans",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Team-coding workspace; compare with Cursor and Continue",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/dropstone-3.md",
+      "slug": "dropstone-3",
+      "section_path": "content/tools/by-job",
+      "display_name": "Dropstone 3",
+      "summary": "Collaborative AI workspace for teams to build, describe, and ship software together",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Dropstone 3 is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, prototyping.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Collaborative AI workspace for teams to build, describe, and ship software together</li>\n<li>Cost model: freemium</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://dropstone.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://dropstone.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration, prototyping</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://dropstone.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Dropstone 3</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Dropstone 3 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, prototyping. Key Features Collaborative AI workspace for teams to build, describe, and ship software together Cost model: freemium Stack: typescript Architecture / How It Works Visit https://dropstone.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration, prototyping Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Dropstone 3 Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "dvc",
       "name": "DVC",
       "type": "tool",
@@ -614,6 +1229,75 @@
       "word_count": 205,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Open-source data and model versioning tool for ML projects and pipelines. Open source or free to start. Best for data/model versioning in Git workflows.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>DVC is included as a tool for model-registry workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open-source status, and operational model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Data versioning</li>\n<li>Pipeline stages</li>\n<li>Remote storage integration</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>DVC versions datasets, models, and pipelines alongside Git metadata.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install dvc\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Versioning eval datasets</li>\n<li><strong>Scenario</strong>: Tracking model artifacts</li>\n<li><strong>Scenario</strong>: Reproducible ML pipelines</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Git-friendly model/data versioning</li>\n<li>Open source</li>\n<li>Works with object storage</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not LLM-specific</li>\n<li>Requires team discipline</li>\n<li>Registry UI depends on ecosystem choices</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>dvc</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/iterative/dvc\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/iterative/dvc\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/iterative/dvc\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for model-registry.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Open source data and model versioning tool for ML projects and pipelines. Open source or free to start. Best for data/model versioning in Git workflows. Overview DVC is included as a tool for model registry workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Data versioning Pipeline stages Remote storage integration Architecture / How It Works DVC versions datasets, models, and pipelines alongside Git metadata. Getting Started Use Cases 1. Scenario : Versioning eval datasets 2. Scenario : Tracking model artifacts 3. Scenario : Reproducible ML pipelines Strengths Git friendly model/data versioning Open source Works with object storage Limitations / When NOT to Use Not LLM specific Requires team discipline Registry UI depends on ecosystem choices Integration Patterns Link this tool from job guides using its canonical ID dvc. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for model registry. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "empromptu-ai",
+      "name": "Empromptu AI",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "deployment"
+      ],
+      "description": "Build, deploy, and manage custom AI applications that improve over time",
+      "url": "content/tools/by-job/empromptu-ai",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "orchestration",
+        "cloud"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Custom-app platform; compare with LangChain and Dify",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/empromptu-ai.md",
+      "slug": "empromptu-ai",
+      "section_path": "content/tools/by-job",
+      "display_name": "Empromptu AI",
+      "summary": "Build, deploy, and manage custom AI applications that improve over time",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 151,
+      "body_html": "<h2>Overview</h2>\n<p>Empromptu AI is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, deployment.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Build, deploy, and manage custom AI applications that improve over time</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://empromptu.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://empromptu.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration, deployment</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://empromptu.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Empromptu AI</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Empromptu AI is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, deployment. Key Features Build, deploy, and manage custom AI applications that improve over time Cost model: freemium Stack: python Architecture / How It Works Visit https://empromptu.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration, deployment Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Empromptu AI Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "fastapi",
@@ -925,6 +1609,73 @@
       "body_text": "TL;DR: Testing platform for evaluating and scanning ML and LLM applications. Open source or free to start. Best for LLM app testing and risk scanning. Overview Giskard is included as a tool for evaluation, security and guardrails workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features LLM vulnerability scanning Test suites Model/application evaluation Architecture / How It Works Giskard runs tests and scans against ML/LLM systems to surface quality and security issues. Getting Started Use Cases 1. Scenario : LLM risk testing 2. Scenario : Regression test suites 3. Scenario : Pre release quality checks Strengths Security/eval framing Open source tooling Useful for governance workflows Limitations / When NOT to Use Not a tracing platform Requires representative tests May overlap with eval frameworks Integration Patterns Link this tool from job guides using its canonical ID giskard. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for evaluation, security and guardrails. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "google-pomelli-2-0",
+      "name": "Google Pomelli 2.0",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "Explore and interact with large datasets through a visual, intuitive interface",
+      "url": "content/tools/by-job/google-pomelli-2-0",
+      "cost_model": "freemium",
+      "pricing_detail": "Free (Google Labs preview)",
+      "tags": [
+        "structured-output"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Google Labs preview; verify stability before production use",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a structured-output tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/google-pomelli-2-0.md",
+      "slug": "google-pomelli-2-0",
+      "section_path": "content/tools/by-job",
+      "display_name": "Google Pomelli 2.0",
+      "summary": "Explore and interact with large datasets through a visual, intuitive interface",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 154,
+      "body_html": "<h2>Overview</h2>\n<p>Google Pomelli 2.0 is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured-output.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Explore and interact with large datasets through a visual, intuitive interface</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://pomelli.google for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://pomelli.google\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When structured-output is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: structured-output</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://pomelli.google\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Google Pomelli 2.0</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Google Pomelli 2.0 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Explore and interact with large datasets through a visual, intuitive interface Cost model: freemium Stack: python Architecture / How It Works Visit https://pomelli.google for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: structured output Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Google Pomelli 2.0 Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "google-vertex-ai",
       "name": "Google Vertex AI",
       "type": "tool",
@@ -1233,6 +1984,73 @@
       "body_text": "TL;DR: Managed Hugging Face service for deploying models as production inference endpoints. Usage based managed inference pricing. Best for managed HF model deployment. Overview Hugging Face Inference Endpoints is included as a tool for deployment, production serving workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Managed model endpoints Hugging Face Hub integration Autoscaling options Architecture / How It Works Inference Endpoints deploy models from the Hugging Face ecosystem behind managed APIs. Getting Started Use Cases 1. Scenario : Deploying HF models without custom infra 2. Scenario : Private model endpoints 3. Scenario : Teams already on Hugging Face Hub Strengths Native HF integration Managed deployment path Good model catalog fit Limitations / When NOT to Use Managed service cost Provider specific workflow Custom runtime limits need review Integration Patterns Link this tool from job guides using its canonical ID hf inference endpoints. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment, production serving. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "honen",
+      "name": "Honen",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "Transform any content into interactive AI-generated courses",
+      "url": "content/tools/by-job/honen",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "structured-output"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Content-to-course niche; evaluate fit before adoption",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a structured-output tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/honen.md",
+      "slug": "honen",
+      "section_path": "content/tools/by-job",
+      "display_name": "Honen",
+      "summary": "Transform any content into interactive AI-generated courses",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 147,
+      "body_html": "<h2>Overview</h2>\n<p>Honen is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured-output.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Transform any content into interactive AI-generated courses</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://honen.app for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://honen.app\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When structured-output is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: structured-output</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://honen.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Honen</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Honen is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Transform any content into interactive AI generated courses Cost model: freemium Stack: python Architecture / How It Works Visit https://honen.app for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: structured output Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Honen Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "hugging-face-hub",
       "name": "Hugging Face Hub",
       "type": "tool",
@@ -1357,6 +2175,140 @@
       "body_text": "Overview Humanloop is a tool for prompt management, evaluation workflows in AI engineering systems. Why It's in the Arsenal It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model. Key Features Supports one or more common AI engineering jobs Has a concrete adoption path for prototypes or production systems Exposes metadata that enables future filtering and comparison Architecture / How It Works Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate. Getting Started Use Cases 1. Scenario : When your system needs prompt management support 2. Scenario : When comparing tools by cost model, maturity, and stack compatibility Strengths Clear job fit in the AI engineering lifecycle Structured metadata makes it comparable with alternatives Limitations / When NOT to Use Validate pricing, data policies, and self hosting needs before committing Avoid adding operational tools before you have a workflow they directly support Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID humanloop rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "type": "tool",
+      "job": [
+        "production-serving"
+      ],
+      "description": "AI image generation with reliable text rendering in outputs",
+      "url": "content/tools/by-job/ideogram",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid subscriptions",
+      "tags": [
+        "multimodal"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Specialized in text-in-image; pair with Flux for diverse image needs",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a production-serving tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/ideogram.md",
+      "slug": "ideogram",
+      "section_path": "content/tools/by-job",
+      "display_name": "Ideogram",
+      "summary": "AI image generation with reliable text rendering in outputs",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 148,
+      "body_html": "<h2>Overview</h2>\n<p>Ideogram is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production-serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI image generation with reliable text rendering in outputs</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://ideogram.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://ideogram.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When production-serving is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: production-serving</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://ideogram.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ideogram</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Ideogram is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features AI image generation with reliable text rendering in outputs Cost model: freemium Stack: python Architecture / How It Works Visit https://ideogram.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: production serving Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Ideogram Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "ideogram-ai",
+      "name": "Ideogram AI",
+      "type": "tool",
+      "job": [
+        "production-serving"
+      ],
+      "description": "AI image generation platform with reliable text rendering and broad style coverage",
+      "url": "content/tools/by-job/ideogram-ai",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid subscriptions",
+      "tags": [
+        "multimodal"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Already covered as ideogram; duplicate reference for cross-platform discoverability",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a production-serving tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/ideogram-ai.md",
+      "slug": "ideogram-ai",
+      "section_path": "content/tools/by-job",
+      "display_name": "Ideogram AI",
+      "summary": "AI image generation platform with reliable text rendering and broad style coverage",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 153,
+      "body_html": "<h2>Overview</h2>\n<p>Ideogram AI is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production-serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI image generation platform with reliable text rendering and broad style coverage</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://ideogram.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://ideogram.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When production-serving is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: production-serving</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://ideogram.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ideogram AI</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Ideogram AI is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features AI image generation platform with reliable text rendering and broad style coverage Cost model: freemium Stack: python Architecture / How It Works Visit https://ideogram.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: production serving Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Ideogram AI Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "instructor",
       "name": "Instructor",
       "type": "tool",
@@ -1393,6 +2345,14 @@
       "verdict": "best-in-class",
       "verdict_rationale": "Useful option for structured-output workflows when it matches your stack and cost constraints",
       "status": "active",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a structured-output library used by AI engineers"
+        }
+      ],
       "entry_type": "tool",
       "path": "content/tools/by-job/instructor.md",
       "slug": "instructor",
@@ -1478,6 +2438,75 @@
       "word_count": 219,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Reader endpoint for converting web pages into LLM-friendly text and Markdown. Free to start; check current Jina pricing/limits. Best for quick webpage-to-text conversion.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Jina AI Reader is included as a tool for web-scraping workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open-source status, and operational model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>URL-to-Markdown reader</li>\n<li>Simple HTTP interface</li>\n<li>LLM ingestion focus</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Jina Reader converts web pages into cleaner text through a hosted reader endpoint.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">curl https://r.jina.ai/http://example.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Quick web-to-Markdown extraction</li>\n<li><strong>Scenario</strong>: Lightweight RAG ingestion</li>\n<li><strong>Scenario</strong>: No-code or shell workflows</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Very simple interface</li>\n<li>Good for prototypes</li>\n<li>No browser automation setup</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Hosted dependency</li>\n<li>May not handle every dynamic site</li>\n<li>Rate/terms should be checked</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>jina-reader</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://jina.ai/reader/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://jina.ai/reader/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for web-scraping.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Reader endpoint for converting web pages into LLM friendly text and Markdown. Free to start; check current Jina pricing/limits. Best for quick webpage to text conversion. Overview Jina AI Reader is included as a tool for web scraping workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features URL to Markdown reader Simple HTTP interface LLM ingestion focus Architecture / How It Works Jina Reader converts web pages into cleaner text through a hosted reader endpoint. Getting Started Use Cases 1. Scenario : Quick web to Markdown extraction 2. Scenario : Lightweight RAG ingestion 3. Scenario : No code or shell workflows Strengths Very simple interface Good for prototypes No browser automation setup Limitations / When NOT to Use Hosted dependency May not handle every dynamic site Rate/terms should be checked Integration Patterns Link this tool from job guides using its canonical ID jina reader. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for web scraping. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "kimi-k2-5",
+      "name": "Kimi K2.5",
+      "type": "tool",
+      "job": [
+        "production-serving",
+        "orchestration"
+      ],
+      "description": "AI assistant with deep understanding, analysis, and reasoning capabilities",
+      "url": "content/tools/by-job/kimi-k2-5",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "llm",
+        "agents"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Major closed-source model from Moonshot AI; compare on benchmarks before adoption",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a production-serving tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/kimi-k2-5.md",
+      "slug": "kimi-k2-5",
+      "section_path": "content/tools/by-job",
+      "display_name": "Kimi K2.5",
+      "summary": "AI assistant with deep understanding, analysis, and reasoning capabilities",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Kimi K2.5 is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production-serving, orchestration.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI assistant with deep understanding, analysis, and reasoning capabilities</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://kimi.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://kimi.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When production-serving is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: production-serving, orchestration</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://kimi.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Kimi K2.5</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Kimi K2.5 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving, orchestration. Key Features AI assistant with deep understanding, analysis, and reasoning capabilities Cost model: freemium Stack: python Architecture / How It Works Visit https://kimi.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: production serving, orchestration Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Kimi K2.5 Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "label-studio",
@@ -1975,6 +3004,75 @@
       "body_text": "TL;DR: Meta safety model family for classifying and moderating LLM inputs and outputs. Open source or free to start. Best for LLM safety classification. Overview Llama Guard is included as a tool for security and guardrails workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Input/output safety classification Model card driven usage Open model safety ecosystem Architecture / How It Works Llama Guard is used as a safety classifier around LLM inputs and outputs. Getting Started Use Cases 1. Scenario : Moderating chat inputs 2. Scenario : Checking generated outputs 3. Scenario : Safety layers in open model stacks Strengths Purpose built safety model Works with open model deployments Useful defense in depth layer Limitations / When NOT to Use Classifier is not complete safety Policy taxonomy must match product needs Latency/cost overhead Integration Patterns Link this tool from job guides using its canonical ID llamaguard. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for security and guardrails. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "manus",
+      "name": "Manus",
+      "type": "tool",
+      "job": [
+        "prototyping",
+        "orchestration"
+      ],
+      "description": "AI-powered platform for building full-stack web applications and automating tasks",
+      "url": "content/tools/by-job/manus",
+      "cost_model": "paid",
+      "pricing_detail": "Paid plans",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Closed-source autonomous agent platform; review outputs carefully",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a prototyping tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/manus.md",
+      "slug": "manus",
+      "section_path": "content/tools/by-job",
+      "display_name": "Manus",
+      "summary": "AI-powered platform for building full-stack web applications and automating tasks",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 150,
+      "body_html": "<h2>Overview</h2>\n<p>Manus is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: prototyping, orchestration.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI-powered platform for building full-stack web applications and automating tasks</li>\n<li>Cost model: paid</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://manus.im for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://manus.im\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When prototyping is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: prototyping, orchestration</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://manus.im\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Manus</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Manus is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: prototyping, orchestration. Key Features AI powered platform for building full stack web applications and automating tasks Cost model: paid Stack: python Architecture / How It Works Visit https://manus.im for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When prototyping is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: prototyping, orchestration Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Manus Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "mem0",
       "name": "Mem0",
       "type": "tool",
@@ -2035,6 +3133,74 @@
       "word_count": 210,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Memory layer for AI agents and assistants with long-term user and session memory. Open source or free to start. Best for agent/user memory.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Mem0 is included as a tool for memory-management workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open-source status, and operational model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Long-term memory APIs</li>\n<li>User/session memory</li>\n<li>Hosted and OSS options</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Mem0 stores and retrieves memories for agents or assistants across sessions.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install mem0ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Personalized assistants</li>\n<li><strong>Scenario</strong>: Agent long-term memory</li>\n<li><strong>Scenario</strong>: User preference recall</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Purpose-built memory layer</li>\n<li>Good agent fit</li>\n<li>Cloud/OSS options</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Memory quality needs evals</li>\n<li>Privacy/retention must be designed</li>\n<li>May overlap with vector DB/custom memory</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>mem0</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/mem0ai/mem0\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/mem0ai/mem0\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/mem0ai/mem0\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for memory-management.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Memory layer for AI agents and assistants with long term user and session memory. Open source or free to start. Best for agent/user memory. Overview Mem0 is included as a tool for memory management workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Long term memory APIs User/session memory Hosted and OSS options Architecture / How It Works Mem0 stores and retrieves memories for agents or assistants across sessions. Getting Started Use Cases 1. Scenario : Personalized assistants 2. Scenario : Agent long term memory 3. Scenario : User preference recall Strengths Purpose built memory layer Good agent fit Cloud/OSS options Limitations / When NOT to Use Memory quality needs evals Privacy/retention must be designed May overlap with vector DB/custom memory Integration Patterns Link this tool from job guides using its canonical ID mem0. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for memory management. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "memoriq",
+      "name": "Memoriq",
+      "type": "tool",
+      "job": [
+        "memory-management"
+      ],
+      "description": "Private AI memory layer that learns from your conversations and documents",
+      "url": "content/tools/by-job/memoriq",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier plus paid plans",
+      "tags": [
+        "memory",
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Memory-layer competition is crowded; compare against Mem0 before adopting",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a memory-management tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/memoriq.md",
+      "slug": "memoriq",
+      "section_path": "content/tools/by-job",
+      "display_name": "Memoriq",
+      "summary": "Private AI memory layer that learns from your conversations and documents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 150,
+      "body_html": "<h2>Overview</h2>\n<p>Memoriq is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: memory-management.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Private AI memory layer that learns from your conversations and documents</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://memoriq.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://memoriq.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When memory-management is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: memory-management</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://memoriq.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Memoriq</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Memoriq is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: memory management. Key Features Private AI memory layer that learns from your conversations and documents Cost model: freemium Stack: python Architecture / How It Works Visit https://memoriq.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When memory management is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: memory management Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Memoriq Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "mesop",
@@ -2282,6 +3448,75 @@
       "body_text": "Overview Modal is a tool for deployment, production serving workflows in AI engineering systems. Why It's in the Arsenal It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model. Key Features Supports one or more common AI engineering jobs Has a concrete adoption path for prototypes or production systems Exposes metadata that enables future filtering and comparison Architecture / How It Works Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate. Getting Started Use Cases 1. Scenario : When your system needs deployment support 2. Scenario : When comparing tools by cost model, maturity, and stack compatibility Strengths Clear job fit in the AI engineering lifecycle Structured metadata makes it comparable with alternatives Limitations / When NOT to Use Validate pricing, data policies, and self hosting needs before committing Avoid adding operational tools before you have a workflow they directly support Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID modal rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "monako-glass",
+      "name": "Monako Glass",
+      "type": "tool",
+      "job": [
+        "monitoring",
+        "evaluation"
+      ],
+      "description": "Visualize and understand AI model outputs with dynamic Pulse Rings and overlays",
+      "url": "content/tools/by-job/monako-glass",
+      "cost_model": "paid",
+      "pricing_detail": "Paid plans",
+      "tags": [
+        "monitoring",
+        "evaluation"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": false,
+      "free_tier_limits": null,
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Visualization tooling; useful for debugging eval failures",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a monitoring tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/monako-glass.md",
+      "slug": "monako-glass",
+      "section_path": "content/tools/by-job",
+      "display_name": "Monako Glass",
+      "summary": "Visualize and understand AI model outputs with dynamic Pulse Rings and overlays",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Monako Glass is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, evaluation.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Visualize and understand AI model outputs with dynamic Pulse Rings and overlays</li>\n<li>Cost model: paid</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://monako.ai/glass for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://monako.ai/glass\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When monitoring is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: monitoring, evaluation</li>\n<li>Mature cost model (paid)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://monako.ai/glass\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Monako Glass</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Monako Glass is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, evaluation. Key Features Visualize and understand AI model outputs with dynamic Pulse Rings and overlays Cost model: paid Stack: python Architecture / How It Works Visit https://monako.ai/glass for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When monitoring is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: monitoring, evaluation Mature cost model (paid) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Monako Glass Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "nemo-guardrails",
       "name": "NeMo Guardrails",
       "type": "tool",
@@ -2402,6 +3637,75 @@
       "word_count": 220,
       "body_html": "<h2>Overview</h2>\n<p>OpenAI Evals is a tool for evaluation workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Supports one or more common AI engineering jobs</li>\n<li>Has a concrete adoption path for prototypes or production systems</li>\n<li>Exposes metadata that enables future filtering and comparison</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Visit the official documentation for installation and setup.\n# URL: https://github.com/openai/evals\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When your system needs evaluation support</li>\n<li><strong>Scenario</strong>: When comparing tools by cost model, maturity, and stack compatibility</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Clear job fit in the AI engineering lifecycle</li>\n<li>Structured metadata makes it comparable with alternatives</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Validate pricing, data policies, and self-hosting needs before committing</li>\n<li>Avoid adding operational tools before you have a workflow they directly support</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>openai-evals</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/openai/evals\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception should be updated with verified sources during regular content reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "Overview OpenAI Evals is a tool for evaluation workflows in AI engineering systems. Why It's in the Arsenal It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model. Key Features Supports one or more common AI engineering jobs Has a concrete adoption path for prototypes or production systems Exposes metadata that enables future filtering and comparison Architecture / How It Works Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate. Getting Started Use Cases 1. Scenario : When your system needs evaluation support 2. Scenario : When comparing tools by cost model, maturity, and stack compatibility Strengths Clear job fit in the AI engineering lifecycle Structured metadata makes it comparable with alternatives Limitations / When NOT to Use Validate pricing, data policies, and self hosting needs before committing Avoid adding operational tools before you have a workflow they directly support Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID openai evals rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "orchestraml",
+      "name": "OrchestraML",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "fine-tuning"
+      ],
+      "description": "Automate end-to-end ML workflows from data prep to deployment using AI agents",
+      "url": "content/tools/by-job/orchestraml",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "orchestration",
+        "fine-tuning"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Agent-driven ML pipelines; verify against existing MLOps platforms",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/orchestraml.md",
+      "slug": "orchestraml",
+      "section_path": "content/tools/by-job",
+      "display_name": "OrchestraML",
+      "summary": "Automate end-to-end ML workflows from data prep to deployment using AI agents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 154,
+      "body_html": "<h2>Overview</h2>\n<p>OrchestraML is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, fine-tuning.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Automate end-to-end ML workflows from data prep to deployment using AI agents</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://orchestraml.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://orchestraml.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration, fine-tuning</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://orchestraml.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">OrchestraML</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview OrchestraML is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, fine tuning. Key Features Automate end to end ML workflows from data prep to deployment using AI agents Cost model: freemium Stack: python Architecture / How It Works Visit https://orchestraml.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration, fine tuning Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources OrchestraML Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "outlines",
@@ -2624,6 +3928,14 @@
       "verdict": "recommended",
       "verdict_rationale": "Useful option when it matches your stack, cost, and operational constraints",
       "status": "active",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a developer tool used for browser automation"
+        }
+      ],
       "entry_type": "tool",
       "path": "content/tools/by-job/playwright.md",
       "slug": "playwright",
@@ -3079,6 +4391,143 @@
       "body_text": "TL;DR: Pydantic agent framework focused on typed outputs, tools, and production Python apps. Open source or free to start. Best for typed Python agent applications. Overview Pydantic AI is included as a tool for structured output, orchestration workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Pydantic models for outputs Tool and agent abstractions Python production ergonomics Architecture / How It Works Pydantic AI uses Pydantic validation and agent abstractions to build typed LLM applications. Getting Started Use Cases 1. Scenario : Typed structured outputs 2. Scenario : Python app integration 3. Scenario : Tool using agents Strengths Great Python typing story Strong validation ergonomics Fits backend codebases Limitations / When NOT to Use Younger than LangChain/LangGraph Not a visual builder Framework choices evolve quickly Integration Patterns Link this tool from job guides using its canonical ID pydantic ai tool. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for structured output, orchestration. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "qursor",
+      "name": "Qursor",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "structured-output"
+      ],
+      "description": "AI-powered UI context for faster front-end development with agents",
+      "url": "content/tools/by-job/qursor",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Niche UI-coding tool; useful if it integrates with your stack",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/qursor.md",
+      "slug": "qursor",
+      "section_path": "content/tools/by-job",
+      "display_name": "Qursor",
+      "summary": "AI-powered UI context for faster front-end development with agents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 151,
+      "body_html": "<h2>Overview</h2>\n<p>Qursor is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, structured-output.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI-powered UI context for faster front-end development with agents</li>\n<li>Cost model: freemium</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://qursor.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://qursor.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration, structured-output</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://qursor.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qursor</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Qursor is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, structured output. Key Features AI powered UI context for faster front end development with agents Cost model: freemium Stack: typescript Architecture / How It Works Visit https://qursor.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration, structured output Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Qursor Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "qwen-3",
+      "name": "Qwen 3",
+      "type": "tool",
+      "job": [
+        "production-serving"
+      ],
+      "description": "Alibaba open-weight model family with multimodal and coding variants",
+      "url": "content/tools/by-job/qwen-3",
+      "cost_model": "freemium",
+      "pricing_detail": "Hosted free with paid upgrades; weights open",
+      "tags": [
+        "llm",
+        "multimodal"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": "https://github.com/QwenLM/Qwen3",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Hosted Qwen interface listed on Techpresso; open weights at github.com/QwenLM/Qwen3",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a production-serving tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/qwen-3.md",
+      "slug": "qwen-3",
+      "section_path": "content/tools/by-job",
+      "display_name": "Qwen 3",
+      "summary": "Alibaba open-weight model family with multimodal and coding variants",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 151,
+      "body_html": "<h2>Overview</h2>\n<p>Qwen 3 is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production-serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Alibaba open-weight model family with multimodal and coding variants</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://qwen.alibaba.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://qwen.alibaba.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When production-serving is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: production-serving</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://qwen.alibaba.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qwen 3</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Qwen 3 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features Alibaba open weight model family with multimodal and coding variants Cost model: freemium Stack: python Architecture / How It Works Visit https://qwen.alibaba.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: production serving Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Qwen 3 Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "railway",
       "name": "Railway",
       "type": "tool",
@@ -3200,6 +4649,73 @@
       "word_count": 211,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Prompt injection detection and guardrail toolkit for LLM applications. Open source or free to start. Best for prompt injection experiments.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Rebuff is included as a tool for security-and-guardrails workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open-source status, and operational model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Prompt injection detection</li>\n<li>Heuristic/model-based checks</li>\n<li>App integration examples</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Rebuff provides detection patterns and tools for prompt-injection defense.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install rebuff\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Testing prompt injection defenses</li>\n<li><strong>Scenario</strong>: Adding basic guardrail checks</li>\n<li><strong>Scenario</strong>: Security demos and prototypes</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Focused on prompt injection</li>\n<li>Easy to reason about</li>\n<li>Open-source</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not complete LLM security</li>\n<li>Project activity must be verified</li>\n<li>Should be layered with other controls</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>rebuff</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/protectai/rebuff\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/protectai/rebuff\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/protectai/rebuff\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for security-and-guardrails.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Prompt injection detection and guardrail toolkit for LLM applications. Open source or free to start. Best for prompt injection experiments. Overview Rebuff is included as a tool for security and guardrails workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Prompt injection detection Heuristic/model based checks App integration examples Architecture / How It Works Rebuff provides detection patterns and tools for prompt injection defense. Getting Started Use Cases 1. Scenario : Testing prompt injection defenses 2. Scenario : Adding basic guardrail checks 3. Scenario : Security demos and prototypes Strengths Focused on prompt injection Easy to reason about Open source Limitations / When NOT to Use Not complete LLM security Project activity must be verified Should be layered with other controls Integration Patterns Link this tool from job guides using its canonical ID rebuff. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for security and guardrails. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "recursi",
+      "name": "Recursi",
+      "type": "tool",
+      "job": [
+        "production-serving"
+      ],
+      "description": "Self-improving system for intuitive and efficient AI-assisted coding",
+      "url": "content/tools/by-job/recursi",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "New self-improving coding tool; evaluate claims independently",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a production-serving tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/recursi.md",
+      "slug": "recursi",
+      "section_path": "content/tools/by-job",
+      "display_name": "Recursi",
+      "summary": "Self-improving system for intuitive and efficient AI-assisted coding",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 149,
+      "body_html": "<h2>Overview</h2>\n<p>Recursi is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production-serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Self-improving system for intuitive and efficient AI-assisted coding</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://recursi.dev for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://recursi.dev\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When production-serving is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: production-serving</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://recursi.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Recursi</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Recursi is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features Self improving system for intuitive and efficient AI assisted coding Cost model: freemium Stack: python Architecture / How It Works Visit https://recursi.dev for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: production serving Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Recursi Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "redis-memory",
@@ -3386,6 +4902,210 @@
       "body_text": "TL;DR: Managed data labeling and data engine platform for enterprise AI datasets. Enterprise pricing. Best for managed enterprise labeling. Overview Scale AI is included as a tool for data labeling workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Managed labeling workforce Enterprise data engine RLHF/data services Architecture / How It Works Scale AI provides managed data labeling and data services rather than a self hosted tool. Getting Started Use Cases 1. Scenario : Enterprise labeling at scale 2. Scenario : RLHF/data operations 3. Scenario : Teams needing managed workforce Strengths Managed service depth Enterprise processes Large scale operations Limitations / When NOT to Use Not open source Pricing is enterprise sales led Less suitable for small DIY teams Integration Patterns Link this tool from job guides using its canonical ID scale ai. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for data labeling. Last reviewed: 2026 06 13 by @maintainer"
     },
     {
+      "id": "seaticket",
+      "name": "SeaTicket",
+      "type": "tool",
+      "job": [
+        "orchestration"
+      ],
+      "description": "Unify and resolve customer-support issues with autonomous AI agents",
+      "url": "content/tools/by-job/seaticket",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "AI support niche; verify against established tools like Intercom Fin",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a orchestration tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/seaticket.md",
+      "slug": "seaticket",
+      "section_path": "content/tools/by-job",
+      "display_name": "SeaTicket",
+      "summary": "Unify and resolve customer-support issues with autonomous AI agents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 146,
+      "body_html": "<h2>Overview</h2>\n<p>SeaTicket is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Unify and resolve customer-support issues with autonomous AI agents</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://seaticket.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://seaticket.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When orchestration is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: orchestration</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://seaticket.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">SeaTicket</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview SeaTicket is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration. Key Features Unify and resolve customer support issues with autonomous AI agents Cost model: freemium Stack: python Architecture / How It Works Visit https://seaticket.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: orchestration Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources SeaTicket Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "shellmate",
+      "name": "ShellMate",
+      "type": "tool",
+      "job": [
+        "production-serving"
+      ],
+      "description": "AI-powered terminal assistant that suggests commands and explains outputs",
+      "url": "content/tools/by-job/shellmate",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Terminal-assistant category; compare with Warp and Fig",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a production-serving tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/shellmate.md",
+      "slug": "shellmate",
+      "section_path": "content/tools/by-job",
+      "display_name": "ShellMate",
+      "summary": "AI-powered terminal assistant that suggests commands and explains outputs",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 149,
+      "body_html": "<h2>Overview</h2>\n<p>ShellMate is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production-serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>AI-powered terminal assistant that suggests commands and explains outputs</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://shellmate.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://shellmate.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When production-serving is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: production-serving</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://shellmate.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">ShellMate</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview ShellMate is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features AI powered terminal assistant that suggests commands and explains outputs Cost model: freemium Stack: python Architecture / How It Works Visit https://shellmate.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: production serving Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources ShellMate Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "spotlight-by-backplanes",
+      "name": "Spotlight by Backplanes",
+      "type": "tool",
+      "job": [
+        "tracing",
+        "monitoring"
+      ],
+      "description": "Understand, improve, and track AI agent sessions with observability tooling",
+      "url": "content/tools/by-job/spotlight-by-backplanes",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "tracing",
+        "monitoring"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Agent-observability niche; compare with Langfuse and Phoenix",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a tracing tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/spotlight-by-backplanes.md",
+      "slug": "spotlight-by-backplanes",
+      "section_path": "content/tools/by-job",
+      "display_name": "Spotlight by Backplanes",
+      "summary": "Understand, improve, and track AI agent sessions with observability tooling",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Spotlight by Backplanes is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: tracing, monitoring.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Understand, improve, and track AI agent sessions with observability tooling</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://backplanes.ai/spotlight for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://backplanes.ai/spotlight\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When tracing is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: tracing, monitoring</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://backplanes.ai/spotlight\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Spotlight by Backplanes</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Spotlight by Backplanes is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: tracing, monitoring. Key Features Understand, improve, and track AI agent sessions with observability tooling Cost model: freemium Stack: python Architecture / How It Works Visit https://backplanes.ai/spotlight for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When tracing is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: tracing, monitoring Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Spotlight by Backplanes Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
       "id": "streamlit",
       "name": "Streamlit",
       "type": "tool",
@@ -3445,6 +5165,211 @@
       "word_count": 218,
       "body_html": "<h2>Overview</h2>\n<p>Streamlit is a tool for prototyping workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Supports one or more common AI engineering jobs</li>\n<li>Has a concrete adoption path for prototypes or production systems</li>\n<li>Exposes metadata that enables future filtering and comparison</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Visit the official documentation for installation and setup.\n# URL: https://streamlit.io\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When your system needs prototyping support</li>\n<li><strong>Scenario</strong>: When comparing tools by cost model, maturity, and stack compatibility</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Clear job fit in the AI engineering lifecycle</li>\n<li>Structured metadata makes it comparable with alternatives</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Validate pricing, data policies, and self-hosting needs before committing</li>\n<li>Avoid adding operational tools before you have a workflow they directly support</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>streamlit</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://streamlit.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception should be updated with verified sources during regular content reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "Overview Streamlit is a tool for prototyping workflows in AI engineering systems. Why It's in the Arsenal It is included because the job it performs appears repeatedly in production AI applications and benefits from structured comparison across cost, maturity, stack, and hosting model. Key Features Supports one or more common AI engineering jobs Has a concrete adoption path for prototypes or production systems Exposes metadata that enables future filtering and comparison Architecture / How It Works Review the official documentation to understand deployment model, data retention, integrations, and operational tradeoffs. For production, connect the tool to evaluation and observability workflows where appropriate. Getting Started Use Cases 1. Scenario : When your system needs prototyping support 2. Scenario : When comparing tools by cost model, maturity, and stack compatibility Strengths Clear job fit in the AI engineering lifecycle Structured metadata makes it comparable with alternatives Limitations / When NOT to Use Validate pricing, data policies, and self hosting needs before committing Avoid adding operational tools before you have a workflow they directly support Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID streamlit rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "superlog",
+      "name": "Superlog",
+      "type": "tool",
+      "job": [
+        "monitoring",
+        "tracing"
+      ],
+      "description": "Real-time log aggregation platform designed for serverless debugging",
+      "url": "content/tools/by-job/superlog",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "monitoring",
+        "tracing"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Serverless-focused logging; compare with Datadog and Honeycomb",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a monitoring tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/superlog.md",
+      "slug": "superlog",
+      "section_path": "content/tools/by-job",
+      "display_name": "Superlog",
+      "summary": "Real-time log aggregation platform designed for serverless debugging",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 147,
+      "body_html": "<h2>Overview</h2>\n<p>Superlog is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, tracing.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Real-time log aggregation platform designed for serverless debugging</li>\n<li>Cost model: freemium</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://superlog.io for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://superlog.io\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When monitoring is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: monitoring, tracing</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://superlog.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Superlog</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Superlog is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, tracing. Key Features Real time log aggregation platform designed for serverless debugging Cost model: freemium Stack: typescript Architecture / How It Works Visit https://superlog.io for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When monitoring is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: monitoring, tracing Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Superlog Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "tabstack",
+      "name": "Tabstack",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "Empower AI systems to autonomously browse, search, and interact with the web via API",
+      "url": "content/tools/by-job/tabstack",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier (50K credits/mo) plus paid plans",
+      "tags": [
+        "retrieval",
+        "agents"
+      ],
+      "maturity": "production",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Mozilla-backed web layer for agents; useful API for scraping and automation",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a web-scraping tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/tabstack.md",
+      "slug": "tabstack",
+      "section_path": "content/tools/by-job",
+      "display_name": "Tabstack",
+      "summary": "Empower AI systems to autonomously browse, search, and interact with the web via API",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 153,
+      "body_html": "<h2>Overview</h2>\n<p>Tabstack is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: web-scraping.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Empower AI systems to autonomously browse, search, and interact with the web via API</li>\n<li>Cost model: freemium</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://console.tabstack.ai for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://console.tabstack.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When web-scraping is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: web-scraping</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://console.tabstack.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Tabstack</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Tabstack is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: web scraping. Key Features Empower AI systems to autonomously browse, search, and interact with the web via API Cost model: freemium Stack: typescript Architecture / How It Works Visit https://console.tabstack.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When web scraping is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: web scraping Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Tabstack Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "taste-lab",
+      "name": "Taste Lab",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "Extracts and analyzes the design DNA of any website for AI agent consumption",
+      "url": "content/tools/by-job/taste-lab",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "agents",
+        "retrieval"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Newly listed on Techpresso; evaluate for design-aware agent pipelines",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a web-scraping tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/taste-lab.md",
+      "slug": "taste-lab",
+      "section_path": "content/tools/by-job",
+      "display_name": "Taste Lab",
+      "summary": "Extracts and analyzes the design DNA of any website for AI agent consumption",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 155,
+      "body_html": "<h2>Overview</h2>\n<p>Taste Lab is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: web-scraping.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Extracts and analyzes the design DNA of any website for AI agent consumption</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://taste-lab.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://taste-lab.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When web-scraping is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: web-scraping</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://taste-lab.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Taste Lab</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Taste Lab is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: web scraping. Key Features Extracts and analyzes the design DNA of any website for AI agent consumption Cost model: freemium Stack: python Architecture / How It Works Visit https://taste lab.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When web scraping is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: web scraping Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Taste Lab Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "torchtune",
@@ -3630,6 +5555,141 @@
       "word_count": 226,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models. Open source or free to start. Best for fast local/open-model fine-tuning.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Unsloth is included as a tool for fine-tuning workflows in AI engineering systems.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open-source status, and operational model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>LoRA/QLoRA-style efficient training</li>\n<li>Notebook-friendly examples</li>\n<li>Focus on speed and memory savings</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Unsloth wraps training/fine-tuning flows with optimized kernels and recipes for popular open models.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install unsloth\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Fine-tuning open-weight chat models</li>\n<li><strong>Scenario</strong>: Single-GPU or limited-GPU experiments</li>\n<li><strong>Scenario</strong>: Rapid adapter training prototypes</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong community mindshare</li>\n<li>Excellent practical examples</li>\n<li>Good speed/memory focus</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Fast-moving compatibility matrix</li>\n<li>Still requires eval data and training discipline</li>\n<li>Not a general experiment tracker</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>unsloth</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/unslothai/unsloth\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/unslothai/unsloth\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/unslothai/unsloth\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for fine-tuning.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Efficient fine tuning toolkit for Llama, Qwen, Mistral, and other open models. Open source or free to start. Best for fast local/open model fine tuning. Overview Unsloth is included as a tool for fine tuning workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features LoRA/QLoRA style efficient training Notebook friendly examples Focus on speed and memory savings Architecture / How It Works Unsloth wraps training/fine tuning flows with optimized kernels and recipes for popular open models. Getting Started Use Cases 1. Scenario : Fine tuning open weight chat models 2. Scenario : Single GPU or limited GPU experiments 3. Scenario : Rapid adapter training prototypes Strengths Strong community mindshare Excellent practical examples Good speed/memory focus Limitations / When NOT to Use Fast moving compatibility matrix Still requires eval data and training discipline Not a general experiment tracker Integration Patterns Link this tool from job guides using its canonical ID unsloth. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for fine tuning. Last reviewed: 2026 06 13 by @maintainer"
+    },
+    {
+      "id": "vaani",
+      "name": "Vaani",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "Fast, private macOS dictation with AI formatting and editing",
+      "url": "content/tools/by-job/vaani",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with paid upgrades",
+      "tags": [
+        "structured-output"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "Local dictation tool; compare against Wispr Flow and MacWhisper",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a structured-output tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/vaani.md",
+      "slug": "vaani",
+      "section_path": "content/tools/by-job",
+      "display_name": "Vaani",
+      "summary": "Fast, private macOS dictation with AI formatting and editing",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 148,
+      "body_html": "<h2>Overview</h2>\n<p>Vaani is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured-output.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Fast, private macOS dictation with AI formatting and editing</li>\n<li>Cost model: freemium</li>\n<li>Stack: python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://vaani.app for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://vaani.app\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When structured-output is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: structured-output</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://vaani.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Vaani</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Vaani is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Fast, private macOS dictation with AI formatting and editing Cost model: freemium Stack: python Architecture / How It Works Visit https://vaani.app for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: structured output Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Vaani Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "type": "tool",
+      "job": [
+        "deployment",
+        "production-serving"
+      ],
+      "description": "Frontend cloud platform for deploying and scaling Next.js apps with edge functions",
+      "url": "content/tools/by-job/vercel",
+      "cost_model": "freemium",
+      "pricing_detail": "Hobby free tier; Pro/Enterprise paid plans",
+      "tags": [
+        "cloud"
+      ],
+      "maturity": "production",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "See official pricing page; limits may change",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": null,
+      "github_url": null,
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-06-14",
+      "last_reviewed": "2026-06-14",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "best-in-class",
+      "verdict_rationale": "Industry standard for Next.js/React deployment with strong DX and edge runtime",
+      "buzz_sources": [
+        {
+          "source": "newsletter",
+          "url": "https://toolradar.com/featured/techpresso",
+          "date": "2026-06-14",
+          "description": "Featured in Techpresso as a deployment tool"
+        }
+      ],
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/by-job/vercel.md",
+      "slug": "vercel",
+      "section_path": "content/tools/by-job",
+      "display_name": "Vercel",
+      "summary": "Frontend cloud platform for deploying and scaling Next.js apps with edge functions",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 152,
+      "body_html": "<h2>Overview</h2>\n<p>Vercel is a tool relevant to AI engineering workflows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: deployment, production-serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Frontend cloud platform for deploying and scaling Next.js apps with edge functions</li>\n<li>Cost model: freemium</li>\n<li>Stack: typescript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Visit https://vercel.com for the canonical architecture description and feature list.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://vercel.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario:</strong> When deployment is a primary requirement and managed hosting is acceptable.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong fit for: deployment, production-serving</li>\n<li>Mature cost model (freemium)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify pricing and feature limits on the official page before production adoption.</li>\n<li>Re-run any benchmarks against your specific workload.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://vercel.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Vercel</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Vercel is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: deployment, production serving. Key Features Frontend cloud platform for deploying and scaling Next.js apps with edge functions Cost model: freemium Stack: typescript Architecture / How It Works Visit https://vercel.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When deployment is a primary requirement and managed hosting is acceptable. Strengths Strong fit for: deployment, production serving Mature cost model (freemium) Limitations / When NOT to Use Verify pricing and feature limits on the official page before production adoption. Re run any benchmarks against your specific workload. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Vercel Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
       "id": "wandb-weave",

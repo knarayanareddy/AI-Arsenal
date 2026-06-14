@@ -6,29 +6,29 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents](./agents/) | 15 entries | 2026-06-14 |
+| [agents](./agents/) | 17 entries | 2026-06-14 |
 | [code generation](./code-generation/) | 0 entries | 2026-06-14 |
 | [computer vision](./computer-vision/) | 0 entries | 2026-06-14 |
 | [data pipelines](./data-pipelines/) | 0 entries | 2026-06-14 |
-| [llms](./llms/) | 21 entries | 2026-06-14 |
+| [llms](./llms/) | 22 entries | 2026-06-14 |
 | [multimodal](./multimodal/) | 0 entries | 2026-06-14 |
 | [observability](./observability/) | 12 entries | 2026-06-14 |
-| [rag](./rag/) | 20 entries | 2026-06-14 |
-| [tooling](./tooling/) | 0 entries | 2026-06-14 |
+| [rag](./rag/) | 21 entries | 2026-06-14 |
+| [tooling](./tooling/) | 1 entries | 2026-06-14 |
 | [voice and audio](./voice-and-audio/) | 0 entries | 2026-06-14 |
 
 ## Recently Added
 
+- [InsForge](./agents/coding-agents/insforge.md)
+- [Stagehand](./agents/browser-agents/stagehand.md)
+- [SurrealDB](./rag/vector-databases/surrealdb.md)
+- [TranslateGemma](./llms/open-source-models/translategemma.md)
+- [Uiverse Design](./tooling/platforms/uiverse-design.md)
 - [Agenta](./observability/tracing/agenta.md)
 - [AutoGen](./agents/frameworks/autogen.md)
 - [AutoGPT](./agents/frameworks/autogpt.md)
 - [Braintrust](./observability/tracing/braintrust.md)
 - [Chroma](./rag/vector-databases/chroma.md)
-- [Command R+](./llms/open-source-models/command-r-plus.md)
-- [Crawl4AI](./rag/document-processing/crawl4ai.md)
-- [CrewAI](./agents/frameworks/crewai.md)
-- [DeepEval](./observability/evaluation/deepeval.md)
-- [DeepSeek-V3 / R1](./llms/open-source-models/deepseek-v3-r1.md)
 
 ## Most Popular
 
@@ -66,6 +66,7 @@
 - [Haystack](./rag/frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Haystack](./agents/frameworks/haystack-agents.md) — Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines
 - [Helicone](./observability/tracing/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
+- [InsForge](./agents/coding-agents/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [LanceDB](./rag/vector-databases/lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LangChain](./rag/frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - [LangChain for RAG](./rag/frameworks/langchain-rag.md) — LangChain components for retrieval chains, retrievers, loaders, and RAG application composition
@@ -94,4 +95,3 @@
 - [Opik](./observability/tracing/opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - [pgvector](./rag/vector-databases/pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Phi-4](./llms/open-source-models/phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
-- [Phi Cookbook](./llms/open-source-models/phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family

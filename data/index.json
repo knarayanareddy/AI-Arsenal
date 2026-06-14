@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-06-14T14:20:12.681Z",
-    "total_projects": 68,
-    "total_tools": 62,
+    "generated_at": "2026-06-14T19:18:46.137Z",
+    "total_projects": 73,
+    "total_tools": 92,
     "total_papers": 25,
     "total_tips": 106,
     "total_people": 25,
@@ -163,6 +163,24 @@
       "featured": false
     },
     {
+      "id": "agent-browser-shield",
+      "type": "tool",
+      "name": "Agent Browser Shield",
+      "description": "Secure AI web browsing by cleaning content and masking PII during agent runs",
+      "tags": [
+        "security",
+        "retrieval"
+      ],
+      "path": "content/tools/by-job/agent-browser-shield.md",
+      "url": "content/tools/by-job/agent-browser-shield",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agent-builder",
       "type": "guide",
       "name": "Agent Builder Learning Path",
@@ -199,6 +217,24 @@
       "category": "observability",
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agnt-hub",
+      "type": "tool",
+      "name": "AGNT.Hub",
+      "description": "Build and manage secure, private AI agents with custom skills and policies",
+      "tags": [
+        "orchestration",
+        "security"
+      ],
+      "path": "content/tools/by-job/agnt-hub.md",
+      "url": "content/tools/by-job/agnt-hub",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "paid",
       "status": "active",
       "featured": false
     },
@@ -355,6 +391,24 @@
       "featured": false
     },
     {
+      "id": "astra-autonomous-pentest",
+      "type": "tool",
+      "name": "Astra Autonomous Pentest",
+      "description": "Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure",
+      "tags": [
+        "security",
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/astra-autonomous-pentest.md",
+      "url": "content/tools/by-job/astra-autonomous-pentest",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "attention-is-all-you-need",
       "type": "paper",
       "name": "Attention Is All You Need",
@@ -468,6 +522,23 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "basedash",
+      "type": "tool",
+      "name": "Basedash",
+      "description": "AI-native platform for generating dashboards, reports, and insights from natural-language queries",
+      "tags": [
+        "structured-output"
+      ],
+      "path": "content/tools/by-job/basedash.md",
+      "url": "content/tools/by-job/basedash",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "paid",
       "status": "active",
       "featured": false
     },
@@ -993,6 +1064,23 @@
       "featured": false
     },
     {
+      "id": "claude-artifact-player",
+      "type": "tool",
+      "name": "Claude Artifact Player",
+      "description": "Interact with and manage AI-generated artifacts from Claude and similar models",
+      "tags": [
+        "structured-output"
+      ],
+      "path": "content/tools/by-job/claude-artifact-player.md",
+      "url": "content/tools/by-job/claude-artifact-player",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "clem-delangue",
       "type": "person",
       "name": "Clément Delangue",
@@ -1008,6 +1096,41 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cloudskill",
+      "type": "tool",
+      "name": "Cloudskill",
+      "description": "Manage, govern, and distribute skills for AI agents across teams",
+      "tags": [
+        "orchestration",
+        "routing"
+      ],
+      "path": "content/tools/by-job/cloudskill.md",
+      "url": "content/tools/by-job/cloudskill",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "code-arena",
+      "type": "tool",
+      "name": "Code Arena",
+      "description": "Benchmark and compare AI models in a competitive coding environment",
+      "tags": [
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/code-arena.md",
+      "url": "content/tools/by-job/code-arena",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -1048,6 +1171,24 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "conan",
+      "type": "tool",
+      "name": "Conan",
+      "description": "Live HUD for monitoring and interacting with AI agent sessions on macOS",
+      "tags": [
+        "monitoring",
+        "tracing"
+      ],
+      "path": "content/tools/by-job/conan.md",
+      "url": "content/tools/by-job/conan",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "paid",
+      "status": "active",
       "featured": false
     },
     {
@@ -1490,6 +1631,24 @@
       "featured": false
     },
     {
+      "id": "dropstone-3",
+      "type": "tool",
+      "name": "Dropstone 3",
+      "description": "Collaborative AI workspace for teams to build, describe, and ship software together",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "path": "content/tools/by-job/dropstone-3.md",
+      "url": "content/tools/by-job/dropstone-3",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "dspy",
       "type": "project",
       "name": "DSPy",
@@ -1562,6 +1721,24 @@
       "category": "research",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "empromptu-ai",
+      "type": "tool",
+      "name": "Empromptu AI",
+      "description": "Build, deploy, and manage custom AI applications that improve over time",
+      "tags": [
+        "orchestration",
+        "cloud"
+      ],
+      "path": "content/tools/by-job/empromptu-ai.md",
+      "url": "content/tools/by-job/empromptu-ai",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -1911,6 +2088,23 @@
       "featured": false
     },
     {
+      "id": "google-pomelli-2-0",
+      "type": "tool",
+      "name": "Google Pomelli 2.0",
+      "description": "Explore and interact with large datasets through a visual, intuitive interface",
+      "tags": [
+        "structured-output"
+      ],
+      "path": "content/tools/by-job/google-pomelli-2-0.md",
+      "url": "content/tools/by-job/google-pomelli-2-0",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "google-vertex-ai",
       "type": "tool",
       "name": "Google Vertex AI",
@@ -2160,6 +2354,23 @@
       "featured": false
     },
     {
+      "id": "honen",
+      "type": "tool",
+      "name": "Honen",
+      "description": "Transform any content into interactive AI-generated courses",
+      "tags": [
+        "structured-output"
+      ],
+      "path": "content/tools/by-job/honen.md",
+      "url": "content/tools/by-job/honen",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "hugging-face-hub",
       "type": "tool",
       "name": "Hugging Face Hub",
@@ -2214,6 +2425,58 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "ideogram",
+      "type": "tool",
+      "name": "Ideogram",
+      "description": "AI image generation with reliable text rendering in outputs",
+      "tags": [
+        "multimodal"
+      ],
+      "path": "content/tools/by-job/ideogram.md",
+      "url": "content/tools/by-job/ideogram",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ideogram-ai",
+      "type": "tool",
+      "name": "Ideogram AI",
+      "description": "AI image generation platform with reliable text rendering and broad style coverage",
+      "tags": [
+        "multimodal"
+      ],
+      "path": "content/tools/by-job/ideogram-ai.md",
+      "url": "content/tools/by-job/ideogram-ai",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "insforge",
+      "type": "project",
+      "name": "InsForge",
+      "description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "path": "content/projects/agents/coding-agents/insforge.md",
+      "url": "content/projects/agents/coding-agents/insforge",
+      "last_updated": "2026-06-14",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -2442,6 +2705,24 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "kimi-k2-5",
+      "type": "tool",
+      "name": "Kimi K2.5",
+      "description": "AI assistant with deep understanding, analysis, and reasoning capabilities",
+      "tags": [
+        "llm",
+        "agents"
+      ],
+      "path": "content/tools/by-job/kimi-k2-5.md",
+      "url": "content/tools/by-job/kimi-k2-5",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -3148,6 +3429,24 @@
       "featured": false
     },
     {
+      "id": "manus",
+      "type": "tool",
+      "name": "Manus",
+      "description": "AI-powered platform for building full-stack web applications and automating tasks",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "path": "content/tools/by-job/manus.md",
+      "url": "content/tools/by-job/manus",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mastra",
       "type": "project",
       "name": "Mastra",
@@ -3297,6 +3596,24 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "memoriq",
+      "type": "tool",
+      "name": "Memoriq",
+      "description": "Private AI memory layer that learns from your conversations and documents",
+      "tags": [
+        "memory",
+        "agents"
+      ],
+      "path": "content/tools/by-job/memoriq.md",
+      "url": "content/tools/by-job/memoriq",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -3530,6 +3847,24 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "monako-glass",
+      "type": "tool",
+      "name": "Monako Glass",
+      "description": "Visualize and understand AI model outputs with dynamic Pulse Rings and overlays",
+      "tags": [
+        "monitoring",
+        "evaluation"
+      ],
+      "path": "content/tools/by-job/monako-glass.md",
+      "url": "content/tools/by-job/monako-glass",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "paid",
       "status": "active",
       "featured": false
     },
@@ -3840,6 +4175,24 @@
       "category": "observability",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "orchestraml",
+      "type": "tool",
+      "name": "OrchestraML",
+      "description": "Automate end-to-end ML workflows from data prep to deployment using AI agents",
+      "tags": [
+        "orchestration",
+        "fine-tuning"
+      ],
+      "path": "content/tools/by-job/orchestraml.md",
+      "url": "content/tools/by-job/orchestraml",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -4584,6 +4937,24 @@
       "featured": false
     },
     {
+      "id": "qursor",
+      "type": "tool",
+      "name": "Qursor",
+      "description": "AI-powered UI context for faster front-end development with agents",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "path": "content/tools/by-job/qursor.md",
+      "url": "content/tools/by-job/qursor",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "qwen",
       "type": "project",
       "name": "Qwen",
@@ -4620,6 +4991,24 @@
       "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "qwen-3",
+      "type": "tool",
+      "name": "Qwen 3",
+      "description": "Alibaba open-weight model family with multimodal and coding variants",
+      "tags": [
+        "llm",
+        "multimodal"
+      ],
+      "path": "content/tools/by-job/qwen-3.md",
+      "url": "content/tools/by-job/qwen-3",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -4851,6 +5240,23 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "recursi",
+      "type": "tool",
+      "name": "Recursi",
+      "description": "Self-improving system for intuitive and efficient AI-assisted coding",
+      "tags": [
+        "agents"
+      ],
+      "path": "content/tools/by-job/recursi.md",
+      "url": "content/tools/by-job/recursi",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -5098,6 +5504,24 @@
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "seaticket",
+      "type": "tool",
+      "name": "SeaTicket",
+      "description": "Unify and resolve customer-support issues with autonomous AI agents",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "path": "content/tools/by-job/seaticket.md",
+      "url": "content/tools/by-job/seaticket",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -5385,6 +5809,23 @@
       "featured": false
     },
     {
+      "id": "shellmate",
+      "type": "tool",
+      "name": "ShellMate",
+      "description": "AI-powered terminal assistant that suggests commands and explains outputs",
+      "tags": [
+        "agents"
+      ],
+      "path": "content/tools/by-job/shellmate.md",
+      "url": "content/tools/by-job/shellmate",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "shreya-shankar",
       "type": "person",
       "name": "Shreya Shankar",
@@ -5497,6 +5938,42 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "spotlight-by-backplanes",
+      "type": "tool",
+      "name": "Spotlight by Backplanes",
+      "description": "Understand, improve, and track AI agent sessions with observability tooling",
+      "tags": [
+        "tracing",
+        "monitoring"
+      ],
+      "path": "content/tools/by-job/spotlight-by-backplanes.md",
+      "url": "content/tools/by-job/spotlight-by-backplanes",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stagehand",
+      "type": "project",
+      "name": "Stagehand",
+      "description": "Open-source browser-AI framework for reliable AI agent web interactions",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "path": "content/projects/agents/browser-agents/stagehand.md",
+      "url": "content/projects/agents/browser-agents/stagehand",
+      "last_updated": "2026-06-14",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -5706,6 +6183,43 @@
       "featured": false
     },
     {
+      "id": "superlog",
+      "type": "tool",
+      "name": "Superlog",
+      "description": "Real-time log aggregation platform designed for serverless debugging",
+      "tags": [
+        "monitoring",
+        "tracing"
+      ],
+      "path": "content/tools/by-job/superlog.md",
+      "url": "content/tools/by-job/superlog",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "surrealdb",
+      "type": "project",
+      "name": "SurrealDB",
+      "description": "Multi-model database combining graph, document, vector, and time-series for AI agents",
+      "tags": [
+        "rag",
+        "retrieval",
+        "agents"
+      ],
+      "path": "content/projects/rag/vector-databases/surrealdb.md",
+      "url": "content/projects/rag/vector-databases/surrealdb",
+      "last_updated": "2026-06-14",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "swe-agent",
       "type": "paper",
       "name": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
@@ -5722,6 +6236,42 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "tabstack",
+      "type": "tool",
+      "name": "Tabstack",
+      "description": "Empower AI systems to autonomously browse, search, and interact with the web via API",
+      "tags": [
+        "retrieval",
+        "agents"
+      ],
+      "path": "content/tools/by-job/tabstack.md",
+      "url": "content/tools/by-job/tabstack",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "taste-lab",
+      "type": "tool",
+      "name": "Taste Lab",
+      "description": "Extracts and analyzes the design DNA of any website for AI agent consumption",
+      "tags": [
+        "agents",
+        "retrieval"
+      ],
+      "path": "content/tools/by-job/taste-lab.md",
+      "url": "content/tools/by-job/taste-lab",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -5934,6 +6484,24 @@
       "featured": false
     },
     {
+      "id": "translategemma",
+      "type": "project",
+      "name": "TranslateGemma",
+      "description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
+      "tags": [
+        "multimodal",
+        "llm"
+      ],
+      "path": "content/projects/llms/open-source-models/translategemma.md",
+      "url": "content/projects/llms/open-source-models/translategemma",
+      "last_updated": "2026-06-14",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "treat-retrieved-text-as-untrusted",
       "type": "tip",
       "name": "Treat Retrieved Text As Untrusted",
@@ -6024,6 +6592,23 @@
       "url": "content/projects/rag/frameworks/txtai",
       "last_updated": "2026-06-13",
       "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "uiverse-design",
+      "type": "project",
+      "name": "Uiverse Design",
+      "description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
+      "tags": [
+        "agents"
+      ],
+      "path": "content/projects/tooling/platforms/uiverse-design.md",
+      "url": "content/projects/tooling/platforms/uiverse-design",
+      "last_updated": "2026-06-14",
+      "category": "tooling",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -6350,6 +6935,23 @@
       "featured": false
     },
     {
+      "id": "vaani",
+      "type": "tool",
+      "name": "Vaani",
+      "description": "Fast, private macOS dictation with AI formatting and editing",
+      "tags": [
+        "structured-output"
+      ],
+      "path": "content/tools/by-job/vaani.md",
+      "url": "content/tools/by-job/vaani",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "validate-tool-arguments-before-execution",
       "type": "tip",
       "name": "Validate Tool Arguments Before Execution",
@@ -6383,6 +6985,23 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "vercel",
+      "type": "tool",
+      "name": "Vercel",
+      "description": "Frontend cloud platform for deploying and scaling Next.js apps with edge functions",
+      "tags": [
+        "cloud"
+      ],
+      "path": "content/tools/by-job/vercel.md",
+      "url": "content/tools/by-job/vercel",
+      "last_updated": "2026-06-14",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },

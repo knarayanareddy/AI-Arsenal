@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-06-14T14:17:14.683Z",
+  "generated_at": "2026-06-14T19:18:47.706Z",
   "config": {
     "document": {
       "id": "id",
@@ -41,8 +41,8 @@
   },
   "facets": {
     "types": {
-      "project": 68,
-      "tool": 62,
+      "project": 73,
+      "tool": 92,
       "paper": 25,
       "tip": 106,
       "person": 25,
@@ -51,21 +51,21 @@
     },
     "tags": {
       "observability": 39,
-      "evaluation": 66,
-      "tracing": 26,
-      "cloud": 61,
-      "agents": 56,
-      "orchestration": 19,
+      "evaluation": 69,
+      "tracing": 29,
+      "cloud": 63,
+      "agents": 70,
+      "orchestration": 29,
       "planning": 12,
       "tool-use": 37,
-      "rag": 71,
+      "rag": 72,
       "embeddings": 29,
-      "retrieval": 57,
+      "retrieval": 61,
       "local": 28,
-      "llm": 150,
-      "multimodal": 8,
+      "llm": 153,
+      "multimodal": 12,
       "data": 45,
-      "monitoring": 37,
+      "monitoring": 41,
       "reasoning": 22,
       "inference": 56,
       "efficiency": 7,
@@ -77,19 +77,20 @@
       "community-favorite": 1,
       "edge": 2,
       "llamaindex": 3,
-      "memory": 16,
+      "memory": 17,
       "code-gen": 5,
       "kubernetes": 2,
       "battle-tested": 1,
       "guardrails": 16,
-      "structured-output": 24,
+      "structured-output": 29,
       "batching": 12,
       "streaming": 6,
       "caching": 20,
-      "security": 22,
-      "fine-tuning": 9,
+      "security": 25,
+      "fine-tuning": 10,
       "pytorch": 7,
       "docker": 1,
+      "routing": 2,
       "serverless": 6,
       "huggingface": 4,
       "openai": 1,
@@ -100,7 +101,6 @@
       "alignment": 7,
       "rlhf": 5,
       "benchmark": 2,
-      "routing": 1,
       "chunking": 1,
       "research": 11,
       "featured": 2,
@@ -109,9 +109,10 @@
     },
     "categories": {
       "observability": 16,
-      "agents": 19,
-      "rag": 24,
-      "llms": 21,
+      "agents": 21,
+      "rag": 25,
+      "llms": 22,
+      "tooling": 1,
       "architecture": 1,
       "training": 9,
       "alignment": 3,
@@ -137,17 +138,17 @@
       "trending": 2
     },
     "maturity": {
-      "production": 129,
-      "beta": 1
+      "production": 143,
+      "beta": 22
     },
     "cost_model": {
-      "freemium": 24,
-      "open-source": 94,
-      "usage-based": 9,
-      "paid": 3
+      "freemium": 47,
+      "open-source": 99,
+      "paid": 10,
+      "usage-based": 9
     },
     "status": {
-      "active": 209,
+      "active": 244,
       "deprecated": 1,
       "archived": 3,
       "watching": 1
@@ -337,6 +338,28 @@
       "body": "Add Reranking After Recall Is Acceptable rag retrieval embeddings rag-tuning Overview TL;DR: Use a reranker only after the first stage retriever reliably returns candidates containing the answer. RAG tuning should be driven by representative questions and retrieved evidence, not global defaults. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 45 minutes Applies to: rag, retrieval, embeddings Architecture / How It Works The practice changes one controllable part of the system—promptin…"
     },
     {
+      "id": "agent-browser-shield",
+      "type": "tool",
+      "name": "Agent Browser Shield",
+      "title": "Agent Browser Shield",
+      "description": "Secure AI web browsing by cleaning content and masking PII during agent runs",
+      "tags": [
+        "security",
+        "retrieval"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/agent-browser-shield.md",
+      "url": "content/tools/by-job/agent-browser-shield",
+      "boost_title": "Agent Browser Shield",
+      "boost_tags": "security retrieval",
+      "boost_description": "Secure AI web browsing by cleaning content and masking PII during agent runs",
+      "body": "Agent Browser Shield Secure AI web browsing by cleaning content and masking PII during agent runs security retrieval Overview Agent Browser Shield is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: security and guardrails, web scraping. Key Features Secure AI web browsing by cleaning content and masking PII during agent runs Cost model: freemium Stack: python Architecture / How It Works Visit https://agentbrowsershield.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When security and guardrails is a primary…"
+    },
+    {
       "id": "agent-builder",
       "type": "guide",
       "name": "Agent Builder Learning Path",
@@ -383,6 +406,28 @@
       "boost_tags": "observability evaluation tracing cloud",
       "boost_description": "Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds",
       "body": "Agenta Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds observability evaluation tracing cloud observability tracing TL;DR: Agenta is an open source LLMOps platform for prompt management, evaluation, observability, and playground workflows. Use it when prompts and evals need a collaborative product surface. Overview Agenta brings prompt collaboration, side by side experiments, evaluation, and observability into one LLMOps platform. Why It's in the Arsenal Teams often outgrow prompts in code and need a shared workflow for subject matter experts, developers, and evaluators. Key Features Prompt playground and management Evaluation workflows Observability and tracing Open source repository Collaboration between…"
+    },
+    {
+      "id": "agnt-hub",
+      "type": "tool",
+      "name": "AGNT.Hub",
+      "title": "AGNT.Hub",
+      "description": "Build and manage secure, private AI agents with custom skills and policies",
+      "tags": [
+        "orchestration",
+        "security"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/agnt-hub.md",
+      "url": "content/tools/by-job/agnt-hub",
+      "boost_title": "AGNT.Hub",
+      "boost_tags": "orchestration security",
+      "boost_description": "Build and manage secure, private AI agents with custom skills and policies",
+      "body": "AGNT.Hub Build and manage secure, private AI agents with custom skills and policies orchestration security Overview AGNT.Hub is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, security and guardrails. Key Features Build and manage secure, private AI agents with custom skills and policies Cost model: paid Stack: python Architecture / How It Works Visit https://agnt.hub for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is accep…"
     },
     {
       "id": "ai-engineer",
@@ -569,6 +614,28 @@
       "body": "Ask For Missing Inputs Before Solving llm structured-output prompting Overview TL;DR: For underspecified tasks, instruct the model to ask clarifying questions instead of guessing. Prompt changes are production changes. Make them explicit, testable, and versioned. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: Medium Time to implement: 20 minutes Applies to: llm, structured output Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, me…"
     },
     {
+      "id": "astra-autonomous-pentest",
+      "type": "tool",
+      "name": "Astra Autonomous Pentest",
+      "title": "Astra Autonomous Pentest",
+      "description": "Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure",
+      "tags": [
+        "security",
+        "evaluation"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/astra-autonomous-pentest.md",
+      "url": "content/tools/by-job/astra-autonomous-pentest",
+      "boost_title": "Astra Autonomous Pentest",
+      "boost_tags": "security evaluation",
+      "boost_description": "Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure",
+      "body": "Astra Autonomous Pentest Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure security evaluation Overview Astra Autonomous Pentest is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: security and guardrails, evaluation. Key Features Continuous AI powered penetration testing for applications, APIs, and cloud infrastructure Cost model: paid Stack: python Architecture / How It Works Visit https://astra.security for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When security and guardrails is a pri…"
+    },
+    {
       "id": "attention-is-all-you-need",
       "type": "paper",
       "name": "Attention Is All You Need",
@@ -708,6 +775,27 @@
       "boost_tags": "cloud llm evaluation",
       "boost_description": "Microsoft Azure platform for building, evaluating, and deploying AI applications",
       "body": "Azure AI Studio Microsoft Azure platform for building, evaluating, and deploying AI applications cloud llm evaluation TL;DR: Microsoft Azure platform for building, evaluating, and deploying AI applications. Azure usage based pricing. Best for Azure enterprise AI development. Overview Azure AI Studio is included as a tool for deployment workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Azure model access Evaluation and deployment workflows Enterprise identity/security Architecture / How It Works Azure AI Studio provides hosted workflows for model…"
+    },
+    {
+      "id": "basedash",
+      "type": "tool",
+      "name": "Basedash",
+      "title": "Basedash",
+      "description": "AI-native platform for generating dashboards, reports, and insights from natural-language queries",
+      "tags": [
+        "structured-output"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/basedash.md",
+      "url": "content/tools/by-job/basedash",
+      "boost_title": "Basedash",
+      "boost_tags": "structured-output",
+      "boost_description": "AI-native platform for generating dashboards, reports, and insights from natural-language queries",
+      "body": "Basedash AI-native platform for generating dashboards, reports, and insights from natural-language queries structured-output Overview Basedash is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features AI native platform for generating dashboards, reports, and insights from natural language queries Cost model: paid Stack: typescript Architecture / How It Works Visit https://basedash.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed ho…"
     },
     {
       "id": "basic-rag-chatbot",
@@ -1339,6 +1427,27 @@
       "body": "Classify Failures Before Fixing Prompts observability tracing evaluation debugging-llm-apps Overview TL;DR: Label failures as retrieval, reasoning, tool, parsing, or policy failures before changing prompts. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retri…"
     },
     {
+      "id": "claude-artifact-player",
+      "type": "tool",
+      "name": "Claude Artifact Player",
+      "title": "Claude Artifact Player",
+      "description": "Interact with and manage AI-generated artifacts from Claude and similar models",
+      "tags": [
+        "structured-output"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/claude-artifact-player.md",
+      "url": "content/tools/by-job/claude-artifact-player",
+      "boost_title": "Claude Artifact Player",
+      "boost_tags": "structured-output",
+      "boost_description": "Interact with and manage AI-generated artifacts from Claude and similar models",
+      "body": "Claude Artifact Player Interact with and manage AI-generated artifacts from Claude and similar models structured-output Overview Claude Artifact Player is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Interact with and manage AI generated artifacts from Claude and similar models Cost model: freemium Stack: typescript Architecture / How It Works Visit https://claudeartifactplayer.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and…"
+    },
+    {
       "id": "clem-delangue",
       "type": "person",
       "name": "Clément Delangue",
@@ -1360,6 +1469,49 @@
       "boost_tags": "huggingface llm data",
       "boost_description": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
       "body": "Clément Delangue Tracks open models, datasets, AI policy, and open-source AI ecosystem signals huggingface llm data Overview Clément Delangue is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for open source AI ecosystem and model release signals. Notable Work Hugging Face platform and open AI advocacy. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "cloudskill",
+      "type": "tool",
+      "name": "Cloudskill",
+      "title": "Cloudskill",
+      "description": "Manage, govern, and distribute skills for AI agents across teams",
+      "tags": [
+        "orchestration",
+        "routing"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/cloudskill.md",
+      "url": "content/tools/by-job/cloudskill",
+      "boost_title": "Cloudskill",
+      "boost_tags": "orchestration routing",
+      "boost_description": "Manage, govern, and distribute skills for AI agents across teams",
+      "body": "Cloudskill Manage, govern, and distribute skills for AI agents across teams orchestration routing Overview Cloudskill is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, prompt management. Key Features Manage, govern, and distribute skills for AI agents across teams Cost model: paid Stack: python Architecture / How It Works Visit https://cloudskill.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. St…"
+    },
+    {
+      "id": "code-arena",
+      "type": "tool",
+      "name": "Code Arena",
+      "title": "Code Arena",
+      "description": "Benchmark and compare AI models in a competitive coding environment",
+      "tags": [
+        "evaluation"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/code-arena.md",
+      "url": "content/tools/by-job/code-arena",
+      "boost_title": "Code Arena",
+      "boost_tags": "evaluation",
+      "boost_description": "Benchmark and compare AI models in a competitive coding environment",
+      "body": "Code Arena Benchmark and compare AI models in a competitive coding environment evaluation Overview Code Arena is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: evaluation. Key Features Benchmark and compare AI models in a competitive coding environment Cost model: freemium Stack: python Architecture / How It Works Visit https://codearena.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When evaluation is a primary requirement and managed hosting is acceptable. Strengths Strong fit…"
     },
     {
       "id": "command-r-plus",
@@ -1407,6 +1559,28 @@
       "boost_tags": "llm caching cloud",
       "boost_description": "",
       "body": "Compress Retrieved Context Before Generation llm caching cloud cost-reduction Overview TL;DR: Summarize or filter retrieved chunks when context cost dominates answer cost. Cost work should preserve quality while reducing unnecessary tokens, duplicate calls, or overpowered model usage. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 30 minutes Applies to: llm, caching, cloud Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evalu…"
+    },
+    {
+      "id": "conan",
+      "type": "tool",
+      "name": "Conan",
+      "title": "Conan",
+      "description": "Live HUD for monitoring and interacting with AI agent sessions on macOS",
+      "tags": [
+        "monitoring",
+        "tracing"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/conan.md",
+      "url": "content/tools/by-job/conan",
+      "boost_title": "Conan",
+      "boost_tags": "monitoring tracing",
+      "boost_description": "Live HUD for monitoring and interacting with AI agent sessions on macOS",
+      "body": "Conan Live HUD for monitoring and interacting with AI agent sessions on macOS monitoring tracing Overview Conan is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, tracing. Key Features Live HUD for monitoring and interacting with AI agent sessions on macOS Cost model: paid Stack: python Architecture / How It Works Visit https://conan.app for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When monitoring is a primary requirement and managed hosting is acceptable. Strengths Strong fit…"
     },
     {
       "id": "constitutional-ai",
@@ -1940,6 +2114,28 @@
       "body": "Drop Unused Conversation History llm caching cloud cost-reduction Overview TL;DR: Keep only relevant history or summaries instead of sending the whole transcript. Cost work should preserve quality while reducing unnecessary tokens, duplicate calls, or overpowered model usage. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 30 minutes Applies to: llm, caching, cloud Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, ev…"
     },
     {
+      "id": "dropstone-3",
+      "type": "tool",
+      "name": "Dropstone 3",
+      "title": "Dropstone 3",
+      "description": "Collaborative AI workspace for teams to build, describe, and ship software together",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/dropstone-3.md",
+      "url": "content/tools/by-job/dropstone-3",
+      "boost_title": "Dropstone 3",
+      "boost_tags": "orchestration agents",
+      "boost_description": "Collaborative AI workspace for teams to build, describe, and ship software together",
+      "body": "Dropstone 3 Collaborative AI workspace for teams to build, describe, and ship software together orchestration agents Overview Dropstone 3 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, prototyping. Key Features Collaborative AI workspace for teams to build, describe, and ship software together Cost model: freemium Stack: typescript Architecture / How It Works Visit https://dropstone.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed host…"
+    },
+    {
       "id": "dspy",
       "type": "project",
       "name": "DSPy",
@@ -2030,6 +2226,28 @@
       "boost_tags": "research reasoning inference",
       "boost_description": "Current techniques worth tracking across reasoning, context, inference, and multimodal systems",
       "body": "Emerging AI Techniques Current techniques worth tracking across reasoning, context, inference, and multimodal systems research reasoning inference research Overview This page tracks technique families that are likely to influence AI engineering decisions. It is a watchlist, not an endorsement list. Why It's in the Arsenal Emerging techniques become useful only when they change architecture, cost, latency, reliability, or evaluation choices. This page filters research trends through that engineering lens. Key Features Test time compute / reasoning models : spend more tokens or search steps at inference time for harder tasks. Distilled reasoning models : transfer reasoning behavior into smaller models for cheaper serving. Graph based RAG : use ent…"
+    },
+    {
+      "id": "empromptu-ai",
+      "type": "tool",
+      "name": "Empromptu AI",
+      "title": "Empromptu AI",
+      "description": "Build, deploy, and manage custom AI applications that improve over time",
+      "tags": [
+        "orchestration",
+        "cloud"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/empromptu-ai.md",
+      "url": "content/tools/by-job/empromptu-ai",
+      "boost_title": "Empromptu AI",
+      "boost_tags": "orchestration cloud",
+      "boost_description": "Build, deploy, and manage custom AI applications that improve over time",
+      "body": "Empromptu AI Build, deploy, and manage custom AI applications that improve over time orchestration cloud Overview Empromptu AI is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, deployment. Key Features Build, deploy, and manage custom AI applications that improve over time Cost model: freemium Stack: python Architecture / How It Works Visit https://empromptu.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptabl…"
     },
     {
       "id": "enterprise-scale",
@@ -2449,6 +2667,27 @@
       "body": "Google ADK Google code-first Python toolkit for building, evaluating, and deploying AI agents agents orchestration graphs tool-use agents agent-frameworks TL;DR: Google ADK is a code first Python toolkit for building, evaluating, and deploying agents. Use it when you want Google ecosystem integration and explicit workflow/runtime primitives. Overview ADK 2.0 emphasizes a workflow runtime, task API, graph execution, routing, fan out/fan in, loops, retries, and state management. It is a stronger fit for code first teams than visual agent builders. Key Features Python code first agent definitions Workflow runtime for graph execution Task API for agent to agent delegation Human in the loop support Google documentation and sample repos Evaluation an…"
     },
     {
+      "id": "google-pomelli-2-0",
+      "type": "tool",
+      "name": "Google Pomelli 2.0",
+      "title": "Google Pomelli 2.0",
+      "description": "Explore and interact with large datasets through a visual, intuitive interface",
+      "tags": [
+        "structured-output"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/google-pomelli-2-0.md",
+      "url": "content/tools/by-job/google-pomelli-2-0",
+      "boost_title": "Google Pomelli 2.0",
+      "boost_tags": "structured-output",
+      "boost_description": "Explore and interact with large datasets through a visual, intuitive interface",
+      "body": "Google Pomelli 2.0 Explore and interact with large datasets through a visual, intuitive interface structured-output Overview Google Pomelli 2.0 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Explore and interact with large datasets through a visual, intuitive interface Cost model: freemium Stack: python Architecture / How It Works Visit https://pomelli.google for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting i…"
+    },
+    {
       "id": "google-vertex-ai",
       "type": "tool",
       "name": "Google Vertex AI",
@@ -2750,6 +2989,27 @@
       "body": "Hugging Face Inference Endpoints Managed Hugging Face service for deploying models as production inference endpoints llm inference cloud TL;DR: Managed Hugging Face service for deploying models as production inference endpoints. Usage based managed inference pricing. Best for managed HF model deployment. Overview Hugging Face Inference Endpoints is included as a tool for deployment, production serving workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Managed model endpoints Hugging Face Hub integration Autoscaling options Architecture / How It Works Inference Endp…"
     },
     {
+      "id": "honen",
+      "type": "tool",
+      "name": "Honen",
+      "title": "Honen",
+      "description": "Transform any content into interactive AI-generated courses",
+      "tags": [
+        "structured-output"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/honen.md",
+      "url": "content/tools/by-job/honen",
+      "boost_title": "Honen",
+      "boost_tags": "structured-output",
+      "boost_description": "Transform any content into interactive AI-generated courses",
+      "body": "Honen Transform any content into interactive AI-generated courses structured-output Overview Honen is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Transform any content into interactive AI generated courses Cost model: freemium Stack: python Architecture / How It Works Visit https://honen.app for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit fo…"
+    },
+    {
       "id": "hugging-face-hub",
       "type": "tool",
       "name": "Hugging Face Hub",
@@ -2817,6 +3077,70 @@
       "boost_tags": "rag retrieval embeddings",
       "boost_description": "Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query",
       "body": "Precise Zero-Shot Dense Retrieval without Relevance Labels Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query rag retrieval embeddings rag TL;DR: Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query. Why it matters: The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed. The Problem It Solved Improved zero shot dense retrieval when no relevance labels are available. Key Contribution Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query. Results / Key Numbers Reported retrieval gains across several zero shot retrieval settings. Do not reuse these numbers as current SOT…"
+    },
+    {
+      "id": "ideogram",
+      "type": "tool",
+      "name": "Ideogram",
+      "title": "Ideogram",
+      "description": "AI image generation with reliable text rendering in outputs",
+      "tags": [
+        "multimodal"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/ideogram.md",
+      "url": "content/tools/by-job/ideogram",
+      "boost_title": "Ideogram",
+      "boost_tags": "multimodal",
+      "boost_description": "AI image generation with reliable text rendering in outputs",
+      "body": "Ideogram AI image generation with reliable text rendering in outputs multimodal Overview Ideogram is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features AI image generation with reliable text rendering in outputs Cost model: freemium Stack: python Architecture / How It Works Visit https://ideogram.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strengths Strong…"
+    },
+    {
+      "id": "ideogram-ai",
+      "type": "tool",
+      "name": "Ideogram AI",
+      "title": "Ideogram AI",
+      "description": "AI image generation platform with reliable text rendering and broad style coverage",
+      "tags": [
+        "multimodal"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/ideogram-ai.md",
+      "url": "content/tools/by-job/ideogram-ai",
+      "boost_title": "Ideogram AI",
+      "boost_tags": "multimodal",
+      "boost_description": "AI image generation platform with reliable text rendering and broad style coverage",
+      "body": "Ideogram AI AI image generation platform with reliable text rendering and broad style coverage multimodal Overview Ideogram AI is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features AI image generation platform with reliable text rendering and broad style coverage Cost model: freemium Stack: python Architecture / How It Works Visit https://ideogram.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is ac…"
+    },
+    {
+      "id": "insforge",
+      "type": "project",
+      "name": "InsForge",
+      "title": "InsForge",
+      "description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "category": "agents",
+      "subcategory": "coding-agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "path": "content/projects/agents/coding-agents/insforge.md",
+      "url": "content/projects/agents/coding-agents/insforge",
+      "boost_title": "InsForge",
+      "boost_tags": "agents orchestration",
+      "boost_description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
+      "body": "InsForge Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway agents orchestration agents coding-agents Overview InsForge is a open source AI engineering project. Why It's in the Arsenal It covers the agents category with the coding agents subcategory and complements existing Arsenal entries. Key Features Open source backend platform giving AI coding agents database, auth, storage, and AI gateway Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/InsForge/InsForge for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the agents category. 2. Scenario: Self hosted alternat…"
     },
     {
       "id": "inspect-retrieved-chunks-beside-the-answer",
@@ -3093,6 +3417,28 @@
       "boost_tags": "rag retrieval embeddings",
       "boost_description": "",
       "body": "Keep Source Page and Section Metadata rag retrieval embeddings rag-tuning Overview TL;DR: Store page, heading, and source URL metadata so generated answers can cite evidence. RAG tuning should be driven by representative questions and retrieved evidence, not global defaults. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 45 minutes Applies to: rag, retrieval, embeddings Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, eval…"
+    },
+    {
+      "id": "kimi-k2-5",
+      "type": "tool",
+      "name": "Kimi K2.5",
+      "title": "Kimi K2.5",
+      "description": "AI assistant with deep understanding, analysis, and reasoning capabilities",
+      "tags": [
+        "llm",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/kimi-k2-5.md",
+      "url": "content/tools/by-job/kimi-k2-5",
+      "boost_title": "Kimi K2.5",
+      "boost_tags": "llm agents",
+      "boost_description": "AI assistant with deep understanding, analysis, and reasoning capabilities",
+      "body": "Kimi K2.5 AI assistant with deep understanding, analysis, and reasoning capabilities llm agents Overview Kimi K2.5 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving, orchestration. Key Features AI assistant with deep understanding, analysis, and reasoning capabilities Cost model: freemium Stack: python Architecture / How It Works Visit https://kimi.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is…"
     },
     {
       "id": "label-studio",
@@ -3942,6 +4288,28 @@
       "body": "Make Success Criteria Machine Checkable agents tool-use monitoring agent-reliability Overview TL;DR: Define completion criteria as explicit checks instead of relying on the agent to decide. Agent reliability improves when autonomy is bounded by budgets, validation, traces, and approval gates. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 30 minutes Applies to: agents, tool use, monitoring Architecture / How It Works The practice changes one controllable part of the system—prompting, retrie…"
     },
     {
+      "id": "manus",
+      "type": "tool",
+      "name": "Manus",
+      "title": "Manus",
+      "description": "AI-powered platform for building full-stack web applications and automating tasks",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/manus.md",
+      "url": "content/tools/by-job/manus",
+      "boost_title": "Manus",
+      "boost_tags": "orchestration agents",
+      "boost_description": "AI-powered platform for building full-stack web applications and automating tasks",
+      "body": "Manus AI-powered platform for building full-stack web applications and automating tasks orchestration agents Overview Manus is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: prototyping, orchestration. Key Features AI powered platform for building full stack web applications and automating tasks Cost model: paid Stack: python Architecture / How It Works Visit https://manus.im for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When prototyping is a primary requirement and managed hosting is acceptable. Str…"
+    },
+    {
       "id": "mastra",
       "type": "project",
       "name": "Mastra",
@@ -4125,6 +4493,28 @@
       "boost_tags": "memory agents rag",
       "boost_description": "Memory layer for AI agents and assistants with long-term user and session memory",
       "body": "Mem0 Memory layer for AI agents and assistants with long-term user and session memory memory agents rag TL;DR: Memory layer for AI agents and assistants with long term user and session memory. Open source or free to start. Best for agent/user memory. Overview Mem0 is included as a tool for memory management workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Long term memory APIs User/session memory Hosted and OSS options Architecture / How It Works Mem0 stores and retrieves memories for agents or assistants across sessions. Getting…"
+    },
+    {
+      "id": "memoriq",
+      "type": "tool",
+      "name": "Memoriq",
+      "title": "Memoriq",
+      "description": "Private AI memory layer that learns from your conversations and documents",
+      "tags": [
+        "memory",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/memoriq.md",
+      "url": "content/tools/by-job/memoriq",
+      "boost_title": "Memoriq",
+      "boost_tags": "memory agents",
+      "boost_description": "Private AI memory layer that learns from your conversations and documents",
+      "body": "Memoriq Private AI memory layer that learns from your conversations and documents memory agents Overview Memoriq is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: memory management. Key Features Private AI memory layer that learns from your conversations and documents Cost model: freemium Stack: python Architecture / How It Works Visit https://memoriq.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When memory management is a primary requirement and managed hosting is acceptable. Streng…"
     },
     {
       "id": "memory-management",
@@ -4406,6 +4796,28 @@
       "boost_tags": "llm data",
       "boost_description": "Curated tools for model registry workflows in AI engineering",
       "body": "Model Registry Tools Curated tools for model registry workflows in AI engineering llm data tools Overview This guide compares tools for the model registry job. Use it as a routing page, then open the linked canonical project or tool entry for full details. Why It's in the Arsenal Tool by job pages help builders quickly shortlist options by task instead of browsing the entire repository. Key Features Job focused shortlist Links to canonical entries instead of duplicating long form content Scannable TL;DR cards for each tool Architecture / How It Works Choose the job first, then compare tools by cost, open source status, self hostability, stack, and operational complexity. Getting Started…"
+    },
+    {
+      "id": "monako-glass",
+      "type": "tool",
+      "name": "Monako Glass",
+      "title": "Monako Glass",
+      "description": "Visualize and understand AI model outputs with dynamic Pulse Rings and overlays",
+      "tags": [
+        "monitoring",
+        "evaluation"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "paid",
+      "status": "active",
+      "path": "content/tools/by-job/monako-glass.md",
+      "url": "content/tools/by-job/monako-glass",
+      "boost_title": "Monako Glass",
+      "boost_tags": "monitoring evaluation",
+      "boost_description": "Visualize and understand AI model outputs with dynamic Pulse Rings and overlays",
+      "body": "Monako Glass Visualize and understand AI model outputs with dynamic Pulse Rings and overlays monitoring evaluation Overview Monako Glass is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, evaluation. Key Features Visualize and understand AI model outputs with dynamic Pulse Rings and overlays Cost model: paid Stack: python Architecture / How It Works Visit https://monako.ai/glass for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When monitoring is a primary requirement and managed hosting is acceptab…"
     },
     {
       "id": "multi-agent-research-system",
@@ -4780,6 +5192,28 @@
       "boost_tags": "observability tracing evaluation monitoring",
       "boost_description": "Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards",
       "body": "Opik Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards observability tracing evaluation monitoring observability tracing TL;DR: Opik is Comet’s open source platform for LLM tracing, evaluation, prompt optimization, and dashboards. Use it when evals and prompt iteration are central. Overview Opik covers tracing, automated evaluations, prompt/version workflows, and monitoring for LLM apps, RAG systems, and agents. Why It's in the Arsenal It is a strong eval oriented open source option from an established ML experiment tracking vendor. Key Features LLM tracing Automated evaluation workflows Prompt management and optimization Production dashboards Self hostable open source platform Architecture / How It Works Appro…"
+    },
+    {
+      "id": "orchestraml",
+      "type": "tool",
+      "name": "OrchestraML",
+      "title": "OrchestraML",
+      "description": "Automate end-to-end ML workflows from data prep to deployment using AI agents",
+      "tags": [
+        "orchestration",
+        "fine-tuning"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/orchestraml.md",
+      "url": "content/tools/by-job/orchestraml",
+      "boost_title": "OrchestraML",
+      "boost_tags": "orchestration fine-tuning",
+      "boost_description": "Automate end-to-end ML workflows from data prep to deployment using AI agents",
+      "body": "OrchestraML Automate end-to-end ML workflows from data prep to deployment using AI agents orchestration fine-tuning Overview OrchestraML is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, fine tuning. Key Features Automate end to end ML workflows from data prep to deployment using AI agents Cost model: freemium Stack: python Architecture / How It Works Visit https://orchestraml.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is…"
     },
     {
       "id": "orchestration",
@@ -5678,6 +6112,28 @@
       "body": "QLoRA: Efficient Finetuning of Quantized LLMs Enabled fine-tuning quantized LLMs with low memory using 4-bit quantization plus LoRA fine-tuning quantization llm training TL;DR: Enabled fine tuning quantized LLMs with low memory using 4 bit quantization plus LoRA. Why it matters: The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed. The Problem It Solved Made high quality fine tuning accessible on smaller GPU setups. Key Contribution Enabled fine tuning quantized LLMs with low memory using 4 bit quantization plus LoRA. Results / Key Numbers Reported Guanaco models reaching strong chatbot benchmark performance with efficient training. Do not reuse these numbers as current SOTA claims without c…"
     },
     {
+      "id": "qursor",
+      "type": "tool",
+      "name": "Qursor",
+      "title": "Qursor",
+      "description": "AI-powered UI context for faster front-end development with agents",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/qursor.md",
+      "url": "content/tools/by-job/qursor",
+      "boost_title": "Qursor",
+      "boost_tags": "orchestration agents",
+      "boost_description": "AI-powered UI context for faster front-end development with agents",
+      "body": "Qursor AI-powered UI context for faster front-end development with agents orchestration agents Overview Qursor is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration, structured output. Key Features AI powered UI context for faster front end development with agents Cost model: freemium Stack: typescript Architecture / How It Works Visit https://qursor.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable.…"
+    },
+    {
       "id": "qwen",
       "type": "project",
       "name": "Qwen",
@@ -5724,6 +6180,28 @@
       "boost_tags": "llm inference reasoning code-gen",
       "boost_description": "Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models",
       "body": "Qwen 2.5 / QwQ Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models llm inference reasoning code-gen llms open-source-models Overview TL;DR: Qwen 2.5 and QwQ are Alibaba open weight models with strong coverage across chat, coding, math, and reasoning. Use them when multilingual or coding/reasoning performance matters. Family / sizes: 0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B Best fit: coding, math, multilingual, and reasoning oriented open model deployments Primary source: Qwen documentation Why It's in the Arsenal Qwen is one of the most practically useful open model families because it spans many sizes and task specialized variants. Key Features Wide range of parameter sizes Coding and math specialized variants Reasoning…"
+    },
+    {
+      "id": "qwen-3",
+      "type": "tool",
+      "name": "Qwen 3",
+      "title": "Qwen 3",
+      "description": "Alibaba open-weight model family with multimodal and coding variants",
+      "tags": [
+        "llm",
+        "multimodal"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/qwen-3.md",
+      "url": "content/tools/by-job/qwen-3",
+      "boost_title": "Qwen 3",
+      "boost_tags": "llm multimodal",
+      "boost_description": "Alibaba open-weight model family with multimodal and coding variants",
+      "body": "Qwen 3 Alibaba open-weight model family with multimodal and coding variants llm multimodal Overview Qwen 3 is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features Alibaba open weight model family with multimodal and coding variants Cost model: freemium Stack: python Architecture / How It Works Visit https://qwen.alibaba.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Stre…"
     },
     {
       "id": "qwen2-5-math",
@@ -6003,6 +6481,27 @@
       "boost_tags": "security guardrails llm",
       "boost_description": "Prompt injection detection and guardrail toolkit for LLM applications",
       "body": "Rebuff Prompt injection detection and guardrail toolkit for LLM applications security guardrails llm TL;DR: Prompt injection detection and guardrail toolkit for LLM applications. Open source or free to start. Best for prompt injection experiments. Overview Rebuff is included as a tool for security and guardrails workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Prompt injection detection Heuristic/model based checks App integration examples Architecture / How It Works Rebuff provides detection patterns and tools for prompt injec…"
+    },
+    {
+      "id": "recursi",
+      "type": "tool",
+      "name": "Recursi",
+      "title": "Recursi",
+      "description": "Self-improving system for intuitive and efficient AI-assisted coding",
+      "tags": [
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/recursi.md",
+      "url": "content/tools/by-job/recursi",
+      "boost_title": "Recursi",
+      "boost_tags": "agents",
+      "boost_description": "Self-improving system for intuitive and efficient AI-assisted coding",
+      "body": "Recursi Self-improving system for intuitive and efficient AI-assisted coding agents Overview Recursi is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features Self improving system for intuitive and efficient AI assisted coding Cost model: freemium Stack: python Architecture / How It Works Visit https://recursi.dev for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable. Strength…"
     },
     {
       "id": "redact-secrets-before-tracing",
@@ -6302,6 +6801,28 @@
       "boost_tags": "data cloud",
       "boost_description": "Managed data labeling and data engine platform for enterprise AI datasets",
       "body": "Scale AI Managed data labeling and data engine platform for enterprise AI datasets data cloud TL;DR: Managed data labeling and data engine platform for enterprise AI datasets. Enterprise pricing. Best for managed enterprise labeling. Overview Scale AI is included as a tool for data labeling workflows in AI engineering systems. Why It's in the Arsenal It solves a recurring job in the AI engineering lifecycle and is useful to compare by cost, stack, open source status, and operational model. Key Features Managed labeling workforce Enterprise data engine RLHF/data services Architecture / How It Works Scale AI provides managed data labeling and data services rather than a self hosted tool…"
+    },
+    {
+      "id": "seaticket",
+      "type": "tool",
+      "name": "SeaTicket",
+      "title": "SeaTicket",
+      "description": "Unify and resolve customer-support issues with autonomous AI agents",
+      "tags": [
+        "orchestration",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/seaticket.md",
+      "url": "content/tools/by-job/seaticket",
+      "boost_title": "SeaTicket",
+      "boost_tags": "orchestration agents",
+      "boost_description": "Unify and resolve customer-support issues with autonomous AI agents",
+      "body": "SeaTicket Unify and resolve customer-support issues with autonomous AI agents orchestration agents Overview SeaTicket is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: orchestration. Key Features Unify and resolve customer support issues with autonomous AI agents Cost model: freemium Stack: python Architecture / How It Works Visit https://seaticket.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When orchestration is a primary requirement and managed hosting is acceptable. Strengths Strong…"
     },
     {
       "id": "sebastian-bubeck",
@@ -6647,6 +7168,27 @@
       "body": "SGLang High-performance serving framework for large language and multimodal models llm inference batching multimodal llms inference-engines Overview TL;DR: SGLang is a high performance serving framework for LLMs and multimodal models. Use it when you need advanced serving performance and are willing to tune a specialized runtime. API compatibility: openai Formats: HF, FP8, AWQ, GPTQ Quantization support: Yes Why It's in the Arsenal SGLang is a major modern inference engine alongside vLLM, especially for high performance and multimodal serving. Key Features High performance LLM serving Multimodal model support OpenAI compatible API server Advanced runtime and scheduling features Quantization/backend support Active research/product…"
     },
     {
+      "id": "shellmate",
+      "type": "tool",
+      "name": "ShellMate",
+      "title": "ShellMate",
+      "description": "AI-powered terminal assistant that suggests commands and explains outputs",
+      "tags": [
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/shellmate.md",
+      "url": "content/tools/by-job/shellmate",
+      "boost_title": "ShellMate",
+      "boost_tags": "agents",
+      "boost_description": "AI-powered terminal assistant that suggests commands and explains outputs",
+      "body": "ShellMate AI-powered terminal assistant that suggests commands and explains outputs agents Overview ShellMate is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: production serving. Key Features AI powered terminal assistant that suggests commands and explains outputs Cost model: freemium Stack: python Architecture / How It Works Visit https://shellmate.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When production serving is a primary requirement and managed hosting is acceptable.…"
+    },
+    {
       "id": "shreya-shankar",
       "type": "person",
       "name": "Shreya Shankar",
@@ -6784,6 +7326,50 @@
       "boost_tags": "inference efficiency llm",
       "boost_description": "Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model",
       "body": "Fast Inference from Transformers via Speculative Decoding Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model inference efficiency llm inference TL;DR: Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model. Why it matters: The practical implication for builders is that this paper changes how systems are designed, evaluated, tuned, or deployed. The Problem It Solved Addressed autoregressive decoding latency without changing the target model distribution. Key Contribution Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model. Results / Key Numbers Reported inference speedups while preserving exact output distribution under t…"
+    },
+    {
+      "id": "spotlight-by-backplanes",
+      "type": "tool",
+      "name": "Spotlight by Backplanes",
+      "title": "Spotlight by Backplanes",
+      "description": "Understand, improve, and track AI agent sessions with observability tooling",
+      "tags": [
+        "tracing",
+        "monitoring"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/spotlight-by-backplanes.md",
+      "url": "content/tools/by-job/spotlight-by-backplanes",
+      "boost_title": "Spotlight by Backplanes",
+      "boost_tags": "tracing monitoring",
+      "boost_description": "Understand, improve, and track AI agent sessions with observability tooling",
+      "body": "Spotlight by Backplanes Understand, improve, and track AI agent sessions with observability tooling tracing monitoring Overview Spotlight by Backplanes is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: tracing, monitoring. Key Features Understand, improve, and track AI agent sessions with observability tooling Cost model: freemium Stack: python Architecture / How It Works Visit https://backplanes.ai/spotlight for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When tracing is a primary requirement and managed hostin…"
+    },
+    {
+      "id": "stagehand",
+      "type": "project",
+      "name": "Stagehand",
+      "title": "Stagehand",
+      "description": "Open-source browser-AI framework for reliable AI agent web interactions",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "category": "agents",
+      "subcategory": "browser-agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "path": "content/projects/agents/browser-agents/stagehand.md",
+      "url": "content/projects/agents/browser-agents/stagehand",
+      "boost_title": "Stagehand",
+      "boost_tags": "agents orchestration",
+      "boost_description": "Open-source browser-AI framework for reliable AI agent web interactions",
+      "body": "Stagehand Open-source browser-AI framework for reliable AI agent web interactions agents orchestration agents browser-agents Overview Stagehand is a open source AI engineering project. Why It's in the Arsenal It covers the agents category with the browser agents subcategory and complements existing Arsenal entries. Key Features Open source browser AI framework for reliable AI agent web interactions Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/browserbase/stagehand for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the agents category. 2. Scenario: Self hosted alternative to commerci…"
     },
     {
       "id": "start-with-a-smaller-quantized-model",
@@ -7036,6 +7622,51 @@
       "body": "Summarize Repeated Conversation Blocks llm memory retrieval context-window-management Overview TL;DR: Compress repeated or old conversation turns into summaries with explicit uncertainty. Context windows are budgets. Allocate them intentionally instead of stuffing everything into the prompt. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: Medium Time to implement: 30 minutes Applies to: llm, memory, retrieval Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, e…"
     },
     {
+      "id": "superlog",
+      "type": "tool",
+      "name": "Superlog",
+      "title": "Superlog",
+      "description": "Real-time log aggregation platform designed for serverless debugging",
+      "tags": [
+        "monitoring",
+        "tracing"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/superlog.md",
+      "url": "content/tools/by-job/superlog",
+      "boost_title": "Superlog",
+      "boost_tags": "monitoring tracing",
+      "boost_description": "Real-time log aggregation platform designed for serverless debugging",
+      "body": "Superlog Real-time log aggregation platform designed for serverless debugging monitoring tracing Overview Superlog is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: monitoring, tracing. Key Features Real time log aggregation platform designed for serverless debugging Cost model: freemium Stack: typescript Architecture / How It Works Visit https://superlog.io for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When monitoring is a primary requirement and managed hosting is acceptable. Strengths…"
+    },
+    {
+      "id": "surrealdb",
+      "type": "project",
+      "name": "SurrealDB",
+      "title": "SurrealDB",
+      "description": "Multi-model database combining graph, document, vector, and time-series for AI agents",
+      "tags": [
+        "rag",
+        "retrieval",
+        "agents"
+      ],
+      "category": "rag",
+      "subcategory": "vector-databases",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "path": "content/projects/rag/vector-databases/surrealdb.md",
+      "url": "content/projects/rag/vector-databases/surrealdb",
+      "boost_title": "SurrealDB",
+      "boost_tags": "rag retrieval agents",
+      "boost_description": "Multi-model database combining graph, document, vector, and time-series for AI agents",
+      "body": "SurrealDB Multi-model database combining graph, document, vector, and time-series for AI agents rag retrieval agents rag vector-databases Overview SurrealDB is a open source AI engineering project. Why It's in the Arsenal It covers the rag category with the vector databases subcategory and complements existing Arsenal entries. Key Features Multi model database combining graph, document, vector, and time series for AI agents Open source at the canonical repository License: Apache 2.0 Architecture / How It Works See https://github.com/surrealdb/surrealdb for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the rag category. 2. Scenario: Self hosted alternat…"
+    },
+    {
       "id": "swe-agent",
       "type": "paper",
       "name": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
@@ -7057,6 +7688,50 @@
       "boost_tags": "agents code-gen tool-use",
       "boost_description": "Studies agent-computer interfaces for software engineering tasks",
       "body": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering Studies agent-computer interfaces for software engineering tasks agents code-gen tool-use agents TL;DR: Studies agent computer interfaces for software engineering tasks. Why it matters: This paper is included because it shaped practical AI engineering decisions, model behavior, evaluation, or architecture patterns. The Problem It Solved SWE agent: Agent Computer Interfaces Enable Automated Software Engineering addresses a practical gap in building, evaluating, aligning, or operating modern LLM systems. Key Contribution Studies agent computer interfaces for software engineering tasks. Results / Key Numbers See the original paper for exact benchmark tables and ablations. This Arsenal entry…"
+    },
+    {
+      "id": "tabstack",
+      "type": "tool",
+      "name": "Tabstack",
+      "title": "Tabstack",
+      "description": "Empower AI systems to autonomously browse, search, and interact with the web via API",
+      "tags": [
+        "retrieval",
+        "agents"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/tabstack.md",
+      "url": "content/tools/by-job/tabstack",
+      "boost_title": "Tabstack",
+      "boost_tags": "retrieval agents",
+      "boost_description": "Empower AI systems to autonomously browse, search, and interact with the web via API",
+      "body": "Tabstack Empower AI systems to autonomously browse, search, and interact with the web via API retrieval agents Overview Tabstack is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: web scraping. Key Features Empower AI systems to autonomously browse, search, and interact with the web via API Cost model: freemium Stack: typescript Architecture / How It Works Visit https://console.tabstack.ai for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When web scraping is a primary requirement and managed hosting is acc…"
+    },
+    {
+      "id": "taste-lab",
+      "type": "tool",
+      "name": "Taste Lab",
+      "title": "Taste Lab",
+      "description": "Extracts and analyzes the design DNA of any website for AI agent consumption",
+      "tags": [
+        "agents",
+        "retrieval"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/taste-lab.md",
+      "url": "content/tools/by-job/taste-lab",
+      "boost_title": "Taste Lab",
+      "boost_tags": "agents retrieval",
+      "boost_description": "Extracts and analyzes the design DNA of any website for AI agent consumption",
+      "body": "Taste Lab Extracts and analyzes the design DNA of any website for AI agent consumption agents retrieval Overview Taste Lab is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: web scraping. Key Features Extracts and analyzes the design DNA of any website for AI agent consumption Cost model: freemium Stack: python Architecture / How It Works Visit https://taste lab.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When web scraping is a primary requirement and managed hosting is acceptable. Strength…"
     },
     {
       "id": "test-prompts-with-adversarial-inputs",
@@ -7312,6 +7987,28 @@
       "body": "Transformers Conceptual guide to transformer architecture and why it matters for LLM systems llm transformers attention foundational skills Overview Transformers are the architecture family behind modern LLMs. For AI engineers, the goal is not to derive every equation from memory; it is to understand tokens, attention, context, pretraining, inference, and why scaling changes behavior. Why It's in the Arsenal AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next. Key Features Concepts to Understand Tokenization: text becomes token IDs. Embeddings: tokens become vectors. Attention: each token can condition on o…"
     },
     {
+      "id": "translategemma",
+      "type": "project",
+      "name": "TranslateGemma",
+      "title": "TranslateGemma",
+      "description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
+      "tags": [
+        "multimodal",
+        "llm"
+      ],
+      "category": "llms",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "path": "content/projects/llms/open-source-models/translategemma.md",
+      "url": "content/projects/llms/open-source-models/translategemma",
+      "boost_title": "TranslateGemma",
+      "boost_tags": "multimodal llm",
+      "boost_description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
+      "body": "TranslateGemma Open translation model family built on Gemma 3 supporting 55 languages efficiently multimodal llm llms open-source-models Overview TranslateGemma is a open source AI engineering project. Why It's in the Arsenal It covers the llms category with the open source models subcategory and complements existing Arsenal entries. Key Features Open translation model family built on Gemma 3 supporting 55 languages efficiently Open source at the canonical repository License: Apache 2.0 Architecture / How It Works See https://github.com/google deepmind/gemma for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the llms category. 2. Scenario: Self hosted…"
+    },
+    {
       "id": "treat-retrieved-text-as-untrusted",
       "type": "tip",
       "name": "Treat Retrieved Text As Untrusted",
@@ -7426,6 +8123,27 @@
       "boost_tags": "rag embeddings retrieval orchestration",
       "boost_description": "All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows",
       "body": "txtai All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows rag embeddings retrieval orchestration rag frameworks TL;DR: txtai is an all in one Python framework for semantic search, embeddings, LLM orchestration, and workflows. Use it for compact semantic search/RAG systems with fewer moving parts. Overview txtai combines embeddings, vector search, workflows, and LLM orchestration in a single Python first framework. Why It's in the Arsenal It is a pragmatic option when a team wants semantic search and RAG without assembling many separate packages. Key Features Embeddings and semantic search Workflow orchestration primitives LLM pipeline support Local first friendly architecture Apache 2.0 open source Arc…"
+    },
+    {
+      "id": "uiverse-design",
+      "type": "project",
+      "name": "Uiverse Design",
+      "title": "Uiverse Design",
+      "description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
+      "tags": [
+        "agents"
+      ],
+      "category": "tooling",
+      "subcategory": "platforms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "path": "content/projects/tooling/platforms/uiverse-design.md",
+      "url": "content/projects/tooling/platforms/uiverse-design",
+      "boost_title": "Uiverse Design",
+      "boost_tags": "agents",
+      "boost_description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
+      "body": "Uiverse Design Open-source library of community-made CSS/Tailwind UI elements for faster front-end development agents tooling platforms Overview Uiverse Design is a open source AI engineering project. Why It's in the Arsenal It covers the tooling category with the platforms subcategory and complements existing Arsenal entries. Key Features Open source library of community made CSS/Tailwind UI elements for faster front end development Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/uiverse io/galaxy for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the tooling category. 2. Scenario: Self hosted a…"
     },
     {
       "id": "unsloth",
@@ -7816,6 +8534,27 @@
       "body": "Use XML Tags for Long Prompt Sections llm structured-output prompting Overview TL;DR: Wrap context, instructions, examples, and output rules in explicit tags for easier parsing. Prompt changes are production changes. Make them explicit, testable, and versioned. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: Medium Time to implement: 20 minutes Applies to: llm, structured output Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memo…"
     },
     {
+      "id": "vaani",
+      "type": "tool",
+      "name": "Vaani",
+      "title": "Vaani",
+      "description": "Fast, private macOS dictation with AI formatting and editing",
+      "tags": [
+        "structured-output"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/vaani.md",
+      "url": "content/tools/by-job/vaani",
+      "boost_title": "Vaani",
+      "boost_tags": "structured-output",
+      "boost_description": "Fast, private macOS dictation with AI formatting and editing",
+      "body": "Vaani Fast, private macOS dictation with AI formatting and editing structured-output Overview Vaani is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: structured output. Key Features Fast, private macOS dictation with AI formatting and editing Cost model: freemium Stack: python Architecture / How It Works Visit https://vaani.app for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When structured output is a primary requirement and managed hosting is acceptable. Strengths Strong fit f…"
+    },
+    {
       "id": "validate-tool-arguments-before-execution",
       "type": "tip",
       "name": "Validate Tool Arguments Before Execution",
@@ -7859,6 +8598,27 @@
       "boost_tags": "llm data",
       "boost_description": "Curated tools for vector search workflows in AI engineering",
       "body": "Vector Search Tools Curated tools for vector search workflows in AI engineering llm data tools Overview This guide compares tools for the vector search job. Use it as a routing page, then open the linked canonical project or tool entry for full details. Why It's in the Arsenal Tool by job pages help builders quickly shortlist options by task instead of browsing the entire repository. Key Features Job focused shortlist Links to canonical entries instead of duplicating long form content Scannable TL;DR cards for each tool Architecture / How It Works Choose the job first, then compare tools by cost, open source status, self hostability, stack, and operational complexity. Getting Started T…"
+    },
+    {
+      "id": "vercel",
+      "type": "tool",
+      "name": "Vercel",
+      "title": "Vercel",
+      "description": "Frontend cloud platform for deploying and scaling Next.js apps with edge functions",
+      "tags": [
+        "cloud"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "path": "content/tools/by-job/vercel.md",
+      "url": "content/tools/by-job/vercel",
+      "boost_title": "Vercel",
+      "boost_tags": "cloud",
+      "boost_description": "Frontend cloud platform for deploying and scaling Next.js apps with edge functions",
+      "body": "Vercel Frontend cloud platform for deploying and scaling Next.js apps with edge functions cloud Overview Vercel is a tool relevant to AI engineering workflows. Why It's in the Arsenal It appears in AI engineering tool listings (curated by Techpresso) and represents a category that builders compare repeatedly: deployment, production serving. Key Features Frontend cloud platform for deploying and scaling Next.js apps with edge functions Cost model: freemium Stack: typescript Architecture / How It Works Visit https://vercel.com for the canonical architecture description and feature list. Getting Started Use Cases 1. Scenario: When deployment is a primary requirement and managed hosting is…"
     },
     {
       "id": "version-system-prompts-like-code",

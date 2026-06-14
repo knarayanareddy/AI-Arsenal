@@ -12,11 +12,11 @@
 | [community](./community/) | 30 entries | 2026-06-14 |
 | [digests](./digests/) | 0 entries | 2026-06-14 |
 | [observability](./observability/) | 4 entries | 2026-06-14 |
-| [projects](./projects/) | 68 entries | 2026-06-14 |
+| [projects](./projects/) | 73 entries | 2026-06-14 |
 | [research](./research/) | 29 entries | 2026-06-14 |
 | [skills](./skills/) | 8 entries | 2026-06-14 |
 | [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-06-14 |
-| [tools](./tools/) | 76 entries | 2026-06-14 |
+| [tools](./tools/) | 106 entries | 2026-06-14 |
 | [trending](./trending/) | 2 entries | 2026-06-14 |
 
 ## Recently Added
@@ -27,10 +27,10 @@
 - [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md)
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md)
 - [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md)
+- [Agent Browser Shield](./tools/by-job/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
+- [AGNT.Hub](./tools/by-job/agnt-hub.md)
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md)
-- [Allowlist Tools Per Agent Role](./tips-and-tricks/allowlist-tools-per-agent-role.md)
-- [Andrej Karpathy](./community/people/andrej-karpathy.md)
 
 ## Most Popular
 
@@ -55,8 +55,10 @@
 - [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md) — 
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md) — 
 - [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md) — 
+- [Agent Browser Shield](./tools/by-job/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
 - [Agenta](./projects/observability/tracing/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AGNT.Hub](./tools/by-job/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [Apache Airflow](./tools/by-job/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/allowlist-tools-per-agent-role.md) — 
@@ -65,12 +67,14 @@
 - [Argilla](./tools/by-job/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Ask For Missing Inputs Before Solving](./tips-and-tricks/ask-for-missing-inputs-before-solving.md) — 
+- [Astra Autonomous Pentest](./tools/by-job/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention Is All You Need](./research/papers/attention-is-all-you-need.md) — Introduced the Transformer architecture that became the foundation for modern LLMs
 - [AutoGen](./projects/agents/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/agents/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/by-job/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./tools/by-job/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Azure AI Studio](./tools/by-job/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
+- [Basedash](./tools/by-job/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [Basic RAG Chatbot](./build-examples/starter/basic-rag-chatbot.md) — Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio
 - [Benchmark On The User Hardware](./tips-and-tricks/benchmark-on-the-user-hardware.md) — 
 - [Benchmark with Production-Shaped Inputs](./tips-and-tricks/benchmark-with-production-shaped-inputs.md) — 
@@ -93,7 +97,3 @@
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
 - [Choose INT4 Only After Quality Tests](./tips-and-tricks/choose-int4-only-after-quality-tests.md) — 
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
-- [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems
-- [Choose an Observability Tool](./architectures/decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools
-- [Choose a Vector Database](./architectures/decision-trees/choose-vector-db.md) — Decision tree for selecting vector storage and retrieval infrastructure
-- [Chroma](./projects/rag/vector-databases/chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG

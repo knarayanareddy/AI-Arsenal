@@ -9,10 +9,11 @@
 | [advanced rag](./advanced-rag/) | 0 entries | 2026-06-14 |
 | [document processing](./document-processing/) | 5 entries | 2026-06-14 |
 | [frameworks](./frameworks/) | 8 entries | 2026-06-14 |
-| [vector databases](./vector-databases/) | 7 entries | 2026-06-14 |
+| [vector databases](./vector-databases/) | 8 entries | 2026-06-14 |
 
 ## Recently Added
 
+- [SurrealDB](./vector-databases/surrealdb.md)
 - [Chroma](./vector-databases/chroma.md)
 - [Crawl4AI](./document-processing/crawl4ai.md)
 - [Docling](./document-processing/docling.md)
@@ -22,7 +23,6 @@
 - [LanceDB](./vector-databases/lancedb.md)
 - [LangChain](./frameworks/langchain.md)
 - [LangChain for RAG](./frameworks/langchain-rag.md)
-- [LlamaIndex](./frameworks/llamaindex.md)
 
 ## Most Popular
 
@@ -56,6 +56,7 @@
 - [Qdrant](./vector-databases/qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
 - [Ragas for RAG Evaluation](./frameworks/ragas-rag-evaluation.md) — Evaluation framework for measuring retrieval-augmented generation quality and regressions
 - [RAGFlow](./frameworks/ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
+- [SurrealDB](./vector-databases/surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
 - [txtai](./frameworks/txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Unstructured](./document-processing/unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
 - [Weaviate](./vector-databases/weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval

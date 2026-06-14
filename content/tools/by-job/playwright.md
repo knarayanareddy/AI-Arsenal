@@ -1,36 +1,43 @@
 ---
-id: "playwright"
-name: "Playwright"
-type: "tool"
+id: playwright
+name: Playwright
+type: tool
 job:
-  - "web-scraping"
-description: "Browser automation framework for reliable end-to-end tests and web scraping workflows"
-url: "https://github.com/microsoft/playwright"
-cost_model: "open-source"
-pricing_detail: "Open source or free to start"
+  - web-scraping
+description: >-
+  Browser automation framework for reliable end-to-end tests and web scraping
+  workflows
+url: 'https://github.com/microsoft/playwright'
+cost_model: open-source
+pricing_detail: Open source or free to start
 tags:
   - data
   - cloud
-maturity: "production"
+maturity: production
 stack:
   - typescript
   - python
 free_tier: true
-free_tier_limits: "Free/open-source use or free tier; verify current limits before production"
+free_tier_limits: Free/open-source use or free tier; verify current limits before production
 self_hostable: true
 open_source: true
-source_url: "https://github.com/microsoft/playwright"
-docs_url: "https://github.com/microsoft/playwright"
-github_url: "https://github.com/microsoft/playwright"
+source_url: 'https://github.com/microsoft/playwright'
+docs_url: 'https://github.com/microsoft/playwright'
+github_url: 'https://github.com/microsoft/playwright'
 alternatives: []
 integrates_with: []
-added_date: "2026-06-13"
-last_reviewed: "2026-06-13"
-added_by: "maintainer"
-reviewed_by: "maintainer"
-verdict: "recommended"
-verdict_rationale: "Useful option when it matches your stack, cost, and operational constraints"
-status: "active"
+added_date: '2026-06-13'
+last_reviewed: '2026-06-13'
+added_by: maintainer
+reviewed_by: maintainer
+verdict: recommended
+verdict_rationale: 'Useful option when it matches your stack, cost, and operational constraints'
+status: active
+buzz_sources:
+  - source: newsletter
+    url: 'https://toolradar.com/featured/techpresso'
+    date: '2026-06-14'
+    description: Featured in Techpresso as a developer tool used for browser automation
 ---
 
 > **TL;DR:** Browser automation framework for reliable end-to-end tests and web scraping workflows. Open source or free to start. Best for browser automation for dynamic pages.

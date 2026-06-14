@@ -25,6 +25,7 @@
 | `haystack` | [Haystack](./rag/frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
 | `haystack-agents` | [Haystack](./agents/frameworks/haystack-agents.md) | Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines |
 | `helicone` | [Helicone](./observability/tracing/helicone.md) | Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics |
+| `insforge` | [InsForge](./agents/coding-agents/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
 | `lancedb` | [LanceDB](./rag/vector-databases/lancedb.md) | Developer-friendly embedded and serverless vector database for multimodal AI retrieval |
 | `langchain` | [LangChain](./rag/frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
 | `langchain-rag` | [LangChain for RAG](./rag/frameworks/langchain-rag.md) | LangChain components for retrieval chains, retrievers, loaders, and RAG application composition |
@@ -66,8 +67,12 @@
 | `semantic-kernel` | [Semantic Kernel](./agents/frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |
 | `sglang` | [SGLang](./llms/inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
 | `smolagents` | [Smolagents](./agents/frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
+| `stagehand` | [Stagehand](./agents/browser-agents/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
+| `surrealdb` | [SurrealDB](./rag/vector-databases/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
 | `text-generation-inference` | [Text Generation Inference](./llms/inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
+| `translategemma` | [TranslateGemma](./llms/open-source-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |
 | `txtai` | [txtai](./rag/frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
+| `uiverse-design` | [Uiverse Design](./tooling/platforms/uiverse-design.md) | Open-source library of community-made CSS/Tailwind UI elements for faster front-end development |
 | `unstructured` | [Unstructured](./rag/document-processing/unstructured.md) | Open-source document ETL for converting complex files into structured data for LLM pipelines |
 | `vllm` | [vLLM](./llms/inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |
 | `weaviate` | [Weaviate](./rag/vector-databases/weaviate.md) | Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval |
