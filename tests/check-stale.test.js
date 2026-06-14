@@ -5,9 +5,9 @@ import { differenceInDays, parseISO, isValid } from 'date-fns';
 test('parseISO handles YYYY-MM-DD format', () => {
   const date = parseISO('2026-06-13');
   assert.ok(isValid(date));
-  assert.equal(date.getUTCFullYear(), 2026);
-  assert.equal(date.getUTCMonth(), 5); // June is index 5
-  assert.equal(date.getUTCDate(), 13);
+  assert.equal(date.getFullYear(), 2026);
+  assert.equal(date.getMonth(), 5); // June is index 5
+  assert.equal(date.getDate(), 13);
 });
 
 test('parseISO rejects invalid dates', () => {

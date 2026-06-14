@@ -7,11 +7,34 @@ import Ajv from 'ajv/dist/2020.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SCHEMAS = path.join(__dirname, '..', 'schemas');
+const FIXTURES = path.join(__dirname, 'fixtures');
 
 async function loadSchema(name) {
   return JSON.parse(await fs.readFile(path.join(SCHEMAS, name), 'utf8'));
 }
 
+async function loadFixture(name) {
+  return (await fs.readFile(path.join(FIXTURES, name), 'utf8')).replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '');
+}
+
+async function parseFrontmatter(raw) {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!match) return null;
+  // We don't want a YAML dependency in tests; use a tiny parser.
+  const yaml = match[1];
+  const body = match[2];
+  const data = {};
+  for (const line of yaml.split(/\r?\n/)) {
+    const m = line.match(/^([a-z_]+):\s*(.*)$/);
+    if (m) {
+      let value = m[2];
+      if (value.startsWith("'") && value.endsWith("'")) value = value.slice(1, -1);
+      if (value.startsWith('"') && value.endsWith('"')) value = value.slice(1, -1);
+      data[m[1]] = value;
+    }
+  }
+  return { data, body };
+}
 test('project schema compiles and accepts a valid project', async () => {
   const schema = await loadSchema('project.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
@@ -47,6 +70,7 @@ test('project schema rejects missing required fields', async () => {
   const valid = validate({
     id: 'incomplete',
     name: 'Incomplete Project'
+    // most fields missing on purpose
   });
   assert.equal(valid, false);
   assert.ok(validate.errors.length > 0);
@@ -130,7 +154,7 @@ test('project schema rejects invalid date format', async () => {
     cost_model: 'open-source',
     github_stars: 0,
     trending_score: 0,
-    last_commit: '06/13/2026',
+    last_commit: '06/13/2026', // wrong format
     added_date: '2026-06-13',
     last_reviewed: '2026-06-13',
     added_by: 'tester',
@@ -229,7 +253,6 @@ test('tool schema rejects malformed buzz_sources', async () => {
   });
   assert.equal(valid, false);
 });
-
 test('tip schema requires valid category', async () => {
   const schema = await loadSchema('tip.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
@@ -253,6 +276,8 @@ test('paper schema enforces arxiv_id regex', async () => {
   const schema = await loadSchema('paper.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
+  // arxiv_id regex is `^\d{4}\.\d{4,5}(v\d+)?$` — exactly 4 digits prefix
+  // and 4-5 digit suffix, optionally followed by version (vN).
   for (const [valid_id, ok] of [['2303.08774', true], ['2406.00000v2', true], ['bogus', false], ['23.123', false], ['99999.99999', false]]) {
     const valid = validate({
       id: 'attention-paper',
@@ -313,7 +338,7 @@ test('digest schema enforces YYYY-MM id regex', async () => {
   assert.equal(valid, true);
 
   const invalid = validate({
-    id: 'june-2026',
+    id: 'june-2026', // wrong format
     title: 'X',
     period: '2026-06',
     published_date: '2026-06-30',
