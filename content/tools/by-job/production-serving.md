@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Modal — 🔄
 
-> **TL;DR:** Modal is a candidate for `production-serving` workflows. Full details: [Modal](./modal.md).
+> **TL;DR:** Modal is a candidate for `production-serving` workflows. Full details: [Modal](../serving-and-deployment/modal.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Modal](./modal.md)
+**Get started:** See [Modal](../serving-and-deployment/modal.md)
 **Alternatives:** BentoML, Replicate, Fly.io, Railway
 
 ### BentoML — 🔄
 
-> **TL;DR:** BentoML is a candidate for `production-serving` workflows. Full details: [BentoML](./bentoml.md).
+> **TL;DR:** BentoML is a candidate for `production-serving` workflows. Full details: [BentoML](../serving-and-deployment/bentoml.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [BentoML](./bentoml.md)
+**Get started:** See [BentoML](../serving-and-deployment/bentoml.md)
 **Alternatives:** Modal, Replicate, Fly.io, Railway
 
 ### Replicate — 🔄
 
-> **TL;DR:** Replicate is a candidate for `production-serving` workflows. Full details: [Replicate](./replicate.md).
+> **TL;DR:** Replicate is a candidate for `production-serving` workflows. Full details: [Replicate](../serving-and-deployment/replicate.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Replicate](./replicate.md)
+**Get started:** See [Replicate](../serving-and-deployment/replicate.md)
 **Alternatives:** Modal, BentoML, Fly.io, Railway
 
 ### Fly.io — 🔄
 
-> **TL;DR:** Fly.io is a candidate for `production-serving` workflows. Full details: [Fly.io](./fly-io.md).
+> **TL;DR:** Fly.io is a candidate for `production-serving` workflows. Full details: [Fly.io](../serving-and-deployment/fly-io.md).
 
 | Field | Value |
 |---|---|
@@ -121,12 +121,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Fly.io](./fly-io.md)
+**Get started:** See [Fly.io](../serving-and-deployment/fly-io.md)
 **Alternatives:** Modal, BentoML, Replicate, Railway
 
 ### Railway — 🔄
 
-> **TL;DR:** Railway is a candidate for `production-serving` workflows. Full details: [Railway](./railway.md).
+> **TL;DR:** Railway is a candidate for `production-serving` workflows. Full details: [Railway](../serving-and-deployment/railway.md).
 
 | Field | Value |
 |---|---|
@@ -142,7 +142,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Railway](./railway.md)
+**Get started:** See [Railway](../serving-and-deployment/railway.md)
 **Alternatives:** Modal, BentoML, Replicate, Fly.io
 
 
@@ -168,11 +168,11 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Modal](./modal.md)
-- [BentoML](./bentoml.md)
-- [Replicate](./replicate.md)
-- [Fly.io](./fly-io.md)
-- [Railway](./railway.md)
+- [Modal](../serving-and-deployment/modal.md)
+- [BentoML](../serving-and-deployment/bentoml.md)
+- [Replicate](../serving-and-deployment/replicate.md)
+- [Fly.io](../serving-and-deployment/fly-io.md)
+- [Railway](../serving-and-deployment/railway.md)
 
 ## Buzz & Reception
 

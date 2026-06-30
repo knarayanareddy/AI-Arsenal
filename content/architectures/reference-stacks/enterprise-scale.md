@@ -110,14 +110,14 @@ flowchart TD
 
 ## Component Deep Dives
 
-- **AWS Bedrock**: [AWS Bedrock](../../tools/by-job/aws-bedrock.md)
-- **Azure AI Studio**: [Azure AI Studio](../../tools/by-job/azure-ai-studio.md)
-- **Google Vertex AI**: [Google Vertex AI](../../tools/by-job/google-vertex-ai.md)
+- **AWS Bedrock**: [AWS Bedrock](../../tools/serving-and-deployment/aws-bedrock.md)
+- **Azure AI Studio**: [Azure AI Studio](../../tools/serving-and-deployment/azure-ai-studio.md)
+- **Google Vertex AI**: [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md)
 - **Microsoft Agent Framework**: [Microsoft Agent Framework](../../projects/agents/frameworks/microsoft-agent-framework.md)
 - **LangGraph**: [LangGraph](../../projects/agents/frameworks/langgraph.md)
 - **Qdrant**: [Qdrant](../../projects/rag/vector-databases/qdrant.md)
 - **OpenLIT**: [OpenLIT](../../projects/observability/tracing/openlit.md)
-- **NeMo Guardrails**: [NeMo Guardrails](../../tools/by-job/nemo-guardrails.md)
+- **NeMo Guardrails**: [NeMo Guardrails](../../tools/evaluation-and-observability/nemo-guardrails.md)
 
 ## Integration Patterns
 
@@ -128,14 +128,14 @@ flowchart TD
 
 ## Resources
 
-- [AWS Bedrock](../../tools/by-job/aws-bedrock.md)
-- [Azure AI Studio](../../tools/by-job/azure-ai-studio.md)
-- [Google Vertex AI](../../tools/by-job/google-vertex-ai.md)
+- [AWS Bedrock](../../tools/serving-and-deployment/aws-bedrock.md)
+- [Azure AI Studio](../../tools/serving-and-deployment/azure-ai-studio.md)
+- [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md)
 - [Microsoft Agent Framework](../../projects/agents/frameworks/microsoft-agent-framework.md)
 - [LangGraph](../../projects/agents/frameworks/langgraph.md)
 - [Qdrant](../../projects/rag/vector-databases/qdrant.md)
 - [OpenLIT](../../projects/observability/tracing/openlit.md)
-- [NeMo Guardrails](../../tools/by-job/nemo-guardrails.md)
+- [NeMo Guardrails](../../tools/evaluation-and-observability/nemo-guardrails.md)
 
 ## Buzz & Reception
 

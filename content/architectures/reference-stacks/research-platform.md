@@ -108,12 +108,12 @@ pip install wandb mlflow dvc peft torchtune vllm ragas
 
 ## Component Deep Dives
 
-- **Weights & Biases**: [Weights & Biases](../../tools/by-job/weights-biases.md)
-- **MLflow**: [MLflow](../../tools/by-job/mlflow.md)
-- **Hugging Face Hub**: [Hugging Face Hub](../../tools/by-job/hugging-face-hub.md)
-- **DVC**: [DVC](../../tools/by-job/dvc.md)
-- **PEFT**: [PEFT](../../tools/by-job/peft.md)
-- **torchtune**: [torchtune](../../tools/by-job/torchtune.md)
+- **Weights & Biases**: [Weights & Biases](../../tools/model-layer/weights-biases.md)
+- **MLflow**: [MLflow](../../tools/model-layer/mlflow.md)
+- **Hugging Face Hub**: [Hugging Face Hub](../../tools/model-layer/hugging-face-hub.md)
+- **DVC**: [DVC](../../tools/model-layer/dvc.md)
+- **PEFT**: [PEFT](../../tools/model-layer/peft.md)
+- **torchtune**: [torchtune](../../tools/model-layer/torchtune.md)
 - **vLLM**: [vLLM](../../projects/llms/inference-engines/vllm.md)
 - **RAGAS**: [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
 
@@ -126,12 +126,12 @@ pip install wandb mlflow dvc peft torchtune vllm ragas
 
 ## Resources
 
-- [Weights & Biases](../../tools/by-job/weights-biases.md)
-- [MLflow](../../tools/by-job/mlflow.md)
-- [Hugging Face Hub](../../tools/by-job/hugging-face-hub.md)
-- [DVC](../../tools/by-job/dvc.md)
-- [PEFT](../../tools/by-job/peft.md)
-- [torchtune](../../tools/by-job/torchtune.md)
+- [Weights & Biases](../../tools/model-layer/weights-biases.md)
+- [MLflow](../../tools/model-layer/mlflow.md)
+- [Hugging Face Hub](../../tools/model-layer/hugging-face-hub.md)
+- [DVC](../../tools/model-layer/dvc.md)
+- [PEFT](../../tools/model-layer/peft.md)
+- [torchtune](../../tools/model-layer/torchtune.md)
 - [vLLM](../../projects/llms/inference-engines/vllm.md)
 - [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
 

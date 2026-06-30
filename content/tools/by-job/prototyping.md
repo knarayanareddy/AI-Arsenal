@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Gradio — 🔄
 
-> **TL;DR:** Gradio is a candidate for `prototyping` workflows. Full details: [Gradio](./gradio.md).
+> **TL;DR:** Gradio is a candidate for `prototyping` workflows. Full details: [Gradio](../dx-and-tooling/gradio.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Gradio](./gradio.md)
+**Get started:** See [Gradio](../dx-and-tooling/gradio.md)
 **Alternatives:** Streamlit, Chainlit, FastAPI, Mesop
 
 ### Streamlit — 🔄
 
-> **TL;DR:** Streamlit is a candidate for `prototyping` workflows. Full details: [Streamlit](./streamlit.md).
+> **TL;DR:** Streamlit is a candidate for `prototyping` workflows. Full details: [Streamlit](../dx-and-tooling/streamlit.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Streamlit](./streamlit.md)
+**Get started:** See [Streamlit](../dx-and-tooling/streamlit.md)
 **Alternatives:** Gradio, Chainlit, FastAPI, Mesop
 
 ### Chainlit — 🔄
 
-> **TL;DR:** Chainlit is a candidate for `prototyping` workflows. Full details: [Chainlit](./chainlit.md).
+> **TL;DR:** Chainlit is a candidate for `prototyping` workflows. Full details: [Chainlit](../dx-and-tooling/chainlit.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Chainlit](./chainlit.md)
+**Get started:** See [Chainlit](../dx-and-tooling/chainlit.md)
 **Alternatives:** Gradio, Streamlit, FastAPI, Mesop
 
 ### FastAPI — 🔄
 
-> **TL;DR:** FastAPI is a candidate for `prototyping` workflows. Full details: [FastAPI](./fastapi.md).
+> **TL;DR:** FastAPI is a candidate for `prototyping` workflows. Full details: [FastAPI](../serving-and-deployment/fastapi.md).
 
 | Field | Value |
 |---|---|
@@ -121,12 +121,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [FastAPI](./fastapi.md)
+**Get started:** See [FastAPI](../serving-and-deployment/fastapi.md)
 **Alternatives:** Gradio, Streamlit, Chainlit, Mesop
 
 ### Mesop — 🔄
 
-> **TL;DR:** Mesop is a candidate for `prototyping` workflows. Full details: [Mesop](./mesop.md).
+> **TL;DR:** Mesop is a candidate for `prototyping` workflows. Full details: [Mesop](../dx-and-tooling/mesop.md).
 
 | Field | Value |
 |---|---|
@@ -142,7 +142,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Mesop](./mesop.md)
+**Get started:** See [Mesop](../dx-and-tooling/mesop.md)
 **Alternatives:** Gradio, Streamlit, Chainlit, FastAPI
 
 
@@ -168,11 +168,11 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Gradio](./gradio.md)
-- [Streamlit](./streamlit.md)
-- [Chainlit](./chainlit.md)
-- [FastAPI](./fastapi.md)
-- [Mesop](./mesop.md)
+- [Gradio](../dx-and-tooling/gradio.md)
+- [Streamlit](../dx-and-tooling/streamlit.md)
+- [Chainlit](../dx-and-tooling/chainlit.md)
+- [FastAPI](../serving-and-deployment/fastapi.md)
+- [Mesop](../dx-and-tooling/mesop.md)
 
 ## Buzz & Reception
 

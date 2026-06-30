@@ -94,7 +94,7 @@ pnpm run generate:all
 - [Fine-tuning tools](../../tools/by-job/fine-tuning.md)
 - [Evaluation tools](../../tools/by-job/evaluation.md)
 - [vLLM](../../projects/llms/inference-engines/vllm.md)
-- [PEFT](../../tools/by-job/peft.md)
+- [PEFT](../../tools/model-layer/peft.md)
 
 ## Buzz & Reception
 

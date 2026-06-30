@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Modal — 🔄
 
-> **TL;DR:** Modal is a candidate for `deployment` workflows. Full details: [Modal](./modal.md).
+> **TL;DR:** Modal is a candidate for `deployment` workflows. Full details: [Modal](../serving-and-deployment/modal.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Modal](./modal.md)
+**Get started:** See [Modal](../serving-and-deployment/modal.md)
 **Alternatives:** Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio, Google Vertex AI
 
 ### Replicate — 🔄
 
-> **TL;DR:** Replicate is a candidate for `deployment` workflows. Full details: [Replicate](./replicate.md).
+> **TL;DR:** Replicate is a candidate for `deployment` workflows. Full details: [Replicate](../serving-and-deployment/replicate.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Replicate](./replicate.md)
+**Get started:** See [Replicate](../serving-and-deployment/replicate.md)
 **Alternatives:** Modal, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio, Google Vertex AI
 
 ### Hugging Face Inference Endpoints — 🔄
 
-> **TL;DR:** Hugging Face Inference Endpoints is a candidate for `deployment` workflows. Full details: [Hugging Face Inference Endpoints](./hf-inference-endpoints.md).
+> **TL;DR:** Hugging Face Inference Endpoints is a candidate for `deployment` workflows. Full details: [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Hugging Face Inference Endpoints](./hf-inference-endpoints.md)
+**Get started:** See [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md)
 **Alternatives:** Modal, Replicate, AWS Bedrock, Azure AI Studio, Google Vertex AI
 
 ### AWS Bedrock — 🔄
 
-> **TL;DR:** AWS Bedrock is a candidate for `deployment` workflows. Full details: [AWS Bedrock](./aws-bedrock.md).
+> **TL;DR:** AWS Bedrock is a candidate for `deployment` workflows. Full details: [AWS Bedrock](../serving-and-deployment/aws-bedrock.md).
 
 | Field | Value |
 |---|---|
@@ -121,12 +121,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [AWS Bedrock](./aws-bedrock.md)
+**Get started:** See [AWS Bedrock](../serving-and-deployment/aws-bedrock.md)
 **Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, Azure AI Studio, Google Vertex AI
 
 ### Azure AI Studio — 🔄
 
-> **TL;DR:** Azure AI Studio is a candidate for `deployment` workflows. Full details: [Azure AI Studio](./azure-ai-studio.md).
+> **TL;DR:** Azure AI Studio is a candidate for `deployment` workflows. Full details: [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md).
 
 | Field | Value |
 |---|---|
@@ -142,12 +142,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Azure AI Studio](./azure-ai-studio.md)
+**Get started:** See [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md)
 **Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Google Vertex AI
 
 ### Google Vertex AI — 🔄
 
-> **TL;DR:** Google Vertex AI is a candidate for `deployment` workflows. Full details: [Google Vertex AI](./google-vertex-ai.md).
+> **TL;DR:** Google Vertex AI is a candidate for `deployment` workflows. Full details: [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md).
 
 | Field | Value |
 |---|---|
@@ -163,7 +163,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Google Vertex AI](./google-vertex-ai.md)
+**Get started:** See [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md)
 **Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio
 
 
@@ -189,12 +189,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Modal](./modal.md)
-- [Replicate](./replicate.md)
-- [Hugging Face Inference Endpoints](./hf-inference-endpoints.md)
-- [AWS Bedrock](./aws-bedrock.md)
-- [Azure AI Studio](./azure-ai-studio.md)
-- [Google Vertex AI](./google-vertex-ai.md)
+- [Modal](../serving-and-deployment/modal.md)
+- [Replicate](../serving-and-deployment/replicate.md)
+- [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md)
+- [AWS Bedrock](../serving-and-deployment/aws-bedrock.md)
+- [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md)
+- [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md)
 
 ## Buzz & Reception
 

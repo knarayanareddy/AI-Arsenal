@@ -6,18 +6,18 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 14 entries | 2026-06-14 |
-| [benchmarks](./benchmarks/) | 0 entries | 2026-06-14 |
-| [build examples](./build-examples/) | 8 entries | 2026-06-14 |
-| [community](./community/) | 30 entries | 2026-06-14 |
-| [digests](./digests/) | 0 entries | 2026-06-14 |
-| [observability](./observability/) | 4 entries | 2026-06-14 |
-| [projects](./projects/) | 73 entries | 2026-06-14 |
-| [research](./research/) | 29 entries | 2026-06-14 |
-| [skills](./skills/) | 8 entries | 2026-06-14 |
-| [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-06-14 |
-| [tools](./tools/) | 106 entries | 2026-06-14 |
-| [trending](./trending/) | 2 entries | 2026-06-14 |
+| [architectures](./architectures/) | 14 entries | 2026-06-30 |
+| [benchmarks](./benchmarks/) | 0 entries | 2026-06-30 |
+| [build examples](./build-examples/) | 8 entries | 2026-06-30 |
+| [community](./community/) | 30 entries | 2026-06-30 |
+| [digests](./digests/) | 0 entries | 2026-06-30 |
+| [observability](./observability/) | 4 entries | 2026-06-30 |
+| [projects](./projects/) | 73 entries | 2026-06-30 |
+| [research](./research/) | 29 entries | 2026-06-30 |
+| [skills](./skills/) | 8 entries | 2026-06-30 |
+| [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-06-30 |
+| [tools](./tools/) | 106 entries | 2026-06-30 |
+| [trending](./trending/) | 2 entries | 2026-06-30 |
 
 ## Recently Added
 
@@ -27,9 +27,9 @@
 - [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md)
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md)
 - [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md)
-- [Agent Browser Shield](./tools/by-job/agent-browser-shield.md)
+- [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
-- [AGNT.Hub](./tools/by-job/agnt-hub.md)
+- [AGNT.Hub](./tools/orchestration/agnt-hub.md)
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md)
 
 ## Most Popular
@@ -55,31 +55,31 @@
 - [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md) — 
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md) — 
 - [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md) — 
-- [Agent Browser Shield](./tools/by-job/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
+- [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
 - [Agenta](./projects/observability/tracing/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
-- [AGNT.Hub](./tools/by-job/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
+- [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
-- [Apache Airflow](./tools/by-job/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
-- [Argilla](./tools/by-job/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
+- [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Ask For Missing Inputs Before Solving](./tips-and-tricks/ask-for-missing-inputs-before-solving.md) — 
-- [Astra Autonomous Pentest](./tools/by-job/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
+- [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention Is All You Need](./research/papers/attention-is-all-you-need.md) — Introduced the Transformer architecture that became the foundation for modern LLMs
 - [AutoGen](./projects/agents/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/agents/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
-- [AWS Bedrock](./tools/by-job/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
-- [Axolotl](./tools/by-job/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
-- [Azure AI Studio](./tools/by-job/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
-- [Basedash](./tools/by-job/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
+- [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
+- [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
+- [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
+- [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [Basic RAG Chatbot](./build-examples/starter/basic-rag-chatbot.md) — Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio
 - [Benchmark On The User Hardware](./tips-and-tricks/benchmark-on-the-user-hardware.md) — 
 - [Benchmark with Production-Shaped Inputs](./tips-and-tricks/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark With Real Context Lengths](./tips-and-tricks/benchmark-with-real-context-lengths.md) — 
-- [BentoML](./tools/by-job/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
+- [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./research/papers/bert.md) — Introduced bidirectional masked-language-model pretraining for language understanding
 - [Braintrust](./projects/observability/tracing/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Budget Context Before Adding Tools](./tips-and-tricks/budget-context-before-adding-tools.md) — 
@@ -88,7 +88,7 @@
 - [Cache Stable System Prompts](./tips-and-tricks/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries](./tips-and-tricks/cap-agent-tool-retries.md) — 
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./research/papers/chain-of-thought-prompting.md) — Showed that prompting models to produce intermediate reasoning improves multi-step reasoning tasks
-- [Chainlit](./tools/by-job/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
+- [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Checkpoint Agent State After Each Tool Call](./tips-and-tricks/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
 - [Choose an Agent Framework](./architectures/decision-trees/choose-agent-framework.md) — Decision tree for selecting agent orchestration frameworks

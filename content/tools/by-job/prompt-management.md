@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Langfuse Prompts — 🔄
 
-> **TL;DR:** Langfuse Prompts is a candidate for `prompt-management` workflows. Full details: [Langfuse Prompts](./langfuse-prompts.md).
+> **TL;DR:** Langfuse Prompts is a candidate for `prompt-management` workflows. Full details: [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Langfuse Prompts](./langfuse-prompts.md)
+**Get started:** See [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md)
 **Alternatives:** LangSmith Hub, Agenta, PromptLayer
 
 ### LangSmith Hub — 🔄
 
-> **TL;DR:** LangSmith Hub is a candidate for `prompt-management` workflows. Full details: [LangSmith Hub](./langsmith-hub.md).
+> **TL;DR:** LangSmith Hub is a candidate for `prompt-management` workflows. Full details: [LangSmith Hub](../dx-and-tooling/langsmith-hub.md).
 
 | Field | Value |
 |---|---|
@@ -79,7 +79,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [LangSmith Hub](./langsmith-hub.md)
+**Get started:** See [LangSmith Hub](../dx-and-tooling/langsmith-hub.md)
 **Alternatives:** Langfuse Prompts, Agenta, PromptLayer
 
 ### Agenta — 🔄
@@ -105,7 +105,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### PromptLayer — 🔄
 
-> **TL;DR:** PromptLayer is a candidate for `prompt-management` workflows. Full details: [PromptLayer](./promptlayer.md).
+> **TL;DR:** PromptLayer is a candidate for `prompt-management` workflows. Full details: [PromptLayer](../dx-and-tooling/promptlayer.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [PromptLayer](./promptlayer.md)
+**Get started:** See [PromptLayer](../dx-and-tooling/promptlayer.md)
 **Alternatives:** Langfuse Prompts, LangSmith Hub, Agenta
 
 
@@ -147,10 +147,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Langfuse Prompts](./langfuse-prompts.md)
-- [LangSmith Hub](./langsmith-hub.md)
+- [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md)
+- [LangSmith Hub](../dx-and-tooling/langsmith-hub.md)
 - [Agenta](../../projects/observability/tracing/agenta.md)
-- [PromptLayer](./promptlayer.md)
+- [PromptLayer](../dx-and-tooling/promptlayer.md)
 
 ## Buzz & Reception
 

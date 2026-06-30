@@ -126,7 +126,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Pinecone — 🔄
 
-> **TL;DR:** Pinecone is a candidate for `vector-search` workflows. Full details: [Pinecone](./pinecone.md).
+> **TL;DR:** Pinecone is a candidate for `vector-search` workflows. Full details: [Pinecone](../data-ingestion/pinecone.md).
 
 | Field | Value |
 |---|---|
@@ -142,7 +142,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Pinecone](./pinecone.md)
+**Get started:** See [Pinecone](../data-ingestion/pinecone.md)
 **Alternatives:** Qdrant, Weaviate, Chroma, Milvus, pgvector, LanceDB
 
 ### pgvector — 🏠
@@ -214,7 +214,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 - [Weaviate](../../projects/rag/vector-databases/weaviate.md)
 - [Chroma](../../projects/rag/vector-databases/chroma.md)
 - [Milvus](../../projects/rag/vector-databases/milvus.md)
-- [Pinecone](./pinecone.md)
+- [Pinecone](../data-ingestion/pinecone.md)
 - [pgvector](../../projects/rag/vector-databases/pgvector.md)
 - [LanceDB](../../projects/rag/vector-databases/lancedb.md)
 

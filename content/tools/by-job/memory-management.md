@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Mem0 — 🔄
 
-> **TL;DR:** Mem0 is a candidate for `memory-management` workflows. Full details: [Mem0](./mem0.md).
+> **TL;DR:** Mem0 is a candidate for `memory-management` workflows. Full details: [Mem0](../orchestration/mem0.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Mem0](./mem0.md)
+**Get started:** See [Mem0](../orchestration/mem0.md)
 **Alternatives:** Zep, Letta, Redis
 
 ### Zep — 🔄
 
-> **TL;DR:** Zep is a candidate for `memory-management` workflows. Full details: [Zep](./zep.md).
+> **TL;DR:** Zep is a candidate for `memory-management` workflows. Full details: [Zep](../orchestration/zep.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Zep](./zep.md)
+**Get started:** See [Zep](../orchestration/zep.md)
 **Alternatives:** Mem0, Letta, Redis
 
 ### Letta — 🔄
 
-> **TL;DR:** Letta is a candidate for `memory-management` workflows. Full details: [Letta](./letta.md).
+> **TL;DR:** Letta is a candidate for `memory-management` workflows. Full details: [Letta](../orchestration/letta.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Letta](./letta.md)
+**Get started:** See [Letta](../orchestration/letta.md)
 **Alternatives:** Mem0, Zep, Redis
 
 ### Redis — 🔄
 
-> **TL;DR:** Redis is a candidate for `memory-management` workflows. Full details: [Redis](./redis-memory.md).
+> **TL;DR:** Redis is a candidate for `memory-management` workflows. Full details: [Redis](../orchestration/redis-memory.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Redis](./redis-memory.md)
+**Get started:** See [Redis](../orchestration/redis-memory.md)
 **Alternatives:** Mem0, Zep, Letta
 
 
@@ -147,10 +147,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Mem0](./mem0.md)
-- [Zep](./zep.md)
-- [Letta](./letta.md)
-- [Redis](./redis-memory.md)
+- [Mem0](../orchestration/mem0.md)
+- [Zep](../orchestration/zep.md)
+- [Letta](../orchestration/letta.md)
+- [Redis](../orchestration/redis-memory.md)
 
 ## Buzz & Reception
 

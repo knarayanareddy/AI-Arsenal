@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Prefect — 🏠
 
-> **TL;DR:** Prefect is a candidate for `orchestration` workflows. Full details: [Prefect](./prefect.md).
+> **TL;DR:** Prefect is a candidate for `orchestration` workflows. Full details: [Prefect](../orchestration/prefect.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Prefect](./prefect.md)
+**Get started:** See [Prefect](../orchestration/prefect.md)
 **Alternatives:** Dagster, Airflow
 
 ### Dagster — 🏠
 
-> **TL;DR:** Dagster is a candidate for `orchestration` workflows. Full details: [Dagster](./dagster.md).
+> **TL;DR:** Dagster is a candidate for `orchestration` workflows. Full details: [Dagster](../orchestration/dagster.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Dagster](./dagster.md)
+**Get started:** See [Dagster](../orchestration/dagster.md)
 **Alternatives:** Prefect, Airflow
 
 ### Airflow — 🏠
 
-> **TL;DR:** Airflow is a candidate for `orchestration` workflows. Full details: [Airflow](./airflow.md).
+> **TL;DR:** Airflow is a candidate for `orchestration` workflows. Full details: [Airflow](../orchestration/airflow.md).
 
 | Field | Value |
 |---|---|
@@ -100,7 +100,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Airflow](./airflow.md)
+**Get started:** See [Airflow](../orchestration/airflow.md)
 **Alternatives:** Prefect, Dagster
 
 
@@ -126,9 +126,9 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Prefect](./prefect.md)
-- [Dagster](./dagster.md)
-- [Airflow](./airflow.md)
+- [Prefect](../orchestration/prefect.md)
+- [Dagster](../orchestration/dagster.md)
+- [Airflow](../orchestration/airflow.md)
 
 ## Buzz & Reception
 

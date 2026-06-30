@@ -61,12 +61,12 @@ Plain-language tree:
 
 | Need | Recommended Start | Canonical Entry |
 |---|---|---|
-| Simple API wrapper | FastAPI + Railway/Fly.io | [FastAPI](../../tools/by-job/fastapi.md), [Railway](../../tools/by-job/railway.md), [Fly.io](../../tools/by-job/fly-io.md) |
-| Serverless Python/GPU jobs | Modal | [Modal](../../tools/by-job/modal.md) |
-| Managed model endpoint | HF Endpoints / Replicate | [HF Inference Endpoints](../../tools/by-job/hf-inference-endpoints.md), [Replicate](../../tools/by-job/replicate.md) |
-| AWS enterprise | Bedrock | [AWS Bedrock](../../tools/by-job/aws-bedrock.md) |
-| Azure enterprise | Azure AI Studio | [Azure AI Studio](../../tools/by-job/azure-ai-studio.md) |
-| GCP enterprise | Vertex AI | [Google Vertex AI](../../tools/by-job/google-vertex-ai.md) |
+| Simple API wrapper | FastAPI + Railway/Fly.io | [FastAPI](../../tools/serving-and-deployment/fastapi.md), [Railway](../../tools/serving-and-deployment/railway.md), [Fly.io](../../tools/serving-and-deployment/fly-io.md) |
+| Serverless Python/GPU jobs | Modal | [Modal](../../tools/serving-and-deployment/modal.md) |
+| Managed model endpoint | HF Endpoints / Replicate | [HF Inference Endpoints](../../tools/serving-and-deployment/hf-inference-endpoints.md), [Replicate](../../tools/serving-and-deployment/replicate.md) |
+| AWS enterprise | Bedrock | [AWS Bedrock](../../tools/serving-and-deployment/aws-bedrock.md) |
+| Azure enterprise | Azure AI Studio | [Azure AI Studio](../../tools/serving-and-deployment/azure-ai-studio.md) |
+| GCP enterprise | Vertex AI | [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md) |
 | Self-host open models | vLLM / SGLang | [vLLM](../../projects/llms/inference-engines/vllm.md), [SGLang](../../projects/llms/inference-engines/sglang.md) |
 
 ## Getting Started
@@ -107,14 +107,14 @@ vllm serve Qwen/Qwen2.5-7B-Instruct
 
 ## Resources
 
-- [Modal](../../tools/by-job/modal.md)
-- [BentoML](../../tools/by-job/bentoml.md)
-- [Replicate](../../tools/by-job/replicate.md)
-- [Fly.io](../../tools/by-job/fly-io.md)
-- [Railway](../../tools/by-job/railway.md)
-- [AWS Bedrock](../../tools/by-job/aws-bedrock.md)
-- [Azure AI Studio](../../tools/by-job/azure-ai-studio.md)
-- [Google Vertex AI](../../tools/by-job/google-vertex-ai.md)
+- [Modal](../../tools/serving-and-deployment/modal.md)
+- [BentoML](../../tools/serving-and-deployment/bentoml.md)
+- [Replicate](../../tools/serving-and-deployment/replicate.md)
+- [Fly.io](../../tools/serving-and-deployment/fly-io.md)
+- [Railway](../../tools/serving-and-deployment/railway.md)
+- [AWS Bedrock](../../tools/serving-and-deployment/aws-bedrock.md)
+- [Azure AI Studio](../../tools/serving-and-deployment/azure-ai-studio.md)
+- [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md)
 
 ## Buzz & Reception
 

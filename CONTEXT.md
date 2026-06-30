@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-06-14T19:49:00.688Z | Entries: 380 | Schema version: 1.0.0
+Generated: 2026-06-30T22:57:09.495Z | Entries: 380 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -23,6 +23,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architecture decisions: /content/architectures/decision-trees/
 - Reference stacks: /content/architectures/reference-stacks/
 - Tool jobs: /content/tools/by-job/
+- Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
 - Research papers: /content/research/papers/
 

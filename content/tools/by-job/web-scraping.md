@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Firecrawl — 🔄
 
-> **TL;DR:** Firecrawl is a candidate for `web-scraping` workflows. Full details: [Firecrawl](./firecrawl-tool.md).
+> **TL;DR:** Firecrawl is a candidate for `web-scraping` workflows. Full details: [Firecrawl](../data-ingestion/firecrawl-tool.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Firecrawl](./firecrawl-tool.md)
+**Get started:** See [Firecrawl](../data-ingestion/firecrawl-tool.md)
 **Alternatives:** Crawl4AI, Playwright, Puppeteer, Jina AI Reader
 
 ### Crawl4AI — 🔄
 
-> **TL;DR:** Crawl4AI is a candidate for `web-scraping` workflows. Full details: [Crawl4AI](./crawl4ai-tool.md).
+> **TL;DR:** Crawl4AI is a candidate for `web-scraping` workflows. Full details: [Crawl4AI](../data-ingestion/crawl4ai-tool.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Crawl4AI](./crawl4ai-tool.md)
+**Get started:** See [Crawl4AI](../data-ingestion/crawl4ai-tool.md)
 **Alternatives:** Firecrawl, Playwright, Puppeteer, Jina AI Reader
 
 ### Playwright — 🔄
 
-> **TL;DR:** Playwright is a candidate for `web-scraping` workflows. Full details: [Playwright](./playwright.md).
+> **TL;DR:** Playwright is a candidate for `web-scraping` workflows. Full details: [Playwright](../data-ingestion/playwright.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Playwright](./playwright.md)
+**Get started:** See [Playwright](../data-ingestion/playwright.md)
 **Alternatives:** Firecrawl, Crawl4AI, Puppeteer, Jina AI Reader
 
 ### Puppeteer — 🔄
 
-> **TL;DR:** Puppeteer is a candidate for `web-scraping` workflows. Full details: [Puppeteer](./puppeteer.md).
+> **TL;DR:** Puppeteer is a candidate for `web-scraping` workflows. Full details: [Puppeteer](../data-ingestion/puppeteer.md).
 
 | Field | Value |
 |---|---|
@@ -121,12 +121,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Puppeteer](./puppeteer.md)
+**Get started:** See [Puppeteer](../data-ingestion/puppeteer.md)
 **Alternatives:** Firecrawl, Crawl4AI, Playwright, Jina AI Reader
 
 ### Jina AI Reader — 🔄
 
-> **TL;DR:** Jina AI Reader is a candidate for `web-scraping` workflows. Full details: [Jina AI Reader](./jina-reader.md).
+> **TL;DR:** Jina AI Reader is a candidate for `web-scraping` workflows. Full details: [Jina AI Reader](../data-ingestion/jina-reader.md).
 
 | Field | Value |
 |---|---|
@@ -142,7 +142,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Jina AI Reader](./jina-reader.md)
+**Get started:** See [Jina AI Reader](../data-ingestion/jina-reader.md)
 **Alternatives:** Firecrawl, Crawl4AI, Playwright, Puppeteer
 
 
@@ -168,11 +168,11 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Firecrawl](./firecrawl-tool.md)
-- [Crawl4AI](./crawl4ai-tool.md)
-- [Playwright](./playwright.md)
-- [Puppeteer](./puppeteer.md)
-- [Jina AI Reader](./jina-reader.md)
+- [Firecrawl](../data-ingestion/firecrawl-tool.md)
+- [Crawl4AI](../data-ingestion/crawl4ai-tool.md)
+- [Playwright](../data-ingestion/playwright.md)
+- [Puppeteer](../data-ingestion/puppeteer.md)
+- [Jina AI Reader](../data-ingestion/jina-reader.md)
 
 ## Buzz & Reception
 

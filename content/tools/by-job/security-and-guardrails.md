@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Llama Guard — 🔄
 
-> **TL;DR:** Llama Guard is a candidate for `security-and-guardrails` workflows. Full details: [Llama Guard](./llamaguard.md).
+> **TL;DR:** Llama Guard is a candidate for `security-and-guardrails` workflows. Full details: [Llama Guard](../evaluation-and-observability/llamaguard.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Llama Guard](./llamaguard.md)
+**Get started:** See [Llama Guard](../evaluation-and-observability/llamaguard.md)
 **Alternatives:** Guardrails AI, NeMo Guardrails, Rebuff
 
 ### Guardrails AI — 🔄
 
-> **TL;DR:** Guardrails AI is a candidate for `security-and-guardrails` workflows. Full details: [Guardrails AI](./guardrails-ai.md).
+> **TL;DR:** Guardrails AI is a candidate for `security-and-guardrails` workflows. Full details: [Guardrails AI](../evaluation-and-observability/guardrails-ai.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Guardrails AI](./guardrails-ai.md)
+**Get started:** See [Guardrails AI](../evaluation-and-observability/guardrails-ai.md)
 **Alternatives:** Llama Guard, NeMo Guardrails, Rebuff
 
 ### NeMo Guardrails — 🔄
 
-> **TL;DR:** NeMo Guardrails is a candidate for `security-and-guardrails` workflows. Full details: [NeMo Guardrails](./nemo-guardrails.md).
+> **TL;DR:** NeMo Guardrails is a candidate for `security-and-guardrails` workflows. Full details: [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [NeMo Guardrails](./nemo-guardrails.md)
+**Get started:** See [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md)
 **Alternatives:** Llama Guard, Guardrails AI, Rebuff
 
 ### Rebuff — 🔄
 
-> **TL;DR:** Rebuff is a candidate for `security-and-guardrails` workflows. Full details: [Rebuff](./rebuff.md).
+> **TL;DR:** Rebuff is a candidate for `security-and-guardrails` workflows. Full details: [Rebuff](../evaluation-and-observability/rebuff.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Rebuff](./rebuff.md)
+**Get started:** See [Rebuff](../evaluation-and-observability/rebuff.md)
 **Alternatives:** Llama Guard, Guardrails AI, NeMo Guardrails
 
 
@@ -147,10 +147,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Llama Guard](./llamaguard.md)
-- [Guardrails AI](./guardrails-ai.md)
-- [NeMo Guardrails](./nemo-guardrails.md)
-- [Rebuff](./rebuff.md)
+- [Llama Guard](../evaluation-and-observability/llamaguard.md)
+- [Guardrails AI](../evaluation-and-observability/guardrails-ai.md)
+- [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md)
+- [Rebuff](../evaluation-and-observability/rebuff.md)
 
 ## Buzz & Reception
 

@@ -1,58 +1,10 @@
 {
-  "generated_at": "2026-06-14T14:20:01.842Z",
+  "generated_at": "2026-06-30T22:36:39.470Z",
   "mode": "all",
-  "files_checked": 460,
-  "urls_checked": 389,
+  "files_checked": 504,
+  "urls_checked": 421,
   "max_urls_per_host": 10,
   "broken_links": [
-    {
-      "url": "http://localhost:6379/",
-      "ok": false,
-      "error": "localhost-hostname",
-      "files": [
-        "content/_test-ssrf.md"
-      ]
-    },
-    {
-      "url": "http://169.254.169.254/latest/meta-data/",
-      "ok": false,
-      "error": "private-ip-169.254.169.254",
-      "files": [
-        "content/_test-ssrf.md"
-      ]
-    },
-    {
-      "url": "http://127.0.0.1/",
-      "ok": false,
-      "error": "private-ip-127.0.0.1",
-      "files": [
-        "content/_test-ssrf.md"
-      ]
-    },
-    {
-      "url": "http://10.0.0.1/",
-      "ok": false,
-      "error": "private-ip-10.0.0.1",
-      "files": [
-        "content/_test-ssrf.md"
-      ]
-    },
-    {
-      "url": "http://192.168.1.1/",
-      "ok": false,
-      "error": "private-ip-192.168.1.1",
-      "files": [
-        "content/_test-ssrf.md"
-      ]
-    },
-    {
-      "url": "http://169.254.0.1/",
-      "ok": false,
-      "error": "private-ip-169.254.0.1",
-      "files": [
-        "content/_test-ssrf.md"
-      ]
-    },
     {
       "url": "https://github.com/username",
       "ok": false,
@@ -76,7 +28,7 @@
       "error": "host-rate-limited",
       "files": [
         "content/build-examples/intermediate/multi-tool-agent.md",
-        "content/tools/by-job/instructor.md"
+        "content/tools/dx-and-tooling/instructor.md"
       ]
     },
     {
@@ -87,7 +39,7 @@
         "content/build-examples/intermediate/multi-tool-agent.md",
         "content/build-examples/intermediate/production-rag-api.md",
         "content/projects/observability/tracing/langfuse.md",
-        "content/tools/by-job/langfuse-prompts.md"
+        "content/tools/dx-and-tooling/langfuse-prompts.md"
       ]
     },
     {
@@ -114,7 +66,7 @@
       "error": "host-rate-limited",
       "files": [
         "content/build-examples/intermediate/production-rag-api.md",
-        "content/tools/by-job/fastapi.md"
+        "content/tools/serving-and-deployment/fastapi.md"
       ]
     },
     {
@@ -132,7 +84,7 @@
       "error": "host-rate-limited",
       "files": [
         "content/build-examples/starter/basic-rag-chatbot.md",
-        "content/tools/by-job/gradio.md"
+        "content/tools/dx-and-tooling/gradio.md"
       ]
     },
     {
@@ -171,18 +123,9 @@
       ]
     },
     {
-      "url": "https://www.deeplearning.ai/the-batch/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/community/newsletters.md"
-      ]
-    },
-    {
       "url": "https://docs.langchain.com/oss/python/langgraph/",
       "ok": false,
-      "status": 307,
+      "status": 308,
       "error": "redirect-unsafe:invalid-url",
       "files": [
         "content/build-examples/starter/simple-react-agent.md",
@@ -204,6 +147,15 @@
       "error": "host-rate-limited",
       "files": [
         "content/community/people/andrej-karpathy.md"
+      ]
+    },
+    {
+      "url": "https://www.deeplearning.ai/the-batch/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/community/newsletters.md"
       ]
     },
     {
@@ -279,6 +231,15 @@
       ]
     },
     {
+      "url": "https://huggingface.co/Thomwolf",
+      "ok": false,
+      "status": 307,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/community/people/thomas-wolf.md"
+      ]
+    },
+    {
       "url": "https://wandb.ai/fully-connected/gradient-dissent",
       "ok": false,
       "status": 301,
@@ -288,12 +249,19 @@
       ]
     },
     {
-      "url": "https://huggingface.co/Thomwolf",
+      "url": "https://github.com/browserbase/stagehand",
       "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
+      "error": "host-rate-limited",
       "files": [
-        "content/community/people/thomas-wolf.md"
+        "content/projects/agents/browser-agents/stagehand.md"
+      ]
+    },
+    {
+      "url": "https://github.com/InsForge/InsForge",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/projects/agents/coding-agents/insforge.md"
       ]
     },
     {
@@ -354,6 +322,15 @@
       ]
     },
     {
+      "url": "https://docs.dify.ai/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/agents/frameworks/dify.md"
+      ]
+    },
+    {
       "url": "https://github.com/google/adk-samples",
       "ok": false,
       "error": "host-rate-limited",
@@ -368,15 +345,6 @@
       "files": [
         "content/projects/agents/frameworks/haystack-agents.md",
         "content/projects/rag/frameworks/haystack.md"
-      ]
-    },
-    {
-      "url": "https://docs.dify.ai/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/dify.md"
       ]
     },
     {
@@ -425,7 +393,7 @@
       "error": "host-rate-limited",
       "files": [
         "content/projects/agents/frameworks/pydantic-ai.md",
-        "content/tools/by-job/pydantic-ai-tool.md"
+        "content/tools/orchestration/pydantic-ai-tool.md"
       ]
     },
     {
@@ -440,6 +408,15 @@
       "url": "https://github.com/huggingface/smolagents",
       "ok": false,
       "error": "host-rate-limited",
+      "files": [
+        "content/projects/agents/frameworks/smolagents.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/smolagents",
+      "ok": false,
+      "status": 302,
+      "error": "redirect-unsafe:invalid-url",
       "files": [
         "content/projects/agents/frameworks/smolagents.md"
       ]
@@ -461,7 +438,7 @@
       ]
     },
     {
-      "url": "https://huggingface.co/docs/smolagents",
+      "url": "https://huggingface.co/learn/agents-course",
       "ok": false,
       "status": 302,
       "error": "redirect-unsafe:invalid-url",
@@ -475,15 +452,6 @@
       "error": "host-rate-limited",
       "files": [
         "content/projects/llms/inference-engines/lmdeploy.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/learn/agents-course",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/smolagents.md"
       ]
     },
     {
@@ -535,23 +503,6 @@
       ]
     },
     {
-      "url": "https://docs.all-hands.dev/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/openhands.md"
-      ]
-    },
-    {
-      "url": "https://github.com/deepseek-ai/DeepSeek-V3",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/deepseek-v3-r1.md"
-      ]
-    },
-    {
       "url": "https://ollama.com/install.sh",
       "ok": false,
       "status": 307,
@@ -570,12 +521,48 @@
       ]
     },
     {
+      "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/projects/llms/open-source-models/deepseek-v3-r1.md"
+      ]
+    },
+    {
+      "url": "https://docs.agpt.co/",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/agents/frameworks/autogpt.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/CohereForAI/c4ai-command-r-plus",
+      "ok": false,
+      "status": 307,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/llms/open-source-models/command-r-plus.md"
+      ]
+    },
+    {
+      "url": "https://docs.all-hands.dev/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/agents/frameworks/openhands.md"
+      ]
+    },
+    {
       "url": "https://github.com/google-deepmind/gemma",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
         "content/projects/llms/open-source-models/gemma-3.md",
-        "content/projects/llms/open-source-models/gemma.md"
+        "content/projects/llms/open-source-models/gemma.md",
+        "content/projects/llms/open-source-models/translategemma.md"
       ]
     },
     {
@@ -594,15 +581,6 @@
         "content/projects/llms/open-source-models/llama-3.md",
         "content/projects/llms/open-source-models/llama-models.md",
         "content/research/papers/llama-3-herd-of-models.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/CohereForAI/c4ai-command-r-plus",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/llms/open-source-models/command-r-plus.md"
       ]
     },
     {
@@ -652,7 +630,8 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/projects/llms/open-source-models/qwen-2-5.md"
+        "content/projects/llms/open-source-models/qwen-2-5.md",
+        "content/tools/model-layer/qwen-3.md"
       ]
     },
     {
@@ -720,6 +699,15 @@
       ]
     },
     {
+      "url": "https://ai.google.dev/gemma",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/llms/open-source-models/gemma-3.md"
+      ]
+    },
+    {
       "url": "https://docs.helicone.ai/",
       "ok": false,
       "status": 308,
@@ -745,28 +733,11 @@
       ]
     },
     {
-      "url": "https://ai.google.dev/gemma",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/llms/open-source-models/gemma-3.md"
-      ]
-    },
-    {
       "url": "https://github.com/comet-ml/opik",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
         "content/projects/observability/tracing/opik.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Arize-ai/phoenix",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/phoenix.md"
       ]
     },
     {
@@ -779,12 +750,30 @@
       ]
     },
     {
+      "url": "https://github.com/Arize-ai/phoenix",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/projects/observability/tracing/phoenix.md"
+      ]
+    },
+    {
       "url": "https://github.com/unclecode/crawl4ai",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
         "content/projects/rag/document-processing/crawl4ai.md",
-        "content/tools/by-job/crawl4ai-tool.md"
+        "content/tools/data-ingestion/crawl4ai-tool.md"
+      ]
+    },
+    {
+      "url": "https://docs.smith.langchain.com/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/observability/tracing/langsmith-platform.md",
+        "content/tools/dx-and-tooling/langsmith-hub.md"
       ]
     },
     {
@@ -797,22 +786,12 @@
       ]
     },
     {
-      "url": "https://docs.smith.langchain.com/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/observability/tracing/langsmith-platform.md",
-        "content/tools/by-job/langsmith-hub.md"
-      ]
-    },
-    {
       "url": "https://github.com/firecrawl/firecrawl",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
         "content/projects/rag/document-processing/firecrawl.md",
-        "content/tools/by-job/firecrawl-tool.md"
+        "content/tools/data-ingestion/firecrawl-tool.md"
       ]
     },
     {
@@ -833,13 +812,12 @@
       ]
     },
     {
-      "url": "https://docs.firecrawl.dev/",
+      "url": "https://docs.cloud.llamaindex.ai/llamaparse/getting_started",
       "ok": false,
       "status": 308,
-      "error": "redirect-unsafe:invalid-url",
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
       "files": [
-        "content/projects/rag/document-processing/firecrawl.md",
-        "content/tools/by-job/firecrawl-tool.md"
+        "content/projects/rag/document-processing/llamaparse.md"
       ]
     },
     {
@@ -848,6 +826,15 @@
       "error": "host-rate-limited",
       "files": [
         "content/projects/rag/frameworks/ragflow.md"
+      ]
+    },
+    {
+      "url": "https://developers.llamaindex.ai/",
+      "ok": false,
+      "status": 307,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/rag/frameworks/llamaindex.md"
       ]
     },
     {
@@ -867,38 +854,11 @@
       ]
     },
     {
-      "url": "https://docs.unstructured.io/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/document-processing/unstructured.md"
-      ]
-    },
-    {
-      "url": "https://docs.cloud.llamaindex.ai/llamaparse/getting_started",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/document-processing/llamaparse.md"
-      ]
-    },
-    {
       "url": "https://github.com/lancedb/lancedb",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
         "content/projects/rag/vector-databases/lancedb.md"
-      ]
-    },
-    {
-      "url": "https://developers.llamaindex.ai/",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/frameworks/llamaindex.md"
       ]
     },
     {
@@ -910,6 +870,23 @@
       ]
     },
     {
+      "url": "https://docs.unstructured.io/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/rag/document-processing/unstructured.md"
+      ]
+    },
+    {
+      "url": "https://github.com/surrealdb/surrealdb",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/projects/rag/vector-databases/surrealdb.md"
+      ]
+    },
+    {
       "url": "https://github.com/weaviate/weaviate",
       "ok": false,
       "error": "host-rate-limited",
@@ -918,12 +895,11 @@
       ]
     },
     {
-      "url": "https://docs.pinecone.io/",
+      "url": "https://github.com/uiverse-io/galaxy",
       "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
+      "error": "host-rate-limited",
       "files": [
-        "content/projects/rag/vector-databases/pinecone-vector-db.md"
+        "content/projects/tooling/platforms/uiverse-design.md"
       ]
     },
     {
@@ -943,20 +919,20 @@
       ]
     },
     {
-      "url": "https://docs.trychroma.com/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/vector-databases/chroma.md"
-      ]
-    },
-    {
       "url": "https://github.com/FranxYao/chain-of-thought-hub",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
         "content/research/papers/chain-of-thought-prompting.md"
+      ]
+    },
+    {
+      "url": "https://docs.pinecone.io/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/rag/vector-databases/pinecone-vector-db.md"
       ]
     },
     {
@@ -1408,6 +1384,15 @@
       ]
     },
     {
+      "url": "https://docs.trychroma.com/",
+      "ok": false,
+      "status": 308,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/projects/rag/vector-databases/chroma.md"
+      ]
+    },
+    {
       "url": "https://huggingface.co/gaia-benchmark",
       "ok": false,
       "error": "host-rate-limited",
@@ -1440,6 +1425,15 @@
       ]
     },
     {
+      "url": "https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu",
+      "ok": false,
+      "status": 302,
+      "error": "redirect-unsafe:host-rate-limited",
+      "files": [
+        "content/research/sota-benchmarks.md"
+      ]
+    },
+    {
       "url": "https://arxiv.org/",
       "ok": false,
       "error": "host-rate-limited",
@@ -1464,12 +1458,12 @@
       ]
     },
     {
-      "url": "https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu",
+      "url": "https://paperswithcode.com/",
       "ok": false,
       "status": 302,
       "error": "redirect-unsafe:host-rate-limited",
       "files": [
-        "content/research/sota-benchmarks.md"
+        "content/research/weekly-arxiv-picks.md"
       ]
     },
     {
@@ -1491,11 +1485,11 @@
       ]
     },
     {
-      "url": "https://github.com/apache/airflow",
+      "url": "https://github.com/pixiebrix/agent-browser-shield",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/airflow.md"
+        "content/tools/data-ingestion/agent-browser-shield.md"
       ]
     },
     {
@@ -1503,73 +1497,7 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/argilla.md"
-      ]
-    },
-    {
-      "url": "https://github.com/axolotl-ai-cloud/axolotl",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/axolotl.md"
-      ]
-    },
-    {
-      "url": "https://weaviate.io/developers/weaviate/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/vector-databases/weaviate.md"
-      ]
-    },
-    {
-      "url": "https://paperswithcode.com/",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:host-rate-limited",
-      "files": [
-        "content/research/weekly-arxiv-picks.md"
-      ]
-    },
-    {
-      "url": "https://github.com/bentoml/BentoML",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/bentoml.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Chainlit/chainlit",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/chainlit.md"
-      ]
-    },
-    {
-      "url": "https://github.com/dagster-io/dagster",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/dagster.md"
-      ]
-    },
-    {
-      "url": "https://github.com/iterative/dvc",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/dvc.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Giskard-AI/giskard",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/giskard.md"
+        "content/tools/data-ingestion/argilla.md"
       ]
     },
     {
@@ -1582,164 +1510,20 @@
       ]
     },
     {
-      "url": "https://github.com/guardrails-ai/guardrails",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/guardrails-ai.md"
-      ]
-    },
-    {
-      "url": "https://github.com/guidance-ai/guidance",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/guidance.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/inference-endpoints",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/hf-inference-endpoints.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/docs/inference-endpoints/",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/hf-inference-endpoints.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/hugging-face-hub.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/docs/hub/",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/hugging-face-hub.md"
-      ]
-    },
-    {
       "url": "https://github.com/HumanSignal/label-studio",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/label-studio.md"
+        "content/tools/data-ingestion/label-studio.md"
       ]
     },
     {
-      "url": "https://github.com/letta-ai/letta",
+      "url": "https://docs.firecrawl.dev/",
       "ok": false,
-      "error": "host-rate-limited",
+      "status": 308,
+      "error": "redirect-unsafe:invalid-url",
       "files": [
-        "content/tools/by-job/letta.md"
-      ]
-    },
-    {
-      "url": "https://cloud.google.com/vertex-ai/docs",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/tools/by-job/google-vertex-ai.md"
-      ]
-    },
-    {
-      "url": "https://github.com/BerriAI/litellm",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/litellm.md"
-      ]
-    },
-    {
-      "url": "https://github.com/hiyouga/LLaMA-Factory",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/llamafactory.md"
-      ]
-    },
-    {
-      "url": "https://github.com/meta-llama/PurpleLlama",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/llamaguard.md"
-      ]
-    },
-    {
-      "url": "https://github.com/mem0ai/mem0",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/mem0.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/mesop",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/mesop.md"
-      ]
-    },
-    {
-      "url": "https://github.com/mlflow/mlflow",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/mlflow.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ml-explore/mlx-lm",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/mlx-lm.md"
-      ]
-    },
-    {
-      "url": "https://github.com/NVIDIA/NeMo-Guardrails",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/nemo-guardrails.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/evals",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/openai-evals.md"
-      ]
-    },
-    {
-      "url": "https://github.com/dottxt-ai/outlines",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/outlines.md"
-      ]
-    },
-    {
-      "url": "https://github.com/huggingface/peft",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/peft.md"
+        "content/tools/data-ingestion/firecrawl-tool.md"
       ]
     },
     {
@@ -1747,32 +1531,16 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/playwright.md"
+        "content/tools/data-ingestion/playwright.md"
       ]
     },
     {
-      "url": "https://langfuse.com/docs/prompts",
+      "url": "https://weaviate.io/developers/weaviate/",
       "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
+      "status": 301,
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
       "files": [
-        "content/tools/by-job/langfuse-prompts.md"
-      ]
-    },
-    {
-      "url": "https://github.com/PrefectHQ/prefect",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/prefect.md"
-      ]
-    },
-    {
-      "url": "https://github.com/promptfoo/promptfoo",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/by-job/promptfoo.md"
+        "content/projects/rag/vector-databases/weaviate.md"
       ]
     },
     {
@@ -1780,7 +1548,7 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/puppeteer.md"
+        "content/tools/data-ingestion/puppeteer.md"
       ]
     },
     {
@@ -1789,23 +1557,144 @@
       "status": 308,
       "error": "redirect-unsafe:invalid-url",
       "files": [
-        "content/tools/by-job/prodigy.md"
+        "content/tools/data-ingestion/prodigy.md"
       ]
     },
     {
-      "url": "https://github.com/protectai/rebuff",
+      "url": "https://github.com/Chainlit/chainlit",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/rebuff.md"
+        "content/tools/dx-and-tooling/chainlit.md"
       ]
     },
     {
-      "url": "https://github.com/redis/redis",
+      "url": "https://github.com/search?q=claudeartifactplayer",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/redis-memory.md"
+        "content/tools/dx-and-tooling/claude-artifact-player.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=dropstone.ai",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/dx-and-tooling/dropstone-3.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=pomelli.google",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/dx-and-tooling/google-pomelli-2-0.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=honen.app",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/dx-and-tooling/honen.md"
+      ]
+    },
+    {
+      "url": "https://github.com/google/mesop",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/dx-and-tooling/mesop.md"
+      ]
+    },
+    {
+      "url": "https://langfuse.com/docs/prompts",
+      "ok": false,
+      "status": 307,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/tools/dx-and-tooling/langfuse-prompts.md"
+      ]
+    },
+    {
+      "url": "https://recursi.dev",
+      "ok": false,
+      "error": "dns-ENOTFOUND",
+      "files": [
+        "content/tools/dx-and-tooling/recursi.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=shellmate.ai",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/dx-and-tooling/shellmate.md"
+      ]
+    },
+    {
+      "url": "https://github.com/streamlit/streamlit",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/dx-and-tooling/streamlit.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=astra.security",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/astra-autonomous-pentest.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=conan.app",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/conan.md"
+      ]
+    },
+    {
+      "url": "https://github.com/Giskard-AI/giskard",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/giskard.md"
+      ]
+    },
+    {
+      "url": "https://github.com/guardrails-ai/guardrails",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/guardrails-ai.md"
+      ]
+    },
+    {
+      "url": "https://github.com/meta-llama/PurpleLlama",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/llamaguard.md"
+      ]
+    },
+    {
+      "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/nemo-guardrails.md"
+      ]
+    },
+    {
+      "url": "https://github.com/openai/evals",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/openai-evals.md"
       ]
     },
     {
@@ -1814,23 +1703,31 @@
       "status": 308,
       "error": "redirect-unsafe:invalid-url",
       "files": [
-        "content/tools/by-job/promptlayer.md"
+        "content/tools/dx-and-tooling/promptlayer.md"
       ]
     },
     {
-      "url": "https://github.com/streamlit/streamlit",
+      "url": "https://github.com/promptfoo/promptfoo",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/streamlit.md"
+        "content/tools/evaluation-and-observability/promptfoo.md"
       ]
     },
     {
-      "url": "https://github.com/pytorch/torchtune",
+      "url": "https://github.com/protectai/rebuff",
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/torchtune.md"
+        "content/tools/evaluation-and-observability/rebuff.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=backplanes.ai",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/evaluation-and-observability/spotlight-by-backplanes.md"
       ]
     },
     {
@@ -1838,7 +1735,103 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/trulens.md"
+        "content/tools/evaluation-and-observability/trulens.md"
+      ]
+    },
+    {
+      "url": "https://github.com/axolotl-ai-cloud/axolotl",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/axolotl.md"
+      ]
+    },
+    {
+      "url": "https://github.com/iterative/dvc",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/dvc.md"
+      ]
+    },
+    {
+      "url": "https://github.com/guidance-ai/guidance",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/guidance.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/hugging-face-hub.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/hub/",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/hugging-face-hub.md"
+      ]
+    },
+    {
+      "url": "https://github.com/hiyouga/LLaMA-Factory",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/llamafactory.md"
+      ]
+    },
+    {
+      "url": "https://github.com/mlflow/mlflow",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/mlflow.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ml-explore/mlx-lm",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/mlx-lm.md"
+      ]
+    },
+    {
+      "url": "https://github.com/dottxt-ai/outlines",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/outlines.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/peft",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/peft.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=qwen.alibaba.com",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/qwen-3.md"
+      ]
+    },
+    {
+      "url": "https://github.com/pytorch/torchtune",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/model-layer/torchtune.md"
       ]
     },
     {
@@ -1846,7 +1839,7 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/unsloth.md"
+        "content/tools/model-layer/unsloth.md"
       ]
     },
     {
@@ -1855,7 +1848,7 @@
       "status": 301,
       "error": "redirect-unsafe:invalid-url",
       "files": [
-        "content/tools/by-job/weights-biases.md"
+        "content/tools/model-layer/weights-biases.md"
       ]
     },
     {
@@ -1863,7 +1856,71 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/weights-biases.md"
+        "content/tools/model-layer/weights-biases.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=agnt.hub",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/agnt-hub.md"
+      ]
+    },
+    {
+      "url": "https://github.com/apache/airflow",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/airflow.md"
+      ]
+    },
+    {
+      "url": "https://github.com/search?q=cloudskill.ai",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/cloudskill.md"
+      ]
+    },
+    {
+      "url": "https://github.com/dagster-io/dagster",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/dagster.md"
+      ]
+    },
+    {
+      "url": "https://github.com/letta-ai/letta",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/letta.md"
+      ]
+    },
+    {
+      "url": "https://github.com/mem0ai/mem0",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/mem0.md"
+      ]
+    },
+    {
+      "url": "https://github.com/PrefectHQ/prefect",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/prefect.md"
+      ]
+    },
+    {
+      "url": "https://github.com/redis/redis",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/orchestration/redis-memory.md"
       ]
     },
     {
@@ -1871,7 +1928,48 @@
       "ok": false,
       "error": "host-rate-limited",
       "files": [
-        "content/tools/by-job/zep.md"
+        "content/tools/orchestration/zep.md"
+      ]
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/azure/ai-studio/",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:invalid-url",
+      "files": [
+        "content/tools/serving-and-deployment/azure-ai-studio.md"
+      ]
+    },
+    {
+      "url": "https://github.com/bentoml/BentoML",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/serving-and-deployment/bentoml.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/inference-endpoints",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/serving-and-deployment/hf-inference-endpoints.md"
+      ]
+    },
+    {
+      "url": "https://huggingface.co/docs/inference-endpoints/",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/serving-and-deployment/hf-inference-endpoints.md"
+      ]
+    },
+    {
+      "url": "https://github.com/BerriAI/litellm",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "content/tools/serving-and-deployment/litellm.md"
       ]
     },
     {
@@ -1908,6 +2006,46 @@
       ]
     },
     {
+      "url": "http://attacker.example/redirect-to-169.254.169.254/...`",
+      "ok": false,
+      "error": "dns-ENOTFOUND",
+      "files": [
+        "redteam-report.md"
+      ]
+    },
+    {
+      "url": "http://169.254.169.254/latest/meta-data/`",
+      "ok": false,
+      "error": "private-ip-169.254.169.254",
+      "files": [
+        "redteam-report.md"
+      ]
+    },
+    {
+      "url": "http://169.254.169.254/latest/meta-data/",
+      "ok": false,
+      "error": "private-ip-169.254.169.254",
+      "files": [
+        "redteam-report.md"
+      ]
+    },
+    {
+      "url": "https://github.com/<your-fork",
+      "ok": false,
+      "error": "host-rate-limited",
+      "files": [
+        "redteam-report.md"
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release",
+      "ok": false,
+      "status": 400,
+      "files": [
+        "docs/data-release.md"
+      ]
+    },
+    {
       "url": "https://github.com/example/bad",
       "ok": false,
       "error": "host-rate-limited",
@@ -1934,14 +2072,6 @@
       ]
     },
     {
-      "url": "https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release",
-      "ok": false,
-      "status": 400,
-      "files": [
-        "docs/data-release.md"
-      ]
-    },
-    {
       "url": "https://example.com/sample",
       "ok": false,
       "status": 404,
@@ -1956,6 +2086,15 @@
       "status": 404,
       "files": [
         "tests/fixtures/sample-tool.md"
+      ]
+    },
+    {
+      "url": "https://cloud.google.com/vertex-ai/docs",
+      "ok": false,
+      "status": 301,
+      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
+      "files": [
+        "content/tools/serving-and-deployment/google-vertex-ai.md"
       ]
     }
   ]

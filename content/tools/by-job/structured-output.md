@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Instructor — 🔄
 
-> **TL;DR:** Instructor is a candidate for `structured-output` workflows. Full details: [Instructor](./instructor.md).
+> **TL;DR:** Instructor is a candidate for `structured-output` workflows. Full details: [Instructor](../dx-and-tooling/instructor.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Instructor](./instructor.md)
+**Get started:** See [Instructor](../dx-and-tooling/instructor.md)
 **Alternatives:** Outlines, Guidance, Pydantic AI
 
 ### Outlines — 🔄
 
-> **TL;DR:** Outlines is a candidate for `structured-output` workflows. Full details: [Outlines](./outlines.md).
+> **TL;DR:** Outlines is a candidate for `structured-output` workflows. Full details: [Outlines](../model-layer/outlines.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Outlines](./outlines.md)
+**Get started:** See [Outlines](../model-layer/outlines.md)
 **Alternatives:** Instructor, Guidance, Pydantic AI
 
 ### Guidance — 🔄
 
-> **TL;DR:** Guidance is a candidate for `structured-output` workflows. Full details: [Guidance](./guidance.md).
+> **TL;DR:** Guidance is a candidate for `structured-output` workflows. Full details: [Guidance](../model-layer/guidance.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Guidance](./guidance.md)
+**Get started:** See [Guidance](../model-layer/guidance.md)
 **Alternatives:** Instructor, Outlines, Pydantic AI
 
 ### Pydantic AI — 🔄
 
-> **TL;DR:** Pydantic AI is a candidate for `structured-output` workflows. Full details: [Pydantic AI](./pydantic-ai-tool.md).
+> **TL;DR:** Pydantic AI is a candidate for `structured-output` workflows. Full details: [Pydantic AI](../orchestration/pydantic-ai-tool.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Pydantic AI](./pydantic-ai-tool.md)
+**Get started:** See [Pydantic AI](../orchestration/pydantic-ai-tool.md)
 **Alternatives:** Instructor, Outlines, Guidance
 
 
@@ -147,10 +147,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Instructor](./instructor.md)
-- [Outlines](./outlines.md)
-- [Guidance](./guidance.md)
-- [Pydantic AI](./pydantic-ai-tool.md)
+- [Instructor](../dx-and-tooling/instructor.md)
+- [Outlines](../model-layer/outlines.md)
+- [Guidance](../model-layer/guidance.md)
+- [Pydantic AI](../orchestration/pydantic-ai-tool.md)
 
 ## Buzz & Reception
 

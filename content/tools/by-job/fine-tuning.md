@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Unsloth — 🏠
 
-> **TL;DR:** Unsloth is a candidate for `fine-tuning` workflows. Full details: [Unsloth](./unsloth.md).
+> **TL;DR:** Unsloth is a candidate for `fine-tuning` workflows. Full details: [Unsloth](../model-layer/unsloth.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Unsloth](./unsloth.md)
+**Get started:** See [Unsloth](../model-layer/unsloth.md)
 **Alternatives:** Axolotl, LLaMA-Factory, torchtune, PEFT, MLX-LM
 
 ### Axolotl — 🏠
 
-> **TL;DR:** Axolotl is a candidate for `fine-tuning` workflows. Full details: [Axolotl](./axolotl.md).
+> **TL;DR:** Axolotl is a candidate for `fine-tuning` workflows. Full details: [Axolotl](../model-layer/axolotl.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Axolotl](./axolotl.md)
+**Get started:** See [Axolotl](../model-layer/axolotl.md)
 **Alternatives:** Unsloth, LLaMA-Factory, torchtune, PEFT, MLX-LM
 
 ### LLaMA-Factory — 🔄
 
-> **TL;DR:** LLaMA-Factory is a candidate for `fine-tuning` workflows. Full details: [LLaMA-Factory](./llamafactory.md).
+> **TL;DR:** LLaMA-Factory is a candidate for `fine-tuning` workflows. Full details: [LLaMA-Factory](../model-layer/llamafactory.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [LLaMA-Factory](./llamafactory.md)
+**Get started:** See [LLaMA-Factory](../model-layer/llamafactory.md)
 **Alternatives:** Unsloth, Axolotl, torchtune, PEFT, MLX-LM
 
 ### torchtune — 🔄
 
-> **TL;DR:** torchtune is a candidate for `fine-tuning` workflows. Full details: [torchtune](./torchtune.md).
+> **TL;DR:** torchtune is a candidate for `fine-tuning` workflows. Full details: [torchtune](../model-layer/torchtune.md).
 
 | Field | Value |
 |---|---|
@@ -121,12 +121,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [torchtune](./torchtune.md)
+**Get started:** See [torchtune](../model-layer/torchtune.md)
 **Alternatives:** Unsloth, Axolotl, LLaMA-Factory, PEFT, MLX-LM
 
 ### PEFT — 🏠
 
-> **TL;DR:** PEFT is a candidate for `fine-tuning` workflows. Full details: [PEFT](./peft.md).
+> **TL;DR:** PEFT is a candidate for `fine-tuning` workflows. Full details: [PEFT](../model-layer/peft.md).
 
 | Field | Value |
 |---|---|
@@ -142,12 +142,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [PEFT](./peft.md)
+**Get started:** See [PEFT](../model-layer/peft.md)
 **Alternatives:** Unsloth, Axolotl, LLaMA-Factory, torchtune, MLX-LM
 
 ### MLX-LM — 🏠
 
-> **TL;DR:** MLX-LM is a candidate for `fine-tuning` workflows. Full details: [MLX-LM](./mlx-lm.md).
+> **TL;DR:** MLX-LM is a candidate for `fine-tuning` workflows. Full details: [MLX-LM](../model-layer/mlx-lm.md).
 
 | Field | Value |
 |---|---|
@@ -163,7 +163,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [MLX-LM](./mlx-lm.md)
+**Get started:** See [MLX-LM](../model-layer/mlx-lm.md)
 **Alternatives:** Unsloth, Axolotl, LLaMA-Factory, torchtune, PEFT
 
 
@@ -189,12 +189,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Unsloth](./unsloth.md)
-- [Axolotl](./axolotl.md)
-- [LLaMA-Factory](./llamafactory.md)
-- [torchtune](./torchtune.md)
-- [PEFT](./peft.md)
-- [MLX-LM](./mlx-lm.md)
+- [Unsloth](../model-layer/unsloth.md)
+- [Axolotl](../model-layer/axolotl.md)
+- [LLaMA-Factory](../model-layer/llamafactory.md)
+- [torchtune](../model-layer/torchtune.md)
+- [PEFT](../model-layer/peft.md)
+- [MLX-LM](../model-layer/mlx-lm.md)
 
 ## Buzz & Reception
 

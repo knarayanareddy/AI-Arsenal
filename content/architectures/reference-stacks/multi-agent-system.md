@@ -114,9 +114,9 @@ pip install langgraph langfuse instructor redis
 - **LangGraph**: [LangGraph](../../projects/agents/frameworks/langgraph.md)
 - **CrewAI**: [CrewAI](../../projects/agents/frameworks/crewai.md)
 - **MetaGPT**: [MetaGPT](../../projects/agents/frameworks/metagpt.md)
-- **Instructor**: [Instructor](../../tools/by-job/instructor.md)
-- **Pydantic AI**: [Pydantic AI](../../tools/by-job/pydantic-ai-tool.md)
-- **Redis**: [Redis](../../tools/by-job/redis-memory.md)
+- **Instructor**: [Instructor](../../tools/dx-and-tooling/instructor.md)
+- **Pydantic AI**: [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
+- **Redis**: [Redis](../../tools/orchestration/redis-memory.md)
 - **Langfuse**: [Langfuse](../../projects/observability/tracing/langfuse.md)
 
 ## Integration Patterns
@@ -131,9 +131,9 @@ pip install langgraph langfuse instructor redis
 - [LangGraph](../../projects/agents/frameworks/langgraph.md)
 - [CrewAI](../../projects/agents/frameworks/crewai.md)
 - [MetaGPT](../../projects/agents/frameworks/metagpt.md)
-- [Instructor](../../tools/by-job/instructor.md)
-- [Pydantic AI](../../tools/by-job/pydantic-ai-tool.md)
-- [Redis](../../tools/by-job/redis-memory.md)
+- [Instructor](../../tools/dx-and-tooling/instructor.md)
+- [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
+- [Redis](../../tools/orchestration/redis-memory.md)
 - [Langfuse](../../projects/observability/tracing/langfuse.md)
 
 ## Buzz & Reception

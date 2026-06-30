@@ -21,8 +21,15 @@ Focused on: AI, LLMs, agents, RAG, observability, and SOTA engineering practice.
 
 ### WHAT TOOLS EXIST FOR A JOB?
 
-→ `/content/tools/by-job/[job-name]/` or `/content/tools/by-job/[job-name].md` when content exists
+→ `/content/tools/by-job/[job-name].md` — job-based shortlist/routing pages (curated TL;DR cards)
 Jobs: prototyping, production-serving, fine-tuning, evaluation, deployment, orchestration, vector-search, memory-management, web-scraping, structured-output, prompt-management, data-labeling, model-registry, security-and-guardrails
+
+### WHAT TOOLS EXIST FOR A LIFECYCLE PHASE?
+
+→ `/content/tools/[phase]/[tool-id].md` — canonical tool entries, grouped by primary lifecycle phase (this is where the full record lives; by-job pages link here)
+Phases: data-ingestion, model-layer, orchestration, serving-and-deployment, evaluation-and-observability, dx-and-tooling
+Every tool entry also carries `phase`, `audience` (prototype/production/research), `best_when`, and `avoid_when` in frontmatter — use these fields to filter/recommend before reading the full body.
+
 
 ### WHAT OPEN SOURCE PROJECTS ARE NOTABLE?
 

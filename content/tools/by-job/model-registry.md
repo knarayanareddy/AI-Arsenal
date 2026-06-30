@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### MLflow — 🔄
 
-> **TL;DR:** MLflow is a candidate for `model-registry` workflows. Full details: [MLflow](./mlflow.md).
+> **TL;DR:** MLflow is a candidate for `model-registry` workflows. Full details: [MLflow](../model-layer/mlflow.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [MLflow](./mlflow.md)
+**Get started:** See [MLflow](../model-layer/mlflow.md)
 **Alternatives:** Weights & Biases, Hugging Face Hub, DVC
 
 ### Weights & Biases — 🔄
 
-> **TL;DR:** Weights & Biases is a candidate for `model-registry` workflows. Full details: [Weights & Biases](./weights-biases.md).
+> **TL;DR:** Weights & Biases is a candidate for `model-registry` workflows. Full details: [Weights & Biases](../model-layer/weights-biases.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Weights & Biases](./weights-biases.md)
+**Get started:** See [Weights & Biases](../model-layer/weights-biases.md)
 **Alternatives:** MLflow, Hugging Face Hub, DVC
 
 ### Hugging Face Hub — 🔄
 
-> **TL;DR:** Hugging Face Hub is a candidate for `model-registry` workflows. Full details: [Hugging Face Hub](./hugging-face-hub.md).
+> **TL;DR:** Hugging Face Hub is a candidate for `model-registry` workflows. Full details: [Hugging Face Hub](../model-layer/hugging-face-hub.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Hugging Face Hub](./hugging-face-hub.md)
+**Get started:** See [Hugging Face Hub](../model-layer/hugging-face-hub.md)
 **Alternatives:** MLflow, Weights & Biases, DVC
 
 ### DVC — 🔄
 
-> **TL;DR:** DVC is a candidate for `model-registry` workflows. Full details: [DVC](./dvc.md).
+> **TL;DR:** DVC is a candidate for `model-registry` workflows. Full details: [DVC](../model-layer/dvc.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [DVC](./dvc.md)
+**Get started:** See [DVC](../model-layer/dvc.md)
 **Alternatives:** MLflow, Weights & Biases, Hugging Face Hub
 
 
@@ -147,10 +147,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [MLflow](./mlflow.md)
-- [Weights & Biases](./weights-biases.md)
-- [Hugging Face Hub](./hugging-face-hub.md)
-- [DVC](./dvc.md)
+- [MLflow](../model-layer/mlflow.md)
+- [Weights & Biases](../model-layer/weights-biases.md)
+- [Hugging Face Hub](../model-layer/hugging-face-hub.md)
+- [DVC](../model-layer/dvc.md)
 
 ## Buzz & Reception
 

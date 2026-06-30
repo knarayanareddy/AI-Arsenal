@@ -6,10 +6,10 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by role](./by-role/) | 0 entries | 2026-06-14 |
-| [core concepts](./core-concepts/) | 2 entries | 2026-06-14 |
-| [learning paths](./learning-paths/) | 4 entries | 2026-06-14 |
-| [prompt engineering](./prompt-engineering/) | 2 entries | 2026-06-14 |
+| [by role](./by-role/) | 0 entries | 2026-06-30 |
+| [core concepts](./core-concepts/) | 2 entries | 2026-06-30 |
+| [learning paths](./learning-paths/) | 4 entries | 2026-06-30 |
+| [prompt engineering](./prompt-engineering/) | 2 entries | 2026-06-30 |
 
 ## Recently Added
 

@@ -21,6 +21,17 @@ CONTEXT.md      linguist-generated=true
 content/**/_index.md      linguist-generated=true
 content/**/_registry.md   linguist-generated=true
 
+# Curated phase index files (tools-vertical reorganisation) have a
+# hand-authored preamble and are not purely bot output; un-set the
+# generated flag so they show up in diffs/review normally. Later patterns
+# override earlier ones in .gitattributes.
+content/tools/data-ingestion/_index.md               -linguist-generated
+content/tools/model-layer/_index.md                  -linguist-generated
+content/tools/orchestration/_index.md                -linguist-generated
+content/tools/serving-and-deployment/_index.md       -linguist-generated
+content/tools/evaluation-and-observability/_index.md -linguist-generated
+content/tools/dx-and-tooling/_index.md               -linguist-generated
+
 # Lockfile is always LF and treated as a single entity.
 pnpm-lock.yaml  text eol=lf
 

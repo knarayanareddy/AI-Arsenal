@@ -9,7 +9,8 @@
 
 ## Finding Things
 
-- Tools by job: `/content/tools/by-job/`
+- Tools by job: `/content/tools/by-job/` (curated shortlist pages, linking to canonical entries)
+- Tools by lifecycle phase: `/content/tools/{data-ingestion,model-layer,orchestration,serving-and-deployment,evaluation-and-observability,dx-and-tooling}/` (canonical entries with `best_when`/`avoid_when` guidance)
 - Projects by category: `/content/projects/`
 - Architecture choices: `/content/architectures/decision-trees/`
 - Full stacks: `/content/architectures/reference-stacks/`

@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Label Studio — 🔄
 
-> **TL;DR:** Label Studio is a candidate for `data-labeling` workflows. Full details: [Label Studio](./label-studio.md).
+> **TL;DR:** Label Studio is a candidate for `data-labeling` workflows. Full details: [Label Studio](../data-ingestion/label-studio.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Label Studio](./label-studio.md)
+**Get started:** See [Label Studio](../data-ingestion/label-studio.md)
 **Alternatives:** Argilla, Prodigy, Scale AI
 
 ### Argilla — 🔄
 
-> **TL;DR:** Argilla is a candidate for `data-labeling` workflows. Full details: [Argilla](./argilla.md).
+> **TL;DR:** Argilla is a candidate for `data-labeling` workflows. Full details: [Argilla](../data-ingestion/argilla.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Argilla](./argilla.md)
+**Get started:** See [Argilla](../data-ingestion/argilla.md)
 **Alternatives:** Label Studio, Prodigy, Scale AI
 
 ### Prodigy — 🔄
 
-> **TL;DR:** Prodigy is a candidate for `data-labeling` workflows. Full details: [Prodigy](./prodigy.md).
+> **TL;DR:** Prodigy is a candidate for `data-labeling` workflows. Full details: [Prodigy](../data-ingestion/prodigy.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Prodigy](./prodigy.md)
+**Get started:** See [Prodigy](../data-ingestion/prodigy.md)
 **Alternatives:** Label Studio, Argilla, Scale AI
 
 ### Scale AI — 🔄
 
-> **TL;DR:** Scale AI is a candidate for `data-labeling` workflows. Full details: [Scale AI](./scale-ai.md).
+> **TL;DR:** Scale AI is a candidate for `data-labeling` workflows. Full details: [Scale AI](../data-ingestion/scale-ai.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Scale AI](./scale-ai.md)
+**Get started:** See [Scale AI](../data-ingestion/scale-ai.md)
 **Alternatives:** Label Studio, Argilla, Prodigy
 
 
@@ -147,10 +147,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Label Studio](./label-studio.md)
-- [Argilla](./argilla.md)
-- [Prodigy](./prodigy.md)
-- [Scale AI](./scale-ai.md)
+- [Label Studio](../data-ingestion/label-studio.md)
+- [Argilla](../data-ingestion/argilla.md)
+- [Prodigy](../data-ingestion/prodigy.md)
+- [Scale AI](../data-ingestion/scale-ai.md)
 
 ## Buzz & Reception
 

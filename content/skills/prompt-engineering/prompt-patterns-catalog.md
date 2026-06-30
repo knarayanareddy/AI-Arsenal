@@ -97,10 +97,10 @@ Prompt patterns are reusable interface designs. The same pattern can work across
 ## Resources
 
 - [Prompt engineering fundamentals](fundamentals.md)
-- [Instructor](../../tools/by-job/instructor.md)
-- [Outlines](../../tools/by-job/outlines.md)
-- [Guidance](../../tools/by-job/guidance.md)
-- [Pydantic AI](../../tools/by-job/pydantic-ai-tool.md)
+- [Instructor](../../tools/dx-and-tooling/instructor.md)
+- [Outlines](../../tools/model-layer/outlines.md)
+- [Guidance](../../tools/model-layer/guidance.md)
+- [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
 
 ## Buzz & Reception
 

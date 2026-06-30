@@ -124,9 +124,9 @@ Use a hybrid when:
 - [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
 - [LangChain for RAG](../../projects/rag/frameworks/langchain-rag.md)
 - [Ragas for RAG Evaluation](../../projects/rag/frameworks/ragas-rag-evaluation.md)
-- [Unsloth](../../tools/by-job/unsloth.md)
-- [Axolotl](../../tools/by-job/axolotl.md)
-- [PEFT](../../tools/by-job/peft.md)
+- [Unsloth](../../tools/model-layer/unsloth.md)
+- [Axolotl](../../tools/model-layer/axolotl.md)
+- [PEFT](../../tools/model-layer/peft.md)
 
 ## Buzz & Reception
 

@@ -25,7 +25,11 @@
     "added_by",
     "verdict",
     "verdict_rationale",
-    "status"
+    "status",
+    "phase",
+    "audience",
+    "best_when",
+    "avoid_when"
   ],
   "properties": {
     "id": {
@@ -209,6 +213,75 @@
         "archived",
         "deprecated",
         "watching"
+      ]
+    },
+    "phase": {
+      "enum": [
+        "data-ingestion",
+        "model-layer",
+        "orchestration",
+        "serving-and-deployment",
+        "evaluation-and-observability",
+        "dx-and-tooling"
+      ]
+    },
+    "audience": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "prototype",
+          "production",
+          "research"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "best_when": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "avoid_when": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "version_tracked": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "enrichment_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "verified"
+      ]
+    },
+    "enrichment_notes": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 400
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "buzz_sources": {

@@ -26,6 +26,13 @@ added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: tester
 reviewed_by: null
+phase: evaluation-and-observability
+audience:
+  - production
+best_when:
+  - You need a quick evaluation pass for a sample workflow
+avoid_when:
+  - You need a fully verified production tool
 verdict: recommended
 verdict_rationale: Solid evaluation framework
 status: active

@@ -181,7 +181,7 @@ Start with these sections:
 | Section | Path | Use it for |
 |---|---|---|
 | Projects | [`content/projects/`](./content/projects/) | Open-source projects, frameworks, models, platforms |
-| Tools | [`content/tools/`](./content/tools/) | Products and tools by job, cost, and stack |
+| Tools | [`content/tools/`](./content/tools/) | Products and tools, browsable by job (`by-job/`), cost, stack, or canonical lifecycle phase (`data-ingestion/`, `model-layer/`, `orchestration/`, `serving-and-deployment/`, `evaluation-and-observability/`, `dx-and-tooling/`) |
 | Architectures | [`content/architectures/`](./content/architectures/) | Decision trees and reference stacks |
 | Observability | [`content/observability/`](./content/observability/) | Tracing, monitoring, evaluation, cost tracking |
 | Research | [`content/research/`](./content/research/) | Must-read papers and individual paper summaries |

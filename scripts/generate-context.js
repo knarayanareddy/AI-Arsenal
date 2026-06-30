@@ -52,6 +52,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architecture decisions: /content/architectures/decision-trees/
 - Reference stacks: /content/architectures/reference-stacks/
 - Tool jobs: /content/tools/by-job/
+- Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
 - Research papers: /content/research/papers/
 

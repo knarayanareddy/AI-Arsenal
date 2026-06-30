@@ -63,9 +63,9 @@ Plain-language tree:
 |---|---|---|
 | Short chat continuity | Session history | — |
 | Session compression | Rolling summary | — |
-| User long-term memory | Mem0 or Zep | [Mem0](../../tools/by-job/mem0.md), [Zep](../../tools/by-job/zep.md) |
-| Stateful agent memory | Letta | [Letta](../../tools/by-job/letta.md) |
-| Fast cache/session state | Redis | [Redis](../../tools/by-job/redis-memory.md) |
+| User long-term memory | Mem0 or Zep | [Mem0](../../tools/orchestration/mem0.md), [Zep](../../tools/orchestration/zep.md) |
+| Stateful agent memory | Letta | [Letta](../../tools/orchestration/letta.md) |
+| Fast cache/session state | Redis | [Redis](../../tools/orchestration/redis-memory.md) |
 | Custom semantic memory | Vector DB | [Qdrant](../../projects/rag/vector-databases/qdrant.md), [pgvector](../../projects/rag/vector-databases/pgvector.md) |
 
 ## Getting Started
@@ -105,10 +105,10 @@ pip install mem0ai
 
 ## Resources
 
-- [Mem0](../../tools/by-job/mem0.md)
-- [Zep](../../tools/by-job/zep.md)
-- [Letta](../../tools/by-job/letta.md)
-- [Redis](../../tools/by-job/redis-memory.md)
+- [Mem0](../../tools/orchestration/mem0.md)
+- [Zep](../../tools/orchestration/zep.md)
+- [Letta](../../tools/orchestration/letta.md)
+- [Redis](../../tools/orchestration/redis-memory.md)
 - [Qdrant](../../projects/rag/vector-databases/qdrant.md)
 
 ## Buzz & Reception

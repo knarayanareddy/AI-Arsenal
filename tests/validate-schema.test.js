@@ -217,6 +217,10 @@ test('tool schema accepts buzz_sources as optional', async () => {
     verdict: 'recommended',
     verdict_rationale: 'Tested and verified',
     status: 'active',
+    phase: 'evaluation-and-observability',
+    audience: ['production'],
+    best_when: ['You need a quick evaluation pass'],
+    avoid_when: ['You need RAG-specific metrics'],
     buzz_sources: [
       { source: 'newsletter', url: 'https://example.com/news', date: '2026-06-13', description: 'Featured in newsletter' }
     ]
@@ -367,4 +371,95 @@ test('guide schema accepts valid guide', async () => {
     status: 'active'
   });
   assert.equal(valid, true);
+});
+
+// Tools-vertical reorganisation: phase/audience/best_when/avoid_when are
+// required on every tool entry (added once the migration reached 100%).
+function baseValidToolFixture(overrides = {}) {
+  return {
+    id: 'sample-tool',
+    name: 'Sample Tool',
+    type: 'tool',
+    job: ['evaluation'],
+    description: 'A sample tool entry for testing',
+    url: 'https://example.com/sample',
+    cost_model: 'freemium',
+    pricing_detail: 'Free for individuals',
+    tags: ['evaluation'],
+    maturity: 'production',
+    stack: ['python'],
+    free_tier: true,
+    self_hostable: false,
+    open_source: false,
+    added_date: '2026-06-13',
+    last_reviewed: '2026-06-13',
+    added_by: 'tester',
+    verdict: 'recommended',
+    verdict_rationale: 'Solid evaluation framework',
+    status: 'active',
+    phase: 'evaluation-and-observability',
+    audience: ['production'],
+    best_when: ['You need a quick evaluation pass'],
+    avoid_when: ['You need a fully verified production tool'],
+    ...overrides
+  };
+}
+
+test('tool schema requires phase/audience/best_when/avoid_when', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const fullyValid = baseValidToolFixture();
+  assert.equal(validate(fullyValid), true);
+
+  for (const field of ['phase', 'audience', 'best_when', 'avoid_when']) {
+    const missing = baseValidToolFixture();
+    delete missing[field];
+    assert.equal(validate(missing), false, `expected schema to reject missing ${field}`);
+  }
+});
+
+test('tool schema rejects an unknown phase value', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate(baseValidToolFixture({ phase: 'not-a-real-phase' }));
+  assert.equal(valid, false);
+});
+
+test('tool schema enforces best_when/avoid_when as 1-4 item arrays', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+
+  assert.equal(validate(baseValidToolFixture({ best_when: [] })), false, 'empty best_when should be rejected');
+  assert.equal(
+    validate(baseValidToolFixture({ best_when: ['a', 'b', 'c', 'd', 'e'] })),
+    false,
+    'best_when with more than 4 items should be rejected'
+  );
+  assert.equal(
+    validate(baseValidToolFixture({ avoid_when: ['a', 'b', 'c', 'd'] })),
+    true,
+    'avoid_when with exactly 4 items should be accepted'
+  );
+});
+
+test('tool schema accepts optional enrichment_status/enrichment_notes', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate(baseValidToolFixture({
+    enrichment_status: 'draft',
+    enrichment_notes: 'Based on vendor docs only; needs third-party usage evidence.'
+  }));
+  assert.equal(valid, true);
+});
+
+test('tool schema rejects an invalid enrichment_status value', async () => {
+  const schema = await loadSchema('tool.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate(baseValidToolFixture({ enrichment_status: 'not-a-real-status' }));
+  assert.equal(valid, false);
 });
