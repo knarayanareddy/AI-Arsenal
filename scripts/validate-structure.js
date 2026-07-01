@@ -103,7 +103,7 @@ const BANNED_PRACTICAL_APPLICABILITY_PHRASES = [
 
 const BANNED_LIMITATIONS_PHRASES = ['no known limitations'];
 
-function researchContentChecks(file, content, errors) {
+function researchContentChecks(file, content, errors, warnings) {
   const limitations = sectionBody(content, 'Limitations & Critiques');
   if (limitations !== null) {
     if (limitations.length === 0) errors.push(`${file}: "Limitations & Critiques" section must not be empty`);
@@ -129,11 +129,33 @@ function researchContentChecks(file, content, errors) {
 
   const overview = sectionBody(content, 'Overview');
   if (overview !== null && overview.length === 0) errors.push(`${file}: "Overview" section must not be empty`);
+
+  // Research-specific integrity check (Phase 4 / Validator checklist item:
+  // "No benchmark claim appears without a date"). Heuristic, so this is a
+  // warning rather than a hard error -- it flags bullet lines in "Key
+  // Results" that look like a benchmark/score claim (contain a percentage,
+  // "pass@", "F1", "BLEU", "accuracy", or similar score-shaped text) but do
+  // not carry a nearby 4-digit year, so a human can confirm/fix rather than
+  // the check silently passing or false-failing on prose that only
+  // discusses a benchmark without asserting a specific score.
+  const keyResults = sectionBody(content, 'Key Results');
+  if (keyResults !== null) {
+    const scoreLikePattern = /(\d+(\.\d+)?\s?%|pass@\d+|\bF1\b|\bBLEU\b|\bEM\b|exact match|accuracy|perplexity)/i;
+    const yearPattern = /\((19|20)\d{2}\)/;
+    for (const line of keyResults.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith('-') && !trimmed.startsWith('*')) continue;
+      if (scoreLikePattern.test(trimmed) && !yearPattern.test(trimmed)) {
+        warnings.push(`${file}: "Key Results" bullet looks like a benchmark/score claim but has no "(YYYY)" year nearby -- verify it is date-stamped: "${trimmed.slice(0, 100)}${trimmed.length > 100 ? '...' : ''}"`);
+      }
+    }
+  }
 }
 
 const changedOnly = process.argv.includes('--changed-only');
 const fix = process.argv.includes('--fix');
 const errors = [];
+const warnings = [];
 let fixed = 0;
 let checked = 0;
 
@@ -158,10 +180,15 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   for (const heading of required) {
     if (!headings.includes(heading)) errors.push(`${file}: missing required section "## ${heading}"`);
   }
-  if (type === 'paper' && data.phase) researchContentChecks(file, content, errors);
+  if (type === 'paper' && data.phase) researchContentChecks(file, content, errors, warnings);
   checked += 1;
 }
 
+
+if (warnings.length) {
+  console.warn(chalk.yellow(`Markdown structure validation warnings (${warnings.length}):`));
+  for (const warning of warnings) console.warn(chalk.yellow(`- ${warning}`));
+}
 
 if (errors.length) {
   console.error(chalk.red(`Markdown structure validation failed with ${errors.length} error(s):`));

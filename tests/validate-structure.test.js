@@ -48,3 +48,38 @@ test('extractHeadings detects missing headings', () => {
   assert.ok(missing.length > 0, 'should detect missing required headings');
   assert.ok(missing.includes('Getting Started'));
 });
+
+// Mirrors the research-vertical "Key Results" benchmark-date heuristic in
+// scripts/validate-structure.js's researchContentChecks(). Tested as a pure
+// unit here (rather than against the live content/ tree), following the
+// same pattern as tests/check-migration-progress.test.js.
+function findUndatedBenchmarkBullets(keyResultsBody) {
+  const scoreLikePattern = /(\d+(\.\d+)?\s?%|pass@\d+|\bF1\b|\bBLEU\b|\bEM\b|exact match|accuracy|perplexity)/i;
+  const yearPattern = /\((19|20)\d{2}\)/;
+  const flagged = [];
+  for (const line of keyResultsBody.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed.startsWith('-') && !trimmed.startsWith('*')) continue;
+    if (scoreLikePattern.test(trimmed) && !yearPattern.test(trimmed)) flagged.push(trimmed);
+  }
+  return flagged;
+}
+
+test('research Key Results heuristic flags a benchmark claim with no year', () => {
+  const body = '- 92.3 accuracy on GLUE\n- A prose line with no score at all';
+  const flagged = findUndatedBenchmarkBullets(body);
+  assert.equal(flagged.length, 1);
+  assert.match(flagged[0], /92\.3 accuracy/);
+});
+
+test('research Key Results heuristic accepts a properly date-stamped benchmark claim', () => {
+  const body = '- 92.3 accuracy on GLUE (2019) — now considered saturated\n- 28.4 BLEU on WMT 2014 (2017)';
+  const flagged = findUndatedBenchmarkBullets(body);
+  assert.equal(flagged.length, 0);
+});
+
+test('research Key Results heuristic ignores non-bullet prose and non-score bullets', () => {
+  const body = 'Some intro prose with 50% mentioned but not a bullet.\n- This bullet has no score-shaped text at all';
+  const flagged = findUndatedBenchmarkBullets(body);
+  assert.equal(flagged.length, 0);
+});
