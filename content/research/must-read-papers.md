@@ -47,9 +47,9 @@ A good engineering reading list should explain what a paper introduced, not just
 ### RAG
 
 - [Retrieval-Augmented Generation](foundational/lewis-2020-rag.md) — 2020 — retrieval plus generation
-- [HyDE](papers/hyde.md) — 2022 — hypothetical-document retrieval
-- [RAPTOR](papers/raptor.md) — 2024 — recursive retrieval summaries
-- [GraphRAG](papers/graphrag.md) — 2024 — graph/community retrieval
+- [HyDE](retrieval-and-memory/gao-2022-hyde.md) — 2022 — hypothetical-document retrieval
+- [RAPTOR](retrieval-and-memory/sarthi-2024-raptor.md) — 2024 — recursive retrieval summaries
+- [GraphRAG](retrieval-and-memory/edge-2024-graphrag.md) — 2024 — graph/community retrieval
 
 ### Agents & Tool Use
 

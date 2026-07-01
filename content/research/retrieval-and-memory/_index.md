@@ -32,7 +32,9 @@ When I am designing a retrieval or memory system for an LLM application, which t
 
 ### Recently Added
 
-_No entries yet._
+- [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./edge-2024-graphrag.md)
+- [Precise Zero-Shot Dense Retrieval without Relevance Labels](./gao-2022-hyde.md)
+- [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./sarthi-2024-raptor.md)
 
 ### Most Popular
 
@@ -40,4 +42,6 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./edge-2024-graphrag.md) — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
+- [Precise Zero-Shot Dense Retrieval without Relevance Labels](./gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
+- [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./sarthi-2024-raptor.md) — Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup

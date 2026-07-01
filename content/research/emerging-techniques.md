@@ -77,8 +77,8 @@ flowchart TD
 ## Resources
 
 - [DeepSeek-R1](training-and-alignment/deepseek-ai-2025-r1.md)
-- [RAPTOR](papers/raptor.md)
-- [GraphRAG](papers/graphrag.md)
+- [RAPTOR](retrieval-and-memory/sarthi-2024-raptor.md)
+- [GraphRAG](retrieval-and-memory/edge-2024-graphrag.md)
 - [Speculative Decoding](inference-and-efficiency/leviathan-2022-speculative-decoding.md)
 
 ## Buzz & Reception
