@@ -9,7 +9,7 @@ import { getChangedMarkdownFiles, isContentEntryCandidate } from './utils/change
 const schemaByType = {
   project: 'project.schema.json',
   tool: 'tool.schema.json',
-  paper: 'paper.schema.json',
+  paper: 'research.schema.json',
   tip: 'tip.schema.json',
   'build-example': 'build-example.schema.json',
   person: 'person.schema.json',
@@ -17,15 +17,15 @@ const schemaByType = {
   guide: 'guide.schema.json'
 };
 
-// Research-vertical reorganisation: a 'paper' entry that already carries the
-// new `phase` field (i.e. has been migrated to content/research/{phase}/)
-// validates against the new research.schema.json instead of the legacy
-// paper.schema.json. This mirrors validate-structure.js's PROJECT_HEADINGS_NEW
-// dispatch-by-`phase`-presence pattern from the projects-vertical
-// reorganisation, so unmigrated papers keep validating against their
-// pre-migration schema during the folder-by-folder migration.
-function resolveSchemaKey(entryType, data) {
-  if (entryType === 'paper' && data?.phase) return 'research';
+// Research-vertical reorganisation: COMPLETE (see x-migration-note in
+// schemas/research.schema.json). Every 'paper' entry now lives under
+// content/research/{phase}/ and validates against research.schema.json --
+// the legacy schemas/paper.schema.json has been retired and removed. This
+// function is now a straight passthrough but is kept (rather than removing
+// the indirection entirely) since it mirrors validate-structure.js's
+// still-active PROJECT_HEADINGS_NEW dispatch-by-`phase`-presence pattern,
+// and documents the migration history for future maintainers.
+function resolveSchemaKey(entryType) {
   return entryType;
 }
 
@@ -101,7 +101,7 @@ const ajv = new Ajv({ allErrors: true, strict: false });
 const validatorPromises = new Map();
 async function getValidator(type) {
   if (validatorPromises.has(type)) return validatorPromises.get(type);
-  const schemaFile = type === 'research' ? 'research.schema.json' : schemaByType[type];
+  const schemaFile = schemaByType[type];
   if (!schemaFile) return null;
   const promise = (async () => {
     const schema = JSON.parse(await fs.readFile(path.join('schemas', schemaFile), 'utf8'));

@@ -12,7 +12,7 @@ Schemas live in `schemas/`:
 
 - `project.schema.json`
 - `tool.schema.json`
-- `paper.schema.json`
+- `research.schema.json` (papers; replaced the retired `paper.schema.json` after the research-vertical reorganisation)
 - `tip.schema.json`
 - `build-example.schema.json`
 - `person.schema.json`

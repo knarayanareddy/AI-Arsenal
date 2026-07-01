@@ -283,34 +283,78 @@ test('tip schema requires valid category', async () => {
   assert.equal(valid, false);
 });
 
-test('paper schema enforces arxiv_id regex', async () => {
-  const schema = await loadSchema('paper.schema.json');
+// Research-vertical reorganisation: papers now validate against
+// research.schema.json (content/research/{phase}/[id].md), not the
+// retired paper.schema.json (content/research/papers/[id].md).
+function baseValidResearchFixture(overrides = {}) {
+  return {
+    id: 'attention-paper',
+    title: 'A Paper',
+    authors: ['Author'],
+    phase: 'foundational',
+    venue: 'arxiv-preprint',
+    year: 2026,
+    arxiv_id: '2303.08774',
+    arxiv_url: 'https://arxiv.org/abs/2303.08774',
+    pdf_url: 'https://arxiv.org/pdf/2303.08774.pdf',
+    tags: ['attention'],
+    practical_applicability: 'high',
+    reproduction_status: 'reproduced',
+    result_status: 'current',
+    has_code: false,
+    tldr: 'A long-enough TLDR for the schema minimum length requirement',
+    key_contribution: 'A long-enough key contribution sentence for the schema minimum length',
+    added_date: '2026-06-13',
+    added_by: 'tester',
+    last_reviewed: '2026-06-13',
+    ...overrides
+  };
+}
+
+test('research schema enforces arxiv_id regex', async () => {
+  const schema = await loadSchema('research.schema.json');
   const ajv = new Ajv({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
   // arxiv_id regex is `^\d{4}\.\d{4,5}(v\d+)?$` — exactly 4 digits prefix
   // and 4-5 digit suffix, optionally followed by version (vN).
   for (const [valid_id, ok] of [['2303.08774', true], ['2406.00000v2', true], ['bogus', false], ['23.123', false], ['99999.99999', false]]) {
-    const valid = validate({
-      id: 'attention-paper',
-      title: 'A Paper',
-      authors: ['Author'],
-      published_date: '2026-06-13',
-      venue: 'arXiv',
+    const valid = validate(baseValidResearchFixture({
       arxiv_id: valid_id,
       arxiv_url: `https://arxiv.org/abs/${valid_id}`,
-      pdf_url: `https://arxiv.org/pdf/${valid_id}.pdf`,
-      tags: ['attention'],
-      category: 'architecture',
-      importance: 'foundational',
-      citation_count: 0,
-      has_code: false,
-      tldr: 'A long-enough TLDR for the schema minimum length requirement',
-      why_it_matters: 'A long-enough explanation that exceeds the minimum length of 20 characters',
-      added_date: '2026-06-13',
-      added_by: 'tester'
-    });
+      pdf_url: `https://arxiv.org/pdf/${valid_id}.pdf`
+    }));
     assert.equal(valid, ok, `arxiv_id ${valid_id} expected ok=${ok}, got valid=${valid}`);
   }
+});
+
+test('research schema requires phase/venue/year/practical_applicability/reproduction_status/result_status/has_code/tldr/key_contribution/last_reviewed', async () => {
+  const schema = await loadSchema('research.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  assert.equal(validate(baseValidResearchFixture()), true);
+
+  for (const field of ['phase', 'venue', 'year', 'practical_applicability', 'reproduction_status', 'result_status', 'has_code', 'tldr', 'key_contribution', 'last_reviewed']) {
+    const missing = baseValidResearchFixture();
+    delete missing[field];
+    assert.equal(validate(missing), false, `expected schema to reject missing ${field}`);
+  }
+});
+
+test('research schema rejects an unknown phase value', async () => {
+  const schema = await loadSchema('research.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  assert.equal(validate(baseValidResearchFixture({ phase: 'not-a-real-phase' })), false);
+});
+
+test('research schema requires superseded_by/builds_on/implemented_in to be valid kebab ids when present', async () => {
+  const schema = await loadSchema('research.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  assert.equal(validate(baseValidResearchFixture({ superseded_by: 'some-other-paper' })), true);
+  assert.equal(validate(baseValidResearchFixture({ builds_on: ['vaswani-2017-attention'] })), true);
+  assert.equal(validate(baseValidResearchFixture({ implemented_in: ['some-tool-id'] })), true);
+  assert.equal(validate(baseValidResearchFixture({ superseded_by: 'Not Kebab Case' })), false);
 });
 
 test('person schema requires channels array', async () => {

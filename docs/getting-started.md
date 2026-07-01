@@ -67,7 +67,7 @@ Start here:
 | Compare AI projects | `content/projects/_registry.md` |
 | Compare AI tools | `content/tools/_registry.md` |
 | Learn observability | `content/observability/` |
-| Read papers | `content/research/papers/` |
+| Read papers | `content/research/{phase}/` (see `content/research/_index.md` for all 8 phases) |
 | Find practical tips | `content/tips-and-tricks/` |
 
 ## 6. Use the Generated Data

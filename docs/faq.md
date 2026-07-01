@@ -51,9 +51,9 @@ pnpm run new:tip
 
 If placing manually:
 
-- projects go under `content/projects/[category]/[subcategory]/`
-- tools go under `content/tools/`
-- papers go under `content/research/papers/`
+- projects go under `content/projects/[phase]/`
+- tools go under `content/tools/[phase]/`
+- papers go under `content/research/[phase]/` (one of: `foundational`, `architectures`, `training-and-alignment`, `inference-and-efficiency`, `retrieval-and-memory`, `agents-and-reasoning`, `evaluation-and-safety`, `surveys`)
 - tips go under `content/tips-and-tricks/`
 - build examples go under `content/build-examples/[difficulty]/`
 

@@ -30,6 +30,9 @@ for (const dataset of datasets) {
         audience: item.audience ?? null,
         domain: item.domain ?? null,
         relation_to_stack: item.relation_to_stack ?? null,
+        practical_applicability: item.practical_applicability ?? null,
+        result_status: item.result_status ?? null,
+        reproduction_status: item.reproduction_status ?? null,
         path: item.path,
         url: item.url,
         boost_title: name,
@@ -43,7 +46,8 @@ for (const dataset of datasets) {
 }
 
 const facets = {
-  types: {}, tags: {}, categories: {}, maturity: {}, cost_model: {}, status: {}, phase: {}, audience: {}, domain: {}, relation_to_stack: {}
+  types: {}, tags: {}, categories: {}, maturity: {}, cost_model: {}, status: {}, phase: {}, audience: {}, domain: {}, relation_to_stack: {},
+  practical_applicability: {}, result_status: {}, reproduction_status: {}
 };
 for (const doc of docs) {
   facets.types[doc.type] = (facets.types[doc.type] ?? 0) + 1;
@@ -56,6 +60,9 @@ for (const doc of docs) {
   for (const a of doc.audience ?? []) facets.audience[a] = (facets.audience[a] ?? 0) + 1;
   for (const d of doc.domain ?? []) facets.domain[d] = (facets.domain[d] ?? 0) + 1;
   for (const r of doc.relation_to_stack ?? []) facets.relation_to_stack[r] = (facets.relation_to_stack[r] ?? 0) + 1;
+  if (doc.practical_applicability) facets.practical_applicability[doc.practical_applicability] = (facets.practical_applicability[doc.practical_applicability] ?? 0) + 1;
+  if (doc.result_status) facets.result_status[doc.result_status] = (facets.result_status[doc.result_status] ?? 0) + 1;
+  if (doc.reproduction_status) facets.reproduction_status[doc.reproduction_status] = (facets.reproduction_status[doc.reproduction_status] ?? 0) + 1;
 }
 
 await fs.writeFile('data/search-index.json', `${JSON.stringify({
@@ -71,7 +78,7 @@ await fs.writeFile('data/search-index.json', `${JSON.stringify({
         { field: 'tags', tokenize: 'strict', resolution: 7 },
         { field: 'body', tokenize: 'strict', resolution: 3 }
       ],
-      store: ['id', 'type', 'name', 'description', 'tags', 'category', 'phase', 'audience', 'domain', 'relation_to_stack', 'path', 'url']
+      store: ['id', 'type', 'name', 'description', 'tags', 'category', 'phase', 'audience', 'domain', 'relation_to_stack', 'practical_applicability', 'result_status', 'reproduction_status', 'path', 'url']
     }
   },
   facets,

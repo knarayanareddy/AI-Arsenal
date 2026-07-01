@@ -10,7 +10,7 @@ For a fuller explanation of schema and taxonomy decisions, read [`../docs/schema
 |---|---|
 | `project.schema.json` | `content/projects/**/[id].md` |
 | `tool.schema.json` | `content/tools/**/[id].md` |
-| `paper.schema.json` | `content/research/papers/[id].md` |
+| `research.schema.json` | `content/research/{phase}/[id].md` (replaces the retired `paper.schema.json`/`content/research/papers/` after the research-vertical reorganisation) |
 | `tip.schema.json` | `content/tips-and-tricks/**/[id].md` |
 | `build-example.schema.json` | `content/build-examples/**/[id].md` |
 | `person.schema.json` | community people/resources entries |

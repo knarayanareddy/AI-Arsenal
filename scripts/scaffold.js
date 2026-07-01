@@ -74,7 +74,12 @@ if (type === 'project') {
 } else if (type === 'tool') {
   destination = `content/tools/by-job/${id}.md`;
 } else if (type === 'paper') {
-  destination = `content/research/papers/${id}.md`;
+  const phase = slugify(await ask('phase', 'training-and-alignment'));
+  const validPhases = ['foundational', 'architectures', 'training-and-alignment', 'inference-and-efficiency', 'retrieval-and-memory', 'agents-and-reasoning', 'evaluation-and-safety', 'surveys'];
+  if (!validPhases.includes(phase)) {
+    throw new Error(`Invalid phase for paper: ${phase}. Must be one of: ${validPhases.join(', ')}`);
+  }
+  destination = `content/research/${phase}/${id}.md`;
 } else if (type === 'tip') {
   destination = `content/tips-and-tricks/${id}.md`;
 } else if (type === 'build-example') {
