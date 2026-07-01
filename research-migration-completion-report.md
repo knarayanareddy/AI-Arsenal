@@ -163,9 +163,12 @@ Every benchmark figure across all 25 entries carries its publication year in the
 ## Known, deliberately-flagged gaps (not silently swept under the rug)
 
 - **`yang-2024-qwen25-math`'s `enrichment_status: draft`** — narrower paper, timeboxed research applied, honestly flagged rather than over-claimed.
-- **No automated per-claim benchmark-date checker** — the requirement "no benchmark claim without a date" was applied by convention during authoring and spot-checked during review, but there is no dedicated validator script asserting every `(Score) on (Benchmark) (Year)` pattern in Key Results actually carries a year; this is a real, if modest, automation gap versus doing it purely by hand-discipline, worth a future validator addition.
 - **`architectures/` and `surveys/` remain empty** — both are genuine current gaps in the existing catalog (documented explicitly in their own `_index.md` files with the reasoning), not oversights or placeholder folders quietly left unaddressed.
 - **The pre-existing `qwen-2-5` project entry's `github_url` data-quality bug** (flagged in the projects-vertical work, pointing to the Qwen3 repo instead of a genuine Qwen2.5 source) is referenced, not re-litigated or fixed, in `yang-2024-qwen25-math`'s Limitations section — consistent with the established "flag, don't unilaterally fix a cross-vertical issue" discipline.
+
+### Closed after initial completion
+
+- **Automated per-claim benchmark-date checker** — originally flagged here as a gap (the "no benchmark claim without a date" requirement was applied by convention during authoring, with no dedicated validator). Closed in a follow-up commit: `scripts/validate-structure.js`'s `researchContentChecks()` now scans every migrated entry's Key Results section for score-shaped bullets (percentages, `pass@N`, F1, BLEU, EM, "accuracy", "perplexity") lacking a nearby `(YYYY)` year and emits a warning for human review. Running it against all 25 entries surfaced 3 warnings, all confirmed as prose that already references a date/period in a different format ("2022-era", "2025-2026") rather than genuine missing-date defects — correct heuristic behavior, not a false-negative gap. 3 new unit tests added.
 
 ## Files changed
 
