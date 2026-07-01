@@ -10,8 +10,8 @@
 | [architectures](./architectures/) | 0 entries | 2026-07-01 |
 | [evaluation and safety](./evaluation-and-safety/) | 0 entries | 2026-07-01 |
 | [foundational](./foundational/) | 5 entries | 2026-07-01 |
-| [inference and efficiency](./inference-and-efficiency/) | 0 entries | 2026-07-01 |
-| [papers](./papers/) | 13 entries | 2026-07-01 |
+| [inference and efficiency](./inference-and-efficiency/) | 2 entries | 2026-07-01 |
+| [papers](./papers/) | 11 entries | 2026-07-01 |
 | [retrieval and memory](./retrieval-and-memory/) | 0 entries | 2026-07-01 |
 | [surveys](./surveys/) | 0 entries | 2026-07-01 |
 | [training and alignment](./training-and-alignment/) | 7 entries | 2026-07-01 |
@@ -22,12 +22,12 @@
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./papers/chain-of-thought-prompting.md)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./foundational/devlin-2018-bert.md)
 - [Emerging AI Techniques](./emerging-techniques.md)
-- [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./papers/gptq.md)
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./papers/graphrag.md)
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./papers/hyde.md)
 - [Must-Read AI Papers](./must-read-papers.md)
 - [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./papers/raptor.md)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](./papers/react.md)
+- [SOTA Benchmarks](./sota-benchmarks.md)
 
 ## Most Popular
 
@@ -43,10 +43,11 @@ _No star-tracked entries yet._
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./foundational/devlin-2018-bert.md) — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
 - [The Llama 3 Herd of Models](./foundational/dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [Emerging AI Techniques](./emerging-techniques.md) — Current techniques worth tracking across reasoning, context, inference, and multimodal systems
-- [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./papers/gptq.md) — Introduced accurate post-training quantization methods for large generative transformers
+- [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./inference-and-efficiency/frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./papers/graphrag.md) — Introduced a graph-based RAG approach for global summarization over private datasets
 - [LoRA: Low-Rank Adaptation of Large Language Models](./training-and-alignment/hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./papers/hyde.md) — Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query
+- [Fast Inference from Transformers via Speculative Decoding](./inference-and-efficiency/leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](./foundational/lewis-2020-rag.md) — Coined 'RAG': a jointly-trained retriever plus generator beats closed-book generation on knowledge-intensive tasks -- ground generation in retrieved documents, though production RAG today uses a simpler decoupled pipeline
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./papers/llm-as-a-judge.md) — Evaluates using LLMs as judges for open-ended model comparison
 - [Must-Read AI Papers](./must-read-papers.md) — Categorized reading guide for foundational and high-leverage AI papers
@@ -57,7 +58,6 @@ _No star-tracked entries yet._
 - [ReAct: Synergizing Reasoning and Acting in Language Models](./papers/react.md) — Combined reasoning traces with actions so language models can think and use tools interleaved
 - [Self-Refine: Iterative Refinement with Self-Feedback](./papers/self-refine.md) — Explores iterative self-feedback for improving generated outputs
 - [SOTA Benchmarks](./sota-benchmarks.md) — Reference table of model, agent, code, math, and safety benchmark leaderboards
-- [Fast Inference from Transformers via Speculative Decoding](./papers/speculative-decoding.md) — Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model
 - [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](./papers/swe-agent.md) — Studies agent-computer interfaces for software engineering tasks
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./papers/toolformer.md) — Showed that language models can learn to call tools using self-supervised API-call annotations
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](./papers/tree-of-thoughts.md) — Introduced search over multiple reasoning paths instead of a single left-to-right chain

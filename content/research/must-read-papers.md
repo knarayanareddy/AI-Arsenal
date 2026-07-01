@@ -61,8 +61,8 @@ A good engineering reading list should explain what a paper introduced, not just
 ### Efficient Inference and Fine-Tuning
 
 - [LoRA](training-and-alignment/hu-2021-lora.md) — 2021 — low-rank adaptation
-- [GPTQ](papers/gptq.md) — 2022 — post-training quantization
-- [Speculative Decoding](papers/speculative-decoding.md) — 2022 — faster decoding with draft models
+- [GPTQ](inference-and-efficiency/frantar-2022-gptq.md) — 2022 — post-training quantization
+- [Speculative Decoding](inference-and-efficiency/leviathan-2022-speculative-decoding.md) — 2022 — faster decoding with draft models
 - [QLoRA](training-and-alignment/dettmers-2023-qlora.md) — 2023 — quantized fine-tuning
 
 ### Current SOTA / Model Reports

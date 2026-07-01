@@ -79,7 +79,7 @@ flowchart TD
 - [DeepSeek-R1](training-and-alignment/deepseek-ai-2025-r1.md)
 - [RAPTOR](papers/raptor.md)
 - [GraphRAG](papers/graphrag.md)
-- [Speculative Decoding](papers/speculative-decoding.md)
+- [Speculative Decoding](inference-and-efficiency/leviathan-2022-speculative-decoding.md)
 
 ## Buzz & Reception
 
