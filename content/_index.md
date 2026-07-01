@@ -12,7 +12,7 @@
 | [community](./community/) | 30 entries | 2026-07-01 |
 | [digests](./digests/) | 0 entries | 2026-07-01 |
 | [observability](./observability/) | 4 entries | 2026-07-01 |
-| [projects](./projects/) | 69 entries | 2026-07-01 |
+| [projects](./projects/) | 68 entries | 2026-07-01 |
 | [research](./research/) | 29 entries | 2026-07-01 |
 | [skills](./skills/) | 8 entries | 2026-07-01 |
 | [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-07-01 |
@@ -57,7 +57,7 @@
 - [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md) — 
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
-- [Agenta](./projects/observability/tracing/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
@@ -81,7 +81,7 @@
 - [Benchmark With Real Context Lengths](./tips-and-tricks/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./research/papers/bert.md) — Introduced bidirectional masked-language-model pretraining for language understanding
-- [Braintrust](./projects/observability/tracing/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
+- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Budget Context Before Adding Tools](./tips-and-tricks/budget-context-before-adding-tools.md) — 
 - [Cache Embeddings By Content Hash](./tips-and-tricks/cache-embeddings-by-content-hash.md) — 
 - [Cache Stable Embedding Calls](./tips-and-tricks/cache-stable-embedding-calls.md) — 

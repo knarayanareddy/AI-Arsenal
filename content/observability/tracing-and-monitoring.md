@@ -95,16 +95,16 @@ AI failures are often distributed across prompts, retrieval, tools, and model be
 
 ## Resources
 
-- [Langfuse](../projects/observability/tracing/langfuse.md) — sdk/self-host
-- [LangSmith](../projects/observability/tracing/langsmith-platform.md) — platform/managed
-- [Phoenix](../projects/observability/tracing/phoenix.md) — otel-native
-- [Helicone](../projects/observability/tracing/helicone.md) — proxy
-- [Opik](../projects/observability/tracing/opik.md) — platform
-- [OpenLIT](../projects/observability/tracing/openlit.md) — otel-native
-- [OpenLLMetry](../projects/observability/tracing/openllmetry.md) — otel-native
-- [Lunary](../projects/observability/tracing/lunary.md) — sdk
-- [Braintrust](../projects/observability/tracing/braintrust.md) — platform/eval-first
-- [Agenta](../projects/observability/tracing/agenta.md) — platform
+- [Langfuse](../projects/benchmarks-and-evals/langfuse.md) — sdk/self-host
+- [LangSmith](../projects/benchmarks-and-evals/langsmith-platform.md) — platform/managed
+- [Phoenix](../projects/benchmarks-and-evals/phoenix.md) — otel-native
+- [Helicone](../projects/benchmarks-and-evals/helicone.md) — proxy
+- [Opik](../projects/benchmarks-and-evals/opik.md) — platform
+- [OpenLIT](../projects/benchmarks-and-evals/openlit.md) — otel-native
+- [OpenLLMetry](../projects/benchmarks-and-evals/openllmetry.md) — otel-native
+- [Lunary](../projects/benchmarks-and-evals/lunary.md) — sdk
+- [Braintrust](../projects/benchmarks-and-evals/braintrust.md) — platform/eval-first
+- [Agenta](../projects/benchmarks-and-evals/agenta.md) — platform
 
 ## Buzz & Reception
 

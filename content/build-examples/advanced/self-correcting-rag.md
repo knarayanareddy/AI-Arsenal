@@ -85,7 +85,7 @@ flowchart TD
 
 - Decision tree: [RAG vs Fine-Tuning](../../architectures/decision-trees/rag-vs-fine-tuning.md)
 - Framework: [LangGraph](../../projects/frameworks/langgraph.md)
-- Evaluation: [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+- Evaluation: [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
 - Tip: [Prefer reranking before rechunking](../../tips-and-tricks/prefer-reranking-before-rechunking.md)
 
 ---

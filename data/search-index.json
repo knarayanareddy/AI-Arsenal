@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-01T11:08:23.968Z",
+  "generated_at": "2026-07-01T11:29:45.344Z",
   "config": {
     "document": {
       "id": "id",
@@ -36,6 +36,8 @@
         "category",
         "phase",
         "audience",
+        "domain",
+        "relation_to_stack",
         "path",
         "url"
       ]
@@ -43,7 +45,7 @@
   },
   "facets": {
     "types": {
-      "project": 69,
+      "project": 68,
       "tool": 92,
       "paper": 25,
       "tip": 106,
@@ -52,17 +54,17 @@
       "build-example": 8
     },
     "tags": {
-      "observability": 39,
-      "evaluation": 69,
+      "observability": 38,
+      "evaluation": 68,
       "tracing": 29,
       "cloud": 63,
       "agents": 69,
       "orchestration": 27,
       "planning": 12,
       "tool-use": 37,
-      "rag": 70,
+      "rag": 69,
       "embeddings": 29,
-      "retrieval": 59,
+      "retrieval": 58,
       "local": 26,
       "llm": 151,
       "multimodal": 12,
@@ -108,7 +110,7 @@
       "new-arrival": 2
     },
     "categories": {
-      "observability": 16,
+      "observability": 15,
       "agents": 20,
       "rag": 24,
       "llms": 20,
@@ -138,23 +140,24 @@
       "trending": 2
     },
     "maturity": {
-      "production": 139,
+      "production": 138,
       "beta": 22
     },
     "cost_model": {
       "freemium": 47,
-      "open-source": 95,
+      "open-source": 94,
       "paid": 10,
       "usage-based": 9
     },
     "status": {
-      "active": 241,
+      "active": 239,
       "deprecated": 1,
       "archived": 2,
-      "watching": 1
+      "watching": 2
     },
     "phase": {
-      "framework": 19,
+      "benchmark-and-eval": 12,
+      "framework": 20,
       "data-and-retrieval": 14,
       "foundation-model": 13,
       "agent-system": 2,
@@ -170,6 +173,19 @@
       "production": 61,
       "research": 23,
       "prototype": 50
+    },
+    "domain": {
+      "language": 65,
+      "reasoning": 16,
+      "general-purpose": 9,
+      "vision": 8,
+      "multimodal": 9
+    },
+    "relation_to_stack": {
+      "deploy-as-is": 54,
+      "build-on-top": 52,
+      "study-and-reference": 15,
+      "fork-and-adapt": 6
     }
   },
   "documents": [
@@ -191,6 +207,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-a-max-step-budget-to-every-agent.md",
       "url": "content/tips-and-tricks/add-a-max-step-budget-to-every-agent",
       "boost_title": "Add A Max Step Budget To Every Agent",
@@ -216,6 +234,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-a-minimal-reproduction-prompt.md",
       "url": "content/tips-and-tricks/add-a-minimal-reproduction-prompt",
       "boost_title": "Add A Minimal Reproduction Prompt",
@@ -240,6 +260,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-evals-before-refactors.md",
       "url": "content/tips-and-tricks/add-evals-before-refactors",
       "boost_title": "Add Evals Before Prompt Refactors",
@@ -265,6 +287,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-human-review-for-high-impact-actions.md",
       "url": "content/tips-and-tricks/add-human-review-for-high-impact-actions",
       "boost_title": "Add Human Review for High-Impact Actions",
@@ -290,6 +314,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-hybrid-search-for-exact-terms.md",
       "url": "content/tips-and-tricks/add-hybrid-search-for-exact-terms",
       "boost_title": "Add Hybrid Search for Exact Terms",
@@ -314,6 +340,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-output-examples-for-edge-cases.md",
       "url": "content/tips-and-tricks/add-output-examples-for-edge-cases",
       "boost_title": "Add Output Examples for Edge Cases",
@@ -339,6 +367,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-provider-timeout-and-retry-policies.md",
       "url": "content/tips-and-tricks/add-provider-timeout-and-retry-policies",
       "boost_title": "Add Provider Timeout And Retry Policies",
@@ -364,6 +394,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/add-reranking-after-recall-is-acceptable.md",
       "url": "content/tips-and-tricks/add-reranking-after-recall-is-acceptable",
       "boost_title": "Add Reranking After Recall Is Acceptable",
@@ -390,6 +422,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/agent-browser-shield.md",
       "url": "content/tools/data-ingestion/agent-browser-shield",
       "boost_title": "Agent Browser Shield",
@@ -416,6 +450,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/learning-paths/agent-builder.md",
       "url": "content/skills/learning-paths/agent-builder",
       "boost_title": "Agent Builder Learning Path",
@@ -440,14 +476,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/agenta.md",
-      "url": "content/projects/observability/tracing/agenta",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/agenta.md",
+      "url": "content/projects/benchmarks-and-evals/agenta",
       "boost_title": "Agenta",
       "boost_tags": "observability evaluation tracing cloud",
       "boost_description": "Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds",
-      "body": "Agenta Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds observability evaluation tracing cloud observability tracing TL;DR: Agenta is an open source LLMOps platform for prompt management, evaluation, observability, and playground workflows. Use it when prompts and evals need a collaborative product surface. Overview Agenta brings prompt collaboration, side by side experiments, evaluation, and observability into one LLMOps platform. Why It's in the Arsenal Teams often outgrow prompts in code and need a shared workflow for subject matter experts, developers, and evaluators. Key Features Prompt playground and management Evaluation workflows Observability and tracing Open source repository Collaboration between…"
+      "body": "Agenta Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds observability evaluation tracing cloud observability tracing Overview An open source LLMOps platform combining prompt management, systematic evaluation, and observability into a single self hostable stack, aimed at letting both engineers and non engineers collaborate on iterating LLM application prompts. Why it's in the Arsenal Open source LLMOps platform combining prompt management, evaluation, and observability in a self hostable stack. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want prompt experimentation, evaluation, and observability in a single self hostable open source platform rather than assem…"
     },
     {
       "id": "agnt-hub",
@@ -468,6 +511,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/agnt-hub.md",
       "url": "content/tools/orchestration/agnt-hub",
       "boost_title": "AGNT.Hub",
@@ -494,6 +539,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/learning-paths/ai-engineer.md",
       "url": "content/skills/learning-paths/ai-engineer",
       "boost_title": "AI Engineer Learning Path",
@@ -521,6 +568,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/airflow.md",
       "url": "content/tools/orchestration/airflow",
       "boost_title": "Apache Airflow",
@@ -546,6 +595,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/allowlist-tools-per-agent-role.md",
       "url": "content/tips-and-tricks/allowlist-tools-per-agent-role",
       "boost_title": "Allowlist Tools Per Agent Role",
@@ -571,6 +622,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/andrej-karpathy.md",
       "url": "content/community/people/andrej-karpathy",
       "boost_title": "Andrej Karpathy",
@@ -596,6 +649,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/andrew-ng.md",
       "url": "content/community/people/andrew-ng",
       "boost_title": "Andrew Ng",
@@ -624,6 +679,8 @@
         "research",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/argilla.md",
       "url": "content/tools/data-ingestion/argilla",
       "boost_title": "Argilla",
@@ -649,6 +706,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/arvind-narayanan.md",
       "url": "content/community/people/arvind-narayanan",
       "boost_title": "Arvind Narayanan",
@@ -673,6 +732,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/ask-for-missing-inputs-before-solving.md",
       "url": "content/tips-and-tricks/ask-for-missing-inputs-before-solving",
       "boost_title": "Ask For Missing Inputs Before Solving",
@@ -699,6 +760,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/astra-autonomous-pentest.md",
       "url": "content/tools/evaluation-and-observability/astra-autonomous-pentest",
       "boost_title": "Astra Autonomous Pentest",
@@ -725,6 +788,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/attention-is-all-you-need.md",
       "url": "content/research/papers/attention-is-all-you-need",
       "boost_title": "Attention Is All You Need",
@@ -751,6 +816,14 @@
       "status": "deprecated",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "study-and-reference",
+        "build-on-top"
+      ],
       "path": "content/projects/frameworks/autogen.md",
       "url": "content/projects/frameworks/autogen",
       "boost_title": "AutoGen",
@@ -777,6 +850,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "study-and-reference"
+      ],
       "path": "content/projects/frameworks/autogpt.md",
       "url": "content/projects/frameworks/autogpt",
       "boost_title": "AutoGPT",
@@ -804,6 +885,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/aws-bedrock.md",
       "url": "content/tools/serving-and-deployment/aws-bedrock",
       "boost_title": "AWS Bedrock",
@@ -832,6 +915,8 @@
         "research",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/axolotl.md",
       "url": "content/tools/model-layer/axolotl",
       "boost_title": "Axolotl",
@@ -859,6 +944,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/azure-ai-studio.md",
       "url": "content/tools/serving-and-deployment/azure-ai-studio",
       "boost_title": "Azure AI Studio",
@@ -884,6 +971,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/basedash.md",
       "url": "content/tools/dx-and-tooling/basedash",
       "boost_title": "Basedash",
@@ -909,6 +998,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/starter/basic-rag-chatbot.md",
       "url": "content/build-examples/starter/basic-rag-chatbot",
       "boost_title": "Basic RAG Chatbot",
@@ -934,6 +1025,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/benchmark-on-the-user-hardware.md",
       "url": "content/tips-and-tricks/benchmark-on-the-user-hardware",
       "boost_title": "Benchmark On The User Hardware",
@@ -958,6 +1051,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/benchmark-with-production-shaped-inputs.md",
       "url": "content/tips-and-tricks/benchmark-with-production-shaped-inputs",
       "boost_title": "Benchmark with Production-Shaped Inputs",
@@ -983,6 +1078,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/benchmark-with-real-context-lengths.md",
       "url": "content/tips-and-tricks/benchmark-with-real-context-lengths",
       "boost_title": "Benchmark With Real Context Lengths",
@@ -1010,6 +1107,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/bentoml.md",
       "url": "content/tools/serving-and-deployment/bentoml",
       "boost_title": "BentoML",
@@ -1035,6 +1134,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/bert.md",
       "url": "content/research/papers/bert",
       "boost_title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
@@ -1059,14 +1160,20 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/braintrust.md",
-      "url": "content/projects/observability/tracing/braintrust",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
+      "path": "content/projects/benchmarks-and-evals/braintrust.md",
+      "url": "content/projects/benchmarks-and-evals/braintrust",
       "boost_title": "Braintrust",
       "boost_tags": "observability evaluation tracing cloud",
       "boost_description": "Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates",
-      "body": "Braintrust Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates observability evaluation tracing cloud observability tracing TL;DR: Braintrust is a managed eval first platform for traces, datasets, scorers, prompt experiments, and CI gates. Use it when evaluation workflows drive your LLM development process. Overview Braintrust emphasizes the loop between production traces, evaluation datasets, scorers, prompt/model experiments, and CI/CD quality gates. Why It's in the Arsenal Eval first teams need more than logs; they need trace to dataset workflows and repeatable scoring before releases. Key Features Trace logging and span trees Datasets and scoring workflows Prompt/model experiment comparison CI/CD evaluation ga…"
+      "body": "Braintrust Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates observability evaluation tracing cloud observability tracing Overview A managed evaluation and observability platform for LLM applications, emphasizing rigorous, data driven evaluation workflows for comparing prompt and model changes before production deployment. Why it's in the Arsenal Managed evaluation and observability platform, positioned around rigorous, data driven LLM evaluation workflows. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a managed platform with a strong focus on rigorous evaluation workflows (systematic scoring, regression detection across prompt/model changes) rather than traci…"
     },
     {
       "id": "budget-context-before-adding-tools",
@@ -1086,6 +1193,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/budget-context-before-adding-tools.md",
       "url": "content/tips-and-tricks/budget-context-before-adding-tools",
       "boost_title": "Budget Context Before Adding Tools",
@@ -1111,6 +1220,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/cache-embeddings-by-content-hash.md",
       "url": "content/tips-and-tricks/cache-embeddings-by-content-hash",
       "boost_title": "Cache Embeddings By Content Hash",
@@ -1136,6 +1247,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/cache-stable-embedding-calls.md",
       "url": "content/tips-and-tricks/cache-stable-embedding-calls",
       "boost_title": "Cache Stable Embedding Calls",
@@ -1161,6 +1274,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/cache-stable-system-prompts.md",
       "url": "content/tips-and-tricks/cache-stable-system-prompts",
       "boost_title": "Cache Stable System Prompts",
@@ -1186,6 +1301,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/cap-agent-tool-retries.md",
       "url": "content/tips-and-tricks/cap-agent-tool-retries",
       "boost_title": "Cap Agent Tool Retries",
@@ -1211,6 +1328,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/chain-of-thought-prompting.md",
       "url": "content/research/papers/chain-of-thought-prompting",
       "boost_title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
@@ -1238,6 +1357,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/chainlit.md",
       "url": "content/tools/dx-and-tooling/chainlit",
       "boost_title": "Chainlit",
@@ -1263,6 +1384,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/checkpoint-agent-state-after-each-tool-call.md",
       "url": "content/tips-and-tricks/checkpoint-agent-state-after-each-tool-call",
       "boost_title": "Checkpoint Agent State After Each Tool Call",
@@ -1288,6 +1411,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/chip-huyen.md",
       "url": "content/community/people/chip-huyen",
       "boost_title": "Chip Huyen",
@@ -1314,6 +1439,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-agent-framework.md",
       "url": "content/architectures/decision-trees/choose-agent-framework",
       "boost_title": "Choose an Agent Framework",
@@ -1339,6 +1466,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/choose-chunk-size-by-answer-span-length.md",
       "url": "content/tips-and-tricks/choose-chunk-size-by-answer-span-length",
       "boost_title": "Choose Chunk Size by Answer Span Length",
@@ -1365,6 +1494,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-deployment-target.md",
       "url": "content/architectures/decision-trees/choose-deployment-target",
       "boost_title": "Choose a Deployment Target",
@@ -1391,6 +1522,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-eval-framework.md",
       "url": "content/architectures/decision-trees/choose-eval-framework",
       "boost_title": "Choose an Evaluation Framework",
@@ -1416,6 +1549,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/choose-int4-only-after-quality-tests.md",
       "url": "content/tips-and-tricks/choose-int4-only-after-quality-tests",
       "boost_title": "Choose INT4 Only After Quality Tests",
@@ -1442,6 +1577,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-llm.md",
       "url": "content/architectures/decision-trees/choose-llm",
       "boost_title": "Which LLM Should I Use?",
@@ -1468,6 +1605,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-memory-solution.md",
       "url": "content/architectures/decision-trees/choose-memory-solution",
       "boost_title": "Choose a Memory Solution",
@@ -1494,6 +1633,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-observability-tool.md",
       "url": "content/architectures/decision-trees/choose-observability-tool",
       "boost_title": "Choose an Observability Tool",
@@ -1520,6 +1661,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/choose-vector-db.md",
       "url": "content/architectures/decision-trees/choose-vector-db",
       "boost_title": "Choose a Vector Database",
@@ -1546,6 +1689,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/chroma.md",
       "url": "content/projects/data-and-retrieval/chroma",
       "boost_title": "Chroma",
@@ -1571,6 +1721,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/classify-failures-before-fixing-prompts.md",
       "url": "content/tips-and-tricks/classify-failures-before-fixing-prompts",
       "boost_title": "Classify Failures Before Fixing Prompts",
@@ -1596,6 +1748,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/claude-artifact-player.md",
       "url": "content/tools/dx-and-tooling/claude-artifact-player",
       "boost_title": "Claude Artifact Player",
@@ -1621,6 +1775,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/clem-delangue.md",
       "url": "content/community/people/clem-delangue",
       "boost_title": "Clément Delangue",
@@ -1647,6 +1803,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/cloudskill.md",
       "url": "content/tools/orchestration/cloudskill",
       "boost_title": "Cloudskill",
@@ -1672,6 +1830,8 @@
       "audience": [
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/code-arena.md",
       "url": "content/tools/evaluation-and-observability/code-arena",
       "boost_title": "Code Arena",
@@ -1698,6 +1858,13 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/foundation-models/command-r-plus.md",
       "url": "content/projects/foundation-models/command-r-plus",
       "boost_title": "Command R+",
@@ -1723,6 +1890,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/compress-retrieved-context-before-generation.md",
       "url": "content/tips-and-tricks/compress-retrieved-context-before-generation",
       "boost_title": "Compress Retrieved Context Before Generation",
@@ -1749,6 +1918,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/conan.md",
       "url": "content/tools/evaluation-and-observability/conan",
       "boost_title": "Conan",
@@ -1774,6 +1945,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/constitutional-ai.md",
       "url": "content/research/papers/constitutional-ai",
       "boost_title": "Constitutional AI: Harmlessness from AI Feedback",
@@ -1799,6 +1972,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/observability/cost-tracking.md",
       "url": "content/observability/cost-tracking",
       "boost_title": "Cost Tracking",
@@ -1824,6 +1999,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/crawl4ai.md",
       "url": "content/projects/data-and-retrieval/crawl4ai",
       "boost_title": "Crawl4AI",
@@ -1852,6 +2034,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/crawl4ai-tool.md",
       "url": "content/tools/data-ingestion/crawl4ai-tool",
       "boost_title": "Crawl4AI",
@@ -1878,6 +2062,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/crewai.md",
       "url": "content/projects/frameworks/crewai",
       "boost_title": "CrewAI",
@@ -1905,6 +2097,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/dagster.md",
       "url": "content/tools/orchestration/dagster",
       "boost_title": "Dagster",
@@ -1930,6 +2124,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/dario-amodei.md",
       "url": "content/community/people/dario-amodei",
       "boost_title": "Dario Amodei",
@@ -1954,6 +2150,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/data-labeling.md",
       "url": "content/tools/by-job/data-labeling",
       "boost_title": "Data Labeling Tools",
@@ -1978,14 +2176,20 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/evaluation/deepeval.md",
-      "url": "content/projects/observability/evaluation/deepeval",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/deepeval.md",
+      "url": "content/projects/benchmarks-and-evals/deepeval",
       "boost_title": "DeepEval",
       "boost_tags": "evaluation llm observability monitoring",
       "boost_description": "An open-source evaluation framework for testing LLM applications in CI",
-      "body": "DeepEval An open-source evaluation framework for testing LLM applications in CI evaluation llm observability monitoring observability evaluation Overview DeepEval is included as a notable observability project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the observability category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxo…"
+      "body": "DeepEval An open-source evaluation framework for testing LLM applications in CI evaluation llm observability monitoring observability evaluation Overview An open source evaluation framework for testing LLM applications, designed to integrate with standard testing tools (pytest) and CI pipelines so LLM output quality can be checked automatically like conventional unit tests. Why it's in the Arsenal General purpose open source LLM evaluation framework designed to run in CI like a unit test suite. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want LLM evaluation to feel like writing unit tests — DeepEval is explicitly designed to integrate with pytest and CI pipelines for automated regressi…"
     },
     {
       "id": "deepseek-r1",
@@ -2005,6 +2209,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/deepseek-r1.md",
       "url": "content/research/papers/deepseek-r1",
       "boost_title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
@@ -2031,6 +2237,14 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/deepseek-v3-r1.md",
       "url": "content/projects/foundation-models/deepseek-v3-r1",
       "boost_title": "DeepSeek-V3 / R1",
@@ -2056,6 +2270,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/define-fallbacks-for-tool-failures.md",
       "url": "content/tips-and-tricks/define-fallbacks-for-tool-failures",
       "boost_title": "Define Fallbacks For Tool Failures",
@@ -2080,6 +2296,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/deployment.md",
       "url": "content/tools/by-job/deployment",
       "boost_title": "Deployment Tools",
@@ -2105,6 +2323,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/detect-context-truncation-in-tests.md",
       "url": "content/tips-and-tricks/detect-context-truncation-in-tests",
       "boost_title": "Detect Context Truncation In Tests",
@@ -2130,6 +2350,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/detect-multi-hop-questions-explicitly.md",
       "url": "content/tips-and-tricks/detect-multi-hop-questions-explicitly",
       "boost_title": "Detect Multi Hop Questions Explicitly",
@@ -2155,6 +2377,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/detect-repeated-tool-calls.md",
       "url": "content/tips-and-tricks/detect-repeated-tool-calls",
       "boost_title": "Detect Repeated Tool Calls",
@@ -2181,6 +2405,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
       "path": "content/projects/frameworks/dify.md",
       "url": "content/projects/frameworks/dify",
       "boost_title": "Dify",
@@ -2206,6 +2438,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/direct-preference-optimization.md",
       "url": "content/research/papers/direct-preference-optimization",
       "boost_title": "Direct Preference Optimization",
@@ -2231,6 +2465,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/discord-communities.md",
       "url": "content/community/discord-communities",
       "boost_title": "Discord and Community Spaces",
@@ -2256,6 +2492,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/do-not-launch-without-trace-sampling.md",
       "url": "content/tips-and-tricks/do-not-launch-without-trace-sampling",
       "boost_title": "Do Not Launch Without Trace Sampling",
@@ -2281,6 +2519,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
       "path": "content/projects/data-and-retrieval/docling.md",
       "url": "content/projects/data-and-retrieval/docling",
       "boost_title": "Docling",
@@ -2306,6 +2551,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/intermediate/document-qa-pipeline.md",
       "url": "content/build-examples/intermediate/document-qa-pipeline",
       "boost_title": "Document Q&A Pipeline",
@@ -2331,6 +2578,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/drop-unused-conversation-history.md",
       "url": "content/tips-and-tricks/drop-unused-conversation-history",
       "boost_title": "Drop Unused Conversation History",
@@ -2357,6 +2606,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/dropstone-3.md",
       "url": "content/tools/dx-and-tooling/dropstone-3",
       "boost_title": "Dropstone 3",
@@ -2383,6 +2634,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/frameworks/dspy.md",
       "url": "content/projects/frameworks/dspy",
       "boost_title": "DSPy",
@@ -2410,6 +2669,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/dvc.md",
       "url": "content/tools/model-layer/dvc",
       "boost_title": "DVC",
@@ -2435,6 +2696,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/core-concepts/embeddings.md",
       "url": "content/skills/core-concepts/embeddings",
       "boost_title": "Embeddings",
@@ -2460,6 +2723,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/emerging-techniques.md",
       "url": "content/research/emerging-techniques",
       "boost_title": "Emerging AI Techniques",
@@ -2486,6 +2751,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/empromptu-ai.md",
       "url": "content/tools/orchestration/empromptu-ai",
       "boost_title": "Empromptu AI",
@@ -2512,6 +2779,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/reference-stacks/enterprise-scale.md",
       "url": "content/architectures/reference-stacks/enterprise-scale",
       "boost_title": "Enterprise-Scale AI Stack",
@@ -2537,6 +2806,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/eugene-yan.md",
       "url": "content/community/people/eugene-yan",
       "boost_title": "Eugene Yan",
@@ -2562,6 +2833,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/evaluate-embedding-models-before-rechunking.md",
       "url": "content/tips-and-tricks/evaluate-embedding-models-before-rechunking",
       "boost_title": "Evaluate Embedding Models Before Rechunking",
@@ -2586,6 +2859,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/evaluation.md",
       "url": "content/tools/by-job/evaluation",
       "boost_title": "Evaluation Tools",
@@ -2611,6 +2886,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/observability/evaluation-pipelines.md",
       "url": "content/observability/evaluation-pipelines",
       "boost_title": "Evaluation Pipelines",
@@ -2637,6 +2914,13 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/foundation-models/falcon-3.md",
       "url": "content/projects/foundation-models/falcon-3",
       "boost_title": "Falcon 3",
@@ -2665,6 +2949,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/fastapi.md",
       "url": "content/tools/serving-and-deployment/fastapi",
       "boost_title": "FastAPI",
@@ -2689,6 +2975,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/fine-tuning.md",
       "url": "content/tools/by-job/fine-tuning",
       "boost_title": "Fine Tuning Tools",
@@ -2714,6 +3002,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/data-and-retrieval/firecrawl.md",
       "url": "content/projects/data-and-retrieval/firecrawl",
       "boost_title": "Firecrawl",
@@ -2742,6 +3037,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/firecrawl-tool.md",
       "url": "content/tools/data-ingestion/firecrawl-tool",
       "boost_title": "Firecrawl",
@@ -2769,6 +3066,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/fireworks-ai.md",
       "url": "content/tools/serving-and-deployment/fireworks-ai",
       "boost_title": "Fireworks AI",
@@ -2797,6 +3096,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/fly-io.md",
       "url": "content/tools/serving-and-deployment/fly-io",
       "boost_title": "Fly.io",
@@ -2822,6 +3123,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/francois-chollet.md",
       "url": "content/community/people/francois-chollet",
       "boost_title": "François Chollet",
@@ -2847,6 +3150,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/prompt-engineering/fundamentals.md",
       "url": "content/skills/prompt-engineering/fundamentals",
       "boost_title": "Prompt Engineering Fundamentals",
@@ -2873,6 +3178,15 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/gemma.md",
       "url": "content/projects/foundation-models/gemma",
       "boost_title": "Gemma",
@@ -2899,6 +3213,16 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "vision",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/gemma-3.md",
       "url": "content/projects/foundation-models/gemma-3",
       "boost_title": "Gemma 3",
@@ -2927,6 +3251,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/giskard.md",
       "url": "content/tools/evaluation-and-observability/giskard",
       "boost_title": "Giskard",
@@ -2953,6 +3279,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/google-adk.md",
       "url": "content/projects/frameworks/google-adk",
       "boost_title": "Google ADK",
@@ -2978,6 +3312,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
       "url": "content/tools/dx-and-tooling/google-pomelli-2-0",
       "boost_title": "Google Pomelli 2.0",
@@ -3005,6 +3341,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/google-vertex-ai.md",
       "url": "content/tools/serving-and-deployment/google-vertex-ai",
       "boost_title": "Google Vertex AI",
@@ -3030,6 +3368,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/gptq.md",
       "url": "content/research/papers/gptq",
       "boost_title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
@@ -3057,6 +3397,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/gradio.md",
       "url": "content/tools/dx-and-tooling/gradio",
       "boost_title": "Gradio",
@@ -3082,6 +3424,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/graphrag.md",
       "url": "content/research/papers/graphrag",
       "boost_title": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
@@ -3109,6 +3453,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/guardrails-ai.md",
       "url": "content/tools/evaluation-and-observability/guardrails-ai",
       "boost_title": "Guardrails AI",
@@ -3137,6 +3483,8 @@
         "research",
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/guidance.md",
       "url": "content/tools/model-layer/guidance",
       "boost_title": "Guidance",
@@ -3161,6 +3509,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/trending/hall-of-fame.md",
       "url": "content/trending/hall-of-fame",
       "boost_title": "AI Arsenal Hall of Fame",
@@ -3186,6 +3536,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/hamel-husain.md",
       "url": "content/community/people/hamel-husain",
       "boost_title": "Hamel Husain",
@@ -3211,6 +3563,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/harrison-chase.md",
       "url": "content/community/people/harrison-chase",
       "boost_title": "Harrison Chase",
@@ -3237,6 +3591,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/haystack.md",
       "url": "content/projects/frameworks/haystack",
       "boost_title": "Haystack",
@@ -3261,14 +3623,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/helicone.md",
-      "url": "content/projects/observability/tracing/helicone",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/helicone.md",
+      "url": "content/projects/benchmarks-and-evals/helicone",
       "boost_title": "Helicone",
       "boost_tags": "observability monitoring cloud self-hosted",
       "boost_description": "Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics",
-      "body": "Helicone Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics observability monitoring cloud self-hosted observability tracing TL;DR: Helicone is a proxy based observability platform for LLM requests, costs, caching, experiments, and analytics. Use it when you want fast rollout through a gateway/proxy pattern. Overview Helicone sits between your app and model provider, making it attractive for quick request logging, cost tracking, caching, and experimentation. Why It's in the Arsenal Proxy based observability can be much easier to adopt than SDK instrumentation when many services call LLM providers. Key Features Proxy/gateway integration Request logs and cost analytics Caching and rate/usage controls Prompt experimen…"
+      "body": "Helicone Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics observability monitoring cloud self-hosted observability tracing Overview An open source LLM observability platform using a proxy based integration model, providing tracing, cost tracking, and caching for LLM applications with minimal code changes required. Why it's in the Arsenal Open source LLM observability platform positioned around a simple proxy based integration model. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the simplest possible integration path for LLM observability — Helicone's proxy based approach typically requires only a base URL change rather than instrumenting code with an SDK throug…"
     },
     {
       "id": "hf-inference-endpoints",
@@ -3291,6 +3660,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/hf-inference-endpoints.md",
       "url": "content/tools/serving-and-deployment/hf-inference-endpoints",
       "boost_title": "Hugging Face Inference Endpoints",
@@ -3316,6 +3687,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/honen.md",
       "url": "content/tools/dx-and-tooling/honen",
       "boost_title": "Honen",
@@ -3345,6 +3718,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/hugging-face-hub.md",
       "url": "content/tools/model-layer/hugging-face-hub",
       "boost_title": "Hugging Face Hub",
@@ -3372,6 +3747,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/humanloop.md",
       "url": "content/tools/evaluation-and-observability/humanloop",
       "boost_title": "Humanloop",
@@ -3397,6 +3774,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/hyde.md",
       "url": "content/research/papers/hyde",
       "boost_title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
@@ -3423,6 +3802,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/ideogram.md",
       "url": "content/tools/model-layer/ideogram",
       "boost_title": "Ideogram",
@@ -3449,6 +3830,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/ideogram-ai.md",
       "url": "content/tools/model-layer/ideogram-ai",
       "boost_title": "Ideogram AI",
@@ -3473,6 +3856,13 @@
       "status": "active",
       "phase": "agent-system",
       "audience": null,
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
       "path": "content/projects/agent-systems/insforge.md",
       "url": "content/projects/agent-systems/insforge",
       "boost_title": "InsForge",
@@ -3498,6 +3888,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer.md",
       "url": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer",
       "boost_title": "Inspect Retrieved Chunks Beside The Answer",
@@ -3523,6 +3915,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/instructgpt.md",
       "url": "content/research/papers/instructgpt",
       "boost_title": "Training Language Models to Follow Instructions with Human Feedback",
@@ -3551,6 +3945,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/instructor.md",
       "url": "content/tools/dx-and-tooling/instructor",
       "boost_title": "Instructor",
@@ -3576,6 +3972,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/jason-liu.md",
       "url": "content/community/people/jason-liu",
       "boost_title": "Jason Liu",
@@ -3601,6 +3999,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/jay-alammar.md",
       "url": "content/community/people/jay-alammar",
       "boost_title": "Jay Alammar",
@@ -3626,6 +4026,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/jeremy-howard.md",
       "url": "content/community/people/jeremy-howard",
       "boost_title": "Jeremy Howard",
@@ -3651,6 +4053,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/jerry-liu.md",
       "url": "content/community/people/jerry-liu",
       "boost_title": "Jerry Liu",
@@ -3678,6 +4082,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/jina-reader.md",
       "url": "content/tools/data-ingestion/jina-reader",
       "boost_title": "Jina AI Reader",
@@ -3703,6 +4109,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/keep-a-kill-switch-for-agent-actions.md",
       "url": "content/tips-and-tricks/keep-a-kill-switch-for-agent-actions",
       "boost_title": "Keep A Kill Switch For Agent Actions",
@@ -3728,6 +4136,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/keep-instructions-outside-retrieved-context.md",
       "url": "content/tips-and-tricks/keep-instructions-outside-retrieved-context",
       "boost_title": "Keep Instructions Outside Retrieved Context",
@@ -3753,6 +4163,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/keep-model-files-out-of-git.md",
       "url": "content/tips-and-tricks/keep-model-files-out-of-git",
       "boost_title": "Keep Model Files Out Of Git",
@@ -3778,6 +4190,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/keep-source-page-and-section-metadata.md",
       "url": "content/tips-and-tricks/keep-source-page-and-section-metadata",
       "boost_title": "Keep Source Page and Section Metadata",
@@ -3805,6 +4219,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/kimi-k2-5.md",
       "url": "content/tools/model-layer/kimi-k2-5",
       "boost_title": "Kimi K2.5",
@@ -3833,6 +4249,8 @@
         "research",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/label-studio.md",
       "url": "content/tools/data-ingestion/label-studio",
       "boost_title": "Label Studio",
@@ -3859,6 +4277,14 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/lancedb.md",
       "url": "content/projects/data-and-retrieval/lancedb",
       "boost_title": "LanceDB",
@@ -3885,6 +4311,13 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
       "path": "content/projects/frameworks/langchain.md",
       "url": "content/projects/frameworks/langchain",
       "boost_title": "LangChain",
@@ -3909,14 +4342,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/langfuse.md",
-      "url": "content/projects/observability/tracing/langfuse",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/langfuse.md",
+      "url": "content/projects/benchmarks-and-evals/langfuse",
       "boost_title": "Langfuse",
       "boost_tags": "observability tracing evaluation self-hosted",
       "boost_description": "Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets",
-      "body": "Langfuse Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets observability tracing evaluation self-hosted observability tracing TL;DR: Langfuse is a self hostable LLM observability platform for traces, evals, prompts, and datasets. Use it when data ownership and open source deployment matter. Overview Langfuse covers tracing, prompt management, evaluations, datasets, metrics, and playground workflows for LLM applications. It has both cloud and self hosted deployment options. Why It's in the Arsenal It is one of the strongest defaults for teams that want an open source observability layer rather than a purely managed service. Key Features Tracing for LLM calls and agents Prompt management and playground workflows Datas…"
+      "body": "Langfuse Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets observability tracing evaluation self-hosted observability tracing Overview An open source LLM observability and evaluation platform offering tracing, prompt management, and evaluation, distinguished by a fully open source (not open core) product model where the self hosted version has feature parity with the managed cloud offering. Why it's in the Arsenal Open source LLM observability and evaluation platform, one of the most widely adopted self hostable options with a fully open source product model. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a fully open source (not open core) observability and evalua…"
     },
     {
       "id": "langfuse-prompts",
@@ -3938,6 +4378,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/langfuse-prompts.md",
       "url": "content/tools/dx-and-tooling/langfuse-prompts",
       "boost_title": "Langfuse Prompts",
@@ -3965,6 +4407,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/langgraph.md",
       "url": "content/projects/frameworks/langgraph",
       "boost_title": "LangGraph",
@@ -3993,6 +4443,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/langsmith.md",
       "url": "content/tools/evaluation-and-observability/langsmith",
       "boost_title": "LangSmith",
@@ -4020,6 +4472,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/langsmith-hub.md",
       "url": "content/tools/dx-and-tooling/langsmith-hub",
       "boost_title": "LangSmith Hub",
@@ -4044,14 +4498,20 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/langsmith-platform.md",
-      "url": "content/projects/observability/tracing/langsmith-platform",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
+      "path": "content/projects/benchmarks-and-evals/langsmith-platform.md",
+      "url": "content/projects/benchmarks-and-evals/langsmith-platform",
       "boost_title": "LangSmith",
       "boost_tags": "observability tracing evaluation langchain",
       "boost_description": "Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback",
-      "body": "LangSmith Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback observability tracing evaluation langchain observability tracing TL;DR: LangSmith is LangChain’s managed platform for tracing, evaluation, prompt workflows, and debugging. Use it when your stack already uses LangChain or LangGraph. Overview LangSmith is a managed service by the LangChain team. It is tightly integrated with LangChain/LangGraph and focuses on traces, datasets, evals, and application debugging. Why It's in the Arsenal For LangChain/LangGraph teams, LangSmith is often the fastest path to high fidelity traces and eval workflows. Key Features Native LangChain/LangGraph tracing Datasets and evaluation workflows Prompt playground and debugging UI…"
+      "body": "LangSmith Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback observability tracing evaluation langchain observability tracing Overview LangChain's managed platform for tracing, evaluating, and monitoring applications, with first party integration for LangChain and LangGraph specifically, requiring minimal setup for applications already built on those frameworks. Why it's in the Arsenal LangChain's managed observability and evaluation platform, with the deepest first party integration for LangChain/LangGraph applications. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building with LangChain or LangGraph and want first party tracing/evaluation with minimal integration…"
     },
     {
       "id": "language-models-are-few-shot-learners",
@@ -4071,6 +4531,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/language-models-are-few-shot-learners.md",
       "url": "content/research/papers/language-models-are-few-shot-learners",
       "boost_title": "Language Models are Few-Shot Learners",
@@ -4097,6 +4559,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/reference-stacks/lean-mvp.md",
       "url": "content/architectures/reference-stacks/lean-mvp",
       "boost_title": "Lean MVP Stack",
@@ -4125,6 +4589,8 @@
         "prototype",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/letta.md",
       "url": "content/tools/orchestration/letta",
       "boost_title": "Letta",
@@ -4150,6 +4616,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/lilian-weng.md",
       "url": "content/community/people/lilian-weng",
       "boost_title": "Lilian Weng",
@@ -4178,6 +4646,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/litellm.md",
       "url": "content/tools/serving-and-deployment/litellm",
       "boost_title": "LiteLLM",
@@ -4204,6 +4674,16 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "vision",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/llama-3.md",
       "url": "content/projects/foundation-models/llama-3",
       "boost_title": "Llama 3.x",
@@ -4229,6 +4709,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/llama-3-herd-of-models.md",
       "url": "content/research/papers/llama-3-herd-of-models",
       "boost_title": "The Llama 3 Herd of Models",
@@ -4255,6 +4737,14 @@
       "status": "active",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "fork-and-adapt"
+      ],
       "path": "content/projects/inference-engines/llama-cpp.md",
       "url": "content/projects/inference-engines/llama-cpp",
       "boost_title": "llama.cpp",
@@ -4283,6 +4773,8 @@
         "research",
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/llamafactory.md",
       "url": "content/tools/model-layer/llamafactory",
       "boost_title": "LLaMA-Factory",
@@ -4309,6 +4801,12 @@
       "status": "active",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
       "path": "content/projects/inference-engines/llamafile.md",
       "url": "content/projects/inference-engines/llamafile",
       "boost_title": "Llamafile",
@@ -4336,6 +4834,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/llamaguard.md",
       "url": "content/tools/evaluation-and-observability/llamaguard",
       "boost_title": "Llama Guard",
@@ -4362,6 +4862,13 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
       "path": "content/projects/frameworks/llamaindex.md",
       "url": "content/projects/frameworks/llamaindex",
       "boost_title": "LlamaIndex",
@@ -4388,6 +4895,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/llamaparse.md",
       "url": "content/projects/data-and-retrieval/llamaparse",
       "boost_title": "LlamaParse",
@@ -4413,6 +4927,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/llm-as-a-judge.md",
       "url": "content/research/papers/llm-as-a-judge",
       "boost_title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
@@ -4439,6 +4955,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/learning-paths/llm-researcher.md",
       "url": "content/skills/learning-paths/llm-researcher",
       "boost_title": "LLM Researcher Learning Path",
@@ -4465,6 +4983,14 @@
       "status": "active",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/inference-engines/lmdeploy.md",
       "url": "content/projects/inference-engines/lmdeploy",
       "boost_title": "LMDeploy",
@@ -4491,6 +5017,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/reference-stacks/local-first.md",
       "url": "content/architectures/reference-stacks/local-first",
       "boost_title": "Local-First AI Stack",
@@ -4516,6 +5044,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/starter/local-llm-chat.md",
       "url": "content/build-examples/starter/local-llm-chat",
       "boost_title": "Local LLM Chat",
@@ -4541,6 +5071,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/log-agent-state-transitions.md",
       "url": "content/tips-and-tricks/log-agent-state-transitions",
       "boost_title": "Log Agent State Transitions",
@@ -4566,6 +5098,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/log-raw-and-parsed-model-outputs.md",
       "url": "content/tips-and-tricks/log-raw-and-parsed-model-outputs",
       "boost_title": "Log Raw And Parsed Model Outputs",
@@ -4591,6 +5125,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/log-retrieved-context.md",
       "url": "content/tips-and-tricks/log-retrieved-context",
       "boost_title": "Log Retrieved Context for Every RAG Answer",
@@ -4616,6 +5152,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/logankilpatrick.md",
       "url": "content/community/people/logankilpatrick",
       "boost_title": "Logan Kilpatrick",
@@ -4641,6 +5179,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/lora.md",
       "url": "content/research/papers/lora",
       "boost_title": "LoRA: Low-Rank Adaptation of Large Language Models",
@@ -4665,14 +5205,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/lunary.md",
-      "url": "content/projects/observability/tracing/lunary",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/lunary.md",
+      "url": "content/projects/benchmarks-and-evals/lunary",
       "boost_title": "Lunary",
       "boost_tags": "observability tracing rag cloud",
       "boost_description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
-      "body": "Lunary Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts observability tracing rag cloud observability tracing TL;DR: Lunary is an open source LLM observability and analytics platform for chatbots and RAG apps. Use it when conversation analytics and prompt collaboration matter. Overview Lunary focuses on monitoring user interactions, prompts, feedback, and chatbot/RAG behavior with cloud and self host options. Why It's in the Arsenal It is useful for product teams that need to understand chatbot usage and feedback, not only backend traces. Key Features Conversation analytics Tracing and feedback collection Prompt/version workflows Self host/cloud options Chatbot and RAG orientation Architecture / How…"
+      "body": "Lunary Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts observability tracing rag cloud observability tracing Overview An open source LLM observability platform offering tracing, analytics, and prompt management, occupying a similar niche to Langfuse and Helicone with a smaller public/community footprint. Why it's in the Arsenal Smaller open source LLM observability platform offering tracing, analytics, and prompt management. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a lightweight, open source observability option with a straightforward pricing/usage model and are comfortable with a smaller community than the leading platforms. See Strengths /…"
     },
     {
       "id": "make-success-criteria-machine-checkable",
@@ -4692,6 +5239,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/make-success-criteria-machine-checkable.md",
       "url": "content/tips-and-tricks/make-success-criteria-machine-checkable",
       "boost_title": "Make Success Criteria Machine Checkable",
@@ -4718,6 +5267,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/manus.md",
       "url": "content/tools/orchestration/manus",
       "boost_title": "Manus",
@@ -4744,6 +5295,12 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
       "path": "content/projects/frameworks/mastra.md",
       "url": "content/projects/frameworks/mastra",
       "boost_title": "Mastra",
@@ -4769,6 +5326,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/match-context-length-to-ram.md",
       "url": "content/tips-and-tricks/match-context-length-to-ram",
       "boost_title": "Match Context Length To RAM",
@@ -4794,6 +5353,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/measure-first-token-latency.md",
       "url": "content/tips-and-tricks/measure-first-token-latency",
       "boost_title": "Measure First Token Latency Separately",
@@ -4819,6 +5380,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/measure-kv-cache-hit-rate.md",
       "url": "content/tips-and-tricks/measure-kv-cache-hit-rate",
       "boost_title": "Measure KV Cache Hit Rate",
@@ -4844,6 +5407,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/measure-queue-time-separately.md",
       "url": "content/tips-and-tricks/measure-queue-time-separately",
       "boost_title": "Measure Queue Time Separately",
@@ -4869,6 +5434,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/measure-retrieval-recall-before-answer-quality.md",
       "url": "content/tips-and-tricks/measure-retrieval-recall-before-answer-quality",
       "boost_title": "Measure Retrieval Recall Before Answer Quality",
@@ -4894,6 +5461,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/melanie-mitchell.md",
       "url": "content/community/people/melanie-mitchell",
       "boost_title": "Melanie Mitchell",
@@ -4922,6 +5491,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/mem0.md",
       "url": "content/tools/orchestration/mem0",
       "boost_title": "Mem0",
@@ -4948,6 +5519,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/memoriq.md",
       "url": "content/tools/orchestration/memoriq",
       "boost_title": "Memoriq",
@@ -4972,6 +5545,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/memory-management.md",
       "url": "content/tools/by-job/memory-management",
       "boost_title": "Memory Management Tools",
@@ -4999,6 +5574,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/mesop.md",
       "url": "content/tools/dx-and-tooling/mesop",
       "boost_title": "Mesop",
@@ -5025,6 +5602,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "study-and-reference",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/metagpt.md",
       "url": "content/projects/frameworks/metagpt",
       "boost_title": "MetaGPT",
@@ -5052,6 +5637,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/microsoft-agent-framework.md",
       "url": "content/projects/frameworks/microsoft-agent-framework",
       "boost_title": "Microsoft Agent Framework",
@@ -5078,6 +5671,14 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/data-and-retrieval/milvus.md",
       "url": "content/projects/data-and-retrieval/milvus",
       "boost_title": "Milvus",
@@ -5104,6 +5705,15 @@
       "status": "archived",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/mistral-models.md",
       "url": "content/projects/foundation-models/mistral-models",
       "boost_title": "Mistral / Mixtral",
@@ -5130,6 +5740,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/learning-paths/ml-engineer.md",
       "url": "content/skills/learning-paths/ml-engineer",
       "boost_title": "ML Engineer to AI Engineer Bridge",
@@ -5158,6 +5770,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/mlflow.md",
       "url": "content/tools/model-layer/mlflow",
       "boost_title": "MLflow",
@@ -5186,6 +5800,8 @@
         "prototype",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/mlx-lm.md",
       "url": "content/tools/model-layer/mlx-lm",
       "boost_title": "MLX-LM",
@@ -5214,6 +5830,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/modal.md",
       "url": "content/tools/serving-and-deployment/modal",
       "boost_title": "Modal",
@@ -5238,6 +5856,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/model-registry.md",
       "url": "content/tools/by-job/model-registry",
       "boost_title": "Model Registry Tools",
@@ -5264,6 +5884,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/monako-glass.md",
       "url": "content/tools/evaluation-and-observability/monako-glass",
       "boost_title": "Monako Glass",
@@ -5289,6 +5911,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/advanced/multi-agent-research-system.md",
       "url": "content/build-examples/advanced/multi-agent-research-system",
       "boost_title": "Multi-Agent Research System",
@@ -5315,6 +5939,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/reference-stacks/multi-agent-system.md",
       "url": "content/architectures/reference-stacks/multi-agent-system",
       "boost_title": "Multi-Agent System Stack",
@@ -5340,6 +5966,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/intermediate/multi-tool-agent.md",
       "url": "content/build-examples/intermediate/multi-tool-agent",
       "boost_title": "Multi-Tool Agent",
@@ -5365,6 +5993,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/must-read-papers.md",
       "url": "content/research/must-read-papers",
       "boost_title": "Must-Read AI Papers",
@@ -5389,6 +6019,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/name-the-audience-in-the-prompt.md",
       "url": "content/tips-and-tricks/name-the-audience-in-the-prompt",
       "boost_title": "Name The Audience In The Prompt",
@@ -5414,6 +6046,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/nathan-lambert.md",
       "url": "content/community/people/nathan-lambert",
       "boost_title": "Nathan Lambert",
@@ -5441,6 +6075,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/nemo-guardrails.md",
       "url": "content/tools/evaluation-and-observability/nemo-guardrails",
       "boost_title": "NeMo Guardrails",
@@ -5466,6 +6102,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/newsletters.md",
       "url": "content/community/newsletters",
       "boost_title": "AI Newsletters",
@@ -5491,6 +6129,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/noam-shazeer.md",
       "url": "content/community/people/noam-shazeer",
       "boost_title": "Noam Shazeer",
@@ -5517,6 +6157,12 @@
       "status": "active",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
       "path": "content/projects/inference-engines/ollama.md",
       "url": "content/projects/inference-engines/ollama",
       "boost_title": "Ollama",
@@ -5543,6 +6189,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/openai-agents-sdk.md",
       "url": "content/projects/frameworks/openai-agents-sdk",
       "boost_title": "OpenAI Agents SDK",
@@ -5571,6 +6225,8 @@
         "research",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/openai-evals.md",
       "url": "content/tools/evaluation-and-observability/openai-evals",
       "boost_title": "OpenAI Evals",
@@ -5597,6 +6253,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
       "path": "content/projects/frameworks/openhands.md",
       "url": "content/projects/frameworks/openhands",
       "boost_title": "OpenHands",
@@ -5621,14 +6285,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/openlit.md",
-      "url": "content/projects/observability/tracing/openlit",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
+      "path": "content/projects/benchmarks-and-evals/openlit.md",
+      "url": "content/projects/benchmarks-and-evals/openlit",
       "boost_title": "OpenLIT",
       "boost_tags": "observability tracing monitoring self-hosted",
       "boost_description": "OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails",
-      "body": "OpenLIT OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails observability tracing monitoring self-hosted observability tracing TL;DR: OpenLIT is an OpenTelemetry native AI engineering platform for traces, GPU monitoring, evals, prompts, and guardrails. Use it when OTel native observability is a requirement. Overview OpenLIT positions itself around OpenTelemetry native LLM observability plus GPU monitoring and broader AI engineering workflows. Why It's in the Arsenal It is relevant for teams that already standardize around OpenTelemetry and want AI traces to fit existing observability pipelines. Key Features OpenTelemetry native traces GPU monitoring support Prompt/eval/guardrail capabilities Self hostable platform Ma…"
+      "body": "OpenLIT OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails observability tracing monitoring self-hosted observability tracing Overview An open source observability toolkit for LLM applications built natively on OpenTelemetry, allowing LLM traces and metrics to integrate directly into existing OTel based observability infrastructure rather than requiring a separate proprietary platform. Why it's in the Arsenal Open source, OpenTelemetry native observability toolkit for LLM applications. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want LLM observability built natively on OpenTelemetry standards, so traces integrate directly with an existing OTel based observability sta…"
     },
     {
       "id": "openllmetry",
@@ -5647,14 +6318,20 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/openllmetry.md",
-      "url": "content/projects/observability/tracing/openllmetry",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/openllmetry.md",
+      "url": "content/projects/benchmarks-and-evals/openllmetry",
       "boost_title": "OpenLLMetry",
       "boost_tags": "observability tracing monitoring self-hosted",
       "boost_description": "OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop",
-      "body": "OpenLLMetry OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop observability tracing monitoring self-hosted observability tracing TL;DR: OpenLLMetry provides OpenTelemetry instrumentation for GenAI and LLM apps. Use it when you want vendor neutral traces rather than a full observability product. Overview OpenLLMetry is instrumentation first: it helps emit standard traces that can be sent to compatible observability backends. Why It's in the Arsenal Instrumentation standards matter because teams do not want AI telemetry locked to one vendor forever. Key Features OpenTelemetry based GenAI instrumentation Vendor neutral tracing approach Python package ecosystem integrations Works with multiple observability backends Apache…"
+      "body": "OpenLLMetry OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop observability tracing monitoring self-hosted observability tracing Overview An open source OpenTelemetry native instrumentation library from Traceloop for GenAI and LLM applications, providing standardized tracing across a wide range of LLM providers, frameworks, and vector databases. Why it's in the Arsenal Traceloop's OpenTelemetry native instrumentation library for GenAI/LLM applications. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want standardized, OpenTelemetry based instrumentation for LLM applications specifically, backed by Traceloop, with broad framework/provider auto instrumentation coverage. See S…"
     },
     {
       "id": "opik",
@@ -5673,14 +6350,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/opik.md",
-      "url": "content/projects/observability/tracing/opik",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/opik.md",
+      "url": "content/projects/benchmarks-and-evals/opik",
       "boost_title": "Opik",
       "boost_tags": "observability tracing evaluation monitoring",
       "boost_description": "Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards",
-      "body": "Opik Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards observability tracing evaluation monitoring observability tracing TL;DR: Opik is Comet’s open source platform for LLM tracing, evaluation, prompt optimization, and dashboards. Use it when evals and prompt iteration are central. Overview Opik covers tracing, automated evaluations, prompt/version workflows, and monitoring for LLM apps, RAG systems, and agents. Why It's in the Arsenal It is a strong eval oriented open source option from an established ML experiment tracking vendor. Key Features LLM tracing Automated evaluation workflows Prompt management and optimization Production dashboards Self hostable open source platform Architecture / How It Works Appro…"
+      "body": "Opik Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards observability tracing evaluation monitoring observability tracing Overview An open source LLM evaluation and observability platform from Comet, extending Comet's established machine learning experiment tracking product into tracing and evaluation for LLM and agent applications. Why it's in the Arsenal Comet's open source LLM evaluation and observability platform, extending Comet's existing ML experiment tracking product line into the LLM/agent space. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosyste…"
     },
     {
       "id": "orchestraml",
@@ -5702,6 +6386,8 @@
         "prototype",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/orchestraml.md",
       "url": "content/tools/orchestration/orchestraml",
       "boost_title": "OrchestraML",
@@ -5726,6 +6412,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/orchestration.md",
       "url": "content/tools/by-job/orchestration",
       "boost_title": "Orchestration Tools",
@@ -5750,6 +6438,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/order-few-shot-examples-by-similarity.md",
       "url": "content/tips-and-tricks/order-few-shot-examples-by-similarity",
       "boost_title": "Order Few Shot Examples by Similarity",
@@ -5778,6 +6468,8 @@
         "production",
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/outlines.md",
       "url": "content/tools/model-layer/outlines",
       "boost_title": "Outlines",
@@ -5804,6 +6496,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/observability/overview.md",
       "url": "content/observability/overview",
       "boost_title": "AI Observability Overview",
@@ -5829,6 +6523,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/parallelize-independent-retrieval-calls.md",
       "url": "content/tips-and-tricks/parallelize-independent-retrieval-calls",
       "boost_title": "Parallelize Independent Retrieval Calls",
@@ -5857,6 +6553,8 @@
         "research",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/peft.md",
       "url": "content/tools/model-layer/peft",
       "boost_title": "PEFT",
@@ -5882,6 +6580,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people-to-follow.md",
       "url": "content/community/people-to-follow",
       "boost_title": "People to Follow",
@@ -5908,6 +6608,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/pgvector.md",
       "url": "content/projects/data-and-retrieval/pgvector",
       "boost_title": "pgvector",
@@ -5934,6 +6641,15 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/phi-4.md",
       "url": "content/projects/foundation-models/phi-4",
       "boost_title": "Phi-4",
@@ -5960,6 +6676,13 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "study-and-reference",
+        "fork-and-adapt"
+      ],
       "path": "content/projects/foundation-models/phi-cookbook.md",
       "url": "content/projects/foundation-models/phi-cookbook",
       "boost_title": "Phi Cookbook",
@@ -5984,14 +6707,22 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/observability/tracing/phoenix.md",
-      "url": "content/projects/observability/tracing/phoenix",
+      "domain": [
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/phoenix.md",
+      "url": "content/projects/benchmarks-and-evals/phoenix",
       "boost_title": "Phoenix",
       "boost_tags": "observability tracing evaluation monitoring",
       "boost_description": "Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems",
-      "body": "Phoenix Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems observability tracing evaluation monitoring observability tracing TL;DR: Phoenix is an open source observability and evaluation platform for LLM, RAG, and agent systems. Use it when OpenTelemetry and RAG debugging are priorities. Overview Phoenix focuses on traces, evaluations, experimentation, and RAG/agent debugging with open source local/self host options and Arize ecosystem integration. Why It's in the Arsenal It is a strong choice for ML/AI engineers who want standards oriented tracing and RAG evaluation workflows. Key Features OpenTelemetry oriented tracing RAG and agent evaluation workflows Notebook/local debugging story Self hostable Phoenix app Int…"
+      "body": "Phoenix Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems observability tracing evaluation monitoring observability tracing Overview Arize AI's open source LLM observability and evaluation platform, notable for a notebook first development experience and OpenTelemetry based instrumentation, extending from ML observability into LLM/agent tracing. Why it's in the Arsenal Arize AI's open source LLM observability and evaluation platform, notebook first and OpenTelemetry based. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a notebook first observability experience for ML/LLM engineers who iterate in Jupyter style environments during development, extending into produc…"
     },
     {
       "id": "pin-dependencies-for-inference-images",
@@ -6011,6 +6742,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/pin-dependencies-for-inference-images.md",
       "url": "content/tips-and-tricks/pin-dependencies-for-inference-images",
       "boost_title": "Pin Dependencies For Inference Images",
@@ -6036,6 +6769,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/pin-model-and-runtime-versions.md",
       "url": "content/tips-and-tricks/pin-model-and-runtime-versions",
       "boost_title": "Pin Model And Runtime Versions",
@@ -6064,6 +6799,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/pinecone.md",
       "url": "content/tools/data-ingestion/pinecone",
       "boost_title": "Pinecone",
@@ -6090,6 +6827,12 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/pinecone-vector-db.md",
       "url": "content/projects/data-and-retrieval/pinecone-vector-db",
       "boost_title": "Pinecone",
@@ -6117,6 +6860,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/playwright.md",
       "url": "content/tools/data-ingestion/playwright",
       "boost_title": "Playwright",
@@ -6142,6 +6887,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/podcasts.md",
       "url": "content/community/podcasts",
       "boost_title": "AI Podcasts",
@@ -6169,6 +6916,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/portkey.md",
       "url": "content/tools/serving-and-deployment/portkey",
       "boost_title": "Portkey",
@@ -6194,6 +6943,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/precompute-expensive-static-context.md",
       "url": "content/tips-and-tricks/precompute-expensive-static-context",
       "boost_title": "Precompute Expensive Static Context",
@@ -6222,6 +6973,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/prefect.md",
       "url": "content/tools/orchestration/prefect",
       "boost_title": "Prefect",
@@ -6247,6 +7000,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/prefer-gguf-for-llama-cpp-workflows.md",
       "url": "content/tips-and-tricks/prefer-gguf-for-llama-cpp-workflows",
       "boost_title": "Prefer GGUF For llama cpp Workflows",
@@ -6271,6 +7026,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/prefer-id-references-over-copying.md",
       "url": "content/tips-and-tricks/prefer-id-references-over-copying",
       "boost_title": "Prefer ID References over Copying Metadata",
@@ -6296,6 +7053,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/prefer-reranking-before-rechunking.md",
       "url": "content/tips-and-tricks/prefer-reranking-before-rechunking",
       "boost_title": "Prefer Reranking Before Rechunking",
@@ -6321,6 +7080,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/prefer-small-model-routing.md",
       "url": "content/tips-and-tricks/prefer-small-model-routing",
       "boost_title": "Prefer Small Model Routing for Simple Tasks",
@@ -6347,6 +7108,8 @@
       "audience": [
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/prodigy.md",
       "url": "content/tools/data-ingestion/prodigy",
       "boost_title": "Prodigy",
@@ -6373,6 +7136,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/reference-stacks/production-rag.md",
       "url": "content/architectures/reference-stacks/production-rag",
       "boost_title": "Production RAG Stack",
@@ -6398,6 +7163,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/intermediate/production-rag-api.md",
       "url": "content/build-examples/intermediate/production-rag-api",
       "boost_title": "Production RAG API",
@@ -6422,6 +7189,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/production-serving.md",
       "url": "content/tools/by-job/production-serving",
       "boost_title": "Production Serving Tools",
@@ -6446,6 +7215,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/prompt-management.md",
       "url": "content/tools/by-job/prompt-management",
       "boost_title": "Prompt Management Tools",
@@ -6471,6 +7242,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/prompt-engineering/prompt-patterns-catalog.md",
       "url": "content/skills/prompt-engineering/prompt-patterns-catalog",
       "boost_title": "Prompt Patterns Catalog",
@@ -6499,6 +7272,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/promptfoo.md",
       "url": "content/tools/evaluation-and-observability/promptfoo",
       "boost_title": "promptfoo",
@@ -6526,6 +7301,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/promptlayer.md",
       "url": "content/tools/dx-and-tooling/promptlayer",
       "boost_title": "PromptLayer",
@@ -6550,6 +7327,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/prototyping.md",
       "url": "content/tools/by-job/prototyping",
       "boost_title": "Prototyping Tools",
@@ -6576,6 +7355,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/puppeteer.md",
       "url": "content/tools/data-ingestion/puppeteer",
       "boost_title": "Puppeteer",
@@ -6600,6 +7381,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/put-task-inputs-after-instructions.md",
       "url": "content/tips-and-tricks/put-task-inputs-after-instructions",
       "boost_title": "Put Task Inputs After Instructions",
@@ -6625,6 +7408,13 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
       "path": "content/projects/frameworks/pydantic-ai.md",
       "url": "content/projects/frameworks/pydantic-ai",
       "boost_title": "Pydantic AI",
@@ -6653,6 +7443,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/pydantic-ai-tool.md",
       "url": "content/tools/orchestration/pydantic-ai-tool",
       "boost_title": "Pydantic AI",
@@ -6679,6 +7471,14 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/data-and-retrieval/qdrant.md",
       "url": "content/projects/data-and-retrieval/qdrant",
       "boost_title": "Qdrant",
@@ -6704,6 +7504,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/qlora.md",
       "url": "content/research/papers/qlora",
       "boost_title": "QLoRA: Efficient Finetuning of Quantized LLMs",
@@ -6730,6 +7532,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/qursor.md",
       "url": "content/tools/dx-and-tooling/qursor",
       "boost_title": "Qursor",
@@ -6756,6 +7560,14 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/qwen.md",
       "url": "content/projects/foundation-models/qwen",
       "boost_title": "Qwen",
@@ -6782,6 +7594,15 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/qwen-2-5.md",
       "url": "content/projects/foundation-models/qwen-2-5",
       "boost_title": "Qwen 2.5 / QwQ",
@@ -6810,6 +7631,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/qwen-3.md",
       "url": "content/tools/model-layer/qwen-3",
       "boost_title": "Qwen 3",
@@ -6835,6 +7658,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/qwen2-5-math.md",
       "url": "content/research/papers/qwen2-5-math",
       "boost_title": "Qwen2.5-Math Technical Report",
@@ -6860,6 +7685,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/rag-chunk-overlap-tuning.md",
       "url": "content/tips-and-tricks/rag-chunk-overlap-tuning",
       "boost_title": "Tune Chunk Overlap Before Chunk Size",
@@ -6886,38 +7713,14 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/decision-trees/rag-vs-fine-tuning.md",
       "url": "content/architectures/decision-trees/rag-vs-fine-tuning",
       "boost_title": "RAG vs Fine-Tuning",
       "boost_tags": "rag fine-tuning retrieval evaluation",
       "boost_description": "Decision tree for choosing retrieval, fine-tuning, or hybrid model adaptation",
       "body": "RAG vs Fine-Tuning Decision tree for choosing retrieval, fine-tuning, or hybrid model adaptation rag fine-tuning retrieval evaluation architectures Overview TL;DR: Use RAG to add or update knowledge. Use fine tuning to change behavior, format, style, or task skill. Use both when the system needs private knowledge and specialized behavior. This is one of the most common AI engineering decisions. The key is to separate knowledge injection from behavior adaptation . Why It's in the Arsenal Teams often fine tune when they need retrieval, or add RAG when they need behavioral consistency. This decision tree prevents expensive wrong turns. Key Features Starts with data availability and problem type Separates knowledge freshness from behavior/st…"
-    },
-    {
-      "id": "ragas",
-      "type": "project",
-      "name": "Ragas",
-      "title": "Ragas",
-      "description": "An evaluation framework for measuring retrieval-augmented generation quality",
-      "tags": [
-        "evaluation",
-        "rag",
-        "retrieval",
-        "observability"
-      ],
-      "category": "observability",
-      "subcategory": "evaluation",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "active",
-      "phase": null,
-      "audience": null,
-      "path": "content/projects/observability/evaluation/ragas.md",
-      "url": "content/projects/observability/evaluation/ragas",
-      "boost_title": "Ragas",
-      "boost_tags": "evaluation rag retrieval observability",
-      "boost_description": "An evaluation framework for measuring retrieval-augmented generation quality",
-      "body": "Ragas An evaluation framework for measuring retrieval-augmented generation quality evaluation rag retrieval observability observability evaluation Overview Ragas is included as a notable observability project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the observability category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonom…"
     },
     {
       "id": "ragas-paper",
@@ -6937,6 +7740,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/ragas-paper.md",
       "url": "content/research/papers/ragas-paper",
       "boost_title": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
@@ -6961,14 +7766,20 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "benchmark-and-eval",
       "audience": null,
-      "path": "content/projects/rag/frameworks/ragas-rag-evaluation.md",
-      "url": "content/projects/rag/frameworks/ragas-rag-evaluation",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "path": "content/projects/benchmarks-and-evals/ragas-rag-evaluation.md",
+      "url": "content/projects/benchmarks-and-evals/ragas-rag-evaluation",
       "boost_title": "Ragas for RAG Evaluation",
       "boost_tags": "rag evaluation retrieval observability",
       "boost_description": "Evaluation framework for measuring retrieval-augmented generation quality and regressions",
-      "body": "Ragas for RAG Evaluation Evaluation framework for measuring retrieval-augmented generation quality and regressions rag evaluation retrieval observability rag frameworks TL;DR: Ragas evaluates RAG pipelines across retrieval and generation quality dimensions. Use it when you need regression tests for relevance, faithfulness, and answer quality. Overview Ragas is not a RAG builder; it is an evaluation framework for RAG systems. It helps quantify whether retrieval and generated answers are improving or regressing. Why It's in the Arsenal RAG systems fail silently without evals. Ragas gives teams metrics and workflows to test retrieval grounded generation. Key Features RAG specific evaluation metrics Dataset based evaluation workflows Works with common LLM applic…"
+      "body": "Ragas for RAG Evaluation Evaluation framework for measuring retrieval-augmented generation quality and regressions rag evaluation retrieval observability rag frameworks Overview An open source evaluation framework purpose built for measuring retrieval augmented generation quality, providing metrics for both the retrieval and generation halves of a RAG pipeline rather than generic LLM output scoring. Why it's in the Arsenal The standard open source evaluation framework specifically for RAG pipeline quality (retrieval and generation) — consolidates the former duplicate ragas.md entry. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need RAG specific evaluation metrics (faithfulness, context precision/recall, answer…"
     },
     {
       "id": "ragflow",
@@ -6989,6 +7800,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
       "path": "content/projects/data-and-retrieval/ragflow.md",
       "url": "content/projects/data-and-retrieval/ragflow",
       "boost_title": "RAGFlow",
@@ -7016,6 +7834,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/railway.md",
       "url": "content/tools/serving-and-deployment/railway",
       "boost_title": "Railway",
@@ -7041,6 +7861,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/rank-context-by-expected-usefulness.md",
       "url": "content/tips-and-tricks/rank-context-by-expected-usefulness",
       "boost_title": "Rank Context By Expected Usefulness",
@@ -7066,6 +7888,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/raptor.md",
       "url": "content/research/papers/raptor",
       "boost_title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
@@ -7091,6 +7915,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/react.md",
       "url": "content/research/papers/react",
       "boost_title": "ReAct: Synergizing Reasoning and Acting in Language Models",
@@ -7118,6 +7944,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/rebuff.md",
       "url": "content/tools/evaluation-and-observability/rebuff",
       "boost_title": "Rebuff",
@@ -7143,6 +7971,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/recursi.md",
       "url": "content/tools/dx-and-tooling/recursi",
       "boost_title": "Recursi",
@@ -7168,6 +7998,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/redact-secrets-before-tracing.md",
       "url": "content/tips-and-tricks/redact-secrets-before-tracing",
       "boost_title": "Redact Secrets Before Tracing",
@@ -7195,6 +8027,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/redis-memory.md",
       "url": "content/tools/orchestration/redis-memory",
       "boost_title": "Redis",
@@ -7220,6 +8054,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed.md",
       "url": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed",
       "boost_title": "Replay The Same Trace With One Variable Changed",
@@ -7248,6 +8084,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/replicate.md",
       "url": "content/tools/serving-and-deployment/replicate",
       "boost_title": "Replicate",
@@ -7273,6 +8111,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/require-human-approval-for-irreversible-actions.md",
       "url": "content/tips-and-tricks/require-human-approval-for-irreversible-actions",
       "boost_title": "Require Human Approval For Irreversible Actions",
@@ -7299,6 +8139,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/architectures/reference-stacks/research-platform.md",
       "url": "content/architectures/reference-stacks/research-platform",
       "boost_title": "AI Research Platform Stack",
@@ -7324,6 +8166,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/reserve-output-tokens-before-adding-context.md",
       "url": "content/tips-and-tricks/reserve-output-tokens-before-adding-context",
       "boost_title": "Reserve Output Tokens Before Adding Context",
@@ -7349,6 +8193,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/retrieval-augmented-generation.md",
       "url": "content/research/papers/retrieval-augmented-generation",
       "boost_title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
@@ -7374,6 +8220,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/review-data-retention-for-prompts.md",
       "url": "content/tips-and-tricks/review-data-retention-for-prompts",
       "boost_title": "Review Data Retention For Prompts",
@@ -7399,6 +8247,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/route-simple-tasks-to-smaller-models.md",
       "url": "content/tips-and-tricks/route-simple-tasks-to-smaller-models",
       "boost_title": "Route Simple Tasks To Smaller Models",
@@ -7424,6 +8274,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/run-prompt-injection-regression-tests.md",
       "url": "content/tips-and-tricks/run-prompt-injection-regression-tests",
       "boost_title": "Run Prompt Injection Regression Tests",
@@ -7449,6 +8301,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/sandbox-code-execution-tools.md",
       "url": "content/tips-and-tricks/sandbox-code-execution-tools",
       "boost_title": "Sandbox Code Execution Tools",
@@ -7475,6 +8329,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/scale-ai.md",
       "url": "content/tools/data-ingestion/scale-ai",
       "boost_title": "Scale AI",
@@ -7501,6 +8357,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/seaticket.md",
       "url": "content/tools/orchestration/seaticket",
       "boost_title": "SeaTicket",
@@ -7526,6 +8384,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/sebastian-bubeck.md",
       "url": "content/community/people/sebastian-bubeck",
       "boost_title": "Sébastien Bubeck",
@@ -7551,6 +8411,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/sebastian-raschka.md",
       "url": "content/community/people/sebastian-raschka",
       "boost_title": "Sebastian Raschka",
@@ -7575,6 +8437,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/security-and-guardrails.md",
       "url": "content/tools/by-job/security-and-guardrails",
       "boost_title": "Security And Guardrails Tools",
@@ -7600,6 +8464,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/advanced/self-correcting-rag.md",
       "url": "content/build-examples/advanced/self-correcting-rag",
       "boost_title": "Self-Correcting RAG",
@@ -7625,6 +8491,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/self-refine.md",
       "url": "content/research/papers/self-refine",
       "boost_title": "Self-Refine: Iterative Refinement with Self-Feedback",
@@ -7651,6 +8519,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "reasoning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/semantic-kernel.md",
       "url": "content/projects/frameworks/semantic-kernel",
       "boost_title": "Semantic Kernel",
@@ -7676,6 +8552,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/separate-model-errors-from-app-errors.md",
       "url": "content/tips-and-tricks/separate-model-errors-from-app-errors",
       "boost_title": "Separate Model Errors From App Errors",
@@ -7701,6 +8579,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/separate-offline-batch-jobs-from-chat-serving.md",
       "url": "content/tips-and-tricks/separate-offline-batch-jobs-from-chat-serving",
       "boost_title": "Separate Offline Batch Jobs From Chat Serving",
@@ -7726,6 +8606,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/separate-planner-and-executor-permissions.md",
       "url": "content/tips-and-tricks/separate-planner-and-executor-permissions",
       "boost_title": "Separate Planner And Executor Permissions",
@@ -7750,6 +8632,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/separate-policy-from-task-instructions.md",
       "url": "content/tips-and-tricks/separate-policy-from-task-instructions",
       "boost_title": "Separate Policy From Task Instructions",
@@ -7774,6 +8658,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/separate-system-and-task-prompts.md",
       "url": "content/tips-and-tricks/separate-system-and-task-prompts",
       "boost_title": "Separate System and Task Prompts",
@@ -7799,6 +8685,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/separate-user-content-from-system-instructions.md",
       "url": "content/tips-and-tricks/separate-user-content-from-system-instructions",
       "boost_title": "Separate User Content From System Instructions",
@@ -7823,6 +8711,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/set-temperature-by-decision-risk.md",
       "url": "content/tips-and-tricks/set-temperature-by-decision-risk",
       "boost_title": "Set Temperature by Decision Risk",
@@ -7848,6 +8738,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/set-token-budgets-per-feature.md",
       "url": "content/tips-and-tricks/set-token-budgets-per-feature",
       "boost_title": "Set Token Budgets Per Feature",
@@ -7874,6 +8766,14 @@
       "status": "active",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/inference-engines/sglang.md",
       "url": "content/projects/inference-engines/sglang",
       "boost_title": "SGLang",
@@ -7899,6 +8799,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/shellmate.md",
       "url": "content/tools/dx-and-tooling/shellmate",
       "boost_title": "ShellMate",
@@ -7924,6 +8826,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/shreya-shankar.md",
       "url": "content/community/people/shreya-shankar",
       "boost_title": "Shreya Shankar",
@@ -7949,6 +8853,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/simon-willison.md",
       "url": "content/community/people/simon-willison",
       "boost_title": "Simon Willison",
@@ -7974,6 +8880,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/build-examples/starter/simple-react-agent.md",
       "url": "content/build-examples/starter/simple-react-agent",
       "boost_title": "Simple ReAct Agent",
@@ -8000,6 +8908,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
       "path": "content/projects/frameworks/smolagents.md",
       "url": "content/projects/frameworks/smolagents",
       "boost_title": "Smolagents",
@@ -8025,6 +8941,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/sota-benchmarks.md",
       "url": "content/research/sota-benchmarks",
       "boost_title": "SOTA Benchmarks",
@@ -8050,6 +8968,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/speculative-decoding.md",
       "url": "content/research/papers/speculative-decoding",
       "boost_title": "Fast Inference from Transformers via Speculative Decoding",
@@ -8076,6 +8996,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md",
       "url": "content/tools/evaluation-and-observability/spotlight-by-backplanes",
       "boost_title": "Spotlight by Backplanes",
@@ -8100,6 +9022,13 @@
       "status": "active",
       "phase": "agent-system",
       "audience": null,
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/agent-systems/stagehand.md",
       "url": "content/projects/agent-systems/stagehand",
       "boost_title": "Stagehand",
@@ -8125,6 +9054,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/start-with-a-smaller-quantized-model.md",
       "url": "content/tips-and-tricks/start-with-a-smaller-quantized-model",
       "boost_title": "Start With A Smaller Quantized Model",
@@ -8150,6 +9081,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/start-with-zero-chunk-overlap.md",
       "url": "content/tips-and-tricks/start-with-zero-chunk-overlap",
       "boost_title": "Start With Zero Chunk Overlap",
@@ -8174,6 +9107,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/state-negative-constraints-as-testable-rules.md",
       "url": "content/tips-and-tricks/state-negative-constraints-as-testable-rules",
       "boost_title": "State Negative Constraints As Testable Rules",
@@ -8199,6 +9134,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/store-parser-version-with-every-chunk.md",
       "url": "content/tips-and-tricks/store-parser-version-with-every-chunk",
       "boost_title": "Store Parser Version With Every Chunk",
@@ -8224,6 +9161,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/store-prompt-version-in-every-trace.md",
       "url": "content/tips-and-tricks/store-prompt-version-in-every-trace",
       "boost_title": "Store Prompt Version In Every Trace",
@@ -8248,6 +9187,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/store-prompts-with-release-versions.md",
       "url": "content/tips-and-tricks/store-prompts-with-release-versions",
       "boost_title": "Store Prompts with Release Versions",
@@ -8273,6 +9214,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/stream-user-facing-responses.md",
       "url": "content/tips-and-tricks/stream-user-facing-responses",
       "boost_title": "Stream User Facing Responses",
@@ -8300,6 +9243,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/streamlit.md",
       "url": "content/tools/dx-and-tooling/streamlit",
       "boost_title": "Streamlit",
@@ -8324,6 +9269,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/structured-output.md",
       "url": "content/tools/by-job/structured-output",
       "boost_title": "Structured Output Tools",
@@ -8349,6 +9296,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/summarize-long-running-agent-state.md",
       "url": "content/tips-and-tricks/summarize-long-running-agent-state",
       "boost_title": "Summarize Long-Running Agent State",
@@ -8374,6 +9323,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/summarize-repeated-conversation-blocks.md",
       "url": "content/tips-and-tricks/summarize-repeated-conversation-blocks",
       "boost_title": "Summarize Repeated Conversation Blocks",
@@ -8400,6 +9351,8 @@
       "audience": [
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/superlog.md",
       "url": "content/tools/evaluation-and-observability/superlog",
       "boost_title": "Superlog",
@@ -8425,6 +9378,15 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "multimodal",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/data-and-retrieval/surrealdb.md",
       "url": "content/projects/data-and-retrieval/surrealdb",
       "boost_title": "SurrealDB",
@@ -8450,6 +9412,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/swe-agent.md",
       "url": "content/research/papers/swe-agent",
       "boost_title": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
@@ -8476,6 +9440,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/tabstack.md",
       "url": "content/tools/data-ingestion/tabstack",
       "boost_title": "Tabstack",
@@ -8502,6 +9468,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/data-ingestion/taste-lab.md",
       "url": "content/tools/data-ingestion/taste-lab",
       "boost_title": "Taste Lab",
@@ -8527,6 +9495,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/test-prompts-with-adversarial-inputs.md",
       "url": "content/tips-and-tricks/test-prompts-with-adversarial-inputs",
       "boost_title": "Test Prompts with Adversarial Inputs",
@@ -8553,6 +9523,12 @@
       "status": "archived",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
       "path": "content/projects/inference-engines/text-generation-inference.md",
       "url": "content/projects/inference-engines/text-generation-inference",
       "boost_title": "Text Generation Inference",
@@ -8577,6 +9553,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/trending/this-week.md",
       "url": "content/trending/this-week",
       "boost_title": "This Week in AI Arsenal",
@@ -8602,6 +9580,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/thomas-wolf.md",
       "url": "content/community/people/thomas-wolf",
       "boost_title": "Thomas Wolf",
@@ -8627,6 +9607,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/toolformer.md",
       "url": "content/research/papers/toolformer",
       "boost_title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
@@ -8654,6 +9636,8 @@
       "audience": [
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/torchtune.md",
       "url": "content/tools/model-layer/torchtune",
       "boost_title": "torchtune",
@@ -8679,6 +9663,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/trace-tool-inputs-and-outputs.md",
       "url": "content/tips-and-tricks/trace-tool-inputs-and-outputs",
       "boost_title": "Trace Tool Inputs And Outputs",
@@ -8704,6 +9690,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/observability/tracing-and-monitoring.md",
       "url": "content/observability/tracing-and-monitoring",
       "boost_title": "Tracing and Monitoring",
@@ -8728,6 +9716,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/track-cost-per-feature.md",
       "url": "content/tips-and-tricks/track-cost-per-feature",
       "boost_title": "Track Cost per Feature",
@@ -8753,6 +9743,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/track-cost-per-successful-outcome.md",
       "url": "content/tips-and-tricks/track-cost-per-successful-outcome",
       "boost_title": "Track Cost Per Successful Outcome",
@@ -8779,6 +9771,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/skills/core-concepts/transformers.md",
       "url": "content/skills/core-concepts/transformers",
       "boost_title": "Transformers",
@@ -8803,6 +9797,13 @@
       "status": "active",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/foundation-models/translategemma.md",
       "url": "content/projects/foundation-models/translategemma",
       "boost_title": "TranslateGemma",
@@ -8828,6 +9829,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/treat-retrieved-text-as-untrusted.md",
       "url": "content/tips-and-tricks/treat-retrieved-text-as-untrusted",
       "boost_title": "Treat Retrieved Text As Untrusted",
@@ -8853,6 +9856,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/papers/tree-of-thoughts.md",
       "url": "content/research/papers/tree-of-thoughts",
       "boost_title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
@@ -8881,6 +9886,8 @@
         "research",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/trulens.md",
       "url": "content/tools/evaluation-and-observability/trulens",
       "boost_title": "TruLens",
@@ -8906,6 +9913,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/tune-batch-size-against-tail-latency.md",
       "url": "content/tips-and-tricks/tune-batch-size-against-tail-latency",
       "boost_title": "Tune Batch Size Against Tail Latency",
@@ -8932,6 +9941,14 @@
       "status": "active",
       "phase": "framework",
       "audience": null,
+      "domain": [
+        "language",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/frameworks/txtai.md",
       "url": "content/projects/frameworks/txtai",
       "boost_title": "txtai",
@@ -8952,15 +9969,21 @@
       "subcategory": "platforms",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
-      "phase": null,
+      "status": "watching",
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/tooling/platforms/uiverse-design.md",
-      "url": "content/projects/tooling/platforms/uiverse-design",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "path": "content/projects/frameworks/uiverse-design.md",
+      "url": "content/projects/frameworks/uiverse-design",
       "boost_title": "Uiverse Design",
       "boost_tags": "agents",
       "boost_description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
-      "body": "Uiverse Design Open-source library of community-made CSS/Tailwind UI elements for faster front-end development agents tooling platforms Overview Uiverse Design is a open source AI engineering project. Why It's in the Arsenal It covers the tooling category with the platforms subcategory and complements existing Arsenal entries. Key Features Open source library of community made CSS/Tailwind UI elements for faster front end development Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/uiverse io/galaxy for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the tooling category. 2. Scenario: Self hosted a…"
+      "body": "Uiverse Design Open-source library of community-made CSS/Tailwind UI elements for faster front-end development agents tooling platforms Overview An open source, community sourced library of CSS and Tailwind UI components (buttons, loaders, form elements, and similar building blocks), included in this catalog's front end tooling coverage rather than because it has any AI specific functionality. Why it's in the Arsenal This entry earns a place in the Arsenal only as a front end asset resource for building the UI layer of AI products — it has no AI functionality of its own. It was added during a broad newsletter driven population sprint rather than a deliberate AI project research pass; a maintainer should review whether it belo…"
     },
     {
       "id": "unsloth",
@@ -8984,6 +10007,8 @@
         "prototype",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/unsloth.md",
       "url": "content/tools/model-layer/unsloth",
       "boost_title": "Unsloth",
@@ -9009,6 +10034,13 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
       "path": "content/projects/data-and-retrieval/unstructured.md",
       "url": "content/projects/data-and-retrieval/unstructured",
       "boost_title": "Unstructured",
@@ -9034,6 +10066,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-context-budgets-per-section.md",
       "url": "content/tips-and-tricks/use-context-budgets-per-section",
       "boost_title": "Use Context Budgets Per Section",
@@ -9058,6 +10092,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-delimiters-around-retrieved-context.md",
       "url": "content/tips-and-tricks/use-delimiters-around-retrieved-context",
       "boost_title": "Use Delimiters Around Retrieved Context",
@@ -9083,6 +10119,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix.md",
       "url": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix",
       "boost_title": "Use Golden Questions For Every Bug Fix",
@@ -9108,6 +10146,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-int8-for-safer-compression.md",
       "url": "content/tips-and-tricks/use-int8-for-safer-compression",
       "boost_title": "Use INT8 For Safer Compression",
@@ -9132,6 +10172,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-json-only-for-machine-parsed-outputs.md",
       "url": "content/tips-and-tricks/use-json-only-for-machine-parsed-outputs",
       "boost_title": "Use JSON Only for Machine Parsed Outputs",
@@ -9156,6 +10198,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-json-schema-for-outputs.md",
       "url": "content/tips-and-tricks/use-json-schema-for-outputs",
       "boost_title": "Use JSON Schema for Critical Outputs",
@@ -9181,6 +10225,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-local-models-for-sensitive-prototyping.md",
       "url": "content/tips-and-tricks/use-local-models-for-sensitive-prototyping",
       "boost_title": "Use Local Models for Sensitive Prototyping",
@@ -9206,6 +10252,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-metadata-filters-before-similarity-search.md",
       "url": "content/tips-and-tricks/use-metadata-filters-before-similarity-search",
       "boost_title": "Use Metadata Filters Before Similarity Search",
@@ -9231,6 +10279,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-parent-child-chunking-for-long-documents.md",
       "url": "content/tips-and-tricks/use-parent-child-chunking-for-long-documents",
       "boost_title": "Use Parent Child Chunking for Long Documents",
@@ -9256,6 +10306,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-query-rewriting-for-vague-questions.md",
       "url": "content/tips-and-tricks/use-query-rewriting-for-vague-questions",
       "boost_title": "Use Query Rewriting for Vague Questions",
@@ -9281,6 +10333,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-semantic-cache-for-repeated-questions.md",
       "url": "content/tips-and-tricks/use-semantic-cache-for-repeated-questions",
       "boost_title": "Use Semantic Cache For Repeated Questions",
@@ -9306,6 +10360,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-sentence-windows-for-dense-manuals.md",
       "url": "content/tips-and-tricks/use-sentence-windows-for-dense-manuals",
       "boost_title": "Use Sentence Windows for Dense Manuals",
@@ -9331,6 +10387,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-smaller-models-for-classification-steps.md",
       "url": "content/tips-and-tricks/use-smaller-models-for-classification-steps",
       "boost_title": "Use Smaller Models For Classification Steps",
@@ -9356,6 +10414,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-speculative-decoding-for-latency-critical-paths.md",
       "url": "content/tips-and-tricks/use-speculative-decoding-for-latency-critical-paths",
       "boost_title": "Use Speculative Decoding For Latency Critical Paths",
@@ -9380,6 +10440,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/use-xml-tags-for-long-prompt-sections.md",
       "url": "content/tips-and-tricks/use-xml-tags-for-long-prompt-sections",
       "boost_title": "Use XML Tags for Long Prompt Sections",
@@ -9405,6 +10467,8 @@
       "audience": [
         "prototype"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/dx-and-tooling/vaani.md",
       "url": "content/tools/dx-and-tooling/vaani",
       "boost_title": "Vaani",
@@ -9430,6 +10494,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/validate-tool-arguments-before-execution.md",
       "url": "content/tips-and-tricks/validate-tool-arguments-before-execution",
       "boost_title": "Validate Tool Arguments Before Execution",
@@ -9454,6 +10520,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/vector-search.md",
       "url": "content/tools/by-job/vector-search",
       "boost_title": "Vector Search Tools",
@@ -9480,6 +10548,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/serving-and-deployment/vercel.md",
       "url": "content/tools/serving-and-deployment/vercel",
       "boost_title": "Vercel",
@@ -9504,6 +10574,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/version-system-prompts-like-code.md",
       "url": "content/tips-and-tricks/version-system-prompts-like-code",
       "boost_title": "Version System Prompts Like Code",
@@ -9528,6 +10600,8 @@
       "status": null,
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tips-and-tricks/version-your-eval-datasets.md",
       "url": "content/tips-and-tricks/version-your-eval-datasets",
       "boost_title": "Version Your Eval Datasets",
@@ -9554,6 +10628,14 @@
       "status": "active",
       "phase": "inference-engine",
       "audience": null,
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/inference-engines/vllm.md",
       "url": "content/projects/inference-engines/vllm",
       "boost_title": "vLLM",
@@ -9582,6 +10664,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/evaluation-and-observability/wandb-weave.md",
       "url": "content/tools/evaluation-and-observability/wandb-weave",
       "boost_title": "Weights & Biases Weave",
@@ -9608,6 +10692,14 @@
       "status": "active",
       "phase": "data-and-retrieval",
       "audience": null,
+      "domain": [
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
       "path": "content/projects/data-and-retrieval/weaviate.md",
       "url": "content/projects/data-and-retrieval/weaviate",
       "boost_title": "Weaviate",
@@ -9632,6 +10724,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/by-job/web-scraping.md",
       "url": "content/tools/by-job/web-scraping",
       "boost_title": "Web Scraping Tools",
@@ -9657,6 +10751,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/research/weekly-arxiv-picks.md",
       "url": "content/research/weekly-arxiv-picks",
       "boost_title": "Weekly ArXiv Picks",
@@ -9685,6 +10781,8 @@
         "production",
         "research"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/model-layer/weights-biases.md",
       "url": "content/tools/model-layer/weights-biases",
       "boost_title": "Weights & Biases",
@@ -9710,6 +10808,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/people/yann-lecun.md",
       "url": "content/community/people/yann-lecun",
       "boost_title": "Yann LeCun",
@@ -9736,6 +10836,12 @@
       "status": "watching",
       "phase": "foundation-model",
       "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "study-and-reference"
+      ],
       "path": "content/projects/foundation-models/yi.md",
       "url": "content/projects/foundation-models/yi",
       "boost_title": "Yi",
@@ -9761,6 +10867,8 @@
       "status": "active",
       "phase": null,
       "audience": null,
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/community/youtube-channels.md",
       "url": "content/community/youtube-channels",
       "boost_title": "YouTube Channels",
@@ -9789,6 +10897,8 @@
         "prototype",
         "production"
       ],
+      "domain": null,
+      "relation_to_stack": null,
       "path": "content/tools/orchestration/zep.md",
       "url": "content/tools/orchestration/zep",
       "boost_title": "Zep",

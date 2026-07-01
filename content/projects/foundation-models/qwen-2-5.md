@@ -43,7 +43,7 @@ upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
-corresponding_tool_entry: null
+corresponding_tool_entry: qwen-3
 enrichment_status: reviewed
 enrichment_notes: This entry's github_url (QwenLM/Qwen3) actually points to the Qwen3 repo, not Qwen2.5 -- a pre-existing data issue from the original population sprint, flagged here rather than silently corrected since fixing it requires a maintainer decision on re-scoping vs. URL correction.
 added_date: "2026-06-13"
@@ -103,7 +103,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+This project entry documents the Qwen2.5 model family's weights, architecture, and generational position (see the enrichment_notes flag about this entry's github_url data-quality issue). For a hosted/managed access path to a current Qwen model, see [Qwen 3](../../tools/model-layer/qwen-3.md) in the tools vertical — that entry does not repeat this one's best_for/avoid_if verbatim, since the frames differ: this entry is about the Qwen model family's architecture, the tool entry is about accessing a hosted Qwen model.
 
 ## Resources
 

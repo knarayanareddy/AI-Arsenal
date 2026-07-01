@@ -123,7 +123,7 @@ Use a hybrid when:
 
 - [LlamaIndex](../../projects/frameworks/llamaindex.md)
 - [LangChain for RAG](../../projects/frameworks/langchain.md)
-- [Ragas for RAG Evaluation](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+- [Ragas for RAG Evaluation](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
 - [Unsloth](../../tools/model-layer/unsloth.md)
 - [Axolotl](../../tools/model-layer/axolotl.md)
 - [PEFT](../../tools/model-layer/peft.md)

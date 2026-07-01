@@ -43,7 +43,7 @@ upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
-corresponding_tool_entry: null
+corresponding_tool_entry: firecrawl-tool
 enrichment_status: reviewed
 enrichment_notes: Documents the same project as the firecrawl-tool entry in the tools vertical; this entry covers architecture/ecosystem position, the tool entry covers usage-oriented job guidance. Firecrawl is widely adopted across RAG tutorials and production ingestion pipelines.
 added_date: "2026-06-13"
@@ -96,7 +96,7 @@ Upstream: relies on headless-browser infrastructure internally. Downstream: none
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This project entry documents Firecrawl's architecture and ecosystem position as an open-source project. For usage-oriented guidance (when to use this API, jobs it covers, pricing tiers), see [Firecrawl](../../tools/data-ingestion/firecrawl-tool.md) in the tools vertical — that entry does not repeat this one's best_for/avoid_if verbatim, since the frames differ: this entry is about what Firecrawl IS, the tool entry is about WHEN you'd reach for it.
 
 ## Resources
 

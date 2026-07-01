@@ -116,7 +116,7 @@ flowchart TD
 - **Microsoft Agent Framework**: [Microsoft Agent Framework](../../projects/frameworks/microsoft-agent-framework.md)
 - **LangGraph**: [LangGraph](../../projects/frameworks/langgraph.md)
 - **Qdrant**: [Qdrant](../../projects/data-and-retrieval/qdrant.md)
-- **OpenLIT**: [OpenLIT](../../projects/observability/tracing/openlit.md)
+- **OpenLIT**: [OpenLIT](../../projects/benchmarks-and-evals/openlit.md)
 - **NeMo Guardrails**: [NeMo Guardrails](../../tools/evaluation-and-observability/nemo-guardrails.md)
 
 ## Integration Patterns
@@ -134,7 +134,7 @@ flowchart TD
 - [Microsoft Agent Framework](../../projects/frameworks/microsoft-agent-framework.md)
 - [LangGraph](../../projects/frameworks/langgraph.md)
 - [Qdrant](../../projects/data-and-retrieval/qdrant.md)
-- [OpenLIT](../../projects/observability/tracing/openlit.md)
+- [OpenLIT](../../projects/benchmarks-and-evals/openlit.md)
 - [NeMo Guardrails](../../tools/evaluation-and-observability/nemo-guardrails.md)
 
 ## Buzz & Reception

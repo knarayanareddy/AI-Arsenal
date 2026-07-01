@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-01T11:08:25.305Z | Entries: 376 | Schema version: 1.0.0
+Generated: 2026-07-01T11:29:46.644Z | Entries: 375 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 69
+- Projects: 68
 - Tools: 92
 - Papers: 25
 - Tips: 106
@@ -45,10 +45,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
-- Ragas (⭐14355, score:70) — An evaluation framework for measuring retrieval-augmented generation quality
 - Langfuse (⭐29021, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - Opik (⭐19609, score:30) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
+- OpenLLMetry (⭐7000, score:30) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 
 ### rag
 - LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents

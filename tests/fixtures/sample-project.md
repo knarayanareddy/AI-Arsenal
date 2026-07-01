@@ -19,6 +19,19 @@ added_date: '2026-06-13'
 last_reviewed: '2026-06-13'
 added_by: tester
 status: active
+phase: framework
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - community-driven
+ecosystem_role:
+  - Sample ecosystem role
+best_for:
+  - You need a quick sample framework for testing
+avoid_if:
+  - You need a fully verified production framework
 ---
 
 ## Overview

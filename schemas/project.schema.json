@@ -5,7 +5,7 @@
   "type": "object",
   "additionalProperties": false,
   "x-schema-version": "2.0.0",
-  "required": ["id", "name", "artifact_type", "category", "subcategory", "description", "github_url", "license", "primary_language", "tags", "maturity", "cost_model", "github_stars", "trending_score", "last_commit", "added_date", "last_reviewed", "added_by", "status"],
+  "required": ["id", "name", "artifact_type", "category", "subcategory", "description", "github_url", "license", "primary_language", "tags", "maturity", "cost_model", "github_stars", "trending_score", "last_commit", "added_date", "last_reviewed", "added_by", "status", "phase", "domain", "relation_to_stack", "health_signals", "ecosystem_role", "best_for", "avoid_if"],
   "properties": {
     "id": { "$ref": "#/$defs/kebabId" },
     "name": { "type": "string", "minLength": 1, "maxLength": 120 },

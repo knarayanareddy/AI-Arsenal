@@ -36,6 +36,7 @@ version_tracked: null
 verdict: recommended
 verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
 status: active
+corresponding_project_entry: pydantic-ai
 ---
 
 > **TL;DR:** Pydantic agent framework focused on typed outputs, tools, and production Python apps. Open source or free to start. Best for typed Python agent applications.

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-01T11:08:21.227Z",
+  "generated_at": "2026-07-01T11:29:43.192Z",
   "tags": [
     {
       "id": "agents",
@@ -440,10 +440,10 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 69,
+      "count": 68,
       "types": {
         "tip": 15,
-        "project": 11,
+        "project": 10,
         "guide": 13,
         "tool": 17,
         "person": 9,
@@ -500,7 +500,6 @@
         "production-rag",
         "promptfoo",
         "rag-vs-fine-tuning",
-        "ragas",
         "ragas-paper",
         "ragas-rag-evaluation",
         "replay-the-same-trace-with-one-variable-changed",
@@ -1085,10 +1084,10 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 39,
+      "count": 38,
       "types": {
         "tip": 12,
-        "project": 13,
+        "project": 12,
         "guide": 7,
         "person": 1,
         "tool": 5,
@@ -1124,7 +1123,6 @@
         "production-rag",
         "production-rag-api",
         "promptlayer",
-        "ragas",
         "ragas-rag-evaluation",
         "replay-the-same-trace-with-one-variable-changed",
         "separate-model-errors-from-app-errors",
@@ -1249,12 +1247,12 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 70,
+      "count": 69,
       "types": {
         "tip": 17,
         "guide": 10,
         "build-example": 5,
-        "project": 24,
+        "project": 23,
         "tool": 6,
         "person": 3,
         "paper": 5
@@ -1312,7 +1310,6 @@
         "qdrant",
         "rag-chunk-overlap-tuning",
         "rag-vs-fine-tuning",
-        "ragas",
         "ragas-paper",
         "ragas-rag-evaluation",
         "ragflow",
@@ -1393,13 +1390,13 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 59,
+      "count": 58,
       "types": {
         "tip": 22,
         "tool": 6,
         "build-example": 4,
         "guide": 5,
-        "project": 16,
+        "project": 15,
         "paper": 5,
         "person": 1
       },
@@ -1438,7 +1435,6 @@
         "qdrant",
         "rag-chunk-overlap-tuning",
         "rag-vs-fine-tuning",
-        "ragas",
         "ragas-paper",
         "ragas-rag-evaluation",
         "ragflow",

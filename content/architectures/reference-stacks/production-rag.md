@@ -117,8 +117,8 @@ pip install fastapi llama-index qdrant-client ragas arize-phoenix langfuse
 - **Qdrant**: [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 - **pgvector**: [pgvector](../../projects/data-and-retrieval/pgvector.md)
 - **Docling**: [Docling](../../projects/data-and-retrieval/docling.md)
-- **RAGAS**: [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
-- **Phoenix**: [Phoenix](../../projects/observability/tracing/phoenix.md)
+- **RAGAS**: [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
+- **Phoenix**: [Phoenix](../../projects/benchmarks-and-evals/phoenix.md)
 
 ## Integration Patterns
 
@@ -134,8 +134,8 @@ pip install fastapi llama-index qdrant-client ragas arize-phoenix langfuse
 - [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 - [pgvector](../../projects/data-and-retrieval/pgvector.md)
 - [Docling](../../projects/data-and-retrieval/docling.md)
-- [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
-- [Phoenix](../../projects/observability/tracing/phoenix.md)
+- [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
+- [Phoenix](../../projects/benchmarks-and-evals/phoenix.md)
 
 ## Buzz & Reception
 

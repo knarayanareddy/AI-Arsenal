@@ -35,6 +35,7 @@ version_tracked: null
 verdict: recommended
 verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
 status: active
+corresponding_project_entry: crawl4ai
 ---
 
 > **TL;DR:** Python crawler and scraper designed for LLM-friendly web content extraction. Open source or free to start. Best for local Python web ingestion.

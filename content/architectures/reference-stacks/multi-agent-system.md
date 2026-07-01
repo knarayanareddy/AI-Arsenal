@@ -117,7 +117,7 @@ pip install langgraph langfuse instructor redis
 - **Instructor**: [Instructor](../../tools/dx-and-tooling/instructor.md)
 - **Pydantic AI**: [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
 - **Redis**: [Redis](../../tools/orchestration/redis-memory.md)
-- **Langfuse**: [Langfuse](../../projects/observability/tracing/langfuse.md)
+- **Langfuse**: [Langfuse](../../projects/benchmarks-and-evals/langfuse.md)
 
 ## Integration Patterns
 
@@ -134,7 +134,7 @@ pip install langgraph langfuse instructor redis
 - [Instructor](../../tools/dx-and-tooling/instructor.md)
 - [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
 - [Redis](../../tools/orchestration/redis-memory.md)
-- [Langfuse](../../projects/observability/tracing/langfuse.md)
+- [Langfuse](../../projects/benchmarks-and-evals/langfuse.md)
 
 ## Buzz & Reception
 

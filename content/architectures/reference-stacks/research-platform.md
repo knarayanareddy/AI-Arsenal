@@ -115,7 +115,7 @@ pip install wandb mlflow dvc peft torchtune vllm ragas
 - **PEFT**: [PEFT](../../tools/model-layer/peft.md)
 - **torchtune**: [torchtune](../../tools/model-layer/torchtune.md)
 - **vLLM**: [vLLM](../../projects/inference-engines/vllm.md)
-- **RAGAS**: [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+- **RAGAS**: [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
 
 ## Integration Patterns
 
@@ -133,7 +133,7 @@ pip install wandb mlflow dvc peft torchtune vllm ragas
 - [PEFT](../../tools/model-layer/peft.md)
 - [torchtune](../../tools/model-layer/torchtune.md)
 - [vLLM](../../projects/inference-engines/vllm.md)
-- [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+- [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
 
 ## Buzz & Reception
 

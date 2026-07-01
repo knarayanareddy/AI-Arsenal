@@ -35,6 +35,7 @@ version_tracked: null
 verdict: recommended
 verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
 status: active
+corresponding_project_entry: langfuse
 ---
 
 > **TL;DR:** Prompt management and versioning workflows inside the Langfuse observability platform. Free/open-source plus paid cloud/enterprise options. Best for prompt management with traces.

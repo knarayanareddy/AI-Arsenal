@@ -84,7 +84,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Agenta — 🔄
 
-> **TL;DR:** Agenta is a candidate for `prompt-management` workflows. Full details: [Agenta](../../projects/observability/tracing/agenta.md).
+> **TL;DR:** Agenta is a candidate for `prompt-management` workflows. Full details: [Agenta](../../projects/benchmarks-and-evals/agenta.md).
 
 | Field | Value |
 |---|---|
@@ -100,7 +100,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Agenta](../../projects/observability/tracing/agenta.md)
+**Get started:** See [Agenta](../../projects/benchmarks-and-evals/agenta.md)
 **Alternatives:** Langfuse Prompts, LangSmith Hub, PromptLayer
 
 ### PromptLayer — 🔄
@@ -149,7 +149,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 - [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md)
 - [LangSmith Hub](../dx-and-tooling/langsmith-hub.md)
-- [Agenta](../../projects/observability/tracing/agenta.md)
+- [Agenta](../../projects/benchmarks-and-evals/agenta.md)
 - [PromptLayer](../dx-and-tooling/promptlayer.md)
 
 ## Buzz & Reception

@@ -38,6 +38,7 @@ verdict: watching
 verdict_rationale: Hosted Qwen interface listed on Techpresso; open weights at github.com/QwenLM/Qwen3
 status: active
 buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso as a production-serving tool"}]
+corresponding_project_entry: qwen-2-5
 ---
 
 ## Overview

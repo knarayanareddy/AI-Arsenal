@@ -17,6 +17,15 @@ import chalk from 'chalk';
 import { loadEntries, writeJson } from './utils/entries.js';
 
 const REQUIRED_FIELDS = ['phase', 'domain', 'relation_to_stack', 'health_signals', 'ecosystem_role', 'best_for', 'avoid_if', 'last_reviewed'];
+
+// No entries are deferred from the phase taxonomy: every project entry,
+// including borderline scope fits (see uiverse-design's enrichment_notes
+// for a flagged maintainer-review case), is migrated to a phase folder
+// and passes the full validator checklist. Kept as an empty set (rather
+// than removed) so a future migration can reintroduce a deferral without
+// restructuring this script.
+const DEFERRED_OUT_OF_SCOPE = new Set();
+
 const VALID_PHASES = new Set([
   'foundation-models',
   'frameworks',
@@ -42,7 +51,7 @@ const PHASE_TO_FOLDER = {
 
 const enforce = process.argv.includes('--enforce');
 
-const entries = (await loadEntries({ includeContent: false })).filter((e) => e.type === 'project');
+const entries = (await loadEntries({ includeContent: false })).filter((e) => e.type === 'project' && !DEFERRED_OUT_OF_SCOPE.has(e.data.id));
 
 const migrated = [];
 const pending = [];
@@ -85,6 +94,7 @@ const report = {
   pending_count: pending.length,
   percent_migrated: percent,
   draft_enrichment_count: draftCount,
+  deferred_out_of_scope: [...DEFERRED_OUT_OF_SCOPE],
   pending_entries: pending,
   migrated_entries: migrated.map((m) => m.id)
 };
@@ -92,6 +102,9 @@ const report = {
 await writeJson('data/projects-migration-progress.json', report);
 
 console.log(chalk.bold(`Projects migration progress: ${migratedCount}/${total} (${percent}%)`));
+if (DEFERRED_OUT_OF_SCOPE.size > 0) {
+  console.log(chalk.blue(`${DEFERRED_OUT_OF_SCOPE.size} entr${DEFERRED_OUT_OF_SCOPE.size === 1 ? 'y' : 'ies'} deferred as out-of-scope for the phase taxonomy (not counted above): ${[...DEFERRED_OUT_OF_SCOPE].join(', ')}.`));
+}
 if (draftCount > 0) {
   console.log(chalk.yellow(`${draftCount} migrated entr${draftCount === 1 ? 'y has' : 'ies have'} enrichment_status: draft (architecture/ecosystem/production claims not yet backed by third-party evidence).`));
 }

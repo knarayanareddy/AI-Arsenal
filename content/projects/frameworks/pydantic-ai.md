@@ -37,7 +37,7 @@ upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
-corresponding_tool_entry: null
+corresponding_tool_entry: pydantic-ai-tool
 enrichment_status: reviewed
 enrichment_notes: Backed by the Pydantic team (widely used, well-established validation library maintainers), which gives credible org-backing signal even without a large historical production case-study base given the project's relative newness.
 added_date: "2026-06-13"
@@ -93,7 +93,7 @@ pip install pydantic-ai
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+This project entry documents Pydantic AI's architecture and ecosystem position as a framework. For usage-oriented job guidance (orchestration job comparisons against alternatives), see [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md) in the tools vertical — that entry does not repeat this one's best_for/avoid_if verbatim, since the frames differ: this entry is about the framework's architecture, the tool entry is about when to reach for it for an orchestration job.
 
 ## Resources
 

@@ -35,6 +35,7 @@ version_tracked: null
 verdict: recommended
 verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
 status: active
+corresponding_project_entry: firecrawl
 ---
 
 > **TL;DR:** API and open-source project for scraping and crawling websites into LLM-ready Markdown. Open-source plus hosted API pricing. Best for LLM-ready web ingestion.

@@ -58,7 +58,14 @@ test('project schema compiles and accepts a valid project', async () => {
     added_date: '2026-06-13',
     last_reviewed: '2026-06-13',
     added_by: 'tester',
-    status: 'active'
+    status: 'active',
+    phase: 'framework',
+    domain: ['general-purpose'],
+    relation_to_stack: ['build-on-top'],
+    health_signals: ['community-driven'],
+    ecosystem_role: ['Sample ecosystem role'],
+    best_for: ['You need a quick sample framework for testing'],
+    avoid_if: ['You need a fully verified production framework']
   });
   assert.equal(valid, true);
 });
@@ -461,5 +468,101 @@ test('tool schema rejects an invalid enrichment_status value', async () => {
   const ajv = new Ajv({ allErrors: true, strict: false });
   const validate = ajv.compile(schema);
   const valid = validate(baseValidToolFixture({ enrichment_status: 'not-a-real-status' }));
+  assert.equal(valid, false);
+});
+
+// Projects-vertical reorganisation: phase/domain/relation_to_stack/
+// health_signals/ecosystem_role/best_for/avoid_if are required on every
+// project entry (added once the migration reached 100%), mirroring the
+// tools-vertical pattern above.
+function baseValidProjectFixture(overrides = {}) {
+  return {
+    id: 'sample-project',
+    name: 'Sample Project',
+    artifact_type: 'framework',
+    category: 'agents',
+    subcategory: 'agent-frameworks',
+    description: 'A sample project entry for testing',
+    github_url: 'https://github.com/example/sample',
+    license: 'MIT',
+    primary_language: 'Python',
+    tags: ['agents'],
+    maturity: 'production',
+    cost_model: 'open-source',
+    github_stars: 100,
+    trending_score: 40,
+    last_commit: '2026-06-13',
+    added_date: '2026-06-13',
+    last_reviewed: '2026-06-13',
+    added_by: 'tester',
+    status: 'active',
+    phase: 'framework',
+    domain: ['general-purpose'],
+    relation_to_stack: ['build-on-top'],
+    health_signals: ['community-driven'],
+    ecosystem_role: ['Sample ecosystem role'],
+    best_for: ['You need a quick sample framework for testing'],
+    avoid_if: ['You need a fully verified production framework'],
+    ...overrides
+  };
+}
+
+test('project schema requires phase/domain/relation_to_stack/health_signals/ecosystem_role/best_for/avoid_if', async () => {
+  const schema = await loadSchema('project.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const fullyValid = baseValidProjectFixture();
+  assert.equal(validate(fullyValid), true);
+
+  for (const field of ['phase', 'domain', 'relation_to_stack', 'health_signals', 'ecosystem_role', 'best_for', 'avoid_if']) {
+    const missing = baseValidProjectFixture();
+    delete missing[field];
+    assert.equal(validate(missing), false, `expected schema to reject missing ${field}`);
+  }
+});
+
+test('project schema rejects an unknown phase value', async () => {
+  const schema = await loadSchema('project.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate(baseValidProjectFixture({ phase: 'not-a-real-phase' }));
+  assert.equal(valid, false);
+});
+
+test('project schema enforces best_for/avoid_if as 1-4 item arrays', async () => {
+  const schema = await loadSchema('project.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+
+  assert.equal(validate(baseValidProjectFixture({ best_for: [] })), false, 'empty best_for should be rejected');
+  assert.equal(
+    validate(baseValidProjectFixture({ best_for: ['a', 'b', 'c', 'd', 'e'] })),
+    false,
+    'best_for with more than 4 items should be rejected'
+  );
+  assert.equal(
+    validate(baseValidProjectFixture({ avoid_if: ['a', 'b', 'c', 'd'] })),
+    true,
+    'avoid_if with exactly 4 items should be accepted'
+  );
+});
+
+test('project schema accepts optional corresponding_tool_entry/upstream_dependencies/downstream_consumers', async () => {
+  const schema = await loadSchema('project.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate(baseValidProjectFixture({
+    corresponding_tool_entry: 'some-tool-id',
+    upstream_dependencies: ['pytorch'],
+    downstream_consumers: ['some-downstream-project']
+  }));
+  assert.equal(valid, true);
+});
+
+test('project schema rejects an invalid enrichment_status value', async () => {
+  const schema = await loadSchema('project.schema.json');
+  const ajv = new Ajv({ allErrors: true, strict: false });
+  const validate = ajv.compile(schema);
+  const valid = validate(baseValidProjectFixture({ enrichment_status: 'not-a-real-status' }));
   assert.equal(valid, false);
 });

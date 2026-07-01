@@ -62,14 +62,14 @@ Plain-language tree:
 
 | Need | Recommended Start | Canonical Entry |
 |---|---|---|
-| Self-hosted full lifecycle | Langfuse | [Langfuse](../../projects/observability/tracing/langfuse.md) |
-| LangChain/LangGraph native | LangSmith | [LangSmith](../../projects/observability/tracing/langsmith-platform.md) |
-| RAG eval + OTel | Phoenix | [Phoenix](../../projects/observability/tracing/phoenix.md) |
-| Proxy/gateway logging | Helicone | [Helicone](../../projects/observability/tracing/helicone.md) |
-| Eval-first workflow | Braintrust / Opik | [Braintrust](../../projects/observability/tracing/braintrust.md), [Opik](../../projects/observability/tracing/opik.md) |
-| OTel instrumentation only | OpenLLMetry | [OpenLLMetry](../../projects/observability/tracing/openllmetry.md) |
-| OTel + GPU monitoring | OpenLIT | [OpenLIT](../../projects/observability/tracing/openlit.md) |
-| Prompt collaboration | Agenta | [Agenta](../../projects/observability/tracing/agenta.md) |
+| Self-hosted full lifecycle | Langfuse | [Langfuse](../../projects/benchmarks-and-evals/langfuse.md) |
+| LangChain/LangGraph native | LangSmith | [LangSmith](../../projects/benchmarks-and-evals/langsmith-platform.md) |
+| RAG eval + OTel | Phoenix | [Phoenix](../../projects/benchmarks-and-evals/phoenix.md) |
+| Proxy/gateway logging | Helicone | [Helicone](../../projects/benchmarks-and-evals/helicone.md) |
+| Eval-first workflow | Braintrust / Opik | [Braintrust](../../projects/benchmarks-and-evals/braintrust.md), [Opik](../../projects/benchmarks-and-evals/opik.md) |
+| OTel instrumentation only | OpenLLMetry | [OpenLLMetry](../../projects/benchmarks-and-evals/openllmetry.md) |
+| OTel + GPU monitoring | OpenLIT | [OpenLIT](../../projects/benchmarks-and-evals/openlit.md) |
+| Prompt collaboration | Agenta | [Agenta](../../projects/benchmarks-and-evals/agenta.md) |
 
 ## Getting Started
 
@@ -108,13 +108,13 @@ pip install arize-phoenix openinference-instrumentation-openai
 
 ## Resources
 
-- [Langfuse](../../projects/observability/tracing/langfuse.md)
-- [LangSmith](../../projects/observability/tracing/langsmith-platform.md)
-- [Phoenix](../../projects/observability/tracing/phoenix.md)
-- [Helicone](../../projects/observability/tracing/helicone.md)
-- [Braintrust](../../projects/observability/tracing/braintrust.md)
-- [Opik](../../projects/observability/tracing/opik.md)
-- [OpenLIT](../../projects/observability/tracing/openlit.md)
+- [Langfuse](../../projects/benchmarks-and-evals/langfuse.md)
+- [LangSmith](../../projects/benchmarks-and-evals/langsmith-platform.md)
+- [Phoenix](../../projects/benchmarks-and-evals/phoenix.md)
+- [Helicone](../../projects/benchmarks-and-evals/helicone.md)
+- [Braintrust](../../projects/benchmarks-and-evals/braintrust.md)
+- [Opik](../../projects/benchmarks-and-evals/opik.md)
+- [OpenLIT](../../projects/benchmarks-and-evals/openlit.md)
 
 ## Buzz & Reception
 

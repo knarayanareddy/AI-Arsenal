@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-01T11:08:21.227Z",
+  "generated_at": "2026-07-01T11:29:43.192Z",
   "count": 92,
   "items": [
     {
@@ -1282,6 +1282,7 @@
       "verdict": "recommended",
       "verdict_rationale": "Useful option when it matches your stack, cost, and operational constraints",
       "status": "active",
+      "corresponding_project_entry": "crawl4ai",
       "entry_type": "tool",
       "path": "content/tools/data-ingestion/crawl4ai-tool.md",
       "slug": "crawl4ai-tool",
@@ -1766,6 +1767,7 @@
       "verdict": "recommended",
       "verdict_rationale": "Useful option when it matches your stack, cost, and operational constraints",
       "status": "active",
+      "corresponding_project_entry": "firecrawl",
       "entry_type": "tool",
       "path": "content/tools/data-ingestion/firecrawl-tool.md",
       "slug": "firecrawl-tool",
@@ -3293,6 +3295,7 @@
       "verdict": "recommended",
       "verdict_rationale": "Useful option when it matches your stack, cost, and operational constraints",
       "status": "active",
+      "corresponding_project_entry": "langfuse",
       "entry_type": "tool",
       "path": "content/tools/dx-and-tooling/langfuse-prompts.md",
       "slug": "langfuse-prompts",
@@ -5525,6 +5528,7 @@
       "verdict": "recommended",
       "verdict_rationale": "Useful option when it matches your stack, cost, and operational constraints",
       "status": "active",
+      "corresponding_project_entry": "pydantic-ai",
       "entry_type": "tool",
       "path": "content/tools/orchestration/pydantic-ai-tool.md",
       "slug": "pydantic-ai-tool",
@@ -5694,6 +5698,7 @@
           "description": "Featured in Techpresso as a production-serving tool"
         }
       ],
+      "corresponding_project_entry": "qwen-2-5",
       "entry_type": "tool",
       "path": "content/tools/model-layer/qwen-3.md",
       "slug": "qwen-3",

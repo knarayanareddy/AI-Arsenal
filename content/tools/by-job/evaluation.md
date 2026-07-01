@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### RAGAS — 🔄
 
-> **TL;DR:** RAGAS is a candidate for `evaluation` workflows. Full details: [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md).
+> **TL;DR:** RAGAS is a candidate for `evaluation` workflows. Full details: [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
+**Get started:** See [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
 **Alternatives:** DeepEval, LangSmith Evals, Phoenix Evals, Promptfoo, Giskard
 
 ### DeepEval — 🔄
 
-> **TL;DR:** DeepEval is a candidate for `evaluation` workflows. Full details: [DeepEval](../../projects/observability/evaluation/deepeval.md).
+> **TL;DR:** DeepEval is a candidate for `evaluation` workflows. Full details: [DeepEval](../../projects/benchmarks-and-evals/deepeval.md).
 
 | Field | Value |
 |---|---|
@@ -79,7 +79,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [DeepEval](../../projects/observability/evaluation/deepeval.md)
+**Get started:** See [DeepEval](../../projects/benchmarks-and-evals/deepeval.md)
 **Alternatives:** RAGAS, LangSmith Evals, Phoenix Evals, Promptfoo, Giskard
 
 ### LangSmith Evals — 🔄
@@ -105,7 +105,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Phoenix Evals — 🔄
 
-> **TL;DR:** Phoenix Evals is a candidate for `evaluation` workflows. Full details: [Phoenix Evals](../../projects/observability/tracing/phoenix.md).
+> **TL;DR:** Phoenix Evals is a candidate for `evaluation` workflows. Full details: [Phoenix Evals](../../projects/benchmarks-and-evals/phoenix.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Phoenix Evals](../../projects/observability/tracing/phoenix.md)
+**Get started:** See [Phoenix Evals](../../projects/benchmarks-and-evals/phoenix.md)
 **Alternatives:** RAGAS, DeepEval, LangSmith Evals, Promptfoo, Giskard
 
 ### Promptfoo — 🔄
@@ -189,10 +189,10 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [RAGAS](../../projects/rag/frameworks/ragas-rag-evaluation.md)
-- [DeepEval](../../projects/observability/evaluation/deepeval.md)
+- [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
+- [DeepEval](../../projects/benchmarks-and-evals/deepeval.md)
 - [LangSmith Evals](../evaluation-and-observability/langsmith.md)
-- [Phoenix Evals](../../projects/observability/tracing/phoenix.md)
+- [Phoenix Evals](../../projects/benchmarks-and-evals/phoenix.md)
 - [Promptfoo](../evaluation-and-observability/promptfoo.md)
 - [Giskard](../evaluation-and-observability/giskard.md)
 
