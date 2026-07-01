@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-01T10:57:37.896Z",
+  "generated_at": "2026-07-01T10:59:21.049Z",
   "config": {
     "document": {
       "id": "id",
@@ -156,6 +156,7 @@
     "phase": {
       "framework": 19,
       "foundation-model": 13,
+      "agent-system": 2,
       "inference-engine": 7,
       "data-ingestion": 13,
       "orchestration": 15,
@@ -3469,14 +3470,14 @@
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "agent-system",
       "audience": null,
-      "path": "content/projects/agents/coding-agents/insforge.md",
-      "url": "content/projects/agents/coding-agents/insforge",
+      "path": "content/projects/agent-systems/insforge.md",
+      "url": "content/projects/agent-systems/insforge",
       "boost_title": "InsForge",
       "boost_tags": "agents orchestration",
       "boost_description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
-      "body": "InsForge Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway agents orchestration agents coding-agents Overview InsForge is a open source AI engineering project. Why It's in the Arsenal It covers the agents category with the coding agents subcategory and complements existing Arsenal entries. Key Features Open source backend platform giving AI coding agents database, auth, storage, and AI gateway Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/InsForge/InsForge for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the agents category. 2. Scenario: Self hosted alternat…"
+      "body": "InsForge Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway agents orchestration agents coding-agents Overview An open source, self hostable backend platform purpose built for AI coding agents rather than human developers, exposing database, authentication, storage, compute, and an AI model gateway through an MCP server interface that agents like Cursor, Claude Code, and GitHub Copilot can operate directly. Why it's in the Arsenal Agent native backend platform giving AI coding agents (Cursor, Claude Code, GitHub Copilot) direct operational control over database, auth, storage, and deployment via MCP. It earns a place in the Arsenal because it directly addresses a recurring decision point: you…"
     },
     {
       "id": "inspect-retrieved-chunks-beside-the-answer",
@@ -8096,14 +8097,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "agent-system",
       "audience": null,
-      "path": "content/projects/agents/browser-agents/stagehand.md",
-      "url": "content/projects/agents/browser-agents/stagehand",
+      "path": "content/projects/agent-systems/stagehand.md",
+      "url": "content/projects/agent-systems/stagehand",
       "boost_title": "Stagehand",
       "boost_tags": "agents orchestration",
       "boost_description": "Open-source browser-AI framework for reliable AI agent web interactions",
-      "body": "Stagehand Open-source browser-AI framework for reliable AI agent web interactions agents orchestration agents browser-agents Overview Stagehand is a open source AI engineering project. Why It's in the Arsenal It covers the agents category with the browser agents subcategory and complements existing Arsenal entries. Key Features Open source browser AI framework for reliable AI agent web interactions Open source at the canonical repository License: MIT Architecture / How It Works See https://github.com/browserbase/stagehand for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the agents category. 2. Scenario: Self hosted alternative to commerci…"
+      "body": "Stagehand Open-source browser-AI framework for reliable AI agent web interactions agents orchestration agents browser-agents Overview An open source browser automation framework from Browserbase that blends natural language, AI driven actions with deterministic code level control, aimed at building web automation that is more resilient to page changes than pure CSS selector scripts while remaining more predictable than a fully autonomous browsing agent. Why it's in the Arsenal Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS selector scripts and fully autonomous browsing agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you…"
     },
     {
       "id": "start-with-a-smaller-quantized-model",

@@ -24,7 +24,7 @@
 | `google-adk` | [Google ADK](./frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
 | `haystack` | [Haystack](./frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
 | `helicone` | [Helicone](./observability/tracing/helicone.md) | Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics |
-| `insforge` | [InsForge](./agents/coding-agents/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
+| `insforge` | [InsForge](./agent-systems/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
 | `lancedb` | [LanceDB](./rag/vector-databases/lancedb.md) | Developer-friendly embedded and serverless vector database for multimodal AI retrieval |
 | `langchain` | [LangChain](./frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
 | `langfuse` | [Langfuse](./observability/tracing/langfuse.md) | Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets |
@@ -63,7 +63,7 @@
 | `semantic-kernel` | [Semantic Kernel](./frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |
 | `sglang` | [SGLang](./inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
 | `smolagents` | [Smolagents](./frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
-| `stagehand` | [Stagehand](./agents/browser-agents/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
+| `stagehand` | [Stagehand](./agent-systems/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
 | `surrealdb` | [SurrealDB](./rag/vector-databases/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
 | `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
 | `translategemma` | [TranslateGemma](./foundation-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |

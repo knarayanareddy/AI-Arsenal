@@ -10,12 +10,12 @@
 
 ## Recently Added
 
-- [InsForge](./insforge.md)
+_No entries yet._
 
 ## Most Popular
 
-- [InsForge](./insforge.md) — ⭐ 2300
+_No star-tracked entries yet._
 
 ## Browse All
 
-- [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+_No entries yet._

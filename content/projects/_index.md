@@ -6,7 +6,8 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents](./agents/) | 2 entries | 2026-07-01 |
+| [agent systems](./agent-systems/) | 2 entries | 2026-07-01 |
+| [agents](./agents/) | 0 entries | 2026-07-01 |
 | [code generation](./code-generation/) | 0 entries | 2026-07-01 |
 | [computer vision](./computer-vision/) | 0 entries | 2026-07-01 |
 | [data pipelines](./data-pipelines/) | 0 entries | 2026-07-01 |
@@ -22,8 +23,8 @@
 
 ## Recently Added
 
-- [InsForge](./agents/coding-agents/insforge.md)
-- [Stagehand](./agents/browser-agents/stagehand.md)
+- [InsForge](./agent-systems/insforge.md)
+- [Stagehand](./agent-systems/stagehand.md)
 - [SurrealDB](./rag/vector-databases/surrealdb.md)
 - [TranslateGemma](./foundation-models/translategemma.md)
 - [Uiverse Design](./tooling/platforms/uiverse-design.md)
@@ -68,7 +69,7 @@
 - [Google ADK](./frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Helicone](./observability/tracing/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
-- [InsForge](./agents/coding-agents/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+- [InsForge](./agent-systems/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [LanceDB](./rag/vector-databases/lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LangChain](./frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - [Langfuse](./observability/tracing/langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets

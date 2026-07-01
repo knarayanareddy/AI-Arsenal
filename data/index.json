@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-01T10:57:35.860Z",
+    "generated_at": "2026-07-01T10:59:18.934Z",
     "total_projects": 69,
     "total_tools": 92,
     "total_papers": 25,
@@ -2450,9 +2450,9 @@
         "agents",
         "orchestration"
       ],
-      "path": "content/projects/agents/coding-agents/insforge.md",
-      "url": "content/projects/agents/coding-agents/insforge",
-      "last_updated": "2026-06-14",
+      "path": "content/projects/agent-systems/insforge.md",
+      "url": "content/projects/agent-systems/insforge",
+      "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "beta",
       "cost_model": "open-source",
@@ -5887,9 +5887,9 @@
         "agents",
         "orchestration"
       ],
-      "path": "content/projects/agents/browser-agents/stagehand.md",
-      "url": "content/projects/agents/browser-agents/stagehand",
-      "last_updated": "2026-06-14",
+      "path": "content/projects/agent-systems/stagehand.md",
+      "url": "content/projects/agent-systems/stagehand",
+      "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
