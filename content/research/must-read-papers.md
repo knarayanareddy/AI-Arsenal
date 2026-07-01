@@ -40,9 +40,9 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ### Instruction Tuning & RLHF
 
-- [InstructGPT](papers/instructgpt.md) — 2022 — RLHF instruction following
-- [Constitutional AI](papers/constitutional-ai.md) — 2022 — AI-feedback alignment
-- [Direct Preference Optimization](papers/direct-preference-optimization.md) — 2023 — simpler preference optimization
+- [InstructGPT](training-and-alignment/ouyang-2022-instructgpt.md) — 2022 — RLHF instruction following
+- [Constitutional AI](training-and-alignment/bai-2022-constitutional-ai.md) — 2022 — AI-feedback alignment
+- [Direct Preference Optimization](training-and-alignment/rafailov-2023-dpo.md) — 2023 — simpler preference optimization
 
 ### RAG
 
@@ -60,15 +60,15 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ### Efficient Inference and Fine-Tuning
 
-- [LoRA](papers/lora.md) — 2021 — low-rank adaptation
+- [LoRA](training-and-alignment/hu-2021-lora.md) — 2021 — low-rank adaptation
 - [GPTQ](papers/gptq.md) — 2022 — post-training quantization
 - [Speculative Decoding](papers/speculative-decoding.md) — 2022 — faster decoding with draft models
-- [QLoRA](papers/qlora.md) — 2023 — quantized fine-tuning
+- [QLoRA](training-and-alignment/dettmers-2023-qlora.md) — 2023 — quantized fine-tuning
 
 ### Current SOTA / Model Reports
 
-- [DeepSeek-R1](papers/deepseek-r1.md) — 2025 — open reasoning model recipe
-- [Qwen2.5-Math](papers/qwen2-5-math.md) — 2024 — math specialist self-improvement
+- [DeepSeek-R1](training-and-alignment/deepseek-ai-2025-r1.md) — 2025 — open reasoning model recipe
+- [Qwen2.5-Math](training-and-alignment/yang-2024-qwen25-math.md) — 2024 — math specialist self-improvement
 
 ## Getting Started
 

@@ -73,6 +73,7 @@
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
+- [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [Basic RAG Chatbot](./build-examples/starter/basic-rag-chatbot.md) — Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio
 - [Benchmark On The User Hardware](./tips-and-tricks/benchmark-on-the-user-hardware.md) — 
@@ -96,4 +97,3 @@
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
 - [Choose INT4 Only After Quality Tests](./tips-and-tricks/choose-int4-only-after-quality-tests.md) — 
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
-- [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems

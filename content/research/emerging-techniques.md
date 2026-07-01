@@ -76,7 +76,7 @@ flowchart TD
 
 ## Resources
 
-- [DeepSeek-R1](papers/deepseek-r1.md)
+- [DeepSeek-R1](training-and-alignment/deepseek-ai-2025-r1.md)
 - [RAPTOR](papers/raptor.md)
 - [GraphRAG](papers/graphrag.md)
 - [Speculative Decoding](papers/speculative-decoding.md)
