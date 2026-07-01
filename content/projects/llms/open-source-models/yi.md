@@ -1,7 +1,7 @@
 ---
 id: yi
 name: Yi
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

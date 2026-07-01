@@ -1,7 +1,7 @@
 ---
 id: langgraph
 name: LangGraph
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: 'Graph-based framework for building stateful, durable LLM agents and workflows'

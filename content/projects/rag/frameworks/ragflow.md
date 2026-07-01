@@ -1,7 +1,7 @@
 ---
 id: ragflow
 name: RAGFlow
-type: platform
+artifact_type: platform
 category: rag
 subcategory: frameworks
 description: >-

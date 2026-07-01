@@ -1,7 +1,7 @@
 ---
 id: llama-3
 name: Llama 3.x
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

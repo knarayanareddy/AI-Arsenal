@@ -1,7 +1,7 @@
 ---
 id: openai-agents-sdk
 name: OpenAI Agents SDK
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

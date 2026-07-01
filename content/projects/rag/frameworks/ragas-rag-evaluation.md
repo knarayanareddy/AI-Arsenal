@@ -1,7 +1,7 @@
 ---
 id: ragas-rag-evaluation
 name: Ragas for RAG Evaluation
-type: library
+artifact_type: library
 category: rag
 subcategory: frameworks
 description: >-

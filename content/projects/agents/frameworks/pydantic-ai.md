@@ -1,7 +1,7 @@
 ---
 id: pydantic-ai
 name: Pydantic AI
-type: framework
+artifact_type: framework
 category: agents
 subcategory: frameworks
 description: A Python agent framework built around typed models and structured outputs

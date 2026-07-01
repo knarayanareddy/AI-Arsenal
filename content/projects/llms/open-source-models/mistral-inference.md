@@ -1,7 +1,7 @@
 ---
 id: mistral-inference
 name: Mistral Inference
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Reference inference code and assets for Mistral open-weight models

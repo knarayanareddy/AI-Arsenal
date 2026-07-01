@@ -24,10 +24,15 @@ for (const file of files) {
   requireAllowed(errors, file, 'status', data.status, taxonomy.statusValues);
 
   if (type === 'project') {
-    requireAllowed(errors, file, 'type', data.type, taxonomy.projectTypes);
+    requireAllowed(errors, file, 'artifact_type', data.artifact_type, taxonomy.projectArtifactTypes);
     requireAllowed(errors, file, 'category', data.category, taxonomy.projectCategories);
     requireAllowed(errors, file, 'subcategory', data.subcategory, taxonomy.projectSubcategories);
     requireAllowed(errors, file, 'primary_language', data.primary_language, taxonomy.primaryLanguages);
+    requireAllowed(errors, file, 'phase', data.phase, taxonomy.projectPhases);
+    requireAllowedArray(errors, file, 'domain', data.domain, taxonomy.projectDomains);
+    requireAllowedArray(errors, file, 'relation_to_stack', data.relation_to_stack, taxonomy.projectRelationToStack);
+    requireAllowedArray(errors, file, 'health_signals', data.health_signals, taxonomy.projectHealthSignals);
+    requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
     for (const buzz of data.buzz_sources ?? []) requireAllowed(errors, file, 'buzz_sources.source', buzz.source, taxonomy.buzzSources);
   }
 
@@ -35,6 +40,9 @@ for (const file of files) {
     requireAllowedArray(errors, file, 'job', data.job, taxonomy.toolJobs);
     requireAllowedArray(errors, file, 'stack', data.stack, taxonomy.stackLanguages);
     requireAllowed(errors, file, 'verdict', data.verdict, taxonomy.verdictValues);
+    requireAllowed(errors, file, 'phase', data.phase, taxonomy.toolPhases);
+    requireAllowedArray(errors, file, 'audience', data.audience, taxonomy.toolAudience);
+    requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
   }
 
   if (type === 'paper') {

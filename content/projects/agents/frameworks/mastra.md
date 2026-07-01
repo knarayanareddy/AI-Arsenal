@@ -1,7 +1,7 @@
 ---
 id: mastra
 name: Mastra
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

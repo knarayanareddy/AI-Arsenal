@@ -1,7 +1,7 @@
 ---
 id: docling
 name: Docling
-type: library
+artifact_type: library
 category: rag
 subcategory: document-processing
 description: >-

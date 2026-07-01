@@ -1,7 +1,7 @@
 ---
 id: text-generation-inference
 name: Text Generation Inference
-type: platform
+artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: >-

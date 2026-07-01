@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-06-30T22:57:06.146Z",
+  "generated_at": "2026-07-01T10:35:43.715Z",
   "count": 73,
   "items": [
     {
       "id": "agenta",
       "name": "Agenta",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds",
@@ -80,7 +80,7 @@
     {
       "id": "autogen",
       "name": "AutoGen",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence",
@@ -148,7 +148,7 @@
     {
       "id": "autogpt",
       "name": "AutoGPT",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Autonomous agent platform and classic agent project for accessible AI automation",
@@ -217,7 +217,7 @@
     {
       "id": "braintrust",
       "name": "Braintrust",
-      "type": "service",
+      "artifact_type": "service",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates",
@@ -291,7 +291,7 @@
     {
       "id": "chroma",
       "name": "Chroma",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG",
@@ -359,7 +359,7 @@
     {
       "id": "command-r-plus",
       "name": "Command R+",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows",
@@ -428,7 +428,7 @@
     {
       "id": "crawl4ai",
       "name": "Crawl4AI",
-      "type": "library",
+      "artifact_type": "library",
       "category": "rag",
       "subcategory": "document-processing",
       "description": "Open-source crawler and scraper designed to produce LLM-friendly web content",
@@ -494,7 +494,7 @@
     {
       "id": "crewai",
       "name": "CrewAI",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Role-based framework for orchestrating collaborative AI agent crews and flows",
@@ -564,7 +564,7 @@
     {
       "id": "deepeval",
       "name": "DeepEval",
-      "type": "library",
+      "artifact_type": "library",
       "category": "observability",
       "subcategory": "evaluation",
       "description": "An open-source evaluation framework for testing LLM applications in CI",
@@ -625,7 +625,7 @@
     {
       "id": "deepseek-v3-r1",
       "name": "DeepSeek-V3 / R1",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "DeepSeek open-weight MoE and reasoning model family known for strong cost-performance",
@@ -700,7 +700,7 @@
     {
       "id": "dify",
       "name": "Dify",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
@@ -769,7 +769,7 @@
     {
       "id": "docling",
       "name": "Docling",
-      "type": "library",
+      "artifact_type": "library",
       "category": "rag",
       "subcategory": "document-processing",
       "description": "IBM-origin open-source toolkit for parsing and exporting documents for generative AI",
@@ -835,7 +835,7 @@
     {
       "id": "dspy",
       "name": "DSPy",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "A framework for programming and optimizing language model pipelines",
@@ -896,7 +896,7 @@
     {
       "id": "falcon-3",
       "name": "Falcon 3",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "TII open model family with compact 1B to 10B text-only variants for local deployment",
@@ -968,7 +968,7 @@
     {
       "id": "firecrawl",
       "name": "Firecrawl",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "document-processing",
       "description": "Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data",
@@ -1041,7 +1041,7 @@
     {
       "id": "gemma",
       "name": "Gemma",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Google open model family designed for efficient language and multimodal applications",
@@ -1102,7 +1102,7 @@
     {
       "id": "gemma-3",
       "name": "Gemma 3",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Google open model family with efficient text and multimodal variants for local and hosted use",
@@ -1174,7 +1174,7 @@
     {
       "id": "google-adk",
       "name": "Google ADK",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
@@ -1243,7 +1243,7 @@
     {
       "id": "haystack",
       "name": "Haystack",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "Modular framework for production search, RAG, agents, routing, and generation pipelines",
@@ -1310,7 +1310,7 @@
     {
       "id": "haystack-agents",
       "name": "Haystack",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines",
@@ -1380,7 +1380,7 @@
     {
       "id": "helicone",
       "name": "Helicone",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics",
@@ -1454,7 +1454,7 @@
     {
       "id": "insforge",
       "name": "InsForge",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "agents",
       "subcategory": "coding-agents",
       "description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
@@ -1522,7 +1522,7 @@
     {
       "id": "lancedb",
       "name": "LanceDB",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Developer-friendly embedded and serverless vector database for multimodal AI retrieval",
@@ -1590,7 +1590,7 @@
     {
       "id": "langchain",
       "name": "LangChain",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "A framework for composing LLM applications, retrieval flows, tools, and agents",
@@ -1651,7 +1651,7 @@
     {
       "id": "langchain-rag",
       "name": "LangChain for RAG",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "LangChain components for retrieval chains, retrievers, loaders, and RAG application composition",
@@ -1720,7 +1720,7 @@
     {
       "id": "langfuse",
       "name": "Langfuse",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets",
@@ -1797,7 +1797,7 @@
     {
       "id": "langgraph",
       "name": "LangGraph",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Graph-based framework for building stateful, durable LLM agents and workflows",
@@ -1868,7 +1868,7 @@
     {
       "id": "langsmith-platform",
       "name": "LangSmith",
-      "type": "service",
+      "artifact_type": "service",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback",
@@ -1945,7 +1945,7 @@
     {
       "id": "llama-3",
       "name": "Llama 3.x",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications",
@@ -2020,7 +2020,7 @@
     {
       "id": "llama-cpp",
       "name": "llama.cpp",
-      "type": "library",
+      "artifact_type": "library",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
@@ -2090,7 +2090,7 @@
     {
       "id": "llama-models",
       "name": "Llama Models",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Meta open-weight model family widely used for local and production AI systems",
@@ -2151,7 +2151,7 @@
     {
       "id": "llamafile",
       "name": "Llamafile",
-      "type": "library",
+      "artifact_type": "library",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "Mozilla project for distributing and running LLMs as a single executable file",
@@ -2221,7 +2221,7 @@
     {
       "id": "llamaindex",
       "name": "LlamaIndex",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
@@ -2288,7 +2288,7 @@
     {
       "id": "llamaparse",
       "name": "LlamaParse",
-      "type": "service",
+      "artifact_type": "service",
       "category": "rag",
       "subcategory": "document-processing",
       "description": "Managed document parser from LlamaIndex for turning complex files into RAG-ready text",
@@ -2355,7 +2355,7 @@
     {
       "id": "lmdeploy",
       "name": "LMDeploy",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends",
@@ -2427,7 +2427,7 @@
     {
       "id": "lunary",
       "name": "Lunary",
-      "type": "service",
+      "artifact_type": "service",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts",
@@ -2501,7 +2501,7 @@
     {
       "id": "mastra",
       "name": "Mastra",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "TypeScript framework for building AI agents, workflows, evals, and application backends",
@@ -2570,7 +2570,7 @@
     {
       "id": "metagpt",
       "name": "MetaGPT",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Multi-agent framework that simulates software-company roles for natural-language programming",
@@ -2639,7 +2639,7 @@
     {
       "id": "microsoft-agent-framework",
       "name": "Microsoft Agent Framework",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Microsoft framework for Python and .NET agents, workflows, and production orchestration",
@@ -2715,7 +2715,7 @@
     {
       "id": "milvus",
       "name": "Milvus",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Cloud-native vector database for large-scale ANN search and production vector workloads",
@@ -2783,7 +2783,7 @@
     {
       "id": "mistral-inference",
       "name": "Mistral Inference",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Reference inference code and assets for Mistral open-weight models",
@@ -2844,7 +2844,7 @@
     {
       "id": "mistral-models",
       "name": "Mistral / Mixtral",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Mistral open-weight model family including dense and mixture-of-experts language models",
@@ -2916,7 +2916,7 @@
     {
       "id": "ollama",
       "name": "Ollama",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "Local runtime for downloading, running, and serving open-weight models on developer machines",
@@ -2986,7 +2986,7 @@
     {
       "id": "openai-agents-sdk",
       "name": "OpenAI Agents SDK",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
@@ -3055,7 +3055,7 @@
     {
       "id": "openhands",
       "name": "OpenHands",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
@@ -3124,7 +3124,7 @@
     {
       "id": "openlit",
       "name": "OpenLIT",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "observability",
       "subcategory": "tracing",
       "description": "OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails",
@@ -3198,7 +3198,7 @@
     {
       "id": "openllmetry",
       "name": "OpenLLMetry",
-      "type": "library",
+      "artifact_type": "library",
       "category": "observability",
       "subcategory": "tracing",
       "description": "OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop",
@@ -3272,7 +3272,7 @@
     {
       "id": "opik",
       "name": "Opik",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards",
@@ -3346,7 +3346,7 @@
     {
       "id": "pgvector",
       "name": "pgvector",
-      "type": "library",
+      "artifact_type": "library",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "PostgreSQL extension for vector similarity search inside an existing relational database",
@@ -3414,7 +3414,7 @@
     {
       "id": "phi-4",
       "name": "Phi-4",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Microsoft small language model family optimized for efficient reasoning and local-friendly deployment",
@@ -3483,7 +3483,7 @@
     {
       "id": "phi-cookbook",
       "name": "Phi Cookbook",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Microsoft examples and recipes for building with the Phi model family",
@@ -3544,7 +3544,7 @@
     {
       "id": "phoenix",
       "name": "Phoenix",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "observability",
       "subcategory": "tracing",
       "description": "Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems",
@@ -3618,7 +3618,7 @@
     {
       "id": "pinecone-vector-db",
       "name": "Pinecone",
-      "type": "service",
+      "artifact_type": "service",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Managed vector database service for production semantic search and RAG applications",
@@ -3686,7 +3686,7 @@
     {
       "id": "pydantic-ai",
       "name": "Pydantic AI",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "frameworks",
       "description": "A Python agent framework built around typed models and structured outputs",
@@ -3746,7 +3746,7 @@
     {
       "id": "qdrant",
       "name": "Qdrant",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Rust vector database for high-performance similarity search with filtering and hybrid search",
@@ -3814,7 +3814,7 @@
     {
       "id": "qwen",
       "name": "Qwen",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Alibaba open-weight model family covering language, coding, and multimodal use cases",
@@ -3875,7 +3875,7 @@
     {
       "id": "qwen-2-5",
       "name": "Qwen 2.5 / QwQ",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models",
@@ -3950,7 +3950,7 @@
     {
       "id": "ragas",
       "name": "Ragas",
-      "type": "library",
+      "artifact_type": "library",
       "category": "observability",
       "subcategory": "evaluation",
       "description": "An evaluation framework for measuring retrieval-augmented generation quality",
@@ -4011,7 +4011,7 @@
     {
       "id": "ragas-rag-evaluation",
       "name": "Ragas for RAG Evaluation",
-      "type": "library",
+      "artifact_type": "library",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "Evaluation framework for measuring retrieval-augmented generation quality and regressions",
@@ -4080,7 +4080,7 @@
     {
       "id": "ragflow",
       "name": "RAGFlow",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "Open-source RAG engine combining document understanding, retrieval, and agent capabilities",
@@ -4147,7 +4147,7 @@
     {
       "id": "semantic-kernel",
       "name": "Semantic Kernel",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "frameworks",
       "description": "An SDK for integrating AI orchestration into production applications",
@@ -4208,7 +4208,7 @@
     {
       "id": "sglang",
       "name": "SGLang",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "High-performance serving framework for large language and multimodal models",
@@ -4281,7 +4281,7 @@
     {
       "id": "smolagents",
       "name": "Smolagents",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "agent-frameworks",
       "description": "Hugging Face library for lightweight agents that can reason and act through code",
@@ -4350,7 +4350,7 @@
     {
       "id": "stagehand",
       "name": "Stagehand",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "agents",
       "subcategory": "browser-agents",
       "description": "Open-source browser-AI framework for reliable AI agent web interactions",
@@ -4421,7 +4421,7 @@
     {
       "id": "surrealdb",
       "name": "SurrealDB",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Multi-model database combining graph, document, vector, and time-series for AI agents",
@@ -4491,7 +4491,7 @@
     {
       "id": "text-generation-inference",
       "name": "Text Generation Inference",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "Hugging Face inference server for serving large text-generation models in production",
@@ -4563,7 +4563,7 @@
     {
       "id": "translategemma",
       "name": "TranslateGemma",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
@@ -4631,7 +4631,7 @@
     {
       "id": "txtai",
       "name": "txtai",
-      "type": "framework",
+      "artifact_type": "framework",
       "category": "rag",
       "subcategory": "frameworks",
       "description": "All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows",
@@ -4698,7 +4698,7 @@
     {
       "id": "uiverse-design",
       "name": "Uiverse Design",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "tooling",
       "subcategory": "platforms",
       "description": "Open-source library of community-made CSS/Tailwind UI elements for faster front-end development",
@@ -4763,7 +4763,7 @@
     {
       "id": "unstructured",
       "name": "Unstructured",
-      "type": "library",
+      "artifact_type": "library",
       "category": "rag",
       "subcategory": "document-processing",
       "description": "Open-source document ETL for converting complex files into structured data for LLM pipelines",
@@ -4829,7 +4829,7 @@
     {
       "id": "vllm",
       "name": "vLLM",
-      "type": "library",
+      "artifact_type": "library",
       "category": "llms",
       "subcategory": "inference-engines",
       "description": "High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs",
@@ -4902,7 +4902,7 @@
     {
       "id": "weaviate",
       "name": "Weaviate",
-      "type": "platform",
+      "artifact_type": "platform",
       "category": "rag",
       "subcategory": "vector-databases",
       "description": "Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval",
@@ -4970,7 +4970,7 @@
     {
       "id": "yi",
       "name": "Yi",
-      "type": "model",
+      "artifact_type": "model",
       "category": "llms",
       "subcategory": "open-source-models",
       "description": "01.AI open model family with bilingual and long-context variants from small to mid-large sizes",

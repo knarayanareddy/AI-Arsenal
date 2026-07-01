@@ -1,7 +1,7 @@
 ---
 id: llamaparse
 name: LlamaParse
-type: service
+artifact_type: service
 category: rag
 subcategory: document-processing
 description: >-

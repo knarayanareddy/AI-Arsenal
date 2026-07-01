@@ -1,7 +1,7 @@
 ---
 id: semantic-kernel
 name: Semantic Kernel
-type: framework
+artifact_type: framework
 category: agents
 subcategory: frameworks
 description: An SDK for integrating AI orchestration into production applications

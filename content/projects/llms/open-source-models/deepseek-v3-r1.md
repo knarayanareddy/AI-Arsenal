@@ -1,7 +1,7 @@
 ---
 id: deepseek-v3-r1
 name: DeepSeek-V3 / R1
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

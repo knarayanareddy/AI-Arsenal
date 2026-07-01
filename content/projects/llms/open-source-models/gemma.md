@@ -1,7 +1,7 @@
 ---
 id: gemma
 name: Gemma
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

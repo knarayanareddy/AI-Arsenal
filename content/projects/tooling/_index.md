@@ -6,7 +6,7 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [platforms](./platforms/) | 1 entries | 2026-06-30 |
+| [platforms](./platforms/) | 1 entries | 2026-07-01 |
 
 ## Recently Added
 

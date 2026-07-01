@@ -1,7 +1,7 @@
 ---
 id: dspy
 name: DSPy
-type: framework
+artifact_type: framework
 category: rag
 subcategory: frameworks
 description: A framework for programming and optimizing language model pipelines

@@ -1,7 +1,7 @@
 ---
 id: pinecone-vector-db
 name: Pinecone
-type: service
+artifact_type: service
 category: rag
 subcategory: vector-databases
 description: >-

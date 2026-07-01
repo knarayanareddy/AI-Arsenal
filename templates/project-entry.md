@@ -1,13 +1,15 @@
 ---
 id: "example-project"
 name: "Example Project"
-type: "framework"
+version_tracked: "YYYY-MM or semver"
+artifact_type: "framework"
 category: "agents"
 subcategory: "frameworks"
 description: "One sentence description, max 160 characters"
 github_url: "https://github.com/org/repo"
 license: "MIT"
 primary_language: "Python"
+org_or_maintainer: "org-or-handle"
 tags:
   - agents
 maturity: "experimental"
@@ -19,8 +21,26 @@ docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
+phase: "framework"
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - experimental
+ecosystem_role:
+  - "One short phrase describing this project's role in the stack"
+best_for:
+  - "Specific condition — not a feature description"
+avoid_if:
+  - "Specific condition — not a feature description"
+upstream_dependencies: []
+downstream_consumers: []
 alternatives: []
 integrates_with: []
+corresponding_tool_entry: null
+enrichment_status: "draft"
+enrichment_notes: null
 added_date: "2026-06-13"
 last_reviewed: "2026-06-13"
 added_by: "github-username"
@@ -32,22 +52,19 @@ status: "active"
 
 ## Overview
 
-## Why It's in the Arsenal
+## Why it's in the Arsenal
 
-## Key Features
+## Architecture
 
-- Feature one with specifics
-- Feature two with specifics
-
-## Architecture / How It Works
+## Ecosystem Position
 
 ## Getting Started
 
 ```bash
-# Minimal working example
+# Minimal working example, framed by relation_to_stack
 ```
 
-## Use Cases
+## Key Use Cases
 
 1. **Scenario**: When you need X and Y is true
 2. **Scenario**: When building Z type of system
@@ -57,20 +74,18 @@ status: "active"
 - Strength one
 - Strength two
 
-## Limitations / When NOT to Use
+## Limitations
 
 - Limitation one
 - Limitation two
 
-## Integration Patterns
+## Relation to the Arsenal
 
 ## Resources
 
 - [Official Docs](https://example.com)
-
-## Buzz & Reception
+- [GitHub](https://github.com/org/repo)
 
 ---
 *Last reviewed: 2026-06-13 by @github-username*
 *Suggest an update: [open an issue](../../../.github/ISSUE_TEMPLATE/update-outdated.yml)*
-

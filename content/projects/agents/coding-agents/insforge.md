@@ -1,7 +1,7 @@
 ---
 id: insforge
 name: InsForge
-type: platform
+artifact_type: platform
 category: agents
 subcategory: coding-agents
 description: Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway

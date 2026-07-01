@@ -1,7 +1,7 @@
 ---
 id: uiverse-design
 name: Uiverse Design
-type: platform
+artifact_type: platform
 category: tooling
 subcategory: platforms
 description: Open-source library of community-made CSS/Tailwind UI elements for faster front-end development

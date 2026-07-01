@@ -1,7 +1,7 @@
 ---
 id: smolagents
 name: Smolagents
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

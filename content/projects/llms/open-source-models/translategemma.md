@@ -1,7 +1,7 @@
 ---
 id: translategemma
 name: TranslateGemma
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Open translation model family built on Gemma 3 supporting 55 languages efficiently

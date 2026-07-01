@@ -1,7 +1,7 @@
 ---
 id: lunary
 name: Lunary
-type: service
+artifact_type: service
 category: observability
 subcategory: tracing
 description: >-

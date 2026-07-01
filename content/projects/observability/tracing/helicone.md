@@ -1,7 +1,7 @@
 ---
 id: helicone
 name: Helicone
-type: platform
+artifact_type: platform
 category: observability
 subcategory: tracing
 description: >-

@@ -1,7 +1,7 @@
 ---
 id: langsmith-platform
 name: LangSmith
-type: service
+artifact_type: service
 category: observability
 subcategory: tracing
 description: >-

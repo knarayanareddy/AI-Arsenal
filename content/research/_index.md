@@ -6,7 +6,7 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [papers](./papers/) | 25 entries | 2026-06-30 |
+| [papers](./papers/) | 25 entries | 2026-07-01 |
 
 ## Recently Added
 

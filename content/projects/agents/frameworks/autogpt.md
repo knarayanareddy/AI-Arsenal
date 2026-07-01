@@ -1,7 +1,7 @@
 ---
 id: autogpt
 name: AutoGPT
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

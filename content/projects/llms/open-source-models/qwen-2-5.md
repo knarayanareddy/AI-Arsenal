@@ -1,7 +1,7 @@
 ---
 id: qwen-2-5
 name: Qwen 2.5 / QwQ
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

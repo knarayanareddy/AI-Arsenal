@@ -17,6 +17,24 @@ const AGENT_FRAMEWORK_HEADINGS = [
   'Community Buzz'
 ];
 
+// Projects-vertical reorganisation: the canonical body structure for a
+// migrated project entry (see the projects-vertical-reorg brief). Applied
+// only once an entry carries the new `phase` field, so unmigrated entries
+// continue to validate against their pre-migration heading set during the
+// folder-by-folder migration. See scripts/check-projects-migration-progress.js.
+const PROJECT_HEADINGS_NEW = [
+  'Overview',
+  "Why it's in the Arsenal",
+  'Architecture',
+  'Ecosystem Position',
+  'Getting Started',
+  'Key Use Cases',
+  'Strengths',
+  'Limitations',
+  'Relation to the Arsenal',
+  'Resources'
+];
+
 const PAPER_HEADINGS = [
   'The Problem It Solved',
   'Key Contribution',
@@ -57,15 +75,22 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   const { data, content, hasFrontmatter } = await readMarkdown(file);
   if (!hasFrontmatter) continue;
   const type = inferEntryType(file, data);
-  const required = type === 'project' && data.category === 'agents' && data.subcategory === 'agent-frameworks'
-    ? AGENT_FRAMEWORK_HEADINGS
-    : (typeHeadings[type] ?? REQUIRED_ENTRY_HEADINGS);
+  let required;
+  if (type === 'project' && data.phase) {
+    // Migrated project entry: use the new canonical structure.
+    required = PROJECT_HEADINGS_NEW;
+  } else if (type === 'project' && data.category === 'agents' && data.subcategory === 'agent-frameworks') {
+    required = AGENT_FRAMEWORK_HEADINGS;
+  } else {
+    required = typeHeadings[type] ?? REQUIRED_ENTRY_HEADINGS;
+  }
   const headings = extractHeadings(content);
   for (const heading of required) {
     if (!headings.includes(heading)) errors.push(`${file}: missing required section "## ${heading}"`);
   }
   checked += 1;
 }
+
 
 if (errors.length) {
   console.error(chalk.red(`Markdown structure validation failed with ${errors.length} error(s):`));

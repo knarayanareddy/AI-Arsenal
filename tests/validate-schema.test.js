@@ -42,7 +42,7 @@ test('project schema compiles and accepts a valid project', async () => {
   const valid = validate({
     id: 'sample-project',
     name: 'Sample Project',
-    type: 'framework',
+    artifact_type: 'framework',
     category: 'agents',
     subcategory: 'agent-frameworks',
     description: 'A sample project entry for testing',
@@ -84,7 +84,7 @@ test('project schema rejects reserved IDs', async () => {
     const valid = validate({
       id: reserved,
       name: 'X',
-      type: 'framework',
+      artifact_type: 'framework',
       category: 'agents',
       subcategory: 'agent-frameworks',
       description: 'reserved id test, must be over 10 chars',
@@ -113,7 +113,7 @@ test('project schema rejects additional properties', async () => {
   const valid = validate({
     id: 'sample-project',
     name: 'Sample Project',
-    type: 'framework',
+    artifact_type: 'framework',
     category: 'agents',
     subcategory: 'agent-frameworks',
     description: 'A sample project entry for testing',
@@ -142,7 +142,7 @@ test('project schema rejects invalid date format', async () => {
   const valid = validate({
     id: 'sample-project',
     name: 'Sample Project',
-    type: 'framework',
+    artifact_type: 'framework',
     category: 'agents',
     subcategory: 'agent-frameworks',
     description: 'A sample project entry for testing',

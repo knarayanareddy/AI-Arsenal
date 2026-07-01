@@ -1,7 +1,7 @@
 ---
 id: mistral-models
 name: Mistral / Mixtral
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

@@ -1,7 +1,7 @@
 ---
 id: braintrust
 name: Braintrust
-type: service
+artifact_type: service
 category: observability
 subcategory: tracing
 description: >-

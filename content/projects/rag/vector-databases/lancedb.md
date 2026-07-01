@@ -1,7 +1,7 @@
 ---
 id: lancedb
 name: LanceDB
-type: platform
+artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: >-

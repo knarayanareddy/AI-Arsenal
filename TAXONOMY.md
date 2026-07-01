@@ -14,9 +14,60 @@ This file is the single source of truth for controlled vocabulary used by schema
 
 `frameworks` | `agent-frameworks` | `multi-agent` | `autonomous` | `browser-agents` | `coding-agents` | `open-source-models` | `inference-engines` | `fine-tuning` | `quantization` | `vector-databases` | `document-processing` | `advanced-rag` | `tracing` | `monitoring` | `evaluation` | `models` | `libraries` | `platforms` | `datasets` | `tools`
 
-## Project Types
+## Project Artifact Types
+
+What kind of software artifact a project fundamentally is. Field: `artifact_type`. (Renamed from the original `Project Types` heading / `type` field during the Projects Vertical Reorganisation to free up `type` — now `phase` — for the folder-driving lifecycle classification below, which is a different axis: a project can be an artifact_type `library` and simultaneously a `phase` of `inference-engine`.)
 
 `framework` | `model` | `tool` | `dataset` | `library` | `platform` | `service`
+
+## Project Phases
+
+The lifecycle-stage classification that determines a project's canonical folder under `content/projects/`. Field: `phase`. This mirrors the `phase` field on tool entries (see Tool Phases above) so both verticals share one "what stage of the stack is this" query axis, even though the two enums differ.
+
+`foundation-model` — open-weight LLMs, embedding models, multimodal models, speech models: the weights themselves plus training code
+`framework` — libraries and SDKs that other projects build on top of (PyTorch, Transformers, LangChain, LlamaIndex, JAX, etc.)
+`inference-engine` — runtimes optimised for serving model weights (llama.cpp, vLLM, TGI, Ollama, ExLlamaV2, etc.)
+`agent-system` — standalone agent platforms, multi-agent systems, autonomous coding agents: systems you deploy or run, not frameworks you build with
+`data-and-retrieval` — vector DBs, embedding pipelines, RAG platforms, document processing systems, knowledge graph projects
+`training-and-alignment` — fine-tuning frameworks, RLHF toolkits, alignment research implementations, dataset curation tools
+`benchmark-and-eval` — evaluation harnesses, benchmark suites, leaderboard infrastructure, safety eval frameworks
+
+## Project Domains
+
+The subject-matter domain(s) a project addresses. Field: `domain` (array, min 1).
+
+`language` | `vision` | `audio` | `multimodal` | `reinforcement-learning` | `reasoning` | `safety-and-alignment` | `general-purpose`
+
+## Project Relation to Stack
+
+What an engineer would actually DO with this project. Field: `relation_to_stack` (array, min 1).
+
+`build-on-top` — use its API/library to build your own system
+`deploy-as-is` — run it as a standalone service
+`contribute-to` — extend or contribute to the project itself
+`study-and-reference` — architecture reference, research baseline
+`fork-and-adapt` — designed to be forked and customised
+
+## Project Health Signals
+
+Evidence-backed signals about a project's maintenance and adoption status. Field: `health_signals` (array, min 1). Never include `production-proven` without a named evidence source in the entry's Resources section; never include `actively-maintained` without checking commit recency at authoring time.
+
+`actively-maintained` — commits in last 30 days, issues responded to
+`community-driven` — primarily community contributors, not one org
+`org-backed` — backed by a named org or company
+`research-origin` — started as a paper implementation
+`production-proven` — documented production deployments at scale
+`experimental` — proof of concept, not stable API
+
+## Ecosystem Position
+
+Where a project sits relative to the rest of the stack. These values are used in prose within the Ecosystem Position body section (not a separate enum-constrained frontmatter array field), and every named project must resolve to a catalog entry or carry a TODO.
+
+`upstream-dependency` — other major projects depend on this
+`downstream-consumer` — consumes other projects as dependencies
+`standalone` — minimal external AI dependencies
+`competing` — direct alternative to named projects
+`complementary` — designed to work alongside named projects
 
 ## Paper Categories
 
@@ -98,13 +149,13 @@ The primary context a tool is built for. A tool may serve more than one audience
 
 `trending` | `featured` | `foundational` | `sota` | `benchmark` | `experimental` | `battle-tested` | `community-favorite` | `new-arrival`
 
-## Enrichment Status (Tools only)
+## Enrichment Status (Tools and Projects)
 
-Tracks editorial confidence for the new `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. This is distinct from `verdict`/`maturity`, which describe the tool itself, not the catalog entry's research depth.
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. This is distinct from `verdict`/`maturity` (tools) or `health_signals`/`maturity` (projects), which describe the entry's subject, not the catalog entry's research depth.
 
-`draft` — best_when/avoid_when written from docs/marketing copy only; no third-party production usage evidence reviewed yet
-`reviewed` — a maintainer has read the official docs and at least one third-party usage report (blog post, case study, issue thread)
-`verified` — hands-on production usage by a maintainer or trusted contributor confirms the best_when/avoid_when conditions
+`draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
+`reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)
+`verified` — hands-on production usage, or a maintainer-confirmed architecture/ecosystem claim backed by a primary source, confirms the entry's claims
 
 ## Verdict Values (Tools only)
 

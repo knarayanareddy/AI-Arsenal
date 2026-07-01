@@ -1,7 +1,7 @@
 ---
 id: ollama
 name: Ollama
-type: platform
+artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: >-

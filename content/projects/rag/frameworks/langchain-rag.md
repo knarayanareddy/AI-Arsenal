@@ -1,7 +1,7 @@
 ---
 id: langchain-rag
 name: LangChain for RAG
-type: framework
+artifact_type: framework
 category: rag
 subcategory: frameworks
 description: >-

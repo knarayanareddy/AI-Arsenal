@@ -1,7 +1,7 @@
 ---
 id: sglang
 name: SGLang
-type: platform
+artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: High-performance serving framework for large language and multimodal models

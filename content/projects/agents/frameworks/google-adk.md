@@ -1,7 +1,7 @@
 ---
 id: google-adk
 name: Google ADK
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

@@ -1,7 +1,7 @@
 ---
 id: sample-project
 name: Sample Project
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: A sample project entry for testing

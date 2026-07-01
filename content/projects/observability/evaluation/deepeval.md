@@ -1,7 +1,7 @@
 ---
 id: deepeval
 name: DeepEval
-type: library
+artifact_type: library
 category: observability
 subcategory: evaluation
 description: An open-source evaluation framework for testing LLM applications in CI

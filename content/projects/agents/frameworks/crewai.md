@@ -1,7 +1,7 @@
 ---
 id: crewai
 name: CrewAI
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Role-based framework for orchestrating collaborative AI agent crews and flows

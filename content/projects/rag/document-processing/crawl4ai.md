@@ -1,7 +1,7 @@
 ---
 id: crawl4ai
 name: Crawl4AI
-type: library
+artifact_type: library
 category: rag
 subcategory: document-processing
 description: Open-source crawler and scraper designed to produce LLM-friendly web content

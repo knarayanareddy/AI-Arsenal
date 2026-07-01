@@ -1,7 +1,7 @@
 ---
 id: metagpt
 name: MetaGPT
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

@@ -1,7 +1,7 @@
 ---
 id: llamaindex
 name: LlamaIndex
-type: framework
+artifact_type: framework
 category: rag
 subcategory: frameworks
 description: >-

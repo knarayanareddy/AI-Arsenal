@@ -1,7 +1,7 @@
 ---
 id: qwen
 name: Qwen
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

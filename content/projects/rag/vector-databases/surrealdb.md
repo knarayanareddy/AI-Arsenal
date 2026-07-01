@@ -1,7 +1,7 @@
 ---
 id: surrealdb
 name: SurrealDB
-type: platform
+artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Multi-model database combining graph, document, vector, and time-series for AI agents

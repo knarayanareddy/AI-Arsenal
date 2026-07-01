@@ -1,7 +1,7 @@
 ---
 id: langchain
 name: LangChain
-type: framework
+artifact_type: framework
 category: rag
 subcategory: frameworks
 description: 'A framework for composing LLM applications, retrieval flows, tools, and agents'

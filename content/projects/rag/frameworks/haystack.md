@@ -1,7 +1,7 @@
 ---
 id: haystack
 name: Haystack
-type: framework
+artifact_type: framework
 category: rag
 subcategory: frameworks
 description: >-

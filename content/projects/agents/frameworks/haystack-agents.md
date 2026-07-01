@@ -1,7 +1,7 @@
 ---
 id: haystack-agents
 name: Haystack
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

@@ -1,7 +1,7 @@
 ---
 id: llama-models
 name: Llama Models
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Meta open-weight model family widely used for local and production AI systems

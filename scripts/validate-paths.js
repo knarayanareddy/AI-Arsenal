@@ -37,10 +37,25 @@ for (const file of await getEntryFiles()) {
   const p = file.split('/');
   if (type === 'project') {
     if (p[0] !== 'content' || p[1] !== 'projects') errors.push(`${file}: project entries must live under content/projects/`);
-    if (parsed.data.category && p[2] !== parsed.data.category) errors.push(`${file}: project category "${parsed.data.category}" must match folder "${p[2]}"`);
-    if (parsed.data.subcategory && p[3] !== parsed.data.subcategory) {
-      const allowedAlias = parsed.data.category === 'agents' && p[3] === 'frameworks' && parsed.data.subcategory === 'agent-frameworks';
-      if (!allowedAlias) warnings.push(`${file}: subcategory "${parsed.data.subcategory}" does not match folder "${p[3]}"`);
+    if (parsed.data.phase) {
+      const phaseToFolder = {
+        'foundation-model': 'foundation-models',
+        framework: 'frameworks',
+        'inference-engine': 'inference-engines',
+        'agent-system': 'agent-systems',
+        'data-and-retrieval': 'data-and-retrieval',
+        'training-and-alignment': 'training-and-alignment',
+        'benchmark-and-eval': 'benchmarks-and-evals'
+      };
+      const expectedFolder = phaseToFolder[parsed.data.phase];
+      if (expectedFolder && p[2] !== expectedFolder) errors.push(`${file}: project phase "${parsed.data.phase}" must live in folder "content/projects/${expectedFolder}/", found "${p[2]}"`);
+      if (p.length !== 4) errors.push(`${file}: migrated project entries must be flat under their phase folder (content/projects/{phase}/{id}.md), found extra nesting`);
+    } else {
+      if (parsed.data.category && p[2] !== parsed.data.category) errors.push(`${file}: project category "${parsed.data.category}" must match folder "${p[2]}"`);
+      if (parsed.data.subcategory && p[3] !== parsed.data.subcategory) {
+        const allowedAlias = parsed.data.category === 'agents' && p[3] === 'frameworks' && parsed.data.subcategory === 'agent-frameworks';
+        if (!allowedAlias) warnings.push(`${file}: subcategory "${parsed.data.subcategory}" does not match folder "${p[3]}"`);
+      }
     }
   }
   if (type === 'paper' && !file.startsWith('content/research/papers/')) errors.push(`${file}: paper entries must live in content/research/papers/`);

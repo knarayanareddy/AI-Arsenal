@@ -1,7 +1,7 @@
 ---
 id: pgvector
 name: pgvector
-type: library
+artifact_type: library
 category: rag
 subcategory: vector-databases
 description: >-

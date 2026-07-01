@@ -1,7 +1,7 @@
 ---
 id: phoenix
 name: Phoenix
-type: platform
+artifact_type: platform
 category: observability
 subcategory: tracing
 description: >-

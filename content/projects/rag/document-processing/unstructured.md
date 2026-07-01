@@ -1,7 +1,7 @@
 ---
 id: unstructured
 name: Unstructured
-type: library
+artifact_type: library
 category: rag
 subcategory: document-processing
 description: >-

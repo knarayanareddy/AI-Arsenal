@@ -1,7 +1,7 @@
 ---
 id: opik
 name: Opik
-type: platform
+artifact_type: platform
 category: observability
 subcategory: tracing
 description: >-

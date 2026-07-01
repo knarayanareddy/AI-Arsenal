@@ -1,7 +1,7 @@
 ---
 id: txtai
 name: txtai
-type: framework
+artifact_type: framework
 category: rag
 subcategory: frameworks
 description: >-

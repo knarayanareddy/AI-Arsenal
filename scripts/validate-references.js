@@ -29,9 +29,19 @@ for (const entry of entries) {
 
   if (entry.data.paper_id && !ids.has(entry.data.paper_id)) warnings.push(`${entry.file}: paper_id references unknown id "${entry.data.paper_id}"`);
 
-  if (entry.type === 'project' && entry.data.type === 'tool') warnings.push(`${entry.file}: project type is "tool"; consider whether this belongs under /content/tools/ instead`);
+  if (entry.type === 'project' && entry.data.artifact_type === 'tool') warnings.push(`${entry.file}: project artifact_type is "tool"; consider whether this belongs under /content/tools/ instead`);
   if (entry.data.status === 'deprecated' && (!Array.isArray(entry.data.alternatives) || entry.data.alternatives.length === 0)) {
     warnings.push(`${entry.file}: deprecated entries should list alternatives`);
+  }
+  if (entry.type === 'project') {
+    checkRefs(entry, 'upstream_dependencies', 'warning');
+    checkRefs(entry, 'downstream_consumers', 'warning');
+    if (entry.data.corresponding_tool_entry && !ids.has(entry.data.corresponding_tool_entry)) {
+      warnings.push(`${entry.file}: corresponding_tool_entry references unknown id "${entry.data.corresponding_tool_entry}"`);
+    }
+  }
+  if (entry.type === 'tool' && entry.data.corresponding_project_entry && !ids.has(entry.data.corresponding_project_entry)) {
+    warnings.push(`${entry.file}: corresponding_project_entry references unknown id "${entry.data.corresponding_project_entry}"`);
   }
 }
 

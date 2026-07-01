@@ -284,6 +284,16 @@
         }
       ]
     },
+    "corresponding_project_entry": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/kebabId"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
     "buzz_sources": {
       "type": "array",
       "items": {

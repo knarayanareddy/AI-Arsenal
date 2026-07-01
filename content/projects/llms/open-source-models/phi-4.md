@@ -1,7 +1,7 @@
 ---
 id: phi-4
 name: Phi-4
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

@@ -1,7 +1,7 @@
 ---
 id: ragas
 name: Ragas
-type: library
+artifact_type: library
 category: observability
 subcategory: evaluation
 description: An evaluation framework for measuring retrieval-augmented generation quality

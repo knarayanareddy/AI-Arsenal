@@ -1,7 +1,7 @@
 ---
 id: phi-cookbook
 name: Phi Cookbook
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Microsoft examples and recipes for building with the Phi model family

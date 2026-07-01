@@ -1,7 +1,7 @@
 ---
 id: firecrawl
 name: Firecrawl
-type: platform
+artifact_type: platform
 category: rag
 subcategory: document-processing
 description: >-

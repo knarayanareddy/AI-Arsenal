@@ -1,7 +1,7 @@
 ---
 id: lmdeploy
 name: LMDeploy
-type: platform
+artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: >-

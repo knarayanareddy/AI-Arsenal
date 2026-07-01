@@ -1,7 +1,7 @@
 ---
 id: gemma-3
 name: Gemma 3
-type: model
+artifact_type: model
 category: llms
 subcategory: open-source-models
 description: >-

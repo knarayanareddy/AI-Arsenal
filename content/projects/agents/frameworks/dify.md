@@ -1,7 +1,7 @@
 ---
 id: dify
 name: Dify
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

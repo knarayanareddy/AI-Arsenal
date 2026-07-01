@@ -1,7 +1,7 @@
 ---
 id: qdrant
 name: Qdrant
-type: platform
+artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: >-

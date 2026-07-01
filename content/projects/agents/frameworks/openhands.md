@@ -1,7 +1,7 @@
 ---
 id: openhands
 name: OpenHands
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

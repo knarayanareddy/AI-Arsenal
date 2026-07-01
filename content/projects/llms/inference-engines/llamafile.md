@@ -1,7 +1,7 @@
 ---
 id: llamafile
 name: Llamafile
-type: library
+artifact_type: library
 category: llms
 subcategory: inference-engines
 description: Mozilla project for distributing and running LLMs as a single executable file

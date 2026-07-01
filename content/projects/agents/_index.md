@@ -6,11 +6,11 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [autonomous](./autonomous/) | 0 entries | 2026-06-30 |
-| [browser agents](./browser-agents/) | 1 entries | 2026-06-30 |
-| [coding agents](./coding-agents/) | 1 entries | 2026-06-30 |
-| [frameworks](./frameworks/) | 15 entries | 2026-06-30 |
-| [multi agent](./multi-agent/) | 0 entries | 2026-06-30 |
+| [autonomous](./autonomous/) | 0 entries | 2026-07-01 |
+| [browser agents](./browser-agents/) | 1 entries | 2026-07-01 |
+| [coding agents](./coding-agents/) | 1 entries | 2026-07-01 |
+| [frameworks](./frameworks/) | 15 entries | 2026-07-01 |
+| [multi agent](./multi-agent/) | 0 entries | 2026-07-01 |
 
 ## Recently Added
 

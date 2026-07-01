@@ -1,7 +1,7 @@
 ---
 id: llama-cpp
 name: llama.cpp
-type: library
+artifact_type: library
 category: llms
 subcategory: inference-engines
 description: >-

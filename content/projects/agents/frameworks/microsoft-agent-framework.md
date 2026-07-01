@@ -1,7 +1,7 @@
 ---
 id: microsoft-agent-framework
 name: Microsoft Agent Framework
-type: framework
+artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: >-

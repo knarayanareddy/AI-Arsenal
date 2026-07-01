@@ -1,7 +1,7 @@
 ---
 id: stagehand
 name: Stagehand
-type: framework
+artifact_type: framework
 category: agents
 subcategory: browser-agents
 description: Open-source browser-AI framework for reliable AI agent web interactions

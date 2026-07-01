@@ -4,12 +4,12 @@
   "title": "AI Arsenal Project Entry",
   "type": "object",
   "additionalProperties": false,
-  "x-schema-version": "1.0.0",
-  "required": ["id", "name", "type", "category", "subcategory", "description", "github_url", "license", "primary_language", "tags", "maturity", "cost_model", "github_stars", "trending_score", "last_commit", "added_date", "last_reviewed", "added_by", "status"],
+  "x-schema-version": "2.0.0",
+  "required": ["id", "name", "artifact_type", "category", "subcategory", "description", "github_url", "license", "primary_language", "tags", "maturity", "cost_model", "github_stars", "trending_score", "last_commit", "added_date", "last_reviewed", "added_by", "status"],
   "properties": {
     "id": { "$ref": "#/$defs/kebabId" },
     "name": { "type": "string", "minLength": 1, "maxLength": 120 },
-    "type": { "enum": ["framework", "model", "tool", "dataset", "library", "platform", "service"] },
+    "artifact_type": { "enum": ["framework", "model", "tool", "dataset", "library", "platform", "service"] },
     "category": { "enum": ["agents", "llms", "rag", "observability", "multimodal", "voice-audio", "computer-vision", "code-generation", "data-pipelines", "tooling", "evaluation"] },
     "subcategory": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
     "description": { "type": "string", "minLength": 10, "maxLength": 160 },
@@ -42,7 +42,47 @@
     "reviewed_by": { "anyOf": [{ "$ref": "#/$defs/githubUser" }, { "type": "null" }] },
     "buzz_sources": { "$ref": "#/$defs/buzzSources" },
     "featured": { "type": "boolean", "default": false },
-    "status": { "enum": ["active", "archived", "deprecated", "watching"] }
+    "status": { "enum": ["active", "archived", "deprecated", "watching"] },
+
+    "phase": { "enum": ["foundation-model", "framework", "inference-engine", "agent-system", "data-and-retrieval", "training-and-alignment", "benchmark-and-eval"] },
+    "domain": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["language", "vision", "audio", "multimodal", "reinforcement-learning", "reasoning", "safety-and-alignment", "general-purpose"] },
+      "uniqueItems": true
+    },
+    "relation_to_stack": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["build-on-top", "deploy-as-is", "contribute-to", "study-and-reference", "fork-and-adapt"] },
+      "uniqueItems": true
+    },
+    "health_signals": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "enum": ["actively-maintained", "community-driven", "org-backed", "research-origin", "production-proven", "experimental"] },
+      "uniqueItems": true
+    },
+    "ecosystem_role": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "best_for": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "avoid_if": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "version_tracked": { "anyOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }] },
+    "org_or_maintainer": { "anyOf": [{ "type": "string", "minLength": 1, "maxLength": 120 }, { "type": "null" }] },
+    "corresponding_tool_entry": { "anyOf": [{ "$ref": "#/$defs/kebabId" }, { "type": "null" }] },
+    "enrichment_status": { "enum": ["draft", "reviewed", "verified"] },
+    "enrichment_notes": { "anyOf": [{ "type": "string", "maxLength": 400 }, { "type": "null" }] },
+    "upstream_dependencies": { "$ref": "#/$defs/stringArray" },
+    "downstream_consumers": { "$ref": "#/$defs/stringArray" }
   },
   "$defs": {
     "kebabId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "not": { "enum": ["index", "registry", "overview", "introduction", "readme", "agent", "context", "taxonomy", "contributing", "governance", "changelog", "security", "template", "all", "none", "undefined", "null", "true", "false"] } },
@@ -54,4 +94,3 @@
     "buzzSources": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["source", "url", "date", "description"], "properties": { "source": { "enum": ["x-twitter", "youtube", "hackernews", "reddit", "arxiv", "github-trending", "newsletter", "conference", "podcast"] }, "url": { "$ref": "#/$defs/url" }, "date": { "$ref": "#/$defs/date" }, "description": { "type": "string", "minLength": 1, "maxLength": 240 } } }, "default": [] }
   }
 }
-

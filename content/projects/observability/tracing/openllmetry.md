@@ -1,7 +1,7 @@
 ---
 id: openllmetry
 name: OpenLLMetry
-type: library
+artifact_type: library
 category: observability
 subcategory: tracing
 description: OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
