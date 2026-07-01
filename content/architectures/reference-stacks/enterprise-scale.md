@@ -115,7 +115,7 @@ flowchart TD
 - **Google Vertex AI**: [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md)
 - **Microsoft Agent Framework**: [Microsoft Agent Framework](../../projects/frameworks/microsoft-agent-framework.md)
 - **LangGraph**: [LangGraph](../../projects/frameworks/langgraph.md)
-- **Qdrant**: [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- **Qdrant**: [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 - **OpenLIT**: [OpenLIT](../../projects/observability/tracing/openlit.md)
 - **NeMo Guardrails**: [NeMo Guardrails](../../tools/evaluation-and-observability/nemo-guardrails.md)
 
@@ -133,7 +133,7 @@ flowchart TD
 - [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md)
 - [Microsoft Agent Framework](../../projects/frameworks/microsoft-agent-framework.md)
 - [LangGraph](../../projects/frameworks/langgraph.md)
-- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 - [OpenLIT](../../projects/observability/tracing/openlit.md)
 - [NeMo Guardrails](../../tools/evaluation-and-observability/nemo-guardrails.md)
 

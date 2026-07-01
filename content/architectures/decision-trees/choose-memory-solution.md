@@ -66,7 +66,7 @@ Plain-language tree:
 | User long-term memory | Mem0 or Zep | [Mem0](../../tools/orchestration/mem0.md), [Zep](../../tools/orchestration/zep.md) |
 | Stateful agent memory | Letta | [Letta](../../tools/orchestration/letta.md) |
 | Fast cache/session state | Redis | [Redis](../../tools/orchestration/redis-memory.md) |
-| Custom semantic memory | Vector DB | [Qdrant](../../projects/rag/vector-databases/qdrant.md), [pgvector](../../projects/rag/vector-databases/pgvector.md) |
+| Custom semantic memory | Vector DB | [Qdrant](../../projects/data-and-retrieval/qdrant.md), [pgvector](../../projects/data-and-retrieval/pgvector.md) |
 
 ## Getting Started
 
@@ -109,7 +109,7 @@ pip install mem0ai
 - [Zep](../../tools/orchestration/zep.md)
 - [Letta](../../tools/orchestration/letta.md)
 - [Redis](../../tools/orchestration/redis-memory.md)
-- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 
 ## Buzz & Reception
 

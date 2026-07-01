@@ -42,7 +42,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### Qdrant — 🏠
 
-> **TL;DR:** Qdrant is a candidate for `vector-search` workflows. Full details: [Qdrant](../../projects/rag/vector-databases/qdrant.md).
+> **TL;DR:** Qdrant is a candidate for `vector-search` workflows. Full details: [Qdrant](../../projects/data-and-retrieval/qdrant.md).
 
 | Field | Value |
 |---|---|
@@ -58,12 +58,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+**Get started:** See [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 **Alternatives:** Weaviate, Chroma, Milvus, Pinecone, pgvector, LanceDB
 
 ### Weaviate — 🏠
 
-> **TL;DR:** Weaviate is a candidate for `vector-search` workflows. Full details: [Weaviate](../../projects/rag/vector-databases/weaviate.md).
+> **TL;DR:** Weaviate is a candidate for `vector-search` workflows. Full details: [Weaviate](../../projects/data-and-retrieval/weaviate.md).
 
 | Field | Value |
 |---|---|
@@ -79,12 +79,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Weaviate](../../projects/rag/vector-databases/weaviate.md)
+**Get started:** See [Weaviate](../../projects/data-and-retrieval/weaviate.md)
 **Alternatives:** Qdrant, Chroma, Milvus, Pinecone, pgvector, LanceDB
 
 ### Chroma — 🏠
 
-> **TL;DR:** Chroma is a candidate for `vector-search` workflows. Full details: [Chroma](../../projects/rag/vector-databases/chroma.md).
+> **TL;DR:** Chroma is a candidate for `vector-search` workflows. Full details: [Chroma](../../projects/data-and-retrieval/chroma.md).
 
 | Field | Value |
 |---|---|
@@ -100,12 +100,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Chroma](../../projects/rag/vector-databases/chroma.md)
+**Get started:** See [Chroma](../../projects/data-and-retrieval/chroma.md)
 **Alternatives:** Qdrant, Weaviate, Milvus, Pinecone, pgvector, LanceDB
 
 ### Milvus — 🏠
 
-> **TL;DR:** Milvus is a candidate for `vector-search` workflows. Full details: [Milvus](../../projects/rag/vector-databases/milvus.md).
+> **TL;DR:** Milvus is a candidate for `vector-search` workflows. Full details: [Milvus](../../projects/data-and-retrieval/milvus.md).
 
 | Field | Value |
 |---|---|
@@ -121,7 +121,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [Milvus](../../projects/rag/vector-databases/milvus.md)
+**Get started:** See [Milvus](../../projects/data-and-retrieval/milvus.md)
 **Alternatives:** Qdrant, Weaviate, Chroma, Pinecone, pgvector, LanceDB
 
 ### Pinecone — 🔄
@@ -147,7 +147,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ### pgvector — 🏠
 
-> **TL;DR:** pgvector is a candidate for `vector-search` workflows. Full details: [pgvector](../../projects/rag/vector-databases/pgvector.md).
+> **TL;DR:** pgvector is a candidate for `vector-search` workflows. Full details: [pgvector](../../projects/data-and-retrieval/pgvector.md).
 
 | Field | Value |
 |---|---|
@@ -163,12 +163,12 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [pgvector](../../projects/rag/vector-databases/pgvector.md)
+**Get started:** See [pgvector](../../projects/data-and-retrieval/pgvector.md)
 **Alternatives:** Qdrant, Weaviate, Chroma, Milvus, Pinecone, LanceDB
 
 ### LanceDB — 🏠
 
-> **TL;DR:** LanceDB is a candidate for `vector-search` workflows. Full details: [LanceDB](../../projects/rag/vector-databases/lancedb.md).
+> **TL;DR:** LanceDB is a candidate for `vector-search` workflows. Full details: [LanceDB](../../projects/data-and-retrieval/lancedb.md).
 
 | Field | Value |
 |---|---|
@@ -184,7 +184,7 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Limitations:**
 - Pricing, hosting, and integration details change; verify before production
 
-**Get started:** See [LanceDB](../../projects/rag/vector-databases/lancedb.md)
+**Get started:** See [LanceDB](../../projects/data-and-retrieval/lancedb.md)
 **Alternatives:** Qdrant, Weaviate, Chroma, Milvus, Pinecone, pgvector
 
 
@@ -210,13 +210,13 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 
 ## Resources
 
-- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
-- [Weaviate](../../projects/rag/vector-databases/weaviate.md)
-- [Chroma](../../projects/rag/vector-databases/chroma.md)
-- [Milvus](../../projects/rag/vector-databases/milvus.md)
+- [Qdrant](../../projects/data-and-retrieval/qdrant.md)
+- [Weaviate](../../projects/data-and-retrieval/weaviate.md)
+- [Chroma](../../projects/data-and-retrieval/chroma.md)
+- [Milvus](../../projects/data-and-retrieval/milvus.md)
 - [Pinecone](../data-ingestion/pinecone.md)
-- [pgvector](../../projects/rag/vector-databases/pgvector.md)
-- [LanceDB](../../projects/rag/vector-databases/lancedb.md)
+- [pgvector](../../projects/data-and-retrieval/pgvector.md)
+- [LanceDB](../../projects/data-and-retrieval/lancedb.md)
 
 ## Buzz & Reception
 

@@ -80,7 +80,7 @@ flowchart TD
 ## Related Entries
 
 - Framework: [LlamaIndex](../../projects/frameworks/llamaindex.md)
-- Vector DB: [Chroma](../../projects/rag/vector-databases/chroma.md)
+- Vector DB: [Chroma](../../projects/data-and-retrieval/chroma.md)
 - Tool: [Gradio](../../tools/dx-and-tooling/gradio.md)
 - Stack reference: [Lean MVP](../../architectures/reference-stacks/lean-mvp.md)
 

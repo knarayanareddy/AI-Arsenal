@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-01T10:59:21.049Z",
+  "generated_at": "2026-07-01T11:08:23.968Z",
   "config": {
     "document": {
       "id": "id",
@@ -155,6 +155,7 @@
     },
     "phase": {
       "framework": 19,
+      "data-and-retrieval": 14,
       "foundation-model": 13,
       "agent-system": 2,
       "inference-engine": 7,
@@ -1543,14 +1544,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/chroma.md",
-      "url": "content/projects/rag/vector-databases/chroma",
+      "path": "content/projects/data-and-retrieval/chroma.md",
+      "url": "content/projects/data-and-retrieval/chroma",
       "boost_title": "Chroma",
       "boost_tags": "rag embeddings retrieval local",
       "boost_description": "Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG",
-      "body": "Chroma Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG rag embeddings retrieval local rag vector-databases TL;DR: Chroma is a developer friendly embeddings database for local prototypes and lightweight RAG apps. Use it when simplicity beats distributed database features. Overview Chroma is often used for quick RAG prototypes because setup is small and local development is straightforward. Why It's in the Arsenal Many builders encounter vector search first through Chroma, so it is important as the simple local baseline. Key Features Local first developer experience Simple Python/JS clients Collections and metadata support Good tutorial ecosystem Apache 2.0 open source Architecture / How It Works Ch…"
+      "body": "Chroma Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG rag embeddings retrieval local rag vector-databases Overview An open source, developer friendly vector database designed to be embedded directly in an application with minimal setup, widely used as the default choice in RAG tutorials and early stage production applications. Why it's in the Arsenal Developer friendly embedded/lightweight vector database, the most common default for RAG prototyping and small to medium production apps. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, th…"
     },
     {
       "id": "classify-failures-before-fixing-prompts",
@@ -1821,14 +1822,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/document-processing/crawl4ai.md",
-      "url": "content/projects/rag/document-processing/crawl4ai",
+      "path": "content/projects/data-and-retrieval/crawl4ai.md",
+      "url": "content/projects/data-and-retrieval/crawl4ai",
       "boost_title": "Crawl4AI",
       "boost_tags": "rag data local",
       "boost_description": "Open-source crawler and scraper designed to produce LLM-friendly web content",
-      "body": "Crawl4AI Open-source crawler and scraper designed to produce LLM-friendly web content rag data local rag document-processing TL;DR: Crawl4AI is an open source crawler/scraper for producing LLM friendly web content. Use it when you want a Python first local web ingestion tool. Overview Crawl4AI is a Python web crawling/scraping option aimed at AI workflows and RAG ingestion. Why It's in the Arsenal It gives builders a self hosted Python option for collecting web content without relying entirely on managed scraping APIs. Key Features Python first crawler/scraper LLM friendly output focus Open source Apache 2.0 license Local/self hosted operation Useful for docs and website ingestion Architecture / How It Works Crawl4…"
+      "body": "Crawl4AI Open-source crawler and scraper designed to produce LLM-friendly web content rag data local rag document-processing Overview An open source Python web crawler and scraper specifically engineered to produce clean, LLM ready Markdown output, designed to plug directly into RAG ingestion pipelines rather than serve as a general purpose scraping library. Why it's in the Arsenal Open source Python crawler specifically designed to output LLM ready Markdown for RAG ingestion pipelines. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need an open source, self hostable web crawler that outputs clean Markdown directly, purpose built for feeding RAG ingestion pipelines rat…"
     },
     {
       "id": "crawl4ai-tool",
@@ -2278,14 +2279,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/document-processing/docling.md",
-      "url": "content/projects/rag/document-processing/docling",
+      "path": "content/projects/data-and-retrieval/docling.md",
+      "url": "content/projects/data-and-retrieval/docling",
       "boost_title": "Docling",
       "boost_tags": "rag data retrieval",
       "boost_description": "IBM-origin open-source toolkit for parsing and exporting documents for generative AI",
-      "body": "Docling IBM-origin open-source toolkit for parsing and exporting documents for generative AI rag data retrieval rag document-processing TL;DR: Docling parses documents and exports structured representations for gen AI workflows. Use it when PDF/document conversion quality is a first order RAG concern. Overview Docling is a high interest open source document processing project focused on making documents ready for generative AI pipelines. Why It's in the Arsenal Document parsing quality is often the limiting factor in RAG; Docling gives teams another strong OSS parser to evaluate. Key Features Document conversion and export PDF/document parsing focus Python API and CLI MIT license Strong community momentum Architecture / How I…"
+      "body": "Docling IBM-origin open-source toolkit for parsing and exporting documents for generative AI rag data retrieval rag document-processing Overview An open source document conversion library from IBM Research, specializing in accurately parsing complex document formats (PDF, DOCX, PPTX) into structured representations that preserve tables, figures, and layout information for downstream RAG use. Why it's in the Arsenal IBM's open source document conversion library, specializing in high fidelity parsing of complex document formats (PDF, DOCX) into structured, LLM ready representations. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need high fidelity parsing of complex documents (PDFs…"
     },
     {
       "id": "document-qa-pipeline",
@@ -2711,14 +2712,14 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/document-processing/firecrawl.md",
-      "url": "content/projects/rag/document-processing/firecrawl",
+      "path": "content/projects/data-and-retrieval/firecrawl.md",
+      "url": "content/projects/data-and-retrieval/firecrawl",
       "boost_title": "Firecrawl",
       "boost_tags": "rag data cloud",
       "boost_description": "Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data",
-      "body": "Firecrawl Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data rag data cloud rag document-processing TL;DR: Firecrawl crawls and scrapes websites into LLM ready Markdown and structured data. Use it when web pages are the source documents for RAG. Overview Firecrawl is useful for RAG ingestion from websites, docs sites, and web content that needs cleaning before embedding. Why It's in the Arsenal Web ingestion is a common RAG bottleneck; Firecrawl packages crawling, scraping, and LLM ready output behind an API/self hostable project. Key Features Crawl and scrape APIs Markdown output for LLM ingestion Hosted and open source options Search/scrape/crawl workflows TypeScript codebase Architecture…"
+      "body": "Firecrawl Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data rag data cloud rag document-processing Overview A managed API (with a smaller open source self hosted variant) that crawls entire websites and converts them into clean, LLM ready Markdown, widely adopted as a standard RAG pipeline ingestion tool. Why it's in the Arsenal Managed API (with a smaller open source self hosted variant) for crawling entire websites into clean, LLM ready Markdown. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti bot handling, retry logic) so you can focus on the R…"
     },
     {
       "id": "firecrawl-tool",
@@ -3856,14 +3857,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/lancedb.md",
-      "url": "content/projects/rag/vector-databases/lancedb",
+      "path": "content/projects/data-and-retrieval/lancedb.md",
+      "url": "content/projects/data-and-retrieval/lancedb",
       "boost_title": "LanceDB",
       "boost_tags": "rag embeddings retrieval multimodal",
       "boost_description": "Developer-friendly embedded and serverless vector database for multimodal AI retrieval",
-      "body": "LanceDB Developer-friendly embedded and serverless vector database for multimodal AI retrieval rag embeddings retrieval multimodal rag vector-databases TL;DR: LanceDB is a developer friendly vector database built around Lance columnar data for multimodal retrieval. Use it when embedded/local and multimodal retrieval workflows matter. Overview LanceDB targets practical AI retrieval with local/embedded and managed options, especially for multimodal data. Why It's in the Arsenal It is important because not all RAG is text only; multimodal retrieval and embedded workflows need different storage tradeoffs. Key Features Embedded and managed options Multimodal retrieval focus Columnar Lance data format Python and JavaScript clients Apache 2.0 open…"
+      "body": "LanceDB Developer-friendly embedded and serverless vector database for multimodal AI retrieval rag embeddings retrieval multimodal rag vector-databases Overview An open source, embedded vector database built on the Lance columnar data format, designed for serverless operation (no separate database server process) with native support for multimodal data and dataset versioning. Why it's in the Arsenal Embedded, serverless vector database built on the Lance columnar format, positioned for multimodal data and zero copy versioned storage. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want an embedded, serverless vector database (no separate server process required) that stores data in an open column…"
     },
     {
       "id": "langchain",
@@ -4385,14 +4386,14 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/document-processing/llamaparse.md",
-      "url": "content/projects/rag/document-processing/llamaparse",
+      "path": "content/projects/data-and-retrieval/llamaparse.md",
+      "url": "content/projects/data-and-retrieval/llamaparse",
       "boost_title": "LlamaParse",
       "boost_tags": "rag data llamaindex cloud",
       "boost_description": "Managed document parser from LlamaIndex for turning complex files into RAG-ready text",
-      "body": "LlamaParse Managed document parser from LlamaIndex for turning complex files into RAG-ready text rag data llamaindex cloud rag document-processing TL;DR: LlamaParse is LlamaIndex’s managed parser for turning complex documents into RAG ready text. Use it when parsing quality matters more than self hosting. Overview LlamaParse is a cloud parser rather than a general OSS library. It is commonly evaluated for complex PDFs and documents feeding LlamaIndex workflows. Why It's in the Arsenal Managed parsing can be worth paying for when tables, layouts, scans, and PDFs dominate RAG quality issues. Key Features Managed document parsing Strong LlamaIndex integration PDF and complex document focus Markdown style output workflows Cloud API with usa…"
+      "body": "LlamaParse Managed document parser from LlamaIndex for turning complex files into RAG-ready text rag data llamaindex cloud rag document-processing Overview A commercial, managed document parsing service from the LlamaIndex team, specializing in accurately parsing complex document layouts (tables, multi column PDFs, embedded images) for RAG ingestion pipelines. Why it's in the Arsenal LlamaIndex's commercial, managed document parsing service, specializing in complex PDF/document layouts for RAG ingestion. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're already using LlamaIndex and want a managed, tightly integrated document parsing service rather than a separate open source library to oper…"
     },
     {
       "id": "llm-as-a-judge",
@@ -5075,14 +5076,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/milvus.md",
-      "url": "content/projects/rag/vector-databases/milvus",
+      "path": "content/projects/data-and-retrieval/milvus.md",
+      "url": "content/projects/data-and-retrieval/milvus",
       "boost_title": "Milvus",
       "boost_tags": "rag embeddings retrieval kubernetes",
       "boost_description": "Cloud-native vector database for large-scale ANN search and production vector workloads",
-      "body": "Milvus Cloud-native vector database for large-scale ANN search and production vector workloads rag embeddings retrieval kubernetes rag vector-databases TL;DR: Milvus is a cloud native vector database built for scalable ANN search. Use it when large scale vector search and distributed operations are central. Overview Milvus is one of the longest running purpose built vector databases and is often considered for high scale vector search infrastructure. Why It's in the Arsenal Milvus is a key option when vector volume, distributed operations, and cloud native deployment matter more than prototype simplicity. Key Features Distributed vector database architecture High scale ANN search Cloud native deployment options Apache 2.0 open source Ecosyst…"
+      "body": "Milvus Cloud-native vector database for large-scale ANN search and production vector workloads rag embeddings retrieval kubernetes rag vector-databases Overview An open source, distributed vector database built by Zilliz for billion scale similarity search, architected as a set of horizontally scalable microservices rather than a single node database. Why it's in the Arsenal Distributed, horizontally scalable vector database designed from the ground up for billion scale vector search, a CNCF adjacent project backed by Zilliz. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to scale vector search to hundreds of millions or billions of vectors with distributed, horizontally scalable infrastruc…"
     },
     {
       "id": "mistral-models",
@@ -5905,14 +5906,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/pgvector.md",
-      "url": "content/projects/rag/vector-databases/pgvector",
+      "path": "content/projects/data-and-retrieval/pgvector.md",
+      "url": "content/projects/data-and-retrieval/pgvector",
       "boost_title": "pgvector",
       "boost_tags": "rag embeddings retrieval self-hosted",
       "boost_description": "PostgreSQL extension for vector similarity search inside an existing relational database",
-      "body": "pgvector PostgreSQL extension for vector similarity search inside an existing relational database rag embeddings retrieval self-hosted rag vector-databases TL;DR: pgvector adds vector similarity search to PostgreSQL. Use it when your app already runs on Postgres and vector search is not yet a separate platform problem. Overview pgvector is often the simplest production choice because it keeps vectors, metadata, permissions, and application data in Postgres. Why It's in the Arsenal Many teams should start with pgvector before adding a separate vector database because operational simplicity is a feature. Key Features Postgres extension Vector indexes and similarity search Keeps metadata and relational data together Works with existing backups/ops/…"
+      "body": "pgvector PostgreSQL extension for vector similarity search inside an existing relational database rag embeddings retrieval self-hosted rag vector-databases Overview An open source PostgreSQL extension that adds vector similarity search directly into Postgres, letting teams add embeddings based retrieval to an existing relational database rather than operating a separate dedicated vector store. Why it's in the Arsenal PostgreSQL extension adding vector similarity search, positioned as the 'use the database you already have' option rather than adding a new dedicated vector store. It earns a place in the Arsenal because it directly addresses a recurring decision point: you already run PostgreSQL for your application data and want to add vector sear…"
     },
     {
       "id": "phi-4",
@@ -6087,14 +6088,14 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/pinecone-vector-db.md",
-      "url": "content/projects/rag/vector-databases/pinecone-vector-db",
+      "path": "content/projects/data-and-retrieval/pinecone-vector-db.md",
+      "url": "content/projects/data-and-retrieval/pinecone-vector-db",
       "boost_title": "Pinecone",
       "boost_tags": "rag embeddings retrieval cloud",
       "boost_description": "Managed vector database service for production semantic search and RAG applications",
-      "body": "Pinecone Managed vector database service for production semantic search and RAG applications rag embeddings retrieval cloud rag vector-databases TL;DR: Pinecone is a managed vector database service for production semantic search and RAG. Use it when you want managed operations rather than self hosting. Overview Pinecone is not self hostable open source; it is a managed vector database used when teams prefer vendor operated vector infrastructure. Why It's in the Arsenal It is one of the most commonly evaluated managed vector DBs, especially by teams that want to avoid database operations. Key Features Managed vector database Serverless and managed deployment options Metadata filtering Production oriented APIs No self hosting burden Arc…"
+      "body": "Pinecone Managed vector database service for production semantic search and RAG applications rag embeddings retrieval cloud rag vector-databases Overview A fully managed, closed source vector database service, one of the earliest and most established managed offerings in the category, designed for production semantic search and RAG applications without requiring customers to operate any infrastructure themselves. Why it's in the Arsenal Fully managed, closed source vector database — the most established managed vector DB vendor, prioritizing zero ops production reliability. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a fully managed vector database with no infrastructure to operat…"
     },
     {
       "id": "playwright",
@@ -6676,14 +6677,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/qdrant.md",
-      "url": "content/projects/rag/vector-databases/qdrant",
+      "path": "content/projects/data-and-retrieval/qdrant.md",
+      "url": "content/projects/data-and-retrieval/qdrant",
       "boost_title": "Qdrant",
       "boost_tags": "rag embeddings retrieval self-hosted",
       "boost_description": "Rust vector database for high-performance similarity search with filtering and hybrid search",
-      "body": "Qdrant Rust vector database for high-performance similarity search with filtering and hybrid search rag embeddings retrieval self-hosted rag vector-databases TL;DR: Qdrant is a Rust vector database with strong filtering, performance, and self hosting support. Use it when vector search is a production workload and you want operational control. Overview Qdrant is a purpose built vector database available as open source and managed cloud. It is a common RAG choice when metadata filtering and production operations matter. Why It's in the Arsenal Qdrant is one of the most frequently compared vector databases for production RAG because it balances performance, features, and self hostability. Key Features Vector and payload filtering Hybrid search suppor…"
+      "body": "Qdrant Rust vector database for high-performance similarity search with filtering and hybrid search rag embeddings retrieval self-hosted rag vector-databases Overview An open source vector database written in Rust, offering both self hosted and managed cloud deployment options, with a particular emphasis on performance and rich payload/metadata filtering alongside vector similarity search. Why it's in the Arsenal Open source vector database written in Rust, positioned as a performance focused, self hostable alternative with a strong managed cloud option. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a self hostable, open source vector database with strong performance (Rust implementation) and bo…"
     },
     {
       "id": "qlora",
@@ -6986,14 +6987,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/frameworks/ragflow.md",
-      "url": "content/projects/rag/frameworks/ragflow",
+      "path": "content/projects/data-and-retrieval/ragflow.md",
+      "url": "content/projects/data-and-retrieval/ragflow",
       "boost_title": "RAGFlow",
       "boost_tags": "rag retrieval agents cloud",
       "boost_description": "Open-source RAG engine combining document understanding, retrieval, and agent capabilities",
-      "body": "RAGFlow Open-source RAG engine combining document understanding, retrieval, and agent capabilities rag retrieval agents cloud rag frameworks TL;DR: RAGFlow is an open source RAG engine that combines document understanding, retrieval, and agent capabilities. Use it when you want an application level RAG platform rather than only a library. Overview RAGFlow packages RAG pipeline capabilities into a platform like system with document parsing, retrieval, and user facing workflows. Why It's in the Arsenal It is useful for teams that want more of the RAG application stack assembled rather than wiring all components manually. Key Features RAG engine with agent capabilities Document understanding focus Application/platform orientation Apa…"
+      "body": "RAGFlow Open-source RAG engine combining document understanding, retrieval, and agent capabilities rag retrieval agents cloud rag frameworks Overview An open source, self hosted RAG engine combining deep document understanding, retrieval, an agent workflow engine, memory storage, sandboxed code execution, and a web UI into a single deployable stack, maintained by InfiniFlow. Why it's in the Arsenal Self hosted, all in one RAG engine combining deep document understanding, retrieval, agent workflows, and a web UI in a single deployable stack. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a complete, self hostable RAG platform (document parsing, retrieval, agent workflows, web UI)…"
     },
     {
       "id": "railway",
@@ -8422,14 +8423,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/surrealdb.md",
-      "url": "content/projects/rag/vector-databases/surrealdb",
+      "path": "content/projects/data-and-retrieval/surrealdb.md",
+      "url": "content/projects/data-and-retrieval/surrealdb",
       "boost_title": "SurrealDB",
       "boost_tags": "rag retrieval agents",
       "boost_description": "Multi-model database combining graph, document, vector, and time-series for AI agents",
-      "body": "SurrealDB Multi-model database combining graph, document, vector, and time-series for AI agents rag retrieval agents rag vector-databases Overview SurrealDB is a open source AI engineering project. Why It's in the Arsenal It covers the rag category with the vector databases subcategory and complements existing Arsenal entries. Key Features Multi model database combining graph, document, vector, and time series for AI agents Open source at the canonical repository License: Apache 2.0 Architecture / How It Works See https://github.com/surrealdb/surrealdb for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the rag category. 2. Scenario: Self hosted alternat…"
+      "body": "SurrealDB Multi-model database combining graph, document, vector, and time-series for AI agents rag retrieval agents rag vector-databases Overview A multi model database combining relational, document, graph, vector, and time series data types in a single system, positioned specifically around giving AI agents persistent memory and synchronized context alongside application data. Why it's in the Arsenal Multi model database (relational, document, graph, vector, time series) positioned specifically around unifying AI agent memory and context alongside application data. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to consolidate multiple data models (relational, document, grap…"
     },
     {
       "id": "swe-agent",
@@ -9006,14 +9007,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/document-processing/unstructured.md",
-      "url": "content/projects/rag/document-processing/unstructured",
+      "path": "content/projects/data-and-retrieval/unstructured.md",
+      "url": "content/projects/data-and-retrieval/unstructured",
       "boost_title": "Unstructured",
       "boost_tags": "rag data retrieval",
       "boost_description": "Open-source document ETL for converting complex files into structured data for LLM pipelines",
-      "body": "Unstructured Open-source document ETL for converting complex files into structured data for LLM pipelines rag data retrieval rag document-processing TL;DR: Unstructured converts complex documents into structured elements for LLM and RAG pipelines. Use it when PDFs, Office files, and messy documents are the hard part. Overview Unstructured focuses on document partitioning and transformation before indexing. It is useful when raw files must become clean chunks with metadata. Why It's in the Arsenal RAG systems fail when document parsing is poor; Unstructured is a major open source option for the ingestion layer. Key Features Document partitioning Many file type loaders Element level structured outputs Chunking/enrichment workflows Enterpris…"
+      "body": "Unstructured Open-source document ETL for converting complex files into structured data for LLM pipelines rag data retrieval rag document-processing Overview An open source library (with an optional managed API) for parsing a wide range of document formats — PDF, Word, HTML, email, images, and more — into structured, normalized elements suitable for RAG ingestion pipelines. Why it's in the Arsenal Open source (with managed API option) library for parsing diverse document formats into structured, LLM ready elements. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to parse a very wide range of document formats (PDF, DOCX, HTML, emails, images) with one consistent library rather than assembl…"
     },
     {
       "id": "use-context-budgets-per-section",
@@ -9605,14 +9606,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "data-and-retrieval",
       "audience": null,
-      "path": "content/projects/rag/vector-databases/weaviate.md",
-      "url": "content/projects/rag/vector-databases/weaviate",
+      "path": "content/projects/data-and-retrieval/weaviate.md",
+      "url": "content/projects/data-and-retrieval/weaviate",
       "boost_title": "Weaviate",
       "boost_tags": "rag embeddings retrieval self-hosted",
       "boost_description": "Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval",
-      "body": "Weaviate Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval rag embeddings retrieval self-hosted rag vector-databases TL;DR: Weaviate is an open source vector database with object storage, filters, modules, and hybrid search. Use it when schema rich vector search and managed/self host options matter. Overview Weaviate stores objects and vectors together, making it useful when retrieval depends on both semantic similarity and structured metadata. Why It's in the Arsenal Weaviate is a major vector DB option because it combines vector search with schema, object storage, hybrid retrieval, and cloud native deployment. Key Features Object plus vector data model Hybrid search Structured filtering Self hosted and cl…"
+      "body": "Weaviate Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval rag embeddings retrieval self-hosted rag vector-databases Overview An open source vector database offering built in hybrid search (combining vector similarity with BM25 keyword search) and a modular system for embedding generation and LLM integration directly within the database's query pipeline. Why it's in the Arsenal Open source vector database with built in hybrid search (vector + keyword/BM25) and native module system for embeddings/generation. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want hybrid search (combining vector similarity with traditional keyword/BM25 search) as a first class, built…"
     },
     {
       "id": "web-scraping",

@@ -62,13 +62,13 @@ Plain-language tree:
 
 | Constraint | Recommended Start | Canonical Entry |
 |---|---|---|
-| Existing Postgres | pgvector | [pgvector](../../projects/rag/vector-databases/pgvector.md) |
-| Fast local prototype | Chroma | [Chroma](../../projects/rag/vector-databases/chroma.md) |
-| Self-hosted production | Qdrant | [Qdrant](../../projects/rag/vector-databases/qdrant.md) |
-| Schema-rich hybrid search | Weaviate | [Weaviate](../../projects/rag/vector-databases/weaviate.md) |
-| Large distributed scale | Milvus | [Milvus](../../projects/rag/vector-databases/milvus.md) |
-| Managed only | Pinecone | [Pinecone](../../projects/rag/vector-databases/pinecone-vector-db.md) |
-| Embedded/multimodal | LanceDB | [LanceDB](../../projects/rag/vector-databases/lancedb.md) |
+| Existing Postgres | pgvector | [pgvector](../../projects/data-and-retrieval/pgvector.md) |
+| Fast local prototype | Chroma | [Chroma](../../projects/data-and-retrieval/chroma.md) |
+| Self-hosted production | Qdrant | [Qdrant](../../projects/data-and-retrieval/qdrant.md) |
+| Schema-rich hybrid search | Weaviate | [Weaviate](../../projects/data-and-retrieval/weaviate.md) |
+| Large distributed scale | Milvus | [Milvus](../../projects/data-and-retrieval/milvus.md) |
+| Managed only | Pinecone | [Pinecone](../../projects/data-and-retrieval/pinecone-vector-db.md) |
+| Embedded/multimodal | LanceDB | [LanceDB](../../projects/data-and-retrieval/lancedb.md) |
 
 ## Getting Started
 
@@ -107,13 +107,13 @@ CREATE EXTENSION IF NOT EXISTS vector;
 
 ## Resources
 
-- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
-- [Weaviate](../../projects/rag/vector-databases/weaviate.md)
-- [Chroma](../../projects/rag/vector-databases/chroma.md)
-- [Milvus](../../projects/rag/vector-databases/milvus.md)
-- [Pinecone](../../projects/rag/vector-databases/pinecone-vector-db.md)
-- [pgvector](../../projects/rag/vector-databases/pgvector.md)
-- [LanceDB](../../projects/rag/vector-databases/lancedb.md)
+- [Qdrant](../../projects/data-and-retrieval/qdrant.md)
+- [Weaviate](../../projects/data-and-retrieval/weaviate.md)
+- [Chroma](../../projects/data-and-retrieval/chroma.md)
+- [Milvus](../../projects/data-and-retrieval/milvus.md)
+- [Pinecone](../../projects/data-and-retrieval/pinecone-vector-db.md)
+- [pgvector](../../projects/data-and-retrieval/pgvector.md)
+- [LanceDB](../../projects/data-and-retrieval/lancedb.md)
 
 ## Buzz & Reception
 

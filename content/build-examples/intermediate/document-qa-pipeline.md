@@ -82,9 +82,9 @@ flowchart TD
 
 ## Related Entries
 
-- Parser: [Docling](../../projects/rag/document-processing/docling.md)
-- Parser: [Unstructured](../../projects/rag/document-processing/unstructured.md)
-- Vector DB: [pgvector](../../projects/rag/vector-databases/pgvector.md)
+- Parser: [Docling](../../projects/data-and-retrieval/docling.md)
+- Parser: [Unstructured](../../projects/data-and-retrieval/unstructured.md)
+- Vector DB: [pgvector](../../projects/data-and-retrieval/pgvector.md)
 - Tip: [Store parser version](../../tips-and-tricks/store-parser-version-with-every-chunk.md)
 
 ---

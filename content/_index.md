@@ -38,11 +38,11 @@
 - [Ollama](./projects/inference-engines/ollama.md) — ⭐ 174059
 - [Dify](./projects/frameworks/dify.md) — ⭐ 145081
 - [LangChain](./projects/frameworks/langchain.md) — ⭐ 139206
-- [Firecrawl](./projects/rag/document-processing/firecrawl.md) — ⭐ 132342
+- [Firecrawl](./projects/data-and-retrieval/firecrawl.md) — ⭐ 132342
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — ⭐ 116399
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
 - [vLLM](./projects/inference-engines/vllm.md) — ⭐ 82772
-- [RAGFlow](./projects/rag/frameworks/ragflow.md) — ⭐ 82655
+- [RAGFlow](./projects/data-and-retrieval/ragflow.md) — ⭐ 82655
 - [OpenHands](./projects/frameworks/openhands.md) — ⭐ 76854
 
 ## Browse All

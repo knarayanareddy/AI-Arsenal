@@ -114,8 +114,8 @@ pip install llama-index chromadb gradio
 - **Llama 3.x**: [Llama 3.x](../../projects/foundation-models/llama-3.md)
 - **Qwen 2.5 / QwQ**: [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
 - **Gemma 3**: [Gemma 3](../../projects/foundation-models/gemma-3.md)
-- **Chroma**: [Chroma](../../projects/rag/vector-databases/chroma.md)
-- **LanceDB**: [LanceDB](../../projects/rag/vector-databases/lancedb.md)
+- **Chroma**: [Chroma](../../projects/data-and-retrieval/chroma.md)
+- **LanceDB**: [LanceDB](../../projects/data-and-retrieval/lancedb.md)
 
 ## Integration Patterns
 
@@ -131,8 +131,8 @@ pip install llama-index chromadb gradio
 - [Llama 3.x](../../projects/foundation-models/llama-3.md)
 - [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
 - [Gemma 3](../../projects/foundation-models/gemma-3.md)
-- [Chroma](../../projects/rag/vector-databases/chroma.md)
-- [LanceDB](../../projects/rag/vector-databases/lancedb.md)
+- [Chroma](../../projects/data-and-retrieval/chroma.md)
+- [LanceDB](../../projects/data-and-retrieval/lancedb.md)
 
 ## Buzz & Reception
 

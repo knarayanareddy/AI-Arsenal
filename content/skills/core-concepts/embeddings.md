@@ -80,8 +80,8 @@ results = vector_db.search(query_vector, top_k=8)
 ## Resources
 
 - [Choose a Vector Database](../../architectures/decision-trees/choose-vector-db.md)
-- [Qdrant](../../projects/rag/vector-databases/qdrant.md)
-- [pgvector](../../projects/rag/vector-databases/pgvector.md)
+- [Qdrant](../../projects/data-and-retrieval/qdrant.md)
+- [pgvector](../../projects/data-and-retrieval/pgvector.md)
 - [Evaluate embedding models before rechunking](../../tips-and-tricks/evaluate-embedding-models-before-rechunking.md)
 
 ## Buzz & Reception

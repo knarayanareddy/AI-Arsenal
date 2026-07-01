@@ -88,7 +88,7 @@ flowchart TD
 ## Related Entries
 
 - Stack reference: [Production RAG](../../architectures/reference-stacks/production-rag.md)
-- Vector DB: [Qdrant](../../projects/rag/vector-databases/qdrant.md)
+- Vector DB: [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 - Observability: [Langfuse](../../projects/observability/tracing/langfuse.md)
 - Evaluation: [Ragas](../../projects/rag/frameworks/ragas-rag-evaluation.md)
 
