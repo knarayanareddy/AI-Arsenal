@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-01T10:46:07.474Z",
+  "generated_at": "2026-07-01T10:54:23.254Z",
   "config": {
     "document": {
       "id": "id",
@@ -43,7 +43,7 @@
   },
   "facets": {
     "types": {
-      "project": 71,
+      "project": 69,
       "tool": 92,
       "paper": 25,
       "tip": 106,
@@ -56,13 +56,13 @@
       "evaluation": 69,
       "tracing": 29,
       "cloud": 63,
-      "agents": 70,
-      "orchestration": 29,
+      "agents": 69,
+      "orchestration": 27,
       "planning": 12,
       "tool-use": 37,
-      "rag": 72,
+      "rag": 70,
       "embeddings": 29,
-      "retrieval": 61,
+      "retrieval": 59,
       "local": 26,
       "llm": 151,
       "multimodal": 12,
@@ -73,8 +73,8 @@
       "efficiency": 7,
       "graphs": 4,
       "self-hosted": 18,
-      "langchain": 5,
       "stateful": 2,
+      "langchain": 4,
       "quantization": 4,
       "edge": 2,
       "llamaindex": 3,
@@ -109,8 +109,8 @@
     },
     "categories": {
       "observability": 16,
-      "agents": 21,
-      "rag": 25,
+      "agents": 20,
+      "rag": 24,
       "llms": 20,
       "tooling": 1,
       "architecture": 1,
@@ -138,22 +138,23 @@
       "trending": 2
     },
     "maturity": {
-      "production": 141,
+      "production": 139,
       "beta": 22
     },
     "cost_model": {
       "freemium": 47,
-      "open-source": 97,
+      "open-source": 95,
       "paid": 10,
       "usage-based": 9
     },
     "status": {
-      "active": 243,
+      "active": 241,
       "deprecated": 1,
       "archived": 2,
       "watching": 1
     },
     "phase": {
+      "framework": 19,
       "foundation-model": 13,
       "data-ingestion": 13,
       "orchestration": 15,
@@ -745,14 +746,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "deprecated",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/autogen.md",
-      "url": "content/projects/agents/frameworks/autogen",
+      "path": "content/projects/frameworks/autogen.md",
+      "url": "content/projects/frameworks/autogen",
       "boost_title": "AutoGen",
       "boost_tags": "agents orchestration planning tool-use",
       "boost_description": "Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence",
-      "body": "AutoGen Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence agents orchestration planning tool-use agents agent-frameworks TL;DR: AutoGen popularized Microsoft’s open source multi agent orchestration patterns. For new projects, prefer Microsoft Agent Framework because AutoGen is maintained for fixes rather than major new features. Overview AutoGen remains historically important and still useful for existing applications. Microsoft maintainers announced that AutoGen and Semantic Kernel are merging into Microsoft Agent Framework, with AutoGen continuing for critical fixes and security patches. Key Features Conversational multi agent abstractions Agent collaboration and handoff patterns Large installed base and many…"
+      "body": "AutoGen Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence agents orchestration planning tool-use agents agent-frameworks Overview Microsoft's early open source framework for building multi agent conversational systems, notable for popularizing patterns like agent to agent dialogue, role based coordination, and tool use, now in maintenance mode as Microsoft consolidates around a newer framework. Why it's in the Arsenal Microsoft's original multi agent conversation framework, now in maintenance mode. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing AutoGen based system and need to maintain it, or you're studying its agent to agent conversation pattern…"
     },
     {
       "id": "autogpt",
@@ -771,14 +772,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/autogpt.md",
-      "url": "content/projects/agents/frameworks/autogpt",
+      "path": "content/projects/frameworks/autogpt.md",
+      "url": "content/projects/frameworks/autogpt",
       "boost_title": "AutoGPT",
       "boost_tags": "agents planning tool-use cloud",
       "boost_description": "Autonomous agent platform and classic agent project for accessible AI automation",
-      "body": "AutoGPT Autonomous agent platform and classic agent project for accessible AI automation agents planning tool-use cloud agents agent-frameworks TL;DR: AutoGPT is the historically important autonomous agent project that helped popularize long horizon AI task execution. Use it as a platform/reference for autonomous automation patterns, not as the simplest app framework. Overview AutoGPT began as a standalone autonomous agent and evolved toward an agent platform. The repository uses mixed licensing: classic components are MIT, while the platform folder uses Polyform Shield. Key Features Autonomous task execution heritage Classic agent, Forge, benchmark, and platform components Large community and historical importance Active repository…"
+      "body": "AutoGPT Autonomous agent platform and classic agent project for accessible AI automation agents planning tool-use cloud agents agent-frameworks Overview One of the earliest widely publicized autonomous AI agent projects, which popularized the idea of an LLM recursively planning and executing its own sub tasks toward a goal with minimal human intervention. Why it's in the Arsenal Early, highly visible autonomous agent platform that popularized the 'autonomous AI agent' concept. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a ready made, deployable autonomous agent platform with an active project (the Significant Gravitas/AutoGPT platform continues shipping releases as of May 2026) r…"
     },
     {
       "id": "aws-bedrock",
@@ -1872,14 +1873,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/crewai.md",
-      "url": "content/projects/agents/frameworks/crewai",
+      "path": "content/projects/frameworks/crewai.md",
+      "url": "content/projects/frameworks/crewai",
       "boost_title": "CrewAI",
       "boost_tags": "agents orchestration planning tool-use",
       "boost_description": "Role-based framework for orchestrating collaborative AI agent crews and flows",
-      "body": "CrewAI Role-based framework for orchestrating collaborative AI agent crews and flows agents orchestration planning tool-use agents agent-frameworks TL;DR: CrewAI is a role based agent framework for organizing AI workers into crews and event driven flows. Use it when your mental model is teams, roles, tasks, and delegation. Overview CrewAI emphasizes agent roles, tasks, crews, and flows rather than graph primitives. It is popular for business process automation, research assistants, and multi role workflows where responsibilities are easy to name. Key Features Role based agents with goals and backstories Task and crew abstractions for collaborative work Flows for event driven orchestration Tool integration for external actions Independent…"
+      "body": "CrewAI Role-based framework for orchestrating collaborative AI agent crews and flows agents orchestration planning tool-use agents agent-frameworks Overview A Python framework for orchestrating multi agent systems modeled as a 'crew' of role based agents that collaborate on tasks, alongside a lower level 'Flows' API for more deterministic control. Why it's in the Arsenal Role based multi agent orchestration framework, positioned as more opinionated/higher level than graph based alternatives. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to model a multi agent system as a 'crew' of role based agents (researcher, writer, reviewer, etc.) with a higher level API than explicit graph constru…"
     },
     {
       "id": "dagster",
@@ -2175,14 +2176,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/dify.md",
-      "url": "content/projects/agents/frameworks/dify",
+      "path": "content/projects/frameworks/dify.md",
+      "url": "content/projects/frameworks/dify",
       "boost_title": "Dify",
       "boost_tags": "agents orchestration rag cloud",
       "boost_description": "Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations",
-      "body": "Dify Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations agents orchestration rag cloud agents agent-frameworks TL;DR: Dify is a visual platform for building agentic workflows, RAG apps, chatbots, and AI automations. Use it when your team wants a product builder interface rather than a code first framework. Overview Dify is not a code first library like LangGraph or CrewAI. It provides a visual builder, workflow orchestration, model/provider integrations, RAG features, and self hostable deployment options under a modified license. Key Features Visual workflow and app builder Agentic workflow development RAG and knowledge base features Multi provider model support Self hostable Docker deployment Useful…"
+      "body": "Dify Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations agents orchestration rag cloud agents agent-frameworks Overview An open source platform for building LLM applications through a visual workflow builder, combining RAG pipeline construction, agent orchestration, and prompt management in a single self hostable product. Why it's in the Arsenal Open source LLM application development platform with a visual workflow builder, positioned as a low code alternative to hand coded agent frameworks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a self hostable, visual workflow builder for LLM applications (RAG, agents, chatbots) rather than writing orchest…"
     },
     {
       "id": "direct-preference-optimization",
@@ -2377,14 +2378,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/rag/frameworks/dspy.md",
-      "url": "content/projects/rag/frameworks/dspy",
+      "path": "content/projects/frameworks/dspy.md",
+      "url": "content/projects/frameworks/dspy",
       "boost_title": "DSPy",
       "boost_tags": "llm rag evaluation reasoning",
       "boost_description": "A framework for programming and optimizing language model pipelines",
-      "body": "DSPy A framework for programming and optimizing language model pipelines llm rag evaluation reasoning rag frameworks Overview DSPy is included as a notable rag project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for curated compari…"
+      "body": "DSPy A framework for programming and optimizing language model pipelines llm rag evaluation reasoning rag frameworks Overview A framework from Stanford NLP for programming and automatically optimizing language model pipelines, treating prompt engineering as a compilable, metric driven optimization problem rather than manual trial and error. Why it's in the Arsenal Stanford NLP's framework for programmatically optimizing LLM pipelines rather than hand tuning prompts. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to treat prompt engineering as an optimization problem — DSPy compiles and tunes prompts/few shot examples automatically against a metric, rather…"
     },
     {
       "id": "dvc",
@@ -2947,14 +2948,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/google-adk.md",
-      "url": "content/projects/agents/frameworks/google-adk",
+      "path": "content/projects/frameworks/google-adk.md",
+      "url": "content/projects/frameworks/google-adk",
       "boost_title": "Google ADK",
       "boost_tags": "agents orchestration graphs tool-use",
       "boost_description": "Google code-first Python toolkit for building, evaluating, and deploying AI agents",
-      "body": "Google ADK Google code-first Python toolkit for building, evaluating, and deploying AI agents agents orchestration graphs tool-use agents agent-frameworks TL;DR: Google ADK is a code first Python toolkit for building, evaluating, and deploying agents. Use it when you want Google ecosystem integration and explicit workflow/runtime primitives. Overview ADK 2.0 emphasizes a workflow runtime, task API, graph execution, routing, fan out/fan in, loops, retries, and state management. It is a stronger fit for code first teams than visual agent builders. Key Features Python code first agent definitions Workflow runtime for graph execution Task API for agent to agent delegation Human in the loop support Google documentation and sample repos Evaluation an…"
+      "body": "Google ADK Google code-first Python toolkit for building, evaluating, and deploying AI agents agents orchestration graphs tool-use agents agent-frameworks Overview Google's official open source framework for building, evaluating, and deploying AI agents, designed to integrate closely with Google Cloud and Vertex AI while remaining usable with other model providers. Why it's in the Arsenal Google's official agent development framework, positioned as the Google Cloud native path for building and deploying agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building on Google Cloud/Vertex AI and want an agent framework with first party integration into that ecosystem, including deployment toolin…"
     },
     {
       "id": "google-pomelli-2-0",
@@ -3231,40 +3232,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/rag/frameworks/haystack.md",
-      "url": "content/projects/rag/frameworks/haystack",
+      "path": "content/projects/frameworks/haystack.md",
+      "url": "content/projects/frameworks/haystack",
       "boost_title": "Haystack",
       "boost_tags": "rag retrieval orchestration agents",
       "boost_description": "Modular framework for production search, RAG, agents, routing, and generation pipelines",
-      "body": "Haystack Modular framework for production search, RAG, agents, routing, and generation pipelines rag retrieval orchestration agents rag frameworks TL;DR: Haystack is a modular pipeline framework for search, RAG, routing, generation, and agent workflows. Use it when explicit pipeline components matter. Overview Haystack is retrieval first and production oriented, with explicit components for pipelines, retrievers, generators, routers, and agents. Why It's in the Arsenal It is a strong fit for teams that want RAG pipelines to be inspectable and modular instead of hidden inside a single chain. Key Features Pipeline/component architecture Strong retrieval and search foundation RAG and agent workflows Production oriented integrations Apache…"
-    },
-    {
-      "id": "haystack-agents",
-      "type": "project",
-      "name": "Haystack",
-      "title": "Haystack",
-      "description": "Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines",
-      "tags": [
-        "agents",
-        "rag",
-        "orchestration",
-        "retrieval"
-      ],
-      "category": "agents",
-      "subcategory": "agent-frameworks",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "active",
-      "phase": null,
-      "audience": null,
-      "path": "content/projects/agents/frameworks/haystack-agents.md",
-      "url": "content/projects/agents/frameworks/haystack-agents",
-      "boost_title": "Haystack",
-      "boost_tags": "agents rag orchestration retrieval",
-      "boost_description": "Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines",
-      "body": "Haystack Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines agents rag orchestration retrieval agents agent-frameworks TL;DR: Haystack is a modular orchestration framework for RAG, agents, routing, retrieval, and generation pipelines. Use it when explicit pipeline composition and production search/RAG matter. Overview Haystack is historically strong in retrieval and question answering, but now supports broader LLM pipelines and agent workflows. It fits teams that want modular components and explicit pipeline control. Key Features Composable pipeline architecture Strong retrieval and RAG roots Agent, routing, memory, and generation components Production search and semantic search focus Integrations with many m…"
+      "body": "Haystack Modular framework for production search, RAG, agents, routing, and generation pipelines rag retrieval orchestration agents rag frameworks Overview deepset's open source framework for building production search, retrieval augmented generation, and agent pipelines, originally built around retrieval and question answering before expanding to cover broader LLM application patterns. Why it's in the Arsenal Modular pipeline framework spanning production RAG, semantic search, and agent orchestration — deepset's flagship open source project. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a retrieval first, production oriented framework with explicit, composable pipeline components (re…"
     },
     {
       "id": "helicone",
@@ -3905,40 +3880,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/rag/frameworks/langchain.md",
-      "url": "content/projects/rag/frameworks/langchain",
+      "path": "content/projects/frameworks/langchain.md",
+      "url": "content/projects/frameworks/langchain",
       "boost_title": "LangChain",
       "boost_tags": "llm rag agents orchestration",
       "boost_description": "A framework for composing LLM applications, retrieval flows, tools, and agents",
-      "body": "LangChain A framework for composing LLM applications, retrieval flows, tools, and agents llm rag agents orchestration rag frameworks Overview LangChain is included as a notable rag project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the rag category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for curated co…"
-    },
-    {
-      "id": "langchain-rag",
-      "type": "project",
-      "name": "LangChain for RAG",
-      "title": "LangChain for RAG",
-      "description": "LangChain components for retrieval chains, retrievers, loaders, and RAG application composition",
-      "tags": [
-        "rag",
-        "retrieval",
-        "langchain",
-        "orchestration"
-      ],
-      "category": "rag",
-      "subcategory": "frameworks",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "active",
-      "phase": null,
-      "audience": null,
-      "path": "content/projects/rag/frameworks/langchain-rag.md",
-      "url": "content/projects/rag/frameworks/langchain-rag",
-      "boost_title": "LangChain for RAG",
-      "boost_tags": "rag retrieval langchain orchestration",
-      "boost_description": "LangChain components for retrieval chains, retrievers, loaders, and RAG application composition",
-      "body": "LangChain for RAG LangChain components for retrieval chains, retrievers, loaders, and RAG application composition rag retrieval langchain orchestration rag frameworks TL;DR: LangChain provides retrievers, loaders, vector store integrations, and composition tools for RAG apps. Use it when your team already uses LangChain or LangGraph. Overview LangChain is broader than RAG, but its retrievers, document loaders, vector store integrations, and chains remain widely used in retrieval applications. Why It's in the Arsenal Many production LLM apps use LangChain integrations even when their orchestration logic lives elsewhere. Key Features Broad vector database integrations Retriever and document loader abstractions Works naturally with LangGraph Runnable composit…"
+      "body": "LangChain A framework for composing LLM applications, retrieval flows, tools, and agents llm rag agents orchestration rag frameworks Overview A widely adopted open source framework for composing LLM powered applications, providing abstractions for prompts, retrieval, tool use, memory, and agent orchestration across a very large ecosystem of integrations. Why it's in the Arsenal The most widely adopted general purpose framework for composing LLM applications, spanning retrieval, tool use, and agent orchestration. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the broadest possible ecosystem of pre built integrations (model providers, vector stores, document loaders, tools)…"
     },
     {
       "id": "langfuse",
@@ -4011,14 +3960,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/langgraph.md",
-      "url": "content/projects/agents/frameworks/langgraph",
+      "path": "content/projects/frameworks/langgraph.md",
+      "url": "content/projects/frameworks/langgraph",
       "boost_title": "LangGraph",
       "boost_tags": "agents orchestration graphs stateful tool-use",
       "boost_description": "Graph-based framework for building stateful, durable LLM agents and workflows",
-      "body": "LangGraph Graph-based framework for building stateful, durable LLM agents and workflows agents orchestration graphs stateful tool-use agents agent-frameworks TL;DR: LangGraph is a graph based orchestration framework for durable, stateful LLM agents. Use it when agent state, branching, retries, and production control matter more than quick demos. Overview Part of the LangChain ecosystem, but focused on explicit graph execution rather than linear chains. Best known for state machines, human in the loop pauses, persistence, streaming, and multi agent workflows. Key Features Graph/state machine execution model Durable state and checkpointing for long running workflows Human in the loop and interruption support Works with LangChain tools and model inte…"
+      "body": "LangGraph Graph-based framework for building stateful, durable LLM agents and workflows agents orchestration graphs stateful tool-use agents agent-frameworks Overview LangChain's graph based orchestration framework for building stateful, durable LLM agents and workflows, distinguished from the broader LangChain library by its focus on explicit graph execution rather than linear chains. Why it's in the Arsenal Graph based orchestration framework for durable, stateful multi agent workflows, LangChain's production agent focused offering. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need explicit control over agent state, branching, retries, and human in the loop interruptions via a directed graph execu…"
     },
     {
       "id": "langsmith",
@@ -4408,14 +4357,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/rag/frameworks/llamaindex.md",
-      "url": "content/projects/rag/frameworks/llamaindex",
+      "path": "content/projects/frameworks/llamaindex.md",
+      "url": "content/projects/frameworks/llamaindex",
       "boost_title": "LlamaIndex",
       "boost_tags": "rag retrieval embeddings llamaindex",
       "boost_description": "Data framework for building document agents, retrieval pipelines, and production RAG systems",
-      "body": "LlamaIndex Data framework for building document agents, retrieval pipelines, and production RAG systems rag retrieval embeddings llamaindex rag frameworks TL;DR: LlamaIndex is a data framework for connecting private data to LLM applications. Use it when ingestion, indexing, retrieval, and document agent workflows are central. Overview LlamaIndex focuses on the data side of LLM applications: loaders, parsing, indexes, retrievers, query engines, and agent/document workflows. Why It's in the Arsenal RAG quality often depends more on data pipelines and retrieval design than on the final prompt; LlamaIndex gives builders structured primitives for that layer. Key Features Document loaders and ingestion pipelines Index, retriever, and query engine abs…"
+      "body": "LlamaIndex Data framework for building document agents, retrieval pipelines, and production RAG systems rag retrieval embeddings llamaindex rag frameworks Overview A data framework purpose built for connecting large language models to external data sources, providing document ingestion, indexing, and retrieval abstractions specifically oriented around building RAG applications and document centric agents. Why it's in the Arsenal Data framework specifically focused on connecting LLMs to your data via document ingestion, indexing, and retrieval. It earns a place in the Arsenal because it directly addresses a recurring decision point: your primary need is building RAG pipelines and document centric agents — LlamaIndex's abstractions (data connecto…"
     },
     {
       "id": "llamaparse",
@@ -4790,14 +4739,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/mastra.md",
-      "url": "content/projects/agents/frameworks/mastra",
+      "path": "content/projects/frameworks/mastra.md",
+      "url": "content/projects/frameworks/mastra",
       "boost_title": "Mastra",
       "boost_tags": "agents orchestration memory evaluation",
       "boost_description": "TypeScript framework for building AI agents, workflows, evals, and application backends",
-      "body": "Mastra TypeScript framework for building AI agents, workflows, evals, and application backends agents orchestration memory evaluation agents agent-frameworks TL;DR: Mastra is a TypeScript framework for agents, workflows, tools, memory, evals, and AI application backends. Use it when your AI stack is Node/TypeScript first. Overview Mastra brings agent and workflow primitives to modern TypeScript teams. It is especially relevant for teams that want AI orchestration close to web app and backend code. Key Features TypeScript native agent framework Workflow and tool abstractions Memory and evaluation support Good fit for Node.js application backends Modern web app ecosystem orientation Active development with commercial/enterprise areas Architecture Mo…"
+      "body": "Mastra TypeScript framework for building AI agents, workflows, evals, and application backends agents orchestration memory evaluation agents agent-frameworks Overview A TypeScript native framework for building AI agents and workflows, aimed at giving the JavaScript/Node.js ecosystem a first class agent building experience comparable to what Python developers have with LangGraph or CrewAI. Why it's in the Arsenal TypeScript native agent framework, positioned to serve the JS/TS ecosystem the way LangGraph/CrewAI serve Python. It earns a place in the Arsenal because it directly addresses a recurring decision point: your stack is TypeScript/JavaScript first and you want an agent framework designed natively for that ecosystem rather than a Python frame…"
     },
     {
       "id": "match-context-length-to-ram",
@@ -5071,14 +5020,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/metagpt.md",
-      "url": "content/projects/agents/frameworks/metagpt",
+      "path": "content/projects/frameworks/metagpt.md",
+      "url": "content/projects/frameworks/metagpt",
       "boost_title": "MetaGPT",
       "boost_tags": "agents orchestration planning code-gen",
       "boost_description": "Multi-agent framework that simulates software-company roles for natural-language programming",
-      "body": "MetaGPT Multi-agent framework that simulates software-company roles for natural-language programming agents orchestration planning code-gen agents agent-frameworks TL;DR: MetaGPT is a multi agent framework that simulates software company roles such as product manager, architect, and engineer. Use it to study role based software generation workflows, not as a default production agent runtime. Overview MetaGPT became known for the “AI software company” pattern: multiple specialized agents collaborate on software tasks. It is useful as a reference implementation for role decomposition and software generation pipelines. Key Features Role based multi agent software workflow Product/architect/engineer style decomposition Natural language programming experimen…"
+      "body": "MetaGPT Multi-agent framework that simulates software-company roles for natural-language programming agents orchestration planning code-gen agents agent-frameworks Overview A multi agent framework that assigns LLM agents distinct software company roles (product manager, architect, engineer, QA) and has them collaborate through a structured 'standard operating procedure' to turn a one line requirement into working software. Why it's in the Arsenal Multi agent framework modeling a software company's roles (PM, architect, engineer, QA) to collaboratively generate software from a requirement. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're researching multi agent role based collaboration patterns for complex,…"
     },
     {
       "id": "microsoft-agent-framework",
@@ -5098,14 +5047,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/microsoft-agent-framework.md",
-      "url": "content/projects/agents/frameworks/microsoft-agent-framework",
+      "path": "content/projects/frameworks/microsoft-agent-framework.md",
+      "url": "content/projects/frameworks/microsoft-agent-framework",
       "boost_title": "Microsoft Agent Framework",
       "boost_tags": "agents orchestration graphs cloud tool-use",
       "boost_description": "Microsoft framework for Python and .NET agents, workflows, and production orchestration",
-      "body": "Microsoft Agent Framework Microsoft framework for Python and .NET agents, workflows, and production orchestration agents orchestration graphs cloud tool-use agents agent-frameworks TL;DR: Microsoft Agent Framework unifies Microsoft’s AutoGen and Semantic Kernel agent work into one Python and .NET framework. Use it when you are in the Microsoft/Azure ecosystem or need enterprise oriented orchestration. Overview Microsoft announced Agent Framework as the successor path that combines AutoGen style multi agent orchestration with Semantic Kernel production foundations. It supports Python and .NET, graph based workflows, provider flexibility, and Azure/Microsoft Foundry integration. Key Features Python and .NET support Graph based workflows and multi agent orchestration Built…"
+      "body": "Microsoft Agent Framework Microsoft framework for Python and .NET agents, workflows, and production orchestration agents orchestration graphs cloud tool-use agents agent-frameworks Overview Microsoft's current agent development framework, released as a production ready 1.0 in April 2026, designed to converge and succeed both the earlier AutoGen and Semantic Kernel projects for building and deploying AI agents and multi agent workflows. Why it's in the Arsenal Microsoft's current, officially recommended agent framework, positioned as the convergence point for AutoGen and Semantic Kernel. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building on Microsoft/Azure and want the officially supported, enterprise SLA path for ag…"
     },
     {
       "id": "milvus",
@@ -5589,14 +5538,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/openai-agents-sdk.md",
-      "url": "content/projects/agents/frameworks/openai-agents-sdk",
+      "path": "content/projects/frameworks/openai-agents-sdk.md",
+      "url": "content/projects/frameworks/openai-agents-sdk",
       "boost_title": "OpenAI Agents SDK",
       "boost_tags": "agents tool-use guardrails tracing",
       "boost_description": "Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing",
-      "body": "OpenAI Agents SDK Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing agents tool-use guardrails tracing agents agent-frameworks TL;DR: OpenAI Agents SDK is a lightweight Python framework for agents, tools, handoffs, guardrails, sessions, and tracing. Use it when you are building around OpenAI APIs but want a simple provider aware orchestration layer. Overview The SDK provides agent primitives that map closely to OpenAI’s Responses and Chat Completions ecosystem. It includes tools, handoffs, sessions, guardrails, human in the loop patterns, and tracing. Key Features Agent abstraction with instructions, tools, and handoffs Built in tracing for debugging runs Guardrails for input and output validation Sessions for conver…"
+      "body": "OpenAI Agents SDK Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing agents tool-use guardrails tracing agents agent-frameworks Overview OpenAI's official, lightweight Python SDK for building agentic applications, providing simple primitives for agents, tool use, and handoffs between agents, intended as a production ready successor to OpenAI's earlier experimental 'Swarm' framework. Why it's in the Arsenal OpenAI's official, lightweight agent building SDK, positioned as the provider native path for building agents against OpenAI's models. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building primarily against OpenAI's models and want a lightweight, officially support…"
     },
     {
       "id": "openai-evals",
@@ -5643,14 +5592,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/openhands.md",
-      "url": "content/projects/agents/frameworks/openhands",
+      "path": "content/projects/frameworks/openhands.md",
+      "url": "content/projects/frameworks/openhands",
       "boost_title": "OpenHands",
       "boost_tags": "agents code-gen tool-use planning",
       "boost_description": "AI software engineering agent platform for coding, terminal work, browser actions, and automation",
-      "body": "OpenHands AI software engineering agent platform for coding, terminal work, browser actions, and automation agents code-gen tool-use planning agents agent-frameworks TL;DR: OpenHands is an AI software engineering agent platform for coding tasks, shell work, browser use, and developer automation. Use it when the agent’s job is to operate like a software engineer, not just call app tools. Overview OpenHands focuses on AI driven development workflows rather than general business process agents. It gives agents a developer environment with code, terminal, browser, and task execution capabilities. Key Features Coding agent focus Terminal and browser oriented workflows Interactive developer task automation Self hostable open source core with enterprise areas La…"
+      "body": "OpenHands AI software engineering agent platform for coding, terminal work, browser actions, and automation agents code-gen tool-use planning agents agent-frameworks Overview An open source platform for autonomous AI software engineering agents (formerly named OpenDevin), capable of reading and writing code, executing commands in a sandboxed environment, and browsing the web to complete end to end coding tasks. Why it's in the Arsenal Open source autonomous coding agent platform (formerly OpenDevin) for end to end software engineering tasks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a deployable, open source autonomous coding agent that can read/write code, run commands, and browse the web to comple…"
     },
     {
       "id": "openlit",
@@ -6671,14 +6620,14 @@
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/pydantic-ai.md",
-      "url": "content/projects/agents/frameworks/pydantic-ai",
+      "path": "content/projects/frameworks/pydantic-ai.md",
+      "url": "content/projects/frameworks/pydantic-ai",
       "boost_title": "Pydantic AI",
       "boost_tags": "agents tool-use structured-output",
       "boost_description": "A Python agent framework built around typed models and structured outputs",
-      "body": "Pydantic AI A Python agent framework built around typed models and structured outputs agents tool-use structured-output agents frameworks Overview Pydantic AI is included as a notable agents project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the agents category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for cu…"
+      "body": "Pydantic AI A Python agent framework built around typed models and structured outputs agents tool-use structured-output agents frameworks Overview A Python agent framework from the team behind Pydantic, built around typed, validated tool definitions and structured outputs as first class citizens rather than an afterthought layered on top of a generic agent loop. Why it's in the Arsenal Lightweight Python agent framework from the Pydantic team, treating typed/validated outputs as a first class design principle. It earns a place in the Arsenal because it directly addresses a recurring decision point: your team already uses Pydantic and FastAPI, and you want an agent framework that fits that same typed, validation first mental mod…"
     },
     {
       "id": "pydantic-ai-tool",
@@ -7697,14 +7646,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/semantic-kernel.md",
-      "url": "content/projects/agents/frameworks/semantic-kernel",
+      "path": "content/projects/frameworks/semantic-kernel.md",
+      "url": "content/projects/frameworks/semantic-kernel",
       "boost_title": "Semantic Kernel",
       "boost_tags": "agents orchestration tool-use planning",
       "boost_description": "An SDK for integrating AI orchestration into production applications",
-      "body": "Semantic Kernel An SDK for integrating AI orchestration into production applications agents orchestration tool-use planning agents frameworks Overview Semantic Kernel is included as a notable agents project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the agents category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy fo…"
+      "body": "Semantic Kernel An SDK for integrating AI orchestration into production applications agents orchestration tool-use planning agents frameworks Overview Microsoft's earlier open source SDK for integrating AI orchestration — plugins, planners, and memory — into existing .NET, Python, and Java applications, predating Microsoft's more recent Agent Framework. Why it's in the Arsenal Microsoft's earlier SDK for integrating AI orchestration into applications, now being converged into Microsoft Agent Framework. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing Semantic Kernel based application in .NET or Python and need to maintain or incrementally extend it. See Strengths / Limit…"
     },
     {
       "id": "separate-model-errors-from-app-errors",
@@ -8046,14 +7995,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/agents/frameworks/smolagents.md",
-      "url": "content/projects/agents/frameworks/smolagents",
+      "path": "content/projects/frameworks/smolagents.md",
+      "url": "content/projects/frameworks/smolagents",
       "boost_title": "Smolagents",
       "boost_tags": "agents tool-use reasoning local",
       "boost_description": "Hugging Face library for lightweight agents that can reason and act through code",
-      "body": "Smolagents Hugging Face library for lightweight agents that can reason and act through code agents tool-use reasoning local agents agent-frameworks TL;DR: Smolagents is Hugging Face’s minimal agent library with first class support for code agents. Use it when you want small abstractions, Python native tools, and Hugging Face model integrations. Overview Smolagents intentionally keeps abstractions small and emphasizes agents that think in executable code. It works well for experiments, tool use, and Hugging Face centered workflows. Key Features Small codebase and minimal abstractions CodeAgent abstraction for code based reasoning/action Hugging Face model and tool ecosystem integration Supports managed and local model backends Good educat…"
+      "body": "Smolagents Hugging Face library for lightweight agents that can reason and act through code agents tool-use reasoning local agents agent-frameworks Overview A minimal, code first agent framework from Hugging Face, designed around the idea that agents work best when they write and execute Python code to take actions rather than being restricted to structured JSON tool calls. Why it's in the Arsenal Hugging Face's minimal, code first agent framework emphasizing simplicity over feature breadth. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a…"
     },
     {
       "id": "sota-benchmarks",
@@ -8978,14 +8927,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "framework",
       "audience": null,
-      "path": "content/projects/rag/frameworks/txtai.md",
-      "url": "content/projects/rag/frameworks/txtai",
+      "path": "content/projects/frameworks/txtai.md",
+      "url": "content/projects/frameworks/txtai",
       "boost_title": "txtai",
       "boost_tags": "rag embeddings retrieval orchestration",
       "boost_description": "All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows",
-      "body": "txtai All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows rag embeddings retrieval orchestration rag frameworks TL;DR: txtai is an all in one Python framework for semantic search, embeddings, LLM orchestration, and workflows. Use it for compact semantic search/RAG systems with fewer moving parts. Overview txtai combines embeddings, vector search, workflows, and LLM orchestration in a single Python first framework. Why It's in the Arsenal It is a pragmatic option when a team wants semantic search and RAG without assembling many separate packages. Key Features Embeddings and semantic search Workflow orchestration primitives LLM pipeline support Local first friendly architecture Apache 2.0 open source Arc…"
+      "body": "txtai All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows rag embeddings retrieval orchestration rag frameworks Overview An open source, all in one framework combining embeddings based semantic search, vector storage, and lightweight LLM orchestration workflows into a single, more self contained library than assembling a separate vector database and orchestration framework. Why it's in the Arsenal All in one embeddings/semantic search framework, positioned as a lighter, more self contained alternative to assembling separate vector DB plus orchestration framework stacks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want semantic search, embeddings, and li…"
     },
     {
       "id": "uiverse-design",

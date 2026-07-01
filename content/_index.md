@@ -12,7 +12,7 @@
 | [community](./community/) | 30 entries | 2026-07-01 |
 | [digests](./digests/) | 0 entries | 2026-07-01 |
 | [observability](./observability/) | 4 entries | 2026-07-01 |
-| [projects](./projects/) | 71 entries | 2026-07-01 |
+| [projects](./projects/) | 69 entries | 2026-07-01 |
 | [research](./research/) | 29 entries | 2026-07-01 |
 | [skills](./skills/) | 8 entries | 2026-07-01 |
 | [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-07-01 |
@@ -34,16 +34,16 @@
 
 ## Most Popular
 
-- [AutoGPT](./projects/agents/frameworks/autogpt.md) — ⭐ 184931
+- [AutoGPT](./projects/frameworks/autogpt.md) — ⭐ 184931
 - [Ollama](./projects/llms/inference-engines/ollama.md) — ⭐ 174059
-- [Dify](./projects/agents/frameworks/dify.md) — ⭐ 145081
-- [LangChain for RAG](./projects/rag/frameworks/langchain-rag.md) — ⭐ 139207
-- [LangChain](./projects/rag/frameworks/langchain.md) — ⭐ 139206
+- [Dify](./projects/frameworks/dify.md) — ⭐ 145081
+- [LangChain](./projects/frameworks/langchain.md) — ⭐ 139206
 - [Firecrawl](./projects/rag/document-processing/firecrawl.md) — ⭐ 132342
 - [llama.cpp](./projects/llms/inference-engines/llama-cpp.md) — ⭐ 116399
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
 - [vLLM](./projects/llms/inference-engines/vllm.md) — ⭐ 82772
 - [RAGFlow](./projects/rag/frameworks/ragflow.md) — ⭐ 82655
+- [OpenHands](./projects/frameworks/openhands.md) — ⭐ 76854
 
 ## Browse All
 
@@ -69,8 +69,8 @@
 - [Ask For Missing Inputs Before Solving](./tips-and-tricks/ask-for-missing-inputs-before-solving.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention Is All You Need](./research/papers/attention-is-all-you-need.md) — Introduced the Transformer architecture that became the foundation for modern LLMs
-- [AutoGen](./projects/agents/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
-- [AutoGPT](./projects/agents/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
+- [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
+- [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications

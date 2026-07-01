@@ -112,8 +112,8 @@ pip install fastapi llama-index qdrant-client ragas arize-phoenix langfuse
 
 ## Component Deep Dives
 
-- **LlamaIndex**: [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
-- **LangChain for RAG**: [LangChain for RAG](../../projects/rag/frameworks/langchain-rag.md)
+- **LlamaIndex**: [LlamaIndex](../../projects/frameworks/llamaindex.md)
+- **LangChain for RAG**: [LangChain for RAG](../../projects/frameworks/langchain.md)
 - **Qdrant**: [Qdrant](../../projects/rag/vector-databases/qdrant.md)
 - **pgvector**: [pgvector](../../projects/rag/vector-databases/pgvector.md)
 - **Docling**: [Docling](../../projects/rag/document-processing/docling.md)
@@ -129,8 +129,8 @@ pip install fastapi llama-index qdrant-client ragas arize-phoenix langfuse
 
 ## Resources
 
-- [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
-- [LangChain for RAG](../../projects/rag/frameworks/langchain-rag.md)
+- [LlamaIndex](../../projects/frameworks/llamaindex.md)
+- [LangChain for RAG](../../projects/frameworks/langchain.md)
 - [Qdrant](../../projects/rag/vector-databases/qdrant.md)
 - [pgvector](../../projects/rag/vector-databases/pgvector.md)
 - [Docling](../../projects/rag/document-processing/docling.md)

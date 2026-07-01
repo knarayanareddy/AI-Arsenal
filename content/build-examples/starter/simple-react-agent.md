@@ -77,7 +77,7 @@ flowchart TD
 
 ## Related Entries
 
-- Framework: [LangGraph](../../projects/agents/frameworks/langgraph.md)
+- Framework: [LangGraph](../../projects/frameworks/langgraph.md)
 - Decision tree: [Choose Agent Framework](../../architectures/decision-trees/choose-agent-framework.md)
 - Tip: [Validate tool arguments](../../tips-and-tricks/validate-tool-arguments-before-execution.md)
 - Tip: [Add max step budget](../../tips-and-tricks/add-a-max-step-budget-to-every-agent.md)

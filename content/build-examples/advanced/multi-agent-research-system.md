@@ -87,8 +87,8 @@ flowchart TD
 ## Related Entries
 
 - Stack reference: [Multi-agent system](../../architectures/reference-stacks/multi-agent-system.md)
-- Framework: [LangGraph](../../projects/agents/frameworks/langgraph.md)
-- Framework: [CrewAI](../../projects/agents/frameworks/crewai.md)
+- Framework: [LangGraph](../../projects/frameworks/langgraph.md)
+- Framework: [CrewAI](../../projects/frameworks/crewai.md)
 - Tip: [Cap retries](../../tips-and-tricks/cap-agent-tool-retries.md)
 
 ---

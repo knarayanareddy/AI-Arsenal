@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-01T10:46:08.784Z | Entries: 378 | Schema version: 1.0.0
+Generated: 2026-07-01T10:54:24.551Z | Entries: 376 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 71
+- Projects: 69
 - Tools: 92
 - Papers: 25
 - Tips: 106
@@ -54,8 +54,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
 - SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
-- LangChain for RAG (⭐139207, score:30) — LangChain components for retrieval chains, retrievers, loaders, and RAG application composition
 - Firecrawl (⭐132342, score:30) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
+- RAGFlow (⭐82655, score:30) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
 
 ### tooling
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development

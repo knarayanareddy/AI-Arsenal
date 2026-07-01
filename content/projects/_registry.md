@@ -5,48 +5,46 @@
 | ID | Name | Description |
 |---|---|---|
 | `agenta` | [Agenta](./observability/tracing/agenta.md) | Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds |
-| `autogen` | [AutoGen](./agents/frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
-| `autogpt` | [AutoGPT](./agents/frameworks/autogpt.md) | Autonomous agent platform and classic agent project for accessible AI automation |
+| `autogen` | [AutoGen](./frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
+| `autogpt` | [AutoGPT](./frameworks/autogpt.md) | Autonomous agent platform and classic agent project for accessible AI automation |
 | `braintrust` | [Braintrust](./observability/tracing/braintrust.md) | Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates |
 | `chroma` | [Chroma](./rag/vector-databases/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
 | `command-r-plus` | [Command R+](./foundation-models/command-r-plus.md) | Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows |
 | `crawl4ai` | [Crawl4AI](./rag/document-processing/crawl4ai.md) | Open-source crawler and scraper designed to produce LLM-friendly web content |
-| `crewai` | [CrewAI](./agents/frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
+| `crewai` | [CrewAI](./frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
 | `deepeval` | [DeepEval](./observability/evaluation/deepeval.md) | An open-source evaluation framework for testing LLM applications in CI |
 | `deepseek-v3-r1` | [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) | DeepSeek open-weight MoE and reasoning model family known for strong cost-performance |
-| `dify` | [Dify](./agents/frameworks/dify.md) | Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations |
+| `dify` | [Dify](./frameworks/dify.md) | Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations |
 | `docling` | [Docling](./rag/document-processing/docling.md) | IBM-origin open-source toolkit for parsing and exporting documents for generative AI |
-| `dspy` | [DSPy](./rag/frameworks/dspy.md) | A framework for programming and optimizing language model pipelines |
+| `dspy` | [DSPy](./frameworks/dspy.md) | A framework for programming and optimizing language model pipelines |
 | `falcon-3` | [Falcon 3](./foundation-models/falcon-3.md) | TII open model family with compact 1B to 10B text-only variants for local deployment |
 | `firecrawl` | [Firecrawl](./rag/document-processing/firecrawl.md) | Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data |
 | `gemma` | [Gemma](./foundation-models/gemma.md) | Google open model family designed for efficient language and multimodal applications |
 | `gemma-3` | [Gemma 3](./foundation-models/gemma-3.md) | Google open model family with efficient text and multimodal variants for local and hosted use |
-| `google-adk` | [Google ADK](./agents/frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
-| `haystack` | [Haystack](./rag/frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
-| `haystack-agents` | [Haystack](./agents/frameworks/haystack-agents.md) | Modular AI orchestration framework for RAG, agents, routing, retrieval, and generation pipelines |
+| `google-adk` | [Google ADK](./frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
+| `haystack` | [Haystack](./frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
 | `helicone` | [Helicone](./observability/tracing/helicone.md) | Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics |
 | `insforge` | [InsForge](./agents/coding-agents/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
 | `lancedb` | [LanceDB](./rag/vector-databases/lancedb.md) | Developer-friendly embedded and serverless vector database for multimodal AI retrieval |
-| `langchain` | [LangChain](./rag/frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
-| `langchain-rag` | [LangChain for RAG](./rag/frameworks/langchain-rag.md) | LangChain components for retrieval chains, retrievers, loaders, and RAG application composition |
+| `langchain` | [LangChain](./frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
 | `langfuse` | [Langfuse](./observability/tracing/langfuse.md) | Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets |
-| `langgraph` | [LangGraph](./agents/frameworks/langgraph.md) | Graph-based framework for building stateful, durable LLM agents and workflows |
+| `langgraph` | [LangGraph](./frameworks/langgraph.md) | Graph-based framework for building stateful, durable LLM agents and workflows |
 | `langsmith-platform` | [LangSmith](./observability/tracing/langsmith-platform.md) | Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback |
 | `llama-3` | [Llama 3.x](./foundation-models/llama-3.md) | Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications |
 | `llama-cpp` | [llama.cpp](./llms/inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
 | `llamafile` | [Llamafile](./llms/inference-engines/llamafile.md) | Mozilla project for distributing and running LLMs as a single executable file |
-| `llamaindex` | [LlamaIndex](./rag/frameworks/llamaindex.md) | Data framework for building document agents, retrieval pipelines, and production RAG systems |
+| `llamaindex` | [LlamaIndex](./frameworks/llamaindex.md) | Data framework for building document agents, retrieval pipelines, and production RAG systems |
 | `llamaparse` | [LlamaParse](./rag/document-processing/llamaparse.md) | Managed document parser from LlamaIndex for turning complex files into RAG-ready text |
 | `lmdeploy` | [LMDeploy](./llms/inference-engines/lmdeploy.md) | Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends |
 | `lunary` | [Lunary](./observability/tracing/lunary.md) | Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts |
-| `mastra` | [Mastra](./agents/frameworks/mastra.md) | TypeScript framework for building AI agents, workflows, evals, and application backends |
-| `metagpt` | [MetaGPT](./agents/frameworks/metagpt.md) | Multi-agent framework that simulates software-company roles for natural-language programming |
-| `microsoft-agent-framework` | [Microsoft Agent Framework](./agents/frameworks/microsoft-agent-framework.md) | Microsoft framework for Python and .NET agents, workflows, and production orchestration |
+| `mastra` | [Mastra](./frameworks/mastra.md) | TypeScript framework for building AI agents, workflows, evals, and application backends |
+| `metagpt` | [MetaGPT](./frameworks/metagpt.md) | Multi-agent framework that simulates software-company roles for natural-language programming |
+| `microsoft-agent-framework` | [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md) | Microsoft framework for Python and .NET agents, workflows, and production orchestration |
 | `milvus` | [Milvus](./rag/vector-databases/milvus.md) | Cloud-native vector database for large-scale ANN search and production vector workloads |
 | `mistral-models` | [Mistral / Mixtral](./foundation-models/mistral-models.md) | Mistral open-weight model family including dense and mixture-of-experts language models |
 | `ollama` | [Ollama](./llms/inference-engines/ollama.md) | Local runtime for downloading, running, and serving open-weight models on developer machines |
-| `openai-agents-sdk` | [OpenAI Agents SDK](./agents/frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
-| `openhands` | [OpenHands](./agents/frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
+| `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
+| `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
 | `openlit` | [OpenLIT](./observability/tracing/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |
 | `openllmetry` | [OpenLLMetry](./observability/tracing/openllmetry.md) | OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop |
 | `opik` | [Opik](./observability/tracing/opik.md) | Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards |
@@ -55,21 +53,21 @@
 | `phi-cookbook` | [Phi Cookbook](./foundation-models/phi-cookbook.md) | Microsoft examples and recipes for building with the Phi model family |
 | `phoenix` | [Phoenix](./observability/tracing/phoenix.md) | Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems |
 | `pinecone-vector-db` | [Pinecone](./rag/vector-databases/pinecone-vector-db.md) | Managed vector database service for production semantic search and RAG applications |
-| `pydantic-ai` | [Pydantic AI](./agents/frameworks/pydantic-ai.md) | A Python agent framework built around typed models and structured outputs |
+| `pydantic-ai` | [Pydantic AI](./frameworks/pydantic-ai.md) | A Python agent framework built around typed models and structured outputs |
 | `qdrant` | [Qdrant](./rag/vector-databases/qdrant.md) | Rust vector database for high-performance similarity search with filtering and hybrid search |
 | `qwen` | [Qwen](./foundation-models/qwen.md) | Alibaba open-weight model family covering language, coding, and multimodal use cases |
 | `qwen-2-5` | [Qwen 2.5 / QwQ](./foundation-models/qwen-2-5.md) | Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models |
 | `ragas` | [Ragas](./observability/evaluation/ragas.md) | An evaluation framework for measuring retrieval-augmented generation quality |
 | `ragas-rag-evaluation` | [Ragas for RAG Evaluation](./rag/frameworks/ragas-rag-evaluation.md) | Evaluation framework for measuring retrieval-augmented generation quality and regressions |
 | `ragflow` | [RAGFlow](./rag/frameworks/ragflow.md) | Open-source RAG engine combining document understanding, retrieval, and agent capabilities |
-| `semantic-kernel` | [Semantic Kernel](./agents/frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |
+| `semantic-kernel` | [Semantic Kernel](./frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |
 | `sglang` | [SGLang](./llms/inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
-| `smolagents` | [Smolagents](./agents/frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
+| `smolagents` | [Smolagents](./frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
 | `stagehand` | [Stagehand](./agents/browser-agents/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
 | `surrealdb` | [SurrealDB](./rag/vector-databases/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
 | `text-generation-inference` | [Text Generation Inference](./llms/inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
 | `translategemma` | [TranslateGemma](./foundation-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |
-| `txtai` | [txtai](./rag/frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
+| `txtai` | [txtai](./frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
 | `uiverse-design` | [Uiverse Design](./tooling/platforms/uiverse-design.md) | Open-source library of community-made CSS/Tailwind UI elements for faster front-end development |
 | `unstructured` | [Unstructured](./rag/document-processing/unstructured.md) | Open-source document ETL for converting complex files into structured data for LLM pipelines |
 | `vllm` | [vLLM](./llms/inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |

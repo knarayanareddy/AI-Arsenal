@@ -84,7 +84,7 @@ flowchart TD
 
 ## Related Entries
 
-- Framework: [LangGraph](../../projects/agents/frameworks/langgraph.md)
+- Framework: [LangGraph](../../projects/frameworks/langgraph.md)
 - Tool: [Instructor](../../tools/dx-and-tooling/instructor.md)
 - Tip: [Validate tool arguments](../../tips-and-tricks/validate-tool-arguments-before-execution.md)
 - Tip: [Separate planner and executor](../../tips-and-tricks/separate-planner-and-executor-permissions.md)

@@ -108,7 +108,7 @@ pip install gradio llama-index chromadb langfuse
 
 - **Gradio**: [Gradio](../../tools/dx-and-tooling/gradio.md)
 - **Streamlit**: [Streamlit](../../tools/dx-and-tooling/streamlit.md)
-- **LlamaIndex**: [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
+- **LlamaIndex**: [LlamaIndex](../../projects/frameworks/llamaindex.md)
 - **Chroma**: [Chroma](../../projects/rag/vector-databases/chroma.md)
 - **Ollama**: [Ollama](../../projects/llms/inference-engines/ollama.md)
 - **Railway**: [Railway](../../tools/serving-and-deployment/railway.md)
@@ -124,7 +124,7 @@ pip install gradio llama-index chromadb langfuse
 
 - [Gradio](../../tools/dx-and-tooling/gradio.md)
 - [Streamlit](../../tools/dx-and-tooling/streamlit.md)
-- [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
+- [LlamaIndex](../../projects/frameworks/llamaindex.md)
 - [Chroma](../../projects/rag/vector-databases/chroma.md)
 - [Ollama](../../projects/llms/inference-engines/ollama.md)
 - [Railway](../../tools/serving-and-deployment/railway.md)

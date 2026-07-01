@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-01T10:46:05.262Z",
+  "generated_at": "2026-07-01T10:54:21.155Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 70,
+      "count": 69,
       "types": {
         "tip": 14,
         "guide": 9,
-        "project": 22,
+        "project": 21,
         "tool": 15,
         "person": 3,
         "build-example": 3,
@@ -38,7 +38,6 @@
         "google-adk",
         "harrison-chase",
         "haystack",
-        "haystack-agents",
         "insforge",
         "kimi-k2-5",
         "langchain",
@@ -729,15 +728,14 @@
     {
       "id": "langchain",
       "label": "Langchain",
-      "count": 5,
+      "count": 4,
       "types": {
         "person": 1,
-        "project": 2,
-        "tool": 2
+        "tool": 2,
+        "project": 1
       },
       "entries": [
         "harrison-chase",
-        "langchain-rag",
         "langsmith",
         "langsmith-hub",
         "langsmith-platform"
@@ -1152,10 +1150,10 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 29,
+      "count": 27,
       "types": {
         "tool": 11,
-        "project": 16,
+        "project": 14,
         "guide": 2
       },
       "entries": [
@@ -1171,10 +1169,8 @@
         "empromptu-ai",
         "google-adk",
         "haystack",
-        "haystack-agents",
         "insforge",
         "langchain",
-        "langchain-rag",
         "langgraph",
         "manus",
         "mastra",
@@ -1253,12 +1249,12 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 72,
+      "count": 70,
       "types": {
         "tip": 17,
         "guide": 10,
         "build-example": 5,
-        "project": 26,
+        "project": 24,
         "tool": 6,
         "person": 3,
         "paper": 5
@@ -1291,14 +1287,12 @@
         "graphrag",
         "harrison-chase",
         "haystack",
-        "haystack-agents",
         "hyde",
         "jerry-liu",
         "jina-reader",
         "keep-source-page-and-section-metadata",
         "lancedb",
         "langchain",
-        "langchain-rag",
         "lean-mvp",
         "llamaindex",
         "llamaparse",
@@ -1399,13 +1393,13 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 61,
+      "count": 59,
       "types": {
         "tip": 22,
         "tool": 6,
         "build-example": 4,
         "guide": 5,
-        "project": 18,
+        "project": 16,
         "paper": 5,
         "person": 1
       },
@@ -1426,13 +1420,11 @@
         "evaluate-embedding-models-before-rechunking",
         "graphrag",
         "haystack",
-        "haystack-agents",
         "hyde",
         "jerry-liu",
         "keep-instructions-outside-retrieved-context",
         "keep-source-page-and-section-metadata",
         "lancedb",
-        "langchain-rag",
         "llamaindex",
         "log-retrieved-context",
         "measure-retrieval-recall-before-answer-quality",

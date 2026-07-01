@@ -121,8 +121,8 @@ Use a hybrid when:
 
 ## Resources
 
-- [LlamaIndex](../../projects/rag/frameworks/llamaindex.md)
-- [LangChain for RAG](../../projects/rag/frameworks/langchain-rag.md)
+- [LlamaIndex](../../projects/frameworks/llamaindex.md)
+- [LangChain for RAG](../../projects/frameworks/langchain.md)
 - [Ragas for RAG Evaluation](../../projects/rag/frameworks/ragas-rag-evaluation.md)
 - [Unsloth](../../tools/model-layer/unsloth.md)
 - [Axolotl](../../tools/model-layer/axolotl.md)

@@ -111,9 +111,9 @@ pip install langgraph langfuse instructor redis
 
 ## Component Deep Dives
 
-- **LangGraph**: [LangGraph](../../projects/agents/frameworks/langgraph.md)
-- **CrewAI**: [CrewAI](../../projects/agents/frameworks/crewai.md)
-- **MetaGPT**: [MetaGPT](../../projects/agents/frameworks/metagpt.md)
+- **LangGraph**: [LangGraph](../../projects/frameworks/langgraph.md)
+- **CrewAI**: [CrewAI](../../projects/frameworks/crewai.md)
+- **MetaGPT**: [MetaGPT](../../projects/frameworks/metagpt.md)
 - **Instructor**: [Instructor](../../tools/dx-and-tooling/instructor.md)
 - **Pydantic AI**: [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
 - **Redis**: [Redis](../../tools/orchestration/redis-memory.md)
@@ -128,9 +128,9 @@ pip install langgraph langfuse instructor redis
 
 ## Resources
 
-- [LangGraph](../../projects/agents/frameworks/langgraph.md)
-- [CrewAI](../../projects/agents/frameworks/crewai.md)
-- [MetaGPT](../../projects/agents/frameworks/metagpt.md)
+- [LangGraph](../../projects/frameworks/langgraph.md)
+- [CrewAI](../../projects/frameworks/crewai.md)
+- [MetaGPT](../../projects/frameworks/metagpt.md)
 - [Instructor](../../tools/dx-and-tooling/instructor.md)
 - [Pydantic AI](../../tools/orchestration/pydantic-ai-tool.md)
 - [Redis](../../tools/orchestration/redis-memory.md)

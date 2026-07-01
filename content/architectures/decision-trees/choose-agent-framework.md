@@ -68,16 +68,16 @@ Plain-language tree:
 
 | Need | Recommended Start | Canonical Entry |
 |---|---|---|
-| Explicit state graph | LangGraph | [LangGraph](../../projects/agents/frameworks/langgraph.md) |
-| Role/task crews | CrewAI | [CrewAI](../../projects/agents/frameworks/crewai.md) |
-| Microsoft/Azure enterprise | Microsoft Agent Framework | [Microsoft Agent Framework](../../projects/agents/frameworks/microsoft-agent-framework.md) |
-| Legacy Microsoft multi-agent apps | AutoGen → migrate | [AutoGen](../../projects/agents/frameworks/autogen.md) |
-| OpenAI-native | OpenAI Agents SDK | [OpenAI Agents SDK](../../projects/agents/frameworks/openai-agents-sdk.md) |
-| Google/Gemini-native | Google ADK | [Google ADK](../../projects/agents/frameworks/google-adk.md) |
-| Hugging Face/open-model code agents | Smolagents | [Smolagents](../../projects/agents/frameworks/smolagents.md) |
-| Visual workflows | Dify | [Dify](../../projects/agents/frameworks/dify.md) |
-| TypeScript app framework | Mastra | [Mastra](../../projects/agents/frameworks/mastra.md) |
-| Coding environment agent | OpenHands | [OpenHands](../../projects/agents/frameworks/openhands.md) |
+| Explicit state graph | LangGraph | [LangGraph](../../projects/frameworks/langgraph.md) |
+| Role/task crews | CrewAI | [CrewAI](../../projects/frameworks/crewai.md) |
+| Microsoft/Azure enterprise | Microsoft Agent Framework | [Microsoft Agent Framework](../../projects/frameworks/microsoft-agent-framework.md) |
+| Legacy Microsoft multi-agent apps | AutoGen → migrate | [AutoGen](../../projects/frameworks/autogen.md) |
+| OpenAI-native | OpenAI Agents SDK | [OpenAI Agents SDK](../../projects/frameworks/openai-agents-sdk.md) |
+| Google/Gemini-native | Google ADK | [Google ADK](../../projects/frameworks/google-adk.md) |
+| Hugging Face/open-model code agents | Smolagents | [Smolagents](../../projects/frameworks/smolagents.md) |
+| Visual workflows | Dify | [Dify](../../projects/frameworks/dify.md) |
+| TypeScript app framework | Mastra | [Mastra](../../projects/frameworks/mastra.md) |
+| Coding environment agent | OpenHands | [OpenHands](../../projects/frameworks/openhands.md) |
 
 ## Getting Started
 
@@ -116,12 +116,12 @@ pip install crewai
 
 ## Resources
 
-- [LangGraph](../../projects/agents/frameworks/langgraph.md)
-- [CrewAI](../../projects/agents/frameworks/crewai.md)
-- [Microsoft Agent Framework](../../projects/agents/frameworks/microsoft-agent-framework.md)
-- [OpenAI Agents SDK](../../projects/agents/frameworks/openai-agents-sdk.md)
-- [Google ADK](../../projects/agents/frameworks/google-adk.md)
-- [Dify](../../projects/agents/frameworks/dify.md)
+- [LangGraph](../../projects/frameworks/langgraph.md)
+- [CrewAI](../../projects/frameworks/crewai.md)
+- [Microsoft Agent Framework](../../projects/frameworks/microsoft-agent-framework.md)
+- [OpenAI Agents SDK](../../projects/frameworks/openai-agents-sdk.md)
+- [Google ADK](../../projects/frameworks/google-adk.md)
+- [Dify](../../projects/frameworks/dify.md)
 
 ## Buzz & Reception
 
