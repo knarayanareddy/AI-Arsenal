@@ -33,7 +33,7 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 
 ### Month 2: Transformer Foundations
 
-- Read [Attention Is All You Need](../../research/papers/attention-is-all-you-need.md), BERT, GPT-3, and LLaMA 3 reports.
+- Read [Attention Is All You Need](../../research/foundational/vaswani-2017-attention.md), [BERT](../../research/foundational/devlin-2018-bert.md), [GPT-3](../../research/foundational/brown-2020-gpt3.md), and [LLaMA 3](../../research/foundational/dubey-2024-llama3.md) reports.
 - Watch Karpathy's transformer/GPT materials.
 
 ### Month 3: Training and Post-Training

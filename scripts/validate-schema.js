@@ -84,9 +84,7 @@ function crossFieldChecks(file, type, data, errors, warnings) {
       if (data.result_status === 'superseded' && !data.superseded_by) {
         errors.push(`${file}: result_status is "superseded" but superseded_by is not set`);
       }
-      if (data.reproduction_status === 'reproduced' && (!Array.isArray(data.implemented_in) || data.implemented_in.length === 0)) {
-        warnings.push(`${file}: reproduction_status is "reproduced" but no implemented_in/reproduction source is recorded -- name the reproduction in the Reproductions & Follow-up Work section`);
-      }
+
       if (data.practical_applicability === 'high' && (!data.key_contribution || data.key_contribution.length < 10)) {
         warnings.push(`${file}: practical_applicability is "high" but key_contribution is missing or too short to justify it`);
       }

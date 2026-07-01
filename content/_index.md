@@ -68,7 +68,6 @@
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Ask For Missing Inputs Before Solving](./tips-and-tricks/ask-for-missing-inputs-before-solving.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
-- [Attention Is All You Need](./research/papers/attention-is-all-you-need.md) — Introduced the Transformer architecture that became the foundation for modern LLMs
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
@@ -80,8 +79,8 @@
 - [Benchmark with Production-Shaped Inputs](./tips-and-tricks/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark With Real Context Lengths](./tips-and-tricks/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./research/papers/bert.md) — Introduced bidirectional masked-language-model pretraining for language understanding
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
+- [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - [Budget Context Before Adding Tools](./tips-and-tricks/budget-context-before-adding-tools.md) — 
 - [Cache Embeddings By Content Hash](./tips-and-tricks/cache-embeddings-by-content-hash.md) — 
 - [Cache Stable Embedding Calls](./tips-and-tricks/cache-stable-embedding-calls.md) — 
@@ -97,3 +96,4 @@
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
 - [Choose INT4 Only After Quality Tests](./tips-and-tricks/choose-int4-only-after-quality-tests.md) — 
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
+- [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems

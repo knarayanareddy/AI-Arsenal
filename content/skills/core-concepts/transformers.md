@@ -81,7 +81,7 @@ A transformer converts token sequences into contextual representations using att
 
 ## Resources
 
-- [Attention Is All You Need](../../research/papers/attention-is-all-you-need.md)
+- [Attention Is All You Need](../../research/foundational/vaswani-2017-attention.md)
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
 - [Andrej Karpathy YouTube](https://www.youtube.com/@AndrejKarpathy)
 - [Hugging Face Transformers course](https://huggingface.co/learn/nlp-course)

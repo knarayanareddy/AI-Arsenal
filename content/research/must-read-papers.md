@@ -33,10 +33,10 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ### Foundational Architecture
 
-- [Attention Is All You Need](papers/attention-is-all-you-need.md) — 2017 — Transformer architecture
-- [BERT](papers/bert.md) — 2018 — bidirectional pretraining
-- [GPT-3](papers/language-models-are-few-shot-learners.md) — 2020 — few-shot scaling
-- [LLaMA 3 Herd](papers/llama-3-herd-of-models.md) — 2024 — open foundation model recipe
+- [Attention Is All You Need](foundational/vaswani-2017-attention.md) — 2017 — Transformer architecture
+- [BERT](foundational/devlin-2018-bert.md) — 2018 — bidirectional pretraining
+- [GPT-3](foundational/brown-2020-gpt3.md) — 2020 — few-shot scaling
+- [LLaMA 3 Herd](foundational/dubey-2024-llama3.md) — 2024 — open foundation model recipe
 
 ### Instruction Tuning & RLHF
 
@@ -46,7 +46,7 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ### RAG
 
-- [Retrieval-Augmented Generation](papers/retrieval-augmented-generation.md) — 2020 — retrieval plus generation
+- [Retrieval-Augmented Generation](foundational/lewis-2020-rag.md) — 2020 — retrieval plus generation
 - [HyDE](papers/hyde.md) — 2022 — hypothetical-document retrieval
 - [RAPTOR](papers/raptor.md) — 2024 — recursive retrieval summaries
 - [GraphRAG](papers/graphrag.md) — 2024 — graph/community retrieval

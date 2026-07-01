@@ -35,12 +35,30 @@ export async function getEntryFiles(files = null) {
   return allFiles.filter((file) => file.startsWith('content/') && !isNavigationFile(file));
 }
 
+const RESEARCH_PHASE_FOLDERS = new Set([
+  'foundational',
+  'architectures',
+  'training-and-alignment',
+  'inference-and-efficiency',
+  'retrieval-and-memory',
+  'agents-and-reasoning',
+  'evaluation-and-safety',
+  'surveys'
+]);
+
 export function inferEntryType(filePath, data = {}) {
   const p = normalizePath(filePath);
   if (data.entry_type) return data.entry_type;
   if (p.startsWith('content/projects/')) return 'project';
   if (p.startsWith('content/tools/')) return 'tool';
   if (p.startsWith('content/research/papers/')) return 'paper';
+  // Research-vertical reorganisation: migrated research entries live flat
+  // under content/research/{phase}/{id}.md instead of content/research/papers/.
+  // Still typed as 'paper' -- research.schema.json/paper.schema.json dispatch
+  // happens downstream in validate-schema.js based on `phase` presence, the
+  // same way validate-structure.js already dispatches project body structure.
+  const parts = p.split('/');
+  if (parts[0] === 'content' && parts[1] === 'research' && RESEARCH_PHASE_FOLDERS.has(parts[2])) return 'paper';
   if (p.startsWith('content/tips-and-tricks/')) return 'tip';
   if (p.startsWith('content/build-examples/')) return 'build-example';
   if (p.startsWith('content/digests/')) return 'digest';
