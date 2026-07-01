@@ -31,6 +31,13 @@ content/tools/orchestration/_index.md                -linguist-generated
 content/tools/serving-and-deployment/_index.md       -linguist-generated
 content/tools/evaluation-and-observability/_index.md -linguist-generated
 content/tools/dx-and-tooling/_index.md               -linguist-generated
+content/projects/foundation-models/_index.md         -linguist-generated
+content/projects/frameworks/_index.md                -linguist-generated
+content/projects/inference-engines/_index.md         -linguist-generated
+content/projects/agent-systems/_index.md             -linguist-generated
+content/projects/data-and-retrieval/_index.md        -linguist-generated
+content/projects/training-and-alignment/_index.md    -linguist-generated
+content/projects/benchmarks-and-evals/_index.md      -linguist-generated
 
 # Lockfile is always LF and treated as a single entity.
 pnpm-lock.yaml  text eol=lf
