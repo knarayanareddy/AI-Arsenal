@@ -53,10 +53,10 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ### Agents & Tool Use
 
-- [Chain-of-Thought](papers/chain-of-thought-prompting.md) — 2022 — reasoning traces
-- [ReAct](papers/react.md) — 2022 — reasoning plus actions
-- [Toolformer](papers/toolformer.md) — 2023 — self-supervised tool use
-- [Tree of Thoughts](papers/tree-of-thoughts.md) — 2023 — search over reasoning paths
+- [Chain-of-Thought](agents-and-reasoning/wei-2022-chain-of-thought.md) — 2022 — reasoning traces
+- [ReAct](agents-and-reasoning/yao-2022-react.md) — 2022 — reasoning plus actions
+- [Toolformer](agents-and-reasoning/schick-2023-toolformer.md) — 2023 — self-supervised tool use
+- [Tree of Thoughts](agents-and-reasoning/yao-2023-tree-of-thoughts.md) — 2023 — search over reasoning paths
 
 ### Efficient Inference and Fine-Tuning
 

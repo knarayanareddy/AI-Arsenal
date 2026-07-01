@@ -87,7 +87,6 @@
 - [Cache Stable Embedding Calls](./tips-and-tricks/cache-stable-embedding-calls.md) — 
 - [Cache Stable System Prompts](./tips-and-tricks/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries](./tips-and-tricks/cap-agent-tool-retries.md) — 
-- [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./research/papers/chain-of-thought-prompting.md) — Showed that prompting models to produce intermediate reasoning improves multi-step reasoning tasks
 - [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Checkpoint Agent State After Each Tool Call](./tips-and-tricks/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
@@ -97,3 +96,4 @@
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
 - [Choose INT4 Only After Quality Tests](./tips-and-tricks/choose-int4-only-after-quality-tests.md) — 
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
+- [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems
