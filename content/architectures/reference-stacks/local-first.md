@@ -111,9 +111,9 @@ pip install llama-index chromadb gradio
 
 - **Ollama**: [Ollama](../../projects/llms/inference-engines/ollama.md)
 - **llama.cpp**: [llama.cpp](../../projects/llms/inference-engines/llama-cpp.md)
-- **Llama 3.x**: [Llama 3.x](../../projects/llms/open-source-models/llama-3.md)
-- **Qwen 2.5 / QwQ**: [Qwen 2.5 / QwQ](../../projects/llms/open-source-models/qwen-2-5.md)
-- **Gemma 3**: [Gemma 3](../../projects/llms/open-source-models/gemma-3.md)
+- **Llama 3.x**: [Llama 3.x](../../projects/foundation-models/llama-3.md)
+- **Qwen 2.5 / QwQ**: [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
+- **Gemma 3**: [Gemma 3](../../projects/foundation-models/gemma-3.md)
 - **Chroma**: [Chroma](../../projects/rag/vector-databases/chroma.md)
 - **LanceDB**: [LanceDB](../../projects/rag/vector-databases/lancedb.md)
 
@@ -128,9 +128,9 @@ pip install llama-index chromadb gradio
 
 - [Ollama](../../projects/llms/inference-engines/ollama.md)
 - [llama.cpp](../../projects/llms/inference-engines/llama-cpp.md)
-- [Llama 3.x](../../projects/llms/open-source-models/llama-3.md)
-- [Qwen 2.5 / QwQ](../../projects/llms/open-source-models/qwen-2-5.md)
-- [Gemma 3](../../projects/llms/open-source-models/gemma-3.md)
+- [Llama 3.x](../../projects/foundation-models/llama-3.md)
+- [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
+- [Gemma 3](../../projects/foundation-models/gemma-3.md)
 - [Chroma](../../projects/rag/vector-databases/chroma.md)
 - [LanceDB](../../projects/rag/vector-databases/lancedb.md)
 

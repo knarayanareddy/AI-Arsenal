@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-01T10:35:46.021Z",
+  "generated_at": "2026-07-01T10:46:07.474Z",
   "config": {
     "document": {
       "id": "id",
@@ -43,7 +43,7 @@
   },
   "facets": {
     "types": {
-      "project": 73,
+      "project": 71,
       "tool": 92,
       "paper": 25,
       "tip": 106,
@@ -63,26 +63,24 @@
       "rag": 72,
       "embeddings": 29,
       "retrieval": 61,
-      "local": 28,
-      "llm": 153,
+      "local": 26,
+      "llm": 151,
       "multimodal": 12,
       "data": 45,
       "monitoring": 41,
       "reasoning": 22,
-      "inference": 56,
+      "inference": 54,
       "efficiency": 7,
       "graphs": 4,
       "self-hosted": 18,
       "langchain": 5,
       "stateful": 2,
       "quantization": 4,
-      "community-favorite": 1,
       "edge": 2,
       "llamaindex": 3,
       "memory": 17,
       "code-gen": 5,
       "kubernetes": 2,
-      "battle-tested": 1,
       "guardrails": 16,
       "structured-output": 29,
       "batching": 12,
@@ -113,7 +111,7 @@
       "observability": 16,
       "agents": 21,
       "rag": 25,
-      "llms": 22,
+      "llms": 20,
       "tooling": 1,
       "architecture": 1,
       "training": 9,
@@ -140,22 +138,23 @@
       "trending": 2
     },
     "maturity": {
-      "production": 143,
+      "production": 141,
       "beta": 22
     },
     "cost_model": {
       "freemium": 47,
-      "open-source": 99,
+      "open-source": 97,
       "paid": 10,
       "usage-based": 9
     },
     "status": {
-      "active": 244,
+      "active": 243,
       "deprecated": 1,
-      "archived": 3,
+      "archived": 2,
       "watching": 1
     },
     "phase": {
+      "foundation-model": 13,
       "data-ingestion": 13,
       "orchestration": 15,
       "evaluation-and-observability": 17,
@@ -1693,14 +1692,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/command-r-plus.md",
-      "url": "content/projects/llms/open-source-models/command-r-plus",
+      "path": "content/projects/foundation-models/command-r-plus.md",
+      "url": "content/projects/foundation-models/command-r-plus",
       "boost_title": "Command R+",
       "boost_tags": "llm rag tool-use multimodal",
       "boost_description": "Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows",
-      "body": "Command R+ Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows llm rag tool-use multimodal llms open-source-models Overview TL;DR: Command R+ is Cohere’s open weight enterprise oriented model focused on RAG, tool use, and multilingual workflows. Use it when retrieval and enterprise assistant behavior matter. Family / sizes: 104B Best fit: enterprise RAG, tool use, multilingual assistants Primary source: Cohere model card Why It's in the Arsenal Command R+ is relevant because it was explicitly positioned for retrieval grounded enterprise assistant workloads rather than only general chat. Key Features RAG oriented model positioning Tool use and enterprise assistant focus Multilingual support emphasis Availa…"
+      "body": "Command R+ Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows llm rag tool-use multimodal llms open-source-models Overview A 104 billion parameter dense transformer chat model from Cohere, released in 2024 and explicitly optimized for retrieval augmented generation with inline citations, multi step tool use, and multilingual enterprise workloads across 10 languages. Why it's in the Arsenal Enterprise RAG and tool use optimized chat model, positioned as Cohere's mid tier open weight offering. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need an open weight model specifically tuned for RAG with citation grounding and multi step tool use. See Strengths / Limi…"
     },
     {
       "id": "compress-retrieved-context-before-generation",
@@ -2026,14 +2025,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/deepseek-v3-r1.md",
-      "url": "content/projects/llms/open-source-models/deepseek-v3-r1",
+      "path": "content/projects/foundation-models/deepseek-v3-r1.md",
+      "url": "content/projects/foundation-models/deepseek-v3-r1",
       "boost_title": "DeepSeek-V3 / R1",
       "boost_tags": "llm reasoning inference efficiency",
       "boost_description": "DeepSeek open-weight MoE and reasoning model family known for strong cost-performance",
-      "body": "DeepSeek-V3 / R1 DeepSeek open-weight MoE and reasoning model family known for strong cost-performance llm reasoning inference efficiency llms open-source-models Overview TL;DR: DeepSeek V3 and R1 are open weight DeepSeek models associated with strong cost performance and reasoning impact. Use them when evaluating open reasoning models or MoE serving tradeoffs. Family / sizes: 671B MoE, 1.5B distilled, 7B distilled, 8B distilled, 14B distilled, 32B distilled, 70B distilled Best fit: reasoning model evaluation, MoE serving experiments, distilled reasoning variants Primary source: DeepSeek GitHub Why It's in the Arsenal DeepSeek changed open model expectations around reasoning and cost performance, making it a required reference family for model selecti…"
+      "body": "DeepSeek-V3 / R1 DeepSeek open-weight MoE and reasoning model family known for strong cost-performance llm reasoning inference efficiency llms open-source-models Overview An open weight Mixture of Experts language model family from DeepSeek AI: V3 is the general purpose base/chat model, and R1 is a reasoning focused variant post trained on top of it, both released under the MIT license. Why it's in the Arsenal Open weight frontier class reasoning and general purpose model family, MIT licensed. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need frontier class reasoning performance (R1) or general chat/coding performance (V3) in an MIT licensed, self hostable model. See Strengths / Limitations below before…"
     },
     {
       "id": "define-fallbacks-for-tool-failures",
@@ -2632,14 +2631,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/falcon-3.md",
-      "url": "content/projects/llms/open-source-models/falcon-3",
+      "path": "content/projects/foundation-models/falcon-3.md",
+      "url": "content/projects/foundation-models/falcon-3",
       "boost_title": "Falcon 3",
       "boost_tags": "llm inference local efficiency",
       "boost_description": "TII open model family with compact 1B to 10B text-only variants for local deployment",
-      "body": "Falcon 3 TII open model family with compact 1B to 10B text-only variants for local deployment llm inference local efficiency llms open-source-models Overview TL;DR: Falcon 3 is TII’s compact text only open model family from 1B to 10B. Use it when evaluating small local models with multilingual support and 32K context in larger variants. Family / sizes: 1B, 3B, 7B, 10B Best fit: small local models, laptop deployment, multilingual lightweight inference Primary source: Falcon 3 model card Why It's in the Arsenal Falcon 3 is relevant for local first AI because it targets compact model sizes and practical deployment through common local runtimes. Key Features 1B to 10B text only variants Base and instruct releases Falcon LLM License 2.0 model…"
+      "body": "Falcon 3 TII open model family with compact 1B to 10B text-only variants for local deployment llm inference local efficiency llms open-source-models Overview An open weight small to mid size language model family from the Technology Innovation Institute (TII) in the UAE, offered in several parameter sizes for local and edge deployment. Why it's in the Arsenal UAE backed (TII) open weight small/mid size model family. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want an open weight model backed by a national research institute (TII, UAE) as an alternative to the US/China dominated open weight landscape. See Strengths / Limitations below before adopting it. Architecture A dense decoder only tr…"
     },
     {
       "id": "fastapi",
@@ -2868,14 +2867,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/gemma.md",
-      "url": "content/projects/llms/open-source-models/gemma",
+      "path": "content/projects/foundation-models/gemma.md",
+      "url": "content/projects/foundation-models/gemma",
       "boost_title": "Gemma",
       "boost_tags": "llm inference multimodal local",
       "boost_description": "Google open model family designed for efficient language and multimodal applications",
-      "body": "Gemma Google open model family designed for efficient language and multimodal applications llm inference multimodal local llms open-source-models Overview Gemma is included as a notable llms project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for curated comp…"
+      "body": "Gemma Google open model family designed for efficient language and multimodal applications llm inference multimodal local llms open-source-models Overview The first generation of Google DeepMind's open weight small language model family, released in 2024 as a lighter weight, locally deployable counterpart to Gemini. Why it's in the Arsenal Google DeepMind's first generation open weight small model family (Gemma 1/2). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Gemma 1/2 generation for compatibility with existing pipelines or comparative research. See Strengths / Limitations below before adopting it. Architecture A dense decoder only transformer built from…"
     },
     {
       "id": "gemma-3",
@@ -2894,14 +2893,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/gemma-3.md",
-      "url": "content/projects/llms/open-source-models/gemma-3",
+      "path": "content/projects/foundation-models/gemma-3.md",
+      "url": "content/projects/foundation-models/gemma-3",
       "boost_title": "Gemma 3",
       "boost_tags": "llm inference multimodal local",
       "boost_description": "Google open model family with efficient text and multimodal variants for local and hosted use",
-      "body": "Gemma 3 Google open model family with efficient text and multimodal variants for local and hosted use llm inference multimodal local llms open-source-models Overview TL;DR: Gemma 3 is Google’s open model family for efficient text and multimodal applications. Use it when you want Google supported open weights with small to mid size deployment options. Family / sizes: 1B, 4B, 12B, 27B Best fit: local friendly Google open models, multimodal experiments, educational usage Primary source: Gemma docs Why It's in the Arsenal Gemma is a major open weight family and is often considered alongside Llama, Qwen, Mistral, and Phi for local or self hosted systems. Key Features Small to mid size open model ladder Text and multimodal variants Google tooling and d…"
+      "body": "Gemma 3 Google open model family with efficient text and multimodal variants for local and hosted use llm inference multimodal local llms open-source-models Overview Google DeepMind's third generation open weight model family, released in 2025, adding multimodal (text+image) input and a long 128K token context window across model sizes from 1B to 27B parameters. Why it's in the Arsenal Google DeepMind's third generation open weight model family with efficient long context multimodal support. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a 128K context multimodal (text+image) open weight model that runs efficiently on constrained hardware, thanks to its interleaved local/global attention design.…"
     },
     {
       "id": "giskard",
@@ -4251,14 +4250,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/llama-3.md",
-      "url": "content/projects/llms/open-source-models/llama-3",
+      "path": "content/projects/foundation-models/llama-3.md",
+      "url": "content/projects/foundation-models/llama-3",
       "boost_title": "Llama 3.x",
       "boost_tags": "llm inference local multimodal",
       "boost_description": "Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications",
-      "body": "Llama 3.x Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications llm inference local multimodal llms open-source-models Overview TL;DR: Llama 3.x is Meta’s widely used open weight model family across small, large, and multimodal variants. Use it when you need broad ecosystem support and many deployment options. Family / sizes: 1B, 3B, 8B, 11B, 70B, 90B, 405B Best fit: general open weight deployments, local inference, fine tuning, and ecosystem compatibility Primary source: Llama official site Why It's in the Arsenal Llama is a default reference point for open weight model selection, tooling support, quantization, fine tuning, and local deployment. Key Features Broad size range from small local models to very l…"
+      "body": "Llama 3.x Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications llm inference local multimodal llms open-source-models Overview Meta's third generation open weight language model family, spanning 1B to 405B parameters with instruction tuned, multilingual, and multimodal (vision) variants, released across 2024 2025. Why it's in the Arsenal Meta's open weight model family with the broadest inference/tooling ecosystem support of any open model line. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the broadest possible ecosystem compatibility — Llama models have the deepest support across inference engines (vLLM, SGLang, TGI, Ollama, llama.cpp), quantization tool…"
     },
     {
       "id": "llama-3-herd-of-models",
@@ -4310,32 +4309,6 @@
       "boost_tags": "llm inference quantization local",
       "boost_description": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
       "body": "llama.cpp C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices llm inference quantization local llms inference-engines Overview TL;DR: llama.cpp is the core local inference engine for GGUF quantized models across CPU, GPU, and edge environments. Use it when portability and local deployment matter. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal llama.cpp underpins much of the local LLM ecosystem and is the reference path for GGUF quantized inference. Key Features C/C++ portable runtime GGUF model format support CPU and GPU acceleration paths Server mode with OpenAI compatible API options Foundation for many local LLM wrappers Strong quantization ecosystem Architecture…"
-    },
-    {
-      "id": "llama-models",
-      "type": "project",
-      "name": "Llama Models",
-      "title": "Llama Models",
-      "description": "Meta open-weight model family widely used for local and production AI systems",
-      "tags": [
-        "llm",
-        "inference",
-        "local",
-        "community-favorite"
-      ],
-      "category": "llms",
-      "subcategory": "open-source-models",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "active",
-      "phase": null,
-      "audience": null,
-      "path": "content/projects/llms/open-source-models/llama-models.md",
-      "url": "content/projects/llms/open-source-models/llama-models",
-      "boost_title": "Llama Models",
-      "boost_tags": "llm inference local community-favorite",
-      "boost_description": "Meta open-weight model family widely used for local and production AI systems",
-      "body": "Llama Models Meta open-weight model family widely used for local and production AI systems llm inference local community-favorite llms open-source-models Overview Llama Models is included as a notable llms project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for curat…"
     },
     {
       "id": "llamafactory",
@@ -5161,32 +5134,6 @@
       "body": "Milvus Cloud-native vector database for large-scale ANN search and production vector workloads rag embeddings retrieval kubernetes rag vector-databases TL;DR: Milvus is a cloud native vector database built for scalable ANN search. Use it when large scale vector search and distributed operations are central. Overview Milvus is one of the longest running purpose built vector databases and is often considered for high scale vector search infrastructure. Why It's in the Arsenal Milvus is a key option when vector volume, distributed operations, and cloud native deployment matter more than prototype simplicity. Key Features Distributed vector database architecture High scale ANN search Cloud native deployment options Apache 2.0 open source Ecosyst…"
     },
     {
-      "id": "mistral-inference",
-      "type": "project",
-      "name": "Mistral Inference",
-      "title": "Mistral Inference",
-      "description": "Reference inference code and assets for Mistral open-weight models",
-      "tags": [
-        "llm",
-        "inference",
-        "local",
-        "battle-tested"
-      ],
-      "category": "llms",
-      "subcategory": "open-source-models",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "archived",
-      "phase": null,
-      "audience": null,
-      "path": "content/projects/llms/open-source-models/mistral-inference.md",
-      "url": "content/projects/llms/open-source-models/mistral-inference",
-      "boost_title": "Mistral Inference",
-      "boost_tags": "llm inference local battle-tested",
-      "boost_description": "Reference inference code and assets for Mistral open-weight models",
-      "body": "Mistral Inference Reference inference code and assets for Mistral open-weight models llm inference local battle-tested llms open-source-models Overview Mistral Inference is included as a notable llms project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for…"
-    },
-    {
       "id": "mistral-models",
       "type": "project",
       "name": "Mistral / Mixtral",
@@ -5203,14 +5150,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "archived",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/mistral-models.md",
-      "url": "content/projects/llms/open-source-models/mistral-models",
+      "path": "content/projects/foundation-models/mistral-models.md",
+      "url": "content/projects/foundation-models/mistral-models",
       "boost_title": "Mistral / Mixtral",
       "boost_tags": "llm inference local efficiency",
       "boost_description": "Mistral open-weight model family including dense and mixture-of-experts language models",
-      "body": "Mistral / Mixtral Mistral open-weight model family including dense and mixture-of-experts language models llm inference local efficiency llms open-source-models Overview TL;DR: Mistral and Mixtral are influential open weight dense and MoE model families. Use them when you want efficient open models with strong inference ecosystem support. Family / sizes: 7B, 8x7B, 8x22B, 24B Best fit: efficient open weight inference, MoE experimentation, European model vendor options Primary source: Mistral docs Why It's in the Arsenal Mistral models are common baselines for efficient open weight deployments and helped popularize high quality MoE open models. Key Features Dense and mixture of experts model families Strong support in inference engines and hosted provi…"
+      "body": "Mistral / Mixtral Mistral open-weight model family including dense and mixture-of-experts language models llm inference local efficiency llms open-source-models Overview Mistral AI's open weight model family, including the original dense Mistral 7B and the influential sparse Mixture of Experts Mixtral 8x7B and 8x22B models, released 2023 2024 under Apache 2.0. Why it's in the Arsenal Mistral AI's open weight model family, notable for early and influential sparse Mixture of Experts (Mixtral) releases. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want influential, efficient open weight dense (7B) or MoE (8x7B/8x22B Mixtral) models with strong performance per parameter and a European vendor's terms. See S…"
     },
     {
       "id": "ml-engineer",
@@ -6033,14 +5980,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/phi-4.md",
-      "url": "content/projects/llms/open-source-models/phi-4",
+      "path": "content/projects/foundation-models/phi-4.md",
+      "url": "content/projects/foundation-models/phi-4",
       "boost_title": "Phi-4",
       "boost_tags": "llm reasoning local efficiency",
       "boost_description": "Microsoft small language model family optimized for efficient reasoning and local-friendly deployment",
-      "body": "Phi-4 Microsoft small language model family optimized for efficient reasoning and local-friendly deployment llm reasoning local efficiency llms open-source-models Overview TL;DR: Phi 4 is Microsoft’s compact open model focused on efficient reasoning for smaller deployments. Use it when you want a smaller model before escalating to larger open weights. Family / sizes: 14B Best fit: small model reasoning, local experiments, cost sensitive inference Primary source: Phi 4 model card Why It's in the Arsenal Phi models are important because they push small model quality and are useful in routing architectures where not every request needs a large model. Key Features Compact parameter count relative to large open models Reasoning oriented training focus Usefu…"
+      "body": "Phi-4 Microsoft small language model family optimized for efficient reasoning and local-friendly deployment llm reasoning local efficiency llms open-source-models Overview A 14 billion parameter dense language model from Microsoft Research, released in December 2024, distinguished by a training approach that emphasizes large scale synthetic data generation over raw dataset scale to maximize reasoning performance per parameter. Why it's in the Arsenal Microsoft's synthetic data centric small language model, optimized for reasoning per parameter rather than raw scale. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a small (14B) dense model that competes with much larger models on reasoning/knowledge ben…"
     },
     {
       "id": "phi-cookbook",
@@ -6059,14 +6006,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/phi-cookbook.md",
-      "url": "content/projects/llms/open-source-models/phi-cookbook",
+      "path": "content/projects/foundation-models/phi-cookbook.md",
+      "url": "content/projects/foundation-models/phi-cookbook",
       "boost_title": "Phi Cookbook",
       "boost_tags": "llm inference local reasoning",
       "boost_description": "Microsoft examples and recipes for building with the Phi model family",
-      "body": "Phi Cookbook Microsoft examples and recipes for building with the Phi model family llm inference local reasoning llms open-source-models Overview Phi Cookbook is included as a notable llms project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for curat…"
+      "body": "Phi Cookbook Microsoft examples and recipes for building with the Phi model family llm inference local reasoning llms open-source-models Overview Microsoft's official collection of samples, tutorials, and deployment recipes for building applications with the Phi model family, maintained alongside the model releases themselves. Why it's in the Arsenal Microsoft's official companion resource of samples and guides for building with the Phi model family. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building an application on Phi 4 or other Phi models and want Microsoft's own reference implementations, fine tuning recipes, and deployment samples rather than reverse engineering usa…"
     },
     {
       "id": "phoenix",
@@ -6855,14 +6802,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/qwen.md",
-      "url": "content/projects/llms/open-source-models/qwen",
+      "path": "content/projects/foundation-models/qwen.md",
+      "url": "content/projects/foundation-models/qwen",
       "boost_title": "Qwen",
       "boost_tags": "llm inference multimodal code-gen",
       "boost_description": "Alibaba open-weight model family covering language, coding, and multimodal use cases",
-      "body": "Qwen Alibaba open-weight model family covering language, coding, and multimodal use cases llm inference multimodal code-gen llms open-source-models Overview Qwen is included as a notable llms project because it addresses a recurring AI engineering need with a visible open source implementation and ecosystem adoption. Why It's in the Arsenal It represents a useful reference point for engineers comparing options in the llms category. The structured metadata above makes it filterable by maturity, cost, tags, and integration role. Key Features Addresses a concrete AI engineering workflow rather than a generic software problem Provides a public repository that can be inspected, forked, or studied Fits the repository taxonomy for curated compa…"
+      "body": "Qwen Alibaba open-weight model family covering language, coding, and multimodal use cases llm inference multimodal code-gen llms open-source-models Overview Alibaba Cloud's original open weight large language model family, first released in 2023, predating the more widely adopted Qwen 2.5 and Qwen3 generations. Why it's in the Arsenal Alibaba's original open weight Qwen model family (Qwen 1/2 generation). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Qwen/Qwen2 generation for compatibility with an existing pipeline or as a comparative research baseline. See Strengths / Limitations below before adopting it. Architecture A dense decoder only transformer family r…"
     },
     {
       "id": "qwen-2-5",
@@ -6881,14 +6828,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/qwen-2-5.md",
-      "url": "content/projects/llms/open-source-models/qwen-2-5",
+      "path": "content/projects/foundation-models/qwen-2-5.md",
+      "url": "content/projects/foundation-models/qwen-2-5",
       "boost_title": "Qwen 2.5 / QwQ",
       "boost_tags": "llm inference reasoning code-gen",
       "boost_description": "Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models",
-      "body": "Qwen 2.5 / QwQ Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models llm inference reasoning code-gen llms open-source-models Overview TL;DR: Qwen 2.5 and QwQ are Alibaba open weight models with strong coverage across chat, coding, math, and reasoning. Use them when multilingual or coding/reasoning performance matters. Family / sizes: 0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B Best fit: coding, math, multilingual, and reasoning oriented open model deployments Primary source: Qwen documentation Why It's in the Arsenal Qwen is one of the most practically useful open model families because it spans many sizes and task specialized variants. Key Features Wide range of parameter sizes Coding and math specialized variants Reasoning…"
+      "body": "Qwen 2.5 / QwQ Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models llm inference reasoning code-gen llms open-source-models Overview Alibaba Cloud's open weight model generation released in 2024, spanning general purpose, coding specialized (Qwen2.5 Coder), and reasoning specialized (QwQ) variants across sizes from 0.5B to 72B parameters. Why it's in the Arsenal Alibaba's widely adopted open weight model generation spanning general, coding, and reasoning specialized variants. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the genera…"
     },
     {
       "id": "qwen-3",
@@ -8902,14 +8849,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/translategemma.md",
-      "url": "content/projects/llms/open-source-models/translategemma",
+      "path": "content/projects/foundation-models/translategemma.md",
+      "url": "content/projects/foundation-models/translategemma",
       "boost_title": "TranslateGemma",
       "boost_tags": "multimodal llm",
       "boost_description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
-      "body": "TranslateGemma Open translation model family built on Gemma 3 supporting 55 languages efficiently multimodal llm llms open-source-models Overview TranslateGemma is a open source AI engineering project. Why It's in the Arsenal It covers the llms category with the open source models subcategory and complements existing Arsenal entries. Key Features Open translation model family built on Gemma 3 supporting 55 languages efficiently Open source at the canonical repository License: Apache 2.0 Architecture / How It Works See https://github.com/google deepmind/gemma for architecture documentation and contributor guidelines. Getting Started Use Cases 1. Scenario: Production AI engineering in the llms category. 2. Scenario: Self hosted…"
+      "body": "TranslateGemma Open translation model family built on Gemma 3 supporting 55 languages efficiently multimodal llm llms open-source-models Overview undefined Why it's in the Arsenal Specialized translation fine tune built on the Gemma 3 base architecture. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need an efficient, open weight machine translation model specifically fine tuned for 55 languages rather than a general purpose chat model repurposed for translation. See Strengths / Limitations below before adopting it. Architecture undefined Ecosystem Position undefined Getting Started Key Use Cases 1. Scenario : you need an efficient, open weight machine translation model specifical…"
     },
     {
       "id": "treat-retrieved-text-as-untrusted",
@@ -9835,14 +9782,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "watching",
-      "phase": null,
+      "phase": "foundation-model",
       "audience": null,
-      "path": "content/projects/llms/open-source-models/yi.md",
-      "url": "content/projects/llms/open-source-models/yi",
+      "path": "content/projects/foundation-models/yi.md",
+      "url": "content/projects/foundation-models/yi",
       "boost_title": "Yi",
       "boost_tags": "llm inference local multimodal",
       "boost_description": "01.AI open model family with bilingual and long-context variants from small to mid-large sizes",
-      "body": "Yi 01.AI open model family with bilingual and long-context variants from small to mid-large sizes llm inference local multimodal llms open-source-models Overview TL;DR: Yi is 01.AI’s open model family with bilingual and long context variants. Use it as a comparison baseline, especially when evaluating older open weight families. Family / sizes: 6B, 9B, 34B Best fit: bilingual model comparison, local open weight experiments, historical baselines Primary source: Yi GitHub Why It's in the Arsenal Yi remains worth tracking as an influential open model family, though current activity should be checked before choosing it for new production systems. Key Features Bilingual English/Chinese model focus 6B, 9B, and 34B scale variants Long context varian…"
+      "body": "Yi 01.AI open model family with bilingual and long-context variants from small to mid-large sizes llm inference local multimodal llms open-source-models Overview undefined Why it's in the Arsenal 01.AI's open weight model family from the 2023 2024 open model wave. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point. See Strengths / Limitations below before adopting it. Architecture undefined Ecosystem Position undefined Getting Started Key Use Cases 1. Scenario : you're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point…"
     },
     {
       "id": "youtube-channels",

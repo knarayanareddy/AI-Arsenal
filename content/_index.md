@@ -12,7 +12,7 @@
 | [community](./community/) | 30 entries | 2026-07-01 |
 | [digests](./digests/) | 0 entries | 2026-07-01 |
 | [observability](./observability/) | 4 entries | 2026-07-01 |
-| [projects](./projects/) | 73 entries | 2026-07-01 |
+| [projects](./projects/) | 71 entries | 2026-07-01 |
 | [research](./research/) | 29 entries | 2026-07-01 |
 | [skills](./skills/) | 8 entries | 2026-07-01 |
 | [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-07-01 |
@@ -41,7 +41,7 @@
 - [LangChain](./projects/rag/frameworks/langchain.md) — ⭐ 139206
 - [Firecrawl](./projects/rag/document-processing/firecrawl.md) — ⭐ 132342
 - [llama.cpp](./projects/llms/inference-engines/llama-cpp.md) — ⭐ 116399
-- [DeepSeek-V3 / R1](./projects/llms/open-source-models/deepseek-v3-r1.md) — ⭐ 103749
+- [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
 - [vLLM](./projects/llms/inference-engines/vllm.md) — ⭐ 82772
 - [RAGFlow](./projects/rag/frameworks/ragflow.md) — ⭐ 82655
 

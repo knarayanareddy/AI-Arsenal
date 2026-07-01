@@ -74,10 +74,10 @@ Plain-language tree:
 |---|---|---|
 | Local laptop dev | Ollama + llama.cpp | [Ollama](../../projects/llms/inference-engines/ollama.md), [llama.cpp](../../projects/llms/inference-engines/llama-cpp.md) |
 | Production open-model serving | vLLM or SGLang | [vLLM](../../projects/llms/inference-engines/vllm.md), [SGLang](../../projects/llms/inference-engines/sglang.md) |
-| Broad open-weight default | Llama or Qwen | [Llama 3.x](../../projects/llms/open-source-models/llama-3.md), [Qwen 2.5/QwQ](../../projects/llms/open-source-models/qwen-2-5.md) |
-| Reasoning model evaluation | DeepSeek-R1/QwQ route | [DeepSeek-V3/R1](../../projects/llms/open-source-models/deepseek-v3-r1.md), [Qwen 2.5/QwQ](../../projects/llms/open-source-models/qwen-2-5.md) |
-| Small-model routing | Phi/Gemma/Qwen small | [Phi-4](../../projects/llms/open-source-models/phi-4.md), [Gemma 3](../../projects/llms/open-source-models/gemma-3.md) |
-| Enterprise RAG model | Command R+ or hosted enterprise model | [Command R+](../../projects/llms/open-source-models/command-r-plus.md) |
+| Broad open-weight default | Llama or Qwen | [Llama 3.x](../../projects/foundation-models/llama-3.md), [Qwen 2.5/QwQ](../../projects/foundation-models/qwen-2-5.md) |
+| Reasoning model evaluation | DeepSeek-R1/QwQ route | [DeepSeek-V3/R1](../../projects/foundation-models/deepseek-v3-r1.md), [Qwen 2.5/QwQ](../../projects/foundation-models/qwen-2-5.md) |
+| Small-model routing | Phi/Gemma/Qwen small | [Phi-4](../../projects/foundation-models/phi-4.md), [Gemma 3](../../projects/foundation-models/gemma-3.md) |
+| Enterprise RAG model | Command R+ or hosted enterprise model | [Command R+](../../projects/foundation-models/command-r-plus.md) |
 
 ## Getting Started
 
@@ -120,9 +120,9 @@ vllm serve Qwen/Qwen2.5-7B-Instruct
 
 - [Ollama](../../projects/llms/inference-engines/ollama.md)
 - [vLLM](../../projects/llms/inference-engines/vllm.md)
-- [Llama 3.x](../../projects/llms/open-source-models/llama-3.md)
-- [Qwen 2.5 / QwQ](../../projects/llms/open-source-models/qwen-2-5.md)
-- [DeepSeek-V3 / R1](../../projects/llms/open-source-models/deepseek-v3-r1.md)
+- [Llama 3.x](../../projects/foundation-models/llama-3.md)
+- [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
+- [DeepSeek-V3 / R1](../../projects/foundation-models/deepseek-v3-r1.md)
 
 ## Buzz & Reception
 

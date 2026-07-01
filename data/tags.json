@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-01T10:35:43.715Z",
+  "generated_at": "2026-07-01T10:46:05.262Z",
   "tags": [
     {
       "id": "agents",
@@ -140,17 +140,6 @@
         "use-int8-for-safer-compression",
         "use-speculative-decoding-for-latency-critical-paths",
         "vllm"
-      ]
-    },
-    {
-      "id": "battle-tested",
-      "label": "Battle Tested",
-      "count": 1,
-      "types": {
-        "project": 1
-      },
-      "entries": [
-        "mistral-inference"
       ]
     },
     {
@@ -300,17 +289,6 @@
         "qwen",
         "qwen-2-5",
         "swe-agent"
-      ]
-    },
-    {
-      "id": "community-favorite",
-      "label": "Community Favorite",
-      "count": 1,
-      "types": {
-        "project": 1
-      },
-      "entries": [
-        "llama-models"
       ]
     },
     {
@@ -669,12 +647,12 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 56,
+      "count": 54,
       "types": {
         "tip": 21,
         "tool": 6,
         "guide": 7,
-        "project": 19,
+        "project": 17,
         "paper": 2,
         "build-example": 1
       },
@@ -698,7 +676,6 @@
         "keep-model-files-out-of-git",
         "llama-3",
         "llama-cpp",
-        "llama-models",
         "llamafile",
         "lmdeploy",
         "local-first",
@@ -707,7 +684,6 @@
         "measure-first-token-latency",
         "measure-kv-cache-hit-rate",
         "measure-queue-time-separately",
-        "mistral-inference",
         "mistral-models",
         "ml-engineer",
         "modal",
@@ -784,7 +760,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 153,
+      "count": 151,
       "types": {
         "tip": 31,
         "guide": 30,
@@ -792,7 +768,7 @@
         "tool": 33,
         "paper": 17,
         "build-example": 2,
-        "project": 25
+        "project": 23
       },
       "entries": [
         "add-evals-before-refactors",
@@ -859,7 +835,6 @@
         "llama-3",
         "llama-3-herd-of-models",
         "llama-cpp",
-        "llama-models",
         "llamafactory",
         "llamafile",
         "llamaguard",
@@ -872,7 +847,6 @@
         "lora",
         "memory-management",
         "mesop",
-        "mistral-inference",
         "mistral-models",
         "ml-engineer",
         "mlx-lm",
@@ -953,11 +927,11 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 28,
+      "count": 26,
       "types": {
         "tip": 6,
         "guide": 2,
-        "project": 16,
+        "project": 14,
         "tool": 3,
         "build-example": 1
       },
@@ -974,12 +948,10 @@
         "keep-model-files-out-of-git",
         "llama-3",
         "llama-cpp",
-        "llama-models",
         "llamafile",
         "local-first",
         "local-llm-chat",
         "match-context-length-to-ram",
-        "mistral-inference",
         "mistral-models",
         "mlx-lm",
         "ollama",

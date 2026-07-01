@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-01T10:35:47.427Z | Entries: 380 | Schema version: 1.0.0
+Generated: 2026-07-01T10:46:08.784Z | Entries: 378 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 73
+- Projects: 71
 - Tools: 92
 - Papers: 25
 - Tips: 106
@@ -38,10 +38,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### llms
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-- Mistral Inference (⭐10816, score:70) — Reference inference code and assets for Mistral open-weight models
-- Llama Models (⭐7628, score:70) — Meta open-weight model family widely used for local and production AI systems
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
+- TranslateGemma (⭐5000, score:50) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
+- Ollama (⭐174059, score:30) — Local runtime for downloading, running, and serving open-weight models on developer machines
 
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
