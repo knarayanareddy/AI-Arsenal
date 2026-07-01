@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-01T10:54:23.254Z",
+  "generated_at": "2026-07-01T10:57:37.896Z",
   "config": {
     "document": {
       "id": "id",
@@ -156,6 +156,7 @@
     "phase": {
       "framework": 19,
       "foundation-model": 13,
+      "inference-engine": 7,
       "data-ingestion": 13,
       "orchestration": 15,
       "evaluation-and-observability": 17,
@@ -4250,14 +4251,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/llama-cpp.md",
-      "url": "content/projects/llms/inference-engines/llama-cpp",
+      "path": "content/projects/inference-engines/llama-cpp.md",
+      "url": "content/projects/inference-engines/llama-cpp",
       "boost_title": "llama.cpp",
       "boost_tags": "llm inference quantization local",
       "boost_description": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
-      "body": "llama.cpp C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices llm inference quantization local llms inference-engines Overview TL;DR: llama.cpp is the core local inference engine for GGUF quantized models across CPU, GPU, and edge environments. Use it when portability and local deployment matter. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal llama.cpp underpins much of the local LLM ecosystem and is the reference path for GGUF quantized inference. Key Features C/C++ portable runtime GGUF model format support CPU and GPU acceleration paths Server mode with OpenAI compatible API options Foundation for many local LLM wrappers Strong quantization ecosystem Architecture…"
+      "body": "llama.cpp C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices llm inference quantization local llms inference-engines Overview A pure C/C++ inference engine for running LLaMA family and other GGUF format quantized models, originally created to make LLM inference feasible on consumer CPU hardware and now the foundation underlying much of the local LLM tooling ecosystem. Why it's in the Arsenal Pure C/C++ CPU/GPU inference engine underlying much of the local LLM ecosystem (Ollama, LM Studio, and others build on it). It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to run quantized LLMs efficiently on CPU only or consumer GPU hardware, including Apple Silicon, w…"
     },
     {
       "id": "llamafactory",
@@ -4304,14 +4305,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/llamafile.md",
-      "url": "content/projects/llms/inference-engines/llamafile",
+      "path": "content/projects/inference-engines/llamafile.md",
+      "url": "content/projects/inference-engines/llamafile",
       "boost_title": "Llamafile",
       "boost_tags": "llm inference local edge",
       "boost_description": "Mozilla project for distributing and running LLMs as a single executable file",
-      "body": "Llamafile Mozilla project for distributing and running LLMs as a single executable file llm inference local edge llms inference-engines Overview TL;DR: Llamafile packages an LLM and runtime into a single executable file. Use it when distribution simplicity matters more than maximum serving throughput. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal Llamafile is notable because it makes local model distribution unusually simple: one file can contain the runtime and model. Key Features Single file model distribution Built on llama.cpp ecosystem ideas Local CPU/GPU execution paths Good demo and portable app story Works well for offline/local experiments Mozilla AI stewardship Architectur…"
+      "body": "Llamafile Mozilla project for distributing and running LLMs as a single executable file llm inference local edge llms inference-engines Overview A Mozilla backed project (built on top of llama.cpp) that packages an LLM and inference engine together as a single, portable, cross platform executable file requiring no installation or dependencies. Why it's in the Arsenal Mozilla backed project distributing LLMs as a single portable executable file, built on top of llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute or run a model as a single, dependency free executable file that works across Windows, macOS, and Linux without an install step. See Strengths / L…"
     },
     {
       "id": "llamaguard",
@@ -4460,14 +4461,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/lmdeploy.md",
-      "url": "content/projects/llms/inference-engines/lmdeploy",
+      "path": "content/projects/inference-engines/lmdeploy.md",
+      "url": "content/projects/inference-engines/lmdeploy",
       "boost_title": "LMDeploy",
       "boost_tags": "llm inference quantization cloud",
       "boost_description": "Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends",
-      "body": "LMDeploy Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends llm inference quantization cloud llms inference-engines Overview TL;DR: LMDeploy is a compression, deployment, and serving toolkit for LLMs with TurboMind and PyTorch backends. Use it when its supported model/backend matrix fits your deployment target. API compatibility: openai Formats: HF, AWQ, W4A16 Quantization support: Yes Why It's in the Arsenal LMDeploy is relevant for teams evaluating alternative high performance serving stacks beyond vLLM and SGLang. Key Features Deployment and serving toolkit TurboMind and PyTorch backend options Quantization/compression workflows OpenAI compatible server support Strong InternLM ecosystem integration Usef…"
+      "body": "LMDeploy Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends llm inference quantization cloud llms inference-engines Overview An inference and serving toolkit from Shanghai AI Laboratory (InternLM's developing organization), providing optimized deployment for InternLM and other open weight model families with a particular focus on quantization. Why it's in the Arsenal InternLM's (Shanghai AI Lab) inference and serving toolkit, with particular strength serving InternLM and other Chinese origin open weight models. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying InternLM models specifically and want the toolkit built and optimized by the same organizat…"
     },
     {
       "id": "local-first",
@@ -5512,14 +5513,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/ollama.md",
-      "url": "content/projects/llms/inference-engines/ollama",
+      "path": "content/projects/inference-engines/ollama.md",
+      "url": "content/projects/inference-engines/ollama",
       "boost_title": "Ollama",
       "boost_tags": "llm inference local self-hosted",
       "boost_description": "Local runtime for downloading, running, and serving open-weight models on developer machines",
-      "body": "Ollama Local runtime for downloading, running, and serving open-weight models on developer machines llm inference local self-hosted llms inference-engines Overview TL;DR: Ollama is the easiest local runtime for pulling and running open weight models on a laptop or workstation. Use it for local development, demos, and privacy first prototypes. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal Ollama is the default local first path for many developers because install, model download, serving, and chat UX are simple. Key Features Simple model pull/run workflow Local HTTP API OpenAI compatible API support Large model library Works well with developer laptops and workstations Good companion for local RAG demos…"
+      "body": "Ollama Local runtime for downloading, running, and serving open-weight models on developer machines llm inference local self-hosted llms inference-engines Overview A developer tool providing a simple, Docker like command line interface and local API for downloading and running open weight LLMs, built on top of llama.cpp's inference engine. Why it's in the Arsenal The dominant local LLM developer tool, providing a Docker like CLI/API experience for pulling and running open weight models built on llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI compatible local API, without hand manag…"
     },
     {
       "id": "openai-agents-sdk",
@@ -7869,14 +7870,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/sglang.md",
-      "url": "content/projects/llms/inference-engines/sglang",
+      "path": "content/projects/inference-engines/sglang.md",
+      "url": "content/projects/inference-engines/sglang",
       "boost_title": "SGLang",
       "boost_tags": "llm inference batching multimodal",
       "boost_description": "High-performance serving framework for large language and multimodal models",
-      "body": "SGLang High-performance serving framework for large language and multimodal models llm inference batching multimodal llms inference-engines Overview TL;DR: SGLang is a high performance serving framework for LLMs and multimodal models. Use it when you need advanced serving performance and are willing to tune a specialized runtime. API compatibility: openai Formats: HF, FP8, AWQ, GPTQ Quantization support: Yes Why It's in the Arsenal SGLang is a major modern inference engine alongside vLLM, especially for high performance and multimodal serving. Key Features High performance LLM serving Multimodal model support OpenAI compatible API server Advanced runtime and scheduling features Quantization/backend support Active research/product…"
+      "body": "SGLang High-performance serving framework for large language and multimodal models llm inference batching multimodal llms inference-engines Overview A high performance serving framework for large language and multimodal models, distinguished by RadixAttention, a token level prefix caching mechanism that automatically discovers and reuses shared context across requests. Why it's in the Arsenal High performance serving framework distinguished by RadixAttention prefix caching, increasingly positioned as a leading alternative to vLLM. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have workloads with significant shared prefix reuse (multi turn conversations, RAG with repeated context, fe…"
     },
     {
       "id": "shellmate",
@@ -8548,14 +8549,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "archived",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/text-generation-inference.md",
-      "url": "content/projects/llms/inference-engines/text-generation-inference",
+      "path": "content/projects/inference-engines/text-generation-inference.md",
+      "url": "content/projects/inference-engines/text-generation-inference",
       "boost_title": "Text Generation Inference",
       "boost_tags": "llm inference streaming batching",
       "boost_description": "Hugging Face inference server for serving large text-generation models in production",
-      "body": "Text Generation Inference Hugging Face inference server for serving large text-generation models in production llm inference streaming batching llms inference-engines Overview TL;DR: Text Generation Inference is Hugging Face’s production inference server for text generation models. Treat it as important but check repository status because the GitHub repo is currently archived. API compatibility: openai Formats: HF, GPTQ, AWQ Quantization support: Yes Why It's in the Arsenal TGI influenced many production open model deployments and remains relevant for teams using Hugging Face infrastructure and docs. Key Features Production text generation server Streaming and batching support Hugging Face model ecosystem integration Docker deployment path Quantization sup…"
+      "body": "Text Generation Inference Hugging Face inference server for serving large text-generation models in production llm inference streaming batching llms inference-engines Overview Hugging Face's original toolkit for serving large language models in production, offering continuous batching and tensor parallel serving, now placed in maintenance mode as Hugging Face redirects its inference engine investment elsewhere. Why it's in the Arsenal Hugging Face's original production LLM serving toolkit, now in maintenance mode as HF redirects investment to vLLM and SGLang. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing production deployment on TGI and need to maintain it — it remains functional and receives…"
     },
     {
       "id": "this-week",
@@ -9549,14 +9550,14 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "phase": null,
+      "phase": "inference-engine",
       "audience": null,
-      "path": "content/projects/llms/inference-engines/vllm.md",
-      "url": "content/projects/llms/inference-engines/vllm",
+      "path": "content/projects/inference-engines/vllm.md",
+      "url": "content/projects/inference-engines/vllm",
       "boost_title": "vLLM",
       "boost_tags": "llm inference batching caching",
       "boost_description": "High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs",
-      "body": "vLLM High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs llm inference batching caching llms inference-engines Overview TL;DR: vLLM is a high throughput serving engine for production LLM inference. Use it when throughput, batching, and OpenAI compatible serving matter. API compatibility: openai Formats: HF, AWQ, GPTQ, FP8 Quantization support: Yes Why It's in the Arsenal vLLM is one of the most important production inference engines because it targets high throughput and memory efficient serving. Key Features Continuous batching and efficient memory management OpenAI compatible API server Broad Hugging Face model support Tensor/pipeline parallel options Quantization support through supported backends/…"
+      "body": "vLLM High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs llm inference batching caching llms inference-engines Overview An open source, high throughput inference and serving engine for large language models, built around PagedAttention, a memory management technique that treats the KV cache like virtual memory to reduce fragmentation and enable much higher batch concurrency. Why it's in the Arsenal The de facto default high throughput LLM serving engine, built around PagedAttention memory management. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying an open weight model to production and want the most broadly adopted, best supported serving engi…"
     },
     {
       "id": "wandb-weave",

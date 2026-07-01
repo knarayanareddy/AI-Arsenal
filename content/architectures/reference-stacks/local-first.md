@@ -109,8 +109,8 @@ pip install llama-index chromadb gradio
 
 ## Component Deep Dives
 
-- **Ollama**: [Ollama](../../projects/llms/inference-engines/ollama.md)
-- **llama.cpp**: [llama.cpp](../../projects/llms/inference-engines/llama-cpp.md)
+- **Ollama**: [Ollama](../../projects/inference-engines/ollama.md)
+- **llama.cpp**: [llama.cpp](../../projects/inference-engines/llama-cpp.md)
 - **Llama 3.x**: [Llama 3.x](../../projects/foundation-models/llama-3.md)
 - **Qwen 2.5 / QwQ**: [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
 - **Gemma 3**: [Gemma 3](../../projects/foundation-models/gemma-3.md)
@@ -126,8 +126,8 @@ pip install llama-index chromadb gradio
 
 ## Resources
 
-- [Ollama](../../projects/llms/inference-engines/ollama.md)
-- [llama.cpp](../../projects/llms/inference-engines/llama-cpp.md)
+- [Ollama](../../projects/inference-engines/ollama.md)
+- [llama.cpp](../../projects/inference-engines/llama-cpp.md)
 - [Llama 3.x](../../projects/foundation-models/llama-3.md)
 - [Qwen 2.5 / QwQ](../../projects/foundation-models/qwen-2-5.md)
 - [Gemma 3](../../projects/foundation-models/gemma-3.md)

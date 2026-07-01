@@ -31,18 +31,18 @@
 | `langgraph` | [LangGraph](./frameworks/langgraph.md) | Graph-based framework for building stateful, durable LLM agents and workflows |
 | `langsmith-platform` | [LangSmith](./observability/tracing/langsmith-platform.md) | Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback |
 | `llama-3` | [Llama 3.x](./foundation-models/llama-3.md) | Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications |
-| `llama-cpp` | [llama.cpp](./llms/inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
-| `llamafile` | [Llamafile](./llms/inference-engines/llamafile.md) | Mozilla project for distributing and running LLMs as a single executable file |
+| `llama-cpp` | [llama.cpp](./inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
+| `llamafile` | [Llamafile](./inference-engines/llamafile.md) | Mozilla project for distributing and running LLMs as a single executable file |
 | `llamaindex` | [LlamaIndex](./frameworks/llamaindex.md) | Data framework for building document agents, retrieval pipelines, and production RAG systems |
 | `llamaparse` | [LlamaParse](./rag/document-processing/llamaparse.md) | Managed document parser from LlamaIndex for turning complex files into RAG-ready text |
-| `lmdeploy` | [LMDeploy](./llms/inference-engines/lmdeploy.md) | Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends |
+| `lmdeploy` | [LMDeploy](./inference-engines/lmdeploy.md) | Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends |
 | `lunary` | [Lunary](./observability/tracing/lunary.md) | Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts |
 | `mastra` | [Mastra](./frameworks/mastra.md) | TypeScript framework for building AI agents, workflows, evals, and application backends |
 | `metagpt` | [MetaGPT](./frameworks/metagpt.md) | Multi-agent framework that simulates software-company roles for natural-language programming |
 | `microsoft-agent-framework` | [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md) | Microsoft framework for Python and .NET agents, workflows, and production orchestration |
 | `milvus` | [Milvus](./rag/vector-databases/milvus.md) | Cloud-native vector database for large-scale ANN search and production vector workloads |
 | `mistral-models` | [Mistral / Mixtral](./foundation-models/mistral-models.md) | Mistral open-weight model family including dense and mixture-of-experts language models |
-| `ollama` | [Ollama](./llms/inference-engines/ollama.md) | Local runtime for downloading, running, and serving open-weight models on developer machines |
+| `ollama` | [Ollama](./inference-engines/ollama.md) | Local runtime for downloading, running, and serving open-weight models on developer machines |
 | `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
 | `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
 | `openlit` | [OpenLIT](./observability/tracing/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |
@@ -61,15 +61,15 @@
 | `ragas-rag-evaluation` | [Ragas for RAG Evaluation](./rag/frameworks/ragas-rag-evaluation.md) | Evaluation framework for measuring retrieval-augmented generation quality and regressions |
 | `ragflow` | [RAGFlow](./rag/frameworks/ragflow.md) | Open-source RAG engine combining document understanding, retrieval, and agent capabilities |
 | `semantic-kernel` | [Semantic Kernel](./frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |
-| `sglang` | [SGLang](./llms/inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
+| `sglang` | [SGLang](./inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
 | `smolagents` | [Smolagents](./frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
 | `stagehand` | [Stagehand](./agents/browser-agents/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
 | `surrealdb` | [SurrealDB](./rag/vector-databases/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
-| `text-generation-inference` | [Text Generation Inference](./llms/inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
+| `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
 | `translategemma` | [TranslateGemma](./foundation-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |
 | `txtai` | [txtai](./frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
 | `uiverse-design` | [Uiverse Design](./tooling/platforms/uiverse-design.md) | Open-source library of community-made CSS/Tailwind UI elements for faster front-end development |
 | `unstructured` | [Unstructured](./rag/document-processing/unstructured.md) | Open-source document ETL for converting complex files into structured data for LLM pipelines |
-| `vllm` | [vLLM](./llms/inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |
+| `vllm` | [vLLM](./inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |
 | `weaviate` | [Weaviate](./rag/vector-databases/weaviate.md) | Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval |
 | `yi` | [Yi](./foundation-models/yi.md) | 01.AI open model family with bilingual and long-context variants from small to mid-large sizes |

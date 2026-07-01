@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-01T10:54:21.155Z",
+  "generated_at": "2026-07-01T10:57:35.860Z",
   "count": 69,
   "items": [
     {
@@ -2393,6 +2393,7 @@
     {
       "id": "llama-cpp",
       "name": "llama.cpp",
+      "version_tracked": null,
       "artifact_type": "library",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -2400,6 +2401,7 @@
       "github_url": "https://github.com/ggml-org/llama.cpp",
       "license": "MIT",
       "primary_language": "C++",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -2424,45 +2426,81 @@
         "GGUF"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top",
+        "fork-and-adapt"
+      ],
+      "health_signals": [
+        "community-driven",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "Pure C/C++ CPU/GPU inference engine underlying much of the local-LLM ecosystem (Ollama, LM Studio, and others build on it)"
+      ],
+      "best_for": [
+        "You need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies",
+        "You're building a downstream tool or product and want to embed a lightweight, dependency-light inference engine rather than a heavier Python-based server"
+      ],
+      "avoid_if": [
+        "You need maximum multi-GPU server-side throughput for high-concurrency production serving — vLLM or SGLang's batching and scheduling are purpose-built for that, while llama.cpp targets single-node/edge efficiency first",
+        "You want a Python-native development experience — llama.cpp's core is C/C++, and while Python bindings exist, they're a secondary interface, not the primary one"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "reviewed",
+      "enrichment_notes": "llama.cpp is the most widely-embedded inference engine in the local-LLM ecosystem: Ollama, LM Studio, GPT4All, and many other downstream tools build directly on it, which is strong production/adoption evidence beyond star count alone.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
-      "buzz_sources": [],
+      "buzz_sources": [
+        {
+          "source": "hackernews",
+          "url": "https://www.xda-developers.com/ditched-lm-studio-for-llama-cpp-and-local-llm-doesnt-feel-like-downgrade-anymore/",
+          "date": "2026-05-23",
+          "description": "Independent reporting confirms llama.cpp is the core backend engine underlying LM Studio, Ollama, and most other local-LLM applications in production use"
+        }
+      ],
       "featured": false,
       "status": "active",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/llama-cpp.md",
-      "url": "content/projects/llms/inference-engines/llama-cpp",
+      "path": "content/projects/inference-engines/llama-cpp.md",
+      "url": "content/projects/inference-engines/llama-cpp",
       "slug": "llama-cpp",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "llama.cpp",
       "summary": "C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
       "reading_time_minutes": 2,
-      "word_count": 257,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> llama.cpp is the core local inference engine for GGUF-quantized models across CPU, GPU, and edge environments. Use it when portability and local deployment matter.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> GGUF</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>llama.cpp underpins much of the local LLM ecosystem and is the reference path for GGUF quantized inference.</p>\n<h2>Key Features</h2>\n<ul>\n<li>C/C++ portable runtime</li>\n<li>GGUF model format support</li>\n<li>CPU and GPU acceleration paths</li>\n<li>Server mode with OpenAI-compatible API options</li>\n<li>Foundation for many local LLM wrappers</li>\n<li>Strong quantization ecosystem</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>llama.cpp is a low-level inference runtime built around ggml/gguf model execution and portable hardware backends.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">brew install llama.cpp\n</code></pre>\n<pre><code class=\"language-bash\">llama-server -hf ggml-org/gemma-3-1b-it-GGUF\n# then call the local server API\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: CPU/local inference</li>\n<li><strong>Scenario</strong>: Edge deployments</li>\n<li><strong>Scenario</strong>: Quantized model experiments</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Extremely portable</li>\n<li>Best-known GGUF runtime</li>\n<li>Works where heavyweight Python serving stacks are impractical</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Lower-level UX than Ollama</li>\n<li>Production multi-tenant serving requires extra infrastructure</li>\n<li>Model conversion/quantization details can be confusing</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/ggml-org/llama.cpp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/ggml-org/llama.cpp/tree/master/tools/server\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">llama.cpp server docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: llama.cpp is the core local inference engine for GGUF quantized models across CPU, GPU, and edge environments. Use it when portability and local deployment matter. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal llama.cpp underpins much of the local LLM ecosystem and is the reference path for GGUF quantized inference. Key Features C/C++ portable runtime GGUF model format support CPU and GPU acceleration paths Server mode with OpenAI compatible API options Foundation for many local LLM wrappers Strong quantization ecosystem Architecture / How It Works llama.cpp is a low level inference runtime built around ggml/gguf model execution and portable hardware backends. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : CPU/local inference 2. Scenario : Edge deployments 3. Scenario : Quantized model experiments Strengths Extremely portable Best known GGUF runtime Works where heavyweight Python serving stacks are impractical Limitations / When NOT to Use Lower level UX than Ollama Production multi tenant serving requires extra infrastructure Model conversion/quantization details can be confusing Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub llama.cpp server docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "word_count": 423,
+      "body_html": "<h2>Overview</h2>\n<p>A pure C/C++ inference engine for running LLaMA-family and other GGUF-format quantized models, originally created to make LLM inference feasible on consumer CPU hardware and now the foundation underlying much of the local-LLM tooling ecosystem.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Pure C/C++ CPU/GPU inference engine underlying much of the local-LLM ecosystem (Ollama, LM Studio, and others build on it). It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Implements transformer inference directly in C/C++ with extensive support for quantization formats (from 2-bit through 8-bit and beyond) via the GGUF file format, with backend support spanning pure CPU, Apple Metal, CUDA, and Vulkan — prioritizing minimal dependencies and portability over Python-ecosystem integration.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: none of particular note — deliberately minimal external dependencies. Downstream: Ollama, LM Studio, GPT4All, and llamafile all build directly on llama.cpp as their inference core, making it one of the most widely depended-upon projects in the local-LLM ecosystem. Competing: vLLM and SGLang for server-side high-throughput serving; MLX for Apple-Silicon-native workflows. Complementary: works with any GGUF-quantized model, including quantized versions of Llama, Qwen, Gemma, and Mistral.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies</li>\n<li><strong>Scenario</strong>: you're building a downstream tool or product and want to embed a lightweight, dependency-light inference engine rather than a heavier Python-based server</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need to run quantized LLMs efficiently on CPU-only or consumer-GPU hardware, including Apple Silicon, with minimal dependencies</li>\n<li>You're building a downstream tool or product and want to embed a lightweight, dependency-light inference engine rather than a heavier Python-based server</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need maximum multi-GPU server-side throughput for high-concurrency production serving — vLLM or SGLang's batching and scheduling are purpose-built for that, while llama.cpp targets single-node/edge efficiency first</li>\n<li>You want a Python-native development experience — llama.cpp's core is C/C++, and while Python bindings exist, they're a secondary interface, not the primary one</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/ggml-org/llama.cpp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/ggml-org/llama.cpp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview A pure C/C++ inference engine for running LLaMA family and other GGUF format quantized models, originally created to make LLM inference feasible on consumer CPU hardware and now the foundation underlying much of the local LLM tooling ecosystem. Why it's in the Arsenal Pure C/C++ CPU/GPU inference engine underlying much of the local LLM ecosystem (Ollama, LM Studio, and others build on it). It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to run quantized LLMs efficiently on CPU only or consumer GPU hardware, including Apple Silicon, with minimal dependencies. See Strengths / Limitations below before adopting it. Architecture Implements transformer inference directly in C/C++ with extensive support for quantization formats (from 2 bit through 8 bit and beyond) via the GGUF file format, with backend support spanning pure CPU, Apple Metal, CUDA, and Vulkan — prioritizing minimal dependencies and portability over Python ecosystem integration. Ecosystem Position Upstream: none of particular note — deliberately minimal external dependencies. Downstream: Ollama, LM Studio, GPT4All, and llamafile all build directly on llama.cpp as their inference core, making it one of the most widely depended upon projects in the local LLM ecosystem. Competing: vLLM and SGLang for server side high throughput serving; MLX for Apple Silicon native workflows. Complementary: works with any GGUF quantized model, including quantized versions of Llama, Qwen, Gemma, and Mistral. Getting Started Key Use Cases 1. Scenario : you need to run quantized LLMs efficiently on CPU only or consumer GPU hardware, including Apple Silicon, with minimal dependencies 2. Scenario : you're building a downstream tool or product and want to embed a lightweight, dependency light inference engine rather than a heavier Python based server Strengths You need to run quantized LLMs efficiently on CPU only or consumer GPU hardware, including Apple Silicon, with minimal dependencies You're building a downstream tool or product and want to embed a lightweight, dependency light inference engine rather than a heavier Python based server Limitations You need maximum multi GPU server side throughput for high concurrency production serving — vLLM or SGLang's batching and scheduling are purpose built for that, while llama.cpp targets single node/edge efficiency first You want a Python native development experience — llama.cpp's core is C/C++, and while Python bindings exist, they're a secondary interface, not the primary one Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "llamafile",
       "name": "Llamafile",
+      "version_tracked": null,
       "artifact_type": "library",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -2470,6 +2508,7 @@
       "github_url": "https://github.com/mozilla-ai/llamafile",
       "license": "Apache-2.0 / MIT components",
       "primary_language": "C++",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -2494,41 +2533,66 @@
         "GGUF"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "org-backed",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "Mozilla-backed project distributing LLMs as a single portable executable file, built on top of llama.cpp"
+      ],
+      "best_for": [
+        "You need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step",
+        "You want the simplest possible way to hand someone a working local LLM demo with zero setup"
+      ],
+      "avoid_if": [
+        "You need production-grade serving with high concurrency or GPU cluster support — llamafile targets simplicity and portability for individual use, not production throughput",
+        "You need frequent model updates or fine-tuning workflows — llamafile's single-executable packaging model is better suited to static distribution than an actively-iterated development loop"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Limited independent third-party production evidence found; this is primarily a distribution-convenience project rather than a production-serving engine, so production-proven is not claimed.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
       "buzz_sources": [],
       "featured": false,
       "status": "active",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/llamafile.md",
-      "url": "content/projects/llms/inference-engines/llamafile",
+      "path": "content/projects/inference-engines/llamafile.md",
+      "url": "content/projects/inference-engines/llamafile",
       "slug": "llamafile",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "Llamafile",
       "summary": "Mozilla project for distributing and running LLMs as a single executable file",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
       "reading_time_minutes": 2,
-      "word_count": 256,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Llamafile packages an LLM and runtime into a single executable file. Use it when distribution simplicity matters more than maximum serving throughput.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> GGUF</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>Llamafile is notable because it makes local model distribution unusually simple: one file can contain the runtime and model.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Single-file model distribution</li>\n<li>Built on llama.cpp ecosystem ideas</li>\n<li>Local CPU/GPU execution paths</li>\n<li>Good demo and portable-app story</li>\n<li>Works well for offline/local experiments</li>\n<li>Mozilla AI stewardship</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Llamafile combines model weights and an inference runtime into a portable executable artifact.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">See official docs for downloading or building a llamafile\n</code></pre>\n<pre><code class=\"language-bash\">chmod +x model.llamafile\n./model.llamafile\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Portable demos</li>\n<li><strong>Scenario</strong>: Offline local inference packages</li>\n<li><strong>Scenario</strong>: Simple distribution to non-ML users</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Excellent distribution simplicity</li>\n<li>Good local/offline story</li>\n<li>Avoids multi-step runtime setup</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not intended as a high-throughput serving cluster</li>\n<li>Artifact size can be large</li>\n<li>Less flexible than raw server runtimes for production tuning</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/mozilla-ai/llamafile\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.mozilla.ai/llamafile\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Llamafile packages an LLM and runtime into a single executable file. Use it when distribution simplicity matters more than maximum serving throughput. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal Llamafile is notable because it makes local model distribution unusually simple: one file can contain the runtime and model. Key Features Single file model distribution Built on llama.cpp ecosystem ideas Local CPU/GPU execution paths Good demo and portable app story Works well for offline/local experiments Mozilla AI stewardship Architecture / How It Works Llamafile combines model weights and an inference runtime into a portable executable artifact. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : Portable demos 2. Scenario : Offline local inference packages 3. Scenario : Simple distribution to non ML users Strengths Excellent distribution simplicity Good local/offline story Avoids multi step runtime setup Limitations / When NOT to Use Not intended as a high throughput serving cluster Artifact size can be large Less flexible than raw server runtimes for production tuning Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "word_count": 398,
+      "body_html": "<h2>Overview</h2>\n<p>A Mozilla-backed project (built on top of llama.cpp) that packages an LLM and inference engine together as a single, portable, cross-platform executable file requiring no installation or dependencies.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Mozilla-backed project distributing LLMs as a single portable executable file, built on top of llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Combines llama.cpp's inference engine with Cosmopolitan Libc (a technology for producing binaries that run natively across multiple operating systems) to package the model weights and runtime into one self-contained executable file.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: built directly on top of llama.cpp for its inference core and Cosmopolitan Libc for cross-platform packaging. Downstream: none of particular note. Competing: Ollama (also simplifies local LLM running, but via a client-server model rather than a single executable). Complementary: none specific beyond its llama.cpp dependency.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step</li>\n<li><strong>Scenario</strong>: you want the simplest possible way to hand someone a working local LLM demo with zero setup</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need to distribute or run a model as a single, dependency-free executable file that works across Windows, macOS, and Linux without an install step</li>\n<li>You want the simplest possible way to hand someone a working local LLM demo with zero setup</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need production-grade serving with high concurrency or GPU cluster support — llamafile targets simplicity and portability for individual use, not production throughput</li>\n<li>You need frequent model updates or fine-tuning workflows — llamafile's single-executable packaging model is better suited to static distribution than an actively-iterated development loop</li>\n</ul>\n<p><em>Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01.</em></p>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/mozilla-ai/llamafile\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.mozilla.ai/llamafile\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview A Mozilla backed project (built on top of llama.cpp) that packages an LLM and inference engine together as a single, portable, cross platform executable file requiring no installation or dependencies. Why it's in the Arsenal Mozilla backed project distributing LLMs as a single portable executable file, built on top of llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute or run a model as a single, dependency free executable file that works across Windows, macOS, and Linux without an install step. See Strengths / Limitations below before adopting it. Architecture Combines llama.cpp's inference engine with Cosmopolitan Libc (a technology for producing binaries that run natively across multiple operating systems) to package the model weights and runtime into one self contained executable file. Ecosystem Position Upstream: built directly on top of llama.cpp for its inference core and Cosmopolitan Libc for cross platform packaging. Downstream: none of particular note. Competing: Ollama (also simplifies local LLM running, but via a client server model rather than a single executable). Complementary: none specific beyond its llama.cpp dependency. Getting Started Key Use Cases 1. Scenario : you need to distribute or run a model as a single, dependency free executable file that works across Windows, macOS, and Linux without an install step 2. Scenario : you want the simplest possible way to hand someone a working local LLM demo with zero setup Strengths You need to distribute or run a model as a single, dependency free executable file that works across Windows, macOS, and Linux without an install step You want the simplest possible way to hand someone a working local LLM demo with zero setup Limitations You need production grade serving with high concurrency or GPU cluster support — llamafile targets simplicity and portability for individual use, not production throughput You need frequent model updates or fine tuning workflows — llamafile's single executable packaging model is better suited to static distribution than an actively iterated development loop Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third party sourcing; not yet independently verified. Last reviewed: 2026 07 01. Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "llamaindex",
@@ -2704,6 +2768,7 @@
     {
       "id": "lmdeploy",
       "name": "LMDeploy",
+      "version_tracked": null,
       "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -2711,6 +2776,7 @@
       "github_url": "https://github.com/InternLM/lmdeploy",
       "license": "Apache-2.0",
       "primary_language": "Python",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -2737,41 +2803,68 @@
         "W4A16"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "InternLM's (Shanghai AI Lab) inference and serving toolkit, with particular strength serving InternLM and other Chinese-origin open-weight models"
+      ],
+      "best_for": [
+        "You're deploying InternLM models specifically and want the toolkit built and optimized by the same organization",
+        "You need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline"
+      ],
+      "avoid_if": [
+        "You need the largest community and broadest model-family support — vLLM and SGLang have substantially larger adoption and community integration coverage across model families",
+        "You want the most actively-innovating serving engine for cutting-edge model architectures — LMDeploy's development pace and community size are smaller than vLLM/SGLang's"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Limited independent third-party production evidence found beyond the project's own documentation and its association with InternLM's model releases; architecture claims are based on the public repository structure.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
       "buzz_sources": [],
       "featured": false,
       "status": "active",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/lmdeploy.md",
-      "url": "content/projects/llms/inference-engines/lmdeploy",
+      "path": "content/projects/inference-engines/lmdeploy.md",
+      "url": "content/projects/inference-engines/lmdeploy",
       "slug": "lmdeploy",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "LMDeploy",
       "summary": "Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
       "reading_time_minutes": 2,
-      "word_count": 239,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> LMDeploy is a compression, deployment, and serving toolkit for LLMs with TurboMind and PyTorch backends. Use it when its supported model/backend matrix fits your deployment target.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> HF, AWQ, W4A16</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>LMDeploy is relevant for teams evaluating alternative high-performance serving stacks beyond vLLM and SGLang.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Deployment and serving toolkit</li>\n<li>TurboMind and PyTorch backend options</li>\n<li>Quantization/compression workflows</li>\n<li>OpenAI-compatible server support</li>\n<li>Strong InternLM ecosystem integration</li>\n<li>Useful for supported-model deployments</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>LMDeploy combines model conversion/compression, optimized runtime backends, and serving APIs.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install lmdeploy\n</code></pre>\n<pre><code class=\"language-bash\">lmdeploy serve api_server internlm/internlm2_5-7b-chat\n# then call the OpenAI-compatible endpoint\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Serving supported open models</li>\n<li><strong>Scenario</strong>: Quantization/compression experiments</li>\n<li><strong>Scenario</strong>: InternLM-centered deployments</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Integrated deploy/compress toolkit</li>\n<li>Useful alternative to vLLM/SGLang</li>\n<li>OpenAI-compatible serving path</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Model/backend support matrix matters</li>\n<li>Smaller ecosystem than vLLM</li>\n<li>Requires careful benchmark validation</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/InternLM/lmdeploy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://lmdeploy.readthedocs.io/en/latest/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: LMDeploy is a compression, deployment, and serving toolkit for LLMs with TurboMind and PyTorch backends. Use it when its supported model/backend matrix fits your deployment target. API compatibility: openai Formats: HF, AWQ, W4A16 Quantization support: Yes Why It's in the Arsenal LMDeploy is relevant for teams evaluating alternative high performance serving stacks beyond vLLM and SGLang. Key Features Deployment and serving toolkit TurboMind and PyTorch backend options Quantization/compression workflows OpenAI compatible server support Strong InternLM ecosystem integration Useful for supported model deployments Architecture / How It Works LMDeploy combines model conversion/compression, optimized runtime backends, and serving APIs. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : Serving supported open models 2. Scenario : Quantization/compression experiments 3. Scenario : InternLM centered deployments Strengths Integrated deploy/compress toolkit Useful alternative to vLLM/SGLang OpenAI compatible serving path Limitations / When NOT to Use Model/backend support matrix matters Smaller ecosystem than vLLM Requires careful benchmark validation Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "word_count": 362,
+      "body_html": "<h2>Overview</h2>\n<p>An inference and serving toolkit from Shanghai AI Laboratory (InternLM's developing organization), providing optimized deployment for InternLM and other open-weight model families with a particular focus on quantization.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>InternLM's (Shanghai AI Lab) inference and serving toolkit, with particular strength serving InternLM and other Chinese-origin open-weight models. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying InternLM models specifically and want the toolkit built and optimized by the same organization. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Provides both a Python inference engine and a serving component with support for continuous batching, tensor parallelism, and quantization formats (AWQ, W4A16) targeting efficient multi-GPU deployment.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: none of particular note. Downstream: none of particular note. Competing: vLLM, SGLang, TGI (in maintenance mode) — LMDeploy occupies a similar niche with a smaller community than the two leading options. Complementary: primarily used to serve InternLM models, though it supports other open-weight families.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you're deploying InternLM models specifically and want the toolkit built and optimized by the same organization</li>\n<li><strong>Scenario</strong>: you need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You're deploying InternLM models specifically and want the toolkit built and optimized by the same organization</li>\n<li>You need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need the largest community and broadest model-family support — vLLM and SGLang have substantially larger adoption and community integration coverage across model families</li>\n<li>You want the most actively-innovating serving engine for cutting-edge model architectures — LMDeploy's development pace and community size are smaller than vLLM/SGLang's</li>\n</ul>\n<p><em>Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01.</em></p>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/InternLM/lmdeploy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://lmdeploy.readthedocs.io/en/latest/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview An inference and serving toolkit from Shanghai AI Laboratory (InternLM's developing organization), providing optimized deployment for InternLM and other open weight model families with a particular focus on quantization. Why it's in the Arsenal InternLM's (Shanghai AI Lab) inference and serving toolkit, with particular strength serving InternLM and other Chinese origin open weight models. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying InternLM models specifically and want the toolkit built and optimized by the same organization. See Strengths / Limitations below before adopting it. Architecture Provides both a Python inference engine and a serving component with support for continuous batching, tensor parallelism, and quantization formats (AWQ, W4A16) targeting efficient multi GPU deployment. Ecosystem Position Upstream: none of particular note. Downstream: none of particular note. Competing: vLLM, SGLang, TGI (in maintenance mode) — LMDeploy occupies a similar niche with a smaller community than the two leading options. Complementary: primarily used to serve InternLM models, though it supports other open weight families. Getting Started Key Use Cases 1. Scenario : you're deploying InternLM models specifically and want the toolkit built and optimized by the same organization 2. Scenario : you need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline Strengths You're deploying InternLM models specifically and want the toolkit built and optimized by the same organization You need a serving toolkit with strong quantization support (AWQ, W4A16) integrated directly into the deployment pipeline Limitations You need the largest community and broadest model family support — vLLM and SGLang have substantially larger adoption and community integration coverage across model families You want the most actively innovating serving engine for cutting edge model architectures — LMDeploy's development pace and community size are smaller than vLLM/SGLang's Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third party sourcing; not yet independently verified. Last reviewed: 2026 07 01. Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "lunary",
@@ -3336,6 +3429,7 @@
     {
       "id": "ollama",
       "name": "Ollama",
+      "version_tracked": null,
       "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -3343,6 +3437,7 @@
       "github_url": "https://github.com/ollama/ollama",
       "license": "MIT",
       "primary_language": "Go",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -3367,41 +3462,75 @@
         "GGUF"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "org-backed",
+        "community-driven",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The dominant local-LLM developer tool, providing a Docker-like CLI/API experience for pulling and running open-weight models built on llama.cpp"
+      ],
+      "best_for": [
+        "You want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly",
+        "You're building a local-first application and want a stable, well-documented local inference API that abstracts away the underlying engine details"
+      ],
+      "avoid_if": [
+        "You need maximum inference throughput or fine-grained control over quantization/batching parameters — Ollama trades some of that control for ease of use; llama.cpp directly or vLLM for production serving give you more knobs",
+        "You need multi-GPU production-scale serving with high concurrency — Ollama is designed primarily for single-machine local/developer use, not production fleet serving"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "reviewed",
+      "enrichment_notes": "Ollama has become the de facto standard reference point in local-LLM tutorials, benchmarks, and comparisons across the ecosystem (frequently cited alongside llama.cpp in the search results gathered for this migration), constituting strong practical-adoption evidence beyond star count alone.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
-      "buzz_sources": [],
+      "buzz_sources": [
+        {
+          "source": "hackernews",
+          "url": "https://cohorte.co/blog/ollama-advanced-use-cases-and-integrations",
+          "date": "2026-05-13",
+          "description": "Documents Continue (open-source VS Code AI assistant) using Ollama in production for fully local code completion and chat, plus internal enterprise knowledge-base assistant deployments"
+        }
+      ],
       "featured": false,
       "status": "active",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/ollama.md",
-      "url": "content/projects/llms/inference-engines/ollama",
+      "path": "content/projects/inference-engines/ollama.md",
+      "url": "content/projects/inference-engines/ollama",
       "slug": "ollama",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "Ollama",
       "summary": "Local runtime for downloading, running, and serving open-weight models on developer machines",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
       "reading_time_minutes": 2,
-      "word_count": 266,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Ollama is the easiest local runtime for pulling and running open-weight models on a laptop or workstation. Use it for local development, demos, and privacy-first prototypes.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> GGUF</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>Ollama is the default local-first path for many developers because install, model download, serving, and chat UX are simple.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Simple model pull/run workflow</li>\n<li>Local HTTP API</li>\n<li>OpenAI-compatible API support</li>\n<li>Large model library</li>\n<li>Works well with developer laptops and workstations</li>\n<li>Good companion for local RAG demos</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Ollama packages model management, local runtime, and serving API around quantized model artifacts.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">curl -fsSL https://ollama.com/install.sh | sh\n</code></pre>\n<pre><code class=\"language-bash\">ollama pull llama3.1\nollama run llama3.1\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Local LLM development</li>\n<li><strong>Scenario</strong>: Privacy-sensitive prototypes</li>\n<li><strong>Scenario</strong>: Simple RAG/chatbot demos without cloud APIs</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Very low setup friction</li>\n<li>Excellent local developer experience</li>\n<li>Broad community model catalog</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not a high-throughput production serving engine</li>\n<li>GPU/server scaling story is simpler than vLLM/SGLang</li>\n<li>Model packaging differs from raw Hugging Face workflows</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/ollama/ollama\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://ollama.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://github.com/ollama/ollama/blob/main/docs/api.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">API docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Ollama is the easiest local runtime for pulling and running open weight models on a laptop or workstation. Use it for local development, demos, and privacy first prototypes. API compatibility: openai Formats: GGUF Quantization support: Yes Why It's in the Arsenal Ollama is the default local first path for many developers because install, model download, serving, and chat UX are simple. Key Features Simple model pull/run workflow Local HTTP API OpenAI compatible API support Large model library Works well with developer laptops and workstations Good companion for local RAG demos Architecture / How It Works Ollama packages model management, local runtime, and serving API around quantized model artifacts. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : Local LLM development 2. Scenario : Privacy sensitive prototypes 3. Scenario : Simple RAG/chatbot demos without cloud APIs Strengths Very low setup friction Excellent local developer experience Broad community model catalog Limitations / When NOT to Use Not a high throughput production serving engine GPU/server scaling story is simpler than vLLM/SGLang Model packaging differs from raw Hugging Face workflows Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Website API docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "word_count": 436,
+      "body_html": "<h2>Overview</h2>\n<p>A developer tool providing a simple, Docker-like command-line interface and local API for downloading and running open-weight LLMs, built on top of llama.cpp's inference engine.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The dominant local-LLM developer tool, providing a Docker-like CLI/API experience for pulling and running open-weight models built on llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Wraps llama.cpp's GGUF-based inference engine with a model registry/pull mechanism (similar to Docker images), a local REST API compatible with common client libraries, and a Modelfile system for customizing model behavior — prioritizing developer ergonomics over exposing every low-level inference knob.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: built directly on llama.cpp for its inference core. Downstream: widely integrated into local-first application stacks and referenced as the default local-model option across countless tutorials and reference architectures. Competing: LM Studio (GUI-first alternative), direct llama.cpp usage (more control, more setup). Complementary: commonly paired with local RAG stacks (Chroma, LanceDB) for privacy-focused local applications.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly</li>\n<li><strong>Scenario</strong>: you're building a local-first application and want a stable, well-documented local inference API that abstracts away the underlying engine details</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly</li>\n<li>You're building a local-first application and want a stable, well-documented local inference API that abstracts away the underlying engine details</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need maximum inference throughput or fine-grained control over quantization/batching parameters — Ollama trades some of that control for ease of use; llama.cpp directly or vLLM for production serving give you more knobs</li>\n<li>You need multi-GPU production-scale serving with high concurrency — Ollama is designed primarily for single-machine local/developer use, not production fleet serving</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/ollama/ollama\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://ollama.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview A developer tool providing a simple, Docker like command line interface and local API for downloading and running open weight LLMs, built on top of llama.cpp's inference engine. Why it's in the Arsenal The dominant local LLM developer tool, providing a Docker like CLI/API experience for pulling and running open weight models built on llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI compatible local API, without hand managing GGUF files or llama.cpp flags directly. See Strengths / Limitations below before adopting it. Architecture Wraps llama.cpp's GGUF based inference engine with a model registry/pull mechanism (similar to Docker images), a local REST API compatible with common client libraries, and a Modelfile system for customizing model behavior — prioritizing developer ergonomics over exposing every low level inference knob. Ecosystem Position Upstream: built directly on llama.cpp for its inference core. Downstream: widely integrated into local first application stacks and referenced as the default local model option across countless tutorials and reference architectures. Competing: LM Studio (GUI first alternative), direct llama.cpp usage (more control, more setup). Complementary: commonly paired with local RAG stacks (Chroma, LanceDB) for privacy focused local applications. Getting Started Key Use Cases 1. Scenario : you want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI compatible local API, without hand managing GGUF files or llama.cpp flags directly 2. Scenario : you're building a local first application and want a stable, well documented local inference API that abstracts away the underlying engine details Strengths You want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI compatible local API, without hand managing GGUF files or llama.cpp flags directly You're building a local first application and want a stable, well documented local inference API that abstracts away the underlying engine details Limitations You need maximum inference throughput or fine grained control over quantization/batching parameters — Ollama trades some of that control for ease of use; llama.cpp directly or vLLM for production serving give you more knobs You need multi GPU production scale serving with high concurrency — Ollama is designed primarily for single machine local/developer use, not production fleet serving Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "openai-agents-sdk",
@@ -4883,6 +5012,7 @@
     {
       "id": "sglang",
       "name": "SGLang",
+      "version_tracked": null,
       "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -4890,6 +5020,7 @@
       "github_url": "https://github.com/sgl-project/sglang",
       "license": "Apache-2.0",
       "primary_language": "Python",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -4917,41 +5048,77 @@
         "GPTQ"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "community-driven",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "High-performance serving framework distinguished by RadixAttention prefix caching, increasingly positioned as a leading alternative to vLLM"
+      ],
+      "best_for": [
+        "You have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains",
+        "You need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled"
+      ],
+      "avoid_if": [
+        "You need the broadest hardware support — SGLang supports NVIDIA and AMD GPUs but not Intel GPUs, AWS Trainium/Inferentia, or Google TPUs, while vLLM has broader hardware coverage",
+        "You want the largest, most mature community and integration ecosystem — vLLM remains the more widely adopted default despite SGLang's competitive or superior benchmarks in specific scenarios"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "reviewed",
+      "enrichment_notes": "2026 independent benchmark comparisons (buildmvpfast.com, techsy.io) confirm SGLang shows measurable throughput and latency advantages over vLLM in specific scenarios (smaller models, structured output, prefix-heavy workloads), giving concrete third-party technical evidence beyond the project's own claims.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
-      "buzz_sources": [],
+      "buzz_sources": [
+        {
+          "source": "hackernews",
+          "url": "https://techsy.io/en/blog/vllm-vs-sglang",
+          "date": "2026-06-13",
+          "description": "Independent 2026 benchmark comparison: SGLang shows ~29% higher throughput than vLLM on 7B-8B models on H100 GPUs, with lower tail latency and better structured-output performance"
+        }
+      ],
       "featured": false,
       "status": "active",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/sglang.md",
-      "url": "content/projects/llms/inference-engines/sglang",
+      "path": "content/projects/inference-engines/sglang.md",
+      "url": "content/projects/inference-engines/sglang",
       "slug": "sglang",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "SGLang",
       "summary": "High-performance serving framework for large language and multimodal models",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
-      "reading_time_minutes": 2,
-      "word_count": 251,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> SGLang is a high-performance serving framework for LLMs and multimodal models. Use it when you need advanced serving performance and are willing to tune a specialized runtime.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> HF, FP8, AWQ, GPTQ</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>SGLang is a major modern inference engine alongside vLLM, especially for high-performance and multimodal serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>High-performance LLM serving</li>\n<li>Multimodal model support</li>\n<li>OpenAI-compatible API server</li>\n<li>Advanced runtime and scheduling features</li>\n<li>Quantization/backend support</li>\n<li>Active research/production serving community</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>SGLang combines a serving runtime with APIs for structured generation and high-throughput model execution.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install sglang\n</code></pre>\n<pre><code class=\"language-bash\">python -m sglang.launch_server --model-path Qwen/Qwen2.5-7B-Instruct --host 0.0.0.0 --port 30000\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: High-performance model serving</li>\n<li><strong>Scenario</strong>: Multimodal serving experiments</li>\n<li><strong>Scenario</strong>: Teams comparing vLLM alternatives</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong serving-performance focus</li>\n<li>OpenAI-compatible endpoint</li>\n<li>Supports modern LLM and VLM workloads</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>More operational complexity than Ollama</li>\n<li>Requires model/hardware-specific benchmarking</li>\n<li>Fast-moving runtime surface</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/sgl-project/sglang\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.sglang.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: SGLang is a high performance serving framework for LLMs and multimodal models. Use it when you need advanced serving performance and are willing to tune a specialized runtime. API compatibility: openai Formats: HF, FP8, AWQ, GPTQ Quantization support: Yes Why It's in the Arsenal SGLang is a major modern inference engine alongside vLLM, especially for high performance and multimodal serving. Key Features High performance LLM serving Multimodal model support OpenAI compatible API server Advanced runtime and scheduling features Quantization/backend support Active research/production serving community Architecture / How It Works SGLang combines a serving runtime with APIs for structured generation and high throughput model execution. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : High performance model serving 2. Scenario : Multimodal serving experiments 3. Scenario : Teams comparing vLLM alternatives Strengths Strong serving performance focus OpenAI compatible endpoint Supports modern LLM and VLM workloads Limitations / When NOT to Use More operational complexity than Ollama Requires model/hardware specific benchmarking Fast moving runtime surface Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "reading_time_minutes": 3,
+      "word_count": 464,
+      "body_html": "<h2>Overview</h2>\n<p>A high-performance serving framework for large language and multimodal models, distinguished by RadixAttention, a token-level prefix-caching mechanism that automatically discovers and reuses shared context across requests.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>High-performance serving framework distinguished by RadixAttention prefix caching, increasingly positioned as a leading alternative to vLLM. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>RadixAttention stores KV cache entries in a radix tree indexed at the token level, automatically identifying shared prefixes across different requests (e.g. repeated system prompts or RAG context) and reusing cached computation rather than recomputing it — combined with continuous batching and support for constrained/structured generation with minimal throughput penalty via overlapped grammar-mask generation.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: none of particular note. Downstream: none of particular note as a dependency, though it's increasingly used as the serving backend of choice for prefix-cache-sensitive production workloads. Competing: vLLM (broader hardware/ecosystem support), TGI (now in maintenance mode). Complementary: serves the same open-weight models cataloged under Foundation Models (Llama, Qwen, DeepSeek, etc.).</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains</li>\n<li><strong>Scenario</strong>: you need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You have workloads with significant shared-prefix reuse (multi-turn conversations, RAG with repeated context, few-shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains</li>\n<li>You need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need the broadest hardware support — SGLang supports NVIDIA and AMD GPUs but not Intel GPUs, AWS Trainium/Inferentia, or Google TPUs, while vLLM has broader hardware coverage</li>\n<li>You want the largest, most mature community and integration ecosystem — vLLM remains the more widely adopted default despite SGLang's competitive or superior benchmarks in specific scenarios</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/sgl-project/sglang\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.sglang.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview A high performance serving framework for large language and multimodal models, distinguished by RadixAttention, a token level prefix caching mechanism that automatically discovers and reuses shared context across requests. Why it's in the Arsenal High performance serving framework distinguished by RadixAttention prefix caching, increasingly positioned as a leading alternative to vLLM. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have workloads with significant shared prefix reuse (multi turn conversations, RAG with repeated context, few shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains. See Strengths / Limitations below before adopting it. Architecture RadixAttention stores KV cache entries in a radix tree indexed at the token level, automatically identifying shared prefixes across different requests (e.g. repeated system prompts or RAG context) and reusing cached computation rather than recomputing it — combined with continuous batching and support for constrained/structured generation with minimal throughput penalty via overlapped grammar mask generation. Ecosystem Position Upstream: none of particular note. Downstream: none of particular note as a dependency, though it's increasingly used as the serving backend of choice for prefix cache sensitive production workloads. Competing: vLLM (broader hardware/ecosystem support), TGI (now in maintenance mode). Complementary: serves the same open weight models cataloged under Foundation Models (Llama, Qwen, DeepSeek, etc.). Getting Started Key Use Cases 1. Scenario : you have workloads with significant shared prefix reuse (multi turn conversations, RAG with repeated context, few shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains 2. Scenario : you need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled Strengths You have workloads with significant shared prefix reuse (multi turn conversations, RAG with repeated context, few shot prompting) — SGLang's RadixAttention automatically caches and reuses shared prefixes at the token level for substantial throughput gains You need low tail latency for structured/constrained generation (JSON mode, grammars) — SGLang overlaps grammar mask generation with GPU inference, avoiding the throughput penalty vLLM shows at higher batch sizes with guided decoding enabled Limitations You need the broadest hardware support — SGLang supports NVIDIA and AMD GPUs but not Intel GPUs, AWS Trainium/Inferentia, or Google TPUs, while vLLM has broader hardware coverage You want the largest, most mature community and integration ecosystem — vLLM remains the more widely adopted default despite SGLang's competitive or superior benchmarks in specific scenarios Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "smolagents",
@@ -5198,6 +5365,7 @@
     {
       "id": "text-generation-inference",
       "name": "Text Generation Inference",
+      "version_tracked": null,
       "artifact_type": "platform",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -5205,6 +5373,7 @@
       "github_url": "https://github.com/huggingface/text-generation-inference",
       "license": "Apache-2.0",
       "primary_language": "Python",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -5231,41 +5400,73 @@
         "AWQ"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "org-backed",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "Hugging Face's original production LLM serving toolkit, now in maintenance mode as HF redirects investment to vLLM and SGLang"
+      ],
+      "best_for": [
+        "You have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes",
+        "You specifically need a documented long-prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload"
+      ],
+      "avoid_if": [
+        "You're starting a new production serving deployment — Hugging Face officially placed TGI into maintenance mode as of December 11, 2025, accepting only minor bug fixes and documentation updates, and now directs new work toward vLLM, SGLang, llama.cpp, and MLX",
+        "You need ongoing feature development, new model architecture support, or active performance optimization — none of that is happening in TGI going forward per Hugging Face's own documentation"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "verified",
+      "enrichment_notes": "Directly confirmed via Hugging Face's own official documentation (huggingface.co/docs/inference-endpoints/en/engines/tgi): 'Text Generation Inference is in maintenance mode as of 12/11/2025... only pull requests for minor bug fixes, documentation improvements, and lightweight maintenance tasks will be accepted.' This is a primary-source status confirmation, not third-party inference.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
-      "buzz_sources": [],
+      "buzz_sources": [
+        {
+          "source": "hackernews",
+          "url": "https://huggingface.co/docs/inference-endpoints/en/engines/tgi",
+          "date": "2025-12-11",
+          "description": "Hugging Face's own documentation confirms TGI entered maintenance mode on 12/11/2025, redirecting new inference-engine investment to vLLM, SGLang, llama.cpp, and MLX"
+        }
+      ],
       "featured": false,
       "status": "archived",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/text-generation-inference.md",
-      "url": "content/projects/llms/inference-engines/text-generation-inference",
+      "path": "content/projects/inference-engines/text-generation-inference.md",
+      "url": "content/projects/inference-engines/text-generation-inference",
       "slug": "text-generation-inference",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "Text Generation Inference",
       "summary": "Hugging Face inference server for serving large text-generation models in production",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
       "reading_time_minutes": 2,
-      "word_count": 269,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Text Generation Inference is Hugging Face’s production inference server for text-generation models. Treat it as important but check repository status because the GitHub repo is currently archived.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> HF, GPTQ, AWQ</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>TGI influenced many production open-model deployments and remains relevant for teams using Hugging Face infrastructure and docs.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Production text-generation server</li>\n<li>Streaming and batching support</li>\n<li>Hugging Face model ecosystem integration</li>\n<li>Docker deployment path</li>\n<li>Quantization support for supported formats</li>\n<li>OpenAI-compatible serving documentation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>TGI is a model server optimized for serving Hugging Face text generation models over HTTP APIs.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">docker run --gpus all --shm-size 1g -p 8080:80 ghcr.io/huggingface/text-generation-inference:latest\n</code></pre>\n<pre><code class=\"language-bash\">curl http://localhost:8080/generate -d '{\"inputs\":\"What is RAG?\",\"parameters\":{\"max_new_tokens\":32}}'\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Hugging Face-centered serving</li>\n<li><strong>Scenario</strong>: Dockerized inference deployments</li>\n<li><strong>Scenario</strong>: Teams already using TGI-compatible infrastructure</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong Hugging Face ecosystem fit</li>\n<li>Production server features</li>\n<li>Well-known deployment path</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Repository is archived as of fetched GitHub metadata</li>\n<li>May not be the best default for new greenfield deployments</li>\n<li>Check current Hugging Face docs before adopting</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/text-generation-inference\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/docs/text-generation-inference\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Text Generation Inference is Hugging Face’s production inference server for text generation models. Treat it as important but check repository status because the GitHub repo is currently archived. API compatibility: openai Formats: HF, GPTQ, AWQ Quantization support: Yes Why It's in the Arsenal TGI influenced many production open model deployments and remains relevant for teams using Hugging Face infrastructure and docs. Key Features Production text generation server Streaming and batching support Hugging Face model ecosystem integration Docker deployment path Quantization support for supported formats OpenAI compatible serving documentation Architecture / How It Works TGI is a model server optimized for serving Hugging Face text generation models over HTTP APIs. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : Hugging Face centered serving 2. Scenario : Dockerized inference deployments 3. Scenario : Teams already using TGI compatible infrastructure Strengths Strong Hugging Face ecosystem fit Production server features Well known deployment path Limitations / When NOT to Use Repository is archived as of fetched GitHub metadata May not be the best default for new greenfield deployments Check current Hugging Face docs before adopting Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "word_count": 406,
+      "body_html": "<h2>Overview</h2>\n<p>Hugging Face's original toolkit for serving large language models in production, offering continuous batching and tensor-parallel serving, now placed in maintenance mode as Hugging Face redirects its inference-engine investment elsewhere.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Hugging Face's original production LLM serving toolkit, now in maintenance mode as HF redirects investment to vLLM and SGLang. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>A Rust-and-Python serving stack implementing continuous batching, tensor parallelism, and quantization support for production LLM deployment, historically notable for strong long-prompt/long-context handling performance documented in its V3 architecture overview.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: integrates with Hugging Face Transformers and the Hugging Face Hub for model loading. Downstream: powers (or historically powered) Hugging Face's own Inference Endpoints product. Competing: vLLM and SGLang, both of which Hugging Face has explicitly stated it is now investing in instead. Superseded by: vLLM and SGLang as Hugging Face's own recommended path per their December 2025 maintenance-mode announcement.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes</li>\n<li><strong>Scenario</strong>: you specifically need a documented long-prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes</li>\n<li>You specifically need a documented long-prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You're starting a new production serving deployment — Hugging Face officially placed TGI into maintenance mode as of December 11, 2025, accepting only minor bug fixes and documentation updates, and now directs new work toward vLLM, SGLang, llama.cpp, and MLX</li>\n<li>You need ongoing feature development, new model architecture support, or active performance optimization — none of that is happening in TGI going forward per Hugging Face's own documentation</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/text-generation-inference\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/docs/text-generation-inference\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview Hugging Face's original toolkit for serving large language models in production, offering continuous batching and tensor parallel serving, now placed in maintenance mode as Hugging Face redirects its inference engine investment elsewhere. Why it's in the Arsenal Hugging Face's original production LLM serving toolkit, now in maintenance mode as HF redirects investment to vLLM and SGLang. It earns a place in the Arsenal because it directly addresses a recurring decision point: you have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes. See Strengths / Limitations below before adopting it. Architecture A Rust and Python serving stack implementing continuous batching, tensor parallelism, and quantization support for production LLM deployment, historically notable for strong long prompt/long context handling performance documented in its V3 architecture overview. Ecosystem Position Upstream: integrates with Hugging Face Transformers and the Hugging Face Hub for model loading. Downstream: powers (or historically powered) Hugging Face's own Inference Endpoints product. Competing: vLLM and SGLang, both of which Hugging Face has explicitly stated it is now investing in instead. Superseded by: vLLM and SGLang as Hugging Face's own recommended path per their December 2025 maintenance mode announcement. Getting Started Key Use Cases 1. Scenario : you have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes 2. Scenario : you specifically need a documented long prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload Strengths You have an existing production deployment on TGI and need to maintain it — it remains functional and receives critical bug fixes You specifically need a documented long prompt handling advantage TGI's V3 overview describes, and have already validated it against vLLM/SGLang for your workload Limitations You're starting a new production serving deployment — Hugging Face officially placed TGI into maintenance mode as of December 11, 2025, accepting only minor bug fixes and documentation updates, and now directs new work toward vLLM, SGLang, llama.cpp, and MLX You need ongoing feature development, new model architecture support, or active performance optimization — none of that is happening in TGI going forward per Hugging Face's own documentation Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "translategemma",
@@ -5594,6 +5795,7 @@
     {
       "id": "vllm",
       "name": "vLLM",
+      "version_tracked": null,
       "artifact_type": "library",
       "category": "llms",
       "subcategory": "inference-engines",
@@ -5601,6 +5803,7 @@
       "github_url": "https://github.com/vllm-project/vllm",
       "license": "Apache-2.0",
       "primary_language": "Python",
+      "org_or_maintainer": null,
       "tags": [
         "llm",
         "inference",
@@ -5628,41 +5831,77 @@
         "FP8"
       ],
       "api_compatible": "openai",
+      "phase": "inference-engine",
+      "domain": [
+        "language",
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "community-driven",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The de facto default high-throughput LLM serving engine, built around PagedAttention memory management"
+      ],
+      "best_for": [
+        "You're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage",
+        "You need proven, mature continuous batching and memory-efficient KV cache management (PagedAttention) for high-concurrency serving"
+      ],
+      "avoid_if": [
+        "Your workload is dominated by heavily shared-prefix requests (repeated system prompts, RAG with common context) at scale — SGLang's RadixAttention specifically targets and often outperforms vLLM in that scenario",
+        "You're serving a single model on a single consumer GPU for local development — the operational overhead of vLLM's server model is unnecessary compared to Ollama or llama.cpp direct usage"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
       "alternatives": [],
       "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "reviewed",
+      "enrichment_notes": "vLLM's status as the default recommended engine is corroborated by both Hugging Face's own December 2025 TGI maintenance-mode announcement (explicitly redirecting users to vLLM) and independent 2026 benchmark comparisons treating it as the baseline other engines are measured against.",
       "added_date": "2026-06-13",
-      "last_reviewed": "2026-06-13",
+      "last_reviewed": "2026-07-01",
       "added_by": "maintainer",
       "reviewed_by": "maintainer",
-      "buzz_sources": [],
+      "buzz_sources": [
+        {
+          "source": "hackernews",
+          "url": "https://www.buildmvpfast.com/blog/vllm-vs-tgi-llm-serving-benchmarks-2026",
+          "date": "2026-04-23",
+          "description": "Independent April 2026 benchmark analysis: 'If you are starting fresh in April 2026, vLLM is the safer default' following Hugging Face's TGI maintenance-mode announcement"
+        }
+      ],
       "featured": false,
       "status": "active",
       "entry_type": "project",
-      "path": "content/projects/llms/inference-engines/vllm.md",
-      "url": "content/projects/llms/inference-engines/vllm",
+      "path": "content/projects/inference-engines/vllm.md",
+      "url": "content/projects/inference-engines/vllm",
       "slug": "vllm",
-      "section_path": "content/projects/llms/inference-engines",
+      "section_path": "content/projects/inference-engines",
       "display_name": "vLLM",
       "summary": "High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-01",
       "headings": [
         "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
         "Getting Started",
-        "Performance Benchmarks",
-        "Use Cases",
+        "Key Use Cases",
         "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
       ],
       "reading_time_minutes": 2,
-      "word_count": 266,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> vLLM is a high-throughput serving engine for production LLM inference. Use it when throughput, batching, and OpenAI-compatible serving matter.</p>\n</blockquote>\n<ul>\n<li><strong>API compatibility:</strong> openai</li>\n<li><strong>Formats:</strong> HF, AWQ, GPTQ, FP8</li>\n<li><strong>Quantization support:</strong> Yes</li>\n</ul>\n<h2>Why It's in the Arsenal</h2>\n<p>vLLM is one of the most important production inference engines because it targets high throughput and memory-efficient serving.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Continuous batching and efficient memory management</li>\n<li>OpenAI-compatible API server</li>\n<li>Broad Hugging Face model support</li>\n<li>Tensor/pipeline parallel options</li>\n<li>Quantization support through supported backends/formats</li>\n<li>Strong production serving ecosystem</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>vLLM is a server/runtime optimized for LLM token generation throughput, scheduling, and memory efficiency.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install vllm\n</code></pre>\n<pre><code class=\"language-bash\">vllm serve meta-llama/Llama-3.1-8B-Instruct\n# then call http://localhost:8000/v1/chat/completions\n</code></pre>\n<h2>Performance Benchmarks</h2>\n<p>No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload-specific benchmarks before choosing.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: Production self-hosted inference</li>\n<li><strong>Scenario</strong>: High-throughput API serving</li>\n<li><strong>Scenario</strong>: Serving Hugging Face models behind OpenAI-compatible endpoints</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong throughput reputation</li>\n<li>Large ecosystem support</li>\n<li>Good default for GPU-backed open model serving</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Requires GPU operations knowledge</li>\n<li>Not the simplest local laptop UX</li>\n<li>Performance depends heavily on model, GPU, and config</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Put an API gateway or observability layer in front of production inference endpoints.</li>\n<li>Benchmark with production-shaped prompts, context lengths, batch sizes, and streaming settings.</li>\n<li>Track model format and quantization separately from serving engine choice.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/vllm-project/vllm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/vllm-project/vllm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n<li><a href=\"https://github.com/vllm-project/vllm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">OpenAI-compatible server docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because inference engine choice directly affects latency, throughput, cost, and operational complexity.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: vLLM is a high throughput serving engine for production LLM inference. Use it when throughput, batching, and OpenAI compatible serving matter. API compatibility: openai Formats: HF, AWQ, GPTQ, FP8 Quantization support: Yes Why It's in the Arsenal vLLM is one of the most important production inference engines because it targets high throughput and memory efficient serving. Key Features Continuous batching and efficient memory management OpenAI compatible API server Broad Hugging Face model support Tensor/pipeline parallel options Quantization support through supported backends/formats Strong production serving ecosystem Architecture / How It Works vLLM is a server/runtime optimized for LLM token generation throughput, scheduling, and memory efficiency. Getting Started Performance Benchmarks No benchmark table is included because performance depends heavily on model, quantization, GPU, batching, and kernel version. Run workload specific benchmarks before choosing. Use Cases 1. Scenario : Production self hosted inference 2. Scenario : High throughput API serving 3. Scenario : Serving Hugging Face models behind OpenAI compatible endpoints Strengths Strong throughput reputation Large ecosystem support Good default for GPU backed open model serving Limitations / When NOT to Use Requires GPU operations knowledge Not the simplest local laptop UX Performance depends heavily on model, GPU, and config Integration Patterns Put an API gateway or observability layer in front of production inference endpoints. Benchmark with production shaped prompts, context lengths, batch sizes, and streaming settings. Track model format and quantization separately from serving engine choice. Resources GitHub Docs OpenAI compatible server docs Buzz & Reception Included because inference engine choice directly affects latency, throughput, cost, and operational complexity. Last reviewed: 2026 06 13 by @maintainer"
+      "word_count": 411,
+      "body_html": "<h2>Overview</h2>\n<p>An open-source, high-throughput inference and serving engine for large language models, built around PagedAttention, a memory-management technique that treats the KV cache like virtual memory to reduce fragmentation and enable much higher batch concurrency.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The de facto default high-throughput LLM serving engine, built around PagedAttention memory management. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>PagedAttention divides the KV cache into fixed-size blocks (analogous to OS virtual-memory pages) rather than requiring contiguous memory per sequence, dramatically reducing memory waste and enabling continuous batching across many concurrent requests; supports tensor and pipeline parallelism for multi-GPU serving and an OpenAI-compatible API server.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: none of particular note. Downstream: extremely widely used as the serving layer under countless production LLM deployments and referenced as the baseline in nearly every serving-engine benchmark comparison. Competing: SGLang (often faster on prefix-heavy or structured-output workloads), TGI (now in maintenance mode). Complementary: serves virtually every open-weight model family cataloged under Foundation Models.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/run command for this specific inference engine.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage</li>\n<li><strong>Scenario</strong>: you need proven, mature continuous batching and memory-efficient KV cache management (PagedAttention) for high-concurrency serving</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You're deploying an open-weight model to production and want the most broadly adopted, best-supported serving engine with the widest hardware and model-family coverage</li>\n<li>You need proven, mature continuous batching and memory-efficient KV cache management (PagedAttention) for high-concurrency serving</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Your workload is dominated by heavily shared-prefix requests (repeated system prompts, RAG with common context) at scale — SGLang's RadixAttention specifically targets and often outperforms vLLM in that scenario</li>\n<li>You're serving a single model on a single consumer GPU for local development — the operational overhead of vLLM's server model is unnecessary compared to Ollama or llama.cpp direct usage</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/vllm-project/vllm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/vllm-project/vllm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview An open source, high throughput inference and serving engine for large language models, built around PagedAttention, a memory management technique that treats the KV cache like virtual memory to reduce fragmentation and enable much higher batch concurrency. Why it's in the Arsenal The de facto default high throughput LLM serving engine, built around PagedAttention memory management. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're deploying an open weight model to production and want the most broadly adopted, best supported serving engine with the widest hardware and model family coverage. See Strengths / Limitations below before adopting it. Architecture PagedAttention divides the KV cache into fixed size blocks (analogous to OS virtual memory pages) rather than requiring contiguous memory per sequence, dramatically reducing memory waste and enabling continuous batching across many concurrent requests; supports tensor and pipeline parallelism for multi GPU serving and an OpenAI compatible API server. Ecosystem Position Upstream: none of particular note. Downstream: extremely widely used as the serving layer under countless production LLM deployments and referenced as the baseline in nearly every serving engine benchmark comparison. Competing: SGLang (often faster on prefix heavy or structured output workloads), TGI (now in maintenance mode). Complementary: serves virtually every open weight model family cataloged under Foundation Models. Getting Started Key Use Cases 1. Scenario : you're deploying an open weight model to production and want the most broadly adopted, best supported serving engine with the widest hardware and model family coverage 2. Scenario : you need proven, mature continuous batching and memory efficient KV cache management (PagedAttention) for high concurrency serving Strengths You're deploying an open weight model to production and want the most broadly adopted, best supported serving engine with the widest hardware and model family coverage You need proven, mature continuous batching and memory efficient KV cache management (PagedAttention) for high concurrency serving Limitations Your workload is dominated by heavily shared prefix requests (repeated system prompts, RAG with common context) at scale — SGLang's RadixAttention specifically targets and often outperforms vLLM in that scenario You're serving a single model on a single consumer GPU for local development — the operational overhead of vLLM's server model is unnecessary compared to Ollama or llama.cpp direct usage Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation"
     },
     {
       "id": "weaviate",

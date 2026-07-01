@@ -93,7 +93,7 @@ pnpm run generate:all
 - [Research Platform Stack](../../architectures/reference-stacks/research-platform.md)
 - [Fine-tuning tools](../../tools/by-job/fine-tuning.md)
 - [Evaluation tools](../../tools/by-job/evaluation.md)
-- [vLLM](../../projects/llms/inference-engines/vllm.md)
+- [vLLM](../../projects/inference-engines/vllm.md)
 - [PEFT](../../tools/model-layer/peft.md)
 
 ## Buzz & Reception

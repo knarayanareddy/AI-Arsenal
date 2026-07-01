@@ -67,7 +67,7 @@ Plain-language tree:
 | AWS enterprise | Bedrock | [AWS Bedrock](../../tools/serving-and-deployment/aws-bedrock.md) |
 | Azure enterprise | Azure AI Studio | [Azure AI Studio](../../tools/serving-and-deployment/azure-ai-studio.md) |
 | GCP enterprise | Vertex AI | [Google Vertex AI](../../tools/serving-and-deployment/google-vertex-ai.md) |
-| Self-host open models | vLLM / SGLang | [vLLM](../../projects/llms/inference-engines/vllm.md), [SGLang](../../projects/llms/inference-engines/sglang.md) |
+| Self-host open models | vLLM / SGLang | [vLLM](../../projects/inference-engines/vllm.md), [SGLang](../../projects/inference-engines/sglang.md) |
 
 ## Getting Started
 
