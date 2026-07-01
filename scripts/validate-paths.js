@@ -58,7 +58,19 @@ for (const file of await getEntryFiles()) {
       }
     }
   }
-  if (type === 'paper' && !file.startsWith('content/research/papers/')) errors.push(`${file}: paper entries must live in content/research/papers/`);
+  if (type === 'paper') {
+    if (parsed.data.phase) {
+      // Research-vertical reorganisation: migrated entries live flat under
+      // content/research/{phase}/{id}.md. Frontmatter `phase` values are
+      // identical to the folder names for this vertical (unlike projects,
+      // which needed a singular-to-plural mapping table).
+      const expectedFolder = `content/research/${parsed.data.phase}`;
+      if (!file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: research phase "${parsed.data.phase}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
+      if (p.length !== 4) errors.push(`${file}: migrated research entries must be flat under their phase folder (content/research/{phase}/{id}.md), found extra nesting`);
+    } else if (!file.startsWith('content/research/papers/')) {
+      errors.push(`${file}: paper entries must live in content/research/papers/`);
+    }
+  }
   if (type === 'tip' && !file.startsWith('content/tips-and-tricks/')) errors.push(`${file}: tip entries must live in content/tips-and-tricks/`);
   if (type === 'build-example' && !file.startsWith(`content/build-examples/${parsed.data.difficulty}/`)) errors.push(`${file}: build example folder must match difficulty "${parsed.data.difficulty}"`);
 }

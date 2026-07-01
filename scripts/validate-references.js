@@ -43,6 +43,20 @@ for (const entry of entries) {
   if (entry.type === 'tool' && entry.data.corresponding_project_entry && !ids.has(entry.data.corresponding_project_entry)) {
     warnings.push(`${entry.file}: corresponding_project_entry references unknown id "${entry.data.corresponding_project_entry}"`);
   }
+
+  if (entry.type === 'paper' && entry.data.phase) {
+    checkRefs(entry, 'builds_on', 'warning');
+    checkRefs(entry, 'implemented_in', 'warning');
+    if (entry.data.superseded_by && !ids.has(entry.data.superseded_by)) {
+      warnings.push(`${entry.file}: superseded_by references unknown id "${entry.data.superseded_by}"`);
+    }
+    if (entry.data.corresponding_project_entry && !ids.has(entry.data.corresponding_project_entry)) {
+      warnings.push(`${entry.file}: corresponding_project_entry references unknown id "${entry.data.corresponding_project_entry}"`);
+    }
+    if (entry.data.result_status === 'superseded' && !entry.data.superseded_by) {
+      warnings.push(`${entry.file}: result_status is "superseded" but superseded_by is not set (also enforced as an error in validate-schema.js)`);
+    }
+  }
 }
 
 if (warnings.length) {

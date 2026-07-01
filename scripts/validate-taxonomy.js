@@ -48,6 +48,23 @@ for (const file of files) {
   if (type === 'paper') {
     requireAllowed(errors, file, 'category', data.category, taxonomy.paperCategories);
     requireAllowed(errors, file, 'importance', data.importance, taxonomy.importanceValues);
+
+    // Research-vertical reorganisation: additional taxonomy fields, checked
+    // only once an entry carries the new `phase` field (i.e. is migrated).
+    if (data.phase) {
+      requireAllowed(errors, file, 'phase', data.phase, taxonomy.researchPhases);
+      requireAllowed(errors, file, 'practical_applicability', data.practical_applicability, taxonomy.practicalApplicability);
+      requireAllowed(errors, file, 'reproduction_status', data.reproduction_status, taxonomy.reproductionStatus);
+      requireAllowed(errors, file, 'result_status', data.result_status, taxonomy.researchResultStatus);
+      requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+      // `venue` accepts either the old free-text shape or the new controlled
+      // vocabulary during migration (see schemas/research.schema.json's
+      // x-migration-note); only enforce the enum if the value looks like it
+      // is already using the new lowercase-kebab vocabulary.
+      if (typeof data.venue === 'string' && /^[a-z0-9-]+$/.test(data.venue)) {
+        requireAllowed(errors, file, 'venue', data.venue, taxonomy.researchVenues);
+      }
+    }
   }
 
   if (type === 'tip') {

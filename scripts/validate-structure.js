@@ -44,6 +44,24 @@ const PAPER_HEADINGS = [
   'Further Reading'
 ];
 
+// Research-vertical reorganisation: the canonical body structure for a
+// migrated research entry (see the research-vertical-reorg brief). Applied
+// only once an entry carries the new `phase` field, so unmigrated papers
+// continue to validate against PAPER_HEADINGS during the folder-by-folder
+// migration. See scripts/check-research-migration-progress.js.
+const RESEARCH_HEADINGS_NEW = [
+  'Overview',
+  "Why it's in the Arsenal",
+  'Core Contribution',
+  'Key Results',
+  'Methodology',
+  'Practical Applicability',
+  'Limitations & Critiques',
+  'Reproductions & Follow-up Work',
+  'Relation to the Arsenal',
+  'Resources'
+];
+
 const typeHeadings = {
   project: REQUIRED_ENTRY_HEADINGS,
   tool: REQUIRED_ENTRY_HEADINGS,
@@ -64,6 +82,55 @@ const typeHeadings = {
   guide: REQUIRED_ENTRY_HEADINGS
 };
 
+// Research-vertical reorganisation: pull a heading's body text (between this
+// heading and the next `## `) so the checks below can look at actual content,
+// not just heading presence. Used only for migrated research entries.
+function sectionBody(content, heading) {
+  const lines = content.split(/\r?\n/);
+  const startIdx = lines.findIndex((line) => line.trim() === `## ${heading}`);
+  if (startIdx === -1) return null;
+  const rest = lines.slice(startIdx + 1);
+  const endIdx = rest.findIndex((line) => /^##\s+/.test(line));
+  return (endIdx === -1 ? rest : rest.slice(0, endIdx)).join('\n').trim();
+}
+
+const BANNED_PRACTICAL_APPLICABILITY_PHRASES = [
+  'engineers should be aware of this',
+  'engineers should read this',
+  'read this paper',
+  'this paper is important and engineers should read it'
+];
+
+const BANNED_LIMITATIONS_PHRASES = ['no known limitations'];
+
+function researchContentChecks(file, content, errors) {
+  const limitations = sectionBody(content, 'Limitations & Critiques');
+  if (limitations !== null) {
+    if (limitations.length === 0) errors.push(`${file}: "Limitations & Critiques" section must not be empty`);
+    const lower = limitations.toLowerCase();
+    for (const phrase of BANNED_LIMITATIONS_PHRASES) {
+      if (lower.includes(phrase)) errors.push(`${file}: "Limitations & Critiques" must not read "${phrase}" -- state author-acknowledged limitations or "No post-publication challenges identified as of last_reviewed: {date}" instead`);
+    }
+  }
+
+  const reproductions = sectionBody(content, 'Reproductions & Follow-up Work');
+  if (reproductions !== null && reproductions.length === 0) {
+    errors.push(`${file}: "Reproductions & Follow-up Work" section must not be empty`);
+  }
+
+  const practicalApplicability = sectionBody(content, 'Practical Applicability');
+  if (practicalApplicability !== null) {
+    if (practicalApplicability.length === 0) errors.push(`${file}: "Practical Applicability" section must not be empty`);
+    const lower = practicalApplicability.toLowerCase().trim();
+    for (const phrase of BANNED_PRACTICAL_APPLICABILITY_PHRASES) {
+      if (lower === phrase || lower === `${phrase}.`) errors.push(`${file}: "Practical Applicability" must answer what an engineer DOES differently, not just "${phrase}"`);
+    }
+  }
+
+  const overview = sectionBody(content, 'Overview');
+  if (overview !== null && overview.length === 0) errors.push(`${file}: "Overview" section must not be empty`);
+}
+
 const changedOnly = process.argv.includes('--changed-only');
 const fix = process.argv.includes('--fix');
 const errors = [];
@@ -81,6 +148,9 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
     required = PROJECT_HEADINGS_NEW;
   } else if (type === 'project' && data.category === 'agents' && data.subcategory === 'agent-frameworks') {
     required = AGENT_FRAMEWORK_HEADINGS;
+  } else if (type === 'paper' && data.phase) {
+    // Migrated research entry: use the new canonical structure.
+    required = RESEARCH_HEADINGS_NEW;
   } else {
     required = typeHeadings[type] ?? REQUIRED_ENTRY_HEADINGS;
   }
@@ -88,6 +158,7 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   for (const heading of required) {
     if (!headings.includes(heading)) errors.push(`${file}: missing required section "## ${heading}"`);
   }
+  if (type === 'paper' && data.phase) researchContentChecks(file, content, errors);
   checked += 1;
 }
 

@@ -17,6 +17,19 @@ const schemaByType = {
   guide: 'guide.schema.json'
 };
 
+// Research-vertical reorganisation: a 'paper' entry that already carries the
+// new `phase` field (i.e. has been migrated to content/research/{phase}/)
+// validates against the new research.schema.json instead of the legacy
+// paper.schema.json. This mirrors validate-structure.js's PROJECT_HEADINGS_NEW
+// dispatch-by-`phase`-presence pattern from the projects-vertical
+// reorganisation, so unmigrated papers keep validating against their
+// pre-migration schema during the folder-by-folder migration.
+function resolveSchemaKey(entryType, data) {
+  if (entryType === 'paper' && data?.phase) return 'research';
+  return entryType;
+}
+
+
 const today = new Date().toISOString().slice(0, 10);
 const changedOnly = process.argv.includes('--changed-only');
 const parseConcurrency = Number(process.env.AI_ARSENAL_PARSE_CONCURRENCY ?? 64);
@@ -62,6 +75,26 @@ function crossFieldChecks(file, type, data, errors, warnings) {
   if (type === 'paper') {
     if (data.arxiv_id && data.arxiv_url && !data.arxiv_url.includes(data.arxiv_id)) warnings.push(`${file}: arxiv_url does not include arxiv_id ${data.arxiv_id}`);
     if (data.has_code === true && !data.code_url) warnings.push(`${file}: has_code=true should include code_url`);
+
+    // Research-vertical reorganisation: additional integrity checks that only
+    // apply once an entry has been migrated (carries `phase`). Mirrors the
+    // "Research-specific integrity checklist" in the research-vertical
+    // authoring prompt (Phase 4 / Validator persona).
+    if (data.phase) {
+      if (data.result_status === 'superseded' && !data.superseded_by) {
+        errors.push(`${file}: result_status is "superseded" but superseded_by is not set`);
+      }
+      if (data.reproduction_status === 'reproduced' && (!Array.isArray(data.implemented_in) || data.implemented_in.length === 0)) {
+        warnings.push(`${file}: reproduction_status is "reproduced" but no implemented_in/reproduction source is recorded -- name the reproduction in the Reproductions & Follow-up Work section`);
+      }
+      if (data.practical_applicability === 'high' && (!data.key_contribution || data.key_contribution.length < 10)) {
+        warnings.push(`${file}: practical_applicability is "high" but key_contribution is missing or too short to justify it`);
+      }
+      if (data.has_code === false && data.reproduction_status && !['no-code', 'not-reproduced'].includes(data.reproduction_status)) {
+        warnings.push(`${file}: has_code is false but reproduction_status is "${data.reproduction_status}", which implies code exists; verify consistency`);
+      }
+      if (data.has_code === true && !data.code_url) warnings.push(`${file}: has_code=true should include code_url`);
+    }
   }
 }
 
@@ -70,7 +103,7 @@ const ajv = new Ajv({ allErrors: true, strict: false });
 const validatorPromises = new Map();
 async function getValidator(type) {
   if (validatorPromises.has(type)) return validatorPromises.get(type);
-  const schemaFile = schemaByType[type];
+  const schemaFile = type === 'research' ? 'research.schema.json' : schemaByType[type];
   if (!schemaFile) return null;
   const promise = (async () => {
     const schema = JSON.parse(await fs.readFile(path.join('schemas', schemaFile), 'utf8'));
@@ -94,7 +127,8 @@ async function validateFile(file) {
     return;
   }
   const entryType = inferEntryType(file, parsed.data);
-  const validate = entryType ? await getValidator(entryType) : null;
+  const schemaKey = entryType ? resolveSchemaKey(entryType, parsed.data) : null;
+  const validate = schemaKey ? await getValidator(schemaKey) : null;
   if (!validate) {
     errors.push(`${file}: unable to infer entry type from path. Move file under a schema-governed content section.`);
     return;

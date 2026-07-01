@@ -73,6 +73,51 @@ Where a project sits relative to the rest of the stack. These values are used in
 
 `architecture` | `training` | `inference` | `rag` | `agents` | `evaluation` | `alignment` | `multimodal` | `efficiency`
 
+## Research Phases
+
+The lifecycle/topic classification that determines a research entry's canonical folder under `content/research/`. Field: `phase`. This mirrors the `phase` field on tool and project entries (see Tool Phases, Project Phases above) so all three verticals share one "what stage/area of the stack is this" query axis, even though the three enums differ — for research, `phase` classifies by the paper's PRIMARY contribution area, not every topic it touches.
+
+`foundational` — seminal works that redefined the field (Attention Is All You Need, BERT, GPT-3-style scaling papers, foundational technical reports for widely-used model families). Reserved for genuinely field-defining works, not merely "important" or "influential" papers.
+`architectures` — model design: attention variants, MoE, positional encodings, context extension, efficient transformers, state-space models (Mamba etc.)
+`training-and-alignment` — pretraining objectives, RLHF, DPO, instruction tuning, PEFT, LoRA/QLoRA, constitutional AI, reward modeling
+`inference-and-efficiency` — quantization, distillation, pruning, speculative decoding, batching, KV cache optimisation, flash attention
+`retrieval-and-memory` — RAG, dense retrieval, hybrid search, long-context memory, knowledge graphs, vector indexing, ColBERT, HyDE
+`agents-and-reasoning` — chain-of-thought, tool use, ReAct, multi-agent, planning, self-reflection, code generation, function calling
+`evaluation-and-safety` — benchmark design, red-teaming, alignment evals, factuality, hallucination, bias measurement, safety frameworks
+`surveys` — comprehensive literature surveys of a subfield, included only when the survey itself functions as a primary engineering reference (engineers use it as a navigational map, not merely a reading list)
+
+## Research Venues
+
+`neurips` | `icml` | `iclr` | `acl` | `emnlp` | `arxiv-preprint` | `blog-post` | `technical-report` | `other`
+
+## Practical Applicability
+
+Field: `practical_applicability` (papers only). Be honest — most papers are `medium` or `low`; inflating this value degrades catalog usefulness.
+
+`high` — engineers should change how they build things NOW
+`medium` — useful context; applies in specific scenarios
+`low` — narrow application; most engineers won't use directly
+`theoretical` — foundational understanding; rarely applied directly (not a demotion — an honest classification, see Rule R-9 in the research-vertical authoring prompt)
+
+## Reproduction Status
+
+Field: `reproduction_status` (papers only). Reflects whether a paper's results have been independently validated, checked at authoring/review time against Papers With Code, official code releases, and independent reimplementations.
+
+`reproduced` — independently reproduced by a third party
+`partially-reproduced` — some results reproduced, not all
+`not-reproduced` — no known independent reproduction
+`code-available` — official code released but no known third-party reproduction
+`no-code` — no code released
+
+## Research Result Status
+
+Field: `result_status` (papers only). Whether a paper's central claims still represent current best practice.
+
+`current` — results still represent good practice
+`superseded` — a better approach now exists in the catalog (must set `superseded_by`)
+`challenged` — results disputed or failed to replicate elsewhere
+`foundational` — baseline; superseded in practice but still taught/required knowledge
+
 ## Tip Categories
 
 `prompting` | `inference-optimization` | `rag-tuning` | `cost-reduction` | `debugging-llm-apps` | `latency-optimization` | `context-window-management` | `agent-reliability` | `production-gotchas` | `local-model-tips` | `security-best-practices`
@@ -149,9 +194,9 @@ The primary context a tool is built for. A tool may serve more than one audience
 
 `trending` | `featured` | `foundational` | `sota` | `benchmark` | `experimental` | `battle-tested` | `community-favorite` | `new-arrival`
 
-## Enrichment Status (Tools and Projects)
+## Enrichment Status (Tools, Projects, and Research)
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. This is distinct from `verdict`/`maturity` (tools) or `health_signals`/`maturity` (projects), which describe the entry's subject, not the catalog entry's research depth.
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), or `importance` (papers), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)
