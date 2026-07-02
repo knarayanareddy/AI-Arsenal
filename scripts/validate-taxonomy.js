@@ -71,6 +71,15 @@ for (const file of files) {
     requireAllowed(errors, file, 'category', data.category, taxonomy.tipCategories);
     requireAllowed(errors, file, 'difficulty', data.difficulty, taxonomy.difficultyValues);
     requireAllowed(errors, file, 'impact', data.impact, taxonomy.impactValues);
+
+    // Tips-vertical reorganisation: additional taxonomy fields, checked
+    // only once an entry carries the new `phase` field (i.e. is migrated).
+    if (data.phase) {
+      requireAllowed(errors, file, 'phase', data.phase, taxonomy.tipPhases);
+      requireAllowed(errors, file, 'effort', data.effort, taxonomy.tipEffort);
+      requireAllowed(errors, file, 'verification_status', data.verification_status, taxonomy.tipVerificationStatus);
+      requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+    }
   }
 
   if (type === 'build-example') requireAllowed(errors, file, 'difficulty', data.difficulty, taxonomy.buildDifficulties);

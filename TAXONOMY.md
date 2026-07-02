@@ -122,6 +122,36 @@ Field: `result_status` (papers only). Whether a paper's central claims still rep
 
 `prompting` | `inference-optimization` | `rag-tuning` | `cost-reduction` | `debugging-llm-apps` | `latency-optimization` | `context-window-management` | `agent-reliability` | `production-gotchas` | `local-model-tips` | `security-best-practices`
 
+## Tip Phases
+
+The lifecycle/problem-area classification that determines a tip's canonical folder under `content/tips-and-tricks/`. Field: `phase`. This mirrors the `phase` field on tool, project, and research entries (see Tool Phases, Project Phases, Research Phases above) so all four verticals share one "what stage/area of the stack is this" query axis, even though the enums differ. Assign by the PROBLEM the tip solves, not the technology it uses. `category` (above) is retained unchanged as the pre-existing free-text-adjacent classification; `phase` is the new, folder-driving axis — the two are not required to be identical for a given entry (a `rag-tuning`-categorized tip can live in `rag-and-retrieval/`).
+
+`prompting` — system prompt design, few-shot construction, instruction clarity, output format control, prompt compression, template patterns
+`rag-and-retrieval` — chunking strategies, embedding choices, reranking, hybrid search, query transformation, context window management specific to retrieved content, metadata filtering
+`agents-and-orchestration` — tool definitions, step budgets, error recovery, memory management, loop termination, parallelisation, handoff patterns
+`evaluation` — eval harness setup, metric selection, golden dataset construction, LLM-as-judge calibration, regression detection
+`inference-and-serving` — batching, caching, quantisation tradeoffs, streaming, timeout handling, fallback routing, cost controls specific to serving infrastructure
+`fine-tuning` — dataset preparation, learning rate schedules, LoRA rank selection, validation split strategy, catastrophic forgetting prevention
+`debugging-and-observability` — tracing setup, log structuring, prompt/response capture, error classification, latency profiling, cost attribution
+`cost-and-performance` — token budgeting, model selection for cost, caching strategies, request batching, prompt compression for cost
+
+## Tip Effort
+
+Field: `effort` (new). Time-to-implement bucket — the axis that gates whether something qualifies as a tip at all. `day` is a hard ceiling: if a practice takes longer than one engineer-day to implement, it is not a tip and belongs in `build-examples/` or `architectures/` instead.
+
+`minutes` — < 30 minutes
+`hours` — 30 minutes to 4 hours
+`day` — 4 hours to 1 day (hard ceiling — if longer, not a tip)
+
+## Tip Verification Status
+
+Field: `verification_status` (new). Tracks how a tip's claimed effect has actually been confirmed — distinct from `enrichment_status` (below), which tracks the catalog entry's own editorial confidence.
+
+`production-verified` — confirmed working in production system(s), with evidence
+`lab-verified` — confirmed working in a controlled test, not yet production
+`community-reported` — reported by community, not independently verified by Arsenal maintainers
+`theoretical` — sound in principle, not yet verified
+
 ## Tool Jobs
 
 `prototyping` | `production-serving` | `fine-tuning` | `evaluation` | `deployment` | `orchestration` | `vector-search` | `memory-management` | `web-scraping` | `structured-output` | `prompt-management` | `data-labeling` | `model-registry` | `security-and-guardrails` | `tracing` | `monitoring`
@@ -194,9 +224,9 @@ The primary context a tool is built for. A tool may serve more than one audience
 
 `trending` | `featured` | `foundational` | `sota` | `benchmark` | `experimental` | `battle-tested` | `community-favorite` | `new-arrival`
 
-## Enrichment Status (Tools, Projects, and Research)
+## Enrichment Status (Tools, Projects, Research, and Tips)
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), or `importance` (papers), which describe the entry's subject, not the catalog entry's research depth.
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), or `verification_status` (tips), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)
@@ -212,9 +242,16 @@ Tracks editorial confidence in a catalog entry's research depth. For tools, this
 
 ## Impact Values (Tips only)
 
-`low` | `medium` | `high`
+Field: `impact`. Extended additively during the tips-vertical reorganisation to add `transformative` as a fourth tier above `high` — the existing three values keep their original meaning unchanged; no existing entry needs updating for this addition since none had `transformative` available to set before.
+
+`low` — marginal improvement, specific edge cases
+`medium` — noticeable improvement in most systems
+`high` — significant improvement, most teams should apply
+`transformative` — changes the character of the system, not just its performance
 
 ## Difficulty Values (Tips only)
+
+Field: `difficulty`. Skill-level required to correctly apply a tip — distinct from `effort` (below), which measures time-to-implement, not skill. A tip can be `beginner` difficulty but `hours` effort (straightforward to implement but tedious), or `advanced` difficulty but `minutes` effort (a one-line change that requires deep system understanding to apply correctly). Kept unchanged (not renamed, not re-enumerated) during the tips-vertical reorganisation: the reorganisation's own `effort` field (minutes/hours/day) covers the "how long does this take" axis the reorganisation brief also called `difficulty` with a different easy/medium/hard enum — since that concept is redundant with `effort`, only `effort` was added as a new field, and this pre-existing `difficulty` field (skill level) was left exactly as it was.
 
 `beginner` | `intermediate` | `advanced`
 

@@ -57,6 +57,39 @@ for (const entry of entries) {
       warnings.push(`${entry.file}: result_status is "superseded" but superseded_by is not set (also enforced as an error in validate-schema.js)`);
     }
   }
+
+  if (entry.type === 'tip' && entry.data.phase) {
+    checkRefs(entry, 'related_tools', 'warning');
+    checkRefs(entry, 'related_tips', 'warning');
+    if (entry.data.implemented_from && !ids.has(entry.data.implemented_from)) {
+      warnings.push(`${entry.file}: implemented_from references unknown id "${entry.data.implemented_from}"`);
+    }
+  }
+}
+
+// Rule T-10: related_tips must not create cycles longer than a direct
+// mutual reference (A -> B -> A is explicitly allowed by the rule; a cycle
+// of length 3+ is not). Checked globally, after the per-entry loop, since
+// cycle detection needs the full related_tips graph across all tip entries.
+const tipEntries = entries.filter((e) => e.type === 'tip' && e.data.phase && Array.isArray(e.data.related_tips));
+const relatedTipsGraph = new Map(tipEntries.map((e) => [e.data.id, e.data.related_tips.filter((r) => ids.has(r))]));
+for (const [startId] of relatedTipsGraph) {
+  const visited = new Set();
+  const stack = [[startId, [startId]]];
+  while (stack.length) {
+    const [currentId, path] = stack.pop();
+    for (const nextId of relatedTipsGraph.get(currentId) ?? []) {
+      if (nextId === startId && path.length > 2) {
+        warnings.push(`related_tips cycle detected (length ${path.length}): ${[...path, nextId].join(' -> ')}`);
+        continue;
+      }
+      const key = `${nextId}:${path.length}`;
+      if (nextId !== startId && !visited.has(key) && path.length < 6) {
+        visited.add(key);
+        stack.push([nextId, [...path, nextId]]);
+      }
+    }
+  }
 }
 
 if (warnings.length) {

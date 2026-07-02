@@ -5,6 +5,8 @@
   "type": "object",
   "additionalProperties": false,
   "x-schema-version": "1.0.0",
+  "x-migration-note": "Tips-vertical reorganisation. New fields below are OPTIONAL but typed until 100% migration is confirmed via `pnpm run migration:tips:progress`, at which point the fields listed in `x-required-after-migration` flip to `required` in one atomic commit alongside CI switching from migration:tips:progress to migration:tips:enforce. `applies_to` is ALREADY required (pre-existing field) but currently has no `minItems` constraint since all 106 pre-migration entries have `applies_to: []`; the atomic promotion commit also adds `minItems: 1` to `applies_to` at that point, per the brief's requirement that applies_to be non-empty post-migration. See the tools/projects/research-vertical precedents for the same required-field sequencing.",
+  "x-required-after-migration": ["phase", "effort", "verification_status", "applies_to (add minItems: 1)", "gotchas", "reversible", "last_reviewed"],
   "required": ["id", "title", "category", "tags", "difficulty", "impact", "time_to_implement", "applies_to", "added_date", "added_by"],
   "properties": {
     "id": { "$ref": "#/$defs/kebabId" },
@@ -12,13 +14,29 @@
     "category": { "enum": ["prompting", "inference-optimization", "rag-tuning", "cost-reduction", "debugging-llm-apps", "latency-optimization", "context-window-management", "agent-reliability", "production-gotchas", "local-model-tips", "security-best-practices"] },
     "tags": { "$ref": "#/$defs/nonEmptyStringArray" },
     "difficulty": { "enum": ["beginner", "intermediate", "advanced"] },
-    "impact": { "enum": ["low", "medium", "high"] },
+    "impact": { "enum": ["low", "medium", "high", "transformative"] },
     "time_to_implement": { "type": "string", "minLength": 1, "maxLength": 80 },
     "applies_to": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "added_date": { "$ref": "#/$defs/date" },
     "added_by": { "$ref": "#/$defs/githubUser" },
-    "verified_by": { "anyOf": [{ "$ref": "#/$defs/githubUser" }, { "type": "null" }] },
-    "source_url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] }
+    "verified_by": { "anyOf": [{ "$ref": "#/$defs/githubUser" }, { "type": "string", "minLength": 1, "maxLength": 120 }, { "type": "null" }] },
+    "source_url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
+
+    "phase": { "enum": ["prompting", "rag-and-retrieval", "agents-and-orchestration", "evaluation", "inference-and-serving", "fine-tuning", "debugging-and-observability", "cost-and-performance"] },
+    "effort": { "enum": ["minutes", "hours", "day"] },
+    "estimated_time": { "type": "string", "minLength": 1, "maxLength": 40 },
+    "reversible": { "type": "boolean" },
+    "verification_status": { "enum": ["production-verified", "lab-verified", "community-reported", "theoretical"] },
+
+    "gotchas": { "type": "array", "minItems": 1, "maxItems": 5, "items": { "type": "string", "minLength": 1 } },
+    "metrics": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+
+    "implemented_from": { "anyOf": [{ "$ref": "#/$defs/kebabId" }, { "type": "null" }] },
+    "related_tools": { "type": "array", "items": { "$ref": "#/$defs/kebabId" }, "default": [] },
+    "related_tips": { "type": "array", "items": { "$ref": "#/$defs/kebabId" }, "default": [] },
+
+    "last_reviewed": { "anyOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+    "enrichment_status": { "enum": ["draft", "reviewed", "verified"] }
   },
   "$defs": {
     "kebabId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "not": { "enum": ["index", "registry", "overview", "introduction", "readme", "agent", "context", "taxonomy", "contributing", "governance", "changelog", "security", "template", "all", "none", "undefined", "null", "true", "false"] } },
@@ -28,4 +46,3 @@
     "nonEmptyStringArray": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
   }
 }
-
