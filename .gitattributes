@@ -46,6 +46,14 @@ content/research/retrieval-and-memory/_index.md      -linguist-generated
 content/research/agents-and-reasoning/_index.md      -linguist-generated
 content/research/evaluation-and-safety/_index.md     -linguist-generated
 content/research/surveys/_index.md                   -linguist-generated
+content/tips-and-tricks/prompting/_index.md                    -linguist-generated
+content/tips-and-tricks/rag-and-retrieval/_index.md            -linguist-generated
+content/tips-and-tricks/agents-and-orchestration/_index.md     -linguist-generated
+content/tips-and-tricks/evaluation/_index.md                   -linguist-generated
+content/tips-and-tricks/inference-and-serving/_index.md        -linguist-generated
+content/tips-and-tricks/fine-tuning/_index.md                  -linguist-generated
+content/tips-and-tricks/debugging-and-observability/_index.md  -linguist-generated
+content/tips-and-tricks/cost-and-performance/_index.md         -linguist-generated
 
 # Lockfile is always LF and treated as a single entity.
 pnpm-lock.yaml  text eol=lf
