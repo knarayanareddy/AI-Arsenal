@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-02T19:48:43.472Z",
+  "generated_at": "2026-07-02T19:53:27.425Z",
   "tags": [
     {
       "id": "agents",
@@ -148,22 +148,18 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 11,
+      "count": 7,
       "types": {
-        "tip": 9,
+        "tip": 5,
         "tool": 1,
         "project": 1
       },
       "entries": [
         "cache-embeddings-by-content-hash",
         "cache-stable-system-prompts",
-        "compress-retrieved-context-before-generation",
-        "drop-unused-conversation-history",
         "measure-kv-cache-hit-rate",
+        "precompute-expensive-static-context",
         "redis-memory",
-        "route-simple-tasks-to-smaller-models",
-        "set-token-budgets-per-feature",
-        "track-cost-per-successful-outcome",
         "use-semantic-cache-for-repeated-questions",
         "vllm"
       ]
@@ -186,11 +182,10 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 58,
+      "count": 49,
       "types": {
         "project": 12,
         "tool": 31,
-        "tip": 9,
         "guide": 5,
         "person": 1
       },
@@ -202,14 +197,10 @@
         "azure-ai-studio",
         "bentoml",
         "braintrust",
-        "cache-embeddings-by-content-hash",
-        "cache-stable-system-prompts",
         "choose-deployment-target",
         "choose-llm",
-        "compress-retrieved-context-before-generation",
         "cost-tracking",
         "dify",
-        "drop-unused-conversation-history",
         "empromptu-ai",
         "enterprise-scale",
         "fastapi",
@@ -244,13 +235,8 @@
         "ragflow",
         "railway",
         "replicate",
-        "route-simple-tasks-to-smaller-models",
         "scale-ai",
-        "set-token-budgets-per-feature",
         "streamlit",
-        "track-cost-per-feature",
-        "track-cost-per-successful-outcome",
-        "use-semantic-cache-for-repeated-questions",
         "vercel",
         "weights-biases"
       ]
@@ -361,9 +347,9 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 13,
+      "count": 18,
       "types": {
-        "tip": 4,
+        "tip": 9,
         "project": 4,
         "paper": 4,
         "tool": 1
@@ -371,8 +357,10 @@
       "entries": [
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
+        "compress-retrieved-context-before-generation",
         "deepseek-v3-r1",
         "dettmers-2023-qlora",
+        "drop-unused-conversation-history",
         "falcon-3",
         "frantar-2022-gptq",
         "hu-2021-lora",
@@ -380,6 +368,9 @@
         "mistral-models",
         "phi-4",
         "pin-model-and-runtime-versions",
+        "set-token-budgets-per-feature",
+        "track-cost-per-feature",
+        "track-cost-per-successful-outcome",
         "unsloth",
         "use-speculative-decoding-for-latency-critical-paths"
       ]
@@ -387,9 +378,9 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 19,
+      "count": 21,
       "types": {
-        "tip": 5,
+        "tip": 7,
         "guide": 3,
         "project": 9,
         "person": 1,
@@ -398,6 +389,7 @@
       "entries": [
         "add-hybrid-search-for-exact-terms",
         "add-reranking-after-recall-is-acceptable",
+        "cache-embeddings-by-content-hash",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -414,6 +406,7 @@
         "txtai",
         "use-metadata-filters-before-similarity-search",
         "use-query-rewriting-for-vague-questions",
+        "use-semantic-cache-for-repeated-questions",
         "weaviate"
       ]
     },
@@ -615,9 +608,9 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 52,
+      "count": 54,
       "types": {
-        "tip": 19,
+        "tip": 21,
         "tool": 6,
         "guide": 7,
         "project": 17,
@@ -630,6 +623,7 @@
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
         "bentoml",
+        "cache-stable-system-prompts",
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
@@ -667,6 +661,7 @@
         "qwen-2-5",
         "replicate",
         "research-platform",
+        "route-simple-tasks-to-smaller-models",
         "separate-offline-batch-jobs-from-chat-serving",
         "sglang",
         "stream-user-facing-responses",
@@ -725,9 +720,9 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 139,
+      "count": 131,
       "types": {
-        "tip": 28,
+        "tip": 20,
         "guide": 30,
         "person": 15,
         "tool": 33,
@@ -748,13 +743,10 @@
         "azure-ai-studio",
         "basic-rag-chatbot",
         "brown-2020-gpt3",
-        "cache-embeddings-by-content-hash",
-        "cache-stable-system-prompts",
         "chainlit",
         "choose-llm",
         "clem-delangue",
         "command-r-plus",
-        "compress-retrieved-context-before-generation",
         "dario-amodei",
         "data-labeling",
         "deepeval",
@@ -763,7 +755,6 @@
         "detect-context-truncation-in-tests",
         "devlin-2018-bert",
         "discord-communities",
-        "drop-unused-conversation-history",
         "dspy",
         "dubey-2024-llama3",
         "evaluation",
@@ -836,14 +827,12 @@
         "rank-context-by-expected-usefulness",
         "rebuff",
         "reserve-output-tokens-before-adding-context",
-        "route-simple-tasks-to-smaller-models",
         "sebastian-bubeck",
         "sebastian-raschka",
         "security-and-guardrails",
         "separate-system-and-task-prompts",
         "separate-user-content-from-system-instructions",
         "set-temperature-by-decision-risk",
-        "set-token-budgets-per-feature",
         "sglang",
         "shreya-shankar",
         "simon-willison",
@@ -856,14 +845,12 @@
         "text-generation-inference",
         "thomas-wolf",
         "torchtune",
-        "track-cost-per-successful-outcome",
         "transformers",
         "translategemma",
         "unsloth",
         "use-context-budgets-per-section",
         "use-delimiters-around-retrieved-context",
         "use-json-only-for-machine-parsed-outputs",
-        "use-semantic-cache-for-repeated-questions",
         "use-xml-tags-for-long-prompt-sections",
         "vaswani-2017-attention",
         "vector-search",
@@ -920,10 +907,10 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 15,
+      "count": 16,
       "types": {
         "guide": 3,
-        "tip": 6,
+        "tip": 7,
         "tool": 5,
         "project": 1
       },
@@ -931,6 +918,7 @@
         "agent-builder",
         "budget-context-before-adding-tools",
         "choose-memory-solution",
+        "drop-unused-conversation-history",
         "letta",
         "mastra",
         "mem0",
@@ -948,9 +936,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 32,
+      "count": 27,
       "types": {
-        "tip": 12,
+        "tip": 7,
         "person": 1,
         "guide": 3,
         "tool": 10,
@@ -972,22 +960,17 @@
         "keep-a-kill-switch-for-agent-actions",
         "litellm",
         "make-success-criteria-machine-checkable",
-        "measure-first-token-latency",
-        "measure-queue-time-separately",
         "mlflow",
         "monako-glass",
         "openlit",
         "openllmetry",
         "opik",
         "overview",
-        "parallelize-independent-retrieval-calls",
         "phoenix",
-        "precompute-expensive-static-context",
         "promptfoo",
         "spotlight-by-backplanes",
         "superlog",
         "tracing-and-monitoring",
-        "use-smaller-models-for-classification-steps",
         "weights-biases"
       ]
     },
@@ -1031,9 +1014,9 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 44,
+      "count": 48,
       "types": {
-        "tip": 18,
+        "tip": 22,
         "project": 12,
         "guide": 7,
         "person": 1,
@@ -1063,6 +1046,8 @@
         "log-raw-and-parsed-model-outputs",
         "log-retrieved-context",
         "lunary",
+        "measure-first-token-latency",
+        "measure-queue-time-separately",
         "openlit",
         "openllmetry",
         "opik",
@@ -1078,11 +1063,13 @@
         "replay-the-same-trace-with-one-variable-changed",
         "review-data-retention-for-prompts",
         "separate-model-errors-from-app-errors",
+        "set-token-budgets-per-feature",
         "store-parser-version-with-every-chunk",
         "store-prompt-version-in-every-trace",
         "trace-tool-inputs-and-outputs",
         "tracing-and-monitoring",
         "track-cost-per-feature",
+        "track-cost-per-successful-outcome",
         "use-golden-questions-for-every-bug-fix",
         "wandb-weave"
       ]
@@ -1200,9 +1187,9 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 69,
+      "count": 70,
       "types": {
-        "tip": 17,
+        "tip": 18,
         "guide": 10,
         "build-example": 5,
         "project": 23,
@@ -1220,6 +1207,7 @@
         "choose-vector-db",
         "chroma",
         "command-r-plus",
+        "compress-retrieved-context-before-generation",
         "crawl4ai",
         "crawl4ai-tool",
         "detect-multi-hop-questions-explicitly",
@@ -1341,9 +1329,9 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 53,
+      "count": 54,
       "types": {
-        "tip": 18,
+        "tip": 19,
         "tool": 6,
         "build-example": 4,
         "guide": 5,
@@ -1377,6 +1365,7 @@
         "log-retrieved-context",
         "measure-retrieval-recall-before-answer-quality",
         "milvus",
+        "parallelize-independent-retrieval-calls",
         "pgvector",
         "pinecone",
         "pinecone-vector-db",
@@ -1426,12 +1415,15 @@
     {
       "id": "routing",
       "label": "Routing",
-      "count": 1,
+      "count": 3,
       "types": {
-        "tool": 1
+        "tool": 1,
+        "tip": 2
       },
       "entries": [
-        "cloudskill"
+        "cloudskill",
+        "route-simple-tasks-to-smaller-models",
+        "use-smaller-models-for-classification-steps"
       ]
     },
     {
@@ -1535,19 +1527,14 @@
     {
       "id": "streaming",
       "label": "Streaming",
-      "count": 7,
+      "count": 2,
       "types": {
-        "tip": 6,
+        "tip": 1,
         "project": 1
       },
       "entries": [
-        "measure-first-token-latency",
-        "measure-queue-time-separately",
-        "parallelize-independent-retrieval-calls",
-        "precompute-expensive-static-context",
         "stream-user-facing-responses",
-        "text-generation-inference",
-        "use-smaller-models-for-classification-steps"
+        "text-generation-inference"
       ]
     },
     {

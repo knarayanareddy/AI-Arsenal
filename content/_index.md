@@ -82,8 +82,8 @@
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - [Budget Context Before Adding More Tools to an Agent](./tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools.md) — 
-- [Cache Embeddings By Content Hash](./tips-and-tricks/cache-embeddings-by-content-hash.md) — 
-- [Cache Stable System Prompts](./tips-and-tricks/cache-stable-system-prompts.md) — 
+- [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash.md) — 
+- [Use Prompt Caching for Long, Stable System Prompt Prefixes](./tips-and-tricks/cost-and-performance/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries.md) — 
 - [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 

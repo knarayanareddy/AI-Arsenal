@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T19:48:43.472Z",
+    "generated_at": "2026-07-02T19:53:27.425Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -673,16 +673,15 @@
     {
       "id": "cache-embeddings-by-content-hash",
       "type": "tip",
-      "name": "Cache Embeddings By Content Hash",
+      "name": "Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls",
       "description": "",
       "tags": [
-        "llm",
         "caching",
-        "cloud"
+        "embeddings"
       ],
-      "path": "content/tips-and-tricks/cache-embeddings-by-content-hash.md",
-      "url": "content/tips-and-tricks/cache-embeddings-by-content-hash",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash.md",
+      "url": "content/tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -692,16 +691,15 @@
     {
       "id": "cache-stable-system-prompts",
       "type": "tip",
-      "name": "Cache Stable System Prompts",
+      "name": "Use Prompt Caching for Long, Stable System Prompt Prefixes",
       "description": "",
       "tags": [
-        "llm",
         "caching",
-        "cloud"
+        "inference"
       ],
-      "path": "content/tips-and-tricks/cache-stable-system-prompts.md",
-      "url": "content/tips-and-tricks/cache-stable-system-prompts",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/cache-stable-system-prompts.md",
+      "url": "content/tips-and-tricks/cost-and-performance/cache-stable-system-prompts",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -1093,16 +1091,15 @@
     {
       "id": "compress-retrieved-context-before-generation",
       "type": "tip",
-      "name": "Compress Retrieved Context Before Generation",
+      "name": "Compress or Filter Retrieved Chunks When Context Cost Dominates",
       "description": "",
       "tags": [
-        "llm",
-        "caching",
-        "cloud"
+        "rag",
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/compress-retrieved-context-before-generation.md",
-      "url": "content/tips-and-tricks/compress-retrieved-context-before-generation",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/compress-retrieved-context-before-generation.md",
+      "url": "content/tips-and-tricks/cost-and-performance/compress-retrieved-context-before-generation",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -1549,16 +1546,15 @@
     {
       "id": "drop-unused-conversation-history",
       "type": "tip",
-      "name": "Drop Unused Conversation History",
+      "name": "Keep Only Relevant Conversation History, Not the Whole Transcript",
       "description": "",
       "tags": [
-        "llm",
-        "caching",
-        "cloud"
+        "memory",
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/drop-unused-conversation-history.md",
-      "url": "content/tips-and-tricks/drop-unused-conversation-history",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/drop-unused-conversation-history.md",
+      "url": "content/tips-and-tricks/cost-and-performance/drop-unused-conversation-history",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -3374,16 +3370,15 @@
     {
       "id": "measure-first-token-latency",
       "type": "tip",
-      "name": "Measure First Token Latency Separately",
+      "name": "Measure Time-to-First-Token Separately From Total Generation Time",
       "description": "",
       "tags": [
-        "streaming",
-        "monitoring",
-        "inference"
+        "inference",
+        "observability"
       ],
-      "path": "content/tips-and-tricks/measure-first-token-latency.md",
-      "url": "content/tips-and-tricks/measure-first-token-latency",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/cost-and-performance/measure-first-token-latency.md",
+      "url": "content/tips-and-tricks/cost-and-performance/measure-first-token-latency",
+      "last_updated": "2026-07-02",
       "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
@@ -3411,16 +3406,15 @@
     {
       "id": "measure-queue-time-separately",
       "type": "tip",
-      "name": "Measure Queue Time Separately",
+      "name": "Measure Queue Time Separately From Model Generation Time",
       "description": "",
       "tags": [
         "inference",
-        "streaming",
-        "monitoring"
+        "observability"
       ],
-      "path": "content/tips-and-tricks/measure-queue-time-separately.md",
-      "url": "content/tips-and-tricks/measure-queue-time-separately",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/measure-queue-time-separately.md",
+      "url": "content/tips-and-tricks/cost-and-performance/measure-queue-time-separately",
+      "last_updated": "2026-07-02",
       "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
@@ -4158,16 +4152,15 @@
     {
       "id": "parallelize-independent-retrieval-calls",
       "type": "tip",
-      "name": "Parallelize Independent Retrieval Calls",
+      "name": "Run Independent Retrieval or Tool Calls Concurrently, Not Sequentially",
       "description": "",
       "tags": [
-        "inference",
-        "streaming",
-        "monitoring"
+        "retrieval",
+        "inference"
       ],
-      "path": "content/tips-and-tricks/parallelize-independent-retrieval-calls.md",
-      "url": "content/tips-and-tricks/parallelize-independent-retrieval-calls",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/parallelize-independent-retrieval-calls.md",
+      "url": "content/tips-and-tricks/cost-and-performance/parallelize-independent-retrieval-calls",
+      "last_updated": "2026-07-02",
       "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
@@ -4427,16 +4420,15 @@
     {
       "id": "precompute-expensive-static-context",
       "type": "tip",
-      "name": "Precompute Expensive Static Context",
+      "name": "Precompute Summaries, Embeddings, and Metadata Offline Instead of at Request Time",
       "description": "",
       "tags": [
         "inference",
-        "streaming",
-        "monitoring"
+        "caching"
       ],
-      "path": "content/tips-and-tricks/precompute-expensive-static-context.md",
-      "url": "content/tips-and-tricks/precompute-expensive-static-context",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/precompute-expensive-static-context.md",
+      "url": "content/tips-and-tricks/cost-and-performance/precompute-expensive-static-context",
+      "last_updated": "2026-07-02",
       "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
@@ -5178,16 +5170,15 @@
     {
       "id": "route-simple-tasks-to-smaller-models",
       "type": "tip",
-      "name": "Route Simple Tasks To Smaller Models",
+      "name": "Classify Task Difficulty and Route Easy Requests to Cheaper Models",
       "description": "",
       "tags": [
-        "llm",
-        "caching",
-        "cloud"
+        "inference",
+        "routing"
       ],
-      "path": "content/tips-and-tricks/route-simple-tasks-to-smaller-models.md",
-      "url": "content/tips-and-tricks/route-simple-tasks-to-smaller-models",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/route-simple-tasks-to-smaller-models.md",
+      "url": "content/tips-and-tricks/cost-and-performance/route-simple-tasks-to-smaller-models",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -5511,16 +5502,15 @@
     {
       "id": "set-token-budgets-per-feature",
       "type": "tip",
-      "name": "Set Token Budgets Per Feature",
+      "name": "Set a Maximum Input/Output Token Budget Per Feature and Alert on Overruns",
       "description": "",
       "tags": [
-        "llm",
-        "caching",
-        "cloud"
+        "efficiency",
+        "observability"
       ],
-      "path": "content/tips-and-tricks/set-token-budgets-per-feature.md",
-      "url": "content/tips-and-tricks/set-token-budgets-per-feature",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/set-token-budgets-per-feature.md",
+      "url": "content/tips-and-tricks/cost-and-performance/set-token-budgets-per-feature",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -6105,15 +6095,15 @@
     {
       "id": "track-cost-per-feature",
       "type": "tip",
-      "name": "Track Cost per Feature",
+      "name": "Track LLM Cost Broken Down Per Feature, Not Only in Aggregate",
       "description": "",
       "tags": [
-        "observability",
-        "cloud"
+        "efficiency",
+        "observability"
       ],
-      "path": "content/tips-and-tricks/track-cost-per-feature.md",
-      "url": "content/tips-and-tricks/track-cost-per-feature",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/cost-and-performance/track-cost-per-feature.md",
+      "url": "content/tips-and-tricks/cost-and-performance/track-cost-per-feature",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -6123,16 +6113,15 @@
     {
       "id": "track-cost-per-successful-outcome",
       "type": "tip",
-      "name": "Track Cost Per Successful Outcome",
+      "name": "Track Cost Per Successful Outcome, Not Just Cost Per Model Call",
       "description": "",
       "tags": [
-        "llm",
-        "caching",
-        "cloud"
+        "observability",
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/track-cost-per-successful-outcome.md",
-      "url": "content/tips-and-tricks/track-cost-per-successful-outcome",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/track-cost-per-successful-outcome.md",
+      "url": "content/tips-and-tricks/cost-and-performance/track-cost-per-successful-outcome",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -6496,16 +6485,15 @@
     {
       "id": "use-semantic-cache-for-repeated-questions",
       "type": "tip",
-      "name": "Use Semantic Cache For Repeated Questions",
+      "name": "Cache Answers for Semantically Similar Repeated Questions",
       "description": "",
       "tags": [
-        "llm",
         "caching",
-        "cloud"
+        "embeddings"
       ],
-      "path": "content/tips-and-tricks/use-semantic-cache-for-repeated-questions.md",
-      "url": "content/tips-and-tricks/use-semantic-cache-for-repeated-questions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/use-semantic-cache-for-repeated-questions.md",
+      "url": "content/tips-and-tricks/cost-and-performance/use-semantic-cache-for-repeated-questions",
+      "last_updated": "2026-07-02",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -6534,16 +6522,15 @@
     {
       "id": "use-smaller-models-for-classification-steps",
       "type": "tip",
-      "name": "Use Smaller Models For Classification Steps",
+      "name": "Use Small Models or Rules for Routing, Classification, and Extraction Sub-Steps",
       "description": "",
       "tags": [
         "inference",
-        "streaming",
-        "monitoring"
+        "routing"
       ],
-      "path": "content/tips-and-tricks/use-smaller-models-for-classification-steps.md",
-      "url": "content/tips-and-tricks/use-smaller-models-for-classification-steps",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/cost-and-performance/use-smaller-models-for-classification-steps.md",
+      "url": "content/tips-and-tricks/cost-and-performance/use-smaller-models-for-classification-steps",
+      "last_updated": "2026-07-02",
       "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,

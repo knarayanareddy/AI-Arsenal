@@ -7,6 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [agents and orchestration](./agents-and-orchestration/) | 15 entries | 2026-07-02 |
+| [cost and performance](./cost-and-performance/) | 14 entries | 2026-07-02 |
 | [debugging and observability](./debugging-and-observability/) | 13 entries | 2026-07-02 |
 | [evaluation](./evaluation/) | 6 entries | 2026-07-02 |
 | [fine tuning](./fine-tuning/) | 0 entries | 2026-07-02 |
@@ -25,7 +26,7 @@
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./inference-and-serving/benchmark-on-the-user-hardware.md)
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./inference-and-serving/benchmark-with-production-shaped-inputs.md)
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./inference-and-serving/benchmark-with-real-context-lengths.md)
-- [Cache Embeddings By Content Hash](./cache-embeddings-by-content-hash.md)
+- [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./cost-and-performance/cache-embeddings-by-content-hash.md)
 
 ## Most Popular
 
@@ -46,20 +47,20 @@ _No star-tracked entries yet._
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [Budget Context Before Adding More Tools to an Agent](./agents-and-orchestration/budget-context-before-adding-tools.md) — 
-- [Cache Embeddings By Content Hash](./cache-embeddings-by-content-hash.md) — 
-- [Cache Stable System Prompts](./cache-stable-system-prompts.md) — 
+- [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./cost-and-performance/cache-embeddings-by-content-hash.md) — 
+- [Use Prompt Caching for Long, Stable System Prompt Prefixes](./cost-and-performance/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./agents-and-orchestration/cap-agent-tool-retries.md) — 
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
 - [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./inference-and-serving/choose-int4-only-after-quality-tests.md) — 
 - [Classify Failures by Root Cause Before Changing Prompts](./debugging-and-observability/classify-failures-before-fixing-prompts.md) — 
-- [Compress Retrieved Context Before Generation](./compress-retrieved-context-before-generation.md) — 
+- [Compress or Filter Retrieved Chunks When Context Cost Dominates](./cost-and-performance/compress-retrieved-context-before-generation.md) — 
 - [Define Explicit Fallbacks for Tool Failures](./agents-and-orchestration/define-fallbacks-for-tool-failures.md) — 
 - [Fail Tests When Important Context Sections Are Truncated](./evaluation/detect-context-truncation-in-tests.md) — 
 - [Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval](./rag-and-retrieval/detect-multi-hop-questions-explicitly.md) — 
 - [Detect and Stop Repeated Identical Tool Calls](./agents-and-orchestration/detect-repeated-tool-calls.md) — 
 - [Capture Sampled Traces Before Real Users Hit the System](./debugging-and-observability/do-not-launch-without-trace-sampling.md) — 
-- [Drop Unused Conversation History](./drop-unused-conversation-history.md) — 
+- [Keep Only Relevant Conversation History, Not the Whole Transcript](./cost-and-performance/drop-unused-conversation-history.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
 - [Keep a Kill Switch for Risky Agent Tools](./agents-and-orchestration/keep-a-kill-switch-for-agent-actions.md) — 
@@ -71,15 +72,15 @@ _No star-tracked entries yet._
 - [Log the Retrieved Context for Every RAG Answer](./debugging-and-observability/log-retrieved-context.md) — 
 - [Make Agent Success Criteria Machine-Checkable, Not Self-Reported](./agents-and-orchestration/make-success-criteria-machine-checkable.md) — 
 - [Match Configured Context Length to Available RAM Before Demos](./inference-and-serving/match-context-length-to-ram.md) — 
-- [Measure First Token Latency Separately](./measure-first-token-latency.md) — 
+- [Measure Time-to-First-Token Separately From Total Generation Time](./cost-and-performance/measure-first-token-latency.md) — 
 - [Track KV Cache Hit Rate for Long-Context Serving Economics](./inference-and-serving/measure-kv-cache-hit-rate.md) — 
-- [Measure Queue Time Separately](./measure-queue-time-separately.md) — 
+- [Measure Queue Time Separately From Model Generation Time](./cost-and-performance/measure-queue-time-separately.md) — 
 - [Measure Retrieval Recall Before Blaming Answer Quality](./rag-and-retrieval/measure-retrieval-recall-before-answer-quality.md) — 
 - [Name the Audience Explicitly in the Prompt](./prompting/name-the-audience-in-the-prompt.md) — 
 - [Order Few-Shot Examples by Similarity to the Actual Task](./prompting/order-few-shot-examples-by-similarity.md) — 
-- [Parallelize Independent Retrieval Calls](./parallelize-independent-retrieval-calls.md) — 
+- [Run Independent Retrieval or Tool Calls Concurrently, Not Sequentially](./cost-and-performance/parallelize-independent-retrieval-calls.md) — 
 - [Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images](./inference-and-serving/pin-dependencies-for-inference-images.md) — 
 - [Pin Model and Runtime Versions Before Running Any Benchmark](./inference-and-serving/pin-model-and-runtime-versions.md) — 
-- [Precompute Expensive Static Context](./precompute-expensive-static-context.md) — 
+- [Precompute Summaries, Embeddings, and Metadata Offline Instead of at Request Time](./cost-and-performance/precompute-expensive-static-context.md) — 
 - [Prefer GGUF Format for llama.cpp and Ollama-Style Local Runtimes](./inference-and-serving/prefer-gguf-for-llama-cpp-workflows.md) — 
 - [Prefer ID References Over Copying Metadata Into Log Records](./debugging-and-observability/prefer-id-references-over-copying.md) — 
