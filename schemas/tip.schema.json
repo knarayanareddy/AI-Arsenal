@@ -4,10 +4,9 @@
   "title": "AI Arsenal Tip Entry",
   "type": "object",
   "additionalProperties": false,
-  "x-schema-version": "1.0.0",
-  "x-migration-note": "Tips-vertical reorganisation. New fields below are OPTIONAL but typed until 100% migration is confirmed via `pnpm run migration:tips:progress`, at which point the fields listed in `x-required-after-migration` flip to `required` in one atomic commit alongside CI switching from migration:tips:progress to migration:tips:enforce. `applies_to` is ALREADY required (pre-existing field) but currently has no `minItems` constraint since all 106 pre-migration entries have `applies_to: []`; the atomic promotion commit also adds `minItems: 1` to `applies_to` at that point, per the brief's requirement that applies_to be non-empty post-migration. See the tools/projects/research-vertical precedents for the same required-field sequencing.",
-  "x-required-after-migration": ["phase", "effort", "verification_status", "applies_to (add minItems: 1)", "gotchas", "reversible", "last_reviewed"],
-  "required": ["id", "title", "category", "tags", "difficulty", "impact", "time_to_implement", "applies_to", "added_date", "added_by"],
+  "x-schema-version": "1.1.0",
+  "x-migration-note": "Tips-vertical reorganisation COMPLETE (102/102 tips migrated into 8 phase folders, confirmed via `pnpm run migration:tips:progress` reporting 100%). This atomic commit flips the previously-optional-but-typed migration fields to required, adds `minItems: 1` to `applies_to` (all 102 entries now carry at least one real context descriptor; the pre-migration `applies_to: []` state no longer exists), and switches `package.json`'s `ci` script from `migration:tips:progress` to `migration:tips:enforce` in the same commit -- matching the exact sequencing already used for the tools/projects/research verticals.",
+  "required": ["id", "title", "category", "tags", "difficulty", "impact", "time_to_implement", "applies_to", "added_date", "added_by", "phase", "effort", "verification_status", "gotchas", "reversible", "last_reviewed"],
   "properties": {
     "id": { "$ref": "#/$defs/kebabId" },
     "title": { "type": "string", "minLength": 1, "maxLength": 140 },
@@ -16,7 +15,7 @@
     "difficulty": { "enum": ["beginner", "intermediate", "advanced"] },
     "impact": { "enum": ["low", "medium", "high", "transformative"] },
     "time_to_implement": { "type": "string", "minLength": 1, "maxLength": 80 },
-    "applies_to": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "applies_to": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "added_date": { "$ref": "#/$defs/date" },
     "added_by": { "$ref": "#/$defs/githubUser" },
     "verified_by": { "anyOf": [{ "$ref": "#/$defs/githubUser" }, { "type": "string", "minLength": 1, "maxLength": 120 }, { "type": "null" }] },
@@ -35,7 +34,7 @@
     "related_tools": { "type": "array", "items": { "$ref": "#/$defs/kebabId" }, "default": [] },
     "related_tips": { "type": "array", "items": { "$ref": "#/$defs/kebabId" }, "default": [] },
 
-    "last_reviewed": { "anyOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+    "last_reviewed": { "$ref": "#/$defs/date" },
     "enrichment_status": { "enum": ["draft", "reviewed", "verified"] }
   },
   "$defs": {
