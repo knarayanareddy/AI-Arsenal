@@ -22,7 +22,12 @@ function checkRefs(entry, field, mode = 'error') {
 for (const entry of entries) {
   checkRefs(entry, 'alternatives', 'warning');
   checkRefs(entry, 'integrates_with', 'warning');
-  checkRefs(entry, 'applies_to', 'warning');
+  // Note: 'applies_to' is intentionally NOT checked as a catalog-ID
+  // reference. For tip entries specifically, applies_to is documented
+  // (tips-vertical-reorg brief) as free-form context descriptors (e.g.
+  // "rag-pipelines", "chat-applications"), not IDs that must resolve to
+  // another catalog entry -- unlike alternatives/integrates_with/
+  // related_tips, which are genuine ID references.
   checkRefs(entry, 'related_entries', 'warning');
   checkRefs(entry, 'top_projects', 'warning');
   checkRefs(entry, 'top_tools', 'warning');
@@ -68,24 +73,31 @@ for (const entry of entries) {
 }
 
 // Rule T-10: related_tips must not create cycles longer than a direct
-// mutual reference (A -> B -> A is explicitly allowed by the rule; a cycle
-// of length 3+ is not). Checked globally, after the per-entry loop, since
-// cycle detection needs the full related_tips graph across all tip entries.
+// mutual reference (A <-> B is explicitly allowed by the rule; a cycle of
+// 3+ distinct entries is not). Checked globally, after the per-entry loop,
+// since cycle detection needs the full related_tips graph across all tip
+// entries. Uses a simple-path DFS (never revisits a node already on the
+// current path) so genuine simple cycles are reported once each, rather
+// than re-exploring already-visited nodes and reporting the same
+// underlying cycle many times at different lengths.
 const tipEntries = entries.filter((e) => e.type === 'tip' && e.data.phase && Array.isArray(e.data.related_tips));
 const relatedTipsGraph = new Map(tipEntries.map((e) => [e.data.id, e.data.related_tips.filter((r) => ids.has(r))]));
+const reportedCycles = new Set();
 for (const [startId] of relatedTipsGraph) {
-  const visited = new Set();
   const stack = [[startId, [startId]]];
   while (stack.length) {
     const [currentId, path] = stack.pop();
     for (const nextId of relatedTipsGraph.get(currentId) ?? []) {
       if (nextId === startId && path.length > 2) {
-        warnings.push(`related_tips cycle detected (length ${path.length}): ${[...path, nextId].join(' -> ')}`);
+        const canonicalKey = [...path].sort().join(',');
+        if (!reportedCycles.has(canonicalKey)) {
+          reportedCycles.add(canonicalKey);
+          warnings.push(`related_tips cycle detected (${path.length} distinct entries, Rule T-10): ${[...path, nextId].join(' -> ')}`);
+        }
         continue;
       }
-      const key = `${nextId}:${path.length}`;
-      if (nextId !== startId && !visited.has(key) && path.length < 6) {
-        visited.add(key);
+      // Simple-path constraint: never revisit a node already on this path.
+      if (!path.includes(nextId) && path.length < 6) {
         stack.push([nextId, [...path, nextId]]);
       }
     }

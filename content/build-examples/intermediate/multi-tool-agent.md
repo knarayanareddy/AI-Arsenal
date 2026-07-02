@@ -86,8 +86,8 @@ flowchart TD
 
 - Framework: [LangGraph](../../projects/frameworks/langgraph.md)
 - Tool: [Instructor](../../tools/dx-and-tooling/instructor.md)
-- Tip: [Validate tool arguments](../../tips-and-tricks/validate-tool-arguments-before-execution.md)
-- Tip: [Separate planner and executor](../../tips-and-tricks/separate-planner-and-executor-permissions.md)
+- Tip: [Validate tool arguments](../../tips-and-tricks/agents-and-orchestration/validate-tool-arguments-before-execution.md)
+- Tip: [Separate planner and executor](../../tips-and-tricks/agents-and-orchestration/separate-planner-and-executor-permissions.md)
 
 ---
 *Last reviewed: 2026-06-14 by @maintainer*
