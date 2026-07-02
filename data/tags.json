@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-02T19:44:33.561Z",
+  "generated_at": "2026-07-02T19:48:43.472Z",
   "tags": [
     {
       "id": "agents",
@@ -186,11 +186,11 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 60,
+      "count": 58,
       "types": {
         "project": 12,
         "tool": 31,
-        "tip": 11,
+        "tip": 9,
         "guide": 5,
         "person": 1
       },
@@ -209,7 +209,6 @@
         "compress-retrieved-context-before-generation",
         "cost-tracking",
         "dify",
-        "do-not-launch-without-trace-sampling",
         "drop-unused-conversation-history",
         "empromptu-ai",
         "enterprise-scale",
@@ -245,7 +244,6 @@
         "ragflow",
         "railway",
         "replicate",
-        "review-data-retention-for-prompts",
         "route-simple-tasks-to-smaller-models",
         "scale-ai",
         "set-token-budgets-per-feature",
@@ -422,9 +420,9 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 72,
+      "count": 65,
       "types": {
-        "tip": 20,
+        "tip": 13,
         "project": 10,
         "guide": 13,
         "tool": 17,
@@ -433,7 +431,6 @@
         "build-example": 1
       },
       "entries": [
-        "add-a-minimal-reproduction-prompt",
         "add-evals-before-refactors",
         "agenta",
         "ai-engineer",
@@ -461,7 +458,6 @@
         "google-vertex-ai",
         "hamel-husain",
         "humanloop",
-        "inspect-retrieved-chunks-beside-the-answer",
         "jason-liu",
         "langfuse",
         "langfuse-prompts",
@@ -469,7 +465,6 @@
         "langsmith-hub",
         "langsmith-platform",
         "llm-researcher",
-        "log-raw-and-parsed-model-outputs",
         "make-success-criteria-machine-checkable",
         "mastra",
         "measure-retrieval-recall-before-answer-quality",
@@ -486,18 +481,14 @@
         "promptfoo",
         "rag-vs-fine-tuning",
         "ragas-rag-evaluation",
-        "replay-the-same-trace-with-one-variable-changed",
         "research-platform",
         "run-prompt-injection-regression-tests",
         "self-correcting-rag",
-        "separate-model-errors-from-app-errors",
         "shreya-shankar",
         "simon-willison",
         "sota-benchmarks",
-        "store-prompt-version-in-every-trace",
         "store-prompts-with-release-versions",
         "test-prompts-with-adversarial-inputs",
-        "trace-tool-inputs-and-outputs",
         "trulens",
         "use-golden-questions-for-every-bug-fix",
         "version-system-prompts-like-code",
@@ -584,9 +575,9 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 14,
+      "count": 13,
       "types": {
-        "tip": 6,
+        "tip": 5,
         "tool": 7,
         "project": 1
       },
@@ -601,7 +592,6 @@
         "openai-agents-sdk",
         "portkey",
         "rebuff",
-        "redact-secrets-before-tracing",
         "separate-user-content-from-system-instructions",
         "treat-retrieved-text-as-untrusted",
         "use-json-schema-for-outputs"
@@ -958,9 +948,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 34,
+      "count": 32,
       "types": {
-        "tip": 14,
+        "tip": 12,
         "person": 1,
         "guide": 3,
         "tool": 10,
@@ -977,7 +967,6 @@
         "deepeval",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
-        "do-not-launch-without-trace-sampling",
         "dvc",
         "helicone",
         "keep-a-kill-switch-for-agent-actions",
@@ -995,7 +984,6 @@
         "phoenix",
         "precompute-expensive-static-context",
         "promptfoo",
-        "review-data-retention-for-prompts",
         "spotlight-by-backplanes",
         "superlog",
         "tracing-and-monitoring",
@@ -1043,9 +1031,9 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 41,
+      "count": 44,
       "types": {
-        "tip": 15,
+        "tip": 18,
         "project": 12,
         "guide": 7,
         "person": 1,
@@ -1062,6 +1050,7 @@
         "classify-failures-before-fixing-prompts",
         "cost-tracking",
         "deepeval",
+        "do-not-launch-without-trace-sampling",
         "evaluation-pipelines",
         "hamel-husain",
         "helicone",
@@ -1085,7 +1074,9 @@
         "production-rag-api",
         "promptlayer",
         "ragas-rag-evaluation",
+        "redact-secrets-before-tracing",
         "replay-the-same-trace-with-one-variable-changed",
+        "review-data-retention-for-prompts",
         "separate-model-errors-from-app-errors",
         "store-parser-version-with-every-chunk",
         "store-prompt-version-in-every-trace",
@@ -1209,9 +1200,9 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 70,
+      "count": 69,
       "types": {
-        "tip": 18,
+        "tip": 17,
         "guide": 10,
         "build-example": 5,
         "project": 23,
@@ -1258,7 +1249,6 @@
         "lewis-2020-rag",
         "llamaindex",
         "llamaparse",
-        "log-retrieved-context",
         "lunary",
         "measure-retrieval-recall-before-answer-quality",
         "mem0",
@@ -1351,9 +1341,9 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 52,
+      "count": 53,
       "types": {
-        "tip": 17,
+        "tip": 18,
         "tool": 6,
         "build-example": 4,
         "guide": 5,
@@ -1378,6 +1368,7 @@
         "evaluate-embedding-models-before-rechunking",
         "gao-2022-hyde",
         "haystack",
+        "inspect-retrieved-chunks-beside-the-answer",
         "jerry-liu",
         "keep-instructions-outside-retrieved-context",
         "lancedb",
@@ -1446,10 +1437,10 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 26,
+      "count": 25,
       "types": {
         "tool": 9,
-        "tip": 13,
+        "tip": 12,
         "person": 3,
         "guide": 1
       },
@@ -1461,7 +1452,6 @@
         "astra-autonomous-pentest",
         "aws-bedrock",
         "dario-amodei",
-        "do-not-launch-without-trace-sampling",
         "enterprise-scale",
         "giskard",
         "guardrails-ai",
@@ -1606,9 +1596,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 32,
+      "count": 31,
       "types": {
-        "tip": 13,
+        "tip": 12,
         "guide": 2,
         "project": 12,
         "build-example": 2,
@@ -1638,7 +1628,6 @@
         "openhands",
         "pydantic-ai",
         "pydantic-ai-tool",
-        "redact-secrets-before-tracing",
         "require-human-approval-for-irreversible-actions",
         "sandbox-code-execution-tools",
         "schick-2023-toolformer",
@@ -1653,9 +1642,9 @@
     {
       "id": "tracing",
       "label": "Tracing",
-      "count": 29,
+      "count": 28,
       "types": {
-        "tip": 9,
+        "tip": 8,
         "project": 10,
         "tool": 7,
         "guide": 3
@@ -1666,9 +1655,8 @@
         "braintrust",
         "chainlit",
         "choose-observability-tool",
-        "classify-failures-before-fixing-prompts",
         "conan",
-        "inspect-retrieved-chunks-beside-the-answer",
+        "do-not-launch-without-trace-sampling",
         "langfuse",
         "langsmith",
         "langsmith-platform",

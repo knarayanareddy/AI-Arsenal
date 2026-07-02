@@ -22,7 +22,6 @@
 ## Recently Added
 
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
-- [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md)
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md)
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
@@ -31,6 +30,7 @@
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md)
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md)
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md)
+- [Andrej Karpathy](./community/people/andrej-karpathy.md)
 
 ## Most Popular
 
@@ -48,7 +48,7 @@
 ## Browse All
 
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md) — 
-- [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md) — 
+- [Keep the Smallest Failing Prompt for Every Recurring Issue](./tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt.md) — 
 - [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./tips-and-tricks/evaluation/add-evals-before-refactors.md) — 
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./tips-and-tricks/prompting/add-output-examples-for-edge-cases.md) — 

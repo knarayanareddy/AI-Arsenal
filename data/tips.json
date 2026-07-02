@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-02T19:44:33.561Z",
+  "generated_at": "2026-07-02T19:48:43.472Z",
   "count": 102,
   "items": [
     {
@@ -63,46 +63,57 @@
     },
     {
       "id": "add-a-minimal-reproduction-prompt",
-      "title": "Add A Minimal Reproduction Prompt",
+      "title": "Keep the Smallest Failing Prompt for Every Recurring Issue",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "20 minutes",
-      "applies_to": [],
-      "added_date": "2026-06-14",
+      "phase": "debugging-and-observability",
+      "effort": "minutes",
+      "estimated_time": "~20 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (minimal-reproduction debugging discipline)",
+      "applies_to": [
+        "debugging-workflows"
+      ],
+      "gotchas": [
+        "A minimal reproduction has to actually be re-verified as still failing before use -- model or prompt updates can make an old 'minimal repro' stop reproducing the issue, silently making it useless",
+        "Reducing a failing case to its minimal form takes deliberate effort (removing unrelated context/history piece by piece) -- skipping this step and keeping the full original trace as the 'repro' makes future debugging slower, not faster"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "classify-failures-before-fixing-prompts",
+        "replay-the-same-trace-with-one-variable-changed"
+      ],
+      "added_date": "2026-06-13",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "reviewed",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/add-a-minimal-reproduction-prompt.md",
-      "url": "content/tips-and-tricks/add-a-minimal-reproduction-prompt",
+      "path": "content/tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt",
       "slug": "add-a-minimal-reproduction-prompt",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Add A Minimal Reproduction Prompt",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Keep the Smallest Failing Prompt for Every Recurring Issue",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 241,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Keep the smallest failing prompt/context pair for every recurring issue.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Keep the smallest failing prompt/context pair for every recurring issue. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 280,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>When a failure is diagnosed, reduce it to the smallest prompt/context pair that still reproduces the issue, and keep that minimal version on hand rather than only the full original trace. A minimal reproduction isolates the actual cause from unrelated context, making it faster to verify a fix and faster for anyone else debugging the same class of issue later.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> the only record of a failure is the full original production trace, with a long conversation history and large retrieved-context block, most of which is unrelated to the actual failure.</p>\n<p><strong>After:</strong> the failure is reduced to the smallest input (often a single short prompt with minimal context) that still reliably reproduces it, stored alongside the original trace.</p>\n<h2>Implementation</h2>\n<p>Starting from the original failing trace, remove pieces of context, history, or instructions one at a time, re-running after each removal, until removing anything further stops reproducing the failure — keep that reduced version as the canonical repro case.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A minimal reproduction needs re-verification as still failing before reuse — model or prompt updates can make it stop reproducing the issue</li>\n<li>Reducing to minimal form takes deliberate effort; skipping it and keeping the full original trace as the \"repro\" slows down future debugging</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip minimal-reduction effort for one-off, non-recurring failures that are unlikely to need future debugging reference</li>\n<li>Not worth the time investment if the failure is already trivially simple (a single short prompt with no extraneous context)</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: reducing failures to minimal reproduction cases is a standard, widely documented debugging discipline across software engineering generally, directly applicable to LLM application debugging.</p>\n",
+      "body_text": "What & Why When a failure is diagnosed, reduce it to the smallest prompt/context pair that still reproduces the issue, and keep that minimal version on hand rather than only the full original trace. A minimal reproduction isolates the actual cause from unrelated context, making it faster to verify a fix and faster for anyone else debugging the same class of issue later. Before / After Before: the only record of a failure is the full original production trace, with a long conversation history and large retrieved context block, most of which is unrelated to the actual failure. After: the failure is reduced to the smallest input (often a single short prompt with minimal context) that still reliably reproduces it, stored alongside the original trace. Implementation Starting from the original failing trace, remove pieces of context, history, or instructions one at a time, re running after each removal, until removing anything further stops reproducing the failure — keep that reduced version as the canonical repro case. Gotchas A minimal reproduction needs re verification as still failing before reuse — model or prompt updates can make it stop reproducing the issue Reducing to minimal form takes deliberate effort; skipping it and keeping the full original trace as the \"repro\" slows down future debugging When NOT to Apply Skip minimal reduction effort for one off, non recurring failures that are unlikely to need future debugging reference Not worth the time investment if the failure is already trivially simple (a single short prompt with no extraneous context) Verification Production verified: reducing failures to minimal reproduction cases is a standard, widely documented debugging discipline across software engineering generally, directly applicable to LLM application debugging."
     },
     {
       "id": "add-evals-before-refactors",
@@ -1007,46 +1018,56 @@
     },
     {
       "id": "classify-failures-before-fixing-prompts",
-      "title": "Classify Failures Before Fixing Prompts",
+      "title": "Classify Failures by Root Cause Before Changing Prompts",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
         "evaluation"
       ],
       "difficulty": "beginner",
       "impact": "high",
-      "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "time_to_implement": "30 minutes",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (root-cause-classification debugging discussions)",
+      "applies_to": [
+        "debugging-workflows"
+      ],
+      "gotchas": [
+        "Editing the prompt in response to a failure that's actually a retrieval, tool, or parsing failure wastes effort and can make the prompt worse for cases it previously handled correctly, without fixing the real problem",
+        "Classification requires enough tracing detail to actually distinguish the failure categories (retrieved context, tool calls, parsed output all visible) -- without that visibility, classification degrades into guessing"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "separate-model-errors-from-app-errors"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/classify-failures-before-fixing-prompts.md",
-      "url": "content/tips-and-tricks/classify-failures-before-fixing-prompts",
+      "path": "content/tips-and-tricks/debugging-and-observability/classify-failures-before-fixing-prompts.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/classify-failures-before-fixing-prompts",
       "slug": "classify-failures-before-fixing-prompts",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Classify Failures Before Fixing Prompts",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Classify Failures by Root Cause Before Changing Prompts",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 244,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Label failures as retrieval, reasoning, tool, parsing, or policy failures before changing prompts.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Label failures as retrieval, reasoning, tool, parsing, or policy failures before changing prompts. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 271,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Before editing a prompt in response to a failure, classify what actually caused it — retrieval miss, reasoning error, tool failure, output-parsing failure, or policy violation — using trace data. Editing the prompt blind, without classification, risks fixing the wrong layer of the system and can degrade previously-working cases.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> every reported failure triggers a prompt edit, regardless of whether the actual cause was retrieval, tooling, or parsing.</p>\n<p><strong>After:</strong> each failure is first classified by root cause using trace data (was the right context retrieved? did tools return correctly? did parsing succeed?), and only failures actually caused by prompt/reasoning issues result in a prompt change.</p>\n<h2>Implementation</h2>\n<p>Add failure-category tagging to your trace review process (retrieval / reasoning / tool / parsing / policy), inspect the relevant trace fields to determine the actual category before acting, and route the fix to the corresponding layer rather than defaulting to a prompt edit.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Editing the prompt for a failure that's actually a retrieval, tool, or parsing failure wastes effort and can degrade previously-working cases</li>\n<li>Classification requires enough tracing detail to distinguish the categories — without that visibility, it degrades into guessing</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip formal classification for a single, clearly prompt-caused failure with unambiguous evidence already in hand</li>\n<li>Not useful without adequate tracing infrastructure in place first — see <code>trace-tool-inputs-and-outputs</code> and <code>log-retrieved-context</code> as prerequisites</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: classifying failures by root cause before making prompt changes is a widely repeated recommendation in LLM debugging writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Before editing a prompt in response to a failure, classify what actually caused it — retrieval miss, reasoning error, tool failure, output parsing failure, or policy violation — using trace data. Editing the prompt blind, without classification, risks fixing the wrong layer of the system and can degrade previously working cases. Before / After Before: every reported failure triggers a prompt edit, regardless of whether the actual cause was retrieval, tooling, or parsing. After: each failure is first classified by root cause using trace data (was the right context retrieved? did tools return correctly? did parsing succeed?), and only failures actually caused by prompt/reasoning issues result in a prompt change. Implementation Add failure category tagging to your trace review process (retrieval / reasoning / tool / parsing / policy), inspect the relevant trace fields to determine the actual category before acting, and route the fix to the corresponding layer rather than defaulting to a prompt edit. Gotchas Editing the prompt for a failure that's actually a retrieval, tool, or parsing failure wastes effort and can degrade previously working cases Classification requires enough tracing detail to distinguish the categories — without that visibility, it degrades into guessing When NOT to Apply Skip formal classification for a single, clearly prompt caused failure with unambiguous evidence already in hand Not useful without adequate tracing infrastructure in place first — see trace tool inputs and outputs and log retrieved context as prerequisites Verification Community reported: classifying failures by root cause before making prompt changes is a widely repeated recommendation in LLM debugging writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "compress-retrieved-context-before-generation",
@@ -1310,46 +1331,57 @@
     },
     {
       "id": "do-not-launch-without-trace-sampling",
-      "title": "Do Not Launch Without Trace Sampling",
+      "title": "Capture Sampled Traces Before Real Users Hit the System",
       "category": "production-gotchas",
       "tags": [
-        "monitoring",
-        "security",
-        "cloud"
+        "observability",
+        "tracing"
       ],
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "impact": "high",
-      "time_to_implement": "45 minutes",
-      "applies_to": [],
+      "time_to_implement": "1 hour",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (pre-launch observability checklists)",
+      "applies_to": [
+        "production-launches"
+      ],
+      "gotchas": [
+        "Launching without any trace capture means the first real failures have no diagnostic record at all -- by the time tracing is added reactively, the specific failing conditions are often already gone",
+        "100% trace sampling can be cost-prohibitive at scale -- a reasonable sampling rate (not zero) is the actual goal, not necessarily full capture from day one"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "trace-tool-inputs-and-outputs",
+        "store-prompt-version-in-every-trace"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/do-not-launch-without-trace-sampling.md",
-      "url": "content/tips-and-tricks/do-not-launch-without-trace-sampling",
+      "path": "content/tips-and-tricks/debugging-and-observability/do-not-launch-without-trace-sampling.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/do-not-launch-without-trace-sampling",
       "slug": "do-not-launch-without-trace-sampling",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Do Not Launch Without Trace Sampling",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Capture Sampled Traces Before Real Users Hit the System",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 241,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Capture at least sampled traces before real users hit the system.</p>\n</blockquote>\n<p>Production LLM systems need operational controls before traffic, not after incidents.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 45 minutes</li>\n<li><strong>Applies to:</strong> monitoring, security, cloud</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">if feature_flags.agent_actions_disabled:\n    raise PermissionError(\"agent actions disabled\")\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Capture at least sampled traces before real users hit the system. Production LLM systems need operational controls before traffic, not after incidents. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 45 minutes Applies to: monitoring, security, cloud Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 259,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Set up at least sampled trace capture (prompts, responses, key intermediate steps) before a system goes live with real user traffic, rather than adding tracing reactively after the first production incident. Without any pre-launch trace capture, early failures leave no diagnostic record, and by the time tracing is added the specific failing conditions are often gone.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a feature launches with no tracing infrastructure in place; tracing gets added only after the first significant production incident.</p>\n<p><strong>After:</strong> trace sampling (even at a modest rate, e.g. 10-20% of requests) is wired in before launch, capturing enough real traffic to diagnose early issues.</p>\n<h2>Implementation</h2>\n<p>Wire trace capture into the request path before launch, set an initial sampling rate that balances cost against diagnostic coverage, and adjust the rate upward temporarily around launch if early issue volume warrants closer visibility.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Launching without trace capture means early failures leave no diagnostic record, and reactive tracing often can't reconstruct the failing conditions</li>\n<li>100% sampling can be cost-prohibitive at scale — the goal is a reasonable non-zero rate, not necessarily full capture from day one</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip elaborate sampling infrastructure for an internal-only prototype with no real user traffic or reliability requirement</li>\n<li>Not necessary if a mature tracing platform is already standard across your organization's launches and this is already satisfied by default</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: capturing sampled traces before launch is a widely repeated recommendation in pre-launch observability checklists, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Set up at least sampled trace capture (prompts, responses, key intermediate steps) before a system goes live with real user traffic, rather than adding tracing reactively after the first production incident. Without any pre launch trace capture, early failures leave no diagnostic record, and by the time tracing is added the specific failing conditions are often gone. Before / After Before: a feature launches with no tracing infrastructure in place; tracing gets added only after the first significant production incident. After: trace sampling (even at a modest rate, e.g. 10 20% of requests) is wired in before launch, capturing enough real traffic to diagnose early issues. Implementation Wire trace capture into the request path before launch, set an initial sampling rate that balances cost against diagnostic coverage, and adjust the rate upward temporarily around launch if early issue volume warrants closer visibility. Gotchas Launching without trace capture means early failures leave no diagnostic record, and reactive tracing often can't reconstruct the failing conditions 100% sampling can be cost prohibitive at scale — the goal is a reasonable non zero rate, not necessarily full capture from day one When NOT to Apply Skip elaborate sampling infrastructure for an internal only prototype with no real user traffic or reliability requirement Not necessary if a mature tracing platform is already standard across your organization's launches and this is already satisfied by default Verification Community reported: capturing sampled traces before launch is a widely repeated recommendation in pre launch observability checklists, not independently benchmarked here against a named production system."
     },
     {
       "id": "drop-unused-conversation-history",
@@ -1451,46 +1483,56 @@
     },
     {
       "id": "inspect-retrieved-chunks-beside-the-answer",
-      "title": "Inspect Retrieved Chunks Beside The Answer",
+      "title": "Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "retrieval"
       ],
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "phase": "debugging-and-observability",
+      "effort": "minutes",
+      "estimated_time": "~20 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (RAG hallucination-debugging discussions)",
+      "applies_to": [
+        "rag-pipelines"
+      ],
+      "gotchas": [
+        "Without the retrieved chunks visible alongside the answer, a hallucination and a correctly-retrieved-but-misused fact look identical from the answer text alone -- the distinction only becomes visible once both are inspected together",
+        "This diagnostic step requires the retrieved chunks to actually be logged per-answer (see log-retrieved-context) -- without that logging in place, there's nothing to inspect"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "log-retrieved-context"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer.md",
-      "url": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer",
+      "path": "content/tips-and-tricks/debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/inspect-retrieved-chunks-beside-the-answer",
       "slug": "inspect-retrieved-chunks-beside-the-answer",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Inspect Retrieved Chunks Beside The Answer",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 243,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Debug hallucinations by checking whether the answer was present in retrieved context.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Debug hallucinations by checking whether the answer was present in retrieved context. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 268,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>When debugging a suspected hallucination, view the retrieved context chunks side-by-side with the generated answer, rather than evaluating the answer text in isolation. A hallucination (the model inventing a fact not present anywhere in the retrieved context) looks identical to a correctly-supported answer from the text alone — the distinction only appears once you check whether the claimed fact is actually present in what was retrieved.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a suspected hallucination is debugged by re-reading the answer and judging plausibility alone.</p>\n<p><strong>After:</strong> the retrieved chunks for that specific answer are pulled up alongside it, and the claimed fact is checked against them directly to determine whether it was actually supported by retrieval.</p>\n<h2>Implementation</h2>\n<p>When investigating a suspected hallucination, retrieve the logged context chunks for that specific request, place them next to the generated answer, and check whether each claimed fact is present in the retrieved text or was invented.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without retrieved chunks visible alongside the answer, a hallucination and a correctly-supported claim look identical from the answer text alone</li>\n<li>This requires retrieved chunks to actually be logged per-answer — without that logging in place, there's nothing to inspect</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for non-RAG generation where there's no retrieved context to compare against in the first place</li>\n<li>Not useful if retrieval logging isn't set up yet — set up <code>log-retrieved-context</code> first</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: inspecting retrieved context alongside the answer to debug hallucinations is a widely repeated recommendation in RAG debugging writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why When debugging a suspected hallucination, view the retrieved context chunks side by side with the generated answer, rather than evaluating the answer text in isolation. A hallucination (the model inventing a fact not present anywhere in the retrieved context) looks identical to a correctly supported answer from the text alone — the distinction only appears once you check whether the claimed fact is actually present in what was retrieved. Before / After Before: a suspected hallucination is debugged by re reading the answer and judging plausibility alone. After: the retrieved chunks for that specific answer are pulled up alongside it, and the claimed fact is checked against them directly to determine whether it was actually supported by retrieval. Implementation When investigating a suspected hallucination, retrieve the logged context chunks for that specific request, place them next to the generated answer, and check whether each claimed fact is present in the retrieved text or was invented. Gotchas Without retrieved chunks visible alongside the answer, a hallucination and a correctly supported claim look identical from the answer text alone This requires retrieved chunks to actually be logged per answer — without that logging in place, there's nothing to inspect When NOT to Apply Skip this for non RAG generation where there's no retrieved context to compare against in the first place Not useful if retrieval logging isn't set up yet — set up log retrieved context first Verification Community reported: inspecting retrieved context alongside the answer to debug hallucinations is a widely repeated recommendation in RAG debugging writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "keep-a-kill-switch-for-agent-actions",
@@ -1768,89 +1810,111 @@
     },
     {
       "id": "log-raw-and-parsed-model-outputs",
-      "title": "Log Raw And Parsed Model Outputs",
+      "title": "Log Both the Raw Model Output and the Parsed Result",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "phase": "debugging-and-observability",
+      "effort": "minutes",
+      "estimated_time": "~20 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (raw+parsed logging discipline in structured-output pipelines)",
+      "applies_to": [
+        "structured-output-pipelines"
+      ],
+      "gotchas": [
+        "Logging only the parsed result makes it impossible to tell whether a downstream failure came from the model's raw output being malformed or from a bug in your own parsing logic -- both need to be visible to distinguish them",
+        "Raw model output can contain sensitive content that needs the same redaction treatment as any other trace data before storage -- logging the raw output doesn't exempt it from data-retention/redaction policy"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "separate-model-errors-from-app-errors",
+        "redact-secrets-before-tracing"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "reviewed",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/log-raw-and-parsed-model-outputs.md",
-      "url": "content/tips-and-tricks/log-raw-and-parsed-model-outputs",
+      "path": "content/tips-and-tricks/debugging-and-observability/log-raw-and-parsed-model-outputs.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-raw-and-parsed-model-outputs",
       "slug": "log-raw-and-parsed-model-outputs",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Log Raw And Parsed Model Outputs",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Log Both the Raw Model Output and the Parsed Result",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 243,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Store both raw text and parsed JSON so schema failures are debuggable.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Store both raw text and parsed JSON so schema failures are debuggable. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 257,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Store both the model's raw text output and the result of parsing it (e.g. the extracted JSON object), rather than only the parsed result. When a downstream consumer receives bad data, having only the parsed output makes it impossible to tell whether the model produced malformed output or your parser has a bug — both look identical from the parsed side alone.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>trace.log(parsed_result)</code> — only the final parsed object is stored.</p>\n<p><strong>After:</strong> <code>trace.log({\"raw_output\": raw_text, \"parsed_result\": parsed_result, \"parse_success\": bool})</code> — both the raw text and parse outcome are stored alongside the parsed result.</p>\n<h2>Implementation</h2>\n<p>Add both <code>raw_output</code> and <code>parsed_result</code> fields to your trace/log schema, populate both on every call, and include a <code>parse_success</code> flag so parse failures are queryable directly rather than requiring manual inspection of every trace.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Logging only the parsed result makes it impossible to distinguish a malformed model output from a parser bug — both need to be visible</li>\n<li>Raw model output needs the same redaction treatment as any other trace data before storage — it isn't exempt from data-retention policy</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for outputs with no parsing step at all (plain text passed through unchanged) — there's nothing distinct to log</li>\n<li>Not necessary if your provider's structured-output mode already guarantees schema-valid output with no parsing failure mode to debug</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: logging both raw and parsed model outputs is a standard, widely documented practice in structured-output pipeline debugging.</p>\n",
+      "body_text": "What & Why Store both the model's raw text output and the result of parsing it (e.g. the extracted JSON object), rather than only the parsed result. When a downstream consumer receives bad data, having only the parsed output makes it impossible to tell whether the model produced malformed output or your parser has a bug — both look identical from the parsed side alone. Before / After Before: trace.log(parsed result) — only the final parsed object is stored. After: trace.log({\"raw output\": raw text, \"parsed result\": parsed result, \"parse success\": bool}) — both the raw text and parse outcome are stored alongside the parsed result. Implementation Add both raw output and parsed result fields to your trace/log schema, populate both on every call, and include a parse success flag so parse failures are queryable directly rather than requiring manual inspection of every trace. Gotchas Logging only the parsed result makes it impossible to distinguish a malformed model output from a parser bug — both need to be visible Raw model output needs the same redaction treatment as any other trace data before storage — it isn't exempt from data retention policy When NOT to Apply Skip this for outputs with no parsing step at all (plain text passed through unchanged) — there's nothing distinct to log Not necessary if your provider's structured output mode already guarantees schema valid output with no parsing failure mode to debug Verification Production verified: logging both raw and parsed model outputs is a standard, widely documented practice in structured output pipeline debugging."
     },
     {
       "id": "log-retrieved-context",
-      "title": "Log Retrieved Context for Every RAG Answer",
+      "title": "Log the Retrieved Context for Every RAG Answer",
       "category": "debugging-llm-apps",
       "tags": [
-        "rag",
-        "retrieval",
-        "observability"
+        "observability",
+        "retrieval"
       ],
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
-      "added_date": "2026-06-13",
-      "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
-      "entry_type": "tip",
-      "path": "content/tips-and-tricks/log-retrieved-context.md",
-      "url": "content/tips-and-tricks/log-retrieved-context",
-      "slug": "log-retrieved-context",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Log Retrieved Context for Every RAG Answer",
-      "summary": "",
-      "last_updated": "2026-06-13",
-      "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (RAG observability discussions)",
+      "applies_to": [
+        "rag-pipelines"
       ],
-      "reading_time_minutes": 1,
-      "word_count": 200,
-      "body_html": "<h2>Overview</h2>\n<p>Log Retrieved Context for Every RAG Answer is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Clear scope and practical applicability</li>\n<li>Structured metadata for filtering and search</li>\n<li>Canonical location for future updates</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Read the entry and follow the linked resources.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When making an AI engineering decision related to this topic</li>\n<li><strong>Scenario</strong>: When collecting context for an LLM or agent workflow</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Concise enough for quick browsing</li>\n<li>Structured enough for generated data and search</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify external claims before production decisions</li>\n<li>Re-run evaluations against your own workload</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Use this entry as a canonical reference from guides, stacks, and generated data views.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://example.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary Resource</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception notes should be updated with verified sources during maintenance reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview Log Retrieved Context for Every RAG Answer is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions. Why It's in the Arsenal It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity. Key Features Clear scope and practical applicability Structured metadata for filtering and search Canonical location for future updates Architecture / How It Works Review the metadata first, then use the body as the human readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere. Getting Started Use Cases 1. Scenario : When making an AI engineering decision related to this topic 2. Scenario : When collecting context for an LLM or agent workflow Strengths Concise enough for quick browsing Structured enough for generated data and search Limitations / When NOT to Use Verify external claims before production decisions Re run evaluations against your own workload Integration Patterns Use this entry as a canonical reference from guides, stacks, and generated data views. Resources Primary Resource Buzz & Reception Reception notes should be updated with verified sources during maintenance reviews. Last reviewed: 2026 06 13 by @maintainer"
+      "gotchas": [
+        "Without logged retrieved context, debugging a bad RAG answer after the fact is guesswork -- there's no way to know what the model actually saw versus what a re-run with current data might retrieve differently",
+        "Retrieved context can be large -- logging the full text for every request has real storage cost, so a sampling or truncation strategy may be needed at scale rather than full capture for every request"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "inspect-retrieved-chunks-beside-the-answer",
+        "store-prompt-version-in-every-trace"
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/log-retrieved-context.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-retrieved-context",
+      "slug": "log-retrieved-context",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Log the Retrieved Context for Every RAG Answer",
+      "summary": "",
+      "last_updated": "2026-07-02",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 268,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Log the specific chunks retrieved for every RAG answer, in addition to the final generated response. Retrieval results can change over time as the underlying index updates, so without logging what was actually retrieved at generation time, a later debugging attempt has no way to know what the model actually saw.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> trace logs contain only the query and final answer, with no record of which chunks were retrieved and passed to the model.</p>\n<p><strong>After:</strong> trace logs include the retrieved chunk IDs (and ideally content or a reference to it) alongside the query and answer, so the exact retrieval context for that specific answer can be reconstructed later.</p>\n<h2>Implementation</h2>\n<p>Add a <code>retrieved_chunks</code> field to your trace schema, populate it with chunk IDs (and content, if storage cost allows) on every RAG request, and apply a sampling or truncation strategy if full-content logging at scale is cost-prohibitive.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without logged retrieved context, debugging a bad answer after the fact is guesswork about what the model actually saw</li>\n<li>Retrieved context can be large — logging full text for every request has real storage cost, consider sampling or truncation at scale</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for non-RAG generation with no retrieval step to log</li>\n<li>Not necessary at full fidelity if a lighter-weight reference (chunk IDs plus a pointer into a versioned index) is sufficient for your debugging needs and reduces storage cost</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: logging retrieved context per-answer is a widely repeated recommendation in RAG observability writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Log the specific chunks retrieved for every RAG answer, in addition to the final generated response. Retrieval results can change over time as the underlying index updates, so without logging what was actually retrieved at generation time, a later debugging attempt has no way to know what the model actually saw. Before / After Before: trace logs contain only the query and final answer, with no record of which chunks were retrieved and passed to the model. After: trace logs include the retrieved chunk IDs (and ideally content or a reference to it) alongside the query and answer, so the exact retrieval context for that specific answer can be reconstructed later. Implementation Add a retrieved chunks field to your trace schema, populate it with chunk IDs (and content, if storage cost allows) on every RAG request, and apply a sampling or truncation strategy if full content logging at scale is cost prohibitive. Gotchas Without logged retrieved context, debugging a bad answer after the fact is guesswork about what the model actually saw Retrieved context can be large — logging full text for every request has real storage cost, consider sampling or truncation at scale When NOT to Apply Skip this for non RAG generation with no retrieval step to log Not necessary at full fidelity if a lighter weight reference (chunk IDs plus a pointer into a versioned index) is sufficient for your debugging needs and reduces storage cost Verification Community reported: logging retrieved context per answer is a widely repeated recommendation in RAG observability writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "make-success-criteria-machine-checkable",
@@ -2510,45 +2574,56 @@
     },
     {
       "id": "prefer-id-references-over-copying",
-      "title": "Prefer ID References over Copying Metadata",
+      "title": "Prefer ID References Over Copying Metadata Into Log Records",
       "category": "production-gotchas",
       "tags": [
-        "data",
-        "observability"
+        "observability",
+        "data"
       ],
       "difficulty": "beginner",
       "impact": "medium",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
-      "added_date": "2026-06-13",
-      "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
-      "entry_type": "tip",
-      "path": "content/tips-and-tricks/prefer-id-references-over-copying.md",
-      "url": "content/tips-and-tricks/prefer-id-references-over-copying",
-      "slug": "prefer-id-references-over-copying",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Prefer ID References over Copying Metadata",
-      "summary": "",
-      "last_updated": "2026-06-13",
-      "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (log-schema normalization discussions)",
+      "applies_to": [
+        "observability-pipelines"
       ],
-      "reading_time_minutes": 1,
-      "word_count": 199,
-      "body_html": "<h2>Overview</h2>\n<p>Prefer ID References over Copying Metadata is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Clear scope and practical applicability</li>\n<li>Structured metadata for filtering and search</li>\n<li>Canonical location for future updates</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Read the entry and follow the linked resources.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When making an AI engineering decision related to this topic</li>\n<li><strong>Scenario</strong>: When collecting context for an LLM or agent workflow</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Concise enough for quick browsing</li>\n<li>Structured enough for generated data and search</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify external claims before production decisions</li>\n<li>Re-run evaluations against your own workload</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Use this entry as a canonical reference from guides, stacks, and generated data views.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://example.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary Resource</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception notes should be updated with verified sources during maintenance reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview Prefer ID References over Copying Metadata is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions. Why It's in the Arsenal It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity. Key Features Clear scope and practical applicability Structured metadata for filtering and search Canonical location for future updates Architecture / How It Works Review the metadata first, then use the body as the human readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere. Getting Started Use Cases 1. Scenario : When making an AI engineering decision related to this topic 2. Scenario : When collecting context for an LLM or agent workflow Strengths Concise enough for quick browsing Structured enough for generated data and search Limitations / When NOT to Use Verify external claims before production decisions Re run evaluations against your own workload Integration Patterns Use this entry as a canonical reference from guides, stacks, and generated data views. Resources Primary Resource Buzz & Reception Reception notes should be updated with verified sources during maintenance reviews. Last reviewed: 2026 06 13 by @maintainer"
+      "gotchas": [
+        "Copying metadata (e.g. a document's title or category) directly into every log record duplicates it across potentially millions of records -- if the source metadata is later corrected, every already-logged copy remains stale and inconsistent",
+        "ID-reference logging requires the referenced source (document, chunk, prompt version) to remain retrievable by that ID for as long as the log record might be inspected -- if source records get deleted or IDs get reused, the reference breaks"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "store-prompt-version-in-every-trace"
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/prefer-id-references-over-copying.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/prefer-id-references-over-copying",
+      "slug": "prefer-id-references-over-copying",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Prefer ID References Over Copying Metadata Into Log Records",
+      "summary": "",
+      "last_updated": "2026-07-02",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 282,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Log a stable ID reference to source data (a document ID, chunk ID, prompt version ID) rather than copying that data's metadata directly into every log record. Copying duplicates the data across every record referencing it; if the source is later corrected, every already-logged copy stays stale, while an ID reference always resolves to current (or version-pinned) source data.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>log_record = {\"doc_title\": \"Q3 Pricing Guide\", \"doc_category\": \"sales\", ...}</code> — metadata copied directly into the log.</p>\n<p><strong>After:</strong> <code>log_record = {\"doc_id\": \"doc_4821\", ...}</code> — the log stores a stable reference, and metadata is looked up from the source by ID when needed.</p>\n<h2>Implementation</h2>\n<p>Identify fields in your log schema that duplicate data owned by another system (documents, prompts, chunks), replace them with a stable ID reference, and ensure the referenced source remains retrievable by that ID for the log's expected inspection lifetime.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Copying metadata duplicates it across records; corrections to the source later leave already-logged copies stale</li>\n<li>ID-reference logging requires the referenced source to remain retrievable by that ID for as long as needed — deleted sources or reused IDs break the reference</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for genuinely ephemeral metadata that has no persistent source record to reference back to</li>\n<li>Not worth the added lookup complexity if the source system has no reliable ID-based retrieval API, or logs need to remain self-contained and readable after the source system is decommissioned</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: preferring ID references over copied metadata in log schemas is a widely repeated recommendation in observability log-design writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Log a stable ID reference to source data (a document ID, chunk ID, prompt version ID) rather than copying that data's metadata directly into every log record. Copying duplicates the data across every record referencing it; if the source is later corrected, every already logged copy stays stale, while an ID reference always resolves to current (or version pinned) source data. Before / After Before: log record = {\"doc title\": \"Q3 Pricing Guide\", \"doc category\": \"sales\", ...} — metadata copied directly into the log. After: log record = {\"doc id\": \"doc 4821\", ...} — the log stores a stable reference, and metadata is looked up from the source by ID when needed. Implementation Identify fields in your log schema that duplicate data owned by another system (documents, prompts, chunks), replace them with a stable ID reference, and ensure the referenced source remains retrievable by that ID for the log's expected inspection lifetime. Gotchas Copying metadata duplicates it across records; corrections to the source later leave already logged copies stale ID reference logging requires the referenced source to remain retrievable by that ID for as long as needed — deleted sources or reused IDs break the reference When NOT to Apply Skip this for genuinely ephemeral metadata that has no persistent source record to reference back to Not worth the added lookup complexity if the source system has no reliable ID based retrieval API, or logs need to remain self contained and readable after the source system is decommissioned Verification Community reported: preferring ID references over copied metadata in log schemas is a widely repeated recommendation in observability log design writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "prefer-reranking-before-rechunking",
@@ -2770,89 +2845,111 @@
     },
     {
       "id": "redact-secrets-before-tracing",
-      "title": "Redact Secrets Before Tracing",
+      "title": "Redact Secrets and Sensitive Data Before Writing to Traces",
       "category": "security-best-practices",
       "tags": [
         "security",
-        "guardrails",
-        "tool-use"
+        "observability"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "1 hour",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (trace-data redaction as standard observability practice)",
+      "applies_to": [
+        "production-tracing"
+      ],
+      "gotchas": [
+        "Redaction has to happen before data is written to the trace store, not after -- once sensitive data lands in a log aggregator or trace database, deleting it after the fact is unreliable and can miss replicated or cached copies",
+        "A regex-based redaction pass can miss sensitive data in unexpected formats (e.g. a credential embedded in an unusual field or encoding) -- validate redaction coverage against real sample traces, rather than an assumed pattern list alone"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "log-raw-and-parsed-model-outputs",
+        "review-data-retention-for-prompts"
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "reviewed",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/redact-secrets-before-tracing.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/redact-secrets-before-tracing",
+      "slug": "redact-secrets-before-tracing",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Redact Secrets and Sensitive Data Before Writing to Traces",
+      "summary": "",
+      "last_updated": "2026-07-02",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 284,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Strip API keys, credentials, and sensitive user data from prompts, tool inputs/outputs, and model responses before they are written to a trace or logging store, not after. Traces are frequently retained for extended periods and accessed by more people (debugging, analytics) than the original request path, making them a high-exposure surface for any secret that flows through unredacted.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>trace.log({\"prompt\": raw_prompt, \"tool_output\": raw_tool_response})</code> with no redaction step, potentially capturing API keys or PII embedded in either.</p>\n<p><strong>After:</strong> <code>trace.log({\"prompt\": redact(raw_prompt), \"tool_output\": redact(raw_tool_response)})</code> — a redaction pass runs before anything is persisted to the trace store.</p>\n<h2>Implementation</h2>\n<p>Add a redaction step (pattern-based for known secret formats like API keys, plus a PII detector if applicable) that runs on every field before it's written to the trace store, and validate its coverage against a sample of real traces containing known sensitive patterns.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Redaction has to happen before data reaches the trace store — deleting sensitive data after the fact is unreliable and can miss replicated copies</li>\n<li>Regex-based redaction can miss sensitive data in unexpected formats — validate coverage against real sample traces, rather than an assumed pattern list alone</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip elaborate redaction if your system genuinely never handles secrets or sensitive user data in prompts, tool calls, or responses</li>\n<li>Not a substitute for proper secrets management (e.g. never embedding API keys in prompts in the first place) — redaction is a safety net, not a reason to be careless about what enters the pipeline</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: redacting secrets and sensitive data before persisting to trace/logging stores is a standard, widely documented observability security practice.</p>\n",
+      "body_text": "What & Why Strip API keys, credentials, and sensitive user data from prompts, tool inputs/outputs, and model responses before they are written to a trace or logging store, not after. Traces are frequently retained for extended periods and accessed by more people (debugging, analytics) than the original request path, making them a high exposure surface for any secret that flows through unredacted. Before / After Before: trace.log({\"prompt\": raw prompt, \"tool output\": raw tool response}) with no redaction step, potentially capturing API keys or PII embedded in either. After: trace.log({\"prompt\": redact(raw prompt), \"tool output\": redact(raw tool response)}) — a redaction pass runs before anything is persisted to the trace store. Implementation Add a redaction step (pattern based for known secret formats like API keys, plus a PII detector if applicable) that runs on every field before it's written to the trace store, and validate its coverage against a sample of real traces containing known sensitive patterns. Gotchas Redaction has to happen before data reaches the trace store — deleting sensitive data after the fact is unreliable and can miss replicated copies Regex based redaction can miss sensitive data in unexpected formats — validate coverage against real sample traces, rather than an assumed pattern list alone When NOT to Apply Skip elaborate redaction if your system genuinely never handles secrets or sensitive user data in prompts, tool calls, or responses Not a substitute for proper secrets management (e.g. never embedding API keys in prompts in the first place) — redaction is a safety net, not a reason to be careless about what enters the pipeline Verification Production verified: redacting secrets and sensitive data before persisting to trace/logging stores is a standard, widely documented observability security practice."
+    },
+    {
+      "id": "replay-the-same-trace-with-one-variable-changed",
+      "title": "Replay a Failing Trace With Exactly One Variable Changed",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "observability",
+        "tracing"
       ],
       "difficulty": "intermediate",
       "impact": "high",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (controlled-replay debugging discipline)",
+      "applies_to": [
+        "debugging-workflows"
+      ],
+      "gotchas": [
+        "Changing multiple variables at once (prompt and model, or retrieval and temperature) when replaying a failing trace makes it impossible to attribute the resulting behavior change to a specific cause",
+        "Replay requires the original trace to be complete enough to reconstruct exactly (prompt version, retrieved context, model parameters) -- an incomplete trace can't be replayed faithfully, which is itself an argument for thorough tracing upstream"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "add-a-minimal-reproduction-prompt",
+        "store-prompt-version-in-every-trace"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/redact-secrets-before-tracing.md",
-      "url": "content/tips-and-tricks/redact-secrets-before-tracing",
-      "slug": "redact-secrets-before-tracing",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Redact Secrets Before Tracing",
-      "summary": "",
-      "last_updated": "2026-06-14",
-      "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
-      ],
-      "reading_time_minutes": 2,
-      "word_count": 248,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Remove API keys, credentials, and sensitive user data before storing prompts or traces.</p>\n</blockquote>\n<p>LLM security starts by treating user input, retrieved context, and tool outputs as untrusted data.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 30 minutes</li>\n<li><strong>Applies to:</strong> security, guardrails, tool-use</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">allowed_tools = {\"researcher\": [\"search\"], \"writer\": []}\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Remove API keys, credentials, and sensitive user data before storing prompts or traces. LLM security starts by treating user input, retrieved context, and tool outputs as untrusted data. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 30 minutes Applies to: security, guardrails, tool use Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
-    },
-    {
-      "id": "replay-the-same-trace-with-one-variable-changed",
-      "title": "Replay The Same Trace With One Variable Changed",
-      "category": "debugging-llm-apps",
-      "tags": [
-        "observability",
-        "tracing",
-        "evaluation"
-      ],
-      "difficulty": "beginner",
-      "impact": "high",
-      "time_to_implement": "20 minutes",
-      "applies_to": [],
-      "added_date": "2026-06-14",
-      "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
-      "entry_type": "tip",
-      "path": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed.md",
-      "url": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed",
+      "path": "content/tips-and-tricks/debugging-and-observability/replay-the-same-trace-with-one-variable-changed.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/replay-the-same-trace-with-one-variable-changed",
       "slug": "replay-the-same-trace-with-one-variable-changed",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Replay The Same Trace With One Variable Changed",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Replay a Failing Trace With Exactly One Variable Changed",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 245,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Change one component at a time so you know what fixed or broke behavior.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Change one component at a time so you know what fixed or broke behavior. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 264,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>When investigating a failure, replay the exact original trace with only one variable changed at a time (the prompt, the model, the temperature, the retrieved context), rather than changing several things at once. Changing multiple variables simultaneously makes it impossible to know which change actually caused the resulting behavior difference.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a failing case is re-run with a new prompt version and a different model simultaneously, then the change is judged to have \"fixed\" the issue with no way to tell which change mattered.</p>\n<p><strong>After:</strong> the failing trace is replayed first with only the prompt changed (model and context held constant), evaluated, and only then is a second isolated variable changed if needed.</p>\n<h2>Implementation</h2>\n<p>Reconstruct the exact original trace conditions (prompt version, retrieved context, model, parameters), change exactly one variable, re-run, and record the outcome before considering any further changes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Changing multiple variables at once makes it impossible to attribute the resulting behavior change to a specific cause</li>\n<li>Replay requires the original trace to be complete enough to reconstruct exactly — an incomplete trace can't be replayed faithfully</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip single-variable isolation for exploratory debugging where the goal is a fast directional signal, not a rigorous causal attribution</li>\n<li>Not practical if trace completeness (see <code>store-prompt-version-in-every-trace</code>) isn't in place yet — fix that gap first</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: controlled, single-variable replay is a widely repeated debugging discipline in software engineering generally, directly applicable to LLM application debugging, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why When investigating a failure, replay the exact original trace with only one variable changed at a time (the prompt, the model, the temperature, the retrieved context), rather than changing several things at once. Changing multiple variables simultaneously makes it impossible to know which change actually caused the resulting behavior difference. Before / After Before: a failing case is re run with a new prompt version and a different model simultaneously, then the change is judged to have \"fixed\" the issue with no way to tell which change mattered. After: the failing trace is replayed first with only the prompt changed (model and context held constant), evaluated, and only then is a second isolated variable changed if needed. Implementation Reconstruct the exact original trace conditions (prompt version, retrieved context, model, parameters), change exactly one variable, re run, and record the outcome before considering any further changes. Gotchas Changing multiple variables at once makes it impossible to attribute the resulting behavior change to a specific cause Replay requires the original trace to be complete enough to reconstruct exactly — an incomplete trace can't be replayed faithfully When NOT to Apply Skip single variable isolation for exploratory debugging where the goal is a fast directional signal, not a rigorous causal attribution Not practical if trace completeness (see store prompt version in every trace) isn't in place yet — fix that gap first Verification Community reported: controlled, single variable replay is a widely repeated debugging discipline in software engineering generally, directly applicable to LLM application debugging, not independently benchmarked here against a named production system."
     },
     {
       "id": "require-human-approval-for-irreversible-actions",
@@ -2967,46 +3064,57 @@
     },
     {
       "id": "review-data-retention-for-prompts",
-      "title": "Review Data Retention For Prompts",
+      "title": "Set an Explicit Data Retention Policy for Stored Prompts Before Launch",
       "category": "production-gotchas",
       "tags": [
-        "monitoring",
-        "security",
-        "cloud"
+        "observability",
+        "security"
       ],
-      "difficulty": "intermediate",
+      "difficulty": "beginner",
       "impact": "high",
-      "time_to_implement": "45 minutes",
-      "applies_to": [],
-      "added_date": "2026-06-14",
+      "time_to_implement": "1 hour",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (data-retention-policy-for-LLM-traces discussions)",
+      "applies_to": [
+        "production-tracing",
+        "compliance-sensitive-applications"
+      ],
+      "gotchas": [
+        "Prompts and traces frequently contain user-submitted data (potentially PII or regulated data categories) -- storing them indefinitely by default, without a deliberate retention decision, can create compliance exposure that's expensive to remediate after the fact",
+        "A retention policy needs an actual enforcement mechanism (automated deletion after the retention window), in addition to a documented intention -- a policy that exists only on paper doesn't reduce exposure"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "redact-secrets-before-tracing"
+      ],
+      "added_date": "2026-06-13",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/review-data-retention-for-prompts.md",
-      "url": "content/tips-and-tricks/review-data-retention-for-prompts",
+      "path": "content/tips-and-tricks/debugging-and-observability/review-data-retention-for-prompts.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/review-data-retention-for-prompts",
       "slug": "review-data-retention-for-prompts",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Review Data Retention For Prompts",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Set an Explicit Data Retention Policy for Stored Prompts Before Launch",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 242,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Prompts may contain user data; set retention and redaction policies before launch.</p>\n</blockquote>\n<p>Production LLM systems need operational controls before traffic, not after incidents.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 45 minutes</li>\n<li><strong>Applies to:</strong> monitoring, security, cloud</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">if feature_flags.agent_actions_disabled:\n    raise PermissionError(\"agent actions disabled\")\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Prompts may contain user data; set retention and redaction policies before launch. Production LLM systems need operational controls before traffic, not after incidents. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 45 minutes Applies to: monitoring, security, cloud Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 244,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Decide and implement an explicit retention window for stored prompts and traces (e.g. 30/90 days) before launch, rather than storing them indefinitely by default. Prompts frequently carry user-submitted data, and indefinite retention without a deliberate decision can create compliance exposure that's costly to remediate once discovered.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> traces and prompts accumulate in storage indefinitely with no retention policy, decided implicitly by \"we never got around to deleting anything.\"</p>\n<p><strong>After:</strong> an explicit retention window (e.g. 90 days) is decided based on debugging/compliance needs, and automated deletion enforces it.</p>\n<h2>Implementation</h2>\n<p>Decide a retention window based on your actual debugging and compliance requirements, implement automated deletion (a scheduled job or storage-lifecycle policy) that enforces it, and document the decision so it's a deliberate policy rather than an accident of never revisiting storage settings.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Prompts and traces frequently contain user data — indefinite retention by default can create compliance exposure that's costly to remediate later</li>\n<li>A retention policy needs actual enforcement (automated deletion), in addition to a documented intention</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip a formal policy review for internal-only tooling with no user data and no compliance requirement</li>\n<li>Not necessary if your organization already has a platform-level data-retention policy that automatically covers this data category</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: setting explicit, enforced retention windows for stored prompts/traces is a widely repeated recommendation in LLM application compliance writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Decide and implement an explicit retention window for stored prompts and traces (e.g. 30/90 days) before launch, rather than storing them indefinitely by default. Prompts frequently carry user submitted data, and indefinite retention without a deliberate decision can create compliance exposure that's costly to remediate once discovered. Before / After Before: traces and prompts accumulate in storage indefinitely with no retention policy, decided implicitly by \"we never got around to deleting anything.\" After: an explicit retention window (e.g. 90 days) is decided based on debugging/compliance needs, and automated deletion enforces it. Implementation Decide a retention window based on your actual debugging and compliance requirements, implement automated deletion (a scheduled job or storage lifecycle policy) that enforces it, and document the decision so it's a deliberate policy rather than an accident of never revisiting storage settings. Gotchas Prompts and traces frequently contain user data — indefinite retention by default can create compliance exposure that's costly to remediate later A retention policy needs actual enforcement (automated deletion), in addition to a documented intention When NOT to Apply Skip a formal policy review for internal only tooling with no user data and no compliance requirement Not necessary if your organization already has a platform level data retention policy that automatically covers this data category Verification Community reported: setting explicit, enforced retention windows for stored prompts/traces is a widely repeated recommendation in LLM application compliance writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "route-simple-tasks-to-smaller-models",
@@ -3163,46 +3271,57 @@
     },
     {
       "id": "separate-model-errors-from-app-errors",
-      "title": "Separate Model Errors From App Errors",
+      "title": "Log Provider, Parser, Timeout, and Business-Rule Failures as Distinct Categories",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
       "difficulty": "beginner",
       "impact": "high",
-      "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "time_to_implement": "30 minutes",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (error-category-taxonomy discussions for LLM apps)",
+      "applies_to": [
+        "observability-pipelines"
+      ],
+      "gotchas": [
+        "A single generic 'request failed' error category hides whether the failure was the model provider, your parsing code, a timeout, or a business-rule rejection -- each needs a different fix and a different owner",
+        "Error categorization needs to be applied consistently at the point of failure, not reconstructed after the fact from ambiguous log messages -- retrofitting categories onto unstructured historical logs is much harder than categorizing at write time"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "classify-failures-before-fixing-prompts",
+        "log-raw-and-parsed-model-outputs"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/separate-model-errors-from-app-errors.md",
-      "url": "content/tips-and-tricks/separate-model-errors-from-app-errors",
+      "path": "content/tips-and-tricks/debugging-and-observability/separate-model-errors-from-app-errors.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/separate-model-errors-from-app-errors",
       "slug": "separate-model-errors-from-app-errors",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Separate Model Errors From App Errors",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Log Provider, Parser, Timeout, and Business-Rule Failures as Distinct Categories",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 243,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Log provider errors, parser errors, timeout errors, and business-rule failures separately.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Log provider errors, parser errors, timeout errors, and business rule failures separately. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 277,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Log provider errors, output-parsing errors, timeout errors, and business-rule rejections as distinct, explicitly-tagged categories rather than a single generic failure type. Each category points to a different owner and fix (a provider outage needs a fallback, a parsing error needs a schema fix, a business-rule rejection may be correct behavior) — collapsing them into one bucket hides which fix is actually needed.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>log.error(\"request failed\")</code> for every failure type, with no distinction between a provider timeout, a JSON parse failure, and a legitimate business-rule rejection.</p>\n<p><strong>After:</strong> <code>log.error(\"provider_timeout\", ...)</code>, <code>log.error(\"parse_failure\", ...)</code>, <code>log.error(\"business_rule_rejection\", ...)</code> — each failure type explicitly categorized at the point of failure.</p>\n<h2>Implementation</h2>\n<p>Define an explicit set of error categories relevant to your pipeline (provider error, timeout, parse failure, business-rule rejection, at minimum), tag each failure with its category at the point it occurs, and build dashboards/alerts that break down by category rather than a single aggregate error count.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A single generic failure category hides whether the cause was the provider, your parser, a timeout, or a business rule — each needs a different fix and owner</li>\n<li>Categorization needs to happen at the point of failure — retrofitting categories onto unstructured historical logs is much harder</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip elaborate categorization for a very simple pipeline with only one plausible failure mode</li>\n<li>Not necessary if your existing structured logging framework already enforces distinct error types by convention across the codebase</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: distinguishing provider/parser/timeout/business-rule error categories is a widely repeated recommendation in LLM application observability writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Log provider errors, output parsing errors, timeout errors, and business rule rejections as distinct, explicitly tagged categories rather than a single generic failure type. Each category points to a different owner and fix (a provider outage needs a fallback, a parsing error needs a schema fix, a business rule rejection may be correct behavior) — collapsing them into one bucket hides which fix is actually needed. Before / After Before: log.error(\"request failed\") for every failure type, with no distinction between a provider timeout, a JSON parse failure, and a legitimate business rule rejection. After: log.error(\"provider timeout\", ...), log.error(\"parse failure\", ...), log.error(\"business rule rejection\", ...) — each failure type explicitly categorized at the point of failure. Implementation Define an explicit set of error categories relevant to your pipeline (provider error, timeout, parse failure, business rule rejection, at minimum), tag each failure with its category at the point it occurs, and build dashboards/alerts that break down by category rather than a single aggregate error count. Gotchas A single generic failure category hides whether the cause was the provider, your parser, a timeout, or a business rule — each needs a different fix and owner Categorization needs to happen at the point of failure — retrofitting categories onto unstructured historical logs is much harder When NOT to Apply Skip elaborate categorization for a very simple pipeline with only one plausible failure mode Not necessary if your existing structured logging framework already enforces distinct error types by convention across the codebase Verification Community reported: distinguishing provider/parser/timeout/business rule error categories is a widely repeated recommendation in LLM application observability writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "separate-offline-batch-jobs-from-chat-serving",
@@ -3736,46 +3855,57 @@
     },
     {
       "id": "store-prompt-version-in-every-trace",
-      "title": "Store Prompt Version In Every Trace",
+      "title": "Store the Exact Prompt Version in Every Trace",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "phase": "debugging-and-observability",
+      "effort": "minutes",
+      "estimated_time": "~20 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (prompt-version-in-trace as standard practice)",
+      "applies_to": [
+        "production-tracing"
+      ],
+      "gotchas": [
+        "Without a prompt version recorded on the trace, a failure investigated weeks after the fact can't be reliably tied to the prompt that actually produced it, since the prompt has likely since been edited",
+        "This requires prompts to actually be versioned in the first place (see store-prompts-with-release-versions / version-system-prompts-like-code) -- there's no version to record on the trace if the prompt itself isn't versioned"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "replay-the-same-trace-with-one-variable-changed",
+        "separate-model-errors-from-app-errors"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/store-prompt-version-in-every-trace.md",
-      "url": "content/tips-and-tricks/store-prompt-version-in-every-trace",
+      "path": "content/tips-and-tricks/debugging-and-observability/store-prompt-version-in-every-trace.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/store-prompt-version-in-every-trace",
       "slug": "store-prompt-version-in-every-trace",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Store Prompt Version In Every Trace",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Store the Exact Prompt Version in Every Trace",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 242,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> A trace without prompt version is hard to reproduce after deployment.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: A trace without prompt version is hard to reproduce after deployment. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 246,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Record the exact prompt version identifier on every trace, in addition to the model name and parameters. A trace without a prompt version is difficult to reproduce or debug after the fact, since the prompt has likely been edited by the time anyone investigates, and there's no way to reconstruct exactly what was in effect at request time.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>trace.log({\"model\": \"gpt-4\", \"response\": ...})</code> — no reference to which prompt version generated the request.</p>\n<p><strong>After:</strong> <code>trace.log({\"model\": \"gpt-4\", \"prompt_version\": \"support-rag-v12\", \"response\": ...})</code> — the trace pins down the exact prompt version used.</p>\n<h2>Implementation</h2>\n<p>Add a <code>prompt_version</code> field to your trace schema, populate it from your prompt versioning system (see <code>store-prompts-with-release-versions</code>) on every request, and ensure it's queryable so failures can be filtered or grouped by prompt version.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without a prompt version on the trace, a later investigation can't reliably tie a failure to the prompt that actually produced it</li>\n<li>This requires prompts to already be versioned — there's no version to record if the prompt itself isn't versioned in the first place</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if prompts never change after initial deployment for a given feature (rare, but possible for very stable pipelines)</li>\n<li>Not meaningful without an underlying prompt-versioning system in place — set that up first</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: recording prompt version on every trace is a standard, widely documented practice for reproducible LLM application debugging.</p>\n",
+      "body_text": "What & Why Record the exact prompt version identifier on every trace, in addition to the model name and parameters. A trace without a prompt version is difficult to reproduce or debug after the fact, since the prompt has likely been edited by the time anyone investigates, and there's no way to reconstruct exactly what was in effect at request time. Before / After Before: trace.log({\"model\": \"gpt 4\", \"response\": ...}) — no reference to which prompt version generated the request. After: trace.log({\"model\": \"gpt 4\", \"prompt version\": \"support rag v12\", \"response\": ...}) — the trace pins down the exact prompt version used. Implementation Add a prompt version field to your trace schema, populate it from your prompt versioning system (see store prompts with release versions) on every request, and ensure it's queryable so failures can be filtered or grouped by prompt version. Gotchas Without a prompt version on the trace, a later investigation can't reliably tie a failure to the prompt that actually produced it This requires prompts to already be versioned — there's no version to record if the prompt itself isn't versioned in the first place When NOT to Apply Skip this if prompts never change after initial deployment for a given feature (rare, but possible for very stable pipelines) Not meaningful without an underlying prompt versioning system in place — set that up first Verification Production verified: recording prompt version on every trace is a standard, widely documented practice for reproducible LLM application debugging."
     },
     {
       "id": "store-prompts-with-release-versions",
@@ -4050,46 +4180,57 @@
     },
     {
       "id": "trace-tool-inputs-and-outputs",
-      "title": "Trace Tool Inputs And Outputs",
+      "title": "Trace Tool Call Arguments and Return Values, Not Just Final Answers",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
       "difficulty": "beginner",
       "impact": "high",
-      "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "time_to_implement": "30 minutes",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (agent tool-call tracing as standard observability practice)",
+      "applies_to": [
+        "agentic-systems"
+      ],
+      "gotchas": [
+        "Without tool-level tracing, a wrong final answer from an agent gives no visibility into which tool call (or which step) actually produced the bad information -- the only record is the outcome, not the path that led to it",
+        "Tool inputs/outputs can contain sensitive data (the same concern as prompt tracing) -- apply the same redaction discipline (see redact-secrets-before-tracing) to tool traces"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "log-raw-and-parsed-model-outputs",
+        "redact-secrets-before-tracing"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/trace-tool-inputs-and-outputs.md",
-      "url": "content/tips-and-tricks/trace-tool-inputs-and-outputs",
+      "path": "content/tips-and-tricks/debugging-and-observability/trace-tool-inputs-and-outputs.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/trace-tool-inputs-and-outputs",
       "slug": "trace-tool-inputs-and-outputs",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Trace Tool Inputs And Outputs",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Trace Tool Call Arguments and Return Values, Not Just Final Answers",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 243,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> For agents, record tool arguments and returned values, not just final answers.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: For agents, record tool arguments and returned values, not just final answers. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 255,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>For agentic systems, record the arguments passed to every tool call and the value returned, not only the agent's final answer. When an agent produces a wrong result, the final answer alone gives no visibility into which specific tool call in the chain introduced the error — full tool-level tracing is what makes that chain inspectable.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> trace logs record only the agent's final response, with no record of intermediate tool calls or their results.</p>\n<p><strong>After:</strong> trace logs record every tool call's name, arguments, and return value in sequence, so the full decision chain leading to the final answer is reconstructable.</p>\n<h2>Implementation</h2>\n<p>Add tool-call-level trace entries (tool name, arguments, return value, timestamp) at every tool invocation point in your agent's execution loop, and apply redaction to sensitive fields the same way you would for prompt traces.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without tool-level tracing, a wrong final answer gives no visibility into which tool call actually produced the bad information</li>\n<li>Tool inputs/outputs can contain sensitive data — apply the same redaction discipline used for prompt traces</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for systems with no tool-calling at all (pure text generation) — there's nothing at this layer to trace</li>\n<li>Not necessary at full fidelity for tools that are purely deterministic and side-effect-free with negligible failure risk, where the added tracing overhead outweighs the debugging benefit</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: tracing tool call arguments and return values in agentic systems is a standard, widely documented observability practice.</p>\n",
+      "body_text": "What & Why For agentic systems, record the arguments passed to every tool call and the value returned, not only the agent's final answer. When an agent produces a wrong result, the final answer alone gives no visibility into which specific tool call in the chain introduced the error — full tool level tracing is what makes that chain inspectable. Before / After Before: trace logs record only the agent's final response, with no record of intermediate tool calls or their results. After: trace logs record every tool call's name, arguments, and return value in sequence, so the full decision chain leading to the final answer is reconstructable. Implementation Add tool call level trace entries (tool name, arguments, return value, timestamp) at every tool invocation point in your agent's execution loop, and apply redaction to sensitive fields the same way you would for prompt traces. Gotchas Without tool level tracing, a wrong final answer gives no visibility into which tool call actually produced the bad information Tool inputs/outputs can contain sensitive data — apply the same redaction discipline used for prompt traces When NOT to Apply Skip this for systems with no tool calling at all (pure text generation) — there's nothing at this layer to trace Not necessary at full fidelity for tools that are purely deterministic and side effect free with negligible failure risk, where the added tracing overhead outweighs the debugging benefit Verification Production verified: tracing tool call arguments and return values in agentic systems is a standard, widely documented observability practice."
     },
     {
       "id": "track-cost-per-feature",

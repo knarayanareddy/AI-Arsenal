@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T19:44:33.561Z",
+    "generated_at": "2026-07-02T19:48:43.472Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -34,16 +34,15 @@
     {
       "id": "add-a-minimal-reproduction-prompt",
       "type": "tip",
-      "name": "Add A Minimal Reproduction Prompt",
+      "name": "Keep the Smallest Failing Prompt for Every Recurring Issue",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/add-a-minimal-reproduction-prompt.md",
-      "url": "content/tips-and-tricks/add-a-minimal-reproduction-prompt",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -985,16 +984,15 @@
     {
       "id": "classify-failures-before-fixing-prompts",
       "type": "tip",
-      "name": "Classify Failures Before Fixing Prompts",
+      "name": "Classify Failures by Root Cause Before Changing Prompts",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
         "evaluation"
       ],
-      "path": "content/tips-and-tricks/classify-failures-before-fixing-prompts.md",
-      "url": "content/tips-and-tricks/classify-failures-before-fixing-prompts",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/classify-failures-before-fixing-prompts.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/classify-failures-before-fixing-prompts",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -1495,16 +1493,15 @@
     {
       "id": "do-not-launch-without-trace-sampling",
       "type": "tip",
-      "name": "Do Not Launch Without Trace Sampling",
+      "name": "Capture Sampled Traces Before Real Users Hit the System",
       "description": "",
       "tags": [
-        "monitoring",
-        "security",
-        "cloud"
+        "observability",
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/do-not-launch-without-trace-sampling.md",
-      "url": "content/tips-and-tricks/do-not-launch-without-trace-sampling",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/do-not-launch-without-trace-sampling.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/do-not-launch-without-trace-sampling",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -2454,16 +2451,15 @@
     {
       "id": "inspect-retrieved-chunks-beside-the-answer",
       "type": "tip",
-      "name": "Inspect Retrieved Chunks Beside The Answer",
+      "name": "Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "retrieval"
       ],
-      "path": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer.md",
-      "url": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/inspect-retrieved-chunks-beside-the-answer",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -3210,16 +3206,15 @@
     {
       "id": "log-raw-and-parsed-model-outputs",
       "type": "tip",
-      "name": "Log Raw And Parsed Model Outputs",
+      "name": "Log Both the Raw Model Output and the Parsed Result",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/log-raw-and-parsed-model-outputs.md",
-      "url": "content/tips-and-tricks/log-raw-and-parsed-model-outputs",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/log-raw-and-parsed-model-outputs.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-raw-and-parsed-model-outputs",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -3229,16 +3224,15 @@
     {
       "id": "log-retrieved-context",
       "type": "tip",
-      "name": "Log Retrieved Context for Every RAG Answer",
+      "name": "Log the Retrieved Context for Every RAG Answer",
       "description": "",
       "tags": [
-        "rag",
-        "retrieval",
-        "observability"
+        "observability",
+        "retrieval"
       ],
-      "path": "content/tips-and-tricks/log-retrieved-context.md",
-      "url": "content/tips-and-tricks/log-retrieved-context",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/debugging-and-observability/log-retrieved-context.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-retrieved-context",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -4489,15 +4483,15 @@
     {
       "id": "prefer-id-references-over-copying",
       "type": "tip",
-      "name": "Prefer ID References over Copying Metadata",
+      "name": "Prefer ID References Over Copying Metadata Into Log Records",
       "description": "",
       "tags": [
-        "data",
-        "observability"
+        "observability",
+        "data"
       ],
-      "path": "content/tips-and-tricks/prefer-id-references-over-copying.md",
-      "url": "content/tips-and-tricks/prefer-id-references-over-copying",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/debugging-and-observability/prefer-id-references-over-copying.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/prefer-id-references-over-copying",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -5035,16 +5029,15 @@
     {
       "id": "redact-secrets-before-tracing",
       "type": "tip",
-      "name": "Redact Secrets Before Tracing",
+      "name": "Redact Secrets and Sensitive Data Before Writing to Traces",
       "description": "",
       "tags": [
         "security",
-        "guardrails",
-        "tool-use"
+        "observability"
       ],
-      "path": "content/tips-and-tricks/redact-secrets-before-tracing.md",
-      "url": "content/tips-and-tricks/redact-secrets-before-tracing",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/redact-secrets-before-tracing.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/redact-secrets-before-tracing",
+      "last_updated": "2026-07-02",
       "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
@@ -5073,16 +5066,15 @@
     {
       "id": "replay-the-same-trace-with-one-variable-changed",
       "type": "tip",
-      "name": "Replay The Same Trace With One Variable Changed",
+      "name": "Replay a Failing Trace With Exactly One Variable Changed",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed.md",
-      "url": "content/tips-and-tricks/replay-the-same-trace-with-one-variable-changed",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/replay-the-same-trace-with-one-variable-changed.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/replay-the-same-trace-with-one-variable-changed",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -5168,16 +5160,15 @@
     {
       "id": "review-data-retention-for-prompts",
       "type": "tip",
-      "name": "Review Data Retention For Prompts",
+      "name": "Set an Explicit Data Retention Policy for Stored Prompts Before Launch",
       "description": "",
       "tags": [
-        "monitoring",
-        "security",
-        "cloud"
+        "observability",
+        "security"
       ],
-      "path": "content/tips-and-tricks/review-data-retention-for-prompts.md",
-      "url": "content/tips-and-tricks/review-data-retention-for-prompts",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/review-data-retention-for-prompts.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/review-data-retention-for-prompts",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -5410,16 +5401,15 @@
     {
       "id": "separate-model-errors-from-app-errors",
       "type": "tip",
-      "name": "Separate Model Errors From App Errors",
+      "name": "Log Provider, Parser, Timeout, and Business-Rule Failures as Distinct Categories",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/separate-model-errors-from-app-errors.md",
-      "url": "content/tips-and-tricks/separate-model-errors-from-app-errors",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/separate-model-errors-from-app-errors.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/separate-model-errors-from-app-errors",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -5783,16 +5773,15 @@
     {
       "id": "store-prompt-version-in-every-trace",
       "type": "tip",
-      "name": "Store Prompt Version In Every Trace",
+      "name": "Store the Exact Prompt Version in Every Trace",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/store-prompt-version-in-every-trace.md",
-      "url": "content/tips-and-tricks/store-prompt-version-in-every-trace",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/store-prompt-version-in-every-trace.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/store-prompt-version-in-every-trace",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -6079,16 +6068,15 @@
     {
       "id": "trace-tool-inputs-and-outputs",
       "type": "tip",
-      "name": "Trace Tool Inputs And Outputs",
+      "name": "Trace Tool Call Arguments and Return Values, Not Just Final Answers",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
-        "evaluation"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/trace-tool-inputs-and-outputs.md",
-      "url": "content/tips-and-tricks/trace-tool-inputs-and-outputs",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/debugging-and-observability/trace-tool-inputs-and-outputs.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/trace-tool-inputs-and-outputs",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
