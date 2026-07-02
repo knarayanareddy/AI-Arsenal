@@ -33,6 +33,10 @@ for (const dataset of datasets) {
         practical_applicability: item.practical_applicability ?? null,
         result_status: item.result_status ?? null,
         reproduction_status: item.reproduction_status ?? null,
+        effort: item.effort ?? null,
+        verification_status: item.verification_status ?? null,
+        impact: item.impact ?? null,
+        difficulty: item.difficulty ?? null,
         path: item.path,
         url: item.url,
         boost_title: name,
@@ -47,7 +51,7 @@ for (const dataset of datasets) {
 
 const facets = {
   types: {}, tags: {}, categories: {}, maturity: {}, cost_model: {}, status: {}, phase: {}, audience: {}, domain: {}, relation_to_stack: {},
-  practical_applicability: {}, result_status: {}, reproduction_status: {}
+  practical_applicability: {}, result_status: {}, reproduction_status: {}, effort: {}, verification_status: {}, impact: {}, difficulty: {}
 };
 for (const doc of docs) {
   facets.types[doc.type] = (facets.types[doc.type] ?? 0) + 1;
@@ -63,6 +67,10 @@ for (const doc of docs) {
   if (doc.practical_applicability) facets.practical_applicability[doc.practical_applicability] = (facets.practical_applicability[doc.practical_applicability] ?? 0) + 1;
   if (doc.result_status) facets.result_status[doc.result_status] = (facets.result_status[doc.result_status] ?? 0) + 1;
   if (doc.reproduction_status) facets.reproduction_status[doc.reproduction_status] = (facets.reproduction_status[doc.reproduction_status] ?? 0) + 1;
+  if (doc.effort) facets.effort[doc.effort] = (facets.effort[doc.effort] ?? 0) + 1;
+  if (doc.verification_status) facets.verification_status[doc.verification_status] = (facets.verification_status[doc.verification_status] ?? 0) + 1;
+  if (doc.impact) facets.impact[doc.impact] = (facets.impact[doc.impact] ?? 0) + 1;
+  if (doc.difficulty) facets.difficulty[doc.difficulty] = (facets.difficulty[doc.difficulty] ?? 0) + 1;
 }
 
 await fs.writeFile('data/search-index.json', `${JSON.stringify({
@@ -78,7 +86,7 @@ await fs.writeFile('data/search-index.json', `${JSON.stringify({
         { field: 'tags', tokenize: 'strict', resolution: 7 },
         { field: 'body', tokenize: 'strict', resolution: 3 }
       ],
-      store: ['id', 'type', 'name', 'description', 'tags', 'category', 'phase', 'audience', 'domain', 'relation_to_stack', 'practical_applicability', 'result_status', 'reproduction_status', 'path', 'url']
+      store: ['id', 'type', 'name', 'description', 'tags', 'category', 'phase', 'audience', 'domain', 'relation_to_stack', 'practical_applicability', 'result_status', 'reproduction_status', 'effort', 'verification_status', 'impact', 'difficulty', 'path', 'url']
     }
   },
   facets,
