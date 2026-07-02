@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-02T19:34:24.585Z",
+  "generated_at": "2026-07-02T19:39:54.051Z",
   "tags": [
     {
       "id": "agents",
@@ -121,23 +121,16 @@
     {
       "id": "batching",
       "label": "Batching",
-      "count": 12,
+      "count": 5,
       "types": {
-        "tip": 9,
+        "tip": 2,
         "project": 3
       },
       "entries": [
-        "benchmark-with-real-context-lengths",
-        "choose-int4-only-after-quality-tests",
-        "measure-kv-cache-hit-rate",
-        "pin-model-and-runtime-versions",
         "separate-offline-batch-jobs-from-chat-serving",
         "sglang",
-        "stream-user-facing-responses",
         "text-generation-inference",
         "tune-batch-size-against-tail-latency",
-        "use-int8-for-safer-compression",
-        "use-speculative-decoding-for-latency-critical-paths",
         "vllm"
       ]
     },
@@ -155,31 +148,23 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 19,
+      "count": 11,
       "types": {
-        "tip": 17,
+        "tip": 9,
         "tool": 1,
         "project": 1
       },
       "entries": [
-        "benchmark-with-real-context-lengths",
         "cache-embeddings-by-content-hash",
         "cache-stable-system-prompts",
-        "choose-int4-only-after-quality-tests",
         "compress-retrieved-context-before-generation",
         "drop-unused-conversation-history",
         "measure-kv-cache-hit-rate",
-        "pin-model-and-runtime-versions",
         "redis-memory",
         "route-simple-tasks-to-smaller-models",
-        "separate-offline-batch-jobs-from-chat-serving",
         "set-token-budgets-per-feature",
-        "stream-user-facing-responses",
         "track-cost-per-successful-outcome",
-        "tune-batch-size-against-tail-latency",
-        "use-int8-for-safer-compression",
         "use-semantic-cache-for-repeated-questions",
-        "use-speculative-decoding-for-latency-critical-paths",
         "vllm"
       ]
     },
@@ -201,16 +186,15 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 62,
+      "count": 60,
       "types": {
-        "tip": 13,
         "project": 12,
         "tool": 31,
+        "tip": 11,
         "guide": 5,
         "person": 1
       },
       "entries": [
-        "add-provider-timeout-and-retry-policies",
         "agenta",
         "airflow",
         "autogpt",
@@ -251,7 +235,6 @@
         "microsoft-agent-framework",
         "mlflow",
         "modal",
-        "pin-dependencies-for-inference-images",
         "pinecone",
         "pinecone-vector-db",
         "playwright",
@@ -354,12 +337,14 @@
     {
       "id": "docker",
       "label": "Docker",
-      "count": 1,
+      "count": 2,
       "types": {
-        "tool": 1
+        "tool": 1,
+        "tip": 1
       },
       "entries": [
-        "bentoml"
+        "bentoml",
+        "pin-dependencies-for-inference-images"
       ]
     },
     {
@@ -378,13 +363,16 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 9,
+      "count": 13,
       "types": {
+        "tip": 4,
         "project": 4,
         "paper": 4,
         "tool": 1
       },
       "entries": [
+        "benchmark-with-production-shaped-inputs",
+        "benchmark-with-real-context-lengths",
         "deepseek-v3-r1",
         "dettmers-2023-qlora",
         "falcon-3",
@@ -393,7 +381,9 @@
         "leviathan-2022-speculative-decoding",
         "mistral-models",
         "phi-4",
-        "unsloth"
+        "pin-model-and-runtime-versions",
+        "unsloth",
+        "use-speculative-decoding-for-latency-critical-paths"
       ]
     },
     {
@@ -432,9 +422,9 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 71,
+      "count": 70,
       "types": {
-        "tip": 19,
+        "tip": 18,
         "project": 10,
         "guide": 13,
         "tool": 17,
@@ -451,7 +441,6 @@
         "arvind-narayanan",
         "astra-autonomous-pentest",
         "azure-ai-studio",
-        "benchmark-with-production-shaped-inputs",
         "braintrust",
         "chip-huyen",
         "choose-eval-framework",
@@ -636,9 +625,9 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 53,
+      "count": 52,
       "types": {
-        "tip": 20,
+        "tip": 19,
         "tool": 6,
         "guide": 7,
         "project": 17,
@@ -646,6 +635,7 @@
         "build-example": 1
       },
       "entries": [
+        "add-provider-timeout-and-retry-policies",
         "benchmark-on-the-user-hardware",
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
@@ -662,7 +652,6 @@
         "gemma",
         "gemma-3",
         "hf-inference-endpoints",
-        "keep-model-files-out-of-git",
         "leviathan-2022-speculative-decoding",
         "llama-3",
         "llama-cpp",
@@ -681,16 +670,15 @@
         "outlines",
         "parallelize-independent-retrieval-calls",
         "phi-cookbook",
+        "pin-dependencies-for-inference-images",
         "pin-model-and-runtime-versions",
         "precompute-expensive-static-context",
-        "prefer-gguf-for-llama-cpp-workflows",
         "qwen",
         "qwen-2-5",
         "replicate",
         "research-platform",
         "separate-offline-batch-jobs-from-chat-serving",
         "sglang",
-        "start-with-a-smaller-quantized-model",
         "stream-user-facing-responses",
         "text-generation-inference",
         "tune-batch-size-against-tail-latency",
@@ -747,9 +735,9 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 140,
+      "count": 139,
       "types": {
-        "tip": 29,
+        "tip": 28,
         "guide": 30,
         "person": 15,
         "tool": 33,
@@ -885,7 +873,6 @@
         "use-context-budgets-per-section",
         "use-delimiters-around-retrieved-context",
         "use-json-only-for-machine-parsed-outputs",
-        "use-local-models-for-sensitive-prototyping",
         "use-semantic-cache-for-repeated-questions",
         "use-xml-tags-for-long-prompt-sections",
         "vaswani-2017-attention",
@@ -972,9 +959,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 36,
+      "count": 34,
       "types": {
-        "tip": 16,
+        "tip": 14,
         "person": 1,
         "guide": 3,
         "tool": 10,
@@ -982,7 +969,6 @@
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
-        "add-provider-timeout-and-retry-policies",
         "cap-agent-tool-retries",
         "checkpoint-agent-state-after-each-tool-call",
         "chip-huyen",
@@ -1008,7 +994,6 @@
         "overview",
         "parallelize-independent-retrieval-calls",
         "phoenix",
-        "pin-dependencies-for-inference-images",
         "precompute-expensive-static-context",
         "promptfoo",
         "review-data-retention-for-prompts",
@@ -1059,9 +1044,9 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 40,
+      "count": 41,
       "types": {
-        "tip": 14,
+        "tip": 15,
         "project": 12,
         "guide": 7,
         "person": 1,
@@ -1070,6 +1055,7 @@
       },
       "entries": [
         "add-a-minimal-reproduction-prompt",
+        "add-provider-timeout-and-retry-policies",
         "agenta",
         "braintrust",
         "choose-eval-framework",
@@ -1205,16 +1191,20 @@
     {
       "id": "quantization",
       "label": "Quantization",
-      "count": 4,
+      "count": 7,
       "types": {
+        "tip": 3,
         "paper": 2,
         "project": 2
       },
       "entries": [
+        "choose-int4-only-after-quality-tests",
         "dettmers-2023-qlora",
         "frantar-2022-gptq",
         "llama-cpp",
-        "lmdeploy"
+        "lmdeploy",
+        "start-with-a-smaller-quantized-model",
+        "use-int8-for-safer-compression"
       ]
     },
     {
@@ -1458,15 +1448,14 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 27,
+      "count": 26,
       "types": {
-        "tip": 14,
         "tool": 9,
+        "tip": 13,
         "person": 3,
         "guide": 1
       },
       "entries": [
-        "add-provider-timeout-and-retry-policies",
         "agent-browser-shield",
         "agnt-hub",
         "allowlist-tools-per-agent-role",
@@ -1481,7 +1470,6 @@
         "keep-a-kill-switch-for-agent-actions",
         "llamaguard",
         "nemo-guardrails",
-        "pin-dependencies-for-inference-images",
         "rebuff",
         "redact-secrets-before-tracing",
         "require-human-approval-for-irreversible-actions",
@@ -1492,21 +1480,21 @@
         "separate-user-content-from-system-instructions",
         "simon-willison",
         "test-prompts-with-adversarial-inputs",
-        "treat-retrieved-text-as-untrusted"
+        "treat-retrieved-text-as-untrusted",
+        "use-local-models-for-sensitive-prototyping"
       ]
     },
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 18,
+      "count": 15,
       "types": {
-        "tip": 6,
         "guide": 3,
         "project": 8,
+        "tip": 3,
         "tool": 1
       },
       "entries": [
-        "benchmark-on-the-user-hardware",
         "choose-deployment-target",
         "choose-vector-db",
         "helicone",
@@ -1514,14 +1502,12 @@
         "label-studio",
         "langfuse",
         "local-first",
-        "match-context-length-to-ram",
         "ollama",
         "openlit",
         "openllmetry",
         "pgvector",
         "prefer-gguf-for-llama-cpp-workflows",
         "qdrant",
-        "start-with-a-smaller-quantized-model",
         "use-local-models-for-sensitive-prototyping",
         "weaviate"
       ]
@@ -1561,9 +1547,9 @@
     {
       "id": "streaming",
       "label": "Streaming",
-      "count": 6,
+      "count": 7,
       "types": {
-        "tip": 5,
+        "tip": 6,
         "project": 1
       },
       "entries": [
@@ -1571,6 +1557,7 @@
         "measure-queue-time-separately",
         "parallelize-independent-retrieval-calls",
         "precompute-expensive-static-context",
+        "stream-user-facing-responses",
         "text-generation-inference",
         "use-smaller-models-for-classification-steps"
       ]

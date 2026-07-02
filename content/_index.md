@@ -24,7 +24,7 @@
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md)
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
-- [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md)
+- [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md)
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
@@ -52,7 +52,7 @@
 - [Add Evals Before Prompt Refactors](./tips-and-tricks/add-evals-before-refactors.md) — 
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./tips-and-tricks/prompting/add-output-examples-for-edge-cases.md) — 
-- [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md) — 
+- [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
@@ -75,9 +75,9 @@
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [Basic RAG Chatbot](./build-examples/starter/basic-rag-chatbot.md) — Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio
-- [Benchmark On The User Hardware](./tips-and-tricks/benchmark-on-the-user-hardware.md) — 
-- [Benchmark with Production-Shaped Inputs](./tips-and-tricks/benchmark-with-production-shaped-inputs.md) — 
-- [Benchmark With Real Context Lengths](./tips-and-tricks/benchmark-with-real-context-lengths.md) — 
+- [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
+- [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
+- [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
@@ -92,7 +92,7 @@
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
 - [Choose a Deployment Target](./architectures/decision-trees/choose-deployment-target.md) — Decision tree for deploying AI apps, APIs, agents, and inference services
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
-- [Choose INT4 Only After Quality Tests](./tips-and-tricks/choose-int4-only-after-quality-tests.md) — 
+- [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md) — 
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
 - [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems
 - [Choose an Observability Tool](./architectures/decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools

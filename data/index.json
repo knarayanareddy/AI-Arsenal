@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T19:34:24.585Z",
+    "generated_at": "2026-07-02T19:39:54.051Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -108,16 +108,15 @@
     {
       "id": "add-provider-timeout-and-retry-policies",
       "type": "tip",
-      "name": "Add Provider Timeout And Retry Policies",
+      "name": "Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call",
       "description": "",
       "tags": [
-        "monitoring",
-        "security",
-        "cloud"
+        "inference",
+        "observability"
       ],
-      "path": "content/tips-and-tricks/add-provider-timeout-and-retry-policies.md",
-      "url": "content/tips-and-tricks/add-provider-timeout-and-retry-policies",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md",
+      "url": "content/tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -544,16 +543,15 @@
     {
       "id": "benchmark-on-the-user-hardware",
       "type": "tip",
-      "name": "Benchmark On The User Hardware",
+      "name": "Benchmark Local Models on the Actual Hardware Class Users Will Run",
       "description": "",
       "tags": [
         "local",
-        "self-hosted",
         "inference"
       ],
-      "path": "content/tips-and-tricks/benchmark-on-the-user-hardware.md",
-      "url": "content/tips-and-tricks/benchmark-on-the-user-hardware",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md",
+      "url": "content/tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware",
+      "last_updated": "2026-07-02",
       "category": "local-model-tips",
       "maturity": null,
       "cost_model": null,
@@ -563,15 +561,15 @@
     {
       "id": "benchmark-with-production-shaped-inputs",
       "type": "tip",
-      "name": "Benchmark with Production-Shaped Inputs",
+      "name": "Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts",
       "description": "",
       "tags": [
         "inference",
-        "evaluation"
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/benchmark-with-production-shaped-inputs.md",
-      "url": "content/tips-and-tricks/benchmark-with-production-shaped-inputs",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md",
+      "url": "content/tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -581,16 +579,15 @@
     {
       "id": "benchmark-with-real-context-lengths",
       "type": "tip",
-      "name": "Benchmark With Real Context Lengths",
+      "name": "Benchmark Using Real Production Context Lengths, Not Short Toy Prompts",
       "description": "",
       "tags": [
         "inference",
-        "batching",
-        "caching"
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/benchmark-with-real-context-lengths.md",
-      "url": "content/tips-and-tricks/benchmark-with-real-context-lengths",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md",
+      "url": "content/tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -870,16 +867,15 @@
     {
       "id": "choose-int4-only-after-quality-tests",
       "type": "tip",
-      "name": "Choose INT4 Only After Quality Tests",
+      "name": "Choose INT4 Quantization Only After Explicit Task-Quality Testing",
       "description": "",
       "tags": [
-        "inference",
-        "batching",
-        "caching"
+        "quantization",
+        "inference"
       ],
-      "path": "content/tips-and-tricks/choose-int4-only-after-quality-tests.md",
-      "url": "content/tips-and-tricks/choose-int4-only-after-quality-tests",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md",
+      "url": "content/tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -2630,16 +2626,15 @@
     {
       "id": "keep-model-files-out-of-git",
       "type": "tip",
-      "name": "Keep Model Files Out Of Git",
+      "name": "Keep Local Model Weight Files Out of Git",
       "description": "",
       "tags": [
         "local",
-        "self-hosted",
-        "inference"
+        "self-hosted"
       ],
-      "path": "content/tips-and-tricks/keep-model-files-out-of-git.md",
-      "url": "content/tips-and-tricks/keep-model-files-out-of-git",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/keep-model-files-out-of-git.md",
+      "url": "content/tips-and-tricks/inference-and-serving/keep-model-files-out-of-git",
+      "last_updated": "2026-07-02",
       "category": "local-model-tips",
       "maturity": null,
       "cost_model": null,
@@ -3368,16 +3363,15 @@
     {
       "id": "match-context-length-to-ram",
       "type": "tip",
-      "name": "Match Context Length To RAM",
+      "name": "Match Configured Context Length to Available RAM Before Demos",
       "description": "",
       "tags": [
         "local",
-        "self-hosted",
         "inference"
       ],
-      "path": "content/tips-and-tricks/match-context-length-to-ram.md",
-      "url": "content/tips-and-tricks/match-context-length-to-ram",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/match-context-length-to-ram.md",
+      "url": "content/tips-and-tricks/inference-and-serving/match-context-length-to-ram",
+      "last_updated": "2026-07-02",
       "category": "local-model-tips",
       "maturity": null,
       "cost_model": null,
@@ -3406,16 +3400,15 @@
     {
       "id": "measure-kv-cache-hit-rate",
       "type": "tip",
-      "name": "Measure KV Cache Hit Rate",
+      "name": "Track KV Cache Hit Rate for Long-Context Serving Economics",
       "description": "",
       "tags": [
         "inference",
-        "batching",
         "caching"
       ],
-      "path": "content/tips-and-tricks/measure-kv-cache-hit-rate.md",
-      "url": "content/tips-and-tricks/measure-kv-cache-hit-rate",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/measure-kv-cache-hit-rate.md",
+      "url": "content/tips-and-tricks/inference-and-serving/measure-kv-cache-hit-rate",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -4309,16 +4302,15 @@
     {
       "id": "pin-dependencies-for-inference-images",
       "type": "tip",
-      "name": "Pin Dependencies For Inference Images",
+      "name": "Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images",
       "description": "",
       "tags": [
-        "monitoring",
-        "security",
-        "cloud"
+        "inference",
+        "docker"
       ],
-      "path": "content/tips-and-tricks/pin-dependencies-for-inference-images.md",
-      "url": "content/tips-and-tricks/pin-dependencies-for-inference-images",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/pin-dependencies-for-inference-images.md",
+      "url": "content/tips-and-tricks/inference-and-serving/pin-dependencies-for-inference-images",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -4328,16 +4320,15 @@
     {
       "id": "pin-model-and-runtime-versions",
       "type": "tip",
-      "name": "Pin Model And Runtime Versions",
+      "name": "Pin Model and Runtime Versions Before Running Any Benchmark",
       "description": "",
       "tags": [
         "inference",
-        "batching",
-        "caching"
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/pin-model-and-runtime-versions.md",
-      "url": "content/tips-and-tricks/pin-model-and-runtime-versions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/pin-model-and-runtime-versions.md",
+      "url": "content/tips-and-tricks/inference-and-serving/pin-model-and-runtime-versions",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -4481,16 +4472,15 @@
     {
       "id": "prefer-gguf-for-llama-cpp-workflows",
       "type": "tip",
-      "name": "Prefer GGUF For llama cpp Workflows",
+      "name": "Prefer GGUF Format for llama.cpp and Ollama-Style Local Runtimes",
       "description": "",
       "tags": [
         "local",
-        "self-hosted",
-        "inference"
+        "self-hosted"
       ],
-      "path": "content/tips-and-tricks/prefer-gguf-for-llama-cpp-workflows.md",
-      "url": "content/tips-and-tricks/prefer-gguf-for-llama-cpp-workflows",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/prefer-gguf-for-llama-cpp-workflows.md",
+      "url": "content/tips-and-tricks/inference-and-serving/prefer-gguf-for-llama-cpp-workflows",
+      "last_updated": "2026-07-02",
       "category": "local-model-tips",
       "maturity": null,
       "cost_model": null,
@@ -5441,16 +5431,15 @@
     {
       "id": "separate-offline-batch-jobs-from-chat-serving",
       "type": "tip",
-      "name": "Separate Offline Batch Jobs From Chat Serving",
+      "name": "Separate Offline Batch Generation From Interactive Chat Serving",
       "description": "",
       "tags": [
         "inference",
-        "batching",
-        "caching"
+        "batching"
       ],
-      "path": "content/tips-and-tricks/separate-offline-batch-jobs-from-chat-serving.md",
-      "url": "content/tips-and-tricks/separate-offline-batch-jobs-from-chat-serving",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/separate-offline-batch-jobs-from-chat-serving.md",
+      "url": "content/tips-and-tricks/inference-and-serving/separate-offline-batch-jobs-from-chat-serving",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -5722,16 +5711,15 @@
     {
       "id": "start-with-a-smaller-quantized-model",
       "type": "tip",
-      "name": "Start With A Smaller Quantized Model",
+      "name": "Validate the Workflow With a Smaller Quantized Model Before Downloading Larger Weights",
       "description": "",
       "tags": [
         "local",
-        "self-hosted",
-        "inference"
+        "quantization"
       ],
-      "path": "content/tips-and-tricks/start-with-a-smaller-quantized-model.md",
-      "url": "content/tips-and-tricks/start-with-a-smaller-quantized-model",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/start-with-a-smaller-quantized-model.md",
+      "url": "content/tips-and-tricks/inference-and-serving/start-with-a-smaller-quantized-model",
+      "last_updated": "2026-07-02",
       "category": "local-model-tips",
       "maturity": null,
       "cost_model": null,
@@ -5834,16 +5822,15 @@
     {
       "id": "stream-user-facing-responses",
       "type": "tip",
-      "name": "Stream User Facing Responses",
+      "name": "Stream Tokens to the User Even When Total Generation Time Is Unchanged",
       "description": "",
       "tags": [
         "inference",
-        "batching",
-        "caching"
+        "streaming"
       ],
-      "path": "content/tips-and-tricks/stream-user-facing-responses.md",
-      "url": "content/tips-and-tricks/stream-user-facing-responses",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/stream-user-facing-responses.md",
+      "url": "content/tips-and-tricks/inference-and-serving/stream-user-facing-responses",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -6246,16 +6233,15 @@
     {
       "id": "tune-batch-size-against-tail-latency",
       "type": "tip",
-      "name": "Tune Batch Size Against Tail Latency",
+      "name": "Increase Batch Size Only Until Tail Latency Becomes Unacceptable",
       "description": "",
       "tags": [
         "inference",
-        "batching",
-        "caching"
+        "batching"
       ],
-      "path": "content/tips-and-tricks/tune-batch-size-against-tail-latency.md",
-      "url": "content/tips-and-tricks/tune-batch-size-against-tail-latency",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/tune-batch-size-against-tail-latency.md",
+      "url": "content/tips-and-tricks/inference-and-serving/tune-batch-size-against-tail-latency",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -6396,16 +6382,15 @@
     {
       "id": "use-int8-for-safer-compression",
       "type": "tip",
-      "name": "Use INT8 For Safer Compression",
+      "name": "Prefer INT8 Over INT4 When Quality Risk Matters More Than Maximum Compression",
       "description": "",
       "tags": [
-        "inference",
-        "batching",
-        "caching"
+        "quantization",
+        "inference"
       ],
-      "path": "content/tips-and-tricks/use-int8-for-safer-compression.md",
-      "url": "content/tips-and-tricks/use-int8-for-safer-compression",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/use-int8-for-safer-compression.md",
+      "url": "content/tips-and-tricks/inference-and-serving/use-int8-for-safer-compression",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,
@@ -6451,16 +6436,16 @@
     {
       "id": "use-local-models-for-sensitive-prototyping",
       "type": "tip",
-      "name": "Use Local Models for Sensitive Prototyping",
+      "name": "Default to Local Models When Prototyping With Sensitive Data",
       "description": "",
       "tags": [
         "local",
         "self-hosted",
-        "llm"
+        "security"
       ],
-      "path": "content/tips-and-tricks/use-local-models-for-sensitive-prototyping.md",
-      "url": "content/tips-and-tricks/use-local-models-for-sensitive-prototyping",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/inference-and-serving/use-local-models-for-sensitive-prototyping.md",
+      "url": "content/tips-and-tricks/inference-and-serving/use-local-models-for-sensitive-prototyping",
+      "last_updated": "2026-07-02",
       "category": "local-model-tips",
       "maturity": null,
       "cost_model": null,
@@ -6584,16 +6569,15 @@
     {
       "id": "use-speculative-decoding-for-latency-critical-paths",
       "type": "tip",
-      "name": "Use Speculative Decoding For Latency Critical Paths",
+      "name": "Use Speculative Decoding When a Cheap Draft Model Is Available and Latency Dominates",
       "description": "",
       "tags": [
         "inference",
-        "batching",
-        "caching"
+        "efficiency"
       ],
-      "path": "content/tips-and-tricks/use-speculative-decoding-for-latency-critical-paths.md",
-      "url": "content/tips-and-tricks/use-speculative-decoding-for-latency-critical-paths",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/inference-and-serving/use-speculative-decoding-for-latency-critical-paths.md",
+      "url": "content/tips-and-tricks/inference-and-serving/use-speculative-decoding-for-latency-critical-paths",
+      "last_updated": "2026-07-02",
       "category": "inference-optimization",
       "maturity": null,
       "cost_model": null,

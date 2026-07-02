@@ -78,7 +78,7 @@ flowchart TD
 - Runtime: [Ollama](../../projects/inference-engines/ollama.md)
 - Runtime: [llama.cpp](../../projects/inference-engines/llama-cpp.md)
 - Stack reference: [Local-first](../../architectures/reference-stacks/local-first.md)
-- Tip: [Benchmark on user hardware](../../tips-and-tricks/benchmark-on-the-user-hardware.md)
+- Tip: [Benchmark on user hardware](../../tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md)
 
 ---
 *Last reviewed: 2026-06-14 by @maintainer*
