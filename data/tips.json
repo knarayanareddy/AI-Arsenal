@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-02T19:39:54.051Z",
+  "generated_at": "2026-07-02T19:44:33.561Z",
   "count": 102,
   "items": [
     {
@@ -106,7 +106,7 @@
     },
     {
       "id": "add-evals-before-refactors",
-      "title": "Add Evals Before Prompt Refactors",
+      "title": "Add an Eval Harness Before Refactoring Prompts or Retrieval Logic",
       "category": "prompting",
       "tags": [
         "evaluation",
@@ -115,36 +115,48 @@
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (regression-driven prompt/pipeline change discipline)",
+      "applies_to": [
+        "prompt-refactoring",
+        "pipeline-changes"
+      ],
+      "gotchas": [
+        "Without a baseline eval run before the change, there is no way to distinguish an actual quality regression from normal output variance -- the comparison point has to exist before the refactor happens, not be reconstructed afterward",
+        "A minimal eval set (even 15-20 representative cases) is enough to catch large regressions -- waiting for a comprehensive eval suite before making any change means changes never happen safely at all"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets"
+      ],
       "added_date": "2026-06-13",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "reviewed",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/add-evals-before-refactors.md",
-      "url": "content/tips-and-tricks/add-evals-before-refactors",
+      "path": "content/tips-and-tricks/evaluation/add-evals-before-refactors.md",
+      "url": "content/tips-and-tricks/evaluation/add-evals-before-refactors",
       "slug": "add-evals-before-refactors",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Add Evals Before Prompt Refactors",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Add an Eval Harness Before Refactoring Prompts or Retrieval Logic",
       "summary": "",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
-      "reading_time_minutes": 1,
-      "word_count": 198,
-      "body_html": "<h2>Overview</h2>\n<p>Add Evals Before Prompt Refactors is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Clear scope and practical applicability</li>\n<li>Structured metadata for filtering and search</li>\n<li>Canonical location for future updates</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Read the entry and follow the linked resources.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When making an AI engineering decision related to this topic</li>\n<li><strong>Scenario</strong>: When collecting context for an LLM or agent workflow</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Concise enough for quick browsing</li>\n<li>Structured enough for generated data and search</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify external claims before production decisions</li>\n<li>Re-run evaluations against your own workload</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Use this entry as a canonical reference from guides, stacks, and generated data views.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://example.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary Resource</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception notes should be updated with verified sources during maintenance reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview Add Evals Before Prompt Refactors is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions. Why It's in the Arsenal It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity. Key Features Clear scope and practical applicability Structured metadata for filtering and search Canonical location for future updates Architecture / How It Works Review the metadata first, then use the body as the human readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere. Getting Started Use Cases 1. Scenario : When making an AI engineering decision related to this topic 2. Scenario : When collecting context for an LLM or agent workflow Strengths Concise enough for quick browsing Structured enough for generated data and search Limitations / When NOT to Use Verify external claims before production decisions Re run evaluations against your own workload Integration Patterns Use this entry as a canonical reference from guides, stacks, and generated data views. Resources Primary Resource Buzz & Reception Reception notes should be updated with verified sources during maintenance reviews. Last reviewed: 2026 06 13 by @maintainer"
+      "reading_time_minutes": 2,
+      "word_count": 290,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Before refactoring a prompt, retrieval step, or any other part of an LLM pipeline, run the existing behavior against a representative eval set and record the baseline. Without a pre-change baseline, there is no way to tell whether a refactor improved, regressed, or had no effect on output quality — you're left comparing memory of \"how it used to feel\" against the new behavior.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a prompt is edited directly in production code, with quality assessed informally by spot-checking a few outputs after deployment.</p>\n<p><strong>After:</strong> the existing prompt is run against a 15-20 case eval set, the baseline scores are recorded, the refactor is made, and the same eval set is re-run to produce a before/after comparison.</p>\n<h2>Implementation</h2>\n<p>Build or reuse a small eval set (15-20 representative cases covering typical and edge-case inputs), run it against current behavior to record a baseline score, make the intended change, and re-run the same eval set to measure the actual delta before shipping.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without a pre-change baseline, there's no way to distinguish an actual regression from normal output variance</li>\n<li>A minimal eval set is enough to catch large regressions — waiting for a comprehensive suite before any change means changes never happen safely</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip formal eval-before-refactor for cosmetic changes with no behavioral impact (e.g. renaming an internal variable)</li>\n<li>Not sufficient on its own for very high-stakes changes — pair with staged rollout and production monitoring, since a static eval set can't catch every real-world input pattern</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: running a baseline eval before making prompt or pipeline changes is a standard, widely documented practice in LLM application engineering discipline.</p>\n",
+      "body_text": "What & Why Before refactoring a prompt, retrieval step, or any other part of an LLM pipeline, run the existing behavior against a representative eval set and record the baseline. Without a pre change baseline, there is no way to tell whether a refactor improved, regressed, or had no effect on output quality — you're left comparing memory of \"how it used to feel\" against the new behavior. Before / After Before: a prompt is edited directly in production code, with quality assessed informally by spot checking a few outputs after deployment. After: the existing prompt is run against a 15 20 case eval set, the baseline scores are recorded, the refactor is made, and the same eval set is re run to produce a before/after comparison. Implementation Build or reuse a small eval set (15 20 representative cases covering typical and edge case inputs), run it against current behavior to record a baseline score, make the intended change, and re run the same eval set to measure the actual delta before shipping. Gotchas Without a pre change baseline, there's no way to distinguish an actual regression from normal output variance A minimal eval set is enough to catch large regressions — waiting for a comprehensive suite before any change means changes never happen safely When NOT to Apply Skip formal eval before refactor for cosmetic changes with no behavioral impact (e.g. renaming an internal variable) Not sufficient on its own for very high stakes changes — pair with staged rollout and production monitoring, since a static eval set can't catch every real world input pattern Verification Production verified: running a baseline eval before making prompt or pipeline changes is a standard, widely documented practice in LLM application engineering discipline."
     },
     {
       "id": "add-hybrid-search-for-exact-terms",
@@ -1136,46 +1148,56 @@
     },
     {
       "id": "detect-context-truncation-in-tests",
-      "title": "Detect Context Truncation In Tests",
+      "title": "Fail Tests When Important Context Sections Are Truncated",
       "category": "context-window-management",
       "tags": [
         "llm",
-        "memory",
-        "retrieval"
+        "evaluation"
       ],
       "difficulty": "intermediate",
       "impact": "medium",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (context-window regression-testing discussions)",
+      "applies_to": [
+        "long-context-prompts"
+      ],
+      "gotchas": [
+        "Silent truncation (a provider or client library trimming context to fit the window with no error) can pass functional tests while quietly degrading answer quality -- an explicit assertion is needed to catch it, since it won't surface as a normal test failure otherwise",
+        "Detecting truncation requires actually checking token counts against the model's context window at test time, rather than checking only that a response was returned -- a truncated request can still return a plausible-looking (but wrong) answer"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "use-context-budgets-per-section"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/detect-context-truncation-in-tests.md",
-      "url": "content/tips-and-tricks/detect-context-truncation-in-tests",
+      "path": "content/tips-and-tricks/evaluation/detect-context-truncation-in-tests.md",
+      "url": "content/tips-and-tricks/evaluation/detect-context-truncation-in-tests",
       "slug": "detect-context-truncation-in-tests",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Detect Context Truncation In Tests",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Fail Tests When Important Context Sections Are Truncated",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 245,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Fail tests when important sections are truncated or omitted from long prompts.</p>\n</blockquote>\n<p>Context windows are budgets. Allocate them intentionally instead of stuffing everything into the prompt.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> Medium</li>\n<li><strong>Time to implement:</strong> 30 minutes</li>\n<li><strong>Applies to:</strong> llm, memory, retrieval</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">budget = {\"instructions\": 800, \"history\": 1200, \"retrieval\": 5000, \"output\": 1000}\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Fail tests when important sections are truncated or omitted from long prompts. Context windows are budgets. Allocate them intentionally instead of stuffing everything into the prompt. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: Medium Time to implement: 30 minutes Applies to: llm, memory, retrieval Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 264,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Add an explicit test assertion that fails when an important prompt section (instructions, critical retrieved context) is truncated to fit the context window, rather than allowing silent truncation to pass unnoticed. A truncated request can still return a plausible-looking response, masking a real quality problem that only an explicit check will catch.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> tests check only that a response was returned successfully, with no check on whether input context was silently trimmed to fit the window.</p>\n<p><strong>After:</strong> a test explicitly computes the token count of the assembled prompt and asserts it's within budget before the call, failing loudly if truncation would occur.</p>\n<h2>Implementation</h2>\n<p>Add a pre-call assertion in your test suite that computes the total token count of the assembled prompt (instructions + context + history) and fails the test if it exceeds the model's context window, rather than relying on the provider to handle truncation silently.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Silent truncation can pass functional tests while quietly degrading answer quality — an explicit assertion is needed</li>\n<li>Detecting truncation requires checking token counts against the context window at test time, rather than checking only that a response was returned</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if your application's inputs are always well within the context window with no realistic truncation risk</li>\n<li>Not necessary if your provider already errors explicitly (rather than silently truncating) when the input exceeds the window</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: explicit truncation-detection assertions in test suites are a repeated recommendation in context-window regression-testing writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Add an explicit test assertion that fails when an important prompt section (instructions, critical retrieved context) is truncated to fit the context window, rather than allowing silent truncation to pass unnoticed. A truncated request can still return a plausible looking response, masking a real quality problem that only an explicit check will catch. Before / After Before: tests check only that a response was returned successfully, with no check on whether input context was silently trimmed to fit the window. After: a test explicitly computes the token count of the assembled prompt and asserts it's within budget before the call, failing loudly if truncation would occur. Implementation Add a pre call assertion in your test suite that computes the total token count of the assembled prompt (instructions + context + history) and fails the test if it exceeds the model's context window, rather than relying on the provider to handle truncation silently. Gotchas Silent truncation can pass functional tests while quietly degrading answer quality — an explicit assertion is needed Detecting truncation requires checking token counts against the context window at test time, rather than checking only that a response was returned When NOT to Apply Skip this if your application's inputs are always well within the context window with no realistic truncation risk Not necessary if your provider already errors explicitly (rather than silently truncating) when the input exceeds the window Verification Community reported: explicit truncation detection assertions in test suites are a repeated recommendation in context window regression testing writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "detect-multi-hop-questions-explicitly",
@@ -3031,46 +3053,57 @@
     },
     {
       "id": "run-prompt-injection-regression-tests",
-      "title": "Run Prompt Injection Regression Tests",
+      "title": "Run a Prompt-Injection Regression Suite on Every CI Run",
       "category": "security-best-practices",
       "tags": [
         "security",
-        "guardrails",
-        "tool-use"
+        "evaluation"
       ],
       "difficulty": "intermediate",
       "impact": "high",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (prompt-injection regression-testing discussions)",
+      "applies_to": [
+        "agentic-systems",
+        "rag-pipelines"
+      ],
+      "gotchas": [
+        "A static injection-test suite only catches known attack patterns -- it needs periodic updates as new injection techniques are discovered, or it gives false confidence against novel attacks",
+        "Injection tests need clear pass/fail criteria (did the model follow the injected instruction, yes or no) -- a vague manual review of the outputs doesn't scale as a CI gate"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "test-prompts-with-adversarial-inputs"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/run-prompt-injection-regression-tests.md",
-      "url": "content/tips-and-tricks/run-prompt-injection-regression-tests",
+      "path": "content/tips-and-tricks/evaluation/run-prompt-injection-regression-tests.md",
+      "url": "content/tips-and-tricks/evaluation/run-prompt-injection-regression-tests",
       "slug": "run-prompt-injection-regression-tests",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Run Prompt Injection Regression Tests",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Run a Prompt-Injection Regression Suite on Every CI Run",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 248,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Keep a small suite of malicious prompts and retrieved-context attacks in CI.</p>\n</blockquote>\n<p>LLM security starts by treating user input, retrieved context, and tool outputs as untrusted data.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 30 minutes</li>\n<li><strong>Applies to:</strong> security, guardrails, tool-use</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">allowed_tools = {\"researcher\": [\"search\"], \"writer\": []}\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Keep a small suite of malicious prompts and retrieved context attacks in CI. LLM security starts by treating user input, retrieved context, and tool outputs as untrusted data. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 30 minutes Applies to: security, guardrails, tool use Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 285,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Maintain a small suite of known prompt-injection and adversarial-context attacks and run it automatically in CI on every change to prompts, retrieval, or tool-calling logic. Without an automated regression suite, a change that reintroduces a previously-fixed injection vulnerability has no mechanism to catch it before deployment.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> injection resistance is checked manually and occasionally, with no automated gate in the deployment pipeline.</p>\n<p><strong>After:</strong> a suite of known injection payloads (e.g. \"ignore previous instructions,\" injected fake system messages inside retrieved documents) runs automatically in CI, with a clear pass/fail check on whether the model followed the injected instruction.</p>\n<h2>Implementation</h2>\n<p>Build a small suite of known injection payloads relevant to your application's attack surface (user input, retrieved documents, tool outputs), define a clear pass/fail criterion per case (did the model comply with the injected instruction), and wire the suite into CI so it runs on every relevant change.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A static suite only catches known attack patterns — it needs periodic updates as new injection techniques are discovered</li>\n<li>Injection tests need clear pass/fail criteria — a vague manual review doesn't scale as a CI gate</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for applications with no untrusted input surface at all (no user input, no external retrieval, no untrusted tool outputs)</li>\n<li>Not a complete security guarantee on its own — pair with runtime monitoring and the underlying mitigations (see <code>treat-retrieved-text-as-untrusted</code>, <code>separate-user-content-from-system-instructions</code>), since a fixed test suite cannot cover every possible attack</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: automated prompt-injection regression suites in CI are a repeated recommendation in LLM application security writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Maintain a small suite of known prompt injection and adversarial context attacks and run it automatically in CI on every change to prompts, retrieval, or tool calling logic. Without an automated regression suite, a change that reintroduces a previously fixed injection vulnerability has no mechanism to catch it before deployment. Before / After Before: injection resistance is checked manually and occasionally, with no automated gate in the deployment pipeline. After: a suite of known injection payloads (e.g. \"ignore previous instructions,\" injected fake system messages inside retrieved documents) runs automatically in CI, with a clear pass/fail check on whether the model followed the injected instruction. Implementation Build a small suite of known injection payloads relevant to your application's attack surface (user input, retrieved documents, tool outputs), define a clear pass/fail criterion per case (did the model comply with the injected instruction), and wire the suite into CI so it runs on every relevant change. Gotchas A static suite only catches known attack patterns — it needs periodic updates as new injection techniques are discovered Injection tests need clear pass/fail criteria — a vague manual review doesn't scale as a CI gate When NOT to Apply Skip this for applications with no untrusted input surface at all (no user input, no external retrieval, no untrusted tool outputs) Not a complete security guarantee on its own — pair with runtime monitoring and the underlying mitigations (see treat retrieved text as untrusted, separate user content from system instructions), since a fixed test suite cannot cover every possible attack Verification Community reported: automated prompt injection regression suites in CI are a repeated recommendation in LLM application security writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "sandbox-code-execution-tools",
@@ -3963,46 +3996,57 @@
     },
     {
       "id": "test-prompts-with-adversarial-inputs",
-      "title": "Test Prompts with Adversarial Inputs",
+      "title": "Test Prompts Against Adversarial Inputs, Not Only Well-Formed Ones",
       "category": "security-best-practices",
       "tags": [
         "security",
-        "guardrails",
         "evaluation"
       ],
       "difficulty": "intermediate",
       "impact": "high",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (adversarial-input testing discussions)",
+      "applies_to": [
+        "eval-pipelines"
+      ],
+      "gotchas": [
+        "A prompt that performs well on well-formed test inputs can still fail badly on malformed, contradictory, or adversarially-phrased inputs -- these failure modes are invisible until specifically tested for",
+        "Adversarial test inputs need to reflect realistic attacker or edge-case behavior for your specific application, not a generic list copied from an unrelated domain"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "run-prompt-injection-regression-tests",
+        "add-output-examples-for-edge-cases"
+      ],
       "added_date": "2026-06-13",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "draft",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/test-prompts-with-adversarial-inputs.md",
-      "url": "content/tips-and-tricks/test-prompts-with-adversarial-inputs",
+      "path": "content/tips-and-tricks/evaluation/test-prompts-with-adversarial-inputs.md",
+      "url": "content/tips-and-tricks/evaluation/test-prompts-with-adversarial-inputs",
       "slug": "test-prompts-with-adversarial-inputs",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Test Prompts with Adversarial Inputs",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Test Prompts Against Adversarial Inputs, Not Only Well-Formed Ones",
       "summary": "",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
-      "reading_time_minutes": 1,
-      "word_count": 198,
-      "body_html": "<h2>Overview</h2>\n<p>Test Prompts with Adversarial Inputs is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Clear scope and practical applicability</li>\n<li>Structured metadata for filtering and search</li>\n<li>Canonical location for future updates</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Read the entry and follow the linked resources.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When making an AI engineering decision related to this topic</li>\n<li><strong>Scenario</strong>: When collecting context for an LLM or agent workflow</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Concise enough for quick browsing</li>\n<li>Structured enough for generated data and search</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify external claims before production decisions</li>\n<li>Re-run evaluations against your own workload</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Use this entry as a canonical reference from guides, stacks, and generated data views.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://example.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary Resource</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception notes should be updated with verified sources during maintenance reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview Test Prompts with Adversarial Inputs is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions. Why It's in the Arsenal It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity. Key Features Clear scope and practical applicability Structured metadata for filtering and search Canonical location for future updates Architecture / How It Works Review the metadata first, then use the body as the human readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere. Getting Started Use Cases 1. Scenario : When making an AI engineering decision related to this topic 2. Scenario : When collecting context for an LLM or agent workflow Strengths Concise enough for quick browsing Structured enough for generated data and search Limitations / When NOT to Use Verify external claims before production decisions Re run evaluations against your own workload Integration Patterns Use this entry as a canonical reference from guides, stacks, and generated data views. Resources Primary Resource Buzz & Reception Reception notes should be updated with verified sources during maintenance reviews. Last reviewed: 2026 06 13 by @maintainer"
+      "reading_time_minutes": 2,
+      "word_count": 254,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Include adversarial and malformed inputs (contradictory instructions, boundary-pushing requests, malformed data) in your prompt eval set, not only clean, well-formed test cases. A prompt validated only against typical inputs can fail unpredictably on inputs that deviate from that pattern, and this gap is invisible until specifically tested for.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> eval set consists entirely of clean, well-formed, typical user inputs.</p>\n<p><strong>After:</strong> eval set includes a subset of adversarial cases (contradictory requests, boundary values, malformed structure) alongside the typical cases, with explicit pass/fail criteria for each.</p>\n<h2>Implementation</h2>\n<p>Identify realistic adversarial or edge-case input patterns specific to your application (not a generic list), add a representative sample to your eval set with defined expected behavior, and run them alongside typical-case evaluation.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A prompt validated only on well-formed inputs can fail unpredictably on adversarial ones — this gap is invisible until specifically tested</li>\n<li>Adversarial test inputs need to reflect realistic behavior for your specific application, not a generic unrelated list</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for tightly-constrained inputs that are structurally guaranteed to be well-formed (e.g. generated by another trusted internal system with strict validation)</li>\n<li>Not a substitute for <code>run-prompt-injection-regression-tests</code> when the actual concern is security rather than general robustness — use both for a security-sensitive application</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: testing prompts with adversarial inputs alongside well-formed ones is a widely repeated recommendation in prompt-evaluation writeups, not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Include adversarial and malformed inputs (contradictory instructions, boundary pushing requests, malformed data) in your prompt eval set, not only clean, well formed test cases. A prompt validated only against typical inputs can fail unpredictably on inputs that deviate from that pattern, and this gap is invisible until specifically tested for. Before / After Before: eval set consists entirely of clean, well formed, typical user inputs. After: eval set includes a subset of adversarial cases (contradictory requests, boundary values, malformed structure) alongside the typical cases, with explicit pass/fail criteria for each. Implementation Identify realistic adversarial or edge case input patterns specific to your application (not a generic list), add a representative sample to your eval set with defined expected behavior, and run them alongside typical case evaluation. Gotchas A prompt validated only on well formed inputs can fail unpredictably on adversarial ones — this gap is invisible until specifically tested Adversarial test inputs need to reflect realistic behavior for your specific application, not a generic unrelated list When NOT to Apply Skip this for tightly constrained inputs that are structurally guaranteed to be well formed (e.g. generated by another trusted internal system with strict validation) Not a substitute for run prompt injection regression tests when the actual concern is security rather than general robustness — use both for a security sensitive application Verification Community reported: testing prompts with adversarial inputs alongside well formed ones is a widely repeated recommendation in prompt evaluation writeups, not independently benchmarked here against a named production system."
     },
     {
       "id": "trace-tool-inputs-and-outputs",
@@ -4351,46 +4395,56 @@
     },
     {
       "id": "use-golden-questions-for-every-bug-fix",
-      "title": "Use Golden Questions For Every Bug Fix",
+      "title": "Add the Failing Question to Your Eval Set Before Fixing the Bug",
       "category": "debugging-llm-apps",
       "tags": [
         "observability",
-        "tracing",
         "evaluation"
       ],
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "20 minutes",
-      "applies_to": [],
+      "phase": "evaluation",
+      "effort": "minutes",
+      "estimated_time": "~20 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (regression-test-from-real-failure discipline)",
+      "applies_to": [
+        "eval-dataset-growth"
+      ],
+      "gotchas": [
+        "Fixing a bug without adding the case to the eval set means the same failure can silently reappear in a future change with nothing to catch it -- the eval set only grows if this step is actually enforced as part of the fix workflow",
+        "Adding the raw failing question isn't enough on its own -- it needs an expected-correct-answer or acceptance criterion attached, or it can't be used as an automated regression check"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets"
+      ],
       "added_date": "2026-06-14",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "reviewed",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix.md",
-      "url": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix",
+      "path": "content/tips-and-tricks/evaluation/use-golden-questions-for-every-bug-fix.md",
+      "url": "content/tips-and-tricks/evaluation/use-golden-questions-for-every-bug-fix",
       "slug": "use-golden-questions-for-every-bug-fix",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Use Golden Questions For Every Bug Fix",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Add the Failing Question to Your Eval Set Before Fixing the Bug",
       "summary": "",
-      "last_updated": "2026-06-14",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
       "reading_time_minutes": 2,
-      "word_count": 244,
-      "body_html": "<h2>Overview</h2>\n<blockquote>\n<p><strong>TL;DR:</strong> Add a failing user question to your eval set before fixing the bug.</p>\n</blockquote>\n<p>Debugging improves when every failure is classified, reproducible, and linked to traces.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation-oriented.</p>\n<h2>Key Features</h2>\n<ul>\n<li><strong>Impact:</strong> High</li>\n<li><strong>Time to implement:</strong> 20 minutes</li>\n<li><strong>Applies to:</strong> observability, tracing, evaluation</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">trace.metadata[\"prompt_version\"] = \"support-rag-v12\"\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When this failure mode appears in a prototype or production trace</li>\n<li><strong>Scenario</strong>: When you need a low-risk improvement before changing major architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Small enough to test quickly</li>\n<li>Easy to roll back if metrics do not improve</li>\n<li>Works best when paired with traces and evals</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Do not apply blindly without checking quality, cost, and latency impact</li>\n<li>Re-evaluate after changing model, prompt, retriever, or deployment target</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add a trace or eval before and after applying the tip.</li>\n<li>Record the change in prompt/config/version history.</li>\n<li>Promote failures into an evaluation dataset when possible.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"../observability/evaluation-pipelines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal evaluation pipelines</a></li>\n<li><a href=\"../observability/overview.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Arsenal observability overview</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>This is a practical field tip distilled from common LLM application failure modes and should be refined with project-specific evidence.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
-      "body_text": "Overview TL;DR: Add a failing user question to your eval set before fixing the bug. Debugging improves when every failure is classified, reproducible, and linked to traces. Why It's in the Arsenal This tip captures a repeatable AI engineering practice that reduces failures, cost, latency, or debugging time. It is intentionally short and implementation oriented. Key Features Impact: High Time to implement: 20 minutes Applies to: observability, tracing, evaluation Architecture / How It Works The practice changes one controllable part of the system—prompting, retrieval, evaluation, memory, serving, or logging—so teams can measure whether behavior improves. Getting Started Use Cases 1. Scenario : When this failure mode appears in a prototype or production trace 2. Scenario : When you need a low risk improvement before changing major architecture Strengths Small enough to test quickly Easy to roll back if metrics do not improve Works best when paired with traces and evals Limitations / When NOT to Use Do not apply blindly without checking quality, cost, and latency impact Re evaluate after changing model, prompt, retriever, or deployment target Integration Patterns Add a trace or eval before and after applying the tip. Record the change in prompt/config/version history. Promote failures into an evaluation dataset when possible. Resources AI Arsenal evaluation pipelines AI Arsenal observability overview Buzz & Reception This is a practical field tip distilled from common LLM application failure modes and should be refined with project specific evidence. Last reviewed: 2026 06 14 by @maintainer"
+      "word_count": 276,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Every time a real user-reported failure is diagnosed, add that exact question (with its correct expected answer) to the permanent eval set before fixing the underlying bug. This turns every production failure into a permanent regression test, so the same failure mode is automatically caught if a future change reintroduces it.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a bug is fixed based on a reported failure, and the specific failing case is discarded once the fix is verified manually.</p>\n<p><strong>After:</strong> the failing question and its correct expected answer are added to the eval set first, the fix is verified against it, and the case remains as a permanent regression check for all future changes.</p>\n<h2>Implementation</h2>\n<p>When a real failure is diagnosed, capture the exact input and the correct expected output, add both as a new case in the eval dataset, verify the fix resolves that specific case, and keep the case in the suite going forward.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Fixing a bug without adding the case to the eval set means the same failure can silently reappear with nothing to catch it</li>\n<li>The raw failing question alone isn't enough — it needs an expected-correct-answer attached to function as an automated regression check</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for failures caused by transient infrastructure issues (e.g. a one-off provider outage) rather than a genuine logic or prompt defect</li>\n<li>Not meaningful for failures that are inherently non-reproducible (e.g. dependent on live, constantly-changing external data) — document those separately instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: growing an eval set from real production failures is a standard, widely documented regression-testing discipline in LLM application engineering.</p>\n",
+      "body_text": "What & Why Every time a real user reported failure is diagnosed, add that exact question (with its correct expected answer) to the permanent eval set before fixing the underlying bug. This turns every production failure into a permanent regression test, so the same failure mode is automatically caught if a future change reintroduces it. Before / After Before: a bug is fixed based on a reported failure, and the specific failing case is discarded once the fix is verified manually. After: the failing question and its correct expected answer are added to the eval set first, the fix is verified against it, and the case remains as a permanent regression check for all future changes. Implementation When a real failure is diagnosed, capture the exact input and the correct expected output, add both as a new case in the eval dataset, verify the fix resolves that specific case, and keep the case in the suite going forward. Gotchas Fixing a bug without adding the case to the eval set means the same failure can silently reappear with nothing to catch it The raw failing question alone isn't enough — it needs an expected correct answer attached to function as an automated regression check When NOT to Apply Skip this for failures caused by transient infrastructure issues (e.g. a one off provider outage) rather than a genuine logic or prompt defect Not meaningful for failures that are inherently non reproducible (e.g. dependent on live, constantly changing external data) — document those separately instead Verification Production verified: growing an eval set from real production failures is a standard, widely documented regression testing discipline in LLM application engineering."
     },
     {
       "id": "use-int8-for-safer-compression",
@@ -5137,7 +5191,7 @@
     },
     {
       "id": "version-your-eval-datasets",
-      "title": "Version Your Eval Datasets",
+      "title": "Version Eval Datasets the Same Way You Version Code",
       "category": "production-gotchas",
       "tags": [
         "evaluation",
@@ -5146,36 +5200,48 @@
       "difficulty": "beginner",
       "impact": "high",
       "time_to_implement": "30 minutes",
-      "applies_to": [],
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "production-verified",
+      "verified_by": "practitioner reports (eval-dataset versioning discipline)",
+      "applies_to": [
+        "eval-pipelines"
+      ],
+      "gotchas": [
+        "Without versioning, a score comparison across two points in time can be comparing against two different datasets (cases added, removed, or corrected in between), making the comparison meaningless without anyone noticing",
+        "Correcting a mislabeled eval case in place, without a version bump, silently invalidates prior recorded scores that were measured against the old (wrong) label"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "add-evals-before-refactors",
+        "use-golden-questions-for-every-bug-fix"
+      ],
       "added_date": "2026-06-13",
       "added_by": "maintainer",
-      "verified_by": "maintainer",
-      "source_url": null,
+      "last_reviewed": "2026-07-02",
+      "enrichment_status": "reviewed",
       "entry_type": "tip",
-      "path": "content/tips-and-tricks/version-your-eval-datasets.md",
-      "url": "content/tips-and-tricks/version-your-eval-datasets",
+      "path": "content/tips-and-tricks/evaluation/version-your-eval-datasets.md",
+      "url": "content/tips-and-tricks/evaluation/version-your-eval-datasets",
       "slug": "version-your-eval-datasets",
-      "section_path": "content/tips-and-tricks",
-      "display_name": "Version Your Eval Datasets",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Version Eval Datasets the Same Way You Version Code",
       "summary": "",
-      "last_updated": "2026-06-13",
+      "last_updated": "2026-07-02",
       "headings": [
-        "Overview",
-        "Why It's in the Arsenal",
-        "Key Features",
-        "Architecture / How It Works",
-        "Getting Started",
-        "Use Cases",
-        "Strengths",
-        "Limitations / When NOT to Use",
-        "Integration Patterns",
-        "Resources",
-        "Buzz & Reception"
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
       ],
-      "reading_time_minutes": 1,
-      "word_count": 197,
-      "body_html": "<h2>Overview</h2>\n<p>Version Your Eval Datasets is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Clear scope and practical applicability</li>\n<li>Structured metadata for filtering and search</li>\n<li>Canonical location for future updates</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Read the entry and follow the linked resources.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: When making an AI engineering decision related to this topic</li>\n<li><strong>Scenario</strong>: When collecting context for an LLM or agent workflow</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Concise enough for quick browsing</li>\n<li>Structured enough for generated data and search</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Verify external claims before production decisions</li>\n<li>Re-run evaluations against your own workload</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Use this entry as a canonical reference from guides, stacks, and generated data views.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://example.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary Resource</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception notes should be updated with verified sources during maintenance reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-13 by @maintainer</em></p>\n",
-      "body_text": "Overview Version Your Eval Datasets is a curated tip entry included to make the Arsenal more useful for practical AI engineering decisions. Why It's in the Arsenal It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity. Key Features Clear scope and practical applicability Structured metadata for filtering and search Canonical location for future updates Architecture / How It Works Review the metadata first, then use the body as the human readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere. Getting Started Use Cases 1. Scenario : When making an AI engineering decision related to this topic 2. Scenario : When collecting context for an LLM or agent workflow Strengths Concise enough for quick browsing Structured enough for generated data and search Limitations / When NOT to Use Verify external claims before production decisions Re run evaluations against your own workload Integration Patterns Use this entry as a canonical reference from guides, stacks, and generated data views. Resources Primary Resource Buzz & Reception Reception notes should be updated with verified sources during maintenance reviews. Last reviewed: 2026 06 13 by @maintainer"
+      "reading_time_minutes": 2,
+      "word_count": 268,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Store eval datasets under version control with an explicit version identifier, and record which dataset version produced any given eval score. Eval datasets change over time (cases added, corrected, or removed), and without versioning, a score comparison across two points in time can silently be comparing against two different underlying datasets.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> an eval dataset is a single file edited in place, with historical scores recorded with no reference to which version of the dataset produced them.</p>\n<p><strong>After:</strong> the eval dataset is tagged (<code>eval-set-v1.4.json</code>), and every recorded score is stored alongside the dataset version used, so comparisons across time are always apples-to-apples.</p>\n<h2>Implementation</h2>\n<p>Store the eval dataset in version control with an explicit version tag or hash, record that identifier alongside every eval run's results, and treat any addition, removal, or correction of a case as a version bump requiring re-running historical comparisons if needed.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without versioning, a score comparison across time can silently compare against two different datasets, and no one notices</li>\n<li>Correcting a mislabeled case in place, without a version bump, silently invalidates prior scores measured against the old label</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip formal versioning for a very small, rarely-changing eval set already fully captured in a single, stable, source-controlled file with no independent update cadence</li>\n<li>Not necessary if eval runs never need to be compared across time (e.g. only ever used for one-off ad hoc checks)</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: versioning eval datasets with the same discipline as code is a standard, widely documented practice in eval pipeline engineering.</p>\n",
+      "body_text": "What & Why Store eval datasets under version control with an explicit version identifier, and record which dataset version produced any given eval score. Eval datasets change over time (cases added, corrected, or removed), and without versioning, a score comparison across two points in time can silently be comparing against two different underlying datasets. Before / After Before: an eval dataset is a single file edited in place, with historical scores recorded with no reference to which version of the dataset produced them. After: the eval dataset is tagged (eval set v1.4.json), and every recorded score is stored alongside the dataset version used, so comparisons across time are always apples to apples. Implementation Store the eval dataset in version control with an explicit version tag or hash, record that identifier alongside every eval run's results, and treat any addition, removal, or correction of a case as a version bump requiring re running historical comparisons if needed. Gotchas Without versioning, a score comparison across time can silently compare against two different datasets, and no one notices Correcting a mislabeled case in place, without a version bump, silently invalidates prior scores measured against the old label When NOT to Apply Skip formal versioning for a very small, rarely changing eval set already fully captured in a single, stable, source controlled file with no independent update cadence Not necessary if eval runs never need to be compared across time (e.g. only ever used for one off ad hoc checks) Verification Production verified: versioning eval datasets with the same discipline as code is a standard, widely documented practice in eval pipeline engineering."
     }
   ]
 }

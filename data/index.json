@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T19:39:54.051Z",
+    "generated_at": "2026-07-02T19:44:33.561Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -53,15 +53,15 @@
     {
       "id": "add-evals-before-refactors",
       "type": "tip",
-      "name": "Add Evals Before Prompt Refactors",
+      "name": "Add an Eval Harness Before Refactoring Prompts or Retrieval Logic",
       "description": "",
       "tags": [
         "evaluation",
         "llm"
       ],
-      "path": "content/tips-and-tricks/add-evals-before-refactors.md",
-      "url": "content/tips-and-tricks/add-evals-before-refactors",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/evaluation/add-evals-before-refactors.md",
+      "url": "content/tips-and-tricks/evaluation/add-evals-before-refactors",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -1361,16 +1361,15 @@
     {
       "id": "detect-context-truncation-in-tests",
       "type": "tip",
-      "name": "Detect Context Truncation In Tests",
+      "name": "Fail Tests When Important Context Sections Are Truncated",
       "description": "",
       "tags": [
         "llm",
-        "memory",
-        "retrieval"
+        "evaluation"
       ],
-      "path": "content/tips-and-tricks/detect-context-truncation-in-tests.md",
-      "url": "content/tips-and-tricks/detect-context-truncation-in-tests",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/evaluation/detect-context-truncation-in-tests.md",
+      "url": "content/tips-and-tricks/evaluation/detect-context-truncation-in-tests",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -5207,16 +5206,15 @@
     {
       "id": "run-prompt-injection-regression-tests",
       "type": "tip",
-      "name": "Run Prompt Injection Regression Tests",
+      "name": "Run a Prompt-Injection Regression Suite on Every CI Run",
       "description": "",
       "tags": [
         "security",
-        "guardrails",
-        "tool-use"
+        "evaluation"
       ],
-      "path": "content/tips-and-tricks/run-prompt-injection-regression-tests.md",
-      "url": "content/tips-and-tricks/run-prompt-injection-regression-tests",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/evaluation/run-prompt-injection-regression-tests.md",
+      "url": "content/tips-and-tricks/evaluation/run-prompt-injection-regression-tests",
+      "last_updated": "2026-07-02",
       "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
@@ -5987,16 +5985,15 @@
     {
       "id": "test-prompts-with-adversarial-inputs",
       "type": "tip",
-      "name": "Test Prompts with Adversarial Inputs",
+      "name": "Test Prompts Against Adversarial Inputs, Not Only Well-Formed Ones",
       "description": "",
       "tags": [
         "security",
-        "guardrails",
         "evaluation"
       ],
-      "path": "content/tips-and-tricks/test-prompts-with-adversarial-inputs.md",
-      "url": "content/tips-and-tricks/test-prompts-with-adversarial-inputs",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/evaluation/test-prompts-with-adversarial-inputs.md",
+      "url": "content/tips-and-tricks/evaluation/test-prompts-with-adversarial-inputs",
+      "last_updated": "2026-07-02",
       "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
@@ -6363,16 +6360,15 @@
     {
       "id": "use-golden-questions-for-every-bug-fix",
       "type": "tip",
-      "name": "Use Golden Questions For Every Bug Fix",
+      "name": "Add the Failing Question to Your Eval Set Before Fixing the Bug",
       "description": "",
       "tags": [
         "observability",
-        "tracing",
         "evaluation"
       ],
-      "path": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix.md",
-      "url": "content/tips-and-tricks/use-golden-questions-for-every-bug-fix",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/evaluation/use-golden-questions-for-every-bug-fix.md",
+      "url": "content/tips-and-tricks/evaluation/use-golden-questions-for-every-bug-fix",
+      "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
@@ -6714,15 +6710,15 @@
     {
       "id": "version-your-eval-datasets",
       "type": "tip",
-      "name": "Version Your Eval Datasets",
+      "name": "Version Eval Datasets the Same Way You Version Code",
       "description": "",
       "tags": [
         "evaluation",
         "data"
       ],
-      "path": "content/tips-and-tricks/version-your-eval-datasets.md",
-      "url": "content/tips-and-tricks/version-your-eval-datasets",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/evaluation/version-your-eval-datasets.md",
+      "url": "content/tips-and-tricks/evaluation/version-your-eval-datasets",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,

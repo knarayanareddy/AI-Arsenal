@@ -49,7 +49,7 @@
 
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md) — 
 - [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md) — 
-- [Add Evals Before Prompt Refactors](./tips-and-tricks/add-evals-before-refactors.md) — 
+- [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./tips-and-tricks/evaluation/add-evals-before-refactors.md) — 
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./tips-and-tricks/prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md) — 

@@ -7,6 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [agents and orchestration](./agents-and-orchestration/) | 15 entries | 2026-07-02 |
+| [evaluation](./evaluation/) | 6 entries | 2026-07-02 |
 | [fine tuning](./fine-tuning/) | 0 entries | 2026-07-02 |
 | [inference and serving](./inference-and-serving/) | 18 entries | 2026-07-02 |
 | [prompting](./prompting/) | 19 entries | 2026-07-02 |
@@ -33,7 +34,7 @@ _No star-tracked entries yet._
 
 - [Add A Max Step Budget To Every Agent Loop](./agents-and-orchestration/add-a-max-step-budget-to-every-agent.md) — 
 - [Add A Minimal Reproduction Prompt](./add-a-minimal-reproduction-prompt.md) — 
-- [Add Evals Before Prompt Refactors](./add-evals-before-refactors.md) — 
+- [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./evaluation/add-evals-before-refactors.md) — 
 - [Add Hybrid Search for Exact-Match Terms](./rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
@@ -53,7 +54,7 @@ _No star-tracked entries yet._
 - [Classify Failures Before Fixing Prompts](./classify-failures-before-fixing-prompts.md) — 
 - [Compress Retrieved Context Before Generation](./compress-retrieved-context-before-generation.md) — 
 - [Define Explicit Fallbacks for Tool Failures](./agents-and-orchestration/define-fallbacks-for-tool-failures.md) — 
-- [Detect Context Truncation In Tests](./detect-context-truncation-in-tests.md) — 
+- [Fail Tests When Important Context Sections Are Truncated](./evaluation/detect-context-truncation-in-tests.md) — 
 - [Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval](./rag-and-retrieval/detect-multi-hop-questions-explicitly.md) — 
 - [Detect and Stop Repeated Identical Tool Calls](./agents-and-orchestration/detect-repeated-tool-calls.md) — 
 - [Do Not Launch Without Trace Sampling](./do-not-launch-without-trace-sampling.md) — 
