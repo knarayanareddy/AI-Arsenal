@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T19:26:26.893Z",
+    "generated_at": "2026-07-02T19:34:24.585Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -90,15 +90,15 @@
     {
       "id": "add-output-examples-for-edge-cases",
       "type": "tip",
-      "name": "Add Output Examples for Edge Cases",
+      "name": "Add Few-Shot Examples for Edge Cases, Not Just the Happy Path",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/add-output-examples-for-edge-cases.md",
-      "url": "content/tips-and-tricks/add-output-examples-for-edge-cases",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/add-output-examples-for-edge-cases.md",
+      "url": "content/tips-and-tricks/prompting/add-output-examples-for-edge-cases",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -356,15 +356,15 @@
     {
       "id": "ask-for-missing-inputs-before-solving",
       "type": "tip",
-      "name": "Ask For Missing Inputs Before Solving",
+      "name": "Instruct the Model to Ask for Missing Inputs Instead of Guessing",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/ask-for-missing-inputs-before-solving.md",
-      "url": "content/tips-and-tricks/ask-for-missing-inputs-before-solving",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md",
+      "url": "content/tips-and-tricks/prompting/ask-for-missing-inputs-before-solving",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -3827,15 +3827,15 @@
     {
       "id": "name-the-audience-in-the-prompt",
       "type": "tip",
-      "name": "Name The Audience In The Prompt",
+      "name": "Name the Audience Explicitly in the Prompt",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/name-the-audience-in-the-prompt.md",
-      "url": "content/tips-and-tricks/name-the-audience-in-the-prompt",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/name-the-audience-in-the-prompt.md",
+      "url": "content/tips-and-tricks/prompting/name-the-audience-in-the-prompt",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -4096,15 +4096,15 @@
     {
       "id": "order-few-shot-examples-by-similarity",
       "type": "tip",
-      "name": "Order Few Shot Examples by Similarity",
+      "name": "Order Few-Shot Examples by Similarity to the Actual Task",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/order-few-shot-examples-by-similarity.md",
-      "url": "content/tips-and-tricks/order-few-shot-examples-by-similarity",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/order-few-shot-examples-by-similarity.md",
+      "url": "content/tips-and-tricks/prompting/order-few-shot-examples-by-similarity",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -4723,15 +4723,15 @@
     {
       "id": "put-task-inputs-after-instructions",
       "type": "tip",
-      "name": "Put Task Inputs After Instructions",
+      "name": "Place Task Inputs After Stable Instructions, Not Before",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/put-task-inputs-after-instructions.md",
-      "url": "content/tips-and-tricks/put-task-inputs-after-instructions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/put-task-inputs-after-instructions.md",
+      "url": "content/tips-and-tricks/prompting/put-task-inputs-after-instructions",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -4991,16 +4991,16 @@
     {
       "id": "rank-context-by-expected-usefulness",
       "type": "tip",
-      "name": "Rank Context By Expected Usefulness",
+      "name": "Rank Context Sections by Expected Usefulness, Not Chronology",
       "description": "",
       "tags": [
         "llm",
         "memory",
         "retrieval"
       ],
-      "path": "content/tips-and-tricks/rank-context-by-expected-usefulness.md",
-      "url": "content/tips-and-tricks/rank-context-by-expected-usefulness",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/rank-context-by-expected-usefulness.md",
+      "url": "content/tips-and-tricks/prompting/rank-context-by-expected-usefulness",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -5161,16 +5161,15 @@
     {
       "id": "reserve-output-tokens-before-adding-context",
       "type": "tip",
-      "name": "Reserve Output Tokens Before Adding Context",
+      "name": "Reserve Output Token Budget Before Filling Context With Input",
       "description": "",
       "tags": [
         "llm",
-        "memory",
-        "retrieval"
+        "memory"
       ],
-      "path": "content/tips-and-tricks/reserve-output-tokens-before-adding-context.md",
-      "url": "content/tips-and-tricks/reserve-output-tokens-before-adding-context",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/reserve-output-tokens-before-adding-context.md",
+      "url": "content/tips-and-tricks/prompting/reserve-output-tokens-before-adding-context",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -5480,15 +5479,15 @@
     {
       "id": "separate-system-and-task-prompts",
       "type": "tip",
-      "name": "Separate System and Task Prompts",
+      "name": "Separate System Rules From Task-Specific Instructions",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/separate-system-and-task-prompts.md",
-      "url": "content/tips-and-tricks/separate-system-and-task-prompts",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/prompting/separate-system-and-task-prompts.md",
+      "url": "content/tips-and-tricks/prompting/separate-system-and-task-prompts",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -5498,16 +5497,16 @@
     {
       "id": "separate-user-content-from-system-instructions",
       "type": "tip",
-      "name": "Separate User Content From System Instructions",
+      "name": "Separate User Content From System Instructions With Roles and Delimiters",
       "description": "",
       "tags": [
         "security",
         "guardrails",
-        "tool-use"
+        "llm"
       ],
-      "path": "content/tips-and-tricks/separate-user-content-from-system-instructions.md",
-      "url": "content/tips-and-tricks/separate-user-content-from-system-instructions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/separate-user-content-from-system-instructions.md",
+      "url": "content/tips-and-tricks/prompting/separate-user-content-from-system-instructions",
+      "last_updated": "2026-07-02",
       "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
@@ -5517,15 +5516,15 @@
     {
       "id": "set-temperature-by-decision-risk",
       "type": "tip",
-      "name": "Set Temperature by Decision Risk",
+      "name": "Set Temperature by the Cost of Being Wrong, Not a Generic Default",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/set-temperature-by-decision-risk.md",
-      "url": "content/tips-and-tricks/set-temperature-by-decision-risk",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/set-temperature-by-decision-risk.md",
+      "url": "content/tips-and-tricks/prompting/set-temperature-by-decision-risk",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -5761,15 +5760,15 @@
     {
       "id": "state-negative-constraints-as-testable-rules",
       "type": "tip",
-      "name": "State Negative Constraints As Testable Rules",
+      "name": "State Negative Constraints as Testable Rules, Not Vague Warnings",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/state-negative-constraints-as-testable-rules.md",
-      "url": "content/tips-and-tricks/state-negative-constraints-as-testable-rules",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/state-negative-constraints-as-testable-rules.md",
+      "url": "content/tips-and-tricks/prompting/state-negative-constraints-as-testable-rules",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -5817,15 +5816,15 @@
     {
       "id": "store-prompts-with-release-versions",
       "type": "tip",
-      "name": "Store Prompts with Release Versions",
+      "name": "Store Prompts With Explicit Release Version Identifiers",
       "description": "",
       "tags": [
         "llm",
         "evaluation"
       ],
-      "path": "content/tips-and-tricks/store-prompts-with-release-versions.md",
-      "url": "content/tips-and-tricks/store-prompts-with-release-versions",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/prompting/store-prompts-with-release-versions.md",
+      "url": "content/tips-and-tricks/prompting/store-prompts-with-release-versions",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -5910,16 +5909,15 @@
     {
       "id": "summarize-repeated-conversation-blocks",
       "type": "tip",
-      "name": "Summarize Repeated Conversation Blocks",
+      "name": "Summarize Repeated or Stale Conversation Blocks Instead of Repeating Them Verbatim",
       "description": "",
       "tags": [
         "llm",
-        "memory",
-        "retrieval"
+        "memory"
       ],
-      "path": "content/tips-and-tricks/summarize-repeated-conversation-blocks.md",
-      "url": "content/tips-and-tricks/summarize-repeated-conversation-blocks",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/summarize-repeated-conversation-blocks.md",
+      "url": "content/tips-and-tricks/prompting/summarize-repeated-conversation-blocks",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -6343,16 +6341,15 @@
     {
       "id": "use-context-budgets-per-section",
       "type": "tip",
-      "name": "Use Context Budgets Per Section",
+      "name": "Allocate a Fixed Token Budget to Each Prompt Section",
       "description": "",
       "tags": [
         "llm",
-        "memory",
-        "retrieval"
+        "memory"
       ],
-      "path": "content/tips-and-tricks/use-context-budgets-per-section.md",
-      "url": "content/tips-and-tricks/use-context-budgets-per-section",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/use-context-budgets-per-section.md",
+      "url": "content/tips-and-tricks/prompting/use-context-budgets-per-section",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -6362,15 +6359,15 @@
     {
       "id": "use-delimiters-around-retrieved-context",
       "type": "tip",
-      "name": "Use Delimiters Around Retrieved Context",
+      "name": "Wrap Retrieved Context in Explicit Delimiters",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/use-delimiters-around-retrieved-context.md",
-      "url": "content/tips-and-tricks/use-delimiters-around-retrieved-context",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/use-delimiters-around-retrieved-context.md",
+      "url": "content/tips-and-tricks/prompting/use-delimiters-around-retrieved-context",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -6418,15 +6415,15 @@
     {
       "id": "use-json-only-for-machine-parsed-outputs",
       "type": "tip",
-      "name": "Use JSON Only for Machine Parsed Outputs",
+      "name": "Request JSON Only When a Parser Will Consume the Output",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/use-json-only-for-machine-parsed-outputs.md",
-      "url": "content/tips-and-tricks/use-json-only-for-machine-parsed-outputs",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/use-json-only-for-machine-parsed-outputs.md",
+      "url": "content/tips-and-tricks/prompting/use-json-only-for-machine-parsed-outputs",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -6436,16 +6433,16 @@
     {
       "id": "use-json-schema-for-outputs",
       "type": "tip",
-      "name": "Use JSON Schema for Critical Outputs",
+      "name": "Constrain Critical Outputs With a JSON Schema, Not Prose Instructions",
       "description": "",
       "tags": [
         "structured-output",
         "guardrails"
       ],
-      "path": "content/tips-and-tricks/use-json-schema-for-outputs.md",
-      "url": "content/tips-and-tricks/use-json-schema-for-outputs",
-      "last_updated": "2026-06-13",
-      "category": "production-gotchas",
+      "path": "content/tips-and-tricks/prompting/use-json-schema-for-outputs.md",
+      "url": "content/tips-and-tricks/prompting/use-json-schema-for-outputs",
+      "last_updated": "2026-07-02",
+      "category": "prompting",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -6606,15 +6603,15 @@
     {
       "id": "use-xml-tags-for-long-prompt-sections",
       "type": "tip",
-      "name": "Use XML Tags for Long Prompt Sections",
+      "name": "Wrap Long Prompt Sections in XML Tags for Clear Parsing",
       "description": "",
       "tags": [
         "llm",
         "structured-output"
       ],
-      "path": "content/tips-and-tricks/use-xml-tags-for-long-prompt-sections.md",
-      "url": "content/tips-and-tricks/use-xml-tags-for-long-prompt-sections",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/use-xml-tags-for-long-prompt-sections.md",
+      "url": "content/tips-and-tricks/prompting/use-xml-tags-for-long-prompt-sections",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -6715,15 +6712,15 @@
     {
       "id": "version-system-prompts-like-code",
       "type": "tip",
-      "name": "Version System Prompts Like Code",
+      "name": "Version System Prompts With the Same Discipline as Application Code",
       "description": "",
       "tags": [
         "llm",
-        "structured-output"
+        "evaluation"
       ],
-      "path": "content/tips-and-tricks/version-system-prompts-like-code.md",
-      "url": "content/tips-and-tricks/version-system-prompts-like-code",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/prompting/version-system-prompts-like-code.md",
+      "url": "content/tips-and-tricks/prompting/version-system-prompts-like-code",
+      "last_updated": "2026-07-02",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,

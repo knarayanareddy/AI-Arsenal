@@ -8,6 +8,7 @@
 |---|---:|---|
 | [agents and orchestration](./agents-and-orchestration/) | 15 entries | 2026-07-02 |
 | [fine tuning](./fine-tuning/) | 0 entries | 2026-07-02 |
+| [prompting](./prompting/) | 19 entries | 2026-07-02 |
 | [rag and retrieval](./rag-and-retrieval/) | 17 entries | 2026-07-02 |
 
 ## Recently Added
@@ -15,13 +16,13 @@
 - [Add A Max Step Budget To Every Agent Loop](./agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add A Minimal Reproduction Prompt](./add-a-minimal-reproduction-prompt.md)
 - [Add Hybrid Search for Exact-Match Terms](./rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
-- [Add Output Examples for Edge Cases](./add-output-examples-for-edge-cases.md)
 - [Add Provider Timeout And Retry Policies](./add-provider-timeout-and-retry-policies.md)
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
 - [Allowlist Tools Per Agent Role](./agents-and-orchestration/allowlist-tools-per-agent-role.md)
-- [Ask For Missing Inputs Before Solving](./ask-for-missing-inputs-before-solving.md)
+- [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./prompting/ask-for-missing-inputs-before-solving.md)
 - [Benchmark On The User Hardware](./benchmark-on-the-user-hardware.md)
 - [Benchmark With Real Context Lengths](./benchmark-with-real-context-lengths.md)
+- [Cache Embeddings By Content Hash](./cache-embeddings-by-content-hash.md)
 
 ## Most Popular
 
@@ -33,11 +34,11 @@ _No star-tracked entries yet._
 - [Add A Minimal Reproduction Prompt](./add-a-minimal-reproduction-prompt.md) — 
 - [Add Evals Before Prompt Refactors](./add-evals-before-refactors.md) — 
 - [Add Hybrid Search for Exact-Match Terms](./rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
-- [Add Output Examples for Edge Cases](./add-output-examples-for-edge-cases.md) — 
+- [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Provider Timeout And Retry Policies](./add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
 - [Allowlist Tools Per Agent Role](./agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
-- [Ask For Missing Inputs Before Solving](./ask-for-missing-inputs-before-solving.md) — 
+- [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./prompting/ask-for-missing-inputs-before-solving.md) — 
 - [Benchmark On The User Hardware](./benchmark-on-the-user-hardware.md) — 
 - [Benchmark with Production-Shaped Inputs](./benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark With Real Context Lengths](./benchmark-with-real-context-lengths.md) — 
@@ -71,8 +72,8 @@ _No star-tracked entries yet._
 - [Measure KV Cache Hit Rate](./measure-kv-cache-hit-rate.md) — 
 - [Measure Queue Time Separately](./measure-queue-time-separately.md) — 
 - [Measure Retrieval Recall Before Blaming Answer Quality](./rag-and-retrieval/measure-retrieval-recall-before-answer-quality.md) — 
-- [Name The Audience In The Prompt](./name-the-audience-in-the-prompt.md) — 
-- [Order Few Shot Examples by Similarity](./order-few-shot-examples-by-similarity.md) — 
+- [Name the Audience Explicitly in the Prompt](./prompting/name-the-audience-in-the-prompt.md) — 
+- [Order Few-Shot Examples by Similarity to the Actual Task](./prompting/order-few-shot-examples-by-similarity.md) — 
 - [Parallelize Independent Retrieval Calls](./parallelize-independent-retrieval-calls.md) — 
 - [Pin Dependencies For Inference Images](./pin-dependencies-for-inference-images.md) — 
 - [Pin Model And Runtime Versions](./pin-model-and-runtime-versions.md) — 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-02T19:26:26.893Z",
+  "generated_at": "2026-07-02T19:34:24.585Z",
   "tags": [
     {
       "id": "agents",
@@ -432,9 +432,9 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 70,
+      "count": 71,
       "types": {
-        "tip": 18,
+        "tip": 19,
         "project": 10,
         "guide": 13,
         "tool": 17,
@@ -509,6 +509,7 @@
         "trace-tool-inputs-and-outputs",
         "trulens",
         "use-golden-questions-for-every-bug-fix",
+        "version-system-prompts-like-code",
         "version-your-eval-datasets",
         "wandb-weave",
         "weights-biases",
@@ -746,9 +747,9 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 139,
+      "count": 140,
       "types": {
-        "tip": 28,
+        "tip": 29,
         "guide": 30,
         "person": 15,
         "tool": 33,
@@ -862,6 +863,7 @@
         "sebastian-raschka",
         "security-and-guardrails",
         "separate-system-and-task-prompts",
+        "separate-user-content-from-system-instructions",
         "set-temperature-by-decision-risk",
         "set-token-budgets-per-feature",
         "sglang",
@@ -1360,9 +1362,9 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 56,
+      "count": 53,
       "types": {
-        "tip": 21,
+        "tip": 18,
         "tool": 6,
         "build-example": 4,
         "guide": 5,
@@ -1409,18 +1411,15 @@
         "ragflow",
         "rank-context-by-expected-usefulness",
         "redis-memory",
-        "reserve-output-tokens-before-adding-context",
         "sarthi-2024-raptor",
         "self-correcting-rag",
         "start-with-zero-chunk-overlap",
         "store-parser-version-with-every-chunk",
-        "summarize-repeated-conversation-blocks",
         "surrealdb",
         "tabstack",
         "taste-lab",
         "txtai",
         "unstructured",
-        "use-context-budgets-per-section",
         "use-metadata-filters-before-similarity-search",
         "use-parent-child-chunking-for-long-documents",
         "use-query-rewriting-for-vague-questions",
@@ -1579,9 +1578,9 @@
     {
       "id": "structured-output",
       "label": "Structured Output",
-      "count": 29,
+      "count": 28,
       "types": {
-        "tip": 14,
+        "tip": 13,
         "tool": 10,
         "guide": 2,
         "person": 1,
@@ -1616,16 +1615,15 @@
         "use-json-schema-for-outputs",
         "use-xml-tags-for-long-prompt-sections",
         "vaani",
-        "validate-tool-arguments-before-execution",
-        "version-system-prompts-like-code"
+        "validate-tool-arguments-before-execution"
       ]
     },
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 34,
+      "count": 33,
       "types": {
-        "tip": 15,
+        "tip": 14,
         "guide": 2,
         "project": 12,
         "build-example": 2,
@@ -1662,7 +1660,6 @@
         "schick-2023-toolformer",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
-        "separate-user-content-from-system-instructions",
         "simple-react-agent",
         "smolagents",
         "validate-tool-arguments-before-execution",

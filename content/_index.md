@@ -24,13 +24,13 @@
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md)
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
-- [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md)
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md)
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md)
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md)
+- [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md)
 
 ## Most Popular
 
@@ -51,7 +51,7 @@
 - [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md) — 
 - [Add Evals Before Prompt Refactors](./tips-and-tricks/add-evals-before-refactors.md) — 
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
-- [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md) — 
+- [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./tips-and-tricks/prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
@@ -65,7 +65,7 @@
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
-- [Ask For Missing Inputs Before Solving](./tips-and-tricks/ask-for-missing-inputs-before-solving.md) — 
+- [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation

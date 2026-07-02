@@ -85,9 +85,9 @@ Prompts are interfaces between product intent and probabilistic model behavior. 
 ## Resources
 
 - [Prompt patterns catalog](prompt-patterns-catalog.md)
-- [Store prompts with release versions](../../tips-and-tricks/store-prompts-with-release-versions.md)
-- [Use XML tags for long prompt sections](../../tips-and-tricks/use-xml-tags-for-long-prompt-sections.md)
-- [Use JSON only for machine parsed outputs](../../tips-and-tricks/use-json-only-for-machine-parsed-outputs.md)
+- [Store prompts with release versions](../../tips-and-tricks/prompting/store-prompts-with-release-versions.md)
+- [Use XML tags for long prompt sections](../../tips-and-tricks/prompting/use-xml-tags-for-long-prompt-sections.md)
+- [Use JSON only for machine parsed outputs](../../tips-and-tricks/prompting/use-json-only-for-machine-parsed-outputs.md)
 
 ## Buzz & Reception
 
