@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-01T11:29:46.644Z | Entries: 375 | Schema version: 1.0.0
+Generated: 2026-07-02T19:26:30.367Z | Entries: 371 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -9,7 +9,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Projects: 68
 - Tools: 92
 - Papers: 25
-- Tips: 106
+- Tips: 102
 - People: 25
 - Digests: 0
 - Guides: 51
@@ -188,26 +188,26 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Must-Read Papers
 
-- Attention Is All You Need — Introduced the Transformer architecture that became the foundation for modern LLMs
-- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding — Introduced bidirectional masked-language-model pretraining for language understanding
-- Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks — Introduced retrieval-augmented generation as a way to combine parametric models with external knowledge
-- Language Models are Few-Shot Learners — Showed that scaling language models enables broad few-shot and in-context learning behavior
-- LoRA: Low-Rank Adaptation of Large Language Models — Introduced low-rank adapters for parameter-efficient fine-tuning of large models
-- Chain-of-Thought Prompting Elicits Reasoning in Large Language Models — Showed that prompting models to produce intermediate reasoning improves multi-step reasoning tasks
-- Training Language Models to Follow Instructions with Human Feedback — Introduced the InstructGPT RLHF recipe for making language models follow user instructions better
-- ReAct: Synergizing Reasoning and Acting in Language Models — Combined reasoning traces with actions so language models can think and use tools interleaved
-- GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers — Introduced accurate post-training quantization methods for large generative transformers
-- Fast Inference from Transformers via Speculative Decoding — Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model
+- Constitutional AI: Harmlessness from AI Feedback — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
+- Language Models are Few-Shot Learners — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
+- DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
+- QLoRA: Efficient Finetuning of Quantized LLMs — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
+- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
+- The Llama 3 Herd of Models — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
+- From Local to Global: A Graph RAG Approach to Query-Focused Summarization — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
+- RAGAS: Automated Evaluation of Retrieval Augmented Generation — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
+- GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
+- Precise Zero-Shot Dense Retrieval without Relevance Labels — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
 
 ## High-Impact Tips
 
-- Add A Max Step Budget To Every Agent — 
+- Add A Max Step Budget To Every Agent Loop — 
 - Add A Minimal Reproduction Prompt — 
 - Add Evals Before Prompt Refactors — 
-- Add Human Review for High-Impact Actions — 
-- Add Hybrid Search for Exact Terms — 
+- Add Hybrid Search for Exact-Match Terms — 
 - Add Provider Timeout And Retry Policies — 
-- Add Reranking After Recall Is Acceptable — 
 - Allowlist Tools Per Agent Role — 
 - Benchmark with Production-Shaped Inputs — 
 - Benchmark With Real Context Lengths — 
+- Cache Embeddings By Content Hash — 
+- Cache Stable System Prompts — 

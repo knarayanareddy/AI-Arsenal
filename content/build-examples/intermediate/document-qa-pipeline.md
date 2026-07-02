@@ -85,7 +85,7 @@ flowchart TD
 - Parser: [Docling](../../projects/data-and-retrieval/docling.md)
 - Parser: [Unstructured](../../projects/data-and-retrieval/unstructured.md)
 - Vector DB: [pgvector](../../projects/data-and-retrieval/pgvector.md)
-- Tip: [Store parser version](../../tips-and-tricks/store-parser-version-with-every-chunk.md)
+- Tip: [Store parser version](../../tips-and-tricks/rag-and-retrieval/store-parser-version-with-every-chunk.md)
 
 ---
 *Last reviewed: 2026-06-14 by @maintainer*

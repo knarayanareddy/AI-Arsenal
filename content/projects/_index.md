@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 2 entries | 2026-07-01 |
-| [benchmarks and evals](./benchmarks-and-evals/) | 12 entries | 2026-07-01 |
-| [data and retrieval](./data-and-retrieval/) | 14 entries | 2026-07-01 |
-| [foundation models](./foundation-models/) | 13 entries | 2026-07-01 |
-| [frameworks](./frameworks/) | 20 entries | 2026-07-01 |
-| [inference engines](./inference-engines/) | 7 entries | 2026-07-01 |
-| [training and alignment](./training-and-alignment/) | 0 entries | 2026-07-01 |
+| [agent systems](./agent-systems/) | 2 entries | 2026-07-02 |
+| [benchmarks and evals](./benchmarks-and-evals/) | 12 entries | 2026-07-02 |
+| [data and retrieval](./data-and-retrieval/) | 14 entries | 2026-07-02 |
+| [foundation models](./foundation-models/) | 13 entries | 2026-07-02 |
+| [frameworks](./frameworks/) | 20 entries | 2026-07-02 |
+| [inference engines](./inference-engines/) | 7 entries | 2026-07-02 |
+| [training and alignment](./training-and-alignment/) | 0 entries | 2026-07-02 |
 
 ## Recently Added
 

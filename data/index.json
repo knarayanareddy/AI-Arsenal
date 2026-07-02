@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-01T11:29:43.192Z",
+    "generated_at": "2026-07-02T19:26:26.893Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
-    "total_tips": 106,
+    "total_tips": 102,
     "total_people": 25,
     "total_digests": 0,
     "total_guides": 51,
@@ -15,16 +15,16 @@
     {
       "id": "add-a-max-step-budget-to-every-agent",
       "type": "tip",
-      "name": "Add A Max Step Budget To Every Agent",
+      "name": "Add A Max Step Budget To Every Agent Loop",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
         "monitoring"
       ],
-      "path": "content/tips-and-tricks/add-a-max-step-budget-to-every-agent.md",
-      "url": "content/tips-and-tricks/add-a-max-step-budget-to-every-agent",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -69,37 +69,18 @@
       "featured": false
     },
     {
-      "id": "add-human-review-for-high-impact-actions",
-      "type": "tip",
-      "name": "Add Human Review for High-Impact Actions",
-      "description": "",
-      "tags": [
-        "agents",
-        "security",
-        "guardrails"
-      ],
-      "path": "content/tips-and-tricks/add-human-review-for-high-impact-actions.md",
-      "url": "content/tips-and-tricks/add-human-review-for-high-impact-actions",
-      "last_updated": "2026-06-13",
-      "category": "agent-reliability",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "add-hybrid-search-for-exact-terms",
       "type": "tip",
-      "name": "Add Hybrid Search for Exact Terms",
+      "name": "Add Hybrid Search for Exact-Match Terms",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
         "embeddings"
       ],
-      "path": "content/tips-and-tricks/add-hybrid-search-for-exact-terms.md",
-      "url": "content/tips-and-tricks/add-hybrid-search-for-exact-terms",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -146,16 +127,16 @@
     {
       "id": "add-reranking-after-recall-is-acceptable",
       "type": "tip",
-      "name": "Add Reranking After Recall Is Acceptable",
+      "name": "Add a Reranker Only After First-Stage Recall Is Acceptable",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
         "embeddings"
       ],
-      "path": "content/tips-and-tricks/add-reranking-after-recall-is-acceptable.md",
-      "url": "content/tips-and-tricks/add-reranking-after-recall-is-acceptable",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -287,9 +268,9 @@
         "guardrails",
         "tool-use"
       ],
-      "path": "content/tips-and-tricks/allowlist-tools-per-agent-role.md",
-      "url": "content/tips-and-tricks/allowlist-tools-per-agent-role",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role",
+      "last_updated": "2026-07-02",
       "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
@@ -409,26 +390,6 @@
       "featured": false
     },
     {
-      "id": "attention-is-all-you-need",
-      "type": "paper",
-      "name": "Attention Is All You Need",
-      "description": "Introduced the Transformer architecture that became the foundation for modern LLMs",
-      "tags": [
-        "transformers",
-        "attention",
-        "foundational",
-        "llm"
-      ],
-      "path": "content/research/papers/attention-is-all-you-need.md",
-      "url": "content/research/papers/attention-is-all-you-need",
-      "last_updated": "2026-06-14",
-      "category": "architecture",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "autogen",
       "type": "project",
       "name": "AutoGen",
@@ -523,6 +484,25 @@
       "maturity": "production",
       "cost_model": "usage-based",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "bai-2022-constitutional-ai",
+      "type": "paper",
+      "name": "Constitutional AI: Harmlessness from AI Feedback",
+      "description": "Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "training"
+      ],
+      "path": "content/research/training-and-alignment/bai-2022-constitutional-ai.md",
+      "url": "content/research/training-and-alignment/bai-2022-constitutional-ai",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -637,25 +617,6 @@
       "featured": false
     },
     {
-      "id": "bert",
-      "type": "paper",
-      "name": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
-      "description": "Introduced bidirectional masked-language-model pretraining for language understanding",
-      "tags": [
-        "llm",
-        "training",
-        "foundational"
-      ],
-      "path": "content/research/papers/bert.md",
-      "url": "content/research/papers/bert",
-      "last_updated": "2026-06-14",
-      "category": "training",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "braintrust",
       "type": "project",
       "name": "Braintrust",
@@ -676,18 +637,37 @@
       "featured": false
     },
     {
+      "id": "brown-2020-gpt3",
+      "type": "paper",
+      "name": "Language Models are Few-Shot Learners",
+      "description": "Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning",
+      "tags": [
+        "training",
+        "foundational",
+        "llm"
+      ],
+      "path": "content/research/foundational/brown-2020-gpt3.md",
+      "url": "content/research/foundational/brown-2020-gpt3",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "budget-context-before-adding-tools",
       "type": "tip",
-      "name": "Budget Context Before Adding Tools",
+      "name": "Budget Context Before Adding More Tools to an Agent",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
         "memory"
       ],
-      "path": "content/tips-and-tricks/budget-context-before-adding-tools.md",
-      "url": "content/tips-and-tricks/budget-context-before-adding-tools",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -707,25 +687,6 @@
       "path": "content/tips-and-tricks/cache-embeddings-by-content-hash.md",
       "url": "content/tips-and-tricks/cache-embeddings-by-content-hash",
       "last_updated": "2026-06-14",
-      "category": "cost-reduction",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "cache-stable-embedding-calls",
-      "type": "tip",
-      "name": "Cache Stable Embedding Calls",
-      "description": "",
-      "tags": [
-        "embeddings",
-        "caching",
-        "rag"
-      ],
-      "path": "content/tips-and-tricks/cache-stable-embedding-calls.md",
-      "url": "content/tips-and-tricks/cache-stable-embedding-calls",
-      "last_updated": "2026-06-13",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -754,36 +715,17 @@
     {
       "id": "cap-agent-tool-retries",
       "type": "tip",
-      "name": "Cap Agent Tool Retries",
+      "name": "Cap Agent Tool Retries at a Fixed Count Per Tool",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
         "monitoring"
       ],
-      "path": "content/tips-and-tricks/cap-agent-tool-retries.md",
-      "url": "content/tips-and-tricks/cap-agent-tool-retries",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "chain-of-thought-prompting",
-      "type": "paper",
-      "name": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
-      "description": "Showed that prompting models to produce intermediate reasoning improves multi-step reasoning tasks",
-      "tags": [
-        "reasoning",
-        "llm",
-        "foundational"
-      ],
-      "path": "content/research/papers/chain-of-thought-prompting.md",
-      "url": "content/research/papers/chain-of-thought-prompting",
-      "last_updated": "2026-06-14",
-      "category": "training",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -811,16 +753,16 @@
     {
       "id": "checkpoint-agent-state-after-each-tool-call",
       "type": "tip",
-      "name": "Checkpoint Agent State After Each Tool Call",
+      "name": "Checkpoint Agent State After Each Side-Effecting Tool Call",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
         "monitoring"
       ],
-      "path": "content/tips-and-tricks/checkpoint-agent-state-after-each-tool-call.md",
-      "url": "content/tips-and-tricks/checkpoint-agent-state-after-each-tool-call",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -869,16 +811,16 @@
     {
       "id": "choose-chunk-size-by-answer-span-length",
       "type": "tip",
-      "name": "Choose Chunk Size by Answer Span Length",
+      "name": "Choose Chunk Size by Expected Answer Span Length, Not a Default",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "chunking"
       ],
-      "path": "content/tips-and-tricks/choose-chunk-size-by-answer-span-length.md",
-      "url": "content/tips-and-tricks/choose-chunk-size-by-answer-span-length",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -1192,25 +1134,6 @@
       "featured": false
     },
     {
-      "id": "constitutional-ai",
-      "type": "paper",
-      "name": "Constitutional AI: Harmlessness from AI Feedback",
-      "description": "Introduced a framework for training helpful and harmless assistants using constitutional principles and AI feedback",
-      "tags": [
-        "alignment",
-        "rlhf",
-        "llm"
-      ],
-      "path": "content/research/papers/constitutional-ai.md",
-      "url": "content/research/papers/constitutional-ai",
-      "last_updated": "2026-06-14",
-      "category": "alignment",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "cost-tracking",
       "type": "guide",
       "name": "Cost Tracking",
@@ -1364,19 +1287,19 @@
       "featured": false
     },
     {
-      "id": "deepseek-r1",
+      "id": "deepseek-ai-2025-r1",
       "type": "paper",
       "name": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
-      "description": "Presented DeepSeek-R1, an open reasoning model trained with reinforcement learning and distilled variants",
+      "description": "Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment",
       "tags": [
+        "training",
         "reasoning",
-        "llm",
         "rlhf"
       ],
-      "path": "content/research/papers/deepseek-r1.md",
-      "url": "content/research/papers/deepseek-r1",
-      "last_updated": "2026-06-14",
-      "category": "training",
+      "path": "content/research/training-and-alignment/deepseek-ai-2025-r1.md",
+      "url": "content/research/training-and-alignment/deepseek-ai-2025-r1",
+      "last_updated": "2026-07-01",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -1405,16 +1328,16 @@
     {
       "id": "define-fallbacks-for-tool-failures",
       "type": "tip",
-      "name": "Define Fallbacks For Tool Failures",
+      "name": "Define Explicit Fallbacks for Tool Failures",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
         "monitoring"
       ],
-      "path": "content/tips-and-tricks/define-fallbacks-for-tool-failures.md",
-      "url": "content/tips-and-tricks/define-fallbacks-for-tool-failures",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/define-fallbacks-for-tool-failures.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/define-fallbacks-for-tool-failures",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -1461,16 +1384,16 @@
     {
       "id": "detect-multi-hop-questions-explicitly",
       "type": "tip",
-      "name": "Detect Multi Hop Questions Explicitly",
+      "name": "Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "evaluation"
       ],
-      "path": "content/tips-and-tricks/detect-multi-hop-questions-explicitly.md",
-      "url": "content/tips-and-tricks/detect-multi-hop-questions-explicitly",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/detect-multi-hop-questions-explicitly.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/detect-multi-hop-questions-explicitly",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -1480,17 +1403,56 @@
     {
       "id": "detect-repeated-tool-calls",
       "type": "tip",
-      "name": "Detect Repeated Tool Calls",
+      "name": "Detect and Stop Repeated Identical Tool Calls",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
         "monitoring"
       ],
-      "path": "content/tips-and-tricks/detect-repeated-tool-calls.md",
-      "url": "content/tips-and-tricks/detect-repeated-tool-calls",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/detect-repeated-tool-calls.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/detect-repeated-tool-calls",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "dettmers-2023-qlora",
+      "type": "paper",
+      "name": "QLoRA: Efficient Finetuning of Quantized LLMs",
+      "description": "Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it",
+      "tags": [
+        "fine-tuning",
+        "quantization",
+        "efficiency"
+      ],
+      "path": "content/research/training-and-alignment/dettmers-2023-qlora.md",
+      "url": "content/research/training-and-alignment/dettmers-2023-qlora",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "devlin-2018-bert",
+      "type": "paper",
+      "name": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "description": "Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks",
+      "tags": [
+        "transformers",
+        "training",
+        "foundational",
+        "llm"
+      ],
+      "path": "content/research/foundational/devlin-2018-bert.md",
+      "url": "content/research/foundational/devlin-2018-bert",
+      "last_updated": "2026-07-01",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -1514,25 +1476,6 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "direct-preference-optimization",
-      "type": "paper",
-      "name": "Direct Preference Optimization",
-      "description": "Simplifies preference optimization for aligning language models",
-      "tags": [
-        "alignment",
-        "rlhf",
-        "llm"
-      ],
-      "path": "content/research/papers/direct-preference-optimization.md",
-      "url": "content/research/papers/direct-preference-optimization",
-      "last_updated": "2026-06-13",
-      "category": "alignment",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -1669,6 +1612,25 @@
       "featured": false
     },
     {
+      "id": "dubey-2024-llama3",
+      "type": "paper",
+      "name": "The Llama 3 Herd of Models",
+      "description": "Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design",
+      "tags": [
+        "training",
+        "llm",
+        "multimodal"
+      ],
+      "path": "content/research/foundational/dubey-2024-llama3.md",
+      "url": "content/research/foundational/dubey-2024-llama3",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "dvc",
       "type": "tool",
       "name": "DVC",
@@ -1684,6 +1646,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "edge-2024-graphrag",
+      "type": "paper",
+      "name": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+      "description": "Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG",
+      "tags": [
+        "rag",
+        "retrieval"
+      ],
+      "path": "content/research/retrieval-and-memory/edge-2024-graphrag.md",
+      "url": "content/research/retrieval-and-memory/edge-2024-graphrag",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1763,6 +1743,24 @@
       "featured": false
     },
     {
+      "id": "es-2023-ragas",
+      "type": "paper",
+      "name": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
+      "description": "Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation",
+      "tags": [
+        "evaluation",
+        "rag"
+      ],
+      "path": "content/research/evaluation-and-safety/es-2023-ragas.md",
+      "url": "content/research/evaluation-and-safety/es-2023-ragas",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "eugene-yan",
       "type": "person",
       "name": "Eugene Yan",
@@ -1784,16 +1782,16 @@
     {
       "id": "evaluate-embedding-models-before-rechunking",
       "type": "tip",
-      "name": "Evaluate Embedding Models Before Rechunking",
+      "name": "Compare Embedding Models Before Changing Your Chunking Strategy",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
         "embeddings"
       ],
-      "path": "content/tips-and-tricks/evaluate-embedding-models-before-rechunking.md",
-      "url": "content/tips-and-tricks/evaluate-embedding-models-before-rechunking",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/evaluate-embedding-models-before-rechunking.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/evaluate-embedding-models-before-rechunking",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -1990,6 +1988,25 @@
       "featured": false
     },
     {
+      "id": "frantar-2022-gptq",
+      "type": "paper",
+      "name": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+      "description": "Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches",
+      "tags": [
+        "efficiency",
+        "quantization",
+        "inference"
+      ],
+      "path": "content/research/inference-and-efficiency/frantar-2022-gptq.md",
+      "url": "content/research/inference-and-efficiency/frantar-2022-gptq",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "fundamentals",
       "type": "guide",
       "name": "Prompt Engineering Fundamentals",
@@ -2006,6 +2023,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gao-2022-hyde",
+      "type": "paper",
+      "name": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+      "description": "Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever",
+      "tags": [
+        "rag",
+        "retrieval"
+      ],
+      "path": "content/research/retrieval-and-memory/gao-2022-hyde.md",
+      "url": "content/research/retrieval-and-memory/gao-2022-hyde",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2124,25 +2159,6 @@
       "featured": false
     },
     {
-      "id": "gptq",
-      "type": "paper",
-      "name": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
-      "description": "Introduced accurate post-training quantization methods for large generative transformers",
-      "tags": [
-        "quantization",
-        "inference",
-        "llm"
-      ],
-      "path": "content/research/papers/gptq.md",
-      "url": "content/research/papers/gptq",
-      "last_updated": "2026-06-14",
-      "category": "efficiency",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "gradio",
       "type": "tool",
       "name": "Gradio",
@@ -2159,25 +2175,6 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "graphrag",
-      "type": "paper",
-      "name": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
-      "description": "Introduced a graph-based RAG approach for global summarization over private datasets",
-      "tags": [
-        "rag",
-        "retrieval",
-        "graphs"
-      ],
-      "path": "content/research/papers/graphrag.md",
-      "url": "content/research/papers/graphrag",
-      "last_updated": "2026-06-14",
-      "category": "rag",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -2351,6 +2348,25 @@
       "featured": false
     },
     {
+      "id": "hu-2021-lora",
+      "type": "paper",
+      "name": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "description": "Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "efficiency"
+      ],
+      "path": "content/research/training-and-alignment/hu-2021-lora.md",
+      "url": "content/research/training-and-alignment/hu-2021-lora",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "hugging-face-hub",
       "type": "tool",
       "name": "Hugging Face Hub",
@@ -2386,25 +2402,6 @@
       "maturity": "production",
       "cost_model": "paid",
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "hyde",
-      "type": "paper",
-      "name": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
-      "description": "Introduced HyDE, which retrieves by embedding a hypothetical answer/document generated from the query",
-      "tags": [
-        "rag",
-        "retrieval",
-        "embeddings"
-      ],
-      "path": "content/research/papers/hyde.md",
-      "url": "content/research/papers/hyde",
-      "last_updated": "2026-06-14",
-      "category": "rag",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -2473,25 +2470,6 @@
       "url": "content/tips-and-tricks/inspect-retrieved-chunks-beside-the-answer",
       "last_updated": "2026-06-14",
       "category": "debugging-llm-apps",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "instructgpt",
-      "type": "paper",
-      "name": "Training Language Models to Follow Instructions with Human Feedback",
-      "description": "Introduced the InstructGPT RLHF recipe for making language models follow user instructions better",
-      "tags": [
-        "alignment",
-        "rlhf",
-        "llm"
-      ],
-      "path": "content/research/papers/instructgpt.md",
-      "url": "content/research/papers/instructgpt",
-      "last_updated": "2026-06-14",
-      "category": "alignment",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -2614,16 +2592,16 @@
     {
       "id": "keep-a-kill-switch-for-agent-actions",
       "type": "tip",
-      "name": "Keep A Kill Switch For Agent Actions",
+      "name": "Keep a Kill Switch for Risky Agent Tools",
       "description": "",
       "tags": [
         "monitoring",
         "security",
-        "cloud"
+        "agents"
       ],
-      "path": "content/tips-and-tricks/keep-a-kill-switch-for-agent-actions.md",
-      "url": "content/tips-and-tricks/keep-a-kill-switch-for-agent-actions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/keep-a-kill-switch-for-agent-actions.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/keep-a-kill-switch-for-agent-actions",
+      "last_updated": "2026-07-02",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -2636,13 +2614,13 @@
       "name": "Keep Instructions Outside Retrieved Context",
       "description": "",
       "tags": [
-        "llm",
-        "memory",
-        "retrieval"
+        "rag",
+        "retrieval",
+        "guardrails"
       ],
-      "path": "content/tips-and-tricks/keep-instructions-outside-retrieved-context.md",
-      "url": "content/tips-and-tricks/keep-instructions-outside-retrieved-context",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/keep-instructions-outside-retrieved-context.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/keep-instructions-outside-retrieved-context",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -2671,16 +2649,16 @@
     {
       "id": "keep-source-page-and-section-metadata",
       "type": "tip",
-      "name": "Keep Source Page and Section Metadata",
+      "name": "Store Source Page and Section Metadata With Every Chunk",
       "description": "",
       "tags": [
         "rag",
-        "retrieval",
-        "embeddings"
+        "data",
+        "observability"
       ],
-      "path": "content/tips-and-tricks/keep-source-page-and-section-metadata.md",
-      "url": "content/tips-and-tricks/keep-source-page-and-section-metadata",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/keep-source-page-and-section-metadata.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/keep-source-page-and-section-metadata",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -2884,25 +2862,6 @@
       "featured": false
     },
     {
-      "id": "language-models-are-few-shot-learners",
-      "type": "paper",
-      "name": "Language Models are Few-Shot Learners",
-      "description": "Showed that scaling language models enables broad few-shot and in-context learning behavior",
-      "tags": [
-        "llm",
-        "reasoning",
-        "foundational"
-      ],
-      "path": "content/research/papers/language-models-are-few-shot-learners.md",
-      "url": "content/research/papers/language-models-are-few-shot-learners",
-      "last_updated": "2026-06-14",
-      "category": "training",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "lean-mvp",
       "type": "guide",
       "name": "Lean MVP Stack",
@@ -2939,6 +2898,45 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "leviathan-2022-speculative-decoding",
+      "type": "paper",
+      "name": "Fast Inference from Transformers via Speculative Decoding",
+      "description": "Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness",
+      "tags": [
+        "inference",
+        "efficiency",
+        "transformers"
+      ],
+      "path": "content/research/inference-and-efficiency/leviathan-2022-speculative-decoding.md",
+      "url": "content/research/inference-and-efficiency/leviathan-2022-speculative-decoding",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "lewis-2020-rag",
+      "type": "paper",
+      "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "description": "Coined 'RAG': a jointly-trained retriever plus generator beats closed-book generation on knowledge-intensive tasks -- ground generation in retrieved documents, though production RAG today uses a simpler decoupled pipeline",
+      "tags": [
+        "rag",
+        "retrieval",
+        "foundational",
+        "llm"
+      ],
+      "path": "content/research/foundational/lewis-2020-rag.md",
+      "url": "content/research/foundational/lewis-2020-rag",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2997,25 +2995,6 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "llama-3-herd-of-models",
-      "type": "paper",
-      "name": "The Llama 3 Herd of Models",
-      "description": "Documented Meta’s Llama 3 model family, training recipe, safety work, and evaluations",
-      "tags": [
-        "llm",
-        "training",
-        "foundational"
-      ],
-      "path": "content/research/papers/llama-3-herd-of-models.md",
-      "url": "content/research/papers/llama-3-herd-of-models",
-      "last_updated": "2026-06-14",
-      "category": "training",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -3137,25 +3116,6 @@
       "featured": false
     },
     {
-      "id": "llm-as-a-judge",
-      "type": "paper",
-      "name": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
-      "description": "Evaluates using LLMs as judges for open-ended model comparison",
-      "tags": [
-        "evaluation",
-        "llm",
-        "benchmark"
-      ],
-      "path": "content/research/papers/llm-as-a-judge.md",
-      "url": "content/research/papers/llm-as-a-judge",
-      "last_updated": "2026-06-13",
-      "category": "evaluation",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "llm-researcher",
       "type": "guide",
       "name": "LLM Researcher Learning Path",
@@ -3237,16 +3197,16 @@
     {
       "id": "log-agent-state-transitions",
       "type": "tip",
-      "name": "Log Agent State Transitions",
+      "name": "Log Every Agent State Transition, Not Just Final Output",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
-        "monitoring"
+        "tracing"
       ],
-      "path": "content/tips-and-tricks/log-agent-state-transitions.md",
-      "url": "content/tips-and-tricks/log-agent-state-transitions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/log-agent-state-transitions.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/log-agent-state-transitions",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -3311,25 +3271,6 @@
       "featured": false
     },
     {
-      "id": "lora",
-      "type": "paper",
-      "name": "LoRA: Low-Rank Adaptation of Large Language Models",
-      "description": "Introduced low-rank adapters for parameter-efficient fine-tuning of large models",
-      "tags": [
-        "fine-tuning",
-        "llm",
-        "efficiency"
-      ],
-      "path": "content/research/papers/lora.md",
-      "url": "content/research/papers/lora",
-      "last_updated": "2026-06-14",
-      "category": "training",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "lunary",
       "type": "project",
       "name": "Lunary",
@@ -3350,18 +3291,36 @@
       "featured": false
     },
     {
+      "id": "madaan-2023-self-refine",
+      "type": "paper",
+      "name": "Self-Refine: Iterative Refinement with Self-Feedback",
+      "description": "Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default",
+      "tags": [
+        "reasoning",
+        "llm"
+      ],
+      "path": "content/research/agents-and-reasoning/madaan-2023-self-refine.md",
+      "url": "content/research/agents-and-reasoning/madaan-2023-self-refine",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "make-success-criteria-machine-checkable",
       "type": "tip",
-      "name": "Make Success Criteria Machine Checkable",
+      "name": "Make Agent Success Criteria Machine-Checkable, Not Self-Reported",
       "description": "",
       "tags": [
         "agents",
-        "tool-use",
+        "evaluation",
         "monitoring"
       ],
-      "path": "content/tips-and-tricks/make-success-criteria-machine-checkable.md",
-      "url": "content/tips-and-tricks/make-success-criteria-machine-checkable",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/make-success-criteria-machine-checkable.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/make-success-criteria-machine-checkable",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -3485,16 +3444,16 @@
     {
       "id": "measure-retrieval-recall-before-answer-quality",
       "type": "tip",
-      "name": "Measure Retrieval Recall Before Answer Quality",
+      "name": "Measure Retrieval Recall Before Blaming Answer Quality",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "evaluation"
       ],
-      "path": "content/tips-and-tricks/measure-retrieval-recall-before-answer-quality.md",
-      "url": "content/tips-and-tricks/measure-retrieval-recall-before-answer-quality",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/measure-retrieval-recall-before-answer-quality.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/measure-retrieval-recall-before-answer-quality",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -4172,6 +4131,25 @@
       "featured": false
     },
     {
+      "id": "ouyang-2022-instructgpt",
+      "type": "paper",
+      "name": "Training Language Models to Follow Instructions with Human Feedback",
+      "description": "Established the 3-stage RLHF recipe (SFT, reward modeling, PPO) that turned GPT-3 into an assistant -- know this pipeline shape, though most teams now reach for simpler DPO instead of implementing PPO-based RLHF directly",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "training"
+      ],
+      "path": "content/research/training-and-alignment/ouyang-2022-instructgpt.md",
+      "url": "content/research/training-and-alignment/ouyang-2022-instructgpt",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "overview",
       "type": "guide",
       "name": "AI Observability Overview",
@@ -4540,36 +4518,17 @@
     {
       "id": "prefer-reranking-before-rechunking",
       "type": "tip",
-      "name": "Prefer Reranking Before Rechunking",
+      "name": "Add a Reranker Before Changing Your Chunking Strategy",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
         "evaluation"
       ],
-      "path": "content/tips-and-tricks/prefer-reranking-before-rechunking.md",
-      "url": "content/tips-and-tricks/prefer-reranking-before-rechunking",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/rag-and-retrieval/prefer-reranking-before-rechunking.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/prefer-reranking-before-rechunking",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "prefer-small-model-routing",
-      "type": "tip",
-      "name": "Prefer Small Model Routing for Simple Tasks",
-      "description": "",
-      "tags": [
-        "llm",
-        "inference",
-        "routing"
-      ],
-      "path": "content/tips-and-tricks/prefer-small-model-routing.md",
-      "url": "content/tips-and-tricks/prefer-small-model-routing",
-      "last_updated": "2026-06-13",
-      "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -4838,25 +4797,6 @@
       "featured": false
     },
     {
-      "id": "qlora",
-      "type": "paper",
-      "name": "QLoRA: Efficient Finetuning of Quantized LLMs",
-      "description": "Enabled fine-tuning quantized LLMs with low memory using 4-bit quantization plus LoRA",
-      "tags": [
-        "fine-tuning",
-        "quantization",
-        "llm"
-      ],
-      "path": "content/research/papers/qlora.md",
-      "url": "content/research/papers/qlora",
-      "last_updated": "2026-06-14",
-      "category": "training",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "qursor",
       "type": "tool",
       "name": "Qursor",
@@ -4933,19 +4873,19 @@
       "featured": false
     },
     {
-      "id": "qwen2-5-math",
+      "id": "rafailov-2023-dpo",
       "type": "paper",
-      "name": "Qwen2.5-Math Technical Report",
-      "description": "Presented Qwen2.5-Math models and a self-improvement pipeline for mathematical reasoning",
+      "name": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+      "description": "Showed the RLHF objective can be solved directly with a simple classification loss on preference pairs, with no separate reward model and no online RL -- meaning you should reach for DPO instead of implementing PPO-based RLHF for most alignment/preference-tuning work",
       "tags": [
-        "reasoning",
-        "llm",
+        "alignment",
+        "rlhf",
         "training"
       ],
-      "path": "content/research/papers/qwen2-5-math.md",
-      "url": "content/research/papers/qwen2-5-math",
-      "last_updated": "2026-06-14",
-      "category": "training",
+      "path": "content/research/training-and-alignment/rafailov-2023-dpo.md",
+      "url": "content/research/training-and-alignment/rafailov-2023-dpo",
+      "last_updated": "2026-07-01",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -4954,16 +4894,16 @@
     {
       "id": "rag-chunk-overlap-tuning",
       "type": "tip",
-      "name": "Tune Chunk Overlap Before Chunk Size",
+      "name": "Tune Chunk Overlap Only After Chunk Size Is Set",
       "description": "",
       "tags": [
         "rag",
         "chunking",
         "retrieval"
       ],
-      "path": "content/tips-and-tricks/rag-chunk-overlap-tuning.md",
-      "url": "content/tips-and-tricks/rag-chunk-overlap-tuning",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/rag-and-retrieval/rag-chunk-overlap-tuning.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/rag-chunk-overlap-tuning",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -4988,25 +4928,6 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "ragas-paper",
-      "type": "paper",
-      "name": "RAGAS: Automated Evaluation of Retrieval Augmented Generation",
-      "description": "Defines reference-free metrics for evaluating RAG pipelines",
-      "tags": [
-        "rag",
-        "evaluation",
-        "retrieval"
-      ],
-      "path": "content/research/papers/ragas-paper.md",
-      "url": "content/research/papers/ragas-paper",
-      "last_updated": "2026-06-13",
-      "category": "evaluation",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -5081,44 +5002,6 @@
       "url": "content/tips-and-tricks/rank-context-by-expected-usefulness",
       "last_updated": "2026-06-14",
       "category": "context-window-management",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "raptor",
-      "type": "paper",
-      "name": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
-      "description": "Introduced hierarchical retrieval over recursively summarized document clusters",
-      "tags": [
-        "rag",
-        "retrieval",
-        "reasoning"
-      ],
-      "path": "content/research/papers/raptor.md",
-      "url": "content/research/papers/raptor",
-      "last_updated": "2026-06-14",
-      "category": "rag",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "react",
-      "type": "paper",
-      "name": "ReAct: Synergizing Reasoning and Acting in Language Models",
-      "description": "Combined reasoning traces with actions so language models can think and use tools interleaved",
-      "tags": [
-        "agents",
-        "reasoning",
-        "tool-use"
-      ],
-      "path": "content/research/papers/react.md",
-      "url": "content/research/papers/react",
-      "last_updated": "2026-06-14",
-      "category": "agents",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -5239,16 +5122,16 @@
     {
       "id": "require-human-approval-for-irreversible-actions",
       "type": "tip",
-      "name": "Require Human Approval For Irreversible Actions",
+      "name": "Require Human Approval Before Irreversible Agent Actions",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
-        "monitoring"
+        "security"
       ],
-      "path": "content/tips-and-tricks/require-human-approval-for-irreversible-actions.md",
-      "url": "content/tips-and-tricks/require-human-approval-for-irreversible-actions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/require-human-approval-for-irreversible-actions.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/require-human-approval-for-irreversible-actions",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -5289,25 +5172,6 @@
       "url": "content/tips-and-tricks/reserve-output-tokens-before-adding-context",
       "last_updated": "2026-06-14",
       "category": "context-window-management",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "retrieval-augmented-generation",
-      "type": "paper",
-      "name": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
-      "description": "Introduced retrieval-augmented generation as a way to combine parametric models with external knowledge",
-      "tags": [
-        "rag",
-        "retrieval",
-        "foundational"
-      ],
-      "path": "content/research/papers/retrieval-augmented-generation.md",
-      "url": "content/research/papers/retrieval-augmented-generation",
-      "last_updated": "2026-06-14",
-      "category": "rag",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -5373,17 +5237,35 @@
     {
       "id": "sandbox-code-execution-tools",
       "type": "tip",
-      "name": "Sandbox Code Execution Tools",
+      "name": "Add Resource and Network Limits to Sandboxed Code Execution Calls",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
-        "monitoring"
+        "security"
       ],
-      "path": "content/tips-and-tricks/sandbox-code-execution-tools.md",
-      "url": "content/tips-and-tricks/sandbox-code-execution-tools",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/sandbox-code-execution-tools.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/sandbox-code-execution-tools",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "sarthi-2024-raptor",
+      "type": "paper",
+      "name": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+      "description": "Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup",
+      "tags": [
+        "rag",
+        "retrieval"
+      ],
+      "path": "content/research/retrieval-and-memory/sarthi-2024-raptor.md",
+      "url": "content/research/retrieval-and-memory/sarthi-2024-raptor",
+      "last_updated": "2026-07-01",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -5405,6 +5287,24 @@
       "maturity": "production",
       "cost_model": "paid",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "schick-2023-toolformer",
+      "type": "paper",
+      "name": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "description": "Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs",
+      "tags": [
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/research/agents-and-reasoning/schick-2023-toolformer.md",
+      "url": "content/research/agents-and-reasoning/schick-2023-toolformer",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -5501,25 +5401,6 @@
       "featured": false
     },
     {
-      "id": "self-refine",
-      "type": "paper",
-      "name": "Self-Refine: Iterative Refinement with Self-Feedback",
-      "description": "Explores iterative self-feedback for improving generated outputs",
-      "tags": [
-        "reasoning",
-        "llm",
-        "evaluation"
-      ],
-      "path": "content/research/papers/self-refine.md",
-      "url": "content/research/papers/self-refine",
-      "last_updated": "2026-06-13",
-      "category": "training",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "semantic-kernel",
       "type": "project",
       "name": "Semantic Kernel",
@@ -5580,35 +5461,17 @@
     {
       "id": "separate-planner-and-executor-permissions",
       "type": "tip",
-      "name": "Separate Planner And Executor Permissions",
+      "name": "Separate Planner and Executor Permissions in Multi-Step Agents",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
-        "monitoring"
+        "security"
       ],
-      "path": "content/tips-and-tricks/separate-planner-and-executor-permissions.md",
-      "url": "content/tips-and-tricks/separate-planner-and-executor-permissions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/separate-planner-and-executor-permissions.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/separate-planner-and-executor-permissions",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "separate-policy-from-task-instructions",
-      "type": "tip",
-      "name": "Separate Policy From Task Instructions",
-      "description": "",
-      "tags": [
-        "llm",
-        "structured-output"
-      ],
-      "path": "content/tips-and-tricks/separate-policy-from-task-instructions.md",
-      "url": "content/tips-and-tricks/separate-policy-from-task-instructions",
-      "last_updated": "2026-06-14",
-      "category": "prompting",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -5822,25 +5685,6 @@
       "featured": false
     },
     {
-      "id": "speculative-decoding",
-      "type": "paper",
-      "name": "Fast Inference from Transformers via Speculative Decoding",
-      "description": "Introduced speculative decoding to accelerate generation using a faster draft model verified by a larger model",
-      "tags": [
-        "inference",
-        "efficiency",
-        "llm"
-      ],
-      "path": "content/research/papers/speculative-decoding.md",
-      "url": "content/research/papers/speculative-decoding",
-      "last_updated": "2026-06-14",
-      "category": "inference",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
       "id": "spotlight-by-backplanes",
       "type": "tool",
       "name": "Spotlight by Backplanes",
@@ -5898,16 +5742,16 @@
     {
       "id": "start-with-zero-chunk-overlap",
       "type": "tip",
-      "name": "Start With Zero Chunk Overlap",
+      "name": "Start With Zero Chunk Overlap, Then Add It Where Needed",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "chunking"
       ],
-      "path": "content/tips-and-tricks/start-with-zero-chunk-overlap.md",
-      "url": "content/tips-and-tricks/start-with-zero-chunk-overlap",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/start-with-zero-chunk-overlap.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/start-with-zero-chunk-overlap",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -5935,16 +5779,16 @@
     {
       "id": "store-parser-version-with-every-chunk",
       "type": "tip",
-      "name": "Store Parser Version With Every Chunk",
+      "name": "Store Parser and Chunker Version With Every Chunk",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "observability"
       ],
-      "path": "content/tips-and-tricks/store-parser-version-with-every-chunk.md",
-      "url": "content/tips-and-tricks/store-parser-version-with-every-chunk",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/store-parser-version-with-every-chunk.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/store-parser-version-with-every-chunk",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -6047,16 +5891,16 @@
     {
       "id": "summarize-long-running-agent-state",
       "type": "tip",
-      "name": "Summarize Long-Running Agent State",
+      "name": "Summarize Long-Running Agent State Instead of Keeping Full History",
       "description": "",
       "tags": [
         "agents",
         "memory",
-        "planning"
+        "stateful"
       ],
-      "path": "content/tips-and-tricks/summarize-long-running-agent-state.md",
-      "url": "content/tips-and-tricks/summarize-long-running-agent-state",
-      "last_updated": "2026-06-13",
+      "path": "content/tips-and-tricks/agents-and-orchestration/summarize-long-running-agent-state.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/summarize-long-running-agent-state",
+      "last_updated": "2026-07-02",
       "category": "context-window-management",
       "maturity": null,
       "cost_model": null,
@@ -6117,25 +5961,6 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "swe-agent",
-      "type": "paper",
-      "name": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
-      "description": "Studies agent-computer interfaces for software engineering tasks",
-      "tags": [
-        "agents",
-        "code-gen",
-        "tool-use"
-      ],
-      "path": "content/research/papers/swe-agent.md",
-      "url": "content/research/papers/swe-agent",
-      "last_updated": "2026-06-13",
-      "category": "agents",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -6248,25 +6073,6 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
-      "featured": false
-    },
-    {
-      "id": "toolformer",
-      "type": "paper",
-      "name": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-      "description": "Showed that language models can learn to call tools using self-supervised API-call annotations",
-      "tags": [
-        "tool-use",
-        "agents",
-        "llm"
-      ],
-      "path": "content/research/papers/toolformer.md",
-      "url": "content/research/papers/toolformer",
-      "last_updated": "2026-06-14",
-      "category": "agents",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
       "featured": false
     },
     {
@@ -6404,36 +6210,17 @@
     {
       "id": "treat-retrieved-text-as-untrusted",
       "type": "tip",
-      "name": "Treat Retrieved Text As Untrusted",
+      "name": "Treat Retrieved Text as Untrusted Input",
       "description": "",
       "tags": [
+        "rag",
         "security",
-        "guardrails",
-        "tool-use"
+        "guardrails"
       ],
-      "path": "content/tips-and-tricks/treat-retrieved-text-as-untrusted.md",
-      "url": "content/tips-and-tricks/treat-retrieved-text-as-untrusted",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/treat-retrieved-text-as-untrusted.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/treat-retrieved-text-as-untrusted",
+      "last_updated": "2026-07-02",
       "category": "security-best-practices",
-      "maturity": null,
-      "cost_model": null,
-      "status": null,
-      "featured": false
-    },
-    {
-      "id": "tree-of-thoughts",
-      "type": "paper",
-      "name": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
-      "description": "Introduced search over multiple reasoning paths instead of a single left-to-right chain",
-      "tags": [
-        "reasoning",
-        "agents",
-        "planning"
-      ],
-      "path": "content/research/papers/tree-of-thoughts.md",
-      "url": "content/research/papers/tree-of-thoughts",
-      "last_updated": "2026-06-14",
-      "category": "agents",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -6686,16 +6473,16 @@
     {
       "id": "use-metadata-filters-before-similarity-search",
       "type": "tip",
-      "name": "Use Metadata Filters Before Similarity Search",
+      "name": "Apply Metadata Filters Before Similarity Search",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
         "embeddings"
       ],
-      "path": "content/tips-and-tricks/use-metadata-filters-before-similarity-search.md",
-      "url": "content/tips-and-tricks/use-metadata-filters-before-similarity-search",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/use-metadata-filters-before-similarity-search.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/use-metadata-filters-before-similarity-search",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -6705,16 +6492,16 @@
     {
       "id": "use-parent-child-chunking-for-long-documents",
       "type": "tip",
-      "name": "Use Parent Child Chunking for Long Documents",
+      "name": "Use Parent-Child Chunking to Balance Precision and Context",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "chunking"
       ],
-      "path": "content/tips-and-tricks/use-parent-child-chunking-for-long-documents.md",
-      "url": "content/tips-and-tricks/use-parent-child-chunking-for-long-documents",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/use-parent-child-chunking-for-long-documents.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/use-parent-child-chunking-for-long-documents",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -6724,16 +6511,16 @@
     {
       "id": "use-query-rewriting-for-vague-questions",
       "type": "tip",
-      "name": "Use Query Rewriting for Vague Questions",
+      "name": "Rewrite Vague Queries Before Embedding Them",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
         "embeddings"
       ],
-      "path": "content/tips-and-tricks/use-query-rewriting-for-vague-questions.md",
-      "url": "content/tips-and-tricks/use-query-rewriting-for-vague-questions",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/use-query-rewriting-for-vague-questions.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/use-query-rewriting-for-vague-questions",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -6762,16 +6549,16 @@
     {
       "id": "use-sentence-windows-for-dense-manuals",
       "type": "tip",
-      "name": "Use Sentence Windows for Dense Manuals",
+      "name": "Return Sentence Windows for Dense Manuals and Policy Docs",
       "description": "",
       "tags": [
         "rag",
         "retrieval",
-        "embeddings"
+        "chunking"
       ],
-      "path": "content/tips-and-tricks/use-sentence-windows-for-dense-manuals.md",
-      "url": "content/tips-and-tricks/use-sentence-windows-for-dense-manuals",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/rag-and-retrieval/use-sentence-windows-for-dense-manuals.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/use-sentence-windows-for-dense-manuals",
+      "last_updated": "2026-07-02",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
@@ -6854,17 +6641,37 @@
     {
       "id": "validate-tool-arguments-before-execution",
       "type": "tip",
-      "name": "Validate Tool Arguments Before Execution",
+      "name": "Validate Tool Arguments Before Execution, Not Inside the Tool",
       "description": "",
       "tags": [
         "agents",
         "tool-use",
-        "monitoring"
+        "structured-output"
       ],
-      "path": "content/tips-and-tricks/validate-tool-arguments-before-execution.md",
-      "url": "content/tips-and-tricks/validate-tool-arguments-before-execution",
-      "last_updated": "2026-06-14",
+      "path": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-before-execution.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-before-execution",
+      "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "vaswani-2017-attention",
+      "type": "paper",
+      "name": "Attention Is All You Need",
+      "description": "Showed self-attention alone (no recurrence or convolution) can model sequences, enabling fully parallelised training that made today's LLM-scale training runs computationally feasible",
+      "tags": [
+        "transformers",
+        "attention",
+        "foundational",
+        "llm"
+      ],
+      "path": "content/research/foundational/vaswani-2017-attention.md",
+      "url": "content/research/foundational/vaswani-2017-attention",
+      "last_updated": "2026-07-01",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -7038,6 +6845,24 @@
       "featured": false
     },
     {
+      "id": "wei-2022-chain-of-thought",
+      "type": "paper",
+      "name": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "description": "Showed prompting a large enough model to produce intermediate reasoning steps improves multi-step reasoning accuracy -- use CoT for reasoning-heavy tasks, but don't trust the trace as an accurate explanation of the model's actual computation",
+      "tags": [
+        "reasoning",
+        "llm"
+      ],
+      "path": "content/research/agents-and-reasoning/wei-2022-chain-of-thought.md",
+      "url": "content/research/agents-and-reasoning/wei-2022-chain-of-thought",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "weights-biases",
       "type": "tool",
       "name": "Weights & Biases",
@@ -7057,6 +6882,42 @@
       "featured": false
     },
     {
+      "id": "yang-2024-qwen25-math",
+      "type": "paper",
+      "name": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement",
+      "description": "Documented a self-improvement pipeline (using the model to generate and filter its own better math training data) producing strong math-specific models -- narrow applicability, and Qwen's own successors have since surpassed these results",
+      "tags": [
+        "training",
+        "reasoning"
+      ],
+      "path": "content/research/training-and-alignment/yang-2024-qwen25-math.md",
+      "url": "content/research/training-and-alignment/yang-2024-qwen25-math",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "yang-2024-swe-agent",
+      "type": "paper",
+      "name": "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering",
+      "description": "Showed a custom agent-computer interface (simplified LM-friendly commands for editing/testing code) matters as much as model quality -- treat interface design, not just model choice, as a first-class variable for coding agents",
+      "tags": [
+        "agents",
+        "code-gen"
+      ],
+      "path": "content/research/agents-and-reasoning/yang-2024-swe-agent.md",
+      "url": "content/research/agents-and-reasoning/yang-2024-swe-agent",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "yann-lecun",
       "type": "person",
       "name": "Yann LeCun",
@@ -7073,6 +6934,43 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "yao-2022-react",
+      "type": "paper",
+      "name": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "description": "Showed interleaving reasoning traces with external actions and their observations outperforms reasoning-only or acting-only prompting, meaning the reason-act-observe loop should be your default agent architecture pattern before reaching for something more complex",
+      "tags": [
+        "agents",
+        "reasoning",
+        "tool-use"
+      ],
+      "path": "content/research/agents-and-reasoning/yao-2022-react.md",
+      "url": "content/research/agents-and-reasoning/yao-2022-react",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "yao-2023-tree-of-thoughts",
+      "type": "paper",
+      "name": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "description": "Showed exploring and backtracking across multiple candidate reasoning paths beats single-chain CoT on hard search-style problems -- reach for ToT for problems needing exploration/backtracking, not as a default CoT replacement",
+      "tags": [
+        "reasoning",
+        "agents"
+      ],
+      "path": "content/research/agents-and-reasoning/yao-2023-tree-of-thoughts.md",
+      "url": "content/research/agents-and-reasoning/yao-2023-tree-of-thoughts",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -7131,6 +7029,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "zheng-2023-llm-as-a-judge",
+      "type": "paper",
+      "name": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+      "description": "Showed strong LLM judges agree with human judgments over 80% of the time, matching human-human agreement -- use LLM-as-judge for scalable open-ended evaluation, but mitigate its documented position, verbosity, and self-enhancement biases",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/research/evaluation-and-safety/zheng-2023-llm-as-a-judge.md",
+      "url": "content/research/evaluation-and-safety/zheng-2023-llm-as-a-judge",
+      "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     }
   ]

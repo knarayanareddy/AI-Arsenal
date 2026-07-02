@@ -82,7 +82,7 @@ results = vector_db.search(query_vector, top_k=8)
 - [Choose a Vector Database](../../architectures/decision-trees/choose-vector-db.md)
 - [Qdrant](../../projects/data-and-retrieval/qdrant.md)
 - [pgvector](../../projects/data-and-retrieval/pgvector.md)
-- [Evaluate embedding models before rechunking](../../tips-and-tricks/evaluate-embedding-models-before-rechunking.md)
+- [Evaluate embedding models before rechunking](../../tips-and-tricks/rag-and-retrieval/evaluate-embedding-models-before-rechunking.md)
 
 ## Buzz & Reception
 

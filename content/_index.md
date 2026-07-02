@@ -6,27 +6,27 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 14 entries | 2026-07-01 |
-| [benchmarks](./benchmarks/) | 0 entries | 2026-07-01 |
-| [build examples](./build-examples/) | 8 entries | 2026-07-01 |
-| [community](./community/) | 30 entries | 2026-07-01 |
-| [digests](./digests/) | 0 entries | 2026-07-01 |
-| [observability](./observability/) | 4 entries | 2026-07-01 |
-| [projects](./projects/) | 68 entries | 2026-07-01 |
-| [research](./research/) | 29 entries | 2026-07-01 |
-| [skills](./skills/) | 8 entries | 2026-07-01 |
-| [tips and tricks](./tips-and-tricks/) | 106 entries | 2026-07-01 |
-| [tools](./tools/) | 106 entries | 2026-07-01 |
-| [trending](./trending/) | 2 entries | 2026-07-01 |
+| [architectures](./architectures/) | 14 entries | 2026-07-02 |
+| [benchmarks](./benchmarks/) | 0 entries | 2026-07-02 |
+| [build examples](./build-examples/) | 8 entries | 2026-07-02 |
+| [community](./community/) | 30 entries | 2026-07-02 |
+| [digests](./digests/) | 0 entries | 2026-07-02 |
+| [observability](./observability/) | 4 entries | 2026-07-02 |
+| [projects](./projects/) | 68 entries | 2026-07-02 |
+| [research](./research/) | 29 entries | 2026-07-02 |
+| [skills](./skills/) | 8 entries | 2026-07-02 |
+| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-02 |
+| [tools](./tools/) | 106 entries | 2026-07-02 |
+| [trending](./trending/) | 2 entries | 2026-07-02 |
 
 ## Recently Added
 
-- [Add A Max Step Budget To Every Agent](./tips-and-tricks/add-a-max-step-budget-to-every-agent.md)
+- [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md)
-- [Add Hybrid Search for Exact Terms](./tips-and-tricks/add-hybrid-search-for-exact-terms.md)
+- [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
 - [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md)
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md)
-- [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md)
+- [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md)
@@ -47,21 +47,20 @@
 
 ## Browse All
 
-- [Add A Max Step Budget To Every Agent](./tips-and-tricks/add-a-max-step-budget-to-every-agent.md) — 
+- [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md) — 
 - [Add A Minimal Reproduction Prompt](./tips-and-tricks/add-a-minimal-reproduction-prompt.md) — 
 - [Add Evals Before Prompt Refactors](./tips-and-tricks/add-evals-before-refactors.md) — 
-- [Add Human Review for High-Impact Actions](./tips-and-tricks/add-human-review-for-high-impact-actions.md) — 
-- [Add Hybrid Search for Exact Terms](./tips-and-tricks/add-hybrid-search-for-exact-terms.md) — 
+- [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md) — 
 - [Add Output Examples for Edge Cases](./tips-and-tricks/add-output-examples-for-edge-cases.md) — 
 - [Add Provider Timeout And Retry Policies](./tips-and-tricks/add-provider-timeout-and-retry-policies.md) — 
-- [Add Reranking After Recall Is Acceptable](./tips-and-tricks/add-reranking-after-recall-is-acceptable.md) — 
+- [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
-- [Allowlist Tools Per Agent Role](./tips-and-tricks/allowlist-tools-per-agent-role.md) — 
+- [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
@@ -82,18 +81,19 @@
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
-- [Budget Context Before Adding Tools](./tips-and-tricks/budget-context-before-adding-tools.md) — 
+- [Budget Context Before Adding More Tools to an Agent](./tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools.md) — 
 - [Cache Embeddings By Content Hash](./tips-and-tricks/cache-embeddings-by-content-hash.md) — 
-- [Cache Stable Embedding Calls](./tips-and-tricks/cache-stable-embedding-calls.md) — 
 - [Cache Stable System Prompts](./tips-and-tricks/cache-stable-system-prompts.md) — 
-- [Cap Agent Tool Retries](./tips-and-tricks/cap-agent-tool-retries.md) — 
+- [Cap Agent Tool Retries at a Fixed Count Per Tool](./tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries.md) — 
 - [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
-- [Checkpoint Agent State After Each Tool Call](./tips-and-tricks/checkpoint-agent-state-after-each-tool-call.md) — 
+- [Checkpoint Agent State After Each Side-Effecting Tool Call](./tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
 - [Choose an Agent Framework](./architectures/decision-trees/choose-agent-framework.md) — Decision tree for selecting agent orchestration frameworks
-- [Choose Chunk Size by Answer Span Length](./tips-and-tricks/choose-chunk-size-by-answer-span-length.md) — 
+- [Choose Chunk Size by Expected Answer Span Length, Not a Default](./tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
 - [Choose a Deployment Target](./architectures/decision-trees/choose-deployment-target.md) — Decision tree for deploying AI apps, APIs, agents, and inference services
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
 - [Choose INT4 Only After Quality Tests](./tips-and-tricks/choose-int4-only-after-quality-tests.md) — 
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
 - [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems
+- [Choose an Observability Tool](./architectures/decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools
+- [Choose a Vector Database](./architectures/decision-trees/choose-vector-db.md) — Decision tree for selecting vector storage and retrieval infrastructure

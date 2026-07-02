@@ -6,9 +6,9 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [advanced](./advanced/) | 2 entries | 2026-07-01 |
-| [intermediate](./intermediate/) | 3 entries | 2026-07-01 |
-| [starter](./starter/) | 3 entries | 2026-07-01 |
+| [advanced](./advanced/) | 2 entries | 2026-07-02 |
+| [intermediate](./intermediate/) | 3 entries | 2026-07-02 |
+| [starter](./starter/) | 3 entries | 2026-07-02 |
 
 ## Recently Added
 
