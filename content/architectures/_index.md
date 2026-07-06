@@ -24,9 +24,9 @@
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./system-design/choose-memory-solution.md)
 - [Choosing an Observability Approach: Integration Model First, Feature List Second](./evaluation-strategy/choose-observability-tool.md)
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./data-strategy/choose-vector-db.md)
-- [Enterprise-Scale AI Stack](./reference-stacks/enterprise-scale.md)
-- [Lean MVP Stack](./reference-stacks/lean-mvp.md)
-- [Local-First AI Stack](./reference-stacks/local-first.md)
+- [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./reference-stacks/enterprise-scale.md)
+- [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./reference-stacks/lean-mvp.md)
+- [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./reference-stacks/local-first.md)
 
 ## Most Popular
 
@@ -41,9 +41,9 @@ _No star-tracked entries yet._
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./system-design/choose-memory-solution.md) — 
 - [Choosing an Observability Approach: Integration Model First, Feature List Second](./evaluation-strategy/choose-observability-tool.md) — 
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./data-strategy/choose-vector-db.md) — 
-- [Enterprise-Scale AI Stack](./reference-stacks/enterprise-scale.md) — Reference architecture for governed enterprise AI systems with security and platform integration
-- [Lean MVP Stack](./reference-stacks/lean-mvp.md) — Opinionated stack for solo developers and fast AI product prototypes
-- [Local-First AI Stack](./reference-stacks/local-first.md) — Reference stack for privacy-first local AI applications without cloud model APIs
+- [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./reference-stacks/enterprise-scale.md) — 
+- [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./reference-stacks/lean-mvp.md) — 
+- [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./reference-stacks/local-first.md) — 
 - [Multi-Agent System Stack](./reference-stacks/multi-agent-system.md) — Reference stack for complex task automation with multiple AI roles and durable state
 - [Production RAG Stack](./reference-stacks/production-rag.md) — Reference architecture for production retrieval-augmented generation applications
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./system-design/rag-vs-fine-tuning.md) — 

@@ -28,9 +28,9 @@ A comparison of two individual tools that plug into the same slot in a stack (e.
 
 ### Recently Added
 
-- [Enterprise-Scale AI Stack](./enterprise-scale.md)
-- [Lean MVP Stack](./lean-mvp.md)
-- [Local-First AI Stack](./local-first.md)
+- [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./enterprise-scale.md)
+- [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./lean-mvp.md)
+- [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./local-first.md)
 - [Multi-Agent System Stack](./multi-agent-system.md)
 - [Production RAG Stack](./production-rag.md)
 - [AI Research Platform Stack](./research-platform.md)
@@ -41,9 +41,9 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [Enterprise-Scale AI Stack](./enterprise-scale.md) — Reference architecture for governed enterprise AI systems with security and platform integration
-- [Lean MVP Stack](./lean-mvp.md) — Opinionated stack for solo developers and fast AI product prototypes
-- [Local-First AI Stack](./local-first.md) — Reference stack for privacy-first local AI applications without cloud model APIs
+- [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./enterprise-scale.md) — 
+- [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./lean-mvp.md) — 
+- [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./local-first.md) — 
 - [Multi-Agent System Stack](./multi-agent-system.md) — Reference stack for complex task automation with multiple AI roles and durable state
 - [Production RAG Stack](./production-rag.md) — Reference architecture for production retrieval-augmented generation applications
 - [AI Research Platform Stack](./research-platform.md) — Reference platform for repeatable model, agent, and retrieval experiments

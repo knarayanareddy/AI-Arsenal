@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T15:05:43.819Z",
+  "generated_at": "2026-07-06T15:09:11.681Z",
   "tags": [
     {
       "id": "agents",
@@ -187,8 +187,8 @@
       "types": {
         "project": 12,
         "tool": 31,
-        "architecture": 2,
-        "guide": 3,
+        "architecture": 4,
+        "guide": 1,
         "person": 1
       },
       "entries": [
@@ -421,10 +421,10 @@
         "tip": 13,
         "build-example": 1,
         "project": 10,
-        "guide": 10,
+        "guide": 9,
         "tool": 17,
         "person": 9,
-        "architecture": 3,
+        "architecture": 4,
         "paper": 2
       },
       "entries": [
@@ -500,7 +500,8 @@
       "label": "Featured",
       "count": 2,
       "types": {
-        "guide": 2
+        "guide": 1,
+        "architecture": 1
       },
       "entries": [
         "hall-of-fame",
@@ -616,8 +617,8 @@
       "types": {
         "tip": 21,
         "tool": 6,
-        "architecture": 2,
-        "guide": 5,
+        "architecture": 3,
+        "guide": 4,
         "project": 17,
         "paper": 2,
         "build-example": 1
@@ -684,7 +685,7 @@
       "label": "Kubernetes",
       "count": 2,
       "types": {
-        "guide": 1,
+        "architecture": 1,
         "project": 1
       },
       "entries": [
@@ -728,11 +729,11 @@
       "count": 131,
       "types": {
         "tip": 20,
-        "guide": 29,
+        "guide": 27,
         "person": 15,
         "tool": 33,
         "paper": 8,
-        "architecture": 1,
+        "architecture": 3,
         "project": 23,
         "build-example": 2
       },
@@ -876,10 +877,9 @@
       "count": 26,
       "types": {
         "tip": 6,
-        "architecture": 1,
+        "architecture": 2,
         "project": 14,
         "tool": 3,
-        "guide": 1,
         "build-example": 1
       },
       "entries": [
@@ -1203,8 +1203,8 @@
       "types": {
         "tip": 18,
         "build-example": 5,
-        "guide": 7,
-        "architecture": 3,
+        "guide": 6,
+        "architecture": 4,
         "project": 23,
         "tool": 6,
         "paper": 5,
@@ -1448,7 +1448,7 @@
         "tool": 9,
         "tip": 12,
         "person": 3,
-        "guide": 1
+        "architecture": 1
       },
       "entries": [
         "agent-browser-shield",
@@ -1483,11 +1483,10 @@
       "label": "Self Hosted",
       "count": 15,
       "types": {
-        "architecture": 2,
+        "architecture": 3,
         "project": 8,
         "tip": 3,
-        "tool": 1,
-        "guide": 1
+        "tool": 1
       },
       "entries": [
         "choose-deployment-target",
