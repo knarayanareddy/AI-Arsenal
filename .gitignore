@@ -51,6 +51,13 @@ content/**/_index.md
 !content/tips-and-tricks/fine-tuning/_index.md
 !content/tips-and-tricks/debugging-and-observability/_index.md
 !content/tips-and-tricks/cost-and-performance/_index.md
+!content/build-examples/rag-systems/_index.md
+!content/build-examples/agent-systems/_index.md
+!content/build-examples/fine-tuning-workflows/_index.md
+!content/build-examples/evaluation-pipelines/_index.md
+!content/build-examples/production-deployment/_index.md
+!content/build-examples/multimodal/_index.md
+!content/build-examples/data-pipelines/_index.md
 
 # GitHub star count cache (regenerated weekly; not source of truth and
 # contains GitHub API responses for external repos which can be used
