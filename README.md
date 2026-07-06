@@ -489,6 +489,7 @@ These principles guide repository structure, schema choices, automation, and con
 | [`docs/data-api.md`](./docs/data-api.md) | Generated JSON API guide |
 | [`docs/data-release.md`](./docs/data-release.md) | Dedicated data-release branch guide |
 | [`docs/maintainer-runbook.md`](./docs/maintainer-runbook.md) | Maintainer operations guide |
+| [`docs/provenance.md`](./docs/provenance.md) | Content provenance and `enrichment_status` meanings |
 | [`docs/troubleshooting.md`](./docs/troubleshooting.md) | Common errors and fixes |
 | [`docs/faq.md`](./docs/faq.md) | Frequently asked questions |
 
