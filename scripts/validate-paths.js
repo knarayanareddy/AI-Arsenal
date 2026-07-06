@@ -119,6 +119,25 @@ for (const file of await getEntryFiles()) {
     if (parsed.data.category && !file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: observability category "${parsed.data.category}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
     if (p.length !== 4) errors.push(`${file}: migrated observability entries must be flat under their category folder (content/observability/{category}/{id}.md), found extra nesting`);
   }
+  if (type === 'community') {
+    // Community-vertical reorganisation: same unconditional-on-kind
+    // enforcement pattern as architectures/observability --
+    // community.schema.json requires `kind` from v1.0.0 with no partial-
+    // migration window. Folder name is plural (forums/chat/newsletters/
+    // events/meetups/creators/datasets); `chat` has no plural form.
+    const kindToFolder = {
+      forum: 'forums',
+      chat: 'chat',
+      newsletter: 'newsletters',
+      event: 'events',
+      meetup: 'meetups',
+      creator: 'creators',
+      dataset: 'datasets'
+    };
+    const expectedFolder = kindToFolder[parsed.data.kind] ? `content/community/${kindToFolder[parsed.data.kind]}` : null;
+    if (expectedFolder && !file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: community kind "${parsed.data.kind}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
+    if (p.length !== 4) errors.push(`${file}: migrated community entries must be flat under their kind folder (content/community/{kind-folder}/{id}.md), found extra nesting`);
+  }
 }
 
 for (const file of await glob('data/*.json', { nodir: true, posix: true })) {

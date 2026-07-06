@@ -16,7 +16,8 @@ const schemaByType = {
   digest: 'digest.schema.json',
   guide: 'guide.schema.json',
   architecture: 'architecture.schema.json',
-  observability: 'observability.schema.json'
+  observability: 'observability.schema.json',
+  community: 'community.schema.json'
 };
 
 // Research-vertical reorganisation: COMPLETE (see x-migration-note in
@@ -48,7 +49,7 @@ function validDateString(value) {
 }
 
 function crossFieldChecks(file, type, data, errors, warnings) {
-  for (const field of ['added_date', 'last_reviewed', 'last_commit', 'published_date']) {
+  for (const field of ['added_date', 'last_reviewed', 'last_commit', 'published_date', 'last_checked']) {
     if (data[field] && !validDateString(data[field])) errors.push(`${file}: ${field} must be a real ISO date (YYYY-MM-DD)`);
     if (data[field] && data[field] > today && field !== 'published_date') warnings.push(`${file}: ${field} is in the future relative to ${today}`);
   }
@@ -71,6 +72,22 @@ function crossFieldChecks(file, type, data, errors, warnings) {
     if (data.health_signals?.includes('production-proven')) {
       const hasEvidence = Array.isArray(data.buzz_sources) && data.buzz_sources.length > 0;
       if (!hasEvidence) warnings.push(`${file}: health_signals includes "production-proven" but no buzz_sources evidence is recorded`);
+    }
+  }
+
+  if (type === 'community') {
+    // Community-vertical reorganisation: honesty/currency checks beyond
+    // what the schema's structural required-fields can express.
+    const activityLower = String(data.activity_evidence ?? '').toLowerCase();
+    const claimsNoSignal = activityLower.includes('no public activity signal found') || activityLower.includes('no recent public activity signal');
+    if (data.activity_level && data.activity_level !== 'unknown' && claimsNoSignal) {
+      errors.push(`${file}: activity_level is "${data.activity_level}" but activity_evidence reads as "no signal found" -- these are contradictory; use activity_level: unknown when no credible signal exists`);
+    }
+    if (data.activity_level === 'unknown' && !claimsNoSignal && data.activity_evidence && data.activity_evidence.length > 0) {
+      warnings.push(`${file}: activity_level is "unknown" but activity_evidence does not read like a "no signal found" statement -- verify this is intentional`);
+    }
+    if (data.last_checked && data.last_reviewed && data.last_checked < data.last_reviewed) {
+      warnings.push(`${file}: last_checked (${data.last_checked}) predates last_reviewed (${data.last_reviewed}) -- activity evidence should be re-verified at least as recently as the entry was last reviewed`);
     }
   }
 

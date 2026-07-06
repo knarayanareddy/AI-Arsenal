@@ -145,9 +145,26 @@ const OBSERVABILITY_HEADINGS = [
   'Resources'
 ];
 
+// Community-vertical reorganisation: the canonical, ORDER-ENFORCED body
+// structure for a community entry (see the community-vertical-reorg brief's
+// Phase 3, "Markdown body sections (EXACT order)"). Mirrors observability's
+// STRICT_ORDER_TYPES treatment rather than every other vertical's
+// presence-only check.
+const COMMUNITY_HEADINGS = [
+  'Overview',
+  "Who it's for",
+  "What you'll get",
+  'How to get value fast',
+  'What to avoid',
+  'Activity & health',
+  'Safety & moderation',
+  'Relation to the Arsenal',
+  'Resources'
+];
+
 // Types whose heading order is enforced strictly (not just presence), per
 // their own vertical-reorg brief's explicit requirement.
-const STRICT_ORDER_TYPES = new Set(['observability']);
+const STRICT_ORDER_TYPES = new Set(['observability', 'community']);
 
 const typeHeadings = {
   project: REQUIRED_ENTRY_HEADINGS,
@@ -168,7 +185,8 @@ const typeHeadings = {
   digest: ['TL;DR', 'Top Projects', 'Top Tools', 'Research Highlights', 'Architecture Notes', 'Community Signals', 'What to Watch Next Month'],
   guide: REQUIRED_ENTRY_HEADINGS,
   architecture: ARCHITECTURE_HEADINGS,
-  observability: OBSERVABILITY_HEADINGS
+  observability: OBSERVABILITY_HEADINGS,
+  community: COMMUNITY_HEADINGS
 };
 
 
@@ -642,6 +660,73 @@ function observabilityContentChecks(file, content, data, errors, warnings) {
   }
 }
 
+// Community-vertical reorganisation: content-quality gates targeting the
+// vertical's four named failure modes -- (1) stale pointers, (2) vibes-only
+// descriptions with no concrete signals, (3) unsafe recommendations without
+// caution notes, (4) mixing entity types without clear typing -- plus the
+// Phase 3 "Section rules" and the Validator persona's integrity checklist.
+const COMMUNITY_VIBES_ONLY_PATTERN = /\b(great|awesome|amazing|excellent|fantastic|wonderful)\s+(community|resource|space|group)\b(?!.{0,150}(?:\d|active|post|member|issue|event|episode))/i;
+
+function communityContentChecks(file, content, data, errors, warnings) {
+  // Failure Mode 2 (vibes-only descriptions): flag generic praise adjectives
+  // applied to "community"/"resource" with no nearby concrete number/signal
+  // word within the same general vicinity. Heuristic, not NLP.
+  const vibesMatch = content.match(COMMUNITY_VIBES_ONLY_PATTERN);
+  if (vibesMatch) {
+    warnings.push(`${file}: body contains vibes-only praise ("${vibesMatch[0]}") with no nearby concrete signal (a number, date, or named activity) -- Failure Mode 2 requires concrete evidence, not adjectives -- verify manually, this check is a heuristic`);
+  }
+
+  // Failure Mode 3 (unsafe recommendations without caution notes) is
+  // primarily enforced structurally via the schema's allOf/if/then
+  // (safety_notes required when safety_level != generally-safe), but also
+  // re-verify the body's "Safety & moderation" section actually says
+  // something concrete when a caution/avoid rating is set, rather than
+  // just satisfying the frontmatter array's minItems.
+  const safetySection = sectionBody(content, 'Safety & moderation');
+  if (data.safety_level && data.safety_level !== 'generally-safe') {
+    if (safetySection === null || safetySection.length === 0) {
+      errors.push(`${file}: safety_level is "${data.safety_level}" but "Safety & moderation" section is missing or empty -- must explicitly state the concern (Phase 3 section rule: "must be explicit when safety_level != generally-safe")`);
+    }
+  }
+
+  // Activity & health section rule: must repeat activity_evidence content
+  // and the last_checked date, not just restate activity_level.
+  const activitySection = sectionBody(content, 'Activity & health');
+  if (activitySection !== null) {
+    if (activitySection.length === 0) {
+      errors.push(`${file}: "Activity & health" section must not be empty`);
+    } else {
+      if (data.last_checked && !activitySection.includes(data.last_checked)) {
+        errors.push(`${file}: "Activity & health" section must repeat the last_checked date (${data.last_checked}) per the Phase 3 section rule`);
+      }
+    }
+  }
+
+  // "How to get value fast" / "What to avoid" must be concrete, not a pure
+  // link dump -- re-check the body sections have actual guidance text, not
+  // just a bare list of links (Validator rule: "No entry is a pure link
+  // dump; must include actionable guidance").
+  const howToSection = sectionBody(content, 'How to get value fast');
+  if (howToSection !== null) {
+    const nonLinkLines = howToSection.split(/\r?\n/).filter((l) => l.trim().length > 0 && !/^\s*[-*]\s*\[[^\]]*\]\([^)]*\)\s*$/.test(l.trim()));
+    if (howToSection.trim().length > 0 && nonLinkLines.length === 0) {
+      errors.push(`${file}: "How to get value fast" reads as a pure link dump (only bare links, no guidance text) -- must include actionable steps (Validator rule)`);
+    }
+  }
+
+  // Overview / Who it's for / What you'll get must be non-empty.
+  for (const heading of ['Overview', "Who it's for", "What you'll get", 'What to avoid']) {
+    const body = sectionBody(content, heading);
+    if (body !== null && body.length === 0) errors.push(`${file}: "${heading}" section must not be empty`);
+  }
+
+  // Resources must include the main URL.
+  const resourcesSection = sectionBody(content, 'Resources');
+  if (resourcesSection !== null && data.url && !resourcesSection.includes(data.url)) {
+    errors.push(`${file}: "Resources" section must include the main URL (${data.url}) per the Phase 4 Structure rule`);
+  }
+}
+
 const changedOnly = process.argv.includes('--changed-only');
 const fix = process.argv.includes('--fix');
 const errors = [];
@@ -694,6 +779,7 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   if (type === 'build-example' && data.phase) buildExampleContentChecks(file, content, data, errors, warnings);
   if (type === 'architecture') architectureContentChecks(file, content, data, errors, warnings);
   if (type === 'observability') observabilityContentChecks(file, content, data, errors, warnings);
+  if (type === 'community') communityContentChecks(file, content, data, errors, warnings);
   checked += 1;
 }
 

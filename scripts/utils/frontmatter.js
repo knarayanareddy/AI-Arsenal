@@ -86,6 +86,24 @@ export function inferEntryType(filePath, data = {}) {
   if (p.startsWith('content/digests/')) return 'digest';
   if (p.startsWith('content/community/people')) return 'person';
   if (p.startsWith('content/community/') && data.channels) return 'person';
+  // Community-vertical reorganisation: migrated entries set entry_type:
+  // "community" explicitly in frontmatter (required by
+  // schemas/community.schema.json), so the data.entry_type check above is
+  // the primary dispatch path. This path-based fallback exists for
+  // consistency with the architecture/observability inference rules and
+  // to correctly resolve content/community/{forums,chat,newsletters,
+  // events,meetups,creators,datasets}/ files that have no entry_type set
+  // at all. It intentionally excludes content/community/people/ (handled
+  // above, dispatches to 'person') and is checked only when data.channels
+  // is not set, so it never shadows the person-entry fallback immediately
+  // above it.
+  if (
+    p.startsWith('content/community/') &&
+    !data.channels &&
+    ['forums', 'chat', 'newsletters', 'events', 'meetups', 'creators', 'datasets'].includes(parts[2])
+  ) {
+    return 'community';
+  }
   return null;
 }
 

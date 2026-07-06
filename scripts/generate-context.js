@@ -24,6 +24,7 @@ const tips = (await readJson('data/tips.json', { items: [] })).items ?? [];
 const guides = (await readJson('data/guides.json', { items: [] })).items ?? [];
 const architectures = (await readJson('data/architectures.json', { items: [] })).items ?? [];
 const observability = (await readJson('data/observability.json', { items: [] })).items ?? [];
+const community = (await readJson('data/community.json', { items: [] })).items ?? [];
 const entries = index.entries ?? [];
 const byType = entries.reduce((acc, entry) => { acc[entry.type] = (acc[entry.type] ?? 0) + 1; return acc; }, {});
 
@@ -47,6 +48,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Build examples: ${byType['build-example'] ?? 0}
 - Architectures: ${byType.architecture ?? 0}
 - Observability: ${byType.observability ?? 0}
+- Community: ${byType.community ?? 0}
 
 ## Navigation
 
@@ -56,6 +58,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architecture decisions: /content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/
 - Reference stacks: /content/architectures/reference-stacks/
 - Observability playbooks: /content/observability/{instrumentation,tracing,evaluation-quality,monitoring-alerting,cost-usage,privacy-governance,incident-response}/
+- Community directory: /content/community/{forums,chat,newsletters,events,meetups,creators,datasets}/
 - Tool jobs: /content/tools/by-job/
 - Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
@@ -80,6 +83,10 @@ ${[...new Set(architectures.map((a) => a.category).filter(Boolean))].sort().map(
 ## Observability Playbooks by Category
 
 ${[...new Set(observability.map((o) => o.category).filter(Boolean))].sort().map((category) => `### ${escapeMarkdownInline(category)}\n${top(observability.filter((o) => o.category === category), 5).map(line).join('\n') || '_None_'}`).join('\n\n') || '_No observability entries migrated yet._'}
+
+## Community Directory by Kind
+
+${[...new Set(community.map((c) => c.kind).filter(Boolean))].sort().map((kind) => `### ${escapeMarkdownInline(kind)}\n${top(community.filter((c) => c.kind === kind), 5).map(line).join('\n') || '_None_'}`).join('\n\n') || '_No community entries migrated yet._'}
 
 ## Decision Heuristics
 

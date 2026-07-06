@@ -4,7 +4,7 @@ This file is the single source of truth for controlled vocabulary used by schema
 
 ## Entry Types
 
-`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture` | `observability`
+`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture` | `observability` | `community`
 
 ## Project Categories
 
@@ -335,9 +335,59 @@ Field: `verification_status` (observability entries). Distinct from the Tip Veri
 `community-reported` — reported by the community, not independently verified by Arsenal maintainers
 `theoretical` — sound in principle, not yet verified
 
-## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, Architectures, and Observability)
+## Community Entity Kinds
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. For observability, this covers whether an entry's `verification_status: production-verified` claim is backed by a described evidence type (a named production system, an incident retro, a measured before/after) versus asserted without evidence — an entry with `verification_status: theoretical` or `community-reported` should also carry `enrichment_status: draft` until a maintainer independently confirms the pattern against a real system. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips and observability), `build_status`/`outcome` (build examples), or `confidence` (architectures), which describe the entry's subject, not the catalog entry's research depth.
+The entity-kind classification that determines a community entry's canonical folder under `content/community/`. Field: `kind`. This mirrors the category/phase field on every other vertical (see Observability Categories, Architecture Categories, Build Example Phases, Tip Phases, Research Phases, Project Phases, Tool Phases above) so all eight verticals share one "what folder does this belong in" query axis. Assign by where the PRIMARY interaction actually happens (e.g. a Slack-based community is `chat` even if it also has a public forum), never by which platform brand is best known. Never duplicate an entry across kinds; use `related_communities` cross-links in frontmatter instead. Distinct from the pre-existing `person` entry type (`content/community/people/`), which is out of scope for this classification — an individual educator with a newsletter/podcast/YouTube channel is a `person` entry, not a `creator`-kind community entry, unless the channel/publication is run by an organisation or a channel not already tracked as a named person's `channels[]`.
+
+`forum` — Discourse forums, web forums, subreddits: primarily asynchronous, threaded, searchable discussion
+`chat` — Discord, Slack, Matrix, Telegram: primarily synchronous or near-synchronous messaging
+`newsletter` — email/Substack-style newsletters and weekly digests published by an organisation or outlet (not an individually-tracked person's own newsletter channel — see `person.channels[]`)
+`event` — recurring conferences or workshop series (not a one-off, non-recurring event)
+`meetup` — local or globally-federated recurring in-person/hybrid meetup networks
+`creator` — high-signal organisational or multi-person educational channels (podcast, YouTube, blog) not already tracked as an individual `person` entry's `channels[]`
+`dataset` — community-maintained datasets or data collections that are not tool/project catalog entries in their own right
+
+## Community Topics
+
+Field: `topics` (array, min 1). The subject-matter focus area(s) a community entry serves.
+
+`llm-engineering` | `rag` | `agents` | `fine-tuning` | `evals` | `observability` | `open-source` | `safety` | `multimodal` | `infra` | `research`
+
+## Community Audience
+
+Field: `audience` (array, min 1). Who a community entry is realistically useful for.
+
+`beginner` | `practitioner` | `researcher` | `founder` | `enterprise`
+
+## Community Activity Level
+
+Field: `activity_level`. How frequently a community is genuinely active, based on the most reliable public signal observable at `last_checked` (see the activity_level rubric in `docs/automation-policy.md`). Must be re-derived from a concrete, dated signal every time `last_checked` is updated, never carried forward unverified.
+
+`very-active` — daily posts/messages, or weekly-or-more newsletter/event cadence
+`active` — activity every few days to roughly weekly
+`intermittent` — activity in bursts, roughly 15-90 days between signals depending on kind
+`quiet` — last signal is older than 60-90 days but the space is not dead
+`unknown` — no credible public activity signal could be found, or the space is private/invite-only with no public indicators
+
+## Community Safety Level
+
+Field: `safety_level`. Whether a community can be recommended without caveats. An entry with `safety_level` other than `generally-safe` must carry a non-empty `safety_notes[]` explaining why, per the Validator rule in this vertical's reorganisation brief.
+
+`generally-safe` — no material safety, moderation, or trust concerns identified
+`caution` — has a documented concern (e.g. past moderation failure, low-signal/spam activity, a specific data-safety incident) that a reader should know about before joining/using, but the community/resource is still net-recommendable with that context
+`avoid` — overwhelming spam, scam activity, or harassment-prone moderation; recommending this space without a strong caveat would actively mislead a reader
+
+## Community Access
+
+Field: `access`. What it costs (in access terms, not necessarily money) to participate.
+
+`public` — open to anyone, no approval or payment required
+`invite-only` — requires an invitation, application, or approval step
+`paid` — requires a paid subscription or membership to fully participate
+
+## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, Architectures, Observability, and Community)
+
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. For observability, this covers whether an entry's `verification_status: production-verified` claim is backed by a described evidence type (a named production system, an incident retro, a measured before/after) versus asserted without evidence — an entry with `verification_status: theoretical` or `community-reported` should also carry `enrichment_status: draft` until a maintainer independently confirms the pattern against a real system. For community entries, this covers whether `activity_level`/`activity_evidence` reflect an independently re-checked, dated public signal versus an inherited or stale claim — an entry with `activity_level: unknown` should also carry `enrichment_status: draft` until a maintainer finds and records a concrete signal. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips and observability), `build_status`/`outcome` (build examples), `confidence` (architectures), or `activity_level`/`safety_level` (community), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)

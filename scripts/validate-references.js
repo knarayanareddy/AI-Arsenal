@@ -92,6 +92,13 @@ for (const entry of entries) {
       warnings.push(`${entry.file}: superseded_by references unknown id "${entry.data.superseded_by}"`);
     }
   }
+
+  if (entry.type === 'community') {
+    checkRefs(entry, 'related_communities', 'warning');
+    checkRefs(entry, 'related_tools', 'warning');
+    checkRefs(entry, 'related_projects', 'warning');
+    checkRefs(entry, 'related_research', 'warning');
+  }
 }
 
 // Rule T-10: related_tips must not create cycles longer than a direct

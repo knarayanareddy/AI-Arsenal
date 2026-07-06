@@ -118,6 +118,16 @@ for (const file of files) {
       requireAllowed(errors, file, `instrumentation_contract.events[].pii_risk (${event.name ?? '?'})`, event.pii_risk, taxonomy.dataSensitivity);
     }
   }
+
+  if (type === 'community') {
+    requireAllowed(errors, file, 'kind', data.kind, taxonomy.communityEntityKinds);
+    requireAllowedArray(errors, file, 'topics', data.topics, taxonomy.communityTopics);
+    requireAllowedArray(errors, file, 'audience', data.audience, taxonomy.communityAudience);
+    requireAllowed(errors, file, 'access', data.access, taxonomy.communityAccess);
+    requireAllowed(errors, file, 'activity_level', data.activity_level, taxonomy.communityActivityLevel);
+    requireAllowed(errors, file, 'safety_level', data.safety_level, taxonomy.communitySafetyLevel);
+    requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+  }
   checked += 1;
 }
 

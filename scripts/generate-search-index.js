@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import chalk from 'chalk';
 import { truncate } from './utils/markdown-escape.js';
 
-const datasets = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples', 'architectures', 'observability'];
+const datasets = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples', 'architectures', 'observability', 'community'];
 const docs = [];
 
 for (const dataset of datasets) {
@@ -44,6 +44,11 @@ for (const dataset of datasets) {
         scope: item.scope ?? null,
         signal_types: item.signal_types ?? null,
         data_sensitivity: item.data_sensitivity ?? null,
+        kind: item.kind ?? null,
+        topics: item.topics ?? null,
+        access: item.access ?? null,
+        activity_level: item.activity_level ?? null,
+        safety_level: item.safety_level ?? null,
         path: item.path,
         url: item.url,
         boost_title: name,
@@ -59,7 +64,7 @@ for (const dataset of datasets) {
 const facets = {
   types: {}, tags: {}, categories: {}, maturity: {}, cost_model: {}, status: {}, phase: {}, audience: {}, domain: {}, relation_to_stack: {},
   practical_applicability: {}, result_status: {}, reproduction_status: {}, effort: {}, verification_status: {}, impact: {}, difficulty: {},
-  scope: {}, signal_types: {}, data_sensitivity: {}
+  scope: {}, signal_types: {}, data_sensitivity: {}, kind: {}, topics: {}, access: {}, activity_level: {}, safety_level: {}
 };
 for (const doc of docs) {
   facets.types[doc.type] = (facets.types[doc.type] ?? 0) + 1;
@@ -82,6 +87,11 @@ for (const doc of docs) {
   if (doc.scope) facets.scope[doc.scope] = (facets.scope[doc.scope] ?? 0) + 1;
   for (const s of doc.signal_types ?? []) facets.signal_types[s] = (facets.signal_types[s] ?? 0) + 1;
   for (const d of doc.data_sensitivity ?? []) facets.data_sensitivity[d] = (facets.data_sensitivity[d] ?? 0) + 1;
+  if (doc.kind) facets.kind[doc.kind] = (facets.kind[doc.kind] ?? 0) + 1;
+  for (const t of doc.topics ?? []) facets.topics[t] = (facets.topics[t] ?? 0) + 1;
+  if (doc.access) facets.access[doc.access] = (facets.access[doc.access] ?? 0) + 1;
+  if (doc.activity_level) facets.activity_level[doc.activity_level] = (facets.activity_level[doc.activity_level] ?? 0) + 1;
+  if (doc.safety_level) facets.safety_level[doc.safety_level] = (facets.safety_level[doc.safety_level] ?? 0) + 1;
 }
 
 await fs.writeFile('data/search-index.json', `${JSON.stringify({
@@ -97,7 +107,7 @@ await fs.writeFile('data/search-index.json', `${JSON.stringify({
         { field: 'tags', tokenize: 'strict', resolution: 7 },
         { field: 'body', tokenize: 'strict', resolution: 3 }
       ],
-      store: ['id', 'type', 'name', 'description', 'tags', 'category', 'phase', 'audience', 'domain', 'relation_to_stack', 'practical_applicability', 'result_status', 'reproduction_status', 'effort', 'verification_status', 'impact', 'difficulty', 'scope', 'signal_types', 'data_sensitivity', 'path', 'url']
+      store: ['id', 'type', 'name', 'description', 'tags', 'category', 'phase', 'audience', 'domain', 'relation_to_stack', 'practical_applicability', 'result_status', 'reproduction_status', 'effort', 'verification_status', 'impact', 'difficulty', 'scope', 'signal_types', 'data_sensitivity', 'kind', 'topics', 'access', 'activity_level', 'safety_level', 'path', 'url']
     }
   },
   facets,
