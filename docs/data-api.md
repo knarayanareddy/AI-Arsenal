@@ -16,6 +16,8 @@ The data layer should be:
 
 In normal contribution workflows, do not edit `data/*.json` directly.
 
+The generated `data/*.json` files are committed to the repository and refreshed through batched maintenance PRs (see [`automation-policy.md`](./automation-policy.md)); they are not regenerated on every merge. Treat them as read-only build artifacts.
+
 Edit files in `content/`, then run:
 
 ```bash
