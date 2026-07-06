@@ -179,6 +179,28 @@ const BENCHMARK_HEADINGS = [
   'Resources'
 ];
 
+// Trending-vertical reorganisation: two body shapes depending on `kind`.
+// weekly-snapshot and hall-of-fame share the ranked-list shape; source-feed
+// uses the shorter feed-description shape. Both are presence-checked (not
+// strict order) to match the other verticals' default behaviour.
+const TREND_RANKED_HEADINGS = [
+  'Overview',
+  'What this snapshot covers',
+  'Method (signals + caveats)',
+  'Ranked entries (with why)',
+  'Notable changes to watch',
+  'How to use this (links into the Arsenal)',
+  'Sources'
+];
+const TREND_SOURCE_HEADINGS = [
+  'Overview',
+  'What this source is',
+  'What signals we extract',
+  'Failure modes / bias',
+  'How it affects the Arsenal',
+  'Sources'
+];
+
 // Types whose heading order is enforced strictly (not just presence), per
 // their own vertical-reorg brief's explicit requirement.
 const STRICT_ORDER_TYPES = new Set(['observability', 'community', 'benchmark']);
@@ -772,6 +794,9 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   } else if (type === 'build-example' && data.phase) {
     // Migrated build example: use the new canonical structure.
     required = BUILD_EXAMPLE_HEADINGS_NEW;
+  } else if (type === 'trend') {
+    // Heading shape depends on kind; source-feed uses the shorter shape.
+    required = data.kind === 'source-feed' ? TREND_SOURCE_HEADINGS : TREND_RANKED_HEADINGS;
   } else {
     required = typeHeadings[type] ?? REQUIRED_ENTRY_HEADINGS;
   }

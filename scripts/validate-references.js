@@ -99,6 +99,17 @@ for (const entry of entries) {
     checkRefs(entry, 'related_projects', 'warning');
     checkRefs(entry, 'related_research', 'warning');
   }
+
+  if (entry.type === 'trend') {
+    // ranked_entries[].entry_id must resolve to an existing catalog entry
+    // (or be an explicit TODO during migration). Warning-only so a single
+    // stale reference does not block the suite.
+    for (const re of entry.data.ranked_entries ?? []) {
+      if (re && re.entry_id && !ids.has(re.entry_id)) {
+        warnings.push(`${entry.file}: ranked_entries[].entry_id references unknown id "${re.entry_id}"`);
+      }
+    }
+  }
 }
 
 // Rule T-10: related_tips must not create cycles longer than a direct

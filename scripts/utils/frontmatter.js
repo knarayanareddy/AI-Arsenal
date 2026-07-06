@@ -107,6 +107,12 @@ export function inferEntryType(filePath, data = {}) {
   // Benchmarks-vertical: migrated entries set entry_type: "benchmark"
   // explicitly. Path fallback mirrors other verticals.
   if (p.startsWith('content/benchmarks/')) return 'benchmark';
+  // Trending-vertical reorganisation: migrated trending entries set
+  // entry_type: "trend" explicitly in frontmatter. This path-based fallback
+  // mirrors every other vertical so any content/trending/ file without an
+  // explicit entry_type still resolves to a sane type. Navigation files
+  // (_index.md/_registry.md) are excluded upstream by getEntryFiles.
+  if (p.startsWith('content/trending/')) return 'trend';
   return null;
 }
 

@@ -466,6 +466,26 @@ Field: `difficulty`. Skill-level required to correctly apply a tip — distinct 
 
 `x-twitter` | `youtube` | `hackernews` | `reddit` | `arxiv` | `github-trending` | `newsletter` | `conference` | `podcast`
 
+## Trend Kinds
+
+The `kind` of a Trending entry (`kind` field). Drives which required body sections and frontmatter fields apply.
+`weekly-snapshot` | `hall-of-fame` | `source-feed`
+
+## Trend Status
+
+Editorial lifecycle of a Trending entry (`status` field). Distinct from the global `Status Values` enum because trending entries are time-bounded snapshots/feeds, not durable catalog records.
+`draft` | `reviewed` | `published` | `deprecated`
+
+## Trend Signal Types
+
+The signals a Trending entry aggregates (`signals_used` array, min 1).
+`github-stars-velocity` | `github-stars-total` | `github-activity` | `newsletter-feature` | `release` | `paper-attention` | `community-buzz` | `breaking-change` | `security-issue`
+
+## Trend Sources
+
+The upstream source a Trending entry or source-feed draws from (`sources[].source`).
+`github` | `toolradar-techpresso` | `arxiv` | `papers-with-code` | `hackernews` | `reddit` | `x` | `blog` | `other`
+
 ## Reserved IDs
 
 `index` | `registry` | `overview` | `introduction` | `readme` | `agent` | `context` | `taxonomy` | `contributing` | `governance` | `changelog` | `security` | `template` | `all` | `none` | `undefined` | `null` | `true` | `false`

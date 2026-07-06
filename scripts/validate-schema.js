@@ -18,7 +18,8 @@ const schemaByType = {
   architecture: 'architecture.schema.json',
   observability: 'observability.schema.json',
   community: 'community.schema.json',
-  benchmark: 'benchmark.schema.json'
+  benchmark: 'benchmark.schema.json',
+  trend: 'trend.schema.json'
 };
 
 // Research-vertical reorganisation: COMPLETE (see x-migration-note in

@@ -21,7 +21,17 @@ for (const file of files) {
   requireAllowedArray(errors, file, 'tags', data.tags, taxonomy.allTags);
   requireAllowed(errors, file, 'maturity', data.maturity, taxonomy.maturityLevels);
   requireAllowed(errors, file, 'cost_model', data.cost_model, taxonomy.costModels);
-  requireAllowed(errors, file, 'status', data.status, taxonomy.statusValues);
+  if (type === 'trend') {
+    // Trending entries use their own status vocabulary (Trend Status), not
+    // the global Status Values enum used by durable catalog records.
+    requireAllowed(errors, file, 'status', data.status, taxonomy.trendStatus);
+    requireAllowed(errors, file, 'kind', data.kind, taxonomy.trendKinds);
+    requireAllowedArray(errors, file, 'signals_used', data.signals_used, taxonomy.trendSignalTypes);
+    requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+    for (const src of data.sources ?? []) requireAllowed(errors, file, 'sources[].source', src.source, taxonomy.trendSources);
+  } else {
+    requireAllowed(errors, file, 'status', data.status, taxonomy.statusValues);
+  }
 
   if (type === 'project') {
     requireAllowed(errors, file, 'artifact_type', data.artifact_type, taxonomy.projectArtifactTypes);

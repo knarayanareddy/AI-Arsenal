@@ -90,6 +90,10 @@ export async function parseTaxonomy(filePath = 'TAXONOMY.md') {
     difficultyValues: sections.get('Difficulty Values') ?? new Set(),
     statusValues: sections.get('Status Values') ?? new Set(),
     buzzSources: sections.get('Buzz Sources') ?? new Set(),
+    trendKinds: sections.get('Trend Kinds') ?? new Set(),
+    trendStatus: sections.get('Trend Status') ?? new Set(),
+    trendSignalTypes: sections.get('Trend Signal Types') ?? new Set(),
+    trendSources: sections.get('Trend Sources') ?? new Set(),
     enrichmentStatusValues: sections.get('Enrichment Status') ?? new Set(),
     reservedIds: sections.get('Reserved IDs') ?? new Set(),
     allTags
