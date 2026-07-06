@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T15:17:59.369Z",
+    "generated_at": "2026-07-06T15:48:47.755Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -10,6 +10,7 @@
     "total_guides": 37,
     "total_build_examples": 8,
     "total_architectures": 14,
+    "total_observability": 0,
     "schema_version": "1.0.0"
   },
   "entries": [

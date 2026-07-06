@@ -79,6 +79,19 @@ for (const entry of entries) {
       checkRefs({ file: entry.file, data: impl }, 'build_example_ids', 'warning');
     }
   }
+
+  if (entry.type === 'observability') {
+    checkRefs(entry, 'related_tools', 'warning');
+    checkRefs(entry, 'related_projects', 'warning');
+    checkRefs(entry, 'related_build_examples', 'warning');
+    checkRefs(entry, 'related_tips', 'warning');
+    if (entry.data.supersedes && !ids.has(entry.data.supersedes)) {
+      warnings.push(`${entry.file}: supersedes references unknown id "${entry.data.supersedes}"`);
+    }
+    if (entry.data.superseded_by && !ids.has(entry.data.superseded_by)) {
+      warnings.push(`${entry.file}: superseded_by references unknown id "${entry.data.superseded_by}"`);
+    }
+  }
 }
 
 // Rule T-10: related_tips must not create cycles longer than a direct

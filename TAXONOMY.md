@@ -4,7 +4,7 @@ This file is the single source of truth for controlled vocabulary used by schema
 
 ## Entry Types
 
-`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture`
+`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture` | `observability`
 
 ## Project Categories
 
@@ -292,9 +292,52 @@ Field: `confidence`. An honest signal of how settled the tradeoffs in this entry
 
 `trending` | `featured` | `foundational` | `sota` | `benchmark` | `experimental` | `battle-tested` | `community-favorite` | `new-arrival`
 
-## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, and Architectures)
+## Observability Categories
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips), `build_status`/`outcome` (build examples), or `confidence` (architectures), which describe the entry's subject, not the catalog entry's research depth.
+The category classification that determines an observability entry's canonical folder under `content/observability/`. Field: `category`. This mirrors the category/phase field on every other vertical (see Tool Phases, Project Phases, Research Phases, Tip Phases, Build Example Phases, Architecture Categories above) so all seven verticals share one "what stage/area of the stack is this" query axis, even though the enums differ. Assign by the PRIMARY operational intent (debug vs evaluate vs govern vs respond), never by which tool is mentioned. Never duplicate an entry across categories; use `related_*` cross-links in frontmatter instead.
+
+`instrumentation` — what to capture: event schemas, required/optional fields, correlation IDs, sampling strategy, redaction rules
+`tracing` — assembling captured events into traces/spans: OpenTelemetry/OpenInference patterns, agent-graph tracing
+`evaluation-quality` — offline/online evaluation loops, golden dataset promotion from production failures, LLM-as-judge calibration, drift detection
+`monitoring-alerting` — SLOs, alert rules, canary deployments, regression monitors, dashboards
+`cost-usage` — cost attribution, token accounting, caching impact, budget/anomaly alerting
+`privacy-governance` — PII handling in telemetry, retention policy, access controls for raw traces/logs, compliance checklists
+`incident-response` — runbooks, triage, rollback, kill-switches, postmortems specific to AI system failure modes
+
+## Signal Types
+
+Field: `signal_types` (array, min 1). The operational signal(s) an observability entry's pattern is designed to improve or protect.
+
+`latency` | `cost` | `quality` | `safety` | `reliability` | `throughput` | `user-satisfaction`
+
+## Data Sensitivity
+
+Field: `data_sensitivity` (array, min 1). The sensitivity level(s) of data an observability pattern's captured events may contain — drives whether `## Privacy & Governance` guidance is load-bearing or largely inapplicable for a given entry. An entry touching `pii`, `secrets`, or `regulated` data must state concrete redaction/retention/access guidance, not a generic disclaimer.
+
+`public` — no sensitivity concern (e.g. aggregate latency counts with no user-identifying context)
+`internal` — not public, but not personally identifying or regulated (e.g. internal feature names, environment tags)
+`pii` — may contain personally identifying information (e.g. raw user prompts, session content)
+`secrets` — may contain credentials, API keys, or tokens (e.g. unredacted tool call arguments)
+`regulated` — subject to specific regulatory regimes (health, financial, or similar regulated data categories)
+
+## Deployment Scope
+
+Field: `scope`. Whether an observability pattern's requirements (particularly around privacy/governance and alerting rigor) assume a prototype or a production deployment. A `production` entry must satisfy the full instrumentation-contract and privacy-governance bar; a `prototype` entry may reasonably defer some of that rigor, but must say so explicitly rather than silently omitting it.
+
+`prototype` | `production`
+
+## Verification Status (Observability)
+
+Field: `verification_status` (observability entries). Distinct from the Tip Verification Status enum above (same value set, but tracked separately since it applies to a different entry type with its own schema) — tracks how an observability pattern's claimed effectiveness has actually been confirmed.
+
+`production-verified` — confirmed working in a named production system, with the evidence type described in the entry's Validation Checklist or Resources section
+`lab-verified` — confirmed working in a controlled test, not yet production
+`community-reported` — reported by the community, not independently verified by Arsenal maintainers
+`theoretical` — sound in principle, not yet verified
+
+## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, Architectures, and Observability)
+
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. For observability, this covers whether an entry's `verification_status: production-verified` claim is backed by a described evidence type (a named production system, an incident retro, a measured before/after) versus asserted without evidence — an entry with `verification_status: theoretical` or `community-reported` should also carry `enrichment_status: draft` until a maintainer independently confirms the pattern against a real system. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips and observability), `build_status`/`outcome` (build examples), or `confidence` (architectures), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)

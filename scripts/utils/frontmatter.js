@@ -72,6 +72,17 @@ export function inferEntryType(filePath, data = {}) {
   // entry_type set (or entry_type removed post-migration) fall through to
   // this path-based inference.
   if (p.startsWith('content/architectures/')) return 'architecture';
+  // Observability-vertical reorganisation: migrated entries set
+  // entry_type: "observability" explicitly in frontmatter (required by
+  // schemas/observability.schema.json), so the data.entry_type check above
+  // is the primary dispatch path for this vertical. This path-based
+  // fallback exists for consistency with every other vertical's inference
+  // rule and to correctly resolve not-yet-migrated content/observability/
+  // files that have no entry_type set at all (rather than explicitly
+  // "guide") to a sane default; in practice, pre-existing observability
+  // entries in this repo all explicitly set entry_type: "guide", so this
+  // fallback rarely triggers.
+  if (p.startsWith('content/observability/') && !data.entry_type) return 'observability';
   if (p.startsWith('content/digests/')) return 'digest';
   if (p.startsWith('content/community/people')) return 'person';
   if (p.startsWith('content/community/') && data.channels) return 'person';

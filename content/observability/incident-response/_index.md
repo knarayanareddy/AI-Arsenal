@@ -21,3 +21,17 @@ _To be populated once category content is authored._
 ## Entries in this category
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Incident Response in This Phase
+
+### Recently Added
+
+_No entries yet._
+
+### Most Popular
+
+_No star-tracked entries yet._
+
+### Browse All
+
+_No entries yet._

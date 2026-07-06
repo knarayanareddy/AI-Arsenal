@@ -2,7 +2,7 @@
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
 
-const files = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples', 'architectures'];
+const files = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples', 'architectures', 'observability'];
 const stats = { schema_version: '1.0.0', generated_at: new Date().toISOString(), entries: { total: 0 } };
 for (const name of files) {
   try {

@@ -126,6 +126,29 @@ const ARCHITECTURE_HEADINGS = [
   'Resources'
 ];
 
+// Observability-vertical reorganisation: the canonical, ORDER-ENFORCED body
+// structure for an observability entry (see the observability-vertical-reorg
+// brief, which explicitly states "EXACT order, do not reorder/rename").
+// Unlike every other vertical's heading check (presence-only, order-
+// agnostic), observability entries are checked for exact sequential order
+// too -- see the STRICT_ORDER_TYPES set and the order-check logic below.
+const OBSERVABILITY_HEADINGS = [
+  'Overview',
+  'What to Capture',
+  'Instrumentation Contract',
+  'Implementation',
+  'Dashboards & Alerts',
+  'Common Failure Modes',
+  'Privacy & Governance',
+  'Validation Checklist',
+  'Relation to the Arsenal',
+  'Resources'
+];
+
+// Types whose heading order is enforced strictly (not just presence), per
+// their own vertical-reorg brief's explicit requirement.
+const STRICT_ORDER_TYPES = new Set(['observability']);
+
 const typeHeadings = {
   project: REQUIRED_ENTRY_HEADINGS,
   tool: REQUIRED_ENTRY_HEADINGS,
@@ -144,7 +167,8 @@ const typeHeadings = {
   person: ['Overview', 'Why Follow', 'Notable Work', 'Channels', 'Resources'],
   digest: ['TL;DR', 'Top Projects', 'Top Tools', 'Research Highlights', 'Architecture Notes', 'Community Signals', 'What to Watch Next Month'],
   guide: REQUIRED_ENTRY_HEADINGS,
-  architecture: ARCHITECTURE_HEADINGS
+  architecture: ARCHITECTURE_HEADINGS,
+  observability: OBSERVABILITY_HEADINGS
 };
 
 
@@ -492,6 +516,132 @@ function architectureContentChecks(file, content, data, errors, warnings) {
   }
 }
 
+// Observability-vertical reorganisation: content-level checks for an
+// observability entry, mirroring the pattern used by every other
+// vertical's *ContentChecks function. Encodes the automatable subset of
+// the Instrumentation Engineer's Six Questions and the Validator's
+// integrity checklist, targeting the vertical's three named failure
+// modes: (1) vendor pages disguised as guidance, (2) abstract advice with
+// no instrumentation contract, (3) PII-unsafe suggestions.
+const OBSERVABILITY_UNSAFE_LOGGING_PATTERN = /\blog(?:ging)?\s+(?:the\s+)?(?:raw\s+)?(?:prompts?|responses?|user (?:input|data|messages?))\b(?!.{0,120}(?:redact|scrub|mask|strip|anonymiz|pii))/i;
+const OBSERVABILITY_VENDOR_MARKETING_PATTERN = /\b(industry[- ]leading|best[- ]in[- ]class|revolutioniz\w*|game[- ]chang\w*|cutting[- ]edge|seamlessly|effortlessly)\b/i;
+const OBSERVABILITY_VAGUE_INSTRUMENTATION_PATTERN = /\b(?:monitor|log|track)\s+(?:latency|cost|quality|errors?|metrics?)\b(?!.{0,150}(?:field|span|event|schema|`))/i;
+
+function observabilityContentChecks(file, content, data, errors, warnings) {
+  // Failure Mode 3 (PII-unsafe suggestions): flag body prose that reads
+  // like it's recommending logging raw prompts/responses/user data with
+  // no nearby redaction/scrubbing/masking mention. Heuristic proximity
+  // check (same paragraph-ish window), not a full NLP parse.
+  if (OBSERVABILITY_UNSAFE_LOGGING_PATTERN.test(content)) {
+    errors.push(`${file}: body appears to recommend logging raw prompts/responses/user data without nearby redaction guidance -- this vertical must never suggest unsafe logging (see "What You Must Never Do" in the reorg brief); add explicit redaction/retention guidance next to this recommendation or rephrase`);
+  }
+
+  // Failure Mode 1 (vendor pages disguised as guidance): flag marketing-
+  // register language, which is a strong signal an entry has drifted from
+  // "operational pattern" into "product pitch."
+  const marketingMatch = content.match(OBSERVABILITY_VENDOR_MARKETING_PATTERN);
+  if (marketingMatch) {
+    warnings.push(`${file}: body contains marketing-register phrase "${marketingMatch[0]}" -- this vertical must describe operational patterns, not vendor marketing copy (Failure Mode 1) -- verify manually, this check is a heuristic`);
+  }
+
+  // Failure Mode 2 (abstract advice with no instrumentation contract):
+  // flag generic "monitor X" / "log Y" phrasing with no nearby reference
+  // to a concrete field/span/event/schema -- the textbook example named
+  // directly in the brief ("monitor latency" without defining spans,
+  // dimensions, sampling).
+  const vagueMatch = content.match(OBSERVABILITY_VAGUE_INSTRUMENTATION_PATTERN);
+  if (vagueMatch) {
+    warnings.push(`${file}: body contains abstract instrumentation advice ("${vagueMatch[0]}") with no nearby field/span/event/schema reference -- Failure Mode 2 requires a concrete instrumentation contract, not abstract advice -- verify manually, this check is a heuristic`);
+  }
+
+  // Validator rule: no "production-verified" without a described evidence
+  // type somewhere in Validation Checklist or Resources.
+  if (data.verification_status === 'production-verified') {
+    const validationSection = sectionBody(content, 'Validation Checklist') ?? '';
+    const resourcesSection = sectionBody(content, 'Resources') ?? '';
+    const evidenceHint = /(production|named system|incident|measured|before\/after|case study|deployment)/i;
+    if (!evidenceHint.test(validationSection) && !evidenceHint.test(resourcesSection)) {
+      errors.push(`${file}: verification_status is "production-verified" but neither "Validation Checklist" nor "Resources" describes an evidence type (named system, incident, measured before/after) -- never claim production-verified without describing the evidence (Validator rule)`);
+    }
+  }
+
+  // Section-specific rules from Phase 3's "Section rules":
+  const whatToCapture = sectionBody(content, 'What to Capture');
+  if (whatToCapture !== null) {
+    if (whatToCapture.length === 0) errors.push(`${file}: "What to Capture" section must not be empty`);
+    const bulletLines = whatToCapture.split(/\r?\n/).filter((l) => l.trim().length > 0);
+    const nonBulletLines = bulletLines.filter((l) => !/^\s*[-*]\s/.test(l));
+    if (nonBulletLines.length > 0) {
+      warnings.push(`${file}: "What to Capture" should be bullets, not prose (Phase 3 section rule) -- verify manually`);
+    }
+  }
+
+  const instrumentationContractSection = sectionBody(content, 'Instrumentation Contract');
+  if (instrumentationContractSection !== null) {
+    if (instrumentationContractSection.length === 0) errors.push(`${file}: "Instrumentation Contract" section must not be empty`);
+    if (!/```json/i.test(instrumentationContractSection)) {
+      errors.push(`${file}: "Instrumentation Contract" section must include at least one example event payload in a \`\`\`json code block (Phase 3 section rule)`);
+    }
+  }
+
+  const implementationSection = sectionBody(content, 'Implementation');
+  if (implementationSection !== null) {
+    if (implementationSection.length === 0) errors.push(`${file}: "Implementation" section must not be empty`);
+    if (!/```(python|bash|yaml|json|javascript|typescript)/i.test(implementationSection)) {
+      errors.push(`${file}: "Implementation" section must include at least one real code or config snippet (Phase 3 section rule: Python preferred)`);
+    }
+  }
+
+  const dashboardsSection = sectionBody(content, 'Dashboards & Alerts');
+  if (dashboardsSection !== null) {
+    const hasAlertRuleField = Array.isArray(data.alert_rules) && data.alert_rules.length >= 1;
+    const hasAlertRuleInBody = /alert/i.test(dashboardsSection);
+    if (!hasAlertRuleField && !hasAlertRuleInBody) {
+      errors.push(`${file}: "Dashboards & Alerts" must include at least 1 alert rule, and frontmatter alert_rules[] should be populated (Phase 3 section rule)`);
+    }
+  }
+
+  const privacySection = sectionBody(content, 'Privacy & Governance');
+  if (privacySection !== null) {
+    if (privacySection.length === 0) errors.push(`${file}: "Privacy & Governance" section must not be empty (mandatory per the reorg brief, never optional)`);
+    else {
+      const mentionsRedaction = /redact|scrub|mask|strip|anonymiz/i.test(privacySection);
+      const mentionsRetention = /retention|delet\w*|expir\w*|ttl\b/i.test(privacySection);
+      const mentionsAccess = /access|who can|permission|role|authoriz/i.test(privacySection);
+      if (!mentionsRedaction || !mentionsRetention) {
+        errors.push(`${file}: "Privacy & Governance" must state what is redacted AND the retention policy (Phase 3 section rule) -- currently missing ${!mentionsRedaction ? 'redaction' : ''}${!mentionsRedaction && !mentionsRetention ? ' and ' : ''}${!mentionsRetention ? 'retention' : ''} guidance`);
+      }
+      if (!mentionsAccess) {
+        warnings.push(`${file}: "Privacy & Governance" does not clearly state who can access raw traces/logs -- the reorg brief requires stating this explicitly -- verify manually`);
+      }
+    }
+  }
+
+  const validationChecklistSection = sectionBody(content, 'Validation Checklist');
+  if (validationChecklistSection !== null) {
+    const checkboxCount = (validationChecklistSection.match(/^\s*-\s*\[[ xX]\]/gm) ?? []).length;
+    if (checkboxCount < 5 || checkboxCount > 10) {
+      errors.push(`${file}: "Validation Checklist" has ${checkboxCount} checkbox item(s); the reorg brief requires 5-10 checkboxes an engineer can actually verify`);
+    }
+  }
+
+  const relationSection = sectionBody(content, 'Relation to the Arsenal');
+  if (relationSection !== null) {
+    const hasAnyRelated = ['related_tools', 'related_projects', 'related_build_examples', 'related_tips'].some((f) => Array.isArray(data[f]) && data[f].length > 0);
+    if (hasAnyRelated && relationSection.length === 0) {
+      errors.push(`${file}: frontmatter declares related_* entries but "Relation to the Arsenal" section is empty -- must include the actual cross-links (Phase 3 section rule)`);
+    }
+  }
+
+  // Instrumentation Engineer Question 3 (how are prompts/responses handled
+  // safely) and Question 5 (failure modes) -- re-verify frontmatter
+  // common_failure_modes has at least 2 entries when scope is production,
+  // matching the brief's "at least 2 failure modes" requirement.
+  if (data.scope === 'production' && (!Array.isArray(data.common_failure_modes) || data.common_failure_modes.length < 2)) {
+    warnings.push(`${file}: scope is "production" but common_failure_modes[] has fewer than 2 entries -- Instrumentation Engineer Question 5 requires at least 2 failure modes for production-scope entries -- verify manually`);
+  }
+}
+
 const changedOnly = process.argv.includes('--changed-only');
 const fix = process.argv.includes('--fix');
 const errors = [];
@@ -526,10 +676,24 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   for (const heading of required) {
     if (!headings.includes(heading)) errors.push(`${file}: missing required section "## ${heading}"`);
   }
+  // Strict-order check (observability-vertical reorg brief: "EXACT order,
+  // do not reorder/rename") -- only applied to types that opt into it,
+  // since every other vertical checks presence only, not sequence.
+  if (STRICT_ORDER_TYPES.has(type)) {
+    const presentRequired = headings.filter((h) => required.includes(h));
+    const expectedOrder = required.filter((h) => presentRequired.includes(h));
+    for (let i = 0; i < presentRequired.length; i += 1) {
+      if (presentRequired[i] !== expectedOrder[i]) {
+        errors.push(`${file}: sections are out of order -- expected "## ${expectedOrder[i]}" at this position, found "## ${presentRequired[i]}" (observability entries require the exact canonical section order)`);
+        break;
+      }
+    }
+  }
   if (type === 'paper' && data.phase) researchContentChecks(file, content, errors, warnings);
   if (type === 'tip' && data.phase) tipContentChecks(file, content, data, errors, warnings);
   if (type === 'build-example' && data.phase) buildExampleContentChecks(file, content, data, errors, warnings);
   if (type === 'architecture') architectureContentChecks(file, content, data, errors, warnings);
+  if (type === 'observability') observabilityContentChecks(file, content, data, errors, warnings);
   checked += 1;
 }
 

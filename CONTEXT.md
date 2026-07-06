@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T15:18:01.878Z | Entries: 371 | Schema version: 1.0.0
+Generated: 2026-07-06T15:48:50.067Z | Entries: 371 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -15,14 +15,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Guides: 37
 - Build examples: 8
 - Architectures: 14
+- Observability: 0
 
 ## Navigation
 
 - Agent map: /AGENT.md
 - Taxonomy: /TAXONOMY.md
 - Data API: /data/index.json, /data/projects.json, /data/tools.json, /data/search-index.json
-- Architecture decisions: /content/architectures/decision-trees/
+- Architecture decisions: /content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/
 - Reference stacks: /content/architectures/reference-stacks/
+- Observability playbooks: /content/observability/{instrumentation,tracing,evaluation-quality,monitoring-alerting,cost-usage,privacy-governance,incident-response}/
 - Tool jobs: /content/tools/by-job/
 - Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
@@ -204,6 +206,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### system-design
 - Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
 - RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
+
+## Observability Playbooks by Category
+
+_No observability entries migrated yet._
 
 ## Decision Heuristics
 

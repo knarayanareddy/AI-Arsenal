@@ -106,6 +106,18 @@ for (const file of files) {
       for (const dimension of tradeoffKeys) requireAllowed(errors, file, `approaches[].tradeoffs (${approach.name ?? '?'})`, dimension, taxonomy.architectureTradeoffDimensions);
     }
   }
+
+  if (type === 'observability') {
+    requireAllowed(errors, file, 'category', data.category, taxonomy.observabilityCategories);
+    requireAllowed(errors, file, 'scope', data.scope, taxonomy.deploymentScope);
+    requireAllowed(errors, file, 'verification_status', data.verification_status, taxonomy.observabilityVerificationStatus);
+    requireAllowedArray(errors, file, 'signal_types', data.signal_types, taxonomy.signalTypes);
+    requireAllowedArray(errors, file, 'data_sensitivity', data.data_sensitivity, taxonomy.dataSensitivity);
+    requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+    for (const event of data.instrumentation_contract?.events ?? []) {
+      requireAllowed(errors, file, `instrumentation_contract.events[].pii_risk (${event.name ?? '?'})`, event.pii_risk, taxonomy.dataSensitivity);
+    }
+  }
   checked += 1;
 }
 

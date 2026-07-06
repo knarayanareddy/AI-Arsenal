@@ -111,6 +111,14 @@ for (const file of await getEntryFiles()) {
     if (parsed.data.category && !file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: architecture category "${parsed.data.category}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
     if (p.length !== 4) errors.push(`${file}: migrated architecture entries must be flat under their category folder (content/architectures/{category}/{id}.md), found extra nesting`);
   }
+  if (type === 'observability') {
+    // Observability-vertical reorganisation: same unconditional-on-category
+    // enforcement pattern as architectures -- observability.schema.json
+    // requires `category` from v1.0.0 with no partial-migration window.
+    const expectedFolder = `content/observability/${parsed.data.category}`;
+    if (parsed.data.category && !file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: observability category "${parsed.data.category}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
+    if (p.length !== 4) errors.push(`${file}: migrated observability entries must be flat under their category folder (content/observability/{category}/{id}.md), found extra nesting`);
+  }
 }
 
 for (const file of await glob('data/*.json', { nodir: true, posix: true })) {
