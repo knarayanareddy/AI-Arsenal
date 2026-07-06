@@ -26,7 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
-_No entries yet._
+- [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./runbook-for-agent-and-rag-incidents.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./runbook-for-agent-and-rag-incidents.md) — 

@@ -54,7 +54,7 @@
     "new:paper": "node scripts/scaffold.js --type=paper",
     "new:tip": "node scripts/scaffold.js --type=tip",
     "dev": "node scripts/watch.js",
-    "ci": "pnpm run validate:all && pnpm run check:duplicates && pnpm run migration:enforce && pnpm run migration:projects:enforce && pnpm run migration:research:enforce && pnpm run migration:tips:enforce && pnpm run migration:build-examples:enforce && pnpm run migration:architectures:enforce && pnpm run migration:observability:progress && pnpm test && pnpm run generate:all",
+    "ci": "pnpm run validate:all && pnpm run check:duplicates && pnpm run migration:enforce && pnpm run migration:projects:enforce && pnpm run migration:research:enforce && pnpm run migration:tips:enforce && pnpm run migration:build-examples:enforce && pnpm run migration:architectures:enforce && pnpm run migration:observability:enforce && pnpm test && pnpm run generate:all",
     "audit": "npm audit --omit=dev && echo 'consider running pnpm audit'",
     "audit:fix": "npm audit fix --omit=dev"
   },

@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T15:48:50.067Z | Entries: 371 | Schema version: 1.0.0
+Generated: 2026-07-06T16:03:03.263Z | Entries: 374 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -12,10 +12,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Tips: 102
 - People: 25
 - Digests: 0
-- Guides: 37
+- Guides: 33
 - Build examples: 8
 - Architectures: 14
-- Observability: 0
+- Observability: 7
 
 ## Navigation
 
@@ -209,7 +209,26 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Observability Playbooks by Category
 
-_No observability entries migrated yet._
+### cost-usage
+- Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total — 
+
+### evaluation-quality
+- Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship — 
+
+### incident-response
+- Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts — 
+
+### instrumentation
+- Capture a Structured Event for Every LLM Call, Not Just an Access Log Line — 
+
+### monitoring-alerting
+- Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions — 
+
+### privacy-governance
+- Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store — 
+
+### tracing
+- Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer — 
 
 ## Decision Heuristics
 

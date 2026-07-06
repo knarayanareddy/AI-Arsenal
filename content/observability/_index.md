@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [cost usage](./cost-usage/) | 0 entries | 2026-07-06 |
+| [cost usage](./cost-usage/) | 1 entries | 2026-07-06 |
 | [dashboards](./dashboards/) | 0 entries | 2026-07-06 |
 | [evaluation quality](./evaluation-quality/) | 1 entries | 2026-07-06 |
-| [incident response](./incident-response/) | 0 entries | 2026-07-06 |
+| [incident response](./incident-response/) | 1 entries | 2026-07-06 |
 | [instrumentation](./instrumentation/) | 1 entries | 2026-07-06 |
 | [monitoring alerting](./monitoring-alerting/) | 1 entries | 2026-07-06 |
-| [privacy governance](./privacy-governance/) | 0 entries | 2026-07-06 |
+| [privacy governance](./privacy-governance/) | 1 entries | 2026-07-06 |
 | [tracing](./tracing/) | 1 entries | 2026-07-06 |
 
 ## Recently Added
@@ -20,9 +20,10 @@
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./monitoring-alerting/alert-on-quality-and-cost-regressions.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./instrumentation/capture-the-llm-call-event.md)
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./evaluation-quality/gate-releases-on-eval-regression.md)
+- [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./cost-usage/instrument-cost-per-feature.md)
+- [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./privacy-governance/redact-and-govern-trace-data.md)
+- [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./incident-response/runbook-for-agent-and-rag-incidents.md)
 - [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./tracing/trace-every-agent-and-rag-step.md)
-- [Cost Tracking](./cost-tracking.md)
-- [AI Observability Overview](./overview.md)
 
 ## Most Popular
 
@@ -32,7 +33,8 @@ _No star-tracked entries yet._
 
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./instrumentation/capture-the-llm-call-event.md) — 
-- [Cost Tracking](./cost-tracking.md) — Guide to token cost math and cost observability for LLM applications
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./evaluation-quality/gate-releases-on-eval-regression.md) — 
-- [AI Observability Overview](./overview.md) — Overview of LLM observability pillars and tool selection
+- [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./cost-usage/instrument-cost-per-feature.md) — 
+- [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./privacy-governance/redact-and-govern-trace-data.md) — 
+- [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./incident-response/runbook-for-agent-and-rag-incidents.md) — 
 - [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./tracing/trace-every-agent-and-rag-step.md) — 

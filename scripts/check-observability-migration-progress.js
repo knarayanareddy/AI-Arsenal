@@ -85,7 +85,18 @@ for (const file of allObsFiles) {
   }
 }
 
-const total = allObsFiles.length - RETIRED_LEGACY_IDS.size;
+// Computed from migrated+pending (both of which explicitly skip retired
+// files via the `continue` above), NOT allObsFiles.length minus a fixed
+// RETIRED_LEGACY_IDS.size -- that subtraction is only correct while a
+// retired file still physically exists on disk; once it's actually
+// deleted (the normal end state), allObsFiles.length no longer includes
+// it, and subtracting again would double-count the retirement and
+// produce a total below the true count (or, as found when this was first
+// written, an inflated percentage after deletion). Deriving total from
+// the two arrays that already correctly exclude retired entries avoids
+// this class of off-by-one regardless of whether the retired file has
+// been deleted yet.
+const total = migrated.length + pending.length;
 const migratedCount = migrated.length;
 const percent = total === 0 ? 100 : Math.round((migratedCount / total) * 1000) / 10;
 

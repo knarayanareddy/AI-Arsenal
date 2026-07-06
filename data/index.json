@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T15:56:12.882Z",
+    "generated_at": "2026-07-06T16:03:00.516Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
     "total_tips": 102,
     "total_people": 25,
     "total_digests": 0,
-    "total_guides": 35,
+    "total_guides": 33,
     "total_build_examples": 8,
     "total_architectures": 14,
-    "total_observability": 4,
+    "total_observability": 7,
     "schema_version": "1.0.0"
   },
   "entries": [
@@ -1172,25 +1172,6 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "paid",
-      "status": "active",
-      "featured": false
-    },
-    {
-      "id": "cost-tracking",
-      "type": "guide",
-      "name": "Cost Tracking",
-      "description": "Guide to token cost math and cost observability for LLM applications",
-      "tags": [
-        "observability",
-        "cloud",
-        "inference"
-      ],
-      "path": "content/observability/cost-tracking.md",
-      "url": "content/observability/cost-tracking",
-      "last_updated": "2026-06-13",
-      "category": "observability",
-      "maturity": null,
-      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -2506,6 +2487,21 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "instrument-cost-per-feature",
+      "type": "observability",
+      "name": "Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/cost-usage/instrument-cost-per-feature.md",
+      "url": "content/observability/cost-usage/instrument-cost-per-feature",
+      "last_updated": "2026-07-06",
+      "category": "cost-usage",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -4158,26 +4154,6 @@
       "featured": false
     },
     {
-      "id": "overview",
-      "type": "guide",
-      "name": "AI Observability Overview",
-      "description": "Overview of LLM observability pillars and tool selection",
-      "tags": [
-        "observability",
-        "tracing",
-        "evaluation",
-        "monitoring"
-      ],
-      "path": "content/observability/overview.md",
-      "url": "content/observability/overview",
-      "last_updated": "2026-06-13",
-      "category": "observability",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "parallelize-independent-retrieval-calls",
       "type": "tip",
       "name": "Run Independent Retrieval or Tool Calls Concurrently, Not Sequentially",
@@ -5028,6 +5004,21 @@
       "featured": false
     },
     {
+      "id": "redact-and-govern-trace-data",
+      "type": "observability",
+      "name": "Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/privacy-governance/redact-and-govern-trace-data.md",
+      "url": "content/observability/privacy-governance/redact-and-govern-trace-data",
+      "last_updated": "2026-07-06",
+      "category": "privacy-governance",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "redact-secrets-before-tracing",
       "type": "tip",
       "name": "Redact Secrets and Sensitive Data Before Writing to Traces",
@@ -5210,6 +5201,21 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "runbook-for-agent-and-rag-incidents",
+      "type": "observability",
+      "name": "Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/incident-response/runbook-for-agent-and-rag-incidents.md",
+      "url": "content/observability/incident-response/runbook-for-agent-and-rag-incidents",
+      "last_updated": "2026-07-06",
+      "category": "incident-response",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {

@@ -26,7 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
-_No entries yet._
+- [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./redact-and-govern-trace-data.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./redact-and-govern-trace-data.md) — 

@@ -11,7 +11,7 @@
 | [build examples](./build-examples/) | 8 entries | 2026-07-06 |
 | [community](./community/) | 30 entries | 2026-07-06 |
 | [digests](./digests/) | 0 entries | 2026-07-06 |
-| [observability](./observability/) | 6 entries | 2026-07-06 |
+| [observability](./observability/) | 7 entries | 2026-07-06 |
 | [projects](./projects/) | 68 entries | 2026-07-06 |
 | [research](./research/) | 29 entries | 2026-07-06 |
 | [skills](./skills/) | 8 entries | 2026-07-06 |
@@ -24,13 +24,13 @@
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md)
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./observability/evaluation-quality/gate-releases-on-eval-regression.md)
+- [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./observability/cost-usage/instrument-cost-per-feature.md)
+- [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./observability/privacy-governance/redact-and-govern-trace-data.md)
+- [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./observability/incident-response/runbook-for-agent-and-rag-incidents.md)
 - [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./observability/tracing/trace-every-agent-and-rag-step.md)
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md)
-- [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
-- [Multi-Agent Research System](./build-examples/agent-systems/advanced-multi-agent-research.md)
-- [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md)
 
 ## Most Popular
 

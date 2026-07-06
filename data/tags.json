@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T15:56:12.882Z",
+  "generated_at": "2026-07-06T16:03:00.516Z",
   "tags": [
     {
       "id": "agents",
@@ -183,12 +183,11 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 49,
+      "count": 48,
       "types": {
         "project": 12,
         "tool": 31,
         "architecture": 4,
-        "guide": 1,
         "person": 1
       },
       "entries": [
@@ -201,7 +200,6 @@
         "braintrust",
         "choose-deployment-target",
         "choose-llm",
-        "cost-tracking",
         "dify",
         "empromptu-ai",
         "enterprise-scale",
@@ -417,12 +415,12 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 64,
+      "count": 63,
       "types": {
         "tip": 13,
         "build-example": 1,
         "project": 10,
-        "guide": 6,
+        "guide": 5,
         "tool": 17,
         "person": 9,
         "architecture": 6,
@@ -471,7 +469,6 @@
         "monako-glass",
         "openai-evals",
         "opik",
-        "overview",
         "phoenix",
         "prefer-reranking-before-rechunking",
         "prodigy",
@@ -613,13 +610,13 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 54,
+      "count": 53,
       "types": {
         "tip": 21,
         "tool": 6,
         "architecture": 4,
-        "guide": 3,
         "project": 17,
+        "guide": 2,
         "paper": 2,
         "build-example": 1
       },
@@ -633,7 +630,6 @@
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
-        "cost-tracking",
         "deepseek-v3-r1",
         "emerging-techniques",
         "falcon-3",
@@ -944,14 +940,13 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 26,
+      "count": 25,
       "types": {
         "tip": 7,
         "person": 1,
         "architecture": 1,
         "tool": 10,
-        "project": 6,
-        "guide": 1
+        "project": 6
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -974,7 +969,6 @@
         "openlit",
         "openllmetry",
         "opik",
-        "overview",
         "phoenix",
         "promptfoo",
         "spotlight-by-backplanes",
@@ -1022,12 +1016,11 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 46,
+      "count": 44,
       "types": {
         "tip": 22,
         "project": 12,
         "architecture": 3,
-        "guide": 2,
         "person": 1,
         "build-example": 1,
         "tool": 5
@@ -1040,7 +1033,6 @@
         "choose-eval-framework",
         "choose-observability-tool",
         "classify-failures-before-fixing-prompts",
-        "cost-tracking",
         "deepeval",
         "do-not-launch-without-trace-sampling",
         "hamel-husain",
@@ -1060,7 +1052,6 @@
         "openlit",
         "openllmetry",
         "opik",
-        "overview",
         "phoenix",
         "portkey",
         "prefer-id-references-over-copying",
@@ -1639,13 +1630,12 @@
     {
       "id": "tracing",
       "label": "Tracing",
-      "count": 27,
+      "count": 26,
       "types": {
         "tip": 8,
         "project": 10,
         "tool": 7,
-        "architecture": 1,
-        "guide": 1
+        "architecture": 1
       },
       "entries": [
         "add-a-minimal-reproduction-prompt",
@@ -1665,7 +1655,6 @@
         "openlit",
         "openllmetry",
         "opik",
-        "overview",
         "phoenix",
         "replay-the-same-trace-with-one-variable-changed",
         "separate-model-errors-from-app-errors",
