@@ -26,7 +26,7 @@ _No entries yet. This category folder was created during the Architectures verti
 
 ### Recently Added
 
-_No entries yet._
+- [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./choose-vector-db.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./choose-vector-db.md) — 

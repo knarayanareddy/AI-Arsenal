@@ -413,14 +413,19 @@ function buildExampleContentChecks(file, content, data, errors, warnings) {
 // buildExampleContentChecks' pattern. Encodes the automatable subset of
 // the Cartographer's Five Questions and the three named failure modes
 // (Abstract Comparison, Outdated Tradeoff, Disguised Advocacy).
-const ARCHITECTURE_ADVOCACY_PHRASES = [
-  'is better',
-  'is the best',
-  'is superior',
-  'is the right choice',
-  'is clearly better',
-  'you should always use',
-  'always choose'
+// Phrase-based, not bare-substring: "is better" alone false-positives on
+// ordinary prose like "the fix is better parsing" (adjective modifying a
+// noun, not an unconditional approach preference). Each pattern below
+// requires the comparative/superlative construction that actually signals
+// unconditional advocacy (a discrete "X is better than Y" or "X is the
+// best" claim), not just the word "better" appearing anywhere.
+const ARCHITECTURE_ADVOCACY_PATTERNS = [
+  /\bis (clearly |definitely |simply )?better than\b/i,
+  /\bis (clearly |definitely |simply )?the best\b/i,
+  /\bis superior to\b/i,
+  /\bis (clearly |definitely |simply )?the right choice\b/i,
+  /\byou should always use\b/i,
+  /\balways choose\b/i
 ];
 const ARCHITECTURE_VAGUE_FACTOR_PATTERN = /\bit depends\b(?!.*\bon\b.*:)/i;
 
@@ -445,10 +450,10 @@ function architectureContentChecks(file, content, data, errors, warnings) {
   // Failure Mode 3 (Disguised Advocacy) / Honesty Auditor rule: never
   // write "Approach A is better" -- only "better when [conditions], worse
   // when [conditions]". Heuristic phrase-based check across the whole body.
-  const lowerContent = content.toLowerCase();
-  for (const phrase of ARCHITECTURE_ADVOCACY_PHRASES) {
-    if (lowerContent.includes(phrase)) {
-      warnings.push(`${file}: body contains advocacy-shaped phrase "${phrase}" -- Honesty Auditor rule requires conditional framing ("better when X, worse when Y"), not an unconditional preference (Failure Mode 3) -- verify manually, this check is a heuristic`);
+  for (const pattern of ARCHITECTURE_ADVOCACY_PATTERNS) {
+    const match = content.match(pattern);
+    if (match) {
+      warnings.push(`${file}: body contains advocacy-shaped phrase "${match[0]}" -- Honesty Auditor rule requires conditional framing ("better when X, worse when Y"), not an unconditional preference (Failure Mode 3) -- verify manually, this check is a heuristic`);
     }
   }
 

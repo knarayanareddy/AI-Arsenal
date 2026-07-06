@@ -26,7 +26,8 @@ Choosing *which* vector database, LLM provider, or observability tool to use is 
 
 ### Recently Added
 
-_No entries yet._
+- [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md)
+- [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./rag-vs-fine-tuning.md)
 
 ### Most Popular
 
@@ -34,4 +35,5 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md) — 
+- [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./rag-vs-fine-tuning.md) — 

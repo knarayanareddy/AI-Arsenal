@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T13:47:44.363Z | Entries: 371 | Schema version: 1.0.0
+Generated: 2026-07-06T14:51:55.252Z | Entries: 371 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,6 +14,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 0
 - Guides: 51
 - Build examples: 8
+- Architectures: 0
 
 ## Navigation
 
@@ -176,6 +177,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Multi-Agent System Stack — Reference stack for complex task automation with multiple AI roles and durable state
 - Production RAG Stack — Reference architecture for production retrieval-augmented generation applications
 - AI Research Platform Stack — Reference platform for repeatable model, agent, and retrieval experiments
+
+## Architecture Decisions by Category
+
+_No architecture entries migrated yet._
 
 ## Decision Heuristics
 

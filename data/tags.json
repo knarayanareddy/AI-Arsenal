@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T13:47:42.246Z",
+  "generated_at": "2026-07-06T14:59:19.200Z",
   "tags": [
     {
       "id": "agents",
@@ -9,9 +9,10 @@
       "types": {
         "tip": 14,
         "build-example": 3,
-        "guide": 9,
+        "guide": 8,
         "project": 21,
         "tool": 15,
+        "architecture": 1,
         "person": 3,
         "paper": 4
       },
@@ -381,8 +382,9 @@
       "count": 21,
       "types": {
         "tip": 7,
-        "guide": 3,
+        "architecture": 2,
         "project": 9,
+        "guide": 1,
         "person": 1,
         "tool": 1
       },
@@ -418,10 +420,11 @@
         "tip": 13,
         "build-example": 1,
         "project": 10,
-        "guide": 13,
+        "guide": 12,
         "tool": 17,
         "person": 9,
-        "paper": 2
+        "paper": 2,
+        "architecture": 1
       },
       "entries": [
         "add-evals-before-refactors",
@@ -510,7 +513,7 @@
       "types": {
         "tool": 7,
         "paper": 2,
-        "guide": 1
+        "architecture": 1
       },
       "entries": [
         "axolotl",
@@ -909,8 +912,9 @@
       "label": "Memory",
       "count": 16,
       "types": {
-        "guide": 3,
+        "guide": 2,
         "tip": 7,
+        "architecture": 1,
         "tool": 5,
         "project": 1
       },
@@ -1191,7 +1195,8 @@
       "types": {
         "tip": 18,
         "build-example": 5,
-        "guide": 10,
+        "guide": 8,
+        "architecture": 2,
         "project": 23,
         "tool": 6,
         "paper": 5,
@@ -1334,9 +1339,10 @@
         "tip": 19,
         "build-example": 4,
         "tool": 6,
-        "guide": 5,
+        "architecture": 3,
         "project": 15,
         "paper": 4,
+        "guide": 2,
         "person": 1
       },
       "entries": [
@@ -1469,7 +1475,8 @@
       "label": "Self Hosted",
       "count": 15,
       "types": {
-        "guide": 3,
+        "guide": 2,
+        "architecture": 1,
         "project": 8,
         "tip": 3,
         "tool": 1
