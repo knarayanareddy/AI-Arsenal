@@ -26,7 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
-_No entries yet._
+- [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./trace-every-agent-and-rag-step.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./trace-every-agent-and-rag-step.md) — 

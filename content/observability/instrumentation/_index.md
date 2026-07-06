@@ -26,7 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
-_No entries yet._
+- [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./capture-the-llm-call-event.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./capture-the-llm-call-event.md) — 

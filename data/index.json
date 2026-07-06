@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T15:48:47.755Z",
+    "generated_at": "2026-07-06T15:53:03.448Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -10,7 +10,7 @@
     "total_guides": 37,
     "total_build_examples": 8,
     "total_architectures": 14,
-    "total_observability": 0,
+    "total_observability": 2,
     "schema_version": "1.0.0"
   },
   "entries": [
@@ -744,6 +744,21 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "capture-the-llm-call-event",
+      "type": "observability",
+      "name": "Capture a Structured Event for Every LLM Call, Not Just an Access Log Line",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/instrumentation/capture-the-llm-call-event.md",
+      "url": "content/observability/instrumentation/capture-the-llm-call-event",
+      "last_updated": "2026-07-06",
+      "category": "instrumentation",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -6054,6 +6069,21 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "trace-every-agent-and-rag-step",
+      "type": "observability",
+      "name": "Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/tracing/trace-every-agent-and-rag-step.md",
+      "url": "content/observability/tracing/trace-every-agent-and-rag-step",
+      "last_updated": "2026-07-06",
+      "category": "tracing",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },

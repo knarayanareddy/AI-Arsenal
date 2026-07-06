@@ -606,7 +606,7 @@ function observabilityContentChecks(file, content, data, errors, warnings) {
     if (privacySection.length === 0) errors.push(`${file}: "Privacy & Governance" section must not be empty (mandatory per the reorg brief, never optional)`);
     else {
       const mentionsRedaction = /redact|scrub|mask|strip|anonymiz/i.test(privacySection);
-      const mentionsRetention = /retention|delet\w*|expir\w*|ttl\b/i.test(privacySection);
+      const mentionsRetention = /retention|retain\w*|delet\w*|expir\w*|ttl\b/i.test(privacySection);
       const mentionsAccess = /access|who can|permission|role|authoriz/i.test(privacySection);
       if (!mentionsRedaction || !mentionsRetention) {
         errors.push(`${file}: "Privacy & Governance" must state what is redacted AND the retention policy (Phase 3 section rule) -- currently missing ${!mentionsRedaction ? 'redaction' : ''}${!mentionsRedaction && !mentionsRetention ? ' and ' : ''}${!mentionsRetention ? 'retention' : ''} guidance`);

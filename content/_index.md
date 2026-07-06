@@ -11,7 +11,7 @@
 | [build examples](./build-examples/) | 8 entries | 2026-07-06 |
 | [community](./community/) | 30 entries | 2026-07-06 |
 | [digests](./digests/) | 0 entries | 2026-07-06 |
-| [observability](./observability/) | 4 entries | 2026-07-06 |
+| [observability](./observability/) | 6 entries | 2026-07-06 |
 | [projects](./projects/) | 68 entries | 2026-07-06 |
 | [research](./research/) | 29 entries | 2026-07-06 |
 | [skills](./skills/) | 8 entries | 2026-07-06 |
@@ -21,6 +21,8 @@
 
 ## Recently Added
 
+- [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md)
+- [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./observability/tracing/trace-every-agent-and-rag-step.md)
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md)
@@ -29,8 +31,6 @@
 - [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md)
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
-- [AGNT.Hub](./tools/orchestration/agnt-hub.md)
-- [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md)
 
 ## Most Popular
 
@@ -86,6 +86,7 @@
 - [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash.md) — 
 - [Use Prompt Caching for Long, Stable System Prompt Prefixes](./tips-and-tricks/cost-and-performance/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries.md) — 
+- [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md) — 
 - [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
@@ -96,4 +97,3 @@
 - [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md) — 
 - [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./architectures/model-selection/choose-llm.md) — 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./architectures/system-design/choose-memory-solution.md) — 
-- [Choosing an Observability Approach: Integration Model First, Feature List Second](./architectures/evaluation-strategy/choose-observability-tool.md) — 
