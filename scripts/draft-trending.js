@@ -2,11 +2,101 @@
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
 
+// Draft a schema-compliant trend weekly-snapshot from generated project data.
+// Emits content/trending/this-week.md with entry_type: "trend" so the file
+// validates against schemas/trend.schema.json (see the Trending vertical
+// reorganisation brief). Run after `pnpm run generate:all` so data/projects.json
+// (which carries trending_score) is current.
 let projects = { items: [] };
 try { projects = JSON.parse(await fs.readFile('data/projects.json', 'utf8')); } catch {}
-const top = [...(projects.items ?? [])].sort((a, b) => (b.trending_score ?? 0) - (a.trending_score ?? 0)).slice(0, 10);
+
 const today = new Date().toISOString().slice(0, 10);
-const list = top.map((p, i) => `${i + 1}. [${p.name}](../../${p.path}) — ${p.description}`).join('\n') || '_No projects available yet._';
-const content = `---\nid: "this-week"\ntitle: "This Week in AI Arsenal"\nentry_type: "guide"\nsection: "trending"\ndescription: "Weekly draft of trending AI engineering projects and ecosystem signals"\ntags:\n  - trending\nrelated_entries: []\nadded_date: "${today}"\nlast_reviewed: "${today}"\nadded_by: "maintainer"\nstatus: "watching"\n---\n\n## Overview\n\nThis weekly draft summarizes notable project movement and ecosystem signals for maintainer review.\n\n## Why It's in the Arsenal\n\nTrending snapshots preserve freshness and make it easier for humans and agents to discover what changed recently.\n\n## Key Features\n\n- Generated from structured project metadata\n- Designed as a draft requiring maintainer review\n- Links back to canonical project entries\n\n## Architecture / How It Works\n\nThe script reads generated project data, sorts by trending score, and writes this Markdown file for human editing.\n\n## Getting Started\n\n\`\`\`bash\npnpm run generate && node scripts/draft-trending.js\n\`\`\`\n\n## Use Cases\n\n1. **Scenario**: Weekly maintainer review of ecosystem movement\n2. **Scenario**: Public digest preparation\n\n## Strengths\n\n- Keeps freshness visible\n- Reuses canonical metadata rather than duplicating entries\n\n## Limitations / When NOT to Use\n\n- Must not be treated as final without human verification\n- Trending scores are only as good as source metadata\n\n## Integration Patterns\n\nLink the weekly draft from monthly digests, launch posts, and future UI trending views.\n\n## Resources\n\n${list}\n\n## Buzz & Reception\n\nMaintainers should add verified buzz sources before publishing.\n\n---\n*Last reviewed: ${today} by @maintainer*\n`;
+const windowStart = (() => {
+  const d = new Date();
+  d.setDate(d.getDate() - 7);
+  return d.toISOString().slice(0, 10);
+})();
+
+const top = [...(projects.items ?? [])]
+  .sort((a, b) => (b.trending_score ?? 0) - (a.trending_score ?? 0))
+  .slice(0, 10);
+
+const rankedYaml = top.length
+  ? top
+      .map((p, i) => {
+        const lines = [
+          `  - rank: ${i + 1}`,
+          `    entry_id: "${p.id}"`,
+          `    entry_type: "project"`,
+          `    why_here: "Trending score ${p.trending_score ?? 0}/100 from GitHub star velocity, recency, and buzz sources."`,
+          `    score_snapshot: ${p.trending_score ?? 0}`
+        ];
+        return lines.join('\n');
+      })
+      .join('\n')
+  : '  []';
+
+const list =
+  top.map((p, i) => `${i + 1}. [${p.name ?? p.id}](${p.url}) — ${p.description ?? ''}`).join('\n') ||
+  '_No projects available yet._';
+
+const content = `---
+id: "this-week"
+title: "This Week in AI Arsenal"
+entry_type: "trend"
+kind: "weekly-snapshot"
+status: "draft"
+as_of: "${today}"
+window:
+  start: "${windowStart}"
+  end: "${today}"
+signals_used:
+  - github-stars-velocity
+  - github-stars-total
+  - github-activity
+sources:
+  - source: "github"
+    url: "https://github.com/trending"
+    last_checked: "${today}"
+    notes: "GitHub Trending is the primary star-velocity signal."
+ranked_entries:
+${rankedYaml}
+last_reviewed: "${today}"
+added_date: "${today}"
+added_by: "maintainer"
+enrichment_status: "draft"
+tags:
+  - trending
+---
+
+## Overview
+
+This weekly draft summarizes notable project movement and ecosystem signals for maintainer review.
+
+## What this snapshot covers
+
+Top projects by trending score (GitHub star velocity, recency, and buzz sources) over the trailing 7-day window (${windowStart} → ${today}).
+
+## Method (signals + caveats)
+
+Trending scores are computed by \`scripts/calculate-trending.js\` from structured project metadata. Star velocity is noisy and community buzz is anecdotal; scores are only as good as source metadata and must be human-verified before publishing.
+
+## Ranked entries (with why)
+
+${list}
+
+## Notable changes to watch
+
+- Re-run \`pnpm run update:trending\` and \`node scripts/draft-trending.js\` before publishing; verify external buzz sources.
+
+## How to use this (links into the Arsenal)
+
+Link the weekly draft from monthly digests and launch posts once reviewed. Pair with the [Hall of Fame](./hall-of-fame.md) for evergreen context.
+
+## Sources
+
+- [GitHub Trending](https://github.com/trending) (last_checked: ${today})
+`;
+
 await fs.writeFile('content/trending/this-week.md', content);
 console.log(chalk.green('Drafted content/trending/this-week.md'));

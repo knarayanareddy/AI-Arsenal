@@ -1,18 +1,19 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T19:13:16.598Z",
+    "generated_at": "2026-07-06T20:44:38.091Z",
     "total_projects": 69,
     "total_tools": 93,
     "total_papers": 25,
     "total_tips": 102,
     "total_people": 25,
     "total_digests": 0,
-    "total_guides": 28,
+    "total_guides": 26,
     "total_build_examples": 8,
     "total_architectures": 14,
     "total_observability": 7,
     "total_community": 23,
-    "total_benchmarks": 9,
+    "total_benchmarks": 30,
+    "total_trending": 4,
     "schema_version": "1.0.0"
   },
   "entries": [
@@ -395,6 +396,25 @@
       "url": "content/community/people/andrew-ng",
       "last_updated": "2026-06-14",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "arena-hard",
+      "type": "benchmark",
+      "name": "Arena-Hard-Auto",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/evaluation-methods/arena-hard.md",
+      "url": "content/benchmarks/evaluation-methods/arena-hard",
+      "last_updated": "2026-07-06",
+      "category": "evaluation-methods",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -1602,6 +1622,25 @@
       "featured": false
     },
     {
+      "id": "do-not-answer",
+      "type": "benchmark",
+      "name": "Do-Not-Answer",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/benchmarks/safety/do-not-answer.md",
+      "url": "content/benchmarks/safety/do-not-answer",
+      "last_updated": "2026-07-06",
+      "category": "safety",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "do-not-launch-without-trace-sampling",
       "type": "tip",
       "name": "Capture Sampled Traces Before Real Users Hit the System",
@@ -2232,6 +2271,23 @@
       "featured": false
     },
     {
+      "id": "github-trending",
+      "type": "trend",
+      "name": "Source Feed: GitHub Trending",
+      "description": "",
+      "tags": [
+        "trending"
+      ],
+      "path": "content/trending/by-source/github-trending.md",
+      "url": "content/trending/by-source/github-trending",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "reviewed",
+      "featured": false
+    },
+    {
       "id": "google-adk",
       "type": "project",
       "name": "Google ADK",
@@ -2341,6 +2397,25 @@
       "featured": false
     },
     {
+      "id": "gsm8k",
+      "type": "benchmark",
+      "name": "GSM8K",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "reasoning"
+      ],
+      "path": "content/benchmarks/general-llm/gsm8k.md",
+      "url": "content/benchmarks/general-llm/gsm8k",
+      "last_updated": "2026-07-06",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "guardrails-ai",
       "type": "tool",
       "name": "Guardrails AI",
@@ -2380,20 +2455,21 @@
     },
     {
       "id": "hall-of-fame",
-      "type": "guide",
+      "type": "trend",
       "name": "AI Arsenal Hall of Fame",
-      "description": "Evergreen list of foundational AI engineering projects and ideas",
+      "description": "",
       "tags": [
-        "foundational",
-        "featured"
+        "trending",
+        "featured",
+        "foundational"
       ],
       "path": "content/trending/hall-of-fame.md",
       "url": "content/trending/hall-of-fame",
-      "last_updated": "2026-06-13",
-      "category": "trending",
+      "last_updated": "2026-07-06",
+      "category": null,
       "maturity": null,
       "cost_model": null,
-      "status": "active",
+      "status": "reviewed",
       "featured": false
     },
     {
@@ -2840,6 +2916,25 @@
       "url": "content/build-examples/rag-systems/intermediate-production-rag-api",
       "last_updated": "2026-07-06",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "jailbreakbench",
+      "type": "benchmark",
+      "name": "JailbreakBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/benchmarks/safety/jailbreakbench.md",
+      "url": "content/benchmarks/safety/jailbreakbench",
+      "last_updated": "2026-07-06",
+      "category": "safety",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -3403,6 +3498,25 @@
       "featured": false
     },
     {
+      "id": "livecodebench",
+      "type": "benchmark",
+      "name": "LiveCodeBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/code/livecodebench.md",
+      "url": "content/benchmarks/code/livecodebench",
+      "last_updated": "2026-07-06",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llama-3",
       "type": "project",
       "name": "Llama 3.x",
@@ -3821,6 +3935,45 @@
       "featured": false
     },
     {
+      "id": "mathvista",
+      "type": "benchmark",
+      "name": "MathVista",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "vision",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/multimodal/mathvista.md",
+      "url": "content/benchmarks/multimodal/mathvista",
+      "last_updated": "2026-07-06",
+      "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mbpp",
+      "type": "benchmark",
+      "name": "MBPP",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/code/mbpp.md",
+      "url": "content/benchmarks/code/mbpp",
+      "last_updated": "2026-07-06",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "measure-first-token-latency",
       "type": "tip",
       "name": "Measure Time-to-First-Token Separately From Total Generation Time",
@@ -4126,6 +4279,45 @@
       "featured": false
     },
     {
+      "id": "mmbench",
+      "type": "benchmark",
+      "name": "MMBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "vision",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/multimodal/mmbench.md",
+      "url": "content/benchmarks/multimodal/mmbench",
+      "last_updated": "2026-07-06",
+      "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mmlu",
+      "type": "benchmark",
+      "name": "MMLU",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "reasoning"
+      ],
+      "path": "content/benchmarks/general-llm/mmlu.md",
+      "url": "content/benchmarks/general-llm/mmlu",
+      "last_updated": "2026-07-06",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mmlu-pro",
       "type": "benchmark",
       "name": "MMLU-Pro",
@@ -4220,6 +4412,45 @@
       "featured": false
     },
     {
+      "id": "msmarco",
+      "type": "benchmark",
+      "name": "MS MARCO",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/msmarco.md",
+      "url": "content/benchmarks/retrieval-rag/msmarco",
+      "last_updated": "2026-07-06",
+      "category": "retrieval-rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mt-bench",
+      "type": "benchmark",
+      "name": "MT-Bench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/evaluation-methods/mt-bench.md",
+      "url": "content/benchmarks/evaluation-methods/mt-bench",
+      "last_updated": "2026-07-06",
+      "category": "evaluation-methods",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "multi-agent-system",
       "type": "architecture",
       "name": "Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It",
@@ -4290,6 +4521,26 @@
       "url": "content/community/people/nathan-lambert",
       "last_updated": "2026-06-14",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "natural-questions",
+      "type": "benchmark",
+      "name": "Natural Questions",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/natural-questions.md",
+      "url": "content/benchmarks/retrieval-rag/natural-questions",
+      "last_updated": "2026-07-06",
+      "category": "retrieval-rag",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -4554,6 +4805,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "osworld",
+      "type": "benchmark",
+      "name": "OSWorld",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/agents/osworld.md",
+      "url": "content/benchmarks/agents/osworld",
+      "last_updated": "2026-07-06",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -5601,6 +5871,26 @@
       "featured": false
     },
     {
+      "id": "rgb",
+      "type": "benchmark",
+      "name": "RGB",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/rgb.md",
+      "url": "content/benchmarks/retrieval-rag/rgb",
+      "last_updated": "2026-07-06",
+      "category": "retrieval-rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "route-simple-tasks-to-smaller-models",
       "type": "tip",
       "name": "Classify Task Difficulty and Route Easy Requests to Cheaper Models",
@@ -5646,6 +5936,25 @@
       "url": "content/observability/incident-response/runbook-for-agent-and-rag-incidents",
       "last_updated": "2026-07-06",
       "category": "incident-response",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "salad-bench",
+      "type": "benchmark",
+      "name": "SALAD-Bench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/benchmarks/safety/salad-bench.md",
+      "url": "content/benchmarks/safety/salad-bench",
+      "last_updated": "2026-07-06",
+      "category": "safety",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -5793,6 +6102,26 @@
       "url": "content/tools/by-job/security-and-guardrails",
       "last_updated": "2026-06-13",
       "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "seed-bench",
+      "type": "benchmark",
+      "name": "SEED-Bench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "vision",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/multimodal/seed-bench.md",
+      "url": "content/benchmarks/multimodal/seed-bench",
+      "last_updated": "2026-07-06",
+      "category": "multimodal",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -6413,6 +6742,26 @@
       "featured": false
     },
     {
+      "id": "swe-bench",
+      "type": "benchmark",
+      "name": "SWE-bench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/code/swe-bench.md",
+      "url": "content/benchmarks/code/swe-bench",
+      "last_updated": "2026-07-06",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "tabstack",
       "type": "tool",
       "name": "Tabstack",
@@ -6445,6 +6794,26 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tau-bench",
+      "type": "benchmark",
+      "name": "TAU-bench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "tool-use",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/agents/tau-bench.md",
+      "url": "content/benchmarks/agents/tau-bench",
+      "last_updated": "2026-07-06",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -6503,20 +6872,19 @@
     },
     {
       "id": "this-week",
-      "type": "guide",
+      "type": "trend",
       "name": "This Week in AI Arsenal",
-      "description": "Weekly curated draft of notable AI engineering ecosystem movement",
+      "description": "",
       "tags": [
-        "trending",
-        "new-arrival"
+        "trending"
       ],
       "path": "content/trending/this-week.md",
       "url": "content/trending/this-week",
-      "last_updated": "2026-06-13",
-      "category": "trending",
+      "last_updated": "2026-07-06",
+      "category": null,
       "maturity": null,
       "cost_model": null,
-      "status": "active",
+      "status": "draft",
       "featured": false
     },
     {
@@ -6536,6 +6904,23 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "toolradar-techpresso",
+      "type": "trend",
+      "name": "Source Feed: ToolRadar / Techpresso",
+      "description": "",
+      "tags": [
+        "trending"
+      ],
+      "path": "content/trending/by-source/toolradar-techpresso.md",
+      "url": "content/trending/by-source/toolradar-techpresso",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "reviewed",
       "featured": false
     },
     {
@@ -6699,6 +7084,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "truthfulqa",
+      "type": "benchmark",
+      "name": "TruthfulQA",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "reasoning"
+      ],
+      "path": "content/benchmarks/general-llm/truthfulqa.md",
+      "url": "content/benchmarks/general-llm/truthfulqa",
+      "last_updated": "2026-07-06",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -7291,6 +7695,25 @@
       "featured": false
     },
     {
+      "id": "webarena",
+      "type": "benchmark",
+      "name": "WebArena",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/agents/webarena.md",
+      "url": "content/benchmarks/agents/webarena",
+      "last_updated": "2026-07-06",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "weekly-arxiv-picks",
       "type": "guide",
       "name": "Weekly ArXiv Picks",
@@ -7343,6 +7766,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "wildbench",
+      "type": "benchmark",
+      "name": "WildBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/evaluation-methods/wildbench.md",
+      "url": "content/benchmarks/evaluation-methods/wildbench",
+      "last_updated": "2026-07-06",
+      "category": "evaluation-methods",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },

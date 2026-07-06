@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T19:13:16.598Z",
+  "generated_at": "2026-07-06T20:44:38.091Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 68,
+      "count": 72,
       "types": {
         "tip": 14,
         "build-example": 3,
@@ -13,7 +13,7 @@
         "project": 21,
         "tool": 16,
         "architecture": 4,
-        "benchmark": 1,
+        "benchmark": 5,
         "person": 3,
         "paper": 4
       },
@@ -61,6 +61,7 @@
         "multi-agent-system",
         "openai-agents-sdk",
         "openhands",
+        "osworld",
         "pydantic-ai",
         "pydantic-ai-tool",
         "qursor",
@@ -78,10 +79,13 @@
         "starter-simple-react-agent",
         "summarize-long-running-agent-state",
         "surrealdb",
+        "swe-bench",
         "tabstack",
         "taste-lab",
+        "tau-bench",
         "uiverse-design",
         "validate-tool-arguments-before-execution",
+        "webarena",
         "yang-2024-swe-agent",
         "yao-2022-react",
         "yao-2023-tree-of-thoughts",
@@ -138,18 +142,33 @@
     {
       "id": "benchmark",
       "label": "Benchmark",
-      "count": 6,
+      "count": 21,
       "types": {
-        "benchmark": 5,
+        "benchmark": 20,
         "guide": 1
       },
       "entries": [
+        "arena-hard",
         "beir",
         "gaia",
         "gpqa-diamond",
         "humaneval",
+        "livecodebench",
+        "mathvista",
+        "mbpp",
+        "mmbench",
         "mmmu",
-        "sota-benchmarks"
+        "msmarco",
+        "mt-bench",
+        "natural-questions",
+        "osworld",
+        "rgb",
+        "seed-bench",
+        "sota-benchmarks",
+        "swe-bench",
+        "tau-bench",
+        "webarena",
+        "wildbench"
       ]
     },
     {
@@ -252,18 +271,21 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 6,
+      "count": 9,
       "types": {
-        "benchmark": 1,
+        "benchmark": 4,
         "project": 4,
         "paper": 1
       },
       "entries": [
         "humaneval",
+        "livecodebench",
+        "mbpp",
         "metagpt",
         "openhands",
         "qwen",
         "qwen-2-5",
+        "swe-bench",
         "yang-2024-swe-agent"
       ]
     },
@@ -426,15 +448,15 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 72,
+      "count": 93,
       "types": {
         "tip": 13,
         "build-example": 1,
         "project": 10,
         "guide": 5,
+        "benchmark": 30,
         "tool": 17,
         "person": 9,
-        "benchmark": 9,
         "architecture": 6,
         "paper": 2
       },
@@ -443,6 +465,7 @@
         "advanced-self-correcting-rag",
         "agenta",
         "ai-engineer",
+        "arena-hard",
         "argilla",
         "arvind-narayanan",
         "astra-autonomous-pentest",
@@ -457,6 +480,7 @@
         "deepeval",
         "detect-context-truncation-in-tests",
         "detect-multi-hop-questions-explicitly",
+        "do-not-answer",
         "dspy",
         "enterprise-scale",
         "es-2023-ragas",
@@ -467,29 +491,40 @@
         "giskard",
         "google-vertex-ai",
         "gpqa-diamond",
+        "gsm8k",
         "hamel-husain",
         "harmbench",
         "humaneval",
         "humanloop",
         "ifeval",
+        "jailbreakbench",
         "jason-liu",
         "langfuse",
         "langfuse-prompts",
         "langsmith",
         "langsmith-hub",
         "langsmith-platform",
+        "livecodebench",
         "llm-as-a-judge",
         "llm-researcher",
         "make-success-criteria-machine-checkable",
         "mastra",
+        "mathvista",
+        "mbpp",
         "measure-retrieval-recall-before-answer-quality",
         "melanie-mitchell",
         "ml-engineer",
+        "mmbench",
+        "mmlu",
         "mmlu-pro",
         "mmmu",
         "monako-glass",
+        "msmarco",
+        "mt-bench",
+        "natural-questions",
         "openai-evals",
         "opik",
+        "osworld",
         "phoenix",
         "prefer-reranking-before-rechunking",
         "prodigy",
@@ -498,18 +533,26 @@
         "rag-vs-fine-tuning",
         "ragas-rag-evaluation",
         "research-platform",
+        "rgb",
         "run-prompt-injection-regression-tests",
+        "salad-bench",
+        "seed-bench",
         "shreya-shankar",
         "simon-willison",
         "sota-benchmarks",
         "store-prompts-with-release-versions",
+        "swe-bench",
+        "tau-bench",
         "test-prompts-with-adversarial-inputs",
         "trulens",
+        "truthfulqa",
         "use-golden-questions-for-every-bug-fix",
         "version-system-prompts-like-code",
         "version-your-eval-datasets",
         "wandb-weave",
+        "webarena",
         "weights-biases",
+        "wildbench",
         "zheng-2023-llm-as-a-judge"
       ]
     },
@@ -518,7 +561,7 @@
       "label": "Featured",
       "count": 2,
       "types": {
-        "guide": 1,
+        "trend": 1,
         "architecture": 1
       },
       "entries": [
@@ -555,7 +598,8 @@
       "types": {
         "person": 5,
         "paper": 4,
-        "guide": 3,
+        "trend": 1,
+        "guide": 2,
         "tool": 1
       },
       "entries": [
@@ -590,25 +634,28 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 14,
+      "count": 17,
       "types": {
         "tip": 5,
+        "benchmark": 4,
         "tool": 7,
-        "benchmark": 1,
         "project": 1
       },
       "entries": [
         "allowlist-tools-per-agent-role",
+        "do-not-answer",
         "giskard",
         "guardrails-ai",
         "guidance",
         "harmbench",
+        "jailbreakbench",
         "keep-instructions-outside-retrieved-context",
         "llamaguard",
         "nemo-guardrails",
         "openai-agents-sdk",
         "portkey",
         "rebuff",
+        "salad-bench",
         "separate-user-content-from-system-instructions",
         "treat-retrieved-text-as-untrusted",
         "use-json-schema-for-outputs"
@@ -744,16 +791,16 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 129,
+      "count": 135,
       "types": {
         "tip": 20,
         "guide": 22,
         "person": 15,
+        "benchmark": 9,
         "tool": 33,
         "paper": 8,
         "architecture": 3,
         "project": 23,
-        "benchmark": 3,
         "build-example": 2
       },
       "entries": [
@@ -762,6 +809,7 @@
         "ai-engineer",
         "andrej-karpathy",
         "andrew-ng",
+        "arena-hard",
         "argilla",
         "ask-for-missing-inputs-before-solving",
         "aws-bedrock",
@@ -792,6 +840,7 @@
         "gemma-3",
         "google-vertex-ai",
         "gradio",
+        "gsm8k",
         "guidance",
         "hamel-husain",
         "hf-inference-endpoints",
@@ -823,8 +872,10 @@
         "mistral-models",
         "ml-engineer",
         "mlx-lm",
+        "mmlu",
         "mmlu-pro",
         "model-registry",
+        "mt-bench",
         "must-read-papers",
         "name-the-audience-in-the-prompt",
         "nemo-guardrails",
@@ -872,6 +923,7 @@
         "torchtune",
         "transformers",
         "translategemma",
+        "truthfulqa",
         "unsloth",
         "use-context-budgets-per-section",
         "use-delimiters-around-retrieved-context",
@@ -883,6 +935,7 @@
         "vllm",
         "web-scraping",
         "wei-2022-chain-of-thought",
+        "wildbench",
         "yann-lecun",
         "yi",
         "zheng-2023-llm-as-a-judge"
@@ -1000,12 +1053,12 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 14,
+      "count": 17,
       "types": {
         "project": 9,
         "paper": 1,
         "tool": 3,
-        "benchmark": 1
+        "benchmark": 4
       },
       "entries": [
         "command-r-plus",
@@ -1016,9 +1069,12 @@
         "ideogram-ai",
         "lancedb",
         "llama-3",
+        "mathvista",
+        "mmbench",
         "mmmu",
         "qwen",
         "qwen-3",
+        "seed-bench",
         "sglang",
         "translategemma",
         "yi"
@@ -1027,12 +1083,11 @@
     {
       "id": "new-arrival",
       "label": "New Arrival",
-      "count": 2,
+      "count": 1,
       "types": {
-        "guide": 2
+        "guide": 1
       },
       "entries": [
-        "this-week",
         "weekly-arxiv-picks"
       ]
     },
@@ -1209,12 +1264,12 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 68,
+      "count": 71,
       "types": {
         "tip": 18,
         "build-example": 5,
         "guide": 2,
-        "benchmark": 1,
+        "benchmark": 4,
         "architecture": 5,
         "project": 23,
         "tool": 6,
@@ -1266,6 +1321,8 @@
         "measure-retrieval-recall-before-answer-quality",
         "mem0",
         "milvus",
+        "msmarco",
+        "natural-questions",
         "pgvector",
         "pinecone",
         "pinecone-vector-db",
@@ -1276,6 +1333,7 @@
         "rag-vs-fine-tuning",
         "ragas-rag-evaluation",
         "ragflow",
+        "rgb",
         "sarthi-2024-raptor",
         "start-with-zero-chunk-overlap",
         "starter-basic-rag-chatbot",
@@ -1295,13 +1353,13 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 23,
+      "count": 26,
       "types": {
         "paper": 6,
         "project": 6,
         "guide": 3,
         "person": 4,
-        "benchmark": 3,
+        "benchmark": 6,
         "build-example": 1
       },
       "entries": [
@@ -1312,9 +1370,11 @@
         "francois-chollet",
         "gaia",
         "gpqa-diamond",
+        "gsm8k",
         "llm-researcher",
         "madaan-2023-self-refine",
         "melanie-mitchell",
+        "mmlu",
         "mmlu-pro",
         "nathan-lambert",
         "phi-4",
@@ -1324,6 +1384,7 @@
         "sebastian-bubeck",
         "smolagents",
         "starter-simple-react-agent",
+        "truthfulqa",
         "wei-2022-chain-of-thought",
         "yang-2024-qwen25-math",
         "yao-2022-react",
@@ -1353,12 +1414,12 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 56,
+      "count": 59,
       "types": {
         "tip": 19,
         "build-example": 4,
         "tool": 6,
-        "benchmark": 1,
+        "benchmark": 4,
         "architecture": 4,
         "project": 16,
         "paper": 4,
@@ -1393,6 +1454,8 @@
         "log-retrieved-context",
         "measure-retrieval-recall-before-answer-quality",
         "milvus",
+        "msmarco",
+        "natural-questions",
         "parallelize-independent-retrieval-calls",
         "pgvector",
         "pinecone",
@@ -1406,6 +1469,7 @@
         "ragflow",
         "rank-context-by-expected-usefulness",
         "redis-memory",
+        "rgb",
         "sarthi-2024-raptor",
         "start-with-zero-chunk-overlap",
         "starter-basic-rag-chatbot",
@@ -1457,13 +1521,13 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 26,
+      "count": 29,
       "types": {
         "tool": 9,
         "tip": 12,
         "person": 3,
-        "architecture": 1,
-        "benchmark": 1
+        "benchmark": 4,
+        "architecture": 1
       },
       "entries": [
         "agent-browser-shield",
@@ -1473,10 +1537,12 @@
         "astra-autonomous-pentest",
         "aws-bedrock",
         "dario-amodei",
+        "do-not-answer",
         "enterprise-scale",
         "giskard",
         "guardrails-ai",
         "harmbench",
+        "jailbreakbench",
         "keep-a-kill-switch-for-agent-actions",
         "llamaguard",
         "nemo-guardrails",
@@ -1485,6 +1551,7 @@
         "require-human-approval-for-irreversible-actions",
         "review-data-retention-for-prompts",
         "run-prompt-injection-regression-tests",
+        "salad-bench",
         "sandbox-code-execution-tools",
         "separate-planner-and-executor-permissions",
         "separate-user-content-from-system-instructions",
@@ -1616,7 +1683,7 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 32,
+      "count": 33,
       "types": {
         "tip": 12,
         "guide": 1,
@@ -1624,7 +1691,8 @@
         "tool": 2,
         "architecture": 1,
         "build-example": 2,
-        "paper": 2
+        "paper": 2,
+        "benchmark": 1
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -1657,6 +1725,7 @@
         "separate-planner-and-executor-permissions",
         "smolagents",
         "starter-simple-react-agent",
+        "tau-bench",
         "validate-tool-arguments-before-execution",
         "yao-2022-react"
       ]
@@ -1746,24 +1815,31 @@
     {
       "id": "trending",
       "label": "Trending",
-      "count": 2,
+      "count": 5,
       "types": {
-        "guide": 2
+        "trend": 4,
+        "guide": 1
       },
       "entries": [
+        "github-trending",
+        "hall-of-fame",
         "this-week",
+        "toolradar-techpresso",
         "weekly-arxiv-picks"
       ]
     },
     {
       "id": "vision",
       "label": "Vision",
-      "count": 1,
+      "count": 4,
       "types": {
-        "benchmark": 1
+        "benchmark": 4
       },
       "entries": [
-        "mmmu"
+        "mathvista",
+        "mmbench",
+        "mmmu",
+        "seed-bench"
       ]
     }
   ]
