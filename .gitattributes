@@ -73,7 +73,14 @@ content/observability/evaluation-quality/_index.md    -linguist-generated
 content/observability/monitoring-alerting/_index.md   -linguist-generated
 content/observability/cost-usage/_index.md            -linguist-generated
 content/observability/privacy-governance/_index.md    -linguist-generated
-content/observability/incident-response/_index.md     -linguist-generated
+content/observability/incident-response/_index.md   -linguist-generated
+content/community/forums/_index.md                   -linguist-generated
+content/community/chat/_index.md                     -linguist-generated
+content/community/newsletters/_index.md              -linguist-generated
+content/community/events/_index.md                   -linguist-generated
+content/community/meetups/_index.md                  -linguist-generated
+content/community/creators/_index.md                 -linguist-generated
+content/community/datasets/_index.md                 -linguist-generated
 
 # Lockfile is always LF and treated as a single entity.
 pnpm-lock.yaml  text eol=lf
