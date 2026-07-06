@@ -26,7 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
-_No entries yet._
+- [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./alert-on-quality-and-cost-regressions.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./alert-on-quality-and-cost-regressions.md) — 

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T15:53:03.448Z",
+  "generated_at": "2026-07-06T15:56:12.882Z",
   "tags": [
     {
       "id": "agents",
@@ -417,12 +417,12 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 65,
+      "count": 64,
       "types": {
         "tip": 13,
         "build-example": 1,
         "project": 10,
-        "guide": 7,
+        "guide": 6,
         "tool": 17,
         "person": 9,
         "architecture": 6,
@@ -450,7 +450,6 @@
         "enterprise-scale",
         "es-2023-ragas",
         "eugene-yan",
-        "evaluation-pipelines",
         "francois-chollet",
         "fundamentals",
         "giskard",
@@ -945,14 +944,14 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 27,
+      "count": 26,
       "types": {
         "tip": 7,
         "person": 1,
         "architecture": 1,
         "tool": 10,
         "project": 6,
-        "guide": 2
+        "guide": 1
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -980,7 +979,6 @@
         "promptfoo",
         "spotlight-by-backplanes",
         "superlog",
-        "tracing-and-monitoring",
         "weights-biases"
       ]
     },
@@ -1024,12 +1022,12 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 48,
+      "count": 46,
       "types": {
         "tip": 22,
         "project": 12,
         "architecture": 3,
-        "guide": 4,
+        "guide": 2,
         "person": 1,
         "build-example": 1,
         "tool": 5
@@ -1045,7 +1043,6 @@
         "cost-tracking",
         "deepeval",
         "do-not-launch-without-trace-sampling",
-        "evaluation-pipelines",
         "hamel-husain",
         "helicone",
         "inspect-retrieved-chunks-beside-the-answer",
@@ -1078,7 +1075,6 @@
         "store-parser-version-with-every-chunk",
         "store-prompt-version-in-every-trace",
         "trace-tool-inputs-and-outputs",
-        "tracing-and-monitoring",
         "track-cost-per-feature",
         "track-cost-per-successful-outcome",
         "use-golden-questions-for-every-bug-fix",
@@ -1199,11 +1195,11 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 70,
+      "count": 69,
       "types": {
         "tip": 18,
         "build-example": 5,
-        "guide": 5,
+        "guide": 4,
         "architecture": 5,
         "project": 23,
         "tool": 6,
@@ -1234,7 +1230,6 @@
         "es-2023-ragas",
         "eugene-yan",
         "evaluate-embedding-models-before-rechunking",
-        "evaluation-pipelines",
         "firecrawl",
         "firecrawl-tool",
         "gao-2022-hyde",
@@ -1644,13 +1639,13 @@
     {
       "id": "tracing",
       "label": "Tracing",
-      "count": 28,
+      "count": 27,
       "types": {
         "tip": 8,
         "project": 10,
         "tool": 7,
         "architecture": 1,
-        "guide": 2
+        "guide": 1
       },
       "entries": [
         "add-a-minimal-reproduction-prompt",
@@ -1678,7 +1673,6 @@
         "store-prompt-version-in-every-trace",
         "superlog",
         "trace-tool-inputs-and-outputs",
-        "tracing-and-monitoring",
         "trulens",
         "wandb-weave"
       ]

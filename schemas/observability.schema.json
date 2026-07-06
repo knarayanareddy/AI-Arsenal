@@ -90,6 +90,7 @@
     "added_by": { "$ref": "#/$defs/githubUser" },
     "status": { "enum": ["active", "archived", "deprecated", "watching"] },
     "enrichment_status": { "enum": ["draft", "reviewed", "verified"] },
+    "enrichment_notes": { "type": "string", "maxLength": 600 },
 
     "related_tools": {
       "type": "array",

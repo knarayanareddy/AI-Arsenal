@@ -26,7 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
-_No entries yet._
+- [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./gate-releases-on-eval-regression.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./gate-releases-on-eval-regression.md) — 

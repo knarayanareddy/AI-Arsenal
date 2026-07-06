@@ -21,7 +21,9 @@
 
 ## Recently Added
 
+- [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md)
+- [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./observability/evaluation-quality/gate-releases-on-eval-regression.md)
 - [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./observability/tracing/trace-every-agent-and-rag-step.md)
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
@@ -29,8 +31,6 @@
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
 - [Multi-Agent Research System](./build-examples/agent-systems/advanced-multi-agent-research.md)
 - [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md)
-- [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
-- [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
 
 ## Most Popular
 
@@ -62,6 +62,7 @@
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
@@ -96,4 +97,3 @@
 - [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./architectures/evaluation-strategy/choose-eval-framework.md) — 
 - [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md) — 
 - [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./architectures/model-selection/choose-llm.md) — 
-- [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./architectures/system-design/choose-memory-solution.md) — 

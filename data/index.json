@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T15:53:03.448Z",
+    "generated_at": "2026-07-06T15:56:12.882Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
     "total_tips": 102,
     "total_people": 25,
     "total_digests": 0,
-    "total_guides": 37,
+    "total_guides": 35,
     "total_build_examples": 8,
     "total_architectures": 14,
-    "total_observability": 2,
+    "total_observability": 4,
     "schema_version": "1.0.0"
   },
   "entries": [
@@ -293,6 +293,21 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "alert-on-quality-and-cost-regressions",
+      "type": "observability",
+      "name": "Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md",
+      "url": "content/observability/monitoring-alerting/alert-on-quality-and-cost-regressions",
+      "last_updated": "2026-07-06",
+      "category": "monitoring-alerting",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -1822,25 +1837,6 @@
       "featured": false
     },
     {
-      "id": "evaluation-pipelines",
-      "type": "guide",
-      "name": "Evaluation Pipelines",
-      "description": "Guide to repeatable LLM, RAG, and agent evaluation workflows",
-      "tags": [
-        "evaluation",
-        "observability",
-        "rag"
-      ],
-      "path": "content/observability/evaluation-pipelines.md",
-      "url": "content/observability/evaluation-pipelines",
-      "last_updated": "2026-06-13",
-      "category": "observability",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "falcon-3",
       "type": "project",
       "name": "Falcon 3",
@@ -2046,6 +2042,21 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "gate-releases-on-eval-regression",
+      "type": "observability",
+      "name": "Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/evaluation-quality/gate-releases-on-eval-regression.md",
+      "url": "content/observability/evaluation-quality/gate-releases-on-eval-regression",
+      "last_updated": "2026-07-06",
+      "category": "evaluation-quality",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -6103,25 +6114,6 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
-      "featured": false
-    },
-    {
-      "id": "tracing-and-monitoring",
-      "type": "guide",
-      "name": "Tracing and Monitoring",
-      "description": "Comparison of tracing approaches for LLM and agent systems",
-      "tags": [
-        "observability",
-        "tracing",
-        "monitoring"
-      ],
-      "path": "content/observability/tracing-and-monitoring.md",
-      "url": "content/observability/tracing-and-monitoring",
-      "last_updated": "2026-06-13",
-      "category": "observability",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
       "featured": false
     },
     {
