@@ -10,7 +10,10 @@
 
 ## Recently Added
 
+- [MathVista](./mathvista.md)
+- [MMBench](./mmbench.md)
 - [MMMU](./mmmu.md)
+- [SEED-Bench](./seed-bench.md)
 
 ## Most Popular
 
@@ -18,4 +21,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [MathVista](./mathvista.md) — 
+- [MMBench](./mmbench.md) — 
 - [MMMU](./mmmu.md) — 
+- [SEED-Bench](./seed-bench.md) — 

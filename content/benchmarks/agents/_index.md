@@ -11,6 +11,9 @@
 ## Recently Added
 
 - [GAIA](./gaia.md)
+- [OSWorld](./osworld.md)
+- [TAU-bench](./tau-bench.md)
+- [WebArena](./webarena.md)
 
 ## Most Popular
 
@@ -19,3 +22,6 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [GAIA](./gaia.md) — 
+- [OSWorld](./osworld.md) — 
+- [TAU-bench](./tau-bench.md) — 
+- [WebArena](./webarena.md) — 

@@ -10,7 +10,10 @@
 
 ## Recently Added
 
+- [Do-Not-Answer](./do-not-answer.md)
 - [HarmBench](./harmbench.md)
+- [JailbreakBench](./jailbreakbench.md)
+- [SALAD-Bench](./salad-bench.md)
 
 ## Most Popular
 
@@ -18,4 +21,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Do-Not-Answer](./do-not-answer.md) — 
 - [HarmBench](./harmbench.md) — 
+- [JailbreakBench](./jailbreakbench.md) — 
+- [SALAD-Bench](./salad-bench.md) — 

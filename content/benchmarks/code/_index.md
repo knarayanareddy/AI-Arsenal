@@ -11,6 +11,9 @@
 ## Recently Added
 
 - [HumanEval](./humaneval.md)
+- [LiveCodeBench](./livecodebench.md)
+- [MBPP](./mbpp.md)
+- [SWE-bench](./swe-bench.md)
 
 ## Most Popular
 
@@ -19,3 +22,6 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [HumanEval](./humaneval.md) — 
+- [LiveCodeBench](./livecodebench.md) — 
+- [MBPP](./mbpp.md) — 
+- [SWE-bench](./swe-bench.md) — 
