@@ -4,7 +4,18 @@
   "title": "AI Arsenal Build Example Entry",
   "type": "object",
   "additionalProperties": false,
-  "x-schema-version": "1.0.0",
+  "x-schema-version": "1.1.0",
+  "x-migration-note": "Build-examples-vertical reorganisation. New fields below are OPTIONAL but typed until 100% migration is confirmed via `pnpm run migration:build-examples:progress`, at which point the fields listed in `x-required-after-migration` flip to `required` in one atomic commit alongside CI switching from migration:build-examples:progress to migration:build-examples:enforce, matching the exact sequencing already used for the tools/projects/research/tips verticals. `stack` is ALREADY required (pre-existing field) but its pre-migration values were free-text stack/language tags (e.g. 'python', 'docker'), not catalog-entry IDs; the atomic promotion commit also tightens `stack` to `minItems: 2` and documents in TAXONOMY.md that post-migration values must resolve to real project/tool IDs. `tested_on` is required only when `build_status` is `tested` (enforced by the `allOf`/`if`/`then` block below), matching the brief's 'required if build_status: tested' rule.",
+  "x-required-after-migration": [
+    "phase",
+    "build_status",
+    "outcome",
+    "estimated_time (already required)",
+    "stack (add minItems: 2, values must be catalog IDs)",
+    "prerequisites",
+    "last_reviewed",
+    "enrichment_status"
+  ],
   "required": ["id", "title", "difficulty", "description", "tags", "stack", "estimated_time", "repo_url", "added_date", "added_by", "status"],
   "properties": {
     "id": { "$ref": "#/$defs/kebabId" },
@@ -19,8 +30,59 @@
     "added_date": { "$ref": "#/$defs/date" },
     "added_by": { "$ref": "#/$defs/githubUser" },
     "last_reviewed": { "anyOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
-    "status": { "enum": ["active", "archived", "deprecated", "watching"] }
+    "status": { "enum": ["active", "archived", "deprecated", "watching"] },
+
+    "phase": {
+      "enum": ["rag-systems", "agent-systems", "fine-tuning-workflows", "evaluation-pipelines", "production-deployment", "multimodal", "data-pipelines"]
+    },
+    "build_status": { "enum": ["tested", "untested", "outdated", "community-built"] },
+    "outcome": { "enum": ["working-prototype", "production-ready", "learning-reference"] },
+    "cost_estimate": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "prerequisites": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "tested_on": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["os", "python_version", "key_package_versions"],
+      "properties": {
+        "os": { "type": "string", "minLength": 1 },
+        "python_version": { "type": "string", "minLength": 1 },
+        "key_package_versions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "extends": { "$ref": "#/$defs/kebabId" },
+    "extended_by": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/kebabId" },
+      "uniqueItems": true
+    },
+    "implements_pattern": { "$ref": "#/$defs/kebabId" },
+    "related_tips": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/kebabId" },
+      "uniqueItems": true
+    },
+    "enrichment_status": { "enum": ["draft", "reviewed", "verified"] },
+    "enrichment_notes": { "type": "string", "maxLength": 600 }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "build_status": { "const": "tested" } },
+        "required": ["build_status"]
+      },
+      "then": {
+        "required": ["tested_on"]
+      }
+    }
+  ],
   "$defs": {
     "kebabId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "not": { "enum": ["index", "registry", "overview", "introduction", "readme", "agent", "context", "taxonomy", "contributing", "governance", "changelog", "security", "template", "all", "none", "undefined", "null", "true", "false"] } },
     "url": { "type": "string", "pattern": "^https?://[^\\s]+$" },
@@ -29,4 +91,3 @@
     "nonEmptyStringArray": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
   }
 }
-
