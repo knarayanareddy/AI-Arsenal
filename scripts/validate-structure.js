@@ -104,6 +104,28 @@ const BUILD_EXAMPLE_HEADINGS_NEW = [
   'Related Entries'
 ];
 
+// Architectures-vertical reorganisation: the canonical body structure for
+// an architecture entry (see the architectures-vertical-reorg brief). Most
+// of the actual decision framework (approaches[], key_factors[],
+// decision_tree, tradeoffs_as_of, common_mistakes[]) lives in structured
+// frontmatter, not body prose -- unlike every other vertical, where the
+// body IS the content. The body's job here is to elaborate on what the
+// frontmatter states tersely: why the decision matters, a walkthrough of
+// the decision tree in prose, per-approach depth beyond the one-line
+// frontmatter description, and elaboration of the common mistakes. See
+// architectureContentChecks below for the honesty/rigor checks (Failure
+// Modes 1-3) layered on top of mere heading presence.
+const ARCHITECTURE_HEADINGS = [
+  'Overview',
+  'The Decision',
+  'Decision Framework',
+  'Approach Deep-Dives',
+  'Common Mistakes',
+  'When This Guidance Might Be Outdated',
+  'Related Decisions',
+  'Resources'
+];
+
 const typeHeadings = {
   project: REQUIRED_ENTRY_HEADINGS,
   tool: REQUIRED_ENTRY_HEADINGS,
@@ -121,7 +143,8 @@ const typeHeadings = {
   ],
   person: ['Overview', 'Why Follow', 'Notable Work', 'Channels', 'Resources'],
   digest: ['TL;DR', 'Top Projects', 'Top Tools', 'Research Highlights', 'Architecture Notes', 'Community Signals', 'What to Watch Next Month'],
-  guide: REQUIRED_ENTRY_HEADINGS
+  guide: REQUIRED_ENTRY_HEADINGS,
+  architecture: ARCHITECTURE_HEADINGS
 };
 
 
@@ -385,6 +408,85 @@ function buildExampleContentChecks(file, content, data, errors, warnings) {
   }
 }
 
+// Architectures-vertical reorganisation: content-level checks for an
+// architecture entry, mirroring researchContentChecks'/tipContentChecks'/
+// buildExampleContentChecks' pattern. Encodes the automatable subset of
+// the Cartographer's Five Questions and the three named failure modes
+// (Abstract Comparison, Outdated Tradeoff, Disguised Advocacy).
+const ARCHITECTURE_ADVOCACY_PHRASES = [
+  'is better',
+  'is the best',
+  'is superior',
+  'is the right choice',
+  'is clearly better',
+  'you should always use',
+  'always choose'
+];
+const ARCHITECTURE_VAGUE_FACTOR_PATTERN = /\bit depends\b(?!.*\bon\b.*:)/i;
+
+function architectureContentChecks(file, content, data, errors, warnings) {
+  // Failure Mode 1 (The Abstract Comparison) / Cartographer Q3: an
+  // architecture entry MUST carry a decision framework. This is already a
+  // hard schema requirement (has_decision_framework: true), but re-check
+  // here against the actual artifacts (decision_tree, approaches[].
+  // tradeoffs, key_factors[]) so a fabricated 'true' with no real content
+  // behind it is still caught.
+  const hasRealFramework = Boolean(data.decision_tree) || (Array.isArray(data.key_factors) && data.key_factors.length >= 3);
+  if (data.has_decision_framework && !hasRealFramework) {
+    errors.push(`${file}: has_decision_framework is true but neither decision_tree nor a populated key_factors[] (>=3) was found -- a boolean claim with no underlying artifact is Failure Mode 1 (Cartographer Q3)`);
+  }
+
+  // Cartographer Q2: key_factors must read as measurable/specific, not a
+  // bare "it depends" cop-out with no named factors following it.
+  if (ARCHITECTURE_VAGUE_FACTOR_PATTERN.test(content)) {
+    warnings.push(`${file}: body contains "it depends" without an immediately following colon-delimited factor list -- Cartographer Q2 requires "it depends on these specific factors: [list]", not a bare cop-out`);
+  }
+
+  // Failure Mode 3 (Disguised Advocacy) / Honesty Auditor rule: never
+  // write "Approach A is better" -- only "better when [conditions], worse
+  // when [conditions]". Heuristic phrase-based check across the whole body.
+  const lowerContent = content.toLowerCase();
+  for (const phrase of ARCHITECTURE_ADVOCACY_PHRASES) {
+    if (lowerContent.includes(phrase)) {
+      warnings.push(`${file}: body contains advocacy-shaped phrase "${phrase}" -- Honesty Auditor rule requires conditional framing ("better when X, worse when Y"), not an unconditional preference (Failure Mode 3) -- verify manually, this check is a heuristic`);
+    }
+  }
+
+  // Failure Mode 2 (The Outdated Tradeoff): tradeoffs_as_of must not be
+  // stale relative to last_reviewed by more than a few days -- if a
+  // maintainer reviewed the entry but didn't re-verify tradeoffs in the
+  // same pass, that's a real staleness risk worth flagging.
+  if (data.tradeoffs_as_of && data.last_reviewed) {
+    const tradeoffsDate = new Date(data.tradeoffs_as_of);
+    const reviewedDate = new Date(data.last_reviewed);
+    if (!Number.isNaN(tradeoffsDate.getTime()) && !Number.isNaN(reviewedDate.getTime()) && tradeoffsDate < reviewedDate) {
+      warnings.push(`${file}: tradeoffs_as_of (${data.tradeoffs_as_of}) predates last_reviewed (${data.last_reviewed}) -- confirm tradeoffs were actually re-verified during the last review, not just the prose (Failure Mode 2)`);
+    }
+  }
+
+  // confidence: evolving should be reflected honestly in the "When This
+  // Guidance Might Be Outdated" section, mirroring tipContentChecks' Rule
+  // T-6 pattern for verification_status.
+  const outdatedSection = sectionBody(content, 'When This Guidance Might Be Outdated');
+  if (outdatedSection !== null) {
+    if (outdatedSection.length === 0) errors.push(`${file}: "When This Guidance Might Be Outdated" section must not be empty`);
+    if (data.confidence === 'evolving' && !/(shift|chang|evolv|new)/i.test(outdatedSection)) {
+      warnings.push(`${file}: confidence is "evolving" but "When This Guidance Might Be Outdated" does not name what might shift -- verify manually`);
+    }
+  }
+
+  // Common mistakes must be specific, not a bare list of restated
+  // approach names -- checked as a minimum-length heuristic per entry,
+  // mirroring the schema's minItems: 2 with an added specificity signal.
+  if (Array.isArray(data.common_mistakes)) {
+    for (const mistake of data.common_mistakes) {
+      if (typeof mistake === 'string' && mistake.trim().split(/\s+/).length < 5) {
+        warnings.push(`${file}: common_mistakes entry "${mistake}" looks too short to explain why the mistake fails (Cartographer Q5 expects the mistake AND why it fails) -- verify manually`);
+      }
+    }
+  }
+}
+
 const changedOnly = process.argv.includes('--changed-only');
 const fix = process.argv.includes('--fix');
 const errors = [];
@@ -422,6 +524,7 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   if (type === 'paper' && data.phase) researchContentChecks(file, content, errors, warnings);
   if (type === 'tip' && data.phase) tipContentChecks(file, content, data, errors, warnings);
   if (type === 'build-example' && data.phase) buildExampleContentChecks(file, content, data, errors, warnings);
+  if (type === 'architecture') architectureContentChecks(file, content, data, errors, warnings);
   checked += 1;
 }
 

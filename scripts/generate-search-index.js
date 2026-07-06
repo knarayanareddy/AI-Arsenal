@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import chalk from 'chalk';
 import { truncate } from './utils/markdown-escape.js';
 
-const datasets = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples'];
+const datasets = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples', 'architectures'];
 const docs = [];
 
 for (const dataset of datasets) {
@@ -37,6 +37,10 @@ for (const dataset of datasets) {
         verification_status: item.verification_status ?? null,
         impact: item.impact ?? null,
         difficulty: item.difficulty ?? null,
+        decision_type: item.decision_type ?? null,
+        confidence: item.confidence ?? null,
+        build_status: item.build_status ?? null,
+        outcome: item.outcome ?? null,
         path: item.path,
         url: item.url,
         boost_title: name,

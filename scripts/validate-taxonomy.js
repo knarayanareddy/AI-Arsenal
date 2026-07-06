@@ -95,6 +95,17 @@ for (const file of files) {
       requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
     }
   }
+
+  if (type === 'architecture') {
+    requireAllowed(errors, file, 'category', data.category, taxonomy.architectureCategories);
+    requireAllowed(errors, file, 'decision_type', data.decision_type, taxonomy.architectureDecisionType);
+    requireAllowed(errors, file, 'confidence', data.confidence, taxonomy.architectureConfidence);
+    requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+    for (const approach of data.approaches ?? []) {
+      const tradeoffKeys = Object.keys(approach.tradeoffs ?? {});
+      for (const dimension of tradeoffKeys) requireAllowed(errors, file, `approaches[].tradeoffs (${approach.name ?? '?'})`, dimension, taxonomy.architectureTradeoffDimensions);
+    }
+  }
   checked += 1;
 }
 

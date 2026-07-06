@@ -9,7 +9,7 @@ import { stripMarkdown, extractHeadings } from './utils/markdown.js';
 import { sanitizeBodyHtml } from './utils/html-sanitizer.js';
 
 const generatedAt = new Date().toISOString();
-const collections = { project: [], tool: [], paper: [], tip: [], person: [], digest: [], 'build-example': [], guide: [] };
+const collections = { project: [], tool: [], paper: [], tip: [], person: [], digest: [], 'build-example': [], guide: [], architecture: [] };
 const entries = [];
 
 function readingTime(text) {
@@ -63,7 +63,8 @@ const totals = {
   total_people: collections.person.length,
   total_digests: collections.digest.length,
   total_guides: collections.guide.length,
-  total_build_examples: collections['build-example'].length
+  total_build_examples: collections['build-example'].length,
+  total_architectures: collections.architecture.length
 };
 
 await writeJson('data/index.json', {
@@ -71,7 +72,7 @@ await writeJson('data/index.json', {
   entries: entries.sort((a, b) => String(a.id).localeCompare(String(b.id)))
 });
 
-const map = { projects: 'project', tools: 'tool', papers: 'paper', tips: 'tip', people: 'person', digests: 'digest', 'build-examples': 'build-example', guides: 'guide' };
+const map = { projects: 'project', tools: 'tool', papers: 'paper', tips: 'tip', people: 'person', digests: 'digest', 'build-examples': 'build-example', guides: 'guide', architectures: 'architecture' };
 for (const [filePrefix, type] of Object.entries(map)) {
   const items = collections[type].sort((a, b) => String(a.id).localeCompare(String(b.id)));
   await writeJson(`data/${filePrefix}.json`, { schema_version: SCHEMA_VERSION, generated_at: generatedAt, count: items.length, items });
@@ -106,7 +107,8 @@ await writeJson('data/stats.json', {
     people: collections.person.length,
     digests: collections.digest.length,
     guides: collections.guide.length,
-    build_examples: collections['build-example'].length
+    build_examples: collections['build-example'].length,
+    architectures: collections.architecture.length
   },
   tags: { total: tagCounts.size },
   content: { total_words: Object.values(collections).flat().reduce((sum, item) => sum + (item.word_count ?? 0), 0) }

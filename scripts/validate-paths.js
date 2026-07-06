@@ -99,6 +99,18 @@ for (const file of await getEntryFiles()) {
       errors.push(`${file}: build example folder must match difficulty "${parsed.data.difficulty}"`);
     }
   }
+  if (type === 'architecture') {
+    // Architectures-vertical reorganisation: unlike prior verticals, there
+    // is no gradual optional-field migration window for this type -- a
+    // file only resolves to type 'architecture' (via path-based inference
+    // in inferEntryType) once its entry_type: "guide" frontmatter field has
+    // been removed as part of its individual migration commit, so every
+    // architecture-typed entry is expected to already carry the required
+    // `category` field matching its actual folder.
+    const expectedFolder = `content/architectures/${parsed.data.category}`;
+    if (parsed.data.category && !file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: architecture category "${parsed.data.category}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
+    if (p.length !== 4) errors.push(`${file}: migrated architecture entries must be flat under their category folder (content/architectures/{category}/{id}.md), found extra nesting`);
+  }
 }
 
 for (const file of await glob('data/*.json', { nodir: true, posix: true })) {

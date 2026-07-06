@@ -61,6 +61,17 @@ export function inferEntryType(filePath, data = {}) {
   if (parts[0] === 'content' && parts[1] === 'research' && RESEARCH_PHASE_FOLDERS.has(parts[2])) return 'paper';
   if (p.startsWith('content/tips-and-tricks/')) return 'tip';
   if (p.startsWith('content/build-examples/')) return 'build-example';
+  // Architectures-vertical reorganisation: migrated entries drop the
+  // generic entry_type: "guide" + section: "architectures" pair in favor
+  // of a dedicated 'architecture' entry type, matching the tools/projects/
+  // research/tips/build-examples-vertical pattern of a vertical-specific
+  // schema once a reorganisation lands. The data.entry_type check above
+  // runs first, so any content/architectures/ file that still explicitly
+  // sets entry_type: "guide" (i.e. not yet migrated) continues to resolve
+  // to 'guide' during the folder-by-folder migration; only files with no
+  // entry_type set (or entry_type removed post-migration) fall through to
+  // this path-based inference.
+  if (p.startsWith('content/architectures/')) return 'architecture';
   if (p.startsWith('content/digests/')) return 'digest';
   if (p.startsWith('content/community/people')) return 'person';
   if (p.startsWith('content/community/') && data.channels) return 'person';

@@ -4,7 +4,7 @@ This file is the single source of truth for controlled vocabulary used by schema
 
 ## Entry Types
 
-`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest`
+`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture`
 
 ## Project Categories
 
@@ -212,6 +212,41 @@ Field: `outcome`. What kind of finished system the build produces — sets the r
 `production-ready` — includes error handling, logging, config management, and has been tested under load
 `learning-reference` — optimised for understanding over production use
 
+## Architecture Categories
+
+The category classification that determines an architecture entry's canonical folder under `content/architectures/`. Field: `category`. This mirrors the `phase`/`category` field on every other vertical (see Tool Phases, Project Phases, Research Phases, Tip Phases, Build Example Phases above) so all six verticals share one "what stage/area of the stack is this" query axis, even though the six enums differ. Assign by the PRIMARY architectural decision being made, never by the tools mentioned in the entry. `model-selection` is for choosing WHICH model/provider once a category has already decided WHETHER to use one — that "whether" decision belongs in `system-design`. `reference-stacks` is exclusively for complete, multi-tool stack recommendations; a comparison of two individual tools belongs in the `tools/` vertical, not here.
+
+`system-design` — approach-level forks that determine the fundamental shape of a system: RAG vs fine-tuning, monolithic vs microservices, synchronous vs asynchronous, stateless vs stateful, client-side vs server-side
+`data-strategy` — SQL vs vector vs hybrid storage, online vs offline processing, streaming vs batch, data warehouse vs data lake
+`model-selection` — open-weight vs API, model size tradeoffs, local vs cloud, general vs domain-specific, single-model vs ensemble, agent-framework selection
+`serving-patterns` — real-time vs batch inference, edge vs cloud, caching strategies, load-balancing patterns, rate-limiting approaches
+`evaluation-strategy` — LLM-as-judge vs human eval, offline vs online eval, regression vs exploration testing, benchmark selection
+`reference-stacks` — end-to-end, multi-tool stack recommendations for common patterns (a full production RAG stack, an agent-observability stack) — never a single-tool comparison, which belongs in `tools/`
+
+## Architecture Decision Type
+
+Field: `decision_type`. Describes the *shape* of the choice this entry helps make, distinct from `category` (which describes the subject-matter area of the decision).
+
+`fork` — mutually exclusive choices (RAG XOR fine-tuning for a given knowledge-injection need)
+`spectrum` — a sliding scale rather than a binary choice (model size, cost vs quality)
+`composition` — compatible choices that are typically combined, not chosen between (RAG + function calling + structured output)
+`progressive` — staged decisions that change over a system's lifecycle (prototype first, then optimize, then scale)
+
+## Architecture Tradeoff Dimensions
+
+The controlled set of dimensions an architecture entry's `approaches[].tradeoffs` object may score approaches against. Not every entry uses every dimension — use only the dimensions that are actually relevant to the decision being described.
+
+`cost` | `latency` | `accuracy` | `complexity` | `flexibility` | `scalability` | `reliability` | `interpretability` | `data-requirements` | `compute-requirements`
+
+## Architecture Confidence
+
+Field: `confidence`. An honest signal of how settled the tradeoffs in this entry actually are — this is the primary defense against Failure Mode 2 (the outdated tradeoff): an entry marked `evolving` is telling the reader to weight `tradeoffs_as_of` more heavily and re-verify before relying on it, while `established` signals the tradeoffs are unlikely to have shifted materially since `tradeoffs_as_of`.
+
+`established` — consensus best practices, proven at scale, unlikely to shift soon
+`emerging-consensus` — the pattern is spreading and gaining adoption but is not yet a standard default
+`context-dependent` — no field-wide consensus exists; the right choice genuinely depends heavily on the specific system, and this entry's job is to name the deciding factors, not to pick a winner
+`evolving` — the landscape is actively shifting (new techniques, changing cost curves) such that tradeoffs stated today may not hold in 6-12 months
+
 ## Maturity Levels
 
 `experimental` — <1 month old or early alpha, use at your own risk
@@ -257,9 +292,9 @@ Field: `outcome`. What kind of finished system the build produces — sets the r
 
 `trending` | `featured` | `foundational` | `sota` | `benchmark` | `experimental` | `battle-tested` | `community-favorite` | `new-arrival`
 
-## Enrichment Status (Tools, Projects, Research, Tips, and Build Examples)
+## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, and Architectures)
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips), or `build_status`/`outcome` (build examples), which describe the entry's subject, not the catalog entry's research depth.
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips), `build_status`/`outcome` (build examples), or `confidence` (architectures), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)

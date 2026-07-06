@@ -22,6 +22,7 @@ const tools = (await readJson('data/tools.json', { items: [] })).items ?? [];
 const papers = (await readJson('data/papers.json', { items: [] })).items ?? [];
 const tips = (await readJson('data/tips.json', { items: [] })).items ?? [];
 const guides = (await readJson('data/guides.json', { items: [] })).items ?? [];
+const architectures = (await readJson('data/architectures.json', { items: [] })).items ?? [];
 const entries = index.entries ?? [];
 const byType = entries.reduce((acc, entry) => { acc[entry.type] = (acc[entry.type] ?? 0) + 1; return acc; }, {});
 
@@ -43,6 +44,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: ${byType.digest ?? 0}
 - Guides: ${byType.guide ?? 0}
 - Build examples: ${byType['build-example'] ?? 0}
+- Architectures: ${byType.architecture ?? 0}
 
 ## Navigation
 
@@ -66,7 +68,11 @@ ${jobs.map((job) => `### ${escapeMarkdownInline(job)}\n${top(tools.filter((t) =>
 
 ## Architecture Quick Refs
 
-${top(guides.filter((g) => g.path?.includes('/reference-stacks/')), 8).map(line).join('\n') || '_No reference stacks yet._'}
+${top([...guides, ...architectures].filter((g) => g.path?.includes('/reference-stacks/')), 8).map(line).join('\n') || '_No reference stacks yet._'}
+
+## Architecture Decisions by Category
+
+${[...new Set(architectures.map((a) => a.category).filter(Boolean))].sort().map((category) => `### ${escapeMarkdownInline(category)}\n${top(architectures.filter((a) => a.category === category), 5).map(line).join('\n') || '_None_'}`).join('\n\n') || '_No architecture entries migrated yet._'}
 
 ## Decision Heuristics
 

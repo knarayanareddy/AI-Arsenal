@@ -70,6 +70,15 @@ for (const entry of entries) {
       warnings.push(`${entry.file}: implemented_from references unknown id "${entry.data.implemented_from}"`);
     }
   }
+
+  if (entry.type === 'architecture') {
+    checkRefs(entry, 'related_decisions', 'warning');
+    for (const impl of entry.data.approach_implementations ?? []) {
+      checkRefs({ file: entry.file, data: impl }, 'tool_ids', 'warning');
+      checkRefs({ file: entry.file, data: impl }, 'project_ids', 'warning');
+      checkRefs({ file: entry.file, data: impl }, 'build_example_ids', 'warning');
+    }
+  }
 }
 
 // Rule T-10: related_tips must not create cycles longer than a direct

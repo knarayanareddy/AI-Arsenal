@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-arsenal.local/schemas/architecture.schema.json",
+  "title": "AI Arsenal Architecture Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "x-schema-version": "1.0.0",
+  "x-migration-note": "Architectures-vertical reorganisation. This is a NEW dedicated schema replacing the generic guide.schema.json + entry_type: 'guide' + section: 'architectures' combination previously used for all 14 pre-existing architecture entries. Fields below are required from schema v1.0.0 (unlike prior verticals' additive-first sequencing) because every architecture entry is being rewritten in Phase 3 in the same pass that introduces this schema -- there is no partial-migration window where old-shaped and new-shaped architecture entries coexist under this schema, so there is nothing to make optional-then-promote. Entries not yet migrated keep entry_type: 'guide' and validate against guide.schema.json until their individual migration commit lands; see scripts/check-architectures-migration-progress.js.",
+  "required": [
+    "id",
+    "title",
+    "category",
+    "decision_type",
+    "decision_summary",
+    "approaches",
+    "key_factors",
+    "has_decision_framework",
+    "confidence",
+    "tradeoffs_as_of",
+    "tags",
+    "added_date",
+    "last_reviewed",
+    "added_by",
+    "status",
+    "enrichment_status"
+  ],
+  "properties": {
+    "id": { "$ref": "#/$defs/kebabId" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "category": {
+      "enum": ["system-design", "data-strategy", "model-selection", "serving-patterns", "evaluation-strategy", "reference-stacks"]
+    },
+    "decision_type": { "enum": ["fork", "spectrum", "composition", "progressive"] },
+    "decision_summary": { "type": "string", "minLength": 10, "maxLength": 240 },
+    "approaches": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "description", "when_to_use", "when_not_to_use", "tradeoffs"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+          "description": { "type": "string", "minLength": 10, "maxLength": 400 },
+          "when_to_use": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+          "when_not_to_use": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+          "tradeoffs": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": { "type": "string", "minLength": 1 },
+            "propertyNames": {
+              "enum": ["cost", "latency", "accuracy", "complexity", "flexibility", "scalability", "reliability", "interpretability", "data-requirements", "compute-requirements"]
+            }
+          }
+        }
+      }
+    },
+    "key_factors": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "has_decision_framework": { "const": true },
+    "decision_tree": { "type": "string", "minLength": 1 },
+    "confidence": { "enum": ["established", "emerging-consensus", "context-dependent", "evolving"] },
+    "tradeoffs_as_of": { "$ref": "#/$defs/date" },
+
+    "approach_implementations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["approach_name"],
+        "properties": {
+          "approach_name": { "type": "string", "minLength": 1 },
+          "tool_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "project_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+          "build_example_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+        }
+      }
+    },
+    "related_decisions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/kebabId" },
+      "uniqueItems": true
+    },
+    "common_mistakes": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string", "minLength": 1 }
+    },
+
+    "tags": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "added_date": { "$ref": "#/$defs/date" },
+    "last_reviewed": { "$ref": "#/$defs/date" },
+    "added_by": { "$ref": "#/$defs/githubUser" },
+    "status": { "enum": ["active", "archived", "deprecated", "watching"] },
+    "enrichment_status": { "enum": ["draft", "reviewed", "verified"] }
+  },
+  "$defs": {
+    "kebabId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "not": { "enum": ["index", "registry", "overview", "introduction", "readme", "agent", "context", "taxonomy", "contributing", "governance", "changelog", "security", "template", "all", "none", "undefined", "null", "true", "false"] } },
+    "url": { "type": "string", "pattern": "^https?://[^\\s]+$" },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "githubUser": { "type": "string", "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$" },
+    "nonEmptyStringArray": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+  }
+}

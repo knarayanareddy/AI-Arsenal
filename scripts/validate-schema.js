@@ -14,7 +14,8 @@ const schemaByType = {
   'build-example': 'build-example.schema.json',
   person: 'person.schema.json',
   digest: 'digest.schema.json',
-  guide: 'guide.schema.json'
+  guide: 'guide.schema.json',
+  architecture: 'architecture.schema.json'
 };
 
 // Research-vertical reorganisation: COMPLETE (see x-migration-note in
