@@ -113,4 +113,11 @@ jobs:
           # Cap per-host amplification; reject private/loopback IPs by default.
           LINK_CHECK_MAX_URLS: '500'
           LINK_CHECK_MAX_URLS_PER_HOST: '100'
+          # Retry transient failures with backoff; known rate-limited hosts
+          # (GitHub, X) get a higher per-host budget so a sample is still
+          # checked. Rate limits / transient errors are soft warnings, not
+          # CI failures — only confirmed 404/410 (and DNS/SSRF) fail CI.
+          LINK_CHECK_RETRIES: '2'
+          LINK_CHECK_BACKOFF_MS: '400'
+          LINK_CHECK_RATE_LIMIT_CAP: '40'
         run: pnpm run validate:links

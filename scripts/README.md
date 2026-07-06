@@ -13,7 +13,7 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `validate-references.js` — validates/flags ID references such as alternatives, integrations, related entries, and digest references.
 - `validate-data-contract.js` — validates the generated `/data/*.json` API contract.
 - `check-duplicates.js` — rejects duplicate content IDs.
-- `check-links.js` — concurrent link checker with changed-only/all modes and JSON reporting.
+- `check-links.js` — concurrent, SSRF-hardened link checker with changed-only/all modes and JSON reporting. Rate limits (429/403), transient network errors, and non-404/410 server errors are reported as **soft warnings**; only confirmed dead links (404/410), DNS misses, and SSRF rejections are **hard failures** that fail CI / open issues. Retries with backoff; known rate-limited hosts (GitHub, X) get a raised per-host budget. URLs inside HTML comments are skipped.
 
 ## Generation
 
