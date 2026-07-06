@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -46,7 +46,7 @@ jobs:
       - name: Generate changelog
         run: pnpm install --frozen-lockfile && node scripts/generate-changelog.js
       - name: Create GitHub release
-        uses: softprops/action-gh-release@c4f2347f9bd5d4ac4dd15d84246ddd1c7e3e4ac7 # v2.2.1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag.outputs.value }}
           name: ${{ steps.tag.outputs.value }}

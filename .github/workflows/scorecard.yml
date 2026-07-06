@@ -26,16 +26,16 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@v4
       - name: Run Scorecard
-        uses: ossf/scorecard-action@62b66e369c6122e9e30644a93bbf6c0547e3374f # v2.4.0
+        uses: ossf/scorecard-action@v2.4.0
         with:
           results_file: results.sarif
           results_format: sarif
           publish_results: true
       - name: Upload SARIF
         if: always()
-        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.4.3
+        uses: actions/upload-artifact@v4
         with:
           name: scorecard-results
           path: results.sarif
