@@ -1,0 +1,21 @@
+# Datasets
+
+> Navigation file for the Datasets section. This file is auto-generated and is not a content entry.
+
+## Quick Navigation
+
+| Sub-section | Count | Last Updated |
+|---|---:|---|
+| _No sub-sections_ | 0 entries | — |
+
+## Recently Added
+
+- [LAION (Large-scale Artificial Intelligence Open Network)](./laion.md)
+
+## Most Popular
+
+_No star-tracked entries yet._
+
+## Browse All
+
+- [LAION (Large-scale Artificial Intelligence Open Network)](./laion.md) — 

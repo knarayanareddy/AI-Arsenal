@@ -9,7 +9,7 @@
 | [architectures](./architectures/) | 14 entries | 2026-07-06 |
 | [benchmarks](./benchmarks/) | 0 entries | 2026-07-06 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-06 |
-| [community](./community/) | 30 entries | 2026-07-06 |
+| [community](./community/) | 48 entries | 2026-07-06 |
 | [digests](./digests/) | 0 entries | 2026-07-06 |
 | [observability](./observability/) | 7 entries | 2026-07-06 |
 | [projects](./projects/) | 68 entries | 2026-07-06 |
@@ -61,6 +61,8 @@
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
+- [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
+- [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
@@ -69,6 +71,7 @@
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
+- [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
@@ -94,6 +97,3 @@
 - [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./architectures/model-selection/choose-agent-framework.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./architectures/serving-patterns/choose-deployment-target.md) — 
-- [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./architectures/evaluation-strategy/choose-eval-framework.md) — 
-- [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md) — 
-- [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./architectures/model-selection/choose-llm.md) — 
