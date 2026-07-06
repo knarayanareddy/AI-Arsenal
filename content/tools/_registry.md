@@ -14,6 +14,7 @@
 | `azure-ai-studio` | [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) | Microsoft Azure platform for building, evaluating, and deploying AI applications |
 | `basedash` | [Basedash](./dx-and-tooling/basedash.md) | AI-native platform for generating dashboards, reports, and insights from natural-language queries |
 | `bentoml` | [BentoML](./serving-and-deployment/bentoml.md) | A framework for packaging, deploying, and scaling AI model services |
+| `browserbase` | [Browserbase](./data-ingestion/browserbase.md) | Hosted cloud browser platform for AI agents and automated browser workflows |
 | `chainlit` | [Chainlit](./dx-and-tooling/chainlit.md) | A framework for building conversational AI interfaces and debugging LLM apps |
 | `claude-artifact-player` | [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) | Interact with and manage AI-generated artifacts from Claude and similar models |
 | `cloudskill` | [Cloudskill](./orchestration/cloudskill.md) | Manage, govern, and distribute skills for AI agents across teams |

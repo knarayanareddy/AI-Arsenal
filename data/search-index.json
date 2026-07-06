@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-06T18:32:36.188Z",
+  "generated_at": "2026-07-06T19:13:18.493Z",
   "config": {
     "document": {
       "id": "id",
@@ -60,8 +60,8 @@
   },
   "facets": {
     "types": {
-      "project": 68,
-      "tool": 92,
+      "project": 69,
+      "tool": 93,
       "paper": 25,
       "tip": 102,
       "person": 25,
@@ -75,24 +75,24 @@
       "observability": 44,
       "evaluation": 63,
       "tracing": 26,
-      "cloud": 48,
-      "agents": 66,
+      "cloud": 50,
+      "agents": 67,
       "orchestration": 27,
       "planning": 10,
-      "tool-use": 31,
+      "tool-use": 32,
       "rag": 67,
       "embeddings": 21,
-      "retrieval": 54,
+      "retrieval": 55,
       "local": 26,
       "llm": 126,
       "multimodal": 13,
-      "data": 46,
+      "data": 47,
       "monitoring": 25,
       "reasoning": 20,
       "inference": 53,
       "efficiency": 18,
       "graphs": 3,
-      "self-hosted": 15,
+      "self-hosted": 16,
       "stateful": 3,
       "langchain": 4,
       "quantization": 7,
@@ -132,7 +132,7 @@
       "agents": 16,
       "rag": 20,
       "llms": 20,
-      "tooling": 1,
+      "tooling": 2,
       "agent-reliability": 11,
       "debugging-llm-apps": 10,
       "prompting": 15,
@@ -163,17 +163,17 @@
       "tracing": 1
     },
     "maturity": {
-      "production": 138,
+      "production": 140,
       "beta": 22
     },
     "cost_model": {
-      "freemium": 47,
+      "freemium": 49,
       "open-source": 94,
       "paid": 10,
       "usage-based": 9
     },
     "status": {
-      "active": 237,
+      "active": 239,
       "deprecated": 1,
       "archived": 2,
       "watching": 2
@@ -181,11 +181,11 @@
     "phase": {
       "benchmark-and-eval": 12,
       "framework": 20,
-      "data-and-retrieval": 14,
+      "data-and-retrieval": 15,
       "foundation-model": 13,
       "agent-system": 2,
       "inference-engine": 7,
-      "data-ingestion": 13,
+      "data-ingestion": 14,
       "orchestration": 15,
       "evaluation-and-observability": 17,
       "serving-and-deployment": 14,
@@ -210,9 +210,9 @@
       "production-deployment": 1
     },
     "audience": {
-      "production": 61,
+      "production": 62,
       "research": 23,
-      "prototype": 50,
+      "prototype": 51,
       "practitioner": 23,
       "founder": 7,
       "enterprise": 4,
@@ -222,13 +222,13 @@
     "domain": {
       "language": 65,
       "reasoning": 16,
-      "general-purpose": 9,
+      "general-purpose": 10,
       "vision": 8,
       "multimodal": 9
     },
     "relation_to_stack": {
-      "deploy-as-is": 54,
-      "build-on-top": 52,
+      "deploy-as-is": 55,
+      "build-on-top": 53,
       "study-and-reference": 15,
       "fork-and-adapt": 6
     },
@@ -2165,6 +2165,55 @@
       "boost_tags": "training foundational llm",
       "boost_description": "Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning",
       "body": "Language Models are Few-Shot Learners Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning training foundational llm Overview This paper trained GPT 3, a 175 billion parameter decoder only Transformer, and showed that few shot in context learning — solving a new task from a handful of examples given purely as text in the prompt, with no gradient updates — improves substantially and fairly predictably as model scale increases. That single empirical finding is the reason prompting largely replaced task specific fine tuning as the default way to use an LLM. Note: the specific claim that 175B parameters was an efficient way to buy that capability has been directly challenged — Chinchilla (Hoffmann et al., 2022)…"
+    },
+    {
+      "id": "browserbase",
+      "type": "tool",
+      "name": "Browserbase",
+      "title": "Browserbase",
+      "description": "Hosted cloud browser platform for AI agents and automated browser workflows",
+      "tags": [
+        "agents",
+        "cloud",
+        "tool-use"
+      ],
+      "category": null,
+      "subcategory": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "domain": null,
+      "relation_to_stack": null,
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/tools/data-ingestion/browserbase.md",
+      "url": "content/tools/data-ingestion/browserbase",
+      "boost_title": "Browserbase",
+      "boost_tags": "agents cloud tool-use",
+      "boost_description": "Hosted cloud browser platform for AI agents and automated browser workflows",
+      "body": "Browserbase Hosted cloud browser platform for AI agents and automated browser workflows agents cloud tool-use Overview Browserbase is a hosted cloud browser platform for running AI agent web interactions and automated browser workflows at scale. This is a stub entry added to resolve a dangling cross reference; it has not yet been fully evaluated against the Arsenal's review rubric. Why It's in the Arsenal Referenced as an integration target for browser automation agent frameworks (e.g. Stagehand) that need a managed, reliable browser environment instead of a local headless browser. Key Features Managed cloud browsers with session recording and stealth/anti bot options. Programmatic control via SDK an…"
     },
     {
       "id": "budget-context-before-adding-tools",
@@ -16120,6 +16169,58 @@
       "boost_tags": "llm memory",
       "boost_description": "",
       "body": "Summarize Repeated or Stale Conversation Blocks Instead of Repeating Them Verbatim llm memory context-window-management What & Why Once a conversation exceeds a length threshold, replace older or repeated blocks of conversation history with a compressed summary rather than keeping the full verbatim history in context indefinitely. This frees context window budget for recent turns and retrieved content, at the cost of some detail loss in the summarized portion. Before / After Before: every turn of a long conversation kept verbatim in context, eventually crowding out room for new retrieved content or exceeding the window entirely. After: turns older than a threshold (e.g. beyond the last 10 exchanges) are period…"
+    },
+    {
+      "id": "supabase",
+      "type": "project",
+      "name": "Supabase",
+      "title": "Supabase",
+      "description": "Open-source backend platform: Postgres database, auth, storage, and realtime APIs",
+      "tags": [
+        "data",
+        "self-hosted",
+        "cloud",
+        "retrieval"
+      ],
+      "category": "tooling",
+      "subcategory": "platforms",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "phase": "data-and-retrieval",
+      "audience": null,
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/data-and-retrieval/supabase.md",
+      "url": "content/projects/data-and-retrieval/supabase",
+      "boost_title": "Supabase",
+      "boost_tags": "data self-hosted cloud retrieval",
+      "boost_description": "Open-source backend platform: Postgres database, auth, storage, and realtime APIs",
+      "body": "Supabase Open-source backend platform: Postgres database, auth, storage, and realtime APIs data self-hosted cloud retrieval tooling platforms Overview Supabase is an open source backend platform built around Postgres, providing authentication, storage, realtime subscriptions, and edge functions. This is a stub entry added to resolve a dangling cross reference; it has not yet been fully evaluated against the Arsenal's review rubric. Why it's in the Arsenal Listed as an alternative backend/platform for AI coding agents and AI native apps that need a managed or self hostable data layer. Referenced by other entries (e.g. InsForge) as a comparable platform. Architecture A hosted and self hostable control plane around a Postgres database…"
     },
     {
       "id": "superlog",

@@ -63,6 +63,7 @@
 | `sglang` | [SGLang](./inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
 | `smolagents` | [Smolagents](./frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
 | `stagehand` | [Stagehand](./agent-systems/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
+| `supabase` | [Supabase](./data-and-retrieval/supabase.md) | Open-source backend platform: Postgres database, auth, storage, and realtime APIs |
 | `surrealdb` | [SurrealDB](./data-and-retrieval/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
 | `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
 | `translategemma` | [TranslateGemma](./foundation-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |

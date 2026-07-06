@@ -6,19 +6,25 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents](./agents/) | 0 entries | 2026-07-06 |
-| [code](./code/) | 0 entries | 2026-07-06 |
-| [evaluation methods](./evaluation-methods/) | 0 entries | 2026-07-06 |
+| [agents](./agents/) | 1 entries | 2026-07-06 |
+| [code](./code/) | 1 entries | 2026-07-06 |
+| [evaluation methods](./evaluation-methods/) | 1 entries | 2026-07-06 |
 | [general llm](./general-llm/) | 3 entries | 2026-07-06 |
-| [multimodal](./multimodal/) | 0 entries | 2026-07-06 |
-| [retrieval rag](./retrieval-rag/) | 0 entries | 2026-07-06 |
-| [safety](./safety/) | 0 entries | 2026-07-06 |
+| [multimodal](./multimodal/) | 1 entries | 2026-07-06 |
+| [retrieval rag](./retrieval-rag/) | 1 entries | 2026-07-06 |
+| [safety](./safety/) | 1 entries | 2026-07-06 |
 
 ## Recently Added
 
+- [BEIR](./retrieval-rag/beir.md)
+- [GAIA](./agents/gaia.md)
 - [GPQA Diamond](./general-llm/gpqa-diamond.md)
+- [HarmBench](./safety/harmbench.md)
+- [HumanEval](./code/humaneval.md)
 - [IFEval](./general-llm/ifeval.md)
+- [LLM-as-a-Judge](./evaluation-methods/llm-as-a-judge.md)
 - [MMLU-Pro](./general-llm/mmlu-pro.md)
+- [MMMU](./multimodal/mmmu.md)
 
 ## Most Popular
 
@@ -26,6 +32,12 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [BEIR](./retrieval-rag/beir.md) — 
+- [GAIA](./agents/gaia.md) — 
 - [GPQA Diamond](./general-llm/gpqa-diamond.md) — 
+- [HarmBench](./safety/harmbench.md) — 
+- [HumanEval](./code/humaneval.md) — 
 - [IFEval](./general-llm/ifeval.md) — 
+- [LLM-as-a-Judge](./evaluation-methods/llm-as-a-judge.md) — 
 - [MMLU-Pro](./general-llm/mmlu-pro.md) — 
+- [MMMU](./multimodal/mmmu.md) — 

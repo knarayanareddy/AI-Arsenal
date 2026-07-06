@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T18:32:34.432Z",
-  "count": 92,
+  "generated_at": "2026-07-06T19:13:16.598Z",
+  "count": 93,
   "items": [
     {
       "id": "agent-browser-shield",
@@ -814,6 +814,83 @@
       "word_count": 369,
       "body_html": "<h2>Overview</h2>\n<p>An open-source framework for packaging a model plus its pre/post-processing code into a single versioned, deployable artifact (a 'Bento'), then serving it on Kubernetes, Docker, or BentoCloud.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>BentoML earns a place in the Arsenal because it directly addresses a recurring decision point: you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Packages model + custom inference code as one artifact</li>\n<li>Cloud-agnostic deployment targets</li>\n<li>Built-in adaptive batching for throughput</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A Bento bundles model weights, a Python service definition, and dependencies into a reproducible build; BentoML then containerizes and serves that build behind a standard inference API.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Visit the official documentation for installation and setup.\n# URL: https://www.bentoml.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact</li>\n<li><strong>Scenario</strong>: you want a serving framework that's cloud-agnostic and can target Kubernetes, Docker, or BentoCloud</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you only need a quick hosted endpoint for a single off-the-shelf open model (Replicate or HF Inference Endpoints may be faster to set up) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact</li>\n<li>You want a serving framework that's cloud-agnostic and can target Kubernetes, Docker, or BentoCloud</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You only need a quick hosted endpoint for a single off-the-shelf open model (Replicate or HF Inference Endpoints may be faster to set up)</li>\n<li>Your workload is purely serverless function calls without a custom inference pipeline</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./fly-io.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Fly.io</a>, <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a>, <a href=\"./railway.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Railway</a>, <a href=\"./replicate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Replicate</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>bentoml</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.bentoml.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception should be updated with verified sources during regular content reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "Overview An open source framework for packaging a model plus its pre/post processing code into a single versioned, deployable artifact (a 'Bento'), then serving it on Kubernetes, Docker, or BentoCloud. Why It's in the Arsenal BentoML earns a place in the Arsenal because it directly addresses a recurring decision point: you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Packages model + custom inference code as one artifact Cloud agnostic deployment targets Built in adaptive batching for throughput Architecture / How It Works A Bento bundles model weights, a Python service definition, and dependencies into a reproducible build; BentoML then containerizes and serves that build behind a standard inference API. Getting Started Use Cases 1. Scenario : you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact 2. Scenario : you want a serving framework that's cloud agnostic and can target Kubernetes, Docker, or BentoCloud 3. Scenario where this is NOT the right fit : you only need a quick hosted endpoint for a single off the shelf open model (Replicate or HF Inference Endpoints may be faster to set up) — evaluate an alternative instead Strengths You need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact You want a serving framework that's cloud agnostic and can target Kubernetes, Docker, or BentoCloud Limitations / When NOT to Use You only need a quick hosted endpoint for a single off the shelf open model (Replicate or HF Inference Endpoints may be faster to set up) Your workload is purely serverless function calls without a custom inference pipeline Integration Patterns Compare against Fly.io, Modal, Railway, Replicate before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID bentoml. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "browserbase",
+      "name": "Browserbase",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "Hosted cloud browser platform for AI agents and automated browser workflows",
+      "url": "content/tools/data-ingestion/browserbase",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with limited sessions; paid plans scale by concurrency and session minutes",
+      "tags": [
+        "agents",
+        "cloud",
+        "tool-use"
+      ],
+      "maturity": "production",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Limited number of concurrent sessions on the free tier",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": null,
+      "docs_url": "https://docs.browserbase.com",
+      "github_url": "https://github.com/browserbase",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-06",
+      "last_reviewed": "2026-07-06",
+      "added_by": "maintainer",
+      "reviewed_by": null,
+      "verdict": "watching",
+      "verdict_rationale": "Stub entry added to resolve a dangling reference; full catalog evaluation pending",
+      "status": "active",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You need a reliable cloud browser to run AI-agent web interactions or scrape JavaScript-heavy sites at scale"
+      ],
+      "avoid_when": [
+        "You require a fully self-hosted or on-prem browser stack with no external dependency"
+      ],
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stub added 2026-07-06 to resolve a dangling 'integrates_with' reference from content/projects/agent-systems/stagehand.md. Full evaluation pending human review.",
+      "version_tracked": null,
+      "corresponding_project_entry": null,
+      "buzz_sources": [],
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/browserbase.md",
+      "slug": "browserbase",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Browserbase",
+      "summary": "Hosted cloud browser platform for AI agents and automated browser workflows",
+      "last_updated": "2026-07-06",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 270,
+      "body_html": "<h2>Overview</h2>\n<p>Browserbase is a hosted cloud browser platform for running AI-agent web interactions and automated browser workflows at scale. This is a <strong>stub entry</strong> added to resolve a dangling cross-reference; it has not yet been fully evaluated against the Arsenal's review rubric.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Referenced as an integration target for browser-automation agent frameworks (e.g. Stagehand) that need a managed, reliable browser environment instead of a local headless browser.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Managed cloud browsers with session recording and stealth/anti-bot options.</li>\n<li>Programmatic control via SDK and REST API for agent-driven navigation.</li>\n<li>Built-in infrastructure for concurrency, scaling, and debugging sessions.</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A managed pool of cloud browsers is exposed through an SDK/API. Agents (or scraping scripts) drive a remote browser session; Browserbase handles provisioning, session capture, and teardown.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">npm install @browserbasehq/sdk\n</code></pre>\n<pre><code class=\"language-ts\">import Browserbase from '@browserbasehq/sdk';\nconst bb = new Browserbase({ apiKey: process.env.BROWSERBASE_API_KEY });\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Agent web interaction</strong>: give an LLM agent a reliable browser for multi-step tasks.</li>\n<li><strong>Resilient scraping</strong>: render JavaScript-heavy pages that basic HTTP fetch cannot.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Removes the operational burden of running and scaling headless browsers.</li>\n<li>Session replay/debugging aids agent reliability work.</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Cloud-only (not self-hostable) — unsuitable where data must never leave your infrastructure.</li>\n<li>Adds a per-session cost and external dependency versus a local browser.</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Pairs with browser-automation frameworks (e.g. Stagehand, Playwright) as the execution backend for agent-driven or scripted browser tasks.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.browserbase.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Browserbase</a></li>\n<li><a href=\"https://docs.browserbase.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/browserbase\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p><em>Not yet curated — stub entry pending full review.</em></p>\n<hr />\n<p><em>Last reviewed: 2026-07-06 by @maintainer — stub entry; full evaluation pending.</em></p>\n",
+      "body_text": "Overview Browserbase is a hosted cloud browser platform for running AI agent web interactions and automated browser workflows at scale. This is a stub entry added to resolve a dangling cross reference; it has not yet been fully evaluated against the Arsenal's review rubric. Why It's in the Arsenal Referenced as an integration target for browser automation agent frameworks (e.g. Stagehand) that need a managed, reliable browser environment instead of a local headless browser. Key Features Managed cloud browsers with session recording and stealth/anti bot options. Programmatic control via SDK and REST API for agent driven navigation. Built in infrastructure for concurrency, scaling, and debugging sessions. Architecture / How It Works A managed pool of cloud browsers is exposed through an SDK/API. Agents (or scraping scripts) drive a remote browser session; Browserbase handles provisioning, session capture, and teardown. Getting Started Use Cases 1. Agent web interaction : give an LLM agent a reliable browser for multi step tasks. 2. Resilient scraping : render JavaScript heavy pages that basic HTTP fetch cannot. Strengths Removes the operational burden of running and scaling headless browsers. Session replay/debugging aids agent reliability work. Limitations / When NOT to Use Cloud only (not self hostable) — unsuitable where data must never leave your infrastructure. Adds a per session cost and external dependency versus a local browser. Integration Patterns Pairs with browser automation frameworks (e.g. Stagehand, Playwright) as the execution backend for agent driven or scripted browser tasks. Resources Browserbase Documentation GitHub Buzz & Reception Not yet curated — stub entry pending full review. Last reviewed: 2026 07 06 by @maintainer — stub entry; full evaluation pending."
     },
     {
       "id": "chainlit",

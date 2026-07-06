@@ -7,30 +7,30 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [architectures](./architectures/) | 14 entries | 2026-07-06 |
-| [benchmarks](./benchmarks/) | 3 entries | 2026-07-06 |
+| [benchmarks](./benchmarks/) | 9 entries | 2026-07-06 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-06 |
 | [community](./community/) | 48 entries | 2026-07-06 |
 | [digests](./digests/) | 0 entries | 2026-07-06 |
 | [observability](./observability/) | 7 entries | 2026-07-06 |
-| [projects](./projects/) | 68 entries | 2026-07-06 |
+| [projects](./projects/) | 69 entries | 2026-07-06 |
 | [research](./research/) | 29 entries | 2026-07-06 |
 | [skills](./skills/) | 8 entries | 2026-07-06 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-06 |
-| [tools](./tools/) | 106 entries | 2026-07-06 |
+| [tools](./tools/) | 107 entries | 2026-07-06 |
 | [trending](./trending/) | 2 entries | 2026-07-06 |
 
 ## Recently Added
 
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md)
+- [Browserbase](./tools/data-ingestion/browserbase.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md)
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./observability/evaluation-quality/gate-releases-on-eval-regression.md)
 - [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./observability/cost-usage/instrument-cost-per-feature.md)
 - [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./observability/privacy-governance/redact-and-govern-trace-data.md)
 - [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./observability/incident-response/runbook-for-agent-and-rag-incidents.md)
+- [Supabase](./projects/data-and-retrieval/supabase.md)
 - [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./observability/tracing/trace-every-agent-and-rag-step.md)
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
-- [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
-- [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md)
 
 ## Most Popular
 
@@ -80,12 +80,14 @@
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
+- [BEIR](./benchmarks/retrieval-rag/beir.md) — 
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
+- [Browserbase](./tools/data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Budget Context Before Adding More Tools to an Agent](./tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools.md) — 
 - [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash.md) — 
 - [Use Prompt Caching for Long, Stable System Prompt Prefixes](./tips-and-tricks/cost-and-performance/cache-stable-system-prompts.md) — 
@@ -95,5 +97,3 @@
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
 - [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./architectures/model-selection/choose-agent-framework.md) — 
-- [Choose Chunk Size by Expected Answer Span Length, Not a Default](./tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
-- [Choosing a Deployment Target: Separating App Hosting From Model Serving](./architectures/serving-patterns/choose-deployment-target.md) — 

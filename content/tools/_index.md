@@ -9,7 +9,7 @@
 | [by cost](./by-cost/) | 0 entries | 2026-07-06 |
 | [by job](./by-job/) | 14 entries | 2026-07-06 |
 | [by stack](./by-stack/) | 0 entries | 2026-07-06 |
-| [data ingestion](./data-ingestion/) | 13 entries | 2026-07-06 |
+| [data ingestion](./data-ingestion/) | 14 entries | 2026-07-06 |
 | [dx and tooling](./dx-and-tooling/) | 17 entries | 2026-07-06 |
 | [evaluation and observability](./evaluation-and-observability/) | 17 entries | 2026-07-06 |
 | [model layer](./model-layer/) | 16 entries | 2026-07-06 |
@@ -18,6 +18,7 @@
 
 ## Recently Added
 
+- [Browserbase](./data-ingestion/browserbase.md)
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md)
 - [AGNT.Hub](./orchestration/agnt-hub.md)
 - [Astra Autonomous Pentest](./evaluation-and-observability/astra-autonomous-pentest.md)
@@ -27,7 +28,6 @@
 - [Code Arena](./evaluation-and-observability/code-arena.md)
 - [Conan](./evaluation-and-observability/conan.md)
 - [Dropstone 3](./dx-and-tooling/dropstone-3.md)
-- [Empromptu AI](./orchestration/empromptu-ai.md)
 
 ## Most Popular
 
@@ -45,6 +45,7 @@ _No star-tracked entries yet._
 - [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Basedash](./dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [BentoML](./serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
+- [Browserbase](./data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Chainlit](./dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) — Interact with and manage AI-generated artifacts from Claude and similar models
 - [Cloudskill](./orchestration/cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
@@ -84,4 +85,3 @@ _No star-tracked entries yet._
 - [LangSmith Hub](./dx-and-tooling/langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
 - [Letta](./orchestration/letta.md) — Stateful agent framework and memory system formerly known as MemGPT
 - [LiteLLM](./serving-and-deployment/litellm.md) — A proxy and SDK for routing requests across many LLM providers
-- [LLaMA-Factory](./model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods

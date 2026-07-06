@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T18:32:34.432Z",
-    "total_projects": 68,
-    "total_tools": 92,
+    "generated_at": "2026-07-06T19:13:16.598Z",
+    "total_projects": 69,
+    "total_tools": 93,
     "total_papers": 25,
     "total_tips": 102,
     "total_people": 25,
@@ -752,6 +752,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "browserbase",
+      "type": "tool",
+      "name": "Browserbase",
+      "description": "Hosted cloud browser platform for AI agents and automated browser workflows",
+      "tags": [
+        "agents",
+        "cloud",
+        "tool-use"
+      ],
+      "path": "content/tools/data-ingestion/browserbase.md",
+      "url": "content/tools/data-ingestion/browserbase",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -6334,6 +6353,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "supabase",
+      "type": "project",
+      "name": "Supabase",
+      "description": "Open-source backend platform: Postgres database, auth, storage, and realtime APIs",
+      "tags": [
+        "data",
+        "self-hosted",
+        "cloud",
+        "retrieval"
+      ],
+      "path": "content/projects/data-and-retrieval/supabase.md",
+      "url": "content/projects/data-and-retrieval/supabase",
+      "last_updated": "2026-07-06",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {

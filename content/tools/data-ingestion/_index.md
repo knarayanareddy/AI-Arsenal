@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Browserbase](./browserbase.md)
 - [Agent Browser Shield](./agent-browser-shield.md)
 - [Tabstack](./tabstack.md)
 - [Taste Lab](./taste-lab.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Jina AI Reader](./jina-reader.md)
 - [Label Studio](./label-studio.md)
 - [Pinecone](./pinecone.md)
-- [Playwright](./playwright.md)
 
 ### Most Popular
 
@@ -46,6 +46,7 @@ _No star-tracked entries yet._
 
 - [Agent Browser Shield](./agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Argilla](./argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
+- [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown

@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T18:12:01.769Z | Entries: 395 | Schema version: 1.0.0
+Generated: 2026-07-06T19:13:18.580Z | Entries: 403 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 68
-- Tools: 92
+- Projects: 69
+- Tools: 93
 - Papers: 25
 - Tips: 102
 - People: 25
@@ -63,6 +63,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - RAGFlow (⭐82655, score:30) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
 
 ### tooling
+- Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 
 ## Top Tools by Job
@@ -168,10 +169,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
+- Browserbase — Hosted cloud browser platform for AI agents and automated browser workflows
 - Crawl4AI — Python crawler and scraper designed for LLM-friendly web content extraction
 - Firecrawl — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - Jina AI Reader — Reader endpoint for converting web pages into LLM-friendly text and Markdown
-- Playwright — Browser automation framework for reliable end-to-end tests and web scraping workflows
 
 ## Architecture Quick Refs
 

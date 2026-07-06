@@ -10,7 +10,7 @@
 
 ## Recently Added
 
-_No entries yet._
+- [HarmBench](./harmbench.md)
 
 ## Most Popular
 
@@ -18,4 +18,4 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-_No entries yet._
+- [HarmBench](./harmbench.md) — 

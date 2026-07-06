@@ -33,6 +33,7 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [Supabase](./supabase.md)
 - [SurrealDB](./surrealdb.md)
 - [Chroma](./chroma.md)
 - [Crawl4AI](./crawl4ai.md)
@@ -42,12 +43,12 @@ Before selecting a data/retrieval component:
 - [LlamaParse](./llamaparse.md)
 - [Milvus](./milvus.md)
 - [pgvector](./pgvector.md)
-- [Pinecone](./pinecone-vector-db.md)
 
 ### Most Popular
 
 - [Firecrawl](./firecrawl.md) — ⭐ 132342
 - [RAGFlow](./ragflow.md) — ⭐ 82655
+- [Supabase](./supabase.md) — ⭐ 74300
 - [Crawl4AI](./crawl4ai.md) — ⭐ 68406
 - [Docling](./docling.md) — ⭐ 61495
 - [Milvus](./milvus.md) — ⭐ 44762
@@ -55,7 +56,6 @@ Before selecting a data/retrieval component:
 - [Chroma](./chroma.md) — ⭐ 28419
 - [SurrealDB](./surrealdb.md) — ⭐ 28000
 - [pgvector](./pgvector.md) — ⭐ 21738
-- [Weaviate](./weaviate.md) — ⭐ 16323
 
 ### Browse All
 
@@ -70,6 +70,7 @@ Before selecting a data/retrieval component:
 - [Pinecone](./pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
 - [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
 - [RAGFlow](./ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
+- [Supabase](./supabase.md) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - [SurrealDB](./surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
 - [Unstructured](./unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
 - [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval

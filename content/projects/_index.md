@@ -8,7 +8,7 @@
 |---|---:|---|
 | [agent systems](./agent-systems/) | 2 entries | 2026-07-06 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 12 entries | 2026-07-06 |
-| [data and retrieval](./data-and-retrieval/) | 14 entries | 2026-07-06 |
+| [data and retrieval](./data-and-retrieval/) | 15 entries | 2026-07-06 |
 | [foundation models](./foundation-models/) | 13 entries | 2026-07-06 |
 | [frameworks](./frameworks/) | 20 entries | 2026-07-06 |
 | [inference engines](./inference-engines/) | 7 entries | 2026-07-06 |
@@ -16,6 +16,7 @@
 
 ## Recently Added
 
+- [Supabase](./data-and-retrieval/supabase.md)
 - [InsForge](./agent-systems/insforge.md)
 - [Stagehand](./agent-systems/stagehand.md)
 - [SurrealDB](./data-and-retrieval/surrealdb.md)
@@ -25,7 +26,6 @@
 - [AutoGen](./frameworks/autogen.md)
 - [AutoGPT](./frameworks/autogpt.md)
 - [Braintrust](./benchmarks-and-evals/braintrust.md)
-- [Chroma](./data-and-retrieval/chroma.md)
 
 ## Most Popular
 

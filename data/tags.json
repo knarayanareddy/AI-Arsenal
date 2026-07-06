@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T18:32:34.432Z",
+  "generated_at": "2026-07-06T19:13:16.598Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 67,
+      "count": 68,
       "types": {
         "tip": 14,
         "build-example": 3,
         "guide": 2,
         "project": 21,
-        "tool": 15,
+        "tool": 16,
         "architecture": 4,
         "benchmark": 1,
         "person": 3,
@@ -24,6 +24,7 @@
         "ai-engineer",
         "autogen",
         "autogpt",
+        "browserbase",
         "budget-context-before-adding-tools",
         "cap-agent-tool-retries",
         "chainlit",
@@ -188,10 +189,10 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 48,
+      "count": 50,
       "types": {
-        "project": 12,
-        "tool": 31,
+        "project": 13,
+        "tool": 32,
         "architecture": 4,
         "person": 1
       },
@@ -203,6 +204,7 @@
         "azure-ai-studio",
         "bentoml",
         "braintrust",
+        "browserbase",
         "choose-deployment-target",
         "choose-llm",
         "dify",
@@ -242,6 +244,7 @@
         "replicate",
         "scale-ai",
         "streamlit",
+        "supabase",
         "vercel",
         "weights-biases"
       ]
@@ -267,11 +270,11 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 46,
+      "count": 47,
       "types": {
         "tool": 17,
         "person": 4,
-        "project": 5,
+        "project": 6,
         "guide": 15,
         "build-example": 1,
         "tip": 3,
@@ -320,6 +323,7 @@
         "shreya-shankar",
         "streamlit",
         "structured-output",
+        "supabase",
         "unstructured",
         "vector-search",
         "version-your-eval-datasets",
@@ -1349,14 +1353,14 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 55,
+      "count": 56,
       "types": {
         "tip": 19,
         "build-example": 4,
         "tool": 6,
         "benchmark": 1,
         "architecture": 4,
-        "project": 15,
+        "project": 16,
         "paper": 4,
         "guide": 1,
         "person": 1
@@ -1406,6 +1410,7 @@
         "start-with-zero-chunk-overlap",
         "starter-basic-rag-chatbot",
         "store-parser-version-with-every-chunk",
+        "supabase",
         "surrealdb",
         "tabstack",
         "taste-lab",
@@ -1492,10 +1497,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 15,
+      "count": 16,
       "types": {
         "architecture": 3,
-        "project": 8,
+        "project": 9,
         "tip": 3,
         "tool": 1
       },
@@ -1513,6 +1518,7 @@
         "pgvector",
         "prefer-gguf-for-llama-cpp-workflows",
         "qdrant",
+        "supabase",
         "use-local-models-for-sensitive-prototyping",
         "weaviate"
       ]
@@ -1610,14 +1616,14 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 31,
+      "count": 32,
       "types": {
         "tip": 12,
         "guide": 1,
         "project": 12,
+        "tool": 2,
         "architecture": 1,
         "build-example": 2,
-        "tool": 1,
         "paper": 2
       },
       "entries": [
@@ -1626,6 +1632,7 @@
         "allowlist-tools-per-agent-role",
         "autogen",
         "autogpt",
+        "browserbase",
         "budget-context-before-adding-tools",
         "cap-agent-tool-retries",
         "checkpoint-agent-state-after-each-tool-call",

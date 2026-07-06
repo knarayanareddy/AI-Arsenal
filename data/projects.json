@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T18:32:34.432Z",
-  "count": 68,
+  "generated_at": "2026-07-06T19:13:16.598Z",
+  "count": 69,
   "items": [
     {
       "id": "agenta",
@@ -6001,6 +6001,96 @@
       "word_count": 518,
       "body_html": "<h2>Overview</h2>\n<p>An open-source browser automation framework from Browserbase that blends natural-language, AI-driven actions with deterministic code-level control, aimed at building web automation that is more resilient to page changes than pure CSS-selector scripts while remaining more predictable than a fully autonomous browsing agent.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS-selector scripts and fully autonomous browsing agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want browser automation that mixes deterministic code (for known, stable page structure) with AI-assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>As of v3, Stagehand talks directly to the browser via the Chrome DevTools Protocol (CDP-native), having removed its earlier Playwright dependency for a reported 44% performance improvement on complex DOM interactions. Core primitives are act() for single actions, extract() for structured data capture, observe() for element discovery, and agent() for multi-step autonomous exploration; an ActCache/AgentCache layer stores and replays AI-discovered actions for large speedups on repeated workflows, with automatic self-healing when cached actions fail due to site changes.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: integrates with multiple LLM providers (OpenAI, Anthropic, Google) via a pluggable client architecture for its AI-driven actions. Downstream: none of particular note. Competing: Playwright and Puppeteer for pure code-based automation; Browser Use for fully autonomous screenshot-driven browsing agents. Complementary: designed to integrate with Browserbase's managed browser-session infrastructure, though it can run against any CDP-compatible browser.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical deployment command for this specific agent system.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want browser automation that mixes deterministic code (for known, stable page structure) with AI-assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other</li>\n<li><strong>Scenario</strong>: you need self-healing automation that survives website changes — Stagehand's caching layer replays AI-discovered actions for 10-100x speedup and falls back to AI re-discovery when cached actions break</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want browser automation that mixes deterministic code (for known, stable page structure) with AI-assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other</li>\n<li>You need self-healing automation that survives website changes — Stagehand's caching layer replays AI-discovered actions for 10-100x speedup and falls back to AI re-discovery when cached actions break</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You want a fully autonomous, screenshot-driven browsing agent that decides its own actions end-to-end without you writing any workflow code — Browser Use's model is closer to that; Stagehand deliberately keeps a human-authored code skeleton</li>\n<li>You need pure deterministic browser automation for a well-defined, stable test suite — plain Playwright without the AI layer is simpler and has no LLM-call latency/cost</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see <a href=\"../frameworks/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Frameworks</a>. For job-based tool comparisons, see <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/browserbase/stagehand\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/browserbase/stagehand\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview An open source browser automation framework from Browserbase that blends natural language, AI driven actions with deterministic code level control, aimed at building web automation that is more resilient to page changes than pure CSS selector scripts while remaining more predictable than a fully autonomous browsing agent. Why it's in the Arsenal Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS selector scripts and fully autonomous browsing agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want browser automation that mixes deterministic code (for known, stable page structure) with AI assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other. See Strengths / Limitations below before adopting it. Architecture As of v3, Stagehand talks directly to the browser via the Chrome DevTools Protocol (CDP native), having removed its earlier Playwright dependency for a reported 44% performance improvement on complex DOM interactions. Core primitives are act() for single actions, extract() for structured data capture, observe() for element discovery, and agent() for multi step autonomous exploration; an ActCache/AgentCache layer stores and replays AI discovered actions for large speedups on repeated workflows, with automatic self healing when cached actions fail due to site changes. Ecosystem Position Upstream: integrates with multiple LLM providers (OpenAI, Anthropic, Google) via a pluggable client architecture for its AI driven actions. Downstream: none of particular note. Competing: Playwright and Puppeteer for pure code based automation; Browser Use for fully autonomous screenshot driven browsing agents. Complementary: designed to integrate with Browserbase's managed browser session infrastructure, though it can run against any CDP compatible browser. Getting Started Key Use Cases 1. Scenario : you want browser automation that mixes deterministic code (for known, stable page structure) with AI assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other 2. Scenario : you need self healing automation that survives website changes — Stagehand's caching layer replays AI discovered actions for 10 100x speedup and falls back to AI re discovery when cached actions break Strengths You want browser automation that mixes deterministic code (for known, stable page structure) with AI assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other You need self healing automation that survives website changes — Stagehand's caching layer replays AI discovered actions for 10 100x speedup and falls back to AI re discovery when cached actions break Limitations You want a fully autonomous, screenshot driven browsing agent that decides its own actions end to end without you writing any workflow code — Browser Use's model is closer to that; Stagehand deliberately keeps a human authored code skeleton You need pure deterministic browser automation for a well defined, stable test suite — plain Playwright without the AI layer is simpler and has no LLM call latency/cost Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "version_tracked": null,
+      "artifact_type": "platform",
+      "category": "tooling",
+      "subcategory": "platforms",
+      "description": "Open-source backend platform: Postgres database, auth, storage, and realtime APIs",
+      "github_url": "https://github.com/supabase/supabase",
+      "license": "Apache-2.0",
+      "primary_language": "TypeScript",
+      "org_or_maintainer": "supabase",
+      "tags": [
+        "data",
+        "self-hosted",
+        "cloud",
+        "retrieval"
+      ],
+      "maturity": "production",
+      "cost_model": "freemium",
+      "github_stars": 74300,
+      "trending_score": 50,
+      "last_commit": "2026-06-13",
+      "docs_url": "https://supabase.com/docs",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "data-and-retrieval",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "org-backed",
+        "community-driven",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "Open-source backend platform (Postgres + Auth + Storage + Realtime) commonly used as the data and persistence layer for AI agents and AI-native apps"
+      ],
+      "best_for": [
+        "You need a managed or self-hosted Postgres backend with auth, storage, and realtime out of the box for an AI app or agent",
+        "You want vector/embeddings storage via pgvector alongside relational data in one system"
+      ],
+      "avoid_if": [
+        "You require a non-Postgres datastore or a fully proprietary managed-only backend with no self-host option",
+        "Your team needs deep single-tenant isolation guarantees beyond what a shared Postgres instance provides"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stub added 2026-07-06 to resolve a dangling 'alternatives' reference from content/projects/agent-systems/insforge.md. Full evaluation pending human review.",
+      "added_date": "2026-07-06",
+      "last_reviewed": "2026-07-06",
+      "added_by": "maintainer",
+      "reviewed_by": null,
+      "buzz_sources": [],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/data-and-retrieval/supabase.md",
+      "url": "content/projects/data-and-retrieval/supabase",
+      "slug": "supabase",
+      "section_path": "content/projects/data-and-retrieval",
+      "display_name": "Supabase",
+      "summary": "Open-source backend platform: Postgres database, auth, storage, and realtime APIs",
+      "last_updated": "2026-07-06",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 268,
+      "body_html": "<h2>Overview</h2>\n<p>Supabase is an open-source backend platform built around Postgres, providing authentication, storage, realtime subscriptions, and edge functions. This is a <strong>stub entry</strong> added to resolve a dangling cross-reference; it has not yet been fully evaluated against the Arsenal's review rubric.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Listed as an alternative backend/platform for AI coding agents and AI-native apps that need a managed or self-hostable data layer. Referenced by other entries (e.g. InsForge) as a comparable platform.</p>\n<h2>Architecture</h2>\n<p>A hosted and self-hostable control plane around a Postgres database, exposing Auth, Storage, Realtime, and Edge Functions, plus a vector/embeddings path via pgvector.</p>\n<h2>Ecosystem Position</h2>\n<p>Complementary to agent frameworks and orchestration layers that need durable state; competes with other backend-as-a-service platforms. Supabase's agent-native surface (MCP server, Postgres tooling) makes it a common persistence choice for coding agents.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Spin up a local Supabase stack\nnpx supabase init\nnpx supabase start\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>AI app persistence</strong>: relational + vector storage for agent memory, chat history, and retrieved documents.</li>\n<li><strong>Auth for AI products</strong>: drop-in auth and row-level security for user-facing AI apps.</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Open-source core (Apache-2.0) with a generous free/self-host path.</li>\n<li>Postgres-native, so transactional and vector workloads live in one system.</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Postgres-centric; not a fit if a non-Postgres store is required.</li>\n<li>Shared tenancy may not meet every single-tenant isolation requirement.</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>Serves as a reference persistence/platform option for agent-system and data-and-retrieval workflows documented across the Arsenal.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://supabase.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Supabase</a></li>\n<li><a href=\"https://supabase.com/docs\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/supabase/supabase\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-06 by @maintainer — stub entry; full evaluation pending.</em></p>\n",
+      "body_text": "Overview Supabase is an open source backend platform built around Postgres, providing authentication, storage, realtime subscriptions, and edge functions. This is a stub entry added to resolve a dangling cross reference; it has not yet been fully evaluated against the Arsenal's review rubric. Why it's in the Arsenal Listed as an alternative backend/platform for AI coding agents and AI native apps that need a managed or self hostable data layer. Referenced by other entries (e.g. InsForge) as a comparable platform. Architecture A hosted and self hostable control plane around a Postgres database, exposing Auth, Storage, Realtime, and Edge Functions, plus a vector/embeddings path via pgvector. Ecosystem Position Complementary to agent frameworks and orchestration layers that need durable state; competes with other backend as a service platforms. Supabase's agent native surface (MCP server, Postgres tooling) makes it a common persistence choice for coding agents. Getting Started Key Use Cases 1. AI app persistence : relational + vector storage for agent memory, chat history, and retrieved documents. 2. Auth for AI products : drop in auth and row level security for user facing AI apps. Strengths Open source core (Apache 2.0) with a generous free/self host path. Postgres native, so transactional and vector workloads live in one system. Limitations Postgres centric; not a fit if a non Postgres store is required. Shared tenancy may not meet every single tenant isolation requirement. Relation to the Arsenal Serves as a reference persistence/platform option for agent system and data and retrieval workflows documented across the Arsenal. Resources Supabase Documentation GitHub Last reviewed: 2026 07 06 by @maintainer — stub entry; full evaluation pending."
     },
     {
       "id": "surrealdb",
