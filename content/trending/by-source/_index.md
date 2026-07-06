@@ -10,7 +10,8 @@
 
 ## Recently Added
 
-_No entries yet._
+- [Source Feed: GitHub Trending](./github-trending.md)
+- [Source Feed: ToolRadar / Techpresso](./toolradar-techpresso.md)
 
 ## Most Popular
 
@@ -18,4 +19,5 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-_No entries yet._
+- [Source Feed: GitHub Trending](./github-trending.md) — 
+- [Source Feed: ToolRadar / Techpresso](./toolradar-techpresso.md) — 

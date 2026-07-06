@@ -17,7 +17,7 @@
 | [skills](./skills/) | 8 entries | 2026-07-06 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-06 |
 | [tools](./tools/) | 107 entries | 2026-07-06 |
-| [trending](./trending/) | 2 entries | 2026-07-06 |
+| [trending](./trending/) | 4 entries | 2026-07-06 |
 
 ## Recently Added
 
@@ -25,12 +25,12 @@
 - [Browserbase](./tools/data-ingestion/browserbase.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md)
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./observability/evaluation-quality/gate-releases-on-eval-regression.md)
+- [Source Feed: GitHub Trending](./trending/by-source/github-trending.md)
 - [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./observability/cost-usage/instrument-cost-per-feature.md)
 - [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./observability/privacy-governance/redact-and-govern-trace-data.md)
 - [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./observability/incident-response/runbook-for-agent-and-rag-incidents.md)
 - [Supabase](./projects/data-and-retrieval/supabase.md)
-- [Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer](./observability/tracing/trace-every-agent-and-rag-step.md)
-- [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
+- [Source Feed: ToolRadar / Techpresso](./trending/by-source/toolradar-techpresso.md)
 
 ## Most Popular
 

@@ -1,72 +1,72 @@
 ---
 id: "hall-of-fame"
 title: "AI Arsenal Hall of Fame"
-entry_type: "guide"
-section: "trending"
-description: "Evergreen list of foundational AI engineering projects and ideas"
-tags:
-  - foundational
-  - featured
-related_entries: []
+entry_type: "trend"
+kind: "hall-of-fame"
+status: "reviewed"
+as_of: "2026-07-06"
+signals_used:
+  - github-stars-total
+  - github-activity
+sources:
+  - source: "github"
+    url: "https://github.com/trending"
+    last_checked: "2026-07-06"
+    notes: "Star totals and long-run activity underpin the evergreen ranking."
+ranked_entries:
+  - rank: 1
+    entry_id: "pinecone"
+    entry_type: "tool"
+    why_here: "Durable, widely-adopted vector database; foundational to most RAG stacks documented in the Arsenal."
+  - rank: 2
+    entry_id: "langfuse"
+    entry_type: "project"
+    why_here: "De-facto open-source LLM observability/eval layer referenced across evaluation and observability entries."
+  - rank: 3
+    entry_id: "choose-llm"
+    entry_type: "architecture"
+    why_here: "Evergreen decision guide for model selection that routes dozens of downstream entries."
+watchlist:
+  - qdrant
+last_reviewed: "2026-07-06"
 added_date: "2026-06-13"
-last_reviewed: "2026-06-13"
 added_by: "maintainer"
-status: "active"
+enrichment_status: "reviewed"
+tags:
+  - trending
+  - featured
+  - foundational
 ---
 
 ## Overview
 
-AI Arsenal Hall of Fame is a curated guide entry included to make the Arsenal more useful for practical AI engineering decisions.
+The AI Arsenal Hall of Fame is an evergreen, slowly-changing list of foundational AI engineering projects, tools, and decision guides that every reader should know. Unlike the weekly snapshot, it deliberately ignores short-term buzz.
 
-## Why It's in the Arsenal
+## What this snapshot covers
 
-It captures reusable knowledge in a structured format so humans can browse it and agents can retrieve it without ambiguity.
+Durable, battle-tested resources ranked by long-run adoption (GitHub stars total + sustained activity), not by what happened this week. These are the entries the rest of the Arsenal links back to.
 
-## Key Features
+## Method (signals + caveats)
 
-- Highlights durable, battle-tested resources
-- Prioritizes historical importance over short-term buzz
-- Links to canonical Arsenal entries
-- Structured metadata for filtering and search
-- Canonical location for future updates
+Signals: `github-stars-total`, `github-activity`.
 
-## Architecture / How It Works
+Caveats: star counts measure popularity, not fitness for a given workload. A high rank here is a *starting point*, not an endorsement — always evaluate against your own requirements using the linked canonical entry.
 
-Review the metadata first, then use the body as the human-readable detail layer. Prefer linking to this canonical entry instead of duplicating its content elsewhere.
+## Ranked entries (with why)
 
-## Getting Started
+1. [pinecone](../tools/data-ingestion/pinecone.md) — Durable, widely-adopted vector database; foundational to most RAG stacks documented in the Arsenal.
+2. [langfuse](../projects/benchmarks-and-evals/langfuse.md) — De-facto open-source LLM observability/eval layer referenced across evaluation and observability entries.
+3. [choose-llm](../architectures/model-selection/choose-llm.md) — Evergreen decision guide for model selection that routes dozens of downstream entries.
 
-```bash
-# Read the entry and follow the linked resources.
-```
+## Notable changes to watch
 
-## Use Cases
+- Watchlist: [qdrant](../projects/data-and-retrieval/qdrant.md) — closing the adoption gap on the leading vector DBs; promote if momentum continues into sustained dominance.
+- Demotions happen when a tool is superseded or its maintenance signal weakens; see each canonical entry's status.
 
-1. **Scenario**: When making an AI engineering decision related to this topic
-2. **Scenario**: When collecting context for an LLM or agent workflow
+## How to use this (links into the Arsenal)
 
-## Strengths
+Start here for foundational context, then follow the linked canonical entries. Contrast with [This Week in AI Arsenal](./this-week.md) for what is moving right now, and with the [by-source feeds](./by-source/) for how signals are sourced.
 
-- Concise enough for quick browsing
-- Structured enough for generated data and search
+## Sources
 
-## Limitations / When NOT to Use
-
-- Verify external claims before production decisions
-- Re-run evaluations against your own workload
-
-## Integration Patterns
-
-Use this entry as a canonical reference from guides, stacks, and generated data views.
-
-## Resources
-
-- [Primary Resource](https://example.com)
-
-## Buzz & Reception
-
-Reception notes should be updated with verified sources during maintenance reviews.
-
----
-*Last reviewed: 2026-06-13 by @maintainer*
-
+- [GitHub Trending](https://github.com/trending) — last_checked 2026-07-06
