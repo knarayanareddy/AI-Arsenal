@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T14:59:19.200Z",
+  "generated_at": "2026-07-06T15:01:58.391Z",
   "tags": [
     {
       "id": "agents",
@@ -9,10 +9,10 @@
       "types": {
         "tip": 14,
         "build-example": 3,
-        "guide": 8,
+        "guide": 7,
         "project": 21,
         "tool": 15,
-        "architecture": 1,
+        "architecture": 2,
         "person": 3,
         "paper": 4
       },
@@ -187,7 +187,8 @@
       "types": {
         "project": 12,
         "tool": 31,
-        "guide": 5,
+        "guide": 4,
+        "architecture": 1,
         "person": 1
       },
       "entries": [
@@ -615,7 +616,8 @@
       "types": {
         "tip": 21,
         "tool": 6,
-        "guide": 7,
+        "guide": 6,
+        "architecture": 1,
         "project": 17,
         "paper": 2,
         "build-example": 1
@@ -726,10 +728,11 @@
       "count": 131,
       "types": {
         "tip": 20,
-        "guide": 30,
+        "guide": 29,
         "person": 15,
         "tool": 33,
         "paper": 8,
+        "architecture": 1,
         "project": 23,
         "build-example": 2
       },
@@ -873,9 +876,10 @@
       "count": 26,
       "types": {
         "tip": 6,
-        "guide": 2,
+        "architecture": 1,
         "project": 14,
         "tool": 3,
+        "guide": 1,
         "build-example": 1
       },
       "entries": [
@@ -1096,7 +1100,8 @@
       "types": {
         "tool": 11,
         "project": 14,
-        "guide": 2
+        "architecture": 1,
+        "guide": 1
       },
       "entries": [
         "agnt-hub",
@@ -1134,8 +1139,9 @@
       "count": 10,
       "types": {
         "build-example": 1,
-        "guide": 3,
-        "project": 6
+        "guide": 2,
+        "project": 6,
+        "architecture": 1
       },
       "entries": [
         "advanced-multi-agent-research",
@@ -1593,8 +1599,9 @@
       "count": 31,
       "types": {
         "tip": 12,
-        "guide": 2,
+        "guide": 1,
         "project": 12,
+        "architecture": 1,
         "build-example": 2,
         "tool": 1,
         "paper": 2

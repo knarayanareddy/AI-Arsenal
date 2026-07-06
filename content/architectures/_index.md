@@ -7,10 +7,10 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [data strategy](./data-strategy/) | 1 entries | 2026-07-06 |
-| [decision trees](./decision-trees/) | 5 entries | 2026-07-06 |
+| [decision trees](./decision-trees/) | 3 entries | 2026-07-06 |
 | [diagrams](./diagrams/) | 0 entries | 2026-07-06 |
 | [evaluation strategy](./evaluation-strategy/) | 0 entries | 2026-07-06 |
-| [model selection](./model-selection/) | 0 entries | 2026-07-06 |
+| [model selection](./model-selection/) | 2 entries | 2026-07-06 |
 | [patterns](./patterns/) | 0 entries | 2026-07-06 |
 | [reference stacks](./reference-stacks/) | 6 entries | 2026-07-06 |
 | [serving patterns](./serving-patterns/) | 0 entries | 2026-07-06 |
@@ -18,10 +18,10 @@
 
 ## Recently Added
 
-- [Choose an Agent Framework](./decision-trees/choose-agent-framework.md)
+- [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./model-selection/choose-agent-framework.md)
 - [Choose a Deployment Target](./decision-trees/choose-deployment-target.md)
 - [Choose an Evaluation Framework](./decision-trees/choose-eval-framework.md)
-- [Which LLM Should I Use?](./decision-trees/choose-llm.md)
+- [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./model-selection/choose-llm.md)
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./system-design/choose-memory-solution.md)
 - [Choose an Observability Tool](./decision-trees/choose-observability-tool.md)
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./data-strategy/choose-vector-db.md)
@@ -35,10 +35,10 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-- [Choose an Agent Framework](./decision-trees/choose-agent-framework.md) — Decision tree for selecting agent orchestration frameworks
+- [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./model-selection/choose-agent-framework.md) — 
 - [Choose a Deployment Target](./decision-trees/choose-deployment-target.md) — Decision tree for deploying AI apps, APIs, agents, and inference services
 - [Choose an Evaluation Framework](./decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
-- [Which LLM Should I Use?](./decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
+- [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./model-selection/choose-llm.md) — 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./system-design/choose-memory-solution.md) — 
 - [Choose an Observability Tool](./decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./data-strategy/choose-vector-db.md) — 

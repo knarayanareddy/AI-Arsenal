@@ -27,7 +27,8 @@ Whether to use a model at all for a given task (e.g. RAG vs fine-tuning as the m
 
 ### Recently Added
 
-_No entries yet._
+- [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./choose-agent-framework.md)
+- [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./choose-llm.md)
 
 ### Most Popular
 
@@ -35,4 +36,5 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./choose-agent-framework.md) — 
+- [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./choose-llm.md) — 

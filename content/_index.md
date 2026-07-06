@@ -89,11 +89,11 @@
 - [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
-- [Choose an Agent Framework](./architectures/decision-trees/choose-agent-framework.md) — Decision tree for selecting agent orchestration frameworks
+- [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./architectures/model-selection/choose-agent-framework.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
 - [Choose a Deployment Target](./architectures/decision-trees/choose-deployment-target.md) — Decision tree for deploying AI apps, APIs, agents, and inference services
 - [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
 - [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md) — 
-- [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
+- [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./architectures/model-selection/choose-llm.md) — 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./architectures/system-design/choose-memory-solution.md) — 
 - [Choose an Observability Tool](./architectures/decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools
