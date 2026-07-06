@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T14:51:55.252Z | Entries: 371 | Schema version: 1.0.0
+Generated: 2026-07-06T15:14:27.373Z | Entries: 371 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -12,9 +12,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Tips: 102
 - People: 25
 - Digests: 0
-- Guides: 51
+- Guides: 37
 - Build examples: 8
-- Architectures: 0
+- Architectures: 14
 
 ## Navigation
 
@@ -171,16 +171,39 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Architecture Quick Refs
 
-- Enterprise-Scale AI Stack — Reference architecture for governed enterprise AI systems with security and platform integration
-- Lean MVP Stack — Opinionated stack for solo developers and fast AI product prototypes
-- Local-First AI Stack — Reference stack for privacy-first local AI applications without cloud model APIs
-- Multi-Agent System Stack — Reference stack for complex task automation with multiple AI roles and durable state
-- Production RAG Stack — Reference architecture for production retrieval-augmented generation applications
-- AI Research Platform Stack — Reference platform for repeatable model, agent, and retrieval experiments
+- Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified — 
+- Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff — 
+- Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling — 
+- Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It — 
+- Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost — 
+- Research Platform Stack vs Product Stack: Reproducibility vs Shipping Speed — 
 
 ## Architecture Decisions by Category
 
-_No architecture entries migrated yet._
+### data-strategy
+- Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
+
+### evaluation-strategy
+- Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review — 
+- Choosing an Observability Approach: Integration Model First, Feature List Second — 
+
+### model-selection
+- Choosing an Agent Framework: State Model, Language, and Provider Constraints — 
+- Choosing a Model: Local vs Cloud, and Routing by Primary Need — 
+
+### reference-stacks
+- Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified — 
+- Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff — 
+- Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling — 
+- Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It — 
+- Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost — 
+
+### serving-patterns
+- Choosing a Deployment Target: Separating App Hosting From Model Serving — 
+
+### system-design
+- Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
+- RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
 
 ## Decision Heuristics
 

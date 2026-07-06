@@ -44,7 +44,7 @@ _No star-tracked entries yet._
 - [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./reference-stacks/enterprise-scale.md) — 
 - [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./reference-stacks/lean-mvp.md) — 
 - [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./reference-stacks/local-first.md) — 
-- [Multi-Agent System Stack](./reference-stacks/multi-agent-system.md) — Reference stack for complex task automation with multiple AI roles and durable state
-- [Production RAG Stack](./reference-stacks/production-rag.md) — Reference architecture for production retrieval-augmented generation applications
+- [Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It](./reference-stacks/multi-agent-system.md) — 
+- [Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost](./reference-stacks/production-rag.md) — 
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./system-design/rag-vs-fine-tuning.md) — 
-- [AI Research Platform Stack](./reference-stacks/research-platform.md) — Reference platform for repeatable model, agent, and retrieval experiments
+- [Research Platform Stack vs Product Stack: Reproducibility vs Shipping Speed](./reference-stacks/research-platform.md) — 

@@ -31,9 +31,9 @@ A comparison of two individual tools that plug into the same slot in a stack (e.
 - [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./enterprise-scale.md)
 - [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./lean-mvp.md)
 - [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./local-first.md)
-- [Multi-Agent System Stack](./multi-agent-system.md)
-- [Production RAG Stack](./production-rag.md)
-- [AI Research Platform Stack](./research-platform.md)
+- [Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It](./multi-agent-system.md)
+- [Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost](./production-rag.md)
+- [Research Platform Stack vs Product Stack: Reproducibility vs Shipping Speed](./research-platform.md)
 
 ### Most Popular
 
@@ -44,6 +44,6 @@ _No star-tracked entries yet._
 - [Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified](./enterprise-scale.md) — 
 - [Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff](./lean-mvp.md) — 
 - [Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling](./local-first.md) — 
-- [Multi-Agent System Stack](./multi-agent-system.md) — Reference stack for complex task automation with multiple AI roles and durable state
-- [Production RAG Stack](./production-rag.md) — Reference architecture for production retrieval-augmented generation applications
-- [AI Research Platform Stack](./research-platform.md) — Reference platform for repeatable model, agent, and retrieval experiments
+- [Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It](./multi-agent-system.md) — 
+- [Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost](./production-rag.md) — 
+- [Research Platform Stack vs Product Stack: Reproducibility vs Shipping Speed](./research-platform.md) — 
