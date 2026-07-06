@@ -11,6 +11,9 @@
 ## Recently Added
 
 - [BEIR](./beir.md)
+- [MS MARCO](./msmarco.md)
+- [Natural Questions](./natural-questions.md)
+- [RGB](./rgb.md)
 
 ## Most Popular
 
@@ -19,3 +22,6 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [BEIR](./beir.md) — 
+- [MS MARCO](./msmarco.md) — 
+- [Natural Questions](./natural-questions.md) — 
+- [RGB](./rgb.md) — 

@@ -352,6 +352,17 @@ pnpm run validate:changed
 pnpm run check:duplicates
 ```
 
+### Add a new benchmark
+
+```bash
+pnpm run new:benchmark
+pnpm run fix:changed
+pnpm run validate:changed
+pnpm run check:duplicates
+```
+
+Benchmarks require live verification: set `leaderboards[].last_checked`, use SOTA-safe wording (date + leaderboard URL + protocol variant), and flag unverified entries `enrichment_status: draft`. See [`PR_DESCRIPTION_BENCHMARKS.md`](./PR_DESCRIPTION_BENCHMARKS.md) for the full verification policy.
+
 ### Regenerate data locally
 
 ```bash
