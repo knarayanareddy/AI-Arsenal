@@ -54,11 +54,14 @@
     "new:paper": "node scripts/scaffold.js --type=paper",
     "new:tip": "node scripts/scaffold.js --type=tip",
     "dev": "node scripts/watch.js",
-    "ci": "pnpm run validate:all && pnpm run check:duplicates && pnpm run migration:enforce && pnpm run migration:projects:enforce && pnpm run migration:research:enforce && pnpm run migration:tips:enforce && pnpm run migration:build-examples:enforce && pnpm run migration:architectures:enforce && pnpm run migration:observability:enforce && pnpm run migration:community:enforce && pnpm test && pnpm run generate:all",
+    "ci": "pnpm run validate:all && pnpm run check:duplicates && pnpm run migration:enforce && pnpm run migration:projects:enforce && pnpm run migration:research:enforce && pnpm run migration:tips:enforce && pnpm run migration:build-examples:enforce && pnpm run migration:architectures:enforce && pnpm run migration:observability:enforce && pnpm run migration:community:enforce && pnpm run migration:benchmarks:enforce && pnpm test && pnpm run generate:all",
     "audit": "npm audit --omit=dev && echo 'consider running pnpm audit'",
     "audit:fix": "npm audit fix --omit=dev",
     "migration:community:progress": "node scripts/check-community-migration-progress.js",
-    "migration:community:enforce": "node scripts/check-community-migration-progress.js --enforce"
+    "migration:community:enforce": "node scripts/check-community-migration-progress.js --enforce",
+    "migration:benchmarks:progress": "node scripts/check-benchmarks-migration-progress.js",
+    "migration:benchmarks:enforce": "node scripts/check-benchmarks-migration-progress.js --enforce",
+    "new:benchmark": "node scripts/scaffold.js --type=benchmark"
   },
   "dependencies": {
     "ajv": "^8.12.0",

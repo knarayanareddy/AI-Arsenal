@@ -104,6 +104,9 @@ export function inferEntryType(filePath, data = {}) {
   ) {
     return 'community';
   }
+  // Benchmarks-vertical: migrated entries set entry_type: "benchmark"
+  // explicitly. Path fallback mirrors other verticals.
+  if (p.startsWith('content/benchmarks/')) return 'benchmark';
   return null;
 }
 

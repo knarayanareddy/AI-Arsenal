@@ -17,7 +17,8 @@ const schemaByType = {
   guide: 'guide.schema.json',
   architecture: 'architecture.schema.json',
   observability: 'observability.schema.json',
-  community: 'community.schema.json'
+  community: 'community.schema.json',
+  benchmark: 'benchmark.schema.json'
 };
 
 // Research-vertical reorganisation: COMPLETE (see x-migration-note in

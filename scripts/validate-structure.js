@@ -162,9 +162,26 @@ const COMMUNITY_HEADINGS = [
   'Resources'
 ];
 
+// Benchmarks-vertical reorganisation: the canonical, ORDER-ENFORCED body
+// structure for a benchmark entry (see the benchmarks-vertical-reorg brief,
+// Phase 3). Mirrors observability/community STRICT_ORDER_TYPES treatment.
+const BENCHMARK_HEADINGS = [
+  'Overview',
+  'What it Measures (and what it doesn’t)',
+  'Dataset & Protocol',
+  'Metrics',
+  'How to Run',
+  'Known Issues, Leakage & Gaming Risks',
+  'How to Interpret Scores',
+  'Recommended Usage',
+  'Related Benchmarks',
+  'Relation to the Arsenal',
+  'Resources'
+];
+
 // Types whose heading order is enforced strictly (not just presence), per
 // their own vertical-reorg brief's explicit requirement.
-const STRICT_ORDER_TYPES = new Set(['observability', 'community']);
+const STRICT_ORDER_TYPES = new Set(['observability', 'community', 'benchmark']);
 
 const typeHeadings = {
   project: REQUIRED_ENTRY_HEADINGS,
@@ -186,7 +203,8 @@ const typeHeadings = {
   guide: REQUIRED_ENTRY_HEADINGS,
   architecture: ARCHITECTURE_HEADINGS,
   observability: OBSERVABILITY_HEADINGS,
-  community: COMMUNITY_HEADINGS
+  community: COMMUNITY_HEADINGS,
+  benchmark: BENCHMARK_HEADINGS
 };
 
 
@@ -774,12 +792,39 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
       }
     }
   }
+// Benchmarks-vertical: content-level checks
+function benchmarkContentChecks(file, content, data, errors, warnings) {
+  // No undated SOTA claims – heuristic
+  const sotaPattern = /\b(SOTA|state-of-the-art|best model|top model|#1|beats all)\b/i;
+  const datePattern = /\b(20\d{2}-\d{2}-\d{2}|as of|20\d{2})\b/;
+  const lines = content.split(/\r?\n/);
+  for (const line of lines) {
+    if (sotaPattern.test(line) && !datePattern.test(line)) {
+      warnings.push(`${file}: possible undated SOTA/\"best model\" claim: "${line.trim().slice(0,120)}" – benchmark claims must include as_of date + leaderboard + protocol`);
+    }
+  }
+  // Required sections non-empty
+  const requiredSections = [
+    'Known Issues, Leakage & Gaming Risks',
+    'How to Interpret Scores',
+    'How to Run',
+    'Recommended Usage'
+  ];
+  for (const heading of requiredSections) {
+    const body = sectionBody(content, heading);
+    if (body !== null && body.length < 20) {
+      errors.push(`${file}: "## ${heading}" section must not be empty – this is a required benchmark contract field`);
+    }
+  }
+}
+
   if (type === 'paper' && data.phase) researchContentChecks(file, content, errors, warnings);
   if (type === 'tip' && data.phase) tipContentChecks(file, content, data, errors, warnings);
   if (type === 'build-example' && data.phase) buildExampleContentChecks(file, content, data, errors, warnings);
   if (type === 'architecture') architectureContentChecks(file, content, data, errors, warnings);
   if (type === 'observability') observabilityContentChecks(file, content, data, errors, warnings);
   if (type === 'community') communityContentChecks(file, content, data, errors, warnings);
+  if (type === 'benchmark') benchmarkContentChecks(file, content, data, errors, warnings);
   checked += 1;
 }
 

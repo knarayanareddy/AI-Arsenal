@@ -7,7 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [architectures](./architectures/) | 14 entries | 2026-07-06 |
-| [benchmarks](./benchmarks/) | 0 entries | 2026-07-06 |
+| [benchmarks](./benchmarks/) | 3 entries | 2026-07-06 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-06 |
 | [community](./community/) | 48 entries | 2026-07-06 |
 | [digests](./digests/) | 0 entries | 2026-07-06 |

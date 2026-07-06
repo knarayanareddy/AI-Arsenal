@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T17:09:36.060Z",
+    "generated_at": "2026-07-06T18:32:34.432Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -12,6 +12,7 @@
     "total_architectures": 14,
     "total_observability": 7,
     "total_community": 23,
+    "total_benchmarks": 9,
     "schema_version": "1.0.0"
   },
   "entries": [
@@ -618,6 +619,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "beir",
+      "type": "benchmark",
+      "name": "BEIR",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/beir.md",
+      "url": "content/benchmarks/retrieval-rag/beir",
+      "last_updated": "2026-07-06",
+      "category": "retrieval-rag",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -2080,6 +2101,26 @@
       "featured": false
     },
     {
+      "id": "gaia",
+      "type": "benchmark",
+      "name": "GAIA",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "benchmark",
+        "reasoning"
+      ],
+      "path": "content/benchmarks/agents/gaia.md",
+      "url": "content/benchmarks/agents/gaia",
+      "last_updated": "2026-07-06",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gao-2022-hyde",
       "type": "paper",
       "name": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
@@ -2228,6 +2269,25 @@
       "featured": false
     },
     {
+      "id": "gpqa-diamond",
+      "type": "benchmark",
+      "name": "GPQA Diamond",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/general-llm/gpqa-diamond.md",
+      "url": "content/benchmarks/general-llm/gpqa-diamond",
+      "last_updated": "2026-07-06",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gradient-dissent-podcast",
       "type": "community",
       "name": "Gradient Dissent (Weights & Biases)",
@@ -2331,6 +2391,25 @@
       "url": "content/community/people/hamel-husain",
       "last_updated": "2026-06-14",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "harmbench",
+      "type": "benchmark",
+      "name": "HarmBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/benchmarks/safety/harmbench.md",
+      "url": "content/benchmarks/safety/harmbench",
+      "last_updated": "2026-07-06",
+      "category": "safety",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -2500,6 +2579,25 @@
       "featured": false
     },
     {
+      "id": "humaneval",
+      "type": "benchmark",
+      "name": "HumanEval",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/code/humaneval.md",
+      "url": "content/benchmarks/code/humaneval",
+      "last_updated": "2026-07-06",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "humanloop",
       "type": "tool",
       "name": "Humanloop",
@@ -2549,6 +2647,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ifeval",
+      "type": "benchmark",
+      "name": "IFEval",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "structured-output",
+        "llm"
+      ],
+      "path": "content/benchmarks/general-llm/ifeval.md",
+      "url": "content/benchmarks/general-llm/ifeval",
+      "last_updated": "2026-07-06",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -3420,6 +3537,24 @@
       "featured": false
     },
     {
+      "id": "llm-as-a-judge",
+      "type": "benchmark",
+      "name": "LLM-as-a-Judge",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/benchmarks/evaluation-methods/llm-as-a-judge.md",
+      "url": "content/benchmarks/evaluation-methods/llm-as-a-judge",
+      "last_updated": "2026-07-06",
+      "category": "evaluation-methods",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llm-researcher",
       "type": "guide",
       "name": "LLM Researcher Learning Path",
@@ -3968,6 +4103,45 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mmlu-pro",
+      "type": "benchmark",
+      "name": "MMLU-Pro",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "llm"
+      ],
+      "path": "content/benchmarks/general-llm/mmlu-pro.md",
+      "url": "content/benchmarks/general-llm/mmlu-pro",
+      "last_updated": "2026-07-06",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mmmu",
+      "type": "benchmark",
+      "name": "MMMU",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "vision",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/multimodal/mmmu.md",
+      "url": "content/benchmarks/multimodal/mmmu",
+      "last_updated": "2026-07-06",
+      "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },

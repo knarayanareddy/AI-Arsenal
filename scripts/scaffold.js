@@ -48,11 +48,12 @@ const templateByType = {
   tip: 'tip-entry.md',
   'build-example': 'build-example-entry.md',
   person: 'person-entry.md',
-  digest: 'digest-entry.md'
+  digest: 'digest-entry.md',
+  benchmark: 'benchmark-entry.md'
 };
 
 if (!templateByType[type]) {
-  console.error(chalk.red('Usage: node scripts/scaffold.js --type=project|tool|paper|tip|build-example|person|digest'));
+  console.error(chalk.red('Usage: node scripts/scaffold.js --type=project|tool|paper|tip|build-example|person|digest|benchmark'));
   process.exit(1);
 }
 
@@ -94,6 +95,13 @@ if (type === 'project') {
   // For digest the id is expected to be YYYY-MM; validate format.
   if (!/^\d{4}-\d{2}$/.test(id)) throw new Error(`Digest id must be YYYY-MM format, got: ${id}`);
   destination = `content/digests/${id}/digest.md`;
+} else if (type === 'benchmark') {
+  const category = slugify(await ask('category', 'general-llm'));
+  const validCategories = ['general-llm', 'code', 'retrieval-rag', 'agents', 'safety', 'multimodal', 'evaluation-methods'];
+  if (!validCategories.includes(category)) {
+    throw new Error(`Invalid category for benchmark: ${category}. Must be one of: ${validCategories.join(', ')}`);
+  }
+  destination = `content/benchmarks/${category}/${id}.md`;
 }
 
 assertSafeDestination(destination);
@@ -112,6 +120,8 @@ body = body
   .replaceAll('Example Build', name)
   .replaceAll('example-person', id)
   .replaceAll('Example Person', name)
+  .replaceAll('example-benchmark', id)
+  .replaceAll('Example Benchmark', name)
   .replaceAll('github-username', username)
   .replaceAll('2026-06-13', today);
 

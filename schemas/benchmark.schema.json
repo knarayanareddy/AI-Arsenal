@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-arsenal.local/schemas/benchmark.schema.json",
+  "title": "AI Arsenal Benchmark Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "x-schema-version": "1.0.0",
+  "required": [
+    "id",
+    "title",
+    "entry_type",
+    "category",
+    "modality",
+    "status",
+    "protocol_confidence",
+    "score_interpretation",
+    "what_it_measures",
+    "metrics",
+    "protocol",
+    "leaderboards",
+    "known_issues",
+    "recommended_usage",
+    "last_reviewed",
+    "enrichment_status",
+    "tags"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/kebabId"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "entry_type": {
+      "const": "benchmark"
+    },
+    "category": {
+      "enum": [
+        "general-llm",
+        "code",
+        "retrieval-rag",
+        "agents",
+        "safety",
+        "multimodal",
+        "evaluation-methods"
+      ]
+    },
+    "modality": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "text",
+          "code",
+          "vision",
+          "audio",
+          "multimodal"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "status": {
+      "enum": [
+        "active",
+        "deprecated",
+        "superseded",
+        "contested",
+        "contaminated"
+      ]
+    },
+    "protocol_confidence": {
+      "enum": [
+        "well-specified",
+        "ambiguous",
+        "evolving"
+      ]
+    },
+    "score_interpretation": {
+      "enum": [
+        "higher-is-better",
+        "lower-is-better",
+        "mixed"
+      ]
+    },
+    "what_it_measures": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 400
+    },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "direction"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "direction": {
+            "enum": [
+              "higher",
+              "lower",
+              "mixed"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 240
+          }
+        }
+      }
+    },
+    "protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset",
+        "dataset_url",
+        "evaluation_setup"
+      ],
+      "properties": {
+        "dataset": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataset_url": {
+          "$ref": "#/$defs/url"
+        },
+        "evaluation_setup": {
+          "type": "string",
+          "minLength": 10
+        },
+        "version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "leaderboards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "url",
+          "last_checked"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "$ref": "#/$defs/url"
+          },
+          "last_checked": {
+            "$ref": "#/$defs/date"
+          }
+        }
+      }
+    },
+    "known_issues": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "recommended_usage": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 10
+      }
+    },
+    "last_reviewed": {
+      "$ref": "#/$defs/date"
+    },
+    "reference_paper": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/kebabId"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "benchmark_suite_project": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/kebabId"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "harness_tools": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/kebabId"
+      }
+    },
+    "related_benchmarks": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/kebabId"
+      }
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "as_of",
+        "top_results"
+      ],
+      "properties": {
+        "as_of": {
+          "$ref": "#/$defs/date"
+        },
+        "top_results": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "model_name",
+              "score"
+            ],
+            "properties": {
+              "model_name": {
+                "type": "string"
+              },
+              "score": {
+                "type": "string"
+              },
+              "link": {
+                "$ref": "#/$defs/url"
+              }
+            }
+          }
+        }
+      }
+    },
+    "enrichment_status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "verified"
+      ]
+    },
+    "enrichment_notes": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 400
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "kebabId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "not": {
+        "enum": [
+          "index",
+          "registry",
+          "overview",
+          "introduction",
+          "readme",
+          "agent",
+          "context",
+          "taxonomy",
+          "contributing",
+          "governance",
+          "changelog",
+          "security",
+          "template",
+          "all",
+          "none",
+          "undefined",
+          "null",
+          "true",
+          "false"
+        ]
+      }
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https?://[^\\s]+$"
+    },
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  }
+}

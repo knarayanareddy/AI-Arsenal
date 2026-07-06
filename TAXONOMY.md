@@ -4,7 +4,7 @@ This file is the single source of truth for controlled vocabulary used by schema
 
 ## Entry Types
 
-`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture` | `observability` | `community`
+`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture` | `observability` | `community` | `benchmark`
 
 ## Project Categories
 
@@ -385,9 +385,51 @@ Field: `access`. What it costs (in access terms, not necessarily money) to parti
 `invite-only` — requires an invitation, application, or approval step
 `paid` — requires a paid subscription or membership to fully participate
 
-## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, Architectures, Observability, and Community)
+## Benchmark Categories
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. For observability, this covers whether an entry's `verification_status: production-verified` claim is backed by a described evidence type (a named production system, an incident retro, a measured before/after) versus asserted without evidence — an entry with `verification_status: theoretical` or `community-reported` should also carry `enrichment_status: draft` until a maintainer independently confirms the pattern against a real system. For community entries, this covers whether `activity_level`/`activity_evidence` reflect an independently re-checked, dated public signal versus an inherited or stale claim — an entry with `activity_level: unknown` should also carry `enrichment_status: draft` until a maintainer finds and records a concrete signal. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips and observability), `build_status`/`outcome` (build examples), `confidence` (architectures), or `activity_level`/`safety_level` (community), which describe the entry's subject, not the catalog entry's research depth.
+The category classification that determines a benchmark entry's canonical folder under `content/benchmarks/`. Field: `category`.
+
+`general-llm` — broad capability benchmarks (reasoning, knowledge, instruction-following)
+`code` — coding benchmarks
+`retrieval-rag` — retrieval + RAG evaluation benchmarks
+`agents` — agent / tool-use benchmarks
+`safety` — harmfulness / jailbreak / bias / safety evals
+`multimodal` — vision+language, doc understanding, video/audio multimodal
+`evaluation-methods` — meta: benchmark design, judge calibration, contamination detection
+
+## Benchmark Modalities
+
+Field: `modality` (array, min 1).
+
+`text` | `code` | `vision` | `audio` | `multimodal`
+
+## Benchmark Status
+
+Field: `status`.
+
+`active` — benchmark is actively maintained and widely used
+`deprecated` — benchmark is no longer recommended for new evaluations
+`superseded` — a better benchmark now exists (set `superseded_by`)
+`contested` — validity disputed / heavy gaming / broken protocol
+`contaminated` — known leakage or training contamination concerns
+
+## Protocol Confidence
+
+Field: `protocol_confidence`.
+
+`well-specified` — protocol is clear and widely replicated
+`ambiguous` — multiple incompatible variants exist
+`evolving` — protocol/versions changing rapidly
+
+## Score Interpretation
+
+Field: `score_interpretation`.
+
+`higher-is-better` | `lower-is-better` | `mixed`
+
+## Enrichment Status (Tools, Projects, Research, Tips, Build Examples, Architectures, Observability, Community, and Benchmark)
+
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. For architectures, this covers whether `tradeoffs_as_of` reflects a genuine, current re-verification of the stated tradeoffs versus an inherited or unverified date — an entry with `confidence: evolving` should also carry `enrichment_status: draft` or `reviewed` (not `verified`) unless the tradeoffs were checked against current evidence within the last few months. For observability, this covers whether an entry's `verification_status: production-verified` claim is backed by a described evidence type (a named production system, an incident retro, a measured before/after) versus asserted without evidence — an entry with `verification_status: theoretical` or `community-reported` should also carry `enrichment_status: draft` until a maintainer independently confirms the pattern against a real system. For community entries, this covers whether `activity_level`/`activity_evidence` reflect an independently re-checked, dated public signal versus an inherited or stale claim — an entry with `activity_level: unknown` should also carry `enrichment_status: draft` until a maintainer finds and records a concrete signal. For benchmarks, this covers whether `protocol_confidence`, `known_issues`, and `leaderboards[].last_checked` reflect a live verification pass versus inherited claims — a benchmark with `protocol_confidence: ambiguous` should also carry `enrichment_status: draft` until protocol details, dataset URLs, and leaderboard accessibility are independently confirmed. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips and observability), `build_status`/`outcome` (build examples), `confidence` (architectures), `activity_level`/`safety_level` (community), or `status`/`protocol_confidence` (benchmarks), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)
