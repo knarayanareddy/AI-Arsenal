@@ -19,12 +19,14 @@ This file lists the people who have contributed to AI Arsenal. Recognition is gr
 <!--
 Template for adding a new contributor:
 
-### [@username](https://github.com/username)
+### @username
 
 - **First PR:** #NNN — brief description
 - **Notable contributions:**
   - ...
   - ...
 - **Recognition tier:** _(see CONTRIBUTING.md)_
+
+Replace `@username` with the contributor's GitHub handle when adding an entry.
 
 -->
