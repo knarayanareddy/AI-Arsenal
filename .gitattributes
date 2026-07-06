@@ -61,6 +61,12 @@ content/build-examples/evaluation-pipelines/_index.md   -linguist-generated
 content/build-examples/production-deployment/_index.md  -linguist-generated
 content/build-examples/multimodal/_index.md             -linguist-generated
 content/build-examples/data-pipelines/_index.md         -linguist-generated
+content/architectures/system-design/_index.md        -linguist-generated
+content/architectures/data-strategy/_index.md        -linguist-generated
+content/architectures/model-selection/_index.md      -linguist-generated
+content/architectures/serving-patterns/_index.md     -linguist-generated
+content/architectures/evaluation-strategy/_index.md  -linguist-generated
+content/architectures/reference-stacks/_index.md     -linguist-generated
 
 # Lockfile is always LF and treated as a single entity.
 pnpm-lock.yaml  text eol=lf
