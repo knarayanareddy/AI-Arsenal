@@ -1,21 +1,37 @@
+---
+title: "Digests"
+section: "digests"
+auto_generated: false
+---
+
 # Digests
 
-> Navigation file for the Digests section. This file is auto-generated and is not a content entry.
+Periodic digests summarizing notable AI engineering movement.
 
-## Quick Navigation
+## Status
 
-| Sub-section | Count | Last Updated |
-|---|---:|---|
-| _No sub-sections_ | 0 entries | — |
+**Queued — not yet populated.** No digest entries exist yet. The intended
+flow is for the `monthly.yml` maintenance workflow to generate the first
+monthly digest via `scripts/create-monthly-digest.js` (with
+`scripts/draft-trending.js` producing weekly drafts), then commit it under
+`content/digests/YYYY-MM/`.
 
-## Recently Added
+The `digest` entry type and `schemas/digest.schema.json` already exist, so
+new digests only need to be authored or generated — no schema work is
+required. This section is intentionally empty until that workflow lands.
+
+<!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Digests in This Phase
+
+### Recently Added
 
 _No entries yet._
 
-## Most Popular
+### Most Popular
 
 _No star-tracked entries yet._
 
-## Browse All
+### Browse All
 
 _No entries yet._
