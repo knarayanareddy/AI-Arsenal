@@ -88,6 +88,8 @@ content/benchmarks/agents/_index.md                  -linguist-generated
 content/benchmarks/safety/_index.md                  -linguist-generated
 content/benchmarks/multimodal/_index.md              -linguist-generated
 content/benchmarks/evaluation-methods/_index.md      -linguist-generated
+content/trending/_index.md                           -linguist-generated
+content/trending/by-source/_index.md                -linguist-generated
 
 # Lockfile is always LF and treated as a single entity.
 pnpm-lock.yaml  text eol=lf
