@@ -269,3 +269,9 @@ Expected: PASS – 401 entries, 0 schema errors, 25 structure warnings (24 pre-e
 **Benchmarks Vertical Reorganisation – Full Baseline + Schema Promotion – Complete**  
 **Total entries: 401 (benchmarks: 9)**  
 **CI: green – `migration:benchmarks:enforce` PASS**
+
+---
+
+### Commit 4 (Follow-up) - `docs: add provenance doc and update README.md`
+- Added `docs/provenance.md` to explain ToolRadar ingestion and `enrichment_status` meanings.
+- Updated `README.md` to link to `docs/provenance.md`.
