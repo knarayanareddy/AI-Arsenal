@@ -4,19 +4,9 @@
   "title": "AI Arsenal Build Example Entry",
   "type": "object",
   "additionalProperties": false,
-  "x-schema-version": "1.1.0",
-  "x-migration-note": "Build-examples-vertical reorganisation. New fields below are OPTIONAL but typed until 100% migration is confirmed via `pnpm run migration:build-examples:progress`, at which point the fields listed in `x-required-after-migration` flip to `required` in one atomic commit alongside CI switching from migration:build-examples:progress to migration:build-examples:enforce, matching the exact sequencing already used for the tools/projects/research/tips verticals. `stack` is ALREADY required (pre-existing field) but its pre-migration values were free-text stack/language tags (e.g. 'python', 'docker'), not catalog-entry IDs; the atomic promotion commit also tightens `stack` to `minItems: 2` and documents in TAXONOMY.md that post-migration values must resolve to real project/tool IDs. `tested_on` is required only when `build_status` is `tested` (enforced by the `allOf`/`if`/`then` block below), matching the brief's 'required if build_status: tested' rule.",
-  "x-required-after-migration": [
-    "phase",
-    "build_status",
-    "outcome",
-    "estimated_time (already required)",
-    "stack (add minItems: 2, values must be catalog IDs)",
-    "prerequisites",
-    "last_reviewed",
-    "enrichment_status"
-  ],
-  "required": ["id", "title", "difficulty", "description", "tags", "stack", "estimated_time", "repo_url", "added_date", "added_by", "status"],
+  "x-schema-version": "2.0.0",
+  "x-migration-note": "Build-examples-vertical reorganisation COMPLETE (8/8 build examples migrated into 7 phase folders, confirmed via `pnpm run migration:build-examples:progress` reporting 100%). This atomic commit flips the previously-optional-but-typed migration fields to required, matching the exact sequencing used for the tools/projects/research/tips verticals. `stack` was originally planned (see the Architect's Step 1.5 note) to get `minItems: 2` post-migration, on the assumption that every build uses at least two catalog-tracked components -- but the pre-flight scan found 2 of 8 entries (starter-local-llm-chat, starter-simple-react-agent) genuinely and correctly have only ONE stack value that resolves to a real catalog ID (Docker and Open WebUI have no catalog entries; the OpenAI API itself is not tracked as a catalog project, only openai-agents-sdk/openai-evals are). Rather than force a fabricated second dependency to satisfy an arbitrary minItems, `stack` is set to `minItems: 1` here, matching ground truth. All 8 entries' `stack` values were independently verified to resolve to real content/projects or content/tools IDs (no free-text stack/language tags remain, unlike the pre-migration state).",
+  "required": ["id", "title", "difficulty", "description", "tags", "stack", "estimated_time", "repo_url", "added_date", "added_by", "status", "phase", "build_status", "outcome", "prerequisites", "last_reviewed", "enrichment_status"],
   "properties": {
     "id": { "$ref": "#/$defs/kebabId" },
     "title": { "type": "string", "minLength": 1, "maxLength": 140 },
@@ -29,7 +19,7 @@
     "demo_url": { "anyOf": [{ "$ref": "#/$defs/url" }, { "type": "null" }] },
     "added_date": { "$ref": "#/$defs/date" },
     "added_by": { "$ref": "#/$defs/githubUser" },
-    "last_reviewed": { "anyOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }] },
+    "last_reviewed": { "$ref": "#/$defs/date" },
     "status": { "enum": ["active", "archived", "deprecated", "watching"] },
 
     "phase": {

@@ -6,18 +6,18 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 14 entries | 2026-07-02 |
-| [benchmarks](./benchmarks/) | 0 entries | 2026-07-02 |
-| [build examples](./build-examples/) | 8 entries | 2026-07-02 |
-| [community](./community/) | 30 entries | 2026-07-02 |
-| [digests](./digests/) | 0 entries | 2026-07-02 |
-| [observability](./observability/) | 4 entries | 2026-07-02 |
-| [projects](./projects/) | 68 entries | 2026-07-02 |
-| [research](./research/) | 29 entries | 2026-07-02 |
-| [skills](./skills/) | 8 entries | 2026-07-02 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-02 |
-| [tools](./tools/) | 106 entries | 2026-07-02 |
-| [trending](./trending/) | 2 entries | 2026-07-02 |
+| [architectures](./architectures/) | 14 entries | 2026-07-06 |
+| [benchmarks](./benchmarks/) | 0 entries | 2026-07-06 |
+| [build examples](./build-examples/) | 8 entries | 2026-07-06 |
+| [community](./community/) | 30 entries | 2026-07-06 |
+| [digests](./digests/) | 0 entries | 2026-07-06 |
+| [observability](./observability/) | 4 entries | 2026-07-06 |
+| [projects](./projects/) | 68 entries | 2026-07-06 |
+| [research](./research/) | 29 entries | 2026-07-06 |
+| [skills](./skills/) | 8 entries | 2026-07-06 |
+| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-06 |
+| [tools](./tools/) | 106 entries | 2026-07-06 |
+| [trending](./trending/) | 2 entries | 2026-07-06 |
 
 ## Recently Added
 
@@ -25,12 +25,12 @@
 - [Add Hybrid Search for Exact-Match Terms](./tips-and-tricks/rag-and-retrieval/add-hybrid-search-for-exact-terms.md)
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md)
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md)
+- [Multi-Agent Research System](./build-examples/agent-systems/advanced-multi-agent-research.md)
+- [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md)
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md)
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md)
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md)
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md)
-- [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md)
-- [Andrej Karpathy](./community/people/andrej-karpathy.md)
 
 ## Most Popular
 
@@ -54,6 +54,8 @@
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./tips-and-tricks/prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
+- [Multi-Agent Research System](./build-examples/agent-systems/advanced-multi-agent-research.md) — A planner/researcher/writer/reviewer LangGraph system with a citation-checked review loop and bounded retries
+- [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md) — A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
@@ -74,7 +76,6 @@
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
-- [Basic RAG Chatbot](./build-examples/starter/basic-rag-chatbot.md) — Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
@@ -96,4 +97,3 @@
 - [Which LLM Should I Use?](./architectures/decision-trees/choose-llm.md) — Decision tree for choosing cloud, local, open-weight, reasoning, multimodal, and code models
 - [Choose a Memory Solution](./architectures/decision-trees/choose-memory-solution.md) — Decision tree for short-term, long-term, semantic, and agent memory systems
 - [Choose an Observability Tool](./architectures/decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools
-- [Choose a Vector Database](./architectures/decision-trees/choose-vector-db.md) — Decision tree for selecting vector storage and retrieval infrastructure

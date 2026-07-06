@@ -85,7 +85,20 @@ for (const file of await getEntryFiles()) {
       errors.push(`${file}: tip entries must live in content/tips-and-tricks/`);
     }
   }
-  if (type === 'build-example' && !file.startsWith(`content/build-examples/${parsed.data.difficulty}/`)) errors.push(`${file}: build example folder must match difficulty "${parsed.data.difficulty}"`);
+  if (type === 'build-example') {
+    if (parsed.data.phase) {
+      // Build-examples-vertical reorganisation: migrated entries live flat
+      // under content/build-examples/{phase}/{id}.md. Frontmatter `phase`
+      // values are identical to the folder names for this vertical
+      // (matching the research/tips-vertical pattern, unlike projects
+      // which needed a singular-to-plural mapping table).
+      const expectedFolder = `content/build-examples/${parsed.data.phase}`;
+      if (!file.startsWith(`${expectedFolder}/`)) errors.push(`${file}: build example phase "${parsed.data.phase}" must live in folder "${expectedFolder}/", found "${path.dirname(file)}"`);
+      if (p.length !== 4) errors.push(`${file}: migrated build example entries must be flat under their phase folder (content/build-examples/{phase}/{id}.md), found extra nesting`);
+    } else if (!file.startsWith(`content/build-examples/${parsed.data.difficulty}/`)) {
+      errors.push(`${file}: build example folder must match difficulty "${parsed.data.difficulty}"`);
+    }
+  }
 }
 
 for (const file of await glob('data/*.json', { nodir: true, posix: true })) {

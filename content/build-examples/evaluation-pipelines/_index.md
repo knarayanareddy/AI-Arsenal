@@ -21,3 +21,17 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 ## Build examples in this phase
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Evaluation Pipelines in This Phase
+
+### Recently Added
+
+_No entries yet._
+
+### Most Popular
+
+_No star-tracked entries yet._
+
+### Browse All
+
+_No entries yet._

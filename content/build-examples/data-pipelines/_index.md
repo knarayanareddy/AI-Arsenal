@@ -21,3 +21,17 @@ If parsing, chunking, and embedding are steps within a build whose primary goal 
 ## Build examples in this phase
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Data Pipelines in This Phase
+
+### Recently Added
+
+- [Document Q&A Pipeline](./intermediate-document-qa-pipeline.md)
+
+### Most Popular
+
+_No star-tracked entries yet._
+
+### Browse All
+
+- [Document Q&A Pipeline](./intermediate-document-qa-pipeline.md) — Parse, chunk, and index documents into Postgres via pgvector, with provenance metadata and a citation-backed Q&A query

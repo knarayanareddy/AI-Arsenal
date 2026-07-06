@@ -35,7 +35,7 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 ### Phase 2: Learn RAG as Data Engineering
 
 - Treat parsing, chunking, metadata, and retrieval evals as data pipeline work.
-- Build: [Document Q&A Pipeline](../../build-examples/intermediate/document-qa-pipeline.md).
+- Build: [Document Q&A Pipeline](../../build-examples/data-pipelines/intermediate-document-qa-pipeline.md).
 
 ### Phase 3: Learn Serving and Inference
 

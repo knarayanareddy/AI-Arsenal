@@ -34,12 +34,12 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 ### Stage 2: ReAct and State
 
 - Build a ReAct-style loop with max steps, retries, and trace logs.
-- Use [Simple ReAct Agent](../../build-examples/starter/simple-react-agent.md).
+- Use [Simple ReAct Agent](../../build-examples/agent-systems/starter-simple-react-agent.md).
 
 ### Stage 3: Multi-Tool Agent
 
 - Add multiple tools, typed outputs, and failure handling.
-- Build [Multi-Tool Agent](../../build-examples/intermediate/multi-tool-agent.md).
+- Build [Multi-Tool Agent](../../build-examples/agent-systems/intermediate-multi-tool-agent.md).
 
 ### Stage 4: Memory and Long-Running State
 
@@ -49,7 +49,7 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 ### Stage 5: Multi-Agent Systems
 
 - Add planner, executor, reviewer, and human approval roles.
-- Build [Multi-Agent Research System](../../build-examples/advanced/multi-agent-research-system.md).
+- Build [Multi-Agent Research System](../../build-examples/agent-systems/advanced-multi-agent-research.md).
 
 ### Stage 6: Production Reliability
 

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-02T19:58:11.804Z",
+    "generated_at": "2026-07-06T13:47:01.359Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
@@ -139,6 +139,44 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "advanced-multi-agent-research",
+      "type": "build-example",
+      "name": "Multi-Agent Research System",
+      "description": "A planner/researcher/writer/reviewer LangGraph system with a citation-checked review loop and bounded retries",
+      "tags": [
+        "agents",
+        "planning",
+        "rag"
+      ],
+      "path": "content/build-examples/agent-systems/advanced-multi-agent-research.md",
+      "url": "content/build-examples/agent-systems/advanced-multi-agent-research",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "advanced-self-correcting-rag",
+      "type": "build-example",
+      "name": "Self-Correcting RAG",
+      "description": "A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries",
+      "tags": [
+        "rag",
+        "evaluation",
+        "retrieval"
+      ],
+      "path": "content/build-examples/rag-systems/advanced-self-correcting-rag.md",
+      "url": "content/build-examples/rag-systems/advanced-self-correcting-rag",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -517,25 +555,6 @@
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
-      "status": "active",
-      "featured": false
-    },
-    {
-      "id": "basic-rag-chatbot",
-      "type": "build-example",
-      "name": "Basic RAG Chatbot",
-      "description": "Blueprint for a document-grounded chatbot using LlamaIndex, Chroma, and Gradio",
-      "tags": [
-        "rag",
-        "retrieval",
-        "llm"
-      ],
-      "path": "content/build-examples/starter/basic-rag-chatbot.md",
-      "url": "content/build-examples/starter/basic-rag-chatbot",
-      "last_updated": "2026-06-14",
-      "category": null,
-      "maturity": null,
-      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -1525,25 +1544,6 @@
       "featured": false
     },
     {
-      "id": "document-qa-pipeline",
-      "type": "build-example",
-      "name": "Document Q&A Pipeline",
-      "description": "Blueprint for document ingestion, parsing, indexing, and question answering with pgvector",
-      "tags": [
-        "rag",
-        "data",
-        "retrieval"
-      ],
-      "path": "content/build-examples/intermediate/document-qa-pipeline.md",
-      "url": "content/build-examples/intermediate/document-qa-pipeline",
-      "last_updated": "2026-06-14",
-      "category": null,
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "drop-unused-conversation-history",
       "type": "tip",
       "name": "Keep Only Relevant Conversation History, Not the Whole Transcript",
@@ -2482,6 +2482,63 @@
       "featured": false
     },
     {
+      "id": "intermediate-document-qa-pipeline",
+      "type": "build-example",
+      "name": "Document Q&A Pipeline",
+      "description": "Parse, chunk, and index documents into Postgres via pgvector, with provenance metadata and a citation-backed Q&A query",
+      "tags": [
+        "rag",
+        "data",
+        "retrieval"
+      ],
+      "path": "content/build-examples/data-pipelines/intermediate-document-qa-pipeline.md",
+      "url": "content/build-examples/data-pipelines/intermediate-document-qa-pipeline",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "intermediate-multi-tool-agent",
+      "type": "build-example",
+      "name": "Multi-Tool Agent",
+      "description": "A bounded multi-tool agent with validated arguments, Pydantic-typed final answers via Instructor, and Langfuse tracing",
+      "tags": [
+        "agents",
+        "tool-use",
+        "structured-output"
+      ],
+      "path": "content/build-examples/agent-systems/intermediate-multi-tool-agent.md",
+      "url": "content/build-examples/agent-systems/intermediate-multi-tool-agent",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "intermediate-production-rag-api",
+      "type": "build-example",
+      "name": "Production RAG API",
+      "description": "A FastAPI RAG service backed by Qdrant with request-scoped tracing, source citations, and async ingestion",
+      "tags": [
+        "rag",
+        "retrieval",
+        "observability"
+      ],
+      "path": "content/build-examples/rag-systems/intermediate-production-rag-api.md",
+      "url": "content/build-examples/rag-systems/intermediate-production-rag-api",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "jason-liu",
       "type": "person",
       "name": "Jason Liu",
@@ -3162,25 +3219,6 @@
       "featured": false
     },
     {
-      "id": "local-llm-chat",
-      "type": "build-example",
-      "name": "Local LLM Chat",
-      "description": "Blueprint for a private local chat app using Ollama and Open WebUI-style deployment",
-      "tags": [
-        "local",
-        "llm",
-        "inference"
-      ],
-      "path": "content/build-examples/starter/local-llm-chat.md",
-      "url": "content/build-examples/starter/local-llm-chat",
-      "last_updated": "2026-06-14",
-      "category": null,
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "log-agent-state-transitions",
       "type": "tip",
       "name": "Log Every Agent State Transition, Not Just Final Output",
@@ -3728,25 +3766,6 @@
       "featured": false
     },
     {
-      "id": "multi-agent-research-system",
-      "type": "build-example",
-      "name": "Multi-Agent Research System",
-      "description": "Blueprint for a research assistant with planning, retrieval, writing, review, and traceable agent state",
-      "tags": [
-        "agents",
-        "planning",
-        "rag"
-      ],
-      "path": "content/build-examples/advanced/multi-agent-research-system.md",
-      "url": "content/build-examples/advanced/multi-agent-research-system",
-      "last_updated": "2026-06-14",
-      "category": null,
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "multi-agent-system",
       "type": "guide",
       "name": "Multi-Agent System Stack",
@@ -3761,25 +3780,6 @@
       "url": "content/architectures/reference-stacks/multi-agent-system",
       "last_updated": "2026-06-13",
       "category": "architectures",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
-      "id": "multi-tool-agent",
-      "type": "build-example",
-      "name": "Multi-Tool Agent",
-      "description": "Blueprint for a LangGraph agent that uses multiple validated tools and structured outputs",
-      "tags": [
-        "agents",
-        "tool-use",
-        "structured-output"
-      ],
-      "path": "content/build-examples/intermediate/multi-tool-agent.md",
-      "url": "content/build-examples/intermediate/multi-tool-agent",
-      "last_updated": "2026-06-14",
-      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -4542,25 +4542,6 @@
       "url": "content/architectures/reference-stacks/production-rag",
       "last_updated": "2026-06-13",
       "category": "architectures",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
-      "id": "production-rag-api",
-      "type": "build-example",
-      "name": "Production RAG API",
-      "description": "Blueprint for a production-ready RAG API with FastAPI, Qdrant, LlamaIndex, and Langfuse",
-      "tags": [
-        "rag",
-        "retrieval",
-        "observability"
-      ],
-      "path": "content/build-examples/intermediate/production-rag-api.md",
-      "url": "content/build-examples/intermediate/production-rag-api",
-      "last_updated": "2026-06-14",
-      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -5351,25 +5332,6 @@
       "featured": false
     },
     {
-      "id": "self-correcting-rag",
-      "type": "build-example",
-      "name": "Self-Correcting RAG",
-      "description": "Blueprint for a RAG pipeline that detects weak retrieval and retries with query rewriting or fallback",
-      "tags": [
-        "rag",
-        "evaluation",
-        "retrieval"
-      ],
-      "path": "content/build-examples/advanced/self-correcting-rag.md",
-      "url": "content/build-examples/advanced/self-correcting-rag",
-      "last_updated": "2026-06-14",
-      "category": null,
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "semantic-kernel",
       "type": "project",
       "name": "Semantic Kernel",
@@ -5593,25 +5555,6 @@
       "featured": false
     },
     {
-      "id": "simple-react-agent",
-      "type": "build-example",
-      "name": "Simple ReAct Agent",
-      "description": "Blueprint for a small ReAct-style tool-using agent with LangGraph and typed tools",
-      "tags": [
-        "agents",
-        "tool-use",
-        "reasoning"
-      ],
-      "path": "content/build-examples/starter/simple-react-agent.md",
-      "url": "content/build-examples/starter/simple-react-agent",
-      "last_updated": "2026-06-14",
-      "category": null,
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "smolagents",
       "type": "project",
       "name": "Smolagents",
@@ -5721,6 +5664,63 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "starter-basic-rag-chatbot",
+      "type": "build-example",
+      "name": "Basic RAG Chatbot",
+      "description": "A document-grounded chatbot: LlamaIndex + Chroma + Gradio, source-grounded answers over a local folder of documents",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llm"
+      ],
+      "path": "content/build-examples/rag-systems/starter-basic-rag-chatbot.md",
+      "url": "content/build-examples/rag-systems/starter-basic-rag-chatbot",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "starter-local-llm-chat",
+      "type": "build-example",
+      "name": "Local LLM Chat",
+      "description": "Stand up a private local chat stack: Ollama plus Open WebUI via Docker Compose, no cloud API calls",
+      "tags": [
+        "local",
+        "llm",
+        "inference"
+      ],
+      "path": "content/build-examples/production-deployment/starter-local-llm-chat.md",
+      "url": "content/build-examples/production-deployment/starter-local-llm-chat",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "starter-simple-react-agent",
+      "type": "build-example",
+      "name": "Simple ReAct Agent",
+      "description": "A minimal tool-using agent with LangChain's create_agent, a step budget, and traceable tool calls",
+      "tags": [
+        "agents",
+        "tool-use",
+        "reasoning"
+      ],
+      "path": "content/build-examples/agent-systems/starter-simple-react-agent.md",
+      "url": "content/build-examples/agent-systems/starter-simple-react-agent",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {

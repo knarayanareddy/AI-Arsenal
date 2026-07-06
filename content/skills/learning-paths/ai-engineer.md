@@ -42,12 +42,12 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 
 - Build a document Q&A system.
 - Learn chunking, embeddings, vector stores, reranking, and retrieval evaluation.
-- Build: [Basic RAG Chatbot](../../build-examples/starter/basic-rag-chatbot.md), then [Production RAG API](../../build-examples/intermediate/production-rag-api.md).
+- Build: [Basic RAG Chatbot](../../build-examples/rag-systems/starter-basic-rag-chatbot.md), then [Production RAG API](../../build-examples/rag-systems/intermediate-production-rag-api.md).
 
 ### Month 4: Agents
 
 - Learn tool calling, state, retries, memory, and human approval.
-- Build: [Simple ReAct Agent](../../build-examples/starter/simple-react-agent.md) and [Multi-Tool Agent](../../build-examples/intermediate/multi-tool-agent.md).
+- Build: [Simple ReAct Agent](../../build-examples/agent-systems/starter-simple-react-agent.md) and [Multi-Tool Agent](../../build-examples/agent-systems/intermediate-multi-tool-agent.md).
 
 ### Month 5: Production
 

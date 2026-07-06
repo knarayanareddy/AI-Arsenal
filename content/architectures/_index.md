@@ -6,10 +6,10 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [decision trees](./decision-trees/) | 8 entries | 2026-07-02 |
-| [diagrams](./diagrams/) | 0 entries | 2026-07-02 |
-| [patterns](./patterns/) | 0 entries | 2026-07-02 |
-| [reference stacks](./reference-stacks/) | 6 entries | 2026-07-02 |
+| [decision trees](./decision-trees/) | 8 entries | 2026-07-06 |
+| [diagrams](./diagrams/) | 0 entries | 2026-07-06 |
+| [patterns](./patterns/) | 0 entries | 2026-07-06 |
+| [reference stacks](./reference-stacks/) | 6 entries | 2026-07-06 |
 
 ## Recently Added
 

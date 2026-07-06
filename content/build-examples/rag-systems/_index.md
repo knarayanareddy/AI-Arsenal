@@ -23,3 +23,21 @@ If the primary artifact is an evaluation harness that happens to evaluate a RAG 
 ## Build examples in this phase
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Rag Systems in This Phase
+
+### Recently Added
+
+- [Self-Correcting RAG](./advanced-self-correcting-rag.md)
+- [Production RAG API](./intermediate-production-rag-api.md)
+- [Basic RAG Chatbot](./starter-basic-rag-chatbot.md)
+
+### Most Popular
+
+_No star-tracked entries yet._
+
+### Browse All
+
+- [Self-Correcting RAG](./advanced-self-correcting-rag.md) — A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries
+- [Production RAG API](./intermediate-production-rag-api.md) — A FastAPI RAG service backed by Qdrant with request-scoped tracing, source citations, and async ingestion
+- [Basic RAG Chatbot](./starter-basic-rag-chatbot.md) — A document-grounded chatbot: LlamaIndex + Chroma + Gradio, source-grounded answers over a local folder of documents

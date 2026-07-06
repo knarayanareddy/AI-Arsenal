@@ -6,7 +6,7 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [people](./people/) | 25 entries | 2026-07-02 |
+| [people](./people/) | 25 entries | 2026-07-06 |
 
 ## Recently Added
 

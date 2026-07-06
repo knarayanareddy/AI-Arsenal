@@ -23,3 +23,21 @@ If the primary artifact is a RAG pipeline that happens to be orchestrated by an 
 ## Build examples in this phase
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Agent Systems in This Phase
+
+### Recently Added
+
+- [Multi-Agent Research System](./advanced-multi-agent-research.md)
+- [Multi-Tool Agent](./intermediate-multi-tool-agent.md)
+- [Simple ReAct Agent](./starter-simple-react-agent.md)
+
+### Most Popular
+
+_No star-tracked entries yet._
+
+### Browse All
+
+- [Multi-Agent Research System](./advanced-multi-agent-research.md) — A planner/researcher/writer/reviewer LangGraph system with a citation-checked review loop and bounded retries
+- [Multi-Tool Agent](./intermediate-multi-tool-agent.md) — A bounded multi-tool agent with validated arguments, Pydantic-typed final answers via Instructor, and Langfuse tracing
+- [Simple ReAct Agent](./starter-simple-react-agent.md) — A minimal tool-using agent with LangChain's create_agent, a step budget, and traceable tool calls

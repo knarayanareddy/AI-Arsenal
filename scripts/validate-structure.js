@@ -356,7 +356,11 @@ function buildExampleContentChecks(file, content, data, errors, warnings) {
     if (whatCanGoWrong.length === 0) errors.push(`${file}: "What Can Go Wrong" section must not be empty -- "None" is never acceptable (Builder Question 3)`);
     const lower = whatCanGoWrong.toLowerCase();
     for (const phrase of BUILD_EXAMPLE_BANNED_GOTCHA_PHRASES) {
-      if (lower.includes(phrase)) errors.push(`${file}: "What Can Go Wrong" must not read "${phrase}" -- name at least one specific, observable failure mode (Builder Question 3)`);
+      // Word-boundary match, not substring -- a bare "none" as a bullet's
+      // entire answer is banned, but prose containing "none" as part of a
+      // larger phrase (e.g. "not None", "nonetheless") must not false-flag.
+      const pattern = new RegExp(`(^|\\n)\\s*[-*]?\\s*${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*($|\\n)`, 'i');
+      if (pattern.test(lower)) errors.push(`${file}: "What Can Go Wrong" must not read "${phrase}" -- name at least one specific, observable failure mode (Builder Question 3)`);
     }
     const bulletCount = whatCanGoWrong.split(/\r?\n/).filter((line) => /^[-*]\s/.test(line.trim())).length;
     const minBullets = data.difficulty === 'starter' ? 1 : 3;

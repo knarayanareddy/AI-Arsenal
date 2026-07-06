@@ -21,3 +21,17 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 ## Build examples in this phase
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->
+
+## Production Deployment in This Phase
+
+### Recently Added
+
+- [Local LLM Chat](./starter-local-llm-chat.md)
+
+### Most Popular
+
+_No star-tracked entries yet._
+
+### Browse All
+
+- [Local LLM Chat](./starter-local-llm-chat.md) — Stand up a private local chat stack: Ollama plus Open WebUI via Docker Compose, no cloud API calls
