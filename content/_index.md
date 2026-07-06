@@ -91,9 +91,9 @@
 - [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering
 - [Choosing an Agent Framework: State Model, Language, and Provider Constraints](./architectures/model-selection/choose-agent-framework.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./tips-and-tricks/rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
-- [Choose a Deployment Target](./architectures/decision-trees/choose-deployment-target.md) — Decision tree for deploying AI apps, APIs, agents, and inference services
-- [Choose an Evaluation Framework](./architectures/decision-trees/choose-eval-framework.md) — Decision tree for testing LLM, RAG, and agent applications
+- [Choosing a Deployment Target: Separating App Hosting From Model Serving](./architectures/serving-patterns/choose-deployment-target.md) — 
+- [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./architectures/evaluation-strategy/choose-eval-framework.md) — 
 - [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./tips-and-tricks/inference-and-serving/choose-int4-only-after-quality-tests.md) — 
 - [Choosing a Model: Local vs Cloud, and Routing by Primary Need](./architectures/model-selection/choose-llm.md) — 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./architectures/system-design/choose-memory-solution.md) — 
-- [Choose an Observability Tool](./architectures/decision-trees/choose-observability-tool.md) — Decision tree for choosing tracing, evaluation, proxy, SDK, and OpenTelemetry observability tools
+- [Choosing an Observability Approach: Integration Model First, Feature List Second](./architectures/evaluation-strategy/choose-observability-tool.md) — 

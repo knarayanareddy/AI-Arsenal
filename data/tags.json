@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T15:01:58.391Z",
+  "generated_at": "2026-07-06T15:05:43.819Z",
   "tags": [
     {
       "id": "agents",
@@ -9,10 +9,10 @@
       "types": {
         "tip": 14,
         "build-example": 3,
-        "guide": 7,
+        "guide": 6,
         "project": 21,
         "tool": 15,
-        "architecture": 2,
+        "architecture": 3,
         "person": 3,
         "paper": 4
       },
@@ -187,8 +187,8 @@
       "types": {
         "project": 12,
         "tool": 31,
-        "guide": 4,
-        "architecture": 1,
+        "architecture": 2,
+        "guide": 3,
         "person": 1
       },
       "entries": [
@@ -421,11 +421,11 @@
         "tip": 13,
         "build-example": 1,
         "project": 10,
-        "guide": 12,
+        "guide": 10,
         "tool": 17,
         "person": 9,
-        "paper": 2,
-        "architecture": 1
+        "architecture": 3,
+        "paper": 2
       },
       "entries": [
         "add-evals-before-refactors",
@@ -616,8 +616,8 @@
       "types": {
         "tip": 21,
         "tool": 6,
-        "guide": 6,
-        "architecture": 1,
+        "architecture": 2,
+        "guide": 5,
         "project": 17,
         "paper": 2,
         "build-example": 1
@@ -948,9 +948,10 @@
       "types": {
         "tip": 7,
         "person": 1,
-        "guide": 3,
+        "architecture": 1,
         "tool": 10,
-        "project": 6
+        "project": 6,
+        "guide": 2
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -1026,7 +1027,8 @@
       "types": {
         "tip": 22,
         "project": 12,
-        "guide": 7,
+        "architecture": 2,
+        "guide": 5,
         "person": 1,
         "build-example": 1,
         "tool": 5
@@ -1201,8 +1203,8 @@
       "types": {
         "tip": 18,
         "build-example": 5,
-        "guide": 8,
-        "architecture": 2,
+        "guide": 7,
+        "architecture": 3,
         "project": 23,
         "tool": 6,
         "paper": 5,
@@ -1481,11 +1483,11 @@
       "label": "Self Hosted",
       "count": 15,
       "types": {
-        "guide": 2,
-        "architecture": 1,
+        "architecture": 2,
         "project": 8,
         "tip": 3,
-        "tool": 1
+        "tool": 1,
+        "guide": 1
       },
       "entries": [
         "choose-deployment-target",
@@ -1510,7 +1512,7 @@
       "label": "Serverless",
       "count": 6,
       "types": {
-        "guide": 1,
+        "architecture": 1,
         "tool": 5
       },
       "entries": [
@@ -1648,7 +1650,8 @@
         "tip": 8,
         "project": 10,
         "tool": 7,
-        "guide": 3
+        "architecture": 1,
+        "guide": 2
       },
       "entries": [
         "add-a-minimal-reproduction-prompt",

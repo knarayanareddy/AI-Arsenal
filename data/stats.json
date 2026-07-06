@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T15:01:58.391Z",
+  "generated_at": "2026-07-06T15:05:43.819Z",
   "entries": {
     "total": 371,
     "projects": 68,
@@ -9,14 +9,14 @@
     "tips": 102,
     "people": 25,
     "digests": 0,
-    "guides": 46,
+    "guides": 43,
     "build_examples": 8,
-    "architectures": 5
+    "architectures": 8
   },
   "tags": {
     "total": 54
   },
   "content": {
-    "total_words": 153526
+    "total_words": 154579
   }
 }

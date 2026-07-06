@@ -26,7 +26,8 @@ Choosing a specific evaluation platform (Langfuse vs LangSmith vs Braintrust) is
 
 ### Recently Added
 
-_No entries yet._
+- [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./choose-eval-framework.md)
+- [Choosing an Observability Approach: Integration Model First, Feature List Second](./choose-observability-tool.md)
 
 ### Most Popular
 
@@ -34,4 +35,5 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./choose-eval-framework.md) — 
+- [Choosing an Observability Approach: Integration Model First, Feature List Second](./choose-observability-tool.md) — 
