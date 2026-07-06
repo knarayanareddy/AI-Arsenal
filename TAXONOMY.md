@@ -175,9 +175,42 @@ The primary context a tool is built for. A tool may serve more than one audience
 `production` — reliability, scalability, SLA, and support matter
 `research` — benchmarking, comparison, academic, or experimental use
 
-## Build Example Difficulty Levels
+## Build Example Phases
 
-`starter` | `intermediate` | `advanced`
+The lifecycle/system-type classification that determines a build example's canonical folder under `content/build-examples/`. Field: `phase`. This mirrors the `phase` field on tool, project, research, and tip entries (see Tool Phases, Project Phases, Research Phases, Tip Phases above) so all five verticals share one "what stage/area of the stack is this" query axis, even though the five enums differ. Assign by the PRIMARY system being built, not the tools used — a RAG system with an evaluation step still belongs in `rag-systems`, not `evaluation-pipelines`, unless the evaluation harness itself is the primary artifact being built. Never duplicate a build example across two phase folders; if a build genuinely spans multiple phases, assign it to the phase representing the hardest and most novel part of the build, and note the non-obvious placement decision in the entry's `enrichment_notes`.
+
+`rag-systems` — retrieval-augmented generation systems: basic RAG, advanced/production RAG, hybrid search, multi-document RAG, agentic RAG, RAG with reranking or self-correction
+`agent-systems` — autonomous agents, multi-agent systems, tool-using agents, coding agents, research agents, human-in-the-loop agent workflows
+`fine-tuning-workflows` — LoRA/QLoRA fine-tuning, instruction tuning, DPO/RLHF pipelines, dataset preparation, fine-tune-plus-eval-plus-deploy loops
+`evaluation-pipelines` — builds where the PRIMARY artifact is the evaluation system itself: LLM-as-judge setups, golden dataset construction, automated regression testing, benchmark harnesses, eval dashboards
+`production-deployment` — builds where the PRIMARY challenge is deployment/serving rather than the AI system's own logic: inference server setup, load balancing, gateway configuration, an observability stack, cost monitoring, A/B testing pipelines
+`multimodal` — vision+language, audio+language, document-image understanding, image-generation pipelines, speech systems
+`data-pipelines` — ingestion, chunking, and embedding pipelines; document processing; knowledge-base construction; data-quality and deduplication systems
+
+## Build Example Difficulty
+
+Field: `difficulty`. Time/complexity bucket describing how much an engineer needs to already know and how much infrastructure the build touches — distinct from `estimated_time`, which is the concrete hour/day range for this specific build.
+
+`starter` — engineer new to this pattern; uses high-level abstractions; ~2-8 hours
+`intermediate` — engineer familiar with the pattern; touches infrastructure; ~1-3 days
+`advanced` — experienced engineer; custom components, production concerns; ~3-5 days
+
+## Build Example Status
+
+Field: `build_status`. Tracks whether a build example has actually been run end-to-end by a named author/maintainer, distinct from `enrichment_status` (below), which tracks general editorial confidence.
+
+`tested` — author verified end-to-end on the stated environment; versions pinned
+`untested` — structure is correct but not end-to-end verified by Arsenal maintainers
+`outdated` — was tested but stack versions have changed significantly since the last review
+`community-built` — contributed by the community; not yet verified by maintainers
+
+## Build Example Outcome
+
+Field: `outcome`. What kind of finished system the build produces — sets the reader's expectations for how much further work is required before shipping.
+
+`working-prototype` — a running system, not production-ready
+`production-ready` — includes error handling, logging, config management, and has been tested under load
+`learning-reference` — optimised for understanding over production use
 
 ## Maturity Levels
 
@@ -224,9 +257,9 @@ The primary context a tool is built for. A tool may serve more than one audience
 
 `trending` | `featured` | `foundational` | `sota` | `benchmark` | `experimental` | `battle-tested` | `community-favorite` | `new-arrival`
 
-## Enrichment Status (Tools, Projects, Research, and Tips)
+## Enrichment Status (Tools, Projects, Research, Tips, and Build Examples)
 
-Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), or `verification_status` (tips), which describe the entry's subject, not the catalog entry's research depth.
+Tracks editorial confidence in a catalog entry's research depth. For tools, this covers the `phase`/`audience`/`best_when`/`avoid_when` fields introduced by the tools-vertical reorganisation. For projects, this covers `phase`/`domain`/`relation_to_stack`/`health_signals`/`ecosystem_role`/`best_for`/`avoid_if` plus the sourced-architecture and named-ecosystem-position claims introduced by the projects-vertical reorganisation. For research, this covers the point-in-time claims introduced by the research-vertical reorganisation: `result_status`, `reproduction_status`, `citation_count_approx`, and post-publication critique/reproduction findings in the Reproductions & Follow-up Work section. For tips, this covers `verification_status` and any `metrics` claims introduced by the tips-vertical reorganisation — a tip with `verification_status: theoretical` should also carry `enrichment_status: draft` per Q4 of the Practitioner's Five Questions. For build examples, this covers whether `build_status: tested` is backed by a real, named `tested_on` environment versus asserted without verification — a build example with `build_status: untested` or `community-built` should also carry `enrichment_status: draft` until a maintainer has independently run it end-to-end. This is distinct from `verdict`/`maturity` (tools), `health_signals`/`maturity` (projects), `importance` (papers), `verification_status` (tips), or `build_status`/`outcome` (build examples), which describe the entry's subject, not the catalog entry's research depth.
 
 `draft` — written from the project/tool's own docs or marketing copy only; no third-party production usage evidence, paper citation, or dependency-graph verification reviewed yet
 `reviewed` — a maintainer has read the official docs/paper and at least one third-party source (blog post, case study, issue thread, dependent-repo evidence)

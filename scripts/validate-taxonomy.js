@@ -82,7 +82,19 @@ for (const file of files) {
     }
   }
 
-  if (type === 'build-example') requireAllowed(errors, file, 'difficulty', data.difficulty, taxonomy.buildDifficulties);
+  if (type === 'build-example') {
+    requireAllowed(errors, file, 'difficulty', data.difficulty, taxonomy.buildDifficulties);
+
+    // Build-examples-vertical reorganisation: additional taxonomy fields,
+    // checked only once an entry carries the new `phase` field (i.e. is
+    // migrated). Mirrors the tools/projects/research/tips-vertical pattern.
+    if (data.phase) {
+      requireAllowed(errors, file, 'phase', data.phase, taxonomy.buildExamplePhases);
+      requireAllowed(errors, file, 'build_status', data.build_status, taxonomy.buildExampleStatus);
+      requireAllowed(errors, file, 'outcome', data.outcome, taxonomy.buildExampleOutcome);
+      requireAllowed(errors, file, 'enrichment_status', data.enrichment_status, taxonomy.enrichmentStatusValues);
+    }
+  }
   checked += 1;
 }
 
