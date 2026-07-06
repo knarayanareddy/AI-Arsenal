@@ -79,6 +79,31 @@ const TIP_HEADINGS_NEW = [
   'Verification'
 ];
 
+// Build-examples-vertical reorganisation: the canonical body structure for a
+// migrated build example (see .migration/build-examples-audit-report.md and
+// the build-examples-vertical-reorg brief). Applied only once an entry
+// carries the new `phase` field, so unmigrated build examples continue to
+// validate against the pre-existing 8-heading structure during the
+// folder-by-folder migration. See
+// scripts/check-build-examples-migration-progress.js. "What Can Go Wrong"
+// and "Verify It Worked" are mandatory, first-class sections (per Persona
+// 3/The Completeness Auditor and Builder Question 3/4) rather than being
+// folded into a generic "Gotchas" section, and "Implementation" content is
+// checked for a real code:prose ratio (buildExampleContentChecks below) so
+// a migrated entry cannot silently regress back into Failure Mode 3 (the
+// Disguised Architecture Essay).
+const BUILD_EXAMPLE_HEADINGS_NEW = [
+  "What You're Building",
+  'Prerequisites',
+  'Architecture Overview',
+  'Implementation',
+  'Verify It Worked',
+  'What Can Go Wrong',
+  'Cost',
+  'Extensions',
+  'Related Entries'
+];
+
 const typeHeadings = {
   project: REQUIRED_ENTRY_HEADINGS,
   tool: REQUIRED_ENTRY_HEADINGS,
@@ -274,6 +299,88 @@ function tipContentChecks(file, content, data, errors, warnings) {
   }
 }
 
+// Build-examples-vertical reorganisation: content-level checks for a
+// migrated build example, mirroring researchContentChecks'/
+// tipContentChecks' pattern. Encodes the Builder's Six Questions and the
+// three named failure modes (Incomplete Blueprint, Moving Target,
+// Disguised Architecture Essay) as automatable checks where possible;
+// anything that requires judgment (Q1 "can an engineer actually complete
+// this?") is left to human/Builder-persona review and is not attempted
+// here.
+const BUILD_EXAMPLE_BANNED_GOTCHA_PHRASES = ['none', 'no known issues', 'nothing to worry about'];
+
+function countCodeAndProseChars(sectionText) {
+  const codeBlocks = sectionText.match(/```[\s\S]*?```/g) ?? [];
+  const codeChars = codeBlocks.reduce((sum, block) => sum + block.length, 0);
+  const proseChars = sectionText.replace(/```[\s\S]*?```/g, '').length;
+  return { codeChars, proseChars };
+}
+
+function buildExampleContentChecks(file, content, data, errors, warnings) {
+  // Failure Mode 3 (Disguised Architecture Essay): the Implementation
+  // section must carry real code, and the code:prose ratio there must not
+  // fall below 1:1, per Persona 3's non-negotiable rule.
+  const implementation = sectionBody(content, 'Implementation');
+  if (implementation !== null) {
+    if (implementation.length === 0) errors.push(`${file}: "Implementation" section must not be empty`);
+    const fenceCount = (implementation.match(/```/g) ?? []).length;
+    if (fenceCount === 0) {
+      errors.push(`${file}: "Implementation" section has no fenced code blocks -- a build example must show real, runnable code, not just prose steps (Failure Mode 3: Disguised Architecture Essay)`);
+    } else if (fenceCount % 2 !== 0) {
+      errors.push(`${file}: "Implementation" section has an unclosed code fence`);
+    } else {
+      const { codeChars, proseChars } = countCodeAndProseChars(implementation);
+      if (codeChars < proseChars) {
+        errors.push(`${file}: "Implementation" section code:prose ratio is below 1:1 (${codeChars} code chars vs ${proseChars} prose chars) -- if the ratio of prose to code exceeds 2:1 it is an architecture guide, not a build example (Failure Mode 3)`);
+      }
+    }
+  }
+
+  // Failure Mode 2 (The Moving Target): a build_status: tested entry must
+  // show at least one pinned version (==, >=, or a bare semver-shaped
+  // string) somewhere in the Implementation section's code, not just in
+  // frontmatter tested_on -- otherwise the body text itself goes stale
+  // silently even though the frontmatter claims verification.
+  if (data.build_status === 'tested' && implementation !== null) {
+    const hasPinnedVersion = /==\d|>=\d|\b\d+\.\d+\.\d+\b/.test(implementation);
+    if (!hasPinnedVersion) {
+      warnings.push(`${file}: build_status is "tested" but no pinned version pattern (e.g. "package==1.2.3") was found in "Implementation" -- verify manually that install commands are actually version-pinned (Builder Question 2 / Failure Mode 2)`);
+    }
+  }
+
+  // Builder Question 3 / Failure Mode 1: "What Can Go Wrong" must name
+  // real, specific failure modes -- at least 3 for intermediate/advanced,
+  // at least 1 for starter, and never a non-answer like "None".
+  const whatCanGoWrong = sectionBody(content, 'What Can Go Wrong');
+  if (whatCanGoWrong !== null) {
+    if (whatCanGoWrong.length === 0) errors.push(`${file}: "What Can Go Wrong" section must not be empty -- "None" is never acceptable (Builder Question 3)`);
+    const lower = whatCanGoWrong.toLowerCase();
+    for (const phrase of BUILD_EXAMPLE_BANNED_GOTCHA_PHRASES) {
+      if (lower.includes(phrase)) errors.push(`${file}: "What Can Go Wrong" must not read "${phrase}" -- name at least one specific, observable failure mode (Builder Question 3)`);
+    }
+    const bulletCount = whatCanGoWrong.split(/\r?\n/).filter((line) => /^[-*]\s/.test(line.trim())).length;
+    const minBullets = data.difficulty === 'starter' ? 1 : 3;
+    if (bulletCount > 0 && bulletCount < minBullets) {
+      warnings.push(`${file}: "What Can Go Wrong" has ${bulletCount} bullet(s); ${data.difficulty ?? 'intermediate/advanced'} build examples should document at least ${minBullets} failure modes (Builder Question 3) -- verify manually`);
+    }
+  }
+
+  // Builder Question 4: "Verify It Worked" must state an observable,
+  // author-independent success criterion, not just "it should work".
+  const verifyItWorked = sectionBody(content, 'Verify It Worked');
+  if (verifyItWorked !== null && verifyItWorked.length === 0) {
+    errors.push(`${file}: "Verify It Worked" section must not be empty -- state a concrete, checkable success criterion (Builder Question 4)`);
+  }
+
+  // Builder Question 5: paid-API/cloud-compute builds must set
+  // cost_estimate; "free with local models" is an acceptable value but the
+  // field must be present, not silently omitted.
+  const costSection = sectionBody(content, 'Cost');
+  if (costSection !== null && costSection.length === 0 && !data.cost_estimate) {
+    warnings.push(`${file}: "Cost" section is empty and frontmatter cost_estimate is not set -- confirm whether this build uses any paid API/compute (Builder Question 5)`);
+  }
+}
+
 const changedOnly = process.argv.includes('--changed-only');
 const fix = process.argv.includes('--fix');
 const errors = [];
@@ -298,6 +405,9 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   } else if (type === 'tip' && data.phase) {
     // Migrated tip entry: use the new canonical structure.
     required = TIP_HEADINGS_NEW;
+  } else if (type === 'build-example' && data.phase) {
+    // Migrated build example: use the new canonical structure.
+    required = BUILD_EXAMPLE_HEADINGS_NEW;
   } else {
     required = typeHeadings[type] ?? REQUIRED_ENTRY_HEADINGS;
   }
@@ -307,6 +417,7 @@ for (const file of await getEntryFiles(changedOnly ? getChangedMarkdownFiles().f
   }
   if (type === 'paper' && data.phase) researchContentChecks(file, content, errors, warnings);
   if (type === 'tip' && data.phase) tipContentChecks(file, content, data, errors, warnings);
+  if (type === 'build-example' && data.phase) buildExampleContentChecks(file, content, data, errors, warnings);
   checked += 1;
 }
 
