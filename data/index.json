@@ -1,16 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T16:03:40.841Z",
+    "generated_at": "2026-07-06T17:09:36.060Z",
     "total_projects": 68,
     "total_tools": 92,
     "total_papers": 25,
     "total_tips": 102,
     "total_people": 25,
     "total_digests": 0,
-    "total_guides": 33,
+    "total_guides": 28,
     "total_build_examples": 8,
     "total_architectures": 14,
     "total_observability": 7,
+    "total_community": 23,
     "schema_version": "1.0.0"
   },
   "entries": [
@@ -278,6 +279,36 @@
       "featured": false
     },
     {
+      "id": "ai-engineer-worlds-fair",
+      "type": "community",
+      "name": "AI Engineer World's Fair",
+      "description": "",
+      "tags": [],
+      "path": "content/community/events/ai-engineer-worlds-fair.md",
+      "url": "content/community/events/ai-engineer-worlds-fair",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "ai-tinkerers",
+      "type": "community",
+      "name": "AI Tinkerers",
+      "description": "",
+      "tags": [],
+      "path": "content/community/meetups/ai-tinkerers.md",
+      "url": "content/community/meetups/ai-tinkerers",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "airflow",
       "type": "tool",
       "name": "Apache Airflow",
@@ -419,6 +450,21 @@
       "url": "content/tips-and-tricks/prompting/ask-for-missing-inputs-before-solving",
       "last_updated": "2026-07-02",
       "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "assemblyai-youtube",
+      "type": "community",
+      "name": "AssemblyAI (YouTube)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/assemblyai-youtube.md",
+      "url": "content/community/creators/assemblyai-youtube",
+      "last_updated": "2026-07-06",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -1310,6 +1356,21 @@
       "featured": false
     },
     {
+      "id": "deeplearningai-youtube",
+      "type": "community",
+      "name": "DeepLearning.AI (YouTube)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/deeplearningai-youtube.md",
+      "url": "content/community/creators/deeplearningai-youtube",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "deepseek-ai-2025-r1",
       "type": "paper",
       "name": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
@@ -1501,25 +1562,6 @@
       "featured": false
     },
     {
-      "id": "discord-communities",
-      "type": "guide",
-      "name": "Discord and Community Spaces",
-      "description": "Community spaces for AI engineering tools, open models, and builders",
-      "tags": [
-        "llm",
-        "agents",
-        "rag"
-      ],
-      "path": "content/community/discord-communities.md",
-      "url": "content/community/discord-communities",
-      "last_updated": "2026-06-14",
-      "category": "community",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "do-not-launch-without-trace-sampling",
       "type": "tip",
       "name": "Capture Sampled Traces Before Real Users Hit the System",
@@ -1661,6 +1703,21 @@
       "path": "content/research/retrieval-and-memory/edge-2024-graphrag.md",
       "url": "content/research/retrieval-and-memory/edge-2024-graphrag",
       "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "eleutherai-discord",
+      "type": "community",
+      "name": "EleutherAI Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/eleutherai-discord.md",
+      "url": "content/community/chat/eleutherai-discord",
+      "last_updated": "2026-07-06",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -1835,6 +1892,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fastai-youtube",
+      "type": "community",
+      "name": "fast.ai",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/fastai-youtube.md",
+      "url": "content/community/creators/fastai-youtube",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2156,6 +2228,21 @@
       "featured": false
     },
     {
+      "id": "gradient-dissent-podcast",
+      "type": "community",
+      "name": "Gradient Dissent (Weights & Biases)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/gradient-dissent-podcast.md",
+      "url": "content/community/creators/gradient-dissent-podcast",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "gradio",
       "type": "tool",
       "name": "Gradio",
@@ -2364,6 +2451,21 @@
       "featured": false
     },
     {
+      "id": "hugging-face-discord",
+      "type": "community",
+      "name": "Hugging Face Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/hugging-face-discord.md",
+      "url": "content/community/chat/hugging-face-discord",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "hugging-face-hub",
       "type": "tool",
       "name": "Hugging Face Hub",
@@ -2380,6 +2482,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "huggingface-youtube",
+      "type": "community",
+      "name": "Hugging Face (YouTube)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/huggingface-youtube.md",
+      "url": "content/community/creators/huggingface-youtube",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2433,6 +2550,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "import-ai",
+      "type": "community",
+      "name": "Import AI (Jack Clark)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/import-ai.md",
+      "url": "content/community/newsletters/import-ai",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2503,6 +2635,21 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "interconnects",
+      "type": "community",
+      "name": "Interconnects (Nathan Lambert)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/interconnects.md",
+      "url": "content/community/newsletters/interconnects",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2770,6 +2917,21 @@
       "featured": false
     },
     {
+      "id": "laion",
+      "type": "community",
+      "name": "LAION (Large-scale Artificial Intelligence Open Network)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/datasets/laion.md",
+      "url": "content/community/datasets/laion",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "lancedb",
       "type": "project",
       "name": "LanceDB",
@@ -2807,6 +2969,36 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "langchain-forum",
+      "type": "community",
+      "name": "LangChain Forum",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/langchain-forum.md",
+      "url": "content/community/forums/langchain-forum",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "langchain-slack",
+      "type": "community",
+      "name": "LangChain Community Slack",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/langchain-slack.md",
+      "url": "content/community/chat/langchain-slack",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2926,6 +3118,36 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "latent-space-newsletter",
+      "type": "community",
+      "name": "Latent Space (Newsletter)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/latent-space-newsletter.md",
+      "url": "content/community/newsletters/latent-space-newsletter",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "latent-space-podcast",
+      "type": "community",
+      "name": "Latent Space (Podcast)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/latent-space-podcast.md",
+      "url": "content/community/creators/latent-space-podcast",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -3160,6 +3382,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llamaindex-discord",
+      "type": "community",
+      "name": "LlamaIndex Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/llamaindex-discord.md",
+      "url": "content/community/chat/llamaindex-discord",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -3885,22 +4122,18 @@
       "featured": false
     },
     {
-      "id": "newsletters",
-      "type": "guide",
-      "name": "AI Newsletters",
-      "description": "Curated newsletters for AI engineering, open models, research, and product signals",
-      "tags": [
-        "llm",
-        "research",
-        "trending"
-      ],
-      "path": "content/community/newsletters.md",
-      "url": "content/community/newsletters",
-      "last_updated": "2026-06-14",
-      "category": "community",
+      "id": "no-priors-podcast",
+      "type": "community",
+      "name": "No Priors",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/no-priors-podcast.md",
+      "url": "content/community/creators/no-priors-podcast",
+      "last_updated": "2026-07-06",
+      "category": null,
       "maturity": null,
       "cost_model": null,
-      "status": "active",
+      "status": null,
       "featured": false
     },
     {
@@ -3960,6 +4193,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openai-developer-forum",
+      "type": "community",
+      "name": "OpenAI Developer Community",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/openai-developer-forum.md",
+      "url": "content/community/forums/openai-developer-forum",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -4191,25 +4439,6 @@
       "featured": false
     },
     {
-      "id": "people-to-follow",
-      "type": "guide",
-      "name": "People to Follow",
-      "description": "Curated guide to AI builders, researchers, educators, and maintainers worth following",
-      "tags": [
-        "llm",
-        "agents",
-        "rag"
-      ],
-      "path": "content/community/people-to-follow.md",
-      "url": "content/community/people-to-follow",
-      "last_updated": "2026-06-14",
-      "category": "community",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "pgvector",
       "type": "project",
       "name": "pgvector",
@@ -4384,25 +4613,6 @@
       "featured": false
     },
     {
-      "id": "podcasts",
-      "type": "guide",
-      "name": "AI Podcasts",
-      "description": "Curated podcasts for AI builders, researchers, and product teams",
-      "tags": [
-        "llm",
-        "agents",
-        "research"
-      ],
-      "path": "content/community/podcasts.md",
-      "url": "content/community/podcasts",
-      "last_updated": "2026-06-14",
-      "category": "community",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
-      "featured": false
-    },
-    {
       "id": "portkey",
       "type": "tool",
       "name": "Portkey",
@@ -4419,6 +4629,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "practical-ai-podcast",
+      "type": "community",
+      "name": "Practical AI (Changelog)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/practical-ai-podcast.md",
+      "url": "content/community/creators/practical-ai-podcast",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -4830,6 +5055,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "r-localllama",
+      "type": "community",
+      "name": "r/LocalLLaMA (Reddit)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/r-localllama.md",
+      "url": "content/community/forums/r-localllama",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -6034,6 +6274,21 @@
       "featured": false
     },
     {
+      "id": "the-batch",
+      "type": "community",
+      "name": "The Batch (DeepLearning.AI)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/the-batch.md",
+      "url": "content/community/newsletters/the-batch",
+      "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "this-week",
       "type": "guide",
       "name": "This Week in AI Arsenal",
@@ -6247,6 +6502,21 @@
       "url": "content/tips-and-tricks/inference-and-serving/tune-batch-size-against-tail-latency",
       "last_updated": "2026-07-02",
       "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "twiml-ai-podcast",
+      "type": "community",
+      "name": "The TWIML AI Podcast",
+      "description": "",
+      "tags": [],
+      "path": "content/community/creators/twiml-ai-podcast.md",
+      "url": "content/community/creators/twiml-ai-podcast",
+      "last_updated": "2026-07-06",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -6973,25 +7243,6 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "watching",
-      "featured": false
-    },
-    {
-      "id": "youtube-channels",
-      "type": "guide",
-      "name": "YouTube Channels",
-      "description": "Curated YouTube channels for AI engineering, ML foundations, and practical LLM building",
-      "tags": [
-        "llm",
-        "training",
-        "foundational"
-      ],
-      "path": "content/community/youtube-channels.md",
-      "url": "content/community/youtube-channels",
-      "last_updated": "2026-06-14",
-      "category": "community",
-      "maturity": null,
-      "cost_model": null,
-      "status": "active",
       "featured": false
     },
     {

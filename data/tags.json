@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T16:03:40.841Z",
+  "generated_at": "2026-07-06T17:09:36.060Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 69,
+      "count": 66,
       "types": {
         "tip": 14,
         "build-example": 3,
-        "guide": 5,
+        "guide": 2,
         "project": 21,
         "tool": 15,
         "architecture": 4,
@@ -34,7 +34,6 @@
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
         "dify",
-        "discord-communities",
         "dropstone-3",
         "google-adk",
         "harrison-chase",
@@ -59,8 +58,6 @@
         "multi-agent-system",
         "openai-agents-sdk",
         "openhands",
-        "people-to-follow",
-        "podcasts",
         "pydantic-ai",
         "pydantic-ai-tool",
         "qursor",
@@ -530,11 +527,11 @@
     {
       "id": "foundational",
       "label": "Foundational",
-      "count": 14,
+      "count": 13,
       "types": {
         "person": 5,
         "paper": 4,
-        "guide": 4,
+        "guide": 3,
         "tool": 1
       },
       "entries": [
@@ -550,8 +547,7 @@
         "openai-evals",
         "transformers",
         "vaswani-2017-attention",
-        "yann-lecun",
-        "youtube-channels"
+        "yann-lecun"
       ]
     },
     {
@@ -722,10 +718,10 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 131,
+      "count": 126,
       "types": {
         "tip": 20,
-        "guide": 27,
+        "guide": 22,
         "person": 15,
         "tool": 33,
         "paper": 8,
@@ -756,7 +752,6 @@
         "deployment",
         "detect-context-truncation-in-tests",
         "devlin-2018-bert",
-        "discord-communities",
         "dspy",
         "dubey-2024-llama3",
         "evaluation",
@@ -803,7 +798,6 @@
         "must-read-papers",
         "name-the-audience-in-the-prompt",
         "nemo-guardrails",
-        "newsletters",
         "noam-shazeer",
         "ollama",
         "openai-evals",
@@ -811,10 +805,8 @@
         "order-few-shot-examples-by-similarity",
         "outlines",
         "peft",
-        "people-to-follow",
         "phi-4",
         "phi-cookbook",
-        "podcasts",
         "production-serving",
         "prompt-management",
         "prompt-patterns-catalog",
@@ -863,7 +855,6 @@
         "wei-2022-chain-of-thought",
         "yann-lecun",
         "yi",
-        "youtube-channels",
         "zheng-2023-llm-as-a-judge"
       ]
     },
@@ -1186,11 +1177,11 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 69,
+      "count": 67,
       "types": {
         "tip": 18,
         "build-example": 5,
-        "guide": 4,
+        "guide": 2,
         "architecture": 5,
         "project": 23,
         "tool": 6,
@@ -1213,7 +1204,6 @@
         "crawl4ai-tool",
         "detect-multi-hop-questions-explicitly",
         "dify",
-        "discord-communities",
         "docling",
         "dspy",
         "edge-2024-graphrag",
@@ -1242,7 +1232,6 @@
         "measure-retrieval-recall-before-answer-quality",
         "mem0",
         "milvus",
-        "people-to-follow",
         "pgvector",
         "pinecone",
         "pinecone-vector-db",
@@ -1306,9 +1295,9 @@
     {
       "id": "research",
       "label": "Research",
-      "count": 11,
+      "count": 9,
       "types": {
-        "guide": 6,
+        "guide": 4,
         "person": 5
       },
       "entries": [
@@ -1317,9 +1306,7 @@
         "llm-researcher",
         "melanie-mitchell",
         "must-read-papers",
-        "newsletters",
         "noam-shazeer",
-        "podcasts",
         "sebastian-bubeck",
         "weekly-arxiv-picks",
         "yann-lecun"
@@ -1669,11 +1656,10 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 13,
+      "count": 12,
       "types": {
         "person": 3,
-        "paper": 9,
-        "guide": 1
+        "paper": 9
       },
       "entries": [
         "andrew-ng",
@@ -1687,8 +1673,7 @@
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
         "sebastian-raschka",
-        "yang-2024-qwen25-math",
-        "youtube-channels"
+        "yang-2024-qwen25-math"
       ]
     },
     {
@@ -1714,12 +1699,11 @@
     {
       "id": "trending",
       "label": "Trending",
-      "count": 3,
+      "count": 2,
       "types": {
-        "guide": 3
+        "guide": 2
       },
       "entries": [
-        "newsletters",
         "this-week",
         "weekly-arxiv-picks"
       ]

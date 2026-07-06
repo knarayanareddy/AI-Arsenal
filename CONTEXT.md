@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T16:03:43.508Z | Entries: 374 | Schema version: 1.0.0
+Generated: 2026-07-06T17:09:38.325Z | Entries: 392 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -12,10 +12,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Tips: 102
 - People: 25
 - Digests: 0
-- Guides: 33
+- Guides: 28
 - Build examples: 8
 - Architectures: 14
 - Observability: 7
+- Community: 23
 
 ## Navigation
 
@@ -25,6 +26,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architecture decisions: /content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/
 - Reference stacks: /content/architectures/reference-stacks/
 - Observability playbooks: /content/observability/{instrumentation,tracing,evaluation-quality,monitoring-alerting,cost-usage,privacy-governance,incident-response}/
+- Community directory: /content/community/{forums,chat,newsletters,events,meetups,creators,datasets}/
 - Tool jobs: /content/tools/by-job/
 - Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
@@ -229,6 +231,41 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### tracing
 - Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer — 
+
+## Community Directory by Kind
+
+### chat
+- EleutherAI Discord — 
+- Hugging Face Discord — 
+- LangChain Community Slack — 
+- LlamaIndex Discord — 
+
+### creator
+- AssemblyAI (YouTube) — 
+- DeepLearning.AI (YouTube) — 
+- fast.ai — 
+- Gradient Dissent (Weights & Biases) — 
+- Hugging Face (YouTube) — 
+
+### dataset
+- LAION (Large-scale Artificial Intelligence Open Network) — 
+
+### event
+- AI Engineer World's Fair — 
+
+### forum
+- LangChain Forum — 
+- OpenAI Developer Community — 
+- r/LocalLLaMA (Reddit) — 
+
+### meetup
+- AI Tinkerers — 
+
+### newsletter
+- Import AI (Jack Clark) — 
+- Interconnects (Nathan Lambert) — 
+- Latent Space (Newsletter) — 
+- The Batch (DeepLearning.AI) — 
 
 ## Decision Heuristics
 
