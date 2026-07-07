@@ -105,6 +105,12 @@ content/**/_index.md
 !content/benchmarks/safety/_index.md
 !content/benchmarks/multimodal/_index.md
 !content/benchmarks/evaluation-methods/_index.md
+!content/skills/core-concepts/_index.md
+!content/skills/prompt-engineering/_index.md
+!content/skills/learning-paths/_index.md
+!content/skills/by-role/_index.md
+!content/skills/applied/_index.md
+!content/skills/agent-skills/_index.md
 !content/trending/_index.md
 !content/trending/by-source/_index.md
 !content/digests/**/_index.md
