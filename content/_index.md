@@ -14,23 +14,23 @@
 | [observability](./observability/) | 7 entries | 2026-07-07 |
 | [projects](./projects/) | 72 entries | 2026-07-07 |
 | [research](./research/) | 29 entries | 2026-07-07 |
-| [skills](./skills/) | 9 entries | 2026-07-07 |
+| [skills](./skills/) | 28 entries | 2026-07-07 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-07 |
 | [tools](./tools/) | 125 entries | 2026-07-07 |
 | [trending](./trending/) | 4 entries | 2026-07-07 |
 
 ## Recently Added
 
+- [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md)
+- [Agent Design](./skills/applied/agent-design.md)
 - [Agent Reach](./tools/data-ingestion/agent-reach.md)
+- [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md)
+- [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md)
+- [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md)
+- [Attention](./skills/core-concepts/attention.md)
+- [Building RAG Systems](./skills/applied/building-rag-systems.md)
 - [Chrome DevTools MCP](./tools/dx-and-tooling/chrome-devtools-mcp.md)
 - [Codebase Memory MCP](./tools/dx-and-tooling/codebase-memory-mcp.md)
-- [Tools by Cost — Freemium](./tools/by-cost/cost-freemium.md)
-- [Tools by Cost — Open Source](./tools/by-cost/cost-open-source.md)
-- [Tools by Cost — Paid](./tools/by-cost/cost-paid.md)
-- [Tools by Cost — Self Hostable](./tools/by-cost/cost-self-hostable.md)
-- [Tools by Cost — Usage Based](./tools/by-cost/cost-usage-based.md)
-- [olmOCR](./tools/data-ingestion/olmocr.md)
-- [PageAgent](./projects/agent-systems/page-agent.md)
 
 ## Most Popular
 
@@ -59,7 +59,11 @@
 - [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md) — A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
+- [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md) — Role overview mapping the Agent Builder job to the Arsenal's learning paths, skill guides, and tooling
+- [Agent Design](./skills/applied/agent-design.md) — The skill of designing reliable LLM agents: tool interfaces, control loops, guardrails, and failure recovery
 - [Agent Reach](./tools/data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
+- [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
+- [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
@@ -68,6 +72,7 @@
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
+- [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
@@ -77,6 +82,7 @@
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
+- [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
@@ -91,9 +97,3 @@
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
-- [Browserbase](./tools/data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
-- [Budget Context Before Adding More Tools to an Agent](./tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools.md) — 
-- [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash.md) — 
-- [Use Prompt Caching for Long, Stable System Prompt Prefixes](./tips-and-tricks/cost-and-performance/cache-stable-system-prompts.md) — 
-- [Cap Agent Tool Retries at a Fixed Count Per Tool](./tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries.md) — 
-- [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md) — 
