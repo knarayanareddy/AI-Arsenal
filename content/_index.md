@@ -12,25 +12,25 @@
 | [community](./community/) | 48 entries | 2026-07-07 |
 | [digests](./digests/) | 1 entries | 2026-07-07 |
 | [observability](./observability/) | 7 entries | 2026-07-07 |
-| [projects](./projects/) | 69 entries | 2026-07-07 |
+| [projects](./projects/) | 72 entries | 2026-07-07 |
 | [research](./research/) | 29 entries | 2026-07-07 |
 | [skills](./skills/) | 28 entries | 2026-07-07 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-07 |
-| [tools](./tools/) | 120 entries | 2026-07-07 |
+| [tools](./tools/) | 125 entries | 2026-07-07 |
 | [trending](./trending/) | 4 entries | 2026-07-07 |
 
 ## Recently Added
 
 - [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md)
 - [Agent Design](./skills/applied/agent-design.md)
+- [Agent Reach](./tools/data-ingestion/agent-reach.md)
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md)
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md)
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md)
 - [Attention](./skills/core-concepts/attention.md)
 - [Building RAG Systems](./skills/applied/building-rag-systems.md)
-- [Context Engineering](./skills/applied/context-engineering.md)
-- [Context Windows](./skills/core-concepts/context-windows.md)
-- [Tools by Cost — Freemium](./tools/by-cost/cost-freemium.md)
+- [Chrome DevTools MCP](./tools/dx-and-tooling/chrome-devtools-mcp.md)
+- [Codebase Memory MCP](./tools/dx-and-tooling/codebase-memory-mcp.md)
 
 ## Most Popular
 
@@ -61,6 +61,7 @@
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
 - [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md) — Role overview mapping the Agent Builder job to the Arsenal's learning paths, skill guides, and tooling
 - [Agent Design](./skills/applied/agent-design.md) — The skill of designing reliable LLM agents: tool interfaces, control loops, guardrails, and failure recovery
+- [Agent Reach](./tools/data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
@@ -96,4 +97,3 @@
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
-- [Browserbase](./tools/data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows

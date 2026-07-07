@@ -152,6 +152,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |

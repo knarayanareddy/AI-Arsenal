@@ -6,9 +6,9 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 2 entries | 2026-07-07 |
+| [agent systems](./agent-systems/) | 4 entries | 2026-07-07 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 12 entries | 2026-07-07 |
-| [data and retrieval](./data-and-retrieval/) | 15 entries | 2026-07-07 |
+| [data and retrieval](./data-and-retrieval/) | 16 entries | 2026-07-07 |
 | [foundation models](./foundation-models/) | 13 entries | 2026-07-07 |
 | [frameworks](./frameworks/) | 20 entries | 2026-07-07 |
 | [inference engines](./inference-engines/) | 7 entries | 2026-07-07 |
@@ -16,6 +16,9 @@
 
 ## Recently Added
 
+- [PageAgent](./agent-systems/page-agent.md)
+- [Strix](./agent-systems/strix.md)
+- [zvec](./data-and-retrieval/zvec.md)
 - [Supabase](./data-and-retrieval/supabase.md)
 - [InsForge](./agent-systems/insforge.md)
 - [Stagehand](./agent-systems/stagehand.md)
@@ -23,9 +26,6 @@
 - [TranslateGemma](./foundation-models/translategemma.md)
 - [Uiverse Design](./frameworks/uiverse-design.md)
 - [Agenta](./benchmarks-and-evals/agenta.md)
-- [AutoGen](./frameworks/autogen.md)
-- [AutoGPT](./frameworks/autogpt.md)
-- [Braintrust](./benchmarks-and-evals/braintrust.md)
 
 ## Most Popular
 
@@ -86,9 +86,9 @@
 - [OpenLIT](./benchmarks-and-evals/openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLMetry](./benchmarks-and-evals/openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [Opik](./benchmarks-and-evals/opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
+- [PageAgent](./agent-systems/page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [pgvector](./data-and-retrieval/pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Phi-4](./foundation-models/phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
 - [Phi Cookbook](./foundation-models/phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
 - [Phoenix](./benchmarks-and-evals/phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 - [Pinecone](./data-and-retrieval/pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
-- [Pydantic AI](./frameworks/pydantic-ai.md) — A Python agent framework built around typed models and structured outputs

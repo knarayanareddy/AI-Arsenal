@@ -138,6 +138,7 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [SkillSpector](../evaluation-and-observability/skillspector.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

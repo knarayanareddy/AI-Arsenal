@@ -9,25 +9,25 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-07 |
 | [by job](./by-job/) | 14 entries | 2026-07-07 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-07 |
-| [data ingestion](./data-ingestion/) | 14 entries | 2026-07-07 |
-| [dx and tooling](./dx-and-tooling/) | 17 entries | 2026-07-07 |
-| [evaluation and observability](./evaluation-and-observability/) | 17 entries | 2026-07-07 |
+| [data ingestion](./data-ingestion/) | 16 entries | 2026-07-07 |
+| [dx and tooling](./dx-and-tooling/) | 19 entries | 2026-07-07 |
+| [evaluation and observability](./evaluation-and-observability/) | 18 entries | 2026-07-07 |
 | [model layer](./model-layer/) | 16 entries | 2026-07-07 |
 | [orchestration](./orchestration/) | 15 entries | 2026-07-07 |
 | [serving and deployment](./serving-and-deployment/) | 14 entries | 2026-07-07 |
 
 ## Recently Added
 
+- [Agent Reach](./data-ingestion/agent-reach.md)
+- [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md)
+- [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md)
 - [Tools by Cost — Freemium](./by-cost/cost-freemium.md)
 - [Tools by Cost — Open Source](./by-cost/cost-open-source.md)
 - [Tools by Cost — Paid](./by-cost/cost-paid.md)
 - [Tools by Cost — Self Hostable](./by-cost/cost-self-hostable.md)
 - [Tools by Cost — Usage Based](./by-cost/cost-usage-based.md)
-- [Tools by Stack — Cpp](./by-stack/stack-cpp.md)
-- [Tools by Stack — Go](./by-stack/stack-go.md)
-- [Tools by Stack — Java](./by-stack/stack-java.md)
-- [Tools by Stack — Julia](./by-stack/stack-julia.md)
-- [Tools by Stack — Polyglot](./by-stack/stack-polyglot.md)
+- [olmOCR](./data-ingestion/olmocr.md)
+- [SkillSpector](./evaluation-and-observability/skillspector.md)
 
 ## Most Popular
 
@@ -36,6 +36,7 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
+- [Agent Reach](./data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - [AGNT.Hub](./orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [Apache Airflow](./orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Argilla](./data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
@@ -47,9 +48,11 @@ _No star-tracked entries yet._
 - [BentoML](./serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Browserbase](./data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Chainlit](./dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
+- [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md) — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
 - [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) — Interact with and manage AI-generated artifacts from Claude and similar models
 - [Cloudskill](./orchestration/cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
 - [Code Arena](./evaluation-and-observability/code-arena.md) — Benchmark and compare AI models in a competitive coding environment
+- [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
 - [Conan](./evaluation-and-observability/conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - [Tools by Cost — Freemium](./by-cost/cost-freemium.md) — Tools in the Arsenal filtered by Cost facet Freemium, with an auto-generated routing table that keeps this page current
 - [Tools by Cost — Open Source](./by-cost/cost-open-source.md) — Tools in the Arsenal filtered by Cost facet Open Source, with an auto-generated routing table that keeps this page current
@@ -82,6 +85,3 @@ _No star-tracked entries yet._
 - [Ideogram](./model-layer/ideogram.md) — AI image generation with reliable text rendering in outputs
 - [Ideogram AI](./model-layer/ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
 - [Instructor](./dx-and-tooling/instructor.md) — A library for extracting typed structured outputs from language models
-- [Jina AI Reader](./data-ingestion/jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
-- [Kimi K2.5](./model-layer/kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
-- [Label Studio](./data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets

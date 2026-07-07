@@ -33,6 +33,7 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [zvec](./zvec.md)
 - [Supabase](./supabase.md)
 - [SurrealDB](./surrealdb.md)
 - [Chroma](./chroma.md)
@@ -42,7 +43,6 @@ Before selecting a data/retrieval component:
 - [LanceDB](./lancedb.md)
 - [LlamaParse](./llamaparse.md)
 - [Milvus](./milvus.md)
-- [pgvector](./pgvector.md)
 
 ### Most Popular
 
@@ -74,3 +74,4 @@ Before selecting a data/retrieval component:
 - [SurrealDB](./surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
 - [Unstructured](./unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
 - [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval
+- [zvec](./zvec.md) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory

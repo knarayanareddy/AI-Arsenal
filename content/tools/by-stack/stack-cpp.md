@@ -66,3 +66,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
+| [Codebase Memory MCP](../dx-and-tooling/codebase-memory-mcp.md) | dx and tooling | memory-management | open-source | Yes | Yes | Yes | cpp | use-with-caution |

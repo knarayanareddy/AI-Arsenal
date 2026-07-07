@@ -48,6 +48,7 @@
 | `openlit` | [OpenLIT](./benchmarks-and-evals/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |
 | `openllmetry` | [OpenLLMetry](./benchmarks-and-evals/openllmetry.md) | OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop |
 | `opik` | [Opik](./benchmarks-and-evals/opik.md) | Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards |
+| `page-agent` | [PageAgent](./agent-systems/page-agent.md) | JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language |
 | `pgvector` | [pgvector](./data-and-retrieval/pgvector.md) | PostgreSQL extension for vector similarity search inside an existing relational database |
 | `phi-4` | [Phi-4](./foundation-models/phi-4.md) | Microsoft small language model family optimized for efficient reasoning and local-friendly deployment |
 | `phi-cookbook` | [Phi Cookbook](./foundation-models/phi-cookbook.md) | Microsoft examples and recipes for building with the Phi model family |
@@ -63,6 +64,7 @@
 | `sglang` | [SGLang](./inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
 | `smolagents` | [Smolagents](./frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
 | `stagehand` | [Stagehand](./agent-systems/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
+| `strix` | [Strix](./agent-systems/strix.md) | Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities |
 | `supabase` | [Supabase](./data-and-retrieval/supabase.md) | Open-source backend platform: Postgres database, auth, storage, and realtime APIs |
 | `surrealdb` | [SurrealDB](./data-and-retrieval/surrealdb.md) | Multi-model database combining graph, document, vector, and time-series for AI agents |
 | `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
@@ -73,3 +75,4 @@
 | `vllm` | [vLLM](./inference-engines/vllm.md) | High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs |
 | `weaviate` | [Weaviate](./data-and-retrieval/weaviate.md) | Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval |
 | `yi` | [Yi](./foundation-models/yi.md) | 01.AI open model family with bilingual and long-context variants from small to mid-large sizes |
+| `zvec` | [zvec](./data-and-retrieval/zvec.md) | Lightweight, in-process vector database from Alibaba for local RAG and agent memory |

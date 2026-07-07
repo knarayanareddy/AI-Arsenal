@@ -130,6 +130,7 @@ This table is exhaustive for tools tagged with job = memory-management.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Codebase Memory MCP](../dx-and-tooling/codebase-memory-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | cpp | use-with-caution |
 | [Letta](../orchestration/letta.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Mem0](../orchestration/mem0.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | freemium | Yes | No | No | python | watching |

@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [SkillSpector](./skillspector.md)
 - [Astra Autonomous Pentest](./astra-autonomous-pentest.md)
 - [Code Arena](./code-arena.md)
 - [Conan](./conan.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Giskard](./giskard.md)
 - [Guardrails AI](./guardrails-ai.md)
 - [Humanloop](./humanloop.md)
-- [LangSmith](./langsmith.md)
 
 ### Most Popular
 
@@ -57,6 +57,7 @@ _No star-tracked entries yet._
 - [OpenAI Evals](./openai-evals.md) — An open-source framework for evaluating language model behavior
 - [promptfoo](./promptfoo.md) — An open-source CLI and platform for prompt and LLM regression testing
 - [Rebuff](./rebuff.md) — Prompt injection detection and guardrail toolkit for LLM applications
+- [SkillSpector](./skillspector.md) — Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills
 - [Spotlight by Backplanes](./spotlight-by-backplanes.md) — Understand, improve, and track AI agent sessions with observability tooling
 - [Superlog](./superlog.md) — Real-time log aggregation platform designed for serverless debugging
 - [TruLens](./trulens.md) — An evaluation and tracking toolkit for LLM and RAG applications
