@@ -54,7 +54,7 @@ If a source fails to resolve on **2 consecutive runs**, flag it in the run repor
 | Latent Space | https://www.latent.space/ — feed: https://www.latent.space/feed | AI-engineering deep dives, tool/framework adoption signals, engineering-practice interviews | tools, architectures, community |
 | Interconnects (Nathan Lambert) | https://www.interconnects.ai/ — feed: https://www.interconnects.ai/feed | open-model landscape, RLHF/post-training research analysis | research, trending |
 | Ahead of AI (Sebastian Raschka) | https://magazine.sebastianraschka.com/ | paper walkthroughs with implementation focus, fine-tuning techniques | research, tips |
-| The Batch (deeplearning.ai) | https://www.deeplearning.ai/the-batch/ | weekly research + industry roundup with editorial judgment | research, trending |
+| The Batch (deeplearning.ai) | https://www.deeplearning.ai/the-batch | weekly research + industry roundup with editorial judgment | research, trending |
 | Import AI (Jack Clark) | https://importai.substack.com/ — feed: https://jack-clark.net/feed/ | frontier research analysis, policy-relevant capability findings | research, trending |
 | Lil'Log (Lilian Weng) | https://lilianweng.github.io/ — feed: https://lilianweng.github.io/index.xml | canonical technique surveys (agents, RAG, safety); low volume, extremely high depth | research, architectures |
 | Chip Huyen | https://huyenchip.com/blog/ — feed: https://huyenchip.com/feed.xml | ML systems & production LLM architecture essays | architectures, observability, tips |
