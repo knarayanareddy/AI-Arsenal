@@ -21,7 +21,7 @@ The catalog was bootstrapped from a mix of:
   fabricated GitHub URLs were introduced.
 
 After ingestion, every vertical was migrated and enriched in batches (see
-the `*-migration-completion-report.md` files at the repo root and the
+the `*-migration-completion-report.md` files in `docs/reports/` and the
 `check-*-migration-progress.js` scripts), bringing each entry up to the
 current schema and controlled vocabulary.
 

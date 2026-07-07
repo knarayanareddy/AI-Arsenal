@@ -89,13 +89,19 @@ Current generated stats:
 
 | Type | Count |
 |---|---:|
-| Projects | 30 |
-| Tools | 20 |
-| Papers | 15 |
-| Tips | 20 |
-| Guides | 30 |
-| Build examples | 5 |
-| Total content entries | 120 |
+| Projects | 69 |
+| Tools | 93 |
+| Papers | 25 |
+| Tips | 102 |
+| Guides | 27 |
+| Benchmarks | 30 |
+| People | 25 |
+| Community | 23 |
+| Architectures | 14 |
+| Build examples | 8 |
+| Observability | 7 |
+| Digests | 1 |
+| Total content entries | 424 |
 
 Browse the generated statistics in [`data/stats.json`](./data/stats.json).
 
@@ -361,7 +367,7 @@ pnpm run validate:changed
 pnpm run check:duplicates
 ```
 
-Benchmarks require live verification: set `leaderboards[].last_checked`, use SOTA-safe wording (date + leaderboard URL + protocol variant), and flag unverified entries `enrichment_status: draft`. See [`PR_DESCRIPTION_BENCHMARKS.md`](./PR_DESCRIPTION_BENCHMARKS.md) for the full verification policy.
+Benchmarks require live verification: set `leaderboards[].last_checked`, use SOTA-safe wording (date + leaderboard URL + protocol variant), and flag unverified entries `enrichment_status: draft`. See [`docs/reports/PR_DESCRIPTION_BENCHMARKS.md`](./docs/reports/PR_DESCRIPTION_BENCHMARKS.md) for the full verification policy.
 
 ### Regenerate data locally
 
