@@ -6,28 +6,28 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 0 entries | 2026-07-06 |
-| [by job](./by-job/) | 14 entries | 2026-07-06 |
-| [by stack](./by-stack/) | 0 entries | 2026-07-06 |
-| [data ingestion](./data-ingestion/) | 14 entries | 2026-07-06 |
-| [dx and tooling](./dx-and-tooling/) | 17 entries | 2026-07-06 |
-| [evaluation and observability](./evaluation-and-observability/) | 17 entries | 2026-07-06 |
-| [model layer](./model-layer/) | 16 entries | 2026-07-06 |
-| [orchestration](./orchestration/) | 15 entries | 2026-07-06 |
-| [serving and deployment](./serving-and-deployment/) | 14 entries | 2026-07-06 |
+| [by cost](./by-cost/) | 5 entries | 2026-07-07 |
+| [by job](./by-job/) | 14 entries | 2026-07-07 |
+| [by stack](./by-stack/) | 8 entries | 2026-07-07 |
+| [data ingestion](./data-ingestion/) | 14 entries | 2026-07-07 |
+| [dx and tooling](./dx-and-tooling/) | 17 entries | 2026-07-07 |
+| [evaluation and observability](./evaluation-and-observability/) | 17 entries | 2026-07-07 |
+| [model layer](./model-layer/) | 16 entries | 2026-07-07 |
+| [orchestration](./orchestration/) | 15 entries | 2026-07-07 |
+| [serving and deployment](./serving-and-deployment/) | 14 entries | 2026-07-07 |
 
 ## Recently Added
 
-- [Browserbase](./data-ingestion/browserbase.md)
-- [Agent Browser Shield](./data-ingestion/agent-browser-shield.md)
-- [AGNT.Hub](./orchestration/agnt-hub.md)
-- [Astra Autonomous Pentest](./evaluation-and-observability/astra-autonomous-pentest.md)
-- [Basedash](./dx-and-tooling/basedash.md)
-- [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md)
-- [Cloudskill](./orchestration/cloudskill.md)
-- [Code Arena](./evaluation-and-observability/code-arena.md)
-- [Conan](./evaluation-and-observability/conan.md)
-- [Dropstone 3](./dx-and-tooling/dropstone-3.md)
+- [Tools by Cost — Freemium](./by-cost/cost-freemium.md)
+- [Tools by Cost — Open Source](./by-cost/cost-open-source.md)
+- [Tools by Cost — Paid](./by-cost/cost-paid.md)
+- [Tools by Cost — Self Hostable](./by-cost/cost-self-hostable.md)
+- [Tools by Cost — Usage Based](./by-cost/cost-usage-based.md)
+- [Tools by Stack — Cpp](./by-stack/stack-cpp.md)
+- [Tools by Stack — Go](./by-stack/stack-go.md)
+- [Tools by Stack — Java](./by-stack/stack-java.md)
+- [Tools by Stack — Julia](./by-stack/stack-julia.md)
+- [Tools by Stack — Polyglot](./by-stack/stack-polyglot.md)
 
 ## Most Popular
 
@@ -51,6 +51,11 @@ _No star-tracked entries yet._
 - [Cloudskill](./orchestration/cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
 - [Code Arena](./evaluation-and-observability/code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Conan](./evaluation-and-observability/conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
+- [Tools by Cost — Freemium](./by-cost/cost-freemium.md) — Tools in the Arsenal filtered by Cost facet Freemium, with an auto-generated routing table that keeps this page current
+- [Tools by Cost — Open Source](./by-cost/cost-open-source.md) — Tools in the Arsenal filtered by Cost facet Open Source, with an auto-generated routing table that keeps this page current
+- [Tools by Cost — Paid](./by-cost/cost-paid.md) — Tools in the Arsenal filtered by Cost facet Paid, with an auto-generated routing table that keeps this page current
+- [Tools by Cost — Self Hostable](./by-cost/cost-self-hostable.md) — Tools in the Arsenal filtered by Cost facet Self Hostable, with an auto-generated routing table that keeps this page current
+- [Tools by Cost — Usage Based](./by-cost/cost-usage-based.md) — Tools in the Arsenal filtered by Cost facet Usage Based, with an auto-generated routing table that keeps this page current
 - [Crawl4AI](./data-ingestion/crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
 - [Dagster](./orchestration/dagster.md) — Data orchestration platform for assets, pipelines, schedules, and observability
 - [Data Labeling Tools](./by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
@@ -80,8 +85,3 @@ _No star-tracked entries yet._
 - [Jina AI Reader](./data-ingestion/jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 - [Kimi K2.5](./model-layer/kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [Label Studio](./data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets
-- [Langfuse Prompts](./dx-and-tooling/langfuse-prompts.md) — Prompt management and versioning workflows inside the Langfuse observability platform
-- [LangSmith](./evaluation-and-observability/langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
-- [LangSmith Hub](./dx-and-tooling/langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
-- [Letta](./orchestration/letta.md) — Stateful agent framework and memory system formerly known as MemGPT
-- [LiteLLM](./serving-and-deployment/litellm.md) — A proxy and SDK for routing requests across many LLM providers
