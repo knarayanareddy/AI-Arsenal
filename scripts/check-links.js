@@ -197,7 +197,7 @@ if (writeReport) {
 
 if (broken.length) {
   console.error(chalk.red(`Link check failed with ${broken.length} confirmed broken URL(s):`));
-  for (const item of broken.slice(0, 50)) console.error(chalk.red(`- ${item.url} (${item.status ?? item.error}) in ${item.files.join(', ')}`));
+  for (const item of report.broken_links.slice(0, 50)) console.error(chalk.red(`- ${item.url} (${item.status ?? item.error}) in ${(item.files ?? []).join(', ')}`));
   process.exit(1);
 }
 if (warnings.length) {

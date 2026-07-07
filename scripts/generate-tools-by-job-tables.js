@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { glob } from 'glob';
 import { readMarkdown } from './utils/frontmatter.js';
 import { loadEntries } from './utils/entries.js';
+import { escapeMarkdownCell } from './utils/markdown-escape.js';
 
 export const START = '<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->';
 export const END = '<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->';
@@ -16,7 +17,7 @@ function rel(fromFile, toFile) {
 }
 
 function cell(value) {
-  return String(value ?? '').replace(/\|/g, '\\|');
+  return escapeMarkdownCell(value);
 }
 
 function tableBlock(tools, jobId, guidePath) {

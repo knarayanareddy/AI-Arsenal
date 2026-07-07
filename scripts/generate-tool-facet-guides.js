@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEntries } from './utils/entries.js';
+import { escapeMarkdownCell } from './utils/markdown-escape.js';
 
 export const MARKER = '<!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->';
 
@@ -45,7 +46,7 @@ function matchTools(tools, facetType, facet) {
 }
 
 function cell(value) {
-  return String(value ?? '').replace(/\|/g, '\\|');
+  return escapeMarkdownCell(value);
 }
 
 function tableBlock(tools, facetType, facet, facetPagePath) {
