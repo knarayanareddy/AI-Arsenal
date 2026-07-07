@@ -188,6 +188,14 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Qdrant, Weaviate, Chroma, Milvus, Pinecone, pgvector
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = vector-search.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Pinecone](../data-ingestion/pinecone.md) | data ingestion | freemium | Yes | No | No | python, typescript | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `vector-search` in a new AI application
@@ -224,4 +232,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

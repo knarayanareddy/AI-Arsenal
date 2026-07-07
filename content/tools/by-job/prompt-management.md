@@ -125,6 +125,20 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Langfuse Prompts, LangSmith Hub, Agenta
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = prompt-management.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
+| [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
+| [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md) | dx and tooling | freemium | Yes | Yes | Yes | python, typescript | recommended |
+| [LangSmith Hub](../dx-and-tooling/langsmith-hub.md) | dx and tooling | freemium | Yes | No | No | python, typescript | recommended |
+| [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | freemium | Yes | No | No | python, typescript | recommended |
+| [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | freemium | Yes | No | No | python, typescript | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `prompt-management` in a new AI application
@@ -158,4 +172,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

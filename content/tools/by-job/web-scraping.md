@@ -146,6 +146,22 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Firecrawl, Crawl4AI, Playwright, Puppeteer
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = web-scraping.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
+| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
+| [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
+| [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | freemium | Yes | Yes | Yes | typescript | recommended |
+| [Jina AI Reader](../data-ingestion/jina-reader.md) | data ingestion | freemium | Yes | No | No | polyglot | recommended |
+| [Playwright](../data-ingestion/playwright.md) | data ingestion | open-source | Yes | Yes | Yes | typescript, python | recommended |
+| [Puppeteer](../data-ingestion/puppeteer.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | recommended |
+| [Tabstack](../data-ingestion/tabstack.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
+| [Taste Lab](../data-ingestion/taste-lab.md) | data ingestion | freemium | Yes | No | No | python | watching |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `web-scraping` in a new AI application
@@ -180,4 +196,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

@@ -146,6 +146,29 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Modal, BentoML, Replicate, Fly.io
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = production-serving.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
+| [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
+| [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | usage-based | Yes | No | No | python, typescript | recommended |
+| [Ideogram](../model-layer/ideogram.md) | model layer | freemium | Yes | No | No | python | watching |
+| [Ideogram AI](../model-layer/ideogram-ai.md) | model layer | freemium | Yes | No | No | python | watching |
+| [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
+| [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
+| [Qwen 3](../model-layer/qwen-3.md) | model layer | freemium | Yes | No | No | python | watching |
+| [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Recursi](../dx-and-tooling/recursi.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+| [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
+| [ShellMate](../dx-and-tooling/shellmate.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+| [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `production-serving` in a new AI application
@@ -180,4 +203,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-
