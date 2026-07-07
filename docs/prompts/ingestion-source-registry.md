@@ -92,7 +92,7 @@ If a source fails to resolve on **2 consecutive runs**, flag it in the run repor
 | Hugging Face Daily Papers | https://huggingface.co/papers | community-upvoted new papers; the de-facto successor to Papers with Code (paperswithcode.com now redirects here — do not cite PwC) | Tier 2 |
 | arXiv recent listings | https://arxiv.org/list/cs.CL/recent (+ cs.AI, cs.LG) — feeds: http://arxiv.org/rss/cs.CL etc. | raw new papers | Tier 3 — volume too high to scan directly; use to verify/enrich candidates surfaced by Tier 1–2 |
 | alphaXiv | https://www.alphaxiv.org/ | trending-paper discussion signal | Tier 3 |
-| Epoch AI | https://epoch.ai/blog | compute/capability trend data, rigorous methodology | Tier 1 for benchmark/trend claims |
+| Epoch AI | https://epoch.ai/latest | compute/capability trend data, rigorous methodology | Tier 1 for benchmark/trend claims |
 
 ## BENCHMARKS & EVALUATION
 
@@ -133,7 +133,7 @@ not grounds for a new tool/project entry.
 | Meta AI | https://ai.meta.com/blog/ | open-model releases |
 | Mistral | https://mistral.ai/news/ | open-model releases |
 | Hugging Face blog | https://huggingface.co/blog | library releases, ecosystem tooling |
-| LangChain blog | https://blog.langchain.com/ — feed: https://blog.langchain.com/rss/ | framework releases, breaking changes (many entries already cataloged — bias to UPDATE) |
+| LangChain blog | https://www.langchain.com/blog | framework releases, breaking changes (many entries already cataloged — bias to UPDATE) |
 | LlamaIndex blog | https://www.llamaindex.ai/blog | framework releases |
 | vLLM blog | https://blog.vllm.ai/ | inference-engine releases, perf notes |
 | Modal blog | https://modal.com/blog | serving/infra patterns, GPU-glossary-style references |
