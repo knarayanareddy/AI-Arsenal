@@ -26,7 +26,7 @@ required. This section is intentionally empty until that workflow lands.
 
 ### Recently Added
 
-_No entries yet._
+- [AI Arsenal Digest — 2026-07](./2026-07/digest.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [AI Arsenal Digest — 2026-07](./2026-07/digest.md) — July 2026 digest: 15 new benchmark entries across all 7 categories, a formal Trending vertical (5 commits), and a rounded-out Skills curriculum with 4 learning paths and 8 guides.
