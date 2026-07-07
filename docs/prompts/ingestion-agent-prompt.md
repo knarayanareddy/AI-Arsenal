@@ -105,17 +105,23 @@ max_new_entries: 10            # hard cap on entries created per run (default 10
 
 ### MODE A — SCAN
 
-Consult ONLY this source allowlist (extend it only via a maintainer-approved edit to this
-prompt, never ad hoc):
+Consult ONLY the sources in the companion
+**[Ingestion Source Registry](./ingestion-source-registry.md)** —
+the maintainer-approved allowlist with tiers, per-source
+extraction recipes, verified feed/API access methods, cadence mapping, and an explicit
+excluded-sources list. Extending it is a maintainer-reviewed edit to that file, never an
+ad-hoc agent decision.
 
-| Source | What to extract | Vertical hint |
-|---|---|---|
-| GitHub Trending (daily/weekly, AI-relevant languages) | repos with sustained velocity, not one-day spikes | projects / tools |
-| arXiv (cs.CL, cs.AI, cs.LG recent) | papers with code or unusual attention | research |
-| Hacker News front page (AI-relevant) | launches, releases, postmortems | tools / tips / trending |
-| Papers with Code (trending) | papers with reproduced results | research / benchmarks |
-| Major vendor blogs (OpenAI, Anthropic, Google, Meta, Mistral, HF) | releases, deprecations, breaking changes | trending / tools |
-| Curated newsletters the repo already cites in `buzz_sources` | featured tools/projects | any |
+Registry rules that bind this phase:
+- Select sources by the registry's **cadence table** (daily runs → Tier 3 aggregators + daily
+  digests for trending signals only; weekly runs → Tier 1–2 + vendor changelogs for entry
+  intake; monthly runs → benchmark/eval + community sources).
+- A candidate needs evidence from at least one **Tier 1–2 or vendor** source; a Tier 3 signal
+  (GitHub Trending, HN, Reddit, alphaXiv) alone never passes the quality gate.
+- Vendor claims of superiority are not evidence; vendor deprecation/breaking-change notices are
+  authoritative and become trending signals immediately.
+- A source failing to resolve on 2 consecutive runs → flag in the report, skip, never
+  substitute an unlisted source.
 
 Rules:
 - Extract at most **30 raw candidates** before filtering. Prefer fewer, stronger candidates.
@@ -321,7 +327,8 @@ Then open ONE pull request:
 ## APPENDIX — DESIGN DECISIONS (for the maintainer, not the agent)
 
 - **Why an allowlist for MODE A**: open-ended web search makes runs non-reproducible and
-  injection-prone; the allowlist is the tuning knob and changing it is a reviewed prompt edit.
+  injection-prone; the allowlist (maintained in `ingestion-source-registry.md`) is the tuning
+  knob and changing it is a reviewed edit.
 - **Why UPDATE-over-CREATE on doubt**: duplicate entries corrupt every generated routing table;
   a conservative merge is cheaply reversible.
 - **Why rejection logging is mandatory**: it is the only way to distinguish a selective agent
