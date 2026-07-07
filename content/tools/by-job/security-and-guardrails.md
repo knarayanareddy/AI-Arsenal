@@ -125,6 +125,21 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Llama Guard, Guardrails AI, NeMo Guardrails
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = security-and-guardrails.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
+| [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
+| [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
+| [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
+| [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `security-and-guardrails` in a new AI application
@@ -158,4 +173,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

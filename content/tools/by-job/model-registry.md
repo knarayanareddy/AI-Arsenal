@@ -125,6 +125,17 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** MLflow, Weights & Biases, Hugging Face Hub
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = model-registry.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [DVC](../model-layer/dvc.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Hugging Face Hub](../model-layer/hugging-face-hub.md) | model layer | freemium | Yes | No | No | python | recommended |
+| [MLflow](../model-layer/mlflow.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Weights & Biases](../model-layer/weights-biases.md) | model layer | freemium | Yes | No | No | python | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `model-registry` in a new AI application
@@ -158,4 +169,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

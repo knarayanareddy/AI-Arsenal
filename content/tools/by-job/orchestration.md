@@ -104,6 +104,26 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Prefect, Dagster
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = orchestration.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
+| [Apache Airflow](../orchestration/airflow.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
+| [Dagster](../orchestration/dagster.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
+| [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
+| [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
+| [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
+| [Prefect](../orchestration/prefect.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [SeaTicket](../orchestration/seaticket.md) | orchestration | freemium | Yes | No | No | python | watching |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `orchestration` in a new AI application
@@ -136,4 +156,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

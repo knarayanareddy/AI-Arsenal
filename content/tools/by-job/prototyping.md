@@ -146,6 +146,20 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Gradio, Streamlit, Chainlit, FastAPI
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = prototyping.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
+| [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [Streamlit](../dx-and-tooling/streamlit.md) | dx and tooling | freemium | Yes | Yes | Yes | python | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `prototyping` in a new AI application
@@ -180,4 +194,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

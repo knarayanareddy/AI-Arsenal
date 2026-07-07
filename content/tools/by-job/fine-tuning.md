@@ -167,6 +167,20 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Unsloth, Axolotl, LLaMA-Factory, torchtune, PEFT
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = fine-tuning.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Axolotl](../model-layer/axolotl.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
+| [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [torchtune](../model-layer/torchtune.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Unsloth](../model-layer/unsloth.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `fine-tuning` in a new AI application
@@ -202,4 +216,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

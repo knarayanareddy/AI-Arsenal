@@ -125,6 +125,18 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Mem0, Zep, Letta
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = memory-management.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Letta](../orchestration/letta.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Memoriq](../orchestration/memoriq.md) | orchestration | freemium | Yes | No | No | python | watching |
+| [Redis](../orchestration/redis-memory.md) | orchestration | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Zep](../orchestration/zep.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `memory-management` in a new AI application
@@ -158,4 +170,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

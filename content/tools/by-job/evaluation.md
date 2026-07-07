@@ -167,6 +167,25 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** RAGAS, DeepEval, LangSmith Evals, Phoenix Evals, Promptfoo
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = evaluation.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
+| [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
+| [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | freemium | Yes | No | No | python | watching |
+| [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
+| [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | freemium | Yes | No | No | python, typescript | recommended |
+| [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | paid | No | No | No | python | watching |
+| [OpenAI Evals](../evaluation-and-observability/openai-evals.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
+| [promptfoo](../evaluation-and-observability/promptfoo.md) | evaluation and observability | open-source | Yes | Yes | Yes | typescript | recommended |
+| [TruLens](../evaluation-and-observability/trulens.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [Weights & Biases Weave](../evaluation-and-observability/wandb-weave.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |
+| [Weights & Biases](../model-layer/weights-biases.md) | model layer | freemium | Yes | No | No | python | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `evaluation` in a new AI application
@@ -202,4 +221,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

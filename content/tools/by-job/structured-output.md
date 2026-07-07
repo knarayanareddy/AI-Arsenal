@@ -125,6 +125,24 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Instructor, Outlines, Guidance
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = structured-output.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Basedash](../dx-and-tooling/basedash.md) | dx and tooling | paid | No | No | No | typescript | watching |
+| [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [Google Pomelli 2.0](../dx-and-tooling/google-pomelli-2-0.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+| [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
+| [Guidance](../model-layer/guidance.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Honen](../dx-and-tooling/honen.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+| [Instructor](../dx-and-tooling/instructor.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
+| [Outlines](../model-layer/outlines.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [Vaani](../dx-and-tooling/vaani.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `structured-output` in a new AI application
@@ -158,4 +176,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

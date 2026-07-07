@@ -125,6 +125,17 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Label Studio, Argilla, Prodigy
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = data-labeling.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
+| [Label Studio](../data-ingestion/label-studio.md) | data ingestion | freemium | Yes | Yes | Yes | python | recommended |
+| [Prodigy](../data-ingestion/prodigy.md) | data ingestion | paid | Yes | No | No | python | recommended |
+| [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | paid | Yes | No | No | polyglot | recommended |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `data-labeling` in a new AI application
@@ -158,4 +169,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-

@@ -167,6 +167,24 @@ Choose the job first, then compare tools by cost, open-source status, self-hosta
 **Alternatives:** Modal, Replicate, Hugging Face Inference Endpoints, AWS Bedrock, Azure AI Studio
 
 
+<!-- AUTO-GENERATED MATCHING TOOLS BELOW — do not edit -->
+This table is exhaustive for tools tagged with job = deployment.
+
+| Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
+|---|---|---|---|---|---|---|---|
+| [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
+| [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
+| [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | usage-based | Yes | No | No | python, typescript | recommended |
+| [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
+| [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
+| [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |
+<!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
+
 ## Use Cases
 
 1. **Scenario**: Selecting tools for `deployment` in a new AI application
@@ -202,4 +220,3 @@ This page is maintained as a curated shortlist, not a popularity ranking.
 
 ---
 *Last reviewed: 2026-06-13 by @maintainer*
-
