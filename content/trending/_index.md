@@ -34,9 +34,9 @@ snapshot carries an `as_of` date plus dated `sources`.
 ### Recently Added
 
 - [Source Feed: GitHub Trending](./by-source/github-trending.md)
+- [This Week in AI Arsenal](./this-week.md)
 - [Source Feed: ToolRadar / Techpresso](./by-source/toolradar-techpresso.md)
 - [AI Arsenal Hall of Fame](./hall-of-fame.md)
-- [This Week in AI Arsenal](./this-week.md)
 
 ### Most Popular
 

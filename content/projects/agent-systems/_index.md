@@ -32,15 +32,21 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [PageAgent](./page-agent.md)
+- [Strix](./strix.md)
 - [InsForge](./insforge.md)
 - [Stagehand](./stagehand.md)
 
 ### Most Popular
 
+- [Strix](./strix.md) — ⭐ 38354
+- [PageAgent](./page-agent.md) — ⭐ 24812
 - [Stagehand](./stagehand.md) — ⭐ 5400
 - [InsForge](./insforge.md) — ⭐ 2300
 
 ### Browse All
 
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+- [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
+- [Strix](./strix.md) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities

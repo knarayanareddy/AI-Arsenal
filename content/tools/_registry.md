@@ -5,6 +5,7 @@
 | ID | Name | Description |
 |---|---|---|
 | `agent-browser-shield` | [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) | Secure AI web browsing by cleaning content and masking PII during agent runs |
+| `agent-reach` | [Agent Reach](./data-ingestion/agent-reach.md) | Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web |
 | `agnt-hub` | [AGNT.Hub](./orchestration/agnt-hub.md) | Build and manage secure, private AI agents with custom skills and policies |
 | `airflow` | [Apache Airflow](./orchestration/airflow.md) | Mature workflow scheduler for batch data, ML, and AI pipeline orchestration |
 | `argilla` | [Argilla](./data-ingestion/argilla.md) | Open-source platform for human and AI feedback, data curation, and evaluation datasets |
@@ -16,9 +17,11 @@
 | `bentoml` | [BentoML](./serving-and-deployment/bentoml.md) | A framework for packaging, deploying, and scaling AI model services |
 | `browserbase` | [Browserbase](./data-ingestion/browserbase.md) | Hosted cloud browser platform for AI agents and automated browser workflows |
 | `chainlit` | [Chainlit](./dx-and-tooling/chainlit.md) | A framework for building conversational AI interfaces and debugging LLM apps |
+| `chrome-devtools-mcp` | [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md) | Official MCP server exposing Chrome DevTools to coding agents for live browser debugging |
 | `claude-artifact-player` | [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) | Interact with and manage AI-generated artifacts from Claude and similar models |
 | `cloudskill` | [Cloudskill](./orchestration/cloudskill.md) | Manage, govern, and distribute skills for AI agents across teams |
 | `code-arena` | [Code Arena](./evaluation-and-observability/code-arena.md) | Benchmark and compare AI models in a competitive coding environment |
+| `codebase-memory-mcp` | [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) | MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence |
 | `conan` | [Conan](./evaluation-and-observability/conan.md) | Live HUD for monitoring and interacting with AI agent sessions on macOS |
 | `crawl4ai-tool` | [Crawl4AI](./data-ingestion/crawl4ai-tool.md) | Python crawler and scraper designed for LLM-friendly web content extraction |
 | `dagster` | [Dagster](./orchestration/dagster.md) | Data orchestration platform for assets, pipelines, schedules, and observability |
@@ -61,6 +64,7 @@
 | `modal` | [Modal](./serving-and-deployment/modal.md) | A serverless platform for deploying Python apps and GPU workloads |
 | `monako-glass` | [Monako Glass](./evaluation-and-observability/monako-glass.md) | Visualize and understand AI model outputs with dynamic Pulse Rings and overlays |
 | `nemo-guardrails` | [NeMo Guardrails](./evaluation-and-observability/nemo-guardrails.md) | NVIDIA framework for adding programmable guardrails to LLM applications |
+| `olmocr` | [olmOCR](./data-ingestion/olmocr.md) | Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion |
 | `openai-evals` | [OpenAI Evals](./evaluation-and-observability/openai-evals.md) | An open-source framework for evaluating language model behavior |
 | `orchestraml` | [OrchestraML](./orchestration/orchestraml.md) | Automate end-to-end ML workflows from data prep to deployment using AI agents |
 | `outlines` | [Outlines](./model-layer/outlines.md) | A library for constrained generation and structured outputs with LLMs |
@@ -84,6 +88,7 @@
 | `scale-ai` | [Scale AI](./data-ingestion/scale-ai.md) | Managed data labeling and data engine platform for enterprise AI datasets |
 | `seaticket` | [SeaTicket](./orchestration/seaticket.md) | Unify and resolve customer-support issues with autonomous AI agents |
 | `shellmate` | [ShellMate](./dx-and-tooling/shellmate.md) | AI-powered terminal assistant that suggests commands and explains outputs |
+| `skillspector` | [SkillSpector](./evaluation-and-observability/skillspector.md) | Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills |
 | `spotlight-by-backplanes` | [Spotlight by Backplanes](./evaluation-and-observability/spotlight-by-backplanes.md) | Understand, improve, and track AI agent sessions with observability tooling |
 | `streamlit` | [Streamlit](./dx-and-tooling/streamlit.md) | A Python framework for building data and AI apps with minimal frontend code |
 | `superlog` | [Superlog](./evaluation-and-observability/superlog.md) | Real-time log aggregation platform designed for serverless debugging |

@@ -6,31 +6,31 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 14 entries | 2026-07-06 |
-| [benchmarks](./benchmarks/) | 30 entries | 2026-07-06 |
-| [build examples](./build-examples/) | 8 entries | 2026-07-06 |
-| [community](./community/) | 48 entries | 2026-07-06 |
-| [digests](./digests/) | 0 entries | 2026-07-06 |
-| [observability](./observability/) | 7 entries | 2026-07-06 |
-| [projects](./projects/) | 69 entries | 2026-07-06 |
-| [research](./research/) | 29 entries | 2026-07-06 |
-| [skills](./skills/) | 8 entries | 2026-07-06 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-06 |
-| [tools](./tools/) | 107 entries | 2026-07-06 |
-| [trending](./trending/) | 4 entries | 2026-07-06 |
+| [architectures](./architectures/) | 14 entries | 2026-07-07 |
+| [benchmarks](./benchmarks/) | 30 entries | 2026-07-07 |
+| [build examples](./build-examples/) | 8 entries | 2026-07-07 |
+| [community](./community/) | 48 entries | 2026-07-07 |
+| [digests](./digests/) | 1 entries | 2026-07-07 |
+| [observability](./observability/) | 7 entries | 2026-07-07 |
+| [projects](./projects/) | 72 entries | 2026-07-07 |
+| [research](./research/) | 29 entries | 2026-07-07 |
+| [skills](./skills/) | 9 entries | 2026-07-07 |
+| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-07 |
+| [tools](./tools/) | 125 entries | 2026-07-07 |
+| [trending](./trending/) | 4 entries | 2026-07-07 |
 
 ## Recently Added
 
-- [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md)
-- [Browserbase](./tools/data-ingestion/browserbase.md)
-- [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md)
-- [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./observability/evaluation-quality/gate-releases-on-eval-regression.md)
-- [Source Feed: GitHub Trending](./trending/by-source/github-trending.md)
-- [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./observability/cost-usage/instrument-cost-per-feature.md)
-- [Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store](./observability/privacy-governance/redact-and-govern-trace-data.md)
-- [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./observability/incident-response/runbook-for-agent-and-rag-incidents.md)
-- [Supabase](./projects/data-and-retrieval/supabase.md)
-- [Source Feed: ToolRadar / Techpresso](./trending/by-source/toolradar-techpresso.md)
+- [Agent Reach](./tools/data-ingestion/agent-reach.md)
+- [Chrome DevTools MCP](./tools/dx-and-tooling/chrome-devtools-mcp.md)
+- [Codebase Memory MCP](./tools/dx-and-tooling/codebase-memory-mcp.md)
+- [Tools by Cost — Freemium](./tools/by-cost/cost-freemium.md)
+- [Tools by Cost — Open Source](./tools/by-cost/cost-open-source.md)
+- [Tools by Cost — Paid](./tools/by-cost/cost-paid.md)
+- [Tools by Cost — Self Hostable](./tools/by-cost/cost-self-hostable.md)
+- [Tools by Cost — Usage Based](./tools/by-cost/cost-usage-based.md)
+- [olmOCR](./tools/data-ingestion/olmocr.md)
+- [PageAgent](./projects/agent-systems/page-agent.md)
 
 ## Most Popular
 
@@ -47,6 +47,7 @@
 
 ## Browse All
 
+- [AI Arsenal Digest — 2026-07](./digests/2026-07/digest.md) — July 2026 digest: 15 new benchmark entries across all 7 categories, a formal Trending vertical (5 commits), and a rounded-out Skills curriculum with 4 learning paths and 8 guides.
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md) — 
 - [Keep the Smallest Failing Prompt for Every Recurring Issue](./tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt.md) — 
 - [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./tips-and-tricks/evaluation/add-evals-before-refactors.md) — 
@@ -58,9 +59,11 @@
 - [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md) — A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
+- [Agent Reach](./tools/data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
+- [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
@@ -94,6 +97,3 @@
 - [Use Prompt Caching for Long, Stable System Prompt Prefixes](./tips-and-tricks/cost-and-performance/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries.md) — 
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./observability/instrumentation/capture-the-llm-call-event.md) — 
-- [Chainlit](./tools/dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
-- [Checkpoint Agent State After Each Side-Effecting Tool Call](./tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
-- [Chip Huyen](./community/people/chip-huyen.md) — Writes about ML systems, data, evaluation, and production AI engineering

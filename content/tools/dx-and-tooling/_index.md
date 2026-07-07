@@ -27,6 +27,8 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Chrome DevTools MCP](./chrome-devtools-mcp.md)
+- [Codebase Memory MCP](./codebase-memory-mcp.md)
 - [Basedash](./basedash.md)
 - [Claude Artifact Player](./claude-artifact-player.md)
 - [Dropstone 3](./dropstone-3.md)
@@ -35,8 +37,6 @@ Before picking a tool in this phase, consider:
 - [Qursor](./qursor.md)
 - [Recursi](./recursi.md)
 - [ShellMate](./shellmate.md)
-- [Vaani](./vaani.md)
-- [Chainlit](./chainlit.md)
 
 ### Most Popular
 
@@ -46,7 +46,9 @@ _No star-tracked entries yet._
 
 - [Basedash](./basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [Chainlit](./chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
+- [Chrome DevTools MCP](./chrome-devtools-mcp.md) — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
 - [Claude Artifact Player](./claude-artifact-player.md) — Interact with and manage AI-generated artifacts from Claude and similar models
+- [Codebase Memory MCP](./codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
 - [Dropstone 3](./dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
 - [Google Pomelli 2.0](./google-pomelli-2-0.md) — Explore and interact with large datasets through a visual, intuitive interface
 - [Gradio](./gradio.md) — A Python library for building and sharing machine learning demos quickly

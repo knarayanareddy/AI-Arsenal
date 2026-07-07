@@ -10,7 +10,7 @@
 
 ## Recently Added
 
-_No entries yet._
+- [AI Engineer — Role Overview](./ai-engineer-role.md)
 
 ## Most Popular
 
@@ -18,4 +18,4 @@ _No star-tracked entries yet._
 
 ## Browse All
 
-_No entries yet._
+- [AI Engineer — Role Overview](./ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools

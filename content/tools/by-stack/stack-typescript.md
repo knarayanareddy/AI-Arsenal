@@ -69,6 +69,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Basedash](../dx-and-tooling/basedash.md) | dx and tooling | structured-output | paid | No | No | No | typescript | watching |
 | [Browserbase](../data-ingestion/browserbase.md) | data ingestion | web-scraping | freemium | Yes | No | No | typescript | watching |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | structured-output | freemium | Yes | No | No | typescript | watching |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | web-scraping | freemium | Yes | Yes | Yes | typescript | recommended |

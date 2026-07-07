@@ -152,6 +152,7 @@ This table is exhaustive for tools tagged with job = web-scraping.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
+| [Agent Reach](../data-ingestion/agent-reach.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
 | [Browserbase](../data-ingestion/browserbase.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | freemium | Yes | Yes | Yes | typescript | recommended |
