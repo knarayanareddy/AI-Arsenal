@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:20:39.064Z | Entries: 585 | Schema version: 1.0.0
+Generated: 2026-07-08T19:22:03.074Z | Entries: 604 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -8,7 +8,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 - Projects: 103
 - Tools: 162
-- Papers: 47
+- Papers: 66
 - Tips: 102
 - People: 25
 - Digests: 1
@@ -304,16 +304,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Must-Read Papers
 
+- GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
 - Constitutional AI: Harmlessness from AI Feedback — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - Language Models are Few-Shot Learners — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
+- Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - Training Verifiers to Solve Math Word Problems — The GSM8K paper: released the 8.5K grade-school math benchmark that anchored LLM reasoning evaluation for years, and introduced verifier-guided sampling — train a model to judge candidate solutions, sample many, pick the best — the seed of verification-based test-time compute
+- FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness — Reframed attention as an IO problem: tiling and online softmax keep the computation in GPU SRAM, avoiding materializing the N×N matrix — exact attention, 2-4x faster and linear memory, now compiled into effectively all training and serving stacks
 - DeepSeek-V3 Technical Report — DeepSeek-V3: a 671B-parameter MoE (37B active) trained for a reported ~$5.6M of GPU time that matched frontier closed models — proof that systems co-design (MLA, FP8 training, aux-loss-free MoE routing, MTP) collapses the frontier cost curve
 - DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - QLoRA: Efficient Finetuning of Quantized LLMs — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
-- The Llama 3 Herd of Models — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
-- From Local to Global: A Graph RAG Approach to Query-Focused Summarization — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
-- RAGAS: Automated Evaluation of Retrieval Augmented Generation — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
 
 ## High-Impact Tips
 
