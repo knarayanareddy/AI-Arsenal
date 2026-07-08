@@ -133,6 +133,7 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
 | [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
+| [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |

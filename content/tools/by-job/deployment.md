@@ -175,6 +175,7 @@ This table is exhaustive for tools tagged with job = deployment.
 | [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
+| [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |

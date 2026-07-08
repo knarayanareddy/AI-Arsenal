@@ -71,6 +71,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | structured-output | freemium | Yes | No | No | typescript | watching |
+| [Codex Plugin for Claude Code](../dx-and-tooling/codex-plugin-cc.md) | dx and tooling | prototyping | freemium | Yes | No | Yes | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | web-scraping | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
@@ -81,6 +82,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | evaluation, tracing, monitoring | freemium | Yes | No | No | python, typescript | recommended |
 | [LangSmith Hub](../dx-and-tooling/langsmith-hub.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
 | [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Orca](../dx-and-tooling/orca.md) | dx and tooling | orchestration | open-source | Yes | Yes | Yes | typescript | watching |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | vector-search | freemium | Yes | No | No | python, typescript | recommended |
 | [Playwright](../data-ingestion/playwright.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | typescript, python | recommended |
 | [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | prompt-management, monitoring | freemium | Yes | No | No | python, typescript | recommended |
@@ -92,5 +94,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | deployment, production-serving | usage-based | No | No | No | python, typescript | solid-choice |
 | [Superlog](../evaluation-and-observability/superlog.md) | evaluation and observability | monitoring, tracing | freemium | Yes | No | No | typescript | watching |
 | [Tabstack](../data-ingestion/tabstack.md) | data ingestion | web-scraping | freemium | Yes | No | No | typescript | watching |
+| [TencentDB Agent Memory](../dx-and-tooling/tencentdb-agent-memory.md) | dx and tooling | memory-management | open-source | Yes | Yes | Yes | typescript | watching |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | deployment, production-serving | freemium | Yes | No | No | typescript | best-in-class |
 | [Zep](../orchestration/zep.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |

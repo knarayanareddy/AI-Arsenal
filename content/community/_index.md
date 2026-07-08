@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [chat](./chat/) | 4 entries | 2026-07-07 |
-| [creators](./creators/) | 9 entries | 2026-07-07 |
-| [datasets](./datasets/) | 1 entries | 2026-07-07 |
-| [events](./events/) | 1 entries | 2026-07-07 |
-| [forums](./forums/) | 3 entries | 2026-07-07 |
-| [meetups](./meetups/) | 1 entries | 2026-07-07 |
-| [newsletters](./newsletters/) | 4 entries | 2026-07-07 |
-| [people](./people/) | 25 entries | 2026-07-07 |
+| [chat](./chat/) | 4 entries | 2026-07-08 |
+| [creators](./creators/) | 9 entries | 2026-07-08 |
+| [datasets](./datasets/) | 1 entries | 2026-07-08 |
+| [events](./events/) | 1 entries | 2026-07-08 |
+| [forums](./forums/) | 3 entries | 2026-07-08 |
+| [meetups](./meetups/) | 1 entries | 2026-07-08 |
+| [newsletters](./newsletters/) | 4 entries | 2026-07-08 |
+| [people](./people/) | 25 entries | 2026-07-08 |
 
 ## Recently Added
 

@@ -1,6 +1,55 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T20:44:38.091Z",
-  "count": 0,
-  "items": []
+  "generated_at": "2026-07-08T15:25:19.282Z",
+  "count": 1,
+  "items": [
+    {
+      "id": "2026-07",
+      "title": "AI Arsenal Digest — 2026-07",
+      "period": "2026-07",
+      "published_date": "2026-07-07",
+      "summary": "July 2026 digest: 15 new benchmark entries across all 7 categories, a formal Trending vertical (5 commits), and a rounded-out Skills curriculum with 4 learning paths and 8 guides.",
+      "highlights": [
+        "15 new benchmark entries added across all 7 categories (code, agents, safety, multimodal, evaluation-methods) — total benchmarks now 30",
+        "Trending promoted to a first-class `trend` entry type with schema, taxonomy, migration guard, and CI enforcement (5 commits)",
+        "Skills curriculum now ships 4 learning paths and 8 guides; the previously-empty `by-role` section is populated"
+      ],
+      "tags": [
+        "trending",
+        "benchmark",
+        "evaluation"
+      ],
+      "top_projects": [
+        "qdrant",
+        "langfuse",
+        "ragas-rag-evaluation",
+        "crawl4ai"
+      ],
+      "top_tools": [
+        "pinecone",
+        "crawl4ai-tool"
+      ],
+      "added_by": "maintainer",
+      "entry_type": "digest",
+      "path": "content/digests/2026-07/digest.md",
+      "url": "content/digests/2026-07/digest",
+      "slug": "digest",
+      "section_path": "content/digests/2026-07",
+      "display_name": "AI Arsenal Digest — 2026-07",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "TL;DR",
+        "Top Projects",
+        "Top Tools",
+        "Research Highlights",
+        "Architecture Notes",
+        "Community Signals",
+        "What to Watch Next Month"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 307,
+      "body_html": "<h2>TL;DR</h2>\n<p>This is the July 2026 Arsenal digest (period <code>2026-07</code>, published 2026-07-07). By the numbers:</p>\n<ul>\n<li><strong>Benchmarks:</strong> +15 entries this month → <strong>30 total</strong> across all 7 categories.</li>\n<li><strong>Trending:</strong> launched as a first-class <code>trend</code> vertical (schema + taxonomy + migration guard + CI).</li>\n<li><strong>Skills:</strong> <strong>8 guides</strong> across <strong>4 learning paths</strong>; the previously-empty <code>by-role</code> section now has an entry.</li>\n<li><strong>Catalog totals:</strong> 69 projects, 93 tools, 25 papers, 102 tips, 26 guides, 14 architectures, 23 community, 30 benchmarks, 4 trending.</li>\n</ul>\n<p>Maintainers should review and extend the \"Top\" selections below before publishing.</p>\n<h2>Top Projects</h2>\n<ul>\n<li><a href=\"../../projects/data-and-retrieval/qdrant.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qdrant</a> — open-source vector database; foundational to most RAG stacks.</li>\n<li><a href=\"../../projects/benchmarks-and-evals/langfuse.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Langfuse</a> — open-source LLM observability and evaluation layer.</li>\n<li><a href=\"../../projects/benchmarks-and-evals/ragas-rag-evaluation.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ragas</a> — RAG evaluation framework for retrieved-context quality.</li>\n<li><a href=\"../../projects/data-and-retrieval/crawl4ai.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Crawl4AI</a> — web crawling / data ingestion purpose-built for RAG.</li>\n</ul>\n<h2>Top Tools</h2>\n<ul>\n<li><a href=\"../../tools/data-ingestion/pinecone.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Pinecone</a> — managed vector database for production retrieval.</li>\n<li><a href=\"../../tools/data-ingestion/crawl4ai-tool.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Crawl4AI</a> — tooling to crawl and convert web content into LLM-ready markdown.</li>\n</ul>\n<h2>Research Highlights</h2>\n<ul>\n<li><a href=\"../../research/training-and-alignment/deepseek-ai-2025-r1.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">DeepSeek-R1</a> — reasoning-model training via large-scale reinforcement learning.</li>\n<li><a href=\"../../research/training-and-alignment/dettmers-2023-qlora.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">QLoRA</a> — fine-tuning 65B-class models on a single 48GB GPU.</li>\n</ul>\n<p>The research vertical holds 25 papers; browse <code>content/research/</code> for the full set.</p>\n<h2>Architecture Notes</h2>\n<ul>\n<li><a href=\"../../architectures/model-selection/choose-llm.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Choose a Model</a> — route by primary need (local vs cloud, latency vs quality).</li>\n<li><a href=\"../../architectures/data-strategy/choose-vector-db.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Choose a Vector Database</a> — decision tree for vector-DB selection.</li>\n<li>Skills worth revisiting: <a href=\"../../skills/core-concepts/embeddings.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Embeddings</a> and the <a href=\"../../skills/learning-paths/ai-engineer.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Engineer Learning Path</a>.</li>\n</ul>\n<h2>Community Signals</h2>\n<ul>\n<li><a href=\"../../community/events/ai-engineer-worlds-fair.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Engineer Worlds Fair</a> — major practitioner event; see <code>content/community/</code> for the full curated set.</li>\n</ul>\n<p>No new community entries were added this month; maintainers should verify event dates before citing.</p>\n<h2>What to Watch Next Month</h2>\n<ul>\n<li>Promotion of the Trending weekly snapshot from <code>draft</code> to <code>published</code> after maintainer verification.</li>\n<li>Continued benchmark coverage and any new evaluation-methods entries.</li>\n<li>Skills: more <code>by-role</code> overviews and tighter links between learning paths and build examples.</li>\n</ul>\n",
+      "body_text": "TL;DR This is the July 2026 Arsenal digest (period 2026 07, published 2026 07 07). By the numbers: Benchmarks: +15 entries this month → 30 total across all 7 categories. Trending: launched as a first class trend vertical (schema + taxonomy + migration guard + CI). Skills: 8 guides across 4 learning paths ; the previously empty by role section now has an entry. Catalog totals: 69 projects, 93 tools, 25 papers, 102 tips, 26 guides, 14 architectures, 23 community, 30 benchmarks, 4 trending. Maintainers should review and extend the \"Top\" selections below before publishing. Top Projects Qdrant — open source vector database; foundational to most RAG stacks. Langfuse — open source LLM observability and evaluation layer. Ragas — RAG evaluation framework for retrieved context quality. Crawl4AI — web crawling / data ingestion purpose built for RAG. Top Tools Pinecone — managed vector database for production retrieval. Crawl4AI — tooling to crawl and convert web content into LLM ready markdown. Research Highlights DeepSeek R1 — reasoning model training via large scale reinforcement learning. QLoRA — fine tuning 65B class models on a single 48GB GPU. The research vertical holds 25 papers; browse content/research/ for the full set. Architecture Notes Choose a Model — route by primary need (local vs cloud, latency vs quality). Choose a Vector Database — decision tree for vector DB selection. Skills worth revisiting: Embeddings and the AI Engineer Learning Path. Community Signals AI Engineer Worlds Fair — major practitioner event; see content/community/ for the full curated set. No new community entries were added this month; maintainers should verify event dates before citing. What to Watch Next Month Promotion of the Trending weekly snapshot from draft to published after maintainer verification. Continued benchmark coverage and any new evaluation methods entries. Skills: more by role overviews and tighter links between learning paths and build examples."
+    }
+  ]
 }

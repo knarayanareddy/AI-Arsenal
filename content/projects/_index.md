@@ -6,16 +6,17 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 4 entries | 2026-07-07 |
-| [benchmarks and evals](./benchmarks-and-evals/) | 12 entries | 2026-07-07 |
-| [data and retrieval](./data-and-retrieval/) | 16 entries | 2026-07-07 |
-| [foundation models](./foundation-models/) | 13 entries | 2026-07-07 |
-| [frameworks](./frameworks/) | 20 entries | 2026-07-07 |
-| [inference engines](./inference-engines/) | 7 entries | 2026-07-07 |
-| [training and alignment](./training-and-alignment/) | 0 entries | 2026-07-07 |
+| [agent systems](./agent-systems/) | 4 entries | 2026-07-08 |
+| [benchmarks and evals](./benchmarks-and-evals/) | 12 entries | 2026-07-08 |
+| [data and retrieval](./data-and-retrieval/) | 16 entries | 2026-07-08 |
+| [foundation models](./foundation-models/) | 13 entries | 2026-07-08 |
+| [frameworks](./frameworks/) | 21 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 7 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 0 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Speech To Speech](./frameworks/speech-to-speech.md)
 - [PageAgent](./agent-systems/page-agent.md)
 - [Strix](./agent-systems/strix.md)
 - [zvec](./data-and-retrieval/zvec.md)
@@ -25,7 +26,6 @@
 - [SurrealDB](./data-and-retrieval/surrealdb.md)
 - [TranslateGemma](./foundation-models/translategemma.md)
 - [Uiverse Design](./frameworks/uiverse-design.md)
-- [Agenta](./benchmarks-and-evals/agenta.md)
 
 ## Most Popular
 

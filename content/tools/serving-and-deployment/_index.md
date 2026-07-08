@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [CubeSandbox](./cubesandbox.md)
 - [Vercel](./vercel.md)
 - [AWS Bedrock](./aws-bedrock.md)
 - [Azure AI Studio](./azure-ai-studio.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Fly.io](./fly-io.md)
 - [Google Vertex AI](./google-vertex-ai.md)
 - [Hugging Face Inference Endpoints](./hf-inference-endpoints.md)
-- [LiteLLM](./litellm.md)
 
 ### Most Popular
 
@@ -47,6 +47,7 @@ _No star-tracked entries yet._
 - [AWS Bedrock](./aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Azure AI Studio](./azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [BentoML](./bentoml.md) — A framework for packaging, deploying, and scaling AI model services
+- [CubeSandbox](./cubesandbox.md) — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 - [FastAPI](./fastapi.md) — Python web framework for building APIs around AI services and model workflows
 - [Fireworks AI](./fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
 - [Fly.io](./fly-io.md) — Application hosting platform with global machines and GPU options for AI services

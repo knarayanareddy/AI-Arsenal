@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generated_at": "2026-07-06T20:44:38.091Z",
-    "total_projects": 69,
-    "total_tools": 93,
+    "generated_at": "2026-07-08T15:25:19.282Z",
+    "total_projects": 73,
+    "total_tools": 104,
     "total_papers": 25,
     "total_tips": 102,
     "total_people": 25,
-    "total_digests": 0,
-    "total_guides": 26,
+    "total_digests": 1,
+    "total_guides": 59,
     "total_build_examples": 8,
     "total_architectures": 14,
     "total_observability": 7,
@@ -17,6 +17,25 @@
     "schema_version": "1.0.0"
   },
   "entries": [
+    {
+      "id": "2026-07",
+      "type": "digest",
+      "name": "AI Arsenal Digest — 2026-07",
+      "description": "July 2026 digest: 15 new benchmark entries across all 7 categories, a formal Trending vertical (5 commits), and a rounded-out Skills curriculum with 4 learning paths and 8 guides.",
+      "tags": [
+        "trending",
+        "benchmark",
+        "evaluation"
+      ],
+      "path": "content/digests/2026-07/digest.md",
+      "url": "content/digests/2026-07/digest",
+      "last_updated": "2026-07-07",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
     {
       "id": "add-a-max-step-budget-to-every-agent",
       "type": "tip",
@@ -147,6 +166,25 @@
       "featured": false
     },
     {
+      "id": "addyosmani-agent-skills",
+      "type": "tool",
+      "name": "Agent Skills (Addy Osmani)",
+      "description": "Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle",
+      "tags": [
+        "agents",
+        "code-gen",
+        "planning"
+      ],
+      "path": "content/tools/dx-and-tooling/addyosmani-agent-skills.md",
+      "url": "content/tools/dx-and-tooling/addyosmani-agent-skills",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "advanced-multi-agent-research",
       "type": "build-example",
       "name": "Multi-Agent Research System",
@@ -223,6 +261,104 @@
       "featured": false
     },
     {
+      "id": "agent-builder-role",
+      "type": "guide",
+      "name": "Agent Builder — Role Overview",
+      "description": "Role overview mapping the Agent Builder job to the Arsenal's learning paths, skill guides, and tooling",
+      "tags": [
+        "agents",
+        "tool-use",
+        "orchestration",
+        "evaluation"
+      ],
+      "path": "content/skills/by-role/agent-builder-role.md",
+      "url": "content/skills/by-role/agent-builder-role",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agent-design",
+      "type": "guide",
+      "name": "Agent Design",
+      "description": "The skill of designing reliable LLM agents: tool interfaces, control loops, guardrails, and failure recovery",
+      "tags": [
+        "agents",
+        "tool-use",
+        "planning",
+        "orchestration"
+      ],
+      "path": "content/skills/applied/agent-design.md",
+      "url": "content/skills/applied/agent-design",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agent-reach",
+      "type": "tool",
+      "name": "Agent Reach",
+      "description": "Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web",
+      "tags": [
+        "agents",
+        "data",
+        "retrieval",
+        "tool-use"
+      ],
+      "path": "content/tools/data-ingestion/agent-reach.md",
+      "url": "content/tools/data-ingestion/agent-reach",
+      "last_updated": "2026-07-07",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agent-skills-ecosystem",
+      "type": "guide",
+      "name": "Agent Skills — Ecosystem",
+      "description": "Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections",
+      "tags": [
+        "agents",
+        "tool-use",
+        "code-gen"
+      ],
+      "path": "content/skills/agent-skills/agent-skills-ecosystem.md",
+      "url": "content/skills/agent-skills/agent-skills-ecosystem",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agent-skills-overview",
+      "type": "guide",
+      "name": "Agent Skills — Overview",
+      "description": "What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them",
+      "tags": [
+        "agents",
+        "tool-use",
+        "code-gen"
+      ],
+      "path": "content/skills/agent-skills/agent-skills-overview.md",
+      "url": "content/skills/agent-skills/agent-skills-overview",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agenta",
       "type": "project",
       "name": "Agenta",
@@ -274,6 +410,26 @@
       "path": "content/skills/learning-paths/ai-engineer.md",
       "url": "content/skills/learning-paths/ai-engineer",
       "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ai-engineer-role",
+      "type": "guide",
+      "name": "AI Engineer — Role Overview",
+      "description": "Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools",
+      "tags": [
+        "llm",
+        "agents",
+        "rag",
+        "evaluation"
+      ],
+      "path": "content/skills/by-role/ai-engineer-role.md",
+      "url": "content/skills/by-role/ai-engineer-role",
+      "last_updated": "2026-07-06",
       "category": "skills",
       "maturity": null,
       "cost_model": null,
@@ -339,6 +495,26 @@
       "url": "content/observability/monitoring-alerting/alert-on-quality-and-cost-regressions",
       "last_updated": "2026-07-06",
       "category": "monitoring-alerting",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "alignment-and-rlhf",
+      "type": "guide",
+      "name": "Alignment & RLHF",
+      "description": "Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "training",
+        "llm"
+      ],
+      "path": "content/skills/core-concepts/alignment-and-rlhf.md",
+      "url": "content/skills/core-concepts/alignment-and-rlhf",
+      "last_updated": "2026-07-07",
+      "category": "skills",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -506,6 +682,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "attention",
+      "type": "guide",
+      "name": "Attention",
+      "description": "Conceptual guide to attention mechanisms and their practical consequences for LLM engineering",
+      "tags": [
+        "attention",
+        "transformers",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/skills/core-concepts/attention.md",
+      "url": "content/skills/core-concepts/attention",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -810,6 +1006,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "building-rag-systems",
+      "type": "guide",
+      "name": "Building RAG Systems",
+      "description": "The skill of building retrieval-augmented generation: ingestion, chunking, retrieval quality, and grounded generation",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "chunking"
+      ],
+      "path": "content/skills/applied/building-rag-systems.md",
+      "url": "content/skills/applied/building-rag-systems",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -1137,6 +1353,25 @@
       "featured": false
     },
     {
+      "id": "chrome-devtools-mcp",
+      "type": "tool",
+      "name": "Chrome DevTools MCP",
+      "description": "Official MCP server exposing Chrome DevTools to coding agents for live browser debugging",
+      "tags": [
+        "agents",
+        "tool-use",
+        "code-gen"
+      ],
+      "path": "content/tools/dx-and-tooling/chrome-devtools-mcp.md",
+      "url": "content/tools/dx-and-tooling/chrome-devtools-mcp",
+      "last_updated": "2026-07-07",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "classify-failures-before-fixing-prompts",
       "type": "tip",
       "name": "Classify Failures by Root Cause Before Changing Prompts",
@@ -1226,6 +1461,45 @@
       "featured": false
     },
     {
+      "id": "codebase-memory-mcp",
+      "type": "tool",
+      "name": "Codebase Memory MCP",
+      "description": "MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence",
+      "tags": [
+        "agents",
+        "memory",
+        "retrieval",
+        "code-gen"
+      ],
+      "path": "content/tools/dx-and-tooling/codebase-memory-mcp.md",
+      "url": "content/tools/dx-and-tooling/codebase-memory-mcp",
+      "last_updated": "2026-07-07",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "codex-plugin-cc",
+      "type": "tool",
+      "name": "Codex Plugin for Claude Code",
+      "description": "Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation",
+      "tags": [
+        "agents",
+        "code-gen",
+        "tool-use"
+      ],
+      "path": "content/tools/dx-and-tooling/codex-plugin-cc.md",
+      "url": "content/tools/dx-and-tooling/codex-plugin-cc",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "command-r-plus",
       "type": "project",
       "name": "Command R+",
@@ -1278,6 +1552,135 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "context-engineering",
+      "type": "guide",
+      "name": "Context Engineering",
+      "description": "The skill of assembling the right tokens at the right time: system prompts, retrieval, history, and tool results",
+      "tags": [
+        "llm",
+        "memory",
+        "retrieval",
+        "structured-output"
+      ],
+      "path": "content/skills/applied/context-engineering.md",
+      "url": "content/skills/applied/context-engineering",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "context-windows",
+      "type": "guide",
+      "name": "Context Windows",
+      "description": "Guide to context window limits, effective context, and budgeting strategies for production prompts",
+      "tags": [
+        "llm",
+        "memory",
+        "chunking"
+      ],
+      "path": "content/skills/core-concepts/context-windows.md",
+      "url": "content/skills/core-concepts/context-windows",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cost-freemium",
+      "type": "guide",
+      "name": "Tools by Cost — Freemium",
+      "description": "Tools in the Arsenal filtered by Cost facet Freemium, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-cost/cost-freemium.md",
+      "url": "content/tools/by-cost/cost-freemium",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cost-open-source",
+      "type": "guide",
+      "name": "Tools by Cost — Open Source",
+      "description": "Tools in the Arsenal filtered by Cost facet Open Source, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-cost/cost-open-source.md",
+      "url": "content/tools/by-cost/cost-open-source",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cost-paid",
+      "type": "guide",
+      "name": "Tools by Cost — Paid",
+      "description": "Tools in the Arsenal filtered by Cost facet Paid, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-cost/cost-paid.md",
+      "url": "content/tools/by-cost/cost-paid",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cost-self-hostable",
+      "type": "guide",
+      "name": "Tools by Cost — Self Hostable",
+      "description": "Tools in the Arsenal filtered by Cost facet Self Hostable, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-cost/cost-self-hostable.md",
+      "url": "content/tools/by-cost/cost-self-hostable",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cost-usage-based",
+      "type": "guide",
+      "name": "Tools by Cost — Usage Based",
+      "description": "Tools in the Arsenal filtered by Cost facet Usage Based, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-cost/cost-usage-based.md",
+      "url": "content/tools/by-cost/cost-usage-based",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -1335,6 +1738,26 @@
       "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cubesandbox",
+      "type": "tool",
+      "name": "CubeSandbox",
+      "description": "Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API",
+      "tags": [
+        "agents",
+        "security",
+        "guardrails",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/cubesandbox.md",
+      "url": "content/tools/serving-and-deployment/cubesandbox",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -1917,6 +2340,25 @@
       "featured": false
     },
     {
+      "id": "evals-in-production",
+      "type": "guide",
+      "name": "Evals in Production",
+      "description": "Operationalizing LLM evaluation: CI gates, online monitoring, feedback loops, and regression discipline",
+      "tags": [
+        "evaluation",
+        "monitoring",
+        "tracing"
+      ],
+      "path": "content/skills/applied/evals-in-production.md",
+      "url": "content/skills/applied/evals-in-production",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "evaluate-embedding-models-before-rechunking",
       "type": "tip",
       "name": "Compare Embedding Models Before Changing Your Chunking Strategy",
@@ -1948,6 +2390,25 @@
       "url": "content/tools/by-job/evaluation",
       "last_updated": "2026-06-13",
       "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "evaluation-methodology",
+      "type": "guide",
+      "name": "Evaluation Methodology",
+      "description": "How to evaluate LLM systems: golden sets, LLM-as-judge, benchmarks vs task evals, and common pitfalls",
+      "tags": [
+        "evaluation",
+        "llm",
+        "benchmark"
+      ],
+      "path": "content/skills/core-concepts/evaluation-methodology.md",
+      "url": "content/skills/core-concepts/evaluation-methodology",
+      "last_updated": "2026-07-07",
+      "category": "skills",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -2020,6 +2481,25 @@
       "url": "content/tools/by-job/fine-tuning",
       "last_updated": "2026-06-13",
       "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fine-tuning-methods",
+      "type": "guide",
+      "name": "Fine-Tuning Methods",
+      "description": "Conceptual guide to full fine-tuning, LoRA/QLoRA, and when tuning beats prompting or retrieval",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "llm"
+      ],
+      "path": "content/skills/core-concepts/fine-tuning-methods.md",
+      "url": "content/skills/core-concepts/fine-tuning-methods",
+      "last_updated": "2026-07-07",
+      "category": "skills",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -2777,6 +3257,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "inference-optimization",
+      "type": "guide",
+      "name": "Inference Optimization",
+      "description": "Conceptual guide to LLM serving performance: batching, KV cache, speculative decoding, and latency metrics",
+      "tags": [
+        "inference",
+        "batching",
+        "caching",
+        "streaming",
+        "efficiency"
+      ],
+      "path": "content/skills/core-concepts/inference-optimization.md",
+      "url": "content/skills/core-concepts/inference-optimization",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -3688,6 +4189,25 @@
       "featured": false
     },
     {
+      "id": "llm-observability",
+      "type": "guide",
+      "name": "LLM Observability",
+      "description": "The skill of instrumenting LLM systems: tracing, cost tracking, failure classification, and privacy-aware logging",
+      "tags": [
+        "observability",
+        "tracing",
+        "monitoring"
+      ],
+      "path": "content/skills/applied/llm-observability.md",
+      "url": "content/skills/applied/llm-observability",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llm-researcher",
       "type": "guide",
       "name": "LLM Researcher Learning Path",
@@ -3701,6 +4221,26 @@
       "path": "content/skills/learning-paths/llm-researcher.md",
       "url": "content/skills/learning-paths/llm-researcher",
       "last_updated": "2026-06-14",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llm-researcher-role",
+      "type": "guide",
+      "name": "LLM Researcher — Role Overview",
+      "description": "Role overview mapping the applied LLM researcher job to the Arsenal's paper track, benchmarks, and eval content",
+      "tags": [
+        "llm",
+        "training",
+        "evaluation",
+        "benchmark"
+      ],
+      "path": "content/skills/by-role/llm-researcher-role.md",
+      "url": "content/skills/by-role/llm-researcher-role",
+      "last_updated": "2026-07-07",
       "category": "skills",
       "maturity": null,
       "cost_model": null,
@@ -4241,6 +4781,26 @@
       "featured": false
     },
     {
+      "id": "ml-engineer-role",
+      "type": "guide",
+      "name": "ML Engineer — Role Overview",
+      "description": "Role overview mapping the ML Engineer job to the Arsenal's training, serving, and efficiency content",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "inference",
+        "quantization"
+      ],
+      "path": "content/skills/by-role/ml-engineer-role.md",
+      "url": "content/skills/by-role/ml-engineer-role",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mlflow",
       "type": "tool",
       "name": "MLflow",
@@ -4620,6 +5180,25 @@
       "featured": false
     },
     {
+      "id": "olmocr",
+      "type": "tool",
+      "name": "olmOCR",
+      "description": "Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion",
+      "tags": [
+        "data",
+        "rag",
+        "multimodal"
+      ],
+      "path": "content/tools/data-ingestion/olmocr.md",
+      "url": "content/tools/data-ingestion/olmocr",
+      "last_updated": "2026-07-07",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openai-agents-sdk",
       "type": "project",
       "name": "OpenAI Agents SDK",
@@ -4754,6 +5333,25 @@
       "featured": false
     },
     {
+      "id": "orca",
+      "type": "tool",
+      "name": "Orca",
+      "description": "Desktop \"agent development environment\" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree",
+      "tags": [
+        "agents",
+        "orchestration",
+        "code-gen"
+      ],
+      "path": "content/tools/dx-and-tooling/orca.md",
+      "url": "content/tools/dx-and-tooling/orca",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "orchestraml",
       "type": "tool",
       "name": "OrchestraML",
@@ -4862,6 +5460,24 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "page-agent",
+      "type": "project",
+      "name": "PageAgent",
+      "description": "JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language",
+      "tags": [
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/projects/agent-systems/page-agent.md",
+      "url": "content/projects/agent-systems/page-agent",
+      "last_updated": "2026-07-07",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -5441,6 +6057,26 @@
       "category": "rag",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "quantization",
+      "type": "guide",
+      "name": "Quantization",
+      "description": "Conceptual guide to model quantization: formats, quality tradeoffs, and when to use int8 vs int4",
+      "tags": [
+        "quantization",
+        "inference",
+        "efficiency",
+        "local"
+      ],
+      "path": "content/skills/core-concepts/quantization.md",
+      "url": "content/skills/core-concepts/quantization",
+      "last_updated": "2026-07-07",
+      "category": "skills",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -6351,6 +6987,25 @@
       "featured": false
     },
     {
+      "id": "skillspector",
+      "type": "tool",
+      "name": "SkillSpector",
+      "description": "Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills",
+      "tags": [
+        "agents",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/tools/evaluation-and-observability/skillspector.md",
+      "url": "content/tools/evaluation-and-observability/skillspector",
+      "last_updated": "2026-07-07",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "smolagents",
       "type": "project",
       "name": "Smolagents",
@@ -6390,6 +7045,26 @@
       "featured": false
     },
     {
+      "id": "speech-to-speech",
+      "type": "project",
+      "name": "Speech To Speech",
+      "description": "Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API",
+      "tags": [
+        "voice",
+        "agents",
+        "streaming",
+        "local"
+      ],
+      "path": "content/projects/frameworks/speech-to-speech.md",
+      "url": "content/projects/frameworks/speech-to-speech",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "spotlight-by-backplanes",
       "type": "tool",
       "name": "Spotlight by Backplanes",
@@ -6404,6 +7079,150 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-cpp",
+      "type": "guide",
+      "name": "Tools by Stack — Cpp",
+      "description": "Tools in the Arsenal filtered by Stack facet Cpp, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-cpp.md",
+      "url": "content/tools/by-stack/stack-cpp",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-go",
+      "type": "guide",
+      "name": "Tools by Stack — Go",
+      "description": "Tools in the Arsenal filtered by Stack facet Go, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-go.md",
+      "url": "content/tools/by-stack/stack-go",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-java",
+      "type": "guide",
+      "name": "Tools by Stack — Java",
+      "description": "Tools in the Arsenal filtered by Stack facet Java, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-java.md",
+      "url": "content/tools/by-stack/stack-java",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-julia",
+      "type": "guide",
+      "name": "Tools by Stack — Julia",
+      "description": "Tools in the Arsenal filtered by Stack facet Julia, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-julia.md",
+      "url": "content/tools/by-stack/stack-julia",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-polyglot",
+      "type": "guide",
+      "name": "Tools by Stack — Polyglot",
+      "description": "Tools in the Arsenal filtered by Stack facet Polyglot, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-polyglot.md",
+      "url": "content/tools/by-stack/stack-polyglot",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-python",
+      "type": "guide",
+      "name": "Tools by Stack — Python",
+      "description": "Tools in the Arsenal filtered by Stack facet Python, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-python.md",
+      "url": "content/tools/by-stack/stack-python",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-rust",
+      "type": "guide",
+      "name": "Tools by Stack — Rust",
+      "description": "Tools in the Arsenal filtered by Stack facet Rust, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-rust.md",
+      "url": "content/tools/by-stack/stack-rust",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stack-typescript",
+      "type": "guide",
+      "name": "Tools by Stack — Typescript",
+      "description": "Tools in the Arsenal filtered by Stack facet Typescript, with an auto-generated routing table that keeps this page current",
+      "tags": [
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/by-stack/stack-typescript.md",
+      "url": "content/tools/by-stack/stack-typescript",
+      "last_updated": "2026-07-07",
+      "category": "tools",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -6630,6 +7449,25 @@
       "featured": false
     },
     {
+      "id": "strix",
+      "type": "project",
+      "name": "Strix",
+      "description": "Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities",
+      "tags": [
+        "agents",
+        "security",
+        "tool-use"
+      ],
+      "path": "content/projects/agent-systems/strix.md",
+      "url": "content/projects/agent-systems/strix",
+      "last_updated": "2026-07-07",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "structured-output",
       "type": "guide",
       "name": "Structured Output Tools",
@@ -6642,6 +7480,25 @@
       "url": "content/tools/by-job/structured-output",
       "last_updated": "2026-06-13",
       "category": "tools",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "structured-output-and-tool-use",
+      "type": "guide",
+      "name": "Structured Output & Tool Use",
+      "description": "The skill of getting reliable machine-readable output from LLMs: schemas, constrained decoding, and tool-call contracts",
+      "tags": [
+        "structured-output",
+        "tool-use",
+        "guardrails"
+      ],
+      "path": "content/skills/applied/structured-output-and-tool-use.md",
+      "url": "content/skills/applied/structured-output-and-tool-use",
+      "last_updated": "2026-07-07",
+      "category": "skills",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -6719,6 +7576,26 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "superpowers",
+      "type": "tool",
+      "name": "Superpowers",
+      "description": "Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents",
+      "tags": [
+        "agents",
+        "code-gen",
+        "planning",
+        "tool-use"
+      ],
+      "path": "content/tools/dx-and-tooling/superpowers.md",
+      "url": "content/tools/dx-and-tooling/superpowers",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6818,6 +7695,24 @@
       "featured": false
     },
     {
+      "id": "tencentdb-agent-memory",
+      "type": "tool",
+      "name": "TencentDB Agent Memory",
+      "description": "Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store",
+      "tags": [
+        "agents",
+        "memory"
+      ],
+      "path": "content/tools/dx-and-tooling/tencentdb-agent-memory.md",
+      "url": "content/tools/dx-and-tooling/tencentdb-agent-memory",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "test-prompts-with-adversarial-inputs",
       "type": "tip",
       "name": "Test Prompts Against Adversarial Inputs, Not Only Well-Formed Ones",
@@ -6901,6 +7796,25 @@
       "url": "content/community/people/thomas-wolf",
       "last_updated": "2026-06-14",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tokenization",
+      "type": "guide",
+      "name": "Tokenization",
+      "description": "Practical guide to tokenization and its impact on cost, latency, context limits, and prompt behavior",
+      "tags": [
+        "llm",
+        "inference",
+        "efficiency"
+      ],
+      "path": "content/skills/core-concepts/tokenization.md",
+      "url": "content/skills/core-concepts/tokenization",
+      "last_updated": "2026-07-07",
+      "category": "skills",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -7935,6 +8849,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "zvec",
+      "type": "project",
+      "name": "zvec",
+      "description": "Lightweight, in-process vector database from Alibaba for local RAG and agent memory",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "local"
+      ],
+      "path": "content/projects/data-and-retrieval/zvec.md",
+      "url": "content/projects/data-and-retrieval/zvec",
+      "last_updated": "2026-07-07",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     }
   ]

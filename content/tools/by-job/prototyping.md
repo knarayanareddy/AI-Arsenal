@@ -151,14 +151,17 @@ This table is exhaustive for tools tagged with job = prototyping.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
+| [Codex Plugin for Claude Code](../dx-and-tooling/codex-plugin-cc.md) | dx and tooling | freemium | Yes | No | Yes | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
 | [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Streamlit](../dx-and-tooling/streamlit.md) | dx and tooling | freemium | Yes | Yes | Yes | python | recommended |
+| [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

@@ -66,6 +66,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
+| [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
@@ -74,3 +75,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
 | [Redis](../orchestration/redis-memory.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | data-labeling | paid | Yes | No | No | polyglot | recommended |
+| [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | polyglot | recommended |

@@ -1,18 +1,18 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-06T20:44:40.298Z | Entries: 426 | Schema version: 1.0.0
+Generated: 2026-07-08T15:25:21.477Z | Entries: 475 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 69
-- Tools: 93
+- Projects: 73
+- Tools: 104
 - Papers: 25
 - Tips: 102
 - People: 25
-- Digests: 0
-- Guides: 26
+- Digests: 1
+- Guides: 59
 - Build examples: 8
 - Architectures: 14
 - Observability: 7
@@ -35,11 +35,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Top Projects by Category
 
 ### agents
+- Strix (⭐38354, score:70) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
 - Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
+- PageAgent (⭐24812, score:65) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - Microsoft Agent Framework (⭐11311, score:50) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
-- Stagehand (⭐5400, score:50) — Open-source browser-AI framework for reliable AI agent web interactions
-- AutoGPT (⭐184931, score:40) — Autonomous agent platform and classic agent project for accessible AI automation
 
 ### llms
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
@@ -59,18 +59,22 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
 - SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
+- zvec (⭐13891, score:60) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory
 - Firecrawl (⭐132342, score:30) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
-- RAGFlow (⭐82655, score:30) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
 
 ### tooling
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
+
+### voice-audio
+- Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 
 ## Top Tools by Job
 
 ### data-labeling
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - Label Studio — An open-source data labeling platform for ML and AI datasets
+- olmOCR — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
 - Prodigy — Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows
 - Scale AI — Managed data labeling and data engine platform for enterprise AI datasets
 
@@ -78,8 +82,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - AWS Bedrock — AWS managed service for accessing foundation models and building generative AI apps
 - Azure AI Studio — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - BentoML — A framework for packaging, deploying, and scaling AI model services
+- CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 - Empromptu AI — Build, deploy, and manage custom AI applications that improve over time
-- Fly.io — Application hosting platform with global machines and GPU options for AI services
 
 ### evaluation
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
@@ -96,11 +100,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - PEFT — Hugging Face library for parameter-efficient fine-tuning methods
 
 ### memory-management
+- Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
 - Letta — Stateful agent framework and memory system formerly known as MemGPT
 - Mem0 — Memory layer for AI agents and assistants with long-term user and session memory
 - Memoriq — Private AI memory layer that learns from your conversations and documents
 - Redis — In-memory data store commonly used for caching, session memory, queues, and vector search
-- Zep — Memory and context engineering platform for AI agents and assistants
 
 ### model-registry
 - DVC — Open-source data and model versioning tool for ML projects and pipelines
@@ -137,18 +141,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - LiteLLM — A proxy and SDK for routing requests across many LLM providers
 
 ### prototyping
+- Agent Skills (Addy Osmani) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - Chainlit — A framework for building conversational AI interfaces and debugging LLM apps
+- Chrome DevTools MCP — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
+- Codex Plugin for Claude Code — Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation
 - Dropstone 3 — Collaborative AI workspace for teams to build, describe, and ship software together
-- FastAPI — Python web framework for building APIs around AI services and model workflows
-- Gradio — A Python library for building and sharing machine learning demos quickly
-- Manus — AI-powered platform for building full-stack web applications and automating tasks
 
 ### security-and-guardrails
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
+- CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 - Giskard — Testing platform for evaluating and scanning ML and LLM applications
-- Guardrails AI — A framework for validating, correcting, and constraining LLM outputs
 
 ### structured-output
 - Basedash — AI-native platform for generating dashboards, reports, and insights from natural-language queries
@@ -169,10 +173,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
+- Agent Reach — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - Browserbase — Hosted cloud browser platform for AI agents and automated browser workflows
 - Crawl4AI — Python crawler and scraper designed for LLM-friendly web content extraction
 - Firecrawl — API and open-source project for scraping and crawling websites into LLM-ready Markdown
-- Jina AI Reader — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 
 ## Architecture Quick Refs
 

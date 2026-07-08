@@ -33,6 +33,7 @@ Before selecting a framework:
 
 ### Recently Added
 
+- [Speech To Speech](./speech-to-speech.md)
 - [Uiverse Design](./uiverse-design.md)
 - [AutoGen](./autogen.md)
 - [AutoGPT](./autogpt.md)
@@ -42,7 +43,6 @@ Before selecting a framework:
 - [Google ADK](./google-adk.md)
 - [Haystack](./haystack.md)
 - [LangChain](./langchain.md)
-- [LangGraph](./langgraph.md)
 
 ### Most Popular
 
@@ -77,5 +77,6 @@ Before selecting a framework:
 - [Pydantic AI](./pydantic-ai.md) — A Python agent framework built around typed models and structured outputs
 - [Semantic Kernel](./semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
 - [Smolagents](./smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
+- [Speech To Speech](./speech-to-speech.md) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development

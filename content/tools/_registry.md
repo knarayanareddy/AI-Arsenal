@@ -4,6 +4,7 @@
 
 | ID | Name | Description |
 |---|---|---|
+| `addyosmani-agent-skills` | [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) | Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle |
 | `agent-browser-shield` | [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) | Secure AI web browsing by cleaning content and masking PII during agent runs |
 | `agent-reach` | [Agent Reach](./data-ingestion/agent-reach.md) | Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web |
 | `agnt-hub` | [AGNT.Hub](./orchestration/agnt-hub.md) | Build and manage secure, private AI agents with custom skills and policies |
@@ -22,8 +23,10 @@
 | `cloudskill` | [Cloudskill](./orchestration/cloudskill.md) | Manage, govern, and distribute skills for AI agents across teams |
 | `code-arena` | [Code Arena](./evaluation-and-observability/code-arena.md) | Benchmark and compare AI models in a competitive coding environment |
 | `codebase-memory-mcp` | [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) | MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence |
+| `codex-plugin-cc` | [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md) | Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation |
 | `conan` | [Conan](./evaluation-and-observability/conan.md) | Live HUD for monitoring and interacting with AI agent sessions on macOS |
 | `crawl4ai-tool` | [Crawl4AI](./data-ingestion/crawl4ai-tool.md) | Python crawler and scraper designed for LLM-friendly web content extraction |
+| `cubesandbox` | [CubeSandbox](./serving-and-deployment/cubesandbox.md) | Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API |
 | `dagster` | [Dagster](./orchestration/dagster.md) | Data orchestration platform for assets, pipelines, schedules, and observability |
 | `dropstone-3` | [Dropstone 3](./dx-and-tooling/dropstone-3.md) | Collaborative AI workspace for teams to build, describe, and ship software together |
 | `dvc` | [DVC](./model-layer/dvc.md) | Open-source data and model versioning tool for ML projects and pipelines |
@@ -66,6 +69,7 @@
 | `nemo-guardrails` | [NeMo Guardrails](./evaluation-and-observability/nemo-guardrails.md) | NVIDIA framework for adding programmable guardrails to LLM applications |
 | `olmocr` | [olmOCR](./data-ingestion/olmocr.md) | Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion |
 | `openai-evals` | [OpenAI Evals](./evaluation-and-observability/openai-evals.md) | An open-source framework for evaluating language model behavior |
+| `orca` | [Orca](./dx-and-tooling/orca.md) | Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree |
 | `orchestraml` | [OrchestraML](./orchestration/orchestraml.md) | Automate end-to-end ML workflows from data prep to deployment using AI agents |
 | `outlines` | [Outlines](./model-layer/outlines.md) | A library for constrained generation and structured outputs with LLMs |
 | `peft` | [PEFT](./model-layer/peft.md) | Hugging Face library for parameter-efficient fine-tuning methods |
@@ -92,8 +96,10 @@
 | `spotlight-by-backplanes` | [Spotlight by Backplanes](./evaluation-and-observability/spotlight-by-backplanes.md) | Understand, improve, and track AI agent sessions with observability tooling |
 | `streamlit` | [Streamlit](./dx-and-tooling/streamlit.md) | A Python framework for building data and AI apps with minimal frontend code |
 | `superlog` | [Superlog](./evaluation-and-observability/superlog.md) | Real-time log aggregation platform designed for serverless debugging |
+| `superpowers` | [Superpowers](./dx-and-tooling/superpowers.md) | Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents |
 | `tabstack` | [Tabstack](./data-ingestion/tabstack.md) | Empower AI systems to autonomously browse, search, and interact with the web via API |
 | `taste-lab` | [Taste Lab](./data-ingestion/taste-lab.md) | Extracts and analyzes the design DNA of any website for AI agent consumption |
+| `tencentdb-agent-memory` | [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md) | Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store |
 | `torchtune` | [torchtune](./model-layer/torchtune.md) | PyTorch-native library for fine-tuning and experimenting with LLMs |
 | `trulens` | [TruLens](./evaluation-and-observability/trulens.md) | An evaluation and tracking toolkit for LLM and RAG applications |
 | `unsloth` | [Unsloth](./model-layer/unsloth.md) | Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models |

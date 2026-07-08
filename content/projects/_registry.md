@@ -63,6 +63,7 @@
 | `semantic-kernel` | [Semantic Kernel](./frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |
 | `sglang` | [SGLang](./inference-engines/sglang.md) | High-performance serving framework for large language and multimodal models |
 | `smolagents` | [Smolagents](./frameworks/smolagents.md) | Hugging Face library for lightweight agents that can reason and act through code |
+| `speech-to-speech` | [Speech To Speech](./frameworks/speech-to-speech.md) | Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API |
 | `stagehand` | [Stagehand](./agent-systems/stagehand.md) | Open-source browser-AI framework for reliable AI agent web interactions |
 | `strix` | [Strix](./agent-systems/strix.md) | Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities |
 | `supabase` | [Supabase](./data-and-retrieval/supabase.md) | Open-source backend platform: Postgres database, auth, storage, and realtime APIs |

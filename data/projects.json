@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T20:44:38.091Z",
-  "count": 69,
+  "generated_at": "2026-07-08T15:25:19.282Z",
+  "count": 73,
   "items": [
     {
       "id": "agenta",
@@ -4513,6 +4513,102 @@
       "body_text": "Overview An open source LLM evaluation and observability platform from Comet, extending Comet's established machine learning experiment tracking product into tracing and evaluation for LLM and agent applications. Why it's in the Arsenal Comet's open source LLM evaluation and observability platform, extending Comet's existing ML experiment tracking product line into the LLM/agent space. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosystem and vendor relationship. See Strengths / Limitations below before adopting it. Architecture Provides tracing instrumentation for LLM application calls, an evaluation framework with both heuristic and LLM graded metrics, and a dashboard shared conceptually with Comet's broader ML experiment tracking platform, available as both open source self hosted and managed cloud offerings. Ecosystem Position Upstream: built by Comet, leveraging their existing ML platform infrastructure and experience. Downstream: none of particular note. Competing: Langfuse, LangSmith, Braintrust. Complementary: shares an ecosystem with Comet's classic ML experiment tracking for teams already using that product. Getting Started Key Use Cases 1. Scenario : you're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosystem and vendor relationship 2. Scenario : you want an open source evaluation platform backed by an established ML tooling company (Comet) with both self hosted and managed options Strengths You're already using Comet for classic ML experiment tracking and want LLM observability/evaluation in the same ecosystem and vendor relationship You want an open source evaluation platform backed by an established ML tooling company (Comet) with both self hosted and managed options Limitations You're not already invested in the Comet ecosystem — a standalone tool like Langfuse may be a lighter weight choice with a larger community specifically in the LLM observability space You need the deepest LangChain specific integration — LangSmith, built by the LangChain team, has tighter native support for that specific framework Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third party sourcing; not yet independently verified. Last reviewed: 2026 07 01. Relation to the Arsenal This is a benchmark and eval entry: it documents an evaluation, tracing, or observability platform. For job based tool comparisons (evaluation, tracing, monitoring), see tools/evaluation and observability/. Resources GitHub Documentation"
     },
     {
+      "id": "page-agent",
+      "name": "PageAgent",
+      "version_tracked": null,
+      "artifact_type": "library",
+      "category": "agents",
+      "subcategory": "browser-agents",
+      "description": "JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language",
+      "github_url": "https://github.com/alibaba/page-agent",
+      "license": "MIT",
+      "primary_language": "TypeScript",
+      "org_or_maintainer": "alibaba",
+      "tags": [
+        "agents",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 24812,
+      "github_stars_last_30d": 0,
+      "trending_score": 65,
+      "last_commit": "2026-07-07",
+      "docs_url": "https://alibaba.github.io/page-agent/",
+      "demo_url": "https://alibaba.github.io/page-agent/",
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "agent-system",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "In-page GUI agent that runs inside the web page itself (a script tag, not a separate browser process), letting any site add \"control this UI with natural language\" — a different architecture from external browser agents like Stagehand or Browser Use"
+      ],
+      "best_for": [
+        "You want to add a natural-language copilot to your own web app so users can drive its UI conversationally — PageAgent runs in-page with direct DOM access, no browser infrastructure to operate",
+        "You need GUI automation that works without screenshots or CDP: it reads the live DOM directly, which is cheaper and faster than vision-based agents for structured web UIs"
+      ],
+      "avoid_if": [
+        "You need to automate third-party sites you don't control — an in-page agent must be embedded by the site owner; use an external browser agent (see the Stagehand entry) instead",
+        "Your UI is canvas-heavy or renders outside the DOM — DOM-based perception has nothing to read there and vision-based approaches will do better"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "stagehand"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (24.8k), MIT license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub weekly and monthly trending. Architecture description (in-page script, DOM-based perception, MCP support) from the project's own documentation.",
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-07",
+          "description": "On GitHub weekly and monthly trending; 24.8k stars"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/agent-systems/page-agent.md",
+      "url": "content/projects/agent-systems/page-agent",
+      "slug": "page-agent",
+      "section_path": "content/projects/agent-systems",
+      "display_name": "PageAgent",
+      "summary": "JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 441,
+      "body_html": "<h2>Overview</h2>\n<p>An open-source in-page GUI agent from Alibaba: you embed it in your own web application as a JavaScript library, and it lets users control the interface with natural language by reading and acting on the live DOM directly — no separate browser process, screenshots, or automation infrastructure.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>In-page GUI agent that inverts the usual browser-agent architecture: instead of an external process driving a browser (Stagehand, Browser Use), the agent lives inside the page the site owner ships. It earns a place in the Arsenal because it addresses a distinct decision point — adding conversational control to <em>your own</em> product's UI — that external browser agents handle poorly, and because DOM-native perception is a meaningfully cheaper mechanism than vision-based agents for structured UIs. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>PageAgent is embedded as a script in the host page. It builds its perception from the live DOM (element roles, text, structure) rather than screenshots, plans actions with an LLM, and executes them as direct DOM interactions (clicks, input, navigation) in the same JavaScript context. Because it shares the page's runtime, it needs no CDP connection or browser infrastructure; MCP support allows exposing page capabilities to external agents as well.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: LLM providers for planning. Downstream: any web app that embeds it. Competing: external browser agents (<a href=\"./stagehand.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Stagehand</a>, Browser Use) for automation of arbitrary sites; product-copilot SDKs for in-app assistance. Complementary: can coexist with external agents — in-page for first-party UX, external for cross-site workflows.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical deployment command for this specific agent system.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want users of your web app to drive its UI conversationally (\"create a report for last quarter and share it with the team\") without you hand-wiring each command</li>\n<li><strong>Scenario</strong>: you want GUI automation for structured web UIs without the cost and latency of screenshot/vision-based perception</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>In-page, DOM-native architecture: no browser infrastructure to operate, and perception is cheaper and faster than vision-based agents on structured UIs</li>\n<li>Org-backed (Alibaba), MIT-licensed, and very actively developed (24.8k stars, pushed 2026-07-07)</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Only works on pages that embed it — it cannot automate third-party sites you don't control</li>\n<li>DOM-based perception fails on canvas-heavy or non-DOM-rendered UIs, where vision-based agents do better</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see <a href=\"../frameworks/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Frameworks</a>. For job-based tool comparisons, see <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/alibaba/page-agent\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://alibaba.github.io/page-agent/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview An open source in page GUI agent from Alibaba: you embed it in your own web application as a JavaScript library, and it lets users control the interface with natural language by reading and acting on the live DOM directly — no separate browser process, screenshots, or automation infrastructure. Why it's in the Arsenal In page GUI agent that inverts the usual browser agent architecture: instead of an external process driving a browser (Stagehand, Browser Use), the agent lives inside the page the site owner ships. It earns a place in the Arsenal because it addresses a distinct decision point — adding conversational control to your own product's UI — that external browser agents handle poorly, and because DOM native perception is a meaningfully cheaper mechanism than vision based agents for structured UIs. See Strengths / Limitations below before adopting it. Architecture PageAgent is embedded as a script in the host page. It builds its perception from the live DOM (element roles, text, structure) rather than screenshots, plans actions with an LLM, and executes them as direct DOM interactions (clicks, input, navigation) in the same JavaScript context. Because it shares the page's runtime, it needs no CDP connection or browser infrastructure; MCP support allows exposing page capabilities to external agents as well. Ecosystem Position Upstream: LLM providers for planning. Downstream: any web app that embeds it. Competing: external browser agents (Stagehand, Browser Use) for automation of arbitrary sites; product copilot SDKs for in app assistance. Complementary: can coexist with external agents — in page for first party UX, external for cross site workflows. Getting Started Key Use Cases 1. Scenario : you want users of your web app to drive its UI conversationally (\"create a report for last quarter and share it with the team\") without you hand wiring each command 2. Scenario : you want GUI automation for structured web UIs without the cost and latency of screenshot/vision based perception Strengths In page, DOM native architecture: no browser infrastructure to operate, and perception is cheaper and faster than vision based agents on structured UIs Org backed (Alibaba), MIT licensed, and very actively developed (24.8k stars, pushed 2026 07 07) Limitations Only works on pages that embed it — it cannot automate third party sites you don't control DOM based perception fails on canvas heavy or non DOM rendered UIs, where vision based agents do better Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation"
+    },
+    {
       "id": "pgvector",
       "name": "pgvector",
       "version_tracked": null,
@@ -5902,6 +5998,105 @@
       "body_text": "Overview A minimal, code first agent framework from Hugging Face, designed around the idea that agents work best when they write and execute Python code to take actions rather than being restricted to structured JSON tool calls. Why it's in the Arsenal Hugging Face's minimal, code first agent framework emphasizing simplicity over feature breadth. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a large dependency surface. See Strengths / Limitations below before adopting it. Architecture Agents reason in a loop and express actions as executable Python code snippets (run in a sandboxed interpreter) rather than JSON function call payloads, an approach Hugging Face argues reduces the friction and error rate of complex multi step tool use. Ecosystem Position Upstream: integrates with the Hugging Face Hub for model access. Downstream: none of particular note. Competing: LangGraph, CrewAI, Pydantic AI — smolagents differentiates specifically on its code execution action model and minimalism. Complementary: pairs naturally with Hugging Face Transformers and Hub hosted models. Getting Started Key Use Cases 1. Scenario : you want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a large dependency surface 2. Scenario : you prefer agents that write and execute Python code to take actions (code agent pattern) rather than JSON based tool calling exclusively Strengths You want the simplest possible agent framework — smolagents is deliberately minimal, useful for learning agent concepts or building lightweight agents without a large dependency surface You prefer agents that write and execute Python code to take actions (code agent pattern) rather than JSON based tool calling exclusively Limitations You need extensive built in integrations, durability features, or enterprise tooling — smolagents' minimalism is a deliberate tradeoff against LangGraph or CrewAI's larger feature sets You need multi agent orchestration at scale — smolagents is oriented toward single or simply composed agents rather than complex multi agent graphs Relation to the Arsenal This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant tools/orchestration/ or tools/by job/ entries. Resources GitHub Documentation"
     },
     {
+      "id": "speech-to-speech",
+      "name": "Speech To Speech",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "voice-audio",
+      "subcategory": "frameworks",
+      "description": "Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API",
+      "github_url": "https://github.com/huggingface/speech-to-speech",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "huggingface",
+      "tags": [
+        "voice",
+        "agents",
+        "streaming",
+        "local"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 5654,
+      "github_stars_last_30d": 0,
+      "trending_score": 60,
+      "last_commit": "2026-07-07",
+      "docs_url": "https://github.com/huggingface/speech-to-speech#readme",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "framework",
+      "domain": [
+        "audio",
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The reference open-source voice-agent pipeline — every stage (VAD, STT, LLM, TTS) swappable, speaking the OpenAI Realtime protocol, so it serves as both a deployable backend and a drop-in self-hosted replacement for hosted realtime voice APIs"
+      ],
+      "best_for": [
+        "You want a voice agent without vendor lock-in — the server speaks the OpenAI Realtime WebSocket protocol, so existing Realtime clients can point at it unchanged while you swap the LLM slot between hosted providers, HF Inference, or a local vLLM/llama.cpp server",
+        "You need a fully local, fully open voice stack (privacy, edge, robotics) — local STT (Parakeet), local TTS (Qwen3-TTS), and a local LLM compose into a pipeline with no cloud dependency"
+      ],
+      "avoid_if": [
+        "You need the absolute lowest-latency, most natural conversational experience and have no data-residency constraints — end-to-end hosted realtime models (native speech-to-speech) still lead a cascaded VAD→STT→LLM→TTS pipeline on latency and prosody",
+        "You want a batteries-included consumer voice assistant — this is a pipeline/server for builders, not an end-user product"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (5.7k), Apache-2.0 license, and last push (2026-07-07) verified via the GitHub API on 2026-07-08; on GitHub weekly trending same day. Production-proven signal is README-documented (conversation backend for thousands of Reachy Mini robots — first-party but concrete). Latency claims not independently benchmarked.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-08",
+          "description": "On GitHub weekly trending; 5.7k stars"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/frameworks/speech-to-speech.md",
+      "url": "content/projects/frameworks/speech-to-speech",
+      "slug": "speech-to-speech",
+      "section_path": "content/projects/frameworks",
+      "display_name": "Speech To Speech",
+      "summary": "Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 454,
+      "body_html": "<h2>Overview</h2>\n<p>Hugging Face's open-source voice-agent framework: a low-latency, fully modular VAD → STT → LLM → TTS pipeline exposed through an OpenAI Realtime-compatible WebSocket server. Every stage is swappable — the default local stack uses Parakeet TDT for STT and Qwen3-TTS for speech output, and the LLM slot speaks OpenAI-compatible protocols so it can target a hosted provider, HF Inference Providers, or your own vLLM/llama.cpp server for a fully local stack.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Two mechanisms earn it a place. First, protocol compatibility: by implementing the OpenAI Realtime WebSocket API, it makes the entire hosted-vs-self-hosted decision reversible — existing Realtime clients repoint at it without code changes, which is rare leverage in the voice space. Second, it is production-proven in an unusually concrete way for an open pipeline: it runs as the conversation backend for thousands of Reachy Mini robots. Together those make it the default starting point for open-source voice agents.</p>\n<h2>Architecture</h2>\n<p>A cascaded pipeline server: voice activity detection segments the input stream, STT transcribes, an OpenAI-compatible LLM produces the response, and TTS renders speech — all streamed over a Realtime-compatible WebSocket (<code>/v1/realtime</code>). Modularity is the design center: each stage is a swappable component behind a common interface, so the same server config spans fully-local, fully-hosted, and hybrid deployments.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: open STT/TTS models (Parakeet, Qwen3-TTS) and any OpenAI-compatible LLM server (vLLM, llama.cpp, hosted providers). Downstream: realtime voice clients and embodied deployments (Reachy Mini robots). Competing: hosted end-to-end realtime speech models, which lead on latency/prosody but cannot be self-hosted; complementary to the <a href=\"../inference-engines/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">inference engines</a> that serve its LLM slot locally.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install speech-to-speech\nexport OPENAI_API_KEY=...\nspeech-to-speech\n# Starts an OpenAI Realtime-compatible server at ws://localhost:8765/v1/realtime\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: replacing a hosted realtime voice API with a self-hosted backend for data-residency reasons, keeping existing Realtime clients unchanged</li>\n<li><strong>Scenario</strong>: a fully local voice assistant on your own hardware — local STT, local LLM via llama.cpp/vLLM, local TTS, no audio leaving the machine</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>OpenAI Realtime protocol compatibility makes hosted↔self-hosted migration a config change, not a rewrite</li>\n<li>Concrete production deployment (conversation backend for thousands of Reachy Mini robots) — rare hard evidence for an open voice pipeline</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Cascaded pipelines lag native end-to-end speech models on latency and prosody; the modularity is bought at that cost</li>\n<li>Quality is bounded by the open STT/TTS components you choose; expect tuning per language and acoustic environment</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a framework entry: a pipeline you deploy or build on rather than a model. For the runtimes that serve its local LLM slot, see <a href=\"../inference-engines/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Inference Engines</a>; for standalone agent platforms, see <a href=\"../agent-systems/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Agent Systems</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/speech-to-speech\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/huggingface/speech-to-speech#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://pypi.org/project/speech-to-speech/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PyPI</a></li>\n</ul>\n",
+      "body_text": "Overview Hugging Face's open source voice agent framework: a low latency, fully modular VAD → STT → LLM → TTS pipeline exposed through an OpenAI Realtime compatible WebSocket server. Every stage is swappable — the default local stack uses Parakeet TDT for STT and Qwen3 TTS for speech output, and the LLM slot speaks OpenAI compatible protocols so it can target a hosted provider, HF Inference Providers, or your own vLLM/llama.cpp server for a fully local stack. Why it's in the Arsenal Two mechanisms earn it a place. First, protocol compatibility: by implementing the OpenAI Realtime WebSocket API, it makes the entire hosted vs self hosted decision reversible — existing Realtime clients repoint at it without code changes, which is rare leverage in the voice space. Second, it is production proven in an unusually concrete way for an open pipeline: it runs as the conversation backend for thousands of Reachy Mini robots. Together those make it the default starting point for open source voice agents. Architecture A cascaded pipeline server: voice activity detection segments the input stream, STT transcribes, an OpenAI compatible LLM produces the response, and TTS renders speech — all streamed over a Realtime compatible WebSocket (/v1/realtime). Modularity is the design center: each stage is a swappable component behind a common interface, so the same server config spans fully local, fully hosted, and hybrid deployments. Ecosystem Position Upstream: open STT/TTS models (Parakeet, Qwen3 TTS) and any OpenAI compatible LLM server (vLLM, llama.cpp, hosted providers). Downstream: realtime voice clients and embodied deployments (Reachy Mini robots). Competing: hosted end to end realtime speech models, which lead on latency/prosody but cannot be self hosted; complementary to the inference engines that serve its LLM slot locally. Getting Started Key Use Cases 1. Scenario : replacing a hosted realtime voice API with a self hosted backend for data residency reasons, keeping existing Realtime clients unchanged 2. Scenario : a fully local voice assistant on your own hardware — local STT, local LLM via llama.cpp/vLLM, local TTS, no audio leaving the machine Strengths OpenAI Realtime protocol compatibility makes hosted↔self hosted migration a config change, not a rewrite Concrete production deployment (conversation backend for thousands of Reachy Mini robots) — rare hard evidence for an open voice pipeline Limitations Cascaded pipelines lag native end to end speech models on latency and prosody; the modularity is bought at that cost Quality is bounded by the open STT/TTS components you choose; expect tuning per language and acoustic environment Relation to the Arsenal This is a framework entry: a pipeline you deploy or build on rather than a model. For the runtimes that serve its local LLM slot, see Inference Engines; for standalone agent platforms, see Agent Systems. Resources GitHub Documentation PyPI"
+    },
+    {
       "id": "stagehand",
       "name": "Stagehand",
       "version_tracked": null,
@@ -6001,6 +6196,102 @@
       "word_count": 518,
       "body_html": "<h2>Overview</h2>\n<p>An open-source browser automation framework from Browserbase that blends natural-language, AI-driven actions with deterministic code-level control, aimed at building web automation that is more resilient to page changes than pure CSS-selector scripts while remaining more predictable than a fully autonomous browsing agent.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS-selector scripts and fully autonomous browsing agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want browser automation that mixes deterministic code (for known, stable page structure) with AI-assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>As of v3, Stagehand talks directly to the browser via the Chrome DevTools Protocol (CDP-native), having removed its earlier Playwright dependency for a reported 44% performance improvement on complex DOM interactions. Core primitives are act() for single actions, extract() for structured data capture, observe() for element discovery, and agent() for multi-step autonomous exploration; an ActCache/AgentCache layer stores and replays AI-discovered actions for large speedups on repeated workflows, with automatic self-healing when cached actions fail due to site changes.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: integrates with multiple LLM providers (OpenAI, Anthropic, Google) via a pluggable client architecture for its AI-driven actions. Downstream: none of particular note. Competing: Playwright and Puppeteer for pure code-based automation; Browser Use for fully autonomous screenshot-driven browsing agents. Complementary: designed to integrate with Browserbase's managed browser-session infrastructure, though it can run against any CDP-compatible browser.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical deployment command for this specific agent system.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want browser automation that mixes deterministic code (for known, stable page structure) with AI-assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other</li>\n<li><strong>Scenario</strong>: you need self-healing automation that survives website changes — Stagehand's caching layer replays AI-discovered actions for 10-100x speedup and falls back to AI re-discovery when cached actions break</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want browser automation that mixes deterministic code (for known, stable page structure) with AI-assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other</li>\n<li>You need self-healing automation that survives website changes — Stagehand's caching layer replays AI-discovered actions for 10-100x speedup and falls back to AI re-discovery when cached actions break</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You want a fully autonomous, screenshot-driven browsing agent that decides its own actions end-to-end without you writing any workflow code — Browser Use's model is closer to that; Stagehand deliberately keeps a human-authored code skeleton</li>\n<li>You need pure deterministic browser automation for a well-defined, stable test suite — plain Playwright without the AI layer is simpler and has no LLM-call latency/cost</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see <a href=\"../frameworks/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Frameworks</a>. For job-based tool comparisons, see <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/browserbase/stagehand\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/browserbase/stagehand\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview An open source browser automation framework from Browserbase that blends natural language, AI driven actions with deterministic code level control, aimed at building web automation that is more resilient to page changes than pure CSS selector scripts while remaining more predictable than a fully autonomous browsing agent. Why it's in the Arsenal Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS selector scripts and fully autonomous browsing agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want browser automation that mixes deterministic code (for known, stable page structure) with AI assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other. See Strengths / Limitations below before adopting it. Architecture As of v3, Stagehand talks directly to the browser via the Chrome DevTools Protocol (CDP native), having removed its earlier Playwright dependency for a reported 44% performance improvement on complex DOM interactions. Core primitives are act() for single actions, extract() for structured data capture, observe() for element discovery, and agent() for multi step autonomous exploration; an ActCache/AgentCache layer stores and replays AI discovered actions for large speedups on repeated workflows, with automatic self healing when cached actions fail due to site changes. Ecosystem Position Upstream: integrates with multiple LLM providers (OpenAI, Anthropic, Google) via a pluggable client architecture for its AI driven actions. Downstream: none of particular note. Competing: Playwright and Puppeteer for pure code based automation; Browser Use for fully autonomous screenshot driven browsing agents. Complementary: designed to integrate with Browserbase's managed browser session infrastructure, though it can run against any CDP compatible browser. Getting Started Key Use Cases 1. Scenario : you want browser automation that mixes deterministic code (for known, stable page structure) with AI assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other 2. Scenario : you need self healing automation that survives website changes — Stagehand's caching layer replays AI discovered actions for 10 100x speedup and falls back to AI re discovery when cached actions break Strengths You want browser automation that mixes deterministic code (for known, stable page structure) with AI assisted actions (for unfamiliar or changing pages), rather than choosing one extreme or the other You need self healing automation that survives website changes — Stagehand's caching layer replays AI discovered actions for 10 100x speedup and falls back to AI re discovery when cached actions break Limitations You want a fully autonomous, screenshot driven browsing agent that decides its own actions end to end without you writing any workflow code — Browser Use's model is closer to that; Stagehand deliberately keeps a human authored code skeleton You need pure deterministic browser automation for a well defined, stable test suite — plain Playwright without the AI layer is simpler and has no LLM call latency/cost Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation"
+    },
+    {
+      "id": "strix",
+      "name": "Strix",
+      "version_tracked": null,
+      "artifact_type": "platform",
+      "category": "agents",
+      "subcategory": "autonomous",
+      "description": "Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities",
+      "github_url": "https://github.com/usestrix/strix",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "usestrix",
+      "tags": [
+        "agents",
+        "security",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 38354,
+      "github_stars_last_30d": 0,
+      "trending_score": 70,
+      "last_commit": "2026-07-07",
+      "docs_url": "https://strix.ai",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "agent-system",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "community-driven",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "Autonomous offensive-security agent that runs real exploitation attempts (in sandboxed environments) against your own applications, rather than static scanning — one of the most visible examples of agents applied to security testing"
+      ],
+      "best_for": [
+        "You want continuous, agent-driven penetration testing of your own applications that goes beyond pattern-matching SAST/DAST — Strix agents actually attempt exploitation to validate findings and cut false positives",
+        "You want to study how an agentic loop (recon, exploitation, validation, reporting) is engineered for a high-stakes domain with sandboxing and scope controls"
+      ],
+      "avoid_if": [
+        "You need compliance-grade pentest reports signed off by humans — autonomous agent output still requires expert review and does not replace a certified assessment",
+        "You cannot run it in an isolated environment against systems you own — pointing offensive agents at third-party systems is unsafe and illegal"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (38.4k), Apache-2.0 license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; appeared on GitHub weekly trending the same day. Exploitation-validation claims come from the project's own documentation and have not been independently benchmarked here.",
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-07",
+          "description": "On GitHub weekly and monthly trending; 38.4k stars"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/agent-systems/strix.md",
+      "url": "content/projects/agent-systems/strix",
+      "slug": "strix",
+      "section_path": "content/projects/agent-systems",
+      "display_name": "Strix",
+      "summary": "Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 411,
+      "body_html": "<h2>Overview</h2>\n<p>An open-source autonomous penetration-testing agent: given a target application you own, Strix agents perform reconnaissance, attempt real (sandboxed) exploitation of candidate vulnerabilities, validate what is actually exploitable, and produce findings — positioning itself as a dynamic, agentic alternative to static scanners.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Autonomous offensive-security agent that runs real exploitation attempts against your own applications rather than pattern-matching. It earns a place in the Arsenal both as a usable defensive tool (continuous self-testing of your apps) and as a reference for engineering agent loops in a high-stakes domain: scope enforcement, sandboxing, and validation-before-reporting are exactly the guardrail patterns covered in the <a href=\"../../tips-and-tricks/agents-and-orchestration/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">agents-and-orchestration tips</a>. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Strix runs LLM-driven agents equipped with security tooling (HTTP clients, browsers, code analysis) inside sandboxed environments. The loop is recon → hypothesis → exploitation attempt → validation → report: findings are only reported after an actual exploitation attempt succeeds, which is the project's core mechanism for reducing the false-positive rate that plagues static scanners. Scope and target configuration constrain what the agents may touch.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: LLM providers for agent reasoning. Downstream: findings feed security review and ticketing workflows. Competing: traditional DAST/SAST scanners and commercial pentest-automation platforms; complementary to guardrail scanners that test the AI system itself rather than using AI to test applications (see <a href=\"../../tools/by-job/security-and-guardrails.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">security-and-guardrails tools</a>).</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical deployment command for this specific agent system.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want continuous, agent-driven penetration testing of your own applications, with findings validated by actual exploitation attempts rather than pattern matching</li>\n<li><strong>Scenario</strong>: you want a reference implementation of an agent loop engineered for a high-stakes domain — sandboxing, scope control, validation before reporting</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Validation-by-exploitation cuts false positives relative to static scanning — a mechanism, not a heuristic</li>\n<li>Fully open-source (Apache-2.0) and very actively developed, with a large community (38k+ stars as of 2026-07-07)</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Autonomous output still requires expert review; it does not replace a certified human pentest for compliance purposes</li>\n<li>Must only be run against systems you own, in isolated environments — misuse is both unsafe and illegal</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see <a href=\"../frameworks/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Frameworks</a>. For job-based tool comparisons, see <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/usestrix/strix\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://strix.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview An open source autonomous penetration testing agent: given a target application you own, Strix agents perform reconnaissance, attempt real (sandboxed) exploitation of candidate vulnerabilities, validate what is actually exploitable, and produce findings — positioning itself as a dynamic, agentic alternative to static scanners. Why it's in the Arsenal Autonomous offensive security agent that runs real exploitation attempts against your own applications rather than pattern matching. It earns a place in the Arsenal both as a usable defensive tool (continuous self testing of your apps) and as a reference for engineering agent loops in a high stakes domain: scope enforcement, sandboxing, and validation before reporting are exactly the guardrail patterns covered in the agents and orchestration tips. See Strengths / Limitations below before adopting it. Architecture Strix runs LLM driven agents equipped with security tooling (HTTP clients, browsers, code analysis) inside sandboxed environments. The loop is recon → hypothesis → exploitation attempt → validation → report: findings are only reported after an actual exploitation attempt succeeds, which is the project's core mechanism for reducing the false positive rate that plagues static scanners. Scope and target configuration constrain what the agents may touch. Ecosystem Position Upstream: LLM providers for agent reasoning. Downstream: findings feed security review and ticketing workflows. Competing: traditional DAST/SAST scanners and commercial pentest automation platforms; complementary to guardrail scanners that test the AI system itself rather than using AI to test applications (see security and guardrails tools). Getting Started Key Use Cases 1. Scenario : you want continuous, agent driven penetration testing of your own applications, with findings validated by actual exploitation attempts rather than pattern matching 2. Scenario : you want a reference implementation of an agent loop engineered for a high stakes domain — sandboxing, scope control, validation before reporting Strengths Validation by exploitation cuts false positives relative to static scanning — a mechanism, not a heuristic Fully open source (Apache 2.0) and very actively developed, with a large community (38k+ stars as of 2026 07 07) Limitations Autonomous output still requires expert review; it does not replace a certified human pentest for compliance purposes Must only be run against systems you own, in isolated environments — misuse is both unsafe and illegal Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation"
     },
     {
       "id": "supabase",
@@ -6999,6 +7290,104 @@
       "word_count": 315,
       "body_html": "<h2>Overview</h2>\n<p>undefined</p>\n<h2>Why it's in the Arsenal</h2>\n<p>01.AI's open-weight model family from the 2023-2024 open-model wave. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>undefined</p>\n<h2>Ecosystem Position</h2>\n<p>undefined</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install transformers accelerate\n</code></pre>\n<pre><code class=\"language-python\">from transformers import pipeline\n\n# Replace with the specific model checkpoint for this family (see Resources).\npipe = pipeline(\"text-generation\", model=\"&lt;org&gt;/&lt;model-checkpoint&gt;\")\nprint(pipe(\"Explain retrieval augmented generation in one sentence.\", max_new_tokens=64)[0][\"generated_text\"])\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point</li>\n<li><strong>Scenario</strong>: you need a bilingual (English/Chinese) dense model and have already validated Yi meets your specific quality bar versus more actively maintained alternatives</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point</li>\n<li>You need a bilingual (English/Chinese) dense model and have already validated Yi meets your specific quality bar versus more actively maintained alternatives</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need active vendor support or frequent updates — GitHub issue activity on 01-ai/Yi shows sparse, community-only engagement in 2026 with no clear maintainer response pattern, and 01.AI's public focus has shifted toward newer, less-established projects</li>\n<li>You want a model with strong current-generation benchmark performance — Yi has been substantially outpaced by Qwen, Llama 3/4, and Gemma on most public leaderboards since its 2023-2024 release</li>\n</ul>\n<p><em>Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01.</em></p>\n<h2>Relation to the Arsenal</h2>\n<p>This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">content/tools/serving-and-deployment/</a> and <a href=\"../../tools/model-layer/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">content/tools/model-layer/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/01-ai/Yi\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/01-ai/Yi\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview undefined Why it's in the Arsenal 01.AI's open weight model family from the 2023 2024 open model wave. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point. See Strengths / Limitations below before adopting it. Architecture undefined Ecosystem Position undefined Getting Started Key Use Cases 1. Scenario : you're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point 2. Scenario : you need a bilingual (English/Chinese) dense model and have already validated Yi meets your specific quality bar versus more actively maintained alternatives Strengths You're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point You need a bilingual (English/Chinese) dense model and have already validated Yi meets your specific quality bar versus more actively maintained alternatives Limitations You need active vendor support or frequent updates — GitHub issue activity on 01 ai/Yi shows sparse, community only engagement in 2026 with no clear maintainer response pattern, and 01.AI's public focus has shifted toward newer, less established projects You want a model with strong current generation benchmark performance — Yi has been substantially outpaced by Qwen, Llama 3/4, and Gemma on most public leaderboards since its 2023 2024 release Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third party sourcing; not yet independently verified. Last reviewed: 2026 07 01. Relation to the Arsenal This is a foundation model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under content/tools/serving and deployment/ and content/tools/model layer/. Resources GitHub Documentation"
+    },
+    {
+      "id": "zvec",
+      "name": "zvec",
+      "version_tracked": null,
+      "artifact_type": "library",
+      "category": "rag",
+      "subcategory": "vector-databases",
+      "description": "Lightweight, in-process vector database from Alibaba for local RAG and agent memory",
+      "github_url": "https://github.com/alibaba/zvec",
+      "license": "Apache-2.0",
+      "primary_language": "C++",
+      "org_or_maintainer": "alibaba",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "local"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 13891,
+      "github_stars_last_30d": 0,
+      "trending_score": 60,
+      "last_commit": "2026-07-07",
+      "docs_url": "https://zvec.org",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "data-and-retrieval",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "In-process (\"SQLite for vectors\") vector database — embeds directly in your application with no server to run, filling the gap between FAISS-style raw indexes and full server-based vector databases like Qdrant"
+      ],
+      "best_for": [
+        "You want vector search inside a local-first or embedded application (desktop app, CLI agent, edge deployment) with zero infrastructure — zvec runs in-process like SQLite, not as a server",
+        "You need agent memory or small-to-medium RAG (up to millions of vectors) where operating a vector-database server is disproportionate overhead"
+      ],
+      "avoid_if": [
+        "You need multi-tenant, horizontally scaled retrieval serving many concurrent applications — a server-based vector database (see the Qdrant entry) is the right shape",
+        "Your team is Python-only and already happy with pgvector inside an existing Postgres — adding a second storage engine needs a concrete reason"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "qdrant"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (13.9k), Apache-2.0 license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub monthly trending. HNSW-based indexing and in-process architecture from the project's own documentation; performance claims not independently benchmarked here.",
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=monthly",
+          "date": "2026-07-07",
+          "description": "On GitHub monthly trending; 13.9k stars"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/data-and-retrieval/zvec.md",
+      "url": "content/projects/data-and-retrieval/zvec",
+      "slug": "zvec",
+      "section_path": "content/projects/data-and-retrieval",
+      "display_name": "zvec",
+      "summary": "Lightweight, in-process vector database from Alibaba for local RAG and agent memory",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 422,
+      "body_html": "<h2>Overview</h2>\n<p>An open-source, in-process vector database from Alibaba: instead of running a separate server, you embed zvec directly in your application (the SQLite model), getting HNSW-indexed similarity search with filtering for local RAG, semantic search, and agent memory workloads.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>In-process vector database that fills a real architectural gap: FAISS gives you a raw index with no database ergonomics, while Qdrant/Weaviate give you a server you must operate. zvec earns a place in the Arsenal because local-first agents and embedded RAG (a growing deployment shape — see the <a href=\"../../architectures/reference-stacks/local-first.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">local-first reference stack</a>) need exactly this middle option: durable, queryable vector storage with zero infrastructure. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>zvec is a C++ core with language bindings, linked into your application process. Vectors are stored durably on local disk and indexed with HNSW for approximate nearest-neighbor search; queries combine similarity search with scalar filtering. Because everything runs in-process, there is no network hop, connection pooling, or server lifecycle — the same trade SQLite makes against client-server databases.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: your embedding pipeline (any embedding model; see the <a href=\"../../skills/core-concepts/embeddings.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">embeddings concept</a>). Downstream: local RAG applications and agent memory layers. Competing: FAISS (raw index, no persistence ergonomics), <a href=\"./qdrant.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qdrant</a> and other server-based vector databases (operational overhead, but multi-tenant scale), pgvector (vectors inside an existing Postgres). Complementary: pairs naturally with local inference runtimes like <a href=\"../inference-engines/ollama.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ollama</a> for fully local RAG.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical installation command for your language binding.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you're building a local-first agent or desktop application that needs durable semantic memory without asking users to run a database server</li>\n<li><strong>Scenario</strong>: you need small-to-medium RAG (thousands to millions of vectors) inside a single service, where an in-process index removes a network dependency and an operational burden</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Zero-infrastructure deployment: in-process like SQLite, so there is no server to provision, secure, or monitor</li>\n<li>Org-backed (Alibaba), Apache-2.0, and very actively developed (13.9k stars, pushed 2026-07-07)</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Single-process architecture: not the right shape for multi-tenant, horizontally scaled retrieval — server-based vector databases exist for that</li>\n<li>Young project relative to established options; evaluate durability and recall on your own data before trusting it with production memory</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a data-and-retrieval project entry: it documents an embeddable retrieval engine. For server-based alternatives and job-based comparisons, see <a href=\"../../tools/by-job/vector-search.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/vector-search</a>. For retrieval-quality practices, see the <a href=\"../../tips-and-tricks/rag-and-retrieval/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">rag-and-retrieval tips</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/alibaba/zvec\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://zvec.org\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview An open source, in process vector database from Alibaba: instead of running a separate server, you embed zvec directly in your application (the SQLite model), getting HNSW indexed similarity search with filtering for local RAG, semantic search, and agent memory workloads. Why it's in the Arsenal In process vector database that fills a real architectural gap: FAISS gives you a raw index with no database ergonomics, while Qdrant/Weaviate give you a server you must operate. zvec earns a place in the Arsenal because local first agents and embedded RAG (a growing deployment shape — see the local first reference stack) need exactly this middle option: durable, queryable vector storage with zero infrastructure. See Strengths / Limitations below before adopting it. Architecture zvec is a C++ core with language bindings, linked into your application process. Vectors are stored durably on local disk and indexed with HNSW for approximate nearest neighbor search; queries combine similarity search with scalar filtering. Because everything runs in process, there is no network hop, connection pooling, or server lifecycle — the same trade SQLite makes against client server databases. Ecosystem Position Upstream: your embedding pipeline (any embedding model; see the embeddings concept). Downstream: local RAG applications and agent memory layers. Competing: FAISS (raw index, no persistence ergonomics), Qdrant and other server based vector databases (operational overhead, but multi tenant scale), pgvector (vectors inside an existing Postgres). Complementary: pairs naturally with local inference runtimes like Ollama for fully local RAG. Getting Started Key Use Cases 1. Scenario : you're building a local first agent or desktop application that needs durable semantic memory without asking users to run a database server 2. Scenario : you need small to medium RAG (thousands to millions of vectors) inside a single service, where an in process index removes a network dependency and an operational burden Strengths Zero infrastructure deployment: in process like SQLite, so there is no server to provision, secure, or monitor Org backed (Alibaba), Apache 2.0, and very actively developed (13.9k stars, pushed 2026 07 07) Limitations Single process architecture: not the right shape for multi tenant, horizontally scaled retrieval — server based vector databases exist for that Young project relative to established options; evaluate durability and recall on your own data before trusting it with production memory Relation to the Arsenal This is a data and retrieval project entry: it documents an embeddable retrieval engine. For server based alternatives and job based comparisons, see tools/by job/vector search. For retrieval quality practices, see the rag and retrieval tips. Resources GitHub Documentation"
     }
   ]
 }

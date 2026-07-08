@@ -1,8 +1,93 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-06T20:44:38.091Z",
-  "count": 93,
+  "generated_at": "2026-07-08T15:25:19.282Z",
+  "count": 104,
   "items": [
+    {
+      "id": "addyosmani-agent-skills",
+      "name": "Agent Skills (Addy Osmani)",
+      "type": "tool",
+      "job": [
+        "prototyping"
+      ],
+      "description": "Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle",
+      "url": "content/tools/dx-and-tooling/addyosmani-agent-skills",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (MIT)",
+      "tags": [
+        "agents",
+        "code-gen",
+        "planning"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "polyglot"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free; no paid tier exists",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/addyosmani/agent-skills",
+      "docs_url": "https://github.com/addyosmani/agent-skills#readme",
+      "github_url": "https://github.com/addyosmani/agent-skills",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want lifecycle discipline for a coding agent but with explicit, per-stage control — each of the 8 slash commands (/spec, /plan, /build, /test, /review, /webperf, /code-simplify, /ship) activates only the skills for that stage, so you invoke exactly the rigor you need",
+        "You want a skills pack curated by one senior engineer with a consistent editorial voice, rather than a sprawling community collection of uneven quality"
+      ],
+      "avoid_when": [
+        "You want the methodology to trigger automatically without per-stage commands — an auto-triggering framework fits that workflow better",
+        "Your work is not web/software-product development — several skills (e.g. /webperf) assume that domain"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (73.2k), MIT license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-08; on GitHub daily trending the same day. Repo created 2026-02 by Addy Osmani (Google Chrome engineering lead). Skill content quality assessed from the README's documented command structure, not independently exercised here.",
+      "verdict": "recommended",
+      "verdict_rationale": "High-signal single-curator skills pack with a clear mechanism (per-lifecycle-stage slash commands with quality gates) and rapid adoption; deliberately smaller scope than whole-methodology frameworks",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=daily",
+          "date": "2026-07-08",
+          "description": "On GitHub daily and weekly trending; 73.2k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/addyosmani-agent-skills.md",
+      "slug": "addyosmani-agent-skills",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Agent Skills (Addy Osmani)",
+      "summary": "Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 551,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Addy Osmani's curated skills pack for coding agents: 8 slash commands mapping to the development lifecycle (spec → plan → build → test → review → ship, plus /webperf and /code-simplify), each activating the right skills and quality gates for that stage. MIT. Best when you want explicit per-stage control; pick an auto-triggering framework if you want zero-command methodology enforcement.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>A collection of production-grade engineering skills for AI coding agents, packaged behind 8 lifecycle slash commands. Each command encodes the workflows and quality gates a senior engineer applies at that stage — spec before code, small atomic tasks, tests as proof, code-health review before merge — so the agent follows them consistently. An optional <code>/build auto</code> mode runs the whole plan autonomously after one human approval, pausing on failures.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Skill packs vary wildly in quality; this one earns a place through mechanism and curation. The mechanism is per-stage activation: instead of loading one giant methodology, each slash command loads only the skills relevant to its lifecycle stage, keeping context lean and the agent's behavior predictable. The curation is a single senior engineer (Chrome engineering lead) with a consistent quality bar — the opposite failure mode from sprawling community collections. It's a primary reference in the <a href=\"../../skills/agent-skills/agent-skills-ecosystem.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">agent-skills ecosystem guide</a>.</p>\n<h2>Key Features</h2>\n<ul>\n<li>8 lifecycle commands: <code>/spec</code>, <code>/plan</code>, <code>/build</code>, <code>/test</code>, <code>/review</code>, <code>/webperf</code>, <code>/code-simplify</code>, <code>/ship</code></li>\n<li>Each command activates stage-appropriate skills and quality gates automatically</li>\n<li><code>/build auto</code>: approve the plan once, then autonomous task-by-task execution — every task still test-driven and committed individually, pausing on failures or risky steps</li>\n<li>Web-specific depth: performance auditing (<code>/webperf</code>) grounded in measure-before-optimize practice</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Skills are Markdown documents grouped by lifecycle stage; the slash commands are thin routers that load the relevant group into the agent's context. Quality gates are encoded as explicit checks within each stage's skills (e.g., tests must pass before <code>/review</code>, review before <code>/ship</code>), so the discipline lives in the loaded instructions rather than in the harness.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the repository README (Resources below) for the current\n# per-harness installation instructions.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: feature development where you drive stage transitions yourself — <code>/spec</code> a feature, <code>/plan</code> it, then <code>/build auto</code> to execute the approved plan autonomously</li>\n<li><strong>Scenario</strong>: a web-performance pass on an existing app via <code>/webperf</code>, with the agent measuring before proposing optimizations</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Per-stage skill activation keeps context small and behavior predictable — you always know which rigor is in force</li>\n<li>Fast, broad adoption (73.2k stars as of 2026-07-08, ~5 months after creation) with a single accountable curator</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Command-driven: nothing enforces the methodology if you skip the commands — auto-triggering frameworks close that gap</li>\n<li>Web/product-development slant; less applicable to ML pipelines, infra, or research code</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use standalone as your agent's lifecycle discipline, or borrow individual stage skills into an existing setup</li>\n<li>Compare with <a href=\"./superpowers.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Superpowers</a>: auto-triggering whole methodology vs. this pack's explicit per-stage commands — the choice is control granularity</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/addyosmani/agent-skills\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/addyosmani/agent-skills#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub daily and weekly trending with 73.2k stars as of 2026-07-08; one of the fastest-growing agent-skills repositories since its February 2026 creation, amplified by the author's large developer-education following.</p>\n",
+      "body_text": "TL;DR: Addy Osmani's curated skills pack for coding agents: 8 slash commands mapping to the development lifecycle (spec → plan → build → test → review → ship, plus /webperf and /code simplify), each activating the right skills and quality gates for that stage. MIT. Best when you want explicit per stage control; pick an auto triggering framework if you want zero command methodology enforcement. Overview A collection of production grade engineering skills for AI coding agents, packaged behind 8 lifecycle slash commands. Each command encodes the workflows and quality gates a senior engineer applies at that stage — spec before code, small atomic tasks, tests as proof, code health review before merge — so the agent follows them consistently. An optional /build auto mode runs the whole plan autonomously after one human approval, pausing on failures. Why It's in the Arsenal Skill packs vary wildly in quality; this one earns a place through mechanism and curation. The mechanism is per stage activation: instead of loading one giant methodology, each slash command loads only the skills relevant to its lifecycle stage, keeping context lean and the agent's behavior predictable. The curation is a single senior engineer (Chrome engineering lead) with a consistent quality bar — the opposite failure mode from sprawling community collections. It's a primary reference in the agent skills ecosystem guide. Key Features 8 lifecycle commands: /spec, /plan, /build, /test, /review, /webperf, /code simplify, /ship Each command activates stage appropriate skills and quality gates automatically /build auto: approve the plan once, then autonomous task by task execution — every task still test driven and committed individually, pausing on failures or risky steps Web specific depth: performance auditing (/webperf) grounded in measure before optimize practice Architecture / How It Works Skills are Markdown documents grouped by lifecycle stage; the slash commands are thin routers that load the relevant group into the agent's context. Quality gates are encoded as explicit checks within each stage's skills (e.g., tests must pass before /review, review before /ship), so the discipline lives in the loaded instructions rather than in the harness. Getting Started Use Cases 1. Scenario : feature development where you drive stage transitions yourself — /spec a feature, /plan it, then /build auto to execute the approved plan autonomously 2. Scenario : a web performance pass on an existing app via /webperf, with the agent measuring before proposing optimizations Strengths Per stage skill activation keeps context small and behavior predictable — you always know which rigor is in force Fast, broad adoption (73.2k stars as of 2026 07 08, 5 months after creation) with a single accountable curator Limitations / When NOT to Use Command driven: nothing enforces the methodology if you skip the commands — auto triggering frameworks close that gap Web/product development slant; less applicable to ML pipelines, infra, or research code Integration Patterns Use standalone as your agent's lifecycle discipline, or borrow individual stage skills into an existing setup Compare with Superpowers: auto triggering whole methodology vs. this pack's explicit per stage commands — the choice is control granularity Resources GitHub Documentation Buzz & Reception On GitHub daily and weekly trending with 73.2k stars as of 2026 07 08; one of the fastest growing agent skills repositories since its February 2026 creation, amplified by the author's large developer education following."
+    },
     {
       "id": "agent-browser-shield",
       "name": "Agent Browser Shield",
@@ -86,6 +171,95 @@
       "word_count": 348,
       "body_html": "<h2>Overview</h2>\n<p>A security tool that sits between an autonomous agent and the live web, sanitizing page content and masking PII before it reaches the model, defending against prompt-injection-via-webpage attacks.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Agent Browser Shield earns a place in the Arsenal because it directly addresses a recurring decision point: your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Content sanitization for agent web browsing</li>\n<li>PII masking during agent runs</li>\n<li>Defense against indirect prompt injection from web content</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Intercepts content fetched during an agent's browsing session, applies sanitization/masking rules, and passes only the cleaned result into the agent's context.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://github.com/pixiebrix/agent-browser-shield\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model</li>\n<li><strong>Scenario</strong>: you need a defensive layer against prompt-injection-via-webpage attacks during agentic browsing</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: your agents never browse untrusted live web content (the risk this tool addresses doesn't apply) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model</li>\n<li>You need a defensive layer against prompt-injection-via-webpage attacks during agentic browsing</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Your agents never browse untrusted live web content (the risk this tool addresses doesn't apply)</p>\n</li>\n<li>\n<p>You need an open-source or self-hostable security layer</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/pixiebrix/agent-browser-shield\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Agent Browser Shield</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview A security tool that sits between an autonomous agent and the live web, sanitizing page content and masking PII before it reaches the model, defending against prompt injection via webpage attacks. Why It's in the Arsenal Agent Browser Shield earns a place in the Arsenal because it directly addresses a recurring decision point: your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Content sanitization for agent web browsing PII masking during agent runs Defense against indirect prompt injection from web content Architecture / How It Works Intercepts content fetched during an agent's browsing session, applies sanitization/masking rules, and passes only the cleaned result into the agent's context. Getting Started Use Cases 1. Scenario : your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model 2. Scenario : you need a defensive layer against prompt injection via webpage attacks during agentic browsing 3. Scenario where this is NOT the right fit : your agents never browse untrusted live web content (the risk this tool addresses doesn't apply) — evaluate an alternative instead Strengths Your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model You need a defensive layer against prompt injection via webpage attacks during agentic browsing Limitations / When NOT to Use Your agents never browse untrusted live web content (the risk this tool addresses doesn't apply) You need an open source or self hostable security layer Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Agent Browser Shield Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "agent-reach",
+      "name": "Agent Reach",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web",
+      "url": "content/tools/data-ingestion/agent-reach",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (MIT); some backends rely on free public endpoints with their own limits",
+      "tags": [
+        "agents",
+        "data",
+        "retrieval",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Relies on free/public endpoints for some platforms; rate limits and breakage risk vary by source",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/Panniantong/Agent-Reach",
+      "docs_url": "https://github.com/Panniantong/Agent-Reach",
+      "github_url": "https://github.com/Panniantong/Agent-Reach",
+      "alternatives": [
+        "firecrawl-tool",
+        "crawl4ai-tool",
+        "jina-reader"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype"
+      ],
+      "best_when": [
+        "Your agent needs to read and search platform content (X/Twitter, Reddit, YouTube transcripts, GitHub) that generic page scrapers handle poorly, through one unified CLI/MCP interface",
+        "You're prototyping research or monitoring agents and want breadth of sources without wiring a separate API client per platform"
+      ],
+      "avoid_when": [
+        "You need contractual reliability — several platform backends use unofficial or free endpoints that can break or be rate-limited without notice; production pipelines should use official APIs",
+        "Platform terms of service matter for your use case — verify that your access pattern is permitted per source before shipping anything on top"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (52.5k), MIT license, and recent activity (last push 2026-07-03) verified via the GitHub API on 2026-07-07; on GitHub monthly trending. Source coverage claims from the project's own README; per-platform reliability not independently verified.",
+      "verdict": "watching",
+      "verdict_rationale": "Very fast-growing and genuinely broad source coverage, but built partly on unofficial endpoints — reliability and ToS posture need per-source verification before production use",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=monthly",
+          "date": "2026-07-07",
+          "description": "On GitHub monthly trending; 52.5k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/agent-reach.md",
+      "slug": "agent-reach",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Agent Reach",
+      "summary": "Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 460,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Open-source toolkit (CLI + MCP) that lets agents read and search X/Twitter, Reddit, YouTube, GitHub, and the web through one interface. Free, MIT. Best for prototyping research/monitoring agents; verify per-source reliability and ToS before production.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An open-source toolkit that gives AI agents \"eyes on the internet\": unified read and search access to platform content — X/Twitter threads, Reddit posts, YouTube transcripts, GitHub repos, and general web pages — exposed as a CLI and MCP server so any agent harness can consume it.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Generic scrapers (Firecrawl, Jina Reader) convert <em>pages</em> well but handle <em>platforms</em> poorly — logged-out X or Reddit content is where most agent research tasks die. Agent Reach earns a place in the Arsenal because it packages per-platform access behind one interface, which is exactly the gap between \"web scraping\" and \"the places practitioners actually discuss things\". Its 52k stars in under five months (verified 2026-07-07) reflect how common that gap is.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Platform readers: X/Twitter, Reddit, YouTube (transcripts), GitHub, Bilibili, Xiaohongshu, and general web</li>\n<li>Search across sources plus content extraction in agent-friendly text</li>\n<li>Dual interface: CLI for scripts, MCP server for agent harnesses (Claude Code, Cursor, etc.)</li>\n<li>Python, MIT-licensed, no paid API required for basic use</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Per-platform adapters normalize each source's access path (public APIs, free endpoints, or scraping fallbacks) into a common read/search interface. The MCP server exposes these as tools; the CLI exposes the same operations for scripted pipelines. Because some adapters depend on unofficial endpoints, individual sources can degrade independently — treat each adapter's reliability as its own dependency.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's README (Resources below) for current install\n# and MCP configuration; adapters and endpoints change frequently.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a research agent asked \"what are practitioners saying about X\" pulls actual Reddit/X/HN discussion instead of SEO blog posts</li>\n<li><strong>Scenario</strong>: a monitoring agent tracks mentions of your project across platforms and summarizes weekly</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Breadth: platform coverage (especially X/Reddit/YouTube) that generic page scrapers don't provide</li>\n<li>Harness-agnostic (CLI + MCP), MIT-licensed, explosive community adoption (52.5k stars as of 2026-07-07)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Unofficial endpoints break without notice — unsuitable as a production dependency without per-source fallbacks</li>\n<li>Platform terms of service vary; verify your access pattern is permitted for each source you rely on</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use as the discovery layer for research agents, with <a href=\"./firecrawl-tool.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Firecrawl</a> or <a href=\"./jina-reader.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Jina Reader</a> for clean full-page extraction of what it finds</li>\n<li>Wrap calls with caching and per-source failure handling so one broken adapter doesn't take down the pipeline</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/Panniantong/Agent-Reach\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub monthly trending with 52.5k stars as of 2026-07-07 — one of the fastest-growing agent-infrastructure repos of 2026; created 2026-02-24.</p>\n",
+      "body_text": "TL;DR: Open source toolkit (CLI + MCP) that lets agents read and search X/Twitter, Reddit, YouTube, GitHub, and the web through one interface. Free, MIT. Best for prototyping research/monitoring agents; verify per source reliability and ToS before production. Overview An open source toolkit that gives AI agents \"eyes on the internet\": unified read and search access to platform content — X/Twitter threads, Reddit posts, YouTube transcripts, GitHub repos, and general web pages — exposed as a CLI and MCP server so any agent harness can consume it. Why It's in the Arsenal Generic scrapers (Firecrawl, Jina Reader) convert pages well but handle platforms poorly — logged out X or Reddit content is where most agent research tasks die. Agent Reach earns a place in the Arsenal because it packages per platform access behind one interface, which is exactly the gap between \"web scraping\" and \"the places practitioners actually discuss things\". Its 52k stars in under five months (verified 2026 07 07) reflect how common that gap is. Key Features Platform readers: X/Twitter, Reddit, YouTube (transcripts), GitHub, Bilibili, Xiaohongshu, and general web Search across sources plus content extraction in agent friendly text Dual interface: CLI for scripts, MCP server for agent harnesses (Claude Code, Cursor, etc.) Python, MIT licensed, no paid API required for basic use Architecture / How It Works Per platform adapters normalize each source's access path (public APIs, free endpoints, or scraping fallbacks) into a common read/search interface. The MCP server exposes these as tools; the CLI exposes the same operations for scripted pipelines. Because some adapters depend on unofficial endpoints, individual sources can degrade independently — treat each adapter's reliability as its own dependency. Getting Started Use Cases 1. Scenario : a research agent asked \"what are practitioners saying about X\" pulls actual Reddit/X/HN discussion instead of SEO blog posts 2. Scenario : a monitoring agent tracks mentions of your project across platforms and summarizes weekly Strengths Breadth: platform coverage (especially X/Reddit/YouTube) that generic page scrapers don't provide Harness agnostic (CLI + MCP), MIT licensed, explosive community adoption (52.5k stars as of 2026 07 07) Limitations / When NOT to Use Unofficial endpoints break without notice — unsuitable as a production dependency without per source fallbacks Platform terms of service vary; verify your access pattern is permitted for each source you rely on Integration Patterns Use as the discovery layer for research agents, with Firecrawl or Jina Reader for clean full page extraction of what it finds Wrap calls with caching and per source failure handling so one broken adapter doesn't take down the pipeline Resources GitHub Buzz & Reception On GitHub monthly trending with 52.5k stars as of 2026 07 07 — one of the fastest growing agent infrastructure repos of 2026; created 2026 02 24."
     },
     {
       "id": "agnt-hub",
@@ -973,6 +1147,94 @@
       "body_text": "Overview A Python framework for quickly building chat style UIs for LLM applications, with built in step by step conversation debugging aimed at developers, not just end users. Why It's in the Arsenal Chainlit earns a place in the Arsenal because it directly addresses a recurring decision point: you want a fast, Python native chat UI for an LLM app with minimal frontend code. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Chat UI with minimal frontend code Built in step/trace visualization for debugging Plugs into common LLM frameworks directly Architecture / How It Works A Python backend defines message handlers; Chainlit renders a chat UI around them automatically and surfaces intermediate steps (tool calls, retries) for inspection. Getting Started Use Cases 1. Scenario : you want a fast, Python native chat UI for an LLM app with minimal frontend code 2. Scenario : you need built in debugging/inspection of conversation steps during development 3. Scenario where this is NOT the right fit : you need a fully customizable, branded production frontend (Chainlit's UI is opinionated and harder to deeply restyle) — evaluate an alternative instead Strengths You want a fast, Python native chat UI for an LLM app with minimal frontend code You need built in debugging/inspection of conversation steps during development Limitations / When NOT to Use You need a fully customizable, branded production frontend (Chainlit's UI is opinionated and harder to deeply restyle) Your frontend team already owns a React/Next.js app and a Python rendered UI would duplicate effort Integration Patterns Compare against FastAPI, Gradio, Mesop, Streamlit before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID chainlit. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "chrome-devtools-mcp",
+      "name": "Chrome DevTools MCP",
+      "type": "tool",
+      "job": [
+        "prototyping"
+      ],
+      "description": "Official MCP server exposing Chrome DevTools to coding agents for live browser debugging",
+      "url": "content/tools/dx-and-tooling/chrome-devtools-mcp",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (Apache-2.0)",
+      "tags": [
+        "agents",
+        "tool-use",
+        "code-gen"
+      ],
+      "maturity": "production",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free and self-hostable; no paid tier exists",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "docs_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "github_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "alternatives": [
+        "playwright",
+        "puppeteer"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Your coding agent (Claude Code, Cursor, Codex, Gemini CLI) needs to see what its frontend changes actually do — console errors, network requests, performance traces, rendered DOM — instead of coding blind",
+        "You want browser debugging grounded in the official DevTools implementation, maintained by the Chrome team itself, rather than a third-party wrapper"
+      ],
+      "avoid_when": [
+        "You need scripted, repeatable browser automation for CI test suites — write Playwright tests directly instead of routing automation through an agent's MCP calls",
+        "Your agent harness has an equivalent built-in browser capability, where adding a second browser-control path creates confusion about which one acts"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (46.2k), Apache-2.0 license, Chrome team ownership, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub weekly trending the same day.",
+      "verdict": "recommended",
+      "verdict_rationale": "First-party Chrome team MCP server; closes the \"agent can't see its own frontend bugs\" loop with official DevTools capabilities",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-07",
+          "description": "On GitHub weekly trending; 46.2k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/chrome-devtools-mcp.md",
+      "slug": "chrome-devtools-mcp",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Chrome DevTools MCP",
+      "summary": "Official MCP server exposing Chrome DevTools to coding agents for live browser debugging",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 473,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Official Chrome-team MCP server that gives coding agents DevTools access — console, network, performance traces, DOM — so they can debug the frontends they write. Free, Apache-2.0. Best for closing the agent code→verify loop on web apps.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An official MCP (Model Context Protocol) server from the Chrome DevTools team that exposes browser debugging capabilities — reading console output, inspecting network requests, taking performance traces, examining the DOM, and driving page interactions — to any MCP-capable coding agent.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Coding agents routinely write frontend code they cannot observe running, which makes their debugging guesswork. This server earns a place in the Arsenal because it closes that loop with the <em>official</em> DevTools implementation: the agent can reproduce the bug in a live browser, read the actual console error, and verify the fix — the same verify-before-claiming-done discipline the Arsenal recommends everywhere. Being maintained by the Chrome team itself distinguishes it from the many third-party browser MCP wrappers.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Console, network, and DOM inspection exposed as MCP tools</li>\n<li>Performance tracing and analysis (Core Web Vitals workflows)</li>\n<li>Page interaction (navigate, click, type) via Puppeteer under the hood</li>\n<li>Works with any MCP client: Claude Code, Cursor, Codex, Gemini CLI, and others</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Runs as a local MCP server that launches or attaches to a Chrome instance via the DevTools Protocol (CDP), using Puppeteer for reliable automation. The agent calls MCP tools (e.g. take a trace, list network requests, read console messages); results return as structured text the model can reason over, rather than screenshots alone.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Add to any MCP-capable client (example: Claude Code)\nclaude mcp add chrome-devtools npx chrome-devtools-mcp@latest\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: an agent's frontend change breaks silently — it opens the page, reads the console error and failing network call, fixes the code, and re-verifies</li>\n<li><strong>Scenario</strong>: performance work — the agent records a trace, reads the analysis, and iterates on the slow path with real measurements</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>First-party: maintained by the Chrome DevTools team, tracking DevTools capabilities directly (46k+ stars as of 2026-07-07)</li>\n<li>Structured debugging data (console, network, traces) is far more model-legible than screenshots</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not a test framework: for repeatable CI automation, write Playwright tests instead of agent-driven MCP calls</li>\n<li>Grants the agent a real browser — treat pages it visits as untrusted input and scope what it may access</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Pair with a coding agent for frontend work: implement → open page → read console/network → fix → re-verify</li>\n<li>Combine with <a href=\"../data-ingestion/playwright.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Playwright</a> tests: the agent debugs interactively via MCP, then encodes the regression as a deterministic test</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/ChromeDevTools/chrome-devtools-mcp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://www.npmjs.com/package/chrome-devtools-mcp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">npm package</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub weekly trending with 46.2k stars as of 2026-07-07; widely adopted across MCP-capable coding agents since its 2025 launch by the Chrome team.</p>\n",
+      "body_text": "TL;DR: Official Chrome team MCP server that gives coding agents DevTools access — console, network, performance traces, DOM — so they can debug the frontends they write. Free, Apache 2.0. Best for closing the agent code→verify loop on web apps. Overview An official MCP (Model Context Protocol) server from the Chrome DevTools team that exposes browser debugging capabilities — reading console output, inspecting network requests, taking performance traces, examining the DOM, and driving page interactions — to any MCP capable coding agent. Why It's in the Arsenal Coding agents routinely write frontend code they cannot observe running, which makes their debugging guesswork. This server earns a place in the Arsenal because it closes that loop with the official DevTools implementation: the agent can reproduce the bug in a live browser, read the actual console error, and verify the fix — the same verify before claiming done discipline the Arsenal recommends everywhere. Being maintained by the Chrome team itself distinguishes it from the many third party browser MCP wrappers. Key Features Console, network, and DOM inspection exposed as MCP tools Performance tracing and analysis (Core Web Vitals workflows) Page interaction (navigate, click, type) via Puppeteer under the hood Works with any MCP client: Claude Code, Cursor, Codex, Gemini CLI, and others Architecture / How It Works Runs as a local MCP server that launches or attaches to a Chrome instance via the DevTools Protocol (CDP), using Puppeteer for reliable automation. The agent calls MCP tools (e.g. take a trace, list network requests, read console messages); results return as structured text the model can reason over, rather than screenshots alone. Getting Started Use Cases 1. Scenario : an agent's frontend change breaks silently — it opens the page, reads the console error and failing network call, fixes the code, and re verifies 2. Scenario : performance work — the agent records a trace, reads the analysis, and iterates on the slow path with real measurements Strengths First party: maintained by the Chrome DevTools team, tracking DevTools capabilities directly (46k+ stars as of 2026 07 07) Structured debugging data (console, network, traces) is far more model legible than screenshots Limitations / When NOT to Use Not a test framework: for repeatable CI automation, write Playwright tests instead of agent driven MCP calls Grants the agent a real browser — treat pages it visits as untrusted input and scope what it may access Integration Patterns Pair with a coding agent for frontend work: implement → open page → read console/network → fix → re verify Combine with Playwright tests: the agent debugs interactively via MCP, then encodes the regression as a deterministic test Resources GitHub npm package Buzz & Reception On GitHub weekly trending with 46.2k stars as of 2026 07 07; widely adopted across MCP capable coding agents since its 2025 launch by the Chrome team."
+    },
+    {
       "id": "claude-artifact-player",
       "name": "Claude Artifact Player",
       "type": "tool",
@@ -1221,6 +1483,177 @@
       "body_text": "Overview A platform for benchmarking and comparing AI models' coding ability head to head in a competitive format, intended to give comparative signal when choosing a code generation model. Why It's in the Arsenal Code Arena earns a place in the Arsenal because it directly addresses a recurring decision point: you want to benchmark and compare AI models' coding ability head to head in a competitive format. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Head to head competitive coding benchmarks Comparative signal across multiple models Architecture / How It Works Models are pitted against shared coding tasks or against each other, with results aggregated into comparative rankings. Getting Started Use Cases 1. Scenario : you want to benchmark and compare AI models' coding ability head to head in a competitive format 2. Scenario : you're choosing a code generation model and want comparative signal beyond static leaderboards 3. Scenario where this is NOT the right fit : you need a rigorous, reproducible benchmark suite for a research paper (use established academic coding benchmarks instead) — evaluate an alternative instead Strengths You want to benchmark and compare AI models' coding ability head to head in a competitive format You're choosing a code generation model and want comparative signal beyond static leaderboards Limitations / When NOT to Use You need a rigorous, reproducible benchmark suite for a research paper (use established academic coding benchmarks instead) You need an open source or self hostable evaluation harness Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Code Arena Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "codebase-memory-mcp",
+      "name": "Codebase Memory MCP",
+      "type": "tool",
+      "job": [
+        "memory-management"
+      ],
+      "description": "MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence",
+      "url": "content/tools/dx-and-tooling/codebase-memory-mcp",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (MIT)",
+      "tags": [
+        "agents",
+        "memory",
+        "retrieval",
+        "code-gen"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "cpp"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free and self-hostable; no paid tier exists",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/DeusData/codebase-memory-mcp",
+      "docs_url": "https://deusdata.github.io/codebase-memory-mcp/",
+      "github_url": "https://github.com/DeusData/codebase-memory-mcp",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Your coding agent burns most of its context window re-discovering codebase structure every session — a persistent AST-derived knowledge graph answers \"who calls this / where is this defined\" in one cheap query",
+        "You work in a large repo where grep-based exploration is slow and imprecise, and you want structural queries (call graphs, symbol references) instead of text search"
+      ],
+      "avoid_when": [
+        "Your repos are small enough that the agent's own file reading and grep are already fast — an index adds setup and staleness risk without payoff",
+        "Your language isn't covered by its tree-sitter grammars — verify language support before adopting"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (27.8k), MIT license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub weekly and monthly trending. Architecture (tree-sitter AST parsing into a SQLite-backed graph, Cypher-style queries) from the project's own documentation; latency claims not independently benchmarked here.",
+      "verdict": "use-with-caution",
+      "verdict_rationale": "Fast-growing and genuinely useful mechanism (persistent structural code index for agents), but young — verify index freshness behavior and language coverage on your repos",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=monthly",
+          "date": "2026-07-07",
+          "description": "On GitHub weekly and monthly trending; 27.8k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/codebase-memory-mcp.md",
+      "slug": "codebase-memory-mcp",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Codebase Memory MCP",
+      "summary": "MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 478,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> MCP server that parses your codebase (tree-sitter) into a persistent knowledge graph so coding agents query structure — definitions, call graphs, references — instead of re-grepping every session. Free, MIT. Best for large repos where context-window archaeology dominates agent time.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>A high-performance MCP server that indexes codebases into a persistent knowledge graph: it parses source with tree-sitter into ASTs, stores symbols and relationships in an embedded database, and exposes structural queries (find definition, list callers, trace references) to any MCP-capable coding agent.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Coding agents on large repos spend a large share of tokens rediscovering structure — grepping, opening files, rebuilding a mental map that evaporates at session end. This tool earns a place in the Arsenal because it attacks that mechanism directly: a persistent, queryable structural index turns repeated context-window archaeology into single cheap tool calls, which is the same \"externalize state, keep context for reasoning\" principle behind good agent memory design.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Tree-sitter AST parsing across many languages into a persistent graph</li>\n<li>Structural queries: definitions, references, call graphs, symbol search</li>\n<li>Embedded storage (SQLite) — no server infrastructure to operate</li>\n<li>Works with Claude Code, Codex, Cursor, Gemini CLI, and other MCP clients</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>An indexing pass parses the repo with tree-sitter grammars and writes symbols, files, and relationships into an embedded graph store; the MCP server then answers Cypher-style structural queries against it. Because the index persists across sessions, the agent's knowledge of the codebase survives context resets — the graph is the memory, not the context window.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's documentation (Resources below) for the current\n# install command and MCP client configuration for your harness.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: an agent asked to refactor a widely used function queries the call graph first, getting the full blast radius in one call instead of iterative grepping</li>\n<li><strong>Scenario</strong>: long-running work on a monorepo where each new session starts with instant structural context instead of re-exploration</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Attacks a real, mechanical cost: repeated structure re-discovery is one of the largest token sinks for coding agents on big repos</li>\n<li>Zero-infrastructure (embedded storage) and harness-agnostic via MCP (27.8k stars as of 2026-07-07)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Index staleness: the graph must be kept in sync with fast-moving branches, or the agent reasons over outdated structure</li>\n<li>Young project; language coverage is bounded by available tree-sitter grammars — verify yours before adopting</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Add alongside a coding agent's normal file tools: structural queries for orientation, direct file reads for the actual edit</li>\n<li>Complements <a href=\"./chrome-devtools-mcp.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Chrome DevTools MCP</a> in a frontend workflow: one gives the agent code structure, the other runtime behavior</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/DeusData/codebase-memory-mcp\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://deusdata.github.io/codebase-memory-mcp/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub weekly and monthly trending with 27.8k stars as of 2026-07-07; rapid adoption across the MCP coding-agent ecosystem since its 2026-02 launch.</p>\n",
+      "body_text": "TL;DR: MCP server that parses your codebase (tree sitter) into a persistent knowledge graph so coding agents query structure — definitions, call graphs, references — instead of re grepping every session. Free, MIT. Best for large repos where context window archaeology dominates agent time. Overview A high performance MCP server that indexes codebases into a persistent knowledge graph: it parses source with tree sitter into ASTs, stores symbols and relationships in an embedded database, and exposes structural queries (find definition, list callers, trace references) to any MCP capable coding agent. Why It's in the Arsenal Coding agents on large repos spend a large share of tokens rediscovering structure — grepping, opening files, rebuilding a mental map that evaporates at session end. This tool earns a place in the Arsenal because it attacks that mechanism directly: a persistent, queryable structural index turns repeated context window archaeology into single cheap tool calls, which is the same \"externalize state, keep context for reasoning\" principle behind good agent memory design. Key Features Tree sitter AST parsing across many languages into a persistent graph Structural queries: definitions, references, call graphs, symbol search Embedded storage (SQLite) — no server infrastructure to operate Works with Claude Code, Codex, Cursor, Gemini CLI, and other MCP clients Architecture / How It Works An indexing pass parses the repo with tree sitter grammars and writes symbols, files, and relationships into an embedded graph store; the MCP server then answers Cypher style structural queries against it. Because the index persists across sessions, the agent's knowledge of the codebase survives context resets — the graph is the memory, not the context window. Getting Started Use Cases 1. Scenario : an agent asked to refactor a widely used function queries the call graph first, getting the full blast radius in one call instead of iterative grepping 2. Scenario : long running work on a monorepo where each new session starts with instant structural context instead of re exploration Strengths Attacks a real, mechanical cost: repeated structure re discovery is one of the largest token sinks for coding agents on big repos Zero infrastructure (embedded storage) and harness agnostic via MCP (27.8k stars as of 2026 07 07) Limitations / When NOT to Use Index staleness: the graph must be kept in sync with fast moving branches, or the agent reasons over outdated structure Young project; language coverage is bounded by available tree sitter grammars — verify yours before adopting Integration Patterns Add alongside a coding agent's normal file tools: structural queries for orientation, direct file reads for the actual edit Complements Chrome DevTools MCP in a frontend workflow: one gives the agent code structure, the other runtime behavior Resources GitHub Documentation Buzz & Reception On GitHub weekly and monthly trending with 27.8k stars as of 2026 07 07; rapid adoption across the MCP coding agent ecosystem since its 2026 02 launch."
+    },
+    {
+      "id": "codex-plugin-cc",
+      "name": "Codex Plugin for Claude Code",
+      "type": "tool",
+      "job": [
+        "prototyping"
+      ],
+      "description": "Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation",
+      "url": "content/tools/dx-and-tooling/codex-plugin-cc",
+      "cost_model": "freemium",
+      "pricing_detail": "Plugin is free and open source (Apache-2.0); Codex usage requires a ChatGPT subscription (including Free tier) or an OpenAI API key and counts against Codex usage limits",
+      "tags": [
+        "agents",
+        "code-gen",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Works with a free ChatGPT account, subject to Codex free-tier usage limits",
+      "self_hostable": false,
+      "open_source": true,
+      "source_url": "https://github.com/openai/codex-plugin-cc",
+      "docs_url": "https://github.com/openai/codex-plugin-cc#readme",
+      "github_url": "https://github.com/openai/codex-plugin-cc",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You work in Claude Code but want an independent second model reviewing your changes — cross-model review (`/codex:review`, `/codex:adversarial-review`) catches blind spots that same-model self-review structurally cannot",
+        "You want to delegate long-running tasks to a background agent (`/codex:rescue`, `/codex:transfer`) without leaving your Claude Code session"
+      ],
+      "avoid_when": [
+        "You don't use Claude Code — this is a Claude Code plugin, not a standalone Codex interface",
+        "You need air-gapped or fully local workflows — Codex calls OpenAI-hosted models and consumes your Codex usage limits"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (26.8k), Apache-2.0 license, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08; on GitHub weekly trending the same day. Command surface (/codex:review, adversarial-review, rescue, transfer, status, result, cancel) from the official README. Review-quality claims are OpenAI's own framing, not independently benchmarked here.",
+      "verdict": "recommended",
+      "verdict_rationale": "First-party (OpenAI) tooling that operationalizes cross-model review — a mechanism with real error-decorrelation value — with trivial install and no new infrastructure",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-08",
+          "description": "On GitHub weekly trending; 26.8k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/codex-plugin-cc.md",
+      "slug": "codex-plugin-cc",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Codex Plugin for Claude Code",
+      "summary": "Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 515,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> OpenAI's official plugin for running Codex inside Claude Code: <code>/codex:review</code> and <code>/codex:adversarial-review</code> for cross-model code review, plus background task delegation and session handoff commands. Free plugin (Apache-2.0); Codex usage needs a ChatGPT account or API key. Best as an independent second reviewer — a different model catches errors your primary agent's self-review can't.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An official OpenAI plugin that embeds Codex into the Claude Code workflow. It provides slash commands for read-only Codex reviews of your current changes, a steerable \"adversarial\" challenge review, and a set of delegation commands (<code>/codex:rescue</code>, <code>/codex:transfer</code>, <code>/codex:status</code>, <code>/codex:result</code>, <code>/codex:cancel</code>) for handing work to Codex as a background job and managing it without leaving Claude Code.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Same-model self-review has a structural weakness: the reviewer shares the author's blind spots. This plugin operationalizes cross-model review — a genuinely different model, trained by a different lab, critiques the diff — which decorrelates errors in a way no amount of same-model prompting can. That it's first-party from OpenAI, shipping through Claude Code's plugin marketplace, also makes it a notable signal of the coding-agent ecosystem interoperating rather than siloing.</p>\n<h2>Key Features</h2>\n<ul>\n<li><code>/codex:review</code> — read-only Codex review of uncommitted changes or a branch, equivalent to running <code>/review</code> in Codex directly</li>\n<li><code>/codex:adversarial-review</code> — steerable challenge review that argues against the change</li>\n<li>Background delegation: <code>/codex:rescue</code> and <code>/codex:transfer</code> hand tasks or whole sessions to Codex; <code>/codex:status</code>/<code>/codex:result</code>/<code>/codex:cancel</code> manage jobs</li>\n<li><code>/codex:setup</code> handles Codex installation and login checks</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The plugin installs via Claude Code's plugin marketplace and shells out to the Codex CLI (<code>@openai/codex</code>) under your existing ChatGPT or API credentials. Reviews run Codex against your working tree read-only; delegated tasks run as background Codex jobs whose results are pulled back into the Claude Code session. Usage counts against your Codex limits, not Claude's.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># In Claude Code:\n/plugin marketplace add openai/codex-plugin-cc\n/plugin install codex@openai-codex\n/reload-plugins\n/codex:setup\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: before opening a PR, run <code>/codex:review --background</code> on a multi-file change and keep working while Codex produces an independent review</li>\n<li><strong>Scenario</strong>: Claude Code is stuck on a task — <code>/codex:rescue</code> hands the session context to Codex for a fresh attempt with a different model</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Cross-model review is a mechanism, not a vibe: independent training lineage means decorrelated failure modes</li>\n<li>First-party maintenance by OpenAI with marketplace distribution (26.8k stars as of 2026-07-08)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Claude Code-only; useless in other harnesses</li>\n<li>Adds a second vendor dependency and consumes Codex usage limits; reviews on large diffs are slow enough that background mode is effectively required</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Make <code>/codex:review --background</code> a pre-PR habit alongside your normal test/lint gate</li>\n<li>Pairs naturally with skills frameworks like <a href=\"./superpowers.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Superpowers</a>: the methodology handles process discipline, Codex provides the independent reviewer its review stage calls for</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/openai/codex-plugin-cc\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/openai/codex-plugin-cc#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub weekly trending with 26.8k stars as of 2026-07-08, roughly three months after its late-March 2026 release — widely noted as an unusual case of OpenAI shipping first-party tooling for a competitor's coding agent.</p>\n",
+      "body_text": "TL;DR: OpenAI's official plugin for running Codex inside Claude Code: /codex:review and /codex:adversarial review for cross model code review, plus background task delegation and session handoff commands. Free plugin (Apache 2.0); Codex usage needs a ChatGPT account or API key. Best as an independent second reviewer — a different model catches errors your primary agent's self review can't. Overview An official OpenAI plugin that embeds Codex into the Claude Code workflow. It provides slash commands for read only Codex reviews of your current changes, a steerable \"adversarial\" challenge review, and a set of delegation commands (/codex:rescue, /codex:transfer, /codex:status, /codex:result, /codex:cancel) for handing work to Codex as a background job and managing it without leaving Claude Code. Why It's in the Arsenal Same model self review has a structural weakness: the reviewer shares the author's blind spots. This plugin operationalizes cross model review — a genuinely different model, trained by a different lab, critiques the diff — which decorrelates errors in a way no amount of same model prompting can. That it's first party from OpenAI, shipping through Claude Code's plugin marketplace, also makes it a notable signal of the coding agent ecosystem interoperating rather than siloing. Key Features /codex:review — read only Codex review of uncommitted changes or a branch, equivalent to running /review in Codex directly /codex:adversarial review — steerable challenge review that argues against the change Background delegation: /codex:rescue and /codex:transfer hand tasks or whole sessions to Codex; /codex:status//codex:result//codex:cancel manage jobs /codex:setup handles Codex installation and login checks Architecture / How It Works The plugin installs via Claude Code's plugin marketplace and shells out to the Codex CLI (@openai/codex) under your existing ChatGPT or API credentials. Reviews run Codex against your working tree read only; delegated tasks run as background Codex jobs whose results are pulled back into the Claude Code session. Usage counts against your Codex limits, not Claude's. Getting Started Use Cases 1. Scenario : before opening a PR, run /codex:review background on a multi file change and keep working while Codex produces an independent review 2. Scenario : Claude Code is stuck on a task — /codex:rescue hands the session context to Codex for a fresh attempt with a different model Strengths Cross model review is a mechanism, not a vibe: independent training lineage means decorrelated failure modes First party maintenance by OpenAI with marketplace distribution (26.8k stars as of 2026 07 08) Limitations / When NOT to Use Claude Code only; useless in other harnesses Adds a second vendor dependency and consumes Codex usage limits; reviews on large diffs are slow enough that background mode is effectively required Integration Patterns Make /codex:review background a pre PR habit alongside your normal test/lint gate Pairs naturally with skills frameworks like Superpowers: the methodology handles process discipline, Codex provides the independent reviewer its review stage calls for Resources GitHub Documentation Buzz & Reception On GitHub weekly trending with 26.8k stars as of 2026 07 08, roughly three months after its late March 2026 release — widely noted as an unusual case of OpenAI shipping first party tooling for a competitor's coding agent."
+    },
+    {
       "id": "conan",
       "name": "Conan",
       "type": "tool",
@@ -1384,6 +1817,92 @@
       "word_count": 424,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Python crawler and scraper designed for LLM-friendly web content extraction. Open source or free to start. Best for local Python web ingestion.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An open-source Python crawler purpose-built to output LLM-ready Markdown rather than raw HTML, intended for RAG ingestion pipelines that need clean text without separate scraping-and-cleaning steps.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Crawl4AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need a crawler that outputs LLM-ready Markdown rather than raw HTML you have to clean yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Outputs clean Markdown directly, not raw HTML</li>\n<li>Self-hostable, open-source crawling pipeline</li>\n<li>Configurable extraction strategies for structured content</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Pages are fetched (optionally via a headless browser for JS-rendered sites), parsed, and converted through a Markdown-conversion pipeline before being handed to the caller.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install crawl4ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need a crawler that outputs LLM-ready Markdown rather than raw HTML you have to clean yourself</li>\n<li><strong>Scenario</strong>: you want an open-source, self-hostable scraping pipeline for RAG ingestion without per-page API fees</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need to scrape heavily JavaScript-rendered or anti-bot-protected sites at scale (a headless-browser tool like Playwright may be required underneath, or a managed API like Firecrawl) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need a crawler that outputs LLM-ready Markdown rather than raw HTML you have to clean yourself</li>\n<li>You want an open-source, self-hostable scraping pipeline for RAG ingestion without per-page API fees</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need to scrape heavily JavaScript-rendered or anti-bot-protected sites at scale (a headless-browser tool like Playwright may be required underneath, or a managed API like Firecrawl)</li>\n<li>You need a managed, zero-infrastructure scraping API and don't want to operate the crawler yourself</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./firecrawl-tool.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Firecrawl</a>, <a href=\"./jina-reader.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Jina AI Reader</a>, <a href=\"./playwright.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Playwright</a>, <a href=\"./puppeteer.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Puppeteer</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>crawl4ai-tool</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/unclecode/crawl4ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://docs.crawl4ai.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/unclecode/crawl4ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for web-scraping.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Python crawler and scraper designed for LLM friendly web content extraction. Open source or free to start. Best for local Python web ingestion. Overview An open source Python crawler purpose built to output LLM ready Markdown rather than raw HTML, intended for RAG ingestion pipelines that need clean text without separate scraping and cleaning steps. Why It's in the Arsenal Crawl4AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need a crawler that outputs LLM ready Markdown rather than raw HTML you have to clean yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Outputs clean Markdown directly, not raw HTML Self hostable, open source crawling pipeline Configurable extraction strategies for structured content Architecture / How It Works Pages are fetched (optionally via a headless browser for JS rendered sites), parsed, and converted through a Markdown conversion pipeline before being handed to the caller. Getting Started Use Cases 1. Scenario : you need a crawler that outputs LLM ready Markdown rather than raw HTML you have to clean yourself 2. Scenario : you want an open source, self hostable scraping pipeline for RAG ingestion without per page API fees 3. Scenario where this is NOT the right fit : you need to scrape heavily JavaScript rendered or anti bot protected sites at scale (a headless browser tool like Playwright may be required underneath, or a managed API like Firecrawl) — evaluate an alternative instead Strengths You need a crawler that outputs LLM ready Markdown rather than raw HTML you have to clean yourself You want an open source, self hostable scraping pipeline for RAG ingestion without per page API fees Limitations / When NOT to Use You need to scrape heavily JavaScript rendered or anti bot protected sites at scale (a headless browser tool like Playwright may be required underneath, or a managed API like Firecrawl) You need a managed, zero infrastructure scraping API and don't want to operate the crawler yourself Integration Patterns Compare against Firecrawl, Jina AI Reader, Playwright, Puppeteer before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID crawl4ai tool. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for web scraping. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "cubesandbox",
+      "name": "CubeSandbox",
+      "type": "tool",
+      "job": [
+        "deployment",
+        "security-and-guardrails"
+      ],
+      "description": "Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API",
+      "url": "content/tools/serving-and-deployment/cubesandbox",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source; self-hosted on your own infrastructure",
+      "tags": [
+        "agents",
+        "security",
+        "guardrails",
+        "self-hosted"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "rust"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free and self-hostable; no hosted tier documented",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/TencentCloud/CubeSandbox",
+      "docs_url": "https://cubesandbox.com",
+      "github_url": "https://github.com/TencentCloud/CubeSandbox",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "You run agent-generated code at scale and need hardware-level isolation (microVM-class) rather than container isolation — agent code is untrusted by construction, and container escape is a real threat model",
+        "You want E2B's sandbox workflow but self-hosted — the API is E2B-compatible, so existing E2B-style integrations port with minimal change while data stays on your infrastructure"
+      ],
+      "avoid_when": [
+        "You execute low-risk snippets occasionally — a subprocess with resource limits or a plain container is far less operational burden than running a sandbox service",
+        "You need a managed, zero-ops sandbox — this is infrastructure you deploy and operate yourself"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (8.8k) and last push (2026-07-08) verified via the GitHub API on 2026-07-08; on GitHub daily/weekly trending same day. GitHub reports license NOASSERTION despite the README's Apache-2.0 badge — verify before adopting. CNCF-landscape listed. Latency/isolation claims are the project's own.",
+      "verdict": "watching",
+      "verdict_rationale": "Org-backed agent sandbox with a real differentiator (hardware-level isolation plus E2B API compatibility, self-hosted), but young and with license-metadata ambiguity to resolve first",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=daily",
+          "date": "2026-07-08",
+          "description": "On GitHub daily and weekly trending; 8.8k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/cubesandbox.md",
+      "slug": "cubesandbox",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "CubeSandbox",
+      "summary": "Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 542,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Tencent Cloud's open-source sandbox service for AI agent code execution: hardware-level isolation, tens-of-milliseconds startup, high-density concurrency, and an E2B-compatible API — self-hosted. Best when agent-executed code is untrusted at scale and you can't ship it to a managed sandbox vendor. Verify the license file first (GitHub metadata says NOASSERTION despite the Apache-2.0 badge).</p>\n</blockquote>\n<h2>Overview</h2>\n<p>CubeSandbox is a sandbox service purpose-built for AI agents that execute code: it provisions isolated execution environments with hardware-level (microVM-class) isolation, startup in tens of milliseconds, and high-concurrency, high-density deployment. Its API is E2B-compatible, positioning it as a self-hosted drop-in for the managed sandbox workflow, with a Python SDK on PyPI.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Code execution is the highest-risk tool you can hand an agent — generated code is untrusted by construction, and the common fallback (containers) shares a kernel with the host. CubeSandbox attacks the actual trade-off in this category: hardware-level isolation normally costs seconds of VM startup, which breaks interactive agent loops; getting microVM-class isolation at tens-of-milliseconds startup is the mechanism that makes strong isolation compatible with agent latency budgets. Self-hostability plus E2B API compatibility also gives teams an exit path from managed sandbox lock-in.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Hardware-level isolation per sandbox, not shared-kernel containers</li>\n<li>Tens-of-milliseconds sandbox startup; designed for high-concurrency, high-density fleets</li>\n<li>E2B-compatible API — existing E2B-style integrations port with minimal change</li>\n<li>Python SDK (<code>cubesandbox</code> on PyPI); listed on the CNCF landscape as an AI-native workload runtime</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A Rust-based sandbox service: agents (or your orchestration layer) request sandboxes via the API, execute code inside hardware-isolated instances, and tear them down. The fast-startup/high-density design keeps a pool of lightweight VMs cheap enough to give every agent task its own isolated environment rather than reusing shared executors.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install cubesandbox\n# Deployment of the sandbox service itself: see the official docs\n# (Resources below) for the current self-hosting guide.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a code-interpreter tool in a production agent product, where every user-triggered execution gets a fresh hardware-isolated sandbox</li>\n<li><strong>Scenario</strong>: migrating an E2B-based agent stack in-house for data-residency reasons, reusing the same API integration against self-hosted CubeSandbox</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Resolves the isolation-vs-latency trade-off that defines this category, rather than picking one side</li>\n<li>Org-backed (Tencent Cloud), actively developed, CNCF-landscape-listed (8.8k stars as of 2026-07-08)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>License ambiguity: GitHub metadata reports NOASSERTION while the README shows an Apache-2.0 badge — resolve before production use</li>\n<li>Young project (~3 months public); operating a sandbox fleet is real infrastructure work compared to a managed vendor</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Wire it in as the execution backend for your agent's code-interpreter tool; keep the agent-facing tool schema unchanged and swap only the executor</li>\n<li>For the threat-model side of agent code execution, see the <a href=\"../by-job/security-and-guardrails.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">security-and-guardrails tools shortlist</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/TencentCloud/CubeSandbox\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://cubesandbox.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub daily and weekly trending with 8.8k stars as of 2026-07-08, roughly three months after creation — part of the 2026 surge of interest in agent execution sandboxes as code-running agents move into production.</p>\n",
+      "body_text": "TL;DR: Tencent Cloud's open source sandbox service for AI agent code execution: hardware level isolation, tens of milliseconds startup, high density concurrency, and an E2B compatible API — self hosted. Best when agent executed code is untrusted at scale and you can't ship it to a managed sandbox vendor. Verify the license file first (GitHub metadata says NOASSERTION despite the Apache 2.0 badge). Overview CubeSandbox is a sandbox service purpose built for AI agents that execute code: it provisions isolated execution environments with hardware level (microVM class) isolation, startup in tens of milliseconds, and high concurrency, high density deployment. Its API is E2B compatible, positioning it as a self hosted drop in for the managed sandbox workflow, with a Python SDK on PyPI. Why It's in the Arsenal Code execution is the highest risk tool you can hand an agent — generated code is untrusted by construction, and the common fallback (containers) shares a kernel with the host. CubeSandbox attacks the actual trade off in this category: hardware level isolation normally costs seconds of VM startup, which breaks interactive agent loops; getting microVM class isolation at tens of milliseconds startup is the mechanism that makes strong isolation compatible with agent latency budgets. Self hostability plus E2B API compatibility also gives teams an exit path from managed sandbox lock in. Key Features Hardware level isolation per sandbox, not shared kernel containers Tens of milliseconds sandbox startup; designed for high concurrency, high density fleets E2B compatible API — existing E2B style integrations port with minimal change Python SDK (cubesandbox on PyPI); listed on the CNCF landscape as an AI native workload runtime Architecture / How It Works A Rust based sandbox service: agents (or your orchestration layer) request sandboxes via the API, execute code inside hardware isolated instances, and tear them down. The fast startup/high density design keeps a pool of lightweight VMs cheap enough to give every agent task its own isolated environment rather than reusing shared executors. Getting Started Use Cases 1. Scenario : a code interpreter tool in a production agent product, where every user triggered execution gets a fresh hardware isolated sandbox 2. Scenario : migrating an E2B based agent stack in house for data residency reasons, reusing the same API integration against self hosted CubeSandbox Strengths Resolves the isolation vs latency trade off that defines this category, rather than picking one side Org backed (Tencent Cloud), actively developed, CNCF landscape listed (8.8k stars as of 2026 07 08) Limitations / When NOT to Use License ambiguity: GitHub metadata reports NOASSERTION while the README shows an Apache 2.0 badge — resolve before production use Young project ( 3 months public); operating a sandbox fleet is real infrastructure work compared to a managed vendor Integration Patterns Wire it in as the execution backend for your agent's code interpreter tool; keep the agent facing tool schema unchanged and swap only the executor For the threat model side of agent code execution, see the security and guardrails tools shortlist Resources GitHub Documentation Buzz & Reception On GitHub daily and weekly trending with 8.8k stars as of 2026 07 08, roughly three months after creation — part of the 2026 surge of interest in agent execution sandboxes as code running agents move into production."
     },
     {
       "id": "dagster",
@@ -4603,6 +5122,91 @@
       "body_text": "TL;DR: NVIDIA framework for adding programmable guardrails to LLM applications. Open source or free to start. Best for programmable LLM guardrails. Overview NVIDIA's open source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang. Why It's in the Arsenal NeMo Guardrails earns a place in the Arsenal because it directly addresses a recurring decision point: you need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Programmable conversational rails via Colang DSL Covers topical, safety, and jailbreak resistance rails Open source, NVIDIA backed Architecture / How It Works Conversation flow is defined as a set of Colang rules describing allowed/disallowed topics and responses; the runtime intercepts the conversation and enforces these rails alongside the underlying LLM. Getting Started Use Cases 1. Scenario : you need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application 2. Scenario : you want NVIDIA backed tooling with Colang based rule definitions for conversational flow control 3. Scenario where this is NOT the right fit : your guardrail needs are simple output validation rather than conversational flow control (Guardrails AI may be simpler) — evaluate an alternative instead Strengths You need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application You want NVIDIA backed tooling with Colang based rule definitions for conversational flow control Limitations / When NOT to Use Your guardrail needs are simple output validation rather than conversational flow control (Guardrails AI may be simpler) Your team doesn't want to learn a new DSL (Colang) for defining rails Integration Patterns Compare against Guardrails AI, Llama Guard, Rebuff before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID nemo guardrails. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for security and guardrails. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "olmocr",
+      "name": "olmOCR",
+      "type": "tool",
+      "job": [
+        "data-labeling"
+      ],
+      "description": "Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion",
+      "url": "content/tools/data-ingestion/olmocr",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (Apache-2.0); requires GPU for the VLM pipeline",
+      "tags": [
+        "data",
+        "rag",
+        "multimodal"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free; self-hosted GPU inference is the only cost",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/allenai/olmocr",
+      "docs_url": "https://github.com/allenai/olmocr",
+      "github_url": "https://github.com/allenai/olmocr",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "production",
+        "research"
+      ],
+      "best_when": [
+        "You need high-quality text out of difficult PDFs (multi-column layouts, tables, equations, scanned pages) at scale — olmOCR uses a fine-tuned vision-language model rather than rule-based layout parsing",
+        "You're building LLM training datasets or large RAG corpora from PDF-heavy sources and want an open, self-hostable pipeline with published methodology from a research lab"
+      ],
+      "avoid_when": [
+        "Your PDFs are simple, born-digital documents — lighter parsers (see the Docling project entry) extract them without GPU cost",
+        "You can't provision GPUs — the VLM pipeline is meaningfully more expensive per page than rule-based extraction"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (18.9k), Apache-2.0 license, and AI2 ownership verified via the GitHub API on 2026-07-07 (last push 2026-03-25); on GitHub weekly trending 2026-07-07. VLM-based approach and benchmark claims from AI2's own paper and documentation.",
+      "verdict": "recommended",
+      "verdict_rationale": "Research-lab-backed (AI2), open pipeline that handles the hard PDF cases rule-based parsers fail on; the GPU cost is the honest trade",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-07",
+          "description": "On GitHub weekly trending; 18.9k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/olmocr.md",
+      "slug": "olmocr",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "olmOCR",
+      "summary": "Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 461,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> AI2's open toolkit for linearizing PDFs with a fine-tuned vision-language model — handles multi-column layouts, tables, equations, and scans that rule-based parsers mangle. Free, Apache-2.0, needs GPU. Best for PDF-heavy dataset and RAG-corpus construction.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An open-source toolkit from the Allen Institute for AI (AI2) that converts PDFs into clean, naturally ordered text using a fine-tuned vision-language model, built for constructing LLM training datasets and large document corpora from PDF-heavy sources.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>PDF extraction quality is the ceiling on any PDF-heavy RAG system — garbage layout parsing propagates into every retrieved chunk. olmOCR earns a place in the Arsenal because it takes the VLM approach to the hard cases (multi-column academic papers, tables, equations, scans) where rule-based parsers fail structurally, and because it's from a research lab that published its methodology and evaluation rather than a black-box API.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Fine-tuned VLM reads rendered page images, producing naturally ordered text across complex layouts</li>\n<li>Handles tables, equations, handwriting, and scanned documents</li>\n<li>Batch pipeline built for scale (millions of pages) with self-hosted inference</li>\n<li>Open weights, code, and evaluation methodology (Apache-2.0)</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Pages are rendered to images and passed to a fine-tuned vision-language model along with anchor text extracted from the PDF internals; the model outputs linearized text in natural reading order. This sidesteps the fundamental limit of rule-based extraction — PDF is a rendering format with no reliable reading-order semantics — by reading the page the way a human does.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install olmocr\n# GPU-backed pipeline; see the README for batch-inference setup.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: building a RAG corpus from thousands of academic papers or reports where multi-column layout and tables defeat conventional parsers</li>\n<li><strong>Scenario</strong>: constructing pretraining/fine-tuning datasets from PDF archives, where extraction quality directly bounds dataset quality</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Handles the document classes (complex layouts, scans, equations) that rule-based parsers mangle — a mechanism difference, not a tuning difference</li>\n<li>Research-lab provenance: open methodology and evaluation, not marketing benchmarks (18.9k stars as of 2026-07-07)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>GPU-backed VLM inference costs meaningfully more per page than rule-based extraction — overkill for simple born-digital PDFs</li>\n<li>Like all model-based OCR, output can contain hallucinated text on degraded inputs; spot-check quality on your document mix</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Route by difficulty: simple PDFs through <a href=\"../../projects/data-and-retrieval/docling.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docling</a>-style parsers, hard ones through olmOCR</li>\n<li>Feed output into your chunking and embedding pipeline like any other text source; extraction quality gains compound through retrieval</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/allenai/olmocr\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub weekly trending with 18.9k stars as of 2026-07-07; widely cited in dataset-construction discussions since its 2025 release by AI2.</p>\n",
+      "body_text": "TL;DR: AI2's open toolkit for linearizing PDFs with a fine tuned vision language model — handles multi column layouts, tables, equations, and scans that rule based parsers mangle. Free, Apache 2.0, needs GPU. Best for PDF heavy dataset and RAG corpus construction. Overview An open source toolkit from the Allen Institute for AI (AI2) that converts PDFs into clean, naturally ordered text using a fine tuned vision language model, built for constructing LLM training datasets and large document corpora from PDF heavy sources. Why It's in the Arsenal PDF extraction quality is the ceiling on any PDF heavy RAG system — garbage layout parsing propagates into every retrieved chunk. olmOCR earns a place in the Arsenal because it takes the VLM approach to the hard cases (multi column academic papers, tables, equations, scans) where rule based parsers fail structurally, and because it's from a research lab that published its methodology and evaluation rather than a black box API. Key Features Fine tuned VLM reads rendered page images, producing naturally ordered text across complex layouts Handles tables, equations, handwriting, and scanned documents Batch pipeline built for scale (millions of pages) with self hosted inference Open weights, code, and evaluation methodology (Apache 2.0) Architecture / How It Works Pages are rendered to images and passed to a fine tuned vision language model along with anchor text extracted from the PDF internals; the model outputs linearized text in natural reading order. This sidesteps the fundamental limit of rule based extraction — PDF is a rendering format with no reliable reading order semantics — by reading the page the way a human does. Getting Started Use Cases 1. Scenario : building a RAG corpus from thousands of academic papers or reports where multi column layout and tables defeat conventional parsers 2. Scenario : constructing pretraining/fine tuning datasets from PDF archives, where extraction quality directly bounds dataset quality Strengths Handles the document classes (complex layouts, scans, equations) that rule based parsers mangle — a mechanism difference, not a tuning difference Research lab provenance: open methodology and evaluation, not marketing benchmarks (18.9k stars as of 2026 07 07) Limitations / When NOT to Use GPU backed VLM inference costs meaningfully more per page than rule based extraction — overkill for simple born digital PDFs Like all model based OCR, output can contain hallucinated text on degraded inputs; spot check quality on your document mix Integration Patterns Route by difficulty: simple PDFs through Docling style parsers, hard ones through olmOCR Feed output into your chunking and embedding pipeline like any other text source; extraction quality gains compound through retrieval Resources GitHub Buzz & Reception On GitHub weekly trending with 18.9k stars as of 2026 07 07; widely cited in dataset construction discussions since its 2025 release by AI2."
+    },
+    {
       "id": "openai-evals",
       "name": "OpenAI Evals",
       "type": "tool",
@@ -4676,6 +5280,91 @@
       "word_count": 338,
       "body_html": "<h2>Overview</h2>\n<p>An open-source framework for writing and running custom evaluation suites against any model's behavior, code-first rather than UI-driven.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>OpenAI Evals earns a place in the Arsenal because it directly addresses a recurring decision point: you want a free, open-source framework to write and run custom evaluation suites against any model behavior. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Code-first custom evaluation suites</li>\n<li>Free, open-source, framework-agnostic in practice</li>\n<li>Extensible to custom grading logic</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Evaluations are defined as Python code specifying inputs, expected behavior, and grading logic; the framework runs the target model against the eval set and reports pass/fail or scored results.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Visit the official documentation for installation and setup.\n# URL: https://github.com/openai/evals\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want a free, open-source framework to write and run custom evaluation suites against any model behavior</li>\n<li><strong>Scenario</strong>: you're comfortable writing eval logic in code rather than using a managed no-code UI</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want a managed dashboard with built-in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want a free, open-source framework to write and run custom evaluation suites against any model behavior</li>\n<li>You're comfortable writing eval logic in code rather than using a managed no-code UI</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You want a managed dashboard with built-in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop)</li>\n<li>You need RAG-specific evaluation metrics out of the box (use RAGAS or DeepEval instead)</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>openai-evals</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/openai/evals\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception should be updated with verified sources during regular content reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "Overview An open source framework for writing and running custom evaluation suites against any model's behavior, code first rather than UI driven. Why It's in the Arsenal OpenAI Evals earns a place in the Arsenal because it directly addresses a recurring decision point: you want a free, open source framework to write and run custom evaluation suites against any model behavior. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Code first custom evaluation suites Free, open source, framework agnostic in practice Extensible to custom grading logic Architecture / How It Works Evaluations are defined as Python code specifying inputs, expected behavior, and grading logic; the framework runs the target model against the eval set and reports pass/fail or scored results. Getting Started Use Cases 1. Scenario : you want a free, open source framework to write and run custom evaluation suites against any model behavior 2. Scenario : you're comfortable writing eval logic in code rather than using a managed no code UI 3. Scenario where this is NOT the right fit : you want a managed dashboard with built in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop) — evaluate an alternative instead Strengths You want a free, open source framework to write and run custom evaluation suites against any model behavior You're comfortable writing eval logic in code rather than using a managed no code UI Limitations / When NOT to Use You want a managed dashboard with built in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop) You need RAG specific evaluation metrics out of the box (use RAGAS or DeepEval instead) Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID openai evals rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "orca",
+      "name": "Orca",
+      "type": "tool",
+      "job": [
+        "orchestration"
+      ],
+      "description": "Desktop \"agent development environment\" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree",
+      "url": "content/tools/dx-and-tooling/orca",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (MIT); agents run on your own subscriptions/API keys",
+      "tags": [
+        "agents",
+        "orchestration",
+        "code-gen"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free; you pay only for the underlying agent subscriptions you already have",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/stablyai/orca",
+      "docs_url": "https://onorca.dev",
+      "github_url": "https://github.com/stablyai/orca",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You already run multiple coding agents in parallel via ad-hoc terminal tabs and manual worktrees — Orca makes the fleet a first-class object with per-agent worktrees, unified status tracking, and mobile monitoring/steering",
+        "You use different agents for different strengths (Codex for review, Claude Code for implementation) and want them side-by-side on the same repo without branch collisions"
+      ],
+      "avoid_when": [
+        "You run one agent on one task at a time — a desktop orchestrator adds a layer without payoff",
+        "You need headless/CI orchestration — Orca is a desktop (Electron-style) app for interactive use, not a server-side fleet scheduler"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (14.0k), MIT license, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08; on GitHub weekly trending the same day. Repo created 2026-03 by Stably AI. Worktree-per-agent architecture and mobile companion from the project README; not independently exercised here.",
+      "verdict": "watching",
+      "verdict_rationale": "Real mechanism (worktree isolation per agent, unified fleet tracking) for an increasingly standard workflow, but young (~4 months) in a crowded, consolidating category",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=weekly",
+          "date": "2026-07-08",
+          "description": "On GitHub weekly trending; 14.0k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/orca.md",
+      "slug": "orca",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Orca",
+      "summary": "Desktop \"agent development environment\" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 547,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Open-source desktop app (macOS/Windows/Linux) for running a fleet of coding agents — Codex, Claude Code, OpenCode, Pi — in parallel, each isolated in its own git worktree, tracked in one dashboard, with a mobile companion for monitoring and steering. MIT; agents run on your own subscriptions. Best when parallel-agent work is already your workflow; skip if you run one agent at a time.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Orca positions itself as an \"ADE\" (agent development environment): a desktop application that launches and manages multiple coding agents concurrently against the same repository. Each agent gets its own git worktree, so parallel runs cannot clobber each other's changes; a unified view tracks every agent's status, and a mobile companion app notifies you when agents finish and lets you send follow-ups remotely.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Parallel multi-agent coding is shifting from power-user trick to default workflow, and the limiting factor is coordination overhead: manual worktree juggling, lost track of which terminal holds which task. Orca's mechanism is worktree-per-agent isolation plus centralized fleet state — it removes the git-collision and attention-fragmentation costs that cap how many agents one engineer can usefully run. It's also harness-neutral: it orchestrates the agents you already pay for rather than replacing them.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Runs Codex, Claude Code, OpenCode, and Pi side-by-side, each in an isolated git worktree</li>\n<li>Unified dashboard of all running agents and their task states</li>\n<li>Mobile companion (iOS) for notifications, monitoring, and steering agents away from the desk</li>\n<li>Bring-your-own-subscription: no proxying of model access</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A cross-platform desktop app that shells out to the installed agent CLIs. For each task it creates a dedicated git worktree and launches the chosen agent inside it; agent lifecycle and output are tracked centrally, and completed work lands as normal branches for review and merge. Isolation is at the worktree level — agents share the machine but not the working tree.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Download the desktop app for macOS/Windows/Linux:\n#   https://onorca.dev/download\n# Prerequisite: the agent CLIs you want to orchestrate\n# (codex, claude, opencode, ...) installed and logged in.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: fan out three independent bug fixes to three agents in parallel worktrees, review each branch as it completes</li>\n<li><strong>Scenario</strong>: kick off a long refactor before leaving, get a mobile notification when the agent finishes, and send a follow-up instruction from your phone</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Worktree-per-agent isolation solves the actual failure mode of parallel agents (working-tree collisions), not just the UI problem</li>\n<li>Agent-agnostic and MIT-licensed in a category where most fleet orchestrators are proprietary SaaS (14.0k stars as of 2026-07-08)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Interactive desktop tool — no headless or CI/server mode for automated fleet scheduling</li>\n<li>Young (created 2026-03) in a fast-consolidating category; expect churn in features and conventions</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Layer on top of your existing agents unchanged — Orca manages processes and worktrees, your agents keep their own configs and skills</li>\n<li>Combine with cross-model review (e.g. <a href=\"./codex-plugin-cc.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Codex Plugin for Claude Code</a>): implement in parallel with one agent family, review with another</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/stablyai/orca\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://onorca.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub weekly trending with 14.0k stars as of 2026-07-08, about four months after creation — part of a visible 2026 wave of parallel-agent orchestration tooling (\"agent fleet\" desktop apps) gaining rapid adoption.</p>\n",
+      "body_text": "TL;DR: Open source desktop app (macOS/Windows/Linux) for running a fleet of coding agents — Codex, Claude Code, OpenCode, Pi — in parallel, each isolated in its own git worktree, tracked in one dashboard, with a mobile companion for monitoring and steering. MIT; agents run on your own subscriptions. Best when parallel agent work is already your workflow; skip if you run one agent at a time. Overview Orca positions itself as an \"ADE\" (agent development environment): a desktop application that launches and manages multiple coding agents concurrently against the same repository. Each agent gets its own git worktree, so parallel runs cannot clobber each other's changes; a unified view tracks every agent's status, and a mobile companion app notifies you when agents finish and lets you send follow ups remotely. Why It's in the Arsenal Parallel multi agent coding is shifting from power user trick to default workflow, and the limiting factor is coordination overhead: manual worktree juggling, lost track of which terminal holds which task. Orca's mechanism is worktree per agent isolation plus centralized fleet state — it removes the git collision and attention fragmentation costs that cap how many agents one engineer can usefully run. It's also harness neutral: it orchestrates the agents you already pay for rather than replacing them. Key Features Runs Codex, Claude Code, OpenCode, and Pi side by side, each in an isolated git worktree Unified dashboard of all running agents and their task states Mobile companion (iOS) for notifications, monitoring, and steering agents away from the desk Bring your own subscription: no proxying of model access Architecture / How It Works A cross platform desktop app that shells out to the installed agent CLIs. For each task it creates a dedicated git worktree and launches the chosen agent inside it; agent lifecycle and output are tracked centrally, and completed work lands as normal branches for review and merge. Isolation is at the worktree level — agents share the machine but not the working tree. Getting Started Use Cases 1. Scenario : fan out three independent bug fixes to three agents in parallel worktrees, review each branch as it completes 2. Scenario : kick off a long refactor before leaving, get a mobile notification when the agent finishes, and send a follow up instruction from your phone Strengths Worktree per agent isolation solves the actual failure mode of parallel agents (working tree collisions), not just the UI problem Agent agnostic and MIT licensed in a category where most fleet orchestrators are proprietary SaaS (14.0k stars as of 2026 07 08) Limitations / When NOT to Use Interactive desktop tool — no headless or CI/server mode for automated fleet scheduling Young (created 2026 03) in a fast consolidating category; expect churn in features and conventions Integration Patterns Layer on top of your existing agents unchanged — Orca manages processes and worktrees, your agents keep their own configs and skills Combine with cross model review (e.g. Codex Plugin for Claude Code): implement in parallel with one agent family, review with another Resources GitHub Documentation Buzz & Reception On GitHub weekly trending with 14.0k stars as of 2026 07 08, about four months after creation — part of a visible 2026 wave of parallel agent orchestration tooling (\"agent fleet\" desktop apps) gaining rapid adoption."
     },
     {
       "id": "orchestraml",
@@ -6450,6 +7139,90 @@
       "body_text": "Overview An AI powered terminal assistant that suggests commands and explains command output inline, aimed at speeding up day to day CLI work and learning new tools. Why It's in the Arsenal ShellMate earns a place in the Arsenal because it directly addresses a recurring decision point: you want an AI powered terminal assistant to suggest commands and explain output during day to day development. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Inline command suggestions in the terminal Explains command output for unfamiliar tools/environments Architecture / How It Works Runs alongside the user's shell session, intercepting context (recent commands, output) to generate relevant suggestions and explanations on demand. Getting Started Use Cases 1. Scenario : you want an AI powered terminal assistant to suggest commands and explain output during day to day development 2. Scenario : you're learning a new CLI tool or environment and want inline explanations 3. Scenario where this is NOT the right fit : you need a fully scriptable, auditable command generation pipeline for production automation (a custom script is safer than an interactive suggestion tool) — evaluate an alternative instead Strengths You want an AI powered terminal assistant to suggest commands and explain output during day to day development You're learning a new CLI tool or environment and want inline explanations Limitations / When NOT to Use You need a fully scriptable, auditable command generation pipeline for production automation (a custom script is safer than an interactive suggestion tool) You need an open source or self hostable assistant Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources ShellMate Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "skillspector",
+      "name": "SkillSpector",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails"
+      ],
+      "description": "Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills",
+      "url": "content/tools/evaluation-and-observability/skillspector",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (Apache-2.0)",
+      "tags": [
+        "agents",
+        "security",
+        "guardrails"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free and self-hostable; no paid tier exists",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/NVIDIA/SkillSpector",
+      "docs_url": "https://github.com/NVIDIA/SkillSpector",
+      "github_url": "https://github.com/NVIDIA/SkillSpector",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-07",
+      "last_reviewed": "2026-07-07",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "Your team installs third-party agent skills (from marketplaces or community collections) and you want automated scanning for prompt-injection payloads, malicious instructions, and dangerous script patterns before they reach an agent",
+        "You maintain an internal skill library and want a security gate in CI, the same way you scan dependencies"
+      ],
+      "avoid_when": [
+        "You treat a scan as a substitute for reading third-party skills — scanners catch known patterns; novel injected instructions can pass",
+        "You only run first-party skills you authored — review effort is better spent on your agents' tool permissions"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (12.2k), Apache-2.0 license, NVIDIA ownership, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub monthly trending. Detection-capability claims from the project's own documentation; coverage not independently benchmarked here.",
+      "verdict": "watching",
+      "verdict_rationale": "First serious org-backed answer to a real new attack surface (malicious agent skills), but young — pattern coverage and false-negative rate are unproven",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=monthly",
+          "date": "2026-07-07",
+          "description": "On GitHub monthly trending; 12.2k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/skillspector.md",
+      "slug": "skillspector",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "SkillSpector",
+      "summary": "Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 462,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> NVIDIA's open-source scanner for AI agent skills — detects prompt-injection payloads, malicious instructions, and dangerous script patterns in skill packs before you install them. Free, Apache-2.0. Best as a CI gate on third-party skills; not a substitute for reading them.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An open-source security scanner from NVIDIA that analyzes AI agent skills — the Markdown-instruction-plus-script packages installed into coding agents — for vulnerabilities, malicious patterns, and security risks, treating skills as the supply-chain artifact they are.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Agent skills are instructions an agent will <em>follow with your permissions</em>, making a malicious skill closer to malware than to a bad dependency — and skill marketplaces have exploded with unvetted third-party packs. SkillSpector earns a place in the Arsenal as the first org-backed tooling for this specific attack surface: an automated scan layer for the \"read before installing\" discipline that manual review doesn't scale to.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Scans skill files for prompt-injection payloads and hidden malicious instructions</li>\n<li>Analyzes bundled scripts for dangerous execution patterns (exfiltration, credential access)</li>\n<li>Suitable as a pre-install check or CI gate over an internal skill library</li>\n<li>Python, Apache-2.0, NVIDIA-maintained</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>SkillSpector parses a skill package (instruction Markdown plus any bundled scripts/resources) and runs detection passes over both layers: content analysis for instruction-level attacks (injections, deceptive directives) and static analysis for script-level risks. Findings are reported per file with the matched pattern, so a human can adjudicate rather than trusting a binary verdict.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's README (Resources below) for current install\n# and scan-invocation commands.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: before installing a community skill pack from a marketplace, scan it and review flagged files instead of trusting the README</li>\n<li><strong>Scenario</strong>: an internal skill library gets a CI job that scans every skill PR, the same way dependency scanners gate package updates</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Addresses a genuinely new, genuinely dangerous surface — skills execute with the agent's (your) permissions</li>\n<li>Org-backed (NVIDIA), open-source, and actively developed (12.2k stars as of 2026-07-07)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Pattern-based detection has unknown false-negative rates against novel attacks; it complements, not replaces, reading third-party skills</li>\n<li>Young project — coverage claims are the project's own and unbenchmarked by third parties so far</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Gate skill installation: scan → human review of findings → install, mirroring dependency-review workflows</li>\n<li>Pair with least-privilege agent configuration (scoped tool permissions, approval gates for irreversible actions) so a missed detection has bounded blast radius — see <a href=\"../by-job/security-and-guardrails.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">security-and-guardrails tools</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/NVIDIA/SkillSpector\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub monthly trending with 12.2k stars as of 2026-07-07; notable as the first major-vendor security tool aimed specifically at the agent-skills supply chain.</p>\n",
+      "body_text": "TL;DR: NVIDIA's open source scanner for AI agent skills — detects prompt injection payloads, malicious instructions, and dangerous script patterns in skill packs before you install them. Free, Apache 2.0. Best as a CI gate on third party skills; not a substitute for reading them. Overview An open source security scanner from NVIDIA that analyzes AI agent skills — the Markdown instruction plus script packages installed into coding agents — for vulnerabilities, malicious patterns, and security risks, treating skills as the supply chain artifact they are. Why It's in the Arsenal Agent skills are instructions an agent will follow with your permissions , making a malicious skill closer to malware than to a bad dependency — and skill marketplaces have exploded with unvetted third party packs. SkillSpector earns a place in the Arsenal as the first org backed tooling for this specific attack surface: an automated scan layer for the \"read before installing\" discipline that manual review doesn't scale to. Key Features Scans skill files for prompt injection payloads and hidden malicious instructions Analyzes bundled scripts for dangerous execution patterns (exfiltration, credential access) Suitable as a pre install check or CI gate over an internal skill library Python, Apache 2.0, NVIDIA maintained Architecture / How It Works SkillSpector parses a skill package (instruction Markdown plus any bundled scripts/resources) and runs detection passes over both layers: content analysis for instruction level attacks (injections, deceptive directives) and static analysis for script level risks. Findings are reported per file with the matched pattern, so a human can adjudicate rather than trusting a binary verdict. Getting Started Use Cases 1. Scenario : before installing a community skill pack from a marketplace, scan it and review flagged files instead of trusting the README 2. Scenario : an internal skill library gets a CI job that scans every skill PR, the same way dependency scanners gate package updates Strengths Addresses a genuinely new, genuinely dangerous surface — skills execute with the agent's (your) permissions Org backed (NVIDIA), open source, and actively developed (12.2k stars as of 2026 07 07) Limitations / When NOT to Use Pattern based detection has unknown false negative rates against novel attacks; it complements, not replaces, reading third party skills Young project — coverage claims are the project's own and unbenchmarked by third parties so far Integration Patterns Gate skill installation: scan → human review of findings → install, mirroring dependency review workflows Pair with least privilege agent configuration (scoped tool permissions, approval gates for irreversible actions) so a missed detection has bounded blast radius — see security and guardrails tools Resources GitHub Buzz & Reception On GitHub monthly trending with 12.2k stars as of 2026 07 07; notable as the first major vendor security tool aimed specifically at the agent skills supply chain."
+    },
+    {
       "id": "spotlight-by-backplanes",
       "name": "Spotlight by Backplanes",
       "type": "tool",
@@ -6697,6 +7470,92 @@
       "body_text": "Overview A real time log aggregation platform purpose built for serverless AI workloads, addressing the difficulty of correlating logs across short lived, distributed serverless invocations. Why It's in the Arsenal Superlog earns a place in the Arsenal because it directly addresses a recurring decision point: you run serverless AI workloads and need real time log aggregation purpose built for that debugging model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Real time aggregation across serverless invocations Purpose built for the serverless debugging model Architecture / How It Works Logs emitted by individual serverless function invocations are streamed to a central aggregation backend that correlates them by request/session for unified viewing. Getting Started Use Cases 1. Scenario : you run serverless AI workloads and need real time log aggregation purpose built for that debugging model 2. Scenario : cold start, distributed serverless logs are hard to correlate with your current tooling 3. Scenario where this is NOT the right fit : your AI workloads run on long lived servers where standard logging/observability stacks already work well — evaluate an alternative instead Strengths You run serverless AI workloads and need real time log aggregation purpose built for that debugging model Cold start, distributed serverless logs are hard to correlate with your current tooling Limitations / When NOT to Use Your AI workloads run on long lived servers where standard logging/observability stacks already work well You need an open source or self hostable logging platform Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Superlog Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "superpowers",
+      "name": "Superpowers",
+      "type": "tool",
+      "job": [
+        "prototyping"
+      ],
+      "description": "Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents",
+      "url": "content/tools/dx-and-tooling/superpowers",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source (MIT); optional commercial support from Prime Radiant",
+      "tags": [
+        "agents",
+        "code-gen",
+        "planning",
+        "tool-use"
+      ],
+      "maturity": "production",
+      "stack": [
+        "polyglot"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free and self-hostable; commercial support is optional",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/obra/superpowers",
+      "docs_url": "https://github.com/obra/superpowers#readme",
+      "github_url": "https://github.com/obra/superpowers",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Your coding agent jumps straight into writing code without a spec or plan and produces sprawling, untested changes — Superpowers front-loads spec extraction, chunked design review, and a plan explicit enough for \"a junior engineer with no context\" before any code is written",
+        "You want one methodology that ports across harnesses — it installs into Claude Code, Codex (app and CLI), Cursor, Copilot CLI, OpenCode, and others, so the workflow survives switching agents"
+      ],
+      "avoid_when": [
+        "Your tasks are small, one-shot edits — the spec/plan/TDD ceremony adds real overhead that only pays off on multi-step feature work",
+        "You disagree with its opinions (strict red/green TDD, YAGNI, subagent-driven task execution) — it is a whole methodology, and cherry-picking fragments loses the mechanism that makes it work"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (249.5k), MIT license, and active development (last push 2026-07-06) verified via the GitHub API on 2026-07-08; on GitHub daily and weekly trending the same day. Workflow description (spec extraction, chunked design review, subagent-driven development) from the project README; productivity claims not independently benchmarked here.",
+      "verdict": "recommended",
+      "verdict_rationale": "The largest agent-skills framework (249k+ stars), marketplace-distributed, with a coherent mechanism (spec-plan-TDD discipline via auto-triggering skills) rather than a loose prompt collection",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=daily",
+          "date": "2026-07-08",
+          "description": "On GitHub daily and weekly trending; 249.5k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/superpowers.md",
+      "slug": "superpowers",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Superpowers",
+      "summary": "Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 604,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> A complete software-development methodology for coding agents, packaged as composable, auto-triggering skills: extract a spec, review the design in digestible chunks, produce an explicit implementation plan, then execute it via subagents with strict red/green TDD. MIT, harness-agnostic (Claude Code, Codex, Cursor, Copilot CLI, OpenCode, and more). Best for multi-step feature work; overkill for one-shot edits.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Superpowers is an agent-skills framework that encodes an opinionated software-development methodology — spec before code, chunked design review, explicit planning, test-driven implementation, subagent-driven execution — as a set of composable skills plus bootstrap instructions that make the agent apply them automatically. Rather than a library you call, it changes how your existing coding agent works from the moment a session starts.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The dominant failure mode of coding agents on non-trivial work is skipping straight to code: no spec, no plan, no tests, and long sessions that drift. Superpowers attacks that mechanism directly — skills trigger automatically when the agent detects it's building something, forcing spec extraction and human sign-off before implementation, then delegating execution to reviewed subagent tasks. It is also the reference point for the agent-skills pattern itself, covered in the <a href=\"../../skills/agent-skills/agent-skills-ecosystem.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">agent-skills ecosystem guide</a>.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Auto-triggering skills: no slash commands needed; the methodology activates when the agent starts building</li>\n<li>Spec extraction and chunked design review with human sign-off gates before code</li>\n<li>Implementation plans written to be executable by \"a junior engineer with poor taste and no context\" — i.e., explicit enough for an LLM</li>\n<li>Subagent-driven development: worker agents execute tasks while the orchestrating agent inspects and reviews their output</li>\n<li>Installs into Claude Code (official plugin marketplace), Codex app/CLI, Cursor, Factory Droid, GitHub Copilot CLI, Kimi Code, OpenCode, and others</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A set of Markdown skill documents plus initial instructions loaded into the harness. The bootstrap instructions make the agent recognize when a skill applies and load it; the skills themselves encode the methodology stages (brainstorm/spec, design review, planning, TDD execution, code review). Multi-hour autonomous runs stay on-plan because the plan itself — not the agent's context memory — is the source of truth for what to do next.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Claude Code (official marketplace):\n#   /plugin marketplace → install Superpowers\n# Other harnesses (Codex, Cursor, OpenCode, ...): see per-harness\n# install instructions in the README (Resources below).\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a multi-day feature build where the agent works autonomously for hours — the spec/plan sign-off happens once up front, then subagents execute task-by-task with TDD</li>\n<li><strong>Scenario</strong>: standardizing how a team's coding agents work across mixed harnesses (some engineers on Claude Code, some on Codex/Cursor) with one shared methodology</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Whole-methodology coherence: spec, plan, TDD, and review reinforce each other rather than being isolated prompt snippets</li>\n<li>Massive adoption and first-party marketplace distribution (249k+ stars as of 2026-07-08; available via the official Claude plugin marketplace)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Heavy for small tasks: the spec/plan ceremony is real overhead on one-shot edits</li>\n<li>Strongly opinionated (strict TDD, YAGNI, subagent execution); teams that reject those opinions will fight the framework rather than benefit from it</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Install per-harness (each harness needs its own installation) and let skills auto-trigger; no per-task invocation needed</li>\n<li>Compare with <a href=\"./addyosmani-agent-skills.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Agent Skills (Addy Osmani)</a> — slash-command-driven lifecycle stages vs. Superpowers' auto-triggering whole methodology</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/obra/superpowers\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/obra/superpowers#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub daily and weekly trending with 249.5k stars as of 2026-07-08 — the most-starred agent-skills framework by a wide margin, distributed through the official Claude Code plugin marketplace and widely discussed as the canonical example of methodology-as-skills.</p>\n",
+      "body_text": "TL;DR: A complete software development methodology for coding agents, packaged as composable, auto triggering skills: extract a spec, review the design in digestible chunks, produce an explicit implementation plan, then execute it via subagents with strict red/green TDD. MIT, harness agnostic (Claude Code, Codex, Cursor, Copilot CLI, OpenCode, and more). Best for multi step feature work; overkill for one shot edits. Overview Superpowers is an agent skills framework that encodes an opinionated software development methodology — spec before code, chunked design review, explicit planning, test driven implementation, subagent driven execution — as a set of composable skills plus bootstrap instructions that make the agent apply them automatically. Rather than a library you call, it changes how your existing coding agent works from the moment a session starts. Why It's in the Arsenal The dominant failure mode of coding agents on non trivial work is skipping straight to code: no spec, no plan, no tests, and long sessions that drift. Superpowers attacks that mechanism directly — skills trigger automatically when the agent detects it's building something, forcing spec extraction and human sign off before implementation, then delegating execution to reviewed subagent tasks. It is also the reference point for the agent skills pattern itself, covered in the agent skills ecosystem guide. Key Features Auto triggering skills: no slash commands needed; the methodology activates when the agent starts building Spec extraction and chunked design review with human sign off gates before code Implementation plans written to be executable by \"a junior engineer with poor taste and no context\" — i.e., explicit enough for an LLM Subagent driven development: worker agents execute tasks while the orchestrating agent inspects and reviews their output Installs into Claude Code (official plugin marketplace), Codex app/CLI, Cursor, Factory Droid, GitHub Copilot CLI, Kimi Code, OpenCode, and others Architecture / How It Works A set of Markdown skill documents plus initial instructions loaded into the harness. The bootstrap instructions make the agent recognize when a skill applies and load it; the skills themselves encode the methodology stages (brainstorm/spec, design review, planning, TDD execution, code review). Multi hour autonomous runs stay on plan because the plan itself — not the agent's context memory — is the source of truth for what to do next. Getting Started Use Cases 1. Scenario : a multi day feature build where the agent works autonomously for hours — the spec/plan sign off happens once up front, then subagents execute task by task with TDD 2. Scenario : standardizing how a team's coding agents work across mixed harnesses (some engineers on Claude Code, some on Codex/Cursor) with one shared methodology Strengths Whole methodology coherence: spec, plan, TDD, and review reinforce each other rather than being isolated prompt snippets Massive adoption and first party marketplace distribution (249k+ stars as of 2026 07 08; available via the official Claude plugin marketplace) Limitations / When NOT to Use Heavy for small tasks: the spec/plan ceremony is real overhead on one shot edits Strongly opinionated (strict TDD, YAGNI, subagent execution); teams that reject those opinions will fight the framework rather than benefit from it Integration Patterns Install per harness (each harness needs its own installation) and let skills auto trigger; no per task invocation needed Compare with Agent Skills (Addy Osmani) — slash command driven lifecycle stages vs. Superpowers' auto triggering whole methodology Resources GitHub Documentation Buzz & Reception On GitHub daily and weekly trending with 249.5k stars as of 2026 07 08 — the most starred agent skills framework by a wide margin, distributed through the official Claude Code plugin marketplace and widely discussed as the canonical example of methodology as skills."
+    },
+    {
       "id": "tabstack",
       "name": "Tabstack",
       "type": "tool",
@@ -6861,6 +7720,90 @@
       "word_count": 330,
       "body_html": "<h2>Overview</h2>\n<p>A niche tool that extracts a website's visual/design system — colors, typography, layout patterns — into structured data an AI agent can reuse, rather than working from raw screenshots.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Taste Lab earns a place in the Arsenal because it directly addresses a recurring decision point: you want to extract a website's visual/design system programmatically for an agent to reuse or reference. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Extracts structured 'design DNA' from a live website</li>\n<li>Output intended for direct agent consumption</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://taste-lab.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want to extract a website's visual/design system programmatically for an agent to reuse or reference</li>\n<li><strong>Scenario</strong>: you're building a design-aware agent and need structured 'design DNA' rather than raw screenshots</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want to extract a website's visual/design system programmatically for an agent to reuse or reference</li>\n<li>You're building a design-aware agent and need structured 'design DNA' rather than raw screenshots</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction)</p>\n</li>\n<li>\n<p>You need an open-source or self-hostable option</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://taste-lab.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Taste Lab</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview A niche tool that extracts a website's visual/design system — colors, typography, layout patterns — into structured data an AI agent can reuse, rather than working from raw screenshots. Why It's in the Arsenal Taste Lab earns a place in the Arsenal because it directly addresses a recurring decision point: you want to extract a website's visual/design system programmatically for an agent to reuse or reference. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Extracts structured 'design DNA' from a live website Output intended for direct agent consumption Architecture / How It Works Analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design aware agent. Getting Started Use Cases 1. Scenario : you want to extract a website's visual/design system programmatically for an agent to reuse or reference 2. Scenario : you're building a design aware agent and need structured 'design DNA' rather than raw screenshots 3. Scenario where this is NOT the right fit : you need general purpose web scraping/crawling (this tool is narrowly scoped to design extraction) — evaluate an alternative instead Strengths You want to extract a website's visual/design system programmatically for an agent to reuse or reference You're building a design aware agent and need structured 'design DNA' rather than raw screenshots Limitations / When NOT to Use You need general purpose web scraping/crawling (this tool is narrowly scoped to design extraction) You need an open source or self hostable option Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Taste Lab Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "tencentdb-agent-memory",
+      "name": "TencentDB Agent Memory",
+      "type": "tool",
+      "job": [
+        "memory-management"
+      ],
+      "description": "Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store",
+      "url": "content/tools/dx-and-tooling/tencentdb-agent-memory",
+      "cost_model": "open-source",
+      "pricing_detail": "Free and open source; runs fully locally",
+      "tags": [
+        "agents",
+        "memory"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free and local; no hosted tier documented",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "docs_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory#readme",
+      "github_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "alternatives": [],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Your agent's context fills with verbose tool logs — its symbolic short-term memory condenses them into compact structured symbols (Mermaid), which is a token-reduction mechanism rather than plain truncation",
+        "Flat vector-store memory retrieves fragments without coherence — its layered long-term memory distills conversations into structured personas and scenes instead of a pile of embeddings"
+      ],
+      "avoid_when": [
+        "Your sessions are short and stateless — a memory layer adds pipeline complexity with no retrieval payoff",
+        "You need a battle-tested, harness-agnostic memory API — its headline benchmarks and deepest integration target one specific harness (OpenClaw); portability elsewhere is less proven"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (7.4k) and last push (2026-06-26) verified via the GitHub API on 2026-07-08; on GitHub daily trending same day. GitHub reports license NOASSERTION despite the README's MIT badge — verify before adopting. Benchmark numbers (−61% tokens, PersonaMem 48%→76%) are self-reported with OpenClaw, not reproduced here.",
+      "verdict": "watching",
+      "verdict_rationale": "The two-mechanism design (symbolic tool-log compression plus layered persona/scene memory) is a genuine alternative to flat vector memory, but evidence is self-reported and harness-specific",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending?since=daily",
+          "date": "2026-07-08",
+          "description": "On GitHub daily trending; 7.4k stars"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/tencentdb-agent-memory.md",
+      "slug": "tencentdb-agent-memory",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "TencentDB Agent Memory",
+      "summary": "Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 558,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Tencent's fully local agent memory with two distinct mechanisms: symbolic short-term memory that condenses heavy tool logs into compact structured symbols (cutting tokens), and layered long-term memory that distills conversations into structured personas and scenes instead of flat vector piles. Self-reported: −61% tokens, PersonaMem 48%→76% with OpenClaw. Watch-status: promising design, self-reported evidence.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>TencentDB Agent Memory is an open-source memory layer for AI agents built around a 4-tier progressive pipeline, fully local. Its short-term component offloads verbose tool output and condenses it into compact symbolic representations; its long-term component distills fragmented conversation history into structured personas and scenes rather than storing flat embedding chunks. It ships as an npm package with first-class integration into the OpenClaw harness.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Most agent-memory tools are a vector store with a summarizer in front — retrieval returns fragments with no structure. This project earns a look because both of its mechanisms differ from that default: symbolic compression targets the single largest context sink in tool-using agents (raw tool logs) with structured condensation rather than truncation, and the persona/scene layering imposes schema on long-term memory so retrieval returns coherent context, not shards. Whether the self-reported gains transfer beyond its home harness is exactly what <code>watching</code> status is for.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Symbolic short-term memory: heavy tool logs condensed into compact structured (Mermaid) symbols</li>\n<li>Layered long-term memory: conversations distilled into structured personas and scenes</li>\n<li>Fully local operation — no external memory service dependency</li>\n<li>Self-reported benchmarks with OpenClaw: −61.38% tokens on WideSearch, +51.52% relative task success, PersonaMem accuracy 48%→76%</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A 4-tier progressive pipeline sits between the agent and its context: fresh tool output is symbolized and swapped out of the live context (retrievable on demand), while conversation history is progressively distilled upward into scene and persona layers. Retrieval works top-down through the layers, so the agent gets structured, deduplicated context instead of the k-nearest raw fragments a flat vector store returns.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">npm install @tencentdb-agent-memory/memory-tencentdb\n# Requires Node &gt;= 22.16; see the README (Resources below) for\n# harness integration (OpenClaw &gt;= 2026.3.13 documented first-class).\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a research/search agent whose tool calls return huge result payloads — symbolization keeps the reasoning context small across dozens of calls</li>\n<li><strong>Scenario</strong>: a long-lived assistant that must remember user preferences and past situations coherently across sessions via persona/scene retrieval</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Attacks tool-log bloat, the dominant context cost in tool-heavy agents, with structured compression rather than truncation</li>\n<li>Org-backed (Tencent Cloud) and fully local — no memory-as-a-service dependency (7.4k stars as of 2026-07-08)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Evidence is self-reported and measured within one harness (OpenClaw); expect integration and validation work elsewhere</li>\n<li>License metadata ambiguity (GitHub NOASSERTION vs. README MIT badge) — verify before adopting</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Drop in as the memory layer for OpenClaw-based agents (documented path); for other harnesses, wrap the npm package behind your own memory interface</li>\n<li>Contrast with structural code memory like <a href=\"./codebase-memory-mcp.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Codebase Memory MCP</a>: that indexes code structure, this manages conversational/tool-log memory — they are complementary, not alternatives</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/TencentCloud/TencentDB-Agent-Memory\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/TencentCloud/TencentDB-Agent-Memory#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>On GitHub daily trending with 7.4k stars as of 2026-07-08, three months after its April 2026 creation — one of several org-backed entries in the fast-moving agent-memory category this year.</p>\n",
+      "body_text": "TL;DR: Tencent's fully local agent memory with two distinct mechanisms: symbolic short term memory that condenses heavy tool logs into compact structured symbols (cutting tokens), and layered long term memory that distills conversations into structured personas and scenes instead of flat vector piles. Self reported: −61% tokens, PersonaMem 48%→76% with OpenClaw. Watch status: promising design, self reported evidence. Overview TencentDB Agent Memory is an open source memory layer for AI agents built around a 4 tier progressive pipeline, fully local. Its short term component offloads verbose tool output and condenses it into compact symbolic representations; its long term component distills fragmented conversation history into structured personas and scenes rather than storing flat embedding chunks. It ships as an npm package with first class integration into the OpenClaw harness. Why It's in the Arsenal Most agent memory tools are a vector store with a summarizer in front — retrieval returns fragments with no structure. This project earns a look because both of its mechanisms differ from that default: symbolic compression targets the single largest context sink in tool using agents (raw tool logs) with structured condensation rather than truncation, and the persona/scene layering imposes schema on long term memory so retrieval returns coherent context, not shards. Whether the self reported gains transfer beyond its home harness is exactly what watching status is for. Key Features Symbolic short term memory: heavy tool logs condensed into compact structured (Mermaid) symbols Layered long term memory: conversations distilled into structured personas and scenes Fully local operation — no external memory service dependency Self reported benchmarks with OpenClaw: −61.38% tokens on WideSearch, +51.52% relative task success, PersonaMem accuracy 48%→76% Architecture / How It Works A 4 tier progressive pipeline sits between the agent and its context: fresh tool output is symbolized and swapped out of the live context (retrievable on demand), while conversation history is progressively distilled upward into scene and persona layers. Retrieval works top down through the layers, so the agent gets structured, deduplicated context instead of the k nearest raw fragments a flat vector store returns. Getting Started Use Cases 1. Scenario : a research/search agent whose tool calls return huge result payloads — symbolization keeps the reasoning context small across dozens of calls 2. Scenario : a long lived assistant that must remember user preferences and past situations coherently across sessions via persona/scene retrieval Strengths Attacks tool log bloat, the dominant context cost in tool heavy agents, with structured compression rather than truncation Org backed (Tencent Cloud) and fully local — no memory as a service dependency (7.4k stars as of 2026 07 08) Limitations / When NOT to Use Evidence is self reported and measured within one harness (OpenClaw); expect integration and validation work elsewhere License metadata ambiguity (GitHub NOASSERTION vs. README MIT badge) — verify before adopting Integration Patterns Drop in as the memory layer for OpenClaw based agents (documented path); for other harnesses, wrap the npm package behind your own memory interface Contrast with structural code memory like Codebase Memory MCP: that indexes code structure, this manages conversational/tool log memory — they are complementary, not alternatives Resources GitHub Documentation Buzz & Reception On GitHub daily trending with 7.4k stars as of 2026 07 08, three months after its April 2026 creation — one of several org backed entries in the fast moving agent memory category this year."
     },
     {
       "id": "torchtune",
