@@ -15,7 +15,7 @@
 | [projects](./projects/) | 110 entries | 2026-07-08 |
 | [research](./research/) | 70 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-08 |
 | [tools](./tools/) | 191 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
@@ -30,7 +30,7 @@
 - [Airbyte](./tools/data-ingestion/airbyte.md)
 - [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md)
 - [AnythingLLM](./projects/agent-systems/anythingllm.md)
-- [BigCodeBench](./projects/benchmarks-and-evals/bigcodebench.md)
+- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md)
 
 ## Most Popular
 
