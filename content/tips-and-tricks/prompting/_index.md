@@ -28,6 +28,8 @@ A tip about how to size or rerank retrieved chunks belongs in `rag-and-retrieval
 
 ### Recently Added
 
+- [Ask for Supporting Quotes Before Answers in RAG Prompts](./ask-for-quotes-before-answers-in-rag-prompts.md)
+- [Pin Model Versions in Prompt Regression Tests](./pin-model-versions-in-prompt-regression-tests.md)
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./ask-for-missing-inputs-before-solving.md)
 - [Name the Audience Explicitly in the Prompt](./name-the-audience-in-the-prompt.md)
 - [Order Few-Shot Examples by Similarity to the Actual Task](./order-few-shot-examples-by-similarity.md)
@@ -36,8 +38,6 @@ A tip about how to size or rerank retrieved chunks belongs in `rag-and-retrieval
 - [Reserve Output Token Budget Before Filling Context With Input](./reserve-output-tokens-before-adding-context.md)
 - [Separate User Content From System Instructions With Roles and Delimiters](./separate-user-content-from-system-instructions.md)
 - [Set Temperature by the Cost of Being Wrong, Not a Generic Default](./set-temperature-by-decision-risk.md)
-- [State Negative Constraints as Testable Rules, Not Vague Warnings](./state-negative-constraints-as-testable-rules.md)
-- [Summarize Repeated or Stale Conversation Blocks Instead of Repeating Them Verbatim](./summarize-repeated-conversation-blocks.md)
 
 ### Most Popular
 
@@ -47,8 +47,10 @@ _No star-tracked entries yet._
 
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./add-output-examples-for-edge-cases.md) — 
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./ask-for-missing-inputs-before-solving.md) — 
+- [Ask for Supporting Quotes Before Answers in RAG Prompts](./ask-for-quotes-before-answers-in-rag-prompts.md) — 
 - [Name the Audience Explicitly in the Prompt](./name-the-audience-in-the-prompt.md) — 
 - [Order Few-Shot Examples by Similarity to the Actual Task](./order-few-shot-examples-by-similarity.md) — 
+- [Pin Model Versions in Prompt Regression Tests](./pin-model-versions-in-prompt-regression-tests.md) — 
 - [Place Task Inputs After Stable Instructions, Not Before](./put-task-inputs-after-instructions.md) — 
 - [Rank Context Sections by Expected Usefulness, Not Chronology](./rank-context-by-expected-usefulness.md) — 
 - [Reserve Output Token Budget Before Filling Context With Input](./reserve-output-tokens-before-adding-context.md) — 
