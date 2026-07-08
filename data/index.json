@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T21:22:59.307Z",
+    "generated_at": "2026-07-08T22:01:19.204Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 100,
@@ -9,7 +9,7 @@
     "total_digests": 1,
     "total_guides": 59,
     "total_build_examples": 8,
-    "total_architectures": 21,
+    "total_architectures": 26,
     "total_observability": 10,
     "total_community": 32,
     "total_benchmarks": 50,
@@ -2215,6 +2215,65 @@
       "url": "content/architectures/evaluation-strategy/choose-observability-tool",
       "last_updated": "2026-07-06",
       "category": "evaluation-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-quantization-strategy",
+      "type": "architecture",
+      "name": "Choosing a Quantization Strategy: How Low Can You Go Before Quality Breaks?",
+      "description": "",
+      "tags": [
+        "inference",
+        "efficiency",
+        "self-hosted",
+        "local"
+      ],
+      "path": "content/architectures/serving-patterns/choose-quantization-strategy.md",
+      "url": "content/architectures/serving-patterns/choose-quantization-strategy",
+      "last_updated": "2026-07-08",
+      "category": "serving-patterns",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-response-delivery-pattern",
+      "type": "architecture",
+      "name": "Synchronous vs Streaming vs Asynchronous: How Should the Answer Reach the User?",
+      "description": "",
+      "tags": [
+        "inference",
+        "llm",
+        "agents"
+      ],
+      "path": "content/architectures/serving-patterns/choose-response-delivery-pattern.md",
+      "url": "content/architectures/serving-patterns/choose-response-delivery-pattern",
+      "last_updated": "2026-07-08",
+      "category": "serving-patterns",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-retrieval-strategy",
+      "type": "architecture",
+      "name": "Dense vs Sparse vs Hybrid Retrieval: How Should You Actually Find the Right Chunks?",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "data"
+      ],
+      "path": "content/architectures/data-strategy/choose-retrieval-strategy.md",
+      "url": "content/architectures/data-strategy/choose-retrieval-strategy",
+      "last_updated": "2026-07-08",
+      "category": "data-strategy",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -7221,6 +7280,25 @@
       "featured": false
     },
     {
+      "id": "llm-as-judge-vs-human-evaluation",
+      "type": "architecture",
+      "name": "LLM-as-Judge vs Human Evaluation vs Reference-Based Metrics: How Should You Grade Outputs?",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "path": "content/architectures/evaluation-strategy/llm-as-judge-vs-human-evaluation.md",
+      "url": "content/architectures/evaluation-strategy/llm-as-judge-vs-human-evaluation",
+      "last_updated": "2026-07-08",
+      "category": "evaluation-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llm-guard",
       "type": "tool",
       "name": "LLM Guard",
@@ -11380,6 +11458,26 @@
       "url": "content/benchmarks/multimodal/seed-bench",
       "last_updated": "2026-07-06",
       "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "self-host-vs-hosted-api",
+      "type": "architecture",
+      "name": "Self-Host Open Weights vs Hosted Model API: Who Should Run the GPU?",
+      "description": "",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "cloud",
+        "llm"
+      ],
+      "path": "content/architectures/model-selection/self-host-vs-hosted-api.md",
+      "url": "content/architectures/model-selection/self-host-vs-hosted-api",
+      "last_updated": "2026-07-08",
+      "category": "model-selection",
       "maturity": null,
       "cost_model": null,
       "status": "active",

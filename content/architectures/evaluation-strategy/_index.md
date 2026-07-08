@@ -26,6 +26,7 @@ Choosing a specific evaluation platform (Langfuse vs LangSmith vs Braintrust) is
 
 ### Recently Added
 
+- [LLM-as-Judge vs Human Evaluation vs Reference-Based Metrics: How Should You Grade Outputs?](./llm-as-judge-vs-human-evaluation.md)
 - [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./choose-eval-framework.md)
 - [Choosing an Observability Approach: Integration Model First, Feature List Second](./choose-observability-tool.md)
 
@@ -37,3 +38,4 @@ _No star-tracked entries yet._
 
 - [Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review](./choose-eval-framework.md) — 
 - [Choosing an Observability Approach: Integration Model First, Feature List Second](./choose-observability-tool.md) — 
+- [LLM-as-Judge vs Human Evaluation vs Reference-Based Metrics: How Should You Grade Outputs?](./llm-as-judge-vs-human-evaluation.md) — 
