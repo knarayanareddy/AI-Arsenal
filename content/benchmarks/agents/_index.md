@@ -10,7 +10,9 @@
 
 ## Recently Added
 
+- [BrowseComp](./browsecomp.md)
 - [GAIA](./gaia.md)
+- [Mind2Web](./mind2web.md)
 - [OSWorld](./osworld.md)
 - [TAU-bench](./tau-bench.md)
 - [WebArena](./webarena.md)
@@ -21,7 +23,9 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [BrowseComp](./browsecomp.md) — 
 - [GAIA](./gaia.md) — 
+- [Mind2Web](./mind2web.md) — 
 - [OSWorld](./osworld.md) — 
 - [TAU-bench](./tau-bench.md) — 
 - [WebArena](./webarena.md) — 

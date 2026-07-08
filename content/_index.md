@@ -7,7 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [architectures](./architectures/) | 21 entries | 2026-07-08 |
-| [benchmarks](./benchmarks/) | 30 entries | 2026-07-08 |
+| [benchmarks](./benchmarks/) | 40 entries | 2026-07-08 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
@@ -67,6 +67,7 @@
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AgentHarm](./benchmarks/safety/agentharm.md) — 
 - [AgentOps](./tools/evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - [Agno](./tools/orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
@@ -83,6 +84,7 @@
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
 - [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
+- [AlpacaEval 2.0 (Length-Controlled)](./benchmarks/evaluation-methods/alpacaeval.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [AnythingLLM](./projects/data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
@@ -95,5 +97,3 @@
 - [Ask for Supporting Quotes Before Answers in RAG Prompts](./tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
-- [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
-- [AudioCraft (Meta)](./projects/foundation-models/audiocraft.md) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
