@@ -26,6 +26,8 @@ Choosing *which* vector database, LLM provider, or observability tool to use is 
 
 ### Recently Added
 
+- [Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates](./choose-guardrails-strategy.md)
+- [Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding](./choose-structured-output-strategy.md)
 - [Single Agent vs Multi-Agent: When Splitting the Work Actually Helps](./single-agent-vs-multi-agent.md)
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md)
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./rag-vs-fine-tuning.md)
@@ -36,6 +38,8 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates](./choose-guardrails-strategy.md) — 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md) — 
+- [Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding](./choose-structured-output-strategy.md) — 
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./rag-vs-fine-tuning.md) — 
 - [Single Agent vs Multi-Agent: When Splitting the Work Actually Helps](./single-agent-vs-multi-agent.md) — 
