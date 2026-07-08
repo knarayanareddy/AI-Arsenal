@@ -12,8 +12,10 @@
 
 - [Import AI (Jack Clark)](./import-ai.md)
 - [Interconnects (Nathan Lambert)](./interconnects.md)
+- [Last Week in AI](./last-week-in-ai.md)
 - [Latent Space (Newsletter)](./latent-space-newsletter.md)
 - [The Batch (DeepLearning.AI)](./the-batch.md)
+- [TLDR AI](./tldr-ai.md)
 
 ## Most Popular
 
@@ -23,5 +25,7 @@ _No star-tracked entries yet._
 
 - [Import AI (Jack Clark)](./import-ai.md) — 
 - [Interconnects (Nathan Lambert)](./interconnects.md) — 
+- [Last Week in AI](./last-week-in-ai.md) — 
 - [Latent Space (Newsletter)](./latent-space-newsletter.md) — 
 - [The Batch (DeepLearning.AI)](./the-batch.md) — 
+- [TLDR AI](./tldr-ai.md) — 
