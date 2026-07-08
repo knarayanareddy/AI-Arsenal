@@ -28,6 +28,7 @@ Before picking a tool in this phase, consider:
 ### Recently Added
 
 - [Cloudflare Workers AI](./cloudflare-workers-ai.md)
+- [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
 - [KServe](./kserve.md)
 - [LoRAX](./lorax.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Ray](./ray.md)
 - [Ray Serve](./ray-serve.md)
 - [RunPod](./runpod.md)
-- [SkyPilot](./skypilot.md)
 
 ### Most Popular
 
@@ -48,6 +48,7 @@ _No star-tracked entries yet._
 - [Azure AI Studio](./azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [BentoML](./bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Cloudflare Workers AI](./cloudflare-workers-ai.md) — Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure
+- [Cog (Replicate)](./cog.md) — Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile
 - [CubeSandbox](./cubesandbox.md) — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 - [FastAPI](./fastapi.md) — Python web framework for building APIs around AI services and model workflows
 - [Fireworks AI](./fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
