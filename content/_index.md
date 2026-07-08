@@ -13,7 +13,7 @@
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
 | [projects](./projects/) | 73 entries | 2026-07-08 |
-| [research](./research/) | 29 entries | 2026-07-08 |
+| [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
 | [tools](./tools/) | 131 entries | 2026-07-08 |
@@ -24,13 +24,13 @@
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
+- [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
+- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
+- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
 - [Orca](./tools/dx-and-tooling/orca.md)
+- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
 - [Speech To Speech](./projects/frameworks/speech-to-speech.md)
 - [Superpowers](./tools/dx-and-tooling/superpowers.md)
-- [TencentDB Agent Memory](./tools/dx-and-tooling/tencentdb-agent-memory.md)
-- [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md)
-- [Agent Design](./skills/applied/agent-design.md)
-- [Agent Reach](./tools/data-ingestion/agent-reach.md)
 
 ## Most Popular
 

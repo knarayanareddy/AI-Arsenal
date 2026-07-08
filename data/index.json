@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T15:25:19.282Z",
+    "generated_at": "2026-07-08T15:33:38.158Z",
     "total_projects": 73,
     "total_tools": 104,
-    "total_papers": 25,
+    "total_papers": 30,
     "total_tips": 102,
     "total_people": 25,
     "total_digests": 1,
@@ -2732,6 +2732,26 @@
       "featured": false
     },
     {
+      "id": "gemma-team-2026-gemma4",
+      "type": "paper",
+      "name": "Gemma 4 Technical Report",
+      "description": "Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026",
+      "tags": [
+        "llm",
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/research/architectures/gemma-team-2026-gemma4.md",
+      "url": "content/research/architectures/gemma-team-2026-gemma4",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "giskard",
       "type": "tool",
       "name": "Giskard",
@@ -3518,6 +3538,26 @@
       "featured": false
     },
     {
+      "id": "ji-2026-mragent",
+      "type": "paper",
+      "name": "Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents",
+      "description": "Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens",
+      "tags": [
+        "agents",
+        "memory",
+        "retrieval",
+        "graphs"
+      ],
+      "path": "content/research/retrieval-and-memory/ji-2026-mragent.md",
+      "url": "content/research/retrieval-and-memory/ji-2026-mragent",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "jina-reader",
       "type": "tool",
       "name": "Jina AI Reader",
@@ -3954,6 +3994,25 @@
       "path": "content/research/foundational/lewis-2020-rag.md",
       "url": "content/research/foundational/lewis-2020-rag",
       "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "liang-2026-mipi",
+      "type": "paper",
+      "name": "The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning",
+      "description": "LLM RL optimizes the training-engine policy, but you deploy the inference-engine policy -- and the two disagree on trajectory probabilities even with synced weights. Proposes MIPI/MIPU to make the deployed policy the optimization objective",
+      "tags": [
+        "rlhf",
+        "training",
+        "inference"
+      ],
+      "path": "content/research/training-and-alignment/liang-2026-mipi.md",
+      "url": "content/research/training-and-alignment/liang-2026-mipi",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -6597,6 +6656,25 @@
       "featured": false
     },
     {
+      "id": "salemi-2026-grepseek",
+      "type": "paper",
+      "name": "GrepSeek: Training Search Agents for Direct Corpus Interaction",
+      "description": "Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it",
+      "tags": [
+        "agents",
+        "retrieval",
+        "rag"
+      ],
+      "path": "content/research/retrieval-and-memory/salemi-2026-grepseek.md",
+      "url": "content/research/retrieval-and-memory/salemi-2026-grepseek",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "sandbox-code-execution-tools",
       "type": "tip",
       "name": "Add Resource and Network Limits to Sandboxed Code Execution Calls",
@@ -8845,6 +8923,24 @@
       "path": "content/research/evaluation-and-safety/zheng-2023-llm-as-a-judge.md",
       "url": "content/research/evaluation-and-safety/zheng-2023-llm-as-a-judge",
       "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "zhou-2026-colleague-skill",
+      "type": "paper",
+      "name": "COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation",
+      "description": "Automates trace-to-skill distillation: turns a person's heterogeneous work traces into a versioned, inspectable agent skill package with separate capability and behavior tracks -- treat expert knowledge capture as a pipeline, not manual skill authoring",
+      "tags": [
+        "agents",
+        "code-gen"
+      ],
+      "path": "content/research/agents-and-reasoning/zhou-2026-colleague-skill.md",
+      "url": "content/research/agents-and-reasoning/zhou-2026-colleague-skill",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,

@@ -31,7 +31,7 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 
 ### Recently Added
 
-_No entries yet._
+- [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md)
 
 ### Most Popular
 
@@ -39,4 +39,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
