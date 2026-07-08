@@ -5,6 +5,7 @@
 | ID | Name | Description |
 |---|---|---|
 | `agenta` | [Agenta](./benchmarks-and-evals/agenta.md) | Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds |
+| `alignment-handbook` | [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md) | Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights |
 | `anything-llm` | [AnythingLLM](./data-and-retrieval/anything-llm.md) | All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required |
 | `anythingllm` | [AnythingLLM](./agent-systems/anythingllm.md) | All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup |
 | `autogen` | [AutoGen](./frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
@@ -13,6 +14,7 @@
 | `braintrust` | [Braintrust](./benchmarks-and-evals/braintrust.md) | Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates |
 | `browser-use` | [Browser Use](./agent-systems/browser-use.md) | The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously |
 | `camel-ai` | [CAMEL](./frameworks/camel-ai.md) | Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation |
+| `candle` | [Candle](./inference-engines/candle.md) | Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference |
 | `chroma` | [Chroma](./data-and-retrieval/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
 | `cognee` | [Cognee](./data-and-retrieval/cognee.md) | Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations |
 | `comfyui` | [ComfyUI](./frameworks/comfyui.md) | Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines |
@@ -41,6 +43,7 @@
 | `insforge` | [InsForge](./agent-systems/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
 | `khoj` | [Khoj](./agent-systems/khoj.md) | Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs |
 | `kimi-k2` | [Kimi K2](./foundation-models/kimi-k2.md) | Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters |
+| `ktransformers` | [KTransformers](./inference-engines/ktransformers.md) | CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops |
 | `lancedb` | [LanceDB](./data-and-retrieval/lancedb.md) | Developer-friendly embedded and serverless vector database for multimodal AI retrieval |
 | `langchain` | [LangChain](./frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
 | `langfuse` | [Langfuse](./benchmarks-and-evals/langfuse.md) | Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets |
@@ -55,6 +58,7 @@
 | `llamaparse` | [LlamaParse](./data-and-retrieval/llamaparse.md) | Managed document parser from LlamaIndex for turning complex files into RAG-ready text |
 | `lmdeploy` | [LMDeploy](./inference-engines/lmdeploy.md) | Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends |
 | `lobe-chat` | [LobeChat (LobeHub)](./agent-systems/lobe-chat.md) | Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment |
+| `localai` | [LocalAI](./inference-engines/localai.md) | Self-hosted drop-in OpenAI API replacement serving text, embeddings, images, and audio from one binary — multiple backends, consumer hardware, no GPU required |
 | `lunary` | [Lunary](./benchmarks-and-evals/lunary.md) | Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts |
 | `marker` | [Marker](./data-and-retrieval/marker.md) | Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts |
 | `mastra` | [Mastra](./frameworks/mastra.md) | TypeScript framework for building AI agents, workflows, evals, and application backends |
@@ -62,12 +66,14 @@
 | `microsoft-agent-framework` | [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md) | Microsoft framework for Python and .NET agents, workflows, and production orchestration |
 | `milvus` | [Milvus](./data-and-retrieval/milvus.md) | Cloud-native vector database for large-scale ANN search and production vector workloads |
 | `mistral-models` | [Mistral / Mixtral](./foundation-models/mistral-models.md) | Mistral open-weight model family including dense and mixture-of-experts language models |
+| `mistral-rs` | [mistral.rs](./inference-engines/mistral-rs.md) | Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization |
 | `mlc-llm` | [MLC LLM](./inference-engines/mlc-llm.md) | Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase |
 | `ms-swift` | [ms-swift](./training-and-alignment/ms-swift.md) | ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends |
 | `mteb` | [MTEB](./benchmarks-and-evals/mteb.md) | The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks |
 | `nanogpt` | [nanoGPT](./training-and-alignment/nanogpt.md) | Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining |
 | `ollama` | [Ollama](./inference-engines/ollama.md) | Local runtime for downloading, running, and serving open-weight models on developer machines |
 | `olmo` | [OLMo](./foundation-models/olmo.md) | AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science |
+| `onnxruntime` | [ONNX Runtime](./inference-engines/onnxruntime.md) | Microsoft's cross-platform inference runtime for the ONNX graph format — one exported model runs on CPU, GPU, mobile, and browser via execution providers |
 | `onyx` | [Onyx (formerly Danswer)](./data-and-retrieval/onyx.md) | Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval |
 | `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
 | `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
@@ -106,6 +112,7 @@
 | `tensorrt-llm` | [TensorRT-LLM](./inference-engines/tensorrt-llm.md) | NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput |
 | `terminal-bench` | [Terminal-Bench](./benchmarks-and-evals/terminal-bench.md) | Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models |
 | `text-generation-inference` | [Text Generation Inference](./inference-engines/text-generation-inference.md) | Hugging Face inference server for serving large text-generation models in production |
+| `text-generation-webui` | [text-generation-webui (oobabooga)](./inference-engines/text-generation-webui.md) | The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API |
 | `translategemma` | [TranslateGemma](./foundation-models/translategemma.md) | Open translation model family built on Gemma 3 supporting 55 languages efficiently |
 | `txtai` | [txtai](./frameworks/txtai.md) | All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows |
 | `uiverse-design` | [Uiverse Design](./frameworks/uiverse-design.md) | Open-source library of community-made CSS/Tailwind UI elements for faster front-end development |

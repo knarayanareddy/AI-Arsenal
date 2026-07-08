@@ -12,12 +12,13 @@
 | [data ingestion](./data-ingestion/) | 29 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 40 entries | 2026-07-08 |
 | [evaluation and observability](./evaluation-and-observability/) | 28 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 28 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 30 entries | 2026-07-08 |
 | [orchestration](./orchestration/) | 23 entries | 2026-07-08 |
 | [serving and deployment](./serving-and-deployment/) | 27 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Hugging Face Accelerate](./model-layer/accelerate.md)
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
 - [AgentOps](./evaluation-and-observability/agentops.md)
 - [Agno](./orchestration/agno.md)
@@ -27,7 +28,6 @@
 - [Claude Code](./dx-and-tooling/claude-code.md)
 - [ClearML](./model-layer/clearml.md)
 - [Cline](./dx-and-tooling/cline.md)
-- [Cloudflare Workers AI](./serving-and-deployment/cloudflare-workers-ai.md)
 
 ## Most Popular
 
@@ -35,6 +35,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Hugging Face Accelerate](./model-layer/accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Reach](./data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
@@ -84,4 +85,3 @@ _No star-tracked entries yet._
 - [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
 - [dlt](./data-ingestion/dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
 - [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
-- [DVC](./model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
