@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T15:33:40.369Z | Entries: 480 | Schema version: 1.0.0
+Generated: 2026-07-08T18:51:32.065Z | Entries: 487 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 73
+- Projects: 80
 - Tools: 104
 - Papers: 30
 - Tips: 102
@@ -48,6 +48,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - TranslateGemma (⭐5000, score:50) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
 - Ollama (⭐174059, score:30) — Local runtime for downloading, running, and serving open-weight models on developer machines
 
+### multimodal
+- Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
+- FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
+- CLIP (OpenAI) (⭐33936, score:30) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
+
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
 - Langfuse (⭐29021, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
@@ -60,7 +65,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
 - SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
 - zvec (⭐13891, score:60) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory
-- Firecrawl (⭐132342, score:30) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
+- BGE / FlagEmbedding (BAAI) (⭐11913, score:45) — BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG
 
 ### tooling
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
@@ -68,6 +73,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### voice-audio
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
+- Chatterbox (Resemble AI) (⭐25426, score:55) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
+- F5-TTS (⭐14902, score:50) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
+- Kokoro TTS (⭐7888, score:45) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
 
 ## Top Tools by Job
 

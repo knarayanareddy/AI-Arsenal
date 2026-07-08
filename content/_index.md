@@ -12,7 +12,7 @@
 | [community](./community/) | 48 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
-| [projects](./projects/) | 73 entries | 2026-07-08 |
+| [projects](./projects/) | 80 entries | 2026-07-08 |
 | [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
@@ -22,15 +22,15 @@
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [BGE / FlagEmbedding (BAAI)](./projects/foundation-models/bge-embeddings.md)
+- [Chatterbox (Resemble AI)](./projects/foundation-models/chatterbox.md)
+- [CLIP (OpenAI)](./projects/foundation-models/clip.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
+- [F5-TTS](./projects/foundation-models/f5-tts.md)
+- [FLUX (Black Forest Labs)](./projects/foundation-models/flux.md)
 - [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [Orca](./tools/dx-and-tooling/orca.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
-- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
-- [Superpowers](./tools/dx-and-tooling/superpowers.md)
 
 ## Most Popular
 
@@ -96,4 +96,4 @@
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
+- [BGE / FlagEmbedding (BAAI)](./projects/foundation-models/bge-embeddings.md) — BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG

@@ -7,8 +7,11 @@
 | `agenta` | [Agenta](./benchmarks-and-evals/agenta.md) | Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds |
 | `autogen` | [AutoGen](./frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
 | `autogpt` | [AutoGPT](./frameworks/autogpt.md) | Autonomous agent platform and classic agent project for accessible AI automation |
+| `bge-embeddings` | [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md) | BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG |
 | `braintrust` | [Braintrust](./benchmarks-and-evals/braintrust.md) | Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates |
+| `chatterbox` | [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) | Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default |
 | `chroma` | [Chroma](./data-and-retrieval/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
+| `clip` | [CLIP (OpenAI)](./foundation-models/clip.md) | OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs |
 | `command-r-plus` | [Command R+](./foundation-models/command-r-plus.md) | Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows |
 | `crawl4ai` | [Crawl4AI](./data-and-retrieval/crawl4ai.md) | Open-source crawler and scraper designed to produce LLM-friendly web content |
 | `crewai` | [CrewAI](./frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
@@ -17,14 +20,17 @@
 | `dify` | [Dify](./frameworks/dify.md) | Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations |
 | `docling` | [Docling](./data-and-retrieval/docling.md) | IBM-origin open-source toolkit for parsing and exporting documents for generative AI |
 | `dspy` | [DSPy](./frameworks/dspy.md) | A framework for programming and optimizing language model pipelines |
+| `f5-tts` | [F5-TTS](./foundation-models/f5-tts.md) | Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple |
 | `falcon-3` | [Falcon 3](./foundation-models/falcon-3.md) | TII open model family with compact 1B to 10B text-only variants for local deployment |
 | `firecrawl` | [Firecrawl](./data-and-retrieval/firecrawl.md) | Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data |
+| `flux` | [FLUX (Black Forest Labs)](./foundation-models/flux.md) | Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled |
 | `gemma` | [Gemma](./foundation-models/gemma.md) | Google open model family designed for efficient language and multimodal applications |
 | `gemma-3` | [Gemma 3](./foundation-models/gemma-3.md) | Google open model family with efficient text and multimodal variants for local and hosted use |
 | `google-adk` | [Google ADK](./frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
 | `haystack` | [Haystack](./frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
 | `helicone` | [Helicone](./benchmarks-and-evals/helicone.md) | Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics |
 | `insforge` | [InsForge](./agent-systems/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
+| `kokoro` | [Kokoro TTS](./foundation-models/kokoro.md) | 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX |
 | `lancedb` | [LanceDB](./data-and-retrieval/lancedb.md) | Developer-friendly embedded and serverless vector database for multimodal AI retrieval |
 | `langchain` | [LangChain](./frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
 | `langfuse` | [Langfuse](./benchmarks-and-evals/langfuse.md) | Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets |
@@ -58,6 +64,7 @@
 | `qdrant` | [Qdrant](./data-and-retrieval/qdrant.md) | Rust vector database for high-performance similarity search with filtering and hybrid search |
 | `qwen` | [Qwen](./foundation-models/qwen.md) | Alibaba open-weight model family covering language, coding, and multimodal use cases |
 | `qwen-2-5` | [Qwen 2.5 / QwQ](./foundation-models/qwen-2-5.md) | Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models |
+| `qwen3-vl` | [Qwen3-VL](./foundation-models/qwen3-vl.md) | Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship |
 | `ragas-rag-evaluation` | [Ragas for RAG Evaluation](./benchmarks-and-evals/ragas-rag-evaluation.md) | Evaluation framework for measuring retrieval-augmented generation quality and regressions |
 | `ragflow` | [RAGFlow](./data-and-retrieval/ragflow.md) | Open-source RAG engine combining document understanding, retrieval, and agent capabilities |
 | `semantic-kernel` | [Semantic Kernel](./frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |

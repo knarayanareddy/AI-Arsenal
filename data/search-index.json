@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-08T15:33:39.552Z",
+  "generated_at": "2026-07-08T18:51:31.243Z",
   "config": {
     "document": {
       "id": "id",
@@ -60,7 +60,7 @@
   },
   "facets": {
     "types": {
-      "project": 73,
+      "project": 80,
       "tool": 104,
       "paper": 30,
       "tip": 102,
@@ -77,23 +77,23 @@
       "evaluation": 69,
       "tracing": 28,
       "cloud": 50,
-      "agents": 88,
+      "agents": 89,
       "orchestration": 30,
       "planning": 13,
       "tool-use": 43,
-      "rag": 72,
-      "embeddings": 23,
+      "embeddings": 25,
+      "rag": 73,
+      "self-hosted": 23,
+      "multimodal": 20,
+      "inference": 63,
       "retrieval": 62,
       "local": 29,
-      "llm": 149,
-      "multimodal": 15,
+      "llm": 151,
       "data": 62,
       "monitoring": 27,
       "reasoning": 20,
-      "inference": 59,
-      "efficiency": 22,
+      "efficiency": 23,
       "graphs": 4,
-      "self-hosted": 18,
       "stateful": 3,
       "langchain": 4,
       "quantization": 9,
@@ -132,9 +132,10 @@
     "categories": {
       "observability": 11,
       "agents": 18,
-      "rag": 21,
+      "rag": 22,
+      "voice-audio": 4,
+      "multimodal": 3,
       "llms": 20,
-      "voice-audio": 1,
       "tooling": 2,
       "agent-reliability": 11,
       "debugging-llm-apps": 10,
@@ -165,17 +166,17 @@
       "tracing": 1
     },
     "maturity": {
-      "production": 144,
+      "production": 151,
       "beta": 33
     },
     "cost_model": {
       "freemium": 50,
-      "open-source": 108,
+      "open-source": 115,
       "paid": 10,
       "usage-based": 9
     },
     "status": {
-      "active": 285,
+      "active": 292,
       "deprecated": 1,
       "archived": 2,
       "watching": 2
@@ -183,8 +184,8 @@
     "phase": {
       "benchmark-and-eval": 12,
       "framework": 21,
+      "foundation-model": 20,
       "data-and-retrieval": 16,
-      "foundation-model": 13,
       "agent-system": 4,
       "inference-engine": 7,
       "dx-and-tooling": 24,
@@ -223,18 +224,18 @@
       "researcher": 7
     },
     "domain": {
-      "language": 66,
+      "language": 68,
       "reasoning": 16,
       "general-purpose": 13,
-      "vision": 8,
-      "multimodal": 9,
-      "audio": 1
+      "audio": 4,
+      "vision": 11,
+      "multimodal": 11
     },
     "relation_to_stack": {
-      "deploy-as-is": 57,
-      "build-on-top": 56,
-      "study-and-reference": 16,
-      "fork-and-adapt": 6
+      "deploy-as-is": 63,
+      "build-on-top": 62,
+      "study-and-reference": 17,
+      "fork-and-adapt": 7
     },
     "practical_applicability": {
       "medium": 9,
@@ -2545,6 +2546,57 @@
       "body": "BentoML A framework for packaging, deploying, and scaling AI model services inference docker cloud Overview An open source framework for packaging a model plus its pre/post processing code into a single versioned, deployable artifact (a 'Bento'), then serving it on Kubernetes, Docker, or BentoCloud. Why It's in the Arsenal BentoML earns a place in the Arsenal because it directly addresses a recurring decision point: you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adop…"
     },
     {
+      "id": "bge-embeddings",
+      "type": "project",
+      "name": "BGE / FlagEmbedding (BAAI)",
+      "title": "BGE / FlagEmbedding (BAAI)",
+      "description": "BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG",
+      "tags": [
+        "embeddings",
+        "rag",
+        "self-hosted"
+      ],
+      "category": "rag",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/bge-embeddings.md",
+      "url": "content/projects/foundation-models/bge-embeddings",
+      "boost_title": "BGE / FlagEmbedding (BAAI)",
+      "boost_tags": "embeddings rag self-hosted",
+      "boost_description": "BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG",
+      "body": "BGE / FlagEmbedding (BAAI) BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG embeddings rag self-hosted rag open-source-models Overview FlagEmbedding is BAAI's home for the BGE (BAAI General Embedding) family: dense embedders across sizes, the bge reranker cross encoders, and BGE M3 — a single model producing three retrieval representations (dense vectors, sparse lexical weights, and ColBERT style multi vectors) over 100+ languages and inputs up to 8192 tokens. The repo carries training/fine tuning code, evaluation harnesses, and inference wrappers. Why it's in the Arsenal The embedding model is the quiet load bearing choice in every RAG system, and BGE is what the self hosted world standardized on: MIT licensed, sma…"
+    },
+    {
       "id": "braintrust",
       "type": "project",
       "name": "Braintrust",
@@ -3017,6 +3069,57 @@
       "boost_tags": "llm tracing agents",
       "boost_description": "A framework for building conversational AI interfaces and debugging LLM apps",
       "body": "Chainlit A framework for building conversational AI interfaces and debugging LLM apps llm tracing agents Overview A Python framework for quickly building chat style UIs for LLM applications, with built in step by step conversation debugging aimed at developers, not just end users. Why It's in the Arsenal Chainlit earns a place in the Arsenal because it directly addresses a recurring decision point: you want a fast, Python native chat UI for an LLM app with minimal frontend code. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Chat UI with minimal frontend code Bu…"
+    },
+    {
+      "id": "chatterbox",
+      "type": "project",
+      "name": "Chatterbox (Resemble AI)",
+      "title": "Chatterbox (Resemble AI)",
+      "description": "Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default",
+      "tags": [
+        "self-hosted",
+        "multimodal",
+        "inference"
+      ],
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/chatterbox.md",
+      "url": "content/projects/foundation-models/chatterbox",
+      "boost_title": "Chatterbox (Resemble AI)",
+      "boost_tags": "self-hosted multimodal inference",
+      "boost_description": "Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default",
+      "body": "Chatterbox (Resemble AI) Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default self-hosted multimodal inference voice-audio open-source-models Overview Chatterbox is Resemble AI's open TTS family: a 0.5B parameter Llama backbone acoustic model trained on 500k hours of speech, offering zero shot voice cloning from short references, a unique emotion exaggeration control, and (in v2/multilingual releases) 20+ language coverage — all MIT licensed, with every output carrying Resemble's PerTh perceptual watermark. The vendor's side by side evals report it preferred over ElevenLabs (vendor published claim). Why it's in the Arsenal It resolved the open TTS licensing trap: research models like F5 ship MIT code over non commercially trained c…"
     },
     {
       "id": "checkpoint-agent-state-after-each-tool-call",
@@ -3767,6 +3870,58 @@
       "boost_tags": "huggingface llm data",
       "boost_description": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
       "body": "Clément Delangue Tracks open models, datasets, AI policy, and open-source AI ecosystem signals huggingface llm data Overview Clément Delangue is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for open source AI ecosystem and model release signals. Notable Work Hugging Face platform and open AI advocacy. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "clip",
+      "type": "project",
+      "name": "CLIP (OpenAI)",
+      "title": "CLIP (OpenAI)",
+      "description": "OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs",
+      "tags": [
+        "embeddings",
+        "multimodal",
+        "llm"
+      ],
+      "category": "multimodal",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "vision",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/clip.md",
+      "url": "content/projects/foundation-models/clip",
+      "boost_title": "CLIP (OpenAI)",
+      "boost_tags": "embeddings multimodal llm",
+      "boost_description": "OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs",
+      "body": "CLIP (OpenAI) OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs embeddings multimodal llm multimodal open-source-models Overview CLIP (Contrastive Language Image Pre training) trains an image encoder and a text encoder jointly so matching pairs land close in a shared embedding space, using 400M web image text pairs. The released models classify images zero shot by embedding candidate label prompts (\"a photo of a dog\") and picking the nearest — competitive with supervised baselines of its era without seeing a single training label. Why it's in the Arsenal Few models are load bearing for an entire ecosystem: CLIP's embedding space is the mechanism behind zero shot vision, image search, and semantic deduplication…"
     },
     {
       "id": "cloudskill",
@@ -6227,6 +6382,57 @@
       "body": "Evaluation Methodology How to evaluate LLM systems: golden sets, LLM-as-judge, benchmarks vs task evals, and common pitfalls evaluation llm benchmark skills Overview Evaluation methodology is how you know an LLM system works — and keeps working after every prompt tweak, model upgrade, and retrieval change. It is the skill that separates teams who ship confidently from teams who ship and pray. Why It's in the Arsenal Every other skill in this vertical (prompting, RAG, fine tuning, agents) is only tunable if you can measure it. Evals are the feedback loop for all of them. Key Features Core Concepts Public benchmarks (MMLU, arena Elo) rank models in general; they say almost nothing about YOUR task — build task evals. A golden set is a small, version…"
     },
     {
+      "id": "f5-tts",
+      "type": "project",
+      "name": "F5-TTS",
+      "title": "F5-TTS",
+      "description": "Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/f5-tts.md",
+      "url": "content/projects/foundation-models/f5-tts",
+      "boost_title": "F5-TTS",
+      "boost_tags": "multimodal self-hosted inference",
+      "boost_description": "Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple",
+      "body": "F5-TTS Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple multimodal self-hosted inference voice-audio open-source-models Overview F5 TTS (\"Fairytaler that Fakes Fluent and Faithful speech with Flow matching\") is a fully non autoregressive text to speech system: a Diffusion Transformer trained with flow matching that clones any voice zero shot from a short reference clip. Its design deletes the usual TTS machinery — no phoneme aligner, no duration model, no text encoder — by padding text tokens to the target length and letting the model infill; Sway Sampling at inference improves quality/speed without retraining. Why it's in the Arsenal Open voice cloning had been autoregressive and fiddly; F5 demonstrated that…"
+    },
+    {
       "id": "falcon-3",
       "type": "project",
       "name": "Falcon 3",
@@ -6613,6 +6819,57 @@
       "boost_tags": "inference cloud llm",
       "boost_description": "A managed platform for fast inference and fine-tuning of open models",
       "body": "Fireworks AI A managed platform for fast inference and fine-tuning of open models inference cloud llm Overview A managed inference platform specializing in fast serving of open weight models, also offering managed fine tuning so teams don't need to operate their own GPU fleet. Why It's in the Arsenal Fireworks AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need fast, managed inference for open weight models without operating your own GPU fleet. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Fast managed inference…"
+    },
+    {
+      "id": "flux",
+      "type": "project",
+      "name": "FLUX (Black Forest Labs)",
+      "title": "FLUX (Black Forest Labs)",
+      "description": "Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled",
+      "tags": [
+        "multimodal",
+        "inference",
+        "self-hosted"
+      ],
+      "category": "multimodal",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/flux.md",
+      "url": "content/projects/foundation-models/flux",
+      "boost_title": "FLUX (Black Forest Labs)",
+      "boost_tags": "multimodal inference self-hosted",
+      "boost_description": "Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled",
+      "body": "FLUX (Black Forest Labs) Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled multimodal inference self-hosted multimodal open-source-models Overview FLUX is Black Forest Labs' text to image family: 12B parameter rectified flow transformers released as FLUX.1 [pro] (API only), [dev] (open weights, non commercial), and [schnell] (Apache 2.0, timestep distilled for 1 4 step generation), later extended with editing/in context models (Kontext) and tooling variants (fill, canny, depth, redux). The repo provides reference inference code; the ecosystem runs it through ComfyUI and diffusers. Why it's in the Arsenal When the original Stable Diffusion team shipped FLUX, the open image generation center of gravity moved with them: it's the m…"
     },
     {
       "id": "fly-io",
@@ -9053,6 +9310,57 @@
       "boost_tags": "llm agents",
       "boost_description": "AI assistant with deep understanding, analysis, and reasoning capabilities",
       "body": "Kimi K2.5 AI assistant with deep understanding, analysis, and reasoning capabilities llm agents Overview A hosted AI assistant model positioned around deep reasoning, analysis, and long context understanding, accessed as a closed source API. Why It's in the Arsenal Kimi K2.5 earns a place in the Arsenal because it directly addresses a recurring decision point: you need a capable hosted reasoning/analysis assistant and are comfortable with a closed source provider. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Reasoning oriented response generation Long…"
+    },
+    {
+      "id": "kokoro",
+      "type": "project",
+      "name": "Kokoro TTS",
+      "title": "Kokoro TTS",
+      "description": "82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX",
+      "tags": [
+        "self-hosted",
+        "inference",
+        "efficiency"
+      ],
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/kokoro.md",
+      "url": "content/projects/foundation-models/kokoro",
+      "boost_title": "Kokoro TTS",
+      "boost_tags": "self-hosted inference efficiency",
+      "boost_description": "82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX",
+      "body": "Kokoro TTS 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX self-hosted inference efficiency voice-audio open-source-models Overview Kokoro is an 82M parameter open weight TTS model (StyleTTS2 lineage architecture) released under Apache 2.0 with a set of prebuilt voices across English variants and several other languages. Its defining property is the quality per parameter ratio: synthesis quality that ranked at or near the top of community TTS arenas from a model small enough to run real time on CPUs, in browsers via ONNX/WASM, and on edge devices. Why it's in the Arsenal Most TTS decisions aren't \"best possible voice\" but \"good voice at negligible cost,\" and Kokoro redefined that trade off: two orders of magnitud…"
     },
     {
       "id": "label-studio",
@@ -15020,6 +15328,59 @@
       "boost_tags": "llm multimodal",
       "boost_description": "Alibaba open-weight model family with multimodal and coding variants",
       "body": "Qwen 3 Alibaba open-weight model family with multimodal and coding variants llm multimodal Overview Alibaba's open weight model family spanning multiple sizes, with dedicated multimodal and coding focused variants, distributed under an open license for self hosting or fine tuning. Why It's in the Arsenal Qwen 3 earns a place in the Arsenal because it directly addresses a recurring decision point: you want a strong open weight model family with multimodal and coding variants you can self host. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Range of…"
+    },
+    {
+      "id": "qwen3-vl",
+      "type": "project",
+      "name": "Qwen3-VL",
+      "title": "Qwen3-VL",
+      "description": "Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship",
+      "tags": [
+        "multimodal",
+        "llm",
+        "agents"
+      ],
+      "category": "multimodal",
+      "subcategory": "open-source-models",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "phase": "foundation-model",
+      "audience": null,
+      "domain": [
+        "vision",
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "practical_applicability": null,
+      "result_status": null,
+      "reproduction_status": null,
+      "effort": null,
+      "verification_status": null,
+      "impact": null,
+      "difficulty": null,
+      "decision_type": null,
+      "confidence": null,
+      "build_status": null,
+      "outcome": null,
+      "scope": null,
+      "signal_types": null,
+      "data_sensitivity": null,
+      "kind": null,
+      "topics": null,
+      "access": null,
+      "activity_level": null,
+      "safety_level": null,
+      "path": "content/projects/foundation-models/qwen3-vl.md",
+      "url": "content/projects/foundation-models/qwen3-vl",
+      "boost_title": "Qwen3-VL",
+      "boost_tags": "multimodal llm agents",
+      "boost_description": "Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship",
+      "body": "Qwen3-VL Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship multimodal llm agents multimodal open-source-models Overview Qwen3 VL is Alibaba's open vision language family: models from edge deployable to flagship scale (dense and MoE variants) that handle images, multi image inputs, video, and long documents, with signature strengths in multilingual OCR, structured document parsing (tables/charts/formulas), and GUI grounding — returning coordinates for UI elements described in text. Weights ship under Apache 2.0 on Hugging Face/ModelScope; the repo is the family's cookbook and integration hub. Why it's in the Arsenal Open multimodality has a clear leader lineage, and this is it: when open source compute…"
     },
     {
       "id": "r-localllama",
