@@ -9,7 +9,7 @@
 | [agents and orchestration](./agents-and-orchestration/) | 18 entries | 2026-07-08 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-08 |
 | [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-08 |
-| [evaluation](./evaluation/) | 13 entries | 2026-07-08 |
+| [evaluation](./evaluation/) | 19 entries | 2026-07-08 |
 | [fine tuning](./fine-tuning/) | 8 entries | 2026-07-08 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-08 |
 | [prompting](./prompting/) | 21 entries | 2026-07-08 |
@@ -22,11 +22,11 @@
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
+- [Evaluate the End-to-End Task, Not Only Components](./evaluation/evaluate-the-end-to-end-task-not-only-components.md)
+- [Log Judge Rationales, Not Only Scores](./evaluation/log-judge-rationales-not-only-scores.md)
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md)
-- [Continuously Sample Production Traffic Into Your Eval Sets](./evaluation/sample-production-traffic-into-eval-sets.md)
-- [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./evaluation/set-pass-fail-thresholds-before-running-evals.md)
-- [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md)
-- [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./evaluation/slice-eval-metrics-by-input-segment.md)
+- [Pair Every Eval Score With a Baseline](./evaluation/pair-every-eval-score-with-a-baseline.md)
+- [Prefer Pairwise Comparison When Absolute Scoring Is Noisy](./evaluation/prefer-pairwise-comparison-when-scoring-is-noisy.md)
 
 ## Most Popular
 
@@ -70,6 +70,7 @@ _No star-tracked entries yet._
 - [Establish a Prompting Baseline Before Fine-Tuning](./fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md) — 
 - [Evaluate Checkpoints on Task Metrics, Not Training Loss](./fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
+- [Evaluate the End-to-End Task, Not Only Components](./evaluation/evaluate-the-end-to-end-task-not-only-components.md) — 
 - [Hold Out an Eval Set Before Any Training Run Touches the Data](./fine-tuning/hold-out-an-eval-set-before-any-training.md) — 
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
 - [Inspect a Random Sample of Training Data by Hand Before Every Run](./fine-tuning/inspect-your-training-data-by-hand.md) — 
@@ -78,9 +79,8 @@ _No star-tracked entries yet._
 - [Keep Local Model Weight Files Out of Git](./inference-and-serving/keep-model-files-out-of-git.md) — 
 - [Store Source Page and Section Metadata With Every Chunk](./rag-and-retrieval/keep-source-page-and-section-metadata.md) — 
 - [Log Every Agent State Transition, Not Just Final Output](./agents-and-orchestration/log-agent-state-transitions.md) — 
+- [Log Judge Rationales, Not Only Scores](./evaluation/log-judge-rationales-not-only-scores.md) — 
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md) — 
 - [Log Both the Raw Model Output and the Parsed Result](./debugging-and-observability/log-raw-and-parsed-model-outputs.md) — 
 - [Log the Retrieved Context for Every RAG Answer](./debugging-and-observability/log-retrieved-context.md) — 
 - [Make Agent Success Criteria Machine-Checkable, Not Self-Reported](./agents-and-orchestration/make-success-criteria-machine-checkable.md) — 
-- [Match Configured Context Length to Available RAM Before Demos](./inference-and-serving/match-context-length-to-ram.md) — 
-- [Match Training and Inference Prompt Formats Exactly](./fine-tuning/match-training-and-inference-prompt-formats.md) — 
