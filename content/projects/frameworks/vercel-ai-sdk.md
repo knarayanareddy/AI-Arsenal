@@ -17,7 +17,7 @@ github_stars: 25427
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-07-08"
-docs_url: "https://ai-sdk.dev/docs"
+docs_url: "https://ai-sdk.dev/docs/introduction"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -97,7 +97,7 @@ This is a framework entry: it documents the library/SDK you build on top of. For
 ## Resources
 
 - [GitHub](https://github.com/vercel/ai)
-- [Documentation](https://ai-sdk.dev/docs)
+- [Documentation](https://ai-sdk.dev/docs/introduction)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (25,427 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)*

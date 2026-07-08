@@ -17,7 +17,7 @@ github_stars: 103506
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-07-08"
-docs_url: "https://docs.browser-use.com"
+docs_url: "https://docs.browser-use.com/cloud/quickstart"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -98,7 +98,7 @@ This is an agent-system entry: it documents a standalone, deployable system rath
 ## Resources
 
 - [GitHub](https://github.com/browser-use/browser-use)
-- [Documentation](https://docs.browser-use.com)
+- [Documentation](https://docs.browser-use.com/cloud/quickstart)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (103,506 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)*

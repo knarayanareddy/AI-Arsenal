@@ -17,7 +17,7 @@ github_stars: 17343
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-07-07"
-docs_url: "https://docs.camel-ai.org"
+docs_url: "https://docs.camel-ai.org/get_started/introduction"
 demo_url: null
 paper_url: "https://arxiv.org/abs/2303.17760"
 paper_id: null
@@ -97,7 +97,7 @@ This is a framework entry: it documents the library/SDK you build on top of. For
 ## Resources
 
 - [GitHub](https://github.com/camel-ai/camel)
-- [Documentation](https://docs.camel-ai.org)
+- [Documentation](https://docs.camel-ai.org/get_started/introduction)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (17,343 stars, last commit 2026-07-07, verified via GitHub API on 2026-07-08)*

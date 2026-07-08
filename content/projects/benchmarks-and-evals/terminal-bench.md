@@ -17,7 +17,7 @@ github_stars: 2427
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-01-22"
-docs_url: "https://www.tbench.ai/docs"
+docs_url: "https://www.tbench.ai/docs/run-terminal-bench-2-0"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -95,7 +95,7 @@ This is a benchmark-and-eval entry: it documents an evaluation, tracing, or obse
 ## Resources
 
 - [GitHub](https://github.com/laude-institute/terminal-bench)
-- [Documentation](https://www.tbench.ai/docs)
+- [Documentation](https://www.tbench.ai/docs/run-terminal-bench-2-0)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (2,427 stars, last commit 2026-01-22, verified via GitHub API on 2026-07-08)*

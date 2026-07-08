@@ -6,7 +6,7 @@ artifact_type: framework
 category: llms
 subcategory: frameworks
 description: "ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs"
-github_url: "https://github.com/volcengine/verl"
+github_url: "https://github.com/verl-project/verl"
 license: "Apache-2.0"
 primary_language: Python
 org_or_maintainer: "Volcengine (ByteDance)"
@@ -44,7 +44,7 @@ added_date: "2026-07-08"
 last_reviewed: "2026-07-08"
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/volcengine/verl", "date": "2026-07-08", "description": "22,377 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources: [{"source": "github-trending", "url": "https://github.com/verl-project/verl", "date": "2026-07-08", "description": "22,377 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 featured: false
 status: active
 ---
@@ -68,7 +68,7 @@ Upstream: vLLM and SGLang for rollouts; FSDP and Megatron-LM for training parall
 ## Getting Started
 
 ```bash
-git clone https://github.com/volcengine/verl && cd verl
+git clone https://github.com/verl-project/verl && cd verl
 pip install -e .
 # Run the PPO quickstart against a small model (see docs/quickstart):
 bash examples/ppo_trainer/run_qwen2-7b_seq_balance.sh
@@ -95,7 +95,7 @@ This is a training-and-alignment entry: it documents a training/fine-tuning/alig
 
 ## Resources
 
-- [GitHub](https://github.com/volcengine/verl)
+- [GitHub](https://github.com/verl-project/verl)
 - [Documentation](https://verl.readthedocs.io/en/latest/)
 
 ---

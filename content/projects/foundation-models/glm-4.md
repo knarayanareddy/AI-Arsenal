@@ -17,7 +17,7 @@ github_stars: 4392
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-02-01"
-docs_url: "https://docs.z.ai"
+docs_url: "https://docs.z.ai/guides/overview/quick-start"
 demo_url: null
 paper_url: "https://arxiv.org/abs/2508.06471"
 paper_id: null
@@ -96,7 +96,7 @@ This is a foundation-model entry: it documents model weights, architecture, and 
 ## Resources
 
 - [GitHub](https://github.com/zai-org/GLM-4.5)
-- [Documentation](https://docs.z.ai)
+- [Documentation](https://docs.z.ai/guides/overview/quick-start)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (4,392 stars, last commit 2026-02-01, verified via GitHub API on 2026-07-08)*

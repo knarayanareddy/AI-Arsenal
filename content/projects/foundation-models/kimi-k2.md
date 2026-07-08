@@ -17,7 +17,7 @@ github_stars: 10889
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-01-21"
-docs_url: "https://platform.moonshot.ai/docs"
+docs_url: "https://platform.kimi.ai/docs/overview"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -69,7 +69,7 @@ Upstream: DeepSeek-architecture lineage, vLLM/SGLang/TensorRT-LLM for serving. C
 
 ```bash
 # Hosted (OpenAI-compatible):
-curl https://api.moonshot.ai/v1/chat/completions -H 'Authorization: Bearer $MOONSHOT_API_KEY' \
+curl <moonshot-api-endpoint>/v1/chat/completions -H 'Authorization: Bearer $MOONSHOT_API_KEY' \
   -d '{"model":"kimi-k2-0905-preview","messages":[{"role":"user","content":"hello"}]}'
 # Self-host: deploy the HF weights (moonshotai/Kimi-K2-Instruct) with vLLM or SGLang on a multi-GPU node
 ```
@@ -96,7 +96,7 @@ This is a foundation-model entry: it documents model weights, architecture, and 
 ## Resources
 
 - [GitHub](https://github.com/MoonshotAI/Kimi-K2)
-- [Documentation](https://platform.moonshot.ai/docs)
+- [Documentation](https://platform.kimi.ai/docs/overview)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (10,889 stars, last commit 2026-01-21, verified via GitHub API on 2026-07-08)*

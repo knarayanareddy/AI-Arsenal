@@ -17,7 +17,7 @@ github_stars: 28508
 github_stars_last_30d: 0
 trending_score: 50
 last_commit: "2026-07-08"
-docs_url: "https://help.getzep.com/graphiti/graphiti/overview"
+docs_url: "https://help.getzep.com/graphiti/getting-started/overview"
 demo_url: null
 paper_url: "https://arxiv.org/abs/2501.13956"
 paper_id: null
@@ -98,7 +98,7 @@ This is a data-and-retrieval entry: it documents a vector database, document-pro
 ## Resources
 
 - [GitHub](https://github.com/getzep/graphiti)
-- [Documentation](https://help.getzep.com/graphiti/graphiti/overview)
+- [Documentation](https://help.getzep.com/graphiti/getting-started/overview)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (28,508 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)*
