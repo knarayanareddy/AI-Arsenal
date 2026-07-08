@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./alert-on-streaming-latency-slos.md)
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./alert-on-quality-and-cost-regressions.md)
 
 ### Most Popular
@@ -35,3 +36,4 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./alert-on-quality-and-cost-regressions.md) — 
+- [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./alert-on-streaming-latency-slos.md) — 
