@@ -162,6 +162,7 @@ This table is exhaustive for tools tagged with job = web-scraping.
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Playwright](../data-ingestion/playwright.md) | data ingestion | open-source | Yes | Yes | Yes | typescript, python | recommended |
 | [Puppeteer](../data-ingestion/puppeteer.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | recommended |
+| [ScrapeGraphAI](../data-ingestion/scrapegraphai.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Tabstack](../data-ingestion/tabstack.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
 | [Taste Lab](../data-ingestion/taste-lab.md) | data ingestion | freemium | Yes | No | No | python | watching |
 | [Trafilatura](../data-ingestion/trafilatura.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |

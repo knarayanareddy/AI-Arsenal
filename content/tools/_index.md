@@ -9,25 +9,25 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-08 |
 | [by job](./by-job/) | 14 entries | 2026-07-08 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-08 |
-| [data ingestion](./data-ingestion/) | 29 entries | 2026-07-08 |
-| [dx and tooling](./dx-and-tooling/) | 40 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 32 entries | 2026-07-08 |
+| [dx and tooling](./dx-and-tooling/) | 42 entries | 2026-07-08 |
 | [evaluation and observability](./evaluation-and-observability/) | 28 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 30 entries | 2026-07-08 |
-| [orchestration](./orchestration/) | 23 entries | 2026-07-08 |
-| [serving and deployment](./serving-and-deployment/) | 27 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 31 entries | 2026-07-08 |
+| [orchestration](./orchestration/) | 26 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 28 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [Hugging Face Accelerate](./model-layer/accelerate.md)
+- [AdalFlow](./dx-and-tooling/adalflow.md)
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
 - [AgentOps](./evaluation-and-observability/agentops.md)
 - [Agno](./orchestration/agno.md)
 - [Aider](./dx-and-tooling/aider.md)
 - [Airbyte](./data-ingestion/airbyte.md)
+- [any-agent](./orchestration/any-agent.md)
+- [BAML](./dx-and-tooling/baml.md)
 - [Cerebras Inference](./model-layer/cerebras-inference.md)
-- [Claude Code](./dx-and-tooling/claude-code.md)
-- [ClearML](./model-layer/clearml.md)
-- [Cline](./dx-and-tooling/cline.md)
 
 ## Most Popular
 
@@ -36,6 +36,7 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [Hugging Face Accelerate](./model-layer/accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
+- [AdalFlow](./dx-and-tooling/adalflow.md) — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Reach](./data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
@@ -45,11 +46,13 @@ _No star-tracked entries yet._
 - [Aider](./dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
 - [Airbyte](./data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- [any-agent](./orchestration/any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - [Argilla](./data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Astra Autonomous Pentest](./evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [AWS Bedrock](./serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
+- [BAML](./dx-and-tooling/baml.md) — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
 - [Basedash](./dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [BentoML](./serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Browserbase](./data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
@@ -82,6 +85,3 @@ _No star-tracked entries yet._
 - [Data Labeling Tools](./by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
 - [Deepchecks](./evaluation-and-observability/deepchecks.md) — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 - [DeepSpeed](./model-layer/deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
-- [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
-- [dlt](./data-ingestion/dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
-- [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together

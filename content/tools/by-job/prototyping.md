@@ -151,6 +151,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [AdalFlow](../dx-and-tooling/adalflow.md) | dx and tooling | open-source | Yes | Yes | Yes | python | watching |
 | [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Aider](../dx-and-tooling/aider.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |

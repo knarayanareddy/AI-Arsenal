@@ -69,4 +69,5 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Cog (Replicate)](../serving-and-deployment/cog.md) | serving and deployment | deployment | open-source | Yes | Yes | Yes | python, go | solid-choice |
 | [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
+| [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | deployment, production-serving | open-source | Yes | Yes | Yes | go | solid-choice |
 | [Temporal](../orchestration/temporal.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |

@@ -29,14 +29,14 @@ Before picking a tool in this phase, consider:
 
 - [Airbyte](./airbyte.md)
 - [dlt](./dlt.md)
+- [DocETL](./docetl.md)
 - [Elasticsearch](./elasticsearch.md)
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
 - [Great Expectations (GX Core)](./great-expectations.md)
 - [MarkItDown](./markitdown.md)
+- [Marqo](./marqo.md)
 - [Meilisearch](./meilisearch.md)
-- [MinerU](./mineru.md)
-- [RAGatouille](./ragatouille.md)
 
 ### Most Popular
 
@@ -51,6 +51,7 @@ _No star-tracked entries yet._
 - [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
 - [dlt](./dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
+- [DocETL](./docetl.md) — LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)
 - [Elasticsearch](./elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - [FAISS](./faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
@@ -59,6 +60,7 @@ _No star-tracked entries yet._
 - [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 - [Label Studio](./label-studio.md) — An open-source data labeling platform for ML and AI datasets
 - [MarkItDown](./markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
+- [Marqo](./marqo.md) — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
 - [Meilisearch](./meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - [MinerU](./mineru.md) — OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models
 - [olmOCR](./olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
@@ -68,6 +70,7 @@ _No star-tracked entries yet._
 - [Puppeteer](./puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
 - [RAGatouille](./ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 - [Scale AI](./scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
+- [ScrapeGraphAI](./scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
 - [Tabstack](./tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
 - [Trafilatura](./trafilatura.md) — Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building

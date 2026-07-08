@@ -31,12 +31,12 @@ Before picking a tool in this phase, consider:
 - [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
 - [KServe](./kserve.md)
+- [KubeAI](./kubeai.md)
 - [LoRAX](./lorax.md)
 - [NVIDIA NIM](./nvidia-nim.md)
 - [OpenLLM](./openllm.md)
 - [Ray](./ray.md)
 - [Ray Serve](./ray-serve.md)
-- [RunPod](./runpod.md)
 
 ### Most Popular
 
@@ -56,6 +56,7 @@ _No star-tracked entries yet._
 - [Google Vertex AI](./google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
 - [Hugging Face Inference Endpoints](./hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [KServe](./kserve.md) — Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol
+- [KubeAI](./kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
 - [LiteLLM](./litellm.md) — A proxy and SDK for routing requests across many LLM providers
 - [LoRAX](./lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
 - [Modal](./modal.md) — A serverless platform for deploying Python apps and GPU workloads

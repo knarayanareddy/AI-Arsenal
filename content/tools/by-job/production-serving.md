@@ -164,6 +164,7 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [Ideogram AI](../model-layer/ideogram-ai.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
+| [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | open-source | Yes | Yes | Yes | go | solid-choice |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
