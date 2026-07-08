@@ -28,6 +28,9 @@ Building an entire evaluation framework or LLM-as-judge pipeline from scratch is
 
 ### Recently Added
 
+- [Continuously Sample Production Traffic Into Your Eval Sets](./sample-production-traffic-into-eval-sets.md)
+- [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./set-pass-fail-thresholds-before-running-evals.md)
+- [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./slice-eval-metrics-by-input-segment.md)
 - [Fail Tests When Important Context Sections Are Truncated](./detect-context-truncation-in-tests.md)
 - [Run a Prompt-Injection Regression Suite on Every CI Run](./run-prompt-injection-regression-tests.md)
 - [Add the Failing Question to Your Eval Set Before Fixing the Bug](./use-golden-questions-for-every-bug-fix.md)
@@ -44,6 +47,9 @@ _No star-tracked entries yet._
 - [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./add-evals-before-refactors.md) — 
 - [Fail Tests When Important Context Sections Are Truncated](./detect-context-truncation-in-tests.md) — 
 - [Run a Prompt-Injection Regression Suite on Every CI Run](./run-prompt-injection-regression-tests.md) — 
+- [Continuously Sample Production Traffic Into Your Eval Sets](./sample-production-traffic-into-eval-sets.md) — 
+- [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./set-pass-fail-thresholds-before-running-evals.md) — 
+- [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./slice-eval-metrics-by-input-segment.md) — 
 - [Test Prompts Against Adversarial Inputs, Not Only Well-Formed Ones](./test-prompts-with-adversarial-inputs.md) — 
 - [Add the Failing Question to Your Eval Set Before Fixing the Bug](./use-golden-questions-for-every-bug-fix.md) — 
 - [Version Eval Datasets the Same Way You Version Code](./version-your-eval-datasets.md) — 

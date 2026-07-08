@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
+  "generated_at": "2026-07-08T17:45:57.431Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 93,
+      "count": 96,
       "types": {
-        "tip": 14,
+        "tip": 17,
         "tool": 26,
         "build-example": 3,
         "guide": 7,
@@ -33,6 +33,7 @@
         "autogpt",
         "browserbase",
         "budget-context-before-adding-tools",
+        "cache-idempotent-tool-results-within-a-run",
         "cap-agent-tool-retries",
         "chainlit",
         "checkpoint-agent-state-after-each-tool-call",
@@ -42,6 +43,7 @@
         "chrome-devtools-mcp",
         "codebase-memory-mcp",
         "codex-plugin-cc",
+        "compact-tool-outputs-before-adding-to-context",
         "crewai",
         "cubesandbox",
         "define-fallbacks-for-tool-failures",
@@ -88,6 +90,7 @@
         "seaticket",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
+        "set-wall-clock-timeouts-for-agent-runs",
         "shellmate",
         "skillspector",
         "smolagents",
@@ -150,18 +153,20 @@
     {
       "id": "batching",
       "label": "Batching",
-      "count": 6,
+      "count": 8,
       "types": {
+        "tip": 4,
         "guide": 1,
-        "tip": 2,
         "project": 3
       },
       "entries": [
+        "batch-embedding-requests-during-ingestion",
         "inference-optimization",
         "separate-offline-batch-jobs-from-chat-serving",
         "sglang",
         "text-generation-inference",
         "tune-batch-size-against-tail-latency",
+        "use-provider-batch-apis-for-offline-workloads",
         "vllm"
       ]
     },
@@ -204,15 +209,16 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 8,
+      "count": 9,
       "types": {
-        "tip": 5,
+        "tip": 6,
         "guide": 1,
         "tool": 1,
         "project": 1
       },
       "entries": [
         "cache-embeddings-by-content-hash",
+        "cache-idempotent-tool-results-within-a-run",
         "cache-stable-system-prompts",
         "inference-optimization",
         "measure-kv-cache-hit-rate",
@@ -442,10 +448,10 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 22,
+      "count": 23,
       "types": {
         "guide": 4,
-        "tip": 9,
+        "tip": 10,
         "project": 4,
         "paper": 4,
         "tool": 1
@@ -454,6 +460,7 @@
         "attention",
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
+        "compact-tool-outputs-before-adding-to-context",
         "compress-retrieved-context-before-generation",
         "deepseek-v3-r1",
         "dettmers-2023-qlora",
@@ -478,9 +485,9 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 23,
+      "count": 24,
       "types": {
-        "tip": 7,
+        "tip": 8,
         "guide": 2,
         "architecture": 2,
         "project": 10,
@@ -490,6 +497,7 @@
       "entries": [
         "add-hybrid-search-for-exact-terms",
         "add-reranking-after-recall-is-acceptable",
+        "batch-embedding-requests-during-ingestion",
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
         "choose-memory-solution",
@@ -516,10 +524,10 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 99,
+      "count": 103,
       "types": {
         "digest": 1,
-        "tip": 13,
+        "tip": 17,
         "build-example": 1,
         "guide": 10,
         "project": 10,
@@ -611,14 +619,18 @@
         "rgb",
         "run-prompt-injection-regression-tests",
         "salad-bench",
+        "sample-production-traffic-into-eval-sets",
         "seed-bench",
+        "set-pass-fail-thresholds-before-running-evals",
         "shreya-shankar",
         "simon-willison",
+        "slice-eval-metrics-by-input-segment",
         "sota-benchmarks",
         "store-prompts-with-release-versions",
         "swe-bench",
         "tau-bench",
         "test-prompts-with-adversarial-inputs",
+        "track-refusal-rates-as-a-regression-signal",
         "trulens",
         "truthfulqa",
         "use-golden-questions-for-every-bug-fix",
@@ -763,9 +775,9 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 59,
+      "count": 62,
       "types": {
-        "tip": 21,
+        "tip": 24,
         "tool": 6,
         "architecture": 4,
         "project": 17,
@@ -780,6 +792,7 @@
         "benchmark-with-real-context-lengths",
         "bentoml",
         "cache-stable-system-prompts",
+        "cap-max-output-tokens-per-request",
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
@@ -829,9 +842,11 @@
         "tokenization",
         "tune-batch-size-against-tail-latency",
         "use-int8-for-safer-compression",
+        "use-provider-batch-apis-for-offline-workloads",
         "use-smaller-models-for-classification-steps",
         "use-speculative-decoding-for-latency-critical-paths",
         "vllm",
+        "warm-up-model-servers-before-routing-traffic",
         "yi"
       ]
     },
@@ -1137,9 +1152,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 27,
+      "count": 28,
       "types": {
-        "tip": 7,
+        "tip": 8,
         "person": 1,
         "architecture": 1,
         "tool": 10,
@@ -1173,6 +1188,7 @@
         "promptfoo",
         "spotlight-by-backplanes",
         "superlog",
+        "track-refusal-rates-as-a-regression-signal",
         "weights-biases"
       ]
     },
@@ -1222,9 +1238,9 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 45,
+      "count": 51,
       "types": {
-        "tip": 22,
+        "tip": 28,
         "project": 12,
         "architecture": 3,
         "person": 1,
@@ -1237,9 +1253,11 @@
         "add-provider-timeout-and-retry-policies",
         "agenta",
         "braintrust",
+        "cap-max-output-tokens-per-request",
         "choose-eval-framework",
         "choose-observability-tool",
         "classify-failures-before-fixing-prompts",
+        "correlate-llm-traces-with-request-ids",
         "deepeval",
         "do-not-launch-without-trace-sampling",
         "hamel-husain",
@@ -1252,6 +1270,7 @@
         "langsmith",
         "langsmith-platform",
         "llm-observability",
+        "log-latency-by-pipeline-stage",
         "log-raw-and-parsed-model-outputs",
         "log-retrieved-context",
         "lunary",
@@ -1269,13 +1288,16 @@
         "redact-secrets-before-tracing",
         "replay-the-same-trace-with-one-variable-changed",
         "review-data-retention-for-prompts",
+        "sample-production-traffic-into-eval-sets",
         "separate-model-errors-from-app-errors",
         "set-token-budgets-per-feature",
+        "slice-eval-metrics-by-input-segment",
         "store-parser-version-with-every-chunk",
         "store-prompt-version-in-every-trace",
         "trace-tool-inputs-and-outputs",
         "track-cost-per-feature",
         "track-cost-per-successful-outcome",
+        "track-refusal-rates-as-a-regression-signal",
         "use-golden-questions-for-every-bug-fix",
         "wandb-weave"
       ]
@@ -1294,12 +1316,13 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 30,
+      "count": 31,
       "types": {
         "guide": 2,
         "tool": 12,
         "project": 14,
-        "architecture": 2
+        "architecture": 2,
+        "tip": 1
       },
       "entries": [
         "agent-builder-role",
@@ -1330,6 +1353,7 @@
         "qursor",
         "seaticket",
         "semantic-kernel",
+        "set-wall-clock-timeouts-for-agent-runs",
         "stagehand",
         "txtai"
       ]
@@ -1724,13 +1748,13 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 18,
+      "count": 19,
       "types": {
         "architecture": 3,
         "tool": 2,
         "paper": 1,
         "project": 9,
-        "tip": 3
+        "tip": 4
       },
       "entries": [
         "choose-deployment-target",
@@ -1750,6 +1774,7 @@
         "qdrant",
         "supabase",
         "use-local-models-for-sensitive-prototyping",
+        "warm-up-model-servers-before-routing-traffic",
         "weaviate"
       ]
     },
@@ -1851,9 +1876,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 44,
+      "count": 46,
       "types": {
-        "tip": 12,
+        "tip": 14,
         "guide": 6,
         "tool": 6,
         "project": 14,
@@ -1875,12 +1900,14 @@
         "autogpt",
         "browserbase",
         "budget-context-before-adding-tools",
+        "cache-idempotent-tool-results-within-a-run",
         "cap-agent-tool-retries",
         "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
         "chrome-devtools-mcp",
         "codex-plugin-cc",
         "command-r-plus",
+        "compact-tool-outputs-before-adding-to-context",
         "crewai",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
@@ -1912,9 +1939,9 @@
     {
       "id": "tracing",
       "label": "Tracing",
-      "count": 28,
+      "count": 30,
       "types": {
-        "tip": 8,
+        "tip": 10,
         "project": 10,
         "tool": 7,
         "architecture": 1,
@@ -1927,6 +1954,7 @@
         "chainlit",
         "choose-observability-tool",
         "conan",
+        "correlate-llm-traces-with-request-ids",
         "do-not-launch-without-trace-sampling",
         "evals-in-production",
         "langfuse",
@@ -1934,6 +1962,7 @@
         "langsmith-platform",
         "llm-observability",
         "log-agent-state-transitions",
+        "log-latency-by-pipeline-stage",
         "log-raw-and-parsed-model-outputs",
         "lunary",
         "openai-agents-sdk",

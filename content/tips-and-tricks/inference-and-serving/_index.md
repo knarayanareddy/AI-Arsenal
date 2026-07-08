@@ -28,6 +28,7 @@ Choosing an entire serving architecture (which inference engine, self-hosted vs.
 
 ### Recently Added
 
+- [Warm Up Model Servers Before Routing Production Traffic to Them](./warm-up-model-servers-before-routing-traffic.md)
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./add-provider-timeout-and-retry-policies.md)
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./benchmark-on-the-user-hardware.md)
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./benchmark-with-production-shaped-inputs.md)
@@ -37,7 +38,6 @@ Choosing an entire serving architecture (which inference engine, self-hosted vs.
 - [Match Configured Context Length to Available RAM Before Demos](./match-context-length-to-ram.md)
 - [Track KV Cache Hit Rate for Long-Context Serving Economics](./measure-kv-cache-hit-rate.md)
 - [Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images](./pin-dependencies-for-inference-images.md)
-- [Pin Model and Runtime Versions Before Running Any Benchmark](./pin-model-and-runtime-versions.md)
 
 ### Most Popular
 
@@ -63,3 +63,4 @@ _No star-tracked entries yet._
 - [Prefer INT8 Over INT4 When Quality Risk Matters More Than Maximum Compression](./use-int8-for-safer-compression.md) — 
 - [Default to Local Models When Prototyping With Sensitive Data](./use-local-models-for-sensitive-prototyping.md) — 
 - [Use Speculative Decoding When a Cheap Draft Model Is Available and Latency Dominates](./use-speculative-decoding-for-latency-critical-paths.md) — 
+- [Warm Up Model Servers Before Routing Production Traffic to Them](./warm-up-model-servers-before-routing-traffic.md) — 

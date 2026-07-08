@@ -15,22 +15,22 @@
 | [projects](./projects/) | 73 entries | 2026-07-08 |
 | [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 115 entries | 2026-07-08 |
 | [tools](./tools/) | 131 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md)
+- [Cache Idempotent Tool Results Within an Agent Run](./tips-and-tricks/agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md)
+- [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
+- [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./tips-and-tricks/agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
+- [Propagate Application Request IDs Into Every LLM Trace](./tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
 - [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [Orca](./tools/dx-and-tooling/orca.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
-- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
-- [Superpowers](./tools/dx-and-tooling/superpowers.md)
 
 ## Most Popular
 
@@ -91,9 +91,9 @@
 - [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
+- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md) — 
 - [BEIR](./benchmarks/retrieval-rag/beir.md) — 
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
