@@ -130,6 +130,7 @@ This table is exhaustive for tools tagged with job = structured-output.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [BAML](../dx-and-tooling/baml.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Basedash](../dx-and-tooling/basedash.md) | dx and tooling | paid | No | No | No | typescript | watching |
 | [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [Google Pomelli 2.0](../dx-and-tooling/google-pomelli-2-0.md) | dx and tooling | freemium | Yes | No | No | python | watching |
@@ -138,6 +139,7 @@ This table is exhaustive for tools tagged with job = structured-output.
 | [Honen](../dx-and-tooling/honen.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 | [Instructor](../dx-and-tooling/instructor.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [LM Format Enforcer](../model-layer/lm-format-enforcer.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Mirascope](../orchestration/mirascope.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Outlines](../model-layer/outlines.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |

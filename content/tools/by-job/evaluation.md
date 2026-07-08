@@ -173,6 +173,7 @@ This table is exhaustive for tools tagged with job = evaluation.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [AgentOps](../evaluation-and-observability/agentops.md) | evaluation and observability | freemium | Yes | No | Yes | python | watching |
+| [any-agent](../orchestration/any-agent.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | freemium | Yes | No | No | python | watching |

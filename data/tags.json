@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:23:32.290Z",
+  "generated_at": "2026-07-08T20:35:24.303Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 146,
+      "count": 149,
       "types": {
         "tip": 17,
-        "tool": 46,
+        "tool": 49,
         "build-example": 3,
         "guide": 7,
         "benchmark": 9,
@@ -34,6 +34,7 @@
         "ai-engineer-role",
         "aider",
         "aider-polyglot",
+        "any-agent",
         "anythingllm",
         "autogen",
         "autogpt",
@@ -127,6 +128,7 @@
         "salemi-2026-grepseek",
         "sandbox-code-execution-tools",
         "schick-2023-toolformer",
+        "scrapegraphai",
         "seaticket",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
@@ -141,6 +143,7 @@
         "spring-ai",
         "stagehand",
         "starter-simple-react-agent",
+        "strands-agents",
         "strix",
         "summarize-long-running-agent-state",
         "superpowers",
@@ -486,9 +489,9 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 83,
+      "count": 85,
       "types": {
-        "tool": 29,
+        "tool": 31,
         "person": 4,
         "project": 13,
         "guide": 28,
@@ -517,6 +520,7 @@
         "deepchecks",
         "deployment",
         "dlt",
+        "docetl",
         "docling",
         "dvc",
         "eugene-yan",
@@ -558,6 +562,7 @@
         "repomix",
         "research-platform",
         "scale-ai",
+        "scrapegraphai",
         "security-and-guardrails",
         "shreya-shankar",
         "stack-cpp",
@@ -614,13 +619,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 52,
+      "count": 53,
       "types": {
         "paper": 16,
         "guide": 4,
         "tip": 11,
         "project": 10,
-        "tool": 9,
+        "tool": 10,
         "architecture": 2
       },
       "entries": [
@@ -655,6 +660,7 @@
         "ktransformers",
         "kwon-2023-pagedattention",
         "leviathan-2022-speculative-decoding",
+        "liger-kernel",
         "lin-2023-awq",
         "lorax",
         "megatron-lm",
@@ -681,13 +687,13 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 42,
+      "count": 43,
       "types": {
         "tip": 8,
         "project": 13,
         "guide": 2,
         "architecture": 4,
-        "tool": 7,
+        "tool": 8,
         "paper": 7,
         "person": 1
       },
@@ -714,6 +720,7 @@
         "khattab-2020-colbert",
         "lancedb",
         "llamaindex",
+        "marqo",
         "mikolov-2013-word2vec",
         "milvus",
         "mteb",
@@ -739,21 +746,22 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 156,
+      "count": 158,
       "types": {
         "digest": 1,
+        "tool": 29,
         "tip": 26,
         "build-example": 1,
         "guide": 10,
         "project": 14,
         "benchmark": 50,
-        "tool": 27,
         "person": 9,
         "paper": 12,
         "architecture": 6
       },
       "entries": [
         "2026-07",
+        "adalflow",
         "add-evals-before-refactors",
         "advanced-self-correcting-rag",
         "agent-builder-role",
@@ -763,6 +771,7 @@
         "ai-engineer-role",
         "aider-polyglot",
         "alpacaeval",
+        "any-agent",
         "arc-agi",
         "arena-hard",
         "argilla",
@@ -927,9 +936,9 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 37,
+      "count": 38,
       "types": {
-        "tool": 13,
+        "tool": 14,
         "project": 7,
         "paper": 6,
         "tip": 8,
@@ -951,6 +960,7 @@
         "hu-2021-lora",
         "inspect-your-training-data-by-hand",
         "lee-2023-rlaif",
+        "liger-kernel",
         "litgpt",
         "liu-2023-llava",
         "llamafactory",
@@ -1096,10 +1106,10 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 110,
+      "count": 111,
       "types": {
         "tip": 25,
-        "tool": 24,
+        "tool": 25,
         "paper": 12,
         "project": 35,
         "architecture": 7,
@@ -1147,6 +1157,7 @@
         "kokoro",
         "kserve",
         "ktransformers",
+        "kubeai",
         "kwon-2023-pagedattention",
         "leviathan-2022-speculative-decoding",
         "liang-2026-mipi",
@@ -1222,15 +1233,16 @@
     {
       "id": "kubernetes",
       "label": "Kubernetes",
-      "count": 3,
+      "count": 4,
       "types": {
         "architecture": 1,
-        "tool": 1,
+        "tool": 2,
         "project": 1
       },
       "entries": [
         "enterprise-scale",
         "kserve",
+        "kubeai",
         "milvus"
       ]
     },
@@ -1267,11 +1279,11 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 262,
+      "count": 267,
       "types": {
+        "tool": 66,
         "tip": 31,
         "guide": 44,
-        "tool": 61,
         "paper": 39,
         "project": 49,
         "benchmark": 14,
@@ -1280,6 +1292,7 @@
         "build-example": 2
       },
       "entries": [
+        "adalflow",
         "add-evals-before-refactors",
         "add-output-examples-for-edge-cases",
         "ai-engineer",
@@ -1301,6 +1314,7 @@
         "aws-bedrock",
         "axolotl",
         "azure-ai-studio",
+        "baml",
         "bigcodebench",
         "bird-sql",
         "brown-2020-gpt3",
@@ -1339,6 +1353,7 @@
         "detect-context-truncation-in-tests",
         "devlin-2018-bert",
         "dlt",
+        "docetl",
         "dspy",
         "dubey-2024-llama3",
         "establish-a-prompting-baseline-before-fine-tuning",
@@ -1420,6 +1435,7 @@
         "memory-management",
         "meng-2024-simpo",
         "mesop",
+        "mirascope",
         "mistral-models",
         "mistral-rs",
         "ml-engineer",
@@ -1472,6 +1488,7 @@
         "repomix",
         "reserve-output-tokens-before-adding-context",
         "run-evals-multiple-times-before-trusting-deltas",
+        "scrapegraphai",
         "sebastian-bubeck",
         "sebastian-raschka",
         "security-and-guardrails",
@@ -1835,20 +1852,22 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 44,
+      "count": 49,
       "types": {
+        "tool": 25,
         "guide": 2,
-        "tool": 20,
         "project": 18,
         "architecture": 3,
         "tip": 1
       },
       "entries": [
+        "adalflow",
         "agent-builder-role",
         "agent-design",
         "agno",
         "agnt-hub",
         "airflow",
+        "any-agent",
         "autogen",
         "browser-use",
         "camel-ai",
@@ -1859,6 +1878,7 @@
         "crewai",
         "dagster",
         "dify",
+        "docetl",
         "dropstone-3",
         "empromptu-ai",
         "flowise",
@@ -1873,6 +1893,7 @@
         "mastra",
         "metagpt",
         "microsoft-agent-framework",
+        "mirascope",
         "multi-agent-system",
         "n8n",
         "orca",
@@ -1886,6 +1907,7 @@
         "set-wall-clock-timeouts-for-agent-runs",
         "single-agent-vs-multi-agent",
         "stagehand",
+        "strands-agents",
         "temporal",
         "txtai"
       ]
@@ -1973,12 +1995,12 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 118,
+      "count": 119,
       "types": {
         "tip": 19,
         "build-example": 5,
         "guide": 4,
-        "tool": 22,
+        "tool": 23,
         "project": 35,
         "paper": 16,
         "benchmark": 7,
@@ -2057,6 +2079,7 @@
         "lunary",
         "marker",
         "markitdown",
+        "marqo",
         "measure-retrieval-recall-before-answer-quality",
         "meilisearch",
         "mem0",
@@ -2196,11 +2219,11 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 95,
+      "count": 96,
       "types": {
         "tip": 20,
         "build-example": 4,
-        "tool": 18,
+        "tool": 19,
         "paper": 16,
         "benchmark": 7,
         "guide": 3,
@@ -2256,6 +2279,7 @@
         "llamaindex",
         "loft",
         "log-retrieved-context",
+        "marqo",
         "measure-retrieval-recall-before-answer-quality",
         "meilisearch",
         "milvus",
@@ -2409,11 +2433,11 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 65,
+      "count": 66,
       "types": {
         "project": 32,
         "architecture": 5,
-        "tool": 23,
+        "tool": 24,
         "paper": 1,
         "tip": 4
       },
@@ -2448,6 +2472,7 @@
         "khoj",
         "kokoro",
         "kserve",
+        "kubeai",
         "label-studio",
         "langfuse",
         "librechat",
@@ -2550,10 +2575,10 @@
     {
       "id": "structured-output",
       "label": "Structured Output",
-      "count": 35,
+      "count": 37,
       "types": {
         "tip": 13,
-        "tool": 11,
+        "tool": 13,
         "architecture": 1,
         "guide": 4,
         "benchmark": 1,
@@ -2564,6 +2589,7 @@
       "entries": [
         "add-output-examples-for-edge-cases",
         "ask-for-missing-inputs-before-solving",
+        "baml",
         "basedash",
         "choose-structured-output-strategy",
         "claude-artifact-player",
@@ -2578,6 +2604,7 @@
         "intermediate-multi-tool-agent",
         "jason-liu",
         "lm-format-enforcer",
+        "mirascope",
         "name-the-audience-in-the-prompt",
         "order-few-shot-examples-by-similarity",
         "outlines",
@@ -2602,11 +2629,11 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 60,
+      "count": 62,
       "types": {
         "tip": 14,
         "guide": 6,
-        "tool": 14,
+        "tool": 16,
         "project": 18,
         "architecture": 2,
         "build-example": 2,
@@ -2624,6 +2651,7 @@
         "allowlist-tools-per-agent-role",
         "autogen",
         "autogpt",
+        "baml",
         "browser-use",
         "browserbase",
         "budget-context-before-adding-tools",
@@ -2666,6 +2694,7 @@
         "skyvern",
         "smolagents",
         "starter-simple-react-agent",
+        "strands-agents",
         "strix",
         "structured-output-and-tool-use",
         "superpowers",
@@ -2724,9 +2753,9 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 45,
+      "count": 46,
       "types": {
-        "tool": 8,
+        "tool": 9,
         "guide": 4,
         "person": 3,
         "paper": 24,
@@ -2758,6 +2787,7 @@
         "jeremy-howard",
         "kaplan-2020-scaling-laws",
         "liang-2026-mipi",
+        "liger-kernel",
         "litgpt",
         "llm-researcher-role",
         "megatron-lm",

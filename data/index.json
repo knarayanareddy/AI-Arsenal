@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:23:32.290Z",
+    "generated_at": "2026-07-08T20:35:24.303Z",
     "total_projects": 136,
-    "total_tools": 177,
+    "total_tools": 187,
     "total_papers": 90,
     "total_tips": 129,
     "total_people": 25,
@@ -51,6 +51,25 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "adalflow",
+      "type": "tool",
+      "name": "AdalFlow",
+      "description": "PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric",
+      "tags": [
+        "llm",
+        "orchestration",
+        "evaluation"
+      ],
+      "path": "content/tools/dx-and-tooling/adalflow.md",
+      "url": "content/tools/dx-and-tooling/adalflow",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -802,6 +821,25 @@
       "featured": false
     },
     {
+      "id": "any-agent",
+      "type": "tool",
+      "name": "any-agent",
+      "description": "One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation",
+      "tags": [
+        "agents",
+        "orchestration",
+        "evaluation"
+      ],
+      "path": "content/tools/orchestration/any-agent.md",
+      "url": "content/tools/orchestration/any-agent",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "anything-llm",
       "type": "project",
       "name": "AnythingLLM",
@@ -1158,6 +1196,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "baml",
+      "type": "tool",
+      "name": "BAML",
+      "description": "DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output",
+      "tags": [
+        "structured-output",
+        "llm",
+        "tool-use"
+      ],
+      "path": "content/tools/dx-and-tooling/baml.md",
+      "url": "content/tools/dx-and-tooling/baml",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -3427,6 +3484,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "docetl",
+      "type": "tool",
+      "name": "DocETL",
+      "description": "LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)",
+      "tags": [
+        "data",
+        "llm",
+        "orchestration"
+      ],
+      "path": "content/tools/data-ingestion/docetl.md",
+      "url": "content/tools/data-ingestion/docetl",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -6035,6 +6111,25 @@
       "featured": false
     },
     {
+      "id": "kubeai",
+      "type": "tool",
+      "name": "KubeAI",
+      "description": "Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "kubernetes"
+      ],
+      "path": "content/tools/serving-and-deployment/kubeai.md",
+      "url": "content/tools/serving-and-deployment/kubeai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "kwon-2023-pagedattention",
       "type": "paper",
       "name": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
@@ -6490,6 +6585,25 @@
       "last_updated": "2026-07-08",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "liger-kernel",
+      "type": "tool",
+      "name": "Liger Kernel",
+      "description": "Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "efficiency"
+      ],
+      "path": "content/tools/model-layer/liger-kernel.md",
+      "url": "content/tools/model-layer/liger-kernel",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -7276,6 +7390,25 @@
       "featured": false
     },
     {
+      "id": "marqo",
+      "type": "tool",
+      "name": "Marqo",
+      "description": "Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "rag"
+      ],
+      "path": "content/tools/data-ingestion/marqo.md",
+      "url": "content/tools/data-ingestion/marqo",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mastra",
       "type": "project",
       "name": "Mastra",
@@ -7728,6 +7861,25 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mirascope",
+      "type": "tool",
+      "name": "Mirascope",
+      "description": "Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python",
+      "tags": [
+        "orchestration",
+        "structured-output",
+        "llm"
+      ],
+      "path": "content/tools/orchestration/mirascope.md",
+      "url": "content/tools/orchestration/mirascope",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -10602,6 +10754,25 @@
       "featured": false
     },
     {
+      "id": "scrapegraphai",
+      "type": "tool",
+      "name": "ScrapeGraphAI",
+      "description": "LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors",
+      "tags": [
+        "data",
+        "agents",
+        "llm"
+      ],
+      "path": "content/tools/data-ingestion/scrapegraphai.md",
+      "url": "content/tools/data-ingestion/scrapegraphai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "screenshot-to-code",
       "type": "project",
       "name": "screenshot-to-code",
@@ -11623,6 +11794,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "strands-agents",
+      "type": "tool",
+      "name": "Strands Agents SDK",
+      "description": "Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use"
+      ],
+      "path": "content/tools/orchestration/strands-agents.md",
+      "url": "content/tools/orchestration/strands-agents",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {

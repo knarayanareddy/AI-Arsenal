@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:23:34.998Z | Entries: 742 | Schema version: 1.0.0
+Generated: 2026-07-08T20:35:27.017Z | Entries: 752 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 136
-- Tools: 177
+- Tools: 187
 - Papers: 90
 - Tips: 129
 - People: 25
@@ -118,17 +118,17 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### evaluation
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
+- any-agent — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - Code Arena — Benchmark and compare AI models in a competitive coding environment
-- Deepchecks — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
 - DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
 - Hugging Face Accelerate — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
+- Liger Kernel — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
-- Megatron-LM — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
@@ -154,9 +154,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### orchestration
 - Agno — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
+- any-agent — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - Apache Airflow — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
-- Cloudskill — Manage, govern, and distribute skills for AI agents across teams
 
 ### production-serving
 - BentoML — A framework for packaging, deploying, and scaling AI model services
@@ -166,18 +166,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - FastAPI — Python web framework for building APIs around AI services and model workflows
 
 ### prompt-management
+- AdalFlow — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
 - Cloudskill — Manage, govern, and distribute skills for AI agents across teams
 - Humanloop — A platform for prompt management, evaluation, and product feedback workflows
 - Langfuse Prompts — Prompt management and versioning workflows inside the Langfuse observability platform
 - LangSmith Hub — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
-- LiteLLM — A proxy and SDK for routing requests across many LLM providers
 
 ### prototyping
+- AdalFlow — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
 - Agent Skills (Addy Osmani) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - Aider — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
 - Chainlit — A framework for building conversational AI interfaces and debugging LLM apps
 - Chrome DevTools MCP — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
-- Claude Code — Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories
 
 ### security-and-guardrails
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
@@ -187,11 +187,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - garak (NVIDIA) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 
 ### structured-output
+- BAML — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
 - Basedash — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - Claude Artifact Player — Interact with and manage AI-generated artifacts from Claude and similar models
 - Google Pomelli 2.0 — Explore and interact with large datasets through a visual, intuitive interface
 - Guardrails AI — A framework for validating, correcting, and constraining LLM outputs
-- Guidance — Microsoft guidance library for controlling and constraining language model generation
 
 ### tracing
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
@@ -203,9 +203,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### vector-search
 - Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - FAISS — Meta's foundational library for efficient similarity search over billions of dense vectors
+- Marqo — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
 - Meilisearch — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - Pinecone — A managed vector database for production semantic search applications
-- RAGatouille — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs

@@ -33,10 +33,10 @@ Before picking a tool in this phase, consider:
 - [Cohere](./cohere.md)
 - [DeepSpeed](./deepspeed.md)
 - [Groq](./groq.md)
+- [Liger Kernel](./liger-kernel.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
 - [Megatron-LM](./megatron-lm.md)
 - [OpenRouter](./openrouter.md)
-- [PyTorch Lightning](./pytorch-lightning.md)
 
 ### Most Popular
 
@@ -57,6 +57,7 @@ _No star-tracked entries yet._
 - [Ideogram](./ideogram.md) — AI image generation with reliable text rendering in outputs
 - [Ideogram AI](./ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
+- [Liger Kernel](./liger-kernel.md) — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
 - [LLaMA-Factory](./llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
 - [LM Format Enforcer](./lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism

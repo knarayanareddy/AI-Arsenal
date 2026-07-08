@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:23:32.290Z",
-  "count": 177,
+  "generated_at": "2026-07-08T20:35:24.303Z",
+  "count": 187,
   "items": [
     {
       "id": "accelerate",
@@ -83,6 +83,98 @@
       "word_count": 492,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Device-agnostic PyTorch training launcher. Open source. Best for making custom training loops portable across hardware and distributed backends.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Accelerate wraps a plain PyTorch training loop in a few lines (<code>accelerator.prepare(...)</code>, <code>accelerator.backward(loss)</code>) and moves all device/distribution concerns into a launch-time config: the same script runs on a laptop CPU, a single GPU, multi-node DDP, FSDP, or DeepSpeed. It also provides big-model utilities (<code>device_map=\"auto\"</code> loading, offloading) used across the HF ecosystem.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Most fine-tuning tooling in this phase (Trainer, TRL, Axolotl, PEFT workflows) runs on Accelerate underneath — it's the distribution substrate of the open training stack, and the tool you drop to when a framework's abstraction leaks. For teams writing their own loops, it's the difference between one codebase and one-per-backend. See Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>One training script across CPU/GPU/multi-GPU/multi-node/TPU, selected by <code>accelerate config</code>, not code</li>\n<li>First-class FSDP and DeepSpeed integration via config files</li>\n<li>Big-model inference utilities: automatic device maps, CPU/disk offload for models larger than one GPU</li>\n<li>Mixed precision (fp16/bf16/fp8) handled by the accelerator object</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The <code>Accelerator</code> object inspects the launch environment and wraps model, optimizer, and dataloaders with the right distributed containers; <code>accelerate launch</code> spawns processes per the saved config. Backend-specific behavior (FSDP wrapping policy, DeepSpeed ZeRO stage) lives in config, keeping the loop code backend-neutral.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install accelerate\naccelerate config   # answer prompts once per machine\naccelerate launch train.py\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a custom fine-tuning loop that must run on a dev GPU today and an 8×A100 node next week without a rewrite</li>\n<li><strong>Scenario</strong>: debugging a distributed run launched by a higher-level framework — the failure surface is usually Accelerate/FSDP/DeepSpeed config</li>\n<li><strong>Scenario</strong>: loading a model too large for one GPU for inference or PEFT training via device maps and offload</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want recipes and YAML-config training rather than owning a loop — use a framework layer instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The minimal-abstraction sweet spot: you keep your PyTorch loop, it owns only devices and distribution</li>\n<li>Battle-tested as the substrate of the HF training ecosystem; distributed bugs are widely documented</li>\n<li>FSDP/DeepSpeed become config choices, making backend comparisons cheap</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not a framework: no recipes, datasets, or method implementations — pair with PEFT/TRL or move up a layer</li>\n<li>Extreme-scale parallelism (tensor/pipeline/expert) is out of scope; Megatron-class tooling applies there</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./megatron-lm.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Megatron-LM</a> and <a href=\"./torchtune.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">torchtune</a> before adopting — they overlap at the distribution layer.</li>\n<li>Underlies <a href=\"./peft.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PEFT</a> and <a href=\"./axolotl.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Axolotl</a> workflows; debugging those often means reading Accelerate config.</li>\n<li>Link this tool from job guides using its canonical ID <code>accelerate</code>.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/docs/accelerate/index\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://huggingface.co/docs/accelerate/index\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/huggingface/accelerate\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>9.7k GitHub stars and position as the default launcher beneath the Hugging Face training stack (verified via the GitHub API, 2026-07-08).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Device agnostic PyTorch training launcher. Open source. Best for making custom training loops portable across hardware and distributed backends. Overview Accelerate wraps a plain PyTorch training loop in a few lines (accelerator.prepare(...), accelerator.backward(loss)) and moves all device/distribution concerns into a launch time config: the same script runs on a laptop CPU, a single GPU, multi node DDP, FSDP, or DeepSpeed. It also provides big model utilities (device map=\"auto\" loading, offloading) used across the HF ecosystem. Why It's in the Arsenal Most fine tuning tooling in this phase (Trainer, TRL, Axolotl, PEFT workflows) runs on Accelerate underneath — it's the distribution substrate of the open training stack, and the tool you drop to when a framework's abstraction leaks. For teams writing their own loops, it's the difference between one codebase and one per backend. See Strengths / Limitations below before adopting it. Key Features One training script across CPU/GPU/multi GPU/multi node/TPU, selected by accelerate config, not code First class FSDP and DeepSpeed integration via config files Big model inference utilities: automatic device maps, CPU/disk offload for models larger than one GPU Mixed precision (fp16/bf16/fp8) handled by the accelerator object Architecture / How It Works The Accelerator object inspects the launch environment and wraps model, optimizer, and dataloaders with the right distributed containers; accelerate launch spawns processes per the saved config. Backend specific behavior (FSDP wrapping policy, DeepSpeed ZeRO stage) lives in config, keeping the loop code backend neutral. Getting Started Use Cases 1. Scenario : a custom fine tuning loop that must run on a dev GPU today and an 8×A100 node next week without a rewrite 2. Scenario : debugging a distributed run launched by a higher level framework — the failure surface is usually Accelerate/FSDP/DeepSpeed config 3. Scenario : loading a model too large for one GPU for inference or PEFT training via device maps and offload 4. Scenario where this is NOT the right fit : you want recipes and YAML config training rather than owning a loop — use a framework layer instead Strengths The minimal abstraction sweet spot: you keep your PyTorch loop, it owns only devices and distribution Battle tested as the substrate of the HF training ecosystem; distributed bugs are widely documented FSDP/DeepSpeed become config choices, making backend comparisons cheap Limitations / When NOT to Use Not a framework: no recipes, datasets, or method implementations — pair with PEFT/TRL or move up a layer Extreme scale parallelism (tensor/pipeline/expert) is out of scope; Megatron class tooling applies there Integration Patterns Compare against Megatron LM and torchtune before adopting — they overlap at the distribution layer. Underlies PEFT and Axolotl workflows; debugging those often means reading Accelerate config. Link this tool from job guides using its canonical ID accelerate. Resources Primary site Documentation Source Buzz & Reception 9.7k GitHub stars and position as the default launcher beneath the Hugging Face training stack (verified via the GitHub API, 2026 07 08). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "adalflow",
+      "name": "AdalFlow",
+      "type": "tool",
+      "job": [
+        "prototyping",
+        "prompt-management"
+      ],
+      "description": "PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric",
+      "url": "content/tools/dx-and-tooling/adalflow",
+      "cost_model": "open-source",
+      "pricing_detail": "MIT open source; free (you pay your own LLM provider costs)",
+      "tags": [
+        "llm",
+        "orchestration",
+        "evaluation"
+      ],
+      "maturity": "alpha",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Open source and free",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/SylphAI-Inc/AdalFlow",
+      "docs_url": "https://adalflow.sylph.ai/",
+      "github_url": "https://github.com/SylphAI-Inc/AdalFlow",
+      "alternatives": [
+        "dspy",
+        "langchain"
+      ],
+      "integrates_with": [
+        "pytorch",
+        "litellm"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "research"
+      ],
+      "best_when": [
+        "You want to automatically optimize prompts/few-shot demonstrations against an eval metric instead of hand-tuning them",
+        "You like a PyTorch-style, unopinionated component API and want to keep control of each building block"
+      ],
+      "avoid_when": [
+        "You want a batteries-included framework with many prebuilt integrations — AdalFlow is intentionally lightweight/low-level",
+        "You need production stability today; it is early-stage and its API is still evolving"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (4,175), MIT license, and last push (2026-05-29) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "watching",
+      "verdict_rationale": "Compelling 'optimize prompts like weights' approach with a clean component model; alpha-stage and overlaps DSPy on auto-optimization",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/SylphAI-Inc/AdalFlow",
+          "date": "2026-07-08",
+          "description": "4,175 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/adalflow.md",
+      "slug": "adalflow",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "AdalFlow",
+      "summary": "PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 398,
+      "body_html": "<h2>Overview</h2>\n<p>AdalFlow is a lightweight, PyTorch-inspired library for building LLM applications where the standout feature is auto-optimization: a trainer that tunes your prompts and few-shot demonstrations against an evaluation metric, borrowing the training/optimizer mental model from deep learning. Components are model-agnostic and low-level, so you compose applications explicitly rather than through heavy abstractions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because it operationalizes \"stop hand-tuning prompts\" — treating prompt/demonstration selection as an optimization problem with a metric and a trainer. It is a comparison point against DSPy and general frameworks in the dx-and-tooling phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>PyTorch-style, model-agnostic components (Generator, Retriever, etc.)</li>\n<li>Trainer that auto-optimizes prompts and few-shot demos toward a metric</li>\n<li>Text-gradient / few-shot optimization strategies</li>\n<li>Unopinionated, low-level building blocks you control</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You define a task pipeline from components with tunable <code>Parameter</code>s (prompt text, demonstrations). Given a metric and training examples, AdalFlow's optimizer proposes and evaluates changes to those parameters — analogous to gradient steps — searching for prompt/demo configurations that maximize the metric, then freezes the best for inference.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install adalflow\n# build a pipeline from Components, define an eval metric + trainset,\n# then run the Trainer to auto-optimize the prompt Parameters\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: auto-tune a classification/extraction prompt against a labeled eval set</li>\n<li><strong>Scenario</strong>: optimize few-shot demonstrations rather than guessing them by hand</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want prebuilt agents/integrations out of the box — a full framework fits better</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Systematic prompt/demo optimization with a metric</li>\n<li>Clean, low-abstraction component design</li>\n<li>Model-agnostic; you retain control</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Alpha-stage; evolving API and stability</p>\n</li>\n<li>\n<p>Low-level by design — more assembly than batteries-included frameworks</p>\n</li>\n<li>\n<p>Auto-optimization consumes eval-time LLM calls</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>dspy</code> (the closest auto-optimization alternative) and <code>langchain</code> before adopting.</li>\n<li>Link this tool from job guides using its canonical ID <code>adalflow</code>.</li>\n<li>Record eval-metric and optimization-cost assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://adalflow.sylph.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site &amp; Docs</a></li>\n<li><a href=\"https://github.com/SylphAI-Inc/AdalFlow\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>4,175 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview AdalFlow is a lightweight, PyTorch inspired library for building LLM applications where the standout feature is auto optimization: a trainer that tunes your prompts and few shot demonstrations against an evaluation metric, borrowing the training/optimizer mental model from deep learning. Components are model agnostic and low level, so you compose applications explicitly rather than through heavy abstractions. Why It's in the Arsenal It earns a place because it operationalizes \"stop hand tuning prompts\" — treating prompt/demonstration selection as an optimization problem with a metric and a trainer. It is a comparison point against DSPy and general frameworks in the dx and tooling phase, not an unconditional recommendation — see Strengths / Limitations. Key Features PyTorch style, model agnostic components (Generator, Retriever, etc.) Trainer that auto optimizes prompts and few shot demos toward a metric Text gradient / few shot optimization strategies Unopinionated, low level building blocks you control Architecture / How It Works You define a task pipeline from components with tunable Parameters (prompt text, demonstrations). Given a metric and training examples, AdalFlow's optimizer proposes and evaluates changes to those parameters — analogous to gradient steps — searching for prompt/demo configurations that maximize the metric, then freezes the best for inference. Getting Started Use Cases 1. Scenario : auto tune a classification/extraction prompt against a labeled eval set 2. Scenario : optimize few shot demonstrations rather than guessing them by hand 3. Scenario where this is NOT the right fit : you want prebuilt agents/integrations out of the box — a full framework fits better Strengths Systematic prompt/demo optimization with a metric Clean, low abstraction component design Model agnostic; you retain control Limitations / When NOT to Use Alpha stage; evolving API and stability Low level by design — more assembly than batteries included frameworks Auto optimization consumes eval time LLM calls Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against dspy (the closest auto optimization alternative) and langchain before adopting. Link this tool from job guides using its canonical ID adalflow. Record eval metric and optimization cost assumptions before production adoption. Resources Official Site & Docs GitHub Buzz & Reception 4,175 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "addyosmani-agent-skills",
@@ -868,6 +960,101 @@
       "body_text": "TL;DR: Mature workflow scheduler for batch data, ML, and AI pipeline orchestration. Open source or free to start. Best for established scheduled workflows. Overview A widely used open source workflow scheduler originally built for data engineering, commonly repurposed to orchestrate batch AI/ML pipelines — ingestion, training jobs, evaluation runs — as directed acyclic graphs (DAGs). Why It's in the Arsenal Apache Airflow earns a place in the Arsenal because it directly addresses a recurring decision point: you already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features DAG based scheduling with dependency management Huge ecosystem of pre built operators/providers Mature retry, backfill, and SLA monitoring tooling Architecture / How It Works Pipelines are defined as Python DAGs of discrete tasks; a scheduler triggers tasks based on time or external sensors, and a web UI shows run history and task state. Getting Started Use Cases 1. Scenario : you already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability 2. Scenario : you need mature, battle tested DAG orchestration with a huge plugin ecosystem and broad community support 3. Scenario : your workflows are primarily time or sensor triggered batch jobs, not low latency agent loops 4. Scenario where this is NOT the right fit : you need sub second or streaming style orchestration for live agent conversations — evaluate an alternative instead Strengths You already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability You need mature, battle tested DAG orchestration with a huge plugin ecosystem and broad community support Your workflows are primarily time or sensor triggered batch jobs, not low latency agent loops Limitations / When NOT to Use You need sub second or streaming style orchestration for live agent conversations Your team has no data engineering background; Airflow's operational overhead is non trivial for a small AI app You want a lightweight library to embed directly in a Python service rather than run a separate scheduler Integration Patterns Link this tool from job guides using its canonical ID airflow. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for orchestration. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "any-agent",
+      "name": "any-agent",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "evaluation"
+      ],
+      "description": "One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation",
+      "url": "content/tools/orchestration/any-agent",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 open source (Mozilla AI); free (you pay your own LLM provider costs)",
+      "tags": [
+        "agents",
+        "orchestration",
+        "evaluation"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Open source and free",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/mozilla-ai/any-agent",
+      "docs_url": "https://mozilla-ai.github.io/any-agent/",
+      "github_url": "https://github.com/mozilla-ai/any-agent",
+      "alternatives": [
+        "openai-agents-sdk",
+        "langchain",
+        "smolagents"
+      ],
+      "integrates_with": [
+        "openai-agents-sdk",
+        "langchain",
+        "smolagents",
+        "google-adk"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "orchestration",
+      "audience": [
+        "prototype",
+        "research"
+      ],
+      "best_when": [
+        "You want to try/compare multiple agent frameworks behind one API without rewriting your agent for each",
+        "You want framework-agnostic tracing and evaluation (via OpenTelemetry) to benchmark agents apples-to-apples"
+      ],
+      "avoid_when": [
+        "You've already committed to one framework and use its advanced, framework-specific features — the abstraction can hide or lag them",
+        "You need a specific framework's newest capability immediately; a wrapper adds an indirection/latency layer"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (1,181), Apache-2.0 license, and last push (2026-07-01) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "Useful meta-layer for evaluating and switching agent frameworks; by nature it trails each framework's bleeding edge",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/mozilla-ai/any-agent",
+          "date": "2026-07-08",
+          "description": "1,181 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/orchestration/any-agent.md",
+      "slug": "any-agent",
+      "section_path": "content/tools/orchestration",
+      "display_name": "any-agent",
+      "summary": "One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 392,
+      "body_html": "<h2>Overview</h2>\n<p>any-agent (Mozilla AI) is a single Python API that wraps many agent frameworks — LangChain, OpenAI Agents SDK, Google ADK, smolagents, and more — so you can define an agent once and run it on any of them. It adds a framework-agnostic tracing and evaluation layer (OpenTelemetry-based) so agents built on different frameworks can be compared on the same footing.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because choosing an agent framework is high-stakes and hard to reverse; any-agent lets you defer and compare that choice empirically. It is a comparison point / meta-layer for the orchestration phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>One API over multiple agent frameworks (build once, swap backend)</li>\n<li>Framework-agnostic tracing via OpenTelemetry</li>\n<li>Built-in agent evaluation to compare frameworks/configs</li>\n<li>Serve agents over A2A/MCP-style interfaces</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>any-agent defines a common agent configuration (model, tools, instructions) and adapters that translate it into each supported framework's native constructs. Execution is traced through a shared telemetry layer, so runs across frameworks emit comparable spans/metrics that the evaluation module scores against your criteria.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install any-agent\n# from any_agent import AnyAgent, AgentConfig\n# agent = AnyAgent.create(\"openai\", AgentConfig(model_id=..., tools=[...]))\n# swap \"openai\" for \"langchain\"/\"smolagents\"/... to compare\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: benchmark the same agent across frameworks before committing</li>\n<li><strong>Scenario</strong>: get uniform tracing/evaluation regardless of the underlying framework</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you rely on one framework's advanced, native-only features — the abstraction may not expose them</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Avoids lock-in; empirical framework comparison</li>\n<li>Consistent observability/evaluation across frameworks</li>\n<li>Backed by Mozilla AI</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Abstraction can lag or hide framework-specific features</p>\n</li>\n<li>\n<p>Extra indirection layer to maintain and debug</p>\n</li>\n<li>\n<p>Younger project; coverage varies by framework</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against committing directly to <code>openai-agents-sdk</code>, <code>langchain</code>, or <code>smolagents</code> — any-agent wraps these rather than replacing them.</li>\n<li>Link this tool from job guides using its canonical ID <code>any-agent</code>.</li>\n<li>Record which frameworks/features you depend on before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://mozilla-ai.github.io/any-agent/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site &amp; Docs</a></li>\n<li><a href=\"https://github.com/mozilla-ai/any-agent\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>1,181 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview any agent (Mozilla AI) is a single Python API that wraps many agent frameworks — LangChain, OpenAI Agents SDK, Google ADK, smolagents, and more — so you can define an agent once and run it on any of them. It adds a framework agnostic tracing and evaluation layer (OpenTelemetry based) so agents built on different frameworks can be compared on the same footing. Why It's in the Arsenal It earns a place because choosing an agent framework is high stakes and hard to reverse; any agent lets you defer and compare that choice empirically. It is a comparison point / meta layer for the orchestration phase, not an unconditional recommendation — see Strengths / Limitations. Key Features One API over multiple agent frameworks (build once, swap backend) Framework agnostic tracing via OpenTelemetry Built in agent evaluation to compare frameworks/configs Serve agents over A2A/MCP style interfaces Architecture / How It Works any agent defines a common agent configuration (model, tools, instructions) and adapters that translate it into each supported framework's native constructs. Execution is traced through a shared telemetry layer, so runs across frameworks emit comparable spans/metrics that the evaluation module scores against your criteria. Getting Started Use Cases 1. Scenario : benchmark the same agent across frameworks before committing 2. Scenario : get uniform tracing/evaluation regardless of the underlying framework 3. Scenario where this is NOT the right fit : you rely on one framework's advanced, native only features — the abstraction may not expose them Strengths Avoids lock in; empirical framework comparison Consistent observability/evaluation across frameworks Backed by Mozilla AI Limitations / When NOT to Use Abstraction can lag or hide framework specific features Extra indirection layer to maintain and debug Younger project; coverage varies by framework Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against committing directly to openai agents sdk, langchain, or smolagents — any agent wraps these rather than replacing them. Link this tool from job guides using its canonical ID any agent. Record which frameworks/features you depend on before production adoption. Resources Official Site & Docs GitHub Buzz & Reception 1,181 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "argilla",
       "name": "Argilla",
       "type": "tool",
@@ -1272,6 +1459,99 @@
       "word_count": 367,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Microsoft Azure platform for building, evaluating, and deploying AI applications. Azure usage-based pricing. Best for Azure enterprise AI development.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Microsoft's platform for building, evaluating, and deploying AI applications within the Azure ecosystem, combining model access, evaluation tooling, and deployment in one console.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Azure AI Studio earns a place in the Arsenal because it directly addresses a recurring decision point: your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Unified build/evaluate/deploy workflow</li>\n<li>Azure AD-integrated governance and access control</li>\n<li>Built-in content filtering and compliance tooling</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Provides a managed workspace where model endpoints, evaluation pipelines, and deployment targets are all configured and monitored through a single Azure-native control plane.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Configure through Azure AI Studio\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console</li>\n<li><strong>Scenario</strong>: you need enterprise governance (RBAC, content filters, compliance certifications) tied to existing Azure AD</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want a lightweight, cloud-agnostic deployment path — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console</li>\n<li>You need enterprise governance (RBAC, content filters, compliance certifications) tied to existing Azure AD</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You want a lightweight, cloud-agnostic deployment path</li>\n<li>Your team is not already operating in Azure and the platform's surface area would be net-new overhead</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./aws-bedrock.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AWS Bedrock</a>, <a href=\"./google-vertex-ai.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Google Vertex AI</a>, <a href=\"./hf-inference-endpoints.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Hugging Face Inference Endpoints</a>, <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a>, <a href=\"./replicate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Replicate</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>azure-ai-studio</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://ai.azure.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://learn.microsoft.com/en-us/azure/ai-studio/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for deployment.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Microsoft Azure platform for building, evaluating, and deploying AI applications. Azure usage based pricing. Best for Azure enterprise AI development. Overview Microsoft's platform for building, evaluating, and deploying AI applications within the Azure ecosystem, combining model access, evaluation tooling, and deployment in one console. Why It's in the Arsenal Azure AI Studio earns a place in the Arsenal because it directly addresses a recurring decision point: your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Unified build/evaluate/deploy workflow Azure AD integrated governance and access control Built in content filtering and compliance tooling Architecture / How It Works Provides a managed workspace where model endpoints, evaluation pipelines, and deployment targets are all configured and monitored through a single Azure native control plane. Getting Started Use Cases 1. Scenario : your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console 2. Scenario : you need enterprise governance (RBAC, content filters, compliance certifications) tied to existing Azure AD 3. Scenario where this is NOT the right fit : you want a lightweight, cloud agnostic deployment path — evaluate an alternative instead Strengths Your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console You need enterprise governance (RBAC, content filters, compliance certifications) tied to existing Azure AD Limitations / When NOT to Use You want a lightweight, cloud agnostic deployment path Your team is not already operating in Azure and the platform's surface area would be net new overhead Integration Patterns Compare against AWS Bedrock, Google Vertex AI, Hugging Face Inference Endpoints, Modal, Replicate before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID azure ai studio. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "baml",
+      "name": "BAML",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output",
+      "url": "content/tools/dx-and-tooling/baml",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 open-source toolchain; free (BoundaryML offers paid tooling/support around it)",
+      "tags": [
+        "structured-output",
+        "llm",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python",
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Open-source and free; you pay your own LLM provider costs",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/BoundaryML/baml",
+      "docs_url": "https://docs.boundaryml.com/",
+      "github_url": "https://github.com/BoundaryML/baml",
+      "alternatives": [
+        "instructor",
+        "outlines",
+        "guidance"
+      ],
+      "integrates_with": [
+        "openai-agents-sdk",
+        "langchain"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want prompts as versioned, typed source (with generated clients + tests) rather than scattered f-strings, across Python and TypeScript",
+        "You need reliable structured output from any model — BAML's parser repairs near-miss JSON instead of requiring constrained decoding"
+      ],
+      "avoid_when": [
+        "You want to stay in plain Python objects/decorators with no separate DSL or codegen step — a library like Instructor is lighter",
+        "Your use case is a couple of one-off prompts; the DSL + build step is overhead you won't recoup"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (8,528), Apache-2.0 license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "recommended",
+      "verdict_rationale": "Strong prompts-as-code approach with model-agnostic schema-aligned parsing; the cost is adopting a DSL + codegen workflow",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/BoundaryML/baml",
+          "date": "2026-07-08",
+          "description": "8,528 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/baml.md",
+      "slug": "baml",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "BAML",
+      "summary": "DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 425,
+      "body_html": "<h2>Overview</h2>\n<p>BAML (Boundary AI Markup Language) treats LLM calls as typed functions defined in <code>.baml</code> files: you declare input/output schemas and the prompt, and BAML generates a type-safe client for Python/TypeScript. Its \"Schema-Aligned Parsing\" coerces and repairs imperfect model output into the declared type rather than relying solely on constrained decoding, so it works across providers.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because it tackles two recurring pains at once: unversioned, untyped prompt sprawl and unreliable structured output. It is a comparison point against other structured-output libraries in the dx-and-tooling phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li><code>.baml</code> DSL for typed prompts and input/output schemas</li>\n<li>Generated, type-safe clients for Python and TypeScript</li>\n<li>Schema-Aligned Parsing that repairs near-miss JSON from any model</li>\n<li>Playground/VS Code tooling and testable prompt functions</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You author functions in <code>.baml</code>; the BAML compiler generates client code binding those functions to your language's types. At runtime the client renders the prompt, calls the model, and parses the response through the schema-aligned parser, which fixes common deviations (trailing text, minor format errors) to satisfy the declared type — decoupling reliability from any single provider's structured-output feature.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">npm install -g @boundaryml/baml   # or: pip install baml-py\nbaml-cli init\n# define a function in baml_src/, run generate, then call the typed client\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: manage prompts as typed, versioned source with generated clients across a Python + TS codebase</li>\n<li><strong>Scenario</strong>: get dependable structured extraction from models that lack strong native JSON modes</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you prefer staying in plain Python with decorators and no DSL — a lighter library fits better</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Prompts-as-code: typed, testable, version-controlled</li>\n<li>Provider-agnostic reliable structured output</li>\n<li>Polyglot (Python + TypeScript) with good editor tooling</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Requires learning a DSL and adding a codegen build step</p>\n</li>\n<li>\n<p>Overhead for tiny/one-off prompt use</p>\n</li>\n<li>\n<p>Another artifact type (<code>.baml</code>) in the repo to maintain</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>instructor</code>, <code>outlines</code>, and <code>guidance</code> before adopting — they compete for the same structured-output job.</li>\n<li>Link this tool from job guides using its canonical ID <code>baml</code>.</li>\n<li>Record prompt-versioning and codegen workflow assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.boundaryml.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://docs.boundaryml.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/BoundaryML/baml\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>8,528 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview BAML (Boundary AI Markup Language) treats LLM calls as typed functions defined in .baml files: you declare input/output schemas and the prompt, and BAML generates a type safe client for Python/TypeScript. Its \"Schema Aligned Parsing\" coerces and repairs imperfect model output into the declared type rather than relying solely on constrained decoding, so it works across providers. Why It's in the Arsenal It earns a place because it tackles two recurring pains at once: unversioned, untyped prompt sprawl and unreliable structured output. It is a comparison point against other structured output libraries in the dx and tooling phase, not an unconditional recommendation — see Strengths / Limitations. Key Features .baml DSL for typed prompts and input/output schemas Generated, type safe clients for Python and TypeScript Schema Aligned Parsing that repairs near miss JSON from any model Playground/VS Code tooling and testable prompt functions Architecture / How It Works You author functions in .baml; the BAML compiler generates client code binding those functions to your language's types. At runtime the client renders the prompt, calls the model, and parses the response through the schema aligned parser, which fixes common deviations (trailing text, minor format errors) to satisfy the declared type — decoupling reliability from any single provider's structured output feature. Getting Started Use Cases 1. Scenario : manage prompts as typed, versioned source with generated clients across a Python + TS codebase 2. Scenario : get dependable structured extraction from models that lack strong native JSON modes 3. Scenario where this is NOT the right fit : you prefer staying in plain Python with decorators and no DSL — a lighter library fits better Strengths Prompts as code: typed, testable, version controlled Provider agnostic reliable structured output Polyglot (Python + TypeScript) with good editor tooling Limitations / When NOT to Use Requires learning a DSL and adding a codegen build step Overhead for tiny/one off prompt use Another artifact type (.baml) in the repo to maintain Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against instructor, outlines, and guidance before adopting — they compete for the same structured output job. Link this tool from job guides using its canonical ID baml. Record prompt versioning and codegen workflow assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 8,528 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "basedash",
@@ -3553,6 +3833,96 @@
       "word_count": 413,
       "body_html": "<h2>Overview</h2>\n<p>An open-source Python library for data loading: decorate generators as sources, and dlt handles schema inference/evolution, incremental state, normalization of nested data, and loading to warehouses, vector stores, or files — designed to be embedded anywhere Python runs rather than operated as a platform.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>dlt earns a place in the Arsenal because it directly addresses a recurring decision point: you want pipelines as pip-installable Python (runs in Lambda, Airflow, notebooks) instead of operating an ELT platform. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Pipelines as plain Python with automatic schema evolution</li>\n<li>Incremental loading with managed state; nested-JSON normalization</li>\n<li>Destinations from BigQuery/Snowflake to DuckDB and vector stores</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Sources yield Python dicts; dlt normalizes them into relational child tables, infers/evolves schemas with configurable contracts, tracks incremental cursors in destination state, and loads via per-destination adapters — so a pipeline is just a script plus credentials.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install dlt\ndlt init rest_api duckdb &amp;&amp; python pipeline.py\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want pipelines as pip-installable Python (runs in Lambda, Airflow, notebooks) instead of operating an ELT platform</li>\n<li><strong>Scenario</strong>: messy/nested JSON sources — automatic schema inference and evolution remove most maintenance toil</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: non-Python teams needing UI-driven connector setup — Airbyte's catalog and console fit better — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want pipelines as pip-installable Python (runs in Lambda, Airflow, notebooks) instead of operating an ELT platform</li>\n<li>Messy/nested JSON sources — automatic schema inference and evolution remove most maintenance toil</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Non-Python teams needing UI-driven connector setup — Airbyte's catalog and console fit better</p>\n</li>\n<li>\n<p>Massive CDC replication workloads; purpose-built replication tools handle those better</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>airbyte</code> before adopting — they compete for the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>dlt</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://dlthub.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://dlthub.com/docs\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/dlt-hub/dlt\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>5,578 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview An open source Python library for data loading: decorate generators as sources, and dlt handles schema inference/evolution, incremental state, normalization of nested data, and loading to warehouses, vector stores, or files — designed to be embedded anywhere Python runs rather than operated as a platform. Why It's in the Arsenal dlt earns a place in the Arsenal because it directly addresses a recurring decision point: you want pipelines as pip installable Python (runs in Lambda, Airflow, notebooks) instead of operating an ELT platform. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Pipelines as plain Python with automatic schema evolution Incremental loading with managed state; nested JSON normalization Destinations from BigQuery/Snowflake to DuckDB and vector stores Architecture / How It Works Sources yield Python dicts; dlt normalizes them into relational child tables, infers/evolves schemas with configurable contracts, tracks incremental cursors in destination state, and loads via per destination adapters — so a pipeline is just a script plus credentials. Getting Started Use Cases 1. Scenario : you want pipelines as pip installable Python (runs in Lambda, Airflow, notebooks) instead of operating an ELT platform 2. Scenario : messy/nested JSON sources — automatic schema inference and evolution remove most maintenance toil 3. Scenario where this is NOT the right fit : non Python teams needing UI driven connector setup — Airbyte's catalog and console fit better — evaluate an alternative instead Strengths You want pipelines as pip installable Python (runs in Lambda, Airflow, notebooks) instead of operating an ELT platform Messy/nested JSON sources — automatic schema inference and evolution remove most maintenance toil Limitations / When NOT to Use Non Python teams needing UI driven connector setup — Airbyte's catalog and console fit better Massive CDC replication workloads; purpose built replication tools handle those better Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against airbyte before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID dlt. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 5,578 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "docetl",
+      "name": "DocETL",
+      "type": "tool",
+      "job": [
+        "orchestration"
+      ],
+      "description": "LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)",
+      "url": "content/tools/data-ingestion/docetl",
+      "cost_model": "open-source",
+      "pricing_detail": "MIT open source; free (you pay your own LLM provider costs). A hosted playground (DocWrangler) is available",
+      "tags": [
+        "data",
+        "llm",
+        "orchestration"
+      ],
+      "maturity": "alpha",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Open source and free; LLM inference billed by your provider",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/ucbepic/docetl",
+      "docs_url": "https://ucbepic.github.io/docetl/",
+      "github_url": "https://github.com/ucbepic/docetl",
+      "alternatives": [
+        "unstructured",
+        "dlt"
+      ],
+      "integrates_with": [
+        "litellm"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "research"
+      ],
+      "best_when": [
+        "You need to extract/transform/summarize over large document collections where a single prompt won't fit or won't be accurate — DocETL decomposes it into optimized LLM operators",
+        "You want an optimizer to rewrite/decompose LLM steps (e.g. split a complex map, add a gleaning pass) rather than hand-tuning each prompt"
+      ],
+      "avoid_when": [
+        "Your transformation is deterministic and structured — classic ETL (dlt/SQL) is cheaper and more reliable than LLM operators",
+        "You need a hardened, high-SLA production pipeline today; DocETL is research-stage and evolving"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (3,880), MIT license, and last push (2026-06-26) verified via the GitHub API on 2026-07-08. Feature claims from official docs/paper; not hands-on verified here.",
+      "verdict": "watching",
+      "verdict_rationale": "Novel LLM-operator + optimizer approach to unstructured-data ETL from a strong research group; still alpha-stage for production use",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/ucbepic/docetl",
+          "date": "2026-07-08",
+          "description": "3,880 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/docetl.md",
+      "slug": "docetl",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "DocETL",
+      "summary": "LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 410,
+      "body_html": "<h2>Overview</h2>\n<p>DocETL, from UC Berkeley's EPIC lab, is a framework for LLM-powered processing of unstructured documents. You express a pipeline as declarative operators (map, reduce, resolve, filter) whose logic is an LLM prompt, and an agentic optimizer rewrites those operators — decomposing overly complex steps, adding verification/gleaning passes — to improve accuracy on large or messy corpora.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because \"run an LLM over a big pile of documents accurately\" is an unsolved, common need, and DocETL contributes an optimizer that tunes the pipeline rather than leaving it to manual prompt fiddling. It is a comparison point against traditional ETL and parsing tools in the data-ingestion phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Declarative LLM operators: map, reduce, resolve, filter, split/gather</li>\n<li>Agentic optimizer that rewrites/decomposes operators for accuracy</li>\n<li>DocWrangler interactive playground for building pipelines</li>\n<li>Model-agnostic via LiteLLM</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A pipeline is a YAML/Python spec of operators over a document dataset. Each operator's semantics come from an LLM prompt. The optimizer treats accuracy as the objective: it can split a hard map into sub-steps, insert a \"gleaning\" self-check, or restructure a reduce, searching for a decomposition that yields more reliable outputs than a single monolithic prompt.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install docetl\n# define a pipeline.yaml with map/reduce operators over your docs\n# docetl run pipeline.yaml   (optionally docetl build to optimize)\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: extract structured findings across thousands of documents too large for one prompt</li>\n<li><strong>Scenario</strong>: summarize/aggregate themes over a corpus with an accuracy-optimized reduce</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: deterministic, schema-known transforms — classic ETL is cheaper and safer</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Decomposes complex document tasks into optimized LLM operators</li>\n<li>Optimizer reduces manual prompt tuning</li>\n<li>Research-grade approach with an interactive builder</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Alpha/research-stage; APIs and stability evolving</p>\n</li>\n<li>\n<p>LLM operators cost tokens and can err vs deterministic ETL</p>\n</li>\n<li>\n<p>Optimization itself consumes model calls/time</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>unstructured</code> and <code>dlt</code> before adopting — they overlap on data-ingestion.</li>\n<li>Link this tool from job guides using its canonical ID <code>docetl</code>.</li>\n<li>Record cost and reliability assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.docetl.org\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://ucbepic.github.io/docetl/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/ucbepic/docetl\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>3,880 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview DocETL, from UC Berkeley's EPIC lab, is a framework for LLM powered processing of unstructured documents. You express a pipeline as declarative operators (map, reduce, resolve, filter) whose logic is an LLM prompt, and an agentic optimizer rewrites those operators — decomposing overly complex steps, adding verification/gleaning passes — to improve accuracy on large or messy corpora. Why It's in the Arsenal It earns a place because \"run an LLM over a big pile of documents accurately\" is an unsolved, common need, and DocETL contributes an optimizer that tunes the pipeline rather than leaving it to manual prompt fiddling. It is a comparison point against traditional ETL and parsing tools in the data ingestion phase, not an unconditional recommendation — see Strengths / Limitations. Key Features Declarative LLM operators: map, reduce, resolve, filter, split/gather Agentic optimizer that rewrites/decomposes operators for accuracy DocWrangler interactive playground for building pipelines Model agnostic via LiteLLM Architecture / How It Works A pipeline is a YAML/Python spec of operators over a document dataset. Each operator's semantics come from an LLM prompt. The optimizer treats accuracy as the objective: it can split a hard map into sub steps, insert a \"gleaning\" self check, or restructure a reduce, searching for a decomposition that yields more reliable outputs than a single monolithic prompt. Getting Started Use Cases 1. Scenario : extract structured findings across thousands of documents too large for one prompt 2. Scenario : summarize/aggregate themes over a corpus with an accuracy optimized reduce 3. Scenario where this is NOT the right fit : deterministic, schema known transforms — classic ETL is cheaper and safer Strengths Decomposes complex document tasks into optimized LLM operators Optimizer reduces manual prompt tuning Research grade approach with an interactive builder Limitations / When NOT to Use Alpha/research stage; APIs and stability evolving LLM operators cost tokens and can err vs deterministic ETL Optimization itself consumes model calls/time Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against unstructured and dlt before adopting — they overlap on data ingestion. Link this tool from job guides using its canonical ID docetl. Record cost and reliability assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 3,880 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "dropstone-3",
@@ -6634,6 +7004,98 @@
       "body_text": "Overview A CNCF model serving platform for Kubernetes: models deploy as InferenceService custom resources, and KServe provides serverless autoscaling (including scale to zero), canary traffic splitting, pre/post processing transformers, and support for LLM runtimes (vLLM, Hugging Face) alongside classic ML servers. Why It's in the Arsenal KServe earns a place in the Arsenal because it directly addresses a recurring decision point: your platform team runs Kubernetes and wants models served as CRDs with scale to zero, canary rollouts, and GitOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features InferenceService CRD: declarative, GitOps friendly serving Serverless autoscaling with scale to zero; canary rollouts Open Inference Protocol across heterogeneous model runtimes Architecture / How It Works A controller reconciles InferenceService resources into Knative services (or raw deployments): each service wraps a model runtime container plus optional transformer/explainer sidecars, and an ingress gateway handles routing, revisions, and traffic splitting. Getting Started Use Cases 1. Scenario : your platform team runs Kubernetes and wants models served as CRDs with scale to zero, canary rollouts, and GitOps 2. Scenario : you need one serving contract (Open Inference Protocol) across sklearn, XGBoost, PyTorch, and LLM runtimes 3. Scenario where this is NOT the right fit : no Kubernetes expertise in house — the operational prerequisite dominates the benefit — evaluate an alternative instead Strengths Your platform team runs Kubernetes and wants models served as CRDs with scale to zero, canary rollouts, and GitOps You need one serving contract (Open Inference Protocol) across sklearn, XGBoost, PyTorch, and LLM runtimes Limitations / When NOT to Use No Kubernetes expertise in house — the operational prerequisite dominates the benefit Latency critical LLM serving where scale to zero cold starts are unacceptable (disable it or serve directly) Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against ray serve, triton inference server, bentoml before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID kserve. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 5,666 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
+      "id": "kubeai",
+      "name": "KubeAI",
+      "type": "tool",
+      "job": [
+        "deployment",
+        "production-serving"
+      ],
+      "description": "Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends",
+      "url": "content/tools/serving-and-deployment/kubeai",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 open source; free (you pay for your own Kubernetes/GPU infrastructure)",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "kubernetes"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "go"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Open source and free; you run it on your own cluster",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/kubeai-project/kubeai",
+      "docs_url": "https://www.kubeai.org/",
+      "github_url": "https://github.com/kubeai-project/kubeai",
+      "alternatives": [
+        "kserve",
+        "ray-serve",
+        "bentoml"
+      ],
+      "integrates_with": [
+        "vllm",
+        "ollama"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "You self-host models on Kubernetes and want an OpenAI-compatible gateway with GPU autoscaling and scale-from-zero without wiring it yourself",
+        "You want to declare models as K8s custom resources and let an operator manage vLLM/Ollama backends"
+      ],
+      "avoid_when": [
+        "You're not on Kubernetes — the operator model adds cluster complexity a single-node server (vLLM/Ollama directly) avoids",
+        "You need a general model-serving platform for arbitrary Python models, not just LLM/embedding backends"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (1,221), Apache-2.0 license, and last push (2026-07-03) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "Focused, ops-friendly way to serve LLMs on K8s with autoscaling; value is tied to already running on Kubernetes",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/kubeai-project/kubeai",
+          "date": "2026-07-08",
+          "description": "1,221 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/kubeai.md",
+      "slug": "kubeai",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "KubeAI",
+      "summary": "Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 414,
+      "body_html": "<h2>Overview</h2>\n<p>KubeAI is a Kubernetes operator for serving LLMs and embedding models. It exposes an OpenAI-compatible API in front of inference backends (vLLM, Ollama), manages them as native Kubernetes resources, and adds LLM-aware autoscaling — including scaling to zero when idle and back up on demand — so self-hosting on a cluster requires far less bespoke glue.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because self-hosting LLMs on Kubernetes usually means hand-assembling serving, autoscaling, and an OpenAI-compatible shim; KubeAI packages that as an operator. It is a comparison point against other serving platforms in the serving-and-deployment phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>OpenAI-compatible <code>/v1</code> endpoint for chat and embeddings</li>\n<li>Model-as-CRD: declare models, KubeAI provisions backends</li>\n<li>LLM-aware autoscaling with scale-from-zero</li>\n<li>Manages vLLM and Ollama backends; no per-model plumbing</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>KubeAI installs as an operator watching <code>Model</code> custom resources. For each model it schedules the appropriate backend (e.g. a vLLM deployment) with GPU requests, routes requests through an OpenAI-compatible proxy, and scales replicas based on load — spinning pods down to zero when idle and cold-starting them when traffic returns.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">helm repo add kubeai https://www.kubeai.org\nhelm install kubeai kubeai/kubeai\n# then apply a Model CRD; call the OpenAI-compatible endpoint it exposes\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: serve open-weight LLMs on your own GPU cluster behind an OpenAI-compatible API</li>\n<li><strong>Scenario</strong>: cut idle GPU cost with scale-from-zero for bursty internal workloads</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: single-node or non-K8s deployment — run vLLM/Ollama directly instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Turns K8s into an LLM-serving platform with minimal glue</li>\n<li>Autoscaling incl. scale-to-zero for cost control</li>\n<li>Drop-in OpenAI API compatibility</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Requires and assumes Kubernetes expertise</p>\n</li>\n<li>\n<p>Scoped to LLM/embedding backends, not arbitrary models</p>\n</li>\n<li>\n<p>Cold starts from zero add first-request latency</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>kserve</code>, <code>ray-serve</code>, and <code>bentoml</code> before adopting — they compete for the same deployment job.</li>\n<li>Link this tool from job guides using its canonical ID <code>kubeai</code>.</li>\n<li>Record cluster, GPU, and cold-start assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.kubeai.org/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site &amp; Docs</a></li>\n<li><a href=\"https://github.com/kubeai-project/kubeai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>1,221 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview KubeAI is a Kubernetes operator for serving LLMs and embedding models. It exposes an OpenAI compatible API in front of inference backends (vLLM, Ollama), manages them as native Kubernetes resources, and adds LLM aware autoscaling — including scaling to zero when idle and back up on demand — so self hosting on a cluster requires far less bespoke glue. Why It's in the Arsenal It earns a place because self hosting LLMs on Kubernetes usually means hand assembling serving, autoscaling, and an OpenAI compatible shim; KubeAI packages that as an operator. It is a comparison point against other serving platforms in the serving and deployment phase, not an unconditional recommendation — see Strengths / Limitations. Key Features OpenAI compatible /v1 endpoint for chat and embeddings Model as CRD: declare models, KubeAI provisions backends LLM aware autoscaling with scale from zero Manages vLLM and Ollama backends; no per model plumbing Architecture / How It Works KubeAI installs as an operator watching Model custom resources. For each model it schedules the appropriate backend (e.g. a vLLM deployment) with GPU requests, routes requests through an OpenAI compatible proxy, and scales replicas based on load — spinning pods down to zero when idle and cold starting them when traffic returns. Getting Started Use Cases 1. Scenario : serve open weight LLMs on your own GPU cluster behind an OpenAI compatible API 2. Scenario : cut idle GPU cost with scale from zero for bursty internal workloads 3. Scenario where this is NOT the right fit : single node or non K8s deployment — run vLLM/Ollama directly instead Strengths Turns K8s into an LLM serving platform with minimal glue Autoscaling incl. scale to zero for cost control Drop in OpenAI API compatibility Limitations / When NOT to Use Requires and assumes Kubernetes expertise Scoped to LLM/embedding backends, not arbitrary models Cold starts from zero add first request latency Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against kserve, ray serve, and bentoml before adopting — they compete for the same deployment job. Link this tool from job guides using its canonical ID kubeai. Record cluster, GPU, and cold start assumptions before production adoption. Resources Official Site & Docs GitHub Buzz & Reception 1,221 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "label-studio",
       "name": "Label Studio",
       "type": "tool",
@@ -7118,6 +7580,98 @@
       "word_count": 415,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Stateful agent framework and memory system formerly known as MemGPT. Open source or free to start. Best for stateful agents with memory.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An open-source stateful agent framework (formerly MemGPT) that gives agents an explicit, inspectable, and self-editable long-term memory system instead of relying solely on a longer context window.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Letta earns a place in the Arsenal because it directly addresses a recurring decision point: you need an agent with explicit, inspectable long-term memory rather than just a longer context window. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Explicit memory blocks the agent can read and edit</li>\n<li>Persistent agent state across sessions</li>\n<li>Self-hostable, open-source runtime</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>An agent's context is split into in-context memory (always visible) and out-of-context archival memory; the agent itself decides when to page information between them, similar to an OS managing virtual memory.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install letta\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need an agent with explicit, inspectable long-term memory rather than just a longer context window</li>\n<li><strong>Scenario</strong>: you are researching or building agents that must persist and edit their own memory across sessions</li>\n<li><strong>Scenario</strong>: you want an open-source, self-hostable stateful-agent runtime (formerly MemGPT)</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: a simple RAG-based memory layer (e.g. Mem0) would satisfy your needs with less operational complexity — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need an agent with explicit, inspectable long-term memory rather than just a longer context window</li>\n<li>You are researching or building agents that must persist and edit their own memory across sessions</li>\n<li>You want an open-source, self-hostable stateful-agent runtime (formerly MemGPT)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>A simple RAG-based memory layer (e.g. Mem0) would satisfy your needs with less operational complexity</li>\n<li>You need a battle-tested, large-scale production deployment track record</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./mem0.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Mem0</a>, <a href=\"./redis-memory.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Redis</a>, <a href=\"./zep.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Zep</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>letta</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/letta-ai/letta\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/letta-ai/letta\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/letta-ai/letta\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for memory-management.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Stateful agent framework and memory system formerly known as MemGPT. Open source or free to start. Best for stateful agents with memory. Overview An open source stateful agent framework (formerly MemGPT) that gives agents an explicit, inspectable, and self editable long term memory system instead of relying solely on a longer context window. Why It's in the Arsenal Letta earns a place in the Arsenal because it directly addresses a recurring decision point: you need an agent with explicit, inspectable long term memory rather than just a longer context window. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Explicit memory blocks the agent can read and edit Persistent agent state across sessions Self hostable, open source runtime Architecture / How It Works An agent's context is split into in context memory (always visible) and out of context archival memory; the agent itself decides when to page information between them, similar to an OS managing virtual memory. Getting Started Use Cases 1. Scenario : you need an agent with explicit, inspectable long term memory rather than just a longer context window 2. Scenario : you are researching or building agents that must persist and edit their own memory across sessions 3. Scenario : you want an open source, self hostable stateful agent runtime (formerly MemGPT) 4. Scenario where this is NOT the right fit : a simple RAG based memory layer (e.g. Mem0) would satisfy your needs with less operational complexity — evaluate an alternative instead Strengths You need an agent with explicit, inspectable long term memory rather than just a longer context window You are researching or building agents that must persist and edit their own memory across sessions You want an open source, self hostable stateful agent runtime (formerly MemGPT) Limitations / When NOT to Use A simple RAG based memory layer (e.g. Mem0) would satisfy your needs with less operational complexity You need a battle tested, large scale production deployment track record Integration Patterns Compare against Mem0, Redis, Zep before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID letta. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for memory management. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "liger-kernel",
+      "name": "Liger Kernel",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements",
+      "url": "content/tools/model-layer/liger-kernel",
+      "cost_model": "open-source",
+      "pricing_detail": "BSD-2-Clause open source; free",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "efficiency"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Free and open source",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/linkedin/Liger-Kernel",
+      "docs_url": "https://github.com/linkedin/Liger-Kernel",
+      "github_url": "https://github.com/linkedin/Liger-Kernel",
+      "alternatives": [
+        "unsloth",
+        "deepspeed"
+      ],
+      "integrates_with": [
+        "huggingface",
+        "trl",
+        "axolotl"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "production",
+        "research"
+      ],
+      "best_when": [
+        "You train/fine-tune Hugging Face LLMs and are memory- or throughput-bound — Liger's fused kernels reduce activation memory and speed up the forward/backward pass",
+        "You want the gains with minimal code change (a one-line model patch) rather than a new training framework"
+      ],
+      "avoid_when": [
+        "Your architecture/layers aren't covered by the provided kernels — you'd get no benefit",
+        "You're not on a supported GPU/Triton stack, or you need bit-exact parity with reference layers for a sensitive experiment"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (6,489), BSD-2-Clause license, and last push (2026-07-06) verified via the GitHub API on 2026-07-08. Throughput/memory claims are the project's; not independently benchmarked here.",
+      "verdict": "recommended",
+      "verdict_rationale": "High-leverage, low-friction training speedup for supported HF models; benefit is bounded to the layers it fuses and the hardware it supports",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/linkedin/Liger-Kernel",
+          "date": "2026-07-08",
+          "description": "6,489 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/liger-kernel.md",
+      "slug": "liger-kernel",
+      "section_path": "content/tools/model-layer",
+      "display_name": "Liger Kernel",
+      "summary": "Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 411,
+      "body_html": "<h2>Overview</h2>\n<p>Liger Kernel (LinkedIn) is a library of fused Triton kernels for common LLM building blocks — RMSNorm, RoPE, SwiGLU, and a memory-efficient fused linear + cross-entropy — designed as near drop-in replacements. Patching a Hugging Face model to use them reduces activation memory and increases training throughput without changing your training loop.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because training memory and throughput are perennial bottlenecks, and Liger delivers gains with a one-line patch rather than a framework migration. It is a comparison point against broader training optimizers in the model-layer phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Fused Triton kernels: RMSNorm, RoPE, SwiGLU, LayerNorm, fused linear cross-entropy</li>\n<li>One-line monkey-patch for supported Hugging Face model families</li>\n<li>Lower peak activation memory → larger batch/sequence or bigger models on the same GPU</li>\n<li>Composes with TRL, Axolotl, and similar HF-based trainers</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Standard PyTorch layers launch many small CUDA ops with extra memory traffic. Liger replaces them with hand-written Triton kernels that fuse operations (e.g. computing logits and cross-entropy without materializing the full logits tensor), cutting memory reads/writes and intermediate allocations while preserving the mathematical result.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install liger-kernel\n# from liger_kernel.transformers import apply_liger_kernel_to_llama\n# apply_liger_kernel_to_llama()  # then train your HF model as usual\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: fit a larger batch or longer sequences into fixed GPU memory during fine-tuning</li>\n<li><strong>Scenario</strong>: raise tokens/sec on an existing HF training run with minimal changes</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: your model uses custom layers Liger doesn't cover — no speedup to gain</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Large memory/throughput gains for supported models</li>\n<li>Minimal integration effort (model patch)</li>\n<li>Interops with the mainstream HF fine-tuning stack</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Benefit limited to the specific layers/architectures with kernels</p>\n</li>\n<li>\n<p>Requires a compatible GPU + Triton toolchain</p>\n</li>\n<li>\n<p>Fused kernels may differ from reference layers at the bit level</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>unsloth</code> and <code>deepspeed</code> before adopting — they overlap on the training-efficiency job.</li>\n<li>Link this tool from job guides using its canonical ID <code>liger-kernel</code>.</li>\n<li>Record hardware/toolchain assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/linkedin/Liger-Kernel\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/linkedin/Liger-Kernel\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation / README</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>6,489 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Liger Kernel (LinkedIn) is a library of fused Triton kernels for common LLM building blocks — RMSNorm, RoPE, SwiGLU, and a memory efficient fused linear + cross entropy — designed as near drop in replacements. Patching a Hugging Face model to use them reduces activation memory and increases training throughput without changing your training loop. Why It's in the Arsenal It earns a place because training memory and throughput are perennial bottlenecks, and Liger delivers gains with a one line patch rather than a framework migration. It is a comparison point against broader training optimizers in the model layer phase, not an unconditional recommendation — see Strengths / Limitations. Key Features Fused Triton kernels: RMSNorm, RoPE, SwiGLU, LayerNorm, fused linear cross entropy One line monkey patch for supported Hugging Face model families Lower peak activation memory → larger batch/sequence or bigger models on the same GPU Composes with TRL, Axolotl, and similar HF based trainers Architecture / How It Works Standard PyTorch layers launch many small CUDA ops with extra memory traffic. Liger replaces them with hand written Triton kernels that fuse operations (e.g. computing logits and cross entropy without materializing the full logits tensor), cutting memory reads/writes and intermediate allocations while preserving the mathematical result. Getting Started Use Cases 1. Scenario : fit a larger batch or longer sequences into fixed GPU memory during fine tuning 2. Scenario : raise tokens/sec on an existing HF training run with minimal changes 3. Scenario where this is NOT the right fit : your model uses custom layers Liger doesn't cover — no speedup to gain Strengths Large memory/throughput gains for supported models Minimal integration effort (model patch) Interops with the mainstream HF fine tuning stack Limitations / When NOT to Use Benefit limited to the specific layers/architectures with kernels Requires a compatible GPU + Triton toolchain Fused kernels may differ from reference layers at the bit level Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against unsloth and deepspeed before adopting — they overlap on the training efficiency job. Link this tool from job guides using its canonical ID liger kernel. Record hardware/toolchain assumptions before production adoption. Resources GitHub Documentation / README Buzz & Reception 6,489 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "litellm",
@@ -8029,6 +8583,98 @@
       "body_text": "Overview A lightweight Microsoft utility that became a standard preprocessing tool: convert files (PDF, Word, Excel, PowerPoint, images with EXIF/OCR, audio with transcription, HTML, CSV, ZIP...) to clean Markdown, on the thesis that Markdown is the most token efficient, LLM native document representation. Why It's in the Arsenal MarkItDown earns a place in the Arsenal because it directly addresses a recurring decision point: you need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Converts Office, PDF, images, audio, HTML, and archives to Markdown Optional LLM powered image descriptions and audio transcription CLI, Python API, and MCP server for agent integration Architecture / How It Works Per format converters (mammoth for docx, pdfminer for PDF, speech recognition for audio) normalize content into a common Markdown stream; an extensible converter registry lets you add formats, and the MCP server exposes conversion directly to agents like Claude. Getting Started Use Cases 1. Scenario : you need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion 2. Scenario : token efficient conversion where Markdown structure (headings, tables, lists) matters more than pixel perfect layout 3. Scenario where this is NOT the right fit : complex PDFs (multi column, scanned, tables) are your core input — layout aware parsers (Docling, MinerU, LlamaParse) extract far more faithfully — evaluate an alternative instead Strengths You need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion Token efficient conversion where Markdown structure (headings, tables, lists) matters more than pixel perfect layout Limitations / When NOT to Use Complex PDFs (multi column, scanned, tables) are your core input — layout aware parsers (Docling, MinerU, LlamaParse) extract far more faithfully You need chunking, element metadata, or OCR pipelines built in; MarkItDown is conversion only Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against docling, unstructured, llamaparse before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID markitdown. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 163,979 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
+      "id": "marqo",
+      "name": "Marqo",
+      "type": "tool",
+      "job": [
+        "vector-search"
+      ],
+      "description": "Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline",
+      "url": "content/tools/data-ingestion/marqo",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 open source (self-host); Marqo Cloud is a paid managed offering",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "rag"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully free when self-hosted; Cloud has usage-based paid tiers",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/marqo-ai/marqo",
+      "docs_url": "https://docs.marqo.ai/",
+      "github_url": "https://github.com/marqo-ai/marqo",
+      "alternatives": [
+        "weaviate",
+        "qdrant",
+        "milvus"
+      ],
+      "integrates_with": [
+        "pytorch",
+        "huggingface"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want vector search without building and operating a separate embedding-inference service — Marqo generates embeddings on ingest and at query time",
+        "You need multimodal (text + image) search out of the box with a single API"
+      ],
+      "avoid_when": [
+        "You already run a dedicated embedding pipeline and just need a pure vector index — a store like Qdrant/pgvector avoids duplicating inference",
+        "You need the largest ecosystem of integrations/filters; more mature vector DBs have wider tooling"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (5,017), Apache-2.0 license, and last push (2026-07-02) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "Removes the embed-then-index operational split by bundling inference with the vector store; the tradeoff is less flexibility than a standalone index + your own models",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/marqo-ai/marqo",
+          "date": "2026-07-08",
+          "description": "5,017 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/marqo.md",
+      "slug": "marqo",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Marqo",
+      "summary": "Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 453,
+      "body_html": "<h2>Overview</h2>\n<p>Marqo is a vector search engine that folds embedding inference into the database itself: you POST documents (text or images) and it embeds, indexes, and stores them; at query time you send natural-language or image queries and it embeds and searches in one call. This collapses the usual \"run an embedding model, then push vectors to a separate index\" pipeline into a single service.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Marqo earns a place in the Arsenal because it addresses a recurring decision point: teams that want semantic/multimodal search but don't want to build and operate a separate embedding-inference tier. It is included as a comparison point against the other vector-search tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Embedding inference built in (text and image) — no separate embed service to run</li>\n<li>Multimodal search (CLIP-style) over combined text/image collections</li>\n<li>Tensor and lexical (hybrid) search with filtering</li>\n<li>Self-hostable via Docker or managed via Marqo Cloud</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Marqo wraps a vector index (backed by an OpenSearch/Vespa-style engine) with model-hosting: on ingest it runs the configured embedding model over each field and stores the resulting tensors; queries are embedded with the same model and matched via approximate nearest neighbor, with optional lexical scoring and metadata filters combined server-side.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">docker run -p 8882:8882 marqoai/marqo:latest\npip install marqo\n# then create an index and add_documents(); Marqo embeds them automatically\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: build multimodal (text + image) semantic search without standing up your own embedding service</li>\n<li><strong>Scenario</strong>: prototype a RAG retriever quickly, then self-host the same engine in production</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you already have an embedding pipeline and only need a raw vector index — a standalone store avoids duplicating inference</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Bundles embedding inference with the index, removing an operational component</li>\n<li>First-class multimodal search</li>\n<li>Same engine self-hosted or on Cloud</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Bundling inference means less freedom to swap embedding models/pipelines independently</p>\n</li>\n<li>\n<p>Smaller integration/filtering ecosystem than the most mature vector DBs</p>\n</li>\n<li>\n<p>Running models inside the DB raises its resource footprint vs a pure index</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>qdrant</code>, <code>weaviate</code>, and <code>milvus</code> before adopting — they compete for the same vector-search job.</li>\n<li>Link this tool from job guides using its canonical ID <code>marqo</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.marqo.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://docs.marqo.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/marqo-ai/marqo\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>5,017 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Marqo is a vector search engine that folds embedding inference into the database itself: you POST documents (text or images) and it embeds, indexes, and stores them; at query time you send natural language or image queries and it embeds and searches in one call. This collapses the usual \"run an embedding model, then push vectors to a separate index\" pipeline into a single service. Why It's in the Arsenal Marqo earns a place in the Arsenal because it addresses a recurring decision point: teams that want semantic/multimodal search but don't want to build and operate a separate embedding inference tier. It is included as a comparison point against the other vector search tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below. Key Features Embedding inference built in (text and image) — no separate embed service to run Multimodal search (CLIP style) over combined text/image collections Tensor and lexical (hybrid) search with filtering Self hostable via Docker or managed via Marqo Cloud Architecture / How It Works Marqo wraps a vector index (backed by an OpenSearch/Vespa style engine) with model hosting: on ingest it runs the configured embedding model over each field and stores the resulting tensors; queries are embedded with the same model and matched via approximate nearest neighbor, with optional lexical scoring and metadata filters combined server side. Getting Started Use Cases 1. Scenario : build multimodal (text + image) semantic search without standing up your own embedding service 2. Scenario : prototype a RAG retriever quickly, then self host the same engine in production 3. Scenario where this is NOT the right fit : you already have an embedding pipeline and only need a raw vector index — a standalone store avoids duplicating inference Strengths Bundles embedding inference with the index, removing an operational component First class multimodal search Same engine self hosted or on Cloud Limitations / When NOT to Use Bundling inference means less freedom to swap embedding models/pipelines independently Smaller integration/filtering ecosystem than the most mature vector DBs Running models inside the DB raises its resource footprint vs a pure index Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against qdrant, weaviate, and milvus before adopting — they compete for the same vector search job. Link this tool from job guides using its canonical ID marqo. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 5,017 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "megatron-lm",
       "name": "Megatron-LM",
       "type": "tool",
@@ -8530,6 +9176,99 @@
       "word_count": 409,
       "body_html": "<h2>Overview</h2>\n<p>A document-extraction pipeline from Shanghai AI Lab's OpenDataLab: purpose-built vision models handle layout detection, reading order, formula recognition (to LaTeX), and table structure (to HTML), converting difficult PDFs into faithful Markdown/JSON — originally developed to produce LLM pretraining corpora.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>MinerU earns a place in the Arsenal because it directly addresses a recurring decision point: scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi-column layouts must survive extraction. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Layout-aware extraction with reading-order recovery</li>\n<li>Formula-to-LaTeX and table-to-HTML recognition</li>\n<li>Handles scanned docs via OCR (100+ languages); local or hosted API</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A cascade of detection models segments each page (text, titles, figures, tables, formulas), specialized recognizers process each region, and a reading-order model reassembles results into linear Markdown — with the VLM-backed 2.x pipeline consolidating steps into a single multimodal model.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install 'mineru[core]'\nmineru -p paper.pdf -o output/\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi-column layouts must survive extraction</li>\n<li><strong>Scenario</strong>: corpus-scale document processing on your own GPUs with a permissively usable pipeline (model weights are open)</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: aGPL is a problem for your product's licensing posture — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi-column layouts must survive extraction</li>\n<li>Corpus-scale document processing on your own GPUs with a permissively usable pipeline (model weights are open)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>AGPL is a problem for your product's licensing posture</p>\n</li>\n<li>\n<p>Simple digital-native PDFs — lighter converters (MarkItDown, pypdf) are much cheaper to run</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>docling</code>, <code>llamaparse</code> before adopting — they compete for the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>mineru</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://mineru.net\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://opendatalab.github.io/MinerU/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/opendatalab/MinerU\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>73,903 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview A document extraction pipeline from Shanghai AI Lab's OpenDataLab: purpose built vision models handle layout detection, reading order, formula recognition (to LaTeX), and table structure (to HTML), converting difficult PDFs into faithful Markdown/JSON — originally developed to produce LLM pretraining corpora. Why It's in the Arsenal MinerU earns a place in the Arsenal because it directly addresses a recurring decision point: scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi column layouts must survive extraction. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Layout aware extraction with reading order recovery Formula to LaTeX and table to HTML recognition Handles scanned docs via OCR (100+ languages); local or hosted API Architecture / How It Works A cascade of detection models segments each page (text, titles, figures, tables, formulas), specialized recognizers process each region, and a reading order model reassembles results into linear Markdown — with the VLM backed 2.x pipeline consolidating steps into a single multimodal model. Getting Started Use Cases 1. Scenario : scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi column layouts must survive extraction 2. Scenario : corpus scale document processing on your own GPUs with a permissively usable pipeline (model weights are open) 3. Scenario where this is NOT the right fit : aGPL is a problem for your product's licensing posture — evaluate an alternative instead Strengths Scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi column layouts must survive extraction Corpus scale document processing on your own GPUs with a permissively usable pipeline (model weights are open) Limitations / When NOT to Use AGPL is a problem for your product's licensing posture Simple digital native PDFs — lighter converters (MarkItDown, pypdf) are much cheaper to run Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against docling, llamaparse before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID mineru. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 73,903 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "mirascope",
+      "name": "Mirascope",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "structured-output"
+      ],
+      "description": "Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python",
+      "url": "content/tools/orchestration/mirascope",
+      "cost_model": "open-source",
+      "pricing_detail": "MIT open source; free (you pay your own LLM provider costs)",
+      "tags": [
+        "orchestration",
+        "structured-output",
+        "llm"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Open source and free",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/Mirascope/mirascope",
+      "docs_url": "https://mirascope.com/docs",
+      "github_url": "https://github.com/Mirascope/mirascope",
+      "alternatives": [
+        "instructor",
+        "langchain",
+        "pydantic-ai-tool"
+      ],
+      "integrates_with": [
+        "openai-agents-sdk",
+        "langchain"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "orchestration",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want LLM calls to look like ordinary typed Python functions (decorator + return type) with minimal abstraction between you and the API",
+        "You want provider-agnostic calls and Pydantic-validated structured output without adopting a large framework"
+      ],
+      "avoid_when": [
+        "You need heavy built-in orchestration (agents, graphs, retrievers) out of the box — a batteries-included framework saves wiring",
+        "Your team already standardized on LangChain/LlamaIndex and wants their ecosystem of integrations"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (1,512), MIT license, and last push (2026-07-07) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "Clean, low-abstraction LLM toolkit for teams that want to stay in idiomatic Python; smaller ecosystem than the big frameworks",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/Mirascope/mirascope",
+          "date": "2026-07-08",
+          "description": "1,512 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/orchestration/mirascope.md",
+      "slug": "mirascope",
+      "section_path": "content/tools/orchestration",
+      "display_name": "Mirascope",
+      "summary": "Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 391,
+      "body_html": "<h2>Overview</h2>\n<p>Mirascope is a lightweight Python toolkit for building with LLMs that deliberately stays close to plain Python: you write a normal function, decorate it, and annotate a return type, and Mirascope turns it into a typed, provider-agnostic LLM call with validated structured output. It favors small, composable primitives over a large framework surface.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because it represents the \"minimal abstraction\" end of the LLM-toolkit spectrum, contrasting with batteries-included frameworks. It is a comparison point against those frameworks and structured-output libraries in the orchestration phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Decorator-based LLM functions with typed return values</li>\n<li>Provider-agnostic (OpenAI, Anthropic, Gemini, local, etc.)</li>\n<li>Pydantic-validated structured output and response models</li>\n<li>Small, composable API that reads like ordinary Python</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A decorated function's signature and return type become the contract: Mirascope builds the prompt from the function, dispatches to the configured provider, and parses/validates the response into the annotated type (often a Pydantic model). Because the abstraction is thin, you can inspect and override the prompt/response at each step rather than fighting a framework.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install mirascope\n# @openai.call(\"gpt-4o\", response_model=Book)\n# def extract_book(text: str): ...  -&gt; returns a validated Book\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: add LLM calls to a Python service with typed I/O and minimal new concepts</li>\n<li><strong>Scenario</strong>: get provider-agnostic structured output without a framework migration</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need built-in agents/retrieval/graphs — a full framework avoids assembling them yourself</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Idiomatic, low-abstraction Python API</li>\n<li>Provider portability and validated outputs</li>\n<li>Easy to read, test, and debug</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Fewer built-in high-level components than large frameworks</p>\n</li>\n<li>\n<p>Smaller ecosystem/integration catalog</p>\n</li>\n<li>\n<p>You assemble orchestration patterns yourself</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>instructor</code>, <code>langchain</code>, and <code>pydantic-ai-tool</code> before adopting — they overlap on the same jobs.</li>\n<li>Link this tool from job guides using its canonical ID <code>mirascope</code>.</li>\n<li>Record provider and structured-output assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://mirascope.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://mirascope.com/docs\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/Mirascope/mirascope\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>1,512 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Mirascope is a lightweight Python toolkit for building with LLMs that deliberately stays close to plain Python: you write a normal function, decorate it, and annotate a return type, and Mirascope turns it into a typed, provider agnostic LLM call with validated structured output. It favors small, composable primitives over a large framework surface. Why It's in the Arsenal It earns a place because it represents the \"minimal abstraction\" end of the LLM toolkit spectrum, contrasting with batteries included frameworks. It is a comparison point against those frameworks and structured output libraries in the orchestration phase, not an unconditional recommendation — see Strengths / Limitations. Key Features Decorator based LLM functions with typed return values Provider agnostic (OpenAI, Anthropic, Gemini, local, etc.) Pydantic validated structured output and response models Small, composable API that reads like ordinary Python Architecture / How It Works A decorated function's signature and return type become the contract: Mirascope builds the prompt from the function, dispatches to the configured provider, and parses/validates the response into the annotated type (often a Pydantic model). Because the abstraction is thin, you can inspect and override the prompt/response at each step rather than fighting a framework. Getting Started Use Cases 1. Scenario : add LLM calls to a Python service with typed I/O and minimal new concepts 2. Scenario : get provider agnostic structured output without a framework migration 3. Scenario where this is NOT the right fit : you need built in agents/retrieval/graphs — a full framework avoids assembling them yourself Strengths Idiomatic, low abstraction Python API Provider portability and validated outputs Easy to read, test, and debug Limitations / When NOT to Use Fewer built in high level components than large frameworks Smaller ecosystem/integration catalog You assemble orchestration patterns yourself Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against instructor, langchain, and pydantic ai tool before adopting — they overlap on the same jobs. Link this tool from job guides using its canonical ID mirascope. Record provider and structured output assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 1,512 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "mlflow",
@@ -12101,6 +12840,97 @@
       "body_text": "TL;DR: Managed data labeling and data engine platform for enterprise AI datasets. Enterprise pricing. Best for managed enterprise labeling. Overview A managed enterprise data labeling and data engine platform providing outsourced annotation workforce and pipeline operations for large scale AI training datasets. Why It's in the Arsenal Scale AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need a managed annotation workforce and data engine for enterprise scale AI training datasets. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Managed annotation workforce, not just tooling End to end data engine: collection, labeling, QA Enterprise scale throughput Architecture / How It Works Customers submit data and labeling requirements; Scale AI's workforce and pipeline manage annotation, quality assurance, and delivery of the finished dataset. Getting Started Use Cases 1. Scenario : you need a managed annotation workforce and data engine for enterprise scale AI training datasets 2. Scenario : you want an end to end data pipeline (collection, labeling, QA) rather than just a labeling tool 3. Scenario where this is NOT the right fit : budget or data sensitivity requires an in house, self hosted labeling tool instead of an outsourced platform — evaluate an alternative instead Strengths You need a managed annotation workforce and data engine for enterprise scale AI training datasets You want an end to end data pipeline (collection, labeling, QA) rather than just a labeling tool Limitations / When NOT to Use Budget or data sensitivity requires an in house, self hosted labeling tool instead of an outsourced platform Your annotation volume is small enough that a self serve tool (Label Studio/Argilla) is more cost effective Integration Patterns Compare against Argilla, Label Studio, Prodigy before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID scale ai. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for data labeling. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "scrapegraphai",
+      "name": "ScrapeGraphAI",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors",
+      "url": "content/tools/data-ingestion/scrapegraphai",
+      "cost_model": "open-source",
+      "pricing_detail": "MIT open-source library (bring your own LLM key); a hosted API/SaaS with usage-based pricing also exists",
+      "tags": [
+        "data",
+        "agents",
+        "llm"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Library is free; you pay your own LLM inference costs. Hosted API has usage-based tiers",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+      "docs_url": "https://docs.scrapegraphai.com/",
+      "github_url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+      "alternatives": [
+        "crawl4ai-tool",
+        "firecrawl-tool"
+      ],
+      "integrates_with": [
+        "langchain",
+        "llamaindex"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Target pages change layout often and maintaining CSS/XPath selectors is the real cost — LLM extraction adapts without rewrites",
+        "You want structured output (a schema/Pydantic model) from messy HTML with minimal glue code"
+      ],
+      "avoid_when": [
+        "You scrape a stable, high-volume source — deterministic selectors are cheaper, faster, and don't burn tokens per page",
+        "You need strict, auditable extraction with zero hallucination tolerance; LLM extraction can fabricate fields"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (28,179), MIT license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from official docs; not hands-on verified here.",
+      "verdict": "recommended",
+      "verdict_rationale": "Strongest open-source take on LLM-based scraping; the tradeoff is per-page token cost and hallucination risk versus deterministic scrapers",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+          "date": "2026-07-08",
+          "description": "28,179 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/scrapegraphai.md",
+      "slug": "scrapegraphai",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "ScrapeGraphAI",
+      "summary": "LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 399,
+      "body_html": "<h2>Overview</h2>\n<p>ScrapeGraphAI is a Python library that uses LLMs plus graph-based pipelines to scrape and structure web data from a natural-language prompt. Instead of writing selectors, you specify what you want (and optionally a schema); it fetches the page, feeds content to an LLM, and returns structured results — adapting when a site's markup shifts.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because it targets the highest-maintenance part of scraping: brittle selectors that break on layout changes. It is included as a comparison point against deterministic scrapers/crawlers in the data-ingestion phase, not as an unconditional recommendation — see Strengths / Limitations below.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Natural-language extraction prompts; optional Pydantic/JSON schema output</li>\n<li>Graph pipelines (single page, multi-page, search-driven)</li>\n<li>Model-agnostic (OpenAI, local models via Ollama, etc.)</li>\n<li>Integrates with LangChain / LlamaIndex ingestion flows</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Scraping is modeled as a directed graph of nodes (fetch → parse → LLM-extract → format). Each node transforms the state; the LLM node maps raw HTML/markdown into the requested structure. Swapping the model or adding nodes (search, pagination) reconfigures the pipeline without bespoke parser code.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install scrapegraphai\nplaywright install\n# then configure a graph with your LLM + prompt and run it against a URL\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: extract structured records from sites whose layout changes frequently</li>\n<li><strong>Scenario</strong>: turn arbitrary pages into schema-validated JSON for a RAG ingestion pipeline</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: high-volume scraping of a stable source — deterministic selectors are cheaper and faster</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Resilient to markup changes; no selector maintenance</li>\n<li>Schema-constrained structured output</li>\n<li>Works with hosted or local models</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Per-page LLM cost and latency vs deterministic scrapers</p>\n</li>\n<li>\n<p>Extraction can hallucinate or miss fields; needs validation</p>\n</li>\n<li>\n<p>Still subject to site anti-bot measures and legal/ToS constraints</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>crawl4ai-tool</code> and <code>firecrawl-tool</code> before adopting — they compete for the same web-scraping job.</li>\n<li>Link this tool from job guides using its canonical ID <code>scrapegraphai</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://scrapegraphai.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://docs.scrapegraphai.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/ScrapeGraphAI/Scrapegraph-ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>28,179 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview ScrapeGraphAI is a Python library that uses LLMs plus graph based pipelines to scrape and structure web data from a natural language prompt. Instead of writing selectors, you specify what you want (and optionally a schema); it fetches the page, feeds content to an LLM, and returns structured results — adapting when a site's markup shifts. Why It's in the Arsenal It earns a place because it targets the highest maintenance part of scraping: brittle selectors that break on layout changes. It is included as a comparison point against deterministic scrapers/crawlers in the data ingestion phase, not as an unconditional recommendation — see Strengths / Limitations below. Key Features Natural language extraction prompts; optional Pydantic/JSON schema output Graph pipelines (single page, multi page, search driven) Model agnostic (OpenAI, local models via Ollama, etc.) Integrates with LangChain / LlamaIndex ingestion flows Architecture / How It Works Scraping is modeled as a directed graph of nodes (fetch → parse → LLM extract → format). Each node transforms the state; the LLM node maps raw HTML/markdown into the requested structure. Swapping the model or adding nodes (search, pagination) reconfigures the pipeline without bespoke parser code. Getting Started Use Cases 1. Scenario : extract structured records from sites whose layout changes frequently 2. Scenario : turn arbitrary pages into schema validated JSON for a RAG ingestion pipeline 3. Scenario where this is NOT the right fit : high volume scraping of a stable source — deterministic selectors are cheaper and faster Strengths Resilient to markup changes; no selector maintenance Schema constrained structured output Works with hosted or local models Limitations / When NOT to Use Per page LLM cost and latency vs deterministic scrapers Extraction can hallucinate or miss fields; needs validation Still subject to site anti bot measures and legal/ToS constraints Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against crawl4ai tool and firecrawl tool before adopting — they compete for the same web scraping job. Link this tool from job guides using its canonical ID scrapegraphai. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 28,179 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "seaticket",
       "name": "SeaTicket",
       "type": "tool",
@@ -12619,6 +13449,98 @@
       "word_count": 321,
       "body_html": "<h2>Overview</h2>\n<p>A closed-source observability tool for understanding and tracking AI agent sessions in production, focused on session-level visibility rather than individual request logs.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Spotlight by Backplanes earns a place in the Arsenal because it directly addresses a recurring decision point: you need to understand and track AI agent sessions in production with dedicated observability tooling. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Session-level (not just request-level) agent visibility</li>\n<li>Aimed at production debugging of multi-step agent runs</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Instrumented agent sessions report step-by-step activity to Spotlight's backend, which reconstructs and visualizes the full session for debugging.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://github.com/search?q=backplanes.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need to understand and track AI agent sessions in production with dedicated observability tooling</li>\n<li><strong>Scenario</strong>: you're debugging multi-step agent runs and need session-level visibility rather than just request-level logs</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need an open-source or self-hostable observability stack — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need to understand and track AI agent sessions in production with dedicated observability tooling</li>\n<li>You're debugging multi-step agent runs and need session-level visibility rather than just request-level logs</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You need an open-source or self-hostable observability stack</p>\n</li>\n<li>\n<p>You already have a tracing platform (LangSmith/Langfuse/Phoenix) that covers your agent's framework</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/search?q=backplanes.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Spotlight by Backplanes</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview A closed source observability tool for understanding and tracking AI agent sessions in production, focused on session level visibility rather than individual request logs. Why It's in the Arsenal Spotlight by Backplanes earns a place in the Arsenal because it directly addresses a recurring decision point: you need to understand and track AI agent sessions in production with dedicated observability tooling. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Session level (not just request level) agent visibility Aimed at production debugging of multi step agent runs Architecture / How It Works Instrumented agent sessions report step by step activity to Spotlight's backend, which reconstructs and visualizes the full session for debugging. Getting Started Use Cases 1. Scenario : you need to understand and track AI agent sessions in production with dedicated observability tooling 2. Scenario : you're debugging multi step agent runs and need session level visibility rather than just request level logs 3. Scenario where this is NOT the right fit : you need an open source or self hostable observability stack — evaluate an alternative instead Strengths You need to understand and track AI agent sessions in production with dedicated observability tooling You're debugging multi step agent runs and need session level visibility rather than just request level logs Limitations / When NOT to Use You need an open source or self hostable observability stack You already have a tracing platform (LangSmith/Langfuse/Phoenix) that covers your agent's framework Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Spotlight by Backplanes Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "strands-agents",
+      "name": "Strands Agents SDK",
+      "type": "tool",
+      "job": [
+        "orchestration"
+      ],
+      "description": "Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models",
+      "url": "content/tools/orchestration/strands-agents",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 open source; free (you pay for whatever model provider/hosting you use)",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "SDK is free; model inference billed by your chosen provider",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/strands-agents/sdk-python",
+      "docs_url": "https://strandsagents.com/latest/documentation/",
+      "github_url": "https://github.com/strands-agents/sdk-python",
+      "alternatives": [
+        "openai-agents-sdk",
+        "pydantic-ai-tool",
+        "crewai"
+      ],
+      "integrates_with": [
+        "composio",
+        "litellm"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "orchestration",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want a lightweight, model-driven agent loop (model decides tool calls) rather than a hand-wired graph, with first-class MCP tool support",
+        "You want provider-agnostic backends (Bedrock, Anthropic, OpenAI, local) behind one agent API"
+      ],
+      "avoid_when": [
+        "You need deterministic, explicitly-authored control flow — a graph framework gives more control than a model-driven loop",
+        "You've already standardized on another agent SDK; the core loop abstractions are similar enough that switching rarely pays off"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (6,483), Apache-2.0 license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08 (repo resolves from strands-agents/sdk-python). Feature claims from official docs; not hands-on verified here.",
+      "verdict": "watching",
+      "verdict_rationale": "Clean model-driven agent SDK with strong MCP/provider support and AWS backing; the model-driven-loop category is still consolidating against graph-based frameworks",
+      "status": "active",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/strands-agents/sdk-python",
+          "date": "2026-07-08",
+          "description": "6,483 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "entry_type": "tool",
+      "path": "content/tools/orchestration/strands-agents.md",
+      "slug": "strands-agents",
+      "section_path": "content/tools/orchestration",
+      "display_name": "Strands Agents SDK",
+      "summary": "Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 427,
+      "body_html": "<h2>Overview</h2>\n<p>Strands Agents is an open-source SDK (open-sourced by AWS) that takes a model-driven approach to agents: you supply a model, a set of tools, and a prompt, and the SDK runs the reasoning/tool-use loop, letting the model decide which tools to call. It has native Model Context Protocol (MCP) support and is provider-agnostic across model backends.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>It earns a place because it represents the \"let the model drive the loop\" school of agent building (versus explicitly-wired graphs), backed by AWS and with strong MCP integration. It is a comparison point against other agent SDKs in the orchestration phase, not an unconditional recommendation — see Strengths / Limitations.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Model-driven agentic loop (model plans and calls tools)</li>\n<li>Native MCP client support for external tool servers</li>\n<li>Provider-agnostic models (Amazon Bedrock, Anthropic, OpenAI, local, others)</li>\n<li>Multi-agent primitives and streaming</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>An <code>Agent</code> binds a model, a tool registry, and a system prompt. On each turn the model receives the conversation plus available tool schemas, may emit tool calls that the SDK executes (including MCP-served tools), feeds results back, and repeats until it produces a final answer — so control flow emerges from the model rather than a static graph.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install strands-agents strands-agents-tools\n# from strands import Agent ; agent = Agent(model=..., tools=[...]) ; agent(\"your task\")\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: build a tool-using assistant where the model decides the steps, with MCP tools plugged in</li>\n<li><strong>Scenario</strong>: keep model provider optionality (Bedrock now, another provider later) behind one agent API</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: workflows needing explicit, deterministic step control — a graph framework fits better</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Minimal, model-driven agent abstraction</li>\n<li>First-class MCP and multi-provider support</li>\n<li>Backed and used by AWS; production-oriented</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Model-driven loops trade determinism for flexibility</p>\n</li>\n<li>\n<p>Younger ecosystem than the most established agent frameworks</p>\n</li>\n<li>\n<p>Multi-agent/complex orchestration patterns still maturing</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>openai-agents-sdk</code>, <code>pydantic-ai-tool</code>, and <code>crewai</code> before adopting — they compete for the same orchestration job.</li>\n<li>Link this tool from job guides using its canonical ID <code>strands-agents</code>.</li>\n<li>Record model-provider and hosting assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://strandsagents.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://strandsagents.com/latest/documentation/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/strands-agents/sdk-python\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>6,483 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Strands Agents is an open source SDK (open sourced by AWS) that takes a model driven approach to agents: you supply a model, a set of tools, and a prompt, and the SDK runs the reasoning/tool use loop, letting the model decide which tools to call. It has native Model Context Protocol (MCP) support and is provider agnostic across model backends. Why It's in the Arsenal It earns a place because it represents the \"let the model drive the loop\" school of agent building (versus explicitly wired graphs), backed by AWS and with strong MCP integration. It is a comparison point against other agent SDKs in the orchestration phase, not an unconditional recommendation — see Strengths / Limitations. Key Features Model driven agentic loop (model plans and calls tools) Native MCP client support for external tool servers Provider agnostic models (Amazon Bedrock, Anthropic, OpenAI, local, others) Multi agent primitives and streaming Architecture / How It Works An Agent binds a model, a tool registry, and a system prompt. On each turn the model receives the conversation plus available tool schemas, may emit tool calls that the SDK executes (including MCP served tools), feeds results back, and repeats until it produces a final answer — so control flow emerges from the model rather than a static graph. Getting Started Use Cases 1. Scenario : build a tool using assistant where the model decides the steps, with MCP tools plugged in 2. Scenario : keep model provider optionality (Bedrock now, another provider later) behind one agent API 3. Scenario where this is NOT the right fit : workflows needing explicit, deterministic step control — a graph framework fits better Strengths Minimal, model driven agent abstraction First class MCP and multi provider support Backed and used by AWS; production oriented Limitations / When NOT to Use Model driven loops trade determinism for flexibility Younger ecosystem than the most established agent frameworks Multi agent/complex orchestration patterns still maturing Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against openai agents sdk, pydantic ai tool, and crewai before adopting — they compete for the same orchestration job. Link this tool from job guides using its canonical ID strands agents. Record model provider and hosting assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 6,483 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "streamlit",

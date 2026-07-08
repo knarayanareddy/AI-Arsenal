@@ -175,6 +175,7 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | [Hugging Face Accelerate](../model-layer/accelerate.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Axolotl](../model-layer/axolotl.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | open-source | Yes | Yes | Yes | python, cpp | recommended |
+| [Liger Kernel](../model-layer/liger-kernel.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |

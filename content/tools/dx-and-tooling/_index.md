@@ -27,16 +27,16 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [AdalFlow](./adalflow.md)
 - [Agent Skills (Addy Osmani)](./addyosmani-agent-skills.md)
 - [Aider](./aider.md)
+- [BAML](./baml.md)
 - [Claude Code](./claude-code.md)
 - [Cline](./cline.md)
 - [Codex Plugin for Claude Code](./codex-plugin-cc.md)
 - [Continue](./continue-dev.md)
 - [Cursor](./cursor.md)
 - [Gemini CLI](./gemini-cli.md)
-- [GitHub Copilot](./github-copilot.md)
-- [Goose](./goose.md)
 
 ### Most Popular
 
@@ -44,8 +44,10 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [AdalFlow](./adalflow.md) — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
 - [Agent Skills (Addy Osmani)](./addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Aider](./aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
+- [BAML](./baml.md) — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
 - [Basedash](./basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [Chainlit](./chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Chrome DevTools MCP](./chrome-devtools-mcp.md) — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging

@@ -130,6 +130,7 @@ This table is exhaustive for tools tagged with job = prompt-management.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [AdalFlow](../dx-and-tooling/adalflow.md) | dx and tooling | open-source | Yes | Yes | Yes | python | watching |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
 | [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md) | dx and tooling | freemium | Yes | Yes | Yes | python, typescript | recommended |

@@ -28,15 +28,15 @@ Before picking a tool in this phase, consider:
 ### Recently Added
 
 - [Agno](./agno.md)
+- [any-agent](./any-agent.md)
 - [Composio](./composio.md)
 - [E2B](./e2b.md)
 - [Flowise](./flowise.md)
 - [Langflow](./langflow.md)
+- [Mirascope](./mirascope.md)
 - [n8n](./n8n.md)
 - [Prompt flow (Microsoft)](./promptflow.md)
-- [Temporal](./temporal.md)
-- [AGNT.Hub](./agnt-hub.md)
-- [Cloudskill](./cloudskill.md)
+- [Strands Agents SDK](./strands-agents.md)
 
 ### Most Popular
 
@@ -47,6 +47,7 @@ _No star-tracked entries yet._
 - [Agno](./agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [Apache Airflow](./airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- [any-agent](./any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - [Cloudskill](./cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
 - [Composio](./composio.md) — Integration platform providing 250+ managed, authenticated tools (Gmail, Slack, GitHub...) to any AI agent framework
 - [Dagster](./dagster.md) — Data orchestration platform for assets, pipelines, schedules, and observability
@@ -58,6 +59,7 @@ _No star-tracked entries yet._
 - [Manus](./manus.md) — AI-powered platform for building full-stack web applications and automating tasks
 - [Mem0](./mem0.md) — Memory layer for AI agents and assistants with long-term user and session memory
 - [Memoriq](./memoriq.md) — Private AI memory layer that learns from your conversations and documents
+- [Mirascope](./mirascope.md) — Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python
 - [n8n](./n8n.md) — Source-available visual workflow automation platform with first-class AI-agent nodes and 400+ integrations
 - [OrchestraML](./orchestraml.md) — Automate end-to-end ML workflows from data prep to deployment using AI agents
 - [Prefect](./prefect.md) — Python workflow orchestration framework useful for AI data, eval, and batch jobs
@@ -65,5 +67,6 @@ _No star-tracked entries yet._
 - [Pydantic AI](./pydantic-ai-tool.md) — Pydantic agent framework focused on typed outputs, tools, and production Python apps
 - [Redis](./redis-memory.md) — In-memory data store commonly used for caching, session memory, queues, and vector search
 - [SeaTicket](./seaticket.md) — Unify and resolve customer-support issues with autonomous AI agents
+- [Strands Agents SDK](./strands-agents.md) — Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models
 - [Temporal](./temporal.md) — Durable-execution platform that guarantees workflow completion — increasingly the reliability backbone under production AI agents
 - [Zep](./zep.md) — Memory and context engineering platform for AI agents and assistants

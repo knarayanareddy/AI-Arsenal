@@ -112,10 +112,12 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Agno](../orchestration/agno.md) | orchestration | open-source | Yes | Yes | Yes | python | watching |
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
 | [Apache Airflow](../orchestration/airflow.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [any-agent](../orchestration/any-agent.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [ClearML](../model-layer/clearml.md) | model layer | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
 | [Composio](../orchestration/composio.md) | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
 | [Dagster](../orchestration/dagster.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [E2B](../orchestration/e2b.md) | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
@@ -125,6 +127,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
+| [Mirascope](../orchestration/mirascope.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
@@ -134,6 +137,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [SeaTicket](../orchestration/seaticket.md) | orchestration | freemium | Yes | No | No | python | watching |
+| [Strands Agents SDK](../orchestration/strands-agents.md) | orchestration | open-source | Yes | Yes | Yes | python | watching |
 | [Temporal](../orchestration/temporal.md) | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
