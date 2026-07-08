@@ -11,13 +11,16 @@
 | `audiocraft` | [AudioCraft (Meta)](./foundation-models/audiocraft.md) | Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec |
 | `autogen` | [AutoGen](./frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
 | `autogpt` | [AutoGPT](./frameworks/autogpt.md) | Autonomous agent platform and classic agent project for accessible AI automation |
+| `bge-embeddings` | [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md) | BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG |
 | `bigcodebench` | [BigCodeBench](./benchmarks-and-evals/bigcodebench.md) | Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval |
 | `braintrust` | [Braintrust](./benchmarks-and-evals/braintrust.md) | Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates |
 | `browser-use` | [Browser Use](./agent-systems/browser-use.md) | The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously |
 | `camel-ai` | [CAMEL](./frameworks/camel-ai.md) | Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation |
 | `candle` | [Candle](./inference-engines/candle.md) | Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference |
+| `chatterbox` | [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) | Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default |
 | `chroma` | [Chroma](./data-and-retrieval/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
 | `cleanlab` | [cleanlab](./data-and-retrieval/cleanlab.md) | Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions |
+| `clip` | [CLIP (OpenAI)](./foundation-models/clip.md) | OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs |
 | `cognee` | [Cognee](./data-and-retrieval/cognee.md) | Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations |
 | `colossalai` | [Colossal-AI (HPC-AI Tech)](./training-and-alignment/colossalai.md) | Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory |
 | `comfyui` | [ComfyUI](./frameworks/comfyui.md) | Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines |
@@ -33,9 +36,11 @@
 | `dspy` | [DSPy](./frameworks/dspy.md) | A framework for programming and optimizing language model pipelines |
 | `exllamav2` | [ExLlamaV2](./inference-engines/exllamav2.md) | Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM |
 | `exo` | [exo (exo-explore)](./inference-engines/exo.md) | Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine |
+| `f5-tts` | [F5-TTS](./foundation-models/f5-tts.md) | Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple |
 | `falcon-3` | [Falcon 3](./foundation-models/falcon-3.md) | TII open model family with compact 1B to 10B text-only variants for local deployment |
 | `faster-whisper` | [faster-whisper](./inference-engines/faster-whisper.md) | Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs |
 | `firecrawl` | [Firecrawl](./data-and-retrieval/firecrawl.md) | Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data |
+| `flux` | [FLUX (Black Forest Labs)](./foundation-models/flux.md) | Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled |
 | `gemma` | [Gemma](./foundation-models/gemma.md) | Google open model family designed for efficient language and multimodal applications |
 | `gemma-3` | [Gemma 3](./foundation-models/gemma-3.md) | Google open model family with efficient text and multimodal variants for local and hosted use |
 | `glm-4` | [GLM-4 / GLM-4.5](./foundation-models/glm-4.md) | Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants |
@@ -48,6 +53,7 @@
 | `insforge` | [InsForge](./agent-systems/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
 | `khoj` | [Khoj](./agent-systems/khoj.md) | Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs |
 | `kimi-k2` | [Kimi K2](./foundation-models/kimi-k2.md) | Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters |
+| `kokoro` | [Kokoro TTS](./foundation-models/kokoro.md) | 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX |
 | `ktransformers` | [KTransformers](./inference-engines/ktransformers.md) | CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops |
 | `lancedb` | [LanceDB](./data-and-retrieval/lancedb.md) | Developer-friendly embedded and serverless vector database for multimodal AI retrieval |
 | `langchain` | [LangChain](./frameworks/langchain.md) | A framework for composing LLM applications, retrieval flows, tools, and agents |
@@ -98,6 +104,7 @@
 | `qdrant` | [Qdrant](./data-and-retrieval/qdrant.md) | Rust vector database for high-performance similarity search with filtering and hybrid search |
 | `qwen` | [Qwen](./foundation-models/qwen.md) | Alibaba open-weight model family covering language, coding, and multimodal use cases |
 | `qwen-2-5` | [Qwen 2.5 / QwQ](./foundation-models/qwen-2-5.md) | Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models |
+| `qwen3-vl` | [Qwen3-VL](./foundation-models/qwen3-vl.md) | Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship |
 | `ragas-rag-evaluation` | [Ragas for RAG Evaluation](./benchmarks-and-evals/ragas-rag-evaluation.md) | Evaluation framework for measuring retrieval-augmented generation quality and regressions |
 | `ragflow` | [RAGFlow](./data-and-retrieval/ragflow.md) | Open-source RAG engine combining document understanding, retrieval, and agent capabilities |
 | `sam2` | [SAM 2 (Segment Anything Model 2)](./foundation-models/sam2.md) | Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory |

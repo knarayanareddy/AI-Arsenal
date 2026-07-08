@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:10:55.117Z | Entries: 701 | Schema version: 1.0.0
+Generated: 2026-07-08T20:11:50.772Z | Entries: 708 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 129
+- Projects: 136
 - Tools: 173
 - Papers: 80
 - Tips: 129
@@ -70,7 +70,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
 
 ### multimodal
+- Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
 - ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
+- FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
+- CLIP (OpenAI) (⭐33936, score:30) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
 
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
@@ -93,9 +96,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### voice-audio
 - AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
+- Chatterbox (Resemble AI) (⭐25426, score:55) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
 - faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
-- Whisper (⭐104543, score:50) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 
 ## Top Tools by Job
 
