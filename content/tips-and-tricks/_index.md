@@ -11,7 +11,7 @@
 | [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-08 |
 | [evaluation](./evaluation/) | 13 entries | 2026-07-08 |
 | [fine tuning](./fine-tuning/) | 8 entries | 2026-07-08 |
-| [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-08 |
+| [inference and serving](./inference-and-serving/) | 25 entries | 2026-07-08 |
 | [prompting](./prompting/) | 21 entries | 2026-07-08 |
 | [rag and retrieval](./rag-and-retrieval/) | 17 entries | 2026-07-08 |
 
@@ -19,14 +19,14 @@
 
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./cost-and-performance/batch-embedding-requests-during-ingestion.md)
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md)
+- [Cap Concurrent Requests With Admission Control](./inference-and-serving/cap-concurrent-requests-with-admission-control.md)
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
+- [Enable Prefix Caching for Shared System Prompts](./inference-and-serving/enable-prefix-caching-for-shared-system-prompts.md)
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md)
-- [Continuously Sample Production Traffic Into Your Eval Sets](./evaluation/sample-production-traffic-into-eval-sets.md)
-- [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./evaluation/set-pass-fail-thresholds-before-running-evals.md)
-- [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md)
-- [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./evaluation/slice-eval-metrics-by-input-segment.md)
+- [Prefer Continuous Batching Over Static Batching for Online Serving](./inference-and-serving/prefer-continuous-batching-for-online-serving.md)
+- [Route Easy Requests to a Smaller Model First](./inference-and-serving/route-easy-requests-to-a-smaller-model-first.md)
 
 ## Most Popular
 
@@ -53,6 +53,7 @@ _No star-tracked entries yet._
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md) — 
 - [Use Prompt Caching for Long, Stable System Prompt Prefixes](./cost-and-performance/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./agents-and-orchestration/cap-agent-tool-retries.md) — 
+- [Cap Concurrent Requests With Admission Control](./inference-and-serving/cap-concurrent-requests-with-admission-control.md) — 
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md) — 
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
@@ -67,6 +68,7 @@ _No star-tracked entries yet._
 - [Detect and Stop Repeated Identical Tool Calls](./agents-and-orchestration/detect-repeated-tool-calls.md) — 
 - [Capture Sampled Traces Before Real Users Hit the System](./debugging-and-observability/do-not-launch-without-trace-sampling.md) — 
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./cost-and-performance/drop-unused-conversation-history.md) — 
+- [Enable Prefix Caching for Shared System Prompts](./inference-and-serving/enable-prefix-caching-for-shared-system-prompts.md) — 
 - [Establish a Prompting Baseline Before Fine-Tuning](./fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md) — 
 - [Evaluate Checkpoints on Task Metrics, Not Training Loss](./fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
@@ -82,5 +84,3 @@ _No star-tracked entries yet._
 - [Log Both the Raw Model Output and the Parsed Result](./debugging-and-observability/log-raw-and-parsed-model-outputs.md) — 
 - [Log the Retrieved Context for Every RAG Answer](./debugging-and-observability/log-retrieved-context.md) — 
 - [Make Agent Success Criteria Machine-Checkable, Not Self-Reported](./agents-and-orchestration/make-success-criteria-machine-checkable.md) — 
-- [Match Configured Context Length to Available RAM Before Demos](./inference-and-serving/match-context-length-to-ram.md) — 
-- [Match Training and Inference Prompt Formats Exactly](./fine-tuning/match-training-and-inference-prompt-formats.md) — 

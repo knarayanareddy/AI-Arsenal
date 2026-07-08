@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T21:22:59.307Z",
+    "generated_at": "2026-07-08T22:59:13.980Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 100,
-    "total_tips": 129,
+    "total_tips": 135,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -1758,6 +1758,25 @@
       "url": "content/tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries",
       "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "cap-concurrent-requests-with-admission-control",
+      "type": "tip",
+      "name": "Cap Concurrent Requests With Admission Control",
+      "description": "",
+      "tags": [
+        "inference",
+        "monitoring",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/cap-concurrent-requests-with-admission-control.md",
+      "url": "content/tips-and-tricks/inference-and-serving/cap-concurrent-requests-with-admission-control",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -3877,6 +3896,25 @@
       "maturity": "beta",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "enable-prefix-caching-for-shared-system-prompts",
+      "type": "tip",
+      "name": "Enable Prefix Caching for Shared System Prompts",
+      "description": "",
+      "tags": [
+        "inference",
+        "caching",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/enable-prefix-caching-for-shared-system-prompts.md",
+      "url": "content/tips-and-tricks/inference-and-serving/enable-prefix-caching-for-shared-system-prompts",
+      "last_updated": "2026-07-08",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -9835,6 +9873,25 @@
       "featured": false
     },
     {
+      "id": "prefer-continuous-batching-for-online-serving",
+      "type": "tip",
+      "name": "Prefer Continuous Batching Over Static Batching for Online Serving",
+      "description": "",
+      "tags": [
+        "inference",
+        "batching",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/prefer-continuous-batching-for-online-serving.md",
+      "url": "content/tips-and-tricks/inference-and-serving/prefer-continuous-batching-for-online-serving",
+      "last_updated": "2026-07-08",
+      "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "prefer-gguf-for-llama-cpp-workflows",
       "type": "tip",
       "name": "Prefer GGUF Format for llama.cpp and Ollama-Style Local Runtimes",
@@ -10978,6 +11035,25 @@
       "featured": false
     },
     {
+      "id": "route-easy-requests-to-a-smaller-model-first",
+      "type": "tip",
+      "name": "Route Easy Requests to a Smaller Model First",
+      "description": "",
+      "tags": [
+        "inference",
+        "routing",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/route-easy-requests-to-a-smaller-model-first.md",
+      "url": "content/tips-and-tricks/inference-and-serving/route-easy-requests-to-a-smaller-model-first",
+      "last_updated": "2026-07-08",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "route-simple-tasks-to-smaller-models",
       "type": "tip",
       "name": "Classify Task Difficulty and Route Easy Requests to Cheaper Models",
@@ -11529,6 +11605,44 @@
       "url": "content/tips-and-tricks/prompting/separate-user-content-from-system-instructions",
       "last_updated": "2026-07-02",
       "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-explicit-stop-sequences-to-prevent-overrun",
+      "type": "tip",
+      "name": "Set Explicit Stop Sequences to Prevent Generation Overrun",
+      "description": "",
+      "tags": [
+        "inference",
+        "efficiency",
+        "structured-output"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/set-explicit-stop-sequences-to-prevent-overrun.md",
+      "url": "content/tips-and-tricks/inference-and-serving/set-explicit-stop-sequences-to-prevent-overrun",
+      "last_updated": "2026-07-08",
+      "category": "inference-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-max-tokens-to-bound-tail-latency-and-cost",
+      "type": "tip",
+      "name": "Set max_tokens to Bound Tail Latency and Cost",
+      "description": "",
+      "tags": [
+        "inference",
+        "efficiency",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/set-max-tokens-to-bound-tail-latency-and-cost.md",
+      "url": "content/tips-and-tricks/inference-and-serving/set-max-tokens-to-bound-tail-latency-and-cost",
+      "last_updated": "2026-07-08",
+      "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
       "status": null,

@@ -28,16 +28,16 @@ Choosing an entire serving architecture (which inference engine, self-hosted vs.
 
 ### Recently Added
 
+- [Cap Concurrent Requests With Admission Control](./cap-concurrent-requests-with-admission-control.md)
+- [Enable Prefix Caching for Shared System Prompts](./enable-prefix-caching-for-shared-system-prompts.md)
+- [Prefer Continuous Batching Over Static Batching for Online Serving](./prefer-continuous-batching-for-online-serving.md)
+- [Route Easy Requests to a Smaller Model First](./route-easy-requests-to-a-smaller-model-first.md)
+- [Set Explicit Stop Sequences to Prevent Generation Overrun](./set-explicit-stop-sequences-to-prevent-overrun.md)
+- [Set max_tokens to Bound Tail Latency and Cost](./set-max-tokens-to-bound-tail-latency-and-cost.md)
 - [Warm Up Model Servers Before Routing Production Traffic to Them](./warm-up-model-servers-before-routing-traffic.md)
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./add-provider-timeout-and-retry-policies.md)
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./benchmark-on-the-user-hardware.md)
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./benchmark-with-production-shaped-inputs.md)
-- [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./benchmark-with-real-context-lengths.md)
-- [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./choose-int4-only-after-quality-tests.md)
-- [Keep Local Model Weight Files Out of Git](./keep-model-files-out-of-git.md)
-- [Match Configured Context Length to Available RAM Before Demos](./match-context-length-to-ram.md)
-- [Track KV Cache Hit Rate for Long-Context Serving Economics](./measure-kv-cache-hit-rate.md)
-- [Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images](./pin-dependencies-for-inference-images.md)
 
 ### Most Popular
 
@@ -49,14 +49,20 @@ _No star-tracked entries yet._
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./benchmark-with-real-context-lengths.md) — 
+- [Cap Concurrent Requests With Admission Control](./cap-concurrent-requests-with-admission-control.md) — 
 - [Choose INT4 Quantization Only After Explicit Task-Quality Testing](./choose-int4-only-after-quality-tests.md) — 
+- [Enable Prefix Caching for Shared System Prompts](./enable-prefix-caching-for-shared-system-prompts.md) — 
 - [Keep Local Model Weight Files Out of Git](./keep-model-files-out-of-git.md) — 
 - [Match Configured Context Length to Available RAM Before Demos](./match-context-length-to-ram.md) — 
 - [Track KV Cache Hit Rate for Long-Context Serving Economics](./measure-kv-cache-hit-rate.md) — 
 - [Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images](./pin-dependencies-for-inference-images.md) — 
 - [Pin Model and Runtime Versions Before Running Any Benchmark](./pin-model-and-runtime-versions.md) — 
+- [Prefer Continuous Batching Over Static Batching for Online Serving](./prefer-continuous-batching-for-online-serving.md) — 
 - [Prefer GGUF Format for llama.cpp and Ollama-Style Local Runtimes](./prefer-gguf-for-llama-cpp-workflows.md) — 
+- [Route Easy Requests to a Smaller Model First](./route-easy-requests-to-a-smaller-model-first.md) — 
 - [Separate Offline Batch Generation From Interactive Chat Serving](./separate-offline-batch-jobs-from-chat-serving.md) — 
+- [Set Explicit Stop Sequences to Prevent Generation Overrun](./set-explicit-stop-sequences-to-prevent-overrun.md) — 
+- [Set max_tokens to Bound Tail Latency and Cost](./set-max-tokens-to-bound-tail-latency-and-cost.md) — 
 - [Validate the Workflow With a Smaller Quantized Model Before Downloading Larger Weights](./start-with-a-smaller-quantized-model.md) — 
 - [Stream Tokens to the User Even When Total Generation Time Is Unchanged](./stream-user-facing-responses.md) — 
 - [Increase Batch Size Only Until Tail Latency Becomes Unacceptable](./tune-batch-size-against-tail-latency.md) — 
