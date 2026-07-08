@@ -31,7 +31,9 @@ When I am trying to reduce inference cost or latency for a model I'm already run
 
 ### Recently Added
 
+- [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](./cai-2024-medusa.md)
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](./dao-2022-flashattention.md)
+- [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](./dao-2023-flashattention2.md)
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./kwon-2023-pagedattention.md)
 - [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](./lin-2023-awq.md)
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./frantar-2022-gptq.md)
@@ -43,7 +45,9 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](./cai-2024-medusa.md) — Speeds up decoding by adding a few extra prediction heads that guess several future tokens at once, verified in parallel with tree attention — no separate draft model, 2-3x faster, and self-contained enough to bolt onto an existing model.
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](./dao-2022-flashattention.md) — Reframed attention as an IO problem: tiling and online softmax keep the computation in GPU SRAM, avoiding materializing the N×N matrix — exact attention, 2-4x faster and linear memory, now compiled into effectively all training and serving stacks
+- [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](./dao-2023-flashattention2.md) — Rewrote FlashAttention to cut non-matmul FLOPs, parallelize across sequence length, and partition work better between GPU warps — roughly 2x faster than v1 and reaching 50-73% of A100 peak, the kernel now underpinning most training and long-context serving.
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./kwon-2023-pagedattention.md) — Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal
 - [Fast Inference from Transformers via Speculative Decoding](./leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness
