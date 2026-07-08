@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
+  "generated_at": "2026-07-08T16:56:15.531Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 93,
+      "count": 94,
       "types": {
         "tip": 14,
         "tool": 26,
         "build-example": 3,
         "guide": 7,
         "project": 24,
-        "architecture": 4,
+        "architecture": 5,
         "benchmark": 5,
         "person": 3,
         "paper": 7
@@ -89,6 +89,7 @@
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
         "shellmate",
+        "single-agent-vs-multi-agent",
         "skillspector",
         "smolagents",
         "speech-to-speech",
@@ -225,14 +226,16 @@
     {
       "id": "chunking",
       "label": "Chunking",
-      "count": 7,
+      "count": 8,
       "types": {
         "guide": 2,
-        "tip": 5
+        "tip": 5,
+        "architecture": 1
       },
       "entries": [
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "context-windows",
         "rag-chunk-overlap-tuning",
         "start-with-zero-chunk-overlap",
@@ -442,10 +445,11 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 22,
+      "count": 23,
       "types": {
         "guide": 4,
         "tip": 9,
+        "architecture": 1,
         "project": 4,
         "paper": 4,
         "tool": 1
@@ -454,6 +458,7 @@
         "attention",
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
+        "choose-serving-stack",
         "compress-retrieved-context-before-generation",
         "deepseek-v3-r1",
         "dettmers-2023-qlora",
@@ -478,11 +483,11 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 23,
+      "count": 24,
       "types": {
         "tip": 7,
         "guide": 2,
-        "architecture": 2,
+        "architecture": 3,
         "project": 10,
         "person": 1,
         "tool": 1
@@ -492,6 +497,7 @@
         "add-reranking-after-recall-is-acceptable",
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
+        "choose-chunking-strategy",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -763,11 +769,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 59,
+      "count": 60,
       "types": {
         "tip": 21,
         "tool": 6,
-        "architecture": 4,
+        "architecture": 5,
         "project": 17,
         "guide": 6,
         "paper": 4,
@@ -783,6 +789,7 @@
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
+        "choose-serving-stack",
         "deepseek-v3-r1",
         "emerging-techniques",
         "falcon-3",
@@ -881,7 +888,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 158,
+      "count": 159,
       "types": {
         "tip": 20,
         "guide": 44,
@@ -889,7 +896,7 @@
         "benchmark": 9,
         "tool": 33,
         "paper": 9,
-        "architecture": 3,
+        "architecture": 4,
         "project": 23,
         "build-example": 2
       },
@@ -911,6 +918,7 @@
         "brown-2020-gpt3",
         "chainlit",
         "choose-llm",
+        "choose-serving-stack",
         "clem-delangue",
         "command-r-plus",
         "context-engineering",
@@ -1294,12 +1302,12 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 30,
+      "count": 31,
       "types": {
         "guide": 2,
         "tool": 12,
         "project": 14,
-        "architecture": 2
+        "architecture": 3
       },
       "entries": [
         "agent-builder-role",
@@ -1330,6 +1338,7 @@
         "qursor",
         "seaticket",
         "semantic-kernel",
+        "single-agent-vs-multi-agent",
         "stagehand",
         "txtai"
       ]
@@ -1337,13 +1346,13 @@
     {
       "id": "planning",
       "label": "Planning",
-      "count": 13,
+      "count": 14,
       "types": {
         "tool": 2,
         "build-example": 1,
         "guide": 2,
         "project": 6,
-        "architecture": 2
+        "architecture": 3
       },
       "entries": [
         "addyosmani-agent-skills",
@@ -1358,6 +1367,7 @@
         "multi-agent-system",
         "openhands",
         "semantic-kernel",
+        "single-agent-vs-multi-agent",
         "superpowers"
       ]
     },
@@ -1405,13 +1415,13 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 76,
+      "count": 77,
       "types": {
         "tip": 18,
         "build-example": 5,
         "guide": 4,
         "benchmark": 4,
-        "architecture": 5,
+        "architecture": 6,
         "project": 24,
         "tool": 7,
         "paper": 6,
@@ -1427,6 +1437,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "choose-eval-framework",
         "choose-vector-db",
         "chroma",
@@ -1560,14 +1571,14 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 66,
+      "count": 67,
       "types": {
         "tip": 19,
         "build-example": 4,
         "tool": 8,
         "benchmark": 4,
         "guide": 3,
-        "architecture": 4,
+        "architecture": 5,
         "project": 17,
         "paper": 6,
         "person": 1
@@ -1581,6 +1592,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -1724,9 +1736,9 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 18,
+      "count": 19,
       "types": {
-        "architecture": 3,
+        "architecture": 4,
         "tool": 2,
         "paper": 1,
         "project": 9,
@@ -1734,6 +1746,7 @@
       },
       "entries": [
         "choose-deployment-target",
+        "choose-serving-stack",
         "choose-vector-db",
         "cubesandbox",
         "gemma-team-2026-gemma4",
