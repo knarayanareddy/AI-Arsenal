@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:10:38.582Z",
+    "generated_at": "2026-07-08T20:11:41.195Z",
     "total_projects": 130,
-    "total_tools": 173,
+    "total_tools": 177,
     "total_papers": 80,
     "total_tips": 129,
     "total_people": 25,
@@ -2239,6 +2239,25 @@
       "featured": false
     },
     {
+      "id": "cog",
+      "type": "tool",
+      "name": "Cog (Replicate)",
+      "description": "Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/tools/serving-and-deployment/cog.md",
+      "url": "content/tools/serving-and-deployment/cog",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cognee",
       "type": "project",
       "name": "Cognee",
@@ -3963,18 +3982,18 @@
     {
       "id": "garak",
       "type": "tool",
-      "name": "garak",
-      "description": "NVIDIA's open-source LLM vulnerability scanner: automated probes for jailbreaks, leakage, injection, and toxicity",
+      "name": "garak (NVIDIA)",
+      "description": "NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation",
       "tags": [
-        "security",
         "evaluation",
-        "llm"
+        "llm",
+        "self-hosted"
       ],
       "path": "content/tools/evaluation-and-observability/garak.md",
       "url": "content/tools/evaluation-and-observability/garak",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4361,6 +4380,25 @@
       "url": "content/projects/data-and-retrieval/graphrag",
       "last_updated": "2026-07-08",
       "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "great-expectations",
+      "type": "tool",
+      "name": "Great Expectations (GX Core)",
+      "description": "The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on",
+      "tags": [
+        "data",
+        "evaluation",
+        "self-hosted"
+      ],
+      "path": "content/tools/data-ingestion/great-expectations.md",
+      "url": "content/tools/data-ingestion/great-expectations",
+      "last_updated": "2026-07-08",
+      "category": null,
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -4959,12 +4997,12 @@
     {
       "id": "inspect-ai",
       "type": "tool",
-      "name": "Inspect",
-      "description": "UK AI Safety Institute's framework for LLM evaluations: solvers, scorers, and sandboxed agentic tasks as code",
+      "name": "Inspect (UK AI Safety Institute)",
+      "description": "The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer",
       "tags": [
         "evaluation",
-        "agents",
-        "llm"
+        "llm",
+        "agents"
       ],
       "path": "content/tools/evaluation-and-observability/inspect-ai.md",
       "url": "content/tools/evaluation-and-observability/inspect-ai",
@@ -6395,6 +6433,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lm-evaluation-harness",
+      "type": "tool",
+      "name": "LM Evaluation Harness (EleutherAI)",
+      "description": "The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard",
+      "tags": [
+        "evaluation",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/tools/evaluation-and-observability/lm-evaluation-harness.md",
+      "url": "content/tools/evaluation-and-observability/lm-evaluation-harness",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -8771,6 +8828,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "promptflow",
+      "type": "tool",
+      "name": "Prompt flow (Microsoft)",
+      "description": "Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML",
+      "tags": [
+        "llm",
+        "agents",
+        "evaluation"
+      ],
+      "path": "content/tools/orchestration/promptflow.md",
+      "url": "content/tools/orchestration/promptflow",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },

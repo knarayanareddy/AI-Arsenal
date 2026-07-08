@@ -9,12 +9,12 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-08 |
 | [by job](./by-job/) | 14 entries | 2026-07-08 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-08 |
-| [data ingestion](./data-ingestion/) | 28 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 29 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 40 entries | 2026-07-08 |
-| [evaluation and observability](./evaluation-and-observability/) | 27 entries | 2026-07-08 |
+| [evaluation and observability](./evaluation-and-observability/) | 28 entries | 2026-07-08 |
 | [model layer](./model-layer/) | 30 entries | 2026-07-08 |
-| [orchestration](./orchestration/) | 22 entries | 2026-07-08 |
-| [serving and deployment](./serving-and-deployment/) | 26 entries | 2026-07-08 |
+| [orchestration](./orchestration/) | 23 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 27 entries | 2026-07-08 |
 
 ## Recently Added
 
@@ -65,6 +65,7 @@ _No star-tracked entries yet._
 - [Code Arena](./evaluation-and-observability/code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
 - [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md) — Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation
+- [Cog (Replicate)](./serving-and-deployment/cog.md) — Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile
 - [Cohere](./model-layer/cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - [Composio](./orchestration/composio.md) — Integration platform providing 250+ managed, authenticated tools (Gmail, Slack, GitHub...) to any AI agent framework
 - [Conan](./evaluation-and-observability/conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
@@ -84,4 +85,3 @@ _No star-tracked entries yet._
 - [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
 - [dlt](./data-ingestion/dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
 - [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
-- [DVC](./model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
