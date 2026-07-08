@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:03:23.503Z",
+    "generated_at": "2026-07-08T20:07:49.593Z",
     "total_projects": 103,
-    "total_tools": 166,
-    "total_papers": 66,
+    "total_tools": 175,
+    "total_papers": 80,
     "total_tips": 129,
     "total_people": 25,
     "total_digests": 1,
@@ -764,6 +764,25 @@
       "featured": false
     },
     {
+      "id": "asai-2023-self-rag",
+      "type": "paper",
+      "name": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+      "description": "Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG",
+      "tags": [
+        "rag",
+        "retrieval",
+        "reasoning"
+      ],
+      "path": "content/research/retrieval-and-memory/asai-2023-self-rag.md",
+      "url": "content/research/retrieval-and-memory/asai-2023-self-rag",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "ask-for-missing-inputs-before-solving",
       "type": "tip",
       "name": "Instruct the Model to Ask for Missing Inputs Instead of Guessing",
@@ -1431,6 +1450,25 @@
       "featured": false
     },
     {
+      "id": "chen-2021-codex",
+      "type": "paper",
+      "name": "Evaluating Large Language Models Trained on Code (Codex / HumanEval)",
+      "description": "Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "llm"
+      ],
+      "path": "content/research/evaluation-and-safety/chen-2021-codex.md",
+      "url": "content/research/evaluation-and-safety/chen-2021-codex",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "chiang-2024-chatbot-arena",
       "type": "paper",
       "name": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
@@ -1766,6 +1804,44 @@
       "featured": false
     },
     {
+      "id": "chowdhery-2022-palm",
+      "type": "paper",
+      "name": "PaLM: Scaling Language Modeling with Pathways",
+      "description": "540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size",
+      "tags": [
+        "llm",
+        "foundational",
+        "training"
+      ],
+      "path": "content/research/foundational/chowdhery-2022-palm.md",
+      "url": "content/research/foundational/chowdhery-2022-palm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "christiano-2017-rlhf",
+      "type": "paper",
+      "name": "Deep Reinforcement Learning from Human Preferences",
+      "description": "The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback",
+      "tags": [
+        "rlhf",
+        "alignment",
+        "training"
+      ],
+      "path": "content/research/training-and-alignment/christiano-2017-rlhf.md",
+      "url": "content/research/training-and-alignment/christiano-2017-rlhf",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "chroma",
       "type": "project",
       "name": "Chroma",
@@ -1856,6 +1932,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "clearml",
+      "type": "tool",
+      "name": "ClearML",
+      "description": "Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration",
+      "tags": [
+        "training",
+        "monitoring",
+        "self-hosted"
+      ],
+      "path": "content/tools/model-layer/clearml.md",
+      "url": "content/tools/model-layer/clearml",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -3025,6 +3120,26 @@
       "featured": false
     },
     {
+      "id": "elasticsearch",
+      "type": "tool",
+      "name": "Elasticsearch",
+      "description": "Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads",
+      "tags": [
+        "retrieval",
+        "rag",
+        "self-hosted",
+        "monitoring"
+      ],
+      "path": "content/tools/data-ingestion/elasticsearch.md",
+      "url": "content/tools/data-ingestion/elasticsearch",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "eleutherai-discord",
       "type": "community",
       "name": "EleutherAI Discord",
@@ -3373,6 +3488,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fedus-2021-switch-transformer",
+      "type": "paper",
+      "name": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+      "description": "Simplified mixture-of-experts to top-1 routing (one expert per token), showing sparse models reach the same quality as dense ones up to 7× faster per FLOP — the recipe that made MoE the standard architecture for frontier-scale efficiency",
+      "tags": [
+        "transformers",
+        "efficiency",
+        "training"
+      ],
+      "path": "content/research/architectures/fedus-2021-switch-transformer.md",
+      "url": "content/research/architectures/fedus-2021-switch-transformer",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -4158,6 +4292,25 @@
       "featured": false
     },
     {
+      "id": "guu-2020-realm",
+      "type": "paper",
+      "name": "REALM: Retrieval-Augmented Language Model Pre-Training",
+      "description": "First model to pretrain a language model jointly with a learned neural retriever over Wikipedia, backpropagating through retrieval — establishing that external knowledge can be a trained component of an LM rather than a bolt-on",
+      "tags": [
+        "retrieval",
+        "rag",
+        "training"
+      ],
+      "path": "content/research/retrieval-and-memory/guu-2020-realm.md",
+      "url": "content/research/retrieval-and-memory/guu-2020-realm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "hall-of-fame",
       "type": "trend",
       "name": "AI Arsenal Hall of Fame",
@@ -4776,6 +4929,25 @@
       "featured": false
     },
     {
+      "id": "izacard-2020-fid",
+      "type": "paper",
+      "name": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)",
+      "description": "Fusion-in-Decoder: encode each retrieved passage independently, concatenate the encodings, and let the decoder attend across all of them — scaling QA accuracy monotonically with passage count at linear (not quadratic) encoding cost",
+      "tags": [
+        "retrieval",
+        "rag",
+        "llm"
+      ],
+      "path": "content/research/retrieval-and-memory/izacard-2020-fid.md",
+      "url": "content/research/retrieval-and-memory/izacard-2020-fid",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "jailbreakbench",
       "type": "benchmark",
       "name": "JailbreakBench",
@@ -5153,6 +5325,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "kojima-2022-zero-shot-cot",
+      "type": "paper",
+      "name": "Large Language Models are Zero-Shot Reasoners",
+      "description": "Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone",
+      "tags": [
+        "reasoning",
+        "research",
+        "llm"
+      ],
+      "path": "content/research/agents-and-reasoning/kojima-2022-zero-shot-cot.md",
+      "url": "content/research/agents-and-reasoning/kojima-2022-zero-shot-cot",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -5673,6 +5864,25 @@
       "featured": false
     },
     {
+      "id": "liu-2023-llava",
+      "type": "paper",
+      "name": "Visual Instruction Tuning (LLaVA)",
+      "description": "Connected a frozen CLIP vision encoder to a LLaMA-family LLM with just a linear projection, trained on GPT-4-generated visual instruction data — establishing the minimal recipe (encoder + projector + LLM) behind most open vision-language models",
+      "tags": [
+        "multimodal",
+        "llm",
+        "fine-tuning"
+      ],
+      "path": "content/research/architectures/liu-2023-llava.md",
+      "url": "content/research/architectures/liu-2023-llava",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "liu-2023-lost-in-the-middle",
       "type": "paper",
       "name": "Lost in the Middle: How Language Models Use Long Contexts",
@@ -5879,6 +6089,25 @@
       "category": "evaluation-methods",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llm-guard",
+      "type": "tool",
+      "name": "LLM Guard",
+      "description": "Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more",
+      "tags": [
+        "security",
+        "guardrails",
+        "self-hosted"
+      ],
+      "path": "content/tools/evaluation-and-observability/llm-guard.md",
+      "url": "content/tools/evaluation-and-observability/llm-guard",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6127,6 +6356,26 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lorax",
+      "type": "tool",
+      "name": "LoRAX",
+      "description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
+      "tags": [
+        "inference",
+        "fine-tuning",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/tools/serving-and-deployment/lorax.md",
+      "url": "content/tools/serving-and-deployment/lorax",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6428,6 +6677,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "megatron-lm",
+      "type": "tool",
+      "name": "Megatron-LM",
+      "description": "NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism",
+      "tags": [
+        "training",
+        "transformers",
+        "efficiency",
+        "self-hosted"
+      ],
+      "path": "content/tools/model-layer/megatron-lm.md",
+      "url": "content/tools/model-layer/megatron-lm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7040,6 +7309,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "nakano-2021-webgpt",
+      "type": "paper",
+      "name": "WebGPT: Browser-assisted question-answering with human feedback",
+      "description": "Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers",
+      "tags": [
+        "agents",
+        "tool-use",
+        "rlhf"
+      ],
+      "path": "content/research/agents-and-reasoning/nakano-2021-webgpt.md",
+      "url": "content/research/agents-and-reasoning/nakano-2021-webgpt",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -8613,6 +8901,25 @@
       "featured": false
     },
     {
+      "id": "ragas",
+      "type": "tool",
+      "name": "Ragas",
+      "description": "Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines",
+      "tags": [
+        "evaluation",
+        "rag",
+        "llm"
+      ],
+      "path": "content/tools/evaluation-and-observability/ragas.md",
+      "url": "content/tools/evaluation-and-observability/ragas",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ragas-rag-evaluation",
       "type": "project",
       "name": "Ragas for RAG Evaluation",
@@ -8706,6 +9013,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "ray",
+      "type": "tool",
+      "name": "Ray",
+      "description": "Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving",
+      "tags": [
+        "inference",
+        "training",
+        "orchestration",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/ray.md",
+      "url": "content/tools/serving-and-deployment/ray",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -9570,6 +9897,25 @@
       ],
       "path": "content/research/training-and-alignment/shao-2024-deepseekmath.md",
       "url": "content/research/training-and-alignment/shao-2024-deepseekmath",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "shazeer-2019-mqa",
+      "type": "paper",
+      "name": "Fast Transformer Decoding: One Write-Head is All You Need (Multi-Query Attention)",
+      "description": "Multi-query attention: share one key/value head across all query heads, shrinking the KV cache by the head count and making incremental decoding memory-bandwidth-cheap — the idea GQA later refined and every modern serving stack depends on",
+      "tags": [
+        "inference",
+        "efficiency",
+        "transformers"
+      ],
+      "path": "content/research/inference-and-efficiency/shazeer-2019-mqa.md",
+      "url": "content/research/inference-and-efficiency/shazeer-2019-mqa",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
@@ -10624,6 +10970,26 @@
       "featured": false
     },
     {
+      "id": "text-embeddings-inference",
+      "type": "tool",
+      "name": "Text Embeddings Inference (TEI)",
+      "description": "Hugging Face's Rust-based high-throughput inference server for embedding and reranker models",
+      "tags": [
+        "embeddings",
+        "inference",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/tools/serving-and-deployment/text-embeddings-inference.md",
+      "url": "content/tools/serving-and-deployment/text-embeddings-inference",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "text-generation-inference",
       "type": "project",
       "name": "Text Generation Inference",
@@ -10781,6 +11147,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "touvron-2023-llama",
+      "type": "paper",
+      "name": "LLaMA: Open and Efficient Foundation Language Models",
+      "description": "Trained 7B–65B models on public data only, overtraining far past Chinchilla-optimal to optimize inference cost rather than training cost — LLaMA-13B beat GPT-3-175B, and the weights' release ignited the open-model ecosystem",
+      "tags": [
+        "llm",
+        "foundational",
+        "training"
+      ],
+      "path": "content/research/foundational/touvron-2023-llama.md",
+      "url": "content/research/foundational/touvron-2023-llama",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -11725,6 +12110,26 @@
       "featured": false
     },
     {
+      "id": "vespa",
+      "type": "tool",
+      "name": "Vespa",
+      "description": "Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference",
+      "tags": [
+        "retrieval",
+        "rag",
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/tools/data-ingestion/vespa.md",
+      "url": "content/tools/data-ingestion/vespa",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "vllm",
       "type": "project",
       "name": "vLLM",
@@ -11780,6 +12185,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "wang-2022-self-consistency",
+      "type": "paper",
+      "name": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "description": "Sample multiple reasoning chains at nonzero temperature and majority-vote the final answers: correct answers are reached by many diverse paths while errors scatter, yielding large accuracy gains at linear compute cost — the founding result of inference-time scaling",
+      "tags": [
+        "reasoning",
+        "inference",
+        "llm"
+      ],
+      "path": "content/research/agents-and-reasoning/wang-2022-self-consistency.md",
+      "url": "content/research/agents-and-reasoning/wang-2022-self-consistency",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -12045,6 +12469,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "xiao-2023-streamingllm",
+      "type": "paper",
+      "name": "Efficient Streaming Language Models with Attention Sinks",
+      "description": "Discovered 'attention sinks': models dump attention mass on the first few tokens regardless of content, so evicting them collapses windowed attention — keeping just 4 initial tokens plus a sliding window enables stable million-token streaming with no retraining",
+      "tags": [
+        "inference",
+        "efficiency",
+        "attention"
+      ],
+      "path": "content/research/inference-and-efficiency/xiao-2023-streamingllm.md",
+      "url": "content/research/inference-and-efficiency/xiao-2023-streamingllm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {

@@ -26,6 +26,7 @@
 | `chrome-devtools-mcp` | [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md) | Official MCP server exposing Chrome DevTools to coding agents for live browser debugging |
 | `claude-artifact-player` | [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) | Interact with and manage AI-generated artifacts from Claude and similar models |
 | `claude-code` | [Claude Code](./dx-and-tooling/claude-code.md) | Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories |
+| `clearml` | [ClearML](./model-layer/clearml.md) | Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration |
 | `cline` | [Cline](./dx-and-tooling/cline.md) | Open-source autonomous coding agent for VS Code with plan/act modes and human-in-the-loop approval of every action |
 | `cloudflare-workers-ai` | [Cloudflare Workers AI](./serving-and-deployment/cloudflare-workers-ai.md) | Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure |
 | `cloudskill` | [Cloudskill](./orchestration/cloudskill.md) | Manage, govern, and distribute skills for AI agents across teams |
@@ -47,6 +48,7 @@
 | `dropstone-3` | [Dropstone 3](./dx-and-tooling/dropstone-3.md) | Collaborative AI workspace for teams to build, describe, and ship software together |
 | `dvc` | [DVC](./model-layer/dvc.md) | Open-source data and model versioning tool for ML projects and pipelines |
 | `e2b` | [E2B](./orchestration/e2b.md) | Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale |
+| `elasticsearch` | [Elasticsearch](./data-ingestion/elasticsearch.md) | Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads |
 | `empromptu-ai` | [Empromptu AI](./orchestration/empromptu-ai.md) | Build, deploy, and manage custom AI applications that improve over time |
 | `evidently` | [Evidently](./evaluation-and-observability/evidently.md) | Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge |
 | `faiss` | [FAISS](./data-ingestion/faiss.md) | Meta's foundational library for efficient similarity search over billions of dense vectors |
@@ -89,12 +91,15 @@
 | `litellm` | [LiteLLM](./serving-and-deployment/litellm.md) | A proxy and SDK for routing requests across many LLM providers |
 | `llamafactory` | [LLaMA-Factory](./model-layer/llamafactory.md) | Unified fine-tuning framework and UI for many LLMs and training methods |
 | `llamaguard` | [Llama Guard](./evaluation-and-observability/llamaguard.md) | Meta safety model family for classifying and moderating LLM inputs and outputs |
+| `llm-guard` | [LLM Guard](./evaluation-and-observability/llm-guard.md) | Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more |
 | `lm-evaluation-harness` | [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md) | The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard |
 | `lm-format-enforcer` | [LM Format Enforcer](./model-layer/lm-format-enforcer.md) | Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM |
 | `lm-studio` | [LM Studio](./dx-and-tooling/lm-studio.md) | Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server |
+| `lorax` | [LoRAX](./serving-and-deployment/lorax.md) | Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU |
 | `manus` | [Manus](./orchestration/manus.md) | AI-powered platform for building full-stack web applications and automating tasks |
 | `marimo` | [marimo](./dx-and-tooling/marimo.md) | Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps |
 | `markitdown` | [MarkItDown](./data-ingestion/markitdown.md) | Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown |
+| `megatron-lm` | [Megatron-LM](./model-layer/megatron-lm.md) | NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism |
 | `meilisearch` | [Meilisearch](./data-ingestion/meilisearch.md) | Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance |
 | `mem0` | [Mem0](./orchestration/mem0.md) | Memory layer for AI agents and assistants with long-term user and session memory |
 | `memoriq` | [Memoriq](./orchestration/memoriq.md) | Private AI memory layer that learns from your conversations and documents |
@@ -130,8 +135,10 @@
 | `pyrit` | [PyRIT](./evaluation-and-observability/pyrit.md) | Microsoft's Python Risk Identification Toolkit for red-teaming generative AI systems, born from its AI Red Team |
 | `qursor` | [Qursor](./dx-and-tooling/qursor.md) | AI-powered UI context for faster front-end development with agents |
 | `qwen-3` | [Qwen 3](./model-layer/qwen-3.md) | Alibaba open-weight model family with multimodal and coding variants |
+| `ragas` | [Ragas](./evaluation-and-observability/ragas.md) | Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines |
 | `ragatouille` | [RAGatouille](./data-ingestion/ragatouille.md) | Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines |
 | `railway` | [Railway](./serving-and-deployment/railway.md) | Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes |
+| `ray` | [Ray](./serving-and-deployment/ray.md) | Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving |
 | `ray-serve` | [Ray Serve](./serving-and-deployment/ray-serve.md) | Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python |
 | `rebuff` | [Rebuff](./evaluation-and-observability/rebuff.md) | Prompt injection detection and guardrail toolkit for LLM applications |
 | `recursi` | [Recursi](./dx-and-tooling/recursi.md) | Self-improving system for intuitive and efficient AI-assisted coding |
@@ -154,6 +161,7 @@
 | `taste-lab` | [Taste Lab](./data-ingestion/taste-lab.md) | Extracts and analyzes the design DNA of any website for AI agent consumption |
 | `temporal` | [Temporal](./orchestration/temporal.md) | Durable-execution platform that guarantees workflow completion — increasingly the reliability backbone under production AI agents |
 | `tencentdb-agent-memory` | [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md) | Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store |
+| `text-embeddings-inference` | [Text Embeddings Inference (TEI)](./serving-and-deployment/text-embeddings-inference.md) | Hugging Face's Rust-based high-throughput inference server for embedding and reranker models |
 | `together-ai` | [Together AI](./model-layer/together-ai.md) | Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints |
 | `torchtune` | [torchtune](./model-layer/torchtune.md) | PyTorch-native library for fine-tuning and experimenting with LLMs |
 | `trafilatura` | [Trafilatura](./data-ingestion/trafilatura.md) | Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building |
@@ -165,6 +173,7 @@
 | `uptrain` | [UpTrain](./evaluation-and-observability/uptrain.md) | Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics |
 | `vaani` | [Vaani](./dx-and-tooling/vaani.md) | Fast, private macOS dictation with AI formatting and editing |
 | `vercel` | [Vercel](./serving-and-deployment/vercel.md) | Frontend cloud platform for deploying and scaling Next.js apps with edge functions |
+| `vespa` | [Vespa](./data-ingestion/vespa.md) | Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference |
 | `voyage-ai` | [Voyage AI](./model-layer/voyage-ai.md) | Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB |
 | `wandb-weave` | [Weights & Biases Weave](./evaluation-and-observability/wandb-weave.md) | An observability and evaluation toolkit for AI applications from Weights & Biases |
 | `weights-biases` | [Weights & Biases](./model-layer/weights-biases.md) | Experiment tracking and model management platform for ML and AI teams |

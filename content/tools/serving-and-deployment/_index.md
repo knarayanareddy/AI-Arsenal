@@ -31,12 +31,12 @@ Before picking a tool in this phase, consider:
 - [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
 - [KServe](./kserve.md)
+- [LoRAX](./lorax.md)
 - [NVIDIA NIM](./nvidia-nim.md)
 - [OpenLLM](./openllm.md)
+- [Ray](./ray.md)
 - [Ray Serve](./ray-serve.md)
 - [RunPod](./runpod.md)
-- [SkyPilot](./skypilot.md)
-- [NVIDIA Triton Inference Server](./triton-inference-server.md)
 
 ### Most Popular
 
@@ -57,14 +57,17 @@ _No star-tracked entries yet._
 - [Hugging Face Inference Endpoints](./hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [KServe](./kserve.md) — Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol
 - [LiteLLM](./litellm.md) — A proxy and SDK for routing requests across many LLM providers
+- [LoRAX](./lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
 - [Modal](./modal.md) — A serverless platform for deploying Python apps and GPU workloads
 - [NVIDIA NIM](./nvidia-nim.md) — Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs
 - [OpenLLM](./openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
 - [Portkey](./portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
 - [Railway](./railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [Ray](./ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
 - [Ray Serve](./ray-serve.md) — Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python
 - [Replicate](./replicate.md) — A hosted platform for running and deploying machine learning models via API
 - [RunPod](./runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
 - [SkyPilot](./skypilot.md) — Run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface
+- [Text Embeddings Inference (TEI)](./text-embeddings-inference.md) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
 - [NVIDIA Triton Inference Server](./triton-inference-server.md) — NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles
 - [Vercel](./vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions
