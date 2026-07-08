@@ -66,3 +66,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
+| [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [KServe](../serving-and-deployment/kserve.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
+| [Temporal](../orchestration/temporal.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |

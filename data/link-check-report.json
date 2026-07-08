@@ -1,268 +1,502 @@
 {
-  "generated_at": "2026-07-08T16:44:15.669Z",
+  "generated_at": "2026-07-08T16:28:18.713Z",
   "mode": "changed-only",
-  "files_checked": 29,
-  "urls_checked": 63,
+  "files_checked": 129,
+  "urls_checked": 224,
   "max_urls_per_host": 10,
   "broken_links": [],
   "warning_links": [
     {
-      "url": "https://arxiv.org/abs/2104.09864",
+      "url": "https://github.com/airbytehq/airbyte",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/architectures/su-2021-rope.md"
+        "content/tools/data-ingestion/airbyte.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2104.09864",
+      "url": "https://github.com/dlt-hub/dlt",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/architectures/su-2021-rope.md"
+        "content/tools/data-ingestion/dlt.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2403.04132",
+      "url": "https://github.com/facebookresearch/faiss",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/evaluation-and-safety/chiang-2024-chatbot-arena.md"
+        "content/tools/data-ingestion/faiss.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2403.04132",
+      "url": "https://github.com/facebookresearch/faiss/wiki",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/evaluation-and-safety/chiang-2024-chatbot-arena.md"
+        "content/tools/data-ingestion/faiss.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2009.03300",
+      "url": "https://github.com/coderamp-labs/gitingest",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/evaluation-and-safety/hendrycks-2020-mmlu.md"
+        "content/tools/data-ingestion/gitingest.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2009.03300",
+      "url": "https://github.com/coderamp-labs/gitingest#readme",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/evaluation-and-safety/hendrycks-2020-mmlu.md"
+        "content/tools/data-ingestion/gitingest.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2307.02483",
+      "url": "https://github.com/octocat/Hello-World",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/evaluation-and-safety/wei-2023-jailbroken.md"
+        "content/tools/data-ingestion/gitingest.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2307.02483",
+      "url": "https://github.com/microsoft/markitdown",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/evaluation-and-safety/wei-2023-jailbroken.md"
+        "content/tools/data-ingestion/markitdown.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2203.15556",
+      "url": "https://github.com/microsoft/markitdown#readme",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/foundational/hoffmann-2022-chinchilla.md"
+        "content/tools/data-ingestion/markitdown.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2203.15556",
+      "url": "https://github.com/meilisearch/meilisearch",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/foundational/hoffmann-2022-chinchilla.md"
+        "content/tools/data-ingestion/meilisearch.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2205.14135",
+      "url": "https://github.com/opendatalab/MinerU",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/inference-and-efficiency/dao-2022-flashattention.md"
+        "content/tools/data-ingestion/mineru.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2205.14135",
+      "url": "https://github.com/AnswerDotAI/RAGatouille",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/inference-and-efficiency/dao-2022-flashattention.md"
+        "content/tools/data-ingestion/ragatouille.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2309.06180",
+      "url": "https://github.com/adbar/trafilatura",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/inference-and-efficiency/kwon-2023-pagedattention.md"
+        "content/tools/data-ingestion/trafilatura.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2309.06180",
+      "url": "https://github.com/typesense/typesense",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/inference-and-efficiency/kwon-2023-pagedattention.md"
+        "content/tools/data-ingestion/typesense.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2306.00978",
+      "url": "https://github.com/Aider-AI/aider",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/inference-and-efficiency/lin-2023-awq.md"
+        "content/tools/dx-and-tooling/aider.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2306.00978",
+      "url": "https://github.com/anthropics/claude-code",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/inference-and-efficiency/lin-2023-awq.md"
+        "content/tools/dx-and-tooling/claude-code.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2004.04906",
+      "url": "https://github.com/cline/cline",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/retrieval-and-memory/karpukhin-2020-dpr.md"
+        "content/tools/dx-and-tooling/cline.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2004.04906",
+      "url": "https://github.com/continuedev/continue",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/retrieval-and-memory/karpukhin-2020-dpr.md"
+        "content/tools/dx-and-tooling/continue-dev.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2004.12832",
+      "url": "https://github.com/google-gemini/gemini-cli",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/retrieval-and-memory/khattab-2020-colbert.md"
+        "content/tools/dx-and-tooling/gemini-cli.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2004.12832",
+      "url": "https://github.com/features/copilot",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/retrieval-and-memory/khattab-2020-colbert.md"
+        "content/tools/dx-and-tooling/github-copilot.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2310.08560",
+      "url": "https://github.com/block/goose",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/retrieval-and-memory/packer-2023-memgpt.md"
+        "content/tools/dx-and-tooling/goose.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2310.08560",
+      "url": "https://github.com/block/goose/releases/download/stable/download_cli.sh",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/retrieval-and-memory/packer-2023-memgpt.md"
+        "content/tools/dx-and-tooling/goose.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2312.10997",
+      "url": "https://github.com/menloresearch/jan",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/surveys/gao-2023-rag-survey.md"
+        "content/tools/dx-and-tooling/jan.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2312.10997",
+      "url": "https://github.com/marimo-team/marimo",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/surveys/gao-2023-rag-survey.md"
+        "content/tools/dx-and-tooling/marimo.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2311.05232",
+      "url": "https://github.com/open-webui/open-webui",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/surveys/huang-2023-hallucination-survey.md"
+        "content/tools/dx-and-tooling/open-webui.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2311.05232",
+      "url": "https://github.com/openai/codex",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/surveys/huang-2023-hallucination-survey.md"
+        "content/tools/dx-and-tooling/openai-codex-cli.md"
       ]
     },
     {
-      "url": "https://arxiv.org/abs/2308.11432",
+      "url": "https://github.com/yamadashy/repomix",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/surveys/wang-2023-agents-survey.md"
+        "content/tools/dx-and-tooling/repomix.md"
       ]
     },
     {
-      "url": "https://arxiv.org/pdf/2308.11432",
+      "url": "https://github.com/TabbyML/tabby",
       "ok": false,
       "error": "host-rate-limited",
       "soft": true,
       "files": [
-        "content/research/surveys/wang-2023-agents-survey.md"
+        "content/tools/dx-and-tooling/tabby-ml.md"
+      ]
+    },
+    {
+      "url": "https://github.com/AgentOps-AI/agentops",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/agentops.md"
+      ]
+    },
+    {
+      "url": "https://github.com/deepchecks/deepchecks",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/deepchecks.md"
+      ]
+    },
+    {
+      "url": "https://github.com/evidentlyai/evidently",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/evidently.md"
+      ]
+    },
+    {
+      "url": "https://github.com/NVIDIA/garak",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/garak.md"
+      ]
+    },
+    {
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/inspect-ai.md"
+      ]
+    },
+    {
+      "url": "https://github.com/microsoft/PyRIT",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/pyrit.md"
+      ]
+    },
+    {
+      "url": "https://github.com/uptrain-ai/uptrain",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/evaluation-and-observability/uptrain.md"
+      ]
+    },
+    {
+      "url": "https://github.com/deepspeedai/DeepSpeed",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/model-layer/deepspeed.md"
+      ]
+    },
+    {
+      "url": "https://github.com/noamgat/lm-format-enforcer",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/model-layer/lm-format-enforcer.md"
+      ]
+    },
+    {
+      "url": "https://github.com/noamgat/lm-format-enforcer#readme",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/model-layer/lm-format-enforcer.md"
+      ]
+    },
+    {
+      "url": "https://github.com/UKPLab/sentence-transformers",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/model-layer/sentence-transformers.md"
+      ]
+    },
+    {
+      "url": "https://github.com/huggingface/trl",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/model-layer/trl.md"
+      ]
+    },
+    {
+      "url": "https://github.com/agno-agi/agno",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/agno.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ComposioHQ/composio",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/composio.md"
+      ]
+    },
+    {
+      "url": "https://github.com/e2b-dev/E2B",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/e2b.md"
+      ]
+    },
+    {
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/flowise.md"
+      ]
+    },
+    {
+      "url": "https://github.com/langflow-ai/langflow",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/langflow.md"
+      ]
+    },
+    {
+      "url": "https://github.com/n8n-io/n8n",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/n8n.md"
+      ]
+    },
+    {
+      "url": "https://github.com/temporalio/temporal",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/orchestration/temporal.md"
+      ]
+    },
+    {
+      "url": "https://github.com/kserve/kserve",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/kserve.md"
+      ]
+    },
+    {
+      "url": "https://github.com/kserve/kserve/releases/latest/download/kserve.yaml",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/kserve.md"
+      ]
+    },
+    {
+      "url": "https://github.com/bentoml/OpenLLM",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/openllm.md"
+      ]
+    },
+    {
+      "url": "https://github.com/bentoml/OpenLLM#readme",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/openllm.md"
+      ]
+    },
+    {
+      "url": "https://github.com/ray-project/ray",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/ray-serve.md"
+      ]
+    },
+    {
+      "url": "https://github.com/skypilot-org/skypilot",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/skypilot.md"
+      ]
+    },
+    {
+      "url": "https://github.com/triton-inference-server/server",
+      "ok": false,
+      "error": "host-rate-limited",
+      "soft": true,
+      "files": [
+        "content/tools/serving-and-deployment/triton-inference-server.md"
       ]
     }
   ],
   "summary": {
-    "ok": 35,
+    "ok": 170,
     "ignored": 0,
     "broken": 0,
-    "warnings": 28
+    "warnings": 54
   }
 }

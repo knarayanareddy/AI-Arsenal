@@ -33,6 +33,9 @@ Before selecting an evaluation/observability platform:
 
 ### Recently Added
 
+- [BigCodeBench](./bigcodebench.md)
+- [MTEB](./mteb.md)
+- [Terminal-Bench](./terminal-bench.md)
 - [Agenta](./agenta.md)
 - [Braintrust](./braintrust.md)
 - [DeepEval](./deepeval.md)
@@ -40,9 +43,6 @@ Before selecting an evaluation/observability platform:
 - [Langfuse](./langfuse.md)
 - [LangSmith](./langsmith-platform.md)
 - [Lunary](./lunary.md)
-- [OpenLIT](./openlit.md)
-- [OpenLLMetry](./openllmetry.md)
-- [Opik](./opik.md)
 
 ### Most Popular
 
@@ -54,20 +54,23 @@ Before selecting an evaluation/observability platform:
 - [OpenLLMetry](./openllmetry.md) — ⭐ 7000
 - [Helicone](./helicone.md) — ⭐ 5809
 - [Agenta](./agenta.md) — ⭐ 3900
+- [MTEB](./mteb.md) — ⭐ 3344
 - [OpenLIT](./openlit.md) — ⭐ 2522
-- [Braintrust](./braintrust.md) — ⭐ 0
 
 ### Browse All
 
 - [Agenta](./agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [BigCodeBench](./bigcodebench.md) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - [Braintrust](./braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [DeepEval](./deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
 - [Helicone](./helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [Langfuse](./langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - [LangSmith](./langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
 - [Lunary](./lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
+- [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - [OpenLIT](./openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLMetry](./openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [Opik](./opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - [Phoenix](./phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 - [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — Evaluation framework for measuring retrieval-augmented generation quality and regressions
+- [Terminal-Bench](./terminal-bench.md) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models

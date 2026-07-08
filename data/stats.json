@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T16:44:13.653Z",
+  "generated_at": "2026-07-08T19:19:59.760Z",
   "entries": {
-    "total": 499,
-    "projects": 73,
-    "tools": 104,
+    "total": 583,
+    "projects": 103,
+    "tools": 162,
     "papers": 49,
     "tips": 102,
     "people": 25,
@@ -14,13 +14,6 @@
     "architectures": 14,
     "observability": 7,
     "community": 23,
-    "benchmarks": 30,
-    "trending": 4
-  },
-  "tags": {
-    "total": 56
-  },
-  "content": {
-    "total_words": 222514
+    "benchmarks": 30
   }
 }
