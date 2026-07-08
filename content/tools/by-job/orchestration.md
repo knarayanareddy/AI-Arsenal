@@ -111,6 +111,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 |---|---|---|---|---|---|---|---|
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
 | [Apache Airflow](../orchestration/airflow.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [ClearML](../model-layer/clearml.md) | model layer | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
 | [Dagster](../orchestration/dagster.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
@@ -122,6 +123,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Prefect](../orchestration/prefect.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [SeaTicket](../orchestration/seaticket.md) | orchestration | freemium | Yes | No | No | python | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 

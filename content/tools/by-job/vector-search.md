@@ -193,7 +193,10 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | self-hostable | Yes | Yes | Yes | java | solid-choice |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | freemium | Yes | No | No | python, typescript | recommended |
+| [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | recommended |
+| [Vespa](../data-ingestion/vespa.md) | data ingestion | open-source | Yes | Yes | Yes | java, cpp | solid-choice |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

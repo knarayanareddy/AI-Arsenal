@@ -160,12 +160,15 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [Ideogram AI](../model-layer/ideogram-ai.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Recursi](../dx-and-tooling/recursi.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
 | [ShellMate](../dx-and-tooling/shellmate.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+| [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | recommended |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 

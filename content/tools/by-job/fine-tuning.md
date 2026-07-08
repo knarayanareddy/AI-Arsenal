@@ -174,9 +174,11 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 |---|---|---|---|---|---|---|---|
 | [Axolotl](../model-layer/axolotl.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Megatron-LM](../model-layer/megatron-lm.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [torchtune](../model-layer/torchtune.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Unsloth](../model-layer/unsloth.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

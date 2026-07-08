@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T15:33:40.369Z | Entries: 480 | Schema version: 1.0.0
+Generated: 2026-07-08T17:56:05.275Z | Entries: 489 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 73
-- Tools: 104
+- Tools: 113
 - Papers: 30
 - Tips: 102
 - People: 25
@@ -95,9 +95,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
+- Megatron-LM — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - MLX-LM — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
 - OrchestraML — Automate end-to-end ML workflows from data prep to deployment using AI agents
-- PEFT — Hugging Face library for parameter-efficient fine-tuning methods
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
@@ -107,6 +107,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Redis — In-memory data store commonly used for caching, session memory, queues, and vector search
 
 ### model-registry
+- ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - DVC — Open-source data and model versioning tool for ML projects and pipelines
 - Hugging Face Hub — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
 - MLflow — Open-source platform for experiment tracking, model registry, and ML lifecycle management
@@ -122,9 +123,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### orchestration
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
 - Apache Airflow — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - Cloudskill — Manage, govern, and distribute skills for AI agents across teams
 - Dagster — Data orchestration platform for assets, pipelines, schedules, and observability
-- Dropstone 3 — Collaborative AI workspace for teams to build, describe, and ship software together
 
 ### production-serving
 - BentoML — A framework for packaging, deploying, and scaling AI model services
@@ -169,7 +170,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - TruLens — An evaluation and tracking toolkit for LLM and RAG applications
 
 ### vector-search
+- Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - Pinecone — A managed vector database for production semantic search applications
+- Text Embeddings Inference (TEI) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
+- Vespa — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs

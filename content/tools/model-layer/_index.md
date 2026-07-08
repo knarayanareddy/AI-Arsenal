@@ -27,6 +27,8 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [ClearML](./clearml.md)
+- [Megatron-LM](./megatron-lm.md)
 - [Ideogram](./ideogram.md)
 - [Ideogram AI](./ideogram-ai.md)
 - [Kimi K2.5](./kimi-k2-5.md)
@@ -35,8 +37,6 @@ Before picking a tool in this phase, consider:
 - [DVC](./dvc.md)
 - [Guidance](./guidance.md)
 - [Hugging Face Hub](./hugging-face-hub.md)
-- [LLaMA-Factory](./llamafactory.md)
-- [MLflow](./mlflow.md)
 
 ### Most Popular
 
@@ -45,6 +45,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Axolotl](./axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
+- [ClearML](./clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - [DVC](./dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
 - [Guidance](./guidance.md) — Microsoft guidance library for controlling and constraining language model generation
 - [Hugging Face Hub](./hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
@@ -52,6 +53,7 @@ _No star-tracked entries yet._
 - [Ideogram AI](./ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [LLaMA-Factory](./llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - [MLflow](./mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 - [MLX-LM](./mlx-lm.md) — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
 - [Outlines](./outlines.md) — A library for constrained generation and structured outputs with LLMs

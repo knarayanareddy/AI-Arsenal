@@ -27,6 +27,8 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Elasticsearch](./elasticsearch.md)
+- [Vespa](./vespa.md)
 - [Agent Reach](./agent-reach.md)
 - [olmOCR](./olmocr.md)
 - [Browserbase](./browserbase.md)
@@ -35,8 +37,6 @@ Before picking a tool in this phase, consider:
 - [Taste Lab](./taste-lab.md)
 - [Argilla](./argilla.md)
 - [Crawl4AI](./crawl4ai-tool.md)
-- [Firecrawl](./firecrawl-tool.md)
-- [Jina AI Reader](./jina-reader.md)
 
 ### Most Popular
 
@@ -49,6 +49,7 @@ _No star-tracked entries yet._
 - [Argilla](./argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
+- [Elasticsearch](./elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 - [Label Studio](./label-studio.md) — An open-source data labeling platform for ML and AI datasets
@@ -60,3 +61,4 @@ _No star-tracked entries yet._
 - [Scale AI](./scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
 - [Tabstack](./tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
+- [Vespa](./vespa.md) — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference

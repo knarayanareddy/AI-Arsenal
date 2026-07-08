@@ -28,15 +28,15 @@ Before picking a tool in this phase, consider:
 ### Recently Added
 
 - [CubeSandbox](./cubesandbox.md)
+- [LoRAX](./lorax.md)
+- [Ray](./ray.md)
+- [Text Embeddings Inference (TEI)](./text-embeddings-inference.md)
 - [Vercel](./vercel.md)
 - [AWS Bedrock](./aws-bedrock.md)
 - [Azure AI Studio](./azure-ai-studio.md)
 - [BentoML](./bentoml.md)
 - [FastAPI](./fastapi.md)
 - [Fireworks AI](./fireworks-ai.md)
-- [Fly.io](./fly-io.md)
-- [Google Vertex AI](./google-vertex-ai.md)
-- [Hugging Face Inference Endpoints](./hf-inference-endpoints.md)
 
 ### Most Popular
 
@@ -54,8 +54,11 @@ _No star-tracked entries yet._
 - [Google Vertex AI](./google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
 - [Hugging Face Inference Endpoints](./hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [LiteLLM](./litellm.md) — A proxy and SDK for routing requests across many LLM providers
+- [LoRAX](./lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
 - [Modal](./modal.md) — A serverless platform for deploying Python apps and GPU workloads
 - [Portkey](./portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
 - [Railway](./railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [Ray](./ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
 - [Replicate](./replicate.md) — A hosted platform for running and deploying machine learning models via API
+- [Text Embeddings Inference (TEI)](./text-embeddings-inference.md) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
 - [Vercel](./vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions

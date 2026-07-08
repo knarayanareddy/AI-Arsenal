@@ -9,25 +9,25 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-08 |
 | [by job](./by-job/) | 14 entries | 2026-07-08 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-08 |
-| [data ingestion](./data-ingestion/) | 16 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 18 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 24 entries | 2026-07-08 |
-| [evaluation and observability](./evaluation-and-observability/) | 18 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 16 entries | 2026-07-08 |
+| [evaluation and observability](./evaluation-and-observability/) | 20 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 18 entries | 2026-07-08 |
 | [orchestration](./orchestration/) | 15 entries | 2026-07-08 |
-| [serving and deployment](./serving-and-deployment/) | 15 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 18 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
+- [ClearML](./model-layer/clearml.md)
 - [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./serving-and-deployment/cubesandbox.md)
+- [Elasticsearch](./data-ingestion/elasticsearch.md)
+- [LLM Guard](./evaluation-and-observability/llm-guard.md)
+- [LoRAX](./serving-and-deployment/lorax.md)
+- [Megatron-LM](./model-layer/megatron-lm.md)
 - [Orca](./dx-and-tooling/orca.md)
-- [Superpowers](./dx-and-tooling/superpowers.md)
-- [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md)
-- [Agent Reach](./data-ingestion/agent-reach.md)
-- [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md)
-- [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md)
-- [Tools by Cost — Freemium](./by-cost/cost-freemium.md)
+- [Ragas](./evaluation-and-observability/ragas.md)
 
 ## Most Popular
 
@@ -51,6 +51,7 @@ _No star-tracked entries yet._
 - [Chainlit](./dx-and-tooling/chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
 - [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md) — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
 - [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) — Interact with and manage AI-generated artifacts from Claude and similar models
+- [ClearML](./model-layer/clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - [Cloudskill](./orchestration/cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
 - [Code Arena](./evaluation-and-observability/code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
@@ -68,6 +69,7 @@ _No star-tracked entries yet._
 - [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
 - [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
 - [DVC](./model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
+- [Elasticsearch](./data-ingestion/elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - [Empromptu AI](./orchestration/empromptu-ai.md) — Build, deploy, and manage custom AI applications that improve over time
 - [Evaluation Tools](./by-job/evaluation.md) — Curated tools for evaluation workflows in AI engineering
 - [FastAPI](./serving-and-deployment/fastapi.md) — Python web framework for building APIs around AI services and model workflows
@@ -83,5 +85,3 @@ _No star-tracked entries yet._
 - [Guidance](./model-layer/guidance.md) — Microsoft guidance library for controlling and constraining language model generation
 - [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [Honen](./dx-and-tooling/honen.md) — Transform any content into interactive AI-generated courses
-- [Hugging Face Hub](./model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
-- [Humanloop](./evaluation-and-observability/humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
