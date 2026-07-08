@@ -18,6 +18,7 @@
 | `camel-ai` | [CAMEL](./frameworks/camel-ai.md) | Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation |
 | `candle` | [Candle](./inference-engines/candle.md) | Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference |
 | `chatterbox` | [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) | Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default |
+| `cherry-studio` | [Cherry Studio](./frameworks/cherry-studio.md) | Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app |
 | `chroma` | [Chroma](./data-and-retrieval/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
 | `cleanlab` | [cleanlab](./data-and-retrieval/cleanlab.md) | Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions |
 | `clip` | [CLIP (OpenAI)](./foundation-models/clip.md) | OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs |
@@ -26,6 +27,7 @@
 | `comfyui` | [ComfyUI](./frameworks/comfyui.md) | Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines |
 | `command-r-plus` | [Command R+](./foundation-models/command-r-plus.md) | Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows |
 | `continue` | [Continue](./agent-systems/continue.md) | Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local |
+| `cosyvoice` | [CosyVoice](./foundation-models/cosyvoice.md) | Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation |
 | `crawl4ai` | [Crawl4AI](./data-and-retrieval/crawl4ai.md) | Open-source crawler and scraper designed to produce LLM-friendly web content |
 | `crewai` | [CrewAI](./frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
 | `deepeval` | [DeepEval](./benchmarks-and-evals/deepeval.md) | An open-source evaluation framework for testing LLM applications in CI |
@@ -46,6 +48,7 @@
 | `glm-4` | [GLM-4 / GLM-4.5](./foundation-models/glm-4.md) | Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants |
 | `google-adk` | [Google ADK](./frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
 | `gpt-researcher` | [GPT Researcher](./agent-systems/gpt-researcher.md) | Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports |
+| `gpt-sovits` | [GPT-SoVITS](./foundation-models/gpt-sovits.md) | Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference |
 | `graphiti` | [Graphiti](./data-and-retrieval/graphiti.md) | Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents |
 | `graphrag` | [GraphRAG](./data-and-retrieval/graphrag.md) | Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't |
 | `haystack` | [Haystack](./frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
@@ -61,7 +64,9 @@
 | `langgraph` | [LangGraph](./frameworks/langgraph.md) | Graph-based framework for building stateful, durable LLM agents and workflows |
 | `langsmith-platform` | [LangSmith](./benchmarks-and-evals/langsmith-platform.md) | Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback |
 | `librechat` | [LibreChat](./agent-systems/librechat.md) | Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth |
+| `lightrag` | [LightRAG](./data-and-retrieval/lightrag.md) | Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval |
 | `litgpt` | [LitGPT](./training-and-alignment/litgpt.md) | Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale |
+| `litserve` | [LitServe](./inference-engines/litserve.md) | Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code |
 | `llama-3` | [Llama 3.x](./foundation-models/llama-3.md) | Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications |
 | `llama-cpp` | [llama.cpp](./inference-engines/llama-cpp.md) | C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices |
 | `llamafile` | [Llamafile](./inference-engines/llamafile.md) | Mozilla project for distributing and running LLMs as a single executable file |
@@ -76,9 +81,11 @@
 | `metagpt` | [MetaGPT](./frameworks/metagpt.md) | Multi-agent framework that simulates software-company roles for natural-language programming |
 | `microsoft-agent-framework` | [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md) | Microsoft framework for Python and .NET agents, workflows, and production orchestration |
 | `milvus` | [Milvus](./data-and-retrieval/milvus.md) | Cloud-native vector database for large-scale ANN search and production vector workloads |
+| `minicpm-v` | [MiniCPM-V](./foundation-models/minicpm-v.md) | Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones |
 | `mistral-models` | [Mistral / Mixtral](./foundation-models/mistral-models.md) | Mistral open-weight model family including dense and mixture-of-experts language models |
 | `mistral-rs` | [mistral.rs](./inference-engines/mistral-rs.md) | Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization |
 | `mlc-llm` | [MLC LLM](./inference-engines/mlc-llm.md) | Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase |
+| `moshi` | [Moshi](./foundation-models/moshi.md) | Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline |
 | `ms-swift` | [ms-swift](./training-and-alignment/ms-swift.md) | ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends |
 | `mteb` | [MTEB](./benchmarks-and-evals/mteb.md) | The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks |
 | `nanogpt` | [nanoGPT](./training-and-alignment/nanogpt.md) | Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining |
@@ -87,6 +94,7 @@
 | `onnxruntime` | [ONNX Runtime](./inference-engines/onnxruntime.md) | Microsoft's cross-platform inference runtime for the ONNX graph format — one exported model runs on CPU, GPU, mobile, and browser via execution providers |
 | `onyx` | [Onyx (formerly Danswer)](./data-and-retrieval/onyx.md) | Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval |
 | `open-r1` | [Open R1 (Hugging Face)](./training-and-alignment/open-r1.md) | Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL |
+| `open-sora` | [Open-Sora](./foundation-models/open-sora.md) | Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis |
 | `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
 | `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
 | `openlit` | [OpenLIT](./benchmarks-and-evals/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |
@@ -104,9 +112,11 @@
 | `qdrant` | [Qdrant](./data-and-retrieval/qdrant.md) | Rust vector database for high-performance similarity search with filtering and hybrid search |
 | `qwen` | [Qwen](./foundation-models/qwen.md) | Alibaba open-weight model family covering language, coding, and multimodal use cases |
 | `qwen-2-5` | [Qwen 2.5 / QwQ](./foundation-models/qwen-2-5.md) | Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models |
+| `qwen-agent` | [Qwen-Agent](./agent-systems/qwen-agent.md) | Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context |
 | `qwen3-vl` | [Qwen3-VL](./foundation-models/qwen3-vl.md) | Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship |
 | `ragas-rag-evaluation` | [Ragas for RAG Evaluation](./benchmarks-and-evals/ragas-rag-evaluation.md) | Evaluation framework for measuring retrieval-augmented generation quality and regressions |
 | `ragflow` | [RAGFlow](./data-and-retrieval/ragflow.md) | Open-source RAG engine combining document understanding, retrieval, and agent capabilities |
+| `rd-agent` | [RD-Agent](./agent-systems/rd-agent.md) | Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining |
 | `sam2` | [SAM 2 (Segment Anything Model 2)](./foundation-models/sam2.md) | Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory |
 | `screenshot-to-code` | [screenshot-to-code](./agent-systems/screenshot-to-code.md) | Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support |
 | `semantic-kernel` | [Semantic Kernel](./frameworks/semantic-kernel.md) | An SDK for integrating AI orchestration into production applications |

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:38:17.020Z",
-  "count": 136,
+  "generated_at": "2026-07-08T20:49:50.928Z",
+  "count": 146,
   "items": [
     {
       "id": "agenta",
@@ -1420,6 +1420,110 @@
       "body_text": "Overview Chatterbox is Resemble AI's open TTS family: a 0.5B parameter Llama backbone acoustic model trained on 500k hours of speech, offering zero shot voice cloning from short references, a unique emotion exaggeration control, and (in v2/multilingual releases) 20+ language coverage — all MIT licensed, with every output carrying Resemble's PerTh perceptual watermark. The vendor's side by side evals report it preferred over ElevenLabs (vendor published claim). Why it's in the Arsenal It resolved the open TTS licensing trap: research models like F5 ship MIT code over non commercially trained checkpoints, while Chatterbox is commercially clean end to end — which is why it became the default recommendation for products needing self hosted cloning. The built in watermarking also makes it the reference example of responsible release mechanics in generative audio, a pattern worth studying beyond TTS. Architecture A two stage design: a Llama architecture autoregressive model generates speech tokens conditioned on text and reference speaker embeddings (where cloning and the exaggeration control live), and a decoder renders tokens to waveform; alignment informed inference stabilizes long inputs. The PerTh watermarker embeds an imperceptible, retrievable signature in all generated audio. Ecosystem Position Vendor lineage: Resemble AI's commercial voice platform (the paid upgrade path). Peers: f5 tts (flow matching research pole), kokoro (efficiency pole), CosyVoice/Fish Speech (multilingual rivals), ElevenLabs (the closed benchmark). Downstream: self hosted agent/dubbing stacks and a fast growing fork ecosystem (streaming servers, quantized variants). Getting Started Key Use Cases 1. Scenario : a commercial product shipping self hosted custom voices — cloning under MIT with no training data license asterisk 2. Scenario : expressive game/agent dialogue where per line emotion intensity control matters more than raw naturalness rankings Strengths The only top tier open cloning model with commercially clean licensing across code and weights — the deciding mechanism for product use Production affordances research repos lack: watermarking by default, emotion control, multilingual checkpoints, active org backing Limitations GPU class serving cost; not the answer for embedded or CPU only deployment Vendor published quality comparisons should be re validated on your content; watermark presence may be a feature or a blocker depending on your use case Relation to the Arsenal The production pole of the open TTS trio (f5 tts research/cloning, kokoro efficiency); pairs with faster whisper/whisperx to complete a self hosted voice loop, and with the guardrails guidance in architectures/system design on responsible generation. Resources GitHub Demo Space"
     },
     {
+      "id": "cherry-studio",
+      "name": "Cherry Studio",
+      "version_tracked": null,
+      "artifact_type": "tool",
+      "category": "tooling",
+      "subcategory": "tools",
+      "description": "Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app",
+      "github_url": "https://github.com/CherryHQ/cherry-studio",
+      "license": "AGPL-3.0",
+      "primary_language": "TypeScript",
+      "org_or_maintainer": "CherryHQ",
+      "tags": [
+        "llm",
+        "agents",
+        "rag",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 48319,
+      "github_stars_last_30d": 0,
+      "trending_score": 46,
+      "last_commit": "2026-07-08",
+      "docs_url": "https://docs.cherry-ai.com/",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "hf_url": null,
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "framework",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "community-driven",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "Popular open desktop front-end that unifies many LLM providers (cloud + local) with assistants, RAG knowledge bases, and MCP tools, competing with clients like LibreChat/Open WebUI but as a native desktop app"
+      ],
+      "best_for": [
+        "You want one desktop app to talk to many providers (OpenAI, Anthropic, Gemini, local Ollama/LM Studio, etc.) with assistants, local knowledge bases, and MCP tools, without wiring your own UI",
+        "You want provider optionality and local-model support in a polished client for individuals or small teams, rather than a hosted single-vendor chat"
+      ],
+      "avoid_if": [
+        "You need a multi-user, server-hosted deployment with centralized auth and admin — a web app like LibreChat/Open WebUI fits that better than a desktop client",
+        "You are embedding chat into your own product — Cherry Studio is an end-user application, not a library/SDK to build on"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (48,319), AGPL-3.0 license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/CherryHQ/cherry-studio",
+          "date": "2026-07-08",
+          "description": "48,319 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/frameworks/cherry-studio.md",
+      "url": "content/projects/frameworks/cherry-studio",
+      "slug": "cherry-studio",
+      "section_path": "content/projects/frameworks",
+      "display_name": "Cherry Studio",
+      "summary": "Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 320,
+      "body_html": "<h2>Overview</h2>\n<p>Cherry Studio is a cross-platform (macOS/Windows/Linux) desktop LLM client. It connects to many cloud providers and local runtimes, and bundles assistants/personas, document knowledge bases (RAG), MCP tool support, and artifact rendering into a single polished application.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It is one of the most popular open desktop clients for people who want provider optionality — switching between cloud APIs and local models — plus RAG and MCP tools without building a UI. It is a comparison point among LLM front-ends; the distinction from server-hosted web clients is drawn honestly below.</p>\n<h2>Architecture</h2>\n<p>It is an Electron/TypeScript desktop app that abstracts providers behind a common chat interface, stores conversations/knowledge locally, indexes uploaded documents for retrieval, and speaks the Model Context Protocol to invoke external tool servers. Local-model support comes via connectors to runtimes like Ollama/LM Studio.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with web-hosted clients (LibreChat, Open WebUI) and other desktop clients. Its niche is a feature-rich native desktop experience with strong multi-provider and local-model support for individuals and small teams.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-text\">Download the installer for your OS from the GitHub releases page,\nadd provider API keys (or connect a local Ollama/LM Studio), and start chatting.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a power user juggling multiple providers and local models from one desktop app</li>\n<li><strong>Scenario</strong>: personal/team knowledge-base chat (RAG over local documents) with MCP tools</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: a multi-user, centrally-administered chat deployment — use a hosted web client</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Broad provider + local-model coverage in one client</li>\n<li>Built-in assistants, RAG knowledge bases, MCP tools</li>\n<li>Polished cross-platform desktop UX</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Desktop app, not a multi-user server or an SDK</li>\n<li>AGPL-3.0 licensing has redistribution implications</li>\n<li>Local data management/security is the user's responsibility</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against LibreChat and Open WebUI before adopting for team use.</li>\n<li>Reference this project by its canonical ID <code>cherry-studio</code>.</li>\n<li>Review AGPL-3.0 obligations before bundling or redistributing.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/CherryHQ/cherry-studio\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://docs.cherry-ai.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview Cherry Studio is a cross platform (macOS/Windows/Linux) desktop LLM client. It connects to many cloud providers and local runtimes, and bundles assistants/personas, document knowledge bases (RAG), MCP tool support, and artifact rendering into a single polished application. Why it's in the Arsenal It is one of the most popular open desktop clients for people who want provider optionality — switching between cloud APIs and local models — plus RAG and MCP tools without building a UI. It is a comparison point among LLM front ends; the distinction from server hosted web clients is drawn honestly below. Architecture It is an Electron/TypeScript desktop app that abstracts providers behind a common chat interface, stores conversations/knowledge locally, indexes uploaded documents for retrieval, and speaks the Model Context Protocol to invoke external tool servers. Local model support comes via connectors to runtimes like Ollama/LM Studio. Ecosystem Position It competes with web hosted clients (LibreChat, Open WebUI) and other desktop clients. Its niche is a feature rich native desktop experience with strong multi provider and local model support for individuals and small teams. Getting Started Key Use Cases 1. Scenario : a power user juggling multiple providers and local models from one desktop app 2. Scenario : personal/team knowledge base chat (RAG over local documents) with MCP tools 3. Scenario where this is NOT the right fit : a multi user, centrally administered chat deployment — use a hosted web client Strengths Broad provider + local model coverage in one client Built in assistants, RAG knowledge bases, MCP tools Polished cross platform desktop UX Limitations Desktop app, not a multi user server or an SDK AGPL 3.0 licensing has redistribution implications Local data management/security is the user's responsibility Relation to the Arsenal Compare against LibreChat and Open WebUI before adopting for team use. Reference this project by its canonical ID cherry studio. Review AGPL 3.0 obligations before bundling or redistributing. Resources GitHub Repository Documentation"
+    },
+    {
       "id": "chroma",
       "name": "Chroma",
       "version_tracked": null,
@@ -2206,6 +2310,110 @@
       "word_count": 447,
       "body_html": "<h2>Overview</h2>\n<p>Continue is the open-source AI coding assistant that decouples the IDE experience from the model: VS Code and JetBrains extensions providing chat, inline edit, tab autocomplete, and agent mode, each independently configurable to any provider — hosted APIs, self-hosted vLLM, or local Ollama. Configuration is code (YAML/JSON), shareable across a team, with hooks for custom context providers and rules.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>For every team whose code cannot leave the network, \"which coding assistant?\" becomes \"which BYO-model assistant?\" — and Continue is the most adopted open-source answer inside the IDE (34k+ stars, Apache-2.0, company-backed). Its per-role model routing is the practically important design: autocomplete latency wants a small local model, agent tasks want a frontier model, and Continue is built around exactly that split.</p>\n<h2>Architecture</h2>\n<p>TypeScript extension core with a provider-abstraction layer; distinct model roles (chat, edit, autocomplete, embed, rerank) each bound to any configured provider; context engine assembling repo context via retrieval (codebase indexing/embeddings), open files, and pluggable context providers; agent mode with tool use (terminal, file edits) building on the same core; team config distributable via Continue Hub.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: any model provider — the point of the project; Ollama and vLLM for the fully-local story. Competing: Copilot/Cursor (closed, capability-maximal), Cline (agent-first VS Code extension), aider (terminal-based), Tabby (self-hosted server including its own serving layer). Complementary: the serving engines in tools/serving-and-deployment that host its models.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Install \"Continue\" from the VS Code marketplace, then configure models:\n#   ~/.continue/config.yaml\n# models:\n#   - name: Local Llama\n#     provider: ollama\n#     model: llama3.1:8b\n#     roles: [chat, edit]\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: air-gapped or compliance-constrained development — full assistant capability (chat, edit, autocomplete) with all inference on internal vLLM/Ollama endpoints</li>\n<li><strong>Scenario</strong>: cost/latency-tuned assistant stack — small local model on autocomplete's hot path, frontier API model reserved for chat and agent tasks, configured once and shared team-wide</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Cleanest separation of assistant UX from model choice in the space: every capability independently routable, making it the default IDE assistant for self-hosted-model shops</li>\n<li>Apache-2.0 with genuine extensibility (custom context providers, rules, hub-shared configs) — fork-and-adapt is realistic, not theoretical</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Trails Cursor/Copilot on integrated product polish and frontier features — the structural cost of being model-agnostic rather than vertically integrated</li>\n<li>Assistant quality is bounded by the models you bring: with small local models, autocomplete is serviceable but agent mode disappoints; setting expectations there is part of adopting it</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The IDE-integrated member of the open coding-assistant set — <code>aider</code> (terminal), <code>cline</code> (agent-first extension), <code>tabby</code> (self-hosted server with own serving). The local-model serving guidance in <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment</a> covers the endpoints it points at.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/continuedev/continue\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.continue.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview Continue is the open source AI coding assistant that decouples the IDE experience from the model: VS Code and JetBrains extensions providing chat, inline edit, tab autocomplete, and agent mode, each independently configurable to any provider — hosted APIs, self hosted vLLM, or local Ollama. Configuration is code (YAML/JSON), shareable across a team, with hooks for custom context providers and rules. Why it's in the Arsenal For every team whose code cannot leave the network, \"which coding assistant?\" becomes \"which BYO model assistant?\" — and Continue is the most adopted open source answer inside the IDE (34k+ stars, Apache 2.0, company backed). Its per role model routing is the practically important design: autocomplete latency wants a small local model, agent tasks want a frontier model, and Continue is built around exactly that split. Architecture TypeScript extension core with a provider abstraction layer; distinct model roles (chat, edit, autocomplete, embed, rerank) each bound to any configured provider; context engine assembling repo context via retrieval (codebase indexing/embeddings), open files, and pluggable context providers; agent mode with tool use (terminal, file edits) building on the same core; team config distributable via Continue Hub. Ecosystem Position Upstream: any model provider — the point of the project; Ollama and vLLM for the fully local story. Competing: Copilot/Cursor (closed, capability maximal), Cline (agent first VS Code extension), aider (terminal based), Tabby (self hosted server including its own serving layer). Complementary: the serving engines in tools/serving and deployment that host its models. Getting Started Key Use Cases 1. Scenario : air gapped or compliance constrained development — full assistant capability (chat, edit, autocomplete) with all inference on internal vLLM/Ollama endpoints 2. Scenario : cost/latency tuned assistant stack — small local model on autocomplete's hot path, frontier API model reserved for chat and agent tasks, configured once and shared team wide Strengths Cleanest separation of assistant UX from model choice in the space: every capability independently routable, making it the default IDE assistant for self hosted model shops Apache 2.0 with genuine extensibility (custom context providers, rules, hub shared configs) — fork and adapt is realistic, not theoretical Limitations Trails Cursor/Copilot on integrated product polish and frontier features — the structural cost of being model agnostic rather than vertically integrated Assistant quality is bounded by the models you bring: with small local models, autocomplete is serviceable but agent mode disappoints; setting expectations there is part of adopting it Relation to the Arsenal The IDE integrated member of the open coding assistant set — aider (terminal), cline (agent first extension), tabby (self hosted server with own serving). The local model serving guidance in tools/serving and deployment covers the endpoints it points at. Resources GitHub Documentation"
+    },
+    {
+      "id": "cosyvoice",
+      "name": "CosyVoice",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "models",
+      "description": "Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation",
+      "github_url": "https://github.com/FunAudioLLM/CosyVoice",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Alibaba (FunAudioLLM)",
+      "tags": [
+        "multimodal",
+        "voice",
+        "inference",
+        "self-hosted"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 22044,
+      "github_stars_last_30d": 0,
+      "trending_score": 40,
+      "last_commit": "2026-05-25",
+      "docs_url": "https://github.com/FunAudioLLM/CosyVoice",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2412.10117",
+      "paper_id": null,
+      "hf_url": "https://huggingface.co/FunAudioLLM",
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "Open-weight multilingual TTS/voice-cloning model family, one of the leading self-hostable alternatives to closed TTS APIs like ElevenLabs for teams that need on-prem or cost control"
+      ],
+      "best_for": [
+        "You need self-hostable, high-quality multilingual TTS with zero-shot voice cloning from a short reference clip, without sending audio to a third-party API",
+        "You want streaming synthesis for low-latency voice applications (assistants, agents) where waiting for full-utterance generation is too slow"
+      ],
+      "avoid_if": [
+        "You want a fully managed, zero-ops TTS with an SLA and polished voice library — a hosted API like ElevenLabs removes the GPU/serving burden CosyVoice imposes",
+        "Your use case is real-time full-duplex conversation (simultaneous listen/speak) — a speech-to-speech model like Moshi targets that directly, whereas CosyVoice is TTS"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (22,044), Apache-2.0 license, and last commit (2026-05-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/FunAudioLLM/CosyVoice",
+          "date": "2026-07-08",
+          "description": "22,044 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/cosyvoice.md",
+      "url": "content/projects/foundation-models/cosyvoice",
+      "slug": "cosyvoice",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "CosyVoice",
+      "summary": "Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 340,
+      "body_html": "<h2>Overview</h2>\n<p>CosyVoice is an open-weight text-to-speech model family from Alibaba's FunAudioLLM group. It supports multilingual synthesis, zero-shot voice cloning from a short reference sample, cross-lingual voice transfer, fine-grained control (emotion/prosody via instructions), and streaming generation for low-latency output.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It is one of the strongest self-hostable answers to closed TTS APIs: teams that need on-prem synthesis, data-residency control, or per-call cost control can run CosyVoice instead of paying per-character to a hosted vendor. It is a comparison point in the voice-audio space, not an unconditional recommendation.</p>\n<h2>Architecture</h2>\n<p>CosyVoice uses an LLM-style token model to map text (and a reference speaker embedding) to speech tokens, followed by a flow-matching / vocoder stage that renders tokens to waveform. Zero-shot cloning works by conditioning on tokens/embeddings extracted from the reference clip; streaming is enabled by generating and vocoding in chunks rather than whole utterances.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with other open TTS models (e.g. GPT-SoVITS, Fish-Speech, Parler-TTS) and with closed APIs (ElevenLabs, OpenAI TTS). Its niche is multilingual + cross-lingual cloning with streaming, backed by a large org.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/FunAudioLLM/CosyVoice\n# install deps, download weights from Hugging Face, then run zero-shot / cross-lingual inference\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: on-prem multilingual voiceover or assistant speech with a cloned brand voice</li>\n<li><strong>Scenario</strong>: low-latency streaming TTS for a voice agent</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: a team wanting zero-ops managed TTS with an SLA — a hosted API fits better</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Multilingual + cross-lingual zero-shot cloning</li>\n<li>Streaming generation for low latency</li>\n<li>Open weights (Apache-2.0), org-backed</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You operate the GPU serving and scaling yourself</li>\n<li>Voice cloning raises consent/misuse and legal concerns</li>\n<li>TTS only — not full-duplex speech-to-speech</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against <code>moshi</code> (speech-to-speech) and <code>gpt-sovits</code> (open voice cloning) before adopting.</li>\n<li>Reference this project by its canonical ID <code>cosyvoice</code>.</li>\n<li>Document consent and watermarking policy before deploying voice cloning.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/FunAudioLLM/CosyVoice\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://arxiv.org/abs/2412.10117\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper (arXiv)</a></li>\n</ul>\n",
+      "body_text": "Overview CosyVoice is an open weight text to speech model family from Alibaba's FunAudioLLM group. It supports multilingual synthesis, zero shot voice cloning from a short reference sample, cross lingual voice transfer, fine grained control (emotion/prosody via instructions), and streaming generation for low latency output. Why it's in the Arsenal It is one of the strongest self hostable answers to closed TTS APIs: teams that need on prem synthesis, data residency control, or per call cost control can run CosyVoice instead of paying per character to a hosted vendor. It is a comparison point in the voice audio space, not an unconditional recommendation. Architecture CosyVoice uses an LLM style token model to map text (and a reference speaker embedding) to speech tokens, followed by a flow matching / vocoder stage that renders tokens to waveform. Zero shot cloning works by conditioning on tokens/embeddings extracted from the reference clip; streaming is enabled by generating and vocoding in chunks rather than whole utterances. Ecosystem Position It competes with other open TTS models (e.g. GPT SoVITS, Fish Speech, Parler TTS) and with closed APIs (ElevenLabs, OpenAI TTS). Its niche is multilingual + cross lingual cloning with streaming, backed by a large org. Getting Started Key Use Cases 1. Scenario : on prem multilingual voiceover or assistant speech with a cloned brand voice 2. Scenario : low latency streaming TTS for a voice agent 3. Scenario where this is NOT the right fit : a team wanting zero ops managed TTS with an SLA — a hosted API fits better Strengths Multilingual + cross lingual zero shot cloning Streaming generation for low latency Open weights (Apache 2.0), org backed Limitations You operate the GPU serving and scaling yourself Voice cloning raises consent/misuse and legal concerns TTS only — not full duplex speech to speech Relation to the Arsenal Compare against moshi (speech to speech) and gpt sovits (open voice cloning) before adopting. Reference this project by its canonical ID cosyvoice. Document consent and watermarking policy before deploying voice cloning. Resources GitHub Repository Paper (arXiv)"
     },
     {
       "id": "crawl4ai",
@@ -4205,6 +4413,110 @@
       "body_text": "Overview An autonomous agent for deep web and local research: given a question, a planner agent generates targeted sub queries, execution agents scrape and evaluate sources in parallel, and a writer agent synthesizes a cited report ( 2,000+ words). It popularized the plan and execute research pattern in open source and supports local documents, custom retrievers, and a multi agent LangGraph pipeline for deeper runs. Why it's in the Arsenal The reference open source implementation of 'deep research': a planner executor architecture that decomposes a question into parallel search queries, scrapes and filters sources, and synthesizes a long form cited report — predating and paralleling the commercial deep research products. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want deep research capability you can self host, point at internal documents, or embed in your own product rather than paying per report for commercial equivalents. See Strengths / Limitations below before adopting it. Architecture A planner executor split inspired by Plan and Solve: the planner produces research questions; per question crawler agents (Tavily or pluggable retrievers, bs4/Playwright scraping) gather and summarize sources while tracking citations; the publisher composes the final report (PDF/Markdown/Word). The 'Deep Research' mode runs a tree of recursive research steps with configurable depth/breadth and concurrency; an MCP server exposes it to other agent stacks. Ecosystem Position Upstream: search providers (Tavily, Google, DuckDuckGo, custom), any major LLM. Competing: commercial deep research features (OpenAI, Gemini, Perplexity) and open alternatives (Onyx, khoj research modes). Complementary: LangGraph multi agent mode; usable as a library, REST API, or MCP tool inside larger agent products. Getting Started Key Use Cases 1. Scenario : you want deep research capability you can self host, point at internal documents, or embed in your own product rather than paying per report for commercial equivalents 2. Scenario : you need reports with traceable citations aggregated from many sources — the planner/executor design cross validates across 20+ scraped pages by default, reducing single source hallucination Strengths You want deep research capability you can self host, point at internal documents, or embed in your own product rather than paying per report for commercial equivalents You need reports with traceable citations aggregated from many sources — the planner/executor design cross validates across 20+ scraped pages by default, reducing single source hallucination Limitations You need guaranteed factual accuracy for high stakes decisions — aggregation reduces but does not eliminate hallucination, and web source quality gates are heuristic A single web search suffices for your use case — a full research run costs multiple LLM calls and minutes of latency versus one cheap query Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (28,151 stars, last commit 2026 07 05, verified via GitHub API on 2026 07 08)"
     },
     {
+      "id": "gpt-sovits",
+      "name": "GPT-SoVITS",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "models",
+      "description": "Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference",
+      "github_url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "RVC-Boss (community)",
+      "tags": [
+        "multimodal",
+        "voice",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 59564,
+      "github_stars_last_30d": 0,
+      "trending_score": 48,
+      "last_commit": "2026-06-20",
+      "docs_url": "https://github.com/RVC-Boss/GPT-SoVITS",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "hf_url": null,
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
+      "health_signals": [
+        "community-driven",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "Extremely popular community voice-cloning toolkit; the go-to open option when you have a small amount of target-speaker audio and want a full train-and-serve WebUI rather than an API"
+      ],
+      "best_for": [
+        "You have a short sample (seconds for zero-shot, ~1 minute for fine-tuned) of a target voice and want high-fidelity cloning you run yourself, with an end-to-end WebUI for data prep/training/inference",
+        "You want to fine-tune on a specific speaker for best quality rather than rely purely on zero-shot, and you're comfortable operating a GPU pipeline"
+      ],
+      "avoid_if": [
+        "You need a managed, consent-guardrailed service — a community cloning toolkit puts all misuse/legal responsibility on you and ships no built-in safeguards",
+        "You need broad multilingual streaming synthesis at scale — an org-backed model like CosyVoice or a hosted API may fit production ops better"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (59,564), MIT license, and last commit (2026-06-20) verified via the GitHub API on 2026-07-08. Capability claims from the README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/RVC-Boss/GPT-SoVITS",
+          "date": "2026-07-08",
+          "description": "59,564 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/gpt-sovits.md",
+      "url": "content/projects/foundation-models/gpt-sovits",
+      "slug": "gpt-sovits",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "GPT-SoVITS",
+      "summary": "Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 344,
+      "body_html": "<h2>Overview</h2>\n<p>GPT-SoVITS is a community voice-cloning and TTS toolkit that produces high-fidelity cloned voices from very little audio — zero-shot from a few seconds, or fine-tuned from around a minute of a target speaker. It bundles a WebUI covering the full workflow: dataset preparation, training, and inference, with cross-lingual support.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>With one of the largest star counts of any voice project, it is the de facto open choice for self-hosted voice cloning when you want a complete train-and-serve pipeline rather than an API. It is a comparison point in the voice-audio space; the consent/misuse caveats are significant and called out below.</p>\n<h2>Architecture</h2>\n<p>It combines a GPT-style text-to-semantic-token model with a SoVITS-style synthesis stage (semantic tokens → waveform). Zero-shot cloning conditions synthesis on features from the reference clip; fine-tuning adapts the models to a specific speaker's dataset for higher fidelity. The WebUI wraps slicing, labeling, training, and inference.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with other open voice models (CosyVoice, Fish-Speech, Parler-TTS) and hosted cloning APIs (ElevenLabs). Its niche is few-shot, high-fidelity cloning with a batteries-included WebUI and a huge community.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/RVC-Boss/GPT-SoVITS\n# use the packaged WebUI (or install deps) to slice audio, train, and run inference\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: clone a specific consented voice from a short recording for narration or a character voice</li>\n<li><strong>Scenario</strong>: fine-tune on a target speaker's dataset for maximum fidelity</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: an enterprise needing managed, guardrailed TTS with an SLA</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Very high-fidelity few-shot / zero-shot cloning</li>\n<li>End-to-end WebUI (data prep → train → infer)</li>\n<li>Large, active community and ecosystem</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>No built-in consent/misuse safeguards — legal risk is on you</li>\n<li>Community-maintained; you operate the GPU pipeline</li>\n<li>Quality depends heavily on reference/training data hygiene</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against <code>cosyvoice</code> and <code>moshi</code> before adopting.</li>\n<li>Reference this project by its canonical ID <code>gpt-sovits</code>.</li>\n<li>Establish a consent and watermarking policy before any cloning use.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/RVC-Boss/GPT-SoVITS\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n</ul>\n",
+      "body_text": "Overview GPT SoVITS is a community voice cloning and TTS toolkit that produces high fidelity cloned voices from very little audio — zero shot from a few seconds, or fine tuned from around a minute of a target speaker. It bundles a WebUI covering the full workflow: dataset preparation, training, and inference, with cross lingual support. Why it's in the Arsenal With one of the largest star counts of any voice project, it is the de facto open choice for self hosted voice cloning when you want a complete train and serve pipeline rather than an API. It is a comparison point in the voice audio space; the consent/misuse caveats are significant and called out below. Architecture It combines a GPT style text to semantic token model with a SoVITS style synthesis stage (semantic tokens → waveform). Zero shot cloning conditions synthesis on features from the reference clip; fine tuning adapts the models to a specific speaker's dataset for higher fidelity. The WebUI wraps slicing, labeling, training, and inference. Ecosystem Position It competes with other open voice models (CosyVoice, Fish Speech, Parler TTS) and hosted cloning APIs (ElevenLabs). Its niche is few shot, high fidelity cloning with a batteries included WebUI and a huge community. Getting Started Key Use Cases 1. Scenario : clone a specific consented voice from a short recording for narration or a character voice 2. Scenario : fine tune on a target speaker's dataset for maximum fidelity 3. Scenario where this is NOT the right fit : an enterprise needing managed, guardrailed TTS with an SLA Strengths Very high fidelity few shot / zero shot cloning End to end WebUI (data prep → train → infer) Large, active community and ecosystem Limitations No built in consent/misuse safeguards — legal risk is on you Community maintained; you operate the GPU pipeline Quality depends heavily on reference/training data hygiene Relation to the Arsenal Compare against cosyvoice and moshi before adopting. Reference this project by its canonical ID gpt sovits. Establish a consent and watermarking policy before any cloning use. Resources GitHub Repository"
+    },
+    {
       "id": "graphiti",
       "name": "Graphiti",
       "version_tracked": null,
@@ -5743,6 +6055,110 @@
       "body_text": "Overview An open source, self hosted AI chat platform that clones and extends the ChatGPT experience across providers: one interface for OpenAI, Anthropic, Google, Azure, Bedrock, and local endpoints, with agents, retrieval, code execution, multimodal chat, and real multi user administration. It targets teams that want commercial model access with self hosted control and auditability. Why it's in the Arsenal The multi provider self hosted chat frontend: where Open WebUI grew up around Ollama, LibreChat grew up around unifying every commercial API (OpenAI, Anthropic, Google, Azure, Bedrock) behind one familiar ChatGPT clone UX with enterprise grade auth. It earns a place in the Arsenal because it directly addresses a recurring decision point: your organization wants one governed chat UI over many providers — per user API key management, OAuth/LDAP auth, moderation tools, and search across all conversations. See Strengths / Limitations below before adopting it. Architecture A Node/React application backed by MongoDB (conversations, users) and MeiliSearch (full text search), with a separate RAG API service (pgvector) for document chat. Endpoints abstract provider APIs behind unified chat semantics; the agent system adds tools (web search, code interpreter sandbox, MCP servers, custom actions from OpenAPI specs); auth supports OAuth2, LDAP, and per user credential encryption. Ecosystem Position Upstream: every major LLM API plus OpenAI compatible local servers. Competing: Open WebUI (local first), AnythingLLM (document appliance focus), commercial team plans from providers. Complementary: MCP tool servers plug in directly; its code interpreter and RAG services are usable as standalone APIs. One of the most starred self hosted AI UIs with a large deployment base. Getting Started Key Use Cases 1. Scenario : your organization wants one governed chat UI over many providers — per user API key management, OAuth/LDAP auth, moderation tools, and search across all conversations 2. Scenario : you need ChatGPT parity features self hosted: agents with tool use and MCP support, code interpreter API, DALL E/image generation, forking conversations, and preset switching mid thread Strengths Your organization wants one governed chat UI over many providers — per user API key management, OAuth/LDAP auth, moderation tools, and search across all conversations You need ChatGPT parity features self hosted: agents with tool use and MCP support, code interpreter API, DALL E/image generation, forking conversations, and preset switching mid thread Limitations You run purely local models and want the tightest Ollama integration — Open WebUI's model management (pull/create/quantize from the UI) is deeper for that workflow You want a minimal dependency deployment — the stack (MongoDB, MeiliSearch, RAG API service) is heavier than single container alternatives Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (40,447 stars, last commit 2026 07 08, verified via GitHub API on 2026 07 08)"
     },
     {
+      "id": "lightrag",
+      "name": "LightRAG",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "rag",
+      "subcategory": "advanced-rag",
+      "description": "Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval",
+      "github_url": "https://github.com/HKUDS/LightRAG",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "HKU Data Intelligence Lab (HKUDS)",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "llm"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 37469,
+      "github_stars_last_30d": 0,
+      "trending_score": 45,
+      "last_commit": "2026-07-08",
+      "docs_url": "https://github.com/HKUDS/LightRAG",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2410.05779",
+      "paper_id": null,
+      "hf_url": null,
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "data-and-retrieval",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "research-origin",
+        "actively-maintained",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "Lightweight graph-RAG framework that positions between plain vector RAG and heavier systems like Microsoft GraphRAG, trading some indexing depth for lower cost and faster incremental updates"
+      ],
+      "best_for": [
+        "Your questions need multi-hop or global reasoning over a corpus (how do entities relate across many documents) where flat top-k vector retrieval misses the connections a knowledge graph makes explicit",
+        "You want graph-RAG benefits without GraphRAG's full indexing cost — LightRAG supports incremental insertion so new documents don't force a full graph rebuild"
+      ],
+      "avoid_if": [
+        "Your workload is simple fact lookup or single-passage Q&A — building and querying a graph adds LLM extraction cost and latency that plain vector search avoids",
+        "You need a hardened, SLA-backed managed service — this is a research-origin library you self-host and operate yourself"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (37,469), MIT license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture claims from the paper/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/HKUDS/LightRAG",
+          "date": "2026-07-08",
+          "description": "37,469 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/data-and-retrieval/lightrag.md",
+      "url": "content/projects/data-and-retrieval/lightrag",
+      "slug": "lightrag",
+      "section_path": "content/projects/data-and-retrieval",
+      "display_name": "LightRAG",
+      "summary": "Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 377,
+      "body_html": "<h2>Overview</h2>\n<p>LightRAG is a retrieval-augmented generation framework that indexes a corpus as a knowledge graph of entities and relationships (extracted by an LLM) alongside vector embeddings, then retrieves at two levels: local (specific entities/neighbors) and global (relationship themes across the graph). The goal is better multi-hop and holistic reasoning than flat vector top-k, at lower cost than heavier graph-RAG systems.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It represents the \"graph-RAG made lightweight\" point on the retrieval spectrum: it brings the multi-hop and global-context strengths of a knowledge graph while supporting incremental document insertion, which is the operational pain point of GraphRAG-style systems. It is a comparison point in the data-and-retrieval phase, not an unconditional recommendation.</p>\n<h2>Architecture</h2>\n<p>Ingestion runs LLM extraction over chunks to produce entities and relationships, deduplicates them into a graph, and stores both graph structure and embeddings. At query time a dual-level retriever combines low-level (entity-centric) and high-level (relationship/theme-centric) matches, assembling context that spans multiple documents rather than a single ranked passage list.</p>\n<h2>Ecosystem Position</h2>\n<p>It sits between plain vector RAG (cheaper, simpler, weaker at multi-hop) and Microsoft GraphRAG (deeper community summaries, heavier and costlier to index). Choose LightRAG when you want graph benefits with incremental updates and a smaller footprint.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install lightrag-hku\n# initialize LightRAG with your LLM + embedding functions, insert documents, then query\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: multi-hop question answering over a knowledge base where answers require connecting facts across documents</li>\n<li><strong>Scenario</strong>: a frequently-updated corpus where full graph re-indexing (as some graph-RAG systems require) would be too expensive</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: single-passage FAQ lookup, where plain vector retrieval is cheaper and simpler</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Multi-hop / global reasoning via graph structure</li>\n<li>Incremental insertion avoids full re-indexing</li>\n<li>Model-agnostic (pluggable LLM + embedding backends)</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>LLM extraction adds indexing cost and can introduce graph noise</li>\n<li>Research-origin; operational maturity below managed services</li>\n<li>Overkill for simple retrieval workloads</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against plain vector databases and Microsoft GraphRAG before adopting; they occupy adjacent points in the data-and-retrieval phase.</li>\n<li>Reference this project by its canonical ID <code>lightrag</code>.</li>\n<li>Record ingestion LLM costs and update cadence before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/HKUDS/LightRAG\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://arxiv.org/abs/2410.05779\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper (arXiv)</a></li>\n</ul>\n",
+      "body_text": "Overview LightRAG is a retrieval augmented generation framework that indexes a corpus as a knowledge graph of entities and relationships (extracted by an LLM) alongside vector embeddings, then retrieves at two levels: local (specific entities/neighbors) and global (relationship themes across the graph). The goal is better multi hop and holistic reasoning than flat vector top k, at lower cost than heavier graph RAG systems. Why it's in the Arsenal It represents the \"graph RAG made lightweight\" point on the retrieval spectrum: it brings the multi hop and global context strengths of a knowledge graph while supporting incremental document insertion, which is the operational pain point of GraphRAG style systems. It is a comparison point in the data and retrieval phase, not an unconditional recommendation. Architecture Ingestion runs LLM extraction over chunks to produce entities and relationships, deduplicates them into a graph, and stores both graph structure and embeddings. At query time a dual level retriever combines low level (entity centric) and high level (relationship/theme centric) matches, assembling context that spans multiple documents rather than a single ranked passage list. Ecosystem Position It sits between plain vector RAG (cheaper, simpler, weaker at multi hop) and Microsoft GraphRAG (deeper community summaries, heavier and costlier to index). Choose LightRAG when you want graph benefits with incremental updates and a smaller footprint. Getting Started Key Use Cases 1. Scenario : multi hop question answering over a knowledge base where answers require connecting facts across documents 2. Scenario : a frequently updated corpus where full graph re indexing (as some graph RAG systems require) would be too expensive 3. Scenario where this is NOT the right fit : single passage FAQ lookup, where plain vector retrieval is cheaper and simpler Strengths Multi hop / global reasoning via graph structure Incremental insertion avoids full re indexing Model agnostic (pluggable LLM + embedding backends) Limitations LLM extraction adds indexing cost and can introduce graph noise Research origin; operational maturity below managed services Overkill for simple retrieval workloads Relation to the Arsenal Compare against plain vector databases and Microsoft GraphRAG before adopting; they occupy adjacent points in the data and retrieval phase. Reference this project by its canonical ID lightrag. Record ingestion LLM costs and update cadence before production adoption. Resources GitHub Repository Paper (arXiv)"
+    },
+    {
       "id": "litgpt",
       "name": "LitGPT",
       "version_tracked": null,
@@ -5842,6 +6258,109 @@
       "word_count": 455,
       "body_html": "<h2>Overview</h2>\n<p>A library of 20+ LLM architectures reimplemented from scratch in readable PyTorch, with command-line recipes for pretraining, LoRA/QLoRA fine-tuning, continued pretraining, and deployment. The design bet is transparency: no framework indirection between you and the model code, while Lightning Fabric supplies distributed training (FSDP, DDP, TPU) when you scale.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Readable single-file model implementations plus production training recipes: LitGPT occupies the space between educational nanoGPT-style code and heavyweight training frameworks, with each architecture reimplemented from scratch and no abstraction layers to dig through. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to actually read and modify the model code you train — every architecture is a from-scratch single-file implementation, not a wrapper over transformers. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Each model family (Llama, Gemma, Qwen, Phi, Mistral, and others) is a standalone implementation sharing a common GPT base class; configs are dataclasses, not registry magic. Training uses Lightning Fabric strategies for sharding; quantization paths (bitsandbytes) enable QLoRA on consumer GPUs; <code>litgpt serve</code> exposes an OpenAI-compatible endpoint for quick deployment.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: PyTorch and Lightning Fabric. Competing: Axolotl and LLaMA-Factory (config-driven fine-tuning), torchtune (Meta's PyTorch-native recipes). Complementary: checkpoints convert to/from Hugging Face format, and its readable implementations are frequently used as reference code when debugging other stacks — it was also the basis for several open pretraining projects (e.g. TinyLlama).</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install 'litgpt[extra]'\nlitgpt download microsoft/phi-2\nlitgpt finetune_lora microsoft/phi-2 --data JSON --data.json_path my_data.json\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want to actually read and modify the model code you train — every architecture is a from-scratch single-file implementation, not a wrapper over transformers</li>\n<li><strong>Scenario</strong>: you need validated pretraining/fine-tuning recipes (FSDP, TPU support, LoRA/QLoRA) with Lightning Fabric handling the distributed plumbing</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want to actually read and modify the model code you train — every architecture is a from-scratch single-file implementation, not a wrapper over transformers</li>\n<li>You need validated pretraining/fine-tuning recipes (FSDP, TPU support, LoRA/QLoRA) with Lightning Fabric handling the distributed plumbing</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need day-one support for every new model release — the from-scratch implementation approach means new architectures land slower than in transformers-based trainers</li>\n<li>You want a YAML-only, no-code fine-tuning experience — Axolotl or LLaMA-Factory are more config-driven</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see <a href=\"../../tools/model-layer/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/model-layer/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/Lightning-AI/litgpt\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/Lightning-AI/litgpt/tree/main/tutorials\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (13,467 stars, last commit 2026-07-06, verified via GitHub API on 2026-07-08)</em></p>\n",
       "body_text": "Overview A library of 20+ LLM architectures reimplemented from scratch in readable PyTorch, with command line recipes for pretraining, LoRA/QLoRA fine tuning, continued pretraining, and deployment. The design bet is transparency: no framework indirection between you and the model code, while Lightning Fabric supplies distributed training (FSDP, DDP, TPU) when you scale. Why it's in the Arsenal Readable single file model implementations plus production training recipes: LitGPT occupies the space between educational nanoGPT style code and heavyweight training frameworks, with each architecture reimplemented from scratch and no abstraction layers to dig through. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want to actually read and modify the model code you train — every architecture is a from scratch single file implementation, not a wrapper over transformers. See Strengths / Limitations below before adopting it. Architecture Each model family (Llama, Gemma, Qwen, Phi, Mistral, and others) is a standalone implementation sharing a common GPT base class; configs are dataclasses, not registry magic. Training uses Lightning Fabric strategies for sharding; quantization paths (bitsandbytes) enable QLoRA on consumer GPUs; litgpt serve exposes an OpenAI compatible endpoint for quick deployment. Ecosystem Position Upstream: PyTorch and Lightning Fabric. Competing: Axolotl and LLaMA Factory (config driven fine tuning), torchtune (Meta's PyTorch native recipes). Complementary: checkpoints convert to/from Hugging Face format, and its readable implementations are frequently used as reference code when debugging other stacks — it was also the basis for several open pretraining projects (e.g. TinyLlama). Getting Started Key Use Cases 1. Scenario : you want to actually read and modify the model code you train — every architecture is a from scratch single file implementation, not a wrapper over transformers 2. Scenario : you need validated pretraining/fine tuning recipes (FSDP, TPU support, LoRA/QLoRA) with Lightning Fabric handling the distributed plumbing Strengths You want to actually read and modify the model code you train — every architecture is a from scratch single file implementation, not a wrapper over transformers You need validated pretraining/fine tuning recipes (FSDP, TPU support, LoRA/QLoRA) with Lightning Fabric handling the distributed plumbing Limitations You need day one support for every new model release — the from scratch implementation approach means new architectures land slower than in transformers based trainers You want a YAML only, no code fine tuning experience — Axolotl or LLaMA Factory are more config driven Relation to the Arsenal This is a training and alignment entry: it documents a training/fine tuning/alignment stack you run yourself. For managed fine tuning paths and adjacent tooling, see tools/model layer/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (13,467 stars, last commit 2026 07 06, verified via GitHub API on 2026 07 08)"
+    },
+    {
+      "id": "litserve",
+      "name": "LitServe",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "tooling",
+      "subcategory": "inference-engines",
+      "description": "Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code",
+      "github_url": "https://github.com/Lightning-AI/LitServe",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Lightning AI",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "llm"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 3910,
+      "github_stars_last_30d": 0,
+      "trending_score": 32,
+      "last_commit": "2026-07-06",
+      "docs_url": "https://lightning.ai/docs/litserve",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "hf_url": null,
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "inference-engine",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "General-purpose model-serving layer over FastAPI; fills the gap between raw FastAPI (no batching/GPU features) and specialized LLM servers like vLLM (fast but LLM-specific), for teams serving arbitrary models"
+      ],
+      "best_for": [
+        "You need to serve arbitrary models (LLMs, vision, audio, classical ML, or multi-model pipelines) with production features — dynamic batching, streaming, GPU autoscaling — without hand-rolling them on FastAPI",
+        "You want a Python-first serving layer where you define a simple API class rather than adopt a heavier, model-specific serving stack"
+      ],
+      "avoid_if": [
+        "You are serving a single LLM and want maximum token throughput — a specialized engine like vLLM or SGLang with paged attention will outperform a general server",
+        "You need a full model-registry/deployment platform with versioning and canary rollout — LitServe is a serving layer, not an MLOps platform"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (3,910), Apache-2.0 license, and last commit (2026-07-06) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/Lightning-AI/LitServe",
+          "date": "2026-07-08",
+          "description": "3,910 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/inference-engines/litserve.md",
+      "url": "content/projects/inference-engines/litserve",
+      "slug": "litserve",
+      "section_path": "content/projects/inference-engines",
+      "display_name": "LitServe",
+      "summary": "Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 342,
+      "body_html": "<h2>Overview</h2>\n<p>LitServe is an open-source model-serving engine from Lightning AI built on FastAPI. You implement a small <code>LitAPI</code> class (setup, decode, predict, encode) and LitServe adds production-serving concerns — dynamic batching, streaming, multi-worker/GPU scaling, and multi-model composition — that plain FastAPI leaves to you.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It fills the middle ground between raw FastAPI (flexible but you build batching/GPU handling yourself) and specialized LLM servers like vLLM (fast but LLM-specific). For teams serving a mix of model types behind one API, it is a low-effort serving layer. It is a comparison point in the inference-engine phase, not an unconditional recommendation.</p>\n<h2>Architecture</h2>\n<p>LitServe wraps your model in an API class and runs a server that queues requests, batches them dynamically, and dispatches to worker processes bound to devices. Streaming and multi-model setups are configuration on top of that loop, so you get serving features without implementing the concurrency and batching machinery yourself.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with FastAPI+custom code and with model-specific servers (vLLM, SGLang, TGI, BentoML/Ray Serve). Its niche is a general, Python-first serving layer for any model type with batteries-included production features.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install litserve\n# implement a LitAPI subclass (setup/predict/encode) and run: server = ls.LitServer(api); server.run(port=8000)\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: serve a vision or audio model (or several models) with batching + GPU scaling behind one API</li>\n<li><strong>Scenario</strong>: quickly stand up a production inference endpoint without hand-rolling FastAPI concurrency</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: single-LLM max-throughput serving — a paged-attention engine like vLLM is faster</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>General-purpose: any model type, multi-model pipelines</li>\n<li>Batching, streaming, GPU autoscaling built in</li>\n<li>Python-first, minimal boilerplate over FastAPI</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Not tuned to LLM-specific throughput like vLLM/SGLang</li>\n<li>A serving layer, not a full deployment/registry platform</li>\n<li>You still own infrastructure and scaling decisions</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against <code>vllm</code>, <code>sglang</code>, and BentoML/Ray Serve before adopting.</li>\n<li>Reference this project by its canonical ID <code>litserve</code>.</li>\n<li>Benchmark batching/throughput against a specialized engine for LLM-only workloads.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/Lightning-AI/LitServe\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://lightning.ai/docs/litserve\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview LitServe is an open source model serving engine from Lightning AI built on FastAPI. You implement a small LitAPI class (setup, decode, predict, encode) and LitServe adds production serving concerns — dynamic batching, streaming, multi worker/GPU scaling, and multi model composition — that plain FastAPI leaves to you. Why it's in the Arsenal It fills the middle ground between raw FastAPI (flexible but you build batching/GPU handling yourself) and specialized LLM servers like vLLM (fast but LLM specific). For teams serving a mix of model types behind one API, it is a low effort serving layer. It is a comparison point in the inference engine phase, not an unconditional recommendation. Architecture LitServe wraps your model in an API class and runs a server that queues requests, batches them dynamically, and dispatches to worker processes bound to devices. Streaming and multi model setups are configuration on top of that loop, so you get serving features without implementing the concurrency and batching machinery yourself. Ecosystem Position It competes with FastAPI+custom code and with model specific servers (vLLM, SGLang, TGI, BentoML/Ray Serve). Its niche is a general, Python first serving layer for any model type with batteries included production features. Getting Started Key Use Cases 1. Scenario : serve a vision or audio model (or several models) with batching + GPU scaling behind one API 2. Scenario : quickly stand up a production inference endpoint without hand rolling FastAPI concurrency 3. Scenario where this is NOT the right fit : single LLM max throughput serving — a paged attention engine like vLLM is faster Strengths General purpose: any model type, multi model pipelines Batching, streaming, GPU autoscaling built in Python first, minimal boilerplate over FastAPI Limitations Not tuned to LLM specific throughput like vLLM/SGLang A serving layer, not a full deployment/registry platform You still own infrastructure and scaling decisions Relation to the Arsenal Compare against vllm, sglang, and BentoML/Ray Serve before adopting. Reference this project by its canonical ID litserve. Benchmark batching/throughput against a specialized engine for LLM only workloads. Resources GitHub Repository Documentation"
     },
     {
       "id": "llama-3",
@@ -7298,6 +7817,112 @@
       "body_text": "Overview An open source, distributed vector database built by Zilliz for billion scale similarity search, architected as a set of horizontally scalable microservices rather than a single node database. Why it's in the Arsenal Distributed, horizontally scalable vector database designed from the ground up for billion scale vector search, a CNCF adjacent project backed by Zilliz. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to scale vector search to hundreds of millions or billions of vectors with distributed, horizontally scalable infrastructure. See Strengths / Limitations below before adopting it. Architecture A cloud native, distributed architecture separating compute and storage across multiple specialized node types (proxy, query nodes, data nodes, index nodes), enabling independent horizontal scaling of each component; supports multiple ANN index types (IVF, HNSW, DiskANN) and hybrid scalar vector filtering. Ecosystem Position Upstream: none of particular note. Downstream: none of particular note as a dependency, though it's a common backend choice for large scale production RAG and recommendation systems. Competing: Qdrant, Weaviate at similar production scale; Chroma/LanceDB at the smaller/embedded end. Complementary: integrates with LangChain, LlamaIndex, and Haystack as a retrieval backend. Getting Started Key Use Cases 1. Scenario : you need to scale vector search to hundreds of millions or billions of vectors with distributed, horizontally scalable infrastructure 2. Scenario : you need enterprise grade features (multi tenancy, RBAC, hybrid search combining vector and scalar filtering) in a self hostable, open source system rather than only through a managed vendor Strengths You need to scale vector search to hundreds of millions or billions of vectors with distributed, horizontally scalable infrastructure You need enterprise grade features (multi tenancy, RBAC, hybrid search combining vector and scalar filtering) in a self hostable, open source system rather than only through a managed vendor Limitations You're prototyping or building a small scale application — Milvus's distributed architecture (multiple microservices: proxy, query nodes, data nodes, etc.) is meaningful operational overhead compared to Chroma or LanceDB's embedded simplicity You want the simplest possible operational model — Milvus typically requires Kubernetes or a comparable orchestration layer for production deployment at scale Relation to the Arsenal This is a data and retrieval entry: it documents a vector database, document processing tool, or RAG platform. For job based tool comparisons (e.g. web scraping, vector search), see tools/data ingestion/. Resources GitHub Documentation"
     },
     {
+      "id": "minicpm-v",
+      "name": "MiniCPM-V",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "multimodal",
+      "subcategory": "models",
+      "description": "Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones",
+      "github_url": "https://github.com/OpenBMB/MiniCPM-V",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "OpenBMB",
+      "tags": [
+        "multimodal",
+        "vision",
+        "inference",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 25801,
+      "github_stars_last_30d": 0,
+      "trending_score": 42,
+      "last_commit": "2026-06-25",
+      "docs_url": "https://github.com/OpenBMB/MiniCPM-V",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2408.01800",
+      "paper_id": null,
+      "hf_url": "https://huggingface.co/openbmb",
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": true,
+      "supported_formats": [
+        "gguf"
+      ],
+      "api_compatible": null,
+      "phase": "foundation-model",
+      "domain": [
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "Efficiency-focused open VLM series; the reference option when you need capable image/video/OCR understanding at a small parameter count that can run on edge devices, versus large VLMs that require server GPUs"
+      ],
+      "best_for": [
+        "You need strong vision-language understanding (image, multi-image, video, OCR) at a small enough size to run on-device or on modest GPUs, where large VLMs are impractical",
+        "You want open weights with quantized/GGUF builds so you can deploy through llama.cpp/Ollama-style runtimes on constrained hardware"
+      ],
+      "avoid_if": [
+        "You need the absolute frontier of multimodal reasoning and have server-class GPUs — a larger VLM (or a frontier hosted model) will outperform a compact model",
+        "Your task is pure text with no visual input — a text-only LLM is a better fit than paying for unused vision capacity"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (25,801), Apache-2.0 license, and last commit (2026-06-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/OpenBMB/MiniCPM-V",
+          "date": "2026-07-08",
+          "description": "25,801 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/minicpm-v.md",
+      "url": "content/projects/foundation-models/minicpm-v",
+      "slug": "minicpm-v",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "MiniCPM-V",
+      "summary": "Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 318,
+      "body_html": "<h2>Overview</h2>\n<p>MiniCPM-V is an open vision-language model series from OpenBMB focused on efficiency: it delivers strong single-image, multi-image, video, and OCR understanding at small parameter counts, with builds designed to run on-device — including phones — via quantization and GGUF.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It anchors the \"capable VLM on constrained hardware\" niche: teams that can't run frontier server-class multimodal models can still get solid vision understanding on edge devices or modest GPUs. It is a comparison point in the multimodal foundation-model space, not an unconditional recommendation over larger VLMs.</p>\n<h2>Architecture</h2>\n<p>Like most modern VLMs, it pairs a vision encoder with an LLM via a projector, but the series emphasizes efficient encoding of high-resolution/multi-image/video inputs and compact backbones. Quantized and GGUF releases let it run through lightweight runtimes (llama.cpp / Ollama-style), trading some accuracy for on-device feasibility.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with other open VLMs (Qwen-VL, InternVL, Llama-based VLMs) and, at the small end, with edge-oriented models. Its distinguishing axis is strong quality-per-parameter and genuine on-device deployment.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># pull weights from Hugging Face (openbmb); run via transformers,\n# or use a GGUF build through llama.cpp / Ollama for on-device inference\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: on-device image/OCR understanding in a mobile or embedded app</li>\n<li><strong>Scenario</strong>: cost-efficient VLM inference on modest GPUs for document/image pipelines</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: frontier multimodal reasoning with ample server GPUs — a larger model wins</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Strong quality-per-parameter across image/video/OCR</li>\n<li>On-device capable (quantization + GGUF)</li>\n<li>Open weights, org-backed, actively maintained</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Compact size caps peak reasoning vs large VLMs</li>\n<li>On-device quantization costs some accuracy</li>\n<li>Multimodal serving still heavier than text-only</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against other open VLMs and frontier hosted models before adopting.</li>\n<li>Reference this project by its canonical ID <code>minicpm-v</code>.</li>\n<li>Benchmark on your own images/documents; VLM quality is task-specific.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/OpenBMB/MiniCPM-V\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://arxiv.org/abs/2408.01800\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper (arXiv)</a></li>\n</ul>\n",
+      "body_text": "Overview MiniCPM V is an open vision language model series from OpenBMB focused on efficiency: it delivers strong single image, multi image, video, and OCR understanding at small parameter counts, with builds designed to run on device — including phones — via quantization and GGUF. Why it's in the Arsenal It anchors the \"capable VLM on constrained hardware\" niche: teams that can't run frontier server class multimodal models can still get solid vision understanding on edge devices or modest GPUs. It is a comparison point in the multimodal foundation model space, not an unconditional recommendation over larger VLMs. Architecture Like most modern VLMs, it pairs a vision encoder with an LLM via a projector, but the series emphasizes efficient encoding of high resolution/multi image/video inputs and compact backbones. Quantized and GGUF releases let it run through lightweight runtimes (llama.cpp / Ollama style), trading some accuracy for on device feasibility. Ecosystem Position It competes with other open VLMs (Qwen VL, InternVL, Llama based VLMs) and, at the small end, with edge oriented models. Its distinguishing axis is strong quality per parameter and genuine on device deployment. Getting Started Key Use Cases 1. Scenario : on device image/OCR understanding in a mobile or embedded app 2. Scenario : cost efficient VLM inference on modest GPUs for document/image pipelines 3. Scenario where this is NOT the right fit : frontier multimodal reasoning with ample server GPUs — a larger model wins Strengths Strong quality per parameter across image/video/OCR On device capable (quantization + GGUF) Open weights, org backed, actively maintained Limitations Compact size caps peak reasoning vs large VLMs On device quantization costs some accuracy Multimodal serving still heavier than text only Relation to the Arsenal Compare against other open VLMs and frontier hosted models before adopting. Reference this project by its canonical ID minicpm v. Benchmark on your own images/documents; VLM quality is task specific. Resources GitHub Repository Paper (arXiv)"
+    },
+    {
       "id": "mistral-models",
       "name": "Mistral / Mixtral",
       "version_tracked": null,
@@ -7600,6 +8225,110 @@
       "word_count": 477,
       "body_html": "<h2>Overview</h2>\n<p>A universal LLM deployment engine built on machine-learning compilation (Apache TVM): model architectures are compiled to optimized kernels for whatever backend the device offers — Metal on Apple hardware, Vulkan on Android, WebGPU in browsers, CUDA/ROCm on desktops. The project's WebLLM spinoff runs quantized Llama-class models entirely client-side in Chrome.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The compiler-based answer to on-device inference: where llama.cpp hand-writes kernels per backend, MLC compiles models through TVM to reach iOS, Android, WebGPU and desktop GPUs from a single pipeline — it powered the first credible in-browser and on-phone Llama demos. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Models are expressed in a Python IR, quantized (3/4-bit grouped quantization), and compiled through TVM's tensor-program optimization into platform-specific libraries; MLCEngine exposes an OpenAI-compatible API with continuous batching on server targets, while iOS/Android SDKs and the WebLLM JS package wrap the same compiled artifacts for edge targets.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: Apache TVM (same research lineage — Tianqi Chen's group). Competing: llama.cpp/Ollama for local desktop inference, ExecuTorch and ONNX Runtime for mobile. Complementary: WebLLM occupies a niche nothing else serves well — production in-browser inference with no server — and MLC's compilation research feeds back into TVM.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install --pre -U -f https://mlc.ai/wheels mlc-llm-nightly-cpu mlc-ai-nightly-cpu\nmlc_llm chat HF://mlc-ai/Llama-3.2-3B-Instruct-q4f16_1-MLC\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition</li>\n<li><strong>Scenario</strong>: you are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on-device options</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition</li>\n<li>You are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on-device options</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You want maximum server-side throughput on NVIDIA GPUs — vLLM, SGLang, or TensorRT-LLM outperform it for datacenter serving</li>\n<li>You rely on the newest model architectures immediately — compiler-based stacks lag hand-optimized runtimes when novel attention/MoE variants ship</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/mlc-ai/mlc-llm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://llm.mlc.ai/docs/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (22,917 stars, last commit 2026-07-07, verified via GitHub API on 2026-07-08)</em></p>\n",
       "body_text": "Overview A universal LLM deployment engine built on machine learning compilation (Apache TVM): model architectures are compiled to optimized kernels for whatever backend the device offers — Metal on Apple hardware, Vulkan on Android, WebGPU in browsers, CUDA/ROCm on desktops. The project's WebLLM spinoff runs quantized Llama class models entirely client side in Chrome. Why it's in the Arsenal The compiler based answer to on device inference: where llama.cpp hand writes kernels per backend, MLC compiles models through TVM to reach iOS, Android, WebGPU and desktop GPUs from a single pipeline — it powered the first credible in browser and on phone Llama demos. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition. See Strengths / Limitations below before adopting it. Architecture Models are expressed in a Python IR, quantized (3/4 bit grouped quantization), and compiled through TVM's tensor program optimization into platform specific libraries; MLCEngine exposes an OpenAI compatible API with continuous batching on server targets, while iOS/Android SDKs and the WebLLM JS package wrap the same compiled artifacts for edge targets. Ecosystem Position Upstream: Apache TVM (same research lineage — Tianqi Chen's group). Competing: llama.cpp/Ollama for local desktop inference, ExecuTorch and ONNX Runtime for mobile. Complementary: WebLLM occupies a niche nothing else serves well — production in browser inference with no server — and MLC's compilation research feeds back into TVM. Getting Started Key Use Cases 1. Scenario : you need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition 2. Scenario : you are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on device options Strengths You need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition You are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on device options Limitations You want maximum server side throughput on NVIDIA GPUs — vLLM, SGLang, or TensorRT LLM outperform it for datacenter serving You rely on the newest model architectures immediately — compiler based stacks lag hand optimized runtimes when novel attention/MoE variants ship Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (22,917 stars, last commit 2026 07 07, verified via GitHub API on 2026 07 08)"
+    },
+    {
+      "id": "moshi",
+      "name": "Moshi",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "models",
+      "description": "Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline",
+      "github_url": "https://github.com/kyutai-labs/moshi",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Kyutai",
+      "tags": [
+        "multimodal",
+        "voice",
+        "inference",
+        "self-hosted"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 10525,
+      "github_stars_last_30d": 0,
+      "trending_score": 38,
+      "last_commit": "2026-05-16",
+      "docs_url": "https://github.com/kyutai-labs/moshi",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2410.00037",
+      "paper_id": null,
+      "hf_url": "https://huggingface.co/kyutai",
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "research-origin",
+        "org-backed",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "Open real-time speech-to-speech model that demonstrates the full-duplex conversational architecture, an alternative to chaining ASR + LLM + TTS with the latency and turn-taking rigidity that pipeline imposes"
+      ],
+      "best_for": [
+        "You need genuinely low-latency, full-duplex voice conversation (the model can listen and speak at once, handle interruptions) that a serial ASR->LLM->TTS pipeline cannot deliver",
+        "You want an open, self-hostable reference for how end-to-end speech-to-speech works, including the Mimi neural audio codec it ships with"
+      ],
+      "avoid_if": [
+        "You only need one-way synthesis (TTS) or transcription (ASR) — a dedicated TTS/ASR model is simpler and higher quality for that single task",
+        "You need production-grade, broad-language conversational quality today — Moshi is a research-forward model, not a turnkey product with an SLA"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (10,525), Apache-2.0 license, and last commit (2026-05-16) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/kyutai-labs/moshi",
+          "date": "2026-07-08",
+          "description": "10,525 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/moshi.md",
+      "url": "content/projects/foundation-models/moshi",
+      "slug": "moshi",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "Moshi",
+      "summary": "Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 335,
+      "body_html": "<h2>Overview</h2>\n<p>Moshi is a full-duplex speech-to-speech foundation model from Kyutai. Unlike a serial pipeline (speech recognition → LLM → text-to-speech), Moshi models the conversation end-to-end and can listen and speak at the same time, enabling natural interruptions and sub-second latency. It ships with Mimi, a streaming neural audio codec.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It is the leading open demonstration of the full-duplex conversational architecture — the direction voice agents are moving. Cataloging it gives practitioners a self-hostable reference for real-time voice interaction versus the ASR+LLM+TTS pipeline most systems use today. It is a comparison/reference point, not a turnkey product recommendation.</p>\n<h2>Architecture</h2>\n<p>Moshi jointly models two audio streams (user and assistant) as token sequences produced by the Mimi codec, with a temporal transformer generating assistant audio tokens in real time while continuously consuming user audio. Because generation and listening are interleaved rather than turn-gated, the model supports overlap and interruption that serial pipelines cannot.</p>\n<h2>Ecosystem Position</h2>\n<p>It contrasts with pipeline voice stacks (Whisper + LLM + a TTS like CosyVoice) and with closed real-time voice APIs. Its niche is open, low-latency, full-duplex conversation and the reusable Mimi codec.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install moshi   # PyTorch; MLX and Rust backends also provided\n# download weights from Hugging Face (kyutai) and run the local server/client\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a low-latency voice assistant that handles interruptions naturally</li>\n<li><strong>Scenario</strong>: research or a product prototype needing an open speech-to-speech baseline</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: plain transcription or one-way narration — use a dedicated ASR or TTS model</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>True full-duplex, low-latency conversation</li>\n<li>Open weights + reusable Mimi streaming codec</li>\n<li>Multiple backends (PyTorch, MLX, Rust)</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Research-forward; not a production SLA product</li>\n<li>Conversational quality/language breadth still maturing</li>\n<li>Real-time serving has non-trivial compute requirements</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against pipeline stacks and <code>cosyvoice</code>/<code>gpt-sovits</code> (TTS) before adopting.</li>\n<li>Reference this project by its canonical ID <code>moshi</code>.</li>\n<li>Validate latency and quality on your hardware before committing.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/kyutai-labs/moshi\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://arxiv.org/abs/2410.00037\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper (arXiv)</a></li>\n</ul>\n",
+      "body_text": "Overview Moshi is a full duplex speech to speech foundation model from Kyutai. Unlike a serial pipeline (speech recognition → LLM → text to speech), Moshi models the conversation end to end and can listen and speak at the same time, enabling natural interruptions and sub second latency. It ships with Mimi, a streaming neural audio codec. Why it's in the Arsenal It is the leading open demonstration of the full duplex conversational architecture — the direction voice agents are moving. Cataloging it gives practitioners a self hostable reference for real time voice interaction versus the ASR+LLM+TTS pipeline most systems use today. It is a comparison/reference point, not a turnkey product recommendation. Architecture Moshi jointly models two audio streams (user and assistant) as token sequences produced by the Mimi codec, with a temporal transformer generating assistant audio tokens in real time while continuously consuming user audio. Because generation and listening are interleaved rather than turn gated, the model supports overlap and interruption that serial pipelines cannot. Ecosystem Position It contrasts with pipeline voice stacks (Whisper + LLM + a TTS like CosyVoice) and with closed real time voice APIs. Its niche is open, low latency, full duplex conversation and the reusable Mimi codec. Getting Started Key Use Cases 1. Scenario : a low latency voice assistant that handles interruptions naturally 2. Scenario : research or a product prototype needing an open speech to speech baseline 3. Scenario where this is NOT the right fit : plain transcription or one way narration — use a dedicated ASR or TTS model Strengths True full duplex, low latency conversation Open weights + reusable Mimi streaming codec Multiple backends (PyTorch, MLX, Rust) Limitations Research forward; not a production SLA product Conversational quality/language breadth still maturing Real time serving has non trivial compute requirements Relation to the Arsenal Compare against pipeline stacks and cosyvoice/gpt sovits (TTS) before adopting. Reference this project by its canonical ID moshi. Validate latency and quality on your hardware before committing. Resources GitHub Repository Paper (arXiv)"
     },
     {
       "id": "ms-swift",
@@ -8406,6 +9135,111 @@
       "word_count": 367,
       "body_html": "<h2>Overview</h2>\n<p>Open R1 is Hugging Face's effort to fully reproduce the DeepSeek-R1 reasoning-model pipeline in the open: SFT on curated reasoning traces followed by GRPO reinforcement learning with verifiable rewards, plus the dataset-generation and evaluation tooling around it. It packages a known-good reasoning-training recipe as runnable scripts on open weights.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>When R1 showed that RL with verifiable rewards produces strong reasoning, the details were scattered across a report; Open R1 is the community's canonical, runnable answer — the same reference-recipe role <code>alignment-handbook</code> plays for SFT/DPO, extended to reasoning RL. It's the practical on-ramp for anyone training or studying R1-style models, and it anchors the reasoning corner of the training-and-alignment phase.</p>\n<h2>Architecture</h2>\n<p>The pipeline has two stages: supervised fine-tuning on reasoning traces to instill format and chain-of-thought, then GRPO (Group Relative Policy Optimization) RL where a verifiable reward (e.g. answer correctness on math/code) shapes the policy without a learned reward model. Open R1 builds on <code>trl</code> and <code>accelerate</code> for the training loop and ships evaluation scripts to measure reasoning benchmarks — the mechanism that makes results comparable to the target.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: <code>trl</code> (RL trainers), <code>accelerate</code> (distribution), and open base models. Downstream: trained reasoning checkpoints. Complementary: <code>alignment-handbook</code> (preference/SFT recipes) and <code>verl</code> (a scalable RL training engine) cover adjacent training needs; Open R1 is specifically the R1-reasoning reproduction.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical training and evaluation recipes.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: training a reasoning model with GRPO on open weights using a recipe that reproduces a known result</li>\n<li><strong>Scenario</strong>: studying the SFT-then-verifiable-reward-RL pipeline with real, runnable code</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Reproducible, org-backed recipe for reasoning-model RL — not a from-scratch reassembly of papers</li>\n<li>Ships the surrounding dataset-generation and evaluation tooling, not just a trainer</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast-moving product</li>\n<li>Reasoning RL is compute-heavy; not a lightweight fine-tune</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a training-and-alignment entry: infrastructure for producing models. For served reasoning models see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>; for the underlying RL library see <code>trl</code>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/open-r1\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n",
       "body_text": "Overview Open R1 is Hugging Face's effort to fully reproduce the DeepSeek R1 reasoning model pipeline in the open: SFT on curated reasoning traces followed by GRPO reinforcement learning with verifiable rewards, plus the dataset generation and evaluation tooling around it. It packages a known good reasoning training recipe as runnable scripts on open weights. Why it's in the Arsenal When R1 showed that RL with verifiable rewards produces strong reasoning, the details were scattered across a report; Open R1 is the community's canonical, runnable answer — the same reference recipe role alignment handbook plays for SFT/DPO, extended to reasoning RL. It's the practical on ramp for anyone training or studying R1 style models, and it anchors the reasoning corner of the training and alignment phase. Architecture The pipeline has two stages: supervised fine tuning on reasoning traces to instill format and chain of thought, then GRPO (Group Relative Policy Optimization) RL where a verifiable reward (e.g. answer correctness on math/code) shapes the policy without a learned reward model. Open R1 builds on trl and accelerate for the training loop and ships evaluation scripts to measure reasoning benchmarks — the mechanism that makes results comparable to the target. Ecosystem Position Upstream: trl (RL trainers), accelerate (distribution), and open base models. Downstream: trained reasoning checkpoints. Complementary: alignment handbook (preference/SFT recipes) and verl (a scalable RL training engine) cover adjacent training needs; Open R1 is specifically the R1 reasoning reproduction. Getting Started Key Use Cases 1. Scenario : training a reasoning model with GRPO on open weights using a recipe that reproduces a known result 2. Scenario : studying the SFT then verifiable reward RL pipeline with real, runnable code Strengths Reproducible, org backed recipe for reasoning model RL — not a from scratch reassembly of papers Ships the surrounding dataset generation and evaluation tooling, not just a trainer Limitations Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast moving product Reasoning RL is compute heavy; not a lightweight fine tune Relation to the Arsenal This is a training and alignment entry: infrastructure for producing models. For served reasoning models see Foundation Models; for the underlying RL library see trl. Resources GitHub"
+    },
+    {
+      "id": "open-sora",
+      "name": "Open-Sora",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "multimodal",
+      "subcategory": "models",
+      "description": "Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis",
+      "github_url": "https://github.com/hpcaitech/Open-Sora",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "HPC-AI Tech",
+      "tags": [
+        "multimodal",
+        "vision",
+        "inference",
+        "self-hosted"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 29172,
+      "github_stars_last_30d": 0,
+      "trending_score": 40,
+      "last_commit": "2026-04-09",
+      "docs_url": "https://github.com/hpcaitech/Open-Sora",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2412.20404",
+      "paper_id": null,
+      "hf_url": "https://huggingface.co/hpcai-tech",
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "foundation-model",
+      "domain": [
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "study-and-reference",
+        "fork-and-adapt"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "Leading open reproduction of text/image-to-video generation; the reference option for teams that want to self-host or study video diffusion rather than call a closed model like Sora, Runway, or Kling"
+      ],
+      "best_for": [
+        "You need self-hostable text-to-video / image-to-video generation with open weights and an open training pipeline, so you can run on your own infra or fine-tune on custom data",
+        "You are studying or reproducing video-diffusion architecture and want a documented, end-to-end open codebase rather than a black-box API"
+      ],
+      "avoid_if": [
+        "You want the highest-fidelity, longest, most controllable video today — closed frontier models (Sora, Kling, Runway) currently lead on raw output quality",
+        "You lack substantial GPU resources — video generation and especially any fine-tuning are heavy, and this is not a lightweight model"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (29,172), Apache-2.0 license, and last commit (2026-04-09) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/hpcaitech/Open-Sora",
+          "date": "2026-07-08",
+          "description": "29,172 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/open-sora.md",
+      "url": "content/projects/foundation-models/open-sora",
+      "slug": "open-sora",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "Open-Sora",
+      "summary": "Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 325,
+      "body_html": "<h2>Overview</h2>\n<p>Open-Sora is an open-source project from HPC-AI Tech that provides models and a full training/inference pipeline for text-to-video and image-to-video generation. Its explicit goal is to make Sora-style video synthesis accessible and reproducible with open weights and documented data/training recipes.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It is the most prominent open reproduction of modern video generation, giving practitioners a self-hostable and studyable alternative to closed video APIs. It is a reference/comparison point in the multimodal space — closed frontier models still lead on quality, which is stated honestly below.</p>\n<h2>Architecture</h2>\n<p>Open-Sora follows the diffusion-transformer approach to video: a spatiotemporal latent diffusion model denoises video latents conditioned on text (and optionally an initial image), with a VAE encoding/decoding frames. The repo documents the data pipeline, training stages, and inference so the whole system can be reproduced or fine-tuned, not just run.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with closed video models (OpenAI Sora, Kuaishou Kling, Runway) on capability and with other open video efforts on openness/quality. Its niche is an open, end-to-end, reproducible video-generation stack.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/hpcaitech/Open-Sora\n# install deps, download weights from Hugging Face (hpcai-tech), then run text/image-to-video inference\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: self-hosted text-to-video generation for content pipelines with data/IP control</li>\n<li><strong>Scenario</strong>: research or fine-tuning of video diffusion on domain-specific footage</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: needing best-in-class output quality now — a closed frontier model leads</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Open weights + open training/data pipeline</li>\n<li>Self-hostable; fine-tunable on custom data</li>\n<li>Strong community traction and documentation</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Output quality/length trails closed frontier models</li>\n<li>Heavy GPU requirements for inference and training</li>\n<li>Video generation raises content-provenance concerns</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against closed video APIs and other open video projects before adopting.</li>\n<li>Reference this project by its canonical ID <code>open-sora</code>.</li>\n<li>Budget GPU capacity and a content-provenance policy before production use.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/hpcaitech/Open-Sora\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://arxiv.org/abs/2412.20404\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Report (arXiv)</a></li>\n</ul>\n",
+      "body_text": "Overview Open Sora is an open source project from HPC AI Tech that provides models and a full training/inference pipeline for text to video and image to video generation. Its explicit goal is to make Sora style video synthesis accessible and reproducible with open weights and documented data/training recipes. Why it's in the Arsenal It is the most prominent open reproduction of modern video generation, giving practitioners a self hostable and studyable alternative to closed video APIs. It is a reference/comparison point in the multimodal space — closed frontier models still lead on quality, which is stated honestly below. Architecture Open Sora follows the diffusion transformer approach to video: a spatiotemporal latent diffusion model denoises video latents conditioned on text (and optionally an initial image), with a VAE encoding/decoding frames. The repo documents the data pipeline, training stages, and inference so the whole system can be reproduced or fine tuned, not just run. Ecosystem Position It competes with closed video models (OpenAI Sora, Kuaishou Kling, Runway) on capability and with other open video efforts on openness/quality. Its niche is an open, end to end, reproducible video generation stack. Getting Started Key Use Cases 1. Scenario : self hosted text to video generation for content pipelines with data/IP control 2. Scenario : research or fine tuning of video diffusion on domain specific footage 3. Scenario where this is NOT the right fit : needing best in class output quality now — a closed frontier model leads Strengths Open weights + open training/data pipeline Self hostable; fine tunable on custom data Strong community traction and documentation Limitations Output quality/length trails closed frontier models Heavy GPU requirements for inference and training Video generation raises content provenance concerns Relation to the Arsenal Compare against closed video APIs and other open video projects before adopting. Reference this project by its canonical ID open sora. Budget GPU capacity and a content provenance policy before production use. Resources GitHub Repository Report (arXiv)"
     },
     {
       "id": "openai-agents-sdk",
@@ -10115,6 +10949,109 @@
       "body_text": "Overview Alibaba Cloud's open weight model generation released in 2024, spanning general purpose, coding specialized (Qwen2.5 Coder), and reasoning specialized (QwQ) variants across sizes from 0.5B to 72B parameters. Why it's in the Arsenal Alibaba's widely adopted open weight model generation spanning general, coding, and reasoning specialized variants. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the general chat models. See Strengths / Limitations below before adopting it. Architecture A dense decoder only transformer family (no MoE in the mainline Qwen2.5 sizes) with dedicated post training branches: Qwen2.5 Coder for code generation and QwQ as an early reasoning focused variant using extended chain of thought training, predating the more thoroughly reasoning optimized Qwen3 generation. Ecosystem Position Upstream: standard transformer research, building on the original Qwen/Qwen2 line. Downstream: very broadly supported — vLLM, SGLang, Ollama, llama.cpp, and virtually every fine tuning framework (Axolotl, Unsloth, LLaMA Factory) support it. Competing: Llama 3, Gemma, Mistral at comparable sizes. Superseded by: Qwen3 and Alibaba's 2026 Qwen3.5/3.6/3.7 generation, which introduce sparse MoE and substantially expanded language coverage. Getting Started Key Use Cases 1. Scenario : you need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the general chat models 2. Scenario : you want strong open weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record Strengths You need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the general chat models You want strong open weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record Limitations You want Alibaba's current frontier line — as of 2026 Alibaba has shipped Qwen3, Qwen3.5, and Qwen3.6/3.7 (hybrid Gated Delta Networks + sparse MoE architecture, 201 language support), which meaningfully outperform Qwen2.5 on reasoning and agentic benchmarks You need the efficiency of a sparse MoE architecture — Qwen2.5's mainline models are dense; MoE variants arrived in the Qwen3.5+ generation Relation to the Arsenal This project entry documents the Qwen2.5 model family's weights, architecture, and generational position (see the enrichment notes flag about this entry's github url data quality issue). For a hosted/managed access path to a current Qwen model, see Qwen 3 in the tools vertical — that entry does not repeat this one's best for/avoid if verbatim, since the frames differ: this entry is about the Qwen model family's architecture, the tool entry is about accessing a hosted Qwen model. Resources GitHub Documentation"
     },
     {
+      "id": "qwen-agent",
+      "name": "Qwen-Agent",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "agents",
+      "subcategory": "agent-frameworks",
+      "description": "Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context",
+      "github_url": "https://github.com/QwenLM/Qwen-Agent",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Qwen Team (Alibaba)",
+      "tags": [
+        "agents",
+        "llm",
+        "rag"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 16694,
+      "github_stars_last_30d": 0,
+      "trending_score": 38,
+      "last_commit": "2026-03-04",
+      "docs_url": "https://github.com/QwenLM/Qwen-Agent",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "hf_url": null,
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "agent-system",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "deploy-as-is"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "Qwen-native agent framework; the reference option when your stack is built on Qwen models and you want function calling, code interpreter, and RAG components tuned to Qwen rather than a model-agnostic framework"
+      ],
+      "best_for": [
+        "You are building on Qwen models and want an agent framework tuned to their function calling, long context, and tool use, with reference components (browser assistant, code interpreter, RAG) to start from",
+        "You want a relatively lightweight, example-driven framework from the model authors rather than a large general-purpose orchestration stack"
+      ],
+      "avoid_if": [
+        "You need to stay model-agnostic across many providers — a framework like LangGraph or the OpenAI Agents SDK is designed for that, whereas Qwen-Agent is Qwen-centric",
+        "You need a large ecosystem of integrations and long-term enterprise support — more established agent frameworks have wider tooling"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (16,694), Apache-2.0 license, and last commit (2026-03-04) verified via the GitHub API on 2026-07-08. Feature claims from the README; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/QwenLM/Qwen-Agent",
+          "date": "2026-07-08",
+          "description": "16,694 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/agent-systems/qwen-agent.md",
+      "url": "content/projects/agent-systems/qwen-agent",
+      "slug": "qwen-agent",
+      "section_path": "content/projects/agent-systems",
+      "display_name": "Qwen-Agent",
+      "summary": "Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 314,
+      "body_html": "<h2>Overview</h2>\n<p>Qwen-Agent is an agent framework from the Qwen team for building LLM applications that use tools, execute code, and do retrieval, built around Qwen's function-calling and long-context capabilities. It ships reference components — a code interpreter, browser assistant, and RAG examples — that double as building blocks.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>For teams standardized on Qwen models, a framework maintained by the model authors and tuned to their tool-use behavior is a natural fit. It is the Qwen-native comparison point against model-agnostic agent frameworks; the tradeoff (model lock-in vs tighter integration) is stated below.</p>\n<h2>Architecture</h2>\n<p>It wraps a Qwen model with an agent loop that parses tool/function calls, executes registered tools (including a sandboxed code interpreter), and feeds results back for further reasoning. Retrieval and long-document handling lean on Qwen's long context. Reference assistants compose these pieces into runnable apps.</p>\n<h2>Ecosystem Position</h2>\n<p>It competes with model-agnostic agent frameworks (LangGraph, OpenAI Agents SDK, CrewAI, Strands). Its niche is first-party Qwen integration and example-driven components rather than provider neutrality.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install -U \"qwen-agent[gui,rag,code_interpreter]\"\n# configure a Qwen model (DashScope or local/OpenAI-compatible endpoint), register tools, run the agent\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a tool-using assistant or code interpreter built on Qwen models</li>\n<li><strong>Scenario</strong>: long-document RAG that leverages Qwen's long context</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: a provider-agnostic agent that must swap models freely — a neutral framework fits better</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>First-party Qwen integration (function calling, long context)</li>\n<li>Ready-made components: code interpreter, browser assistant, RAG</li>\n<li>Lightweight and example-driven</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Qwen-centric; not designed for provider neutrality</li>\n<li>Smaller integration ecosystem than major frameworks</li>\n<li>Reference components need hardening for production</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against <code>langgraph</code>, <code>crewai</code>, and the OpenAI Agents SDK before adopting.</li>\n<li>Reference this project by its canonical ID <code>qwen-agent</code>.</li>\n<li>Sandbox the code interpreter carefully before exposing it to untrusted input.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/QwenLM/Qwen-Agent\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n</ul>\n",
+      "body_text": "Overview Qwen Agent is an agent framework from the Qwen team for building LLM applications that use tools, execute code, and do retrieval, built around Qwen's function calling and long context capabilities. It ships reference components — a code interpreter, browser assistant, and RAG examples — that double as building blocks. Why it's in the Arsenal For teams standardized on Qwen models, a framework maintained by the model authors and tuned to their tool use behavior is a natural fit. It is the Qwen native comparison point against model agnostic agent frameworks; the tradeoff (model lock in vs tighter integration) is stated below. Architecture It wraps a Qwen model with an agent loop that parses tool/function calls, executes registered tools (including a sandboxed code interpreter), and feeds results back for further reasoning. Retrieval and long document handling lean on Qwen's long context. Reference assistants compose these pieces into runnable apps. Ecosystem Position It competes with model agnostic agent frameworks (LangGraph, OpenAI Agents SDK, CrewAI, Strands). Its niche is first party Qwen integration and example driven components rather than provider neutrality. Getting Started Key Use Cases 1. Scenario : a tool using assistant or code interpreter built on Qwen models 2. Scenario : long document RAG that leverages Qwen's long context 3. Scenario where this is NOT the right fit : a provider agnostic agent that must swap models freely — a neutral framework fits better Strengths First party Qwen integration (function calling, long context) Ready made components: code interpreter, browser assistant, RAG Lightweight and example driven Limitations Qwen centric; not designed for provider neutrality Smaller integration ecosystem than major frameworks Reference components need hardening for production Relation to the Arsenal Compare against langgraph, crewai, and the OpenAI Agents SDK before adopting. Reference this project by its canonical ID qwen agent. Sandbox the code interpreter carefully before exposing it to untrusted input. Resources GitHub Repository"
+    },
+    {
       "id": "qwen3-vl",
       "name": "Qwen3-VL",
       "version_tracked": null,
@@ -10407,6 +11344,109 @@
       "word_count": 456,
       "body_html": "<h2>Overview</h2>\n<p>An open-source, self-hosted RAG engine combining deep document understanding, retrieval, an agent workflow engine, memory storage, sandboxed code execution, and a web UI into a single deployable stack, maintained by InfiniFlow.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Self-hosted, all-in-one RAG engine combining deep document understanding, retrieval, agent workflows, and a web UI in a single deployable stack. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a complete, self-hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Deployed as a multi-container Docker Compose stack combining Elasticsearch (or the lighter Infinity engine) for document search, MySQL for metadata, MinIO for object storage, and Redis for task queuing, with a Python backend implementing document parsing, chunking, retrieval, and an agent workflow engine, plus an MCP server for agent-driven interaction and a web UI for knowledge-base management.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: integrates with Infinity, InfiniFlow's own AI-native database, as an alternative to Elasticsearch. Downstream: none of particular note. Competing: Dify (also an all-in-one platform, more agent/workflow-general-purpose than RAG-specific), assembling LangChain/LlamaIndex plus a vector database and custom UI. Complementary: works with a wide range of LLM providers and local models for its generation step.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/deployment command for this specific project.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want a complete, self-hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately</li>\n<li><strong>Scenario</strong>: you need deep document understanding (not just chunking) built into the ingestion pipeline as a core product feature</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want a complete, self-hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately</li>\n<li>You need deep document understanding (not just chunking) built into the ingestion pipeline as a core product feature</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You want a lightweight deployment — RAGFlow's full stack includes Elasticsearch (requiring 16GB+ RAM due to memory-lock behavior), MySQL, MinIO, and Redis, which is substantially heavier than a single vector database plus a thin application layer</li>\n<li>You need fine-grained code-level control over the RAG pipeline — RAGFlow's all-in-one platform model trades some of that flexibility for out-of-the-box completeness</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see <a href=\"../../tools/data-ingestion/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/data-ingestion/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/infiniflow/ragflow\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://ragflow.io/docs/dev/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview An open source, self hosted RAG engine combining deep document understanding, retrieval, an agent workflow engine, memory storage, sandboxed code execution, and a web UI into a single deployable stack, maintained by InfiniFlow. Why it's in the Arsenal Self hosted, all in one RAG engine combining deep document understanding, retrieval, agent workflows, and a web UI in a single deployable stack. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a complete, self hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately. See Strengths / Limitations below before adopting it. Architecture Deployed as a multi container Docker Compose stack combining Elasticsearch (or the lighter Infinity engine) for document search, MySQL for metadata, MinIO for object storage, and Redis for task queuing, with a Python backend implementing document parsing, chunking, retrieval, and an agent workflow engine, plus an MCP server for agent driven interaction and a web UI for knowledge base management. Ecosystem Position Upstream: integrates with Infinity, InfiniFlow's own AI native database, as an alternative to Elasticsearch. Downstream: none of particular note. Competing: Dify (also an all in one platform, more agent/workflow general purpose than RAG specific), assembling LangChain/LlamaIndex plus a vector database and custom UI. Complementary: works with a wide range of LLM providers and local models for its generation step. Getting Started Key Use Cases 1. Scenario : you want a complete, self hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately 2. Scenario : you need deep document understanding (not just chunking) built into the ingestion pipeline as a core product feature Strengths You want a complete, self hostable RAG platform (document parsing, retrieval, agent workflows, web UI) deployed as a single Docker Compose stack, rather than assembling a framework, vector database, and UI separately You need deep document understanding (not just chunking) built into the ingestion pipeline as a core product feature Limitations You want a lightweight deployment — RAGFlow's full stack includes Elasticsearch (requiring 16GB+ RAM due to memory lock behavior), MySQL, MinIO, and Redis, which is substantially heavier than a single vector database plus a thin application layer You need fine grained code level control over the RAG pipeline — RAGFlow's all in one platform model trades some of that flexibility for out of the box completeness Relation to the Arsenal This is a data and retrieval entry: it documents a vector database, document processing tool, or RAG platform. For job based tool comparisons (e.g. web scraping, vector search), see tools/data ingestion/. Resources GitHub Documentation"
+    },
+    {
+      "id": "rd-agent",
+      "name": "RD-Agent",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "agents",
+      "subcategory": "autonomous",
+      "description": "Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining",
+      "github_url": "https://github.com/microsoft/RD-Agent",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "Microsoft Research",
+      "tags": [
+        "agents",
+        "llm",
+        "evaluation"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 13824,
+      "github_stars_last_30d": 0,
+      "trending_score": 38,
+      "last_commit": "2026-06-15",
+      "docs_url": "https://rdagent.readthedocs.io/en/latest/",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2505.14738",
+      "paper_id": null,
+      "hf_url": null,
+      "model_sizes": [],
+      "benchmark_scores": [],
+      "supports_quantization": false,
+      "supported_formats": [],
+      "api_compatible": null,
+      "phase": "agent-system",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "Research-and-development automation agent from Microsoft; a specialized alternative to general coding agents, targeting the propose->implement->evaluate loop of data-science and quantitative modeling rather than generic software tasks"
+      ],
+      "best_for": [
+        "You want to automate an iterative R&D loop — hypothesis/idea proposal, code implementation, execution, and evaluation — in data-science, model, or quant-finance factor-mining settings",
+        "You want a research-backed reference for how an agent can improve its own solutions across iterations, not just perform one-shot code generation"
+      ],
+      "avoid_if": [
+        "You need a general-purpose coding assistant for everyday software tasks — a code-focused agent (Aider, OpenHands, Cursor) fits general engineering better than an R&D-loop agent",
+        "You need a stable, turnkey product — RD-Agent is research-forward and expects data-science literacy and compute to run its loops"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Star count (13,824), MIT license, and last commit (2026-06-15) verified via the GitHub API on 2026-07-08. Capability claims from the paper/docs; not hands-on verified here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/microsoft/RD-Agent",
+          "date": "2026-07-08",
+          "description": "13,824 stars on GitHub as of 2026-07-08 (GitHub API)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/agent-systems/rd-agent.md",
+      "url": "content/projects/agent-systems/rd-agent",
+      "slug": "rd-agent",
+      "section_path": "content/projects/agent-systems",
+      "display_name": "RD-Agent",
+      "summary": "Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 319,
+      "body_html": "<h2>Overview</h2>\n<p>RD-Agent is a Microsoft Research framework for automating research and development. It frames R&amp;D as two collaborating roles — a Researcher that proposes ideas/hypotheses and a Developer that implements and runs them — iterating on the results. It targets data-science and quantitative-finance workflows such as model tuning and factor mining.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It represents a distinct agent category: automating the propose→implement→evaluate research loop rather than generic coding. For teams doing data-science or quant modeling, that specialization is the point. It is a comparison/reference entry in the agent-system phase, not a general coding-agent recommendation.</p>\n<h2>Architecture</h2>\n<p>RD-Agent separates idea generation from implementation: the Research component proposes changes/hypotheses; the Development component turns them into runnable code, executes experiments, and returns metrics; the loop then refines based on evaluation. Domain scenarios (e.g. quant factor mining, Kaggle-style modeling) provide the environment and scoring the agent optimizes against.</p>\n<h2>Ecosystem Position</h2>\n<p>It contrasts with general coding agents (Aider, OpenHands) and with orchestration frameworks. Its niche is closed-loop, evaluation-driven R&amp;D automation from a major research lab.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install rdagent\n# configure an LLM backend, then run a scenario (e.g. data-science or quant factor mining) via the CLI\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: automate iterative model tuning / factor mining in a quant or data-science pipeline</li>\n<li><strong>Scenario</strong>: study how an agent improves solutions across evaluation-driven iterations</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: everyday general software tasks — a general coding agent is a better fit</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Specialized for iterative, evaluation-driven R&amp;D</li>\n<li>Researcher/Developer separation with concrete scenarios</li>\n<li>Research-backed and org-maintained</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Research-forward; expects data-science literacy and compute</li>\n<li>Narrower than general coding agents by design</li>\n<li>Running loops can incur significant LLM/compute cost</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<ul>\n<li>Compare against general coding agents (Aider, OpenHands) for non-R&amp;D work.</li>\n<li>Reference this project by its canonical ID <code>rd-agent</code>.</li>\n<li>Budget LLM/compute cost per iteration before running long loops.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/microsoft/RD-Agent\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Repository</a></li>\n<li><a href=\"https://rdagent.readthedocs.io/en/latest/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://arxiv.org/abs/2505.14738\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper (arXiv)</a></li>\n</ul>\n",
+      "body_text": "Overview RD Agent is a Microsoft Research framework for automating research and development. It frames R&D as two collaborating roles — a Researcher that proposes ideas/hypotheses and a Developer that implements and runs them — iterating on the results. It targets data science and quantitative finance workflows such as model tuning and factor mining. Why it's in the Arsenal It represents a distinct agent category: automating the propose→implement→evaluate research loop rather than generic coding. For teams doing data science or quant modeling, that specialization is the point. It is a comparison/reference entry in the agent system phase, not a general coding agent recommendation. Architecture RD Agent separates idea generation from implementation: the Research component proposes changes/hypotheses; the Development component turns them into runnable code, executes experiments, and returns metrics; the loop then refines based on evaluation. Domain scenarios (e.g. quant factor mining, Kaggle style modeling) provide the environment and scoring the agent optimizes against. Ecosystem Position It contrasts with general coding agents (Aider, OpenHands) and with orchestration frameworks. Its niche is closed loop, evaluation driven R&D automation from a major research lab. Getting Started Key Use Cases 1. Scenario : automate iterative model tuning / factor mining in a quant or data science pipeline 2. Scenario : study how an agent improves solutions across evaluation driven iterations 3. Scenario where this is NOT the right fit : everyday general software tasks — a general coding agent is a better fit Strengths Specialized for iterative, evaluation driven R&D Researcher/Developer separation with concrete scenarios Research backed and org maintained Limitations Research forward; expects data science literacy and compute Narrower than general coding agents by design Running loops can incur significant LLM/compute cost Relation to the Arsenal Compare against general coding agents (Aider, OpenHands) for non R&D work. Reference this project by its canonical ID rd agent. Budget LLM/compute cost per iteration before running long loops. Resources GitHub Repository Documentation Paper (arXiv)"
     },
     {
       "id": "sam2",

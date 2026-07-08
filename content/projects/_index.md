@@ -6,12 +6,12 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 14 entries | 2026-07-08 |
+| [agent systems](./agent-systems/) | 16 entries | 2026-07-08 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 15 entries | 2026-07-08 |
-| [data and retrieval](./data-and-retrieval/) | 25 entries | 2026-07-08 |
-| [foundation models](./foundation-models/) | 26 entries | 2026-07-08 |
-| [frameworks](./frameworks/) | 29 entries | 2026-07-08 |
-| [inference engines](./inference-engines/) | 19 entries | 2026-07-08 |
+| [data and retrieval](./data-and-retrieval/) | 26 entries | 2026-07-08 |
+| [foundation models](./foundation-models/) | 31 entries | 2026-07-08 |
+| [frameworks](./frameworks/) | 30 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 20 entries | 2026-07-08 |
 | [training and alignment](./training-and-alignment/) | 8 entries | 2026-07-08 |
 
 ## Recently Added
@@ -56,6 +56,7 @@
 - [CAMEL](./frameworks/camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
 - [Candle](./inference-engines/candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
+- [Cherry Studio](./frameworks/cherry-studio.md) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
 - [Chroma](./data-and-retrieval/chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [cleanlab](./data-and-retrieval/cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - [CLIP (OpenAI)](./foundation-models/clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
@@ -64,6 +65,7 @@
 - [ComfyUI](./frameworks/comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [Command R+](./foundation-models/command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [Continue](./agent-systems/continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- [CosyVoice](./foundation-models/cosyvoice.md) — Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
 - [Crawl4AI](./data-and-retrieval/crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [CrewAI](./frameworks/crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
@@ -84,11 +86,9 @@
 - [GLM-4 / GLM-4.5](./foundation-models/glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
 - [Google ADK](./frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [GPT Researcher](./agent-systems/gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
+- [GPT-SoVITS](./foundation-models/gpt-sovits.md) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
 - [Graphiti](./data-and-retrieval/graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
 - [GraphRAG](./data-and-retrieval/graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Helicone](./benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [InsForge](./agent-systems/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
-- [Khoj](./agent-systems/khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
-- [Kimi K2](./foundation-models/kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
-- [Kokoro TTS](./foundation-models/kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX

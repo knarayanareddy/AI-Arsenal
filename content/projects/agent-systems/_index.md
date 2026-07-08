@@ -39,9 +39,9 @@ Before selecting an agent system:
 - [Khoj](./khoj.md)
 - [LibreChat](./librechat.md)
 - [LobeChat (LobeHub)](./lobe-chat.md)
+- [Qwen-Agent](./qwen-agent.md)
+- [RD-Agent](./rd-agent.md)
 - [screenshot-to-code](./screenshot-to-code.md)
-- [Skyvern](./skyvern.md)
-- [Tabby](./tabby.md)
 
 ### Most Popular
 
@@ -67,6 +67,8 @@ Before selecting an agent system:
 - [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [LobeChat (LobeHub)](./lobe-chat.md) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
+- [Qwen-Agent](./qwen-agent.md) — Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context
+- [RD-Agent](./rd-agent.md) — Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining
 - [screenshot-to-code](./screenshot-to-code.md) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
 - [Skyvern](./skyvern.md) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
