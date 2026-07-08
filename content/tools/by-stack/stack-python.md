@@ -77,6 +77,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | orchestration, prompt-management | paid | No | No | No | python | watching |
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | evaluation | freemium | Yes | No | No | python | watching |
+| [Cog (Replicate)](../serving-and-deployment/cog.md) | serving and deployment | deployment | open-source | Yes | Yes | Yes | python, go | solid-choice |
 | [Conan](../evaluation-and-observability/conan.md) | evaluation and observability | monitoring, tracing | paid | No | No | No | python | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | python | recommended |
 | [Dagster](../orchestration/dagster.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
@@ -84,9 +85,11 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | orchestration, deployment | freemium | Yes | No | No | python | watching |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | prototyping, production-serving | open-source | Yes | Yes | Yes | python | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
+| [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | evaluation, security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
 | [Google Pomelli 2.0](../dx-and-tooling/google-pomelli-2-0.md) | dx and tooling | structured-output | freemium | Yes | No | No | python | watching |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
+| [Great Expectations (GX Core)](../data-ingestion/great-expectations.md) | data ingestion | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | security-and-guardrails, structured-output | freemium | Yes | Yes | Yes | python | recommended |
 | [Guidance](../model-layer/guidance.md) | model layer | structured-output | open-source | Yes | Yes | Yes | python | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python, typescript | recommended |
@@ -95,6 +98,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | prompt-management, evaluation | paid | No | No | No | python, typescript | solid-choice |
 | [Ideogram](../model-layer/ideogram.md) | model layer | production-serving | freemium | Yes | No | No | python | watching |
 | [Ideogram AI](../model-layer/ideogram-ai.md) | model layer | production-serving | freemium | Yes | No | No | python | watching |
+| [Inspect (UK AI Safety Institute)](../evaluation-and-observability/inspect-ai.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Instructor](../dx-and-tooling/instructor.md) | dx and tooling | structured-output | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | production-serving, orchestration | freemium | Yes | No | No | python | watching |
 | [Label Studio](../data-ingestion/label-studio.md) | data ingestion | data-labeling | freemium | Yes | Yes | Yes | python | recommended |
@@ -105,6 +109,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | production-serving, prompt-management | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
+| [LM Evaluation Harness (EleutherAI)](../evaluation-and-observability/lm-evaluation-harness.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Manus](../orchestration/manus.md) | orchestration | prototyping, orchestration | paid | No | No | No | python | watching |
 | [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | memory-management | freemium | Yes | No | No | python | watching |
@@ -124,6 +129,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | prompt-management, monitoring | freemium | Yes | No | No | python, typescript | recommended |
 | [Prefect](../orchestration/prefect.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | data-labeling | paid | Yes | No | No | python | recommended |
+| [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | orchestration, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | structured-output, orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | production-serving | freemium | Yes | No | No | python | watching |

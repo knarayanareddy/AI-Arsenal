@@ -24,6 +24,7 @@
 | `code-arena` | [Code Arena](./evaluation-and-observability/code-arena.md) | Benchmark and compare AI models in a competitive coding environment |
 | `codebase-memory-mcp` | [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) | MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence |
 | `codex-plugin-cc` | [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md) | Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation |
+| `cog` | [Cog (Replicate)](./serving-and-deployment/cog.md) | Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile |
 | `conan` | [Conan](./evaluation-and-observability/conan.md) | Live HUD for monitoring and interacting with AI agent sessions on macOS |
 | `crawl4ai-tool` | [Crawl4AI](./data-ingestion/crawl4ai-tool.md) | Python crawler and scraper designed for LLM-friendly web content extraction |
 | `cubesandbox` | [CubeSandbox](./serving-and-deployment/cubesandbox.md) | Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API |
@@ -35,10 +36,12 @@
 | `firecrawl-tool` | [Firecrawl](./data-ingestion/firecrawl-tool.md) | API and open-source project for scraping and crawling websites into LLM-ready Markdown |
 | `fireworks-ai` | [Fireworks AI](./serving-and-deployment/fireworks-ai.md) | A managed platform for fast inference and fine-tuning of open models |
 | `fly-io` | [Fly.io](./serving-and-deployment/fly-io.md) | Application hosting platform with global machines and GPU options for AI services |
+| `garak` | [garak (NVIDIA)](./evaluation-and-observability/garak.md) | NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation |
 | `giskard` | [Giskard](./evaluation-and-observability/giskard.md) | Testing platform for evaluating and scanning ML and LLM applications |
 | `google-pomelli-2-0` | [Google Pomelli 2.0](./dx-and-tooling/google-pomelli-2-0.md) | Explore and interact with large datasets through a visual, intuitive interface |
 | `google-vertex-ai` | [Google Vertex AI](./serving-and-deployment/google-vertex-ai.md) | Google Cloud platform for model APIs, training, evaluation, and AI application deployment |
 | `gradio` | [Gradio](./dx-and-tooling/gradio.md) | A Python library for building and sharing machine learning demos quickly |
+| `great-expectations` | [Great Expectations (GX Core)](./data-ingestion/great-expectations.md) | The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on |
 | `guardrails-ai` | [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) | A framework for validating, correcting, and constraining LLM outputs |
 | `guidance` | [Guidance](./model-layer/guidance.md) | Microsoft guidance library for controlling and constraining language model generation |
 | `hf-inference-endpoints` | [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) | Managed Hugging Face service for deploying models as production inference endpoints |
@@ -47,6 +50,7 @@
 | `humanloop` | [Humanloop](./evaluation-and-observability/humanloop.md) | A platform for prompt management, evaluation, and product feedback workflows |
 | `ideogram` | [Ideogram](./model-layer/ideogram.md) | AI image generation with reliable text rendering in outputs |
 | `ideogram-ai` | [Ideogram AI](./model-layer/ideogram-ai.md) | AI image generation platform with reliable text rendering and broad style coverage |
+| `inspect-ai` | [Inspect (UK AI Safety Institute)](./evaluation-and-observability/inspect-ai.md) | The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer |
 | `instructor` | [Instructor](./dx-and-tooling/instructor.md) | A library for extracting typed structured outputs from language models |
 | `jina-reader` | [Jina AI Reader](./data-ingestion/jina-reader.md) | Reader endpoint for converting web pages into LLM-friendly text and Markdown |
 | `kimi-k2-5` | [Kimi K2.5](./model-layer/kimi-k2-5.md) | AI assistant with deep understanding, analysis, and reasoning capabilities |
@@ -58,6 +62,7 @@
 | `litellm` | [LiteLLM](./serving-and-deployment/litellm.md) | A proxy and SDK for routing requests across many LLM providers |
 | `llamafactory` | [LLaMA-Factory](./model-layer/llamafactory.md) | Unified fine-tuning framework and UI for many LLMs and training methods |
 | `llamaguard` | [Llama Guard](./evaluation-and-observability/llamaguard.md) | Meta safety model family for classifying and moderating LLM inputs and outputs |
+| `lm-evaluation-harness` | [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md) | The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard |
 | `manus` | [Manus](./orchestration/manus.md) | AI-powered platform for building full-stack web applications and automating tasks |
 | `mem0` | [Mem0](./orchestration/mem0.md) | Memory layer for AI agents and assistants with long-term user and session memory |
 | `memoriq` | [Memoriq](./orchestration/memoriq.md) | Private AI memory layer that learns from your conversations and documents |
@@ -78,6 +83,7 @@
 | `portkey` | [Portkey](./serving-and-deployment/portkey.md) | An AI gateway for routing, observability, guardrails, and prompt management |
 | `prefect` | [Prefect](./orchestration/prefect.md) | Python workflow orchestration framework useful for AI data, eval, and batch jobs |
 | `prodigy` | [Prodigy](./data-ingestion/prodigy.md) | Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows |
+| `promptflow` | [Prompt flow (Microsoft)](./orchestration/promptflow.md) | Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML |
 | `promptfoo` | [promptfoo](./evaluation-and-observability/promptfoo.md) | An open-source CLI and platform for prompt and LLM regression testing |
 | `promptlayer` | [PromptLayer](./dx-and-tooling/promptlayer.md) | Prompt management and logging platform for versioning, collaboration, and observability |
 | `puppeteer` | [Puppeteer](./data-ingestion/puppeteer.md) | Node.js browser automation library for Chrome and Chromium workflows |

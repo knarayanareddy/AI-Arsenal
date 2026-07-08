@@ -27,6 +27,9 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [garak (NVIDIA)](./garak.md)
+- [Inspect (UK AI Safety Institute)](./inspect-ai.md)
+- [LM Evaluation Harness (EleutherAI)](./lm-evaluation-harness.md)
 - [SkillSpector](./skillspector.md)
 - [Astra Autonomous Pentest](./astra-autonomous-pentest.md)
 - [Code Arena](./code-arena.md)
@@ -34,9 +37,6 @@ Before picking a tool in this phase, consider:
 - [Monako Glass](./monako-glass.md)
 - [Spotlight by Backplanes](./spotlight-by-backplanes.md)
 - [Superlog](./superlog.md)
-- [Giskard](./giskard.md)
-- [Guardrails AI](./guardrails-ai.md)
-- [Humanloop](./humanloop.md)
 
 ### Most Popular
 
@@ -47,11 +47,14 @@ _No star-tracked entries yet._
 - [Astra Autonomous Pentest](./astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Code Arena](./code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Conan](./conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
+- [garak (NVIDIA)](./garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 - [Giskard](./giskard.md) — Testing platform for evaluating and scanning ML and LLM applications
 - [Guardrails AI](./guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Humanloop](./humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
+- [Inspect (UK AI Safety Institute)](./inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
 - [LangSmith](./langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - [Llama Guard](./llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
+- [LM Evaluation Harness (EleutherAI)](./lm-evaluation-harness.md) — The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard
 - [Monako Glass](./monako-glass.md) — Visualize and understand AI model outputs with dynamic Pulse Rings and overlays
 - [NeMo Guardrails](./nemo-guardrails.md) — NVIDIA framework for adding programmable guardrails to LLM applications
 - [OpenAI Evals](./openai-evals.md) — An open-source framework for evaluating language model behavior

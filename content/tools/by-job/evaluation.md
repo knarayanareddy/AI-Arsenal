@@ -175,11 +175,15 @@ This table is exhaustive for tools tagged with job = evaluation.
 | [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | freemium | Yes | No | No | python | watching |
+| [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
+| [Inspect (UK AI Safety Institute)](../evaluation-and-observability/inspect-ai.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | freemium | Yes | No | No | python, typescript | recommended |
+| [LM Evaluation Harness (EleutherAI)](../evaluation-and-observability/lm-evaluation-harness.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [OpenAI Evals](../evaluation-and-observability/openai-evals.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [promptfoo](../evaluation-and-observability/promptfoo.md) | evaluation and observability | open-source | Yes | Yes | Yes | typescript | recommended |
 | [TruLens](../evaluation-and-observability/trulens.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Weights & Biases Weave](../evaluation-and-observability/wandb-weave.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |

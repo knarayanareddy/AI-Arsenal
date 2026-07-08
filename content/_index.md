@@ -16,21 +16,21 @@
 | [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
-| [tools](./tools/) | 131 entries | 2026-07-08 |
+| [tools](./tools/) | 137 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
+- [Cog (Replicate)](./tools/serving-and-deployment/cog.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
+- [garak (NVIDIA)](./tools/evaluation-and-observability/garak.md)
 - [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
+- [Great Expectations (GX Core)](./tools/data-ingestion/great-expectations.md)
+- [Inspect (UK AI Safety Institute)](./tools/evaluation-and-observability/inspect-ai.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
 - [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [Orca](./tools/dx-and-tooling/orca.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
-- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
-- [Superpowers](./tools/dx-and-tooling/superpowers.md)
 
 ## Most Popular
 

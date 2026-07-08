@@ -9,25 +9,25 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-08 |
 | [by job](./by-job/) | 14 entries | 2026-07-08 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-08 |
-| [data ingestion](./data-ingestion/) | 16 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 17 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 24 entries | 2026-07-08 |
-| [evaluation and observability](./evaluation-and-observability/) | 18 entries | 2026-07-08 |
+| [evaluation and observability](./evaluation-and-observability/) | 21 entries | 2026-07-08 |
 | [model layer](./model-layer/) | 16 entries | 2026-07-08 |
-| [orchestration](./orchestration/) | 15 entries | 2026-07-08 |
-| [serving and deployment](./serving-and-deployment/) | 15 entries | 2026-07-08 |
+| [orchestration](./orchestration/) | 16 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 16 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
 - [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md)
+- [Cog (Replicate)](./serving-and-deployment/cog.md)
 - [CubeSandbox](./serving-and-deployment/cubesandbox.md)
+- [garak (NVIDIA)](./evaluation-and-observability/garak.md)
+- [Great Expectations (GX Core)](./data-ingestion/great-expectations.md)
+- [Inspect (UK AI Safety Institute)](./evaluation-and-observability/inspect-ai.md)
+- [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md)
 - [Orca](./dx-and-tooling/orca.md)
-- [Superpowers](./dx-and-tooling/superpowers.md)
-- [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md)
-- [Agent Reach](./data-ingestion/agent-reach.md)
-- [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md)
-- [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md)
-- [Tools by Cost — Freemium](./by-cost/cost-freemium.md)
+- [Prompt flow (Microsoft)](./orchestration/promptflow.md)
 
 ## Most Popular
 
@@ -55,6 +55,7 @@ _No star-tracked entries yet._
 - [Code Arena](./evaluation-and-observability/code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
 - [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md) — Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation
+- [Cog (Replicate)](./serving-and-deployment/cog.md) — Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile
 - [Conan](./evaluation-and-observability/conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - [Tools by Cost — Freemium](./by-cost/cost-freemium.md) — Tools in the Arsenal filtered by Cost facet Freemium, with an auto-generated routing table that keeps this page current
 - [Tools by Cost — Open Source](./by-cost/cost-open-source.md) — Tools in the Arsenal filtered by Cost facet Open Source, with an auto-generated routing table that keeps this page current
@@ -75,13 +76,12 @@ _No star-tracked entries yet._
 - [Firecrawl](./data-ingestion/firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Fireworks AI](./serving-and-deployment/fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
 - [Fly.io](./serving-and-deployment/fly-io.md) — Application hosting platform with global machines and GPU options for AI services
+- [garak (NVIDIA)](./evaluation-and-observability/garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 - [Giskard](./evaluation-and-observability/giskard.md) — Testing platform for evaluating and scanning ML and LLM applications
 - [Google Pomelli 2.0](./dx-and-tooling/google-pomelli-2-0.md) — Explore and interact with large datasets through a visual, intuitive interface
 - [Google Vertex AI](./serving-and-deployment/google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
 - [Gradio](./dx-and-tooling/gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [Great Expectations (GX Core)](./data-ingestion/great-expectations.md) — The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on
 - [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Guidance](./model-layer/guidance.md) — Microsoft guidance library for controlling and constraining language model generation
 - [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
-- [Honen](./dx-and-tooling/honen.md) — Transform any content into interactive AI-generated courses
-- [Hugging Face Hub](./model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
-- [Humanloop](./evaluation-and-observability/humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows

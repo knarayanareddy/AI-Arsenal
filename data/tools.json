@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
-  "count": 104,
+  "generated_at": "2026-07-08T19:02:41.937Z",
+  "count": 110,
   "items": [
     {
       "id": "addyosmani-agent-skills",
@@ -1654,6 +1654,87 @@
       "body_text": "TL;DR: OpenAI's official plugin for running Codex inside Claude Code: /codex:review and /codex:adversarial review for cross model code review, plus background task delegation and session handoff commands. Free plugin (Apache 2.0); Codex usage needs a ChatGPT account or API key. Best as an independent second reviewer — a different model catches errors your primary agent's self review can't. Overview An official OpenAI plugin that embeds Codex into the Claude Code workflow. It provides slash commands for read only Codex reviews of your current changes, a steerable \"adversarial\" challenge review, and a set of delegation commands (/codex:rescue, /codex:transfer, /codex:status, /codex:result, /codex:cancel) for handing work to Codex as a background job and managing it without leaving Claude Code. Why It's in the Arsenal Same model self review has a structural weakness: the reviewer shares the author's blind spots. This plugin operationalizes cross model review — a genuinely different model, trained by a different lab, critiques the diff — which decorrelates errors in a way no amount of same model prompting can. That it's first party from OpenAI, shipping through Claude Code's plugin marketplace, also makes it a notable signal of the coding agent ecosystem interoperating rather than siloing. Key Features /codex:review — read only Codex review of uncommitted changes or a branch, equivalent to running /review in Codex directly /codex:adversarial review — steerable challenge review that argues against the change Background delegation: /codex:rescue and /codex:transfer hand tasks or whole sessions to Codex; /codex:status//codex:result//codex:cancel manage jobs /codex:setup handles Codex installation and login checks Architecture / How It Works The plugin installs via Claude Code's plugin marketplace and shells out to the Codex CLI (@openai/codex) under your existing ChatGPT or API credentials. Reviews run Codex against your working tree read only; delegated tasks run as background Codex jobs whose results are pulled back into the Claude Code session. Usage counts against your Codex limits, not Claude's. Getting Started Use Cases 1. Scenario : before opening a PR, run /codex:review background on a multi file change and keep working while Codex produces an independent review 2. Scenario : Claude Code is stuck on a task — /codex:rescue hands the session context to Codex for a fresh attempt with a different model Strengths Cross model review is a mechanism, not a vibe: independent training lineage means decorrelated failure modes First party maintenance by OpenAI with marketplace distribution (26.8k stars as of 2026 07 08) Limitations / When NOT to Use Claude Code only; useless in other harnesses Adds a second vendor dependency and consumes Codex usage limits; reviews on large diffs are slow enough that background mode is effectively required Integration Patterns Make /codex:review background a pre PR habit alongside your normal test/lint gate Pairs naturally with skills frameworks like Superpowers: the methodology handles process discipline, Codex provides the independent reviewer its review stage calls for Resources GitHub Documentation Buzz & Reception On GitHub weekly trending with 26.8k stars as of 2026 07 08, roughly three months after its late March 2026 release — widely noted as an unusual case of OpenAI shipping first party tooling for a competitor's coding agent."
     },
     {
+      "id": "cog",
+      "name": "Cog (Replicate)",
+      "type": "tool",
+      "job": [
+        "deployment"
+      ],
+      "description": "Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile",
+      "url": "content/tools/serving-and-deployment/cog",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0); Replicate's hosting platform is a separate paid service",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "llm"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python",
+        "go"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Cog itself is free; running on Replicate's cloud is usage-based",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/replicate/cog",
+      "docs_url": "https://cog.run",
+      "github_url": "https://github.com/replicate/cog",
+      "alternatives": [
+        "bentoml",
+        "modal"
+      ],
+      "integrates_with": [
+        "replicate"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want to containerize a model without writing a Dockerfile — declare Python/system/CUDA deps in cog.yaml and a Predictor class, and Cog builds a reproducible GPU-ready image exposing a standard HTTP prediction API",
+        "You're deploying to Replicate or want a Replicate-compatible container — Cog is the native packaging format, so local dev and cloud deploy use the same artifact"
+      ],
+      "avoid_when": [
+        "You need fine-grained control over the serving layer (custom batching, multi-model graphs, non-standard routing) — a full framework like BentoML or a bespoke server gives more control than Cog's opinionated interface",
+        "Your model isn't Python, or you already have a hardened container pipeline — Cog's value is generating that pipeline for you"
+      ],
+      "version_tracked": null,
+      "verdict": "solid-choice",
+      "verdict_rationale": "The lowest-friction way to turn a Python model into a GPU-served container, especially for Replicate; a focused packaging tool, not a full serving framework",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/cog.md",
+      "slug": "cog",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "Cog (Replicate)",
+      "summary": "Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 446,
+      "body_html": "<h2>Overview</h2>\n<p>Cog is Replicate's open-source tool for packaging machine-learning models as containers. You describe the environment in a <code>cog.yaml</code> (Python version, pip/system packages, CUDA) and implement a <code>Predictor</code> with a typed <code>predict()</code> method; Cog generates an optimized Docker image — resolving the notoriously painful CUDA/PyTorch/driver matrix — that exposes an automatic HTTP prediction API and queue worker. It's the container format Replicate runs, usable standalone anywhere Docker runs.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The gap between \"model works in my notebook\" and \"model runs as a reliable GPU service\" is mostly Docker/CUDA yak-shaving, and Cog closes it declaratively. It's the deployment-side counterpart to the catalog's inference engines: where vLLM/TGI serve LLM weights at throughput, Cog packages arbitrary models (diffusion, audio, custom pipelines) into a standard served artifact — filling the \"how do I ship this custom model\" slot.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Dockerfile-free image builds from <code>cog.yaml</code>, handling CUDA/cuDNN/PyTorch compatibility automatically</li>\n<li>Typed <code>Predictor</code> interface auto-generating an OpenAPI HTTP server, input validation, and a prediction queue</li>\n<li>Local <code>cog predict</code> for parity between dev and production; push to any registry</li>\n<li>First-class Replicate deploy path from the same container</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p><code>cog.yaml</code> + <code>predict.py</code> are the contract: at build, Cog composes a layered image with the declared environment and a web server wrapping your <code>Predictor</code>; <code>setup()</code> loads weights once at boot, <code>predict()</code> handles each request with type-checked inputs, and a queue worker enables async/batched serving — the standard shape Replicate's infrastructure expects.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># cog.yaml declares build env; predict.py implements Predictor\ncog predict -i prompt=\"a cat astronaut\"\ncog build -t my-model &amp;&amp; docker run -p 5000:5000 my-model\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: shipping a Stable-Diffusion/FLUX-class or custom audio model as a GPU HTTP service without hand-writing CUDA Dockerfiles</li>\n<li><strong>Scenario</strong>: developing locally and deploying to Replicate with one reproducible artifact across both</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: high-throughput LLM token serving — use a dedicated inference engine (vLLM/TGI); Cog packages models, it doesn't optimize LLM decoding</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Removes the single biggest ML-deployment time sink (the CUDA/dep matrix) with a declarative file</li>\n<li>Same artifact from laptop to Replicate cloud — no dev/prod drift in the container</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Opinionated single-predictor interface; complex serving graphs or custom batching want a fuller framework</li>\n<li>Deepest value is realized inside the Replicate ecosystem; standalone it's \"just\" a container builder (a good one)</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>cog</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/replicate/cog\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://cog.run\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>9.4k GitHub stars (verified via API 2026-07-08); Apache-2.0; actively maintained by Replicate. The de facto packaging format for the Replicate model ecosystem.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Cog is Replicate's open source tool for packaging machine learning models as containers. You describe the environment in a cog.yaml (Python version, pip/system packages, CUDA) and implement a Predictor with a typed predict() method; Cog generates an optimized Docker image — resolving the notoriously painful CUDA/PyTorch/driver matrix — that exposes an automatic HTTP prediction API and queue worker. It's the container format Replicate runs, usable standalone anywhere Docker runs. Why It's in the Arsenal The gap between \"model works in my notebook\" and \"model runs as a reliable GPU service\" is mostly Docker/CUDA yak shaving, and Cog closes it declaratively. It's the deployment side counterpart to the catalog's inference engines: where vLLM/TGI serve LLM weights at throughput, Cog packages arbitrary models (diffusion, audio, custom pipelines) into a standard served artifact — filling the \"how do I ship this custom model\" slot. Key Features Dockerfile free image builds from cog.yaml, handling CUDA/cuDNN/PyTorch compatibility automatically Typed Predictor interface auto generating an OpenAPI HTTP server, input validation, and a prediction queue Local cog predict for parity between dev and production; push to any registry First class Replicate deploy path from the same container Architecture / How It Works cog.yaml + predict.py are the contract: at build, Cog composes a layered image with the declared environment and a web server wrapping your Predictor; setup() loads weights once at boot, predict() handles each request with type checked inputs, and a queue worker enables async/batched serving — the standard shape Replicate's infrastructure expects. Getting Started Use Cases 1. Scenario : shipping a Stable Diffusion/FLUX class or custom audio model as a GPU HTTP service without hand writing CUDA Dockerfiles 2. Scenario : developing locally and deploying to Replicate with one reproducible artifact across both 3. Scenario where this is NOT the right fit : high throughput LLM token serving — use a dedicated inference engine (vLLM/TGI); Cog packages models, it doesn't optimize LLM decoding Strengths Removes the single biggest ML deployment time sink (the CUDA/dep matrix) with a declarative file Same artifact from laptop to Replicate cloud — no dev/prod drift in the container Limitations / When NOT to Use Opinionated single predictor interface; complex serving graphs or custom batching want a fuller framework Deepest value is realized inside the Replicate ecosystem; standalone it's \"just\" a container builder (a good one) Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID cog rather than duplicating details. Resources GitHub Docs Buzz & Reception 9.4k GitHub stars (verified via API 2026 07 08); Apache 2.0; actively maintained by Replicate. The de facto packaging format for the Replicate model ecosystem. Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "conan",
       "name": "Conan",
       "type": "tool",
@@ -2546,6 +2627,87 @@
       "body_text": "TL;DR: Application hosting platform with global machines and GPU options for AI services. Usage based hosting pricing. Best for small globally deployed AI APIs. Overview An application hosting platform that runs apps as lightweight VMs ('Fly Machines') close to users globally, with GPU machine options for moderate AI inference workloads. Why It's in the Arsenal Fly.io earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Global, low latency app deployment GPU machine support for inference workloads Minimal DevOps overhead compared to managing Kubernetes Architecture / How It Works Applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance. Getting Started Use Cases 1. Scenario : you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps 2. Scenario : you need GPU machines for moderate workloads without managing a full Kubernetes cluster 3. Scenario where this is NOT the right fit : you need large scale, multi GPU distributed training or serving (purpose built ML platforms scale better there) — evaluate an alternative instead Strengths You want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps You need GPU machines for moderate workloads without managing a full Kubernetes cluster Limitations / When NOT to Use You need large scale, multi GPU distributed training or serving (purpose built ML platforms scale better there) You require deep enterprise compliance certifications that a smaller cloud provider may not yet offer Integration Patterns Compare against BentoML, Modal, Railway, Replicate before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID fly io. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment, production serving. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "garak",
+      "name": "garak (NVIDIA)",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails",
+        "evaluation"
+      ],
+      "description": "NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation",
+      "url": "content/tools/evaluation-and-observability/garak",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0)",
+      "tags": [
+        "evaluation",
+        "llm",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; compute/API costs are your own",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/NVIDIA/garak",
+      "docs_url": "https://docs.garak.ai/garak",
+      "github_url": "https://github.com/NVIDIA/garak",
+      "alternatives": [
+        "promptfoo",
+        "rebuff"
+      ],
+      "integrates_with": [
+        "nemo-guardrails"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "production",
+        "research"
+      ],
+      "best_when": [
+        "You need a pre-deployment security scan of an LLM system — garak fires curated attack probes (jailbreaks, injection, encoding smuggling, data leakage, malware generation) and scores responses with detectors, producing a vulnerability report",
+        "You want repeatable red-teaming in CI rather than ad-hoc manual jailbreak testing — probes are versioned modules, so scans are comparable across model versions"
+      ],
+      "avoid_when": [
+        "You need runtime protection — garak is offline assessment; blocking live attacks is a guardrail's job (NeMo Guardrails, Llama Guard) that scanning complements but doesn't replace",
+        "You need application-logic security review (authz, tool-call abuse in your agent) — garak probes the model interface generically, not your business logic"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The most complete open attack-probe library for LLMs, NVIDIA-backed and actively maintained — the standard first move for LLM security assessment, not a runtime defense",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/garak.md",
+      "slug": "garak",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "garak (NVIDIA)",
+      "summary": "NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 471,
+      "body_html": "<h2>Overview</h2>\n<p>garak (Generative AI Red-teaming and Assessment Kit) is an open-source LLM vulnerability scanner, self-described as \"nmap for LLMs\": it runs libraries of attack probes — jailbreak suites (DAN and descendants), prompt injection, encoding-based smuggling, training-data leakage replay, toxicity elicitation, hallucinated-package prompts — against any target (HF models, OpenAI-compatible APIs, REST endpoints, Ollama), scores responses with paired detectors, and emits a report of what got through.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>LLM security guidance is long on advice and short on tooling; garak is the tool: a concrete, runnable answer to \"how vulnerable is our deployed model to known attack classes?\" Its probe/detector structure operationalizes the OWASP-LLM-style threat lists the catalog's guardrail entries defend against — scan with garak, then configure guardrails for what actually landed.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Dozens of probe modules spanning jailbreaks, injection, XSS/encoding smuggling, leakage, misinformation, and malware-generation elicitation</li>\n<li>Detector-scored results (string/ML classifiers) with per-probe hit rates and an HTML/JSONL report</li>\n<li>Generator abstraction targets HF, OpenAI-compatible, NIM, Ollama, LiteLLM, and raw REST endpoints</li>\n<li>Extensible: custom probes/detectors as Python modules; buff system mutates probes (paraphrase, encoding) to defeat brittle filters</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A scan is a matrix: generators (model targets) × probes (attack payload families) × detectors (response classifiers). Each probe sends its payloads N times (sampling matters for stochastic failures), detectors flag harmful/leaky outputs, and the evaluator aggregates hit rates per probe class — making \"which attack families does this deployment fail on\" a queryable artifact.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">python -m pip install -U garak\npython -m garak --model_type openai --model_name gpt-4o-mini --probes promptinject\npython -m garak --model_type huggingface --model_name gpt2 --probes dan.Dan_11_0\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: pre-launch security gate — scan the exact model+system-prompt combination you'll ship and file the report with the release</li>\n<li><strong>Scenario</strong>: comparing jailbreak resistance across candidate models or after a guardrail change, using identical probe suites</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: stopping a live prompt-injection attack in production — that's runtime guardrail territory; garak tells you where to point the guardrails</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Breadth and currency of the probe library — community-maintained attack suites beat any internally curated jailbreak list</li>\n<li>Versioned, repeatable methodology turns red-teaming from an art demo into a regression test</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Probes cover known attack classes; a clean scan is necessary, not sufficient — novel and application-specific attacks remain your problem</li>\n<li>Full scans are slow and API-expensive (many probes × many generations); scope probe selection deliberately</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>garak</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/NVIDIA/garak\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.garak.ai/garak\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>8.4k GitHub stars (verified via API 2026-07-08); Apache-2.0; NVIDIA-maintained with active development. Widely referenced as the default open LLM security scanner in red-teaming guidance.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview garak (Generative AI Red teaming and Assessment Kit) is an open source LLM vulnerability scanner, self described as \"nmap for LLMs\": it runs libraries of attack probes — jailbreak suites (DAN and descendants), prompt injection, encoding based smuggling, training data leakage replay, toxicity elicitation, hallucinated package prompts — against any target (HF models, OpenAI compatible APIs, REST endpoints, Ollama), scores responses with paired detectors, and emits a report of what got through. Why It's in the Arsenal LLM security guidance is long on advice and short on tooling; garak is the tool: a concrete, runnable answer to \"how vulnerable is our deployed model to known attack classes?\" Its probe/detector structure operationalizes the OWASP LLM style threat lists the catalog's guardrail entries defend against — scan with garak, then configure guardrails for what actually landed. Key Features Dozens of probe modules spanning jailbreaks, injection, XSS/encoding smuggling, leakage, misinformation, and malware generation elicitation Detector scored results (string/ML classifiers) with per probe hit rates and an HTML/JSONL report Generator abstraction targets HF, OpenAI compatible, NIM, Ollama, LiteLLM, and raw REST endpoints Extensible: custom probes/detectors as Python modules; buff system mutates probes (paraphrase, encoding) to defeat brittle filters Architecture / How It Works A scan is a matrix: generators (model targets) × probes (attack payload families) × detectors (response classifiers). Each probe sends its payloads N times (sampling matters for stochastic failures), detectors flag harmful/leaky outputs, and the evaluator aggregates hit rates per probe class — making \"which attack families does this deployment fail on\" a queryable artifact. Getting Started Use Cases 1. Scenario : pre launch security gate — scan the exact model+system prompt combination you'll ship and file the report with the release 2. Scenario : comparing jailbreak resistance across candidate models or after a guardrail change, using identical probe suites 3. Scenario where this is NOT the right fit : stopping a live prompt injection attack in production — that's runtime guardrail territory; garak tells you where to point the guardrails Strengths Breadth and currency of the probe library — community maintained attack suites beat any internally curated jailbreak list Versioned, repeatable methodology turns red teaming from an art demo into a regression test Limitations / When NOT to Use Probes cover known attack classes; a clean scan is necessary, not sufficient — novel and application specific attacks remain your problem Full scans are slow and API expensive (many probes × many generations); scope probe selection deliberately Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID garak rather than duplicating details. Resources GitHub Docs Buzz & Reception 8.4k GitHub stars (verified via API 2026 07 08); Apache 2.0; NVIDIA maintained with active development. Widely referenced as the default open LLM security scanner in red teaming guidance. Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "giskard",
       "name": "Giskard",
       "type": "tool",
@@ -2861,6 +3023,86 @@
       "word_count": 346,
       "body_html": "<h2>Overview</h2>\n<p>A Python library for turning a model or function into a shareable web demo in minutes, widely used for quick stakeholder-facing prototypes rather than production UIs.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Gradio earns a place in the Arsenal because it directly addresses a recurring decision point: you want to demo a model or pipeline with a shareable web UI in minutes, using only Python. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Fast demo UI generation from a Python function</li>\n<li>Shareable public links for quick feedback</li>\n<li>Large library of pre-built input/output components</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A Python function is wrapped with declared input/output component types; Gradio auto-generates a web UI around that function and can expose it via a temporary public URL.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Visit the official documentation for installation and setup.\n# URL: https://www.gradio.app\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want to demo a model or pipeline with a shareable web UI in minutes, using only Python</li>\n<li><strong>Scenario</strong>: you're prototyping and need quick stakeholder feedback on a model's behavior</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need a production-grade, highly customized UI/UX (use a proper frontend framework instead) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want to demo a model or pipeline with a shareable web UI in minutes, using only Python</li>\n<li>You're prototyping and need quick stakeholder feedback on a model's behavior</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need a production-grade, highly customized UI/UX (use a proper frontend framework instead)</li>\n<li>Your app needs complex multi-page navigation or state beyond a single demo interface</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./chainlit.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Chainlit</a>, <a href=\"../serving-and-deployment/fastapi.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">FastAPI</a>, <a href=\"./mesop.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Mesop</a>, <a href=\"./streamlit.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Streamlit</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>gradio</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.gradio.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reception should be updated with verified sources during regular content reviews.</p>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "Overview A Python library for turning a model or function into a shareable web demo in minutes, widely used for quick stakeholder facing prototypes rather than production UIs. Why It's in the Arsenal Gradio earns a place in the Arsenal because it directly addresses a recurring decision point: you want to demo a model or pipeline with a shareable web UI in minutes, using only Python. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Fast demo UI generation from a Python function Shareable public links for quick feedback Large library of pre built input/output components Architecture / How It Works A Python function is wrapped with declared input/output component types; Gradio auto generates a web UI around that function and can expose it via a temporary public URL. Getting Started Use Cases 1. Scenario : you want to demo a model or pipeline with a shareable web UI in minutes, using only Python 2. Scenario : you're prototyping and need quick stakeholder feedback on a model's behavior 3. Scenario where this is NOT the right fit : you need a production grade, highly customized UI/UX (use a proper frontend framework instead) — evaluate an alternative instead Strengths You want to demo a model or pipeline with a shareable web UI in minutes, using only Python You're prototyping and need quick stakeholder feedback on a model's behavior Limitations / When NOT to Use You need a production grade, highly customized UI/UX (use a proper frontend framework instead) Your app needs complex multi page navigation or state beyond a single demo interface Integration Patterns Compare against Chainlit, FastAPI, Mesop, Streamlit before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID gradio. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "great-expectations",
+      "name": "Great Expectations (GX Core)",
+      "type": "tool",
+      "job": [
+        "orchestration"
+      ],
+      "description": "The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on",
+      "url": "content/tools/data-ingestion/great-expectations",
+      "cost_model": "open-source",
+      "pricing_detail": "GX Core is open source (Apache-2.0); GX Cloud is a paid hosted platform",
+      "tags": [
+        "data",
+        "evaluation",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "GX Core fully open source; GX Cloud has separate pricing",
+      "source_url": "https://github.com/great-expectations/great_expectations",
+      "docs_url": "https://docs.greatexpectations.io/docs/home",
+      "github_url": "https://github.com/great-expectations/great_expectations",
+      "self_hostable": true,
+      "open_source": true,
+      "alternatives": [
+        "dvc"
+      ],
+      "integrates_with": [
+        "airflow",
+        "dagster",
+        "prefect"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "You need contract-style guarantees on data feeding AI systems — Expectations (\"column X non-null\", \"values in set\", \"row count within N% of last run\") run as validation gates inside Airflow/Dagster/Prefect pipelines and fail loudly on drift",
+        "You want data-quality checks that document themselves — validation results render into Data Docs, giving stakeholders a browsable record of what was checked and when"
+      ],
+      "avoid_when": [
+        "You need lightweight schema checks inside application code — a JSON-schema or pydantic validation is simpler than standing up a GX project",
+        "Your data-quality problem is semantic (label noise, annotation disagreement) — that's data-labeling/curation territory (Argilla, Cleanlab-class tools), not tabular assertions"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The most widely adopted open data-validation framework, and the piece most AI pipelines are missing — silent upstream data drift is a top cause of model and RAG quality regressions",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/great-expectations.md",
+      "slug": "great-expectations",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Great Expectations (GX Core)",
+      "summary": "The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 464,
+      "body_html": "<h2>Overview</h2>\n<p>Great Expectations (GX Core) is the standard open-source framework for data quality: you declare Expectations — assertions about your data such as null rates, value sets, distributions, and volume bounds — and GX validates batches against them wherever the data lives (pandas, Spark, SQL warehouses), producing machine-readable results and human-readable Data Docs. In AI systems it's the gate between raw sources and the training sets, embedding corpora, and feature tables downstream.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Model and RAG regressions are frequently data regressions in disguise — an upstream schema change, a silently emptied column, a doubled row count — and none of the catalog's model-side eval tools can see them. GX fills the data-ingestion slot with the same philosophy the Arsenal applies to prompts and models: declarative, versioned assertions enforced in CI/pipelines instead of tribal knowledge.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Large library of built-in Expectations plus custom ones; suites are versionable YAML/JSON artifacts</li>\n<li>Executes against pandas, Spark, and SQL backends (Snowflake, BigQuery, Postgres, Databricks) without moving data</li>\n<li>Checkpoints bundle suites + data for scheduled/pipeline runs; native Airflow/Dagster/Prefect operators</li>\n<li>Data Docs: auto-generated HTML documentation of expectations and validation history</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>An Expectation Suite is a declarative contract; a Checkpoint binds suites to Batch Definitions (how to slice the data source) and runs validation through the backend's own engine — SQL expectations compile to SQL, Spark to Spark — so checks scale with the warehouse rather than pulling data out. Results feed actions (fail the pipeline, notify, update docs).</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install great_expectations\n</code></pre>\n<pre><code class=\"language-python\">import great_expectations as gx\ncontext = gx.get_context()\nbatch = context.data_sources.pandas_default.read_csv(\"corpus_manifest.csv\")\nbatch.validate(gx.expectations.ExpectColumnValuesToNotBeNull(column=\"doc_text\"))\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: gating a nightly embedding-refresh pipeline — validate document counts, null rates, and dedup ratios before re-indexing the vector store</li>\n<li><strong>Scenario</strong>: contracting fine-tuning datasets — enforce schema, length distributions, and label-set membership before a training run spends GPU budget</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: validating a single API payload in application code — use pydantic; GX is pipeline-scale infrastructure</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Declarative, versioned data contracts catch the silent upstream changes that model-side evals can't</li>\n<li>Pushes validation down to the data engine, so it works at warehouse scale</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Real setup and maintenance cost (contexts, suites, checkpoints) — overkill below pipeline scale</li>\n<li>Asserts on structure and statistics, not semantics; label quality needs different tooling</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>great-expectations</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://greatexpectations.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://github.com/great-expectations/great_expectations\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.greatexpectations.io/docs/home\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>11.6k GitHub stars (verified via API 2026-07-08); Apache-2.0; actively maintained (GX, now under Fivetran). The default answer to \"how do we test our data\" across the data-engineering ecosystem.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Great Expectations (GX Core) is the standard open source framework for data quality: you declare Expectations — assertions about your data such as null rates, value sets, distributions, and volume bounds — and GX validates batches against them wherever the data lives (pandas, Spark, SQL warehouses), producing machine readable results and human readable Data Docs. In AI systems it's the gate between raw sources and the training sets, embedding corpora, and feature tables downstream. Why It's in the Arsenal Model and RAG regressions are frequently data regressions in disguise — an upstream schema change, a silently emptied column, a doubled row count — and none of the catalog's model side eval tools can see them. GX fills the data ingestion slot with the same philosophy the Arsenal applies to prompts and models: declarative, versioned assertions enforced in CI/pipelines instead of tribal knowledge. Key Features Large library of built in Expectations plus custom ones; suites are versionable YAML/JSON artifacts Executes against pandas, Spark, and SQL backends (Snowflake, BigQuery, Postgres, Databricks) without moving data Checkpoints bundle suites + data for scheduled/pipeline runs; native Airflow/Dagster/Prefect operators Data Docs: auto generated HTML documentation of expectations and validation history Architecture / How It Works An Expectation Suite is a declarative contract; a Checkpoint binds suites to Batch Definitions (how to slice the data source) and runs validation through the backend's own engine — SQL expectations compile to SQL, Spark to Spark — so checks scale with the warehouse rather than pulling data out. Results feed actions (fail the pipeline, notify, update docs). Getting Started Use Cases 1. Scenario : gating a nightly embedding refresh pipeline — validate document counts, null rates, and dedup ratios before re indexing the vector store 2. Scenario : contracting fine tuning datasets — enforce schema, length distributions, and label set membership before a training run spends GPU budget 3. Scenario where this is NOT the right fit : validating a single API payload in application code — use pydantic; GX is pipeline scale infrastructure Strengths Declarative, versioned data contracts catch the silent upstream changes that model side evals can't Pushes validation down to the data engine, so it works at warehouse scale Limitations / When NOT to Use Real setup and maintenance cost (contexts, suites, checkpoints) — overkill below pipeline scale Asserts on structure and statistics, not semantics; label quality needs different tooling Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID great expectations rather than duplicating details. Resources Official Site GitHub Docs Buzz & Reception 11.6k GitHub stars (verified via API 2026 07 08); Apache 2.0; actively maintained (GX, now under Fivetran). The default answer to \"how do we test our data\" across the data engineering ecosystem. Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "guardrails-ai",
@@ -3506,6 +3748,84 @@
       "word_count": 308,
       "body_html": "<h2>Overview</h2>\n<p>A platform offering for Ideogram-style image generation, emphasizing broad style coverage alongside the same reliable text-rendering strength.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Ideogram AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need broad style coverage plus the same reliable text-rendering strength as Ideogram, via a platform offering. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Broad style/preset coverage</li>\n<li>Reliable in-image text rendering</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Accessed as a managed API/platform; generation happens on the provider's infrastructure with no self-hosting option.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://ideogram.ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need broad style coverage plus the same reliable text-rendering strength as Ideogram, via a platform offering</li>\n<li><strong>Scenario</strong>: you want a managed image-generation API rather than self-hosting a diffusion model</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need an open-weight, self-hostable image generation stack — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need broad style coverage plus the same reliable text-rendering strength as Ideogram, via a platform offering</li>\n<li>You want a managed image-generation API rather than self-hosting a diffusion model</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You need an open-weight, self-hostable image generation stack</p>\n</li>\n<li>\n<p>Cost-per-image at scale is a primary constraint (compare against open-source diffusion models first)</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://ideogram.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ideogram AI</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview A platform offering for Ideogram style image generation, emphasizing broad style coverage alongside the same reliable text rendering strength. Why It's in the Arsenal Ideogram AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need broad style coverage plus the same reliable text rendering strength as Ideogram, via a platform offering. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Broad style/preset coverage Reliable in image text rendering Architecture / How It Works Accessed as a managed API/platform; generation happens on the provider's infrastructure with no self hosting option. Getting Started Use Cases 1. Scenario : you need broad style coverage plus the same reliable text rendering strength as Ideogram, via a platform offering 2. Scenario : you want a managed image generation API rather than self hosting a diffusion model 3. Scenario where this is NOT the right fit : you need an open weight, self hostable image generation stack — evaluate an alternative instead Strengths You need broad style coverage plus the same reliable text rendering strength as Ideogram, via a platform offering You want a managed image generation API rather than self hosting a diffusion model Limitations / When NOT to Use You need an open weight, self hostable image generation stack Cost per image at scale is a primary constraint (compare against open source diffusion models first) Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Ideogram AI Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "inspect-ai",
+      "name": "Inspect (UK AI Safety Institute)",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer",
+      "url": "content/tools/evaluation-and-observability/inspect-ai",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (MIT)",
+      "tags": [
+        "evaluation",
+        "llm",
+        "agents"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; model/API costs are your own",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "docs_url": "https://inspect.aisi.org.uk",
+      "github_url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "alternatives": [
+        "lm-evaluation-harness",
+        "openai-evals"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You're writing custom evals for agentic or tool-using behaviour — Inspect models an eval as solvers (prompt/tool/multi-step flows) plus scorers (including model-graded), which fits agent and safety evaluations that fixed benchmark harnesses can't express",
+        "You need to inspect what happened — the bundled log viewer replays every sample's messages, tool calls, and scores, which is decisive when debugging why an eval scored the way it did"
+      ],
+      "avoid_when": [
+        "You just want standard academic benchmark numbers with minimal setup — lm-evaluation-harness ships those tasks ready-made; Inspect is a framework you write evals in",
+        "Your team wants a no-code/hosted eval product — Inspect is a code-first library, not a SaaS dashboard"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The strongest open framework for authoring bespoke agentic and safety evals, from a serious institutional author (UK AISI); choose it when you're building evals, not just running benchmarks",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/inspect-ai.md",
+      "slug": "inspect-ai",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "Inspect (UK AI Safety Institute)",
+      "summary": "The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 460,
+      "body_html": "<h2>Overview</h2>\n<p>Inspect is an LLM evaluation framework from the UK AI Safety Institute: you compose an eval from a dataset, a solver (the strategy that produces answers — a prompt, a tool-use loop, a multi-turn agent, a self-critique chain), and a scorer (exact match, pattern, or model-graded), then run it across providers with a rich interactive log viewer for post-hoc inspection. It's built for the evaluations governments and labs use to assess model capabilities and risks.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Evaluation is bifurcating: standardized benchmarks (lm-eval's turf) versus bespoke evals of agentic and safety-relevant behaviour, which need real code. Inspect is the best open answer for the second class, and its institutional provenance and log-viewer transparency make it credible where results carry weight. It complements, rather than competes with, the benchmark harness.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Solver/scorer abstraction expressing multi-step, tool-using, and self-critique evals — not just single-shot Q&amp;A</li>\n<li>Built-in tool support and sandboxing for agent evals; model-graded scoring with reference judges</li>\n<li>Interactive log viewer replaying messages, tool calls, and per-sample scores</li>\n<li>Provider-agnostic (OpenAI, Anthropic, Google, HF, vLLM, and more) via one model interface</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p><code>@task</code> composes dataset + solver + scorer. Solvers are chainable steps operating on a <code>TaskState</code> (messages, tool calls, model outputs); tools are Python functions the solver may invoke in a loop; scorers reduce completed states to metrics, optionally by calling a grader model. Every run writes a structured <code>.eval</code> log the viewer renders — the mechanism behind its debuggability.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install inspect-ai\ninspect eval my_eval.py --model openai/gpt-4o\ninspect view   # open the interactive log viewer\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: measuring whether an agent completes a multi-step tool task safely — model the tools and success criteria as a solver+scorer</li>\n<li><strong>Scenario</strong>: capability/safety evals whose results need audit-grade transparency into every model interaction</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you just need MMLU/GSM8K numbers — reach for lm-evaluation-harness's ready tasks instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Expresses agentic/tool-using evals natively, where benchmark harnesses assume single-shot tasks</li>\n<li>Log viewer makes eval results inspectable and defensible — a real differentiator for safety work</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>It's a framework: you author evals in Python, which is more effort than running a prebuilt benchmark suite</li>\n<li>Younger and smaller ecosystem than the established harnesses; fewer off-the-shelf tasks</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>inspect-ai</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/UKGovernmentBEIS/inspect_ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://inspect.aisi.org.uk\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>2.3k GitHub stars (verified via API 2026-07-08); MIT; actively developed by the UK AI Safety Institute. Increasingly adopted for agentic and safety evaluations where authorship credibility matters.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Inspect is an LLM evaluation framework from the UK AI Safety Institute: you compose an eval from a dataset, a solver (the strategy that produces answers — a prompt, a tool use loop, a multi turn agent, a self critique chain), and a scorer (exact match, pattern, or model graded), then run it across providers with a rich interactive log viewer for post hoc inspection. It's built for the evaluations governments and labs use to assess model capabilities and risks. Why It's in the Arsenal Evaluation is bifurcating: standardized benchmarks (lm eval's turf) versus bespoke evals of agentic and safety relevant behaviour, which need real code. Inspect is the best open answer for the second class, and its institutional provenance and log viewer transparency make it credible where results carry weight. It complements, rather than competes with, the benchmark harness. Key Features Solver/scorer abstraction expressing multi step, tool using, and self critique evals — not just single shot Q&A Built in tool support and sandboxing for agent evals; model graded scoring with reference judges Interactive log viewer replaying messages, tool calls, and per sample scores Provider agnostic (OpenAI, Anthropic, Google, HF, vLLM, and more) via one model interface Architecture / How It Works @task composes dataset + solver + scorer. Solvers are chainable steps operating on a TaskState (messages, tool calls, model outputs); tools are Python functions the solver may invoke in a loop; scorers reduce completed states to metrics, optionally by calling a grader model. Every run writes a structured .eval log the viewer renders — the mechanism behind its debuggability. Getting Started Use Cases 1. Scenario : measuring whether an agent completes a multi step tool task safely — model the tools and success criteria as a solver+scorer 2. Scenario : capability/safety evals whose results need audit grade transparency into every model interaction 3. Scenario where this is NOT the right fit : you just need MMLU/GSM8K numbers — reach for lm evaluation harness's ready tasks instead Strengths Expresses agentic/tool using evals natively, where benchmark harnesses assume single shot tasks Log viewer makes eval results inspectable and defensible — a real differentiator for safety work Limitations / When NOT to Use It's a framework: you author evals in Python, which is more effort than running a prebuilt benchmark suite Younger and smaller ecosystem than the established harnesses; fewer off the shelf tasks Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID inspect ai rather than duplicating details. Resources GitHub Docs Buzz & Reception 2.3k GitHub stars (verified via API 2026 07 08); MIT; actively developed by the UK AI Safety Institute. Increasingly adopted for agentic and safety evaluations where authorship credibility matters. Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "instructor",
@@ -4387,6 +4707,84 @@
       "word_count": 380,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Meta safety model family for classifying and moderating LLM inputs and outputs. Open source or free to start. Best for LLM safety classification.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Meta's open-weight safety classifier model family for moderating LLM inputs and outputs, deployable as a self-hosted model rather than a third-party moderation API.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Llama Guard earns a place in the Arsenal because it directly addresses a recurring decision point: you need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Open-weight, self-hostable safety classification</li>\n<li>Classifies both inputs and outputs against safety categories</li>\n<li>Multiple model sizes for different latency/cost tradeoffs</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Runs as a separate classifier model alongside the primary LLM; inputs and/or outputs are passed through Llama Guard before being accepted, flagging or blocking unsafe content.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See PurpleLlama model cards and examples\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model</li>\n<li><strong>Scenario</strong>: you want a model-based moderation layer rather than only keyword/regex filtering</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need a fully managed moderation API with no self-hosting (most major model providers offer one) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model</li>\n<li>You want a model-based moderation layer rather than only keyword/regex filtering</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need a fully managed moderation API with no self-hosting (most major model providers offer one)</li>\n<li>Your latency budget can't absorb running an additional classifier model per request without optimization</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./guardrails-ai.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Guardrails AI</a>, <a href=\"./nemo-guardrails.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">NeMo Guardrails</a>, <a href=\"./rebuff.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Rebuff</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>llamaguard</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/meta-llama/PurpleLlama\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://www.llama.com/docs/model-cards-and-prompt-formats/llama-guard-3/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/meta-llama/PurpleLlama\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for security-and-guardrails.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Meta safety model family for classifying and moderating LLM inputs and outputs. Open source or free to start. Best for LLM safety classification. Overview Meta's open weight safety classifier model family for moderating LLM inputs and outputs, deployable as a self hosted model rather than a third party moderation API. Why It's in the Arsenal Llama Guard earns a place in the Arsenal because it directly addresses a recurring decision point: you need an open weight safety classifier to moderate LLM inputs/outputs and can self host the model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Open weight, self hostable safety classification Classifies both inputs and outputs against safety categories Multiple model sizes for different latency/cost tradeoffs Architecture / How It Works Runs as a separate classifier model alongside the primary LLM; inputs and/or outputs are passed through Llama Guard before being accepted, flagging or blocking unsafe content. Getting Started Use Cases 1. Scenario : you need an open weight safety classifier to moderate LLM inputs/outputs and can self host the model 2. Scenario : you want a model based moderation layer rather than only keyword/regex filtering 3. Scenario where this is NOT the right fit : you need a fully managed moderation API with no self hosting (most major model providers offer one) — evaluate an alternative instead Strengths You need an open weight safety classifier to moderate LLM inputs/outputs and can self host the model You want a model based moderation layer rather than only keyword/regex filtering Limitations / When NOT to Use You need a fully managed moderation API with no self hosting (most major model providers offer one) Your latency budget can't absorb running an additional classifier model per request without optimization Integration Patterns Compare against Guardrails AI, NeMo Guardrails, Rebuff before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID llamaguard. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for security and guardrails. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "lm-evaluation-harness",
+      "name": "LM Evaluation Harness (EleutherAI)",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard",
+      "url": "content/tools/evaluation-and-observability/lm-evaluation-harness",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (MIT)",
+      "tags": [
+        "evaluation",
+        "llm",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; compute costs are your own",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "docs_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "github_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "alternatives": [
+        "openai-evals",
+        "deepeval"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need standardized, reproducible academic-benchmark numbers (MMLU, GSM8K, HellaSwag, and hundreds more) that are comparable to published results — same prompts, same few-shot format, same metrics",
+        "You're evaluating base or fine-tuned open models across backends — it drives HF Transformers, vLLM, SGLang, GGUF, and API models through one task interface"
+      ],
+      "avoid_when": [
+        "You're evaluating an application (RAG pipeline, agent, chatbot) rather than a model — task-based academic benchmarks say little about product behavior; use application-level eval tools",
+        "You need LLM-as-judge or human-preference evaluation — the harness scores against reference answers and log-likelihoods, not rubric judgments"
+      ],
+      "version_tracked": null,
+      "verdict": "best-in-class",
+      "verdict_rationale": "The shared measurement infrastructure of open LLM research — when a model card cites benchmark numbers, this is usually the code that produced them",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/lm-evaluation-harness.md",
+      "slug": "lm-evaluation-harness",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "LM Evaluation Harness (EleutherAI)",
+      "summary": "The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 434,
+      "body_html": "<h2>Overview</h2>\n<p>EleutherAI's lm-evaluation-harness is the reference implementation for benchmarking language models: a unified CLI and task framework covering hundreds of academic evaluations, with backends for local HF models, vLLM/SGLang servers, quantized GGUF models, and commercial APIs. It powered Hugging Face's Open LLM Leaderboard and is the standard citation for reproducible benchmark methodology.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Benchmark numbers are only meaningful if produced the same way as everyone else's, and this harness is that \"same way\": versioned task definitions pin the prompt format, few-shot sampling, and metric so your MMLU score is comparable to a paper's. It anchors the model-evaluation slot the way pytest anchors testing — the catalog's application-eval tools (DeepEval, RAGAS, promptfoo) measure products; this measures models.</p>\n<h2>Key Features</h2>\n<ul>\n<li>400+ tasks with versioned definitions (changes bump the version, protecting comparability)</li>\n<li>Backend-agnostic: <code>hf</code>, <code>vllm</code>, <code>sglang</code>, <code>gguf</code>, OpenAI-compatible APIs, and more via <code>--model</code></li>\n<li>Log-likelihood, generation, and multiple-choice evaluation modes with few-shot control</li>\n<li>YAML-defined custom tasks; batch evaluation and results caching</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Each task is a YAML/Python definition (dataset, prompt template, few-shot policy, metric); a model adapter exposes loglikelihood/generate primitives per backend; the runner shards examples, queries the model, and aggregates metrics with versioned task hashes recorded in results — the mechanism behind its reproducibility guarantees.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install lm-eval\nlm_eval --model hf --model_args pretrained=meta-llama/Llama-3.1-8B-Instruct \\\n  --tasks mmlu,gsm8k --num_fewshot 5 --batch_size auto\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: validating a fine-tune didn't regress general capability — run the same task suite on base and tuned checkpoints and diff</li>\n<li><strong>Scenario</strong>: producing model-card benchmark tables that reviewers can reproduce exactly</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: measuring whether your RAG app answers customer questions correctly — that's an application eval; use DeepEval/RAGAS-class tools instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Comparability is the product: versioned tasks and standard prompts make numbers citable, which no ad-hoc eval script achieves</li>\n<li>Backend breadth means the same suite runs on a laptop GGUF and a multi-GPU vLLM server</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Academic benchmarks correlate weakly with application quality — treat scores as capability floors, not product metrics</li>\n<li>Contamination caveats apply: public benchmark data leaks into training sets, and the harness can't detect that</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>lm-evaluation-harness</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/EleutherAI/lm-evaluation-harness\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>13.2k GitHub stars (verified via API 2026-07-08); MIT; actively maintained by EleutherAI with broad community contribution. Cited as the evaluation methodology in a large share of open-model releases.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview EleutherAI's lm evaluation harness is the reference implementation for benchmarking language models: a unified CLI and task framework covering hundreds of academic evaluations, with backends for local HF models, vLLM/SGLang servers, quantized GGUF models, and commercial APIs. It powered Hugging Face's Open LLM Leaderboard and is the standard citation for reproducible benchmark methodology. Why It's in the Arsenal Benchmark numbers are only meaningful if produced the same way as everyone else's, and this harness is that \"same way\": versioned task definitions pin the prompt format, few shot sampling, and metric so your MMLU score is comparable to a paper's. It anchors the model evaluation slot the way pytest anchors testing — the catalog's application eval tools (DeepEval, RAGAS, promptfoo) measure products; this measures models. Key Features 400+ tasks with versioned definitions (changes bump the version, protecting comparability) Backend agnostic: hf, vllm, sglang, gguf, OpenAI compatible APIs, and more via model Log likelihood, generation, and multiple choice evaluation modes with few shot control YAML defined custom tasks; batch evaluation and results caching Architecture / How It Works Each task is a YAML/Python definition (dataset, prompt template, few shot policy, metric); a model adapter exposes loglikelihood/generate primitives per backend; the runner shards examples, queries the model, and aggregates metrics with versioned task hashes recorded in results — the mechanism behind its reproducibility guarantees. Getting Started Use Cases 1. Scenario : validating a fine tune didn't regress general capability — run the same task suite on base and tuned checkpoints and diff 2. Scenario : producing model card benchmark tables that reviewers can reproduce exactly 3. Scenario where this is NOT the right fit : measuring whether your RAG app answers customer questions correctly — that's an application eval; use DeepEval/RAGAS class tools instead Strengths Comparability is the product: versioned tasks and standard prompts make numbers citable, which no ad hoc eval script achieves Backend breadth means the same suite runs on a laptop GGUF and a multi GPU vLLM server Limitations / When NOT to Use Academic benchmarks correlate weakly with application quality — treat scores as capability floors, not product metrics Contamination caveats apply: public benchmark data leaks into training sets, and the harness can't detect that Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID lm evaluation harness rather than duplicating details. Resources GitHub Buzz & Reception 13.2k GitHub stars (verified via API 2026 07 08); MIT; actively maintained by EleutherAI with broad community contribution. Cited as the evaluation methodology in a large share of open model releases. Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "manus",
@@ -6006,6 +6404,87 @@
       "word_count": 371,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows. Paid commercial license. Best for scriptable expert annotation.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>A scriptable, model-in-the-loop annotation tool for NLP tasks, where small Python 'recipes' can actively select the most useful examples to label next, improving annotation efficiency.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Prodigy earns a place in the Arsenal because it directly addresses a recurring decision point: you want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Model-in-the-loop active learning for annotation</li>\n<li>Scriptable recipes for custom workflows</li>\n<li>Paid, one-time-license desktop/server tool</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A recipe script controls what's shown to the annotator next (often guided by a model's uncertainty), and annotated examples can be fed back to retrain that model iteratively.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Install via paid Prodigy license instructions\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks</li>\n<li><strong>Scenario</strong>: you're comfortable writing small Python recipes to customize the annotation workflow</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need a free, open-source tool (Prodigy is a paid, one-time-license product) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks</li>\n<li>You're comfortable writing small Python recipes to customize the annotation workflow</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need a free, open-source tool (Prodigy is a paid, one-time-license product)</li>\n<li>You need multi-modal (image/video/audio) labeling beyond Prodigy's primary NLP focus</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./argilla.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Argilla</a>, <a href=\"./label-studio.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Label Studio</a>, <a href=\"./scale-ai.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Scale AI</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>prodigy</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://prodi.gy/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://prodi.gy/docs/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for data-labeling.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Scriptable annotation tool for NLP, data labeling, and model in the loop workflows. Paid commercial license. Best for scriptable expert annotation. Overview A scriptable, model in the loop annotation tool for NLP tasks, where small Python 'recipes' can actively select the most useful examples to label next, improving annotation efficiency. Why It's in the Arsenal Prodigy earns a place in the Arsenal because it directly addresses a recurring decision point: you want a scriptable, model in the loop annotation tool to actively improve labeling efficiency for NLP tasks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Model in the loop active learning for annotation Scriptable recipes for custom workflows Paid, one time license desktop/server tool Architecture / How It Works A recipe script controls what's shown to the annotator next (often guided by a model's uncertainty), and annotated examples can be fed back to retrain that model iteratively. Getting Started Use Cases 1. Scenario : you want a scriptable, model in the loop annotation tool to actively improve labeling efficiency for NLP tasks 2. Scenario : you're comfortable writing small Python recipes to customize the annotation workflow 3. Scenario where this is NOT the right fit : you need a free, open source tool (Prodigy is a paid, one time license product) — evaluate an alternative instead Strengths You want a scriptable, model in the loop annotation tool to actively improve labeling efficiency for NLP tasks You're comfortable writing small Python recipes to customize the annotation workflow Limitations / When NOT to Use You need a free, open source tool (Prodigy is a paid, one time license product) You need multi modal (image/video/audio) labeling beyond Prodigy's primary NLP focus Integration Patterns Compare against Argilla, Label Studio, Scale AI before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID prodigy. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for data labeling. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "promptflow",
+      "name": "Prompt flow (Microsoft)",
+      "type": "tool",
+      "job": [
+        "orchestration",
+        "evaluation"
+      ],
+      "description": "Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML",
+      "url": "content/tools/orchestration/promptflow",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (MIT); Azure AI integration billed separately if used",
+      "tags": [
+        "llm",
+        "agents",
+        "evaluation"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source locally; Azure services are pay-as-you-go",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/microsoft/promptflow",
+      "docs_url": "https://microsoft.github.io/promptflow/",
+      "github_url": "https://github.com/microsoft/promptflow",
+      "alternatives": [
+        "langfuse",
+        "promptfoo"
+      ],
+      "integrates_with": [
+        "azure-ai-studio"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "orchestration",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Your organization is on Azure and wants one artifact from prototype to production — a flow authored locally runs unchanged as an Azure ML/AI Studio managed endpoint, with the same tracing and evaluation attached",
+        "You want evaluation wired into development, not bolted on — batch runs execute a flow over a dataset and score it with evaluation flows, making prompt changes measurable before deploy"
+      ],
+      "avoid_when": [
+        "You need dynamic agentic control flow (loops, planner-driven tool selection, multi-agent handoffs) — Prompt flow's DAG model fits pipeline-shaped apps; agent frameworks fit open-ended ones",
+        "You're avoiding ecosystem coupling — outside Azure, the deploy/monitor story thins and general-purpose frameworks plus a dedicated eval tool cover the same ground"
+      ],
+      "version_tracked": null,
+      "verdict": "solid-choice",
+      "verdict_rationale": "The strongest option for Azure-centric teams because the local-to-managed-endpoint path is real; elsewhere a competent but ecosystem-flavored choice",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/orchestration/promptflow.md",
+      "slug": "promptflow",
+      "section_path": "content/tools/orchestration",
+      "display_name": "Prompt flow (Microsoft)",
+      "summary": "Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 457,
+      "body_html": "<h2>Overview</h2>\n<p>Prompt flow is Microsoft's development suite for LLM applications: flows are DAGs of Python and LLM nodes defined in YAML, executed with full tracing, visualized in a local UI, batch-run over datasets for evaluation, and deployable as-is to Azure ML / AI Studio managed endpoints. It bundles what is usually three tools — orchestration, tracing, and evaluation — into one flow artifact.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Its distinctive mechanism is the single-artifact lifecycle: the same flow definition is the dev harness, the eval target, and the production deployment, which eliminates the rewrite step where most prototype quality evaporates. For the large population of Azure-committed teams it's the default answer, and its built-in batch-evaluation loop is a pattern worth stealing even if you don't adopt the tool.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Flows as YAML DAGs of Python/LLM/prompt nodes with variants for A/B-ing prompts</li>\n<li>Local visual trace UI showing every node's inputs, outputs, latency, and token usage</li>\n<li>Batch runs + evaluation flows: score a flow over a dataset with LLM-graded or coded metrics</li>\n<li>One-command deployment of a flow to Azure ML endpoints; VS Code extension for authoring</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A flow directory (flow.dag.yaml + node sources) is the unit of everything: the executor resolves the DAG, streams traces per node, and exposes the flow as a function, a batch job, or an HTTP endpoint. Evaluation is the same machinery pointed at outputs — an evaluation flow consumes another flow's batch results and emits metrics, so eval infra is not a separate system.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install promptflow promptflow-tools\npf flow init --flow my_flow --type chat\npf flow test --flow my_flow --interactive\npf run create --flow my_flow --data data.jsonl   # batch run for evaluation\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: an Azure-based team shipping a RAG or copilot app that must move from notebook to managed endpoint without a rewrite</li>\n<li><strong>Scenario</strong>: gating prompt changes on batch-eval scores over a golden dataset before deployment</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: an autonomous agent that plans its own tool calls at runtime — the static DAG model is the wrong shape; use an agent framework</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Prototype-to-production continuity on Azure is genuinely unmatched by framework-plus-glue stacks</li>\n<li>Evaluation as a first-class flow type builds the measure-before-ship habit into the workflow</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>DAG-shaped: poor fit for dynamic agentic control flow</li>\n<li>Value concentrates inside Azure; standalone users trade ecosystem coupling for features other stacks match</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>promptflow</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/microsoft/promptflow\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://microsoft.github.io/promptflow/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>11.2k GitHub stars (verified via API 2026-07-08); MIT; Microsoft-maintained. The reference LLM-app toolchain within the Azure AI ecosystem.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "Overview Prompt flow is Microsoft's development suite for LLM applications: flows are DAGs of Python and LLM nodes defined in YAML, executed with full tracing, visualized in a local UI, batch run over datasets for evaluation, and deployable as is to Azure ML / AI Studio managed endpoints. It bundles what is usually three tools — orchestration, tracing, and evaluation — into one flow artifact. Why It's in the Arsenal Its distinctive mechanism is the single artifact lifecycle: the same flow definition is the dev harness, the eval target, and the production deployment, which eliminates the rewrite step where most prototype quality evaporates. For the large population of Azure committed teams it's the default answer, and its built in batch evaluation loop is a pattern worth stealing even if you don't adopt the tool. Key Features Flows as YAML DAGs of Python/LLM/prompt nodes with variants for A/B ing prompts Local visual trace UI showing every node's inputs, outputs, latency, and token usage Batch runs + evaluation flows: score a flow over a dataset with LLM graded or coded metrics One command deployment of a flow to Azure ML endpoints; VS Code extension for authoring Architecture / How It Works A flow directory (flow.dag.yaml + node sources) is the unit of everything: the executor resolves the DAG, streams traces per node, and exposes the flow as a function, a batch job, or an HTTP endpoint. Evaluation is the same machinery pointed at outputs — an evaluation flow consumes another flow's batch results and emits metrics, so eval infra is not a separate system. Getting Started Use Cases 1. Scenario : an Azure based team shipping a RAG or copilot app that must move from notebook to managed endpoint without a rewrite 2. Scenario : gating prompt changes on batch eval scores over a golden dataset before deployment 3. Scenario where this is NOT the right fit : an autonomous agent that plans its own tool calls at runtime — the static DAG model is the wrong shape; use an agent framework Strengths Prototype to production continuity on Azure is genuinely unmatched by framework plus glue stacks Evaluation as a first class flow type builds the measure before ship habit into the workflow Limitations / When NOT to Use DAG shaped: poor fit for dynamic agentic control flow Value concentrates inside Azure; standalone users trade ecosystem coupling for features other stacks match Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID promptflow rather than duplicating details. Resources GitHub Docs Buzz & Reception 11.2k GitHub stars (verified via API 2026 07 08); MIT; Microsoft maintained. The reference LLM app toolchain within the Azure AI ecosystem. Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "promptfoo",

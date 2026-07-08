@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Prompt flow (Microsoft)](./promptflow.md)
 - [AGNT.Hub](./agnt-hub.md)
 - [Cloudskill](./cloudskill.md)
 - [Empromptu AI](./empromptu-ai.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [SeaTicket](./seaticket.md)
 - [Apache Airflow](./airflow.md)
 - [Dagster](./dagster.md)
-- [Letta](./letta.md)
 
 ### Most Popular
 
@@ -55,6 +55,7 @@ _No star-tracked entries yet._
 - [Memoriq](./memoriq.md) — Private AI memory layer that learns from your conversations and documents
 - [OrchestraML](./orchestraml.md) — Automate end-to-end ML workflows from data prep to deployment using AI agents
 - [Prefect](./prefect.md) — Python workflow orchestration framework useful for AI data, eval, and batch jobs
+- [Prompt flow (Microsoft)](./promptflow.md) — Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML
 - [Pydantic AI](./pydantic-ai-tool.md) — Pydantic agent framework focused on typed outputs, tools, and production Python apps
 - [Redis](./redis-memory.md) — In-memory data store commonly used for caching, session memory, queues, and vector search
 - [SeaTicket](./seaticket.md) — Unify and resolve customer-support issues with autonomous AI agents

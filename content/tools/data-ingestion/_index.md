@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Great Expectations (GX Core)](./great-expectations.md)
 - [Agent Reach](./agent-reach.md)
 - [olmOCR](./olmocr.md)
 - [Browserbase](./browserbase.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Argilla](./argilla.md)
 - [Crawl4AI](./crawl4ai-tool.md)
 - [Firecrawl](./firecrawl-tool.md)
-- [Jina AI Reader](./jina-reader.md)
 
 ### Most Popular
 
@@ -50,6 +50,7 @@ _No star-tracked entries yet._
 - [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
+- [Great Expectations (GX Core)](./great-expectations.md) — The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on
 - [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 - [Label Studio](./label-studio.md) — An open-source data labeling platform for ML and AI datasets
 - [olmOCR](./olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
