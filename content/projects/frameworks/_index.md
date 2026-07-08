@@ -34,6 +34,8 @@ Before selecting a framework:
 ### Recently Added
 
 - [Speech To Speech](./speech-to-speech.md)
+- [Supervision](./supervision.md)
+- [Ultralytics YOLO](./ultralytics.md)
 - [Uiverse Design](./uiverse-design.md)
 - [AutoGen](./autogen.md)
 - [AutoGPT](./autogpt.md)
@@ -41,8 +43,6 @@ Before selecting a framework:
 - [Dify](./dify.md)
 - [DSPy](./dspy.md)
 - [Google ADK](./google-adk.md)
-- [Haystack](./haystack.md)
-- [LangChain](./langchain.md)
 
 ### Most Popular
 
@@ -51,11 +51,11 @@ Before selecting a framework:
 - [LangChain](./langchain.md) — ⭐ 139206
 - [OpenHands](./openhands.md) — ⭐ 76854
 - [MetaGPT](./metagpt.md) — ⭐ 68769
+- [Ultralytics YOLO](./ultralytics.md) — ⭐ 59255
 - [AutoGen](./autogen.md) — ⭐ 58925
 - [CrewAI](./crewai.md) — ⭐ 53462
 - [LlamaIndex](./llamaindex.md) — ⭐ 50109
-- [DSPy](./dspy.md) — ⭐ 35010
-- [LangGraph](./langgraph.md) — ⭐ 34644
+- [Supervision](./supervision.md) — ⭐ 47365
 
 ### Browse All
 
@@ -78,5 +78,7 @@ Before selecting a framework:
 - [Semantic Kernel](./semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
 - [Smolagents](./smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
 - [Speech To Speech](./speech-to-speech.md) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
+- [Supervision](./supervision.md) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
+- [Ultralytics YOLO](./ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API

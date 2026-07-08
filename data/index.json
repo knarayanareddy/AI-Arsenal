@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T18:13:42.512Z",
-    "total_projects": 73,
+    "generated_at": "2026-07-08T18:26:20.979Z",
+    "total_projects": 86,
     "total_tools": 113,
     "total_papers": 44,
     "total_tips": 102,
@@ -574,6 +574,25 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "anything-llm",
+      "type": "project",
+      "name": "AnythingLLM",
+      "description": "All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required",
+      "tags": [
+        "rag",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/anything-llm.md",
+      "url": "content/projects/data-and-retrieval/anything-llm",
+      "last_updated": "2026-07-08",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -1690,6 +1709,25 @@
       "featured": false
     },
     {
+      "id": "continue",
+      "type": "project",
+      "name": "Continue",
+      "description": "Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local",
+      "tags": [
+        "code-gen",
+        "agents",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/continue.md",
+      "url": "content/projects/agent-systems/continue",
+      "last_updated": "2026-07-08",
+      "category": "code-generation",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cost-freemium",
       "type": "guide",
       "name": "Tools by Cost — Freemium",
@@ -2584,6 +2622,25 @@
       "featured": false
     },
     {
+      "id": "faster-whisper",
+      "type": "project",
+      "name": "faster-whisper",
+      "description": "Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs",
+      "tags": [
+        "voice",
+        "inference",
+        "quantization"
+      ],
+      "path": "content/projects/inference-engines/faster-whisper.md",
+      "url": "content/projects/inference-engines/faster-whisper",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "fedus-2021-switch-transformer",
       "type": "paper",
       "name": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
@@ -3025,6 +3082,25 @@
       "url": "content/tools/dx-and-tooling/gradio",
       "last_updated": "2026-06-30",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "graphrag",
+      "type": "project",
+      "name": "GraphRAG",
+      "description": "Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't",
+      "tags": [
+        "rag",
+        "graphs",
+        "retrieval"
+      ],
+      "path": "content/projects/data-and-retrieval/graphrag.md",
+      "url": "content/projects/data-and-retrieval/graphrag",
+      "last_updated": "2026-07-08",
+      "category": "rag",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -4556,6 +4632,25 @@
       "featured": false
     },
     {
+      "id": "lobe-chat",
+      "type": "project",
+      "name": "LobeChat (LobeHub)",
+      "description": "Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "agents"
+      ],
+      "path": "content/projects/agent-systems/lobe-chat.md",
+      "url": "content/projects/agent-systems/lobe-chat",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "local-first",
       "type": "architecture",
       "name": "Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling",
@@ -5542,6 +5637,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "onyx",
+      "type": "project",
+      "name": "Onyx (formerly Danswer)",
+      "description": "Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval",
+      "tags": [
+        "rag",
+        "self-hosted",
+        "retrieval"
+      ],
+      "path": "content/projects/data-and-retrieval/onyx.md",
+      "url": "content/projects/data-and-retrieval/onyx",
+      "last_updated": "2026-07-08",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -7002,6 +7116,25 @@
       "featured": false
     },
     {
+      "id": "sam2",
+      "type": "project",
+      "name": "SAM 2 (Segment Anything Model 2)",
+      "description": "Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory",
+      "tags": [
+        "vision",
+        "multimodal",
+        "research"
+      ],
+      "path": "content/projects/foundation-models/sam2.md",
+      "url": "content/projects/foundation-models/sam2",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "sandbox-code-execution-tools",
       "type": "tip",
       "name": "Add Resource and Network Limits to Sandboxed Code Execution Calls",
@@ -7072,6 +7205,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "screenshot-to-code",
+      "type": "project",
+      "name": "screenshot-to-code",
+      "description": "Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support",
+      "tags": [
+        "code-gen",
+        "multimodal",
+        "vision"
+      ],
+      "path": "content/projects/agent-systems/screenshot-to-code.md",
+      "url": "content/projects/agent-systems/screenshot-to-code",
+      "last_updated": "2026-07-08",
+      "category": "code-generation",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7426,6 +7578,25 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "skyvern",
+      "type": "project",
+      "name": "Skyvern",
+      "description": "LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors",
+      "tags": [
+        "agents",
+        "tool-use",
+        "vision"
+      ],
+      "path": "content/projects/agent-systems/skyvern.md",
+      "url": "content/projects/agent-systems/skyvern",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -8024,6 +8195,25 @@
       "featured": false
     },
     {
+      "id": "supervision",
+      "type": "project",
+      "name": "Supervision",
+      "description": "Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools",
+      "tags": [
+        "vision",
+        "data",
+        "tool-use"
+      ],
+      "path": "content/projects/frameworks/supervision.md",
+      "url": "content/projects/frameworks/supervision",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "surrealdb",
       "type": "project",
       "name": "SurrealDB",
@@ -8059,6 +8249,25 @@
       "category": "code",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tabby",
+      "type": "project",
+      "name": "Tabby",
+      "description": "Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations",
+      "tags": [
+        "code-gen",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/agent-systems/tabby.md",
+      "url": "content/projects/agent-systems/tabby",
+      "last_updated": "2026-07-08",
+      "category": "code-generation",
+      "maturity": "production",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -8551,6 +8760,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "watching",
+      "featured": false
+    },
+    {
+      "id": "ultralytics",
+      "type": "project",
+      "name": "Ultralytics YOLO",
+      "description": "The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API",
+      "tags": [
+        "vision",
+        "inference",
+        "training"
+      ],
+      "path": "content/projects/frameworks/ultralytics.md",
+      "url": "content/projects/frameworks/ultralytics",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "self-hostable",
+      "status": "active",
       "featured": false
     },
     {
@@ -9182,6 +9410,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "whisperx",
+      "type": "project",
+      "name": "WhisperX",
+      "description": "Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput",
+      "tags": [
+        "voice",
+        "inference",
+        "data"
+      ],
+      "path": "content/projects/inference-engines/whisperx.md",
+      "url": "content/projects/inference-engines/whisperx",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },

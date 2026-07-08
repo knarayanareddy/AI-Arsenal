@@ -33,6 +33,8 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [faster-whisper](./faster-whisper.md)
+- [WhisperX](./whisperx.md)
 - [llama.cpp](./llama-cpp.md)
 - [Llamafile](./llamafile.md)
 - [LMDeploy](./lmdeploy.md)
@@ -48,11 +50,14 @@ Before selecting an inference engine:
 - [vLLM](./vllm.md) — ⭐ 82772
 - [SGLang](./sglang.md) — ⭐ 28967
 - [Llamafile](./llamafile.md) — ⭐ 24936
+- [faster-whisper](./faster-whisper.md) — ⭐ 24114
+- [WhisperX](./whisperx.md) — ⭐ 22968
 - [Text Generation Inference](./text-generation-inference.md) — ⭐ 10863
 - [LMDeploy](./lmdeploy.md) — ⭐ 7895
 
 ### Browse All
 
+- [faster-whisper](./faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
 - [LMDeploy](./lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
@@ -60,3 +65,4 @@ Before selecting an inference engine:
 - [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
 - [Text Generation Inference](./text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
 - [vLLM](./vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
+- [WhisperX](./whisperx.md) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput

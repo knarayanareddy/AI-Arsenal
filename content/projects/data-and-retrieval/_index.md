@@ -33,6 +33,9 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [AnythingLLM](./anything-llm.md)
+- [GraphRAG](./graphrag.md)
+- [Onyx (formerly Danswer)](./onyx.md)
 - [zvec](./zvec.md)
 - [Supabase](./supabase.md)
 - [SurrealDB](./surrealdb.md)
@@ -40,9 +43,6 @@ Before selecting a data/retrieval component:
 - [Crawl4AI](./crawl4ai.md)
 - [Docling](./docling.md)
 - [Firecrawl](./firecrawl.md)
-- [LanceDB](./lancedb.md)
-- [LlamaParse](./llamaparse.md)
-- [Milvus](./milvus.md)
 
 ### Most Popular
 
@@ -50,22 +50,25 @@ Before selecting a data/retrieval component:
 - [RAGFlow](./ragflow.md) — ⭐ 82655
 - [Supabase](./supabase.md) — ⭐ 74300
 - [Crawl4AI](./crawl4ai.md) — ⭐ 68406
+- [AnythingLLM](./anything-llm.md) — ⭐ 62924
 - [Docling](./docling.md) — ⭐ 61495
 - [Milvus](./milvus.md) — ⭐ 44762
+- [GraphRAG](./graphrag.md) — ⭐ 34257
 - [Qdrant](./qdrant.md) — ⭐ 32155
-- [Chroma](./chroma.md) — ⭐ 28419
-- [SurrealDB](./surrealdb.md) — ⭐ 28000
-- [pgvector](./pgvector.md) — ⭐ 21738
+- [Onyx (formerly Danswer)](./onyx.md) — ⭐ 30772
 
 ### Browse All
 
+- [AnythingLLM](./anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [Crawl4AI](./crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [Docling](./docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
 - [Firecrawl](./firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
+- [GraphRAG](./graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [LanceDB](./lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LlamaParse](./llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text
 - [Milvus](./milvus.md) — Cloud-native vector database for large-scale ANN search and production vector workloads
+- [Onyx (formerly Danswer)](./onyx.md) — Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
 - [pgvector](./pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Pinecone](./pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
 - [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search

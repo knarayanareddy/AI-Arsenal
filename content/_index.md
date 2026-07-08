@@ -12,7 +12,7 @@
 | [community](./community/) | 48 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
-| [projects](./projects/) | 73 entries | 2026-07-08 |
+| [projects](./projects/) | 86 entries | 2026-07-08 |
 | [research](./research/) | 48 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
@@ -22,15 +22,15 @@
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [AnythingLLM](./projects/data-and-retrieval/anything-llm.md)
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md)
 - [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./research/evaluation-and-safety/chen-2021-codex.md)
 - [PaLM: Scaling Language Modeling with Pathways](./research/foundational/chowdhery-2022-palm.md)
 - [Deep Reinforcement Learning from Human Preferences](./research/training-and-alignment/christiano-2017-rlhf.md)
 - [ClearML](./tools/model-layer/clearml.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
+- [Continue](./projects/agent-systems/continue.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
-- [Elasticsearch](./tools/data-ingestion/elasticsearch.md)
-- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./research/architectures/fedus-2021-switch-transformer.md)
 
 ## Most Popular
 
@@ -43,7 +43,7 @@
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
 - [vLLM](./projects/inference-engines/vllm.md) — ⭐ 82772
 - [RAGFlow](./projects/data-and-retrieval/ragflow.md) — ⭐ 82655
-- [OpenHands](./projects/frameworks/openhands.md) — ⭐ 76854
+- [LobeChat (LobeHub)](./projects/agent-systems/lobe-chat.md) — ⭐ 79620
 
 ## Browse All
 
@@ -77,6 +77,7 @@
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
+- [AnythingLLM](./projects/data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [Arena-Hard-Auto](./benchmarks/evaluation-methods/arena-hard.md) — 
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
@@ -96,4 +97,3 @@
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
-- [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
