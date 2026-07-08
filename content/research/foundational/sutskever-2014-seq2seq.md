@@ -83,4 +83,4 @@ Seq2seq with attention (Bahdanau et al., 2014) directly addressed the fixed-vect
 
 - [arXiv abstract](https://arxiv.org/abs/1409.3215)
 - [PDF](https://arxiv.org/pdf/1409.3215)
-- [NeurIPS 2014 paper page](https://papers.nips.cc/paper/2014/hash/a14ac55a4f27472c5d894ec1c3c743d2-Abstract.html)
+- [NeurIPS 2014 paper page](https://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks)
