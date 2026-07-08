@@ -16,21 +16,21 @@
 | [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
-| [tools](./tools/) | 131 entries | 2026-07-08 |
+| [tools](./tools/) | 189 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [AgentOps](./tools/evaluation-and-observability/agentops.md)
+- [Agno](./tools/orchestration/agno.md)
+- [Aider](./tools/dx-and-tooling/aider.md)
+- [Airbyte](./tools/data-ingestion/airbyte.md)
+- [Cerebras Inference](./tools/model-layer/cerebras-inference.md)
+- [Claude Code](./tools/dx-and-tooling/claude-code.md)
+- [Cline](./tools/dx-and-tooling/cline.md)
+- [Cloudflare Workers AI](./tools/serving-and-deployment/cloudflare-workers-ai.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
-- [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
-- [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
-- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [Orca](./tools/dx-and-tooling/orca.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
-- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
-- [Superpowers](./tools/dx-and-tooling/superpowers.md)
 
 ## Most Popular
 
@@ -66,11 +66,15 @@
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AgentOps](./tools/evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
+- [Agno](./tools/orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
+- [Aider](./tools/dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
+- [Airbyte](./tools/data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
@@ -93,7 +97,3 @@
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [BEIR](./benchmarks/retrieval-rag/beir.md) — 
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
-- [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
-- [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
-- [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates

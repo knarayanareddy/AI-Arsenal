@@ -173,11 +173,17 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [Axolotl](../model-layer/axolotl.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [DeepSpeed](../model-layer/deepspeed.md) | model layer | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
+| [Sentence Transformers](../model-layer/sentence-transformers.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
+| [SkyPilot](../serving-and-deployment/skypilot.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Together AI](../model-layer/together-ai.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
 | [torchtune](../model-layer/torchtune.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [TRL](../model-layer/trl.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Unsloth](../model-layer/unsloth.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
