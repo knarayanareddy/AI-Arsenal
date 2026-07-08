@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:22:16.623Z",
+  "generated_at": "2026-07-08T19:27:43.525Z",
   "entries": {
-    "total": 592,
+    "total": 598,
     "projects": 103,
     "tools": 171,
     "papers": 49,
@@ -11,8 +11,8 @@
     "digests": 1,
     "guides": 59,
     "build_examples": 8,
-    "architectures": 14,
-    "observability": 7,
+    "architectures": 17,
+    "observability": 10,
     "community": 23,
     "benchmarks": 30
   }
