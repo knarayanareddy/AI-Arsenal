@@ -11,7 +11,7 @@ arxiv_id: "2312.00752"
 arxiv_url: "https://arxiv.org/abs/2312.00752"
 pdf_url: "https://arxiv.org/pdf/2312.00752"
 code_url: "https://github.com/state-spaces/mamba"
-venue_url: "https://openreview.net/forum?id=tEYskw1VY2"
+venue_url: null
 
 practical_applicability: medium
 reproduction_status: reproduced
@@ -79,7 +79,6 @@ Positioned against `vaswani-2017-attention` (foundational/) as the strongest lin
 - [Paper (PDF)](https://arxiv.org/pdf/2312.00752)
 - [arXiv](https://arxiv.org/abs/2312.00752)
 - [Code](https://github.com/state-spaces/mamba)
-- [Venue](https://openreview.net/forum?id=tEYskw1VY2)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

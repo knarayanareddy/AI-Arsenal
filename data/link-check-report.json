@@ -1,2101 +1,268 @@
 {
-  "generated_at": "2026-06-30T22:36:39.470Z",
-  "mode": "all",
-  "files_checked": 504,
-  "urls_checked": 421,
+  "generated_at": "2026-07-08T16:44:15.669Z",
+  "mode": "changed-only",
+  "files_checked": 29,
+  "urls_checked": 63,
   "max_urls_per_host": 10,
-  "broken_links": [
+  "broken_links": [],
+  "warning_links": [
     {
-      "url": "https://github.com/username",
+      "url": "https://arxiv.org/abs/2104.09864",
       "ok": false,
-      "status": 404,
-      "files": [
-        "CONTRIBUTORS.md"
-      ]
-    },
-    {
-      "url": "https://github.com/pgvector/pgvector",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/intermediate/document-qa-pipeline.md",
-        "content/projects/rag/vector-databases/pgvector.md"
-      ]
-    },
-    {
-      "url": "https://github.com/instructor-ai/instructor",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/intermediate/multi-tool-agent.md",
-        "content/tools/dx-and-tooling/instructor.md"
-      ]
-    },
-    {
-      "url": "https://github.com/langfuse/langfuse",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/intermediate/multi-tool-agent.md",
-        "content/build-examples/intermediate/production-rag-api.md",
-        "content/projects/observability/tracing/langfuse.md",
-        "content/tools/dx-and-tooling/langfuse-prompts.md"
-      ]
-    },
-    {
-      "url": "https://github.com/qdrant/examples",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/intermediate/production-rag-api.md"
-      ]
-    },
-    {
-      "url": "https://github.com/run-llama/llama_index",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/intermediate/production-rag-api.md",
-        "content/build-examples/starter/basic-rag-chatbot.md",
-        "content/projects/rag/frameworks/llamaindex.md"
-      ]
-    },
-    {
-      "url": "https://github.com/fastapi/fastapi",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/intermediate/production-rag-api.md",
-        "content/tools/serving-and-deployment/fastapi.md"
-      ]
-    },
-    {
-      "url": "https://github.com/chroma-core/chroma",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/starter/basic-rag-chatbot.md",
-        "content/projects/rag/vector-databases/chroma.md"
-      ]
-    },
-    {
-      "url": "https://github.com/gradio-app/gradio",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/starter/basic-rag-chatbot.md",
-        "content/tools/dx-and-tooling/gradio.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ollama/ollama",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/starter/local-llm-chat.md",
-        "content/projects/llms/inference-engines/ollama.md"
-      ]
-    },
-    {
-      "url": "https://github.com/open-webui/open-webui",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/starter/local-llm-chat.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ggml-org/llama.cpp",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/starter/local-llm-chat.md",
-        "content/projects/llms/inference-engines/llama-cpp.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/openai-agents-python",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/build-examples/starter/simple-react-agent.md",
-        "content/projects/agents/frameworks/openai-agents-sdk.md"
-      ]
-    },
-    {
-      "url": "https://docs.langchain.com/oss/python/langgraph/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/build-examples/starter/simple-react-agent.md",
-        "content/projects/agents/frameworks/langgraph.md"
-      ]
-    },
-    {
-      "url": "https://www.llamaindex.ai/community",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/community/discord-communities.md"
-      ]
-    },
-    {
-      "url": "https://github.com/karpathy",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/andrej-karpathy.md"
-      ]
-    },
-    {
-      "url": "https://www.deeplearning.ai/the-batch/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/community/newsletters.md"
-      ]
-    },
-    {
-      "url": "https://github.com/eugeneyan",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/eugene-yan.md"
-      ]
-    },
-    {
-      "url": "https://github.com/fchollet",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/francois-chollet.md"
-      ]
-    },
-    {
-      "url": "https://github.com/hamelsmu",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/hamel-husain.md"
-      ]
-    },
-    {
-      "url": "https://github.com/hwchase17",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/harrison-chase.md"
-      ]
-    },
-    {
-      "url": "https://github.com/jxnl",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/jason-liu.md"
-      ]
-    },
-    {
-      "url": "https://github.com/logankilpatrick",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/logankilpatrick.md"
-      ]
-    },
-    {
-      "url": "https://github.com/rasbt",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/sebastian-raschka.md"
-      ]
-    },
-    {
-      "url": "https://github.com/simonw",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/simon-willison.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ThomWolf",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/community/people/thomas-wolf.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/Thomwolf",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/community/people/thomas-wolf.md"
-      ]
-    },
-    {
-      "url": "https://wandb.ai/fully-connected/gradient-dissent",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/community/podcasts.md"
-      ]
-    },
-    {
-      "url": "https://github.com/browserbase/stagehand",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/browser-agents/stagehand.md"
-      ]
-    },
-    {
-      "url": "https://github.com/InsForge/InsForge",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/coding-agents/insforge.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/autogen",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/autogen.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/autogen/discussions/7066",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/autogen.md",
-        "content/projects/agents/frameworks/microsoft-agent-framework.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/autogpt.md"
-      ]
-    },
-    {
-      "url": "https://github.com/crewAIInc/crewAI-examples",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/crewai.md"
-      ]
-    },
-    {
-      "url": "https://github.com/langgenius/dify",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/dify.md"
-      ]
-    },
-    {
-      "url": "https://github.com/langgenius/dify.git",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/dify.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/adk-python",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/google-adk.md"
-      ]
-    },
-    {
-      "url": "https://docs.dify.ai/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/dify.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/adk-samples",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/google-adk.md"
-      ]
-    },
-    {
-      "url": "https://github.com/deepset-ai/haystack",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/haystack-agents.md",
-        "content/projects/rag/frameworks/haystack.md"
-      ]
-    },
-    {
-      "url": "https://github.com/mastra-ai/mastra",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/mastra.md"
-      ]
-    },
-    {
-      "url": "https://github.com/FoundationAgents/MetaGPT",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/metagpt.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/agent-framework",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/microsoft-agent-framework.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/openai-agents-python/tree/main/examples",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/openai-agents-sdk.md"
-      ]
-    },
-    {
-      "url": "https://github.com/OpenHands/OpenHands",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/openhands.md"
-      ]
-    },
-    {
-      "url": "https://github.com/pydantic/pydantic-ai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/pydantic-ai.md",
-        "content/tools/orchestration/pydantic-ai-tool.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/semantic-kernel",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/semantic-kernel.md"
-      ]
-    },
-    {
-      "url": "https://github.com/huggingface/smolagents",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/agents/frameworks/smolagents.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/docs/smolagents",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/smolagents.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ggml-org/llama.cpp/tree/master/tools/server",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/llama-cpp.md"
-      ]
-    },
-    {
-      "url": "https://github.com/mozilla-ai/llamafile",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/llamafile.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/learn/agents-course",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/smolagents.md"
-      ]
-    },
-    {
-      "url": "https://github.com/InternLM/lmdeploy",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/lmdeploy.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ollama/ollama/blob/main/docs/api.md",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/ollama.md"
-      ]
-    },
-    {
-      "url": "https://github.com/sgl-project/sglang",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/sglang.md"
-      ]
-    },
-    {
-      "url": "https://github.com/huggingface/text-generation-inference",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/text-generation-inference.md"
-      ]
-    },
-    {
-      "url": "http://localhost:8080/generate",
-      "ok": false,
-      "error": "localhost-hostname",
-      "files": [
-        "content/projects/llms/inference-engines/text-generation-inference.md"
-      ]
-    },
-    {
-      "url": "https://github.com/vllm-project/vllm",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/vllm.md"
-      ]
-    },
-    {
-      "url": "http://localhost:8000/v1/chat/completions",
-      "ok": false,
-      "error": "localhost-hostname",
-      "files": [
-        "content/projects/llms/inference-engines/vllm.md"
-      ]
-    },
-    {
-      "url": "https://ollama.com/install.sh",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:host-rate-limited",
-      "files": [
-        "content/projects/llms/inference-engines/ollama.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/docs/text-generation-inference",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/llms/inference-engines/text-generation-inference.md"
-      ]
-    },
-    {
-      "url": "https://github.com/deepseek-ai/DeepSeek-V3",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/deepseek-v3-r1.md"
-      ]
-    },
-    {
-      "url": "https://docs.agpt.co/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/autogpt.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/CohereForAI/c4ai-command-r-plus",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/llms/open-source-models/command-r-plus.md"
-      ]
-    },
-    {
-      "url": "https://docs.all-hands.dev/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/agents/frameworks/openhands.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google-deepmind/gemma",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/gemma-3.md",
-        "content/projects/llms/open-source-models/gemma.md",
-        "content/projects/llms/open-source-models/translategemma.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/google",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/gemma-3.md"
-      ]
-    },
-    {
-      "url": "https://github.com/meta-llama/llama-models",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/llama-3.md",
-        "content/projects/llms/open-source-models/llama-models.md",
-        "content/research/papers/llama-3-herd-of-models.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/meta-llama",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/llama-3.md"
-      ]
-    },
-    {
-      "url": "https://github.com/mistralai/mistral-inference",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/mistral-inference.md",
-        "content/projects/llms/open-source-models/mistral-models.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/mistralai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/mistral-models.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/microsoft/phi-4",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/phi-4.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/PhiCookBook",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/phi-4.md",
-        "content/projects/llms/open-source-models/phi-cookbook.md"
-      ]
-    },
-    {
-      "url": "https://github.com/QwenLM/Qwen3",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/qwen-2-5.md",
-        "content/tools/model-layer/qwen-3.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/Qwen",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/qwen-2-5.md"
-      ]
-    },
-    {
-      "url": "https://github.com/QwenLM/Qwen",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/qwen.md"
-      ]
-    },
-    {
-      "url": "https://github.com/01-ai/Yi",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/yi.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/01-ai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/llms/open-source-models/yi.md"
-      ]
-    },
-    {
-      "url": "https://github.com/confident-ai/deepeval",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/evaluation/deepeval.md"
-      ]
-    },
-    {
-      "url": "https://github.com/explodinggradients/ragas",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/evaluation/ragas.md"
-      ]
-    },
-    {
-      "url": "https://github.com/agenta-ai/agenta",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/agenta.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Helicone/helicone",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/helicone.md"
-      ]
-    },
-    {
-      "url": "https://ai.google.dev/gemma",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/llms/open-source-models/gemma-3.md"
-      ]
-    },
-    {
-      "url": "https://docs.helicone.ai/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/observability/tracing/helicone.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openlit/openlit",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/openlit.md"
-      ]
-    },
-    {
-      "url": "https://github.com/traceloop/openllmetry",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/openllmetry.md"
-      ]
-    },
-    {
-      "url": "https://github.com/comet-ml/opik",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/opik.md"
-      ]
-    },
-    {
-      "url": "https://docs.openlit.io/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/observability/tracing/openlit.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Arize-ai/phoenix",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/observability/tracing/phoenix.md"
-      ]
-    },
-    {
-      "url": "https://github.com/unclecode/crawl4ai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/document-processing/crawl4ai.md",
-        "content/tools/data-ingestion/crawl4ai-tool.md"
-      ]
-    },
-    {
-      "url": "https://docs.smith.langchain.com/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/observability/tracing/langsmith-platform.md",
-        "content/tools/dx-and-tooling/langsmith-hub.md"
-      ]
-    },
-    {
-      "url": "https://lunary.ai/docs",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/observability/tracing/lunary.md"
-      ]
-    },
-    {
-      "url": "https://github.com/firecrawl/firecrawl",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/document-processing/firecrawl.md",
-        "content/tools/data-ingestion/firecrawl-tool.md"
-      ]
-    },
-    {
-      "url": "https://github.com/stanfordnlp/dspy",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/frameworks/dspy.md"
-      ]
-    },
-    {
-      "url": "https://github.com/langchain-ai/langchain",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/frameworks/langchain-rag.md",
-        "content/projects/rag/frameworks/langchain.md"
-      ]
-    },
-    {
-      "url": "https://docs.cloud.llamaindex.ai/llamaparse/getting_started",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/document-processing/llamaparse.md"
-      ]
-    },
-    {
-      "url": "https://github.com/infiniflow/ragflow",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/frameworks/ragflow.md"
-      ]
-    },
-    {
-      "url": "https://developers.llamaindex.ai/",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/frameworks/llamaindex.md"
-      ]
-    },
-    {
-      "url": "https://github.com/infiniflow/ragflow.git",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/frameworks/ragflow.md"
-      ]
-    },
-    {
-      "url": "https://github.com/neuml/txtai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/frameworks/txtai.md"
-      ]
-    },
-    {
-      "url": "https://github.com/lancedb/lancedb",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/vector-databases/lancedb.md"
-      ]
-    },
-    {
-      "url": "https://github.com/milvus-io/milvus",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/vector-databases/milvus.md"
-      ]
-    },
-    {
-      "url": "https://docs.unstructured.io/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/document-processing/unstructured.md"
-      ]
-    },
-    {
-      "url": "https://github.com/surrealdb/surrealdb",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/vector-databases/surrealdb.md"
-      ]
-    },
-    {
-      "url": "https://github.com/weaviate/weaviate",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/rag/vector-databases/weaviate.md"
-      ]
-    },
-    {
-      "url": "https://github.com/uiverse-io/galaxy",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/projects/tooling/platforms/uiverse-design.md"
-      ]
-    },
-    {
-      "url": "https://github.com/tensorflow/tensor2tensor",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/attention-is-all-you-need.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google-research/bert",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/bert.md"
-      ]
-    },
-    {
-      "url": "https://github.com/FranxYao/chain-of-thought-hub",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/chain-of-thought-prompting.md"
-      ]
-    },
-    {
-      "url": "https://docs.pinecone.io/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/vector-databases/pinecone-vector-db.md"
-      ]
-    },
-    {
-      "url": "https://github.com/deepseek-ai/DeepSeek-R1",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/deepseek-r1.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2305.18290",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/direct-preference-optimization.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2305.18290",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/direct-preference-optimization.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2210.17323",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/gptq.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2210.17323",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/gptq.md"
-      ]
-    },
-    {
-      "url": "https://github.com/IST-DASLab/gptq",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/gptq.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2404.16130",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/graphrag.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2404.16130",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/graphrag.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/graphrag",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/graphrag.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2212.10496",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/hyde.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2212.10496",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/hyde.md"
-      ]
-    },
-    {
-      "url": "https://github.com/texttron/hyde",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/hyde.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2203.02155",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/instructgpt.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2203.02155",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/instructgpt.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/following-instructions-human-feedback",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/instructgpt.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2005.14165",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/language-models-are-few-shot-learners.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2005.14165",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/language-models-are-few-shot-learners.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/gpt-3",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/language-models-are-few-shot-learners.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2407.21783",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/llama-3-herd-of-models.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2407.21783",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/llama-3-herd-of-models.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2306.05685",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/llm-as-a-judge.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2306.05685",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/llm-as-a-judge.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2106.09685",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/lora.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2106.09685",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/lora.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/LoRA",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/lora.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2305.14314",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/qlora.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2305.14314",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/qlora.md"
-      ]
-    },
-    {
-      "url": "https://github.com/artidoro/qlora",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/qlora.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2409.12122",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/qwen2-5-math.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2409.12122",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/qwen2-5-math.md"
-      ]
-    },
-    {
-      "url": "https://github.com/QwenLM/Qwen2.5-Math",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/qwen2-5-math.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2309.15217",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/ragas-paper.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2309.15217",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/ragas-paper.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2401.18059",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/raptor.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2401.18059",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/raptor.md"
-      ]
-    },
-    {
-      "url": "https://github.com/parthsarthi03/raptor",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/raptor.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2210.03629",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/react.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2210.03629",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/react.md"
-      ]
-    },
-    {
-      "url": "https://github.com/ysymyth/ReAct",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/react.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2005.11401",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/retrieval-augmented-generation.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2005.11401",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/retrieval-augmented-generation.md"
-      ]
-    },
-    {
-      "url": "https://github.com/huggingface/transformers",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/retrieval-augmented-generation.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2303.17651",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/self-refine.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2303.17651",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/self-refine.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2211.17192",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/speculative-decoding.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2211.17192",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/speculative-decoding.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google-research/google-research",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/speculative-decoding.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2405.15793",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/swe-agent.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2405.15793",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/swe-agent.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2302.04761",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/toolformer.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2302.04761",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/toolformer.md"
-      ]
-    },
-    {
-      "url": "https://github.com/lucidrains/toolformer-pytorch",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/toolformer.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2305.10601",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/tree-of-thoughts.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/pdf/2305.10601",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/tree-of-thoughts.md"
-      ]
-    },
-    {
-      "url": "https://github.com/princeton-nlp/tree-of-thought-llm",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/papers/tree-of-thoughts.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/human-eval",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://docs.trychroma.com/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/vector-databases/chroma.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/gaia-benchmark",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/abs/2311.12022",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://github.com/suzgunmirac/BIG-Bench-Hard",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/weekly-arxiv-picks.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/list/cs.CL/recent",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/weekly-arxiv-picks.md"
-      ]
-    },
-    {
-      "url": "https://arxiv.org/list/cs.AI/recent",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/research/weekly-arxiv-picks.md"
-      ]
-    },
-    {
-      "url": "https://paperswithcode.com/",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:host-rate-limited",
-      "files": [
-        "content/research/weekly-arxiv-picks.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/learn/nlp-course",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/skills/core-concepts/transformers.md",
-        "content/skills/learning-paths/ai-engineer.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/learn",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/skills/learning-paths/ai-engineer.md",
-        "content/skills/learning-paths/llm-researcher.md"
-      ]
-    },
-    {
-      "url": "https://github.com/pixiebrix/agent-browser-shield",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/data-ingestion/agent-browser-shield.md"
-      ]
-    },
-    {
-      "url": "https://github.com/argilla-io/argilla",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/data-ingestion/argilla.md"
-      ]
-    },
-    {
-      "url": "https://paperswithcode.com/dataset/math",
-      "ok": false,
-      "status": 302,
-      "error": "redirect-unsafe:host-rate-limited",
-      "files": [
-        "content/research/sota-benchmarks.md"
-      ]
-    },
-    {
-      "url": "https://github.com/HumanSignal/label-studio",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/data-ingestion/label-studio.md"
-      ]
-    },
-    {
-      "url": "https://docs.firecrawl.dev/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/tools/data-ingestion/firecrawl-tool.md"
-      ]
-    },
-    {
-      "url": "https://github.com/microsoft/playwright",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/data-ingestion/playwright.md"
-      ]
-    },
-    {
-      "url": "https://weaviate.io/developers/weaviate/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
-      "files": [
-        "content/projects/rag/vector-databases/weaviate.md"
-      ]
-    },
-    {
-      "url": "https://github.com/puppeteer/puppeteer",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/data-ingestion/puppeteer.md"
-      ]
-    },
-    {
-      "url": "https://prodi.gy/docs/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/tools/data-ingestion/prodigy.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Chainlit/chainlit",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/chainlit.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=claudeartifactplayer",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/claude-artifact-player.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=dropstone.ai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/dropstone-3.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=pomelli.google",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/google-pomelli-2-0.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=honen.app",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/honen.md"
-      ]
-    },
-    {
-      "url": "https://github.com/google/mesop",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/mesop.md"
-      ]
-    },
-    {
-      "url": "https://langfuse.com/docs/prompts",
-      "ok": false,
-      "status": 307,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/tools/dx-and-tooling/langfuse-prompts.md"
-      ]
-    },
-    {
-      "url": "https://recursi.dev",
-      "ok": false,
-      "error": "dns-ENOTFOUND",
-      "files": [
-        "content/tools/dx-and-tooling/recursi.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=shellmate.ai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/shellmate.md"
-      ]
-    },
-    {
-      "url": "https://github.com/streamlit/streamlit",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/dx-and-tooling/streamlit.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=astra.security",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/astra-autonomous-pentest.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=conan.app",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/conan.md"
-      ]
-    },
-    {
-      "url": "https://github.com/Giskard-AI/giskard",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/giskard.md"
-      ]
-    },
-    {
-      "url": "https://github.com/guardrails-ai/guardrails",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/guardrails-ai.md"
-      ]
-    },
-    {
-      "url": "https://github.com/meta-llama/PurpleLlama",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/llamaguard.md"
-      ]
-    },
-    {
-      "url": "https://github.com/NVIDIA/NeMo-Guardrails",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/nemo-guardrails.md"
-      ]
-    },
-    {
-      "url": "https://github.com/openai/evals",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/openai-evals.md"
-      ]
-    },
-    {
-      "url": "https://docs.promptlayer.com/",
-      "ok": false,
-      "status": 308,
-      "error": "redirect-unsafe:invalid-url",
-      "files": [
-        "content/tools/dx-and-tooling/promptlayer.md"
-      ]
-    },
-    {
-      "url": "https://github.com/promptfoo/promptfoo",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/promptfoo.md"
-      ]
-    },
-    {
-      "url": "https://github.com/protectai/rebuff",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/rebuff.md"
-      ]
-    },
-    {
-      "url": "https://github.com/search?q=backplanes.ai",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/spotlight-by-backplanes.md"
-      ]
-    },
-    {
-      "url": "https://github.com/truera/trulens",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/evaluation-and-observability/trulens.md"
-      ]
-    },
-    {
-      "url": "https://github.com/axolotl-ai-cloud/axolotl",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/model-layer/axolotl.md"
-      ]
-    },
-    {
-      "url": "https://github.com/iterative/dvc",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/model-layer/dvc.md"
-      ]
-    },
-    {
-      "url": "https://github.com/guidance-ai/guidance",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/model-layer/guidance.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/model-layer/hugging-face-hub.md"
-      ]
-    },
-    {
-      "url": "https://huggingface.co/docs/hub/",
-      "ok": false,
-      "error": "host-rate-limited",
-      "files": [
-        "content/tools/model-layer/hugging-face-hub.md"
-      ]
-    },
-    {
-      "url": "https://github.com/hiyouga/LLaMA-Factory",
-      "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/llamafactory.md"
+        "content/research/architectures/su-2021-rope.md"
       ]
     },
     {
-      "url": "https://github.com/mlflow/mlflow",
+      "url": "https://arxiv.org/pdf/2104.09864",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/mlflow.md"
+        "content/research/architectures/su-2021-rope.md"
       ]
     },
     {
-      "url": "https://github.com/ml-explore/mlx-lm",
+      "url": "https://arxiv.org/abs/2403.04132",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/mlx-lm.md"
+        "content/research/evaluation-and-safety/chiang-2024-chatbot-arena.md"
       ]
     },
     {
-      "url": "https://github.com/dottxt-ai/outlines",
+      "url": "https://arxiv.org/pdf/2403.04132",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/outlines.md"
+        "content/research/evaluation-and-safety/chiang-2024-chatbot-arena.md"
       ]
     },
     {
-      "url": "https://github.com/huggingface/peft",
+      "url": "https://arxiv.org/abs/2009.03300",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/peft.md"
+        "content/research/evaluation-and-safety/hendrycks-2020-mmlu.md"
       ]
     },
     {
-      "url": "https://github.com/search?q=qwen.alibaba.com",
+      "url": "https://arxiv.org/pdf/2009.03300",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/qwen-3.md"
+        "content/research/evaluation-and-safety/hendrycks-2020-mmlu.md"
       ]
     },
     {
-      "url": "https://github.com/pytorch/torchtune",
+      "url": "https://arxiv.org/abs/2307.02483",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/torchtune.md"
+        "content/research/evaluation-and-safety/wei-2023-jailbroken.md"
       ]
     },
     {
-      "url": "https://github.com/unslothai/unsloth",
+      "url": "https://arxiv.org/pdf/2307.02483",
       "ok": false,
       "error": "host-rate-limited",
-      "files": [
-        "content/tools/model-layer/unsloth.md"
-      ]
-    },
-    {
-      "url": "https://wandb.ai/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:invalid-url",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/weights-biases.md"
+        "content/research/evaluation-and-safety/wei-2023-jailbroken.md"
       ]
     },
     {
-      "url": "https://github.com/wandb/wandb",
+      "url": "https://arxiv.org/abs/2203.15556",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/model-layer/weights-biases.md"
+        "content/research/foundational/hoffmann-2022-chinchilla.md"
       ]
     },
     {
-      "url": "https://github.com/search?q=agnt.hub",
+      "url": "https://arxiv.org/pdf/2203.15556",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/agnt-hub.md"
+        "content/research/foundational/hoffmann-2022-chinchilla.md"
       ]
     },
     {
-      "url": "https://github.com/apache/airflow",
+      "url": "https://arxiv.org/abs/2205.14135",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/airflow.md"
+        "content/research/inference-and-efficiency/dao-2022-flashattention.md"
       ]
     },
     {
-      "url": "https://github.com/search?q=cloudskill.ai",
+      "url": "https://arxiv.org/pdf/2205.14135",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/cloudskill.md"
+        "content/research/inference-and-efficiency/dao-2022-flashattention.md"
       ]
     },
     {
-      "url": "https://github.com/dagster-io/dagster",
+      "url": "https://arxiv.org/abs/2309.06180",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/dagster.md"
+        "content/research/inference-and-efficiency/kwon-2023-pagedattention.md"
       ]
     },
     {
-      "url": "https://github.com/letta-ai/letta",
+      "url": "https://arxiv.org/pdf/2309.06180",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/letta.md"
+        "content/research/inference-and-efficiency/kwon-2023-pagedattention.md"
       ]
     },
     {
-      "url": "https://github.com/mem0ai/mem0",
+      "url": "https://arxiv.org/abs/2306.00978",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/mem0.md"
+        "content/research/inference-and-efficiency/lin-2023-awq.md"
       ]
     },
     {
-      "url": "https://github.com/PrefectHQ/prefect",
+      "url": "https://arxiv.org/pdf/2306.00978",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/prefect.md"
+        "content/research/inference-and-efficiency/lin-2023-awq.md"
       ]
     },
     {
-      "url": "https://github.com/redis/redis",
+      "url": "https://arxiv.org/abs/2004.04906",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/orchestration/redis-memory.md"
+        "content/research/retrieval-and-memory/karpukhin-2020-dpr.md"
       ]
     },
     {
-      "url": "https://github.com/getzep/zep",
+      "url": "https://arxiv.org/pdf/2004.04906",
       "ok": false,
       "error": "host-rate-limited",
-      "files": [
-        "content/tools/orchestration/zep.md"
-      ]
-    },
-    {
-      "url": "https://learn.microsoft.com/en-us/azure/ai-studio/",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:invalid-url",
+      "soft": true,
       "files": [
-        "content/tools/serving-and-deployment/azure-ai-studio.md"
+        "content/research/retrieval-and-memory/karpukhin-2020-dpr.md"
       ]
     },
     {
-      "url": "https://github.com/bentoml/BentoML",
+      "url": "https://arxiv.org/abs/2004.12832",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/serving-and-deployment/bentoml.md"
+        "content/research/retrieval-and-memory/khattab-2020-colbert.md"
       ]
     },
     {
-      "url": "https://huggingface.co/inference-endpoints",
+      "url": "https://arxiv.org/pdf/2004.12832",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/serving-and-deployment/hf-inference-endpoints.md"
+        "content/research/retrieval-and-memory/khattab-2020-colbert.md"
       ]
     },
     {
-      "url": "https://huggingface.co/docs/inference-endpoints/",
+      "url": "https://arxiv.org/abs/2310.08560",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "content/tools/serving-and-deployment/hf-inference-endpoints.md"
+        "content/research/retrieval-and-memory/packer-2023-memgpt.md"
       ]
     },
     {
-      "url": "https://github.com/BerriAI/litellm",
+      "url": "https://arxiv.org/pdf/2310.08560",
       "ok": false,
       "error": "host-rate-limited",
-      "files": [
-        "content/tools/serving-and-deployment/litellm.md"
-      ]
-    },
-    {
-      "url": "http://attacker.example/redirect-to-169.254.169.254/latest/meta-data/iam/security-credentials/",
-      "ok": false,
-      "error": "dns-ENOTFOUND",
-      "files": [
-        "docs/policies/redteam-audit.md"
-      ]
-    },
-    {
-      "url": "https://attacker/?",
-      "ok": false,
-      "error": "bare-hostname",
+      "soft": true,
       "files": [
-        "docs/policies/redteam-audit.md",
-        "tests/fixtures/xss-sample.md"
+        "content/research/retrieval-and-memory/packer-2023-memgpt.md"
       ]
     },
     {
-      "url": "https://github.com/knarayanareddy/AI-Arsenal/actions/workflows/release.yml",
+      "url": "https://arxiv.org/abs/2312.10997",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "docs/release-process.md"
+        "content/research/surveys/gao-2023-rag-survey.md"
       ]
     },
     {
-      "url": "https://github.com/knarayanareddy/AI-Arsenal/releases/tag/v1.1.0",
+      "url": "https://arxiv.org/pdf/2312.10997",
       "ok": false,
       "error": "host-rate-limited",
-      "files": [
-        "docs/release-process.md"
-      ]
-    },
-    {
-      "url": "http://attacker.example/redirect-to-169.254.169.254/...`",
-      "ok": false,
-      "error": "dns-ENOTFOUND",
-      "files": [
-        "redteam-report.md"
-      ]
-    },
-    {
-      "url": "http://169.254.169.254/latest/meta-data/`",
-      "ok": false,
-      "error": "private-ip-169.254.169.254",
+      "soft": true,
       "files": [
-        "redteam-report.md"
+        "content/research/surveys/gao-2023-rag-survey.md"
       ]
     },
     {
-      "url": "http://169.254.169.254/latest/meta-data/",
+      "url": "https://arxiv.org/abs/2311.05232",
       "ok": false,
-      "error": "private-ip-169.254.169.254",
-      "files": [
-        "redteam-report.md"
-      ]
-    },
-    {
-      "url": "https://github.com/<your-fork",
-      "ok": false,
       "error": "host-rate-limited",
-      "files": [
-        "redteam-report.md"
-      ]
-    },
-    {
-      "url": "https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release",
-      "ok": false,
-      "status": 400,
+      "soft": true,
       "files": [
-        "docs/data-release.md"
+        "content/research/surveys/huang-2023-hallucination-survey.md"
       ]
     },
     {
-      "url": "https://github.com/example/bad",
+      "url": "https://arxiv.org/pdf/2311.05232",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "tests/fixtures/bad-id-mismatch.md",
-        "tests/fixtures/bad-project-bad-taxonomy.md",
-        "tests/fixtures/content-styled-bad-id-mismatch.md"
+        "content/research/surveys/huang-2023-hallucination-survey.md"
       ]
     },
     {
-      "url": "https://github.com/example/sample",
+      "url": "https://arxiv.org/abs/2308.11432",
       "ok": false,
       "error": "host-rate-limited",
+      "soft": true,
       "files": [
-        "tests/fixtures/sample-project.md"
+        "content/research/surveys/wang-2023-agents-survey.md"
       ]
     },
     {
-      "url": "https://github.com/example/xss",
+      "url": "https://arxiv.org/pdf/2308.11432",
       "ok": false,
       "error": "host-rate-limited",
-      "files": [
-        "tests/fixtures/xss-sample.md"
-      ]
-    },
-    {
-      "url": "https://example.com/sample",
-      "ok": false,
-      "status": 404,
-      "files": [
-        "tests/fixtures/sample-person.md",
-        "tests/fixtures/sample-tool.md"
-      ]
-    },
-    {
-      "url": "https://example.com/docs",
-      "ok": false,
-      "status": 404,
-      "files": [
-        "tests/fixtures/sample-tool.md"
-      ]
-    },
-    {
-      "url": "https://cloud.google.com/vertex-ai/docs",
-      "ok": false,
-      "status": 301,
-      "error": "redirect-unsafe:redirect-unsafe:invalid-url",
+      "soft": true,
       "files": [
-        "content/tools/serving-and-deployment/google-vertex-ai.md"
+        "content/research/surveys/wang-2023-agents-survey.md"
       ]
     }
-  ]
+  ],
+  "summary": {
+    "ok": 35,
+    "ignored": 0,
+    "broken": 0,
+    "warnings": 28
+  }
 }

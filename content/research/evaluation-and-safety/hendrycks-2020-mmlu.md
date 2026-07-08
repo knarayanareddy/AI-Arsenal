@@ -16,7 +16,7 @@ arxiv_id: "2009.03300"
 arxiv_url: "https://arxiv.org/abs/2009.03300"
 pdf_url: "https://arxiv.org/pdf/2009.03300"
 code_url: "https://github.com/hendrycks/test"
-venue_url: "https://openreview.net/forum?id=d7KBjmI3GmQ"
+venue_url: null
 
 practical_applicability: high
 reproduction_status: reproduced
@@ -84,7 +84,6 @@ The capability yardstick referenced across this catalog's foundation-model entri
 - [Paper (PDF)](https://arxiv.org/pdf/2009.03300)
 - [arXiv](https://arxiv.org/abs/2009.03300)
 - [Code](https://github.com/hendrycks/test)
-- [Venue](https://openreview.net/forum?id=d7KBjmI3GmQ)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
