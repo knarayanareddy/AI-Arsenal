@@ -143,6 +143,7 @@ This table is exhaustive for tools tagged with job = structured-output.
 | [Outlines](../model-layer/outlines.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
+| [Reducto](../data-ingestion/reducto.md) | data ingestion | usage-based | Yes | No | No | python | solid-choice |
 | [Vaani](../dx-and-tooling/vaani.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 

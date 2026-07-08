@@ -151,6 +151,8 @@ This table is exhaustive for tools tagged with job = production-serving.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | usage-based | Yes | No | No | python | solid-choice |
+| [Baseten](../serving-and-deployment/baseten.md) | serving and deployment | usage-based | Yes | No | No | python | recommended |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
 | [Cerebras Inference](../model-layer/cerebras-inference.md) | model layer | usage-based | Yes | No | No | python, polyglot | watching |
 | [Cloudflare Workers AI](../serving-and-deployment/cloudflare-workers-ai.md) | serving and deployment | usage-based | Yes | No | No | typescript | solid-choice |

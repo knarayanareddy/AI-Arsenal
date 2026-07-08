@@ -9,12 +9,12 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-08 |
 | [by job](./by-job/) | 14 entries | 2026-07-08 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-08 |
-| [data ingestion](./data-ingestion/) | 32 entries | 2026-07-08 |
-| [dx and tooling](./dx-and-tooling/) | 42 entries | 2026-07-08 |
-| [evaluation and observability](./evaluation-and-observability/) | 28 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 31 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-08 |
+| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-08 |
+| [evaluation and observability](./evaluation-and-observability/) | 30 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 32 entries | 2026-07-08 |
 | [orchestration](./orchestration/) | 26 entries | 2026-07-08 |
-| [serving and deployment](./serving-and-deployment/) | 28 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 30 entries | 2026-07-08 |
 
 ## Recently Added
 
@@ -26,8 +26,8 @@
 - [Aider](./dx-and-tooling/aider.md)
 - [Airbyte](./data-ingestion/airbyte.md)
 - [any-agent](./orchestration/any-agent.md)
+- [Anyscale](./serving-and-deployment/anyscale.md)
 - [BAML](./dx-and-tooling/baml.md)
-- [Cerebras Inference](./model-layer/cerebras-inference.md)
 
 ## Most Popular
 
@@ -47,6 +47,7 @@ _No star-tracked entries yet._
 - [Airbyte](./data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [any-agent](./orchestration/any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
+- [Anyscale](./serving-and-deployment/anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [Argilla](./data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Astra Autonomous Pentest](./evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [AWS Bedrock](./serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
@@ -54,6 +55,7 @@ _No star-tracked entries yet._
 - [Azure AI Studio](./serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - [BAML](./dx-and-tooling/baml.md) — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
 - [Basedash](./dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
+- [Baseten](./serving-and-deployment/baseten.md) — Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero
 - [BentoML](./serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Browserbase](./data-ingestion/browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Cerebras Inference](./model-layer/cerebras-inference.md) — Wafer-scale-engine inference API claiming the fastest open-model token rates available
@@ -83,5 +85,3 @@ _No star-tracked entries yet._
 - [Cursor](./dx-and-tooling/cursor.md) — AI-native code editor (VS Code fork) with agent mode, codebase-aware chat, and predictive multi-line edits
 - [Dagster](./orchestration/dagster.md) — Data orchestration platform for assets, pipelines, schedules, and observability
 - [Data Labeling Tools](./by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
-- [Deepchecks](./evaluation-and-observability/deepchecks.md) — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
-- [DeepSpeed](./model-layer/deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory

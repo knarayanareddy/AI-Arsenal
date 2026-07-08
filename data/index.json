@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:58:46.676Z",
+    "generated_at": "2026-07-08T21:22:59.307Z",
     "total_projects": 146,
-    "total_tools": 187,
+    "total_tools": 197,
     "total_papers": 100,
     "total_tips": 129,
     "total_people": 25,
@@ -840,6 +840,25 @@
       "featured": false
     },
     {
+      "id": "anyscale",
+      "type": "tool",
+      "name": "Anyscale",
+      "description": "Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters",
+      "tags": [
+        "inference",
+        "cloud",
+        "orchestration"
+      ],
+      "path": "content/tools/serving-and-deployment/anyscale.md",
+      "url": "content/tools/serving-and-deployment/anyscale",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "anything-llm",
       "type": "project",
       "name": "AnythingLLM",
@@ -1231,6 +1250,24 @@
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "baseten",
+      "type": "tool",
+      "name": "Baseten",
+      "description": "Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero",
+      "tags": [
+        "inference",
+        "cloud"
+      ],
+      "path": "content/tools/serving-and-deployment/baseten.md",
+      "url": "content/tools/serving-and-deployment/baseten",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -4050,6 +4087,25 @@
       "featured": false
     },
     {
+      "id": "exa",
+      "type": "tool",
+      "name": "Exa",
+      "description": "Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity (\"find similar pages\") endpoints",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "rag"
+      ],
+      "path": "content/tools/data-ingestion/exa.md",
+      "url": "content/tools/data-ingestion/exa",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "exllamav2",
       "type": "project",
       "name": "ExLlamaV2",
@@ -4477,6 +4533,25 @@
       "category": "agents",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "galileo",
+      "type": "tool",
+      "name": "Galileo",
+      "description": "Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails",
+      "tags": [
+        "observability",
+        "evaluation",
+        "guardrails"
+      ],
+      "path": "content/tools/evaluation-and-observability/galileo.md",
+      "url": "content/tools/evaluation-and-observability/galileo",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -6523,6 +6598,25 @@
       "category": "observability",
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "langwatch",
+      "type": "tool",
+      "name": "LangWatch",
+      "description": "Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/tools/evaluation-and-observability/langwatch.md",
+      "url": "content/tools/evaluation-and-observability/langwatch",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -8759,6 +8853,25 @@
       "featured": false
     },
     {
+      "id": "nomic-atlas",
+      "type": "tool",
+      "name": "Nomic Atlas",
+      "description": "Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation",
+      "tags": [
+        "embeddings",
+        "data",
+        "multimodal"
+      ],
+      "path": "content/tools/data-ingestion/nomic-atlas.md",
+      "url": "content/tools/data-ingestion/nomic-atlas",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "nvidia-nim",
       "type": "tool",
       "name": "NVIDIA NIM",
@@ -9115,6 +9228,25 @@
       "last_updated": "2026-07-01",
       "category": "observability",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openpipe-art",
+      "type": "tool",
+      "name": "OpenPipe ART",
+      "description": "Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps",
+      "tags": [
+        "fine-tuning",
+        "agents",
+        "rlhf"
+      ],
+      "path": "content/tools/model-layer/openpipe-art.md",
+      "url": "content/tools/model-layer/openpipe-art",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -10632,6 +10764,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "reducto",
+      "type": "tool",
+      "name": "Reducto",
+      "description": "Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines",
+      "tags": [
+        "rag",
+        "data",
+        "structured-output"
+      ],
+      "path": "content/tools/data-ingestion/reducto.md",
+      "url": "content/tools/data-ingestion/reducto",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -12562,6 +12713,25 @@
       "featured": false
     },
     {
+      "id": "tavily",
+      "type": "tool",
+      "name": "Tavily",
+      "description": "Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call",
+      "tags": [
+        "agents",
+        "retrieval",
+        "rag"
+      ],
+      "path": "content/tools/data-ingestion/tavily.md",
+      "url": "content/tools/data-ingestion/tavily",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "temporal",
       "type": "tool",
       "name": "Temporal",
@@ -13738,6 +13908,24 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "vellum",
+      "type": "tool",
+      "name": "Vellum",
+      "description": "Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tools/dx-and-tooling/vellum.md",
+      "url": "content/tools/dx-and-tooling/vellum",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },

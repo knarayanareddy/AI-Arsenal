@@ -31,12 +31,12 @@ Before picking a tool in this phase, consider:
 - [dlt](./dlt.md)
 - [DocETL](./docetl.md)
 - [Elasticsearch](./elasticsearch.md)
+- [Exa](./exa.md)
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
 - [Great Expectations (GX Core)](./great-expectations.md)
 - [MarkItDown](./markitdown.md)
 - [Marqo](./marqo.md)
-- [Meilisearch](./meilisearch.md)
 
 ### Most Popular
 
@@ -53,6 +53,7 @@ _No star-tracked entries yet._
 - [dlt](./dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
 - [DocETL](./docetl.md) — LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)
 - [Elasticsearch](./elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
+- [Exa](./exa.md) — Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity ("find similar pages") endpoints
 - [FAISS](./faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Gitingest](./gitingest.md) — Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL
@@ -63,16 +64,19 @@ _No star-tracked entries yet._
 - [Marqo](./marqo.md) — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
 - [Meilisearch](./meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - [MinerU](./mineru.md) — OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models
+- [Nomic Atlas](./nomic-atlas.md) — Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation
 - [olmOCR](./olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
 - [Pinecone](./pinecone.md) — A managed vector database for production semantic search applications
 - [Playwright](./playwright.md) — Browser automation framework for reliable end-to-end tests and web scraping workflows
 - [Prodigy](./prodigy.md) — Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows
 - [Puppeteer](./puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
 - [RAGatouille](./ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
+- [Reducto](./reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
 - [Scale AI](./scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
 - [ScrapeGraphAI](./scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
 - [Tabstack](./tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
+- [Tavily](./tavily.md) — Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call
 - [Trafilatura](./trafilatura.md) — Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building
 - [Typesense](./typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
 - [Vespa](./vespa.md) — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference

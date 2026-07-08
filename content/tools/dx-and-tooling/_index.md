@@ -85,4 +85,5 @@ _No star-tracked entries yet._
 - [Tabby](./tabby-ml.md) — Self-hosted, open-source AI coding assistant: an on-prem alternative to GitHub Copilot with completions and chat
 - [TencentDB Agent Memory](./tencentdb-agent-memory.md) — Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store
 - [Vaani](./vaani.md) — Fast, private macOS dictation with AI formatting and editing
+- [Vellum](./vellum.md) — Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK
 - [Windsurf](./windsurf.md) — Agentic AI code editor built around Cascade, a context-aware agent that keeps working across your whole repo

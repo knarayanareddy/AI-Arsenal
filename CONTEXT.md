@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:58:49.509Z | Entries: 772 | Schema version: 1.0.0
+Generated: 2026-07-08T21:23:02.099Z | Entries: 782 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 146
-- Tools: 187
+- Tools: 197
 - Papers: 100
 - Tips: 129
 - People: 25
@@ -113,11 +113,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - MarkItDown — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
 
 ### deployment
+- Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - AWS Bedrock — AWS managed service for accessing foundation models and building generative AI apps
 - Azure AI Studio — Microsoft Azure platform for building, evaluating, and deploying AI applications
+- Baseten — Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero
 - BentoML — A framework for packaging, deploying, and scaling AI model services
-- Cog (Replicate) — Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile
-- CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 
 ### evaluation
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
@@ -152,7 +152,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - Deepchecks — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 - Evidently — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
-- LangSmith — A managed platform for tracing, evaluating, and monitoring LangChain applications
+- Galileo — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
 
 ### orchestration
 - Agno — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
@@ -162,11 +162,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 
 ### production-serving
+- Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
+- Baseten — Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero
 - BentoML — A framework for packaging, deploying, and scaling AI model services
 - Cerebras Inference — Wafer-scale-engine inference API claiming the fastest open-model token rates available
 - Cloudflare Workers AI — Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure
-- Cohere — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
-- FastAPI — Python web framework for building APIs around AI services and model workflows
 
 ### prompt-management
 - AdalFlow — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
@@ -200,8 +200,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - LangSmith — A managed platform for tracing, evaluating, and monitoring LangChain applications
+- LangWatch — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
 - Spotlight by Backplanes — Understand, improve, and track AI agent sessions with observability tooling
-- Superlog — Real-time log aggregation platform designed for serverless debugging
 
 ### vector-search
 - Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads

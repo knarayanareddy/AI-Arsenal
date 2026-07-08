@@ -172,8 +172,10 @@ This table is exhaustive for tools tagged with job = deployment.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | usage-based | Yes | No | No | python | solid-choice |
 | [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Baseten](../serving-and-deployment/baseten.md) | serving and deployment | usage-based | Yes | No | No | python | recommended |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
 | [Cog (Replicate)](../serving-and-deployment/cog.md) | serving and deployment | open-source | Yes | Yes | Yes | python, go | solid-choice |
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
