@@ -63,10 +63,11 @@ You submit a document to the API; Reducto performs layout analysis and OCR/parsi
 ## Getting Started
 
 ```bash
-# Hosted API — request an API key from the dashboard, then POST a document:
-# curl -X POST https://api.reducto.ai/parse \
-#   -H "Authorization: Bearer $REDUCTO_API_KEY" \
-#   -F "document=@filing.pdf"
+# Hosted API — request an API key from the dashboard, then POST a document
+# to the parse endpoint with your key and the file:
+#   curl -X POST "$REDUCTO_API_BASE/parse" \
+#     -H "Authorization: Bearer $REDUCTO_API_KEY" \
+#     -F "document=@filing.pdf"
 # See the docs (Resources) for SDKs and the current endpoint/response schema.
 ```
 
