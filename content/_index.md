@@ -13,7 +13,7 @@
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
 | [projects](./projects/) | 73 entries | 2026-07-08 |
-| [research](./research/) | 34 entries | 2026-07-08 |
+| [research](./research/) | 51 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
 | [tools](./tools/) | 131 entries | 2026-07-08 |
@@ -22,15 +22,15 @@
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [Training Verifiers to Solve Math Word Problems](./research/evaluation-and-safety/cobbe-2021-gsm8k.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
+- [DeepSeek-V3 Technical Report](./research/architectures/deepseek-ai-2024-deepseek-v3.md)
 - [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
+- [Textbooks Are All You Need](./research/training-and-alignment/gunasekar-2023-phi-1.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [Orca](./tools/dx-and-tooling/orca.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
-- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
-- [Superpowers](./tools/dx-and-tooling/superpowers.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./research/evaluation-and-safety/jimenez-2023-swe-bench.md)
+- [Scaling Laws for Neural Language Models](./research/foundational/kaplan-2020-scaling-laws.md)
 
 ## Most Popular
 

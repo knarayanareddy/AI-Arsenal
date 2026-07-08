@@ -33,6 +33,7 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 
 ### Recently Added
 
+- [Generative Agents: Interactive Simulacra of Human Behavior](./park-2023-generative-agents.md)
 - [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./zhou-2026-colleague-skill.md)
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md)
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md)
@@ -48,6 +49,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
+- [Generative Agents: Interactive Simulacra of Human Behavior](./park-2023-generative-agents.md) — The Smallville paper: 25 LLM agents with a memory-stream architecture (observation, retrieval by recency/importance/relevance, reflection, planning) lived in a simulated town and produced emergent social behavior — the design that defined agent memory
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./wei-2022-chain-of-thought.md) — Showed prompting a large enough model to produce intermediate reasoning steps improves multi-step reasoning accuracy -- use CoT for reasoning-heavy tasks, but don't trust the trace as an accurate explanation of the model's actual computation
 - [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](./yang-2024-swe-agent.md) — Showed a custom agent-computer interface (simplified LM-friendly commands for editing/testing code) matters as much as model quality -- treat interface design, not just model choice, as a first-class variable for coding agents

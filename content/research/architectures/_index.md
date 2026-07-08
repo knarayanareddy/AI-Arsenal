@@ -31,7 +31,10 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 
 ### Recently Added
 
+- [DeepSeek-V3 Technical Report](./deepseek-ai-2024-deepseek-v3.md)
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md)
+- [Learning Transferable Visual Models From Natural Language Supervision](./radford-2021-clip.md)
+- [Robust Speech Recognition via Large-Scale Weak Supervision](./radford-2022-whisper.md)
 
 ### Most Popular
 
@@ -39,4 +42,7 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [DeepSeek-V3 Technical Report](./deepseek-ai-2024-deepseek-v3.md) — DeepSeek-V3: a 671B-parameter MoE (37B active) trained for a reported ~$5.6M of GPU time that matched frontier closed models — proof that systems co-design (MLA, FP8 training, aux-loss-free MoE routing, MTP) collapses the frontier cost curve
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
+- [Learning Transferable Visual Models From Natural Language Supervision](./radford-2021-clip.md) — CLIP: contrastive training on 400M web image-text pairs yields a shared vision-language embedding space enabling zero-shot classification — the component that underlies multimodal LLM vision encoders, text-to-image guidance, and cross-modal retrieval
+- [Robust Speech Recognition via Large-Scale Weak Supervision](./radford-2022-whisper.md) — Whisper: a plain encoder-decoder transformer trained on 680K hours of weakly-labeled web audio achieves human-competitive, zero-shot-robust speech recognition across 96+ languages — and its released weights became the default open ASR component

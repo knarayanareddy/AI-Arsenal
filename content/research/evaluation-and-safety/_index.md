@@ -31,6 +31,9 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 
 ### Recently Added
 
+- [Training Verifiers to Solve Math Word Problems](./cobbe-2021-gsm8k.md)
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./jimenez-2023-swe-bench.md)
+- [MTEB: Massive Text Embedding Benchmark](./muennighoff-2022-mteb.md)
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md)
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./zheng-2023-llm-as-a-judge.md)
 
@@ -40,5 +43,8 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Training Verifiers to Solve Math Word Problems](./cobbe-2021-gsm8k.md) — The GSM8K paper: released the 8.5K grade-school math benchmark that anchored LLM reasoning evaluation for years, and introduced verifier-guided sampling — train a model to judge candidate solutions, sample many, pick the best — the seed of verification-based test-time compute
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
+- [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./jimenez-2023-swe-bench.md) — SWE-bench: 2,294 real GitHub issues from 12 Python repos, graded by running the repos' own tests against model-generated patches — the benchmark that replaced toy coding problems and became the scoreboard of the coding-agent era
+- [MTEB: Massive Text Embedding Benchmark](./muennighoff-2022-mteb.md) — MTEB: 8 embedding task families across 58 datasets and 112 languages, with a public leaderboard — the benchmark that made embedding models comparable and whose central finding still holds: no single model wins everywhere
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./zheng-2023-llm-as-a-judge.md) — Showed strong LLM judges agree with human judgments over 80% of the time, matching human-human agreement -- use LLM-as-judge for scalable open-ended evaluation, but mitigate its documented position, verbosity, and self-enhancement biases
