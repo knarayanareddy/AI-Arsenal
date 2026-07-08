@@ -30,7 +30,14 @@ As of the tips-vertical reorganisation (2026-07), this catalog has zero fine-tun
 
 ### Recently Added
 
-_No entries yet._
+- [Establish a Prompting Baseline Before Fine-Tuning](./establish-a-prompting-baseline-before-fine-tuning.md)
+- [Evaluate Checkpoints on Task Metrics, Not Training Loss](./evaluate-checkpoints-on-task-metrics-not-loss.md)
+- [Hold Out an Eval Set Before Any Training Run Touches the Data](./hold-out-an-eval-set-before-any-training.md)
+- [Inspect a Random Sample of Training Data by Hand Before Every Run](./inspect-your-training-data-by-hand.md)
+- [Match Training and Inference Prompt Formats Exactly](./match-training-and-inference-prompt-formats.md)
+- [Start With LoRA Before Full-Parameter Fine-Tuning](./start-with-lora-before-full-fine-tuning.md)
+- [Test for Regressions Outside the Tuned Task After Every Fine-Tune](./test-for-regressions-outside-the-tuned-task.md)
+- [Version Datasets and Adapters Together as One Artifact Pair](./version-datasets-and-adapters-together.md)
 
 ### Most Popular
 
@@ -38,4 +45,11 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Establish a Prompting Baseline Before Fine-Tuning](./establish-a-prompting-baseline-before-fine-tuning.md) — 
+- [Evaluate Checkpoints on Task Metrics, Not Training Loss](./evaluate-checkpoints-on-task-metrics-not-loss.md) — 
+- [Hold Out an Eval Set Before Any Training Run Touches the Data](./hold-out-an-eval-set-before-any-training.md) — 
+- [Inspect a Random Sample of Training Data by Hand Before Every Run](./inspect-your-training-data-by-hand.md) — 
+- [Match Training and Inference Prompt Formats Exactly](./match-training-and-inference-prompt-formats.md) — 
+- [Start With LoRA Before Full-Parameter Fine-Tuning](./start-with-lora-before-full-fine-tuning.md) — 
+- [Test for Regressions Outside the Tuned Task After Every Fine-Tune](./test-for-regressions-outside-the-tuned-task.md) — 
+- [Version Datasets and Adapters Together as One Artifact Pair](./version-datasets-and-adapters-together.md) — 
