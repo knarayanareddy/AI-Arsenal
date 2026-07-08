@@ -15,7 +15,7 @@
 | [projects](./projects/) | 73 entries | 2026-07-08 |
 | [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
 | [tools](./tools/) | 131 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
@@ -81,6 +81,7 @@
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
+- [Ask for Supporting Quotes Before Answers in RAG Prompts](./tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
@@ -96,4 +97,3 @@
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates

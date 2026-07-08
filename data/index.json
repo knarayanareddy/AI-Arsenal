@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T15:33:38.158Z",
+    "generated_at": "2026-07-08T17:03:34.090Z",
     "total_projects": 73,
     "total_tools": 104,
     "total_papers": 30,
-    "total_tips": 102,
+    "total_tips": 116,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -646,6 +646,25 @@
       "path": "content/tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md",
       "url": "content/tips-and-tricks/prompting/ask-for-missing-inputs-before-solving",
       "last_updated": "2026-07-02",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "ask-for-quotes-before-answers-in-rag-prompts",
+      "type": "tip",
+      "name": "Ask for Supporting Quotes Before Answers in RAG Prompts",
+      "description": "",
+      "tags": [
+        "rag",
+        "llm",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md",
+      "url": "content/tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts",
+      "last_updated": "2026-07-07",
       "category": "prompting",
       "maturity": null,
       "cost_model": null,
@@ -2321,6 +2340,25 @@
       "featured": false
     },
     {
+      "id": "establish-a-prompting-baseline-before-fine-tuning",
+      "type": "tip",
+      "name": "Establish a Prompting Baseline Before Fine-Tuning",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md",
+      "url": "content/tips-and-tricks/fine-tuning/establish-a-prompting-baseline-before-fine-tuning",
+      "last_updated": "2026-07-07",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "eugene-yan",
       "type": "person",
       "name": "Eugene Yan",
@@ -2356,6 +2394,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "evaluate-checkpoints-on-task-metrics-not-loss",
+      "type": "tip",
+      "name": "Evaluate Checkpoints on Task Metrics, Not Training Loss",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md",
+      "url": "content/tips-and-tricks/fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss",
+      "last_updated": "2026-07-07",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -3089,6 +3145,25 @@
       "featured": false
     },
     {
+      "id": "hold-out-an-eval-set-before-any-training",
+      "type": "tip",
+      "name": "Hold Out an Eval Set Before Any Training Run Touches the Data",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "data"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/hold-out-an-eval-set-before-any-training.md",
+      "url": "content/tips-and-tricks/fine-tuning/hold-out-an-eval-set-before-any-training",
+      "last_updated": "2026-07-07",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "honen",
       "type": "tool",
       "name": "Honen",
@@ -3331,6 +3406,25 @@
       "url": "content/tips-and-tricks/debugging-and-observability/inspect-retrieved-chunks-beside-the-answer",
       "last_updated": "2026-07-02",
       "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "inspect-your-training-data-by-hand",
+      "type": "tip",
+      "name": "Inspect a Random Sample of Training Data by Hand Before Every Run",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand.md",
+      "url": "content/tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand",
+      "last_updated": "2026-07-07",
+      "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -4534,6 +4628,25 @@
       "featured": false
     },
     {
+      "id": "match-training-and-inference-prompt-formats",
+      "type": "tip",
+      "name": "Match Training and Inference Prompt Formats Exactly",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "inference",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/match-training-and-inference-prompt-formats.md",
+      "url": "content/tips-and-tricks/fine-tuning/match-training-and-inference-prompt-formats",
+      "last_updated": "2026-07-07",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "mathvista",
       "type": "benchmark",
       "name": "MathVista",
@@ -5693,6 +5806,24 @@
       "featured": false
     },
     {
+      "id": "pin-model-versions-in-prompt-regression-tests",
+      "type": "tip",
+      "name": "Pin Model Versions in Prompt Regression Tests",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/prompting/pin-model-versions-in-prompt-regression-tests.md",
+      "url": "content/tips-and-tricks/prompting/pin-model-versions-in-prompt-regression-tests",
+      "last_updated": "2026-07-07",
+      "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "pinecone",
       "type": "tool",
       "name": "Pinecone",
@@ -6604,6 +6735,24 @@
       "featured": false
     },
     {
+      "id": "run-evals-multiple-times-before-trusting-deltas",
+      "type": "tip",
+      "name": "Run Evals Multiple Times Before Trusting Small Deltas",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/run-evals-multiple-times-before-trusting-deltas.md",
+      "url": "content/tips-and-tricks/evaluation/run-evals-multiple-times-before-trusting-deltas",
+      "last_updated": "2026-07-07",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "run-prompt-injection-regression-tests",
       "type": "tip",
       "name": "Run a Prompt-Injection Regression Suite on Every CI Run",
@@ -6859,6 +7008,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "separate-a-frozen-holdout-from-your-dev-eval-set",
+      "type": "tip",
+      "name": "Separate a Frozen Holdout From Your Dev Eval Set",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/separate-a-frozen-holdout-from-your-dev-eval-set.md",
+      "url": "content/tips-and-tricks/evaluation/separate-a-frozen-holdout-from-your-dev-eval-set",
+      "last_updated": "2026-07-07",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -7341,6 +7508,25 @@
       "featured": false
     },
     {
+      "id": "start-with-lora-before-full-fine-tuning",
+      "type": "tip",
+      "name": "Start With LoRA Before Full-Parameter Fine-Tuning",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "efficiency",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/start-with-lora-before-full-fine-tuning.md",
+      "url": "content/tips-and-tricks/fine-tuning/start-with-lora-before-full-fine-tuning",
+      "last_updated": "2026-07-07",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "start-with-zero-chunk-overlap",
       "type": "tip",
       "name": "Start With Zero Chunk Overlap, Then Add It Where Needed",
@@ -7788,6 +7974,25 @@
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "test-for-regressions-outside-the-tuned-task",
+      "type": "tip",
+      "name": "Test for Regressions Outside the Tuned Task After Every Fine-Tune",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/test-for-regressions-outside-the-tuned-task.md",
+      "url": "content/tips-and-tricks/fine-tuning/test-for-regressions-outside-the-tuned-task",
+      "last_updated": "2026-07-07",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -8392,6 +8597,24 @@
       "featured": false
     },
     {
+      "id": "use-rubric-anchored-llm-judges",
+      "type": "tip",
+      "name": "Use Rubric-Anchored Prompts for LLM Judges, Not Bare Score Requests",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/use-rubric-anchored-llm-judges.md",
+      "url": "content/tips-and-tricks/evaluation/use-rubric-anchored-llm-judges",
+      "last_updated": "2026-07-07",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "use-semantic-cache-for-repeated-questions",
       "type": "tip",
       "name": "Cache Answers for Semantically Similar Repeated Questions",
@@ -8500,6 +8723,24 @@
       "featured": false
     },
     {
+      "id": "validate-llm-judges-against-human-labels",
+      "type": "tip",
+      "name": "Validate LLM Judges Against Human Labels Before Trusting Their Scores",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/validate-llm-judges-against-human-labels.md",
+      "url": "content/tips-and-tricks/evaluation/validate-llm-judges-against-human-labels",
+      "last_updated": "2026-07-07",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "validate-tool-arguments-before-execution",
       "type": "tip",
       "name": "Validate Tool Arguments Before Execution, Not Inside the Tool",
@@ -8571,6 +8812,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "version-datasets-and-adapters-together",
+      "type": "tip",
+      "name": "Version Datasets and Adapters Together as One Artifact Pair",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "observability"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/version-datasets-and-adapters-together.md",
+      "url": "content/tips-and-tricks/fine-tuning/version-datasets-and-adapters-together",
+      "last_updated": "2026-07-07",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
