@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:49:07.229Z",
-  "count": 116,
+  "generated_at": "2026-07-08T20:03:41.072Z",
+  "count": 129,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -548,6 +548,61 @@
       "body_text": "What & Why In RAG prompts for accuracy critical answers, instruct the model to first extract verbatim quotes from the retrieved context that support the answer, and then compose the answer from those quotes — with a stated rule for the no support case (\"if no relevant quote exists, say so\"). Making support extraction an explicit prior step conditions generation on evidence the model has already committed to, reduces unsupported claims, and produces a machine checkable artifact: quotes either appear in the retrieved text or they don't. Before / After Before: \"Answer the question using the context above.\" The model blends retrieved facts with prior knowledge, and there is no way to tell which claims are grounded. After: \"First list verbatim quotes from the context that support your answer (or state that none exist). Then answer using only those quotes.\" A post processing check verifies each quote appears in the retrieved chunks and flags responses whose quotes fail the match. Implementation Add the two step instruction with structured output (a quotes array plus an answer field). Verify quotes with a substring or normalized fuzzy match against the retrieved chunks; route quote verification failures to a fallback (regenerate, or answer with a no support disclaimer). Track the quote match rate as a groundedness metric per prompt version. Gotchas Unverified quotes are decoration — fabricated quotes look identical to real ones until matched against the source The pattern costs output tokens on every call; apply it where wrong answers are expensive, not everywhere When NOT to Apply Skip for creative, conversational, or synthesis heavy endpoints where verbatim support is the wrong contract Skip when answers legitimately require reasoning across many fragments — quote lists grow unwieldy; consider citation IDs per claim instead Verification Community reported: quote then answer prompting is a documented grounded generation pattern (including in provider prompting guides) with the verification step as the operative mechanism; effect sizes are task dependent."
     },
     {
+      "id": "batch-embedding-requests-during-ingestion",
+      "title": "Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time",
+      "category": "cost-reduction",
+      "tags": [
+        "embeddings",
+        "batching"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "1-2 hours",
+      "phase": "cost-and-performance",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (embedding API docs; RAG ingestion optimization writeups)",
+      "applies_to": [
+        "rag-ingestion-pipelines"
+      ],
+      "gotchas": [
+        "Batch size limits are provider- and model-specific (count and total tokens per request); exceeding them fails the whole batch, so validate limits and split accordingly",
+        "One malformed chunk can fail an entire batch — handle partial failure by retrying the batch's items individually rather than dropping all of them",
+        "Self-hosted embedding servers have an optimal batch size beyond which latency degrades; benchmark rather than maxing out"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "cache-embeddings-by-content-hash",
+        "parallelize-independent-retrieval-calls"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md",
+      "url": "content/tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion",
+      "slug": "batch-embedding-requests-during-ingestion",
+      "section_path": "content/tips-and-tricks/cost-and-performance",
+      "display_name": "Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 265,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Send chunks to the embedding API in batches (tens to hundreds per request) instead of one call per chunk. Per-request overhead — TLS, HTTP round-trip, provider-side queueing — dominates when payloads are tiny: embedding 100K chunks one at a time means 100K round-trips of mostly overhead, turning an hours-long ingestion into days and hammering rate limits. Batching amortizes that overhead across every provider's supported multi-input API.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>for chunk in chunks: embed(chunk)</code> — 100K sequential calls, rate-limit backoff loops, ingestion measured in days.</p>\n<p><strong>After:</strong> <code>for batch in chunked(chunks, 128): embed(batch)</code> — ~800 calls, ingestion measured in minutes-to-hours, with far fewer rate-limit collisions.</p>\n<h2>Implementation</h2>\n<p>Chunk the input stream into batches sized against the provider's per-request item and token limits, embed batch-by-batch (optionally with a small concurrency pool), and on batch failure retry items individually to isolate malformed inputs.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Respect provider batch limits (items and total tokens) — oversized batches fail atomically</li>\n<li>Retry failed batches item-by-item so one bad chunk doesn't drop the batch</li>\n<li>For self-hosted embedders, benchmark the optimal batch size instead of maximizing it</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Real-time query-path embedding of a single user query — there is nothing to batch</li>\n<li>Trickle ingestion (a few documents per hour) where latency and cost are already negligible</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: batched embedding is explicitly recommended by embedding API documentation and standard in RAG ingestion frameworks; the round-trip-overhead mechanism is well understood, but speedup ratios are not independently benchmarked here.</p>\n",
+      "body_text": "What & Why Send chunks to the embedding API in batches (tens to hundreds per request) instead of one call per chunk. Per request overhead — TLS, HTTP round trip, provider side queueing — dominates when payloads are tiny: embedding 100K chunks one at a time means 100K round trips of mostly overhead, turning an hours long ingestion into days and hammering rate limits. Batching amortizes that overhead across every provider's supported multi input API. Before / After Before: for chunk in chunks: embed(chunk) — 100K sequential calls, rate limit backoff loops, ingestion measured in days. After: for batch in chunked(chunks, 128): embed(batch) — 800 calls, ingestion measured in minutes to hours, with far fewer rate limit collisions. Implementation Chunk the input stream into batches sized against the provider's per request item and token limits, embed batch by batch (optionally with a small concurrency pool), and on batch failure retry items individually to isolate malformed inputs. Gotchas Respect provider batch limits (items and total tokens) — oversized batches fail atomically Retry failed batches item by item so one bad chunk doesn't drop the batch For self hosted embedders, benchmark the optimal batch size instead of maximizing it When NOT to Apply Real time query path embedding of a single user query — there is nothing to batch Trickle ingestion (a few documents per hour) where latency and cost are already negligible Verification Community reported: batched embedding is explicitly recommended by embedding API documentation and standard in RAG ingestion frameworks; the round trip overhead mechanism is well understood, but speedup ratios are not independently benchmarked here."
+    },
+    {
       "id": "benchmark-on-the-user-hardware",
       "title": "Benchmark Local Models on the Actual Hardware Class Users Will Run",
       "category": "local-model-tips",
@@ -816,6 +871,62 @@
       "body_text": "What & Why Hash normalized text content before generating an embedding, and check a cache keyed by that hash before making the embedding call. Re ingestion pipelines frequently re process unchanged documents (e.g. a full corpus re run after a code change), and without content hash caching, every re run generates duplicate embeddings for content that hasn't actually changed. Before / After Before: embedding = embed(text) called unconditionally on every ingestion run, even for unchanged documents. After: cache key = sha256(normalize(text)); embedding = cache.get(cache key) or embed(text) — the embedding call is skipped entirely for previously seen content. Implementation Normalize text content (consistent whitespace, casing, encoding) before hashing, use the hash as a cache key, check the cache before calling the embedding API, and store the result on a cache miss. Gotchas The hash must be computed over normalized text — hashing raw unnormalized text produces cache misses for semantically identical but byte different content This differs from use semantic cache for repeated questions (near duplicate matching) — content hash caching only catches exact content re embedding When NOT to Apply Skip this if your ingestion pipeline never re processes previously seen content (e.g. strictly append only, never re run) Not useful if your embedding provider already deduplicates identical inputs server side at no cost to you Verification Community reported: content hash keyed embedding caching to avoid duplicate calls is a widely repeated recommendation in RAG ingestion cost optimization writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "cache-idempotent-tool-results-within-a-run",
+      "title": "Cache Idempotent Tool Results Within an Agent Run",
+      "category": "agent-reliability",
+      "tags": [
+        "agents",
+        "caching",
+        "tool-use"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "2-4 hours",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (agent framework memoization patterns; redundant-tool-call analyses)",
+      "applies_to": [
+        "agent-systems"
+      ],
+      "gotchas": [
+        "Only cache tools that are actually idempotent and read-only — caching a search over changing data or anything with side effects serves stale results or hides real actions",
+        "Scope the cache to the run (or a short TTL); cross-run caching is a different, riskier decision with staleness and privacy implications",
+        "Cache keys must include all semantically meaningful arguments, normalized — argument order or formatting differences shouldn't cause misses, and different arguments must never collide"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "detect-repeated-tool-calls",
+        "cap-agent-tool-retries"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/cache-idempotent-tool-results-within-a-run",
+      "slug": "cache-idempotent-tool-results-within-a-run",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Cache Idempotent Tool Results Within an Agent Run",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 324,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Memoize read-only tool calls (file reads, documentation lookups, search queries) keyed by normalized arguments for the duration of an agent run. Agents re-issue identical calls constantly — after context compaction erases the earlier result, in loops, or across planner/executor handoffs — and each repeat costs tool latency plus the tokens to re-ingest the result. A run-scoped cache returns the prior result instantly and, paired with repeated-call detection, turns wasteful loops into cheap no-ops.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A coding agent reads the same 400-line config file five times across a long run — four of them after compaction dropped the earlier content — paying tool latency and ~2K redundant context tokens each time.</p>\n<p><strong>After:</strong> The second through fifth reads hit the run cache; the framework can also inject \"(cached — unchanged since last read)\" to hint the agent it is looping.</p>\n<h2>Implementation</h2>\n<p>Wrap tool execution with a memoization layer: mark tools as cacheable in their registration metadata, key by tool name plus canonicalized arguments, scope the store to the run, and invalidate on any write action that could affect the cached reads (e.g. a file edit invalidates that file's read cache).</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Cache only read-only, idempotent tools; anything with side effects must always execute</li>\n<li>Keep cache scope to the run or a short TTL — cross-run reuse raises staleness and privacy questions</li>\n<li>Canonicalize arguments in the key; and invalidate reads after related writes (edit-then-reread must not serve the stale version)</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Tools querying fast-changing state (live metrics, current time, market data) where staleness within a run is wrong</li>\n<li>Short runs (a handful of steps) where repeats are rare and the invalidation logic costs more than it saves</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: run-scoped tool memoization appears in agent framework patterns and redundant-call analyses of long agent traces; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Memoize read only tool calls (file reads, documentation lookups, search queries) keyed by normalized arguments for the duration of an agent run. Agents re issue identical calls constantly — after context compaction erases the earlier result, in loops, or across planner/executor handoffs — and each repeat costs tool latency plus the tokens to re ingest the result. A run scoped cache returns the prior result instantly and, paired with repeated call detection, turns wasteful loops into cheap no ops. Before / After Before: A coding agent reads the same 400 line config file five times across a long run — four of them after compaction dropped the earlier content — paying tool latency and 2K redundant context tokens each time. After: The second through fifth reads hit the run cache; the framework can also inject \"(cached — unchanged since last read)\" to hint the agent it is looping. Implementation Wrap tool execution with a memoization layer: mark tools as cacheable in their registration metadata, key by tool name plus canonicalized arguments, scope the store to the run, and invalidate on any write action that could affect the cached reads (e.g. a file edit invalidates that file's read cache). Gotchas Cache only read only, idempotent tools; anything with side effects must always execute Keep cache scope to the run or a short TTL — cross run reuse raises staleness and privacy questions Canonicalize arguments in the key; and invalidate reads after related writes (edit then reread must not serve the stale version) When NOT to Apply Tools querying fast changing state (live metrics, current time, market data) where staleness within a run is wrong Short runs (a handful of steps) where repeats are rare and the invalidation logic costs more than it saves Verification Community reported: run scoped tool memoization appears in agent framework patterns and redundant call analyses of long agent traces; not independently benchmarked here against a named production system."
+    },
+    {
       "id": "cache-stable-system-prompts",
       "title": "Use Prompt Caching for Long, Stable System Prompt Prefixes",
       "category": "cost-reduction",
@@ -923,6 +1034,60 @@
       "word_count": 299,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Limit how many times an agent may retry a single failing tool call before giving up and surfacing the failure, tracked independently per tool rather than as one global counter. Without a per-tool cap, an agent that keeps calling a broken or misconfigured tool consumes its entire step budget on one failure instead of trying alternative approaches.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong></p>\n<pre><code class=\"language-python\">while True:\n    result = call_tool(name, args)\n    if result.ok:\n        break\n</code></pre>\n<p><strong>After:</strong></p>\n<pre><code class=\"language-python\">MAX_RETRIES_PER_TOOL = 3\nretries = {}\nresult = call_tool(name, args)\nwhile not result.ok and retries.get(name, 0) &lt; MAX_RETRIES_PER_TOOL:\n    retries[name] = retries.get(name, 0) + 1\n    result = call_tool(name, args)\nif not result.ok:\n    return ToolResult(error=result.error, exhausted=True)\n</code></pre>\n<h2>Implementation</h2>\n<p>Track a retry counter keyed by tool name (or tool-call site if a tool is invoked from multiple points), increment on each failed attempt, and once the cap is hit, return an <code>exhausted</code> result the agent's planner can use to try a different tool or give up gracefully rather than a silent hang.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A global retry counter across all tools masks a single misbehaving tool — track retries per tool-call site, not per agent run</li>\n<li>Retrying identical failing arguments wastes the budget — only retry if the agent actually changes the arguments between attempts, otherwise fail fast rather than burning all 3 retries on the same mistake</li>\n<li>Exponential backoff between retries adds latency the user feels — cap total retry wall-clock time, not only the count, for latency-sensitive paths</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for tools with no transient failure modes (a pure computation with no external dependency either always succeeds or always fails identically — retrying doesn't help)</li>\n<li>Skip a fixed numeric cap if your framework already provides adaptive retry-with-circuit-breaker behavior at the infrastructure layer — don't duplicate the mechanism</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: per-tool retry caps are a standard defensive pattern in tool-using agent loops, referenced alongside <code>add-a-max-step-budget-to-every-agent</code> in practitioner writeups on bounding agent cost and preventing infinite retry loops in production deployments.</p>\n",
       "body_text": "What & Why Limit how many times an agent may retry a single failing tool call before giving up and surfacing the failure, tracked independently per tool rather than as one global counter. Without a per tool cap, an agent that keeps calling a broken or misconfigured tool consumes its entire step budget on one failure instead of trying alternative approaches. Before / After Before: After: Implementation Track a retry counter keyed by tool name (or tool call site if a tool is invoked from multiple points), increment on each failed attempt, and once the cap is hit, return an exhausted result the agent's planner can use to try a different tool or give up gracefully rather than a silent hang. Gotchas A global retry counter across all tools masks a single misbehaving tool — track retries per tool call site, not per agent run Retrying identical failing arguments wastes the budget — only retry if the agent actually changes the arguments between attempts, otherwise fail fast rather than burning all 3 retries on the same mistake Exponential backoff between retries adds latency the user feels — cap total retry wall clock time, not only the count, for latency sensitive paths When NOT to Apply Skip this for tools with no transient failure modes (a pure computation with no external dependency either always succeeds or always fails identically — retrying doesn't help) Skip a fixed numeric cap if your framework already provides adaptive retry with circuit breaker behavior at the infrastructure layer — don't duplicate the mechanism Verification Production verified: per tool retry caps are a standard defensive pattern in tool using agent loops, referenced alongside add a max step budget to every agent in practitioner writeups on bounding agent cost and preventing infinite retry loops in production deployments."
+    },
+    {
+      "id": "cap-max-output-tokens-per-request",
+      "title": "Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults",
+      "category": "cost-reduction",
+      "tags": [
+        "inference",
+        "observability"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "1-2 hours",
+      "phase": "cost-and-performance",
+      "effort": "minutes",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (provider API docs; cost-control writeups on runaway generation)",
+      "applies_to": [
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "Too-tight caps truncate legitimate outputs mid-sentence (or mid-JSON, breaking parsers) — set caps from the observed output-length distribution per request type (e.g. p99 + margin), not from guesses",
+        "Hitting the cap is a signal worth logging: a rising truncation rate means either the cap is wrong or the model has started rambling after a prompt/model change"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "set-token-budgets-per-feature",
+        "track-cost-per-feature"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request.md",
+      "url": "content/tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request",
+      "slug": "cap-max-output-tokens-per-request",
+      "section_path": "content/tips-and-tricks/cost-and-performance",
+      "display_name": "Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 289,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Set <code>max_tokens</code> deliberately per request type — classification, extraction, summarization, chat — instead of leaving provider defaults (often thousands of tokens or the model maximum). Output tokens are the expensive ones (typically 3-5x input price), and unbounded generation is the failure mode that makes a single degenerate request expensive: a looping model or a prompt regression can emit thousands of junk tokens per call, multiplied across traffic. A cap converts \"unbounded cost per failure\" into \"bounded and alertable.\"</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A yes/no classification endpoint runs with the default cap; a prompt regression makes the model explain its reasoning at length — output cost for the endpoint rises 40x before anyone notices.</p>\n<p><strong>After:</strong> The endpoint is capped at 16 tokens; the regression manifests as a truncation-rate alert within the hour, at negligible extra cost.</p>\n<h2>Implementation</h2>\n<p>Measure the output-length distribution per request type from traces, set caps at p99 plus safety margin, log a metric whenever a response hits the cap, and alert on truncation-rate shifts.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Derive caps from observed distributions, not guesses — too-tight caps break outputs (especially JSON) mid-structure</li>\n<li>Log and alert on cap hits: rising truncation is a regression signal, not noise</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Genuinely open-ended generation (long-form writing, code generation) where legitimate output length is unbounded — use per-feature budgets and streaming with user control instead</li>\n<li>Reasoning-model calls where the provider counts hidden reasoning tokens against the cap; capping tightly can silently destroy answer quality</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: explicit output caps as cost/failure containment is a recurring recommendation in provider documentation and cost-control post-mortems involving runaway generation; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Set max tokens deliberately per request type — classification, extraction, summarization, chat — instead of leaving provider defaults (often thousands of tokens or the model maximum). Output tokens are the expensive ones (typically 3 5x input price), and unbounded generation is the failure mode that makes a single degenerate request expensive: a looping model or a prompt regression can emit thousands of junk tokens per call, multiplied across traffic. A cap converts \"unbounded cost per failure\" into \"bounded and alertable.\" Before / After Before: A yes/no classification endpoint runs with the default cap; a prompt regression makes the model explain its reasoning at length — output cost for the endpoint rises 40x before anyone notices. After: The endpoint is capped at 16 tokens; the regression manifests as a truncation rate alert within the hour, at negligible extra cost. Implementation Measure the output length distribution per request type from traces, set caps at p99 plus safety margin, log a metric whenever a response hits the cap, and alert on truncation rate shifts. Gotchas Derive caps from observed distributions, not guesses — too tight caps break outputs (especially JSON) mid structure Log and alert on cap hits: rising truncation is a regression signal, not noise When NOT to Apply Genuinely open ended generation (long form writing, code generation) where legitimate output length is unbounded — use per feature budgets and streaming with user control instead Reasoning model calls where the provider counts hidden reasoning tokens against the cap; capping tightly can silently destroy answer quality Verification Community reported: explicit output caps as cost/failure containment is a recurring recommendation in provider documentation and cost control post mortems involving runaway generation; not independently benchmarked here against a named production system."
     },
     {
       "id": "checkpoint-agent-state-after-each-tool-call",
@@ -1145,6 +1310,63 @@
       "body_text": "What & Why Before editing a prompt in response to a failure, classify what actually caused it — retrieval miss, reasoning error, tool failure, output parsing failure, or policy violation — using trace data. Editing the prompt blind, without classification, risks fixing the wrong layer of the system and can degrade previously working cases. Before / After Before: every reported failure triggers a prompt edit, regardless of whether the actual cause was retrieval, tooling, or parsing. After: each failure is first classified by root cause using trace data (was the right context retrieved? did tools return correctly? did parsing succeed?), and only failures actually caused by prompt/reasoning issues result in a prompt change. Implementation Add failure category tagging to your trace review process (retrieval / reasoning / tool / parsing / policy), inspect the relevant trace fields to determine the actual category before acting, and route the fix to the corresponding layer rather than defaulting to a prompt edit. Gotchas Editing the prompt for a failure that's actually a retrieval, tool, or parsing failure wastes effort and can degrade previously working cases Classification requires enough tracing detail to distinguish the categories — without that visibility, it degrades into guessing When NOT to Apply Skip formal classification for a single, clearly prompt caused failure with unambiguous evidence already in hand Not useful without adequate tracing infrastructure in place first — see trace tool inputs and outputs and log retrieved context as prerequisites Verification Community reported: classifying failures by root cause before making prompt changes is a widely repeated recommendation in LLM debugging writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "compact-tool-outputs-before-adding-to-context",
+      "title": "Truncate or Summarize Tool Outputs Before They Enter Agent Context",
+      "category": "context-window-management",
+      "tags": [
+        "agents",
+        "tool-use",
+        "efficiency"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (context engineering writeups; agent framework output-processing patterns)",
+      "applies_to": [
+        "agent-systems"
+      ],
+      "gotchas": [
+        "Naive truncation (first N chars) can cut exactly the part the agent needed — prefer structure-aware compaction: head+tail for logs, schema-plus-sample for query results, error-line extraction for stack traces",
+        "If you compact, give the agent a path to the full data (an ID or file reference it can re-query) — otherwise you've traded context bloat for dead ends",
+        "Summarizing with an LLM adds cost and can hallucinate details into the summary; deterministic truncation is safer for anything the agent will act on precisely"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "budget-context-before-adding-tools",
+        "prefer-id-references-over-copying",
+        "summarize-long-running-agent-state"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/compact-tool-outputs-before-adding-to-context",
+      "slug": "compact-tool-outputs-before-adding-to-context",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Truncate or Summarize Tool Outputs Before They Enter Agent Context",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 337,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Post-process every tool's raw output before appending it to the agent's context: cap its size, extract the relevant structure, and reference the full payload by ID. Tool outputs are the dominant source of agent context bloat — one unfiltered API response, database query, or log dump can be tens of thousands of tokens, most of it irrelevant — and each bloated result is then re-sent on <em>every subsequent model call</em> in the loop, multiplying its cost by the number of remaining steps and pushing earlier reasoning out of effective context.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A monitoring tool returns a 30K-token JSON payload; the agent's next 15 steps each re-transmit it, costing ~450K cumulative input tokens and degrading attention over the parts that matter.</p>\n<p><strong>After:</strong> The tool wrapper returns the 40 relevant lines plus <code>full_result_id: r_8213</code> (re-queryable); subsequent steps carry ~1K tokens of it instead of 30K.</p>\n<h2>Implementation</h2>\n<p>Add a per-tool output policy: a hard token cap, structure-aware compaction (head+tail for logs, error extraction for traces, schema-plus-rows-sample for query results), and an ID or file reference for retrieving the full output on demand.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Truncate structure-aware, not first-N-chars — the needed detail is often at the end (stack traces) or middle</li>\n<li>Always leave a handle to the full data the agent can follow; compaction without recourse creates dead ends</li>\n<li>LLM summarization of outputs can hallucinate; use deterministic compaction for precision-critical data</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Tools whose outputs are already small and fully relevant (a calculator, a boolean check) — a policy layer there is pure overhead</li>\n<li>Cases where the agent must reproduce the output verbatim (e.g. quoting a file for an exact edit) — give it the full content for that step</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: tool-output compaction with full-payload references is a core context-engineering pattern documented across agent framework guides and long-trace cost analyses; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Post process every tool's raw output before appending it to the agent's context: cap its size, extract the relevant structure, and reference the full payload by ID. Tool outputs are the dominant source of agent context bloat — one unfiltered API response, database query, or log dump can be tens of thousands of tokens, most of it irrelevant — and each bloated result is then re sent on every subsequent model call in the loop, multiplying its cost by the number of remaining steps and pushing earlier reasoning out of effective context. Before / After Before: A monitoring tool returns a 30K token JSON payload; the agent's next 15 steps each re transmit it, costing 450K cumulative input tokens and degrading attention over the parts that matter. After: The tool wrapper returns the 40 relevant lines plus full result id: r 8213 (re queryable); subsequent steps carry 1K tokens of it instead of 30K. Implementation Add a per tool output policy: a hard token cap, structure aware compaction (head+tail for logs, error extraction for traces, schema plus rows sample for query results), and an ID or file reference for retrieving the full output on demand. Gotchas Truncate structure aware, not first N chars — the needed detail is often at the end (stack traces) or middle Always leave a handle to the full data the agent can follow; compaction without recourse creates dead ends LLM summarization of outputs can hallucinate; use deterministic compaction for precision critical data When NOT to Apply Tools whose outputs are already small and fully relevant (a calculator, a boolean check) — a policy layer there is pure overhead Cases where the agent must reproduce the output verbatim (e.g. quoting a file for an exact edit) — give it the full content for that step Verification Community reported: tool output compaction with full payload references is a core context engineering pattern documented across agent framework guides and long trace cost analyses; not independently benchmarked here against a named production system."
+    },
+    {
       "id": "compress-retrieved-context-before-generation",
       "title": "Compress or Filter Retrieved Chunks When Context Cost Dominates",
       "category": "cost-reduction",
@@ -1196,6 +1418,60 @@
       "word_count": 261,
       "body_html": "<h2>What &amp; Why</h2>\n<p>When retrieved context tokens dominate the total cost of a RAG call (more than the generated answer itself), summarize or filter retrieved chunks down to the most relevant content before passing them to the generation call. This trades a small quality risk (potential detail loss) for a meaningful reduction in the largest cost driver of the request.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> all retrieved chunks (potentially several thousand tokens) are passed in full to the generation call regardless of relevance density.</p>\n<p><strong>After:</strong> retrieved chunks are filtered to the most relevant subset or summarized before the generation call, reducing input tokens while preserving the information needed to answer.</p>\n<h2>Implementation</h2>\n<p>Measure whether context tokens are actually the dominant cost driver for your RAG calls, and if so, add a filtering or summarization step (a smaller/cheaper model, or a relevance-based truncation) between retrieval and generation, verifying answer quality doesn't measurably degrade on your eval set.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Compression is lossy — it risks dropping a detail the answer actually needed, trading cost for a real quality risk</li>\n<li>The compression step itself has a cost — verify the net savings are actually positive after accounting for it</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if context tokens are not actually the dominant cost driver for your calls — measure first</li>\n<li>Not worth the quality risk for high-stakes answers where any detail loss is unacceptable</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: compressing or filtering retrieved context before generation is a widely repeated recommendation in RAG cost-optimization writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why When retrieved context tokens dominate the total cost of a RAG call (more than the generated answer itself), summarize or filter retrieved chunks down to the most relevant content before passing them to the generation call. This trades a small quality risk (potential detail loss) for a meaningful reduction in the largest cost driver of the request. Before / After Before: all retrieved chunks (potentially several thousand tokens) are passed in full to the generation call regardless of relevance density. After: retrieved chunks are filtered to the most relevant subset or summarized before the generation call, reducing input tokens while preserving the information needed to answer. Implementation Measure whether context tokens are actually the dominant cost driver for your RAG calls, and if so, add a filtering or summarization step (a smaller/cheaper model, or a relevance based truncation) between retrieval and generation, verifying answer quality doesn't measurably degrade on your eval set. Gotchas Compression is lossy — it risks dropping a detail the answer actually needed, trading cost for a real quality risk The compression step itself has a cost — verify the net savings are actually positive after accounting for it When NOT to Apply Skip this if context tokens are not actually the dominant cost driver for your calls — measure first Not worth the quality risk for high stakes answers where any detail loss is unacceptable Verification Community reported: compressing or filtering retrieved context before generation is a widely repeated recommendation in RAG cost optimization writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "correlate-llm-traces-with-request-ids",
+      "title": "Propagate Application Request IDs Into Every LLM Trace",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "observability",
+        "tracing"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "2-4 hours",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (distributed tracing practice; LLM observability tooling docs)",
+      "applies_to": [
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "Generating a fresh ID inside the LLM service instead of propagating the caller's ID defeats the purpose — the correlation must start at the edge (gateway/frontend) and flow through every hop",
+        "Async and queued work drops context silently; make sure the ID survives job serialization, not just in-process call chains"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "trace-tool-inputs-and-outputs",
+        "store-prompt-version-in-every-trace"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids",
+      "slug": "correlate-llm-traces-with-request-ids",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Propagate Application Request IDs Into Every LLM Trace",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 288,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Carry the application's request/correlation ID into every LLM span, log line, and eval record, so a single user complaint can be traced from the frontend click through retrieval, each model call, and the final response. LLM observability tools and application APM often live in separate systems; without a shared ID, debugging means timestamp archaeology — matching a 14:32:07 support ticket against thousands of anonymous traces. With it, \"user X got a wrong answer at 14:32\" resolves to the exact trace in seconds.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Support ticket says \"the bot told me to cancel my subscription to fix billing\" — engineers grep logs by approximate time and hope the user's request stands out among hundreds.</p>\n<p><strong>After:</strong> The ticket carries <code>request_id=abc123</code>; one query returns the full trace — the retrieved chunks, the prompt version, the model response — and the bad retrieved document is identified in one minute.</p>\n<h2>Implementation</h2>\n<p>Accept/generate the correlation ID at the edge, propagate it via context (HTTP headers, job payloads, async task metadata), and attach it as a standard attribute on every LLM span and structured log line — OpenTelemetry trace context does this for free if your LLM instrumentation joins the existing trace instead of starting its own.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>The ID must originate at the edge and be propagated, not regenerated per service</li>\n<li>Async/queued work drops context silently — verify the ID survives job serialization</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Rarely skip-worthy; the only real exception is throwaway prototypes with no users, where there is nothing to correlate yet</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: request-ID correlation is standard distributed-tracing practice extended to LLM spans, recommended across LLM observability tooling documentation; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Carry the application's request/correlation ID into every LLM span, log line, and eval record, so a single user complaint can be traced from the frontend click through retrieval, each model call, and the final response. LLM observability tools and application APM often live in separate systems; without a shared ID, debugging means timestamp archaeology — matching a 14:32:07 support ticket against thousands of anonymous traces. With it, \"user X got a wrong answer at 14:32\" resolves to the exact trace in seconds. Before / After Before: Support ticket says \"the bot told me to cancel my subscription to fix billing\" — engineers grep logs by approximate time and hope the user's request stands out among hundreds. After: The ticket carries request id=abc123; one query returns the full trace — the retrieved chunks, the prompt version, the model response — and the bad retrieved document is identified in one minute. Implementation Accept/generate the correlation ID at the edge, propagate it via context (HTTP headers, job payloads, async task metadata), and attach it as a standard attribute on every LLM span and structured log line — OpenTelemetry trace context does this for free if your LLM instrumentation joins the existing trace instead of starting its own. Gotchas The ID must originate at the edge and be propagated, not regenerated per service Async/queued work drops context silently — verify the ID survives job serialization When NOT to Apply Rarely skip worthy; the only real exception is throwaway prototypes with no users, where there is nothing to correlate yet Verification Community reported: request ID correlation is standard distributed tracing practice extended to LLM spans, recommended across LLM observability tooling documentation; not independently benchmarked here against a named production system."
     },
     {
       "id": "define-fallbacks-for-tool-failures",
@@ -2120,6 +2396,61 @@
       "word_count": 315,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Record each state transition an agent makes (its reasoning at that step, the action chosen, and the result observed) as a structured log event, not only the final answer returned to the user. When an agent produces a wrong result, the transition log is what lets you determine which specific step introduced the error, rather than guessing from the final output alone.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>logger.info(f\"Agent finished: {final_answer}\")</code> — only the end state is recorded.</p>\n<p><strong>After:</strong> <code>logger.info({\"step\": i, \"thought\": thought, \"action\": action, \"result\": result})</code> emitted at every step, queryable by task ID to reconstruct the full trace.</p>\n<h2>Implementation</h2>\n<p>Emit one structured log event per step containing the agent's stated reasoning, the action taken, and the observed result, tagged with a task/run ID so all events for one execution can be reconstructed in order; route these into the same trace/observability pipeline used for other LLM calls rather than a separate ad hoc log.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Logging only the final answer makes it impossible to tell why an agent reached a wrong conclusion — the intermediate reasoning and tool results are what actually explain a failure</li>\n<li>Unstructured log lines are hard to query at scale — log structured events (state, action, result) rather than free-text messages if you expect to debug more than a handful of traces</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip per-step logging for extremely high-volume, low-stakes agent calls where the storage/query cost of full trace logging outweighs the debugging value — sample instead of logging every run in full</li>\n<li>Skip this if your orchestration framework already provides built-in step-level tracing you can query directly — don't duplicate the mechanism</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: structured per-step logging is a widely recommended agent-observability practice, though this entry has not yet been independently verified against a named production system — flagged <code>enrichment_status: draft</code> pending stronger evidence.</p>\n",
       "body_text": "What & Why Record each state transition an agent makes (its reasoning at that step, the action chosen, and the result observed) as a structured log event, not only the final answer returned to the user. When an agent produces a wrong result, the transition log is what lets you determine which specific step introduced the error, rather than guessing from the final output alone. Before / After Before: logger.info(f\"Agent finished: {final answer}\") — only the end state is recorded. After: logger.info({\"step\": i, \"thought\": thought, \"action\": action, \"result\": result}) emitted at every step, queryable by task ID to reconstruct the full trace. Implementation Emit one structured log event per step containing the agent's stated reasoning, the action taken, and the observed result, tagged with a task/run ID so all events for one execution can be reconstructed in order; route these into the same trace/observability pipeline used for other LLM calls rather than a separate ad hoc log. Gotchas Logging only the final answer makes it impossible to tell why an agent reached a wrong conclusion — the intermediate reasoning and tool results are what actually explain a failure Unstructured log lines are hard to query at scale — log structured events (state, action, result) rather than free text messages if you expect to debug more than a handful of traces When NOT to Apply Skip per step logging for extremely high volume, low stakes agent calls where the storage/query cost of full trace logging outweighs the debugging value — sample instead of logging every run in full Skip this if your orchestration framework already provides built in step level tracing you can query directly — don't duplicate the mechanism Verification Community reported: structured per step logging is a widely recommended agent observability practice, though this entry has not yet been independently verified against a named production system — flagged enrichment status: draft pending stronger evidence."
+    },
+    {
+      "id": "log-latency-by-pipeline-stage",
+      "title": "Break Down Latency by Pipeline Stage Before Optimizing Anything",
+      "category": "latency-optimization",
+      "tags": [
+        "observability",
+        "tracing"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "2-4 hours",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM latency debugging writeups; standard tracing practice)",
+      "applies_to": [
+        "production-llm-systems",
+        "rag-pipelines"
+      ],
+      "gotchas": [
+        "Averages hide the story — a stage that is 5% of mean latency can be 60% of p99; always look at stage breakdowns at the percentile you care about",
+        "Streaming responses need two generation metrics (time-to-first-token and total generation time); collapsing them into one number makes user-perceived latency invisible"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "measure-first-token-latency",
+        "measure-queue-time-separately"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/log-latency-by-pipeline-stage.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-latency-by-pipeline-stage",
+      "slug": "log-latency-by-pipeline-stage",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Break Down Latency by Pipeline Stage Before Optimizing Anything",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 267,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Instrument each pipeline stage — query rewriting, embedding, retrieval, reranking, prompt assembly, queueing, generation, post-processing — as a separate timed span before attempting any latency work. LLM pipelines invite a specific mistake: assuming the model call dominates and reaching for a faster/smaller model, when in practice reranking, sequential retrieval calls, or a guardrail pass are often the real tail-latency culprits. Optimizing without a stage breakdown is guessing with extra steps.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"p95 is 6 seconds, the LLM is slow, let's switch to a smaller model\" — quality drops, p95 improves by 400ms because generation was never the bottleneck.</p>\n<p><strong>After:</strong> The trace waterfall shows generation at 1.8s, but a sequential rerank + two guardrail LLM calls adding 3.1s; parallelizing and caching those cuts p95 to 3.2s with zero quality cost.</p>\n<h2>Implementation</h2>\n<p>Wrap each stage in a span (OpenTelemetry or your LLM tracing tool's native spans), report per-stage latency at p50/p95/p99 — not only means — and separate time-to-first-token from total generation for streaming paths.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Stage shares differ wildly between mean and p99 — analyze at the percentile you're fixing</li>\n<li>Streaming needs TTFT and total-generation tracked separately</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Single-call pipelines (one prompt, no retrieval, no post-processing) where there is only one stage to measure — provider-side breakdown (queue vs. inference) is the relevant split instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: per-stage latency decomposition is standard tracing practice, repeatedly cited in LLM latency post-mortems where non-generation stages dominated tail latency; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Instrument each pipeline stage — query rewriting, embedding, retrieval, reranking, prompt assembly, queueing, generation, post processing — as a separate timed span before attempting any latency work. LLM pipelines invite a specific mistake: assuming the model call dominates and reaching for a faster/smaller model, when in practice reranking, sequential retrieval calls, or a guardrail pass are often the real tail latency culprits. Optimizing without a stage breakdown is guessing with extra steps. Before / After Before: \"p95 is 6 seconds, the LLM is slow, let's switch to a smaller model\" — quality drops, p95 improves by 400ms because generation was never the bottleneck. After: The trace waterfall shows generation at 1.8s, but a sequential rerank + two guardrail LLM calls adding 3.1s; parallelizing and caching those cuts p95 to 3.2s with zero quality cost. Implementation Wrap each stage in a span (OpenTelemetry or your LLM tracing tool's native spans), report per stage latency at p50/p95/p99 — not only means — and separate time to first token from total generation for streaming paths. Gotchas Stage shares differ wildly between mean and p99 — analyze at the percentile you're fixing Streaming needs TTFT and total generation tracked separately When NOT to Apply Single call pipelines (one prompt, no retrieval, no post processing) where there is only one stage to measure — provider side breakdown (queue vs. inference) is the relevant split instead Verification Community reported: per stage latency decomposition is standard tracing practice, repeatedly cited in LLM latency post mortems where non generation stages dominated tail latency; not independently benchmarked here against a named production system."
     },
     {
       "id": "log-raw-and-parsed-model-outputs",
@@ -3744,6 +4075,62 @@
       "body_text": "What & Why Maintain a small suite of known prompt injection and adversarial context attacks and run it automatically in CI on every change to prompts, retrieval, or tool calling logic. Without an automated regression suite, a change that reintroduces a previously fixed injection vulnerability has no mechanism to catch it before deployment. Before / After Before: injection resistance is checked manually and occasionally, with no automated gate in the deployment pipeline. After: a suite of known injection payloads (e.g. \"ignore previous instructions,\" injected fake system messages inside retrieved documents) runs automatically in CI, with a clear pass/fail check on whether the model followed the injected instruction. Implementation Build a small suite of known injection payloads relevant to your application's attack surface (user input, retrieved documents, tool outputs), define a clear pass/fail criterion per case (did the model comply with the injected instruction), and wire the suite into CI so it runs on every relevant change. Gotchas A static suite only catches known attack patterns — it needs periodic updates as new injection techniques are discovered Injection tests need clear pass/fail criteria — a vague manual review doesn't scale as a CI gate When NOT to Apply Skip this for applications with no untrusted input surface at all (no user input, no external retrieval, no untrusted tool outputs) Not a complete security guarantee on its own — pair with runtime monitoring and the underlying mitigations (see treat retrieved text as untrusted, separate user content from system instructions), since a fixed test suite cannot cover every possible attack Verification Community reported: automated prompt injection regression suites in CI are a repeated recommendation in LLM application security writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "sample-production-traffic-into-eval-sets",
+      "title": "Continuously Sample Production Traffic Into Your Eval Sets",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "observability"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "1-2 days",
+      "phase": "evaluation",
+      "effort": "day",
+      "estimated_time": "~1-2 days",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLMOps eval-set maintenance writeups)",
+      "applies_to": [
+        "llm-evaluation-pipelines",
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "Production samples contain PII — route sampled traffic through the same redaction pipeline as your traces before it enters an eval set anyone can read",
+        "Random sampling over-represents the head of the distribution; stratify by intent/segment or deliberately oversample failures (thumbs-down, retries, escalations) to keep the set discriminative",
+        "Never auto-promote samples into the frozen holdout set — new samples go into the dev eval set; the holdout only changes deliberately"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets",
+        "slice-eval-metrics-by-input-segment"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/sample-production-traffic-into-eval-sets.md",
+      "url": "content/tips-and-tricks/evaluation/sample-production-traffic-into-eval-sets",
+      "slug": "sample-production-traffic-into-eval-sets",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Continuously Sample Production Traffic Into Your Eval Sets",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 296,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Set up a recurring pipeline that samples real production requests — especially failures — labels them, and adds them to your eval sets. Hand-written eval sets describe the traffic you <em>imagined</em> at design time; real traffic drifts (new phrasings, new intents, adversarial users), and an eval set that never refreshes measures your system against last quarter's world. The failure-oversampling variant is the highest-value part: every thumbs-down or escalation is a free, maximally informative eval candidate.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A 300-example eval set written before launch, unchanged for six months, scoring 92% while support tickets about a new query pattern pile up.</p>\n<p><strong>After:</strong> A weekly job samples ~50 production requests stratified by intent plus all negative-feedback cases; a human labels them; the dev eval set tracks reality and the new query pattern shows up as a failing slice within a week.</p>\n<h2>Implementation</h2>\n<p>Sample from traces (stratified by segment, oversampling negative-feedback and retry cases), redact PII, queue for human labeling, and append to the versioned dev eval set — keeping the frozen holdout untouched.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Redact PII before samples enter a human-readable eval set</li>\n<li>Pure random sampling over-represents easy head traffic — stratify and oversample failures</li>\n<li>New samples go to the dev set only; the frozen holdout changes deliberately or not at all</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Pre-launch systems with no production traffic yet — build the synthetic set first, add this pipeline at launch</li>\n<li>Domains where data-retention policy forbids reusing user content, unless you have an approved anonymization path</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: continuous eval-set refresh from production traffic (with failure oversampling) is a recurring recommendation in LLMOps writeups and eval tooling guides; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Set up a recurring pipeline that samples real production requests — especially failures — labels them, and adds them to your eval sets. Hand written eval sets describe the traffic you imagined at design time; real traffic drifts (new phrasings, new intents, adversarial users), and an eval set that never refreshes measures your system against last quarter's world. The failure oversampling variant is the highest value part: every thumbs down or escalation is a free, maximally informative eval candidate. Before / After Before: A 300 example eval set written before launch, unchanged for six months, scoring 92% while support tickets about a new query pattern pile up. After: A weekly job samples 50 production requests stratified by intent plus all negative feedback cases; a human labels them; the dev eval set tracks reality and the new query pattern shows up as a failing slice within a week. Implementation Sample from traces (stratified by segment, oversampling negative feedback and retry cases), redact PII, queue for human labeling, and append to the versioned dev eval set — keeping the frozen holdout untouched. Gotchas Redact PII before samples enter a human readable eval set Pure random sampling over represents easy head traffic — stratify and oversample failures New samples go to the dev set only; the frozen holdout changes deliberately or not at all When NOT to Apply Pre launch systems with no production traffic yet — build the synthetic set first, add this pipeline at launch Domains where data retention policy forbids reusing user content, unless you have an approved anonymization path Verification Community reported: continuous eval set refresh from production traffic (with failure oversampling) is a recurring recommendation in LLMOps writeups and eval tooling guides; not independently benchmarked here against a named production system."
+    },
+    {
       "id": "sandbox-code-execution-tools",
       "title": "Add Resource and Network Limits to Sandboxed Code Execution Calls",
       "category": "agent-reliability",
@@ -4129,6 +4516,58 @@
       "body_text": "What & Why Use the provider's message role structure (system vs. user) combined with explicit delimiters to ensure user submitted content is always treated as data to respond to, never as an instruction that can override system policy. Without this separation, a user can submit input phrased as a command (\"ignore previous instructions and...\") that the model may follow if it can't distinguish policy from content. Before / After Before: prompt = f\"{system policy}\\n{user input}\" concatenated as one string with no role or delimiter boundary. After: messages = [{\"role\": \"system\", \"content\": system policy}, {\"role\": \"user\", \"content\": f\"<user input {user input}</user input \"}] — role structure plus explicit delimiters mark the boundary. Implementation Use your provider's native system/user message roles rather than a single concatenated string, and additionally wrap raw user content in explicit delimiters so the boundary is marked twice (structurally and textually). Gotchas Delimiters alone, without message role separation, are a weaker defense — adversarial input can mimic delimiter syntax to try to escape the boundary This defends against user input masquerading as policy but not against injection carried in retrieved documents or tool outputs — pair with treat retrieved text as untrusted When NOT to Apply Skip additional hardening for internal, fully trusted operator tools where no adversarial user input is possible Not a complete defense on its own against a determined adversary — combine with output validation and monitoring, not as the sole safeguard Verification Community reported: role based separation plus delimiters is a widely cited baseline mitigation in prompt injection defense writeups, not independently benchmarked here against a named production incident."
     },
     {
+      "id": "set-pass-fail-thresholds-before-running-evals",
+      "title": "Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "30 minutes",
+      "phase": "evaluation",
+      "effort": "minutes",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (eval methodology writeups; standard pre-registration practice)",
+      "applies_to": [
+        "llm-evaluation-pipelines"
+      ],
+      "gotchas": [
+        "Thresholds set without baseline data are guesses — run the eval once on your current system to calibrate, then freeze the threshold for future comparisons",
+        "A single aggregate threshold can hide regressions in critical slices; set per-slice thresholds for high-stakes categories"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/set-pass-fail-thresholds-before-running-evals.md",
+      "url": "content/tips-and-tricks/evaluation/set-pass-fail-thresholds-before-running-evals",
+      "slug": "set-pass-fail-thresholds-before-running-evals",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 265,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Decide what score counts as passing — per metric, and per critical slice — before the eval runs. When thresholds are chosen after seeing results, the natural bias is to rationalize whatever the current system scores as acceptable (\"87% seems fine\"), which quietly converts the eval from a gate into a rubber stamp. Pre-committed thresholds make regressions undeniable and force the team to articulate what quality bar the product actually requires.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Run eval → look at score → debate in Slack whether 84% is acceptable this time → ship.</p>\n<p><strong>After:</strong> Threshold recorded in the eval config (<code>min_accuracy: 0.85</code>, <code>max_hallucination_rate: 0.02</code>) before the run; CI fails the deploy automatically when breached, and changing a threshold requires an explicit reviewed commit.</p>\n<h2>Implementation</h2>\n<p>Calibrate once against your current production system, write thresholds into version-controlled eval config, wire them into CI as blocking assertions, and require threshold changes to go through code review with a stated rationale.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Thresholds set without baseline data are guesses — calibrate on the current system first, then freeze</li>\n<li>Aggregate thresholds hide slice regressions — set separate floors for high-stakes categories (safety, top customer intents)</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Early prototyping where the eval set itself is still churning — premature gates on unstable metrics generate noise, not discipline</li>\n<li>Exploratory evals whose purpose is characterization rather than gating</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: pre-committing acceptance criteria mirrors pre-registration practice in experimental methodology and is a recurring recommendation in LLM eval-pipeline writeups; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Decide what score counts as passing — per metric, and per critical slice — before the eval runs. When thresholds are chosen after seeing results, the natural bias is to rationalize whatever the current system scores as acceptable (\"87% seems fine\"), which quietly converts the eval from a gate into a rubber stamp. Pre committed thresholds make regressions undeniable and force the team to articulate what quality bar the product actually requires. Before / After Before: Run eval → look at score → debate in Slack whether 84% is acceptable this time → ship. After: Threshold recorded in the eval config (min accuracy: 0.85, max hallucination rate: 0.02) before the run; CI fails the deploy automatically when breached, and changing a threshold requires an explicit reviewed commit. Implementation Calibrate once against your current production system, write thresholds into version controlled eval config, wire them into CI as blocking assertions, and require threshold changes to go through code review with a stated rationale. Gotchas Thresholds set without baseline data are guesses — calibrate on the current system first, then freeze Aggregate thresholds hide slice regressions — set separate floors for high stakes categories (safety, top customer intents) When NOT to Apply Early prototyping where the eval set itself is still churning — premature gates on unstable metrics generate noise, not discipline Exploratory evals whose purpose is characterization rather than gating Verification Community reported: pre committing acceptance criteria mirrors pre registration practice in experimental methodology and is a recurring recommendation in LLM eval pipeline writeups; not independently benchmarked here against a named production system."
+    },
+    {
       "id": "set-temperature-by-decision-risk",
       "title": "Set Temperature by the Cost of Being Wrong, Not a Generic Default",
       "category": "prompting",
@@ -4232,6 +4671,115 @@
       "word_count": 261,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Assign each distinct feature in your application an explicit maximum input and output token budget, and alert when a feature's actual usage approaches or exceeds it. Without per-feature budgets, a cost regression in one feature (a prompt change, a retrieval change that adds more context) can go unnoticed in the aggregate bill until it's a large, hard-to-attribute problem.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> token usage is tracked only in aggregate across the whole application, with no per-feature attribution or alerting.</p>\n<p><strong>After:</strong> each feature has an explicit token budget (e.g. <code>support_bot: max_input=4000, max_output=500</code>), with alerts firing when actual usage trends toward or exceeds it.</p>\n<h2>Implementation</h2>\n<p>Measure current typical token usage per feature, set a budget with reasonable headroom above that baseline, instrument usage tracking per feature, and configure alerts for usage approaching or exceeding the budget.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without per-feature budgets, a cost regression in one feature can go unnoticed until the aggregate bill spikes</li>\n<li>A budget set too aggressively can degrade quality by truncating needed content — base it on measured typical usage plus headroom, not an arbitrary number</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip per-feature budgeting for a single-feature application where aggregate tracking is already equivalent to per-feature tracking</li>\n<li>Not necessary if cost is not currently a meaningful constraint and the operational overhead of budget-setting isn't justified yet</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: per-feature token budgets with overrun alerting are a widely repeated recommendation in LLM application cost-governance writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Assign each distinct feature in your application an explicit maximum input and output token budget, and alert when a feature's actual usage approaches or exceeds it. Without per feature budgets, a cost regression in one feature (a prompt change, a retrieval change that adds more context) can go unnoticed in the aggregate bill until it's a large, hard to attribute problem. Before / After Before: token usage is tracked only in aggregate across the whole application, with no per feature attribution or alerting. After: each feature has an explicit token budget (e.g. support bot: max input=4000, max output=500), with alerts firing when actual usage trends toward or exceeds it. Implementation Measure current typical token usage per feature, set a budget with reasonable headroom above that baseline, instrument usage tracking per feature, and configure alerts for usage approaching or exceeding the budget. Gotchas Without per feature budgets, a cost regression in one feature can go unnoticed until the aggregate bill spikes A budget set too aggressively can degrade quality by truncating needed content — base it on measured typical usage plus headroom, not an arbitrary number When NOT to Apply Skip per feature budgeting for a single feature application where aggregate tracking is already equivalent to per feature tracking Not necessary if cost is not currently a meaningful constraint and the operational overhead of budget setting isn't justified yet Verification Community reported: per feature token budgets with overrun alerting are a widely repeated recommendation in LLM application cost governance writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "set-wall-clock-timeouts-for-agent-runs",
+      "title": "Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets",
+      "category": "agent-reliability",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "1-2 hours",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (agent runaway post-mortems; orchestration framework timeout features)",
+      "applies_to": [
+        "agent-systems"
+      ],
+      "gotchas": [
+        "A step budget alone doesn't bound time or money: one step can hang on a slow tool for 20 minutes or stream an enormous response — you need per-step timeouts, a run-level wall clock, and ideally a token/cost budget as three separate limits",
+        "Timeout handling must be graceful: kill the run mid-tool-call without checkpointing and you can leave external side effects half-applied — time out at step boundaries where possible"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "add-a-max-step-budget-to-every-agent",
+        "checkpoint-agent-state-after-each-tool-call",
+        "cap-agent-tool-retries"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs",
+      "slug": "set-wall-clock-timeouts-for-agent-runs",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 329,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Bound every agent run with a wall-clock timeout (and per-step tool timeouts) in addition to a max-step budget. Step budgets bound <em>iterations</em>; they don't bound <em>time or cost per iteration</em> — a hung tool call, a slow provider, or a single step that streams a massive response can burn 20 minutes and real money while remaining safely \"within budget\" at step 3 of 20. The three limits fail differently, so production agents need all three: steps (loop containment), wall clock (time containment), tokens/cost (spend containment).</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> An agent with a 25-step budget calls a scraping tool that hangs on an unresponsive site; the run sits at step 7 for 40 minutes, holding a worker and a user's patience.</p>\n<p><strong>After:</strong> The tool call times out at 60s, the step is marked failed with a fallback, and the run itself is hard-capped at 10 minutes — worst case is now bounded and predictable.</p>\n<h2>Implementation</h2>\n<p>Set per-tool-call timeouts sized to each tool's latency profile, a run-level wall-clock deadline enforced by the orchestrator, and time out at step boundaries where possible — checkpointing state so a timed-out run can report partial progress or resume rather than vanish.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Steps, wall clock, and token/cost budgets bound different failure modes — set all three, don't treat any one as covering the others</li>\n<li>Time out gracefully at step boundaries with checkpointed state; mid-tool kills can leave external side effects half-applied</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Deliberately long-horizon background agents — they still need timeouts, merely sized in hours with checkpoint/resume, not removed</li>\n<li>Hard-realtime paths where an agent loop shouldn't exist at all; a timeout is not a substitute for the right architecture</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: run-level and per-step timeouts are standard features of agent orchestration frameworks and a recurring lesson in runaway-agent post-mortems; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Bound every agent run with a wall clock timeout (and per step tool timeouts) in addition to a max step budget. Step budgets bound iterations ; they don't bound time or cost per iteration — a hung tool call, a slow provider, or a single step that streams a massive response can burn 20 minutes and real money while remaining safely \"within budget\" at step 3 of 20. The three limits fail differently, so production agents need all three: steps (loop containment), wall clock (time containment), tokens/cost (spend containment). Before / After Before: An agent with a 25 step budget calls a scraping tool that hangs on an unresponsive site; the run sits at step 7 for 40 minutes, holding a worker and a user's patience. After: The tool call times out at 60s, the step is marked failed with a fallback, and the run itself is hard capped at 10 minutes — worst case is now bounded and predictable. Implementation Set per tool call timeouts sized to each tool's latency profile, a run level wall clock deadline enforced by the orchestrator, and time out at step boundaries where possible — checkpointing state so a timed out run can report partial progress or resume rather than vanish. Gotchas Steps, wall clock, and token/cost budgets bound different failure modes — set all three, don't treat any one as covering the others Time out gracefully at step boundaries with checkpointed state; mid tool kills can leave external side effects half applied When NOT to Apply Deliberately long horizon background agents — they still need timeouts, merely sized in hours with checkpoint/resume, not removed Hard realtime paths where an agent loop shouldn't exist at all; a timeout is not a substitute for the right architecture Verification Community reported: run level and per step timeouts are standard features of agent orchestration frameworks and a recurring lesson in runaway agent post mortems; not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "slice-eval-metrics-by-input-segment",
+      "title": "Slice Eval Metrics by Input Segment Instead of Trusting the Average",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "observability"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "2-4 hours",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (ML slice-based evaluation practice; eval tooling docs)",
+      "applies_to": [
+        "llm-evaluation-pipelines"
+      ],
+      "gotchas": [
+        "Small slices produce noisy metrics — a 10-example slice swinging 10% per run is sampling noise, not signal; enforce a minimum slice size before trusting deltas",
+        "Slicing by too many dimensions at once creates hundreds of micro-slices nobody reviews; start with 3-5 segments that map to real product decisions"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets",
+        "set-pass-fail-thresholds-before-running-evals"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/slice-eval-metrics-by-input-segment.md",
+      "url": "content/tips-and-tricks/evaluation/slice-eval-metrics-by-input-segment",
+      "slug": "slice-eval-metrics-by-input-segment",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Slice Eval Metrics by Input Segment Instead of Trusting the Average",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 271,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Tag every eval example with segment metadata (language, intent type, input length, customer tier, difficulty) and report metrics per segment, not only overall. Aggregate scores are dominated by whatever segment is most common in the eval set: a model change that improves easy English queries by 3% while breaking long-context or non-English queries entirely can show up as a net <em>improvement</em> in the average. Slices are where regressions actually live.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"Accuracy went from 86% to 87%, ship it\" — while accuracy on the 8% of traffic that is multi-turn dropped from 80% to 55%.</p>\n<p><strong>After:</strong> Eval report is a table of segments × metrics; the multi-turn row turns red and blocks the release even though the topline improved.</p>\n<h2>Implementation</h2>\n<p>Add a <code>segment</code> metadata field (or several) to each eval example, group results by segment in the report, and set minimum slice sizes so noisy micro-slices are flagged as inconclusive rather than pass/fail.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Small slices are noisy — enforce a minimum slice size (e.g. 30+ examples) before trusting deltas</li>\n<li>Too many slicing dimensions creates micro-slices nobody reviews — start with 3-5 segments tied to real product decisions</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Eval sets under ~100 examples: slicing them produces segments too small to be meaningful — grow the set first</li>\n<li>Genuinely homogeneous workloads (single language, single narrow task) where segments would be arbitrary</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: slice-based evaluation is established ML evaluation practice (subgroup analysis) repeatedly recommended in LLM eval writeups and supported natively by eval tooling; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Tag every eval example with segment metadata (language, intent type, input length, customer tier, difficulty) and report metrics per segment, not only overall. Aggregate scores are dominated by whatever segment is most common in the eval set: a model change that improves easy English queries by 3% while breaking long context or non English queries entirely can show up as a net improvement in the average. Slices are where regressions actually live. Before / After Before: \"Accuracy went from 86% to 87%, ship it\" — while accuracy on the 8% of traffic that is multi turn dropped from 80% to 55%. After: Eval report is a table of segments × metrics; the multi turn row turns red and blocks the release even though the topline improved. Implementation Add a segment metadata field (or several) to each eval example, group results by segment in the report, and set minimum slice sizes so noisy micro slices are flagged as inconclusive rather than pass/fail. Gotchas Small slices are noisy — enforce a minimum slice size (e.g. 30+ examples) before trusting deltas Too many slicing dimensions creates micro slices nobody reviews — start with 3 5 segments tied to real product decisions When NOT to Apply Eval sets under 100 examples: slicing them produces segments too small to be meaningful — grow the set first Genuinely homogeneous workloads (single language, single narrow task) where segments would be arbitrary Verification Community reported: slice based evaluation is established ML evaluation practice (subgroup analysis) repeatedly recommended in LLM eval writeups and supported natively by eval tooling; not independently benchmarked here against a named production system."
     },
     {
       "id": "start-with-a-smaller-quantized-model",
@@ -5046,6 +5594,61 @@
       "body_text": "What & Why Measure and optimize cost per successfully completed task, in addition to cost per individual model call. A cheaper model or shorter prompt that requires more retries, more escalations, or more failed attempts can have a lower per call cost while actually costing more per resolved task — cost per call alone hides this tradeoff. Before / After Before: cost dashboards report only total api cost / total calls, which improves when switching to a cheaper model even if that model fails more often and requires retries. After: cost dashboards report total cost including retries / count of successful outcomes, capturing the true cost of getting to a resolved task. Implementation Define a clear success signal for the task (completion, user acceptance, resolution without escalation), track total cost across all attempts (including retries and failures) per task, and compute cost per successful outcome as the primary cost metric alongside — not instead of — cost per call. Gotchas Cost per call can look like it's improving while cost per successful outcome gets worse, if the cheaper approach requires more retries or produces more failures Defining \"successful outcome\" requires an actual success signal — without one, this metric can't be computed When NOT to Apply Skip this for features with no clear, measurable success/failure signal to attach cost to Not necessary for very low stakes, low volume features where the analysis overhead isn't justified by the modest cost involved Verification Production verified: tracking cost per successful outcome rather than cost per call alone is a standard, widely documented practice in outcome based cost monitoring for production LLM applications."
     },
     {
+      "id": "track-refusal-rates-as-a-regression-signal",
+      "title": "Track Refusal and Non-Answer Rates as a First-Class Regression Signal",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "observability",
+        "monitoring",
+        "evaluation"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "half a day",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (production LLM monitoring writeups; over-refusal regressions after provider model updates)",
+      "applies_to": [
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "Keyword matching ('I cannot', 'I'm sorry') misses paraphrased refusals and false-positives on legitimate answers quoting those phrases — a small classifier or LLM judge on a sampled stream is more reliable",
+        "Some refusals are correct behavior (genuinely unsafe requests); track refusal rate per intent segment so you can distinguish 'refusing more attacks' from 'refusing more customers'"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "separate-model-errors-from-app-errors",
+        "slice-eval-metrics-by-input-segment"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/track-refusal-rates-as-a-regression-signal.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/track-refusal-rates-as-a-regression-signal",
+      "slug": "track-refusal-rates-as-a-regression-signal",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Track Refusal and Non-Answer Rates as a First-Class Regression Signal",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 295,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Classify responses as answered / refused / hedged-non-answer, and monitor that rate over time with alerts on shifts. Refusal regressions are among the most common silent failures in production LLM systems: a provider model update, a prompt tweak, or a guardrail change can double refusals on legitimate queries overnight while every latency and error dashboard stays green — because refusing is, technically, a successful 200 response. Users experience it as the product breaking; standard monitoring can't see it.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Provider silently updates the underlying model; refusals on a legitimate insurance-question intent jump from 2% to 15%; the team learns about it from a week of angry tickets.</p>\n<p><strong>After:</strong> The refusal-rate dashboard spikes within an hour of the model change, segmented to the affected intent, and the team rolls back / adjusts the prompt the same day.</p>\n<h2>Implementation</h2>\n<p>Run a lightweight refusal classifier (small model or LLM judge over a sampled stream; regex only as a first pass) on production responses, emit refusal-rate metrics per intent segment and per prompt/model version, and alert on relative shifts against a rolling baseline rather than absolute thresholds.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Keyword matching both misses paraphrased refusals and false-positives — classify, don't grep</li>\n<li>Segment by intent: rising refusals on attack traffic is success; on customer traffic it's an incident</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Systems with structured-only outputs where a refusal manifests as a validation failure you already count</li>\n<li>Very low-traffic internal tools where per-conversation human review is feasible anyway</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: over-refusal regressions after model/prompt updates are a widely documented production failure mode, and refusal-rate monitoring is a recurring recommendation in LLM production-monitoring writeups; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Classify responses as answered / refused / hedged non answer, and monitor that rate over time with alerts on shifts. Refusal regressions are among the most common silent failures in production LLM systems: a provider model update, a prompt tweak, or a guardrail change can double refusals on legitimate queries overnight while every latency and error dashboard stays green — because refusing is, technically, a successful 200 response. Users experience it as the product breaking; standard monitoring can't see it. Before / After Before: Provider silently updates the underlying model; refusals on a legitimate insurance question intent jump from 2% to 15%; the team learns about it from a week of angry tickets. After: The refusal rate dashboard spikes within an hour of the model change, segmented to the affected intent, and the team rolls back / adjusts the prompt the same day. Implementation Run a lightweight refusal classifier (small model or LLM judge over a sampled stream; regex only as a first pass) on production responses, emit refusal rate metrics per intent segment and per prompt/model version, and alert on relative shifts against a rolling baseline rather than absolute thresholds. Gotchas Keyword matching both misses paraphrased refusals and false positives — classify, don't grep Segment by intent: rising refusals on attack traffic is success; on customer traffic it's an incident When NOT to Apply Systems with structured only outputs where a refusal manifests as a validation failure you already count Very low traffic internal tools where per conversation human review is feasible anyway Verification Community reported: over refusal regressions after model/prompt updates are a widely documented production failure mode, and refusal rate monitoring is a recurring recommendation in LLM production monitoring writeups; not independently benchmarked here against a named production system."
+    },
+    {
       "id": "treat-retrieved-text-as-untrusted",
       "title": "Treat Retrieved Text as Untrusted Input",
       "category": "security-best-practices",
@@ -5639,6 +6242,62 @@
       "word_count": 376,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Embed and retrieve small, precise \"child\" chunks for matching, but return their larger enclosing \"parent\" chunk (a full section or page) to the generator as context. This resolves the standard chunking tradeoff — small chunks retrieve precisely but lack surrounding context; large chunks have context but dilute embeddings — by using small chunks for search and large chunks for generation.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> one chunk size used for both embedding/matching and the context sent to the generator, forcing a compromise between precision and context completeness.</p>\n<p><strong>After:</strong> small child chunks (e.g. 200 tokens) indexed for retrieval, each tagged with a reference to its parent chunk (e.g. 1,000–2,000 tokens); on retrieval, the matched child's parent is fetched and sent to the generator instead of the child alone.</p>\n<h2>Implementation</h2>\n<p>Split each document into large parent sections first, then split each parent into smaller child chunks, storing a parent-ID reference on each child's metadata; at retrieval time, match against child embeddings but resolve and return the corresponding parent text. Both LlamaIndex and LangChain ship a documented parent-document retriever implementing this pattern directly.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Parent-child chunking roughly doubles your indexing and storage complexity (two chunk sizes to manage, a mapping between them) — only adopt this when a single chunk size genuinely cannot serve both precision and context needs</li>\n<li>If the parent chunk is too large, you are back to the original dilution problem one level up — size the parent deliberately, do not default to \"the whole document\"</li>\n<li>This requires your retrieval framework to support a child-to-parent expansion step at retrieval time — verify your vector store/framework combination actually supports it before committing to the pattern</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for short documents where a single chunk size already comfortably captures both precise matching and sufficient context</li>\n<li>Skip this if your framework doesn't support parent-child expansion natively and building it yourself would exceed a day of work — that crosses into build-example territory, not a same-day tip</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: parent-document (parent-child) chunking is a documented, first-class retriever pattern in both LlamaIndex and LangChain, reported by practitioners specifically for long technical-manual and documentation RAG use cases where a single chunk size underperforms.</p>\n",
       "body_text": "What & Why Embed and retrieve small, precise \"child\" chunks for matching, but return their larger enclosing \"parent\" chunk (a full section or page) to the generator as context. This resolves the standard chunking tradeoff — small chunks retrieve precisely but lack surrounding context; large chunks have context but dilute embeddings — by using small chunks for search and large chunks for generation. Before / After Before: one chunk size used for both embedding/matching and the context sent to the generator, forcing a compromise between precision and context completeness. After: small child chunks (e.g. 200 tokens) indexed for retrieval, each tagged with a reference to its parent chunk (e.g. 1,000–2,000 tokens); on retrieval, the matched child's parent is fetched and sent to the generator instead of the child alone. Implementation Split each document into large parent sections first, then split each parent into smaller child chunks, storing a parent ID reference on each child's metadata; at retrieval time, match against child embeddings but resolve and return the corresponding parent text. Both LlamaIndex and LangChain ship a documented parent document retriever implementing this pattern directly. Gotchas Parent child chunking roughly doubles your indexing and storage complexity (two chunk sizes to manage, a mapping between them) — only adopt this when a single chunk size genuinely cannot serve both precision and context needs If the parent chunk is too large, you are back to the original dilution problem one level up — size the parent deliberately, do not default to \"the whole document\" This requires your retrieval framework to support a child to parent expansion step at retrieval time — verify your vector store/framework combination actually supports it before committing to the pattern When NOT to Apply Skip this for short documents where a single chunk size already comfortably captures both precise matching and sufficient context Skip this if your framework doesn't support parent child expansion natively and building it yourself would exceed a day of work — that crosses into build example territory, not a same day tip Verification Production verified: parent document (parent child) chunking is a documented, first class retriever pattern in both LlamaIndex and LangChain, reported by practitioners specifically for long technical manual and documentation RAG use cases where a single chunk size underperforms."
+    },
+    {
+      "id": "use-provider-batch-apis-for-offline-workloads",
+      "title": "Use Provider Batch APIs for Offline Workloads to Halve Token Costs",
+      "category": "cost-reduction",
+      "tags": [
+        "batching",
+        "inference"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "cost-and-performance",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (OpenAI/Anthropic batch API pricing documentation)",
+      "applies_to": [
+        "offline-llm-workloads",
+        "data-enrichment-pipelines"
+      ],
+      "gotchas": [
+        "Batch APIs are asynchronous with completion windows measured in hours (typically up to 24h) — anything a user is waiting on does not belong there",
+        "Results can complete out of order and individual items can fail; you need an idempotent job design keyed by custom IDs, not positional matching",
+        "Discounts apply to batch-endpoint submissions, not to concurrency you implement yourself against the realtime API"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "track-cost-per-feature",
+        "route-simple-tasks-to-smaller-models"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/cost-and-performance/use-provider-batch-apis-for-offline-workloads.md",
+      "url": "content/tips-and-tricks/cost-and-performance/use-provider-batch-apis-for-offline-workloads",
+      "slug": "use-provider-batch-apis-for-offline-workloads",
+      "section_path": "content/tips-and-tricks/cost-and-performance",
+      "display_name": "Use Provider Batch APIs for Offline Workloads to Halve Token Costs",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 283,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Route non-interactive LLM work — dataset labeling, bulk summarization, enrichment backfills, offline eval runs — through the provider's batch endpoint instead of the realtime API. Major providers (OpenAI, Anthropic, and others) price batch submissions at roughly 50% of realtime rates because they can schedule the work into idle capacity. For workloads where nobody is waiting on the response, paying the realtime premium buys you nothing: it is the single easiest large cost cut in most LLM budgets.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A nightly enrichment job fires 200K realtime API calls at full price, competing with production traffic for rate limits.</p>\n<p><strong>After:</strong> The same job uploads one batch file to the batch endpoint, collects results within the completion window at ~half the token cost, and production rate limits are untouched.</p>\n<h2>Implementation</h2>\n<p>Separate workloads by latency requirement, package offline work into the provider's batch format with a custom ID per item, submit, poll for completion, and reconcile results by ID with per-item retry for failures.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Asynchronous by design (up to 24h windows) — never put user-facing requests on it</li>\n<li>Match results by custom ID and handle per-item failures; don't assume order or completeness</li>\n<li>The discount is for the batch endpoint itself, not for client-side parallelism</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Anything interactive or deadline-bound tighter than the provider's completion window</li>\n<li>Self-hosted inference, where the equivalent move is scheduling offline jobs onto idle capacity yourself (see separate-offline-batch-jobs-from-chat-serving)</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: the ~50% batch discount is documented provider pricing (OpenAI Batch API, Anthropic Message Batches) rather than an empirical claim; the tip's judgment is about workload routing, not the discount itself.</p>\n",
+      "body_text": "What & Why Route non interactive LLM work — dataset labeling, bulk summarization, enrichment backfills, offline eval runs — through the provider's batch endpoint instead of the realtime API. Major providers (OpenAI, Anthropic, and others) price batch submissions at roughly 50% of realtime rates because they can schedule the work into idle capacity. For workloads where nobody is waiting on the response, paying the realtime premium buys you nothing: it is the single easiest large cost cut in most LLM budgets. Before / After Before: A nightly enrichment job fires 200K realtime API calls at full price, competing with production traffic for rate limits. After: The same job uploads one batch file to the batch endpoint, collects results within the completion window at half the token cost, and production rate limits are untouched. Implementation Separate workloads by latency requirement, package offline work into the provider's batch format with a custom ID per item, submit, poll for completion, and reconcile results by ID with per item retry for failures. Gotchas Asynchronous by design (up to 24h windows) — never put user facing requests on it Match results by custom ID and handle per item failures; don't assume order or completeness The discount is for the batch endpoint itself, not for client side parallelism When NOT to Apply Anything interactive or deadline bound tighter than the provider's completion window Self hosted inference, where the equivalent move is scheduling offline jobs onto idle capacity yourself (see separate offline batch jobs from chat serving) Verification Community reported: the 50% batch discount is documented provider pricing (OpenAI Batch API, Anthropic Message Batches) rather than an empirical claim; the tip's judgment is about workload routing, not the discount itself."
     },
     {
       "id": "use-query-rewriting-for-vague-questions",
@@ -6300,6 +6959,62 @@
       "word_count": 268,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Store eval datasets under version control with an explicit version identifier, and record which dataset version produced any given eval score. Eval datasets change over time (cases added, corrected, or removed), and without versioning, a score comparison across two points in time can silently be comparing against two different underlying datasets.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> an eval dataset is a single file edited in place, with historical scores recorded with no reference to which version of the dataset produced them.</p>\n<p><strong>After:</strong> the eval dataset is tagged (<code>eval-set-v1.4.json</code>), and every recorded score is stored alongside the dataset version used, so comparisons across time are always apples-to-apples.</p>\n<h2>Implementation</h2>\n<p>Store the eval dataset in version control with an explicit version tag or hash, record that identifier alongside every eval run's results, and treat any addition, removal, or correction of a case as a version bump requiring re-running historical comparisons if needed.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without versioning, a score comparison across time can silently compare against two different datasets, and no one notices</li>\n<li>Correcting a mislabeled case in place, without a version bump, silently invalidates prior scores measured against the old label</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip formal versioning for a very small, rarely-changing eval set already fully captured in a single, stable, source-controlled file with no independent update cadence</li>\n<li>Not necessary if eval runs never need to be compared across time (e.g. only ever used for one-off ad hoc checks)</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: versioning eval datasets with the same discipline as code is a standard, widely documented practice in eval pipeline engineering.</p>\n",
       "body_text": "What & Why Store eval datasets under version control with an explicit version identifier, and record which dataset version produced any given eval score. Eval datasets change over time (cases added, corrected, or removed), and without versioning, a score comparison across two points in time can silently be comparing against two different underlying datasets. Before / After Before: an eval dataset is a single file edited in place, with historical scores recorded with no reference to which version of the dataset produced them. After: the eval dataset is tagged (eval set v1.4.json), and every recorded score is stored alongside the dataset version used, so comparisons across time are always apples to apples. Implementation Store the eval dataset in version control with an explicit version tag or hash, record that identifier alongside every eval run's results, and treat any addition, removal, or correction of a case as a version bump requiring re running historical comparisons if needed. Gotchas Without versioning, a score comparison across time can silently compare against two different datasets, and no one notices Correcting a mislabeled case in place, without a version bump, silently invalidates prior scores measured against the old label When NOT to Apply Skip formal versioning for a very small, rarely changing eval set already fully captured in a single, stable, source controlled file with no independent update cadence Not necessary if eval runs never need to be compared across time (e.g. only ever used for one off ad hoc checks) Verification Production verified: versioning eval datasets with the same discipline as code is a standard, widely documented practice in eval pipeline engineering."
+    },
+    {
+      "id": "warm-up-model-servers-before-routing-traffic",
+      "title": "Warm Up Model Servers Before Routing Production Traffic to Them",
+      "category": "latency-optimization",
+      "tags": [
+        "inference",
+        "self-hosted"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (inference server deployment guides; cold-start latency analyses)",
+      "applies_to": [
+        "self-hosted-inference",
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "A TCP/HTTP health check passing does not mean the server is warm — weights may still be loading, CUDA graphs uncaptured, and compilation caches cold; the readiness probe must run a real inference",
+        "Warm-up requests should match production shapes (context lengths, batch sizes) — a 10-token ping doesn't exercise the kernels and cache allocations your real traffic will hit",
+        "During autoscaling events this matters most: scale-up that routes traffic to cold replicas converts your capacity fix into a latency incident"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "benchmark-with-real-context-lengths",
+        "tune-batch-size-against-tail-latency"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/warm-up-model-servers-before-routing-traffic.md",
+      "url": "content/tips-and-tricks/inference-and-serving/warm-up-model-servers-before-routing-traffic",
+      "slug": "warm-up-model-servers-before-routing-traffic",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Warm Up Model Servers Before Routing Production Traffic to Them",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 313,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Gate traffic on a readiness probe that executes real inference requests — not merely a port check — and pre-warm new replicas with production-shaped requests before the load balancer sends them users. LLM servers have deep cold paths: multi-GB weight loading, memory-pool allocation, CUDA-graph capture, and JIT/compilation caches that only build on first execution per shape. A \"healthy\" cold replica can serve its first requests seconds slower than steady state, and every scale-up event replays that penalty onto live users.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Autoscaler adds two replicas during a traffic spike; the LB routes to them the moment port 8000 opens; p99 spikes to 20s+ exactly when the system was supposed to be adding capacity.</p>\n<p><strong>After:</strong> New replicas run a warm-up script (representative context lengths and batch sizes) and only pass readiness after warm inference latency stabilizes; scale-up is latency-invisible to users.</p>\n<h2>Implementation</h2>\n<p>Implement the readiness endpoint to run one or more real generations, add a startup warm-up phase issuing requests that match your production shape distribution, and configure the orchestrator (e.g. Kubernetes readiness probes with appropriate initial delays) so routing strictly follows warm readiness.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Health ≠ warm: probe with real inference, not a port check</li>\n<li>Warm up with production-shaped requests — trivial pings don't build the right caches</li>\n<li>Autoscaling is the high-stakes moment; test warm-up behavior under scale-up, not only at deploy time</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Serverless/scale-to-zero deployments where cold starts are an accepted cost trade-off — there, mitigate with provider snapshotting features instead of blocking on warmth</li>\n<li>Batch/offline serving where first-request latency is irrelevant</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: inference-level readiness probes and shape-matched warm-up are standard guidance in inference-server deployment documentation and cold-start analyses; not independently benchmarked here against a named production system.</p>\n",
+      "body_text": "What & Why Gate traffic on a readiness probe that executes real inference requests — not merely a port check — and pre warm new replicas with production shaped requests before the load balancer sends them users. LLM servers have deep cold paths: multi GB weight loading, memory pool allocation, CUDA graph capture, and JIT/compilation caches that only build on first execution per shape. A \"healthy\" cold replica can serve its first requests seconds slower than steady state, and every scale up event replays that penalty onto live users. Before / After Before: Autoscaler adds two replicas during a traffic spike; the LB routes to them the moment port 8000 opens; p99 spikes to 20s+ exactly when the system was supposed to be adding capacity. After: New replicas run a warm up script (representative context lengths and batch sizes) and only pass readiness after warm inference latency stabilizes; scale up is latency invisible to users. Implementation Implement the readiness endpoint to run one or more real generations, add a startup warm up phase issuing requests that match your production shape distribution, and configure the orchestrator (e.g. Kubernetes readiness probes with appropriate initial delays) so routing strictly follows warm readiness. Gotchas Health ≠ warm: probe with real inference, not a port check Warm up with production shaped requests — trivial pings don't build the right caches Autoscaling is the high stakes moment; test warm up behavior under scale up, not only at deploy time When NOT to Apply Serverless/scale to zero deployments where cold starts are an accepted cost trade off — there, mitigate with provider snapshotting features instead of blocking on warmth Batch/offline serving where first request latency is irrelevant Verification Community reported: inference level readiness probes and shape matched warm up are standard guidance in inference server deployment documentation and cold start analyses; not independently benchmarked here against a named production system."
     }
   ]
 }

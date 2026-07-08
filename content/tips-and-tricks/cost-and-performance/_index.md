@@ -28,6 +28,9 @@ A tip about batching, caching, or quantization at the serving/inference-engine l
 
 ### Recently Added
 
+- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./batch-embedding-requests-during-ingestion.md)
+- [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cap-max-output-tokens-per-request.md)
+- [Use Provider Batch APIs for Offline Workloads to Halve Token Costs](./use-provider-batch-apis-for-offline-workloads.md)
 - [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./cache-embeddings-by-content-hash.md)
 - [Compress or Filter Retrieved Chunks When Context Cost Dominates](./compress-retrieved-context-before-generation.md)
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./drop-unused-conversation-history.md)
@@ -35,9 +38,6 @@ A tip about batching, caching, or quantization at the serving/inference-engine l
 - [Measure Queue Time Separately From Model Generation Time](./measure-queue-time-separately.md)
 - [Run Independent Retrieval or Tool Calls Concurrently, Not Sequentially](./parallelize-independent-retrieval-calls.md)
 - [Precompute Summaries, Embeddings, and Metadata Offline Instead of at Request Time](./precompute-expensive-static-context.md)
-- [Classify Task Difficulty and Route Easy Requests to Cheaper Models](./route-simple-tasks-to-smaller-models.md)
-- [Set a Maximum Input/Output Token Budget Per Feature and Alert on Overruns](./set-token-budgets-per-feature.md)
-- [Track LLM Cost Broken Down Per Feature, Not Only in Aggregate](./track-cost-per-feature.md)
 
 ### Most Popular
 
@@ -45,8 +45,10 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./batch-embedding-requests-during-ingestion.md) — 
 - [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./cache-embeddings-by-content-hash.md) — 
 - [Use Prompt Caching for Long, Stable System Prompt Prefixes](./cache-stable-system-prompts.md) — 
+- [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cap-max-output-tokens-per-request.md) — 
 - [Compress or Filter Retrieved Chunks When Context Cost Dominates](./compress-retrieved-context-before-generation.md) — 
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./drop-unused-conversation-history.md) — 
 - [Measure Time-to-First-Token Separately From Total Generation Time](./measure-first-token-latency.md) — 
@@ -57,5 +59,6 @@ _No star-tracked entries yet._
 - [Set a Maximum Input/Output Token Budget Per Feature and Alert on Overruns](./set-token-budgets-per-feature.md) — 
 - [Track LLM Cost Broken Down Per Feature, Not Only in Aggregate](./track-cost-per-feature.md) — 
 - [Track Cost Per Successful Outcome, Not Just Cost Per Model Call](./track-cost-per-successful-outcome.md) — 
+- [Use Provider Batch APIs for Offline Workloads to Halve Token Costs](./use-provider-batch-apis-for-offline-workloads.md) — 
 - [Cache Answers for Semantically Similar Repeated Questions](./use-semantic-cache-for-repeated-questions.md) — 
 - [Use Small Models or Rules for Routing, Classification, and Extraction Sub-Steps](./use-smaller-models-for-classification-steps.md) — 
