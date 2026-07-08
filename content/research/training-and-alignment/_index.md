@@ -35,14 +35,15 @@ When I am deciding how to fine-tune, align, or adapt a model, which technique sh
 ### Recently Added
 
 - [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md)
+- [Textbooks Are All You Need](./gunasekar-2023-phi-1.md)
 - [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./liang-2026-mipi.md)
+- [Proximal Policy Optimization Algorithms](./schulman-2017-ppo.md)
+- [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](./shao-2024-deepseekmath.md)
+- [Finetuned Language Models Are Zero-Shot Learners](./wei-2021-flan.md)
 - [Constitutional AI: Harmlessness from AI Feedback](./bai-2022-constitutional-ai.md)
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md)
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./dettmers-2023-qlora.md)
 - [LoRA: Low-Rank Adaptation of Large Language Models](./hu-2021-lora.md)
-- [Training Language Models to Follow Instructions with Human Feedback](./ouyang-2022-instructgpt.md)
-- [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](./rafailov-2023-dpo.md)
-- [Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement](./yang-2024-qwen25-math.md)
 
 ### Most Popular
 
@@ -54,8 +55,12 @@ _No star-tracked entries yet._
 - [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md) — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
+- [Textbooks Are All You Need](./gunasekar-2023-phi-1.md) — The phi-1 paper: a 1.3B model trained on 7B tokens of filtered 'textbook-quality' and synthetic data hit 50.6% HumanEval — the flagship argument that data quality can substitute for orders of magnitude of scale, launching the small-language-model program
 - [LoRA: Low-Rank Adaptation of Large Language Models](./hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
 - [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./liang-2026-mipi.md) — LLM RL optimizes the training-engine policy, but you deploy the inference-engine policy -- and the two disagree on trajectory probabilities even with synced weights. Proposes MIPI/MIPU to make the deployed policy the optimization objective
 - [Training Language Models to Follow Instructions with Human Feedback](./ouyang-2022-instructgpt.md) — Established the 3-stage RLHF recipe (SFT, reward modeling, PPO) that turned GPT-3 into an assistant -- know this pipeline shape, though most teams now reach for simpler DPO instead of implementing PPO-based RLHF directly
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](./rafailov-2023-dpo.md) — Showed the RLHF objective can be solved directly with a simple classification loss on preference pairs, with no separate reward model and no online RL -- meaning you should reach for DPO instead of implementing PPO-based RLHF for most alignment/preference-tuning work
+- [Proximal Policy Optimization Algorithms](./schulman-2017-ppo.md) — PPO: a clipped surrogate objective that keeps policy updates safely small using only first-order optimization — the RL algorithm that, five years later, became the engine of RLHF and thus of ChatGPT-style alignment
+- [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](./shao-2024-deepseekmath.md) — Introduced GRPO: group-relative policy optimization drops PPO's value network by baselining rewards against groups of sampled outputs — the algorithm behind DeepSeek-R1 and the reasoning-RL wave — plus a 120B-token math corpus mined from Common Crawl
+- [Finetuned Language Models Are Zero-Shot Learners](./wei-2021-flan.md) — The FLAN paper: fine-tuning a 137B model on 60+ NLP tasks phrased as natural-language instructions makes it follow instructions on unseen tasks — the founding demonstration of instruction tuning, the step every modern usable LLM undergoes
 - [Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement](./yang-2024-qwen25-math.md) — Documented a self-improvement pipeline (using the model to generate and filter its own better math training data) producing strong math-specific models -- narrow applicability, and Qwen's own successors have since surpassed these results

@@ -35,6 +35,7 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 
 - [Large Language Models are Zero-Shot Reasoners](./kojima-2022-zero-shot-cot.md)
 - [WebGPT: Browser-assisted question-answering with human feedback](./nakano-2021-webgpt.md)
+- [Generative Agents: Interactive Simulacra of Human Behavior](./park-2023-generative-agents.md)
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](./shinn-2023-reflexion.md)
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](./wang-2022-self-consistency.md)
 - [Voyager: An Open-Ended Embodied Agent with Large Language Models](./wang-2023-voyager.md)
@@ -42,7 +43,6 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md)
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md)
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./wei-2022-chain-of-thought.md)
-- [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](./yang-2024-swe-agent.md)
 
 ### Most Popular
 
@@ -53,6 +53,7 @@ _No star-tracked entries yet._
 - [Large Language Models are Zero-Shot Reasoners](./kojima-2022-zero-shot-cot.md) — Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
 - [WebGPT: Browser-assisted question-answering with human feedback](./nakano-2021-webgpt.md) — Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers
+- [Generative Agents: Interactive Simulacra of Human Behavior](./park-2023-generative-agents.md) — The Smallville paper: 25 LLM agents with a memory-stream architecture (observation, retrieval by recency/importance/relevance, reflection, planning) lived in a simulated town and produced emergent social behavior — the design that defined agent memory
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](./shinn-2023-reflexion.md) — Showed agents improve across retries by writing verbal self-reflections on failures into an episodic memory instead of updating weights — 'verbal reinforcement learning' — the retry-with-reflection loop now standard in coding and tool-use agents
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](./wang-2022-self-consistency.md) — Sample multiple reasoning chains at nonzero temperature and majority-vote the final answers: correct answers are reached by many diverse paths while errors scatter, yielding large accuracy gains at linear compute cost — the founding result of inference-time scaling
