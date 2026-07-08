@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:44:45.942Z",
+  "generated_at": "2026-07-08T19:48:04.592Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 133,
+      "count": 136,
       "types": {
         "tip": 14,
         "tool": 45,
@@ -13,9 +13,9 @@
         "guide": 7,
         "benchmark": 8,
         "project": 37,
-        "architecture": 5,
+        "architecture": 6,
         "person": 3,
-        "paper": 11
+        "paper": 13
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -46,6 +46,7 @@
         "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
         "choose-eval-framework",
+        "choose-guardrails-strategy",
         "choose-memory-solution",
         "chrome-devtools-mcp",
         "claude-code",
@@ -77,6 +78,7 @@
         "inspect-ai",
         "intermediate-multi-tool-agent",
         "ji-2026-mragent",
+        "jimenez-2023-swe-bench",
         "keep-a-kill-switch-for-agent-actions",
         "khoj",
         "kimi-k2",
@@ -106,6 +108,7 @@
         "osworld",
         "packer-2023-memgpt",
         "page-agent",
+        "park-2023-generative-agents",
         "pydantic-ai",
         "pydantic-ai-tool",
         "pyrit",
@@ -156,11 +159,11 @@
     {
       "id": "alignment",
       "label": "Alignment",
-      "count": 11,
+      "count": 13,
       "types": {
         "guide": 1,
         "person": 4,
-        "paper": 3,
+        "paper": 5,
         "project": 2,
         "tool": 1
       },
@@ -174,8 +177,10 @@
         "openrlhf",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
+        "schulman-2017-ppo",
         "trl",
-        "verl"
+        "verl",
+        "wei-2021-flan"
       ]
     },
     {
@@ -231,10 +236,11 @@
     {
       "id": "benchmark",
       "label": "Benchmark",
-      "count": 32,
+      "count": 35,
       "types": {
         "digest": 1,
         "benchmark": 28,
+        "paper": 3,
         "guide": 3
       },
       "entries": [
@@ -244,11 +250,13 @@
         "bbh",
         "beir",
         "browsecomp",
+        "cobbe-2021-gsm8k",
         "evaluation-methodology",
         "gaia",
         "gpqa-diamond",
         "hle",
         "humaneval",
+        "jimenez-2023-swe-bench",
         "livecodebench",
         "llm-researcher-role",
         "math-500",
@@ -259,6 +267,7 @@
         "mmmu",
         "msmarco",
         "mt-bench",
+        "muennighoff-2022-mteb",
         "natural-questions",
         "osworld",
         "rgb",
@@ -275,9 +284,10 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 9,
+      "count": 10,
       "types": {
         "tip": 5,
+        "architecture": 1,
         "guide": 1,
         "paper": 1,
         "tool": 1,
@@ -286,6 +296,7 @@
       "entries": [
         "cache-embeddings-by-content-hash",
         "cache-stable-system-prompts",
+        "choose-caching-strategy",
         "inference-optimization",
         "kwon-2023-pagedattention",
         "measure-kv-cache-hit-rate",
@@ -385,13 +396,13 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 36,
+      "count": 38,
       "types": {
         "tool": 20,
         "guide": 2,
         "project": 7,
-        "benchmark": 4,
-        "paper": 3
+        "paper": 5,
+        "benchmark": 4
       },
       "entries": [
         "addyosmani-agent-skills",
@@ -412,7 +423,9 @@
         "gitingest",
         "glm-4",
         "goose",
+        "gunasekar-2023-phi-1",
         "humaneval",
+        "jimenez-2023-swe-bench",
         "kimi-k2",
         "livecodebench",
         "mbpp",
@@ -435,12 +448,13 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 78,
+      "count": 79,
       "types": {
         "tool": 28,
         "person": 4,
         "guide": 28,
         "project": 10,
+        "paper": 1,
         "tip": 6,
         "build-example": 1,
         "architecture": 1
@@ -472,6 +486,7 @@
         "firecrawl",
         "firecrawl-tool",
         "gitingest",
+        "gunasekar-2023-phi-1",
         "hold-out-an-eval-set-before-any-training",
         "hugging-face-hub",
         "inspect-your-training-data-by-hand",
@@ -557,13 +572,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 37,
+      "count": 39,
       "types": {
-        "paper": 10,
+        "paper": 11,
         "guide": 4,
         "tip": 10,
         "tool": 6,
-        "architecture": 1,
+        "architecture": 2,
         "project": 6
       },
       "entries": [
@@ -572,9 +587,11 @@
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
         "cerebras-inference",
+        "choose-caching-strategy",
         "choose-serving-stack",
         "compress-retrieved-context-before-generation",
         "dao-2022-flashattention",
+        "deepseek-ai-2024-deepseek-v3",
         "deepseek-v3-r1",
         "deepspeed",
         "dettmers-2023-qlora",
@@ -609,15 +626,15 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 31,
+      "count": 35,
       "types": {
         "tip": 7,
         "guide": 2,
-        "architecture": 3,
+        "architecture": 4,
         "project": 11,
         "tool": 5,
         "person": 1,
-        "paper": 2
+        "paper": 5
       },
       "entries": [
         "add-hybrid-search-for-exact-terms",
@@ -625,6 +642,7 @@
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
         "choose-chunking-strategy",
+        "choose-embedding-model",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -639,10 +657,13 @@
         "llamaindex",
         "milvus",
         "mteb",
+        "muennighoff-2022-mteb",
         "pgvector",
         "pinecone",
         "pinecone-vector-db",
         "qdrant",
+        "radford-2021-clip",
+        "reimers-2019-sentence-bert",
         "sentence-transformers",
         "txtai",
         "use-metadata-filters-before-similarity-search",
@@ -656,7 +677,7 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 132,
+      "count": 136,
       "types": {
         "digest": 1,
         "tip": 22,
@@ -666,7 +687,7 @@
         "benchmark": 40,
         "tool": 23,
         "person": 9,
-        "paper": 7,
+        "paper": 11,
         "architecture": 6
       },
       "entries": [
@@ -694,6 +715,7 @@
         "choose-eval-framework",
         "choose-observability-tool",
         "classify-failures-before-fixing-prompts",
+        "cobbe-2021-gsm8k",
         "code-arena",
         "deepchecks",
         "deepeval",
@@ -729,11 +751,13 @@
         "inspect-ai",
         "jailbreakbench",
         "jason-liu",
+        "jimenez-2023-swe-bench",
         "langfuse",
         "langfuse-prompts",
         "langsmith",
         "langsmith-hub",
         "langsmith-platform",
+        "liu-2023-lost-in-the-middle",
         "livecodebench",
         "llm-as-a-judge",
         "llm-researcher",
@@ -755,6 +779,7 @@
         "msmarco",
         "mt-bench",
         "mteb",
+        "muennighoff-2022-mteb",
         "natural-questions",
         "openai-evals",
         "opik",
@@ -862,10 +887,10 @@
     {
       "id": "foundational",
       "label": "Foundational",
-      "count": 15,
+      "count": 24,
       "types": {
         "person": 5,
-        "paper": 5,
+        "paper": 14,
         "trend": 1,
         "guide": 2,
         "project": 1,
@@ -880,12 +905,21 @@
         "hoffmann-2022-chinchilla",
         "jay-alammar",
         "jeremy-howard",
+        "kaplan-2020-scaling-laws",
         "lewis-2020-rag",
         "must-read-papers",
         "nanogpt",
+        "openai-2023-gpt4",
         "openai-evals",
+        "park-2023-generative-agents",
+        "radford-2021-clip",
+        "raffel-2019-t5",
+        "reimers-2019-sentence-bert",
+        "schulman-2017-ppo",
+        "touvron-2023-llama2",
         "transformers",
         "vaswani-2017-attention",
+        "wei-2021-flan",
         "yann-lecun"
       ]
     },
@@ -907,9 +941,10 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 23,
+      "count": 24,
       "types": {
         "tip": 5,
+        "architecture": 1,
         "tool": 9,
         "benchmark": 5,
         "paper": 2,
@@ -918,6 +953,7 @@
       },
       "entries": [
         "allowlist-tools-per-agent-role",
+        "choose-guardrails-strategy",
         "cubesandbox",
         "do-not-answer",
         "giskard",
@@ -962,11 +998,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 81,
+      "count": 83,
       "types": {
         "tip": 22,
         "tool": 20,
-        "architecture": 5,
+        "architecture": 7,
         "paper": 7,
         "project": 20,
         "guide": 6,
@@ -980,10 +1016,12 @@
         "bentoml",
         "cache-stable-system-prompts",
         "cerebras-inference",
+        "choose-caching-strategy",
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
         "choose-serving-stack",
+        "choose-structured-output-strategy",
         "cloudflare-workers-ai",
         "dao-2022-flashattention",
         "deepseek-v3-r1",
@@ -1104,7 +1142,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 220,
+      "count": 232,
       "types": {
         "tip": 31,
         "guide": 44,
@@ -1112,8 +1150,8 @@
         "benchmark": 11,
         "person": 15,
         "project": 40,
-        "paper": 16,
-        "architecture": 4,
+        "paper": 25,
+        "architecture": 7,
         "build-example": 2
       },
       "entries": [
@@ -1139,8 +1177,11 @@
         "cerebras-inference",
         "chainlit",
         "chiang-2024-chatbot-arena",
+        "choose-caching-strategy",
+        "choose-guardrails-strategy",
         "choose-llm",
         "choose-serving-stack",
+        "choose-structured-output-strategy",
         "clem-delangue",
         "cohere",
         "command-r-plus",
@@ -1156,6 +1197,7 @@
         "dario-amodei",
         "data-labeling",
         "deepeval",
+        "deepseek-ai-2024-deepseek-v3",
         "deepseek-v3-r1",
         "deployment",
         "detect-context-truncation-in-tests",
@@ -1186,6 +1228,7 @@
         "groq",
         "gsm8k",
         "guidance",
+        "gunasekar-2023-phi-1",
         "hamel-husain",
         "hendrycks-2020-mmlu",
         "hf-inference-endpoints",
@@ -1200,6 +1243,7 @@
         "jan",
         "jason-liu",
         "jiang-2024-mixtral",
+        "kaplan-2020-scaling-laws",
         "kimi-k2",
         "kimi-k2-5",
         "langchain",
@@ -1210,6 +1254,7 @@
         "librechat",
         "litellm",
         "litgpt",
+        "liu-2023-lost-in-the-middle",
         "llama-3",
         "llama-cpp",
         "llamafactory",
@@ -1247,6 +1292,7 @@
         "ollama",
         "olmo",
         "open-webui",
+        "openai-2023-gpt4",
         "openai-evals",
         "openllm",
         "openrlhf",
@@ -1269,6 +1315,7 @@
         "qwen",
         "qwen-2-5",
         "qwen-3",
+        "raffel-2019-t5",
         "rank-context-by-expected-usefulness",
         "rebuff",
         "repomix",
@@ -1282,6 +1329,7 @@
         "separate-user-content-from-system-instructions",
         "set-temperature-by-decision-risk",
         "sglang",
+        "shao-2024-deepseekmath",
         "shreya-shankar",
         "simon-willison",
         "simpleqa",
@@ -1313,6 +1361,7 @@
         "together-ai",
         "tokenization",
         "torchtune",
+        "touvron-2023-llama2",
         "trafilatura",
         "transformers",
         "translategemma",
@@ -1330,6 +1379,7 @@
         "version-system-prompts-like-code",
         "vllm",
         "web-scraping",
+        "wei-2021-flan",
         "wei-2022-chain-of-thought",
         "whisper",
         "wildbench",
@@ -1390,14 +1440,14 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 26,
+      "count": 27,
       "types": {
         "guide": 3,
         "tool": 8,
         "tip": 7,
         "architecture": 2,
         "project": 3,
-        "paper": 3
+        "paper": 4
       },
       "entries": [
         "agent-builder",
@@ -1417,6 +1467,7 @@
         "memoriq",
         "multi-agent-system",
         "packer-2023-memgpt",
+        "park-2023-generative-agents",
         "rank-context-by-expected-usefulness",
         "redis-memory",
         "reserve-output-tokens-before-adding-context",
@@ -1475,10 +1526,10 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 26,
+      "count": 29,
       "types": {
         "project": 15,
-        "paper": 2,
+        "paper": 5,
         "tool": 5,
         "benchmark": 4
       },
@@ -1499,9 +1550,12 @@
         "mmmu",
         "ms-swift",
         "olmocr",
+        "openai-2023-gpt4",
         "paddleocr",
         "qwen",
         "qwen-3",
+        "radford-2021-clip",
+        "radford-2022-whisper",
         "seed-bench",
         "sglang",
         "surya",
@@ -1657,14 +1711,14 @@
     {
       "id": "planning",
       "label": "Planning",
-      "count": 16,
+      "count": 17,
       "types": {
         "tool": 2,
         "build-example": 1,
         "guide": 2,
         "project": 6,
         "architecture": 3,
-        "paper": 2
+        "paper": 3
       },
       "entries": [
         "addyosmani-agent-skills",
@@ -1678,6 +1732,7 @@
         "metagpt",
         "multi-agent-system",
         "openhands",
+        "park-2023-generative-agents",
         "semantic-kernel",
         "single-agent-vs-multi-agent",
         "superpowers",
@@ -1732,7 +1787,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 102,
+      "count": 105,
       "types": {
         "tip": 19,
         "build-example": 5,
@@ -1740,8 +1795,8 @@
         "tool": 19,
         "project": 31,
         "benchmark": 5,
-        "architecture": 6,
-        "paper": 10,
+        "architecture": 7,
+        "paper": 12,
         "person": 3
       },
       "entries": [
@@ -1758,6 +1813,7 @@
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
         "choose-chunking-strategy",
+        "choose-embedding-model",
         "choose-eval-framework",
         "choose-vector-db",
         "chroma",
@@ -1799,6 +1855,7 @@
         "langflow",
         "lean-mvp",
         "lewis-2020-rag",
+        "liu-2023-lost-in-the-middle",
         "llamaindex",
         "llamaparse",
         "lunary",
@@ -1825,6 +1882,7 @@
         "ragas-rag-evaluation",
         "ragatouille",
         "ragflow",
+        "reimers-2019-sentence-bert",
         "rgb",
         "ruler",
         "salemi-2026-grepseek",
@@ -1852,10 +1910,10 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 30,
+      "count": 32,
       "types": {
         "benchmark": 9,
-        "paper": 7,
+        "paper": 9,
         "project": 6,
         "guide": 3,
         "person": 4,
@@ -1863,6 +1921,7 @@
       },
       "entries": [
         "bbh",
+        "cobbe-2021-gsm8k",
         "deepseek-ai-2025-r1",
         "deepseek-v3-r1",
         "dspy",
@@ -1884,6 +1943,7 @@
         "prompt-patterns-catalog",
         "qwen-2-5",
         "sebastian-bubeck",
+        "shao-2024-deepseekmath",
         "shinn-2023-reflexion",
         "smolagents",
         "starter-simple-react-agent",
@@ -1926,16 +1986,16 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 81,
+      "count": 85,
       "types": {
         "tip": 20,
         "build-example": 4,
         "tool": 16,
         "benchmark": 5,
         "guide": 3,
-        "architecture": 5,
+        "architecture": 6,
         "project": 18,
-        "paper": 9,
+        "paper": 12,
         "person": 1
       },
       "entries": [
@@ -1949,6 +2009,7 @@
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
         "choose-chunking-strategy",
+        "choose-embedding-model",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -1974,6 +2035,7 @@
         "khattab-2020-colbert",
         "lancedb",
         "lewis-2020-rag",
+        "liu-2023-lost-in-the-middle",
         "llamaindex",
         "log-retrieved-context",
         "measure-retrieval-recall-before-answer-quality",
@@ -1981,6 +2043,7 @@
         "milvus",
         "msmarco",
         "mteb",
+        "muennighoff-2022-mteb",
         "natural-questions",
         "parallelize-independent-retrieval-calls",
         "pgvector",
@@ -1996,6 +2059,7 @@
         "ragflow",
         "rank-context-by-expected-usefulness",
         "redis-memory",
+        "reimers-2019-sentence-bert",
         "rgb",
         "ruler",
         "salemi-2026-grepseek",
@@ -2025,10 +2089,10 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 8,
+      "count": 11,
       "types": {
         "guide": 1,
-        "paper": 5,
+        "paper": 8,
         "person": 1,
         "tool": 1
       },
@@ -2040,6 +2104,9 @@
         "nathan-lambert",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
+        "schulman-2017-ppo",
+        "shao-2024-deepseekmath",
+        "touvron-2023-llama2",
         "trl"
       ]
     },
@@ -2061,13 +2128,13 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 37,
+      "count": 38,
       "types": {
         "tool": 14,
         "tip": 12,
         "person": 3,
+        "architecture": 2,
         "benchmark": 5,
-        "architecture": 1,
         "project": 1,
         "paper": 1
       },
@@ -2078,6 +2145,7 @@
         "arvind-narayanan",
         "astra-autonomous-pentest",
         "aws-bedrock",
+        "choose-guardrails-strategy",
         "cubesandbox",
         "dario-amodei",
         "do-not-answer",
@@ -2114,10 +2182,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 32,
+      "count": 33,
       "types": {
         "project": 13,
-        "architecture": 4,
+        "architecture": 5,
         "tool": 11,
         "paper": 1,
         "tip": 3
@@ -2125,6 +2193,7 @@
       "entries": [
         "anythingllm",
         "choose-deployment-target",
+        "choose-embedding-model",
         "choose-serving-stack",
         "choose-vector-db",
         "comfyui",
@@ -2177,6 +2246,17 @@
       ]
     },
     {
+      "id": "sota",
+      "label": "Sota",
+      "count": 1,
+      "types": {
+        "paper": 1
+      },
+      "entries": [
+        "deepseek-ai-2024-deepseek-v3"
+      ]
+    },
+    {
       "id": "stateful",
       "label": "Stateful",
       "count": 4,
@@ -2211,10 +2291,11 @@
     {
       "id": "structured-output",
       "label": "Structured Output",
-      "count": 34,
+      "count": 35,
       "types": {
         "tip": 13,
         "tool": 11,
+        "architecture": 1,
         "guide": 4,
         "benchmark": 1,
         "build-example": 1,
@@ -2225,6 +2306,7 @@
         "add-output-examples-for-edge-cases",
         "ask-for-missing-inputs-before-solving",
         "basedash",
+        "choose-structured-output-strategy",
         "claude-artifact-player",
         "context-engineering",
         "fundamentals",
@@ -2261,13 +2343,13 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 54,
+      "count": 55,
       "types": {
         "tip": 12,
         "guide": 6,
         "tool": 14,
         "project": 16,
-        "architecture": 1,
+        "architecture": 2,
         "build-example": 2,
         "paper": 2,
         "benchmark": 1
@@ -2289,6 +2371,7 @@
         "cap-agent-tool-retries",
         "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
+        "choose-structured-output-strategy",
         "chrome-devtools-mcp",
         "claude-code",
         "cline",
@@ -2375,11 +2458,11 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 24,
+      "count": 32,
       "types": {
         "guide": 4,
         "person": 3,
-        "paper": 11,
+        "paper": 19,
         "tool": 3,
         "project": 3
       },
@@ -2388,14 +2471,18 @@
         "andrew-ng",
         "bai-2022-constitutional-ai",
         "brown-2020-gpt3",
+        "cobbe-2021-gsm8k",
+        "deepseek-ai-2024-deepseek-v3",
         "deepseek-ai-2025-r1",
         "deepspeed",
         "devlin-2018-bert",
         "dubey-2024-llama3",
         "fine-tuning-methods",
+        "gunasekar-2023-phi-1",
         "hoffmann-2022-chinchilla",
         "hu-2021-lora",
         "jeremy-howard",
+        "kaplan-2020-scaling-laws",
         "liang-2026-mipi",
         "litgpt",
         "llm-researcher-role",
@@ -2404,18 +2491,22 @@
         "olmo",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
+        "raffel-2019-t5",
+        "schulman-2017-ppo",
         "sebastian-raschka",
+        "shao-2024-deepseekmath",
         "skypilot",
         "trl",
+        "wei-2021-flan",
         "yang-2024-qwen25-math"
       ]
     },
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 13,
+      "count": 14,
       "types": {
-        "paper": 7,
+        "paper": 8,
         "person": 4,
         "guide": 2
       },
@@ -2429,6 +2520,7 @@
         "jiang-2024-mixtral",
         "leviathan-2022-speculative-decoding",
         "noam-shazeer",
+        "radford-2022-whisper",
         "su-2021-rope",
         "thomas-wolf",
         "transformers",
@@ -2467,25 +2559,29 @@
     {
       "id": "vision",
       "label": "Vision",
-      "count": 4,
+      "count": 5,
       "types": {
-        "benchmark": 4
+        "benchmark": 4,
+        "paper": 1
       },
       "entries": [
         "mathvista",
         "mmbench",
         "mmmu",
+        "radford-2021-clip",
         "seed-bench"
       ]
     },
     {
       "id": "voice",
       "label": "Voice",
-      "count": 2,
+      "count": 3,
       "types": {
+        "paper": 1,
         "project": 2
       },
       "entries": [
+        "radford-2022-whisper",
         "speech-to-speech",
         "whisper"
       ]

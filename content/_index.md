@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 17 entries | 2026-07-08 |
+| [architectures](./architectures/) | 21 entries | 2026-07-08 |
 | [benchmarks](./benchmarks/) | 40 entries | 2026-07-08 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 10 entries | 2026-07-08 |
 | [projects](./projects/) | 103 entries | 2026-07-08 |
-| [research](./research/) | 53 entries | 2026-07-08 |
+| [research](./research/) | 70 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
 | [tools](./tools/) | 189 entries | 2026-07-08 |
