@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:28:01.140Z",
-  "count": 102,
+  "generated_at": "2026-07-08T19:31:15.339Z",
+  "count": 116,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -491,6 +491,61 @@
       "word_count": 233,
       "body_html": "<h2>What &amp; Why</h2>\n<p>For tasks with genuinely underspecified inputs, explicitly instruct the model to ask a clarifying question rather than guess a plausible value. Left unconstrained, models fill gaps with confident-sounding assumptions that fail silently, since the output looks complete even when a key input was fabricated.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>\"Book a flight for the trip described.\"</code> with no departure city specified — the model may invent one.</p>\n<p><strong>After:</strong> <code>\"Book a flight for the trip described. If any required field is missing, ask a clarifying question instead of assuming a value.\"</code></p>\n<h2>Implementation</h2>\n<p>Add an explicit instruction covering the ask-vs-guess behavior for the specific fields that are commonly missing, and verify with a few known-underspecified test inputs that the model actually asks instead of filling in a plausible guess.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without an explicit instruction, models fill gaps with plausible-sounding assumptions that are silently wrong</li>\n<li>Only works in interactive contexts — fully automated pipelines need a fallback default or explicit error instead</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for fully automated, non-interactive pipelines where there is no human to answer a clarifying question</li>\n<li>Not needed for tasks where every required input is always structurally guaranteed to be present</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: instructing models to ask rather than guess for underspecified tasks is a commonly cited pattern in prompting discussions, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why For tasks with genuinely underspecified inputs, explicitly instruct the model to ask a clarifying question rather than guess a plausible value. Left unconstrained, models fill gaps with confident sounding assumptions that fail silently, since the output looks complete even when a key input was fabricated. Before / After Before: \"Book a flight for the trip described.\" with no departure city specified — the model may invent one. After: \"Book a flight for the trip described. If any required field is missing, ask a clarifying question instead of assuming a value.\" Implementation Add an explicit instruction covering the ask vs guess behavior for the specific fields that are commonly missing, and verify with a few known underspecified test inputs that the model actually asks instead of filling in a plausible guess. Gotchas Without an explicit instruction, models fill gaps with plausible sounding assumptions that are silently wrong Only works in interactive contexts — fully automated pipelines need a fallback default or explicit error instead When NOT to Apply Skip this for fully automated, non interactive pipelines where there is no human to answer a clarifying question Not needed for tasks where every required input is always structurally guaranteed to be present Verification Community reported: instructing models to ask rather than guess for underspecified tasks is a commonly cited pattern in prompting discussions, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "ask-for-quotes-before-answers-in-rag-prompts",
+      "title": "Ask for Supporting Quotes Before Answers in RAG Prompts",
+      "category": "prompting",
+      "tags": [
+        "rag",
+        "llm",
+        "retrieval"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "30 minutes",
+      "phase": "prompting",
+      "effort": "minutes",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (grounded-generation prompt patterns)",
+      "applies_to": [
+        "rag-pipelines"
+      ],
+      "gotchas": [
+        "Models can fabricate plausible-looking quotes -- the pattern only pays off when quotes are programmatically verified against the retrieved text",
+        "Quote-first output adds tokens and latency to every response; budget for it or restrict it to accuracy-critical endpoints"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "use-delimiters-around-retrieved-context",
+        "inspect-retrieved-chunks-beside-the-answer"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md",
+      "url": "content/tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts",
+      "slug": "ask-for-quotes-before-answers-in-rag-prompts",
+      "section_path": "content/tips-and-tricks/prompting",
+      "display_name": "Ask for Supporting Quotes Before Answers in RAG Prompts",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 321,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>In RAG prompts for accuracy-critical answers, instruct the model to first extract verbatim quotes from the retrieved context that support the answer, and then compose the answer from those quotes — with a stated rule for the no-support case (\"if no relevant quote exists, say so\"). Making support extraction an explicit prior step conditions generation on evidence the model has already committed to, reduces unsupported claims, and produces a machine-checkable artifact: quotes either appear in the retrieved text or they don't.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"Answer the question using the context above.\" The model blends retrieved facts with prior knowledge, and there is no way to tell which claims are grounded.</p>\n<p><strong>After:</strong> \"First list verbatim quotes from the context that support your answer (or state that none exist). Then answer using only those quotes.\" A post-processing check verifies each quote appears in the retrieved chunks and flags responses whose quotes fail the match.</p>\n<h2>Implementation</h2>\n<p>Add the two-step instruction with structured output (a quotes array plus an answer field). Verify quotes with a substring or normalized-fuzzy match against the retrieved chunks; route quote-verification failures to a fallback (regenerate, or answer with a no-support disclaimer). Track the quote-match rate as a groundedness metric per prompt version.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Unverified quotes are decoration — fabricated quotes look identical to real ones until matched against the source</li>\n<li>The pattern costs output tokens on every call; apply it where wrong answers are expensive, not everywhere</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip for creative, conversational, or synthesis-heavy endpoints where verbatim support is the wrong contract</li>\n<li>Skip when answers legitimately require reasoning across many fragments — quote lists grow unwieldy; consider citation IDs per claim instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: quote-then-answer prompting is a documented grounded-generation pattern (including in provider prompting guides) with the verification step as the operative mechanism; effect sizes are task-dependent.</p>\n",
+      "body_text": "What & Why In RAG prompts for accuracy critical answers, instruct the model to first extract verbatim quotes from the retrieved context that support the answer, and then compose the answer from those quotes — with a stated rule for the no support case (\"if no relevant quote exists, say so\"). Making support extraction an explicit prior step conditions generation on evidence the model has already committed to, reduces unsupported claims, and produces a machine checkable artifact: quotes either appear in the retrieved text or they don't. Before / After Before: \"Answer the question using the context above.\" The model blends retrieved facts with prior knowledge, and there is no way to tell which claims are grounded. After: \"First list verbatim quotes from the context that support your answer (or state that none exist). Then answer using only those quotes.\" A post processing check verifies each quote appears in the retrieved chunks and flags responses whose quotes fail the match. Implementation Add the two step instruction with structured output (a quotes array plus an answer field). Verify quotes with a substring or normalized fuzzy match against the retrieved chunks; route quote verification failures to a fallback (regenerate, or answer with a no support disclaimer). Track the quote match rate as a groundedness metric per prompt version. Gotchas Unverified quotes are decoration — fabricated quotes look identical to real ones until matched against the source The pattern costs output tokens on every call; apply it where wrong answers are expensive, not everywhere When NOT to Apply Skip for creative, conversational, or synthesis heavy endpoints where verbatim support is the wrong contract Skip when answers legitimately require reasoning across many fragments — quote lists grow unwieldy; consider citation IDs per claim instead Verification Community reported: quote then answer prompting is a documented grounded generation pattern (including in provider prompting guides) with the verification step as the operative mechanism; effect sizes are task dependent."
     },
     {
       "id": "benchmark-on-the-user-hardware",
@@ -1468,6 +1523,114 @@
       "body_text": "What & Why Send only the conversation history relevant to the current turn, rather than the full transcript accumulated so far. As conversations grow, sending the entire history on every turn means paying for the same old tokens repeatedly, even when most of it has no bearing on the current question. Before / After Before: every turn sends the full accumulated conversation history, regardless of relevance to the current question. After: a relevance filter (recency window, topic change detection, or explicit reference resolution) determines which prior turns are actually needed, and only those are sent. Implementation Add a relevance filter to conversation history assembly (a simple recency window is a reasonable starting point) that determines which prior turns are included for the current call, dropping turns that have no bearing on the current question. Gotchas Dropping history too aggressively can lose context the current turn depends on — validate against real multi turn conversations This is distinct from summarize repeated conversation blocks — dropping removes irrelevant content entirely, summarizing preserves a compressed version of relevant but old content When NOT to Apply Skip aggressive trimming for short conversations that never accumulate enough history to matter for cost Not appropriate if your application genuinely requires full conversation context for correctness (e.g. legal or compliance transcripts where nothing can be dropped) Verification Community reported: trimming conversation history to only relevant turns is a widely repeated recommendation in conversational cost optimization writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "establish-a-prompting-baseline-before-fine-tuning",
+      "title": "Establish a Prompting Baseline Before Fine-Tuning",
+      "category": "cost-reduction",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "evaluation"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "2 hours",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (fine-tuning decision writeups)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "A weak baseline prompt makes fine-tuning look more valuable than it is -- invest real effort (few-shot examples, format instructions) in the baseline before comparing",
+        "Baselines built on a different model than the fine-tune target confound model choice with tuning benefit"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md",
+      "url": "content/tips-and-tricks/fine-tuning/establish-a-prompting-baseline-before-fine-tuning",
+      "slug": "establish-a-prompting-baseline-before-fine-tuning",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Establish a Prompting Baseline Before Fine-Tuning",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 333,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Before committing to a fine-tuning run, build the strongest prompt-based version of the same capability — few-shot examples, explicit format rules, retrieval if applicable — and score it on the eval set the fine-tune will be judged against. Fine-tuning costs data preparation, training runs, and a permanent maintenance burden (re-tuning on every base-model upgrade); a serious prompting baseline is hours of work and frequently closes most of the gap, which changes or cancels the fine-tuning decision.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"The model gets our ticket-tagging format wrong, let's fine-tune\" — training starts against a one-line zero-shot prompt as the comparison point.</p>\n<p><strong>After:</strong> A tuned prompt with 8 curated few-shot examples scores 91% on the tagging eval set; fine-tuning is only approved if a pilot run beats that number by a margin worth the maintenance cost.</p>\n<h2>Implementation</h2>\n<p>Freeze an eval set first. Iterate the prompt seriously: instructions, few-shot examples selected from real failures, output schema. Record the best score. Only then run a fine-tuning pilot on the same eval set and compare against that number, not against the first prompt you tried.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A weak baseline inflates the apparent value of fine-tuning — the comparison is only honest if the prompt was genuinely tuned</li>\n<li>Comparing a fine-tuned small model against a prompted large model conflates two decisions; hold the base model constant in at least one comparison</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip when the goal is something prompting cannot deliver at all: strict latency/cost floors requiring a small model, style cloning from thousands of examples, or removing long system prompts entirely</li>\n<li>Skip when you already have a validated prompting baseline from a previous iteration of the same task</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: \"try prompting harder first\" is the consistent first recommendation in practitioner fine-tuning guides, including vendor fine-tuning documentation, but the win-rate margin is task-dependent and not independently benchmarked here.</p>\n",
+      "body_text": "What & Why Before committing to a fine tuning run, build the strongest prompt based version of the same capability — few shot examples, explicit format rules, retrieval if applicable — and score it on the eval set the fine tune will be judged against. Fine tuning costs data preparation, training runs, and a permanent maintenance burden (re tuning on every base model upgrade); a serious prompting baseline is hours of work and frequently closes most of the gap, which changes or cancels the fine tuning decision. Before / After Before: \"The model gets our ticket tagging format wrong, let's fine tune\" — training starts against a one line zero shot prompt as the comparison point. After: A tuned prompt with 8 curated few shot examples scores 91% on the tagging eval set; fine tuning is only approved if a pilot run beats that number by a margin worth the maintenance cost. Implementation Freeze an eval set first. Iterate the prompt seriously: instructions, few shot examples selected from real failures, output schema. Record the best score. Only then run a fine tuning pilot on the same eval set and compare against that number, not against the first prompt you tried. Gotchas A weak baseline inflates the apparent value of fine tuning — the comparison is only honest if the prompt was genuinely tuned Comparing a fine tuned small model against a prompted large model conflates two decisions; hold the base model constant in at least one comparison When NOT to Apply Skip when the goal is something prompting cannot deliver at all: strict latency/cost floors requiring a small model, style cloning from thousands of examples, or removing long system prompts entirely Skip when you already have a validated prompting baseline from a previous iteration of the same task Verification Community reported: \"try prompting harder first\" is the consistent first recommendation in practitioner fine tuning guides, including vendor fine tuning documentation, but the win rate margin is task dependent and not independently benchmarked here."
+    },
+    {
+      "id": "evaluate-checkpoints-on-task-metrics-not-loss",
+      "title": "Evaluate Checkpoints on Task Metrics, Not Training Loss",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "evaluation"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "3 hours",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~3 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (checkpoint-selection practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Task-metric evaluation per checkpoint costs inference time -- budget it into the training run rather than skipping it when runs get long",
+        "A judge model scoring checkpoints must stay pinned for the duration of the comparison, or checkpoint deltas mix with judge drift"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "hold-out-an-eval-set-before-any-training",
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md",
+      "url": "content/tips-and-tricks/fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss",
+      "slug": "evaluate-checkpoints-on-task-metrics-not-loss",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Evaluate Checkpoints on Task Metrics, Not Training Loss",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 294,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Select fine-tuning checkpoints by scoring each on the frozen task eval set — exact match, rubric scores, pass rates, whatever the task defines as success — instead of picking the lowest validation-loss checkpoint. Loss measures next-token prediction on the training distribution; it correlates loosely and sometimes inversely with task success, because formatting compliance, refusal behavior, and end-of-turn discipline all move independently of loss. The best-loss checkpoint is frequently not the best-task checkpoint.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The checkpoint with minimum eval loss ships. It scores worse on the actual extraction task than the checkpoint from one epoch earlier, which nobody evaluated.</p>\n<p><strong>After:</strong> Every saved checkpoint is run against the task eval set; the shipping decision reads the task-metric curve, with loss kept only as a divergence alarm.</p>\n<h2>Implementation</h2>\n<p>Save checkpoints at regular intervals. After training (or asynchronously during it), run each checkpoint over the frozen eval set through the same inference path production uses, and record task metrics per checkpoint. Pick on task metrics; investigate any large loss/task-metric disagreement, since it usually indicates a formatting or template problem.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Per-checkpoint inference has real cost on long runs — evaluate a spaced subset first, then densify around the peak</li>\n<li>Keep the judge and eval set pinned across the comparison, or the curve measures drift instead of checkpoints</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip for continued-pretraining runs where the objective genuinely is next-token prediction on a corpus</li>\n<li>If no task eval set exists yet, that is the blocking gap to fix — checkpoint selection is not meaningful without it</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: the loss/task-quality divergence in instruction tuning is widely documented in practitioner writeups and trainer documentation; magnitudes are task-specific.</p>\n",
+      "body_text": "What & Why Select fine tuning checkpoints by scoring each on the frozen task eval set — exact match, rubric scores, pass rates, whatever the task defines as success — instead of picking the lowest validation loss checkpoint. Loss measures next token prediction on the training distribution; it correlates loosely and sometimes inversely with task success, because formatting compliance, refusal behavior, and end of turn discipline all move independently of loss. The best loss checkpoint is frequently not the best task checkpoint. Before / After Before: The checkpoint with minimum eval loss ships. It scores worse on the actual extraction task than the checkpoint from one epoch earlier, which nobody evaluated. After: Every saved checkpoint is run against the task eval set; the shipping decision reads the task metric curve, with loss kept only as a divergence alarm. Implementation Save checkpoints at regular intervals. After training (or asynchronously during it), run each checkpoint over the frozen eval set through the same inference path production uses, and record task metrics per checkpoint. Pick on task metrics; investigate any large loss/task metric disagreement, since it usually indicates a formatting or template problem. Gotchas Per checkpoint inference has real cost on long runs — evaluate a spaced subset first, then densify around the peak Keep the judge and eval set pinned across the comparison, or the curve measures drift instead of checkpoints When NOT to Apply Skip for continued pretraining runs where the objective genuinely is next token prediction on a corpus If no task eval set exists yet, that is the blocking gap to fix — checkpoint selection is not meaningful without it Verification Community reported: the loss/task quality divergence in instruction tuning is widely documented in practitioner writeups and trainer documentation; magnitudes are task specific."
+    },
+    {
       "id": "evaluate-embedding-models-before-rechunking",
       "title": "Compare Embedding Models Before Changing Your Chunking Strategy",
       "category": "rag-tuning",
@@ -1523,6 +1686,61 @@
       "body_text": "What & Why Before investing in a chunking strategy change to fix poor retrieval, first compare a couple of alternative embedding models on a small labeled retrieval set. Poor retrieval is sometimes an embedding model quality problem, not a chunking problem, and rechunking is a larger, harder to reverse change (requiring full re indexing) than swapping an embedding model for the same chunks. Before / After Before: poor retrieval quality is diagnosed by immediately trying different chunk sizes and overlaps, without first checking whether the embedding model itself is the weaker link. After: run the same chunked corpus through 2 3 candidate embedding models, measure retrieval recall on a labeled eval set for each, and only proceed to chunking changes if a better embedding model doesn't resolve the gap. Implementation Keep chunking fixed, re embed the same chunk set with each candidate embedding model, and measure recall@k on a labeled (query, correct chunk) eval set for each — a meaningful recall improvement from a model swap alone means chunking wasn't the bottleneck. Gotchas Swapping embedding models requires re embedding and re indexing the entire corpus — budget for this cost before committing, same as a chunking change would require A labeled retrieval eval set of only a handful of examples can produce a misleadingly confident comparison — use enough examples to distinguish real differences from noise When NOT to Apply Skip this comparison if you already have strong evidence your current embedding model is state of the art for your domain and language — the marginal gain from swapping is unlikely to be worth the re indexing cost Skip this if your retrieval problem is clearly diagnosed as a chunking issue already (e.g. answers are consistently split across chunk boundaries) — go directly to chunking fixes Verification Community reported: comparing embedding models before committing to a chunking rewrite is a commonly recommended diagnostic order in RAG tuning discussions, though this entry has not yet been independently verified against a named production case — flagged enrichment status: draft pending stronger evidence."
     },
     {
+      "id": "hold-out-an-eval-set-before-any-training",
+      "title": "Hold Out an Eval Set Before Any Training Run Touches the Data",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "data"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "1 hour",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": false,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (standard ML practice applied to LLM tuning)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Near-duplicates across the train/eval split leak silently -- deduplicate semantically (embedding similarity), not only by exact string match",
+        "An eval set carved out after several training iterations is contaminated by selection: examples the team looked at while debugging are no longer held out"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets",
+        "establish-a-prompting-baseline-before-fine-tuning"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/hold-out-an-eval-set-before-any-training.md",
+      "url": "content/tips-and-tricks/fine-tuning/hold-out-an-eval-set-before-any-training",
+      "slug": "hold-out-an-eval-set-before-any-training",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Hold Out an Eval Set Before Any Training Run Touches the Data",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 306,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Split off a held-out eval set — and freeze it — before the first training run, not after. Post-hoc holdouts are systematically contaminated: examples the team has read while debugging, near-duplicates of training items, and distribution cherry-picking all inflate measured quality. The eval set is the only instrument that can tell you whether fine-tuning worked; it must be created while the data is still untouched by iteration.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> After three training iterations, 200 examples are set aside as the eval set. Scores look great; production quality doesn't match, because near-duplicates of half the eval items remain in the training set.</p>\n<p><strong>After:</strong> Before any run, 10% of data is split off, semantically deduplicated against the training portion, versioned, and never used for anything except scoring.</p>\n<h2>Implementation</h2>\n<p>At dataset-creation time: shuffle, split, then deduplicate across the boundary using embedding similarity with a conservative threshold (removing eval items whose near-twin remains in training). Store the eval set under version control with a hash, and score every subsequent experiment — including the prompting baseline — against the same frozen set.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Exact-match dedup misses paraphrase leakage; semantic dedup across the split boundary is the step teams skip</li>\n<li>Any example a human inspected while iterating on training data is compromised as a holdout — freeze the set first, debug on the training side only</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip building a new holdout when a curated, versioned eval set for the task already exists — use it instead</li>\n<li>For tiny datasets (a few hundred examples) prefer cross-validation over a fixed split, but keep the leakage discipline</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: held-out-first splitting is standard ML methodology; its application discipline for LLM fine-tuning pipelines is repeatedly re-learned in practitioner postmortems rather than benchmarked.</p>\n",
+      "body_text": "What & Why Split off a held out eval set — and freeze it — before the first training run, not after. Post hoc holdouts are systematically contaminated: examples the team has read while debugging, near duplicates of training items, and distribution cherry picking all inflate measured quality. The eval set is the only instrument that can tell you whether fine tuning worked; it must be created while the data is still untouched by iteration. Before / After Before: After three training iterations, 200 examples are set aside as the eval set. Scores look great; production quality doesn't match, because near duplicates of half the eval items remain in the training set. After: Before any run, 10% of data is split off, semantically deduplicated against the training portion, versioned, and never used for anything except scoring. Implementation At dataset creation time: shuffle, split, then deduplicate across the boundary using embedding similarity with a conservative threshold (removing eval items whose near twin remains in training). Store the eval set under version control with a hash, and score every subsequent experiment — including the prompting baseline — against the same frozen set. Gotchas Exact match dedup misses paraphrase leakage; semantic dedup across the split boundary is the step teams skip Any example a human inspected while iterating on training data is compromised as a holdout — freeze the set first, debug on the training side only When NOT to Apply Skip building a new holdout when a curated, versioned eval set for the task already exists — use it instead For tiny datasets (a few hundred examples) prefer cross validation over a fixed split, but keep the leakage discipline Verification Community reported: held out first splitting is standard ML methodology; its application discipline for LLM fine tuning pipelines is repeatedly re learned in practitioner postmortems rather than benchmarked."
+    },
+    {
       "id": "inspect-retrieved-chunks-beside-the-answer",
       "title": "Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations",
       "category": "debugging-llm-apps",
@@ -1574,6 +1792,60 @@
       "word_count": 268,
       "body_html": "<h2>What &amp; Why</h2>\n<p>When debugging a suspected hallucination, view the retrieved context chunks side-by-side with the generated answer, rather than evaluating the answer text in isolation. A hallucination (the model inventing a fact not present anywhere in the retrieved context) looks identical to a correctly-supported answer from the text alone — the distinction only appears once you check whether the claimed fact is actually present in what was retrieved.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a suspected hallucination is debugged by re-reading the answer and judging plausibility alone.</p>\n<p><strong>After:</strong> the retrieved chunks for that specific answer are pulled up alongside it, and the claimed fact is checked against them directly to determine whether it was actually supported by retrieval.</p>\n<h2>Implementation</h2>\n<p>When investigating a suspected hallucination, retrieve the logged context chunks for that specific request, place them next to the generated answer, and check whether each claimed fact is present in the retrieved text or was invented.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without retrieved chunks visible alongside the answer, a hallucination and a correctly-supported claim look identical from the answer text alone</li>\n<li>This requires retrieved chunks to actually be logged per-answer — without that logging in place, there's nothing to inspect</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for non-RAG generation where there's no retrieved context to compare against in the first place</li>\n<li>Not useful if retrieval logging isn't set up yet — set up <code>log-retrieved-context</code> first</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: inspecting retrieved context alongside the answer to debug hallucinations is a widely repeated recommendation in RAG debugging writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why When debugging a suspected hallucination, view the retrieved context chunks side by side with the generated answer, rather than evaluating the answer text in isolation. A hallucination (the model inventing a fact not present anywhere in the retrieved context) looks identical to a correctly supported answer from the text alone — the distinction only appears once you check whether the claimed fact is actually present in what was retrieved. Before / After Before: a suspected hallucination is debugged by re reading the answer and judging plausibility alone. After: the retrieved chunks for that specific answer are pulled up alongside it, and the claimed fact is checked against them directly to determine whether it was actually supported by retrieval. Implementation When investigating a suspected hallucination, retrieve the logged context chunks for that specific request, place them next to the generated answer, and check whether each claimed fact is present in the retrieved text or was invented. Gotchas Without retrieved chunks visible alongside the answer, a hallucination and a correctly supported claim look identical from the answer text alone This requires retrieved chunks to actually be logged per answer — without that logging in place, there's nothing to inspect When NOT to Apply Skip this for non RAG generation where there's no retrieved context to compare against in the first place Not useful if retrieval logging isn't set up yet — set up log retrieved context first Verification Community reported: inspecting retrieved context alongside the answer to debug hallucinations is a widely repeated recommendation in RAG debugging writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "inspect-your-training-data-by-hand",
+      "title": "Inspect a Random Sample of Training Data by Hand Before Every Run",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "1 hour",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (data-quality postmortems)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Sampling only the head of the file misses systematic corruption introduced mid-pipeline -- sample uniformly at random",
+        "Reviewing pre-formatting source records instead of the final serialized training examples misses template and tokenization bugs, which live in the last step"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "match-training-and-inference-prompt-formats"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand.md",
+      "url": "content/tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand",
+      "slug": "inspect-your-training-data-by-hand",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Inspect a Random Sample of Training Data by Hand Before Every Run",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 291,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Before launching any fine-tuning run, read 30-50 uniformly random examples from the final, serialized training file — the exact artifact the trainer will consume. Fine-tuning amplifies whatever is in the data: duplicated examples, leaked eval items, broken chat templates, truncated completions, and mislabeled records all train in silently and surface later as mysterious quality regressions. An hour of reading catches the failure classes that no aggregate statistic flags.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The dataset pipeline reports 12,000 examples and passes a schema check; training starts. The model learns to end every response with a stray <code>&lt;/s&gt;assistant</code> because a template bug affected 40% of examples.</p>\n<p><strong>After:</strong> Random-sample review before the run catches the malformed template in minutes; the run starts on clean data.</p>\n<h2>Implementation</h2>\n<p>Sample uniformly at random from the final training file (not the upstream database). Read each example end-to-end asking: is the completion actually correct, is the format the one inference will use, would I want the model to produce this? Track the defect rate; anything above a few percent blocks the run and triggers a pipeline fix, not manual patching of the sampled items.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Head-of-file sampling misses mid-pipeline corruption — randomize</li>\n<li>Reviewing source records rather than serialized examples misses the template bugs that live in the final formatting step</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip re-review when the data pipeline is unchanged and only hyperparameters differ from the previous inspected run</li>\n<li>Manual reading does not replace automated dedup and eval-leakage checks — it complements them; skip neither</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: hand-inspection before training is a standing recommendation in fine-tuning postmortems and data-quality writeups; the specific defect rates it catches are anecdotal.</p>\n",
+      "body_text": "What & Why Before launching any fine tuning run, read 30 50 uniformly random examples from the final, serialized training file — the exact artifact the trainer will consume. Fine tuning amplifies whatever is in the data: duplicated examples, leaked eval items, broken chat templates, truncated completions, and mislabeled records all train in silently and surface later as mysterious quality regressions. An hour of reading catches the failure classes that no aggregate statistic flags. Before / After Before: The dataset pipeline reports 12,000 examples and passes a schema check; training starts. The model learns to end every response with a stray </s assistant because a template bug affected 40% of examples. After: Random sample review before the run catches the malformed template in minutes; the run starts on clean data. Implementation Sample uniformly at random from the final training file (not the upstream database). Read each example end to end asking: is the completion actually correct, is the format the one inference will use, would I want the model to produce this? Track the defect rate; anything above a few percent blocks the run and triggers a pipeline fix, not manual patching of the sampled items. Gotchas Head of file sampling misses mid pipeline corruption — randomize Reviewing source records rather than serialized examples misses the template bugs that live in the final formatting step When NOT to Apply Skip re review when the data pipeline is unchanged and only hyperparameters differ from the previous inspected run Manual reading does not replace automated dedup and eval leakage checks — it complements them; skip neither Verification Community reported: hand inspection before training is a standing recommendation in fine tuning postmortems and data quality writeups; the specific defect rates it catches are anecdotal."
     },
     {
       "id": "keep-a-kill-switch-for-agent-actions",
@@ -2068,6 +2340,62 @@
       "body_text": "What & Why Set the configured maximum context length for a local model based on the actual RAM available on the target hardware, and test with realistic (not minimal) context before a demo or deployment. Context window size directly drives KV cache memory usage; a context length configured for a high RAM development machine can exhaust memory or degrade badly on lower spec target hardware. Before / After Before: context length configured at the model's maximum supported value regardless of target hardware RAM. After: context length capped based on a memory budget calculated from the target hardware's available RAM, verified with a realistic length test prompt before deployment. Implementation Calculate expected KV cache memory usage at your intended context length (a function of model size, layer count, and context length), compare against actual available RAM on the target hardware, and cap the configured context length below the point where memory pressure appears. Gotchas Larger context windows increase KV cache memory usage substantially — a context length fine at short prompts can exhaust RAM at real lengths Memory pressure can manifest as a crash, silent truncation, or severe slowdown depending on the runtime — test the actual failure mode on target hardware When NOT to Apply Skip this calculation if you're serving via a cloud API where memory management is the provider's responsibility, not yours Not necessary if your target hardware has ample RAM headroom well beyond your maximum realistic context length Verification Community reported: matching configured context length to available RAM before demos is a widely repeated recommendation in local model deployment writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "match-training-and-inference-prompt-formats",
+      "title": "Match Training and Inference Prompt Formats Exactly",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "inference",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "2 hours",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (chat-template mismatch bug reports)",
+      "applies_to": [
+        "fine-tuning-workflows",
+        "llm-apps"
+      ],
+      "gotchas": [
+        "Different libraries apply different default chat templates for the same base model -- the trainer and the serving engine must be checked against each other, not against documentation",
+        "System-prompt presence/absence is part of the format: training with one and serving without one (or vice versa) is a silent mismatch"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "inspect-your-training-data-by-hand",
+        "pin-model-and-runtime-versions"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/match-training-and-inference-prompt-formats.md",
+      "url": "content/tips-and-tricks/fine-tuning/match-training-and-inference-prompt-formats",
+      "slug": "match-training-and-inference-prompt-formats",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Match Training and Inference Prompt Formats Exactly",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 298,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>The serialized token sequence at inference must match the training format exactly: chat template, special tokens, system-prompt convention, and stop tokens. Chat-template mismatch is the most common cause of a fine-tune that scored well offline behaving erratically in production — the model was trained on one framing and is being queried in another, and nothing errors; quality degrades in ways that look like model failure.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Training data serialized with one chat template; the serving engine applies the base model's default template, which differs in special tokens. The fine-tune rambles past turn boundaries and ignores the system prompt.</p>\n<p><strong>After:</strong> One template definition is shared by the training serializer and the serving engine; a round-trip test asserts byte-identical rendering before deployment.</p>\n<h2>Implementation</h2>\n<p>Treat the chat template as a versioned artifact owned by the project, not a library default. Render a fixed test conversation through the training pipeline's serializer and through the serving engine's template path, and assert token-level equality in CI. Re-run the assertion whenever the trainer, serving engine, or tokenizer version changes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Trainer and server defaults can disagree for the same model family — verify against each other empirically</li>\n<li>System-prompt convention (always present, never present, or variable) is part of the format contract and must match</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Not relevant for base-model (non-chat) completion-style fine-tunes with a single flat format — though the stop-token discipline still applies</li>\n<li>Deliberate format transfer experiments (training on one format to serve another) are research territory, not production practice</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: template-mismatch failures are among the most frequently reported fine-tuning bugs across trainer and serving-engine issue trackers; the round-trip CI check is the standard prevention.</p>\n",
+      "body_text": "What & Why The serialized token sequence at inference must match the training format exactly: chat template, special tokens, system prompt convention, and stop tokens. Chat template mismatch is the most common cause of a fine tune that scored well offline behaving erratically in production — the model was trained on one framing and is being queried in another, and nothing errors; quality degrades in ways that look like model failure. Before / After Before: Training data serialized with one chat template; the serving engine applies the base model's default template, which differs in special tokens. The fine tune rambles past turn boundaries and ignores the system prompt. After: One template definition is shared by the training serializer and the serving engine; a round trip test asserts byte identical rendering before deployment. Implementation Treat the chat template as a versioned artifact owned by the project, not a library default. Render a fixed test conversation through the training pipeline's serializer and through the serving engine's template path, and assert token level equality in CI. Re run the assertion whenever the trainer, serving engine, or tokenizer version changes. Gotchas Trainer and server defaults can disagree for the same model family — verify against each other empirically System prompt convention (always present, never present, or variable) is part of the format contract and must match When NOT to Apply Not relevant for base model (non chat) completion style fine tunes with a single flat format — though the stop token discipline still applies Deliberate format transfer experiments (training on one format to serve another) are research territory, not production practice Verification Community reported: template mismatch failures are among the most frequently reported fine tuning bugs across trainer and serving engine issue trackers; the round trip CI check is the standard prevention."
+    },
+    {
       "id": "measure-first-token-latency",
       "title": "Measure Time-to-First-Token Separately From Total Generation Time",
       "category": "latency-optimization",
@@ -2547,6 +2875,60 @@
       "word_count": 258,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Pin the exact model version and inference runtime version before running any performance benchmark, and record both alongside the results. Inference performance characteristics can shift across model or runtime point releases even without a documented API change, so benchmark numbers gathered against a floating \"latest\" reference silently compare against a moving target.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> benchmark results recorded with no reference to which model or runtime version produced them, using whatever \"latest\" resolved to at run time.</p>\n<p><strong>After:</strong> benchmark results tagged with the exact model version and runtime version (e.g. <code>model: llama-3.1-8b-instruct@v2</code>, <code>runtime: vllm==0.4.2</code>), so later comparisons are apples-to-apples.</p>\n<h2>Implementation</h2>\n<p>Pin the specific model version and runtime version being benchmarked, record both explicitly in the benchmark report, and re-pin deliberately (not automatically) when either changes, re-running the benchmark against the new pin.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Inference performance can shift across point releases without an API change — an unpinned benchmark compares against a moving target</li>\n<li>This is a narrower, model/runtime-scoped concern than the full-stack (OS/CUDA/driver) pinning covered by <code>pin-dependencies-for-inference-images</code> — track both</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip formal pinning for one-off exploratory benchmarks not meant for comparison over time</li>\n<li>Not necessary if your provider is a fully managed API where you have no control over or visibility into the underlying model/runtime version anyway</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: pinning model and runtime versions before benchmarking is a widely repeated recommendation in inference-benchmarking reproducibility writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Pin the exact model version and inference runtime version before running any performance benchmark, and record both alongside the results. Inference performance characteristics can shift across model or runtime point releases even without a documented API change, so benchmark numbers gathered against a floating \"latest\" reference silently compare against a moving target. Before / After Before: benchmark results recorded with no reference to which model or runtime version produced them, using whatever \"latest\" resolved to at run time. After: benchmark results tagged with the exact model version and runtime version (e.g. model: llama 3.1 8b instruct@v2, runtime: vllm==0.4.2), so later comparisons are apples to apples. Implementation Pin the specific model version and runtime version being benchmarked, record both explicitly in the benchmark report, and re pin deliberately (not automatically) when either changes, re running the benchmark against the new pin. Gotchas Inference performance can shift across point releases without an API change — an unpinned benchmark compares against a moving target This is a narrower, model/runtime scoped concern than the full stack (OS/CUDA/driver) pinning covered by pin dependencies for inference images — track both When NOT to Apply Skip formal pinning for one off exploratory benchmarks not meant for comparison over time Not necessary if your provider is a fully managed API where you have no control over or visibility into the underlying model/runtime version anyway Verification Community reported: pinning model and runtime versions before benchmarking is a widely repeated recommendation in inference benchmarking reproducibility writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "pin-model-versions-in-prompt-regression-tests",
+      "title": "Pin Model Versions in Prompt Regression Tests",
+      "category": "prompting",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "30 minutes",
+      "phase": "prompting",
+      "effort": "minutes",
+      "estimated_time": "~30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (model-alias drift incidents)",
+      "applies_to": [
+        "llm-apps"
+      ],
+      "gotchas": [
+        "Pinned snapshots get deprecated by providers -- pinning requires a scheduled migration ritual, or tests break on the provider's timeline instead of yours",
+        "Local models need the same discipline via weights/quantization pinning, not only a model name"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-system-prompts-like-code",
+        "run-evals-multiple-times-before-trusting-deltas"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/prompting/pin-model-versions-in-prompt-regression-tests.md",
+      "url": "content/tips-and-tricks/prompting/pin-model-versions-in-prompt-regression-tests",
+      "slug": "pin-model-versions-in-prompt-regression-tests",
+      "section_path": "content/tips-and-tricks/prompting",
+      "display_name": "Pin Model Versions in Prompt Regression Tests",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 290,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Prompt regression tests must call a pinned model snapshot (an exact dated version identifier), never a floating alias like a bare model family name. Providers move aliases to new snapshots without your involvement; when that happens, every prompt test failure becomes ambiguous — did the prompt change break something, or did the model underneath move? Pinning restores the single-variable property that makes a regression test a test.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> CI prompt tests call a floating <code>latest</code>-style alias. One morning a third of them fail with no code change; a day is lost before anyone suspects the alias moved to a new snapshot.</p>\n<p><strong>After:</strong> Tests call an exact dated snapshot. Model upgrades are deliberate: bump the pinned version in a branch, run the full suite, review diffs, merge.</p>\n<h2>Implementation</h2>\n<p>Replace floating aliases with exact snapshot identifiers in test configuration, and record the pinned version inside test output so historical results are interpretable. Add a calendar reminder or deprecation-watch for the pinned snapshot's retirement date, and treat model upgrades as reviewed changes with their own eval run.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Pinned snapshots have provider-set end-of-life dates; the migration ritual is part of the practice</li>\n<li>For self-hosted models, pin weights revision and quantization level — the serving engine's model name alone is not identity</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>A small set of canary tests deliberately tracking the floating alias is useful for early warning of upcoming behavior shifts — keep them separate from the regression suite</li>\n<li>Exploratory notebooks don't need pinning; the discipline applies where results gate decisions</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: alias-drift breaking prompt suites is a recurring incident pattern in practitioner reports; snapshot pinning is the standard prevention in provider documentation.</p>\n",
+      "body_text": "What & Why Prompt regression tests must call a pinned model snapshot (an exact dated version identifier), never a floating alias like a bare model family name. Providers move aliases to new snapshots without your involvement; when that happens, every prompt test failure becomes ambiguous — did the prompt change break something, or did the model underneath move? Pinning restores the single variable property that makes a regression test a test. Before / After Before: CI prompt tests call a floating latest style alias. One morning a third of them fail with no code change; a day is lost before anyone suspects the alias moved to a new snapshot. After: Tests call an exact dated snapshot. Model upgrades are deliberate: bump the pinned version in a branch, run the full suite, review diffs, merge. Implementation Replace floating aliases with exact snapshot identifiers in test configuration, and record the pinned version inside test output so historical results are interpretable. Add a calendar reminder or deprecation watch for the pinned snapshot's retirement date, and treat model upgrades as reviewed changes with their own eval run. Gotchas Pinned snapshots have provider set end of life dates; the migration ritual is part of the practice For self hosted models, pin weights revision and quantization level — the serving engine's model name alone is not identity When NOT to Apply A small set of canary tests deliberately tracking the floating alias is useful for early warning of upcoming behavior shifts — keep them separate from the regression suite Exploratory notebooks don't need pinning; the discipline applies where results gate decisions Verification Community reported: alias drift breaking prompt suites is a recurring incident pattern in practitioner reports; snapshot pinning is the standard prevention in provider documentation."
     },
     {
       "id": "precompute-expensive-static-context",
@@ -3252,6 +3634,62 @@
       "body_text": "What & Why Classify incoming task difficulty and route straightforward requests to a smaller, cheaper model while reserving the larger model for genuinely complex requests. Not every request needs the largest available model's capability; a classifier that reliably identifies easy cases lets you cut cost on the majority of traffic without degrading quality on the harder tail. Before / After Before: every request, regardless of complexity, is sent to the largest available model. After: a lightweight classifier (a small model or rule based heuristic) tags each request's difficulty, routing \"easy\" requests to a smaller model and \"hard\" requests to the larger one. Implementation Build or reuse a difficulty classifier (often a small model or a rule set based on request features), validate its routing accuracy against a labeled sample before deployment, and route based on its output — reserving the larger model only for requests it flags as complex. Gotchas The underlying routing mechanism is the same whether framed as a cost or latency optimization — this absorbs a narrower, latency framed version of the same practice A misrouting classifier produces silently worse answers on hard tasks routed to the smaller model — validate routing accuracy, in addition to cost savings Routing adds its own classification step and overhead — for very low volume features, this overhead can exceed the savings When NOT to Apply Skip this for low volume features where the routing infrastructure overhead isn't justified by the modest absolute cost savings Not appropriate if you can't build or validate a difficulty classifier with acceptable accuracy — a bad classifier's quality risk outweighs the cost benefit Verification Production verified: routing simple tasks to smaller/cheaper models based on classified difficulty is a standard, widely documented cost optimization pattern in production LLM application design."
     },
     {
+      "id": "run-evals-multiple-times-before-trusting-deltas",
+      "title": "Run Evals Multiple Times Before Trusting Small Deltas",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "1 hour",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (eval variance discussions)",
+      "applies_to": [
+        "llm-apps",
+        "rag-pipelines",
+        "agents"
+      ],
+      "gotchas": [
+        "Setting temperature to 0 does not make hosted-model outputs deterministic -- provider-side nondeterminism persists, so measured variance is still required",
+        "Variance from the judge stacks on variance from the system under test -- repeated runs measure both together unless the judge is deterministic"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "use-rubric-anchored-llm-judges",
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/run-evals-multiple-times-before-trusting-deltas.md",
+      "url": "content/tips-and-tricks/evaluation/run-evals-multiple-times-before-trusting-deltas",
+      "slug": "run-evals-multiple-times-before-trusting-deltas",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Run Evals Multiple Times Before Trusting Small Deltas",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 323,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Before declaring that a prompt or model change improved quality, run the eval suite several times (3-5) for both variants and compare score distributions, not single numbers. LLM systems are nondeterministic end to end — sampling, provider-side variation even at temperature 0, and judge noise — so single-run scores on a few hundred examples routinely differ by several points between identical runs. A 2-point single-run improvement is frequently sampling noise wearing a victory costume.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> New prompt scores 84% versus 81% and ships as an improvement. Re-running the old prompt the next day yields 84.5%.</p>\n<p><strong>After:</strong> Both variants run 5 times: old scores 81-85% (mean 83.2), new scores 82-85% (mean 83.6). The delta is within run-to-run noise and the change is judged neutral — saving a false-progress narrative.</p>\n<h2>Implementation</h2>\n<p>Measure your suite's run-to-run variance once by repeating an identical configuration; that spread is your noise floor, and any delta below it needs more runs or a bigger eval set before it means anything. For decisions, run each variant 3-5 times, compare means with the spread in view, and prefer paired per-example comparisons (which variant won on each item) — they detect real differences with fewer runs than aggregate scores.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Temperature 0 reduces but does not remove nondeterminism on hosted models — measure, don't assume</li>\n<li>Judge noise and system noise compound; a deterministic programmatic check on the same runs isolates the system's own variance</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Deltas far above the noise floor (an order of magnitude larger) don't need repeated confirmation before acting</li>\n<li>Fully deterministic pipelines with programmatic checks (fixed seeds, local models, exact-match scoring) can trust single runs</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: run-to-run eval variance on identical configurations is widely documented across eval platforms and benchmark reproduction studies; typical magnitudes depend on suite size and judge design.</p>\n",
+      "body_text": "What & Why Before declaring that a prompt or model change improved quality, run the eval suite several times (3 5) for both variants and compare score distributions, not single numbers. LLM systems are nondeterministic end to end — sampling, provider side variation even at temperature 0, and judge noise — so single run scores on a few hundred examples routinely differ by several points between identical runs. A 2 point single run improvement is frequently sampling noise wearing a victory costume. Before / After Before: New prompt scores 84% versus 81% and ships as an improvement. Re running the old prompt the next day yields 84.5%. After: Both variants run 5 times: old scores 81 85% (mean 83.2), new scores 82 85% (mean 83.6). The delta is within run to run noise and the change is judged neutral — saving a false progress narrative. Implementation Measure your suite's run to run variance once by repeating an identical configuration; that spread is your noise floor, and any delta below it needs more runs or a bigger eval set before it means anything. For decisions, run each variant 3 5 times, compare means with the spread in view, and prefer paired per example comparisons (which variant won on each item) — they detect real differences with fewer runs than aggregate scores. Gotchas Temperature 0 reduces but does not remove nondeterminism on hosted models — measure, don't assume Judge noise and system noise compound; a deterministic programmatic check on the same runs isolates the system's own variance When NOT to Apply Deltas far above the noise floor (an order of magnitude larger) don't need repeated confirmation before acting Fully deterministic pipelines with programmatic checks (fixed seeds, local models, exact match scoring) can trust single runs Verification Community reported: run to run eval variance on identical configurations is widely documented across eval platforms and benchmark reproduction studies; typical magnitudes depend on suite size and judge design."
+    },
+    {
       "id": "run-prompt-injection-regression-tests",
       "title": "Run a Prompt-Injection Regression Suite on Every CI Run",
       "category": "security-best-practices",
@@ -3360,6 +3798,62 @@
       "word_count": 330,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Given an existing sandboxed code/shell/browser execution backend, add explicit CPU time, memory, and network-egress limits to each execution call, rather than relying on the sandbox's default configuration. An agent-generated script — whether from a bug or an adversarial prompt injection — should be unable to consume unbounded resources or reach the network even if the code itself is not malicious, because the sandbox boundary must not depend on the code's intent.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>sandbox.execute(code)</code> with the sandbox's default (often permissive) resource and network configuration.</p>\n<p><strong>After:</strong> <code>sandbox.execute(code, timeout_s=10, memory_mb=256, network=\"deny\")</code>, with limits set explicitly per call rather than inherited from a shared default.</p>\n<h2>Implementation</h2>\n<p>Set per-call timeout, memory ceiling, and network policy explicitly at the call site rather than relying on the sandbox provider's defaults; deny network access by default and allowlist specific egress destinations only if a task genuinely requires them (e.g. fetching a package from a known registry).</p>\n<h2>Gotchas</h2>\n<ul>\n<li>This tip assumes an existing sandboxed execution backend is already in place — building sandbox infrastructure from scratch is a multi-day project, not a tip</li>\n<li>A time limit without a network limit still lets a compromised or hallucinated script exfiltrate data before it is killed — both limits are required together</li>\n<li>Resource limits that are too generous provide false confidence — size limits to the smallest values your legitimate workloads actually need, not a large round number</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if you have no code-execution tool at all — there is nothing to add limits to</li>\n<li>Skip customizing limits per call if your sandbox provider already enforces sufficiently strict organization-wide defaults that meet your risk tolerance</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: explicit per-call resource and network limits on sandboxed code execution are a commonly recommended practice in coding-agent security discussions, though this entry has not yet been independently verified against a named production incident or deployment — flagged <code>enrichment_status: draft</code> pending stronger evidence.</p>\n",
       "body_text": "What & Why Given an existing sandboxed code/shell/browser execution backend, add explicit CPU time, memory, and network egress limits to each execution call, rather than relying on the sandbox's default configuration. An agent generated script — whether from a bug or an adversarial prompt injection — should be unable to consume unbounded resources or reach the network even if the code itself is not malicious, because the sandbox boundary must not depend on the code's intent. Before / After Before: sandbox.execute(code) with the sandbox's default (often permissive) resource and network configuration. After: sandbox.execute(code, timeout s=10, memory mb=256, network=\"deny\"), with limits set explicitly per call rather than inherited from a shared default. Implementation Set per call timeout, memory ceiling, and network policy explicitly at the call site rather than relying on the sandbox provider's defaults; deny network access by default and allowlist specific egress destinations only if a task genuinely requires them (e.g. fetching a package from a known registry). Gotchas This tip assumes an existing sandboxed execution backend is already in place — building sandbox infrastructure from scratch is a multi day project, not a tip A time limit without a network limit still lets a compromised or hallucinated script exfiltrate data before it is killed — both limits are required together Resource limits that are too generous provide false confidence — size limits to the smallest values your legitimate workloads actually need, not a large round number When NOT to Apply Skip this if you have no code execution tool at all — there is nothing to add limits to Skip customizing limits per call if your sandbox provider already enforces sufficiently strict organization wide defaults that meet your risk tolerance Verification Community reported: explicit per call resource and network limits on sandboxed code execution are a commonly recommended practice in coding agent security discussions, though this entry has not yet been independently verified against a named production incident or deployment — flagged enrichment status: draft pending stronger evidence."
+    },
+    {
+      "id": "separate-a-frozen-holdout-from-your-dev-eval-set",
+      "title": "Separate a Frozen Holdout From Your Dev Eval Set",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "1 hour",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (eval overfitting discussions)",
+      "applies_to": [
+        "llm-apps",
+        "rag-pipelines",
+        "agents"
+      ],
+      "gotchas": [
+        "Prompt iteration against a fixed eval set overfits it even though no training occurs -- the humans are the optimizer",
+        "A holdout loses its value the first time someone debugs against its items -- access discipline is the mechanism, not the split itself"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-your-eval-datasets",
+        "hold-out-an-eval-set-before-any-training"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/separate-a-frozen-holdout-from-your-dev-eval-set.md",
+      "url": "content/tips-and-tricks/evaluation/separate-a-frozen-holdout-from-your-dev-eval-set",
+      "slug": "separate-a-frozen-holdout-from-your-dev-eval-set",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Separate a Frozen Holdout From Your Dev Eval Set",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 304,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Split evaluation data into a dev set used freely during prompt and pipeline iteration, and a frozen holdout scored rarely — before releases and at fixed intervals. No gradient descent is needed to overfit an eval set: engineers iterating prompts against the same 100 examples for weeks are a slow optimizer, and dev-set scores drift upward without generalizing. The holdout is the only number that estimates real quality, and it stays honest only while nobody iterates against it.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> One 150-example eval set serves both daily iteration and release decisions. Scores climb from 78% to 92% over a month; production complaint rates don't move.</p>\n<p><strong>After:</strong> 100 examples serve iteration; a 50-example holdout is scored only at release. Dev says 92%, holdout says 81% — the 11-point gap is measured overfitting, informing both the release call and the next dev-set refresh.</p>\n<h2>Implementation</h2>\n<p>Split at eval-set creation. Log every holdout scoring event (who, when, score) and prohibit reading individual holdout transcripts during debugging — failures worth investigating rotate into the dev set and are replaced in the holdout. Refresh the dev set periodically from production samples so iteration targets current traffic.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Human iteration is optimization; the dev/holdout gap is your overfitting meter — track it, don't ignore it</li>\n<li>One debugging session against holdout items quietly converts them into dev items; treat access as the invariant</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Very early prototyping with a handful of examples doesn't warrant the ceremony — adopt the split when eval scores start driving decisions</li>\n<li>Teams with continuous fresh-traffic sampling can use rolling production samples as the de facto holdout instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: dev/test discipline is foundational ML methodology; its prompt-iteration variant (humans overfitting evals without training) is repeatedly documented in practitioner eval writeups.</p>\n",
+      "body_text": "What & Why Split evaluation data into a dev set used freely during prompt and pipeline iteration, and a frozen holdout scored rarely — before releases and at fixed intervals. No gradient descent is needed to overfit an eval set: engineers iterating prompts against the same 100 examples for weeks are a slow optimizer, and dev set scores drift upward without generalizing. The holdout is the only number that estimates real quality, and it stays honest only while nobody iterates against it. Before / After Before: One 150 example eval set serves both daily iteration and release decisions. Scores climb from 78% to 92% over a month; production complaint rates don't move. After: 100 examples serve iteration; a 50 example holdout is scored only at release. Dev says 92%, holdout says 81% — the 11 point gap is measured overfitting, informing both the release call and the next dev set refresh. Implementation Split at eval set creation. Log every holdout scoring event (who, when, score) and prohibit reading individual holdout transcripts during debugging — failures worth investigating rotate into the dev set and are replaced in the holdout. Refresh the dev set periodically from production samples so iteration targets current traffic. Gotchas Human iteration is optimization; the dev/holdout gap is your overfitting meter — track it, don't ignore it One debugging session against holdout items quietly converts them into dev items; treat access as the invariant When NOT to Apply Very early prototyping with a handful of examples doesn't warrant the ceremony — adopt the split when eval scores start driving decisions Teams with continuous fresh traffic sampling can use rolling production samples as the de facto holdout instead Verification Community reported: dev/test discipline is foundational ML methodology; its prompt iteration variant (humans overfitting evals without training) is repeatedly documented in practitioner eval writeups."
     },
     {
       "id": "separate-model-errors-from-app-errors",
@@ -3794,6 +4288,60 @@
       "body_text": "What & Why Validate the end to end local model workflow (loading, prompting, parsing output) using a small, quickly downloadable quantized model before committing bandwidth and disk space to a larger target model. Integration and configuration bugs are equally visible with a small model, and catching them before a large download saves significant setup time. Before / After Before: downloading a large (e.g. 70B parameter) model first, then discovering a configuration or integration bug during the first real test. After: validating the full pipeline against a small (e.g. 1 3B parameter) quantized model first, then swapping in the larger target model once the pipeline is confirmed working. Implementation Set up and test the full local model pipeline (loading, inference call, output parsing) against a small quantized model that downloads in minutes, confirm it works end to end, then swap the model reference to the larger target model. Gotchas A small model validates pipeline correctness, not task quality at the deployed size — run a separate quality check before committing to a specific model size Time spent downloading a large model before confirming the pipeline works is often wasted if an integration bug surfaces first When NOT to Apply Skip this step if the pipeline has already been validated against the exact target model in a prior run Not necessary if bandwidth/disk space and download time are non issues for your environment (e.g. models are already pre cached locally) Verification Community reported: validating with a small model before downloading the target model is a widely repeated recommendation in local model onboarding writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "start-with-lora-before-full-fine-tuning",
+      "title": "Start With LoRA Before Full-Parameter Fine-Tuning",
+      "category": "cost-reduction",
+      "tags": [
+        "fine-tuning",
+        "efficiency",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "fine-tuning",
+      "effort": "day",
+      "estimated_time": "~1 day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (PEFT adoption experience)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "LoRA underperforms full fine-tuning when the task requires large behavioral shifts or new knowledge domains -- if the LoRA ceiling is below target, the answer may be full tuning, not a bigger rank",
+        "Serving many LoRA adapters efficiently requires an engine with multi-adapter support; naively merging every adapter multiplies stored model copies"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "version-datasets-and-adapters-together"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/start-with-lora-before-full-fine-tuning.md",
+      "url": "content/tips-and-tricks/fine-tuning/start-with-lora-before-full-fine-tuning",
+      "slug": "start-with-lora-before-full-fine-tuning",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Start With LoRA Before Full-Parameter Fine-Tuning",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 305,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Run your first fine-tuning attempts as LoRA (or QLoRA) adapters rather than full-parameter training. Adapters train on a fraction of the GPU memory, finish faster, produce megabyte-scale artifacts instead of full model copies, and are trivially reversible — you keep the base model untouched and can stack, swap, or discard adapters per experiment. For the majority of instruction-following and style/format tasks, adapter quality is close enough to full tuning that the economics dominate.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> First experiment is a full fine-tune of a 7B model: multi-GPU reservation, hours per run, a 14GB artifact per experiment, and rollback means redeploying the previous copy.</p>\n<p><strong>After:</strong> First experiments are LoRA runs on a single GPU, each producing a ~50MB adapter; the best adapter is promoted, and rollback is unloading it.</p>\n<h2>Implementation</h2>\n<p>Use a PEFT-supporting trainer, start with the common defaults (rank 8-16, alpha 2x rank, LoRA on attention projections), and iterate data quality before iterating rank. Evaluate each adapter against the frozen eval set; only escalate to full fine-tuning if the adapter approach plateaus measurably below target.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Tasks demanding deep behavioral change or new domain knowledge can exceed what adapters deliver — treat a plateau as a real signal, not a tuning failure</li>\n<li>Multi-adapter serving needs engine support (vLLM and peers support it); merging adapters back into weights recreates the full-copy storage problem per variant</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip when you have strong evidence the task needs full-parameter training (e.g. continued pretraining on a new domain corpus)</li>\n<li>Skip for embedding models or small classifiers where full training is already cheap</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: adapter-first is the default recommendation across PEFT documentation and practitioner fine-tuning guides; quality parity claims vary by task and are not independently benchmarked here.</p>\n",
+      "body_text": "What & Why Run your first fine tuning attempts as LoRA (or QLoRA) adapters rather than full parameter training. Adapters train on a fraction of the GPU memory, finish faster, produce megabyte scale artifacts instead of full model copies, and are trivially reversible — you keep the base model untouched and can stack, swap, or discard adapters per experiment. For the majority of instruction following and style/format tasks, adapter quality is close enough to full tuning that the economics dominate. Before / After Before: First experiment is a full fine tune of a 7B model: multi GPU reservation, hours per run, a 14GB artifact per experiment, and rollback means redeploying the previous copy. After: First experiments are LoRA runs on a single GPU, each producing a 50MB adapter; the best adapter is promoted, and rollback is unloading it. Implementation Use a PEFT supporting trainer, start with the common defaults (rank 8 16, alpha 2x rank, LoRA on attention projections), and iterate data quality before iterating rank. Evaluate each adapter against the frozen eval set; only escalate to full fine tuning if the adapter approach plateaus measurably below target. Gotchas Tasks demanding deep behavioral change or new domain knowledge can exceed what adapters deliver — treat a plateau as a real signal, not a tuning failure Multi adapter serving needs engine support (vLLM and peers support it); merging adapters back into weights recreates the full copy storage problem per variant When NOT to Apply Skip when you have strong evidence the task needs full parameter training (e.g. continued pretraining on a new domain corpus) Skip for embedding models or small classifiers where full training is already cheap Verification Community reported: adapter first is the default recommendation across PEFT documentation and practitioner fine tuning guides; quality parity claims vary by task and are not independently benchmarked here."
+    },
+    {
       "id": "start-with-zero-chunk-overlap",
       "title": "Start With Zero Chunk Overlap, Then Add It Where Needed",
       "category": "rag-tuning",
@@ -4225,6 +4773,61 @@
       "word_count": 251,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Once a conversation exceeds a length threshold, replace older or repeated blocks of conversation history with a compressed summary rather than keeping the full verbatim history in context indefinitely. This frees context-window budget for recent turns and retrieved content, at the cost of some detail loss in the summarized portion.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> every turn of a long conversation kept verbatim in context, eventually crowding out room for new retrieved content or exceeding the window entirely.</p>\n<p><strong>After:</strong> turns older than a threshold (e.g. beyond the last 10 exchanges) are periodically compressed into a running summary, with only recent turns kept verbatim.</p>\n<h2>Implementation</h2>\n<p>Set a threshold (turn count or token count) beyond which older conversation history is passed through a summarization call and replaced by the resulting summary, keeping only recent turns in full detail alongside it.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Summarization is lossy by construction — a summary can drop a detail that later turns out to matter</li>\n<li>Summarizing too aggressively or too early can degrade coherence in fast-moving conversations where recent turns are still directly relevant</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for short conversations that never approach the context window limit</li>\n<li>Not appropriate for conversations where exact verbatim history is a hard requirement (e.g. legal or compliance transcripts) — summarization risks losing legally relevant detail</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: summarizing older conversation history to manage context-window pressure is a widely documented pattern in conversational-memory system designs, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Once a conversation exceeds a length threshold, replace older or repeated blocks of conversation history with a compressed summary rather than keeping the full verbatim history in context indefinitely. This frees context window budget for recent turns and retrieved content, at the cost of some detail loss in the summarized portion. Before / After Before: every turn of a long conversation kept verbatim in context, eventually crowding out room for new retrieved content or exceeding the window entirely. After: turns older than a threshold (e.g. beyond the last 10 exchanges) are periodically compressed into a running summary, with only recent turns kept verbatim. Implementation Set a threshold (turn count or token count) beyond which older conversation history is passed through a summarization call and replaced by the resulting summary, keeping only recent turns in full detail alongside it. Gotchas Summarization is lossy by construction — a summary can drop a detail that later turns out to matter Summarizing too aggressively or too early can degrade coherence in fast moving conversations where recent turns are still directly relevant When NOT to Apply Skip this for short conversations that never approach the context window limit Not appropriate for conversations where exact verbatim history is a hard requirement (e.g. legal or compliance transcripts) — summarization risks losing legally relevant detail Verification Community reported: summarizing older conversation history to manage context window pressure is a widely documented pattern in conversational memory system designs, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "test-for-regressions-outside-the-tuned-task",
+      "title": "Test for Regressions Outside the Tuned Task After Every Fine-Tune",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "fine-tuning",
+      "effort": "day",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (catastrophic-forgetting reports in practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "A general-capability smoke suite that shares format with the tuned task under-detects forgetting -- include tasks in different formats (reasoning, coding, safety refusals)",
+        "Safety behavior regressions from narrow fine-tuning are documented even for benign training data -- include refusal probes, not only capability probes"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "hold-out-an-eval-set-before-any-training",
+        "start-with-lora-before-full-fine-tuning"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/test-for-regressions-outside-the-tuned-task.md",
+      "url": "content/tips-and-tricks/fine-tuning/test-for-regressions-outside-the-tuned-task",
+      "slug": "test-for-regressions-outside-the-tuned-task",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Test for Regressions Outside the Tuned Task After Every Fine-Tune",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 326,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>After every fine-tune, run a fixed smoke suite of general-capability and safety probes alongside the task eval: reasoning, instruction-following in other formats, and refusal behavior on clearly harmful prompts. Narrow fine-tuning measurably degrades out-of-domain capability and can weaken safety training even when the training data is benign — and the task eval set, by construction, cannot see it. Teams that only measure the tuned task ship models that got better at one thing and quietly worse at everything else.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A support-summarization fine-tune ships on a strong task score. Weeks later, users report the same deployment handling general Q&amp;A noticeably worse, and a red-team check finds weakened refusals.</p>\n<p><strong>After:</strong> The post-tune gate runs task evals plus a ~100-item general suite and a refusal probe set; the regression appears before deployment and the mitigation (lower rank, mixed general data, fewer epochs) is applied.</p>\n<h2>Implementation</h2>\n<p>Assemble a fixed suite once: a slice of general benchmarks in varied formats, plus refusal probes. Score the base model to establish the baseline, then score every fine-tune against it. Gate deployment on regression thresholds. Standard mitigations when the gate fails: mix general instruction data into training, reduce epochs or LoRA rank, or scope the fine-tune to a narrower adapter.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Format-similar probes under-detect forgetting; diversity of task format is the point of the suite</li>\n<li>Include safety probes explicitly — capability suites do not measure refusal regressions</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Less critical for adapters served only behind a single narrow endpoint where no general traffic reaches the tuned model — though safety probes still apply</li>\n<li>Skip duplicating the suite when your eval platform already runs an equivalent regression gate</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: task-specific tuning degrading general and safety behavior is documented in published research and vendor guidance; the smoke-suite gate is standard practice at LLM-serving teams, thresholds vary.</p>\n",
+      "body_text": "What & Why After every fine tune, run a fixed smoke suite of general capability and safety probes alongside the task eval: reasoning, instruction following in other formats, and refusal behavior on clearly harmful prompts. Narrow fine tuning measurably degrades out of domain capability and can weaken safety training even when the training data is benign — and the task eval set, by construction, cannot see it. Teams that only measure the tuned task ship models that got better at one thing and quietly worse at everything else. Before / After Before: A support summarization fine tune ships on a strong task score. Weeks later, users report the same deployment handling general Q&A noticeably worse, and a red team check finds weakened refusals. After: The post tune gate runs task evals plus a 100 item general suite and a refusal probe set; the regression appears before deployment and the mitigation (lower rank, mixed general data, fewer epochs) is applied. Implementation Assemble a fixed suite once: a slice of general benchmarks in varied formats, plus refusal probes. Score the base model to establish the baseline, then score every fine tune against it. Gate deployment on regression thresholds. Standard mitigations when the gate fails: mix general instruction data into training, reduce epochs or LoRA rank, or scope the fine tune to a narrower adapter. Gotchas Format similar probes under detect forgetting; diversity of task format is the point of the suite Include safety probes explicitly — capability suites do not measure refusal regressions When NOT to Apply Less critical for adapters served only behind a single narrow endpoint where no general traffic reaches the tuned model — though safety probes still apply Skip duplicating the suite when your eval platform already runs an equivalent regression gate Verification Community reported: task specific tuning degrading general and safety behavior is documented in published research and vendor guidance; the smoke suite gate is standard practice at LLM serving teams, thresholds vary."
     },
     {
       "id": "test-prompts-with-adversarial-inputs",
@@ -5093,6 +5696,62 @@
       "body_text": "What & Why Rewrite short, ambiguous, or context dependent queries (e.g. \"what about the second one?\") into a self contained, retrieval friendly form before embedding them. Embedding models are trained to match well formed semantic content; a vague or elliptical query embeds poorly and retrieves weakly related passages even when the underlying information need is answerable from the corpus. Before / After Before: embed and search(\"what about pricing?\") in a multi turn conversation, with no reference to what \"pricing\" refers to. After: rewritten = rewrite with conversation history(\"what about pricing?\", history) producing \"What is the pricing for the Enterprise plan discussed earlier?\", then embedding and searching the rewritten query. Implementation Before the retrieval step, pass the raw query plus recent conversation history through a lightweight rewriting call (a smaller/cheaper model is usually sufficient) that resolves references and expands ellipsis, then embed the rewritten form instead of the raw query. Gotchas Query rewriting adds an extra model call and latency before retrieval even starts — measure the added latency against the recall improvement A rewriting step can over specify a genuinely ambiguous question, injecting an assumption that wasn't in the original query When NOT to Apply Skip this for single turn, already well formed queries where rewriting adds latency without a retrieval benefit Not useful if your retrieval failures are dominated by chunking or embedding model quality rather than query ambiguity — diagnose with measure retrieval recall before answer quality first Verification Community reported: query rewriting before retrieval is a commonly cited pattern in conversational RAG writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "use-rubric-anchored-llm-judges",
+      "title": "Use Rubric-Anchored Prompts for LLM Judges, Not Bare Score Requests",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "2 hours",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM-as-judge calibration writeups)",
+      "applies_to": [
+        "llm-apps",
+        "rag-pipelines",
+        "agents"
+      ],
+      "gotchas": [
+        "Judges exhibit known biases (position, verbosity, self-preference) that rubrics reduce but do not remove -- pairwise comparisons with position swapping are the stronger design where feasible",
+        "A rubric written after seeing model outputs tends to encode those outputs' quirks as criteria -- draft it from task requirements first"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "validate-llm-judges-against-human-labels",
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/use-rubric-anchored-llm-judges.md",
+      "url": "content/tips-and-tricks/evaluation/use-rubric-anchored-llm-judges",
+      "slug": "use-rubric-anchored-llm-judges",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Use Rubric-Anchored Prompts for LLM Judges, Not Bare Score Requests",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 326,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>When using an LLM as a judge, define an explicit rubric — named criteria, what each score level concretely means, and 2-3 anchored examples per level — instead of asking for a 1-10 quality score. Bare score requests produce compressed, drifting distributions (most outputs score 7-8) with poor run-to-run stability; anchored rubrics move the judgment from the judge's taste to your stated criteria, which is what makes scores comparable across time, models, and prompt versions.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"Rate this answer's quality from 1-10.\" Scores cluster at 7-8, reorderings of the same outputs shift scores, and a real quality regression moves the average by less than the noise.</p>\n<p><strong>After:</strong> A rubric scores three named criteria (groundedness, completeness, format compliance) at three anchored levels each, with a worked example per level; regressions show up as movement on a specific criterion.</p>\n<h2>Implementation</h2>\n<p>Draft criteria from task requirements before looking at outputs. For each criterion define discrete levels with concrete descriptions and an anchored example. Have the judge output per-criterion scores with a quoted justification in structured form, not one aggregate number. Pin the judge model version, and re-anchor whenever the rubric or judge changes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Rubrics reduce but do not eliminate judge biases; for A/B decisions, pairwise judging with position swapping is more reliable than absolute scores</li>\n<li>Rubrics reverse-engineered from current outputs encode the status quo — write them from requirements</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip LLM judging entirely where a programmatic check exists (exact match, schema validation, test execution) — deterministic checks dominate judges on both cost and reliability</li>\n<li>Single-criterion binary checks (\"does the answer cite a source?\") don't need a leveled rubric, only a clear yes/no definition</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: rubric-anchored and pairwise judging as mitigations for judge bias are consistent findings across LLM-as-judge research and eval-platform documentation; exact reliability gains vary by task and judge model.</p>\n",
+      "body_text": "What & Why When using an LLM as a judge, define an explicit rubric — named criteria, what each score level concretely means, and 2 3 anchored examples per level — instead of asking for a 1 10 quality score. Bare score requests produce compressed, drifting distributions (most outputs score 7 8) with poor run to run stability; anchored rubrics move the judgment from the judge's taste to your stated criteria, which is what makes scores comparable across time, models, and prompt versions. Before / After Before: \"Rate this answer's quality from 1 10.\" Scores cluster at 7 8, reorderings of the same outputs shift scores, and a real quality regression moves the average by less than the noise. After: A rubric scores three named criteria (groundedness, completeness, format compliance) at three anchored levels each, with a worked example per level; regressions show up as movement on a specific criterion. Implementation Draft criteria from task requirements before looking at outputs. For each criterion define discrete levels with concrete descriptions and an anchored example. Have the judge output per criterion scores with a quoted justification in structured form, not one aggregate number. Pin the judge model version, and re anchor whenever the rubric or judge changes. Gotchas Rubrics reduce but do not eliminate judge biases; for A/B decisions, pairwise judging with position swapping is more reliable than absolute scores Rubrics reverse engineered from current outputs encode the status quo — write them from requirements When NOT to Apply Skip LLM judging entirely where a programmatic check exists (exact match, schema validation, test execution) — deterministic checks dominate judges on both cost and reliability Single criterion binary checks (\"does the answer cite a source?\") don't need a leveled rubric, only a clear yes/no definition Verification Community reported: rubric anchored and pairwise judging as mitigations for judge bias are consistent findings across LLM as judge research and eval platform documentation; exact reliability gains vary by task and judge model."
+    },
+    {
       "id": "use-semantic-cache-for-repeated-questions",
       "title": "Cache Answers for Semantically Similar Repeated Questions",
       "category": "cost-reduction",
@@ -5368,6 +6027,61 @@
       "body_text": "What & Why For prompts with multiple long, distinct sections (context, instructions, examples, output rules), wrap each in a consistent XML style tag rather than relying on prose transitions or whitespace alone. Explicit tags give the model (and any human debugging the prompt) an unambiguous marker for where each section starts and ends. Before / After Before: a long prompt with instructions, examples, and context separated only by blank lines and prose like \"Now here are some examples:\". After: <instructions ...</instructions \\n<examples ...</examples \\n<context ...</context — each section explicitly tagged. Implementation Identify the distinct long sections in your prompt template, assign each a consistent tag name used the same way across every prompt in your codebase, and wrap the section content in the opening and closing tag. Gotchas Overusing XML tags for short prompts adds visual clutter with no parsing benefit — reserve this for prompts with genuinely multiple long sections Tag names should be consistent across your codebase — inconsistent tagging (mixing <context and <retrieved docs for the same concept) reduces the model's ability to learn the convention When NOT to Apply Skip this for short, single section prompts where there's nothing to visually separate Not necessary if your provider's prompt format already has strong native structuring (e.g. multi part message content) that serves the same purpose Verification Community reported: XML tag section wrapping for long, multi part prompts is a widely documented pattern in long context prompt engineering writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "validate-llm-judges-against-human-labels",
+      "title": "Validate LLM Judges Against Human Labels Before Trusting Their Scores",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "evaluation",
+      "effort": "day",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (judge-calibration practice)",
+      "applies_to": [
+        "llm-apps",
+        "rag-pipelines"
+      ],
+      "gotchas": [
+        "Judge agreement measured on obvious cases overstates reliability -- the calibration set must include borderline examples, which is where judges earn or lose trust",
+        "Agreement decays when the output distribution shifts (new model, new prompt style) -- recalibrate after major system changes, not only at setup"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "use-rubric-anchored-llm-judges",
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/validate-llm-judges-against-human-labels.md",
+      "url": "content/tips-and-tricks/evaluation/validate-llm-judges-against-human-labels",
+      "slug": "validate-llm-judges-against-human-labels",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Validate LLM Judges Against Human Labels Before Trusting Their Scores",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 313,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Before an LLM judge's scores drive any decision, measure its agreement against a human-labeled calibration set of 50-100 examples spanning easy and borderline cases. A judge is a measurement instrument; deploying one uncalibrated means every downstream number — regression gates, A/B results, dashboard trends — inherits an unknown error term. Measured agreement (percent agreement or Cohen's kappa against humans) converts \"the judge said so\" into a quantified, contestable measurement.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A judge gates releases for months. When engineers finally label a sample themselves, judge-human agreement on borderline cases is near chance — the gate has been noise.</p>\n<p><strong>After:</strong> At setup, the judge scores a 75-example human-labeled set; agreement is measured overall and on the borderline subset, the rubric is iterated until acceptable, and the number is recorded next to every judge-derived metric.</p>\n<h2>Implementation</h2>\n<p>Sample real outputs, including known-hard cases. Have 1-2 humans label them with the same rubric the judge will use, then score the same set with the judge and compute agreement (kappa preferred over raw percent when classes are imbalanced). Iterate the rubric — not the labels — until agreement is acceptable for the decision's stakes. Store the calibration set and re-run it when the judge model, rubric, or output distribution changes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Easy-case agreement is not the number that matters; report the borderline-subset agreement separately</li>\n<li>Calibration is perishable — major system changes shift the output distribution the judge was validated on</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip for deterministic checks that need no judge</li>\n<li>For low-stakes exploratory scoring, a lighter spot-check (10-20 labels) may be proportionate — but label some before trusting any trend</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: human-agreement validation is the standard recommendation across LLM-as-judge research and every major eval platform's documentation; acceptable-agreement thresholds are decision-specific.</p>\n",
+      "body_text": "What & Why Before an LLM judge's scores drive any decision, measure its agreement against a human labeled calibration set of 50 100 examples spanning easy and borderline cases. A judge is a measurement instrument; deploying one uncalibrated means every downstream number — regression gates, A/B results, dashboard trends — inherits an unknown error term. Measured agreement (percent agreement or Cohen's kappa against humans) converts \"the judge said so\" into a quantified, contestable measurement. Before / After Before: A judge gates releases for months. When engineers finally label a sample themselves, judge human agreement on borderline cases is near chance — the gate has been noise. After: At setup, the judge scores a 75 example human labeled set; agreement is measured overall and on the borderline subset, the rubric is iterated until acceptable, and the number is recorded next to every judge derived metric. Implementation Sample real outputs, including known hard cases. Have 1 2 humans label them with the same rubric the judge will use, then score the same set with the judge and compute agreement (kappa preferred over raw percent when classes are imbalanced). Iterate the rubric — not the labels — until agreement is acceptable for the decision's stakes. Store the calibration set and re run it when the judge model, rubric, or output distribution changes. Gotchas Easy case agreement is not the number that matters; report the borderline subset agreement separately Calibration is perishable — major system changes shift the output distribution the judge was validated on When NOT to Apply Skip for deterministic checks that need no judge For low stakes exploratory scoring, a lighter spot check (10 20 labels) may be proportionate — but label some before trusting any trend Verification Community reported: human agreement validation is the standard recommendation across LLM as judge research and every major eval platform's documentation; acceptable agreement thresholds are decision specific."
+    },
+    {
       "id": "validate-tool-arguments-before-execution",
       "title": "Validate Tool Arguments Before Execution, Not Inside the Tool",
       "category": "agent-reliability",
@@ -5424,6 +6138,61 @@
       "word_count": 328,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Validate a model-generated tool call's arguments against an explicit schema (types, ranges, enums, required fields) before the tool function ever runs, and reject invalid calls with a structured error the agent can read and correct. This catches malformed or hallucinated arguments — a string where a tool expects an integer, an out-of-range enum value — before they reach code that assumes well-formed input.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong></p>\n<pre><code class=\"language-python\">def execute_tool(call):\n    return TOOLS[call.name](**call.args)  # crashes on bad args\n</code></pre>\n<p><strong>After:</strong></p>\n<pre><code class=\"language-python\">def execute_tool(call):\n    schema = TOOL_SCHEMAS[call.name]\n    try:\n        validated = schema.model_validate(call.args)\n    except ValidationError as e:\n        return ToolResult(error=str(e), retry=True)\n    return TOOLS[call.name](**validated.model_dump())\n</code></pre>\n<h2>Implementation</h2>\n<p>Define a Pydantic model per tool matching its expected argument schema, validate before calling the underlying function, and on failure return the validation error text back into the agent's context as a tool result (not a raised exception that crashes the loop) so the model can see what was wrong and retry.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Validating types alone isn't enough — an argument can be well-typed but semantically wrong (a negative quantity, a date in the past for a future-only field); add field-level validators for domain constraints in addition to type checks</li>\n<li>Silently coercing invalid arguments (stringifying a number, truncating an overlong string) hides model errors instead of surfacing them for the agent to retry</li>\n<li>If validation errors aren't fed back into the agent's context, it repeats the same invalid call indefinitely — always return the validator's rejection reason to the model, and pair with <code>cap-agent-tool-retries</code> to bound retry loops</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip building custom validation if your tool-calling framework already enforces JSON-schema-based argument validation before invocation (check first — many do)</li>\n<li>Skip this for tools with no meaningful invalid-argument space (a no-argument <code>get_current_time()</code> call has nothing to validate)</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: schema-validated tool arguments with structured rejection-and-retry is a standard pattern in LangGraph and comparable tool-calling frameworks, and is the direct mechanism referenced in this catalog's own <code>use-json-schema-for-outputs</code> and <code>multi-tool-agent</code> build example for reducing malformed structured-output rates.</p>\n",
       "body_text": "What & Why Validate a model generated tool call's arguments against an explicit schema (types, ranges, enums, required fields) before the tool function ever runs, and reject invalid calls with a structured error the agent can read and correct. This catches malformed or hallucinated arguments — a string where a tool expects an integer, an out of range enum value — before they reach code that assumes well formed input. Before / After Before: After: Implementation Define a Pydantic model per tool matching its expected argument schema, validate before calling the underlying function, and on failure return the validation error text back into the agent's context as a tool result (not a raised exception that crashes the loop) so the model can see what was wrong and retry. Gotchas Validating types alone isn't enough — an argument can be well typed but semantically wrong (a negative quantity, a date in the past for a future only field); add field level validators for domain constraints in addition to type checks Silently coercing invalid arguments (stringifying a number, truncating an overlong string) hides model errors instead of surfacing them for the agent to retry If validation errors aren't fed back into the agent's context, it repeats the same invalid call indefinitely — always return the validator's rejection reason to the model, and pair with cap agent tool retries to bound retry loops When NOT to Apply Skip building custom validation if your tool calling framework already enforces JSON schema based argument validation before invocation (check first — many do) Skip this for tools with no meaningful invalid argument space (a no argument get current time() call has nothing to validate) Verification Production verified: schema validated tool arguments with structured rejection and retry is a standard pattern in LangGraph and comparable tool calling frameworks, and is the direct mechanism referenced in this catalog's own use json schema for outputs and multi tool agent build example for reducing malformed structured output rates."
+    },
+    {
+      "id": "version-datasets-and-adapters-together",
+      "title": "Version Datasets and Adapters Together as One Artifact Pair",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "observability"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "2 hours",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (ML reproducibility practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Storing only a dataset filename (not a content hash) breaks the link the first time the file is regenerated in place",
+        "The chat template and tokenizer version are part of the recipe -- an adapter is not reproducible from data alone"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "match-training-and-inference-prompt-formats",
+        "version-your-eval-datasets"
+      ],
+      "added_date": "2026-07-07",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-07",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/version-datasets-and-adapters-together.md",
+      "url": "content/tips-and-tricks/fine-tuning/version-datasets-and-adapters-together",
+      "slug": "version-datasets-and-adapters-together",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Version Datasets and Adapters Together as One Artifact Pair",
+      "summary": "",
+      "last_updated": "2026-07-07",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 293,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Every trained adapter or checkpoint should carry an immutable reference to exactly what produced it: dataset content hash, base model and tokenizer versions, chat template version, and training config. Six weeks later, \"which data trained the adapter currently in production?\" is a question that decides whether a quality regression is debuggable — and without the pairing recorded at training time, it is unanswerable, because datasets get regenerated in place and configs drift.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>adapter-v3</code> misbehaves in production. The training data directory has been overwritten twice since; nobody can reproduce the run or diff its data against v2's.</p>\n<p><strong>After:</strong> <code>adapter-v3</code>'s metadata records <code>dataset sha256:9f2a..., base llama-3.1-8b-instruct, template v4, config hash</code>. Reproducing or diffing the run is a lookup.</p>\n<h2>Implementation</h2>\n<p>At training time, compute a content hash of the final serialized training file and write a metadata record (alongside the adapter artifact and in the experiment tracker) containing: dataset hash and storage URI, base model revision, tokenizer and template versions, training config, and the eval-set version used for checkpoint selection. Make the training script fail if any component is untracked.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Filenames are not identity — hash the content</li>\n<li>Data alone does not reproduce an adapter; template, tokenizer, and config versions belong in the same record</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>For throwaway exploratory runs that will never be deployed, a lighter record (tracker run with config) is acceptable — but promotion to any shared environment requires the full pair</li>\n<li>Teams already on a model registry with lineage tracking should use it rather than a parallel homegrown scheme</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: artifact-lineage pairing is established ML-reproducibility practice, restated in every model-registry's documentation; the failure mode it prevents is ubiquitous in postmortems.</p>\n",
+      "body_text": "What & Why Every trained adapter or checkpoint should carry an immutable reference to exactly what produced it: dataset content hash, base model and tokenizer versions, chat template version, and training config. Six weeks later, \"which data trained the adapter currently in production?\" is a question that decides whether a quality regression is debuggable — and without the pairing recorded at training time, it is unanswerable, because datasets get regenerated in place and configs drift. Before / After Before: adapter v3 misbehaves in production. The training data directory has been overwritten twice since; nobody can reproduce the run or diff its data against v2's. After: adapter v3's metadata records dataset sha256:9f2a..., base llama 3.1 8b instruct, template v4, config hash. Reproducing or diffing the run is a lookup. Implementation At training time, compute a content hash of the final serialized training file and write a metadata record (alongside the adapter artifact and in the experiment tracker) containing: dataset hash and storage URI, base model revision, tokenizer and template versions, training config, and the eval set version used for checkpoint selection. Make the training script fail if any component is untracked. Gotchas Filenames are not identity — hash the content Data alone does not reproduce an adapter; template, tokenizer, and config versions belong in the same record When NOT to Apply For throwaway exploratory runs that will never be deployed, a lighter record (tracker run with config) is acceptable — but promotion to any shared environment requires the full pair Teams already on a model registry with lineage tracking should use it rather than a parallel homegrown scheme Verification Community reported: artifact lineage pairing is established ML reproducibility practice, restated in every model registry's documentation; the failure mode it prevents is ubiquitous in postmortems."
     },
     {
       "id": "version-system-prompts-like-code",

@@ -9,13 +9,13 @@
 | [architectures](./architectures/) | 17 entries | 2026-07-08 |
 | [benchmarks](./benchmarks/) | 30 entries | 2026-07-08 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
-| [community](./community/) | 48 entries | 2026-07-08 |
+| [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 10 entries | 2026-07-08 |
 | [projects](./projects/) | 110 entries | 2026-07-08 |
 | [research](./research/) | 53 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
 | [tools](./tools/) | 191 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
@@ -90,10 +90,10 @@
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
+- [Ask for Supporting Quotes Before Answers in RAG Prompts](./tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
-- [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
