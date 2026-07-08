@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T21:22:59.307Z",
-  "count": 129,
+  "generated_at": "2026-07-08T22:34:25.044Z",
+  "count": 135,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -384,6 +384,60 @@
       "word_count": 320,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Confirm that your first-stage retriever reliably returns candidates containing the correct answer (measured recall, not intuition) before investing in a reranking stage. Reranking only reorders what was already retrieved — it cannot recover an answer the first-stage retriever never surfaced at all, so adding it before verifying recall risks optimizing the wrong stage of the pipeline.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> reranking added to the pipeline as a default best practice, with no prior measurement of whether first-stage recall is the actual bottleneck.</p>\n<p><strong>After:</strong> measure recall@k on a labeled eval set first; if recall is already high (the answer is usually in the candidate set) but final answer quality is still poor, add reranking to fix the ordering problem specifically.</p>\n<h2>Implementation</h2>\n<p>Build or reuse a labeled set of (query, correct-source-passage) pairs, measure whether the correct passage appears in your first-stage top-k, and only proceed to add a reranker once that recall number is already acceptable (e.g. &gt;90%) — otherwise fix retrieval or chunking first.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Adding a reranker before confirming first-stage recall wastes engineering effort re-ranking a candidate set that does not contain the right answer in the first place</li>\n<li>Measure recall on a labeled eval set, not intuition — \"the answers look mostly right\" is not the same as measured recall above your target threshold</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this ordering discipline if you already have solid evidence (a maintained eval set showing high recall) that your first-stage retrieval is reliable — proceed straight to reranking</li>\n<li>Skip building a formal eval set if your corpus and query set are small enough to manually verify recall directly</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: \"fix recall before reranking\" is a commonly cited diagnostic ordering in RAG optimization discussions, though this specific entry has not yet been independently verified against a named production case — flagged <code>enrichment_status: draft</code> pending stronger evidence.</p>\n",
       "body_text": "What & Why Confirm that your first stage retriever reliably returns candidates containing the correct answer (measured recall, not intuition) before investing in a reranking stage. Reranking only reorders what was already retrieved — it cannot recover an answer the first stage retriever never surfaced at all, so adding it before verifying recall risks optimizing the wrong stage of the pipeline. Before / After Before: reranking added to the pipeline as a default best practice, with no prior measurement of whether first stage recall is the actual bottleneck. After: measure recall@k on a labeled eval set first; if recall is already high (the answer is usually in the candidate set) but final answer quality is still poor, add reranking to fix the ordering problem specifically. Implementation Build or reuse a labeled set of (query, correct source passage) pairs, measure whether the correct passage appears in your first stage top k, and only proceed to add a reranker once that recall number is already acceptable (e.g. 90%) — otherwise fix retrieval or chunking first. Gotchas Adding a reranker before confirming first stage recall wastes engineering effort re ranking a candidate set that does not contain the right answer in the first place Measure recall on a labeled eval set, not intuition — \"the answers look mostly right\" is not the same as measured recall above your target threshold When NOT to Apply Skip this ordering discipline if you already have solid evidence (a maintained eval set showing high recall) that your first stage retrieval is reliable — proceed straight to reranking Skip building a formal eval set if your corpus and query set are small enough to manually verify recall directly Verification Community reported: \"fix recall before reranking\" is a commonly cited diagnostic ordering in RAG optimization discussions, though this specific entry has not yet been independently verified against a named production case — flagged enrichment status: draft pending stronger evidence."
+    },
+    {
+      "id": "alarm-on-empty-and-unparseable-responses",
+      "title": "Alarm on Empty and Unparseable Responses",
+      "category": "production-gotchas",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "a few hours",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~2-3 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (production LLM monitoring practice)",
+      "applies_to": [
+        "production-deployment"
+      ],
+      "gotchas": [
+        "Empty/malformed rates often spike quietly after a model or prompt change while overall error rate stays green -- these are usually 200-OK responses, so HTTP monitoring misses them",
+        "A retry-on-parse-failure loop can mask the problem in metrics while multiplying cost and latency; count parse failures even when the retry eventually succeeds"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "separate-model-errors-from-app-errors",
+        "log-raw-and-parsed-model-outputs"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses",
+      "slug": "alarm-on-empty-and-unparseable-responses",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Alarm on Empty and Unparseable Responses",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 306,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>A large class of LLM production failures are not HTTP errors — they are successful 200 responses whose <em>body</em> is unusable: an empty completion, a truncated JSON, prose where a schema was required, a refusal where an answer was expected. Standard uptime monitoring sees these as healthy. If you do not explicitly count and alarm on empty and unparseable responses, a prompt or model change can silently break a downstream parser for a whole segment of traffic while every dashboard stays green. Make output-validity a first-class monitored metric.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A model update starts wrapping JSON in prose; the parser fails on 15% of requests, users get errors, but the service dashboard is all green because every call returned 200.</p>\n<p><strong>After:</strong> An \"unparseable response rate\" metric spikes from 0.2% to 15% and pages on-call within minutes; the prompt is patched or the model pinned back.</p>\n<h2>Implementation</h2>\n<p>Instrument the boundary where you consume the model output: increment a counter for empty completions and for parse/schema-validation failures, tagged by model and prompt version. Alert on rate thresholds and on sudden increases. Count a parse failure even when a retry later succeeds, so retries do not hide the regression. Sample and store the offending outputs for debugging.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>These failures are 200-OK bodies; HTTP-level monitoring will not catch them — measure at the parse boundary</li>\n<li>Retry-until-success masks the failure in success metrics while inflating cost/latency; count the failures separately</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Free-form generation with no downstream parser has no \"unparseable\" state — monitor emptiness/refusals instead</li>\n<li>Very early prototypes may not warrant paging alerts yet, but the counter is cheap to add from day one</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: monitoring output validity (empty/malformed/refusal rates) is emphasized in production LLM observability guides. Thresholds are application-specific.</p>\n",
+      "body_text": "What & Why A large class of LLM production failures are not HTTP errors — they are successful 200 responses whose body is unusable: an empty completion, a truncated JSON, prose where a schema was required, a refusal where an answer was expected. Standard uptime monitoring sees these as healthy. If you do not explicitly count and alarm on empty and unparseable responses, a prompt or model change can silently break a downstream parser for a whole segment of traffic while every dashboard stays green. Make output validity a first class monitored metric. Before / After Before: A model update starts wrapping JSON in prose; the parser fails on 15% of requests, users get errors, but the service dashboard is all green because every call returned 200. After: An \"unparseable response rate\" metric spikes from 0.2% to 15% and pages on call within minutes; the prompt is patched or the model pinned back. Implementation Instrument the boundary where you consume the model output: increment a counter for empty completions and for parse/schema validation failures, tagged by model and prompt version. Alert on rate thresholds and on sudden increases. Count a parse failure even when a retry later succeeds, so retries do not hide the regression. Sample and store the offending outputs for debugging. Gotchas These failures are 200 OK bodies; HTTP level monitoring will not catch them — measure at the parse boundary Retry until success masks the failure in success metrics while inflating cost/latency; count the failures separately When NOT to Apply Free form generation with no downstream parser has no \"unparseable\" state — monitor emptiness/refusals instead Very early prototypes may not warrant paging alerts yet, but the counter is cheap to add from day one Verification Community reported: monitoring output validity (empty/malformed/refusal rates) is emphasized in production LLM observability guides. Thresholds are application specific."
     },
     {
       "id": "allowlist-tools-per-agent-role",
@@ -2561,6 +2615,61 @@
       "body_text": "What & Why Log the specific chunks retrieved for every RAG answer, in addition to the final generated response. Retrieval results can change over time as the underlying index updates, so without logging what was actually retrieved at generation time, a later debugging attempt has no way to know what the model actually saw. Before / After Before: trace logs contain only the query and final answer, with no record of which chunks were retrieved and passed to the model. After: trace logs include the retrieved chunk IDs (and ideally content or a reference to it) alongside the query and answer, so the exact retrieval context for that specific answer can be reconstructed later. Implementation Add a retrieved chunks field to your trace schema, populate it with chunk IDs (and content, if storage cost allows) on every RAG request, and apply a sampling or truncation strategy if full content logging at scale is cost prohibitive. Gotchas Without logged retrieved context, debugging a bad answer after the fact is guesswork about what the model actually saw Retrieved context can be large — logging full text for every request has real storage cost, consider sampling or truncation at scale When NOT to Apply Skip this for non RAG generation with no retrieval step to log Not necessary at full fidelity if a lighter weight reference (chunk IDs plus a pointer into a versioned index) is sufficient for your debugging needs and reduces storage cost Verification Community reported: logging retrieved context per answer is a widely repeated recommendation in RAG observability writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "log-token-counts-and-cost-per-request",
+      "title": "Log Token Counts and Cost Per Request",
+      "category": "production-gotchas",
+      "tags": [
+        "observability",
+        "llm",
+        "efficiency"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLMOps cost-monitoring practice)",
+      "applies_to": [
+        "production-deployment"
+      ],
+      "gotchas": [
+        "Providers count tokens with their own tokenizer; a local estimate can drift from the billed number -- prefer the usage figures returned in the API response for cost accuracy",
+        "Averages hide the tail: a few pathological requests (runaway context, retry storms) can dominate the bill while the median looks fine -- log per-request and watch percentiles"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "log-latency-by-pipeline-stage",
+        "correlate-llm-traces-with-request-ids"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/log-token-counts-and-cost-per-request.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-token-counts-and-cost-per-request",
+      "slug": "log-token-counts-and-cost-per-request",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Log Token Counts and Cost Per Request",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 289,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Cost and context bugs are invisible until you measure them per request. Logging prompt tokens, completion tokens, and derived cost on every call gives you the signal to catch a prompt that quietly ballooned, a retrieval step stuffing the context window, or a retry loop multiplying spend. It also turns \"the bill went up\" from a mystery into a query: group by feature, endpoint, or prompt version and the culprit surfaces. This is the cheapest observability you can add and the first thing you will wish you had when finance asks why costs doubled.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The monthly LLM bill jumps 40% and nobody can attribute it; you scroll through code guessing which feature changed.</p>\n<p><strong>After:</strong> Per-request token/cost logs show one feature's average prompt grew from 800 to 6,000 tokens after a retrieval change — attributed in one query.</p>\n<h2>Implementation</h2>\n<p>Record the usage fields the provider returns (prompt/completion/total tokens) plus a computed cost per request, tagged with feature, endpoint, model, and prompt version. Prefer the API's reported usage over a local tokenizer estimate for billing accuracy. Chart percentiles (p50/p95/p99), not only the mean, and alert on sudden shifts in per-request cost.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Local token estimates can diverge from billed counts — use the provider's returned usage for cost</li>\n<li>Mean cost masks tail blowups; monitor p95/p99 and per-feature breakdowns</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Throwaway prototypes with negligible volume can defer detailed cost logging</li>\n<li>If your provider bills a flat rate independent of tokens, per-token cost logging is less useful (still log tokens for context-window debugging)</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: per-request token/cost logging is a standard LLMOps practice and built into most observability tooling. Exact cost formulas depend on provider pricing.</p>\n",
+      "body_text": "What & Why Cost and context bugs are invisible until you measure them per request. Logging prompt tokens, completion tokens, and derived cost on every call gives you the signal to catch a prompt that quietly ballooned, a retrieval step stuffing the context window, or a retry loop multiplying spend. It also turns \"the bill went up\" from a mystery into a query: group by feature, endpoint, or prompt version and the culprit surfaces. This is the cheapest observability you can add and the first thing you will wish you had when finance asks why costs doubled. Before / After Before: The monthly LLM bill jumps 40% and nobody can attribute it; you scroll through code guessing which feature changed. After: Per request token/cost logs show one feature's average prompt grew from 800 to 6,000 tokens after a retrieval change — attributed in one query. Implementation Record the usage fields the provider returns (prompt/completion/total tokens) plus a computed cost per request, tagged with feature, endpoint, model, and prompt version. Prefer the API's reported usage over a local tokenizer estimate for billing accuracy. Chart percentiles (p50/p95/p99), not only the mean, and alert on sudden shifts in per request cost. Gotchas Local token estimates can diverge from billed counts — use the provider's returned usage for cost Mean cost masks tail blowups; monitor p95/p99 and per feature breakdowns When NOT to Apply Throwaway prototypes with negligible volume can defer detailed cost logging If your provider bills a flat rate independent of tokens, per token cost logging is less useful (still log tokens for context window debugging) Verification Community reported: per request token/cost logging is a standard LLMOps practice and built into most observability tooling. Exact cost formulas depend on provider pricing."
+    },
+    {
       "id": "make-success-criteria-machine-checkable",
       "title": "Make Agent Success Criteria Machine-Checkable, Not Self-Reported",
       "category": "agent-reliability",
@@ -3101,6 +3210,60 @@
       "body_text": "What & Why When a request requires calling multiple independent retrieval sources or tools (e.g. querying two separate databases, or calling several unrelated tools), run those calls concurrently rather than sequentially. Sequential execution of independent calls adds their latencies together for no benefit; concurrent execution reduces total latency to roughly the slowest single call. Before / After Before: result a = retrieve a(query); result b = retrieve b(query) — two independent calls executed one after another. After: result a, result b = await asyncio.gather(retrieve a(query), retrieve b(query)) — both calls run concurrently. Implementation Identify calls in your pipeline with no data dependency between them, verify that independence explicitly (one call's input doesn't depend on another's output), and restructure the code to issue them concurrently using your language's async/concurrency primitives. Gotchas Parallelizing calls that actually have a dependency between them breaks correctness, in addition to hurting performance — verify independence, don't assume it Concurrent calls to a shared downstream service can hit rate limits or connection pool exhaustion that sequential calls wouldn't — verify the service can handle the concurrency When NOT to Apply Skip this if the calls have a genuine data dependency (one needs another's output) — parallelizing would produce incorrect results Not worth the added complexity if the calls are already fast enough in sequence that latency isn't a concern for your use case Verification Community reported: parallelizing independent retrieval and tool calls is a widely repeated recommendation in latency optimization writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "pin-and-log-the-model-version-in-traces",
+      "title": "Pin and Log the Model Version in Every Trace",
+      "category": "production-gotchas",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "an hour",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLMOps versioning practice)",
+      "applies_to": [
+        "production-deployment"
+      ],
+      "gotchas": [
+        "Aliases like 'latest' or an undated model name can silently repoint to a new snapshot, changing behavior with no deploy on your side -- pin explicit versions and record which one served each request",
+        "A pinned version can be deprecated and retired by the provider; monitor deprecation notices so a pin does not turn into an outage"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "store-prompt-version-in-every-trace",
+        "track-refusal-rates-as-a-regression-signal"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/pin-and-log-the-model-version-in-traces.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/pin-and-log-the-model-version-in-traces",
+      "slug": "pin-and-log-the-model-version-in-traces",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Pin and Log the Model Version in Every Trace",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 310,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Hosted models change under you. If you call a floating alias (e.g. an undated model name or \"latest\"), the provider can swap the underlying snapshot and your outputs shift with zero changes on your side — the hardest class of bug to diagnose because nothing in your repo moved. Pin an explicit model version in requests, and log the exact version that served each response. Then a behavior change correlates to a known model swap in your traces instead of a multi-day hunt through your own code.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Answer quality degrades over a weekend; you bisect your own commits for two days before discovering the provider rotated the model behind the alias you were calling.</p>\n<p><strong>After:</strong> Every trace records the serving model version; the quality dip lines up exactly with a version change in the logs, and you pin back or adapt in minutes.</p>\n<h2>Implementation</h2>\n<p>Specify an explicit, dated model version in your API calls rather than a floating alias. Capture the model version returned/echoed by the provider in every trace, alongside prompt version and request id. When behavior shifts, filter traces by model version to confirm or rule out a model change before touching your code. Track provider deprecation schedules so pins are refreshed deliberately.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Floating aliases repoint silently — pin explicit versions and record the served version per request</li>\n<li>Pins get deprecated; watch provider notices so a pin does not become a broken call</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Self-hosted models you deploy already have a known version — still log it, but the silent-swap risk is lower</li>\n<li>If you intentionally want auto-upgrades and can tolerate drift, document that choice; still log the served version</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: version pinning and logging is standard LLMOps guidance precisely because hosted-model swaps cause silent regressions. Provider aliasing/deprecation behavior varies.</p>\n",
+      "body_text": "What & Why Hosted models change under you. If you call a floating alias (e.g. an undated model name or \"latest\"), the provider can swap the underlying snapshot and your outputs shift with zero changes on your side — the hardest class of bug to diagnose because nothing in your repo moved. Pin an explicit model version in requests, and log the exact version that served each response. Then a behavior change correlates to a known model swap in your traces instead of a multi day hunt through your own code. Before / After Before: Answer quality degrades over a weekend; you bisect your own commits for two days before discovering the provider rotated the model behind the alias you were calling. After: Every trace records the serving model version; the quality dip lines up exactly with a version change in the logs, and you pin back or adapt in minutes. Implementation Specify an explicit, dated model version in your API calls rather than a floating alias. Capture the model version returned/echoed by the provider in every trace, alongside prompt version and request id. When behavior shifts, filter traces by model version to confirm or rule out a model change before touching your code. Track provider deprecation schedules so pins are refreshed deliberately. Gotchas Floating aliases repoint silently — pin explicit versions and record the served version per request Pins get deprecated; watch provider notices so a pin does not become a broken call When NOT to Apply Self hosted models you deploy already have a known version — still log it, but the silent swap risk is lower If you intentionally want auto upgrades and can tolerate drift, document that choice; still log the served version Verification Community reported: version pinning and logging is standard LLMOps guidance precisely because hosted model swaps cause silent regressions. Provider aliasing/deprecation behavior varies."
+    },
+    {
       "id": "pin-dependencies-for-inference-images",
       "title": "Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images",
       "category": "production-gotchas",
@@ -3635,6 +3798,115 @@
       "word_count": 250,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Order context sections (retrieved passages, conversation history, tool outputs) by their expected relevance to the current task rather than by the order they were produced or retrieved. Chronological ordering treats every piece of context as equally important, when in practice some passages are far more load-bearing for the answer than others.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> context assembled strictly in retrieval or generation order, regardless of relevance score.</p>\n<p><strong>After:</strong> context sections sorted by a relevance score (retrieval similarity, task-specific heuristic) before insertion into the prompt.</p>\n<h2>Implementation</h2>\n<p>Attach a relevance score to each context section at assembly time (retrieval similarity score is often already available), sort sections by that score, and verify against your eval set that this ordering measurably improves answer quality over chronological ordering.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Usefulness ranking requires an actual relevance signal — without one, this becomes an arbitrary reordering with no measurable benefit</li>\n<li>Reordering context can interact with a model's positional biases — verify the effect on your own eval set rather than assuming a universal best ordering</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if you have no reliable relevance signal to rank by — a bad ranking can be worse than chronological order</li>\n<li>Not worth the complexity for short contexts where every section fits comfortably within budget regardless of order</li>\n</ul>\n<h2>Verification</h2>\n<p>Theoretical: this entry describes a plausible mechanism (positional/attention bias toward earlier or later context) without independent verification against a named production system or benchmark — flagged <code>enrichment_status: draft</code> pending stronger evidence.</p>\n",
       "body_text": "What & Why Order context sections (retrieved passages, conversation history, tool outputs) by their expected relevance to the current task rather than by the order they were produced or retrieved. Chronological ordering treats every piece of context as equally important, when in practice some passages are far more load bearing for the answer than others. Before / After Before: context assembled strictly in retrieval or generation order, regardless of relevance score. After: context sections sorted by a relevance score (retrieval similarity, task specific heuristic) before insertion into the prompt. Implementation Attach a relevance score to each context section at assembly time (retrieval similarity score is often already available), sort sections by that score, and verify against your eval set that this ordering measurably improves answer quality over chronological ordering. Gotchas Usefulness ranking requires an actual relevance signal — without one, this becomes an arbitrary reordering with no measurable benefit Reordering context can interact with a model's positional biases — verify the effect on your own eval set rather than assuming a universal best ordering When NOT to Apply Skip this if you have no reliable relevance signal to rank by — a bad ranking can be worse than chronological order Not worth the complexity for short contexts where every section fits comfortably within budget regardless of order Verification Theoretical: this entry describes a plausible mechanism (positional/attention bias toward earlier or later context) without independent verification against a named production system or benchmark — flagged enrichment status: draft pending stronger evidence."
+    },
+    {
+      "id": "read-a-sample-of-production-traces-every-week",
+      "title": "Read a Sample of Production Traces Every Week",
+      "category": "production-gotchas",
+      "tags": [
+        "observability",
+        "llm",
+        "evaluation"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "an hour a week",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour weekly",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM product operations practice)",
+      "applies_to": [
+        "production-deployment"
+      ],
+      "gotchas": [
+        "Random sampling over-represents the common happy path; deliberately over-sample low-confidence, high-cost, refused, and thumbs-down cases to find real problems",
+        "Reading without recording is wasted effort -- turn each notable failure into a golden eval case so the manual review compounds into your automated suite"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "sample-production-traffic-into-eval-sets",
+        "classify-failures-before-fixing-prompts"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/read-a-sample-of-production-traces-every-week.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/read-a-sample-of-production-traces-every-week",
+      "slug": "read-a-sample-of-production-traces-every-week",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Read a Sample of Production Traces Every Week",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 314,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Dashboards tell you <em>that</em> metrics moved; reading actual transcripts tells you <em>what is going wrong</em>. A standing habit of manually reading a sample of real production traces every week surfaces failure modes no aggregate metric names — subtly wrong answers, awkward tone, a tool being misused, users fighting the system. This \"look at your data\" discipline is repeatedly cited as the highest-leverage practice in LLM product work, because most quality problems are qualitative and invisible in a numeric summary until they have already cost you users.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Metrics look stable, so the team assumes quality is fine; meanwhile a recurring misunderstanding frustrates a segment of users that no counter captures.</p>\n<p><strong>After:</strong> A weekly 30-transcript read surfaces the pattern, it becomes a golden eval case and a prompt fix, and the fix is protected against regression thereafter.</p>\n<h2>Implementation</h2>\n<p>Schedule a recurring block to read a sample of traces. Bias the sample toward informative cases — low judge confidence, high cost/latency, refusals, negative feedback — rather than pure random draws. For each notable failure, write it up and, critically, add it to your golden eval set so the learning becomes a permanent regression check rather than a one-time observation.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Uniform random sampling drowns you in the happy path; over-sample the suspicious and the flagged</li>\n<li>Reviews that are not captured as eval cases do not compound — always write findings back into the suite</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Regimes that forbid human viewing of user content require a privacy-preserving path (redaction, synthetic replay) instead of raw reads</li>\n<li>Pre-launch systems with no real traffic should review synthetic/pilot traces until production data exists</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: \"look at your data\" / manual trace review is one of the most consistently recommended practices in LLM product operations and eval literature. The sampling strategy is context-dependent.</p>\n",
+      "body_text": "What & Why Dashboards tell you that metrics moved; reading actual transcripts tells you what is going wrong . A standing habit of manually reading a sample of real production traces every week surfaces failure modes no aggregate metric names — subtly wrong answers, awkward tone, a tool being misused, users fighting the system. This \"look at your data\" discipline is repeatedly cited as the highest leverage practice in LLM product work, because most quality problems are qualitative and invisible in a numeric summary until they have already cost you users. Before / After Before: Metrics look stable, so the team assumes quality is fine; meanwhile a recurring misunderstanding frustrates a segment of users that no counter captures. After: A weekly 30 transcript read surfaces the pattern, it becomes a golden eval case and a prompt fix, and the fix is protected against regression thereafter. Implementation Schedule a recurring block to read a sample of traces. Bias the sample toward informative cases — low judge confidence, high cost/latency, refusals, negative feedback — rather than pure random draws. For each notable failure, write it up and, critically, add it to your golden eval set so the learning becomes a permanent regression check rather than a one time observation. Gotchas Uniform random sampling drowns you in the happy path; over sample the suspicious and the flagged Reviews that are not captured as eval cases do not compound — always write findings back into the suite When NOT to Apply Regimes that forbid human viewing of user content require a privacy preserving path (redaction, synthetic replay) instead of raw reads Pre launch systems with no real traffic should review synthetic/pilot traces until production data exists Verification Community reported: \"look at your data\" / manual trace review is one of the most consistently recommended practices in LLM product operations and eval literature. The sampling strategy is context dependent."
+    },
+    {
+      "id": "record-the-fully-rendered-prompt-sent-to-the-model",
+      "title": "Record the Fully Rendered Prompt Sent to the Model",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "an hour",
+      "phase": "debugging-and-observability",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM tracing practice)",
+      "applies_to": [
+        "production-deployment"
+      ],
+      "gotchas": [
+        "Rendered prompts can contain PII and secrets pulled in from context -- redact before storing, and mind retention policy (see the secret-redaction and retention tips)",
+        "Storing only the template plus variables is not enough: truncation, tool results, and message ordering happen at render time and are exactly where bugs hide"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "redact-secrets-before-tracing",
+        "log-raw-and-parsed-model-outputs"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/record-the-fully-rendered-prompt-sent-to-the-model.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/record-the-fully-rendered-prompt-sent-to-the-model",
+      "slug": "record-the-fully-rendered-prompt-sent-to-the-model",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Record the Fully Rendered Prompt Sent to the Model",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 300,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>The single most useful artifact when debugging an LLM call is the exact string (or message array) that actually reached the model — after templating, context injection, truncation, and tool-result formatting. Teams often log the template and the variables separately and reconstruct the prompt mentally, but the bug is usually in the rendering: a variable that was empty, context that got truncated mid-sentence, messages in the wrong order. Capturing the final rendered payload removes the guesswork; you see precisely what the model saw.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Logs show the template and a dict of variables; an answer is wrong and you assume the model is at fault — until hours later you realize the retrieved context was truncated to zero rows at render time.</p>\n<p><strong>After:</strong> The trace stores the exact rendered messages; you open it, see the empty context block immediately, and fix the truncation logic.</p>\n<h2>Implementation</h2>\n<p>At the point of the API call, serialize and store the final request payload (messages/prompt, plus key parameters) against the request id — after all rendering and truncation. Redact secrets and PII first, and apply your retention policy. Make this the artifact your on-call opens first when a response looks wrong.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Rendered prompts often carry sensitive data — redact before storage and respect retention limits</li>\n<li>Template + variables is insufficient; render-time truncation/ordering is where most prompt bugs live</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Extremely high-volume paths where storing every full prompt is cost-prohibitive can sample or store only on error/flagged cases</li>\n<li>Strict data-handling regimes may forbid storing raw content — store hashes/metadata and reproduce on demand instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: capturing the rendered prompt/messages is standard in LLM tracing tools and debugging guides. Redaction and retention specifics depend on your compliance requirements.</p>\n",
+      "body_text": "What & Why The single most useful artifact when debugging an LLM call is the exact string (or message array) that actually reached the model — after templating, context injection, truncation, and tool result formatting. Teams often log the template and the variables separately and reconstruct the prompt mentally, but the bug is usually in the rendering: a variable that was empty, context that got truncated mid sentence, messages in the wrong order. Capturing the final rendered payload removes the guesswork; you see precisely what the model saw. Before / After Before: Logs show the template and a dict of variables; an answer is wrong and you assume the model is at fault — until hours later you realize the retrieved context was truncated to zero rows at render time. After: The trace stores the exact rendered messages; you open it, see the empty context block immediately, and fix the truncation logic. Implementation At the point of the API call, serialize and store the final request payload (messages/prompt, plus key parameters) against the request id — after all rendering and truncation. Redact secrets and PII first, and apply your retention policy. Make this the artifact your on call opens first when a response looks wrong. Gotchas Rendered prompts often carry sensitive data — redact before storage and respect retention limits Template + variables is insufficient; render time truncation/ordering is where most prompt bugs live When NOT to Apply Extremely high volume paths where storing every full prompt is cost prohibitive can sample or store only on error/flagged cases Strict data handling regimes may forbid storing raw content — store hashes/metadata and reproduce on demand instead Verification Community reported: capturing the rendered prompt/messages is standard in LLM tracing tools and debugging guides. Redaction and retention specifics depend on your compliance requirements."
     },
     {
       "id": "redact-secrets-before-tracing",
@@ -4618,6 +4890,60 @@
       "word_count": 248,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Choose the sampling temperature based on the cost of an incorrect or inconsistent answer for that specific call, not a single generic value applied everywhere. High-stakes, factual, or decision-support calls benefit from low temperature (consistency, minimal invention); creative or brainstorming calls benefit from higher temperature (diversity of output).</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>temperature=0.7</code> applied uniformly to both a medical-triage classification call and a marketing-copy brainstorm call.</p>\n<p><strong>After:</strong> <code>temperature=0.1</code> for the classification call, <code>temperature=0.9</code> for the brainstorm call — set per call type based on error cost.</p>\n<h2>Implementation</h2>\n<p>Classify each distinct LLM call type in your application by the cost of an inconsistent or wrong answer, and set temperature per call type accordingly — low (0.0-0.2) for high-stakes/factual calls, higher (0.6-1.0) for creative/exploratory calls.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A single global temperature ignores that different calls have very different error costs</li>\n<li>Temperature is not the only source of output variance — top-p/top-k and prompt phrasing also matter, so tuning temperature alone doesn't guarantee desired behavior</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip per-call tuning if your application only has one call type with a stable, already-appropriate temperature</li>\n<li>Not meaningful for models/providers where temperature has limited effect on the specific task (e.g. some constrained-decoding or schema-enforced outputs)</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: setting temperature based on decision risk rather than a fixed default is a commonly repeated recommendation in temperature-tuning writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Choose the sampling temperature based on the cost of an incorrect or inconsistent answer for that specific call, not a single generic value applied everywhere. High stakes, factual, or decision support calls benefit from low temperature (consistency, minimal invention); creative or brainstorming calls benefit from higher temperature (diversity of output). Before / After Before: temperature=0.7 applied uniformly to both a medical triage classification call and a marketing copy brainstorm call. After: temperature=0.1 for the classification call, temperature=0.9 for the brainstorm call — set per call type based on error cost. Implementation Classify each distinct LLM call type in your application by the cost of an inconsistent or wrong answer, and set temperature per call type accordingly — low (0.0 0.2) for high stakes/factual calls, higher (0.6 1.0) for creative/exploratory calls. Gotchas A single global temperature ignores that different calls have very different error costs Temperature is not the only source of output variance — top p/top k and prompt phrasing also matter, so tuning temperature alone doesn't guarantee desired behavior When NOT to Apply Skip per call tuning if your application only has one call type with a stable, already appropriate temperature Not meaningful for models/providers where temperature has limited effect on the specific task (e.g. some constrained decoding or schema enforced outputs) Verification Community reported: setting temperature based on decision risk rather than a fixed default is a commonly repeated recommendation in temperature tuning writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "set-temperature-to-zero-when-reproducing-bugs",
+      "title": "Set Temperature to Zero When Reproducing Bugs",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "minutes",
+      "phase": "debugging-and-observability",
+      "effort": "minutes",
+      "estimated_time": "~5 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM debugging practice)",
+      "applies_to": [
+        "production-deployment"
+      ],
+      "gotchas": [
+        "Temperature 0 reduces but does not fully eliminate nondeterminism -- batching, hardware, and MoE routing can still vary outputs slightly across runs and providers",
+        "You are debugging a different configuration than production runs at; confirm the fix at the production temperature before closing the bug"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "add-a-minimal-reproduction-prompt",
+        "replay-the-same-trace-with-one-variable-changed"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/debugging-and-observability/set-temperature-to-zero-when-reproducing-bugs.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/set-temperature-to-zero-when-reproducing-bugs",
+      "slug": "set-temperature-to-zero-when-reproducing-bugs",
+      "section_path": "content/tips-and-tricks/debugging-and-observability",
+      "display_name": "Set Temperature to Zero When Reproducing Bugs",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 290,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Debugging a nondeterministic system is painful: you change one thing, the output changes for ten reasons, and you cannot tell whether your fix helped. Setting temperature to 0 (greedy decoding) removes most of the sampling randomness, so the same prompt tends to yield the same output run to run. That lets you isolate the variable you actually changed. Reproduce and iterate at temperature 0, then re-verify the fix at the real production temperature — because a fix that only works under greedy decoding is not a fix.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A flaky formatting bug appears \"sometimes\"; each debugging run produces a different output, so you cannot confirm whether your prompt tweak addressed it.</p>\n<p><strong>After:</strong> At temperature 0 the bug reproduces consistently, you change one instruction, the output changes predictably, and you confirm the fix — then re-check at production temperature.</p>\n<h2>Implementation</h2>\n<p>Set temperature to 0 (and fix seed where the provider supports it) in your debugging harness. Change one variable at a time and compare outputs. Once you believe the bug is fixed, run the case several times at the production temperature to confirm the fix holds under sampling, since that is how users hit it.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Temperature 0 is not fully deterministic across batching/hardware/providers — expect occasional variation even greedy</li>\n<li>You are testing a non-production config; always re-validate at the real temperature before closing</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Bugs that only manifest under sampling diversity (e.g. mode collapse, repetition) must be studied at the production temperature</li>\n<li>Evaluating creative-generation quality needs realistic sampling, not greedy decoding</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: greedy decoding for reproducibility is standard LLM debugging advice. Residual nondeterminism at temperature 0 is documented across providers and not eliminated here.</p>\n",
+      "body_text": "What & Why Debugging a nondeterministic system is painful: you change one thing, the output changes for ten reasons, and you cannot tell whether your fix helped. Setting temperature to 0 (greedy decoding) removes most of the sampling randomness, so the same prompt tends to yield the same output run to run. That lets you isolate the variable you actually changed. Reproduce and iterate at temperature 0, then re verify the fix at the real production temperature — because a fix that only works under greedy decoding is not a fix. Before / After Before: A flaky formatting bug appears \"sometimes\"; each debugging run produces a different output, so you cannot confirm whether your prompt tweak addressed it. After: At temperature 0 the bug reproduces consistently, you change one instruction, the output changes predictably, and you confirm the fix — then re check at production temperature. Implementation Set temperature to 0 (and fix seed where the provider supports it) in your debugging harness. Change one variable at a time and compare outputs. Once you believe the bug is fixed, run the case several times at the production temperature to confirm the fix holds under sampling, since that is how users hit it. Gotchas Temperature 0 is not fully deterministic across batching/hardware/providers — expect occasional variation even greedy You are testing a non production config; always re validate at the real temperature before closing When NOT to Apply Bugs that only manifest under sampling diversity (e.g. mode collapse, repetition) must be studied at the production temperature Evaluating creative generation quality needs realistic sampling, not greedy decoding Verification Community reported: greedy decoding for reproducibility is standard LLM debugging advice. Residual nondeterminism at temperature 0 is documented across providers and not eliminated here."
     },
     {
       "id": "set-token-budgets-per-feature",

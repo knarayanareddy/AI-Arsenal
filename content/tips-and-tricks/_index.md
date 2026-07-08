@@ -8,7 +8,7 @@
 |---|---:|---|
 | [agents and orchestration](./agents-and-orchestration/) | 18 entries | 2026-07-08 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-08 |
-| [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-08 |
+| [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-07-08 |
 | [evaluation](./evaluation/) | 13 entries | 2026-07-08 |
 | [fine tuning](./fine-tuning/) | 8 entries | 2026-07-08 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-08 |
@@ -17,16 +17,16 @@
 
 ## Recently Added
 
+- [Alarm on Empty and Unparseable Responses](./debugging-and-observability/alarm-on-empty-and-unparseable-responses.md)
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./cost-and-performance/batch-embedding-requests-during-ingestion.md)
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md)
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md)
-- [Continuously Sample Production Traffic Into Your Eval Sets](./evaluation/sample-production-traffic-into-eval-sets.md)
-- [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./evaluation/set-pass-fail-thresholds-before-running-evals.md)
-- [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md)
-- [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./evaluation/slice-eval-metrics-by-input-segment.md)
+- [Log Token Counts and Cost Per Request](./debugging-and-observability/log-token-counts-and-cost-per-request.md)
+- [Pin and Log the Model Version in Every Trace](./debugging-and-observability/pin-and-log-the-model-version-in-traces.md)
+- [Read a Sample of Production Traces Every Week](./debugging-and-observability/read-a-sample-of-production-traces-every-week.md)
 
 ## Most Popular
 
@@ -41,6 +41,7 @@ _No star-tracked entries yet._
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
+- [Alarm on Empty and Unparseable Responses](./debugging-and-observability/alarm-on-empty-and-unparseable-responses.md) — 
 - [Allowlist Tools Per Agent Role](./agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./prompting/ask-for-missing-inputs-before-solving.md) — 
 - [Ask for Supporting Quotes Before Answers in RAG Prompts](./prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
@@ -81,6 +82,5 @@ _No star-tracked entries yet._
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md) — 
 - [Log Both the Raw Model Output and the Parsed Result](./debugging-and-observability/log-raw-and-parsed-model-outputs.md) — 
 - [Log the Retrieved Context for Every RAG Answer](./debugging-and-observability/log-retrieved-context.md) — 
+- [Log Token Counts and Cost Per Request](./debugging-and-observability/log-token-counts-and-cost-per-request.md) — 
 - [Make Agent Success Criteria Machine-Checkable, Not Self-Reported](./agents-and-orchestration/make-success-criteria-machine-checkable.md) — 
-- [Match Configured Context Length to Available RAM Before Demos](./inference-and-serving/match-context-length-to-ram.md) — 
-- [Match Training and Inference Prompt Formats Exactly](./fine-tuning/match-training-and-inference-prompt-formats.md) — 
