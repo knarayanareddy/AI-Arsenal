@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:30:35.217Z",
+    "generated_at": "2026-07-08T19:31:52.881Z",
     "total_projects": 103,
     "total_tools": 162,
     "total_papers": 49,
@@ -11,7 +11,7 @@
     "total_build_examples": 8,
     "total_architectures": 21,
     "total_observability": 10,
-    "total_community": 23,
+    "total_community": 32,
     "total_benchmarks": 30,
     "total_trending": 4,
     "schema_version": "1.0.0"
@@ -2014,6 +2014,21 @@
       "featured": false
     },
     {
+      "id": "common-crawl",
+      "type": "community",
+      "name": "Common Crawl",
+      "description": "",
+      "tags": [],
+      "path": "content/community/datasets/common-crawl.md",
+      "url": "content/community/datasets/common-crawl",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "composio",
       "type": "tool",
       "name": "Composio",
@@ -3247,6 +3262,21 @@
       "featured": false
     },
     {
+      "id": "fineweb",
+      "type": "community",
+      "name": "FineWeb (Hugging Face)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/datasets/fineweb.md",
+      "url": "content/community/datasets/fineweb",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "firecrawl",
       "type": "project",
       "name": "Firecrawl",
@@ -3775,6 +3805,21 @@
       "featured": false
     },
     {
+      "id": "gpu-mode-discord",
+      "type": "community",
+      "name": "GPU MODE Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/gpu-mode-discord.md",
+      "url": "content/community/chat/gpu-mode-discord",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "gradient-dissent-podcast",
       "type": "community",
       "name": "Gradient Dissent (Weights & Biases)",
@@ -4178,6 +4223,21 @@
       "path": "content/community/chat/hugging-face-discord.md",
       "url": "content/community/chat/hugging-face-discord",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "hugging-face-forums",
+      "type": "community",
+      "name": "Hugging Face Forums",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/hugging-face-forums.md",
+      "url": "content/community/forums/hugging-face-forums",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -5144,6 +5204,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "last-week-in-ai",
+      "type": "community",
+      "name": "Last Week in AI",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/last-week-in-ai.md",
+      "url": "content/community/newsletters/last-week-in-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -6757,6 +6832,21 @@
       "featured": false
     },
     {
+      "id": "neurips",
+      "type": "community",
+      "name": "NeurIPS (Conference on Neural Information Processing Systems)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/events/neurips.md",
+      "url": "content/community/events/neurips",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "no-priors-podcast",
       "type": "community",
       "name": "No Priors",
@@ -6827,6 +6917,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ollama-discord",
+      "type": "community",
+      "name": "Ollama Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/ollama-discord.md",
+      "url": "content/community/chat/ollama-discord",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -8006,6 +8111,21 @@
       "path": "content/community/forums/r-localllama.md",
       "url": "content/community/forums/r-localllama",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "r-machinelearning",
+      "type": "community",
+      "name": "r/MachineLearning (Reddit)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/r-machinelearning.md",
+      "url": "content/community/forums/r-machinelearning",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -10019,6 +10139,21 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tldr-ai",
+      "type": "community",
+      "name": "TLDR AI",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/tldr-ai.md",
+      "url": "content/community/newsletters/tldr-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {

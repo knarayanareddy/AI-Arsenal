@@ -11,9 +11,11 @@
 ## Recently Added
 
 - [EleutherAI Discord](./eleutherai-discord.md)
+- [GPU MODE Discord](./gpu-mode-discord.md)
 - [Hugging Face Discord](./hugging-face-discord.md)
 - [LangChain Community Slack](./langchain-slack.md)
 - [LlamaIndex Discord](./llamaindex-discord.md)
+- [Ollama Discord](./ollama-discord.md)
 
 ## Most Popular
 
@@ -22,6 +24,8 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [EleutherAI Discord](./eleutherai-discord.md) — 
+- [GPU MODE Discord](./gpu-mode-discord.md) — 
 - [Hugging Face Discord](./hugging-face-discord.md) — 
 - [LangChain Community Slack](./langchain-slack.md) — 
 - [LlamaIndex Discord](./llamaindex-discord.md) — 
+- [Ollama Discord](./ollama-discord.md) — 
