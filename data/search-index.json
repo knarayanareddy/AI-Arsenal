@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-08T19:22:52.147Z",
+  "generated_at": "2026-07-08T19:25:30.478Z",
   "config": {
     "document": {
       "id": "id",
@@ -60,7 +60,7 @@
   },
   "facets": {
     "types": {
-      "project": 110,
+      "project": 109,
       "tool": 162,
       "paper": 49,
       "tip": 102,
@@ -78,14 +78,14 @@
       "tracing": 29,
       "cloud": 54,
       "rag": 95,
-      "agents": 125,
+      "agents": 124,
       "self-hosted": 36,
       "voice": 3,
       "multimodal": 23,
       "orchestration": 41,
       "planning": 15,
-      "tool-use": 54,
-      "code-gen": 33,
+      "tool-use": 53,
+      "code-gen": 32,
       "llm": 197,
       "research": 15,
       "embeddings": 30,
@@ -134,7 +134,7 @@
     },
     "categories": {
       "observability": 11,
-      "agents": 27,
+      "agents": 26,
       "voice-audio": 3,
       "evaluation": 3,
       "rag": 23,
@@ -173,24 +173,24 @@
     },
     "maturity": {
       "production": 220,
-      "beta": 51,
+      "beta": 50,
       "experimental": 1
     },
     "cost_model": {
       "freemium": 67,
-      "open-source": 175,
+      "open-source": 174,
       "paid": 11,
       "usage-based": 19
     },
     "status": {
-      "active": 380,
+      "active": 379,
       "deprecated": 1,
       "archived": 2,
       "watching": 2
     },
     "phase": {
       "benchmark-and-eval": 15,
-      "agent-system": 10,
+      "agent-system": 9,
       "foundation-model": 18,
       "framework": 27,
       "data-and-retrieval": 22,
@@ -233,7 +233,7 @@
     },
     "domain": {
       "language": 94,
-      "general-purpose": 30,
+      "general-purpose": 29,
       "audio": 3,
       "reasoning": 22,
       "vision": 14,
@@ -241,10 +241,10 @@
       "reinforcement-learning": 3
     },
     "relation_to_stack": {
-      "deploy-as-is": 75,
+      "deploy-as-is": 74,
       "build-on-top": 83,
       "fork-and-adapt": 11,
-      "study-and-reference": 30
+      "study-and-reference": 29
     },
     "practical_applicability": {
       "high": 30,
@@ -9229,57 +9229,6 @@
       "boost_tags": "cloud llm evaluation",
       "boost_description": "Google Cloud platform for model APIs, training, evaluation, and AI application deployment",
       "body": "Google Vertex AI Google Cloud platform for model APIs, training, evaluation, and AI application deployment cloud llm evaluation TL;DR: Google Cloud platform for model APIs, training, evaluation, and AI application deployment. Google Cloud usage based pricing. Best for Google Cloud AI deployment. Overview Google Cloud's platform for training, evaluating, and deploying AI models, tightly integrated with BigQuery and other GCP data services. Why It's in the Arsenal Google Vertex AI earns a place in the Arsenal because it directly addresses a recurring decision point: your org is standardized on Google Cloud and wants model training, evaluation, and deployment in one platform. It is included as a comparison point against…"
-    },
-    {
-      "id": "goose",
-      "type": "project",
-      "name": "goose (Block)",
-      "title": "goose (Block)",
-      "description": "Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent",
-      "tags": [
-        "agents",
-        "code-gen",
-        "tool-use"
-      ],
-      "category": "agents",
-      "subcategory": "coding-agents",
-      "maturity": "beta",
-      "cost_model": "open-source",
-      "status": "active",
-      "phase": "agent-system",
-      "audience": null,
-      "domain": [
-        "general-purpose"
-      ],
-      "relation_to_stack": [
-        "deploy-as-is",
-        "study-and-reference"
-      ],
-      "practical_applicability": null,
-      "result_status": null,
-      "reproduction_status": null,
-      "effort": null,
-      "verification_status": null,
-      "impact": null,
-      "difficulty": null,
-      "decision_type": null,
-      "confidence": null,
-      "build_status": null,
-      "outcome": null,
-      "scope": null,
-      "signal_types": null,
-      "data_sensitivity": null,
-      "kind": null,
-      "topics": null,
-      "access": null,
-      "activity_level": null,
-      "safety_level": null,
-      "path": "content/projects/agent-systems/goose.md",
-      "url": "content/projects/agent-systems/goose",
-      "boost_title": "goose (Block)",
-      "boost_tags": "agents code-gen tool-use",
-      "boost_description": "Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent",
-      "body": "goose (Block) Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent agents code-gen tool-use agents coding-agents Overview goose is Block's open source AI agent that runs on your own machine: given a task, it plans and executes real actions — running shell commands, editing files, invoking tools, and running tests — using whichever LLM you configure. It ships as a CLI and a desktop app, and its capabilities are extended through Model Context Protocol (MCP) servers rather than a proprietary plugin system. Why it's in the Arsenal The coding agent space is dominated by hosted, model locked products; goose is the credible open, model agnostic, on machine alternative, with serious backing (Block) and one of t…"
     },
     {
       "id": "goose",

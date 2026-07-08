@@ -6,7 +6,7 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 10 entries | 2026-07-08 |
+| [agent systems](./agent-systems/) | 9 entries | 2026-07-08 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 15 entries | 2026-07-08 |
 | [data and retrieval](./data-and-retrieval/) | 22 entries | 2026-07-08 |
 | [foundation models](./foundation-models/) | 18 entries | 2026-07-08 |
@@ -73,7 +73,6 @@
 - [Gemma 3](./foundation-models/gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GLM-4 / GLM-4.5](./foundation-models/glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
 - [Google ADK](./frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
-- [goose (Block)](./agent-systems/goose.md) — Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent
 - [GPT Researcher](./agent-systems/gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [Graphiti](./data-and-retrieval/graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
@@ -92,3 +91,4 @@
 - [llama.cpp](./inference-engines/llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./inference-engines/llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
 - [LlamaIndex](./frameworks/llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
+- [LlamaParse](./data-and-retrieval/llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text

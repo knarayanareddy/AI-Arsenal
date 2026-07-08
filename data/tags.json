@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:22:50.591Z",
+  "generated_at": "2026-07-08T19:25:28.907Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 130,
+      "count": 129,
       "types": {
         "tip": 14,
         "tool": 45,
         "build-example": 3,
         "guide": 7,
-        "project": 38,
+        "project": 37,
         "architecture": 4,
         "benchmark": 5,
         "person": 3,
@@ -66,7 +66,6 @@
         "github-copilot",
         "glm-4",
         "google-adk",
-        "goose",
         "goose",
         "gpt-researcher",
         "graphiti",
@@ -372,11 +371,11 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 37,
+      "count": 36,
       "types": {
         "tool": 20,
         "guide": 2,
-        "project": 8,
+        "project": 7,
         "benchmark": 4,
         "paper": 3
       },
@@ -398,7 +397,6 @@
         "github-copilot",
         "gitingest",
         "glm-4",
-        "goose",
         "goose",
         "humaneval",
         "kimi-k2",
@@ -2198,12 +2196,12 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 55,
+      "count": 54,
       "types": {
         "tip": 12,
         "guide": 6,
         "tool": 14,
-        "project": 17,
+        "project": 16,
         "architecture": 1,
         "build-example": 2,
         "paper": 2,
@@ -2238,7 +2236,6 @@
         "detect-repeated-tool-calls",
         "gemini-cli",
         "google-adk",
-        "goose",
         "goose",
         "intermediate-multi-tool-agent",
         "langgraph",

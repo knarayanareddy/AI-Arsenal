@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:22:50.591Z",
-    "total_projects": 110,
+    "generated_at": "2026-07-08T19:25:28.907Z",
+    "total_projects": 109,
     "total_tools": 162,
     "total_papers": 49,
     "total_tips": 102,
@@ -3603,25 +3603,6 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
-      "status": "active",
-      "featured": false
-    },
-    {
-      "id": "goose",
-      "type": "project",
-      "name": "goose (Block)",
-      "description": "Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent",
-      "tags": [
-        "agents",
-        "code-gen",
-        "tool-use"
-      ],
-      "path": "content/projects/agent-systems/goose.md",
-      "url": "content/projects/agent-systems/goose",
-      "last_updated": "2026-07-08",
-      "category": "agents",
-      "maturity": "beta",
-      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },

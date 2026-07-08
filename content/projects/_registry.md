@@ -35,7 +35,6 @@
 | `gemma-3` | [Gemma 3](./foundation-models/gemma-3.md) | Google open model family with efficient text and multimodal variants for local and hosted use |
 | `glm-4` | [GLM-4 / GLM-4.5](./foundation-models/glm-4.md) | Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants |
 | `google-adk` | [Google ADK](./frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
-| `goose` | [goose (Block)](./agent-systems/goose.md) | Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent |
 | `gpt-researcher` | [GPT Researcher](./agent-systems/gpt-researcher.md) | Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports |
 | `graphiti` | [Graphiti](./data-and-retrieval/graphiti.md) | Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents |
 | `haystack` | [Haystack](./frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |

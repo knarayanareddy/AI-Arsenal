@@ -12,7 +12,7 @@
 | [community](./community/) | 48 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
-| [projects](./projects/) | 110 entries | 2026-07-08 |
+| [projects](./projects/) | 109 entries | 2026-07-08 |
 | [research](./research/) | 53 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:22:50.591Z",
-  "count": 110,
+  "generated_at": "2026-07-08T19:25:28.907Z",
+  "count": 109,
   "items": [
     {
       "id": "agenta",
@@ -3103,107 +3103,6 @@
       "word_count": 394,
       "body_html": "<h2>Overview</h2>\n<p>Google's official open-source framework for building, evaluating, and deploying AI agents, designed to integrate closely with Google Cloud and Vertex AI while remaining usable with other model providers.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Google's official agent development framework, positioned as the Google Cloud-native path for building and deploying agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building on Google Cloud/Vertex AI and want an agent framework with first-party integration into that ecosystem, including deployment tooling. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Provides an agent abstraction with built-in support for tool use, multi-agent composition, and evaluation, plus tooling for deploying agents to Google Cloud infrastructure; supports both Python and other language bindings per Google's official samples.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: designed to work with Gemini/Gemma models as first-class citizens, though not exclusively. Downstream: none of particular note yet given its relative newness. Competing: LangGraph, CrewAI, Microsoft Agent Framework, AWS's agent tooling. Complementary: integrates with Vertex AI's evaluation and deployment infrastructure.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install google-adk\n</code></pre>\n<pre><code class=\"language-python\"># See the project's official documentation (Resources below) for a\n# runnable quickstart tailored to this framework's specific API.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you're building on Google Cloud/Vertex AI and want an agent framework with first-party integration into that ecosystem, including deployment tooling</li>\n<li><strong>Scenario</strong>: you need multi-agent orchestration with Google's own model family (Gemini/Gemma) as the primary target, with official support and documentation</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You're building on Google Cloud/Vertex AI and want an agent framework with first-party integration into that ecosystem, including deployment tooling</li>\n<li>You need multi-agent orchestration with Google's own model family (Gemini/Gemma) as the primary target, with official support and documentation</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need a cloud-agnostic framework — ADK's deployment and tooling story is most complete within Google Cloud, so a cloud-agnostic choice like LangGraph or CrewAI may fit better outside that ecosystem</li>\n<li>You want the largest possible existing community and third-party tutorial base — as a comparatively newer entrant, ADK's community resources are smaller than LangChain/LangGraph's</li>\n</ul>\n<p><em>Enrichment status: draft — claims above are based on limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01.</em></p>\n<h2>Relation to the Arsenal</h2>\n<p>This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant <a href=\"../../tools/orchestration/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/orchestration/</a> or <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a> entries.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/google/adk-python\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://google.github.io/adk-docs/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview Google's official open source framework for building, evaluating, and deploying AI agents, designed to integrate closely with Google Cloud and Vertex AI while remaining usable with other model providers. Why it's in the Arsenal Google's official agent development framework, positioned as the Google Cloud native path for building and deploying agents. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're building on Google Cloud/Vertex AI and want an agent framework with first party integration into that ecosystem, including deployment tooling. See Strengths / Limitations below before adopting it. Architecture Provides an agent abstraction with built in support for tool use, multi agent composition, and evaluation, plus tooling for deploying agents to Google Cloud infrastructure; supports both Python and other language bindings per Google's official samples. Ecosystem Position Upstream: designed to work with Gemini/Gemma models as first class citizens, though not exclusively. Downstream: none of particular note yet given its relative newness. Competing: LangGraph, CrewAI, Microsoft Agent Framework, AWS's agent tooling. Complementary: integrates with Vertex AI's evaluation and deployment infrastructure. Getting Started Key Use Cases 1. Scenario : you're building on Google Cloud/Vertex AI and want an agent framework with first party integration into that ecosystem, including deployment tooling 2. Scenario : you need multi agent orchestration with Google's own model family (Gemini/Gemma) as the primary target, with official support and documentation Strengths You're building on Google Cloud/Vertex AI and want an agent framework with first party integration into that ecosystem, including deployment tooling You need multi agent orchestration with Google's own model family (Gemini/Gemma) as the primary target, with official support and documentation Limitations You need a cloud agnostic framework — ADK's deployment and tooling story is most complete within Google Cloud, so a cloud agnostic choice like LangGraph or CrewAI may fit better outside that ecosystem You want the largest possible existing community and third party tutorial base — as a comparatively newer entrant, ADK's community resources are smaller than LangChain/LangGraph's Enrichment status: draft — claims above are based on limited third party sourcing; not yet independently verified. Last reviewed: 2026 07 01. Relation to the Arsenal This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant tools/orchestration/ or tools/by job/ entries. Resources GitHub Documentation"
-    },
-    {
-      "id": "goose",
-      "name": "goose (Block)",
-      "version_tracked": null,
-      "artifact_type": "platform",
-      "category": "agents",
-      "subcategory": "coding-agents",
-      "description": "Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent",
-      "github_url": "https://github.com/block/goose",
-      "license": "Apache-2.0",
-      "primary_language": "Rust",
-      "org_or_maintainer": "Block (aaif-goose)",
-      "tags": [
-        "agents",
-        "code-gen",
-        "tool-use"
-      ],
-      "maturity": "beta",
-      "cost_model": "open-source",
-      "github_stars": 50845,
-      "github_stars_last_30d": 0,
-      "trending_score": 75,
-      "last_commit": "2026-07-08",
-      "docs_url": "https://goose-docs.ai/",
-      "demo_url": null,
-      "paper_url": null,
-      "paper_id": null,
-      "phase": "agent-system",
-      "domain": [
-        "general-purpose"
-      ],
-      "relation_to_stack": [
-        "deploy-as-is",
-        "study-and-reference"
-      ],
-      "health_signals": [
-        "org-backed",
-        "actively-maintained"
-      ],
-      "ecosystem_role": [
-        "A model-agnostic, on-machine coding agent that executes real actions (shell, file edits, tests) via MCP-based extensions — the open, self-hosted counterpart to hosted coding agents, with no vendor model lock-in"
-      ],
-      "best_for": [
-        "You want a local coding agent that runs on your machine with your choice of LLM (OpenAI, Anthropic, Google, or local via Ollama) rather than being tied to one vendor's model and cloud",
-        "You want to extend an agent's capabilities through the Model Context Protocol — goose consumes MCP servers as tools, so it grows with the MCP ecosystem instead of a closed plugin API"
-      ],
-      "avoid_if": [
-        "You want a fully managed, zero-setup cloud coding agent with a team dashboard — goose is a local runtime you install and point at your own model keys",
-        "You need enterprise governance (audit logs, centralized policy) out of the box — that's not what an on-machine open agent provides without additional tooling"
-      ],
-      "upstream_dependencies": [],
-      "downstream_consumers": [],
-      "alternatives": [
-        "aider",
-        "openhands"
-      ],
-      "integrates_with": [
-        "ollama"
-      ],
-      "corresponding_tool_entry": null,
-      "enrichment_status": "draft",
-      "enrichment_notes": "50.8k stars, Apache-2.0, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. The repository was recently moved under the aaif-goose org; github.com/block/goose redirects there. Capability claims come from project documentation and have not been independently benchmarked here.",
-      "added_date": "2026-07-08",
-      "last_reviewed": "2026-07-08",
-      "added_by": "maintainer",
-      "reviewed_by": "maintainer",
-      "buzz_sources": [
-        {
-          "source": "github-trending",
-          "url": "https://github.com/trending",
-          "date": "2026-07-08",
-          "description": "50.8k stars; one of the most-starred open coding agents"
-        }
-      ],
-      "featured": false,
-      "status": "active",
-      "entry_type": "project",
-      "path": "content/projects/agent-systems/goose.md",
-      "url": "content/projects/agent-systems/goose",
-      "slug": "goose",
-      "section_path": "content/projects/agent-systems",
-      "display_name": "goose (Block)",
-      "summary": "Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent",
-      "last_updated": "2026-07-08",
-      "headings": [
-        "Overview",
-        "Why it's in the Arsenal",
-        "Architecture",
-        "Ecosystem Position",
-        "Getting Started",
-        "Key Use Cases",
-        "Strengths",
-        "Limitations",
-        "Relation to the Arsenal",
-        "Resources"
-      ],
-      "reading_time_minutes": 2,
-      "word_count": 410,
-      "body_html": "<h2>Overview</h2>\n<p>goose is Block's open-source AI agent that runs on your own machine: given a task, it plans and executes real actions — running shell commands, editing files, invoking tools, and running tests — using whichever LLM you configure. It ships as a CLI and a desktop app, and its capabilities are extended through Model Context Protocol (MCP) servers rather than a proprietary plugin system.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The coding-agent space is dominated by hosted, model-locked products; goose is the credible open, model-agnostic, on-machine alternative, with serious backing (Block) and one of the largest star counts in the category. Its MCP-native extension model is the mechanism that matters: it inherits the growing MCP tool ecosystem instead of reinventing a plugin API, which is why it belongs alongside <code>aider</code> and <code>openhands</code> as a reference agent-system.</p>\n<h2>Architecture</h2>\n<p>goose runs an agent loop (reason → select tool → execute → observe) against a configured LLM provider. Tools are supplied by MCP server extensions — filesystem, shell, web, and third-party servers — so adding a capability means attaching an MCP server, not patching goose. It executes on your machine with your credentials, which is both its power (real local actions) and its risk surface (sandbox and scope deliberately).</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: any configured LLM provider (hosted APIs or local via Ollama) and the MCP tool ecosystem. Downstream: your codebase and dev environment. Competing/complementary: <code>aider</code> (git-native pair-programming CLI) and <code>openhands</code> (autonomous software-engineering agent) occupy adjacent slots; goose's differentiator is being model-agnostic and MCP-extensible on-machine.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install command for the CLI and desktop app.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: running a local coding agent against a model you choose (including a local Ollama model) with no cloud dependency</li>\n<li><strong>Scenario</strong>: extending an agent with new tools by attaching MCP servers rather than writing plugins</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Model-agnostic and self-hosted — no vendor model lock-in, works with local models</li>\n<li>MCP-native extension model inherits a growing tool ecosystem rather than a closed plugin API</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>On-machine execution with your credentials is a real risk surface — scope and sandbox deliberately</li>\n<li>Not a managed product: no built-in team governance, audit, or zero-setup cloud experience</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an agent-system entry: a deployable/runnable agent, not a library you import to build one. For agent-building SDKs see <a href=\"../frameworks/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Frameworks</a>; for job-based tool comparisons see <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/block/goose\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://goose-docs.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
-      "body_text": "Overview goose is Block's open source AI agent that runs on your own machine: given a task, it plans and executes real actions — running shell commands, editing files, invoking tools, and running tests — using whichever LLM you configure. It ships as a CLI and a desktop app, and its capabilities are extended through Model Context Protocol (MCP) servers rather than a proprietary plugin system. Why it's in the Arsenal The coding agent space is dominated by hosted, model locked products; goose is the credible open, model agnostic, on machine alternative, with serious backing (Block) and one of the largest star counts in the category. Its MCP native extension model is the mechanism that matters: it inherits the growing MCP tool ecosystem instead of reinventing a plugin API, which is why it belongs alongside aider and openhands as a reference agent system. Architecture goose runs an agent loop (reason → select tool → execute → observe) against a configured LLM provider. Tools are supplied by MCP server extensions — filesystem, shell, web, and third party servers — so adding a capability means attaching an MCP server, not patching goose. It executes on your machine with your credentials, which is both its power (real local actions) and its risk surface (sandbox and scope deliberately). Ecosystem Position Upstream: any configured LLM provider (hosted APIs or local via Ollama) and the MCP tool ecosystem. Downstream: your codebase and dev environment. Competing/complementary: aider (git native pair programming CLI) and openhands (autonomous software engineering agent) occupy adjacent slots; goose's differentiator is being model agnostic and MCP extensible on machine. Getting Started Key Use Cases 1. Scenario : running a local coding agent against a model you choose (including a local Ollama model) with no cloud dependency 2. Scenario : extending an agent with new tools by attaching MCP servers rather than writing plugins Strengths Model agnostic and self hosted — no vendor model lock in, works with local models MCP native extension model inherits a growing tool ecosystem rather than a closed plugin API Limitations On machine execution with your credentials is a real risk surface — scope and sandbox deliberately Not a managed product: no built in team governance, audit, or zero setup cloud experience Relation to the Arsenal This is an agent system entry: a deployable/runnable agent, not a library you import to build one. For agent building SDKs see Frameworks; for job based tool comparisons see tools/by job/. Resources GitHub Documentation"
     },
     {
       "id": "gpt-researcher",

@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:22:53.004Z | Entries: 594 | Schema version: 1.0.0
+Generated: 2026-07-08T19:25:31.331Z | Entries: 593 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 110
+- Projects: 109
 - Tools: 162
 - Papers: 49
 - Tips: 102
@@ -35,11 +35,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Top Projects by Category
 
 ### agents
-- goose (Block) (⭐50845, score:75) — Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent
 - Strix (⭐38354, score:70) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
 - Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
 - PageAgent (⭐24812, score:65) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
+- Browser Use (⭐103506, score:50) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 
 ### computer-vision
 - Detectron2 (Meta) (⭐34599, score:55) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
