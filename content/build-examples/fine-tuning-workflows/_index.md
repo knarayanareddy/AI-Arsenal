@@ -26,7 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
-_No entries yet._
+- [LoRA Fine-Tune on a Single GPU with Unsloth](./starter-lora-finetune-unsloth.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [LoRA Fine-Tune on a Single GPU with Unsloth](./starter-lora-finetune-unsloth.md) — Fine-tune a small open-weight model with LoRA on one consumer GPU using Unsloth, then merge and run the adapter locally

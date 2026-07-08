@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T22:01:19.204Z",
+  "generated_at": "2026-07-08T22:12:06.312Z",
   "tags": [
     {
       "id": "agents",
@@ -634,14 +634,15 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 57,
+      "count": 58,
       "types": {
         "paper": 19,
         "guide": 4,
         "tip": 11,
         "project": 10,
         "tool": 10,
-        "architecture": 3
+        "architecture": 3,
+        "build-example": 1
       },
       "entries": [
         "ainslie-2023-gqa",
@@ -691,6 +692,7 @@
         "shazeer-2019-mqa",
         "skypilot",
         "start-with-lora-before-full-fine-tuning",
+        "starter-lora-finetune-unsloth",
         "tensorrt-llm",
         "text-embeddings-inference",
         "tokenization",
@@ -769,12 +771,12 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 164,
+      "count": 165,
       "types": {
         "digest": 1,
         "tool": 32,
         "tip": 26,
-        "build-example": 1,
+        "build-example": 2,
         "guide": 10,
         "project": 15,
         "benchmark": 50,
@@ -923,6 +925,7 @@
         "simpleqa",
         "slice-eval-metrics-by-input-segment",
         "sota-benchmarks",
+        "starter-golden-set-eval-harness",
         "store-prompts-with-release-versions",
         "strongreject",
         "swe-bench",
@@ -965,14 +968,15 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 42,
+      "count": 43,
       "types": {
         "tool": 15,
         "project": 8,
         "paper": 8,
         "tip": 8,
         "guide": 2,
-        "architecture": 1
+        "architecture": 1,
+        "build-example": 1
       },
       "entries": [
         "accelerate",
@@ -1009,6 +1013,7 @@
         "pytorch-lightning",
         "rag-vs-fine-tuning",
         "start-with-lora-before-full-fine-tuning",
+        "starter-lora-finetune-unsloth",
         "test-for-regressions-outside-the-tuned-task",
         "together-ai",
         "torchtune",
@@ -1141,7 +1146,7 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 122,
+      "count": 123,
       "types": {
         "tip": 25,
         "tool": 27,
@@ -1149,7 +1154,7 @@
         "project": 40,
         "architecture": 10,
         "guide": 6,
-        "build-example": 1
+        "build-example": 2
       },
       "entries": [
         "add-provider-timeout-and-retry-policies",
@@ -1194,6 +1199,7 @@
         "groq",
         "hf-inference-endpoints",
         "inference-optimization",
+        "intermediate-vllm-serving-with-observability",
         "kokoro",
         "kserve",
         "ktransformers",
@@ -1325,7 +1331,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 285,
+      "count": 288,
       "types": {
         "tool": 67,
         "tip": 31,
@@ -1335,7 +1341,7 @@
         "benchmark": 14,
         "person": 15,
         "architecture": 10,
-        "build-example": 2
+        "build-example": 5
       },
       "entries": [
         "adalflow",
@@ -1573,7 +1579,10 @@
         "stack-typescript",
         "start-with-lora-before-full-fine-tuning",
         "starter-basic-rag-chatbot",
+        "starter-golden-set-eval-harness",
+        "starter-image-qa-with-vlm",
         "starter-local-llm-chat",
+        "starter-lora-finetune-unsloth",
         "state-negative-constraints-as-testable-rules",
         "store-prompts-with-release-versions",
         "streamlit",
@@ -1767,12 +1776,13 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 50,
+      "count": 51,
       "types": {
         "paper": 9,
         "project": 28,
         "benchmark": 7,
-        "tool": 6
+        "tool": 6,
+        "build-example": 1
       },
       "entries": [
         "alayrac-2022-flamingo",
@@ -1819,6 +1829,7 @@
         "screenshot-to-code",
         "seed-bench",
         "sglang",
+        "starter-image-qa-with-vlm",
         "surya",
         "translategemma",
         "ultralytics-yolo",
@@ -1841,14 +1852,14 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 58,
+      "count": 60,
       "types": {
         "tip": 29,
         "project": 12,
         "tool": 10,
         "architecture": 4,
         "person": 1,
-        "build-example": 1,
+        "build-example": 3,
         "guide": 1
       },
       "entries": [
@@ -1870,6 +1881,7 @@
         "helicone",
         "inspect-retrieved-chunks-beside-the-answer",
         "intermediate-production-rag-api",
+        "intermediate-vllm-serving-with-observability",
         "keep-source-page-and-section-metadata",
         "langfuse",
         "langfuse-prompts",
@@ -1900,6 +1912,7 @@
         "separate-model-errors-from-app-errors",
         "set-token-budgets-per-feature",
         "slice-eval-metrics-by-input-segment",
+        "starter-golden-set-eval-harness",
         "store-parser-version-with-every-chunk",
         "store-prompt-version-in-every-trace",
         "trace-tool-inputs-and-outputs",
@@ -2526,12 +2539,13 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 75,
+      "count": 77,
       "types": {
         "project": 39,
         "architecture": 7,
         "tool": 24,
         "paper": 1,
+        "build-example": 2,
         "tip": 4
       },
       "entries": [
@@ -2564,6 +2578,7 @@
         "gpt-sovits",
         "great-expectations",
         "helicone",
+        "intermediate-vllm-serving-with-observability",
         "jan",
         "keep-model-files-out-of-git",
         "khoj",
@@ -2599,6 +2614,7 @@
         "qdrant",
         "ray",
         "self-host-vs-hosted-api",
+        "starter-image-qa-with-vlm",
         "supabase",
         "tabby",
         "tabby-ml",
