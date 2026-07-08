@@ -15,7 +15,7 @@
 | [projects](./projects/) | 103 entries | 2026-07-08 |
 | [research](./research/) | 84 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-08 |
 | [tools](./tools/) | 198 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
@@ -29,8 +29,8 @@
 - [Airbyte](./tools/data-ingestion/airbyte.md)
 - [AnythingLLM](./projects/agent-systems/anythingllm.md)
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md)
+- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md)
 - [BigCodeBench](./projects/benchmarks-and-evals/bigcodebench.md)
-- [Browser Use](./projects/agent-systems/browser-use.md)
 
 ## Most Popular
 

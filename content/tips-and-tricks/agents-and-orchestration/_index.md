@@ -28,6 +28,9 @@ A tip about which reasoning technique to prompt for (chain-of-thought, few-shot 
 
 ### Recently Added
 
+- [Cache Idempotent Tool Results Within an Agent Run](./cache-idempotent-tool-results-within-a-run.md)
+- [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./compact-tool-outputs-before-adding-to-context.md)
+- [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./set-wall-clock-timeouts-for-agent-runs.md)
 - [Add A Max Step Budget To Every Agent Loop](./add-a-max-step-budget-to-every-agent.md)
 - [Allowlist Tools Per Agent Role](./allowlist-tools-per-agent-role.md)
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./checkpoint-agent-state-after-each-tool-call.md)
@@ -35,9 +38,6 @@ A tip about which reasoning technique to prompt for (chain-of-thought, few-shot 
 - [Detect and Stop Repeated Identical Tool Calls](./detect-repeated-tool-calls.md)
 - [Keep a Kill Switch for Risky Agent Tools](./keep-a-kill-switch-for-agent-actions.md)
 - [Log Every Agent State Transition, Not Just Final Output](./log-agent-state-transitions.md)
-- [Add Resource and Network Limits to Sandboxed Code Execution Calls](./sandbox-code-execution-tools.md)
-- [Separate Planner and Executor Permissions in Multi-Step Agents](./separate-planner-and-executor-permissions.md)
-- [Summarize Long-Running Agent State Instead of Keeping Full History](./summarize-long-running-agent-state.md)
 
 ### Most Popular
 
@@ -48,8 +48,10 @@ _No star-tracked entries yet._
 - [Add A Max Step Budget To Every Agent Loop](./add-a-max-step-budget-to-every-agent.md) — 
 - [Allowlist Tools Per Agent Role](./allowlist-tools-per-agent-role.md) — 
 - [Budget Context Before Adding More Tools to an Agent](./budget-context-before-adding-tools.md) — 
+- [Cache Idempotent Tool Results Within an Agent Run](./cache-idempotent-tool-results-within-a-run.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./cap-agent-tool-retries.md) — 
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./checkpoint-agent-state-after-each-tool-call.md) — 
+- [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./compact-tool-outputs-before-adding-to-context.md) — 
 - [Define Explicit Fallbacks for Tool Failures](./define-fallbacks-for-tool-failures.md) — 
 - [Detect and Stop Repeated Identical Tool Calls](./detect-repeated-tool-calls.md) — 
 - [Keep a Kill Switch for Risky Agent Tools](./keep-a-kill-switch-for-agent-actions.md) — 
@@ -58,5 +60,6 @@ _No star-tracked entries yet._
 - [Require Human Approval Before Irreversible Agent Actions](./require-human-approval-for-irreversible-actions.md) — 
 - [Add Resource and Network Limits to Sandboxed Code Execution Calls](./sandbox-code-execution-tools.md) — 
 - [Separate Planner and Executor Permissions in Multi-Step Agents](./separate-planner-and-executor-permissions.md) — 
+- [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./set-wall-clock-timeouts-for-agent-runs.md) — 
 - [Summarize Long-Running Agent State Instead of Keeping Full History](./summarize-long-running-agent-state.md) — 
 - [Validate Tool Arguments Before Execution, Not Inside the Tool](./validate-tool-arguments-before-execution.md) — 
