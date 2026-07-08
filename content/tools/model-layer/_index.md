@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Hugging Face Accelerate](./accelerate.md)
 - [Cerebras Inference](./cerebras-inference.md)
 - [ClearML](./clearml.md)
 - [Cohere](./cohere.md)
@@ -35,8 +36,7 @@ Before picking a tool in this phase, consider:
 - [LM Format Enforcer](./lm-format-enforcer.md)
 - [Megatron-LM](./megatron-lm.md)
 - [OpenRouter](./openrouter.md)
-- [Sentence Transformers](./sentence-transformers.md)
-- [Together AI](./together-ai.md)
+- [PyTorch Lightning](./pytorch-lightning.md)
 
 ### Most Popular
 
@@ -44,6 +44,7 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Hugging Face Accelerate](./accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - [Axolotl](./axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Cerebras Inference](./cerebras-inference.md) — Wafer-scale-engine inference API claiming the fastest open-model token rates available
 - [ClearML](./clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
@@ -64,6 +65,7 @@ _No star-tracked entries yet._
 - [OpenRouter](./openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
 - [Outlines](./outlines.md) — A library for constrained generation and structured outputs with LLMs
 - [PEFT](./peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [PyTorch Lightning](./pytorch-lightning.md) — The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing
 - [Qwen 3](./qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
 - [Sentence Transformers](./sentence-transformers.md) — The standard Python library for computing, training, and fine-tuning text embedding and reranker models
 - [Together AI](./together-ai.md) — Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints

@@ -12,25 +12,25 @@
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 10 entries | 2026-07-08 |
-| [projects](./projects/) | 123 entries | 2026-07-08 |
+| [projects](./projects/) | 130 entries | 2026-07-08 |
 | [research](./research/) | 84 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-08 |
-| [tools](./tools/) | 198 entries | 2026-07-08 |
+| [tools](./tools/) | 200 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Hugging Face Accelerate](./tools/model-layer/accelerate.md)
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
 - [AgentOps](./tools/evaluation-and-observability/agentops.md)
 - [Agno](./tools/orchestration/agno.md)
 - [Aider](./tools/dx-and-tooling/aider.md)
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md)
 - [Airbyte](./tools/data-ingestion/airbyte.md)
+- [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md)
 - [AnythingLLM](./projects/data-and-retrieval/anything-llm.md)
 - [AnythingLLM](./projects/agent-systems/anythingllm.md)
-- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md)
-- [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md)
 
 ## Most Popular
 
@@ -48,6 +48,7 @@
 ## Browse All
 
 - [AI Arsenal Digest — 2026-07](./digests/2026-07/digest.md) — July 2026 digest: 15 new benchmark entries across all 7 categories, a formal Trending vertical (5 commits), and a rounded-out Skills curriculum with 4 learning paths and 8 guides.
+- [Hugging Face Accelerate](./tools/model-layer/accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - [Add A Max Step Budget To Every Agent Loop](./tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md) — 
 - [Keep the Smallest Failing Prompt for Every Recurring Issue](./tips-and-tricks/debugging-and-observability/add-a-minimal-reproduction-prompt.md) — 
 - [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./tips-and-tricks/evaluation/add-evals-before-refactors.md) — 
@@ -80,6 +81,7 @@
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./observability/monitoring-alerting/alert-on-streaming-latency-slos.md) — 
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
+- [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
@@ -95,5 +97,3 @@
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
-- [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
-- [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps

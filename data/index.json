@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:08:31.038Z",
-    "total_projects": 123,
-    "total_tools": 171,
+    "generated_at": "2026-07-08T20:10:38.582Z",
+    "total_projects": 130,
+    "total_tools": 173,
     "total_papers": 80,
     "total_tips": 129,
     "total_people": 25,
@@ -34,6 +34,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "accelerate",
+      "type": "tool",
+      "name": "Hugging Face Accelerate",
+      "description": "Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes",
+      "tags": [
+        "training",
+        "fine-tuning",
+        "pytorch"
+      ],
+      "path": "content/tools/model-layer/accelerate.md",
+      "url": "content/tools/model-layer/accelerate",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -627,6 +646,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "alignment-handbook",
+      "type": "project",
+      "name": "The Alignment Handbook (Hugging Face)",
+      "description": "Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights",
+      "tags": [
+        "fine-tuning",
+        "rlhf",
+        "llm"
+      ],
+      "path": "content/projects/training-and-alignment/alignment-handbook.md",
+      "url": "content/projects/training-and-alignment/alignment-handbook",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -1358,6 +1396,25 @@
       "url": "content/projects/frameworks/camel-ai",
       "last_updated": "2026-07-08",
       "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "candle",
+      "type": "project",
+      "name": "Candle",
+      "description": "Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference",
+      "tags": [
+        "inference",
+        "efficiency",
+        "llm"
+      ],
+      "path": "content/projects/inference-engines/candle.md",
+      "url": "content/projects/inference-engines/candle",
+      "last_updated": "2026-07-08",
+      "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -5518,6 +5575,25 @@
       "featured": false
     },
     {
+      "id": "ktransformers",
+      "type": "project",
+      "name": "KTransformers",
+      "description": "CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops",
+      "tags": [
+        "inference",
+        "quantization",
+        "efficiency"
+      ],
+      "path": "content/projects/inference-engines/ktransformers.md",
+      "url": "content/projects/inference-engines/ktransformers",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "kwon-2023-pagedattention",
       "type": "paper",
       "name": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
@@ -6420,6 +6496,25 @@
       "featured": false
     },
     {
+      "id": "localai",
+      "type": "project",
+      "name": "LocalAI",
+      "description": "Self-hosted drop-in OpenAI API replacement serving text, embeddings, images, and audio from one binary — multiple backends, consumer hardware, no GPU required",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/inference-engines/localai.md",
+      "url": "content/projects/inference-engines/localai",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "log-agent-state-transitions",
       "type": "tip",
       "name": "Log Every Agent State Transition, Not Just Final Output",
@@ -7061,6 +7156,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "archived",
+      "featured": false
+    },
+    {
+      "id": "mistral-rs",
+      "type": "project",
+      "name": "mistral.rs",
+      "description": "Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization",
+      "tags": [
+        "inference",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/mistral-rs.md",
+      "url": "content/projects/inference-engines/mistral-rs",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7713,6 +7827,25 @@
       "url": "content/tools/data-ingestion/olmocr",
       "last_updated": "2026-07-07",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "onnxruntime",
+      "type": "project",
+      "name": "ONNX Runtime",
+      "description": "Microsoft's cross-platform inference runtime for the ONNX graph format — one exported model runs on CPU, GPU, mobile, and browser via execution providers",
+      "tags": [
+        "inference",
+        "efficiency",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/onnxruntime.md",
+      "url": "content/projects/inference-engines/onnxruntime",
+      "last_updated": "2026-07-08",
+      "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -8786,6 +8919,25 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pytorch-lightning",
+      "type": "tool",
+      "name": "PyTorch Lightning",
+      "description": "The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing",
+      "tags": [
+        "training",
+        "pytorch",
+        "fine-tuning"
+      ],
+      "path": "content/tools/model-layer/pytorch-lightning.md",
+      "url": "content/tools/model-layer/pytorch-lightning",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -11273,6 +11425,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "archived",
+      "featured": false
+    },
+    {
+      "id": "text-generation-webui",
+      "type": "project",
+      "name": "text-generation-webui (oobabooga)",
+      "description": "The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/inference-engines/text-generation-webui.md",
+      "url": "content/projects/inference-engines/text-generation-webui",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {

@@ -11,21 +11,21 @@
 | [data and retrieval](./data-and-retrieval/) | 24 entries | 2026-07-08 |
 | [foundation models](./foundation-models/) | 25 entries | 2026-07-08 |
 | [frameworks](./frameworks/) | 28 entries | 2026-07-08 |
-| [inference engines](./inference-engines/) | 12 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 5 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 18 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 6 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md)
 - [AnythingLLM](./data-and-retrieval/anything-llm.md)
 - [AnythingLLM](./agent-systems/anythingllm.md)
 - [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md)
 - [BigCodeBench](./benchmarks-and-evals/bigcodebench.md)
 - [Browser Use](./agent-systems/browser-use.md)
 - [CAMEL](./frameworks/camel-ai.md)
+- [Candle](./inference-engines/candle.md)
 - [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md)
 - [CLIP (OpenAI)](./foundation-models/clip.md)
-- [Cognee](./data-and-retrieval/cognee.md)
-- [ComfyUI](./frameworks/comfyui.md)
 
 ## Most Popular
 
@@ -43,6 +43,7 @@
 ## Browse All
 
 - [Agenta](./benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [AnythingLLM](./data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [AnythingLLM](./agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [AutoGen](./frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
@@ -52,6 +53,7 @@
 - [Braintrust](./benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
 - [Browser Use](./agent-systems/browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 - [CAMEL](./frameworks/camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
+- [Candle](./inference-engines/candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
 - [Chroma](./data-and-retrieval/chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [CLIP (OpenAI)](./foundation-models/clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
@@ -85,10 +87,8 @@
 - [Khoj](./agent-systems/khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
 - [Kimi K2](./foundation-models/kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Kokoro TTS](./foundation-models/kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
+- [KTransformers](./inference-engines/ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 - [LanceDB](./data-and-retrieval/lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LangChain](./frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - [Langfuse](./benchmarks-and-evals/langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - [LangGraph](./frameworks/langgraph.md) — Graph-based framework for building stateful, durable LLM agents and workflows
-- [LangSmith](./benchmarks-and-evals/langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
-- [LibreChat](./agent-systems/librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
-- [LitGPT](./training-and-alignment/litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
