@@ -15,7 +15,7 @@
 | [projects](./projects/) | 103 entries | 2026-07-08 |
 | [research](./research/) | 67 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
 | [tools](./tools/) | 198 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
@@ -89,6 +89,7 @@
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
+- [Ask for Supporting Quotes Before Answers in RAG Prompts](./tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
@@ -96,4 +97,3 @@
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
-- [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
