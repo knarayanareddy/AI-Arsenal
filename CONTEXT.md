@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:31:11.058Z | Entries: 643 | Schema version: 1.0.0
+Generated: 2026-07-08T19:36:49.079Z | Entries: 656 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,9 +14,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 1
 - Guides: 59
 - Build examples: 8
-- Architectures: 17
+- Architectures: 21
 - Observability: 10
-- Community: 23
+- Community: 32
 
 ## Navigation
 
@@ -222,6 +222,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### data-strategy
 - Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic — 
+- Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted — 
 - Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
 
 ### evaluation-strategy
@@ -240,11 +241,14 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost — 
 
 ### serving-patterns
+- Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse — 
 - Choosing a Deployment Target: Separating App Hosting From Model Serving — 
 - Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine — 
 
 ### system-design
+- Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates — 
 - Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
+- Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding — 
 - RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
 - Single Agent vs Multi-Agent: When Splitting the Work Actually Helps — 
 
@@ -278,6 +282,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### chat
 - EleutherAI Discord — 
+- GPU MODE Discord — 
 - Hugging Face Discord — 
 - LangChain Community Slack — 
 - LlamaIndex Discord — 
@@ -290,15 +295,20 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Hugging Face (YouTube) — 
 
 ### dataset
+- Common Crawl — 
+- FineWeb (Hugging Face) — 
 - LAION (Large-scale Artificial Intelligence Open Network) — 
 
 ### event
 - AI Engineer World's Fair — 
+- NeurIPS (Conference on Neural Information Processing Systems) — 
 
 ### forum
+- Hugging Face Forums — 
 - LangChain Forum — 
 - OpenAI Developer Community — 
 - r/LocalLLaMA (Reddit) — 
+- r/MachineLearning (Reddit) — 
 
 ### meetup
 - AI Tinkerers — 
@@ -306,6 +316,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### newsletter
 - Import AI (Jack Clark) — 
 - Interconnects (Nathan Lambert) — 
+- Last Week in AI — 
 - Latent Space (Newsletter) — 
 - The Batch (DeepLearning.AI) — 
 
