@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:26:14.057Z | Entries: 599 | Schema version: 1.0.0
+Generated: 2026-07-08T19:31:37.613Z | Entries: 622 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -9,14 +9,14 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Projects: 109
 - Tools: 162
 - Papers: 49
-- Tips: 102
+- Tips: 116
 - People: 25
 - Digests: 1
 - Guides: 59
 - Build examples: 8
 - Architectures: 17
 - Observability: 10
-- Community: 23
+- Community: 32
 
 ## Navigation
 
@@ -271,6 +271,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### chat
 - EleutherAI Discord — 
+- GPU MODE Discord — 
 - Hugging Face Discord — 
 - LangChain Community Slack — 
 - LlamaIndex Discord — 
@@ -283,15 +284,20 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Hugging Face (YouTube) — 
 
 ### dataset
+- Common Crawl — 
+- FineWeb (Hugging Face) — 
 - LAION (Large-scale Artificial Intelligence Open Network) — 
 
 ### event
 - AI Engineer World's Fair — 
+- NeurIPS (Conference on Neural Information Processing Systems) — 
 
 ### forum
+- Hugging Face Forums — 
 - LangChain Forum — 
 - OpenAI Developer Community — 
 - r/LocalLLaMA (Reddit) — 
+- r/MachineLearning (Reddit) — 
 
 ### meetup
 - AI Tinkerers — 
@@ -299,6 +305,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### newsletter
 - Import AI (Jack Clark) — 
 - Interconnects (Nathan Lambert) — 
+- Last Week in AI — 
 - Latent Space (Newsletter) — 
 - The Batch (DeepLearning.AI) — 
 
