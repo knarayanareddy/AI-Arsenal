@@ -10,6 +10,9 @@
 
 ## Recently Added
 
+- [Aider Polyglot Coding Benchmark](./aider-polyglot.md)
+- [BIRD (Big Bench for Large-Scale Database Grounded Text-to-SQL)](./bird-sql.md)
+- [CRUXEval (Code Reasoning, Understanding, and eXecution)](./crux-eval.md)
 - [HumanEval](./humaneval.md)
 - [LiveCodeBench](./livecodebench.md)
 - [MBPP](./mbpp.md)
@@ -21,6 +24,9 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Aider Polyglot Coding Benchmark](./aider-polyglot.md) — 
+- [BIRD (Big Bench for Large-Scale Database Grounded Text-to-SQL)](./bird-sql.md) — 
+- [CRUXEval (Code Reasoning, Understanding, and eXecution)](./crux-eval.md) — 
 - [HumanEval](./humaneval.md) — 
 - [LiveCodeBench](./livecodebench.md) — 
 - [MBPP](./mbpp.md) — 

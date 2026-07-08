@@ -165,17 +165,20 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [OpenLLM](../serving-and-deployment/openllm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Recursi](../dx-and-tooling/recursi.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
 | [ShellMate](../dx-and-tooling/shellmate.md) | dx and tooling | freemium | Yes | No | No | python | watching |
+| [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | recommended |
 | [Together AI](../model-layer/together-ai.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:17:49.613Z",
+    "generated_at": "2026-07-08T20:23:32.290Z",
     "total_projects": 136,
     "total_tools": 177,
     "total_papers": 90,
@@ -12,7 +12,7 @@
     "total_architectures": 21,
     "total_observability": 10,
     "total_community": 32,
-    "total_benchmarks": 40,
+    "total_benchmarks": 50,
     "total_trending": 4,
     "schema_version": "1.0.0"
   },
@@ -562,6 +562,26 @@
       "featured": false
     },
     {
+      "id": "aider-polyglot",
+      "type": "benchmark",
+      "name": "Aider Polyglot Coding Benchmark",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/code/aider-polyglot.md",
+      "url": "content/benchmarks/code/aider-polyglot",
+      "last_updated": "2026-07-08",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ainslie-2023-gqa",
       "type": "paper",
       "name": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
@@ -816,6 +836,26 @@
       "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "arc-agi",
+      "type": "benchmark",
+      "name": "ARC-AGI (Abstraction and Reasoning Corpus)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "benchmark",
+        "llm"
+      ],
+      "path": "content/benchmarks/general-llm/arc-agi.md",
+      "url": "content/benchmarks/general-llm/arc-agi",
+      "last_updated": "2026-07-08",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -1306,6 +1346,26 @@
       "featured": false
     },
     {
+      "id": "bird-sql",
+      "type": "benchmark",
+      "name": "BIRD (Big Bench for Large-Scale Database Grounded Text-to-SQL)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "benchmark",
+        "llm"
+      ],
+      "path": "content/benchmarks/code/bird-sql.md",
+      "url": "content/benchmarks/code/bird-sql",
+      "last_updated": "2026-07-08",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "braintrust",
       "type": "project",
       "name": "Braintrust",
@@ -1654,6 +1714,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "chartqa",
+      "type": "benchmark",
+      "name": "ChartQA",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/multimodal/chartqa.md",
+      "url": "content/benchmarks/multimodal/chartqa",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -2834,6 +2913,26 @@
       "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "crux-eval",
+      "type": "benchmark",
+      "name": "CRUXEval (Code Reasoning, Understanding, and eXecution)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "reasoning",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/code/crux-eval.md",
+      "url": "content/benchmarks/code/crux-eval",
+      "last_updated": "2026-07-08",
+      "category": "code",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -4089,6 +4188,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "frames",
+      "type": "benchmark",
+      "name": "FRAMES (Factuality, Retrieval, And reasoning MEasurement Set)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/frames.md",
+      "url": "content/benchmarks/retrieval-rag/frames",
+      "last_updated": "2026-07-08",
+      "category": "retrieval-rag",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -6894,6 +7013,26 @@
       "featured": false
     },
     {
+      "id": "loft",
+      "type": "benchmark",
+      "name": "LOFT (Long-Context Frontiers)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/loft.md",
+      "url": "content/benchmarks/retrieval-rag/loft",
+      "last_updated": "2026-07-08",
+      "category": "retrieval-rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "log-agent-state-transitions",
       "type": "tip",
       "name": "Log Every Agent State Transition, Not Just Final Output",
@@ -7801,6 +7940,25 @@
       "path": "content/benchmarks/multimodal/mmmu.md",
       "url": "content/benchmarks/multimodal/mmmu",
       "last_updated": "2026-07-06",
+      "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mmstar",
+      "type": "benchmark",
+      "name": "MMStar",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/multimodal/mmstar.md",
+      "url": "content/benchmarks/multimodal/mmstar",
+      "last_updated": "2026-07-08",
       "category": "multimodal",
       "maturity": null,
       "cost_model": null,
@@ -10125,6 +10283,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "rewardbench",
+      "type": "benchmark",
+      "name": "RewardBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "alignment",
+        "rlhf",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/evaluation-methods/rewardbench.md",
+      "url": "content/benchmarks/evaluation-methods/rewardbench",
+      "last_updated": "2026-07-08",
+      "category": "evaluation-methods",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -13151,6 +13329,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "video-mme",
+      "type": "benchmark",
+      "name": "Video-MME",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "benchmark",
+        "llm"
+      ],
+      "path": "content/benchmarks/multimodal/video-mme.md",
+      "url": "content/benchmarks/multimodal/video-mme",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },

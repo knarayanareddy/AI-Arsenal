@@ -7,7 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [architectures](./architectures/) | 21 entries | 2026-07-08 |
-| [benchmarks](./benchmarks/) | 40 entries | 2026-07-08 |
+| [benchmarks](./benchmarks/) | 50 entries | 2026-07-08 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
@@ -76,6 +76,7 @@
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
 - [Aider](./tools/dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
+- [Aider Polyglot Coding Benchmark](./benchmarks/code/aider-polyglot.md) — 
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md) — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
 - [Airbyte](./tools/data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
@@ -90,10 +91,9 @@
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [AnythingLLM](./projects/data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [AnythingLLM](./projects/agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
+- [ARC-AGI (Abstraction and Reasoning Corpus)](./benchmarks/general-llm/arc-agi.md) — 
 - [Arena-Hard-Auto](./benchmarks/evaluation-methods/arena-hard.md) — 
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
-- [Ask for Supporting Quotes Before Answers in RAG Prompts](./tips-and-tricks/prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
-- [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 

@@ -11,6 +11,8 @@
 ## Recently Added
 
 - [BEIR](./beir.md)
+- [FRAMES (Factuality, Retrieval, And reasoning MEasurement Set)](./frames.md)
+- [LOFT (Long-Context Frontiers)](./loft.md)
 - [MS MARCO](./msmarco.md)
 - [Natural Questions](./natural-questions.md)
 - [RGB](./rgb.md)
@@ -23,6 +25,8 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [BEIR](./beir.md) — 
+- [FRAMES (Factuality, Retrieval, And reasoning MEasurement Set)](./frames.md) — 
+- [LOFT (Long-Context Frontiers)](./loft.md) — 
 - [MS MARCO](./msmarco.md) — 
 - [Natural Questions](./natural-questions.md) — 
 - [RGB](./rgb.md) — 

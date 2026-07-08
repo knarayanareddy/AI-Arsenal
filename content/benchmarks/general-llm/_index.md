@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [ARC-AGI (Abstraction and Reasoning Corpus)](./arc-agi.md)
 - [BIG-Bench Hard (BBH)](./bbh.md)
 - [GPQA Diamond](./gpqa-diamond.md)
 - [GSM8K](./gsm8k.md)
@@ -19,7 +20,6 @@
 - [MMLU](./mmlu.md)
 - [MMLU-Pro](./mmlu-pro.md)
 - [SimpleQA](./simpleqa.md)
-- [TruthfulQA](./truthfulqa.md)
 
 ## Most Popular
 
@@ -27,6 +27,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [ARC-AGI (Abstraction and Reasoning Corpus)](./arc-agi.md) — 
 - [BIG-Bench Hard (BBH)](./bbh.md) — 
 - [GPQA Diamond](./gpqa-diamond.md) — 
 - [GSM8K](./gsm8k.md) — 

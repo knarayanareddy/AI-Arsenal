@@ -69,6 +69,8 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | deployment, security-and-guardrails | open-source | Yes | Yes | Yes | rust | watching |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | prototyping, orchestration | open-source | Yes | Yes | Yes | rust | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
+| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | rust | recommended |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | prototyping | usage-based | No | No | Yes | rust | recommended |
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | rust | solid-choice |
+| [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | production-serving, vector-search | open-source | Yes | Yes | Yes | rust | recommended |
