@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:11:10.197Z",
-  "count": 123,
+  "generated_at": "2026-07-08T20:12:05.449Z",
+  "count": 130,
   "items": [
     {
       "id": "agenta",
@@ -621,6 +621,106 @@
       "body_text": "Overview One of the earliest widely publicized autonomous AI agent projects, which popularized the idea of an LLM recursively planning and executing its own sub tasks toward a goal with minimal human intervention. Why it's in the Arsenal Early, highly visible autonomous agent platform that popularized the 'autonomous AI agent' concept. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a ready made, deployable autonomous agent platform with an active project (the Significant Gravitas/AutoGPT platform continues shipping releases as of May 2026) rather than a bare framework to build with. See Strengths / Limitations below before adopting it. Architecture Has evolved from its original 2023 single script recursive planning loop design into a fuller platform (AutoGPT Platform) with a web UI, credential management, and a broader agent building workflow, rather than remaining a bare autonomous loop library. Ecosystem Position Upstream: none of particular note. Downstream: none of particular note as a dependency, though it strongly influenced the broader 'autonomous agent' category that followed. Competing: AgentGPT, BabyAGI, and other early autonomous loop projects; more maturely, CrewAI and LangGraph for structured multi agent orchestration. Complementary: none specific. Getting Started Key Use Cases 1. Scenario : you want a ready made, deployable autonomous agent platform with an active project (the Significant Gravitas/AutoGPT platform continues shipping releases as of May 2026) rather than a bare framework to build with 2. Scenario : you're studying the history and design patterns of early autonomous agent systems as a reference point Strengths You want a ready made, deployable autonomous agent platform with an active project (the Significant Gravitas/AutoGPT platform continues shipping releases as of May 2026) rather than a bare framework to build with You're studying the history and design patterns of early autonomous agent systems as a reference point Limitations You need a lightweight, embeddable agent framework to build your own application on top of — AutoGPT is closer to a standalone platform/product than a library, unlike LangGraph, CrewAI, or Pydantic AI You need the most current agent architecture patterns (planning, tool use reliability) — AutoGPT's original 2023 design was more exploratory/experimental than today's more disciplined agent frameworks Relation to the Arsenal This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant tools/orchestration/ or tools/by job/ entries. Resources GitHub Documentation"
     },
     {
+      "id": "bge-embeddings",
+      "name": "BGE / FlagEmbedding (BAAI)",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "rag",
+      "subcategory": "open-source-models",
+      "description": "BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG",
+      "github_url": "https://github.com/FlagOpen/FlagEmbedding",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "BAAI (FlagOpen)",
+      "tags": [
+        "embeddings",
+        "rag",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 11913,
+      "github_stars_last_30d": 0,
+      "trending_score": 45,
+      "last_commit": "2026-04-22",
+      "docs_url": "https://github.com/FlagOpen/FlagEmbedding",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2402.03216",
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "language"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "production-proven",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "The workhorse open embedding family of the RAG era: BGE checkpoints are what teams actually self-host when they leave OpenAI's embedding API — and BGE-M3's trick of emitting dense, sparse (lexical-weight), and ColBERT-style multi-vector representations from one forward pass collapsed the embed-plus-BM25 hybrid stack into a single model"
+      ],
+      "best_for": [
+        "Self-hosted multilingual RAG: BGE-M3 covers 100+ languages and 8k-token inputs with hybrid dense+sparse retrieval from one model — the pragmatic default when data can't leave your infrastructure",
+        "Adding a reranking stage cheaply: the paired bge-reranker cross-encoders are the standard open choice for precision-boosting the top-k of any retriever"
+      ],
+      "avoid_if": [
+        "You want peak English-only leaderboard scores — newer LLM-based embedders (Qwen3-Embedding-class, NV-Embed lineage) lead MTEB; BGE wins on deployment economics, not benchmark ceilings",
+        "You won't operate GPU/CPU inference — a managed embedding API is less machinery for small workloads"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [
+        "milvus",
+        "qdrant"
+      ],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (11.9k), MIT, last push 2026-04-22 verified via the GitHub API on 2026-07-08. Paper is the BGE-M3 report (arXiv:2402.03216). \"Default self-hosted choice\" reflects sustained HF download rankings for bge-m3/bge-reranker; not re-benchmarked here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/FlagOpen/FlagEmbedding",
+          "date": "2026-07-08",
+          "description": "11.9k stars; BAAI's BGE embedding/reranker family repo"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/bge-embeddings.md",
+      "url": "content/projects/foundation-models/bge-embeddings",
+      "slug": "bge-embeddings",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "BGE / FlagEmbedding (BAAI)",
+      "summary": "BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 428,
+      "body_html": "<h2>Overview</h2>\n<p>FlagEmbedding is BAAI's home for the BGE (BAAI General Embedding) family: dense embedders across sizes, the bge-reranker cross-encoders, and BGE-M3 — a single model producing three retrieval representations (dense vectors, sparse lexical weights, and ColBERT-style multi-vectors) over 100+ languages and inputs up to 8192 tokens. The repo carries training/fine-tuning code, evaluation harnesses, and inference wrappers.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The embedding model is the quiet load-bearing choice in every RAG system, and BGE is what the self-hosted world standardized on: MIT-licensed, small enough to serve cheaply, strong enough multilingually, with M3's unified hybrid retrieval removing the need to run BM25 alongside a dense index. The catalog's vector-DB and RAG entries mostly assume a BGE-shaped model at the front; this entry names it.</p>\n<h2>Architecture</h2>\n<p>Dense BGE models are XLM-R/BERT-lineage encoders contrastively trained (RetroMAE pretraining + large-scale pair training + hard-negative fine-tuning). BGE-M3 adds self-knowledge-distillation so one backbone jointly optimizes dense (CLS), sparse (per-token weights), and multi-vector (per-token embeddings) objectives — the mechanism that lets one forward pass serve hybrid retrieval. Rerankers are cross-encoders scoring query-document pairs directly.</p>\n<h2>Ecosystem Position</h2>\n<p>Serves through sentence-transformers, <code>text-embeddings-inference</code>, ONNX/fastembed, and Ollama-ecosystem runtimes; indexes into <code>milvus</code>/<code>qdrant</code>-class stores (M3's sparse output maps to their hybrid-search APIs). Competing: e5/GTE families, Jina embeddings, nomic-embed on the open side; OpenAI/Cohere/Voyage APIs on the managed side; Qwen3-Embedding-class LLM embedders at the benchmark frontier.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install -U FlagEmbedding\n</code></pre>\n<pre><code class=\"language-python\">from FlagEmbedding import BGEM3FlagModel\nmodel = BGEM3FlagModel(\"BAAI/bge-m3\", use_fp16=True)\nout = model.encode([\"what is RAG?\"], return_dense=True, return_sparse=True, return_colbert_vecs=True)\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: multilingual enterprise RAG that must run in-VPC — bge-m3 for hybrid retrieval plus bge-reranker-v2-m3 on the top-50, all self-hosted under MIT</li>\n<li><strong>Scenario</strong>: replacing a paid embedding API at volume — embedding costs drop to inference compute with quality adequate for most corpora</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>M3's one-model hybrid retrieval is an architectural simplification, not a benchmark point: one service, one index pipeline, dense+lexical recall</li>\n<li>Deployment economics: small encoders, MIT license, first-class support in every open serving/indexing stack</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Benchmark frontier has moved to LLM-based embedders; BGE's advantage is operational, and English-only ceilings favor newer families</li>\n<li>Embedding models are corpus-sensitive — BGE's defaults still warrant evaluation on your retrieval set before committing an index</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The model at the front of the RAG pipeline entries (<code>milvus</code>, <code>qdrant</code>, <code>pgvector</code>) and beneath the chunking/embedding decision guides in <a href=\"../../architectures/data-strategy/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">architectures/data-strategy</a>; served in production via <code>text-embeddings-inference</code> (tools).</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/FlagOpen/FlagEmbedding\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://arxiv.org/abs/2402.03216\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">BGE-M3 paper</a></li>\n</ul>\n",
+      "body_text": "Overview FlagEmbedding is BAAI's home for the BGE (BAAI General Embedding) family: dense embedders across sizes, the bge reranker cross encoders, and BGE M3 — a single model producing three retrieval representations (dense vectors, sparse lexical weights, and ColBERT style multi vectors) over 100+ languages and inputs up to 8192 tokens. The repo carries training/fine tuning code, evaluation harnesses, and inference wrappers. Why it's in the Arsenal The embedding model is the quiet load bearing choice in every RAG system, and BGE is what the self hosted world standardized on: MIT licensed, small enough to serve cheaply, strong enough multilingually, with M3's unified hybrid retrieval removing the need to run BM25 alongside a dense index. The catalog's vector DB and RAG entries mostly assume a BGE shaped model at the front; this entry names it. Architecture Dense BGE models are XLM R/BERT lineage encoders contrastively trained (RetroMAE pretraining + large scale pair training + hard negative fine tuning). BGE M3 adds self knowledge distillation so one backbone jointly optimizes dense (CLS), sparse (per token weights), and multi vector (per token embeddings) objectives — the mechanism that lets one forward pass serve hybrid retrieval. Rerankers are cross encoders scoring query document pairs directly. Ecosystem Position Serves through sentence transformers, text embeddings inference, ONNX/fastembed, and Ollama ecosystem runtimes; indexes into milvus/qdrant class stores (M3's sparse output maps to their hybrid search APIs). Competing: e5/GTE families, Jina embeddings, nomic embed on the open side; OpenAI/Cohere/Voyage APIs on the managed side; Qwen3 Embedding class LLM embedders at the benchmark frontier. Getting Started Key Use Cases 1. Scenario : multilingual enterprise RAG that must run in VPC — bge m3 for hybrid retrieval plus bge reranker v2 m3 on the top 50, all self hosted under MIT 2. Scenario : replacing a paid embedding API at volume — embedding costs drop to inference compute with quality adequate for most corpora Strengths M3's one model hybrid retrieval is an architectural simplification, not a benchmark point: one service, one index pipeline, dense+lexical recall Deployment economics: small encoders, MIT license, first class support in every open serving/indexing stack Limitations Benchmark frontier has moved to LLM based embedders; BGE's advantage is operational, and English only ceilings favor newer families Embedding models are corpus sensitive — BGE's defaults still warrant evaluation on your retrieval set before committing an index Relation to the Arsenal The model at the front of the RAG pipeline entries (milvus, qdrant, pgvector) and beneath the chunking/embedding decision guides in architectures/data strategy; served in production via text embeddings inference (tools). Resources GitHub BGE M3 paper"
+    },
+    {
       "id": "bigcodebench",
       "name": "BigCodeBench",
       "version_tracked": null,
@@ -1124,6 +1224,106 @@
       "body_text": "Overview Candle is Hugging Face's Rust ML framework: a PyTorch shaped tensor API (Tensor, modules, safetensors loading) with CPU (SIMD/MKL), CUDA (incl. flash attention), Metal, and WASM backends, plus candle transformers shipping ready implementations of the major open architectures. The design goal is serverless grade deployment: no Python interpreter, no GIL, small static binaries, fast cold starts — models in the browser via WASM included. Why it's in the Arsenal The Python tax on inference deployment (container size, cold start, GIL, dependency surface) is a real production constraint, and Candle is the credible org backed answer: it's what Hugging Face's own text embeddings inference — the standard self hosted embedding server — is built on. It earns its entry as the foundation layer of Rust ML, the direction performance sensitive inference infrastructure is visibly moving. Architecture Core tensor library with pluggable device backends behind one API; kernels via custom CUDA/Metal implementations (flash attention, quantized matmuls) and optimized CPU paths; candle nn for module composition; candle transformers as the model zoo; safetensors native weight loading with support for GGUF quantized weights; WASM target compiles the same code for in browser inference. Ecosystem Position Upstream: safetensors/GGUF model weights from the HF Hub. Downstream: text embeddings inference, mistral.rs (Candle lineage LLM server), and a growing Rust ML crate ecosystem. Competing: burn (pure Rust, training oriented), tch rs (libtorch bindings — Python free but not lightweight), and staying on PyTorch/ONNX for teams without Rust. Getting Started Key Use Cases 1. Scenario : embedding/reranker inference as a static binary in serverless or sidecar deployments — the text embeddings inference pattern, reusable for custom models 2. Scenario : on device and in browser inference (WASM demos, edge boxes) where a Python runtime is unavailable or unacceptable Strengths Deployment profile no Python framework matches: single static binary, no interpreter, fast cold start, WASM support — mechanisms, not marketing Hugging Face backing with production usage in its own inference servers; broad architecture coverage in candle transformers Limitations Inference first: training support exists but is far from PyTorch's maturity — wrong tool for research iteration The Rust ML ecosystem is still thin relative to Python; expect to implement more yourself when off the beaten path of candle transformers Relation to the Arsenal The foundation under text embeddings inference (tools/serving and deployment) and the base of the Rust inference lineage; contrast with llama cpp (C/C++ local runtime) and onnxruntime (portable graph runtime) as the three Python free inference philosophies. Resources GitHub Documentation"
     },
     {
+      "id": "chatterbox",
+      "name": "Chatterbox (Resemble AI)",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "description": "Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default",
+      "github_url": "https://github.com/resemble-ai/chatterbox",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "resemble-ai",
+      "tags": [
+        "self-hosted",
+        "multimodal",
+        "inference"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 25426,
+      "github_stars_last_30d": 0,
+      "trending_score": 55,
+      "last_commit": "2026-06-10",
+      "docs_url": "https://github.com/resemble-ai/chatterbox",
+      "demo_url": "https://huggingface.co/spaces/ResembleAI/Chatterbox",
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "production-proven",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "The commercial-vendor gambit in open TTS: a voice-AI company (Resemble) open-sourcing a production-grade cloning model under MIT — bringing things research repos skip (default perceptual watermarking, emotion-intensity control, multilingual checkpoints, a paid-API upgrade path) and instantly becoming the most-starred open cloning-TTS release of its generation"
+      ],
+      "best_for": [
+        "Commercial products needing self-hosted voice cloning — MIT license end to end (code and weights), which the F5-class alternatives' non-commercial training-data terms can't offer",
+        "Expressive dialogue/agent voices: the exaggeration control dials emotion intensity per utterance — a control axis most open TTS lacks"
+      ],
+      "avoid_if": [
+        "You need minimal-footprint TTS — it's a 0.5B-parameter GPU-class model; Kokoro serves the embedded/CPU case at a fraction of the cost",
+        "Your compliance posture forbids watermark removal debates entirely — outputs carry Resemble's PerTh watermark by design; verify that fits (or is required by) your policy before deploying"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "f5-tts",
+        "kokoro"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (25.4k), MIT, last push 2026-06-10 verified via the GitHub API on 2026-07-08. Benchmark claim (preferred over ElevenLabs in side-by-side evals) is the vendor's published result, flagged as such. Multilingual v2 coverage per official README.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/resemble-ai/chatterbox",
+          "date": "2026-07-08",
+          "description": "25.4k stars; Resemble AI's open production TTS, a 2025 breakout release"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/chatterbox.md",
+      "url": "content/projects/foundation-models/chatterbox",
+      "slug": "chatterbox",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "Chatterbox (Resemble AI)",
+      "summary": "Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 399,
+      "body_html": "<h2>Overview</h2>\n<p>Chatterbox is Resemble AI's open TTS family: a 0.5B-parameter Llama-backbone acoustic model trained on ~500k hours of speech, offering zero-shot voice cloning from short references, a unique emotion-exaggeration control, and (in v2/multilingual releases) 20+ language coverage — all MIT-licensed, with every output carrying Resemble's PerTh perceptual watermark. The vendor's side-by-side evals report it preferred over ElevenLabs (vendor-published claim).</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It resolved the open-TTS licensing trap: research models like F5 ship MIT code over non-commercially-trained checkpoints, while Chatterbox is commercially clean end to end — which is why it became the default recommendation for products needing self-hosted cloning. The built-in watermarking also makes it the reference example of responsible-release mechanics in generative audio, a pattern worth studying beyond TTS.</p>\n<h2>Architecture</h2>\n<p>A two-stage design: a Llama-architecture autoregressive model generates speech tokens conditioned on text and reference-speaker embeddings (where cloning and the exaggeration control live), and a decoder renders tokens to waveform; alignment-informed inference stabilizes long inputs. The PerTh watermarker embeds an imperceptible, retrievable signature in all generated audio.</p>\n<h2>Ecosystem Position</h2>\n<p>Vendor lineage: Resemble AI's commercial voice platform (the paid upgrade path). Peers: <code>f5-tts</code> (flow-matching research pole), <code>kokoro</code> (efficiency pole), CosyVoice/Fish-Speech (multilingual rivals), ElevenLabs (the closed benchmark). Downstream: self-hosted agent/dubbing stacks and a fast-growing fork ecosystem (streaming servers, quantized variants).</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install chatterbox-tts\n</code></pre>\n<pre><code class=\"language-python\">from chatterbox.tts import ChatterboxTTS\nmodel = ChatterboxTTS.from_pretrained(device=\"cuda\")\nwav = model.generate(\"Welcome back.\", audio_prompt_path=\"reference.wav\", exaggeration=0.7)\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a commercial product shipping self-hosted custom voices — cloning under MIT with no training-data license asterisk</li>\n<li><strong>Scenario</strong>: expressive game/agent dialogue where per-line emotion intensity control matters more than raw naturalness rankings</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The only top-tier open cloning model with commercially clean licensing across code and weights — the deciding mechanism for product use</li>\n<li>Production affordances research repos lack: watermarking by default, emotion control, multilingual checkpoints, active org backing</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>GPU-class serving cost; not the answer for embedded or CPU-only deployment</li>\n<li>Vendor-published quality comparisons should be re-validated on your content; watermark presence may be a feature or a blocker depending on your use case</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The production pole of the open-TTS trio (<code>f5-tts</code> research/cloning, <code>kokoro</code> efficiency); pairs with <code>faster-whisper</code>/<code>whisperx</code> to complete a self-hosted voice loop, and with the guardrails guidance in <a href=\"../../architectures/system-design/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">architectures/system-design</a> on responsible generation.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/resemble-ai/chatterbox\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/spaces/ResembleAI/Chatterbox\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Demo Space</a></li>\n</ul>\n",
+      "body_text": "Overview Chatterbox is Resemble AI's open TTS family: a 0.5B parameter Llama backbone acoustic model trained on 500k hours of speech, offering zero shot voice cloning from short references, a unique emotion exaggeration control, and (in v2/multilingual releases) 20+ language coverage — all MIT licensed, with every output carrying Resemble's PerTh perceptual watermark. The vendor's side by side evals report it preferred over ElevenLabs (vendor published claim). Why it's in the Arsenal It resolved the open TTS licensing trap: research models like F5 ship MIT code over non commercially trained checkpoints, while Chatterbox is commercially clean end to end — which is why it became the default recommendation for products needing self hosted cloning. The built in watermarking also makes it the reference example of responsible release mechanics in generative audio, a pattern worth studying beyond TTS. Architecture A two stage design: a Llama architecture autoregressive model generates speech tokens conditioned on text and reference speaker embeddings (where cloning and the exaggeration control live), and a decoder renders tokens to waveform; alignment informed inference stabilizes long inputs. The PerTh watermarker embeds an imperceptible, retrievable signature in all generated audio. Ecosystem Position Vendor lineage: Resemble AI's commercial voice platform (the paid upgrade path). Peers: f5 tts (flow matching research pole), kokoro (efficiency pole), CosyVoice/Fish Speech (multilingual rivals), ElevenLabs (the closed benchmark). Downstream: self hosted agent/dubbing stacks and a fast growing fork ecosystem (streaming servers, quantized variants). Getting Started Key Use Cases 1. Scenario : a commercial product shipping self hosted custom voices — cloning under MIT with no training data license asterisk 2. Scenario : expressive game/agent dialogue where per line emotion intensity control matters more than raw naturalness rankings Strengths The only top tier open cloning model with commercially clean licensing across code and weights — the deciding mechanism for product use Production affordances research repos lack: watermarking by default, emotion control, multilingual checkpoints, active org backing Limitations GPU class serving cost; not the answer for embedded or CPU only deployment Vendor published quality comparisons should be re validated on your content; watermark presence may be a feature or a blocker depending on your use case Relation to the Arsenal The production pole of the open TTS trio (f5 tts research/cloning, kokoro efficiency); pairs with faster whisper/whisperx to complete a self hosted voice loop, and with the guardrails guidance in architectures/system design on responsible generation. Resources GitHub Demo Space"
+    },
+    {
       "id": "chroma",
       "name": "Chroma",
       "version_tracked": null,
@@ -1219,6 +1419,104 @@
       "word_count": 413,
       "body_html": "<h2>Overview</h2>\n<p>An open-source, developer-friendly vector database designed to be embedded directly in an application with minimal setup, widely used as the default choice in RAG tutorials and early-stage production applications.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Developer-friendly embedded/lightweight vector database, the most common default for RAG prototyping and small-to-medium production apps. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path to a working RAG prototype — Chroma can run embedded in-process with zero infrastructure setup, then scale to a client-server deployment when needed. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Can run fully embedded in-process (backed by SQLite/DuckDB-style local storage) for prototyping, or as a standalone client-server deployment for production, storing embeddings alongside metadata and supporting approximate nearest-neighbor search with metadata filtering.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: none of particular note. Downstream: none of particular note as a dependency, though it's the most commonly referenced default vector store in LangChain and LlamaIndex documentation/tutorials. Competing: Qdrant, Weaviate, Milvus, LanceDB, Pinecone. Complementary: pairs with LangChain, LlamaIndex, or Haystack as the retrieval backend for a RAG pipeline.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/deployment command for this specific project.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want the fastest path to a working RAG prototype — Chroma can run embedded in-process with zero infrastructure setup, then scale to a client-server deployment when needed</li>\n<li><strong>Scenario</strong>: you're building a small-to-medium scale application where operational simplicity matters more than the largest possible scale or the most advanced filtering/indexing features</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want the fastest path to a working RAG prototype — Chroma can run embedded in-process with zero infrastructure setup, then scale to a client-server deployment when needed</li>\n<li>You're building a small-to-medium scale application where operational simplicity matters more than the largest possible scale or the most advanced filtering/indexing features</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need to scale to hundreds of millions or billions of vectors with distributed sharding — Milvus, Qdrant, or a managed service like Pinecone are built for that scale from the ground up</li>\n<li>You need the most mature enterprise features (RBAC, multi-tenancy, SLA-backed managed hosting) — Chroma's managed offering is newer than Pinecone's or Weaviate Cloud's</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see <a href=\"../../tools/data-ingestion/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/data-ingestion/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/chroma-core/chroma\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.trychroma.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview An open source, developer friendly vector database designed to be embedded directly in an application with minimal setup, widely used as the default choice in RAG tutorials and early stage production applications. Why it's in the Arsenal Developer friendly embedded/lightweight vector database, the most common default for RAG prototyping and small to medium production apps. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, then scale to a client server deployment when needed. See Strengths / Limitations below before adopting it. Architecture Can run fully embedded in process (backed by SQLite/DuckDB style local storage) for prototyping, or as a standalone client server deployment for production, storing embeddings alongside metadata and supporting approximate nearest neighbor search with metadata filtering. Ecosystem Position Upstream: none of particular note. Downstream: none of particular note as a dependency, though it's the most commonly referenced default vector store in LangChain and LlamaIndex documentation/tutorials. Competing: Qdrant, Weaviate, Milvus, LanceDB, Pinecone. Complementary: pairs with LangChain, LlamaIndex, or Haystack as the retrieval backend for a RAG pipeline. Getting Started Key Use Cases 1. Scenario : you want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, then scale to a client server deployment when needed 2. Scenario : you're building a small to medium scale application where operational simplicity matters more than the largest possible scale or the most advanced filtering/indexing features Strengths You want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, then scale to a client server deployment when needed You're building a small to medium scale application where operational simplicity matters more than the largest possible scale or the most advanced filtering/indexing features Limitations You need to scale to hundreds of millions or billions of vectors with distributed sharding — Milvus, Qdrant, or a managed service like Pinecone are built for that scale from the ground up You need the most mature enterprise features (RBAC, multi tenancy, SLA backed managed hosting) — Chroma's managed offering is newer than Pinecone's or Weaviate Cloud's Relation to the Arsenal This is a data and retrieval entry: it documents a vector database, document processing tool, or RAG platform. For job based tool comparisons (e.g. web scraping, vector search), see tools/data ingestion/. Resources GitHub Documentation"
+    },
+    {
+      "id": "clip",
+      "name": "CLIP (OpenAI)",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "multimodal",
+      "subcategory": "open-source-models",
+      "description": "OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs",
+      "github_url": "https://github.com/openai/CLIP",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "openai",
+      "tags": [
+        "embeddings",
+        "multimodal",
+        "llm"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 33936,
+      "github_stars_last_30d": 0,
+      "trending_score": 30,
+      "last_commit": "2026-03-25",
+      "docs_url": "https://github.com/openai/CLIP",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2103.00020",
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "vision",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "org-backed",
+        "production-proven",
+        "research-origin"
+      ],
+      "ecosystem_role": [
+        "The foundational primitive of open multimodality: contrastive pretraining on 400M image-text pairs produced a shared embedding space that made zero-shot vision classification real — and CLIP-family encoders became the standard vision front-end inside LLaVA-class VLMs and the text conditioning inside Stable Diffusion"
+      ],
+      "best_for": [
+        "Image-text retrieval and zero-shot classification: embed images and label prompts in one space and compare by cosine similarity — no task-specific training",
+        "Building multimodal systems: CLIP-family encoders (via open_clip's reproductions) remain the default choice for vision features feeding an LLM or a diffusion model"
+      ],
+      "avoid_if": [
+        "You need dense per-pixel understanding (segmentation, OCR, counting) — CLIP embeds whole images; its known failure modes include fine-grained spatial reasoning",
+        "You want SOTA retrieval today — SigLIP-class successors and modern multimodal embedders outperform original CLIP checkpoints; use this repo as reference, open_clip for practice"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (33.9k), MIT, last push 2026-03-25 verified via the GitHub API on 2026-07-08. The repo is a stable reference release (2021 weights); currency lives in successors, which the entry states plainly. Paper is Radford et al. 2021.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/openai/CLIP",
+          "date": "2026-07-08",
+          "description": "33.9k stars; canonical repo of the 2021 model that started open multimodality"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/clip.md",
+      "url": "content/projects/foundation-models/clip",
+      "slug": "clip",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "CLIP (OpenAI)",
+      "summary": "OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 390,
+      "body_html": "<h2>Overview</h2>\n<p>CLIP (Contrastive Language-Image Pre-training) trains an image encoder and a text encoder jointly so matching pairs land close in a shared embedding space, using 400M web image-text pairs. The released models classify images zero-shot by embedding candidate label prompts (\"a photo of a dog\") and picking the nearest — competitive with supervised baselines of its era without seeing a single training label.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Few models are load-bearing for an entire ecosystem: CLIP's embedding space is the mechanism behind zero-shot vision, image search, and semantic deduplication; its encoders are the vision front-end of the LLaVA lineage and the text conditioning of Stable Diffusion. Anyone building multimodal systems ends up reasoning about CLIP-space properties, making the canonical repo and paper reference material regardless of which successor checkpoint they deploy.</p>\n<h2>Architecture</h2>\n<p>Dual encoders — a ViT (or ResNet) for images and a Transformer for text — projected into one space and trained with a symmetric contrastive (InfoNCE) loss over in-batch pairs. Zero-shot classification reduces to nearest-prompt retrieval; no classification head exists. This design is why it generalizes (open vocabulary) and why it fails at spatial/fine-grained tasks (global-embedding bottleneck).</p>\n<h2>Ecosystem Position</h2>\n<p>Downstream: LLaVA-class VLMs (vision encoder), Stable Diffusion (text encoder), open_clip (community reproductions at scale, the practical checkpoints), FAISS/vector-DB image search stacks. Successors: SigLIP/SigLIP2 (better loss), EVA-CLIP, and multimodal embedders. The repo itself is a frozen reference; the ideas are anything but.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install git+https://github.com/openai/CLIP.git\n</code></pre>\n<pre><code class=\"language-python\">import clip, torch\nmodel, preprocess = clip.load(\"ViT-B/32\")\nimage_features = model.encode_image(preprocess(img).unsqueeze(0))\ntext_features = model.encode_text(clip.tokenize([\"a dog\", \"a cat\"]))\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: semantic image search or dataset deduplication — embed once, query in CLIP space via a vector DB</li>\n<li><strong>Scenario</strong>: zero-shot filtering/tagging pipelines where training a classifier per label set is impractical</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The open-vocabulary mechanism itself: any concept expressible in text becomes a classifier for free</li>\n<li>Unmatched ecosystem leverage — understanding CLIP space transfers to VLMs, diffusion, and retrieval alike</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Global-embedding failure modes are well documented: counting, spatial relations, fine-grained text-in-image</li>\n<li>Original 2021 checkpoints trail modern successors; treat this repo as the reference implementation, not the deployment choice</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The vision-side foundation under <code>sam2</code> (segmentation), the LLaVA-lineage VLMs, and image-generation entries; conceptually paired with the embedding-model guidance in <a href=\"../../architectures/data-strategy/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">architectures/data-strategy</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/openai/CLIP\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://arxiv.org/abs/2103.00020\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper (Radford et al., 2021)</a></li>\n</ul>\n",
+      "body_text": "Overview CLIP (Contrastive Language Image Pre training) trains an image encoder and a text encoder jointly so matching pairs land close in a shared embedding space, using 400M web image text pairs. The released models classify images zero shot by embedding candidate label prompts (\"a photo of a dog\") and picking the nearest — competitive with supervised baselines of its era without seeing a single training label. Why it's in the Arsenal Few models are load bearing for an entire ecosystem: CLIP's embedding space is the mechanism behind zero shot vision, image search, and semantic deduplication; its encoders are the vision front end of the LLaVA lineage and the text conditioning of Stable Diffusion. Anyone building multimodal systems ends up reasoning about CLIP space properties, making the canonical repo and paper reference material regardless of which successor checkpoint they deploy. Architecture Dual encoders — a ViT (or ResNet) for images and a Transformer for text — projected into one space and trained with a symmetric contrastive (InfoNCE) loss over in batch pairs. Zero shot classification reduces to nearest prompt retrieval; no classification head exists. This design is why it generalizes (open vocabulary) and why it fails at spatial/fine grained tasks (global embedding bottleneck). Ecosystem Position Downstream: LLaVA class VLMs (vision encoder), Stable Diffusion (text encoder), open clip (community reproductions at scale, the practical checkpoints), FAISS/vector DB image search stacks. Successors: SigLIP/SigLIP2 (better loss), EVA CLIP, and multimodal embedders. The repo itself is a frozen reference; the ideas are anything but. Getting Started Key Use Cases 1. Scenario : semantic image search or dataset deduplication — embed once, query in CLIP space via a vector DB 2. Scenario : zero shot filtering/tagging pipelines where training a classifier per label set is impractical Strengths The open vocabulary mechanism itself: any concept expressible in text becomes a classifier for free Unmatched ecosystem leverage — understanding CLIP space transfers to VLMs, diffusion, and retrieval alike Limitations Global embedding failure modes are well documented: counting, spatial relations, fine grained text in image Original 2021 checkpoints trail modern successors; treat this repo as the reference implementation, not the deployment choice Relation to the Arsenal The vision side foundation under sam2 (segmentation), the LLaVA lineage VLMs, and image generation entries; conceptually paired with the embedding model guidance in architectures/data strategy. Resources GitHub Paper (Radford et al., 2021)"
     },
     {
       "id": "cognee",
@@ -2409,6 +2707,106 @@
       "body_text": "Overview An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP based EXL3 format. Why it's in the Arsenal The enthusiast tier quantized inference engine: EXL2's variable bitrate quantization (2.0–8.0 bits per weight, mixed within a model) squeezes the largest possible models onto consumer VRAM with better quality per bit than fixed width formats at low bitrates. It earns a place in the Arsenal because it directly addresses a recurring decision point: you run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade offs. See Strengths / Limitations below before adopting it. Architecture Custom CUDA kernels implement fused attention and quantized matmul over EXL2 tensors; quantization allocates bitrate per layer/matrix by optimizing measured KL divergence against calibration data. Paged attention, LoRA loading, speculative decoding, and Q4/Q6/Q8 quantized KV cache round out the runtime; TabbyAPI provides the OpenAI compatible serving layer. Ecosystem Position Upstream: PyTorch + custom CUDA extensions. Downstream: TabbyAPI, text generation webui, SillyTavern ecosystems standardize on it for GPU rich local setups. Competing: llama.cpp/GGUF (broader hardware, larger community) and AWQ/GPTQ paths in vLLM (server side). The EXL2 vs GGUF choice is the canonical local inference trade off: EXL2 for CUDA speed and bitrate precision, GGUF for portability. Getting Started Key Use Cases 1. Scenario : you run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade offs 2. Scenario : you build local chat/roleplay/agent UIs — it is a standard backend in TabbyAPI and text generation webui with fast prompt processing and speculative decoding Strengths You run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade offs You build local chat/roleplay/agent UIs — it is a standard backend in TabbyAPI and text generation webui with fast prompt processing and speculative decoding Limitations You need CPU or Apple Silicon inference — it is CUDA/ROCm only; llama.cpp covers those targets You are serving many concurrent users in production — vLLM class continuous batching and operational tooling are stronger for multi tenant serving Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (4,581 stars, last commit 2026 03 04, verified via GitHub API on 2026 07 08)"
     },
     {
+      "id": "f5-tts",
+      "name": "F5-TTS",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "description": "Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple",
+      "github_url": "https://github.com/SWivid/F5-TTS",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "SWivid (SJTU)",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 14902,
+      "github_stars_last_30d": 0,
+      "trending_score": 50,
+      "last_commit": "2026-07-05",
+      "docs_url": "https://github.com/SWivid/F5-TTS",
+      "demo_url": "https://huggingface.co/spaces/mrfakename/E2-F5-TTS",
+      "paper_url": "https://arxiv.org/abs/2410.06885",
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
+      "health_signals": [
+        "research-origin",
+        "actively-maintained",
+        "community-driven"
+      ],
+      "ecosystem_role": [
+        "The open reference for flow-matching TTS: where autoregressive cloning systems (XTTS lineage) generate token-by-token with alignment machinery, F5 pads text to speech length and denoises the whole utterance in parallel via flow matching — a radical simplification that delivers zero-shot cloning at real-time-plus speeds and made it the community's fine-tuning base for new languages"
+      ],
+      "best_for": [
+        "Zero-shot voice cloning from a few seconds of reference audio, self-hosted under MIT (code) — narration, dubbing, and dataset generation without per-voice training",
+        "Fine-tuning for underserved languages: the community has produced dozens of language ports precisely because the non-autoregressive recipe trains stably on modest data"
+      ],
+      "avoid_if": [
+        "You need streaming conversational latency — non-autoregressive generation produces whole utterances; dialogue-agent stacks want streaming-first systems (Kokoro-class for speed, commercial APIs for polish)",
+        "Cloning ethics/consent can't be enforced in your product — released checkpoints are trained under CC-BY-NC data terms (Emilia); check the model-license note, and gate voice inputs"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "kokoro",
+        "chatterbox"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (14.9k), MIT code license, active development (last push 2026-07-05) verified via the GitHub API on 2026-07-08. Checkpoint data licensing (CC-BY-NC training data for the main release) noted from the repo. Paper arXiv:2410.06885.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/SWivid/F5-TTS",
+          "date": "2026-07-08",
+          "description": "14.9k stars; leading open flow-matching TTS with zero-shot cloning"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/f5-tts.md",
+      "url": "content/projects/foundation-models/f5-tts",
+      "slug": "f5-tts",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "F5-TTS",
+      "summary": "Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 433,
+      "body_html": "<h2>Overview</h2>\n<p>F5-TTS (\"Fairytaler that Fakes Fluent and Faithful speech with Flow matching\") is a fully non-autoregressive text-to-speech system: a Diffusion Transformer trained with flow matching that clones any voice zero-shot from a short reference clip. Its design deletes the usual TTS machinery — no phoneme aligner, no duration model, no text encoder — by padding text tokens to the target length and letting the model infill; Sway Sampling at inference improves quality/speed without retraining.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Open voice cloning had been autoregressive and fiddly; F5 demonstrated that a drastically simpler parallel architecture matches or beats it while running faster (RTF ~0.15) and training more reproducibly — which is why it became the base the community fine-tunes for new languages, and one of the most-deployed self-hosted cloning stacks. It anchors the audio-generation slot among foundation models the way Whisper anchors recognition.</p>\n<h2>Architecture</h2>\n<p>Text (character sequence) is padded with filler tokens to speech length and concatenated with a masked mel-spectrogram; a DiT backbone trained with conditional flow matching infills the masked speech conditioned on reference audio + text; ConvNeXt blocks preprocess text for alignment-free conditioning; a vocoder (Vocos) renders mels to audio. Inference-time Sway Sampling skews flow steps toward early trajectory regions — a drop-in quality win.</p>\n<h2>Ecosystem Position</h2>\n<p>Predecessors: E2-TTS (the design it stabilizes), autoregressive cloners (XTTS/coqui lineage, now archived upstream). Peers: <code>kokoro</code> (small, fast, no cloning), <code>chatterbox</code> (production-oriented cloning with watermarking), CosyVoice/Fish-Speech-class systems. Downstream: many community language fine-tunes and self-hosted narration/dubbing stacks.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install f5-tts\nf5-tts_infer-gradio   # web UI\n# or CLI:\nf5-tts_infer-cli --model F5TTS_v1_Base --ref_audio ref.wav --ref_text \"reference transcript\" --gen_text \"text to speak\"\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: self-hosted narration/dubbing with per-speaker voices from seconds of consented reference audio — no per-voice training runs</li>\n<li><strong>Scenario</strong>: building TTS for a language commercial APIs serve poorly, by fine-tuning the base on a modest single-language corpus</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Architectural simplicity is the feature: no aligner/duration stack means fewer failure modes and easy fine-tuning — the mechanism behind its community adoption</li>\n<li>Strong quality at real-time-plus speeds with MIT code and active maintenance (multilingual v1 checkpoints, ecosystem runtimes: MLX, TensorRT-LLM ports)</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Whole-utterance generation: not a streaming conversational engine, and long-form requires chunking heuristics</li>\n<li>Main checkpoints inherit non-commercial training-data terms (Emilia CC-BY-NC) — commercial deployments must verify checkpoint licensing, not just the MIT code</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The speech-synthesis counterpart to <code>faster-whisper</code>/<code>whisperx</code> (recognition) among audio entries; contrast with <code>kokoro</code> (speed/size pole) and <code>chatterbox</code> (production-cloning pole) for the TTS decision.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/SWivid/F5-TTS\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://arxiv.org/abs/2410.06885\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper</a></li>\n<li><a href=\"https://huggingface.co/spaces/mrfakename/E2-F5-TTS\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Demo Space</a></li>\n</ul>\n",
+      "body_text": "Overview F5 TTS (\"Fairytaler that Fakes Fluent and Faithful speech with Flow matching\") is a fully non autoregressive text to speech system: a Diffusion Transformer trained with flow matching that clones any voice zero shot from a short reference clip. Its design deletes the usual TTS machinery — no phoneme aligner, no duration model, no text encoder — by padding text tokens to the target length and letting the model infill; Sway Sampling at inference improves quality/speed without retraining. Why it's in the Arsenal Open voice cloning had been autoregressive and fiddly; F5 demonstrated that a drastically simpler parallel architecture matches or beats it while running faster (RTF 0.15) and training more reproducibly — which is why it became the base the community fine tunes for new languages, and one of the most deployed self hosted cloning stacks. It anchors the audio generation slot among foundation models the way Whisper anchors recognition. Architecture Text (character sequence) is padded with filler tokens to speech length and concatenated with a masked mel spectrogram; a DiT backbone trained with conditional flow matching infills the masked speech conditioned on reference audio + text; ConvNeXt blocks preprocess text for alignment free conditioning; a vocoder (Vocos) renders mels to audio. Inference time Sway Sampling skews flow steps toward early trajectory regions — a drop in quality win. Ecosystem Position Predecessors: E2 TTS (the design it stabilizes), autoregressive cloners (XTTS/coqui lineage, now archived upstream). Peers: kokoro (small, fast, no cloning), chatterbox (production oriented cloning with watermarking), CosyVoice/Fish Speech class systems. Downstream: many community language fine tunes and self hosted narration/dubbing stacks. Getting Started Key Use Cases 1. Scenario : self hosted narration/dubbing with per speaker voices from seconds of consented reference audio — no per voice training runs 2. Scenario : building TTS for a language commercial APIs serve poorly, by fine tuning the base on a modest single language corpus Strengths Architectural simplicity is the feature: no aligner/duration stack means fewer failure modes and easy fine tuning — the mechanism behind its community adoption Strong quality at real time plus speeds with MIT code and active maintenance (multilingual v1 checkpoints, ecosystem runtimes: MLX, TensorRT LLM ports) Limitations Whole utterance generation: not a streaming conversational engine, and long form requires chunking heuristics Main checkpoints inherit non commercial training data terms (Emilia CC BY NC) — commercial deployments must verify checkpoint licensing, not just the MIT code Relation to the Arsenal The speech synthesis counterpart to faster whisper/whisperx (recognition) among audio entries; contrast with kokoro (speed/size pole) and chatterbox (production cloning pole) for the TTS decision. Resources GitHub Paper Demo Space"
+    },
+    {
       "id": "falcon-3",
       "name": "Falcon 3",
       "version_tracked": null,
@@ -2712,6 +3110,102 @@
       "word_count": 444,
       "body_html": "<h2>Overview</h2>\n<p>A managed API (with a smaller open-source self-hosted variant) that crawls entire websites and converts them into clean, LLM-ready Markdown, widely adopted as a standard RAG-pipeline ingestion tool.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Managed API (with a smaller open-source self-hosted variant) for crawling entire websites into clean, LLM-ready Markdown. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti-bot handling, retry logic) so you can focus on the RAG pipeline rather than crawler infrastructure. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Combines a distributed crawling infrastructure (handling JavaScript rendering, rate limiting, and retry logic across many pages) with a Markdown-conversion pipeline, exposed via a simple API/SDK rather than requiring users to operate browser automation infrastructure themselves.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: relies on headless-browser infrastructure internally. Downstream: none of particular note. Competing: Crawl4AI (self-hosted alternative), Jina Reader (simpler single-page conversion). Complementary: commonly used as the ingestion step for a vector database and RAG framework; has an official MCP server variant for agent-driven use.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install/deployment command for this specific project.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti-bot handling, retry logic) so you can focus on the RAG pipeline rather than crawler infrastructure</li>\n<li><strong>Scenario</strong>: you need to crawl and convert many pages across a whole site reliably, not just single-page conversion</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti-bot handling, retry logic) so you can focus on the RAG pipeline rather than crawler infrastructure</li>\n<li>You need to crawl and convert many pages across a whole site reliably, not just single-page conversion</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Budget requires a fully free, self-hosted-only solution at scale — Firecrawl's open-source self-hosted version exists but has a reduced feature set compared to the hosted API</li>\n<li>You need very fine-grained, custom scraping logic that a general-purpose crawling API can't easily express — a lower-level tool like Playwright combined with custom extraction logic gives more control</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This project entry documents Firecrawl's architecture and ecosystem position as an open-source project. For usage-oriented guidance (when to use this API, jobs it covers, pricing tiers), see <a href=\"../../tools/data-ingestion/firecrawl-tool.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Firecrawl</a> in the tools vertical — that entry does not repeat this one's best_for/avoid_if verbatim, since the frames differ: this entry is about what Firecrawl IS, the tool entry is about WHEN you'd reach for it.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/firecrawl/firecrawl\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.firecrawl.dev/introduction\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview A managed API (with a smaller open source self hosted variant) that crawls entire websites and converts them into clean, LLM ready Markdown, widely adopted as a standard RAG pipeline ingestion tool. Why it's in the Arsenal Managed API (with a smaller open source self hosted variant) for crawling entire websites into clean, LLM ready Markdown. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti bot handling, retry logic) so you can focus on the RAG pipeline rather than crawler infrastructure. See Strengths / Limitations below before adopting it. Architecture Combines a distributed crawling infrastructure (handling JavaScript rendering, rate limiting, and retry logic across many pages) with a Markdown conversion pipeline, exposed via a simple API/SDK rather than requiring users to operate browser automation infrastructure themselves. Ecosystem Position Upstream: relies on headless browser infrastructure internally. Downstream: none of particular note. Competing: Crawl4AI (self hosted alternative), Jina Reader (simpler single page conversion). Complementary: commonly used as the ingestion step for a vector database and RAG framework; has an official MCP server variant for agent driven use. Getting Started Key Use Cases 1. Scenario : you want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti bot handling, retry logic) so you can focus on the RAG pipeline rather than crawler infrastructure 2. Scenario : you need to crawl and convert many pages across a whole site reliably, not just single page conversion Strengths You want a managed API that handles the operational complexity of crawling (JavaScript rendering, anti bot handling, retry logic) so you can focus on the RAG pipeline rather than crawler infrastructure You need to crawl and convert many pages across a whole site reliably, not just single page conversion Limitations Budget requires a fully free, self hosted only solution at scale — Firecrawl's open source self hosted version exists but has a reduced feature set compared to the hosted API You need very fine grained, custom scraping logic that a general purpose crawling API can't easily express — a lower level tool like Playwright combined with custom extraction logic gives more control Relation to the Arsenal This project entry documents Firecrawl's architecture and ecosystem position as an open source project. For usage oriented guidance (when to use this API, jobs it covers, pricing tiers), see Firecrawl in the tools vertical — that entry does not repeat this one's best for/avoid if verbatim, since the frames differ: this entry is about what Firecrawl IS, the tool entry is about WHEN you'd reach for it. Resources GitHub Documentation"
+    },
+    {
+      "id": "flux",
+      "name": "FLUX (Black Forest Labs)",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "multimodal",
+      "subcategory": "open-source-models",
+      "description": "Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled",
+      "github_url": "https://github.com/black-forest-labs/flux",
+      "license": "Apache-2.0 (code); weights vary by variant",
+      "primary_language": "Python",
+      "org_or_maintainer": "black-forest-labs",
+      "tags": [
+        "multimodal",
+        "inference",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 25700,
+      "github_stars_last_30d": 0,
+      "trending_score": 45,
+      "last_commit": "2025-07-31",
+      "docs_url": "https://github.com/black-forest-labs/flux",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "vision"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The successor to Stable Diffusion's open-weights crown: built by the original SD authors after leaving Stability, FLUX's 12B rectified-flow transformers raised open image-generation quality (prompt adherence, text rendering, anatomy) to near-closed-model level — and its [dev]/[schnell] license split defines how the ecosystem now ships 'open' image models"
+      ],
+      "best_for": [
+        "Self-hosted high-quality image generation: [schnell] (Apache-2.0, few-step) for permissive commercial use, [dev] for maximum open quality where the non-commercial license fits",
+        "Building on an active tooling ecosystem — ComfyUI workflows, LoRA fine-tuning, and ControlNet-style tools ported to FLUX quickly, inheriting SD's community energy"
+      ],
+      "avoid_if": [
+        "You need permissive weights at maximum quality — [dev]'s non-commercial license is the catch; commercial [dev]-quality access is API-only, so read the license before building a product on it",
+        "You're VRAM-constrained — 12B-parameter generation models want 24GB-class GPUs; quantized variants trade quality for fit"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (25.7k), Apache-2.0 code license, last push 2025-07-31 verified via the GitHub API on 2026-07-08 — release-hub cadence; family activity continues via weight releases (Kontext etc.) on the Hub. Weight-license split documented from official model cards.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/black-forest-labs/flux",
+          "date": "2026-07-08",
+          "description": "25.7k stars; the open image-generation reference since 2024"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/flux.md",
+      "url": "content/projects/foundation-models/flux",
+      "slug": "flux",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "FLUX (Black Forest Labs)",
+      "summary": "Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 405,
+      "body_html": "<h2>Overview</h2>\n<p>FLUX is Black Forest Labs' text-to-image family: 12B-parameter rectified-flow transformers released as FLUX.1 [pro] (API-only), [dev] (open weights, non-commercial), and [schnell] (Apache-2.0, timestep-distilled for 1-4-step generation), later extended with editing/in-context models (Kontext) and tooling variants (fill, canny, depth, redux). The repo provides reference inference code; the ecosystem runs it through ComfyUI and diffusers.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>When the original Stable Diffusion team shipped FLUX, the open image-generation center of gravity moved with them: it's the model the local-generation ecosystem (ComfyUI workflows, LoRA culture, control tools) now organizes around, and its three-tier license structure is the template open image models follow. Any stack decision about self-hosted image generation starts here.</p>\n<h2>Architecture</h2>\n<p>A rectified-flow (flow-matching) transformer rather than classic DDPM U-Net: a multimodal DiT-style backbone with parallel attention over image latents and text conditioning from dual encoders (CLIP + T5-XXL), trained to straighten probability-flow trajectories — the property that makes [schnell]'s few-step distillation work. Generation runs in a VAE latent space.</p>\n<h2>Ecosystem Position</h2>\n<p>Predecessor lineage: Stable Diffusion (same core authors; SD3 shares the rectified-flow direction). Competing: SDXL/SD3.5 (Stability), open challengers (HiDream, Qwen-Image-class), and closed APIs (Midjourney, DALL·E, Imagen). Complementary: ComfyUI (the de facto runtime), diffusers integration, LoRA fine-tuning stacks.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install -U diffusers transformers\n</code></pre>\n<pre><code class=\"language-python\">from diffusers import FluxPipeline\npipe = FluxPipeline.from_pretrained(\"black-forest-labs/FLUX.1-schnell\", torch_dtype=\"auto\").to(\"cuda\")\nimage = pipe(\"a photo of a corgi reading a newspaper\", num_inference_steps=4).images[0]\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: self-hosted product imagery/creative generation on [schnell] where Apache-2.0 licensing and few-step latency both matter</li>\n<li><strong>Scenario</strong>: local creative workflows in ComfyUI with [dev] + community LoRAs for maximum open-weights quality (non-commercial contexts)</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Raised the open quality bar by mechanism (rectified-flow DiT at 12B, T5-conditioned prompts) — visibly better text rendering and prompt adherence than the SD generation it superseded</li>\n<li>Inherited the strongest tooling community in image generation, so control/fine-tuning capabilities arrived fast</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>The license split is the sharp edge: the weights most people benchmark ([dev]) are non-commercial; product builders must use [schnell] or the paid API</li>\n<li>12B inference is heavy for hobby GPUs; and the reference repo itself moves at release cadence, with day-to-day development in ecosystem tools</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The image-generation pole among foundation models — complements <code>clip</code> (whose text-encoder lineage conditions it) and the vision entries; runs locally through ComfyUI-class tooling covered on the tools side.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/black-forest-labs/flux\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/black-forest-labs\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Model weights</a></li>\n</ul>\n",
+      "body_text": "Overview FLUX is Black Forest Labs' text to image family: 12B parameter rectified flow transformers released as FLUX.1 [pro] (API only), [dev] (open weights, non commercial), and [schnell] (Apache 2.0, timestep distilled for 1 4 step generation), later extended with editing/in context models (Kontext) and tooling variants (fill, canny, depth, redux). The repo provides reference inference code; the ecosystem runs it through ComfyUI and diffusers. Why it's in the Arsenal When the original Stable Diffusion team shipped FLUX, the open image generation center of gravity moved with them: it's the model the local generation ecosystem (ComfyUI workflows, LoRA culture, control tools) now organizes around, and its three tier license structure is the template open image models follow. Any stack decision about self hosted image generation starts here. Architecture A rectified flow (flow matching) transformer rather than classic DDPM U Net: a multimodal DiT style backbone with parallel attention over image latents and text conditioning from dual encoders (CLIP + T5 XXL), trained to straighten probability flow trajectories — the property that makes [schnell]'s few step distillation work. Generation runs in a VAE latent space. Ecosystem Position Predecessor lineage: Stable Diffusion (same core authors; SD3 shares the rectified flow direction). Competing: SDXL/SD3.5 (Stability), open challengers (HiDream, Qwen Image class), and closed APIs (Midjourney, DALL·E, Imagen). Complementary: ComfyUI (the de facto runtime), diffusers integration, LoRA fine tuning stacks. Getting Started Key Use Cases 1. Scenario : self hosted product imagery/creative generation on [schnell] where Apache 2.0 licensing and few step latency both matter 2. Scenario : local creative workflows in ComfyUI with [dev] + community LoRAs for maximum open weights quality (non commercial contexts) Strengths Raised the open quality bar by mechanism (rectified flow DiT at 12B, T5 conditioned prompts) — visibly better text rendering and prompt adherence than the SD generation it superseded Inherited the strongest tooling community in image generation, so control/fine tuning capabilities arrived fast Limitations The license split is the sharp edge: the weights most people benchmark ([dev]) are non commercial; product builders must use [schnell] or the paid API 12B inference is heavy for hobby GPUs; and the reference repo itself moves at release cadence, with day to day development in ecosystem tools Relation to the Arsenal The image generation pole among foundation models — complements clip (whose text encoder lineage conditions it) and the vision entries; runs locally through ComfyUI class tooling covered on the tools side. Resources GitHub Model weights"
     },
     {
       "id": "gemma",
@@ -3931,6 +4425,105 @@
       "word_count": 526,
       "body_html": "<h2>Overview</h2>\n<p>Moonshot AI's open-weights mixture-of-experts model: 1 trillion total parameters with 32B activated per token, trained on 15.5T tokens using the MuonClip optimizer to eliminate training instability at scale. K2's distinguishing bet is agentic-intelligence-first training — large-scale synthetic tool-use trajectories and joint RL — which shows up in its coding-agent and tool-calling benchmark leadership among open models at release.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The open-weights model that made 'agentic-first' a training target rather than a fine-tune: a 1T-parameter MoE (32B active) trained with the MuonClip optimizer and large-scale synthetic tool-use data, competing with closed frontier models on coding and agentic benchmarks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you run agentic/coding workloads on self-hosted or provider-hosted open weights — K2 was purpose-trained for multi-step tool use and tops open-model agentic benchmarks (SWE-bench Verified, Tau2). See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>A DeepSeek-V3-lineage MoE architecture (384 experts, 8 active plus one shared, MLA attention) at 1T scale; MuonClip's qk-clip mechanism stabilized the Muon optimizer for the full 15.5T-token run with reported zero loss spikes. Post-training combines supervised agentic-trajectory data synthesized across thousands of tools with a joint RL stage using verifiable rewards plus a self-critique rubric reward.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: DeepSeek-architecture lineage, vLLM/SGLang/TensorRT-LLM for serving. Competing: DeepSeek V3/R1, Qwen3 (open weights); GPT/Claude-class models on agentic work. Complementary: hosted access via Moonshot's platform and OpenRouter-class aggregators; the K2 Thinking variant extends the line into interleaved reasoning+tool-use. Kimi-inspired training details (MuonClip) influenced subsequent open-model training practice.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Hosted (OpenAI-compatible):\ncurl &lt;moonshot-api-endpoint&gt;/v1/chat/completions -H 'Authorization: Bearer $MOONSHOT_API_KEY' \\\n  -d '{\"model\":\"kimi-k2-0905-preview\",\"messages\":[{\"role\":\"user\",\"content\":\"hello\"}]}'\n# Self-host: deploy the HF weights (moonshotai/Kimi-K2-Instruct) with vLLM or SGLang on a multi-GPU node\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you run agentic/coding workloads on self-hosted or provider-hosted open weights — K2 was purpose-trained for multi-step tool use and tops open-model agentic benchmarks (SWE-bench Verified, Tau2)</li>\n<li><strong>Scenario</strong>: you need frontier-adjacent capability with weight access for customization — the modified-MIT license permits commercial use with an attribution condition at very large scale</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You run agentic/coding workloads on self-hosted or provider-hosted open weights — K2 was purpose-trained for multi-step tool use and tops open-model agentic benchmarks (SWE-bench Verified, Tau2)</li>\n<li>You need frontier-adjacent capability with weight access for customization — the modified-MIT license permits commercial use with an attribution condition at very large scale</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You self-host on modest infrastructure — serving a 1T MoE (even at 32B active) requires multi-GPU node configurations beyond most teams; use hosted providers instead</li>\n<li>You need strong multimodal input — K2's headline strengths are text, code, and tool use; vision-language options elsewhere fit image-heavy workloads better</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a foundation-model entry: it documents model weights, architecture, and generational position. For hosted/managed access paths to models, see <a href=\"../../tools/model-layer/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/model-layer/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/MoonshotAI/Kimi-K2\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://platform.kimi.ai/docs/overview\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (10,889 stars, last commit 2026-01-21, verified via GitHub API on 2026-07-08)</em></p>\n",
       "body_text": "Overview Moonshot AI's open weights mixture of experts model: 1 trillion total parameters with 32B activated per token, trained on 15.5T tokens using the MuonClip optimizer to eliminate training instability at scale. K2's distinguishing bet is agentic intelligence first training — large scale synthetic tool use trajectories and joint RL — which shows up in its coding agent and tool calling benchmark leadership among open models at release. Why it's in the Arsenal The open weights model that made 'agentic first' a training target rather than a fine tune: a 1T parameter MoE (32B active) trained with the MuonClip optimizer and large scale synthetic tool use data, competing with closed frontier models on coding and agentic benchmarks. It earns a place in the Arsenal because it directly addresses a recurring decision point: you run agentic/coding workloads on self hosted or provider hosted open weights — K2 was purpose trained for multi step tool use and tops open model agentic benchmarks (SWE bench Verified, Tau2). See Strengths / Limitations below before adopting it. Architecture A DeepSeek V3 lineage MoE architecture (384 experts, 8 active plus one shared, MLA attention) at 1T scale; MuonClip's qk clip mechanism stabilized the Muon optimizer for the full 15.5T token run with reported zero loss spikes. Post training combines supervised agentic trajectory data synthesized across thousands of tools with a joint RL stage using verifiable rewards plus a self critique rubric reward. Ecosystem Position Upstream: DeepSeek architecture lineage, vLLM/SGLang/TensorRT LLM for serving. Competing: DeepSeek V3/R1, Qwen3 (open weights); GPT/Claude class models on agentic work. Complementary: hosted access via Moonshot's platform and OpenRouter class aggregators; the K2 Thinking variant extends the line into interleaved reasoning+tool use. Kimi inspired training details (MuonClip) influenced subsequent open model training practice. Getting Started Key Use Cases 1. Scenario : you run agentic/coding workloads on self hosted or provider hosted open weights — K2 was purpose trained for multi step tool use and tops open model agentic benchmarks (SWE bench Verified, Tau2) 2. Scenario : you need frontier adjacent capability with weight access for customization — the modified MIT license permits commercial use with an attribution condition at very large scale Strengths You run agentic/coding workloads on self hosted or provider hosted open weights — K2 was purpose trained for multi step tool use and tops open model agentic benchmarks (SWE bench Verified, Tau2) You need frontier adjacent capability with weight access for customization — the modified MIT license permits commercial use with an attribution condition at very large scale Limitations You self host on modest infrastructure — serving a 1T MoE (even at 32B active) requires multi GPU node configurations beyond most teams; use hosted providers instead You need strong multimodal input — K2's headline strengths are text, code, and tool use; vision language options elsewhere fit image heavy workloads better Relation to the Arsenal This is a foundation model entry: it documents model weights, architecture, and generational position. For hosted/managed access paths to models, see tools/model layer/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (10,889 stars, last commit 2026 01 21, verified via GitHub API on 2026 07 08)"
+    },
+    {
+      "id": "kokoro",
+      "name": "Kokoro TTS",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "description": "82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX",
+      "github_url": "https://github.com/hexgrad/kokoro",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "hexgrad",
+      "tags": [
+        "self-hosted",
+        "inference",
+        "efficiency"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 7888,
+      "github_stars_last_30d": 0,
+      "trending_score": 45,
+      "last_commit": "2025-08-06",
+      "docs_url": "https://github.com/hexgrad/kokoro",
+      "demo_url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS",
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "community-driven",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The efficiency pole of open TTS: 82M parameters (roughly 1/100th of flagship systems) delivering quality that topped community TTS arenas, under Apache-2.0 — the model that made 'just bundle TTS into the app' viable, spawning ONNX/WASM ports that run in browsers, on edge boxes, and on CPUs"
+      ],
+      "best_for": [
+        "Voice output for applications where TTS is a feature, not the product — assistants, reading modes, notifications — with negligible compute cost and permissive licensing",
+        "Edge/embedded/browser deployment: kokoro-onnx and web ports run where no GPU exists; real-time synthesis on modest CPUs"
+      ],
+      "avoid_if": [
+        "You need voice cloning or emotional/expressive range — Kokoro ships a fixed voice set (voicepack embeddings) and trades expressiveness for size; F5-TTS/Chatterbox-class systems own cloning",
+        "You need long-form prosody consistency at audiobook quality — flagship-scale systems still lead on naturalness over long passages"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "f5-tts",
+        "chatterbox"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (7.9k repo; the model's reach is better measured by its HF download volume, consistently among the top TTS models), Apache-2.0, last push 2025-08-06 verified via the GitHub API on 2026-07-08 — checkpoint-release cadence. Arena-ranking claim reflects TTS-Arena community results at release; below the usual star bar, admitted as the efficiency anchor of open TTS.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/hexgrad/kokoro",
+          "date": "2026-07-08",
+          "description": "7.9k stars; top HF-downloads open TTS at 82M parameters"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/kokoro.md",
+      "url": "content/projects/foundation-models/kokoro",
+      "slug": "kokoro",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "Kokoro TTS",
+      "summary": "82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 405,
+      "body_html": "<h2>Overview</h2>\n<p>Kokoro is an 82M-parameter open-weight TTS model (StyleTTS2-lineage architecture) released under Apache-2.0 with a set of prebuilt voices across English variants and several other languages. Its defining property is the quality-per-parameter ratio: synthesis quality that ranked at or near the top of community TTS arenas from a model small enough to run real-time on CPUs, in browsers via ONNX/WASM, and on edge devices.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Most TTS decisions aren't \"best possible voice\" but \"good voice at negligible cost,\" and Kokoro redefined that trade-off: two orders of magnitude smaller than flagship systems at comparable perceived quality for short-form speech. Its Apache-2.0 license and ONNX portability made it the default embedded/self-hosted voice for open assistants and apps — the efficiency anchor against which larger TTS entries should be judged.</p>\n<h2>Architecture</h2>\n<p>A StyleTTS2-derived non-autoregressive pipeline: phoneme input (espeak-ng G2P via the misaki library) conditioned on per-voice style embeddings (\"voicepacks\"), a decoder-only acoustic path with ISTFTNet-style vocoding — no diffusion at inference, which is where the speed comes from. Distributed as PyTorch weights and community ONNX exports.</p>\n<h2>Ecosystem Position</h2>\n<p>Lineage: StyleTTS2 (architecture), trained largely on synthetic audio. Peers: <code>f5-tts</code> (cloning, flow-matching), <code>chatterbox</code> (production cloning), Piper (older edge-TTS standard it largely superseded on quality). Downstream: kokoro-onnx, kokoro-web, FastAPI wrappers, and integrations in open assistant stacks (Open WebUI-class ecosystems).</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install kokoro soundfile\n</code></pre>\n<pre><code class=\"language-python\">from kokoro import KPipeline\npipeline = KPipeline(lang_code=\"a\")  # American English\nfor _, _, audio in pipeline(\"Hello from Kokoro.\", voice=\"af_heart\"):\n    ...  # 24kHz audio chunks\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: adding spoken responses to a self-hosted assistant or app with CPU-only real-time synthesis and no licensing friction</li>\n<li><strong>Scenario</strong>: fully client-side TTS — browser reading modes, offline devices — via ONNX/WASM ports where cloud APIs aren't an option</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The quality-per-parameter outlier of open TTS: the 82M size is the capability (CPU real-time, browser-deployable, pennies to serve)</li>\n<li>Apache-2.0 weights with a clean voicepack system and a large downstream integration ecosystem</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>No cloning, fixed voices, limited expressive range — by design; pair with a cloning system when voices must be custom</li>\n<li>Single-maintainer release cadence (last repo push 2025-08); language coverage beyond English varies in quality</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The small-fast pole of the TTS trio with <code>f5-tts</code> (cloning/quality) and <code>chatterbox</code> (production cloning); the natural voice-output stage after <code>faster-whisper</code> recognition in self-hosted voice pipelines.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/hexgrad/kokoro\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/hexgrad/Kokoro-82M\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Model weights</a></li>\n<li><a href=\"https://huggingface.co/spaces/hexgrad/Kokoro-TTS\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Demo Space</a></li>\n</ul>\n",
+      "body_text": "Overview Kokoro is an 82M parameter open weight TTS model (StyleTTS2 lineage architecture) released under Apache 2.0 with a set of prebuilt voices across English variants and several other languages. Its defining property is the quality per parameter ratio: synthesis quality that ranked at or near the top of community TTS arenas from a model small enough to run real time on CPUs, in browsers via ONNX/WASM, and on edge devices. Why it's in the Arsenal Most TTS decisions aren't \"best possible voice\" but \"good voice at negligible cost,\" and Kokoro redefined that trade off: two orders of magnitude smaller than flagship systems at comparable perceived quality for short form speech. Its Apache 2.0 license and ONNX portability made it the default embedded/self hosted voice for open assistants and apps — the efficiency anchor against which larger TTS entries should be judged. Architecture A StyleTTS2 derived non autoregressive pipeline: phoneme input (espeak ng G2P via the misaki library) conditioned on per voice style embeddings (\"voicepacks\"), a decoder only acoustic path with ISTFTNet style vocoding — no diffusion at inference, which is where the speed comes from. Distributed as PyTorch weights and community ONNX exports. Ecosystem Position Lineage: StyleTTS2 (architecture), trained largely on synthetic audio. Peers: f5 tts (cloning, flow matching), chatterbox (production cloning), Piper (older edge TTS standard it largely superseded on quality). Downstream: kokoro onnx, kokoro web, FastAPI wrappers, and integrations in open assistant stacks (Open WebUI class ecosystems). Getting Started Key Use Cases 1. Scenario : adding spoken responses to a self hosted assistant or app with CPU only real time synthesis and no licensing friction 2. Scenario : fully client side TTS — browser reading modes, offline devices — via ONNX/WASM ports where cloud APIs aren't an option Strengths The quality per parameter outlier of open TTS: the 82M size is the capability (CPU real time, browser deployable, pennies to serve) Apache 2.0 weights with a clean voicepack system and a large downstream integration ecosystem Limitations No cloning, fixed voices, limited expressive range — by design; pair with a cloning system when voices must be custom Single maintainer release cadence (last repo push 2025 08); language coverage beyond English varies in quality Relation to the Arsenal The small fast pole of the TTS trio with f5 tts (cloning/quality) and chatterbox (production cloning); the natural voice output stage after faster whisper recognition in self hosted voice pipelines. Resources GitHub Model weights Demo Space"
     },
     {
       "id": "ktransformers",
@@ -8924,6 +9517,108 @@
       "word_count": 443,
       "body_html": "<h2>Overview</h2>\n<p>Alibaba Cloud's open-weight model generation released in 2024, spanning general-purpose, coding-specialized (Qwen2.5-Coder), and reasoning-specialized (QwQ) variants across sizes from 0.5B to 72B parameters.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Alibaba's widely-adopted open-weight model generation spanning general, coding, and reasoning-specialized variants. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a mature, broadly-supported open-weight generation with dedicated coding (Qwen2.5-Coder) and math/reasoning (QwQ) variants alongside the general chat models. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>A dense decoder-only transformer family (no MoE in the mainline Qwen2.5 sizes) with dedicated post-training branches: Qwen2.5-Coder for code generation and QwQ as an early reasoning-focused variant using extended chain-of-thought training, predating the more thoroughly reasoning-optimized Qwen3 generation.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: standard transformer research, building on the original Qwen/Qwen2 line. Downstream: very broadly supported — vLLM, SGLang, Ollama, llama.cpp, and virtually every fine-tuning framework (Axolotl, Unsloth, LLaMA-Factory) support it. Competing: Llama 3, Gemma, Mistral at comparable sizes. Superseded by: Qwen3 and Alibaba's 2026 Qwen3.5/3.6/3.7 generation, which introduce sparse MoE and substantially expanded language coverage.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install transformers accelerate\n</code></pre>\n<pre><code class=\"language-python\">from transformers import pipeline\n\n# Replace with the specific model checkpoint for this family (see Resources).\npipe = pipeline(\"text-generation\", model=\"&lt;org&gt;/&lt;model-checkpoint&gt;\")\nprint(pipe(\"Explain retrieval augmented generation in one sentence.\", max_new_tokens=64)[0][\"generated_text\"])\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need a mature, broadly-supported open-weight generation with dedicated coding (Qwen2.5-Coder) and math/reasoning (QwQ) variants alongside the general chat models</li>\n<li><strong>Scenario</strong>: you want strong open-weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need a mature, broadly-supported open-weight generation with dedicated coding (Qwen2.5-Coder) and math/reasoning (QwQ) variants alongside the general chat models</li>\n<li>You want strong open-weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You want Alibaba's current frontier line — as of 2026 Alibaba has shipped Qwen3, Qwen3.5, and Qwen3.6/3.7 (hybrid Gated Delta Networks + sparse MoE architecture, 201-language support), which meaningfully outperform Qwen2.5 on reasoning and agentic benchmarks</li>\n<li>You need the efficiency of a sparse MoE architecture — Qwen2.5's mainline models are dense; MoE variants arrived in the Qwen3.5+ generation</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This project entry documents the Qwen2.5 model family's weights, architecture, and generational position (see the enrichment_notes flag about this entry's github_url data-quality issue). For a hosted/managed access path to a current Qwen model, see <a href=\"../../tools/model-layer/qwen-3.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qwen 3</a> in the tools vertical — that entry does not repeat this one's best_for/avoid_if verbatim, since the frames differ: this entry is about the Qwen model family's architecture, the tool entry is about accessing a hosted Qwen model.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/QwenLM/Qwen3\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/QwenLM/Qwen3\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview Alibaba Cloud's open weight model generation released in 2024, spanning general purpose, coding specialized (Qwen2.5 Coder), and reasoning specialized (QwQ) variants across sizes from 0.5B to 72B parameters. Why it's in the Arsenal Alibaba's widely adopted open weight model generation spanning general, coding, and reasoning specialized variants. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the general chat models. See Strengths / Limitations below before adopting it. Architecture A dense decoder only transformer family (no MoE in the mainline Qwen2.5 sizes) with dedicated post training branches: Qwen2.5 Coder for code generation and QwQ as an early reasoning focused variant using extended chain of thought training, predating the more thoroughly reasoning optimized Qwen3 generation. Ecosystem Position Upstream: standard transformer research, building on the original Qwen/Qwen2 line. Downstream: very broadly supported — vLLM, SGLang, Ollama, llama.cpp, and virtually every fine tuning framework (Axolotl, Unsloth, LLaMA Factory) support it. Competing: Llama 3, Gemma, Mistral at comparable sizes. Superseded by: Qwen3 and Alibaba's 2026 Qwen3.5/3.6/3.7 generation, which introduce sparse MoE and substantially expanded language coverage. Getting Started Key Use Cases 1. Scenario : you need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the general chat models 2. Scenario : you want strong open weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record Strengths You need a mature, broadly supported open weight generation with dedicated coding (Qwen2.5 Coder) and math/reasoning (QwQ) variants alongside the general chat models You want strong open weight performance across a very wide range of sizes (0.5B to 72B) with proven production track record Limitations You want Alibaba's current frontier line — as of 2026 Alibaba has shipped Qwen3, Qwen3.5, and Qwen3.6/3.7 (hybrid Gated Delta Networks + sparse MoE architecture, 201 language support), which meaningfully outperform Qwen2.5 on reasoning and agentic benchmarks You need the efficiency of a sparse MoE architecture — Qwen2.5's mainline models are dense; MoE variants arrived in the Qwen3.5+ generation Relation to the Arsenal This project entry documents the Qwen2.5 model family's weights, architecture, and generational position (see the enrichment notes flag about this entry's github url data quality issue). For a hosted/managed access path to a current Qwen model, see Qwen 3 in the tools vertical — that entry does not repeat this one's best for/avoid if verbatim, since the frames differ: this entry is about the Qwen model family's architecture, the tool entry is about accessing a hosted Qwen model. Resources GitHub Documentation"
+    },
+    {
+      "id": "qwen3-vl",
+      "name": "Qwen3-VL",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "multimodal",
+      "subcategory": "open-source-models",
+      "description": "Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship",
+      "github_url": "https://github.com/QwenLM/Qwen3-VL",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "QwenLM (Alibaba)",
+      "tags": [
+        "multimodal",
+        "llm",
+        "agents"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 19555,
+      "github_stars_last_30d": 0,
+      "trending_score": 55,
+      "last_commit": "2026-01-30",
+      "docs_url": "https://github.com/QwenLM/Qwen3-VL",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "vision",
+        "language",
+        "multimodal"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "build-on-top"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The open-weights VLM to beat: the Qwen-VL lineage set the open standard for document/OCR understanding and GUI grounding (locating UI elements from instructions), which is why it powers most open computer-use and document-AI stacks — the vision-side counterpart to Qwen's dominance in open text models"
+      ],
+      "best_for": [
+        "Document AI and OCR-heavy workloads — parsing scans, tables, charts, and multilingual text where the Qwen-VL family has consistently led open benchmarks",
+        "Vision-grounded agents: GUI element grounding and video understanding make it the default open model behind browser/computer-use agents that need to point at pixels"
+      ],
+      "avoid_if": [
+        "Text-only workloads — the VL variants trade some pure-text quality against Qwen3 text models of equal size; use the text family unless you need vision",
+        "You need frontier-level visual reasoning with guarantees — closed models (Gemini/GPT-4o class) still lead on the hardest visual-reasoning evals; validate on your task first"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [
+        "vllm",
+        "skyvern"
+      ],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Stars (19.6k), Apache-2.0, last push 2026-01-30 verified via the GitHub API on 2026-07-08 — the repo is the model-family cookbook/release hub; weights update on the Hub. Benchmark-leadership claims are stated as the family's track record, not per-checkpoint numbers.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/QwenLM/Qwen3-VL",
+          "date": "2026-07-08",
+          "description": "19.6k stars; Alibaba's flagship open VLM family"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/qwen3-vl.md",
+      "url": "content/projects/foundation-models/qwen3-vl",
+      "slug": "qwen3-vl",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "Qwen3-VL",
+      "summary": "Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 410,
+      "body_html": "<h2>Overview</h2>\n<p>Qwen3-VL is Alibaba's open vision-language family: models from edge-deployable to flagship scale (dense and MoE variants) that handle images, multi-image inputs, video, and long documents, with signature strengths in multilingual OCR, structured-document parsing (tables/charts/formulas), and GUI grounding — returning coordinates for UI elements described in text. Weights ship under Apache-2.0 on Hugging Face/ModelScope; the repo is the family's cookbook and integration hub.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Open multimodality has a clear leader lineage, and this is it: when open-source computer-use agents, document-AI pipelines, or VLM fine-tuning projects pick a base model, Qwen-VL is the default the way Llama once was for text. The catalog's agent entries that \"see\" (browser agents, GUI automation) mostly stand on exactly the grounding capability this family made openly available.</p>\n<h2>Architecture</h2>\n<p>A vision encoder feeding a Qwen3 language backbone via a vision-language adapter, with native dynamic resolution (images processed at varying token budgets rather than fixed crops), interleaved image-text-video packing for long-context multimodal inputs, and grounding heads that emit bounding boxes/points as text tokens — the mechanism behind GUI-element localization.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: Qwen3 text backbones. Downstream: computer-use agents (<code>skyvern</code>-class and open computer-use stacks), document-AI pipelines, VLM fine-tunes via <code>ms-swift</code>/LLaMA-Factory. Competing: InternVL, Llama-vision variants, and closed frontier VLMs. Serving: first-class support in <code>vllm</code>, SGLang, and llama.cpp-ecosystem quantizations.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">from transformers import AutoModelForImageTextToText, AutoProcessor\nmodel = AutoModelForImageTextToText.from_pretrained(\"Qwen/Qwen3-VL-8B-Instruct\", torch_dtype=\"auto\", device_map=\"auto\")\nprocessor = AutoProcessor.from_pretrained(\"Qwen/Qwen3-VL-8B-Instruct\")\n# messages may mix {\"type\":\"image\"} / {\"type\":\"video\"} / {\"type\":\"text\"} content parts\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: production document understanding — invoices, scans, multilingual forms — where open weights are required for privacy or cost</li>\n<li><strong>Scenario</strong>: the perception model inside a GUI/browser agent: describe a target (\"the blue submit button\"), receive grounded coordinates</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Best-in-open document/OCR and GUI-grounding track record — capability niches with direct production demand, not leaderboard trivia</li>\n<li>Full size ladder under Apache-2.0 with strong serving-stack support makes deployment-tier matching easy</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Repo cadence is release-driven (last push 2026-01); day-to-day activity lives in Hub weights and serving integrations — track releases, not commits</li>\n<li>Like all open VLMs, hardest visual-reasoning tasks still favor closed frontier models; grounding quality degrades on dense/cluttered UIs</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The open VLM anchor among foundation models — the perception layer for <code>skyvern</code>-class agent entries, fine-tunable via <code>ms-swift</code> (its first-party framework), served by <code>vllm</code>; complements <code>clip</code> (embedding-level vision) and <code>sam2</code> (segmentation).</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/QwenLM/Qwen3-VL\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/Qwen\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Model weights</a></li>\n</ul>\n",
+      "body_text": "Overview Qwen3 VL is Alibaba's open vision language family: models from edge deployable to flagship scale (dense and MoE variants) that handle images, multi image inputs, video, and long documents, with signature strengths in multilingual OCR, structured document parsing (tables/charts/formulas), and GUI grounding — returning coordinates for UI elements described in text. Weights ship under Apache 2.0 on Hugging Face/ModelScope; the repo is the family's cookbook and integration hub. Why it's in the Arsenal Open multimodality has a clear leader lineage, and this is it: when open source computer use agents, document AI pipelines, or VLM fine tuning projects pick a base model, Qwen VL is the default the way Llama once was for text. The catalog's agent entries that \"see\" (browser agents, GUI automation) mostly stand on exactly the grounding capability this family made openly available. Architecture A vision encoder feeding a Qwen3 language backbone via a vision language adapter, with native dynamic resolution (images processed at varying token budgets rather than fixed crops), interleaved image text video packing for long context multimodal inputs, and grounding heads that emit bounding boxes/points as text tokens — the mechanism behind GUI element localization. Ecosystem Position Upstream: Qwen3 text backbones. Downstream: computer use agents (skyvern class and open computer use stacks), document AI pipelines, VLM fine tunes via ms swift/LLaMA Factory. Competing: InternVL, Llama vision variants, and closed frontier VLMs. Serving: first class support in vllm, SGLang, and llama.cpp ecosystem quantizations. Getting Started Key Use Cases 1. Scenario : production document understanding — invoices, scans, multilingual forms — where open weights are required for privacy or cost 2. Scenario : the perception model inside a GUI/browser agent: describe a target (\"the blue submit button\"), receive grounded coordinates Strengths Best in open document/OCR and GUI grounding track record — capability niches with direct production demand, not leaderboard trivia Full size ladder under Apache 2.0 with strong serving stack support makes deployment tier matching easy Limitations Repo cadence is release driven (last push 2026 01); day to day activity lives in Hub weights and serving integrations — track releases, not commits Like all open VLMs, hardest visual reasoning tasks still favor closed frontier models; grounding quality degrades on dense/cluttered UIs Relation to the Arsenal The open VLM anchor among foundation models — the perception layer for skyvern class agent entries, fine tunable via ms swift (its first party framework), served by vllm; complements clip (embedding level vision) and sam2 (segmentation). Resources GitHub Model weights"
     },
     {
       "id": "ragas-rag-evaluation",
