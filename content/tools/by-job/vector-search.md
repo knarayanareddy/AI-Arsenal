@@ -193,7 +193,12 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [FAISS](../data-ingestion/faiss.md) | data ingestion | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
+| [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | freemium | Yes | Yes | Yes | rust | recommended |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | freemium | Yes | No | No | python, typescript | recommended |
+| [RAGatouille](../data-ingestion/ragatouille.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
+| [Sentence Transformers](../model-layer/sentence-transformers.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
+| [Typesense](../data-ingestion/typesense.md) | data ingestion | freemium | Yes | Yes | Yes | cpp | solid-choice |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases
