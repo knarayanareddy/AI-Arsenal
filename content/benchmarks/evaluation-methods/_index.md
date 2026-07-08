@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [AlpacaEval 2.0 (Length-Controlled)](./alpacaeval.md)
 - [Arena-Hard-Auto](./arena-hard.md)
 - [LLM-as-a-Judge](./llm-as-a-judge.md)
 - [MT-Bench](./mt-bench.md)
@@ -21,6 +22,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [AlpacaEval 2.0 (Length-Controlled)](./alpacaeval.md) — 
 - [Arena-Hard-Auto](./arena-hard.md) — 
 - [LLM-as-a-Judge](./llm-as-a-judge.md) — 
 - [MT-Bench](./mt-bench.md) — 

@@ -14,6 +14,7 @@
 - [MS MARCO](./msmarco.md)
 - [Natural Questions](./natural-questions.md)
 - [RGB](./rgb.md)
+- [RULER](./ruler.md)
 
 ## Most Popular
 
@@ -25,3 +26,4 @@ _No star-tracked entries yet._
 - [MS MARCO](./msmarco.md) — 
 - [Natural Questions](./natural-questions.md) — 
 - [RGB](./rgb.md) — 
+- [RULER](./ruler.md) — 
