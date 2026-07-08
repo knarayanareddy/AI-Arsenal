@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:42:15.375Z",
+  "generated_at": "2026-07-08T20:02:48.876Z",
   "tags": [
     {
       "id": "agents",
@@ -567,12 +567,12 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 40,
+      "count": 43,
       "types": {
         "paper": 11,
         "guide": 4,
         "tip": 11,
-        "tool": 6,
+        "tool": 9,
         "architecture": 2,
         "project": 6
       },
@@ -603,6 +603,8 @@
         "kwon-2023-pagedattention",
         "leviathan-2022-speculative-decoding",
         "lin-2023-awq",
+        "lorax",
+        "megatron-lm",
         "mistral-models",
         "phi-4",
         "pin-model-and-runtime-versions",
@@ -611,6 +613,7 @@
         "skypilot",
         "start-with-lora-before-full-fine-tuning",
         "tensorrt-llm",
+        "text-embeddings-inference",
         "tokenization",
         "track-cost-per-feature",
         "track-cost-per-successful-outcome",
@@ -622,13 +625,13 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 36,
+      "count": 38,
       "types": {
         "tip": 8,
         "guide": 2,
         "architecture": 4,
         "project": 11,
-        "tool": 5,
+        "tool": 7,
         "person": 1,
         "paper": 5
       },
@@ -662,10 +665,12 @@
         "radford-2021-clip",
         "reimers-2019-sentence-bert",
         "sentence-transformers",
+        "text-embeddings-inference",
         "txtai",
         "use-metadata-filters-before-similarity-search",
         "use-query-rewriting-for-vague-questions",
         "use-semantic-cache-for-repeated-questions",
+        "vespa",
         "voyage-ai",
         "weaviate",
         "zvec"
@@ -674,7 +679,7 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 130,
+      "count": 131,
       "types": {
         "digest": 1,
         "tip": 26,
@@ -682,7 +687,7 @@
         "guide": 10,
         "project": 13,
         "benchmark": 30,
-        "tool": 23,
+        "tool": 24,
         "person": 9,
         "paper": 11,
         "architecture": 6
@@ -782,6 +787,7 @@
         "promptfoo",
         "pyrit",
         "rag-vs-fine-tuning",
+        "ragas",
         "ragas-rag-evaluation",
         "research-platform",
         "rgb",
@@ -836,9 +842,9 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 27,
+      "count": 28,
       "types": {
-        "tool": 10,
+        "tool": 11,
         "paper": 2,
         "tip": 8,
         "guide": 2,
@@ -857,6 +863,7 @@
         "inspect-your-training-data-by-hand",
         "litgpt",
         "llamafactory",
+        "lorax",
         "match-training-and-inference-prompt-formats",
         "ml-engineer-role",
         "mlx-lm",
@@ -932,11 +939,11 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 23,
+      "count": 24,
       "types": {
         "tip": 5,
         "architecture": 1,
-        "tool": 9,
+        "tool": 10,
         "benchmark": 4,
         "paper": 2,
         "project": 1,
@@ -955,6 +962,7 @@
         "jailbreakbench",
         "keep-instructions-outside-retrieved-context",
         "llamaguard",
+        "llm-guard",
         "nemo-guardrails",
         "openai-agents-sdk",
         "portkey",
@@ -988,10 +996,10 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 86,
+      "count": 89,
       "types": {
         "tip": 25,
-        "tool": 20,
+        "tool": 23,
         "architecture": 7,
         "paper": 7,
         "project": 20,
@@ -1039,6 +1047,7 @@
         "lm-studio",
         "lmdeploy",
         "local-first",
+        "lorax",
         "match-context-length-to-ram",
         "match-training-and-inference-prompt-formats",
         "measure-first-token-latency",
@@ -1062,6 +1071,7 @@
         "quantization",
         "qwen",
         "qwen-2-5",
+        "ray",
         "ray-serve",
         "replicate",
         "research-platform",
@@ -1073,6 +1083,7 @@
         "starter-local-llm-chat",
         "stream-user-facing-responses",
         "tensorrt-llm",
+        "text-embeddings-inference",
         "text-generation-inference",
         "together-ai",
         "tokenization",
@@ -1135,11 +1146,11 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 230,
+      "count": 231,
       "types": {
         "tip": 31,
         "guide": 44,
-        "tool": 57,
+        "tool": 58,
         "person": 15,
         "benchmark": 9,
         "project": 40,
@@ -1308,6 +1319,7 @@
         "qwen-2-5",
         "qwen-3",
         "raffel-2019-t5",
+        "ragas",
         "rank-context-by-expected-usefulness",
         "rebuff",
         "repomix",
@@ -1473,12 +1485,12 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 30,
+      "count": 32,
       "types": {
         "tip": 8,
         "person": 1,
         "architecture": 1,
-        "tool": 12,
+        "tool": 14,
         "project": 6,
         "guide": 2
       },
@@ -1488,6 +1500,7 @@
         "checkpoint-agent-state-after-each-tool-call",
         "chip-huyen",
         "choose-observability-tool",
+        "clearml",
         "conan",
         "dagster",
         "deepchecks",
@@ -1495,6 +1508,7 @@
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
         "dvc",
+        "elasticsearch",
         "evals-in-production",
         "evidently",
         "helicone",
@@ -1654,10 +1668,10 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 43,
+      "count": 44,
       "types": {
         "guide": 2,
-        "tool": 19,
+        "tool": 20,
         "project": 18,
         "architecture": 3,
         "tip": 1
@@ -1698,6 +1712,7 @@
         "orchestraml",
         "prefect",
         "qursor",
+        "ray",
         "ray-serve",
         "seaticket",
         "semantic-kernel",
@@ -1787,12 +1802,12 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 104,
+      "count": 107,
       "types": {
         "tip": 19,
         "build-example": 5,
         "guide": 4,
-        "tool": 19,
+        "tool": 22,
         "project": 31,
         "benchmark": 4,
         "architecture": 7,
@@ -1828,6 +1843,7 @@
         "docling",
         "dspy",
         "edge-2024-graphrag",
+        "elasticsearch",
         "embeddings",
         "es-2023-ragas",
         "eugene-yan",
@@ -1879,6 +1895,7 @@
         "qdrant",
         "rag-chunk-overlap-tuning",
         "rag-vs-fine-tuning",
+        "ragas",
         "ragas-rag-evaluation",
         "ragatouille",
         "ragflow",
@@ -1901,6 +1918,7 @@
         "use-parent-child-chunking-for-long-documents",
         "use-query-rewriting-for-vague-questions",
         "use-sentence-windows-for-dense-manuals",
+        "vespa",
         "voyage-ai",
         "weaviate",
         "zvec"
@@ -1982,11 +2000,11 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 84,
+      "count": 86,
       "types": {
         "tip": 20,
         "build-example": 4,
-        "tool": 16,
+        "tool": 18,
         "benchmark": 4,
         "guide": 3,
         "architecture": 6,
@@ -2015,6 +2033,7 @@
         "detect-multi-hop-questions-explicitly",
         "docling",
         "edge-2024-graphrag",
+        "elasticsearch",
         "embeddings",
         "evaluate-embedding-models-before-rechunking",
         "faiss",
@@ -2075,6 +2094,7 @@
         "use-parent-child-chunking-for-long-documents",
         "use-query-rewriting-for-vague-questions",
         "use-sentence-windows-for-dense-manuals",
+        "vespa",
         "voyage-ai",
         "weaviate",
         "zep",
@@ -2123,9 +2143,9 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 37,
+      "count": 38,
       "types": {
-        "tool": 14,
+        "tool": 15,
         "tip": 12,
         "person": 3,
         "architecture": 2,
@@ -2153,6 +2173,7 @@
         "jailbreakbench",
         "keep-a-kill-switch-for-agent-actions",
         "llamaguard",
+        "llm-guard",
         "nemo-guardrails",
         "pyrit",
         "rebuff",
@@ -2176,11 +2197,11 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 34,
+      "count": 42,
       "types": {
         "project": 13,
         "architecture": 5,
-        "tool": 11,
+        "tool": 19,
         "paper": 1,
         "tip": 4
       },
@@ -2190,8 +2211,10 @@
         "choose-embedding-model",
         "choose-serving-stack",
         "choose-vector-db",
+        "clearml",
         "comfyui",
         "cubesandbox",
+        "elasticsearch",
         "gemma-team-2026-gemma4",
         "helicone",
         "jan",
@@ -2201,7 +2224,10 @@
         "label-studio",
         "langfuse",
         "librechat",
+        "llm-guard",
         "local-first",
+        "lorax",
+        "megatron-lm",
         "meilisearch",
         "nvidia-nim",
         "ollama",
@@ -2212,11 +2238,14 @@
         "pgvector",
         "prefer-gguf-for-llama-cpp-workflows",
         "qdrant",
+        "ray",
         "supabase",
         "tabby-ml",
+        "text-embeddings-inference",
         "triton-inference-server",
         "typesense",
         "use-local-models-for-sensitive-prototyping",
+        "vespa",
         "warm-up-model-servers-before-routing-traffic",
         "weaviate"
       ]
@@ -2457,12 +2486,12 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 32,
+      "count": 35,
       "types": {
         "guide": 4,
         "person": 3,
         "paper": 19,
-        "tool": 3,
+        "tool": 6,
         "project": 3
       },
       "entries": [
@@ -2470,6 +2499,7 @@
         "andrew-ng",
         "bai-2022-constitutional-ai",
         "brown-2020-gpt3",
+        "clearml",
         "cobbe-2021-gsm8k",
         "deepseek-ai-2024-deepseek-v3",
         "deepseek-ai-2025-r1",
@@ -2485,12 +2515,14 @@
         "liang-2026-mipi",
         "litgpt",
         "llm-researcher-role",
+        "megatron-lm",
         "ml-engineer-role",
         "nanogpt",
         "olmo",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
         "raffel-2019-t5",
+        "ray",
         "schulman-2017-ppo",
         "sebastian-raschka",
         "shao-2024-deepseekmath",
@@ -2503,11 +2535,12 @@
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 14,
+      "count": 15,
       "types": {
         "paper": 8,
         "person": 4,
-        "guide": 2
+        "guide": 2,
+        "tool": 1
       },
       "entries": [
         "ainslie-2023-gqa",
@@ -2518,6 +2551,7 @@
         "jay-alammar",
         "jiang-2024-mixtral",
         "leviathan-2022-speculative-decoding",
+        "megatron-lm",
         "noam-shazeer",
         "radford-2022-whisper",
         "su-2021-rope",

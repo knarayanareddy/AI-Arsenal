@@ -16,7 +16,7 @@
 | [research](./research/) | 70 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-08 |
-| [tools](./tools/) | 189 entries | 2026-07-08 |
+| [tools](./tools/) | 198 entries | 2026-07-08 |
 | [trending](./trending/) | 4 entries | 2026-07-08 |
 
 ## Recently Added
