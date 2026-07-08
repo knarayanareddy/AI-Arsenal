@@ -4,6 +4,7 @@
 
 | ID | Name | Description |
 |---|---|---|
+| `accelerate` | [Hugging Face Accelerate](./model-layer/accelerate.md) | Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes |
 | `addyosmani-agent-skills` | [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) | Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle |
 | `agent-browser-shield` | [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) | Secure AI web browsing by cleaning content and masking PII during agent runs |
 | `agent-reach` | [Agent Reach](./data-ingestion/agent-reach.md) | Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web |
@@ -66,6 +67,7 @@
 | `mlx-lm` | [MLX-LM](./model-layer/mlx-lm.md) | Apple MLX library for running and fine-tuning LLMs on Apple Silicon |
 | `modal` | [Modal](./serving-and-deployment/modal.md) | A serverless platform for deploying Python apps and GPU workloads |
 | `monako-glass` | [Monako Glass](./evaluation-and-observability/monako-glass.md) | Visualize and understand AI model outputs with dynamic Pulse Rings and overlays |
+| `ms-swift` | [ms-swift](./model-layer/ms-swift.md) | ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen |
 | `nemo-guardrails` | [NeMo Guardrails](./evaluation-and-observability/nemo-guardrails.md) | NVIDIA framework for adding programmable guardrails to LLM applications |
 | `olmocr` | [olmOCR](./data-ingestion/olmocr.md) | Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion |
 | `openai-evals` | [OpenAI Evals](./evaluation-and-observability/openai-evals.md) | An open-source framework for evaluating language model behavior |
@@ -82,6 +84,7 @@
 | `promptlayer` | [PromptLayer](./dx-and-tooling/promptlayer.md) | Prompt management and logging platform for versioning, collaboration, and observability |
 | `puppeteer` | [Puppeteer](./data-ingestion/puppeteer.md) | Node.js browser automation library for Chrome and Chromium workflows |
 | `pydantic-ai-tool` | [Pydantic AI](./orchestration/pydantic-ai-tool.md) | Pydantic agent framework focused on typed outputs, tools, and production Python apps |
+| `pytorch-lightning` | [PyTorch Lightning](./model-layer/pytorch-lightning.md) | The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing |
 | `qursor` | [Qursor](./dx-and-tooling/qursor.md) | AI-powered UI context for faster front-end development with agents |
 | `qwen-3` | [Qwen 3](./model-layer/qwen-3.md) | Alibaba open-weight model family with multimodal and coding variants |
 | `railway` | [Railway](./serving-and-deployment/railway.md) | Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes |

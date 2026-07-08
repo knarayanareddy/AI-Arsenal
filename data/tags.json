@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
+  "generated_at": "2026-07-08T18:42:07.741Z",
   "tags": [
     {
       "id": "agents",
@@ -442,11 +442,11 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 22,
+      "count": 25,
       "types": {
         "guide": 4,
         "tip": 9,
-        "project": 4,
+        "project": 7,
         "paper": 4,
         "tool": 1
       },
@@ -454,6 +454,7 @@
         "attention",
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
+        "candle",
         "compress-retrieved-context-before-generation",
         "deepseek-v3-r1",
         "dettmers-2023-qlora",
@@ -462,8 +463,10 @@
         "frantar-2022-gptq",
         "hu-2021-lora",
         "inference-optimization",
+        "ktransformers",
         "leviathan-2022-speculative-decoding",
         "mistral-models",
+        "onnxruntime",
         "phi-4",
         "pin-model-and-runtime-versions",
         "quantization",
@@ -647,14 +650,17 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 12,
+      "count": 16,
       "types": {
-        "tool": 7,
+        "tool": 10,
+        "project": 1,
         "paper": 2,
         "guide": 2,
         "architecture": 1
       },
       "entries": [
+        "accelerate",
+        "alignment-handbook",
         "axolotl",
         "dettmers-2023-qlora",
         "fine-tuning-methods",
@@ -662,8 +668,10 @@
         "llamafactory",
         "ml-engineer-role",
         "mlx-lm",
+        "ms-swift",
         "orchestraml",
         "peft",
+        "pytorch-lightning",
         "rag-vs-fine-tuning",
         "torchtune",
         "unsloth"
@@ -763,12 +771,12 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 59,
+      "count": 65,
       "types": {
         "tip": 21,
         "tool": 6,
+        "project": 23,
         "architecture": 4,
-        "project": 17,
         "guide": 6,
         "paper": 4,
         "build-example": 1
@@ -780,6 +788,7 @@
         "benchmark-with-real-context-lengths",
         "bentoml",
         "cache-stable-system-prompts",
+        "candle",
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
@@ -793,6 +802,7 @@
         "gemma-team-2026-gemma4",
         "hf-inference-endpoints",
         "inference-optimization",
+        "ktransformers",
         "leviathan-2022-speculative-decoding",
         "liang-2026-mipi",
         "llama-3",
@@ -800,15 +810,18 @@
         "llamafile",
         "lmdeploy",
         "local-first",
+        "localai",
         "match-context-length-to-ram",
         "measure-first-token-latency",
         "measure-kv-cache-hit-rate",
         "measure-queue-time-separately",
         "mistral-models",
+        "mistral-rs",
         "ml-engineer",
         "ml-engineer-role",
         "modal",
         "ollama",
+        "onnxruntime",
         "outlines",
         "parallelize-independent-retrieval-calls",
         "phi-cookbook",
@@ -826,6 +839,7 @@
         "starter-local-llm-chat",
         "stream-user-facing-responses",
         "text-generation-inference",
+        "text-generation-webui",
         "tokenization",
         "tune-batch-size-against-tail-latency",
         "use-int8-for-safer-compression",
@@ -881,16 +895,16 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 158,
+      "count": 163,
       "types": {
         "tip": 20,
         "guide": 44,
+        "project": 28,
         "person": 15,
         "benchmark": 9,
         "tool": 33,
         "paper": 9,
         "architecture": 3,
-        "project": 23,
         "build-example": 2
       },
       "entries": [
@@ -899,6 +913,7 @@
         "ai-engineer",
         "ai-engineer-role",
         "alignment-and-rlhf",
+        "alignment-handbook",
         "andrej-karpathy",
         "andrew-ng",
         "arena-hard",
@@ -909,6 +924,7 @@
         "axolotl",
         "azure-ai-studio",
         "brown-2020-gpt3",
+        "candle",
         "chainlit",
         "choose-llm",
         "clem-delangue",
@@ -969,11 +985,13 @@
         "llm-researcher-role",
         "lmdeploy",
         "local-first",
+        "localai",
         "logankilpatrick",
         "madaan-2023-self-refine",
         "memory-management",
         "mesop",
         "mistral-models",
+        "mistral-rs",
         "ml-engineer",
         "mlx-lm",
         "mmlu",
@@ -1031,6 +1049,7 @@
         "structured-output",
         "summarize-repeated-conversation-blocks",
         "text-generation-inference",
+        "text-generation-webui",
         "thomas-wolf",
         "tokenization",
         "torchtune",
@@ -1179,11 +1198,11 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 19,
+      "count": 20,
       "types": {
         "project": 9,
         "paper": 2,
-        "tool": 4,
+        "tool": 5,
         "benchmark": 4
       },
       "entries": [
@@ -1199,6 +1218,7 @@
         "mathvista",
         "mmbench",
         "mmmu",
+        "ms-swift",
         "olmocr",
         "qwen",
         "qwen-3",
@@ -1364,16 +1384,18 @@
     {
       "id": "pytorch",
       "label": "Pytorch",
-      "count": 7,
+      "count": 9,
       "types": {
-        "tool": 4,
+        "tool": 6,
         "person": 2,
         "architecture": 1
       },
       "entries": [
+        "accelerate",
         "axolotl",
         "jeremy-howard",
         "llamafactory",
+        "pytorch-lightning",
         "research-platform",
         "sebastian-raschka",
         "torchtune",
@@ -1383,17 +1405,18 @@
     {
       "id": "quantization",
       "label": "Quantization",
-      "count": 9,
+      "count": 10,
       "types": {
         "tip": 3,
         "paper": 2,
-        "project": 2,
+        "project": 3,
         "guide": 2
       },
       "entries": [
         "choose-int4-only-after-quality-tests",
         "dettmers-2023-qlora",
         "frantar-2022-gptq",
+        "ktransformers",
         "llama-cpp",
         "lmdeploy",
         "ml-engineer-role",
@@ -1644,17 +1667,21 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 7,
+      "count": 9,
       "types": {
         "guide": 1,
+        "project": 1,
         "paper": 5,
+        "tool": 1,
         "person": 1
       },
       "entries": [
         "alignment-and-rlhf",
+        "alignment-handbook",
         "bai-2022-constitutional-ai",
         "deepseek-ai-2025-r1",
         "liang-2026-mipi",
+        "ms-swift",
         "nathan-lambert",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo"
@@ -1724,12 +1751,12 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 18,
+      "count": 22,
       "types": {
         "architecture": 3,
         "tool": 2,
         "paper": 1,
-        "project": 9,
+        "project": 13,
         "tip": 3
       },
       "entries": [
@@ -1742,13 +1769,17 @@
         "label-studio",
         "langfuse",
         "local-first",
+        "localai",
+        "mistral-rs",
         "ollama",
+        "onnxruntime",
         "openlit",
         "openllmetry",
         "pgvector",
         "prefer-gguf-for-llama-cpp-workflows",
         "qdrant",
         "supabase",
+        "text-generation-webui",
         "use-local-models-for-sensitive-prototyping",
         "weaviate"
       ]
@@ -1954,13 +1985,15 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 17,
+      "count": 19,
       "types": {
+        "tool": 2,
         "guide": 4,
         "person": 3,
         "paper": 10
       },
       "entries": [
+        "accelerate",
         "alignment-and-rlhf",
         "andrew-ng",
         "bai-2022-constitutional-ai",
@@ -1975,6 +2008,7 @@
         "llm-researcher-role",
         "ml-engineer-role",
         "ouyang-2022-instructgpt",
+        "pytorch-lightning",
         "rafailov-2023-dpo",
         "sebastian-raschka",
         "yang-2024-qwen25-math"

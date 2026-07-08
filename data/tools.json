@@ -1,8 +1,89 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
-  "count": 104,
+  "generated_at": "2026-07-08T18:42:07.741Z",
+  "count": 107,
   "items": [
+    {
+      "id": "accelerate",
+      "name": "Hugging Face Accelerate",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes",
+      "url": "content/tools/model-layer/accelerate",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0)",
+      "tags": [
+        "training",
+        "fine-tuning",
+        "pytorch"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no usage limits",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/huggingface/accelerate",
+      "docs_url": "https://huggingface.co/docs/accelerate",
+      "github_url": "https://github.com/huggingface/accelerate",
+      "alternatives": [
+        "torchtune",
+        "megatron-lm"
+      ],
+      "integrates_with": [
+        "peft",
+        "axolotl"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You write your own PyTorch training loops and want them portable across single-GPU, multi-GPU, FSDP, and DeepSpeed without maintaining per-backend code paths",
+        "You use the Hugging Face ecosystem — Trainer, TRL, and most fine-tuning frameworks already run on Accelerate underneath, so understanding it pays off when debugging distributed runs"
+      ],
+      "avoid_when": [
+        "You want a full training framework with configs and recipes rather than a thin loop wrapper — Axolotl or LLaMA-Factory sit at that layer",
+        "Your scale demands hand-tuned parallelism (tensor/pipeline) beyond what FSDP/DeepSpeed-via-config express — Megatron-class stacks apply"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The de facto distribution layer under the Hugging Face training stack; the right abstraction when you own the training loop",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/accelerate.md",
+      "slug": "accelerate",
+      "section_path": "content/tools/model-layer",
+      "display_name": "Hugging Face Accelerate",
+      "summary": "Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 492,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Device-agnostic PyTorch training launcher. Open source. Best for making custom training loops portable across hardware and distributed backends.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Accelerate wraps a plain PyTorch training loop in a few lines (<code>accelerator.prepare(...)</code>, <code>accelerator.backward(loss)</code>) and moves all device/distribution concerns into a launch-time config: the same script runs on a laptop CPU, a single GPU, multi-node DDP, FSDP, or DeepSpeed. It also provides big-model utilities (<code>device_map=\"auto\"</code> loading, offloading) used across the HF ecosystem.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Most fine-tuning tooling in this phase (Trainer, TRL, Axolotl, PEFT workflows) runs on Accelerate underneath — it's the distribution substrate of the open training stack, and the tool you drop to when a framework's abstraction leaks. For teams writing their own loops, it's the difference between one codebase and one-per-backend. See Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>One training script across CPU/GPU/multi-GPU/multi-node/TPU, selected by <code>accelerate config</code>, not code</li>\n<li>First-class FSDP and DeepSpeed integration via config files</li>\n<li>Big-model inference utilities: automatic device maps, CPU/disk offload for models larger than one GPU</li>\n<li>Mixed precision (fp16/bf16/fp8) handled by the accelerator object</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The <code>Accelerator</code> object inspects the launch environment and wraps model, optimizer, and dataloaders with the right distributed containers; <code>accelerate launch</code> spawns processes per the saved config. Backend-specific behavior (FSDP wrapping policy, DeepSpeed ZeRO stage) lives in config, keeping the loop code backend-neutral.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install accelerate\naccelerate config   # answer prompts once per machine\naccelerate launch train.py\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a custom fine-tuning loop that must run on a dev GPU today and an 8×A100 node next week without a rewrite</li>\n<li><strong>Scenario</strong>: debugging a distributed run launched by a higher-level framework — the failure surface is usually Accelerate/FSDP/DeepSpeed config</li>\n<li><strong>Scenario</strong>: loading a model too large for one GPU for inference or PEFT training via device maps and offload</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want recipes and YAML-config training rather than owning a loop — use a framework layer instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The minimal-abstraction sweet spot: you keep your PyTorch loop, it owns only devices and distribution</li>\n<li>Battle-tested as the substrate of the HF training ecosystem; distributed bugs are widely documented</li>\n<li>FSDP/DeepSpeed become config choices, making backend comparisons cheap</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not a framework: no recipes, datasets, or method implementations — pair with PEFT/TRL or move up a layer</li>\n<li>Extreme-scale parallelism (tensor/pipeline/expert) is out of scope; Megatron-class tooling applies there</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./megatron-lm.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Megatron-LM</a> and <a href=\"./torchtune.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">torchtune</a> before adopting — they overlap at the distribution layer.</li>\n<li>Underlies <a href=\"./peft.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PEFT</a> and <a href=\"./axolotl.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Axolotl</a> workflows; debugging those often means reading Accelerate config.</li>\n<li>Link this tool from job guides using its canonical ID <code>accelerate</code>.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/docs/accelerate\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://huggingface.co/docs/accelerate\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/huggingface/accelerate\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>9.7k GitHub stars and position as the default launcher beneath the Hugging Face training stack (verified via the GitHub API, 2026-07-08).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "TL;DR: Device agnostic PyTorch training launcher. Open source. Best for making custom training loops portable across hardware and distributed backends. Overview Accelerate wraps a plain PyTorch training loop in a few lines (accelerator.prepare(...), accelerator.backward(loss)) and moves all device/distribution concerns into a launch time config: the same script runs on a laptop CPU, a single GPU, multi node DDP, FSDP, or DeepSpeed. It also provides big model utilities (device map=\"auto\" loading, offloading) used across the HF ecosystem. Why It's in the Arsenal Most fine tuning tooling in this phase (Trainer, TRL, Axolotl, PEFT workflows) runs on Accelerate underneath — it's the distribution substrate of the open training stack, and the tool you drop to when a framework's abstraction leaks. For teams writing their own loops, it's the difference between one codebase and one per backend. See Strengths / Limitations below before adopting it. Key Features One training script across CPU/GPU/multi GPU/multi node/TPU, selected by accelerate config, not code First class FSDP and DeepSpeed integration via config files Big model inference utilities: automatic device maps, CPU/disk offload for models larger than one GPU Mixed precision (fp16/bf16/fp8) handled by the accelerator object Architecture / How It Works The Accelerator object inspects the launch environment and wraps model, optimizer, and dataloaders with the right distributed containers; accelerate launch spawns processes per the saved config. Backend specific behavior (FSDP wrapping policy, DeepSpeed ZeRO stage) lives in config, keeping the loop code backend neutral. Getting Started Use Cases 1. Scenario : a custom fine tuning loop that must run on a dev GPU today and an 8×A100 node next week without a rewrite 2. Scenario : debugging a distributed run launched by a higher level framework — the failure surface is usually Accelerate/FSDP/DeepSpeed config 3. Scenario : loading a model too large for one GPU for inference or PEFT training via device maps and offload 4. Scenario where this is NOT the right fit : you want recipes and YAML config training rather than owning a loop — use a framework layer instead Strengths The minimal abstraction sweet spot: you keep your PyTorch loop, it owns only devices and distribution Battle tested as the substrate of the HF training ecosystem; distributed bugs are widely documented FSDP/DeepSpeed become config choices, making backend comparisons cheap Limitations / When NOT to Use Not a framework: no recipes, datasets, or method implementations — pair with PEFT/TRL or move up a layer Extreme scale parallelism (tensor/pipeline/expert) is out of scope; Megatron class tooling applies there Integration Patterns Compare against Megatron LM and torchtune before adopting — they overlap at the distribution layer. Underlies PEFT and Axolotl workflows; debugging those often means reading Accelerate config. Link this tool from job guides using its canonical ID accelerate. Resources Primary site Documentation Source Buzz & Reception 9.7k GitHub stars and position as the default launcher beneath the Hugging Face training stack (verified via the GitHub API, 2026 07 08). Last reviewed: 2026 07 08 by @maintainer"
+    },
     {
       "id": "addyosmani-agent-skills",
       "name": "Agent Skills (Addy Osmani)",
@@ -5044,6 +5125,87 @@
       "body_text": "Overview A closed source tool for visually inspecting and understanding model output patterns through dynamic overlays, aimed at qualitative debugging rather than automated metric scoring. Why It's in the Arsenal Monako Glass earns a place in the Arsenal because it directly addresses a recurring decision point: you want a visual way to inspect and understand model output patterns rather than reading raw logs. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Visual overlay based output inspection Aimed at qualitative pattern discovery, not automated scoring Architecture / How It Works Model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure. Getting Started Use Cases 1. Scenario : you want a visual way to inspect and understand model output patterns rather than reading raw logs 2. Scenario : you're debugging qualitative output drift and a visual overlay tool would speed up investigation 3. Scenario where this is NOT the right fit : you need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens) — evaluate an alternative instead Strengths You want a visual way to inspect and understand model output patterns rather than reading raw logs You're debugging qualitative output drift and a visual overlay tool would speed up investigation Limitations / When NOT to Use You need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens) You need an open source or self hostable observability tool Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Monako Glass Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "ms-swift",
+      "name": "ms-swift",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen",
+      "url": "content/tools/model-layer/ms-swift",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0)",
+      "tags": [
+        "fine-tuning",
+        "rlhf",
+        "multimodal"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no usage limits",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/modelscope/ms-swift",
+      "docs_url": "https://swift.readthedocs.io/en/latest/",
+      "github_url": "https://github.com/modelscope/ms-swift",
+      "alternatives": [
+        "llamafactory",
+        "axolotl",
+        "unsloth"
+      ],
+      "integrates_with": [
+        "peft"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You fine-tune Qwen-family or other Chinese-ecosystem models — ms-swift is Alibaba/ModelScope's own framework and lands day-one support for those releases before community frameworks do",
+        "You need multimodal fine-tuning (vision-language, audio) or RLHF methods (DPO, GRPO, PPO) in the same framework as your SFT runs — its coverage there is broader than most alternatives"
+      ],
+      "avoid_when": [
+        "Your models are mainstream Llama-family and your team is English-docs-first — LLaMA-Factory and Axolotl have larger Western communities and more battle-tested configs for that path",
+        "You want a thin library rather than a full CLI framework — PEFT plus your own loop is less to learn"
+      ],
+      "version_tracked": null,
+      "verdict": "solid-choice",
+      "verdict_rationale": "Broadest model/method coverage in open fine-tuning and the definitive choice for Qwen-family work; smaller Western community than LLaMA-Factory or Axolotl",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/ms-swift.md",
+      "slug": "ms-swift",
+      "section_path": "content/tools/model-layer",
+      "display_name": "ms-swift",
+      "summary": "ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 537,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> ModelScope's fine-tuning/RLHF framework with the broadest model coverage in the space. Open source. Best for Qwen-family and multimodal fine-tuning.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>ms-swift (Scalable lightWeight Infrastructure for Fine-Tuning) is ModelScope's training framework: SFT, DPO/GRPO/PPO-style RLHF, and pretraining across 500+ text LLMs and 200+ multimodal models, with LoRA/QLoRA and quantized-training support, a CLI and web UI, and export paths to GGUF/AWQ. Backed by Alibaba's ModelScope, it's effectively the first-party training stack for the Qwen ecosystem.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The fine-tuning phase already covers the Western defaults (Axolotl, LLaMA-Factory, Unsloth, torchtune); ms-swift fills the coverage they miss — day-one Qwen-family support and unusually broad multimodal + RLHF method coverage in a single framework. As Qwen checkpoints anchor much of open-weight practice, the framework that tracks them fastest earns a slot. See Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>500+ LLMs and 200+ multimodal models supported, with fastest coverage of Qwen releases</li>\n<li>Full method spread: SFT, DPO, GRPO, PPO, KTO, pretraining, and quantized training (QLoRA, GPTQ/AWQ-aware)</li>\n<li>CLI-driven with a Gradio web UI; Megatron-backend option for large multi-node runs</li>\n<li>Export to deployment formats (GGUF, AWQ) and direct ModelScope/HF hub integration</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>A configuration/CLI layer over Transformers and PEFT (with an optional Megatron backend for large runs): <code>swift sft</code>/<code>swift rlhf</code> commands assemble model, template, dataset, and method from flags or config files; chat-template handling per model family is built in, which is where its day-one model support materially lives.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install ms-swift\nswift sft --model Qwen/Qwen2.5-7B-Instruct --dataset my_data.jsonl --train_type lora\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: LoRA/QLoRA fine-tuning of a just-released Qwen model the week it ships, before other frameworks add its template</li>\n<li><strong>Scenario</strong>: vision-language model fine-tuning (Qwen-VL class) where most text-first frameworks have thin or no support</li>\n<li><strong>Scenario</strong>: running SFT then DPO/GRPO in one framework without stitching TRL onto a separate SFT stack</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: mainstream Llama fine-tuning with an English-first team — the larger communities around LLaMA-Factory/Axolotl reduce friction</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Widest model-coverage matrix in open fine-tuning, with first-party speed on the Qwen family — a structural advantage, not a feature</li>\n<li>SFT + RLHF + multimodal in one framework removes the usual multi-tool stitching</li>\n<li>Active org backing (ModelScope/Alibaba) with high release cadence (14.7k stars, daily commits as of 2026-07-08)</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Documentation and community discussion skew Chinese-first; English docs exist but lag — expect more self-service debugging for Western teams</li>\n<li>Full-framework abstraction: when a run misbehaves, you're debugging swift's template/config layers, not your own loop</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./llamafactory.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LLaMA-Factory</a>, <a href=\"./axolotl.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Axolotl</a>, and <a href=\"./unsloth.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Unsloth</a> before adopting — they solve the same job in this phase.</li>\n<li>Builds on <a href=\"./peft.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PEFT</a> for adapter methods; exports feed llama.cpp/vLLM-style serving.</li>\n<li>Link this tool from job guides using its canonical ID <code>ms-swift</code>.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/modelscope/ms-swift\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://swift.readthedocs.io/en/latest/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/modelscope/ms-swift\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>14.7k GitHub stars, Apache-2.0, daily commit activity verified via the GitHub API on 2026-07-08; the reference framework in Qwen model cards' fine-tuning instructions.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "TL;DR: ModelScope's fine tuning/RLHF framework with the broadest model coverage in the space. Open source. Best for Qwen family and multimodal fine tuning. Overview ms swift (Scalable lightWeight Infrastructure for Fine Tuning) is ModelScope's training framework: SFT, DPO/GRPO/PPO style RLHF, and pretraining across 500+ text LLMs and 200+ multimodal models, with LoRA/QLoRA and quantized training support, a CLI and web UI, and export paths to GGUF/AWQ. Backed by Alibaba's ModelScope, it's effectively the first party training stack for the Qwen ecosystem. Why It's in the Arsenal The fine tuning phase already covers the Western defaults (Axolotl, LLaMA Factory, Unsloth, torchtune); ms swift fills the coverage they miss — day one Qwen family support and unusually broad multimodal + RLHF method coverage in a single framework. As Qwen checkpoints anchor much of open weight practice, the framework that tracks them fastest earns a slot. See Strengths / Limitations below before adopting it. Key Features 500+ LLMs and 200+ multimodal models supported, with fastest coverage of Qwen releases Full method spread: SFT, DPO, GRPO, PPO, KTO, pretraining, and quantized training (QLoRA, GPTQ/AWQ aware) CLI driven with a Gradio web UI; Megatron backend option for large multi node runs Export to deployment formats (GGUF, AWQ) and direct ModelScope/HF hub integration Architecture / How It Works A configuration/CLI layer over Transformers and PEFT (with an optional Megatron backend for large runs): swift sft/swift rlhf commands assemble model, template, dataset, and method from flags or config files; chat template handling per model family is built in, which is where its day one model support materially lives. Getting Started Use Cases 1. Scenario : LoRA/QLoRA fine tuning of a just released Qwen model the week it ships, before other frameworks add its template 2. Scenario : vision language model fine tuning (Qwen VL class) where most text first frameworks have thin or no support 3. Scenario : running SFT then DPO/GRPO in one framework without stitching TRL onto a separate SFT stack 4. Scenario where this is NOT the right fit : mainstream Llama fine tuning with an English first team — the larger communities around LLaMA Factory/Axolotl reduce friction Strengths Widest model coverage matrix in open fine tuning, with first party speed on the Qwen family — a structural advantage, not a feature SFT + RLHF + multimodal in one framework removes the usual multi tool stitching Active org backing (ModelScope/Alibaba) with high release cadence (14.7k stars, daily commits as of 2026 07 08) Limitations / When NOT to Use Documentation and community discussion skew Chinese first; English docs exist but lag — expect more self service debugging for Western teams Full framework abstraction: when a run misbehaves, you're debugging swift's template/config layers, not your own loop Integration Patterns Compare against LLaMA Factory, Axolotl, and Unsloth before adopting — they solve the same job in this phase. Builds on PEFT for adapter methods; exports feed llama.cpp/vLLM style serving. Link this tool from job guides using its canonical ID ms swift. Resources Primary site Documentation Source Buzz & Reception 14.7k GitHub stars, Apache 2.0, daily commit activity verified via the GitHub API on 2026 07 08; the reference framework in Qwen model cards' fine tuning instructions. Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
       "id": "nemo-guardrails",
       "name": "NeMo Guardrails",
       "type": "tool",
@@ -6319,6 +6481,84 @@
       "word_count": 403,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Pydantic agent framework focused on typed outputs, tools, and production Python apps. Open source or free to start. Best for typed Python agent applications.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>A Python agent framework from the Pydantic team that treats typed, validated outputs as a first-class part of agent design, aimed at teams already using FastAPI/Pydantic conventions.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Pydantic AI earns a place in the Arsenal because it directly addresses a recurring decision point: you want an agent framework that treats typed, validated outputs as a first-class citizen, not an afterthought. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Pydantic-native typed outputs and tool definitions</li>\n<li>Dependency-injection style context passing</li>\n<li>Lightweight compared to graph-based agent frameworks</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Agents are defined with typed input/output models and tool functions; the framework validates model outputs against the declared schema and retries on mismatch.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install pydantic-ai\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want an agent framework that treats typed, validated outputs as a first-class citizen, not an afterthought</li>\n<li><strong>Scenario</strong>: your team already uses Pydantic and FastAPI and wants an agent layer that fits the same mental model</li>\n<li><strong>Scenario</strong>: you need a lightweight, Python-native alternative to heavier graph-based agent frameworks</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need complex multi-agent graph orchestration with durable checkpointing (prefer LangGraph) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want an agent framework that treats typed, validated outputs as a first-class citizen, not an afterthought</li>\n<li>Your team already uses Pydantic and FastAPI and wants an agent layer that fits the same mental model</li>\n<li>You need a lightweight, Python-native alternative to heavier graph-based agent frameworks</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need complex multi-agent graph orchestration with durable checkpointing (prefer LangGraph)</li>\n<li>Your stack is primarily TypeScript/JavaScript</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"../model-layer/guidance.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Guidance</a>, <a href=\"../dx-and-tooling/instructor.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Instructor</a>, <a href=\"../model-layer/outlines.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Outlines</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>pydantic-ai-tool</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/pydantic/pydantic-ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/pydantic/pydantic-ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/pydantic/pydantic-ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for structured-output, orchestration.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Pydantic agent framework focused on typed outputs, tools, and production Python apps. Open source or free to start. Best for typed Python agent applications. Overview A Python agent framework from the Pydantic team that treats typed, validated outputs as a first class part of agent design, aimed at teams already using FastAPI/Pydantic conventions. Why It's in the Arsenal Pydantic AI earns a place in the Arsenal because it directly addresses a recurring decision point: you want an agent framework that treats typed, validated outputs as a first class citizen, not an afterthought. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Pydantic native typed outputs and tool definitions Dependency injection style context passing Lightweight compared to graph based agent frameworks Architecture / How It Works Agents are defined with typed input/output models and tool functions; the framework validates model outputs against the declared schema and retries on mismatch. Getting Started Use Cases 1. Scenario : you want an agent framework that treats typed, validated outputs as a first class citizen, not an afterthought 2. Scenario : your team already uses Pydantic and FastAPI and wants an agent layer that fits the same mental model 3. Scenario : you need a lightweight, Python native alternative to heavier graph based agent frameworks 4. Scenario where this is NOT the right fit : you need complex multi agent graph orchestration with durable checkpointing (prefer LangGraph) — evaluate an alternative instead Strengths You want an agent framework that treats typed, validated outputs as a first class citizen, not an afterthought Your team already uses Pydantic and FastAPI and wants an agent layer that fits the same mental model You need a lightweight, Python native alternative to heavier graph based agent frameworks Limitations / When NOT to Use You need complex multi agent graph orchestration with durable checkpointing (prefer LangGraph) Your stack is primarily TypeScript/JavaScript Integration Patterns Compare against Guidance, Instructor, Outlines before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID pydantic ai tool. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for structured output, orchestration. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "pytorch-lightning",
+      "name": "PyTorch Lightning",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing",
+      "url": "content/tools/model-layer/pytorch-lightning",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0); Lightning AI cloud platform is a separate paid product",
+      "tags": [
+        "training",
+        "pytorch",
+        "fine-tuning"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Framework fully open source; no usage limits",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/Lightning-AI/pytorch-lightning",
+      "docs_url": "https://lightning.ai/docs/pytorch/stable/",
+      "github_url": "https://github.com/Lightning-AI/pytorch-lightning",
+      "alternatives": [
+        "accelerate",
+        "torchtune"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You train custom models (not just LLM fine-tunes) and want engineering discipline — the LightningModule/Trainer split standardizes checkpointing, logging, precision, and multi-GPU across a research team's codebases",
+        "Your training code must scale from laptop debugging to multi-node without rewrites, with mature callbacks (early stopping, checkpointing, profilers) instead of hand-rolled equivalents"
+      ],
+      "avoid_when": [
+        "Your work is exclusively LLM fine-tuning with standard methods — recipe frameworks (Axolotl, LLaMA-Factory, torchtune) encode more domain knowledge per line of your code",
+        "You want zero framework opinion in your loop — Accelerate keeps you closer to raw PyTorch"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The most mature general PyTorch training framework; the right layer for custom-model teams, one layer too general for pure LLM fine-tuning",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/pytorch-lightning.md",
+      "slug": "pytorch-lightning",
+      "section_path": "content/tools/model-layer",
+      "display_name": "PyTorch Lightning",
+      "summary": "The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 516,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> The standard general-purpose PyTorch training framework. Open source. Best for custom-model training discipline; recipe frameworks beat it for pure LLM fine-tuning.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>PyTorch Lightning splits training code into a LightningModule (your model, losses, optimizers — pure PyTorch) and a Trainer that owns everything else: device placement, DDP/FSDP/DeepSpeed strategies, mixed precision, gradient accumulation, checkpointing, and logger integrations. The pitch is \"organize, don't abstract\": research code stays visible while the engineering scaffolding becomes framework-provided and uniform.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Not every model-layer job is an LLM fine-tune: teams training encoders, diffusion models, rankers, and bespoke architectures need training infrastructure, and Lightning is that category's long-standing default (31k stars, a decade of production use). It anchors the general-training end of the phase, complementing the LLM-recipe frameworks. See Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Trainer-managed distribution strategies (DDP, FSDP, DeepSpeed) and precision (bf16/fp16) via arguments, not code</li>\n<li>Callback system: checkpointing, early stopping, LR monitoring, profiling — composable and battle-tested</li>\n<li>Logger integrations (W&amp;B, MLflow, TensorBoard) behind one interface</li>\n<li>Fabric, a lower-level sibling API, for teams wanting Accelerate-style minimalism within the Lightning ecosystem</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The Trainer drives a standardized loop calling your LightningModule hooks (<code>training_step</code>, <code>configure_optimizers</code>, etc.); strategies encapsulate distributed backends, plugins handle precision/cluster environments, and callbacks observe lifecycle events. Determinism, sanity-checking, and resume-from-checkpoint semantics are framework responsibilities.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install lightning\n</code></pre>\n<pre><code class=\"language-python\">import lightning as L\ntrainer = L.Trainer(max_epochs=3, devices=4, strategy=\"fsdp\", precision=\"bf16-mixed\")\ntrainer.fit(MyLightningModule(), datamodule=dm)\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a research team standardizing many custom-model training codebases so any member can run, resume, and scale any project</li>\n<li><strong>Scenario</strong>: training non-LLM deep models (vision, audio, ranking, diffusion) where LLM recipe frameworks don't apply but multi-GPU/precision/checkpointing rigor still does</li>\n<li><strong>Scenario</strong>: scaling a working single-GPU prototype to multi-node FSDP by changing Trainer arguments</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: standard LoRA fine-tuning of an open LLM — recipe frameworks encode the method knowledge you'd otherwise rebuild</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>A decade of hardening: edge cases in resume, precision, and distributed training that DIY loops rediscover are already handled</li>\n<li>Uniform structure across projects is a real team-velocity mechanism, not aesthetics</li>\n<li>Scales down (laptop, <code>fast_dev_run</code>) as well as up (multi-node) — rare among training frameworks</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Hook-based inversion of control: nonstandard training schemes (unusual optimization loops, RL) fight the Trainer's assumptions</li>\n<li>For LLM fine-tuning specifically it knows nothing about templates, PEFT methods, or quantization recipes — you'd reassemble what Axolotl-class tools ship</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./accelerate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Accelerate</a> (thinner) and <a href=\"./torchtune.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">torchtune</a> (LLM-recipe layer) before adopting — the right choice depends on how custom your training is.</li>\n<li>Logs to <a href=\"./weights-biases.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Weights &amp; Biases</a> or <a href=\"./mlflow.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">MLflow</a> via built-in loggers.</li>\n<li>Link this tool from job guides using its canonical ID <code>pytorch-lightning</code>.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://lightning.ai/docs/pytorch/stable/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://lightning.ai/docs/pytorch/stable/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/Lightning-AI/pytorch-lightning\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>31.2k GitHub stars and sustained active development (verified via the GitHub API, 2026-07-08); one of the most-adopted training frameworks in PyTorch history.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "TL;DR: The standard general purpose PyTorch training framework. Open source. Best for custom model training discipline; recipe frameworks beat it for pure LLM fine tuning. Overview PyTorch Lightning splits training code into a LightningModule (your model, losses, optimizers — pure PyTorch) and a Trainer that owns everything else: device placement, DDP/FSDP/DeepSpeed strategies, mixed precision, gradient accumulation, checkpointing, and logger integrations. The pitch is \"organize, don't abstract\": research code stays visible while the engineering scaffolding becomes framework provided and uniform. Why It's in the Arsenal Not every model layer job is an LLM fine tune: teams training encoders, diffusion models, rankers, and bespoke architectures need training infrastructure, and Lightning is that category's long standing default (31k stars, a decade of production use). It anchors the general training end of the phase, complementing the LLM recipe frameworks. See Strengths / Limitations below before adopting it. Key Features Trainer managed distribution strategies (DDP, FSDP, DeepSpeed) and precision (bf16/fp16) via arguments, not code Callback system: checkpointing, early stopping, LR monitoring, profiling — composable and battle tested Logger integrations (W&B, MLflow, TensorBoard) behind one interface Fabric, a lower level sibling API, for teams wanting Accelerate style minimalism within the Lightning ecosystem Architecture / How It Works The Trainer drives a standardized loop calling your LightningModule hooks (training step, configure optimizers, etc.); strategies encapsulate distributed backends, plugins handle precision/cluster environments, and callbacks observe lifecycle events. Determinism, sanity checking, and resume from checkpoint semantics are framework responsibilities. Getting Started Use Cases 1. Scenario : a research team standardizing many custom model training codebases so any member can run, resume, and scale any project 2. Scenario : training non LLM deep models (vision, audio, ranking, diffusion) where LLM recipe frameworks don't apply but multi GPU/precision/checkpointing rigor still does 3. Scenario : scaling a working single GPU prototype to multi node FSDP by changing Trainer arguments 4. Scenario where this is NOT the right fit : standard LoRA fine tuning of an open LLM — recipe frameworks encode the method knowledge you'd otherwise rebuild Strengths A decade of hardening: edge cases in resume, precision, and distributed training that DIY loops rediscover are already handled Uniform structure across projects is a real team velocity mechanism, not aesthetics Scales down (laptop, fast dev run) as well as up (multi node) — rare among training frameworks Limitations / When NOT to Use Hook based inversion of control: nonstandard training schemes (unusual optimization loops, RL) fight the Trainer's assumptions For LLM fine tuning specifically it knows nothing about templates, PEFT methods, or quantization recipes — you'd reassemble what Axolotl class tools ship Integration Patterns Compare against Accelerate (thinner) and torchtune (LLM recipe layer) before adopting — the right choice depends on how custom your training is. Logs to Weights & Biases or MLflow via built in loggers. Link this tool from job guides using its canonical ID pytorch lightning. Resources Primary site Documentation Source Buzz & Reception 31.2k GitHub stars and sustained active development (verified via the GitHub API, 2026 07 08); one of the most adopted training frameworks in PyTorch history. Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "qursor",

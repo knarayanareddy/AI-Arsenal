@@ -33,30 +33,42 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [Candle](./candle.md)
+- [KTransformers](./ktransformers.md)
+- [LocalAI](./localai.md)
+- [mistral.rs](./mistral-rs.md)
+- [ONNX Runtime](./onnxruntime.md)
+- [text-generation-webui (oobabooga)](./text-generation-webui.md)
 - [llama.cpp](./llama-cpp.md)
 - [Llamafile](./llamafile.md)
 - [LMDeploy](./lmdeploy.md)
 - [Ollama](./ollama.md)
-- [SGLang](./sglang.md)
-- [Text Generation Inference](./text-generation-inference.md)
-- [vLLM](./vllm.md)
 
 ### Most Popular
 
 - [Ollama](./ollama.md) — ⭐ 174059
 - [llama.cpp](./llama-cpp.md) — ⭐ 116399
 - [vLLM](./vllm.md) — ⭐ 82772
+- [text-generation-webui (oobabooga)](./text-generation-webui.md) — ⭐ 47433
+- [LocalAI](./localai.md) — ⭐ 47415
 - [SGLang](./sglang.md) — ⭐ 28967
 - [Llamafile](./llamafile.md) — ⭐ 24936
-- [Text Generation Inference](./text-generation-inference.md) — ⭐ 10863
-- [LMDeploy](./lmdeploy.md) — ⭐ 7895
+- [ONNX Runtime](./onnxruntime.md) — ⭐ 21037
+- [Candle](./candle.md) — ⭐ 20620
+- [KTransformers](./ktransformers.md) — ⭐ 17384
 
 ### Browse All
 
+- [Candle](./candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
+- [KTransformers](./ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
 - [LMDeploy](./lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
+- [LocalAI](./localai.md) — Self-hosted drop-in OpenAI API replacement serving text, embeddings, images, and audio from one binary — multiple backends, consumer hardware, no GPU required
+- [mistral.rs](./mistral-rs.md) — Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization
 - [Ollama](./ollama.md) — Local runtime for downloading, running, and serving open-weight models on developer machines
+- [ONNX Runtime](./onnxruntime.md) — Microsoft's cross-platform inference runtime for the ONNX graph format — one exported model runs on CPU, GPU, mobile, and browser via execution providers
 - [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
 - [Text Generation Inference](./text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
+- [text-generation-webui (oobabooga)](./text-generation-webui.md) — The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API
 - [vLLM](./vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs

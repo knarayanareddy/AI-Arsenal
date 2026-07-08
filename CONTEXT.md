@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T15:33:40.369Z | Entries: 480 | Schema version: 1.0.0
+Generated: 2026-07-08T18:42:09.865Z | Entries: 490 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 73
-- Tools: 104
+- Projects: 80
+- Tools: 107
 - Papers: 30
 - Tips: 102
 - People: 25
@@ -45,8 +45,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
-- TranslateGemma (⭐5000, score:50) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
-- Ollama (⭐174059, score:30) — Local runtime for downloading, running, and serving open-weight models on developer machines
+- KTransformers (⭐17384, score:60) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
+- LocalAI (⭐47415, score:58) — Self-hosted drop-in OpenAI API replacement serving text, embeddings, images, and audio from one binary — multiple backends, consumer hardware, no GPU required
 
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
@@ -94,10 +94,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
+- Hugging Face Accelerate — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
 - MLX-LM — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
-- OrchestraML — Automate end-to-end ML workflows from data prep to deployment using AI agents
-- PEFT — Hugging Face library for parameter-efficient fine-tuning methods
+- ms-swift — ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence

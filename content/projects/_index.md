@@ -11,21 +11,21 @@
 | [data and retrieval](./data-and-retrieval/) | 16 entries | 2026-07-08 |
 | [foundation models](./foundation-models/) | 13 entries | 2026-07-08 |
 | [frameworks](./frameworks/) | 21 entries | 2026-07-08 |
-| [inference engines](./inference-engines/) | 7 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 0 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 13 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 1 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md)
+- [Candle](./inference-engines/candle.md)
+- [KTransformers](./inference-engines/ktransformers.md)
+- [LocalAI](./inference-engines/localai.md)
+- [mistral.rs](./inference-engines/mistral-rs.md)
+- [ONNX Runtime](./inference-engines/onnxruntime.md)
 - [Speech To Speech](./frameworks/speech-to-speech.md)
+- [text-generation-webui (oobabooga)](./inference-engines/text-generation-webui.md)
 - [PageAgent](./agent-systems/page-agent.md)
 - [Strix](./agent-systems/strix.md)
-- [zvec](./data-and-retrieval/zvec.md)
-- [Supabase](./data-and-retrieval/supabase.md)
-- [InsForge](./agent-systems/insforge.md)
-- [Stagehand](./agent-systems/stagehand.md)
-- [SurrealDB](./data-and-retrieval/surrealdb.md)
-- [TranslateGemma](./foundation-models/translategemma.md)
-- [Uiverse Design](./frameworks/uiverse-design.md)
 
 ## Most Popular
 
@@ -43,9 +43,11 @@
 ## Browse All
 
 - [Agenta](./benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [AutoGen](./frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [Braintrust](./benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
+- [Candle](./inference-engines/candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [Chroma](./data-and-retrieval/chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [Command R+](./foundation-models/command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [Crawl4AI](./data-and-retrieval/crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
@@ -63,6 +65,7 @@
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Helicone](./benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [InsForge](./agent-systems/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+- [KTransformers](./inference-engines/ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 - [LanceDB](./data-and-retrieval/lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LangChain](./frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - [Langfuse](./benchmarks-and-evals/langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
@@ -74,21 +77,18 @@
 - [LlamaIndex](./frameworks/llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
 - [LlamaParse](./data-and-retrieval/llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text
 - [LMDeploy](./inference-engines/lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
+- [LocalAI](./inference-engines/localai.md) — Self-hosted drop-in OpenAI API replacement serving text, embeddings, images, and audio from one binary — multiple backends, consumer hardware, no GPU required
 - [Lunary](./benchmarks-and-evals/lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
 - [Mastra](./frameworks/mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
 - [MetaGPT](./frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
 - [Microsoft Agent Framework](./frameworks/microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
 - [Milvus](./data-and-retrieval/milvus.md) — Cloud-native vector database for large-scale ANN search and production vector workloads
 - [Mistral / Mixtral](./foundation-models/mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
+- [mistral.rs](./inference-engines/mistral-rs.md) — Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization
 - [Ollama](./inference-engines/ollama.md) — Local runtime for downloading, running, and serving open-weight models on developer machines
+- [ONNX Runtime](./inference-engines/onnxruntime.md) — Microsoft's cross-platform inference runtime for the ONNX graph format — one exported model runs on CPU, GPU, mobile, and browser via execution providers
 - [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
 - [OpenHands](./frameworks/openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
 - [OpenLIT](./benchmarks-and-evals/openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLMetry](./benchmarks-and-evals/openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [Opik](./benchmarks-and-evals/opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
-- [PageAgent](./agent-systems/page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
-- [pgvector](./data-and-retrieval/pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
-- [Phi-4](./foundation-models/phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
-- [Phi Cookbook](./foundation-models/phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
-- [Phoenix](./benchmarks-and-evals/phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
-- [Pinecone](./data-and-retrieval/pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications

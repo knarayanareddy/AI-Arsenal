@@ -30,12 +30,12 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Recently Added
 
-_No entries yet._
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md)
 
 ### Most Popular
 
-_No star-tracked entries yet._
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — ⭐ 5627
 
 ### Browse All
 
-_No entries yet._
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights

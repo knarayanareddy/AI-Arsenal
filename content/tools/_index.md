@@ -12,22 +12,22 @@
 | [data ingestion](./data-ingestion/) | 16 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 24 entries | 2026-07-08 |
 | [evaluation and observability](./evaluation-and-observability/) | 18 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 16 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 19 entries | 2026-07-08 |
 | [orchestration](./orchestration/) | 15 entries | 2026-07-08 |
 | [serving and deployment](./serving-and-deployment/) | 15 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Hugging Face Accelerate](./model-layer/accelerate.md)
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
 - [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./serving-and-deployment/cubesandbox.md)
+- [ms-swift](./model-layer/ms-swift.md)
 - [Orca](./dx-and-tooling/orca.md)
+- [PyTorch Lightning](./model-layer/pytorch-lightning.md)
 - [Superpowers](./dx-and-tooling/superpowers.md)
 - [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md)
 - [Agent Reach](./data-ingestion/agent-reach.md)
-- [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md)
-- [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md)
-- [Tools by Cost — Freemium](./by-cost/cost-freemium.md)
 
 ## Most Popular
 
@@ -35,6 +35,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Hugging Face Accelerate](./model-layer/accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Reach](./data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
@@ -84,4 +85,3 @@ _No star-tracked entries yet._
 - [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [Honen](./dx-and-tooling/honen.md) — Transform any content into interactive AI-generated courses
 - [Hugging Face Hub](./model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
-- [Humanloop](./evaluation-and-observability/humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows

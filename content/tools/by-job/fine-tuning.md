@@ -172,11 +172,14 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Hugging Face Accelerate](../model-layer/accelerate.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Axolotl](../model-layer/axolotl.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [ms-swift](../model-layer/ms-swift.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [PyTorch Lightning](../model-layer/pytorch-lightning.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [torchtune](../model-layer/torchtune.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Unsloth](../model-layer/unsloth.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
