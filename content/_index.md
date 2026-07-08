@@ -12,7 +12,7 @@
 | [community](./community/) | 48 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
-| [projects](./projects/) | 73 entries | 2026-07-08 |
+| [projects](./projects/) | 103 entries | 2026-07-08 |
 | [research](./research/) | 34 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
@@ -26,11 +26,11 @@
 - [Agno](./tools/orchestration/agno.md)
 - [Aider](./tools/dx-and-tooling/aider.md)
 - [Airbyte](./tools/data-ingestion/airbyte.md)
+- [AnythingLLM](./projects/agent-systems/anythingllm.md)
+- [BigCodeBench](./projects/benchmarks-and-evals/bigcodebench.md)
+- [Browser Use](./projects/agent-systems/browser-use.md)
+- [CAMEL](./projects/frameworks/camel-ai.md)
 - [Cerebras Inference](./tools/model-layer/cerebras-inference.md)
-- [Claude Code](./tools/dx-and-tooling/claude-code.md)
-- [Cline](./tools/dx-and-tooling/cline.md)
-- [Cloudflare Workers AI](./tools/serving-and-deployment/cloudflare-workers-ai.md)
-- [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
 
 ## Most Popular
 
@@ -39,11 +39,11 @@
 - [Dify](./projects/frameworks/dify.md) — ⭐ 145081
 - [LangChain](./projects/frameworks/langchain.md) — ⭐ 139206
 - [Firecrawl](./projects/data-and-retrieval/firecrawl.md) — ⭐ 132342
+- [ComfyUI](./projects/frameworks/comfyui.md) — ⭐ 119901
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — ⭐ 116399
+- [Whisper](./projects/foundation-models/whisper.md) — ⭐ 104543
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
-- [vLLM](./projects/inference-engines/vllm.md) — ⭐ 82772
-- [RAGFlow](./projects/data-and-retrieval/ragflow.md) — ⭐ 82655
-- [OpenHands](./projects/frameworks/openhands.md) — ⭐ 76854
+- [Browser Use](./projects/agent-systems/browser-use.md) — ⭐ 103506
 
 ## Browse All
 
@@ -81,6 +81,7 @@
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
+- [AnythingLLM](./projects/agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [Arena-Hard-Auto](./benchmarks/evaluation-methods/arena-hard.md) — 
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
@@ -96,4 +97,3 @@
 - [Constitutional AI: Harmlessness from AI Feedback](./research/training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Basedash](./tools/dx-and-tooling/basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
 - [BEIR](./benchmarks/retrieval-rag/beir.md) — 
-- [Benchmark Local Models on the Actual Hardware Class Users Will Run](./tips-and-tricks/inference-and-serving/benchmark-on-the-user-hardware.md) — 
