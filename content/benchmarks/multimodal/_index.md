@@ -10,10 +10,13 @@
 
 ## Recently Added
 
+- [ChartQA](./chartqa.md)
 - [MathVista](./mathvista.md)
 - [MMBench](./mmbench.md)
 - [MMMU](./mmmu.md)
+- [MMStar](./mmstar.md)
 - [SEED-Bench](./seed-bench.md)
+- [Video-MME](./video-mme.md)
 
 ## Most Popular
 
@@ -21,7 +24,10 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [ChartQA](./chartqa.md) — 
 - [MathVista](./mathvista.md) — 
 - [MMBench](./mmbench.md) — 
 - [MMMU](./mmmu.md) — 
+- [MMStar](./mmstar.md) — 
 - [SEED-Bench](./seed-bench.md) — 
+- [Video-MME](./video-mme.md) — 

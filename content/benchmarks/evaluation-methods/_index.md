@@ -14,6 +14,7 @@
 - [Arena-Hard-Auto](./arena-hard.md)
 - [LLM-as-a-Judge](./llm-as-a-judge.md)
 - [MT-Bench](./mt-bench.md)
+- [RewardBench](./rewardbench.md)
 - [WildBench](./wildbench.md)
 
 ## Most Popular
@@ -26,4 +27,5 @@ _No star-tracked entries yet._
 - [Arena-Hard-Auto](./arena-hard.md) — 
 - [LLM-as-a-Judge](./llm-as-a-judge.md) — 
 - [MT-Bench](./mt-bench.md) — 
+- [RewardBench](./rewardbench.md) — 
 - [WildBench](./wildbench.md) — 

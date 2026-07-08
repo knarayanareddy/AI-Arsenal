@@ -121,6 +121,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Flowise](../orchestration/flowise.md) | orchestration | freemium | Yes | Yes | Yes | typescript | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
+| [Great Expectations (GX Core)](../data-ingestion/great-expectations.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
@@ -128,6 +129,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Prefect](../orchestration/prefect.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |

@@ -73,3 +73,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | production-serving, deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [Typesense](../data-ingestion/typesense.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | cpp | solid-choice |
+| [Vespa](../data-ingestion/vespa.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | java, cpp | solid-choice |

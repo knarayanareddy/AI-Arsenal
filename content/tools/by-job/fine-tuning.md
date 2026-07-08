@@ -172,12 +172,16 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Hugging Face Accelerate](../model-layer/accelerate.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Axolotl](../model-layer/axolotl.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Megatron-LM](../model-layer/megatron-lm.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [PyTorch Lightning](../model-layer/pytorch-lightning.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
 | [Sentence Transformers](../model-layer/sentence-transformers.md) | model layer | open-source | Yes | Yes | Yes | python | best-in-class |
 | [SkyPilot](../serving-and-deployment/skypilot.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
