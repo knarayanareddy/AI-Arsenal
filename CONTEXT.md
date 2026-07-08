@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:25:31.331Z | Entries: 593 | Schema version: 1.0.0
+Generated: 2026-07-08T19:26:14.057Z | Entries: 599 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,8 +14,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 1
 - Guides: 59
 - Build examples: 8
-- Architectures: 14
-- Observability: 7
+- Architectures: 17
+- Observability: 10
 - Community: 23
 
 ## Navigation
@@ -214,6 +214,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Architecture Decisions by Category
 
 ### data-strategy
+- Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic — 
 - Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
 
 ### evaluation-strategy
@@ -233,10 +234,12 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### serving-patterns
 - Choosing a Deployment Target: Separating App Hosting From Model Serving — 
+- Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine — 
 
 ### system-design
 - Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
 - RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
+- Single Agent vs Multi-Agent: When Splitting the Work Actually Helps — 
 
 ## Observability Playbooks by Category
 
@@ -245,15 +248,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### evaluation-quality
 - Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship — 
+- Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks — 
 
 ### incident-response
 - Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts — 
 
 ### instrumentation
 - Capture a Structured Event for Every LLM Call, Not Just an Access Log Line — 
+- Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces — 
 
 ### monitoring-alerting
 - Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions — 
+- Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration — 
 
 ### privacy-governance
 - Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store — 

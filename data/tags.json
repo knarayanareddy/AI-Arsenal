@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:25:28.907Z",
+  "generated_at": "2026-07-08T19:26:11.593Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 129,
+      "count": 130,
       "types": {
         "tip": 14,
         "tool": 45,
         "build-example": 3,
         "guide": 7,
         "project": 37,
-        "architecture": 4,
+        "architecture": 5,
         "benchmark": 5,
         "person": 3,
         "paper": 11
@@ -118,6 +118,7 @@
         "separate-planner-and-executor-permissions",
         "shellmate",
         "shinn-2023-reflexion",
+        "single-agent-vs-multi-agent",
         "skillspector",
         "smolagents",
         "speech-to-speech",
@@ -286,14 +287,16 @@
     {
       "id": "chunking",
       "label": "Chunking",
-      "count": 7,
+      "count": 8,
       "types": {
         "guide": 2,
-        "tip": 5
+        "tip": 5,
+        "architecture": 1
       },
       "entries": [
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "context-windows",
         "rag-chunk-overlap-tuning",
         "start-with-zero-chunk-overlap",
@@ -541,12 +544,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 35,
+      "count": 36,
       "types": {
         "paper": 10,
         "guide": 4,
         "tip": 9,
         "tool": 6,
+        "architecture": 1,
         "project": 6
       },
       "entries": [
@@ -555,6 +559,7 @@
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
         "cerebras-inference",
+        "choose-serving-stack",
         "compress-retrieved-context-before-generation",
         "dao-2022-flashattention",
         "deepseek-v3-r1",
@@ -590,11 +595,11 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 30,
+      "count": 31,
       "types": {
         "tip": 7,
         "guide": 2,
-        "architecture": 2,
+        "architecture": 3,
         "project": 11,
         "tool": 5,
         "person": 1,
@@ -605,6 +610,7 @@
         "add-reranking-after-recall-is-acceptable",
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
+        "choose-chunking-strategy",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -916,11 +922,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 80,
+      "count": 81,
       "types": {
         "tip": 21,
         "tool": 20,
-        "architecture": 4,
+        "architecture": 5,
         "paper": 7,
         "project": 21,
         "guide": 6,
@@ -937,6 +943,7 @@
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
+        "choose-serving-stack",
         "cloudflare-workers-ai",
         "dao-2022-flashattention",
         "deepseek-v3-r1",
@@ -1057,7 +1064,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 206,
+      "count": 207,
       "types": {
         "tip": 20,
         "guide": 44,
@@ -1066,7 +1073,7 @@
         "benchmark": 9,
         "project": 40,
         "paper": 16,
-        "architecture": 3,
+        "architecture": 4,
         "build-example": 2
       },
       "entries": [
@@ -1091,6 +1098,7 @@
         "chainlit",
         "chiang-2024-chatbot-arena",
         "choose-llm",
+        "choose-serving-stack",
         "clem-delangue",
         "cohere",
         "command-r-plus",
@@ -1542,12 +1550,12 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 41,
+      "count": 42,
       "types": {
         "guide": 2,
         "tool": 19,
         "project": 18,
-        "architecture": 2
+        "architecture": 3
       },
       "entries": [
         "agent-builder-role",
@@ -1588,6 +1596,7 @@
         "ray-serve",
         "seaticket",
         "semantic-kernel",
+        "single-agent-vs-multi-agent",
         "stagehand",
         "temporal",
         "txtai"
@@ -1596,13 +1605,13 @@
     {
       "id": "planning",
       "label": "Planning",
-      "count": 15,
+      "count": 16,
       "types": {
         "tool": 2,
         "build-example": 1,
         "guide": 2,
         "project": 6,
-        "architecture": 2,
+        "architecture": 3,
         "paper": 2
       },
       "entries": [
@@ -1618,6 +1627,7 @@
         "multi-agent-system",
         "openhands",
         "semantic-kernel",
+        "single-agent-vs-multi-agent",
         "superpowers",
         "wang-2023-agents-survey",
         "wang-2023-voyager"
@@ -1670,7 +1680,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 99,
+      "count": 100,
       "types": {
         "tip": 18,
         "build-example": 5,
@@ -1678,7 +1688,7 @@
         "tool": 19,
         "project": 31,
         "benchmark": 4,
-        "architecture": 5,
+        "architecture": 6,
         "paper": 10,
         "person": 3
       },
@@ -1694,6 +1704,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "choose-eval-framework",
         "choose-vector-db",
         "chroma",
@@ -1859,14 +1870,14 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 78,
+      "count": 79,
       "types": {
         "tip": 19,
         "build-example": 4,
         "tool": 16,
         "benchmark": 4,
         "guide": 3,
-        "architecture": 4,
+        "architecture": 5,
         "project": 18,
         "paper": 9,
         "person": 1
@@ -1880,6 +1891,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -2045,10 +2057,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 36,
+      "count": 37,
       "types": {
         "project": 18,
-        "architecture": 3,
+        "architecture": 4,
         "tool": 11,
         "paper": 1,
         "tip": 3
@@ -2057,6 +2069,7 @@
         "anythingllm",
         "audiocraft",
         "choose-deployment-target",
+        "choose-serving-stack",
         "choose-vector-db",
         "cleanlab",
         "colossalai",
