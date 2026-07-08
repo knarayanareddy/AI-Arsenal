@@ -26,6 +26,7 @@ Choosing *which* vector database, LLM provider, or observability tool to use is 
 
 ### Recently Added
 
+- [Single Agent vs Multi-Agent: When Splitting the Work Actually Helps](./single-agent-vs-multi-agent.md)
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md)
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./rag-vs-fine-tuning.md)
 
@@ -37,3 +38,4 @@ _No star-tracked entries yet._
 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md) — 
 - [RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation](./rag-vs-fine-tuning.md) — 
+- [Single Agent vs Multi-Agent: When Splitting the Work Actually Helps](./single-agent-vs-multi-agent.md) — 

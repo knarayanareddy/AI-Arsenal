@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:22:20.927Z",
+    "generated_at": "2026-07-08T19:27:47.341Z",
     "total_projects": 103,
     "total_tools": 171,
     "total_papers": 63,
@@ -9,8 +9,8 @@
     "total_digests": 1,
     "total_guides": 59,
     "total_build_examples": 8,
-    "total_architectures": 14,
-    "total_observability": 7,
+    "total_architectures": 17,
+    "total_observability": 10,
     "total_community": 23,
     "total_benchmarks": 30,
     "total_trending": 4,
@@ -589,6 +589,21 @@
       "path": "content/observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md",
       "url": "content/observability/monitoring-alerting/alert-on-quality-and-cost-regressions",
       "last_updated": "2026-07-06",
+      "category": "monitoring-alerting",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "alert-on-streaming-latency-slos",
+      "type": "observability",
+      "name": "Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/monitoring-alerting/alert-on-streaming-latency-slos.md",
+      "url": "content/observability/monitoring-alerting/alert-on-streaming-latency-slos",
+      "last_updated": "2026-07-07",
       "category": "monitoring-alerting",
       "maturity": null,
       "cost_model": null,
@@ -1289,6 +1304,21 @@
       "featured": false
     },
     {
+      "id": "capture-user-feedback-events",
+      "type": "observability",
+      "name": "Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/instrumentation/capture-user-feedback-events.md",
+      "url": "content/observability/instrumentation/capture-user-feedback-events",
+      "last_updated": "2026-07-07",
+      "category": "instrumentation",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cerebras-inference",
       "type": "tool",
       "name": "Cerebras Inference",
@@ -1442,6 +1472,26 @@
       "featured": false
     },
     {
+      "id": "choose-chunking-strategy",
+      "type": "architecture",
+      "name": "Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic",
+      "description": "",
+      "tags": [
+        "rag",
+        "chunking",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/architectures/data-strategy/choose-chunking-strategy.md",
+      "url": "content/architectures/data-strategy/choose-chunking-strategy",
+      "last_updated": "2026-07-07",
+      "category": "data-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "choose-deployment-target",
       "type": "architecture",
       "name": "Choosing a Deployment Target: Separating App Hosting From Model Serving",
@@ -1554,6 +1604,26 @@
       "url": "content/architectures/evaluation-strategy/choose-observability-tool",
       "last_updated": "2026-07-06",
       "category": "evaluation-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-serving-stack",
+      "type": "architecture",
+      "name": "Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine",
+      "description": "",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/architectures/serving-patterns/choose-serving-stack.md",
+      "url": "content/architectures/serving-patterns/choose-serving-stack",
+      "last_updated": "2026-07-07",
+      "category": "serving-patterns",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -6518,6 +6588,21 @@
       "featured": false
     },
     {
+      "id": "monitor-retrieval-quality-in-production",
+      "type": "observability",
+      "name": "Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks",
+      "description": "",
+      "tags": [],
+      "path": "content/observability/evaluation-quality/monitor-retrieval-quality-in-production.md",
+      "url": "content/observability/evaluation-quality/monitor-retrieval-quality-in-production",
+      "last_updated": "2026-07-07",
+      "category": "evaluation-quality",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ms-swift",
       "type": "project",
       "name": "ms-swift",
@@ -9005,6 +9090,25 @@
       "url": "content/community/people/simon-willison",
       "last_updated": "2026-06-14",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "single-agent-vs-multi-agent",
+      "type": "architecture",
+      "name": "Single Agent vs Multi-Agent: When Splitting the Work Actually Helps",
+      "description": "",
+      "tags": [
+        "agents",
+        "orchestration",
+        "planning"
+      ],
+      "path": "content/architectures/system-design/single-agent-vs-multi-agent.md",
+      "url": "content/architectures/system-design/single-agent-vs-multi-agent",
+      "last_updated": "2026-07-07",
+      "category": "system-design",
       "maturity": null,
       "cost_model": null,
       "status": "active",
