@@ -10,6 +10,8 @@
 
 ## Recently Added
 
+- [Common Crawl](./common-crawl.md)
+- [FineWeb (Hugging Face)](./fineweb.md)
 - [LAION (Large-scale Artificial Intelligence Open Network)](./laion.md)
 
 ## Most Popular
@@ -18,4 +20,6 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Common Crawl](./common-crawl.md) — 
+- [FineWeb (Hugging Face)](./fineweb.md) — 
 - [LAION (Large-scale Artificial Intelligence Open Network)](./laion.md) — 
