@@ -36,13 +36,13 @@ Before selecting a foundation model:
 - [GLM-4 / GLM-4.5](./glm-4.md)
 - [Kimi K2](./kimi-k2.md)
 - [OLMo](./olmo.md)
+- [SAM 2 (Segment Anything Model 2)](./sam2.md)
 - [Whisper](./whisper.md)
 - [TranslateGemma](./translategemma.md)
 - [Command R+](./command-r-plus.md)
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md)
 - [Falcon 3](./falcon-3.md)
 - [Gemma](./gemma.md)
-- [Gemma 3](./gemma-3.md)
 
 ### Most Popular
 
@@ -50,12 +50,12 @@ Before selecting a foundation model:
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — ⭐ 27298
 - [Qwen](./qwen.md) — ⭐ 21281
+- [SAM 2 (Segment Anything Model 2)](./sam2.md) — ⭐ 19492
 - [Kimi K2](./kimi-k2.md) — ⭐ 10889
 - [Mistral / Mixtral](./mistral-models.md) — ⭐ 10816
 - [Llama 3.x](./llama-3.md) — ⭐ 9242
 - [Yi](./yi.md) — ⭐ 7820
 - [OLMo](./olmo.md) — ⭐ 6574
-- [Gemma](./gemma.md) — ⭐ 5410
 
 ### Browse All
 
@@ -73,6 +73,7 @@ Before selecting a foundation model:
 - [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
+- [SAM 2 (Segment Anything Model 2)](./sam2.md) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 - [TranslateGemma](./translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
 - [Whisper](./whisper.md) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 - [Yi](./yi.md) — 01.AI open model family with bilingual and long-context variants from small to mid-large sizes
