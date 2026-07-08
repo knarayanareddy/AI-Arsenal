@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:08:24.237Z",
-    "total_projects": 123,
+    "generated_at": "2026-07-08T20:10:38.582Z",
+    "total_projects": 130,
     "total_tools": 173,
     "total_papers": 80,
     "total_tips": 129,
@@ -1174,6 +1174,25 @@
       "featured": false
     },
     {
+      "id": "bge-embeddings",
+      "type": "project",
+      "name": "BGE / FlagEmbedding (BAAI)",
+      "description": "BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG",
+      "tags": [
+        "embeddings",
+        "rag",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/bge-embeddings.md",
+      "url": "content/projects/foundation-models/bge-embeddings",
+      "last_updated": "2026-07-08",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "bigcodebench",
       "type": "project",
       "name": "BigCodeBench",
@@ -1501,6 +1520,25 @@
       "url": "content/tools/dx-and-tooling/chainlit",
       "last_updated": "2026-06-30",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "chatterbox",
+      "type": "project",
+      "name": "Chatterbox (Resemble AI)",
+      "description": "Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default",
+      "tags": [
+        "self-hosted",
+        "multimodal",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/chatterbox.md",
+      "url": "content/projects/foundation-models/chatterbox",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -2063,6 +2101,25 @@
       "url": "content/tools/dx-and-tooling/cline",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "clip",
+      "type": "project",
+      "name": "CLIP (OpenAI)",
+      "description": "OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs",
+      "tags": [
+        "embeddings",
+        "multimodal",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/clip.md",
+      "url": "content/projects/foundation-models/clip",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -3494,6 +3551,25 @@
       "featured": false
     },
     {
+      "id": "f5-tts",
+      "type": "project",
+      "name": "F5-TTS",
+      "description": "Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/f5-tts.md",
+      "url": "content/projects/foundation-models/f5-tts",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "faiss",
       "type": "tool",
       "name": "FAISS",
@@ -3729,6 +3805,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "flux",
+      "type": "project",
+      "name": "FLUX (Black Forest Labs)",
+      "description": "Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled",
+      "tags": [
+        "multimodal",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/flux.md",
+      "url": "content/projects/foundation-models/flux",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -5439,6 +5534,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "kokoro",
+      "type": "project",
+      "name": "Kokoro TTS",
+      "description": "82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX",
+      "tags": [
+        "self-hosted",
+        "inference",
+        "efficiency"
+      ],
+      "path": "content/projects/foundation-models/kokoro.md",
+      "url": "content/projects/foundation-models/kokoro",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -8941,6 +9055,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "qwen3-vl",
+      "type": "project",
+      "name": "Qwen3-VL",
+      "description": "Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship",
+      "tags": [
+        "multimodal",
+        "llm",
+        "agents"
+      ],
+      "path": "content/projects/foundation-models/qwen3-vl.md",
+      "url": "content/projects/foundation-models/qwen3-vl",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
