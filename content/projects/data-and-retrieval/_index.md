@@ -33,6 +33,7 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [cleanlab](./cleanlab.md)
 - [zvec](./zvec.md)
 - [Supabase](./supabase.md)
 - [SurrealDB](./surrealdb.md)
@@ -42,7 +43,6 @@ Before selecting a data/retrieval component:
 - [Firecrawl](./firecrawl.md)
 - [LanceDB](./lancedb.md)
 - [LlamaParse](./llamaparse.md)
-- [Milvus](./milvus.md)
 
 ### Most Popular
 
@@ -60,6 +60,7 @@ Before selecting a data/retrieval component:
 ### Browse All
 
 - [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
+- [cleanlab](./cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - [Crawl4AI](./crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [Docling](./docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
 - [Firecrawl](./firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data

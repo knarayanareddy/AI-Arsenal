@@ -33,6 +33,7 @@ Before selecting a framework:
 
 ### Recently Added
 
+- [Detectron2 (Meta)](./detectron2.md)
 - [Speech To Speech](./speech-to-speech.md)
 - [Uiverse Design](./uiverse-design.md)
 - [AutoGen](./autogen.md)
@@ -42,7 +43,6 @@ Before selecting a framework:
 - [DSPy](./dspy.md)
 - [Google ADK](./google-adk.md)
 - [Haystack](./haystack.md)
-- [LangChain](./langchain.md)
 
 ### Most Popular
 
@@ -62,6 +62,7 @@ Before selecting a framework:
 - [AutoGen](./autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [CrewAI](./crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
+- [Detectron2 (Meta)](./detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dify](./dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [DSPy](./dspy.md) — A framework for programming and optimizing language model pipelines
 - [Google ADK](./google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents

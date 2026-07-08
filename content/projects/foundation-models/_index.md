@@ -33,6 +33,7 @@ Before selecting a foundation model:
 
 ### Recently Added
 
+- [AudioCraft (Meta)](./audiocraft.md)
 - [TranslateGemma](./translategemma.md)
 - [Command R+](./command-r-plus.md)
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md)
@@ -42,12 +43,12 @@ Before selecting a foundation model:
 - [Llama 3.x](./llama-3.md)
 - [Mistral / Mixtral](./mistral-models.md)
 - [Phi-4](./phi-4.md)
-- [Phi Cookbook](./phi-cookbook.md)
 
 ### Most Popular
 
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — ⭐ 27298
+- [AudioCraft (Meta)](./audiocraft.md) — ⭐ 23456
 - [Qwen](./qwen.md) — ⭐ 21281
 - [Mistral / Mixtral](./mistral-models.md) — ⭐ 10816
 - [Llama 3.x](./llama-3.md) — ⭐ 9242
@@ -55,10 +56,10 @@ Before selecting a foundation model:
 - [Gemma](./gemma.md) — ⭐ 5410
 - [TranslateGemma](./translategemma.md) — ⭐ 5000
 - [Phi Cookbook](./phi-cookbook.md) — ⭐ 3750
-- [Gemma 3](./gemma-3.md) — ⭐ 985
 
 ### Browse All
 
+- [AudioCraft (Meta)](./audiocraft.md) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
 - [Command R+](./command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
 - [Falcon 3](./falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment

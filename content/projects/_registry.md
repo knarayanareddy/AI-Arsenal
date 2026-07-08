@@ -5,23 +5,29 @@
 | ID | Name | Description |
 |---|---|---|
 | `agenta` | [Agenta](./benchmarks-and-evals/agenta.md) | Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds |
+| `audiocraft` | [AudioCraft (Meta)](./foundation-models/audiocraft.md) | Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec |
 | `autogen` | [AutoGen](./frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
 | `autogpt` | [AutoGPT](./frameworks/autogpt.md) | Autonomous agent platform and classic agent project for accessible AI automation |
 | `braintrust` | [Braintrust](./benchmarks-and-evals/braintrust.md) | Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates |
 | `chroma` | [Chroma](./data-and-retrieval/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
+| `cleanlab` | [cleanlab](./data-and-retrieval/cleanlab.md) | Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions |
+| `colossalai` | [Colossal-AI (HPC-AI Tech)](./training-and-alignment/colossalai.md) | Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory |
 | `command-r-plus` | [Command R+](./foundation-models/command-r-plus.md) | Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows |
 | `crawl4ai` | [Crawl4AI](./data-and-retrieval/crawl4ai.md) | Open-source crawler and scraper designed to produce LLM-friendly web content |
 | `crewai` | [CrewAI](./frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
 | `deepeval` | [DeepEval](./benchmarks-and-evals/deepeval.md) | An open-source evaluation framework for testing LLM applications in CI |
 | `deepseek-v3-r1` | [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) | DeepSeek open-weight MoE and reasoning model family known for strong cost-performance |
+| `detectron2` | [Detectron2 (Meta)](./frameworks/detectron2.md) | Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work |
 | `dify` | [Dify](./frameworks/dify.md) | Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations |
 | `docling` | [Docling](./data-and-retrieval/docling.md) | IBM-origin open-source toolkit for parsing and exporting documents for generative AI |
 | `dspy` | [DSPy](./frameworks/dspy.md) | A framework for programming and optimizing language model pipelines |
+| `exo` | [exo (exo-explore)](./inference-engines/exo.md) | Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine |
 | `falcon-3` | [Falcon 3](./foundation-models/falcon-3.md) | TII open model family with compact 1B to 10B text-only variants for local deployment |
 | `firecrawl` | [Firecrawl](./data-and-retrieval/firecrawl.md) | Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data |
 | `gemma` | [Gemma](./foundation-models/gemma.md) | Google open model family designed for efficient language and multimodal applications |
 | `gemma-3` | [Gemma 3](./foundation-models/gemma-3.md) | Google open model family with efficient text and multimodal variants for local and hosted use |
 | `google-adk` | [Google ADK](./frameworks/google-adk.md) | Google code-first Python toolkit for building, evaluating, and deploying AI agents |
+| `goose` | [goose (Block)](./agent-systems/goose.md) | Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent |
 | `haystack` | [Haystack](./frameworks/haystack.md) | Modular framework for production search, RAG, agents, routing, and generation pipelines |
 | `helicone` | [Helicone](./benchmarks-and-evals/helicone.md) | Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics |
 | `insforge` | [InsForge](./agent-systems/insforge.md) | Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway |
@@ -43,6 +49,7 @@
 | `milvus` | [Milvus](./data-and-retrieval/milvus.md) | Cloud-native vector database for large-scale ANN search and production vector workloads |
 | `mistral-models` | [Mistral / Mixtral](./foundation-models/mistral-models.md) | Mistral open-weight model family including dense and mixture-of-experts language models |
 | `ollama` | [Ollama](./inference-engines/ollama.md) | Local runtime for downloading, running, and serving open-weight models on developer machines |
+| `open-r1` | [Open R1 (Hugging Face)](./training-and-alignment/open-r1.md) | Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL |
 | `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
 | `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
 | `openlit` | [OpenLIT](./benchmarks-and-evals/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |

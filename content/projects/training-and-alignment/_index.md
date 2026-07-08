@@ -30,12 +30,15 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Recently Added
 
-_No entries yet._
+- [Colossal-AI (HPC-AI Tech)](./colossalai.md)
+- [Open R1 (Hugging Face)](./open-r1.md)
 
 ### Most Popular
 
-_No star-tracked entries yet._
+- [Colossal-AI (HPC-AI Tech)](./colossalai.md) — ⭐ 41407
+- [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26399
 
 ### Browse All
 
-_No entries yet._
+- [Colossal-AI (HPC-AI Tech)](./colossalai.md) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
+- [Open R1 (Hugging Face)](./open-r1.md) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL

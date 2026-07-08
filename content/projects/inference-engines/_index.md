@@ -33,6 +33,7 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [exo (exo-explore)](./exo.md)
 - [llama.cpp](./llama-cpp.md)
 - [Llamafile](./llamafile.md)
 - [LMDeploy](./lmdeploy.md)
@@ -46,6 +47,7 @@ Before selecting an inference engine:
 - [Ollama](./ollama.md) — ⭐ 174059
 - [llama.cpp](./llama-cpp.md) — ⭐ 116399
 - [vLLM](./vllm.md) — ⭐ 82772
+- [exo (exo-explore)](./exo.md) — ⭐ 46087
 - [SGLang](./sglang.md) — ⭐ 28967
 - [Llamafile](./llamafile.md) — ⭐ 24936
 - [Text Generation Inference](./text-generation-inference.md) — ⭐ 10863
@@ -53,6 +55,7 @@ Before selecting an inference engine:
 
 ### Browse All
 
+- [exo (exo-explore)](./exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
 - [LMDeploy](./lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends

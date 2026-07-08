@@ -1,17 +1,17 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
+  "generated_at": "2026-07-08T19:16:30.050Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 93,
+      "count": 94,
       "types": {
         "tip": 14,
         "tool": 26,
         "build-example": 3,
         "guide": 7,
-        "project": 24,
+        "project": 25,
         "architecture": 4,
         "benchmark": 5,
         "person": 3,
@@ -50,6 +50,7 @@
         "dropstone-3",
         "gaia",
         "google-adk",
+        "goose",
         "harrison-chase",
         "haystack",
         "insforge",
@@ -306,12 +307,12 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 18,
+      "count": 19,
       "types": {
         "tool": 6,
         "guide": 2,
+        "project": 5,
         "benchmark": 4,
-        "project": 4,
         "paper": 2
       },
       "entries": [
@@ -321,6 +322,7 @@
         "chrome-devtools-mcp",
         "codebase-memory-mcp",
         "codex-plugin-cc",
+        "goose",
         "humaneval",
         "livecodebench",
         "mbpp",
@@ -338,12 +340,12 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 62,
+      "count": 63,
       "types": {
         "tool": 19,
         "person": 4,
+        "project": 7,
         "guide": 28,
-        "project": 6,
         "build-example": 1,
         "tip": 3,
         "architecture": 1
@@ -353,6 +355,7 @@
         "airflow",
         "argilla",
         "chip-huyen",
+        "cleanlab",
         "clem-delangue",
         "cost-freemium",
         "cost-open-source",
@@ -516,13 +519,13 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 99,
+      "count": 100,
       "types": {
         "digest": 1,
         "tip": 13,
         "build-example": 1,
         "guide": 10,
-        "project": 10,
+        "project": 11,
         "benchmark": 30,
         "tool": 17,
         "person": 9,
@@ -548,6 +551,7 @@
         "choose-eval-framework",
         "choose-observability-tool",
         "classify-failures-before-fixing-prompts",
+        "cleanlab",
         "code-arena",
         "deepeval",
         "detect-context-truncation-in-tests",
@@ -647,21 +651,24 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 12,
+      "count": 14,
       "types": {
         "tool": 7,
+        "project": 2,
         "paper": 2,
         "guide": 2,
         "architecture": 1
       },
       "entries": [
         "axolotl",
+        "colossalai",
         "dettmers-2023-qlora",
         "fine-tuning-methods",
         "hu-2021-lora",
         "llamafactory",
         "ml-engineer-role",
         "mlx-lm",
+        "open-r1",
         "orchestraml",
         "peft",
         "rag-vs-fine-tuning",
@@ -763,12 +770,12 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 59,
+      "count": 60,
       "types": {
         "tip": 21,
         "tool": 6,
         "architecture": 4,
-        "project": 17,
+        "project": 18,
         "guide": 6,
         "paper": 4,
         "build-example": 1
@@ -785,6 +792,7 @@
         "choose-llm",
         "deepseek-v3-r1",
         "emerging-techniques",
+        "exo",
         "falcon-3",
         "fireworks-ai",
         "frantar-2022-gptq",
@@ -1057,11 +1065,11 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 29,
+      "count": 30,
       "types": {
         "tip": 6,
         "architecture": 2,
-        "project": 16,
+        "project": 17,
         "tool": 3,
         "guide": 1,
         "build-example": 1
@@ -1072,6 +1080,7 @@
         "chroma",
         "crawl4ai",
         "crawl4ai-tool",
+        "exo",
         "falcon-3",
         "gemma",
         "gemma-3",
@@ -1179,14 +1188,15 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 19,
+      "count": 20,
       "types": {
-        "project": 9,
+        "project": 10,
         "paper": 2,
         "tool": 4,
         "benchmark": 4
       },
       "entries": [
+        "audiocraft",
         "command-r-plus",
         "dubey-2024-llama3",
         "gemma",
@@ -1499,10 +1509,10 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 26,
+      "count": 27,
       "types": {
         "paper": 6,
-        "project": 6,
+        "project": 7,
         "guide": 3,
         "person": 4,
         "benchmark": 6,
@@ -1523,6 +1533,7 @@
         "mmlu",
         "mmlu-pro",
         "nathan-lambert",
+        "open-r1",
         "phi-4",
         "phi-cookbook",
         "prompt-patterns-catalog",
@@ -1644,11 +1655,12 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 7,
+      "count": 8,
       "types": {
         "guide": 1,
         "paper": 5,
-        "person": 1
+        "person": 1,
+        "project": 1
       },
       "entries": [
         "alignment-and-rlhf",
@@ -1656,6 +1668,7 @@
         "deepseek-ai-2025-r1",
         "liang-2026-mipi",
         "nathan-lambert",
+        "open-r1",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo"
       ]
@@ -1724,18 +1737,23 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 18,
+      "count": 23,
       "types": {
+        "project": 14,
         "architecture": 3,
         "tool": 2,
         "paper": 1,
-        "project": 9,
         "tip": 3
       },
       "entries": [
+        "audiocraft",
         "choose-deployment-target",
         "choose-vector-db",
+        "cleanlab",
+        "colossalai",
         "cubesandbox",
+        "detectron2",
+        "exo",
         "gemma-team-2026-gemma4",
         "helicone",
         "keep-model-files-out-of-git",
@@ -1851,12 +1869,12 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 44,
+      "count": 45,
       "types": {
         "tip": 12,
         "guide": 6,
         "tool": 6,
-        "project": 14,
+        "project": 15,
         "architecture": 1,
         "build-example": 2,
         "paper": 2,
@@ -1885,6 +1903,7 @@
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
         "google-adk",
+        "goose",
         "intermediate-multi-tool-agent",
         "langgraph",
         "log-agent-state-transitions",
@@ -1954,18 +1973,21 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 17,
+      "count": 19,
       "types": {
         "guide": 4,
         "person": 3,
-        "paper": 10
+        "paper": 10,
+        "project": 2
       },
       "entries": [
         "alignment-and-rlhf",
         "andrew-ng",
         "bai-2022-constitutional-ai",
         "brown-2020-gpt3",
+        "colossalai",
         "deepseek-ai-2025-r1",
+        "detectron2",
         "devlin-2018-bert",
         "dubey-2024-llama3",
         "fine-tuning-methods",
@@ -2022,11 +2044,13 @@
     {
       "id": "vision",
       "label": "Vision",
-      "count": 4,
+      "count": 5,
       "types": {
+        "project": 1,
         "benchmark": 4
       },
       "entries": [
+        "detectron2",
         "mathvista",
         "mmbench",
         "mmmu",
@@ -2036,11 +2060,12 @@
     {
       "id": "voice",
       "label": "Voice",
-      "count": 1,
+      "count": 2,
       "types": {
-        "project": 1
+        "project": 2
       },
       "entries": [
+        "audiocraft",
         "speech-to-speech"
       ]
     }

@@ -32,6 +32,7 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [goose (Block)](./goose.md)
 - [PageAgent](./page-agent.md)
 - [Strix](./strix.md)
 - [InsForge](./insforge.md)
@@ -39,6 +40,7 @@ Before selecting an agent system:
 
 ### Most Popular
 
+- [goose (Block)](./goose.md) — ⭐ 50845
 - [Strix](./strix.md) — ⭐ 38354
 - [PageAgent](./page-agent.md) — ⭐ 24812
 - [Stagehand](./stagehand.md) — ⭐ 5400
@@ -46,6 +48,7 @@ Before selecting an agent system:
 
 ### Browse All
 
+- [goose (Block)](./goose.md) — Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
