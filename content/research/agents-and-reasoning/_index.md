@@ -33,6 +33,7 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 
 ### Recently Added
 
+- [Generative Agents: Interactive Simulacra of Human Behavior](./park-2023-generative-agents.md)
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](./shinn-2023-reflexion.md)
 - [Voyager: An Open-Ended Embodied Agent with Large Language Models](./wang-2023-voyager.md)
 - [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./zhou-2026-colleague-skill.md)
@@ -50,6 +51,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
+- [Generative Agents: Interactive Simulacra of Human Behavior](./park-2023-generative-agents.md) — The Smallville paper: 25 LLM agents with a memory-stream architecture (observation, retrieval by recency/importance/relevance, reflection, planning) lived in a simulated town and produced emergent social behavior — the design that defined agent memory
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
 - [Reflexion: Language Agents with Verbal Reinforcement Learning](./shinn-2023-reflexion.md) — Showed agents improve across retries by writing verbal self-reflections on failures into an episodic memory instead of updating weights — 'verbal reinforcement learning' — the retry-with-reflection loop now standard in coding and tool-use agents
 - [Voyager: An Open-Ended Embodied Agent with Large Language Models](./wang-2023-voyager.md) — First LLM-powered lifelong-learning agent in Minecraft: an automatic curriculum, an ever-growing skill library of verified executable code, and iterative environment-feedback prompting — the origin of the 'skill library' pattern now reappearing in agent skill systems
