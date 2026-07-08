@@ -30,12 +30,24 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Recently Added
 
-_No entries yet._
+- [LitGPT](./litgpt.md)
+- [ms-swift](./ms-swift.md)
+- [nanoGPT](./nanogpt.md)
+- [OpenRLHF](./openrlhf.md)
+- [verl](./verl.md)
 
 ### Most Popular
 
-_No star-tracked entries yet._
+- [nanoGPT](./nanogpt.md) — ⭐ 60962
+- [verl](./verl.md) — ⭐ 22377
+- [ms-swift](./ms-swift.md) — ⭐ 14751
+- [LitGPT](./litgpt.md) — ⭐ 13467
+- [OpenRLHF](./openrlhf.md) — ⭐ 9769
 
 ### Browse All
 
-_No entries yet._
+- [LitGPT](./litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
+- [ms-swift](./ms-swift.md) — ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends
+- [nanoGPT](./nanogpt.md) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
+- [OpenRLHF](./openrlhf.md) — High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale
+- [verl](./verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
