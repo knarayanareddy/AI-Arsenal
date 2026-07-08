@@ -35,6 +35,7 @@ Before selecting a framework:
 
 - [CAMEL](./camel-ai.md)
 - [ComfyUI](./comfyui.md)
+- [Detectron2 (Meta)](./detectron2.md)
 - [Speech To Speech](./speech-to-speech.md)
 - [Spring AI](./spring-ai.md)
 - [Supervision](./supervision.md)
@@ -42,7 +43,6 @@ Before selecting a framework:
 - [Ultralytics YOLO](./ultralytics-yolo.md)
 - [Vercel AI SDK](./vercel-ai-sdk.md)
 - [Uiverse Design](./uiverse-design.md)
-- [AutoGen](./autogen.md)
 
 ### Most Popular
 
@@ -64,6 +64,7 @@ Before selecting a framework:
 - [CAMEL](./camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
 - [ComfyUI](./comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [CrewAI](./crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
+- [Detectron2 (Meta)](./detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dify](./dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [DSPy](./dspy.md) — A framework for programming and optimizing language model pipelines
 - [Google ADK](./google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents

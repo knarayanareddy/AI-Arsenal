@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:14:17.406Z",
+  "generated_at": "2026-07-08T20:15:56.537Z",
   "tags": [
     {
       "id": "agents",
@@ -466,12 +466,12 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 82,
+      "count": 83,
       "types": {
         "tool": 29,
         "person": 4,
+        "project": 13,
         "guide": 28,
-        "project": 12,
         "paper": 1,
         "tip": 6,
         "build-example": 1,
@@ -483,6 +483,7 @@
         "airflow",
         "argilla",
         "chip-huyen",
+        "cleanlab",
         "clem-delangue",
         "cost-freemium",
         "cost-open-source",
@@ -714,13 +715,13 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 145,
+      "count": 146,
       "types": {
         "digest": 1,
         "tip": 26,
         "build-example": 1,
         "guide": 10,
-        "project": 13,
+        "project": 14,
         "benchmark": 40,
         "tool": 27,
         "person": 9,
@@ -753,6 +754,7 @@
         "choose-eval-framework",
         "choose-observability-tool",
         "classify-failures-before-fixing-prompts",
+        "cleanlab",
         "cobbe-2021-gsm8k",
         "code-arena",
         "deepchecks",
@@ -891,10 +893,10 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 32,
+      "count": 34,
       "types": {
         "tool": 13,
-        "project": 5,
+        "project": 7,
         "paper": 3,
         "tip": 8,
         "guide": 2,
@@ -904,6 +906,7 @@
         "accelerate",
         "alignment-handbook",
         "axolotl",
+        "colossalai",
         "deepspeed",
         "dettmers-2023-qlora",
         "establish-a-prompting-baseline-before-fine-tuning",
@@ -920,6 +923,7 @@
         "ml-engineer-role",
         "mlx-lm",
         "ms-swift",
+        "open-r1",
         "openrlhf",
         "orchestraml",
         "peft",
@@ -1053,11 +1057,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 107,
+      "count": 108,
       "types": {
         "tip": 25,
         "tool": 24,
-        "project": 34,
+        "project": 35,
         "architecture": 7,
         "paper": 10,
         "guide": 6,
@@ -1086,6 +1090,7 @@
         "deepseek-v3-r1",
         "emerging-techniques",
         "exllamav2",
+        "exo",
         "f5-tts",
         "falcon-3",
         "faster-whisper",
@@ -1491,11 +1496,11 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 33,
+      "count": 34,
       "types": {
         "tip": 6,
         "architecture": 2,
-        "project": 17,
+        "project": 18,
         "tool": 6,
         "guide": 1,
         "build-example": 1
@@ -1507,6 +1512,7 @@
         "crawl4ai",
         "crawl4ai-tool",
         "exllamav2",
+        "exo",
         "falcon-3",
         "gemma",
         "gemma-3",
@@ -1628,14 +1634,15 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 37,
+      "count": 38,
       "types": {
-        "project": 22,
+        "project": 23,
         "paper": 6,
         "tool": 5,
         "benchmark": 4
       },
       "entries": [
+        "audiocraft",
         "chatterbox",
         "clip",
         "comfyui",
@@ -2043,11 +2050,11 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 35,
+      "count": 36,
       "types": {
         "paper": 12,
         "benchmark": 9,
-        "project": 6,
+        "project": 7,
         "guide": 3,
         "person": 4,
         "build-example": 1
@@ -2073,6 +2080,7 @@
         "mmlu",
         "mmlu-pro",
         "nathan-lambert",
+        "open-r1",
         "phi-4",
         "phi-cookbook",
         "prompt-patterns-catalog",
@@ -2234,10 +2242,10 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 14,
+      "count": 15,
       "types": {
         "guide": 1,
-        "project": 1,
+        "project": 2,
         "paper": 10,
         "person": 1,
         "tool": 1
@@ -2251,6 +2259,7 @@
         "liang-2026-mipi",
         "nakano-2021-webgpt",
         "nathan-lambert",
+        "open-r1",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
         "schulman-2017-ppo",
@@ -2331,9 +2340,9 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 60,
+      "count": 65,
       "types": {
-        "project": 27,
+        "project": 32,
         "architecture": 5,
         "tool": 23,
         "paper": 1,
@@ -2342,18 +2351,23 @@
       "entries": [
         "anything-llm",
         "anythingllm",
+        "audiocraft",
         "bge-embeddings",
         "chatterbox",
         "choose-deployment-target",
         "choose-embedding-model",
         "choose-serving-stack",
         "choose-vector-db",
+        "cleanlab",
         "clearml",
         "cog",
+        "colossalai",
         "comfyui",
         "continue",
         "cubesandbox",
+        "detectron2",
         "elasticsearch",
+        "exo",
         "f5-tts",
         "flux",
         "garak",
@@ -2641,13 +2655,13 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 43,
+      "count": 45,
       "types": {
         "tool": 8,
         "guide": 4,
         "person": 3,
         "paper": 24,
-        "project": 4
+        "project": 6
       },
       "entries": [
         "accelerate",
@@ -2659,9 +2673,11 @@
         "christiano-2017-rlhf",
         "clearml",
         "cobbe-2021-gsm8k",
+        "colossalai",
         "deepseek-ai-2024-deepseek-v3",
         "deepseek-ai-2025-r1",
         "deepspeed",
+        "detectron2",
         "devlin-2018-bert",
         "dubey-2024-llama3",
         "fedus-2021-switch-transformer",
@@ -2757,13 +2773,14 @@
     {
       "id": "vision",
       "label": "Vision",
-      "count": 10,
+      "count": 11,
       "types": {
+        "project": 6,
         "benchmark": 4,
-        "paper": 1,
-        "project": 5
+        "paper": 1
       },
       "entries": [
+        "detectron2",
         "mathvista",
         "mmbench",
         "mmmu",
@@ -2779,12 +2796,13 @@
     {
       "id": "voice",
       "label": "Voice",
-      "count": 5,
+      "count": 6,
       "types": {
-        "project": 4,
+        "project": 5,
         "paper": 1
       },
       "entries": [
+        "audiocraft",
         "faster-whisper",
         "radford-2022-whisper",
         "speech-to-speech",

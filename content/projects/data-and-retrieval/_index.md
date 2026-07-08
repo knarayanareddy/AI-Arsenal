@@ -34,6 +34,7 @@ Before selecting a data/retrieval component:
 ### Recently Added
 
 - [AnythingLLM](./anything-llm.md)
+- [cleanlab](./cleanlab.md)
 - [Cognee](./cognee.md)
 - [Graphiti](./graphiti.md)
 - [GraphRAG](./graphrag.md)
@@ -42,7 +43,6 @@ Before selecting a data/retrieval component:
 - [PaddleOCR](./paddleocr.md)
 - [Surya](./surya.md)
 - [zvec](./zvec.md)
-- [Supabase](./supabase.md)
 
 ### Most Popular
 
@@ -61,6 +61,7 @@ Before selecting a data/retrieval component:
 
 - [AnythingLLM](./anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
+- [cleanlab](./cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - [Cognee](./cognee.md) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
 - [Crawl4AI](./crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [Docling](./docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI

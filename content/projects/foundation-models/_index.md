@@ -33,6 +33,7 @@ Before selecting a foundation model:
 
 ### Recently Added
 
+- [AudioCraft (Meta)](./audiocraft.md)
 - [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md)
 - [Chatterbox (Resemble AI)](./chatterbox.md)
 - [CLIP (OpenAI)](./clip.md)
@@ -42,7 +43,6 @@ Before selecting a foundation model:
 - [Kimi K2](./kimi-k2.md)
 - [Kokoro TTS](./kokoro.md)
 - [OLMo](./olmo.md)
-- [Qwen3-VL](./qwen3-vl.md)
 
 ### Most Popular
 
@@ -52,13 +52,14 @@ Before selecting a foundation model:
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — ⭐ 27298
 - [FLUX (Black Forest Labs)](./flux.md) — ⭐ 25700
 - [Chatterbox (Resemble AI)](./chatterbox.md) — ⭐ 25426
+- [AudioCraft (Meta)](./audiocraft.md) — ⭐ 23456
 - [Qwen](./qwen.md) — ⭐ 21281
 - [Qwen3-VL](./qwen3-vl.md) — ⭐ 19555
 - [SAM 2 (Segment Anything Model 2)](./sam2.md) — ⭐ 19492
-- [F5-TTS](./f5-tts.md) — ⭐ 14902
 
 ### Browse All
 
+- [AudioCraft (Meta)](./audiocraft.md) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
 - [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md) — BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG
 - [Chatterbox (Resemble AI)](./chatterbox.md) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
 - [CLIP (OpenAI)](./clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
