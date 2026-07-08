@@ -6,12 +6,12 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 14 entries | 2026-07-08 |
+| [architectures](./architectures/) | 17 entries | 2026-07-08 |
 | [benchmarks](./benchmarks/) | 30 entries | 2026-07-08 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
 | [community](./community/) | 48 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
-| [observability](./observability/) | 7 entries | 2026-07-08 |
+| [observability](./observability/) | 10 entries | 2026-07-08 |
 | [projects](./projects/) | 116 entries | 2026-07-08 |
 | [research](./research/) | 67 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
@@ -78,6 +78,7 @@
 - [Airbyte](./tools/data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
+- [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./observability/monitoring-alerting/alert-on-streaming-latency-slos.md) — 
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
@@ -96,4 +97,3 @@
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
-- [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
