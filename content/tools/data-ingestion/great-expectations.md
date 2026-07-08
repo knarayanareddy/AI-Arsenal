@@ -13,7 +13,7 @@ stack: [python]
 free_tier: true
 free_tier_limits: GX Core fully open source; GX Cloud has separate pricing
 source_url: "https://github.com/great-expectations/great_expectations"
-docs_url: "https://docs.greatexpectations.io/docs/home"
+docs_url: "https://docs.greatexpectations.io/docs/home/"
 github_url: "https://github.com/great-expectations/great_expectations"
 self_hostable: true
 open_source: true
@@ -93,7 +93,7 @@ Link this tool from reference stacks, decision trees, and project entries using 
 
 - [Official Site](https://greatexpectations.io)
 - [GitHub](https://github.com/great-expectations/great_expectations)
-- [Docs](https://docs.greatexpectations.io/docs/home)
+- [Docs](https://docs.greatexpectations.io/docs/home/)
 
 ## Buzz & Reception
 
