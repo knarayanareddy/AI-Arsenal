@@ -6,16 +6,17 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 9 entries | 2026-07-08 |
+| [agent systems](./agent-systems/) | 14 entries | 2026-07-08 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 15 entries | 2026-07-08 |
-| [data and retrieval](./data-and-retrieval/) | 21 entries | 2026-07-08 |
-| [foundation models](./foundation-models/) | 24 entries | 2026-07-08 |
-| [frameworks](./frameworks/) | 26 entries | 2026-07-08 |
-| [inference engines](./inference-engines/) | 10 entries | 2026-07-08 |
+| [data and retrieval](./data-and-retrieval/) | 24 entries | 2026-07-08 |
+| [foundation models](./foundation-models/) | 25 entries | 2026-07-08 |
+| [frameworks](./frameworks/) | 28 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 12 entries | 2026-07-08 |
 | [training and alignment](./training-and-alignment/) | 5 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [AnythingLLM](./data-and-retrieval/anything-llm.md)
 - [AnythingLLM](./agent-systems/anythingllm.md)
 - [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md)
 - [BigCodeBench](./benchmarks-and-evals/bigcodebench.md)
@@ -25,7 +26,6 @@
 - [CLIP (OpenAI)](./foundation-models/clip.md)
 - [Cognee](./data-and-retrieval/cognee.md)
 - [ComfyUI](./frameworks/comfyui.md)
-- [ExLlamaV2](./inference-engines/exllamav2.md)
 
 ## Most Popular
 
@@ -43,6 +43,7 @@
 ## Browse All
 
 - [Agenta](./benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AnythingLLM](./data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [AnythingLLM](./agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [AutoGen](./frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
@@ -57,6 +58,7 @@
 - [Cognee](./data-and-retrieval/cognee.md) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
 - [ComfyUI](./frameworks/comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [Command R+](./foundation-models/command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
+- [Continue](./agent-systems/continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
 - [Crawl4AI](./data-and-retrieval/crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [CrewAI](./frameworks/crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
@@ -67,6 +69,7 @@
 - [ExLlamaV2](./inference-engines/exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
 - [F5-TTS](./foundation-models/f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
 - [Falcon 3](./foundation-models/falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
+- [faster-whisper](./inference-engines/faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [Firecrawl](./data-and-retrieval/firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
 - [FLUX (Black Forest Labs)](./foundation-models/flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - [Gemma](./foundation-models/gemma.md) — Google open model family designed for efficient language and multimodal applications
@@ -75,6 +78,7 @@
 - [Google ADK](./frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [GPT Researcher](./agent-systems/gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [Graphiti](./data-and-retrieval/graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
+- [GraphRAG](./data-and-retrieval/graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Helicone](./benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [InsForge](./agent-systems/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
@@ -88,7 +92,3 @@
 - [LangSmith](./benchmarks-and-evals/langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
 - [LibreChat](./agent-systems/librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [LitGPT](./training-and-alignment/litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
-- [Llama 3.x](./foundation-models/llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
-- [llama.cpp](./inference-engines/llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
-- [Llamafile](./inference-engines/llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
-- [LlamaIndex](./frameworks/llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems

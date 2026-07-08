@@ -54,8 +54,8 @@ Before selecting a foundation model:
 - [Chatterbox (Resemble AI)](./chatterbox.md) — ⭐ 25426
 - [Qwen](./qwen.md) — ⭐ 21281
 - [Qwen3-VL](./qwen3-vl.md) — ⭐ 19555
+- [SAM 2 (Segment Anything Model 2)](./sam2.md) — ⭐ 19492
 - [F5-TTS](./f5-tts.md) — ⭐ 14902
-- [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md) — ⭐ 11913
 
 ### Browse All
 
@@ -80,6 +80,7 @@ Before selecting a foundation model:
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [Qwen3-VL](./qwen3-vl.md) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
+- [SAM 2 (Segment Anything Model 2)](./sam2.md) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 - [TranslateGemma](./translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
 - [Whisper](./whisper.md) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 - [Yi](./yi.md) — 01.AI open model family with bilingual and long-context variants from small to mid-large sizes
