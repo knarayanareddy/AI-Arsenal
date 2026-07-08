@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:42:22.380Z",
+  "generated_at": "2026-07-08T20:02:48.876Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 133,
+      "count": 136,
       "types": {
-        "tip": 14,
+        "tip": 17,
         "tool": 45,
         "build-example": 3,
         "guide": 7,
@@ -38,6 +38,7 @@
         "browser-use",
         "browserbase",
         "budget-context-before-adding-tools",
+        "cache-idempotent-tool-results-within-a-run",
         "camel-ai",
         "cap-agent-tool-retries",
         "chainlit",
@@ -52,6 +53,7 @@
         "codebase-memory-mcp",
         "codex-plugin-cc",
         "cognee",
+        "compact-tool-outputs-before-adding-to-context",
         "composio",
         "crewai",
         "cubesandbox",
@@ -119,6 +121,7 @@
         "seaticket",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
+        "set-wall-clock-timeouts-for-agent-runs",
         "shellmate",
         "shinn-2023-reflexion",
         "single-agent-vs-multi-agent",
@@ -212,14 +215,15 @@
     {
       "id": "batching",
       "label": "Batching",
-      "count": 8,
+      "count": 10,
       "types": {
+        "tip": 4,
         "guide": 1,
         "tool": 2,
-        "tip": 2,
         "project": 3
       },
       "entries": [
+        "batch-embedding-requests-during-ingestion",
         "inference-optimization",
         "ray-serve",
         "separate-offline-batch-jobs-from-chat-serving",
@@ -227,6 +231,7 @@
         "text-generation-inference",
         "triton-inference-server",
         "tune-batch-size-against-tail-latency",
+        "use-provider-batch-apis-for-offline-workloads",
         "vllm"
       ]
     },
@@ -273,9 +278,9 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 10,
+      "count": 11,
       "types": {
-        "tip": 5,
+        "tip": 6,
         "architecture": 1,
         "guide": 1,
         "paper": 1,
@@ -284,6 +289,7 @@
       },
       "entries": [
         "cache-embeddings-by-content-hash",
+        "cache-idempotent-tool-results-within-a-run",
         "cache-stable-system-prompts",
         "choose-caching-strategy",
         "inference-optimization",
@@ -561,11 +567,11 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 42,
+      "count": 43,
       "types": {
         "paper": 11,
         "guide": 4,
-        "tip": 10,
+        "tip": 11,
         "tool": 9,
         "architecture": 2,
         "project": 6
@@ -578,6 +584,7 @@
         "cerebras-inference",
         "choose-caching-strategy",
         "choose-serving-stack",
+        "compact-tool-outputs-before-adding-to-context",
         "compress-retrieved-context-before-generation",
         "dao-2022-flashattention",
         "deepseek-ai-2024-deepseek-v3",
@@ -618,9 +625,9 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 37,
+      "count": 38,
       "types": {
-        "tip": 7,
+        "tip": 8,
         "guide": 2,
         "architecture": 4,
         "project": 11,
@@ -631,6 +638,7 @@
       "entries": [
         "add-hybrid-search-for-exact-terms",
         "add-reranking-after-recall-is-acceptable",
+        "batch-embedding-requests-during-ingestion",
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
         "choose-chunking-strategy",
@@ -671,10 +679,10 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 127,
+      "count": 131,
       "types": {
         "digest": 1,
-        "tip": 22,
+        "tip": 26,
         "build-example": 1,
         "guide": 10,
         "project": 13,
@@ -786,11 +794,14 @@
         "run-evals-multiple-times-before-trusting-deltas",
         "run-prompt-injection-regression-tests",
         "salad-bench",
+        "sample-production-traffic-into-eval-sets",
         "seed-bench",
         "separate-a-frozen-holdout-from-your-dev-eval-set",
+        "set-pass-fail-thresholds-before-running-evals",
         "shinn-2023-reflexion",
         "shreya-shankar",
         "simon-willison",
+        "slice-eval-metrics-by-input-segment",
         "sota-benchmarks",
         "store-prompts-with-release-versions",
         "swe-bench",
@@ -798,6 +809,7 @@
         "terminal-bench",
         "test-for-regressions-outside-the-tuned-task",
         "test-prompts-with-adversarial-inputs",
+        "track-refusal-rates-as-a-regression-signal",
         "trulens",
         "truthfulqa",
         "uptrain",
@@ -984,9 +996,9 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 86,
+      "count": 89,
       "types": {
-        "tip": 22,
+        "tip": 25,
         "tool": 23,
         "architecture": 7,
         "paper": 7,
@@ -1001,6 +1013,7 @@
         "benchmark-with-real-context-lengths",
         "bentoml",
         "cache-stable-system-prompts",
+        "cap-max-output-tokens-per-request",
         "cerebras-inference",
         "choose-caching-strategy",
         "choose-deployment-target",
@@ -1077,9 +1090,11 @@
         "triton-inference-server",
         "tune-batch-size-against-tail-latency",
         "use-int8-for-safer-compression",
+        "use-provider-batch-apis-for-offline-workloads",
         "use-smaller-models-for-classification-steps",
         "use-speculative-decoding-for-latency-critical-paths",
         "vllm",
+        "warm-up-model-servers-before-routing-traffic",
         "yi"
       ]
     },
@@ -1470,9 +1485,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 31,
+      "count": 32,
       "types": {
-        "tip": 7,
+        "tip": 8,
         "person": 1,
         "architecture": 1,
         "tool": 14,
@@ -1510,6 +1525,7 @@
         "promptfoo",
         "spotlight-by-backplanes",
         "superlog",
+        "track-refusal-rates-as-a-regression-signal",
         "weights-biases"
       ]
     },
@@ -1569,9 +1585,9 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 49,
+      "count": 55,
       "types": {
-        "tip": 23,
+        "tip": 29,
         "project": 12,
         "tool": 8,
         "architecture": 3,
@@ -1585,9 +1601,11 @@
         "agenta",
         "agentops",
         "braintrust",
+        "cap-max-output-tokens-per-request",
         "choose-eval-framework",
         "choose-observability-tool",
         "classify-failures-before-fixing-prompts",
+        "correlate-llm-traces-with-request-ids",
         "deepeval",
         "do-not-launch-without-trace-sampling",
         "evidently",
@@ -1601,6 +1619,7 @@
         "langsmith",
         "langsmith-platform",
         "llm-observability",
+        "log-latency-by-pipeline-stage",
         "log-raw-and-parsed-model-outputs",
         "log-retrieved-context",
         "lunary",
@@ -1618,13 +1637,16 @@
         "redact-secrets-before-tracing",
         "replay-the-same-trace-with-one-variable-changed",
         "review-data-retention-for-prompts",
+        "sample-production-traffic-into-eval-sets",
         "separate-model-errors-from-app-errors",
         "set-token-budgets-per-feature",
+        "slice-eval-metrics-by-input-segment",
         "store-parser-version-with-every-chunk",
         "store-prompt-version-in-every-trace",
         "trace-tool-inputs-and-outputs",
         "track-cost-per-feature",
         "track-cost-per-successful-outcome",
+        "track-refusal-rates-as-a-regression-signal",
         "uptrain",
         "use-golden-questions-for-every-bug-fix",
         "version-datasets-and-adapters-together",
@@ -1646,12 +1668,13 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 43,
+      "count": 44,
       "types": {
         "guide": 2,
         "tool": 20,
         "project": 18,
-        "architecture": 3
+        "architecture": 3,
+        "tip": 1
       },
       "entries": [
         "agent-builder-role",
@@ -1693,6 +1716,7 @@
         "ray-serve",
         "seaticket",
         "semantic-kernel",
+        "set-wall-clock-timeouts-for-agent-runs",
         "single-agent-vs-multi-agent",
         "stagehand",
         "temporal",
@@ -2173,13 +2197,13 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 41,
+      "count": 42,
       "types": {
         "project": 13,
         "architecture": 5,
         "tool": 19,
         "paper": 1,
-        "tip": 3
+        "tip": 4
       },
       "entries": [
         "anythingllm",
@@ -2222,6 +2246,7 @@
         "typesense",
         "use-local-models-for-sensitive-prototyping",
         "vespa",
+        "warm-up-model-servers-before-routing-traffic",
         "weaviate"
       ]
     },
@@ -2342,9 +2367,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 55,
+      "count": 57,
       "types": {
-        "tip": 12,
+        "tip": 14,
         "guide": 6,
         "tool": 14,
         "project": 16,
@@ -2367,6 +2392,7 @@
         "browser-use",
         "browserbase",
         "budget-context-before-adding-tools",
+        "cache-idempotent-tool-results-within-a-run",
         "cap-agent-tool-retries",
         "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
@@ -2376,6 +2402,7 @@
         "cline",
         "codex-plugin-cc",
         "command-r-plus",
+        "compact-tool-outputs-before-adding-to-context",
         "composio",
         "continue-dev",
         "crewai",
@@ -2414,9 +2441,9 @@
     {
       "id": "tracing",
       "label": "Tracing",
-      "count": 29,
+      "count": 31,
       "types": {
-        "tip": 8,
+        "tip": 10,
         "project": 10,
         "tool": 8,
         "architecture": 1,
@@ -2430,6 +2457,7 @@
         "chainlit",
         "choose-observability-tool",
         "conan",
+        "correlate-llm-traces-with-request-ids",
         "do-not-launch-without-trace-sampling",
         "evals-in-production",
         "langfuse",
@@ -2437,6 +2465,7 @@
         "langsmith-platform",
         "llm-observability",
         "log-agent-state-transitions",
+        "log-latency-by-pipeline-stage",
         "log-raw-and-parsed-model-outputs",
         "lunary",
         "openai-agents-sdk",
