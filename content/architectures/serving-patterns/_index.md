@@ -26,6 +26,7 @@ _No entries yet. This category folder was created during the Architectures verti
 
 ### Recently Added
 
+- [Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine](./choose-serving-stack.md)
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md)
 
 ### Most Popular
@@ -35,3 +36,4 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md) — 
+- [Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine](./choose-serving-stack.md) — 

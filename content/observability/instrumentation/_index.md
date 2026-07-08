@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces](./capture-user-feedback-events.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./capture-the-llm-call-event.md)
 
 ### Most Popular
@@ -35,3 +36,4 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./capture-the-llm-call-event.md) — 
+- [Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces](./capture-user-feedback-events.md) — 
