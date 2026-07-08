@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:21:54.128Z",
+  "generated_at": "2026-07-08T19:27:20.946Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 130,
+      "count": 131,
       "types": {
         "tip": 14,
         "tool": 45,
         "build-example": 3,
         "guide": 7,
         "project": 37,
-        "architecture": 5,
+        "architecture": 6,
         "benchmark": 5,
         "person": 3,
         "paper": 11
@@ -119,6 +119,7 @@
         "separate-planner-and-executor-permissions",
         "shellmate",
         "shinn-2023-reflexion",
+        "single-agent-vs-multi-agent",
         "skillspector",
         "smolagents",
         "speech-to-speech",
@@ -289,14 +290,16 @@
     {
       "id": "chunking",
       "label": "Chunking",
-      "count": 7,
+      "count": 8,
       "types": {
         "guide": 2,
-        "tip": 5
+        "tip": 5,
+        "architecture": 1
       },
       "entries": [
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "context-windows",
         "rag-chunk-overlap-tuning",
         "start-with-zero-chunk-overlap",
@@ -543,13 +546,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 36,
+      "count": 37,
       "types": {
         "paper": 10,
         "guide": 4,
         "tip": 9,
         "tool": 6,
-        "architecture": 1,
+        "architecture": 2,
         "project": 6
       },
       "entries": [
@@ -559,6 +562,7 @@
         "benchmark-with-real-context-lengths",
         "cerebras-inference",
         "choose-caching-strategy",
+        "choose-serving-stack",
         "compress-retrieved-context-before-generation",
         "dao-2022-flashattention",
         "deepseek-v3-r1",
@@ -594,11 +598,11 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 31,
+      "count": 32,
       "types": {
         "tip": 7,
         "guide": 2,
-        "architecture": 3,
+        "architecture": 4,
         "project": 11,
         "tool": 5,
         "person": 1,
@@ -609,6 +613,7 @@
         "add-reranking-after-recall-is-acceptable",
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
+        "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
         "choose-vector-db",
@@ -920,11 +925,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 81,
+      "count": 82,
       "types": {
         "tip": 21,
         "tool": 20,
-        "architecture": 6,
+        "architecture": 7,
         "paper": 7,
         "project": 20,
         "guide": 6,
@@ -942,6 +947,7 @@
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
+        "choose-serving-stack",
         "choose-structured-output-strategy",
         "cloudflare-workers-ai",
         "dao-2022-flashattention",
@@ -1062,7 +1068,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 209,
+      "count": 210,
       "types": {
         "tip": 20,
         "guide": 44,
@@ -1071,7 +1077,7 @@
         "benchmark": 9,
         "project": 40,
         "paper": 16,
-        "architecture": 6,
+        "architecture": 7,
         "build-example": 2
       },
       "entries": [
@@ -1098,6 +1104,7 @@
         "choose-caching-strategy",
         "choose-guardrails-strategy",
         "choose-llm",
+        "choose-serving-stack",
         "choose-structured-output-strategy",
         "clem-delangue",
         "cohere",
@@ -1548,12 +1555,12 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 41,
+      "count": 42,
       "types": {
         "guide": 2,
         "tool": 19,
         "project": 18,
-        "architecture": 2
+        "architecture": 3
       },
       "entries": [
         "agent-builder-role",
@@ -1594,6 +1601,7 @@
         "ray-serve",
         "seaticket",
         "semantic-kernel",
+        "single-agent-vs-multi-agent",
         "stagehand",
         "temporal",
         "txtai"
@@ -1602,13 +1610,13 @@
     {
       "id": "planning",
       "label": "Planning",
-      "count": 15,
+      "count": 16,
       "types": {
         "tool": 2,
         "build-example": 1,
         "guide": 2,
         "project": 6,
-        "architecture": 2,
+        "architecture": 3,
         "paper": 2
       },
       "entries": [
@@ -1624,6 +1632,7 @@
         "multi-agent-system",
         "openhands",
         "semantic-kernel",
+        "single-agent-vs-multi-agent",
         "superpowers",
         "wang-2023-agents-survey",
         "wang-2023-voyager"
@@ -1676,7 +1685,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 100,
+      "count": 101,
       "types": {
         "tip": 18,
         "build-example": 5,
@@ -1684,7 +1693,7 @@
         "tool": 19,
         "project": 31,
         "benchmark": 4,
-        "architecture": 6,
+        "architecture": 7,
         "paper": 10,
         "person": 3
       },
@@ -1700,6 +1709,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-eval-framework",
         "choose-vector-db",
@@ -1865,14 +1875,14 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 79,
+      "count": 80,
       "types": {
         "tip": 19,
         "build-example": 4,
         "tool": 16,
         "benchmark": 4,
         "guide": 3,
-        "architecture": 5,
+        "architecture": 6,
         "project": 18,
         "paper": 9,
         "person": 1
@@ -1886,6 +1896,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
         "choose-vector-db",
@@ -2051,10 +2062,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 32,
+      "count": 33,
       "types": {
         "project": 13,
-        "architecture": 4,
+        "architecture": 5,
         "tool": 11,
         "paper": 1,
         "tip": 3
@@ -2063,6 +2074,7 @@
         "anythingllm",
         "choose-deployment-target",
         "choose-embedding-model",
+        "choose-serving-stack",
         "choose-vector-db",
         "comfyui",
         "cubesandbox",

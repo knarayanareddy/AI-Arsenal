@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:21:56.494Z | Entries: 591 | Schema version: 1.0.0
+Generated: 2026-07-08T19:27:23.314Z | Entries: 597 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,8 +14,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 1
 - Guides: 59
 - Build examples: 8
-- Architectures: 18
-- Observability: 7
+- Architectures: 21
+- Observability: 10
 - Community: 23
 
 ## Navigation
@@ -211,6 +211,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Architecture Decisions by Category
 
 ### data-strategy
+- Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic — 
 - Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted — 
 - Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
 
@@ -232,12 +233,14 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### serving-patterns
 - Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse — 
 - Choosing a Deployment Target: Separating App Hosting From Model Serving — 
+- Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine — 
 
 ### system-design
 - Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates — 
 - Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
 - Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding — 
 - RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
+- Single Agent vs Multi-Agent: When Splitting the Work Actually Helps — 
 
 ## Observability Playbooks by Category
 
@@ -246,15 +249,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### evaluation-quality
 - Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship — 
+- Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks — 
 
 ### incident-response
 - Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts — 
 
 ### instrumentation
 - Capture a Structured Event for Every LLM Call, Not Just an Access Log Line — 
+- Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces — 
 
 ### monitoring-alerting
 - Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions — 
+- Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration — 
 
 ### privacy-governance
 - Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store — 
