@@ -130,6 +130,7 @@ This table is exhaustive for tools tagged with job = model-registry.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [ClearML](../model-layer/clearml.md) | model layer | freemium | Yes | Yes | Yes | python | solid-choice |
 | [DVC](../model-layer/dvc.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Hugging Face Hub](../model-layer/hugging-face-hub.md) | model layer | freemium | Yes | No | No | python | recommended |
 | [MLflow](../model-layer/mlflow.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
