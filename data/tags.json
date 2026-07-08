@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:33:38.158Z",
+  "generated_at": "2026-07-08T17:22:04.693Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 93,
+      "count": 94,
       "types": {
         "tip": 14,
         "tool": 26,
         "build-example": 3,
         "guide": 7,
         "project": 24,
-        "architecture": 4,
+        "architecture": 5,
         "benchmark": 5,
         "person": 3,
         "paper": 7
@@ -38,6 +38,7 @@
         "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
         "choose-eval-framework",
+        "choose-guardrails-strategy",
         "choose-memory-solution",
         "chrome-devtools-mcp",
         "codebase-memory-mcp",
@@ -204,9 +205,10 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 8,
+      "count": 9,
       "types": {
         "tip": 5,
+        "architecture": 1,
         "guide": 1,
         "tool": 1,
         "project": 1
@@ -214,6 +216,7 @@
       "entries": [
         "cache-embeddings-by-content-hash",
         "cache-stable-system-prompts",
+        "choose-caching-strategy",
         "inference-optimization",
         "measure-kv-cache-hit-rate",
         "precompute-expensive-static-context",
@@ -442,10 +445,11 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 22,
+      "count": 23,
       "types": {
         "guide": 4,
         "tip": 9,
+        "architecture": 1,
         "project": 4,
         "paper": 4,
         "tool": 1
@@ -454,6 +458,7 @@
         "attention",
         "benchmark-with-production-shaped-inputs",
         "benchmark-with-real-context-lengths",
+        "choose-caching-strategy",
         "compress-retrieved-context-before-generation",
         "deepseek-v3-r1",
         "dettmers-2023-qlora",
@@ -478,11 +483,11 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 23,
+      "count": 24,
       "types": {
         "tip": 7,
         "guide": 2,
-        "architecture": 2,
+        "architecture": 3,
         "project": 10,
         "person": 1,
         "tool": 1
@@ -492,6 +497,7 @@
         "add-reranking-after-recall-is-acceptable",
         "building-rag-systems",
         "cache-embeddings-by-content-hash",
+        "choose-embedding-model",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -714,9 +720,10 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 20,
+      "count": 21,
       "types": {
         "tip": 5,
+        "architecture": 1,
         "tool": 9,
         "benchmark": 4,
         "project": 1,
@@ -724,6 +731,7 @@
       },
       "entries": [
         "allowlist-tools-per-agent-role",
+        "choose-guardrails-strategy",
         "cubesandbox",
         "do-not-answer",
         "giskard",
@@ -763,11 +771,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 59,
+      "count": 61,
       "types": {
         "tip": 21,
         "tool": 6,
-        "architecture": 4,
+        "architecture": 6,
         "project": 17,
         "guide": 6,
         "paper": 4,
@@ -780,9 +788,11 @@
         "benchmark-with-real-context-lengths",
         "bentoml",
         "cache-stable-system-prompts",
+        "choose-caching-strategy",
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
+        "choose-structured-output-strategy",
         "deepseek-v3-r1",
         "emerging-techniques",
         "falcon-3",
@@ -881,7 +891,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 158,
+      "count": 161,
       "types": {
         "tip": 20,
         "guide": 44,
@@ -889,7 +899,7 @@
         "benchmark": 9,
         "tool": 33,
         "paper": 9,
-        "architecture": 3,
+        "architecture": 6,
         "project": 23,
         "build-example": 2
       },
@@ -910,7 +920,10 @@
         "azure-ai-studio",
         "brown-2020-gpt3",
         "chainlit",
+        "choose-caching-strategy",
+        "choose-guardrails-strategy",
         "choose-llm",
+        "choose-structured-output-strategy",
         "clem-delangue",
         "command-r-plus",
         "context-engineering",
@@ -1405,13 +1418,13 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 76,
+      "count": 77,
       "types": {
         "tip": 18,
         "build-example": 5,
         "guide": 4,
         "benchmark": 4,
-        "architecture": 5,
+        "architecture": 6,
         "project": 24,
         "tool": 7,
         "paper": 6,
@@ -1427,6 +1440,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-embedding-model",
         "choose-eval-framework",
         "choose-vector-db",
         "chroma",
@@ -1560,14 +1574,14 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 66,
+      "count": 67,
       "types": {
         "tip": 19,
         "build-example": 4,
         "tool": 8,
         "benchmark": 4,
         "guide": 3,
-        "architecture": 4,
+        "architecture": 5,
         "project": 17,
         "paper": 6,
         "person": 1
@@ -1581,6 +1595,7 @@
         "beir",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
+        "choose-embedding-model",
         "choose-memory-solution",
         "choose-vector-db",
         "chroma",
@@ -1677,13 +1692,13 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 32,
+      "count": 33,
       "types": {
         "tool": 11,
         "tip": 12,
         "person": 3,
+        "architecture": 2,
         "benchmark": 4,
-        "architecture": 1,
         "project": 1
       },
       "entries": [
@@ -1693,6 +1708,7 @@
         "arvind-narayanan",
         "astra-autonomous-pentest",
         "aws-bedrock",
+        "choose-guardrails-strategy",
         "cubesandbox",
         "dario-amodei",
         "do-not-answer",
@@ -1724,9 +1740,9 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 18,
+      "count": 19,
       "types": {
-        "architecture": 3,
+        "architecture": 4,
         "tool": 2,
         "paper": 1,
         "project": 9,
@@ -1734,6 +1750,7 @@
       },
       "entries": [
         "choose-deployment-target",
+        "choose-embedding-model",
         "choose-vector-db",
         "cubesandbox",
         "gemma-team-2026-gemma4",
@@ -1804,10 +1821,11 @@
     {
       "id": "structured-output",
       "label": "Structured Output",
-      "count": 31,
+      "count": 32,
       "types": {
         "tip": 13,
         "tool": 10,
+        "architecture": 1,
         "guide": 4,
         "benchmark": 1,
         "build-example": 1,
@@ -1818,6 +1836,7 @@
         "add-output-examples-for-edge-cases",
         "ask-for-missing-inputs-before-solving",
         "basedash",
+        "choose-structured-output-strategy",
         "claude-artifact-player",
         "context-engineering",
         "fundamentals",
@@ -1851,13 +1870,13 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 44,
+      "count": 45,
       "types": {
         "tip": 12,
         "guide": 6,
         "tool": 6,
         "project": 14,
-        "architecture": 1,
+        "architecture": 2,
         "build-example": 2,
         "paper": 2,
         "benchmark": 1
@@ -1878,6 +1897,7 @@
         "cap-agent-tool-retries",
         "checkpoint-agent-state-after-each-tool-call",
         "choose-agent-framework",
+        "choose-structured-output-strategy",
         "chrome-devtools-mcp",
         "codex-plugin-cc",
         "command-r-plus",

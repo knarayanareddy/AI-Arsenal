@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T15:33:40.369Z | Entries: 480 | Schema version: 1.0.0
+Generated: 2026-07-08T17:22:06.816Z | Entries: 484 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,7 +14,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 1
 - Guides: 59
 - Build examples: 8
-- Architectures: 14
+- Architectures: 18
 - Observability: 7
 - Community: 23
 
@@ -190,6 +190,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Architecture Decisions by Category
 
 ### data-strategy
+- Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted — 
 - Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
 
 ### evaluation-strategy
@@ -208,10 +209,13 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost — 
 
 ### serving-patterns
+- Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse — 
 - Choosing a Deployment Target: Separating App Hosting From Model Serving — 
 
 ### system-design
+- Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates — 
 - Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
+- Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding — 
 - RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
 
 ## Observability Playbooks by Category

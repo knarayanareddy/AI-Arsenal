@@ -26,6 +26,7 @@ _No entries yet. This category folder was created during the Architectures verti
 
 ### Recently Added
 
+- [Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted](./choose-embedding-model.md)
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./choose-vector-db.md)
 
 ### Most Popular
@@ -34,4 +35,5 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted](./choose-embedding-model.md) — 
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./choose-vector-db.md) — 

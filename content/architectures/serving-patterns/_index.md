@@ -26,6 +26,7 @@ _No entries yet. This category folder was created during the Architectures verti
 
 ### Recently Added
 
+- [Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse](./choose-caching-strategy.md)
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md)
 
 ### Most Popular
@@ -34,4 +35,5 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse](./choose-caching-strategy.md) — 
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md) — 
