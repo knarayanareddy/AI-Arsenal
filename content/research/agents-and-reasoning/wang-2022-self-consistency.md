@@ -14,7 +14,7 @@ arxiv_id: "2203.11171"
 arxiv_url: "https://arxiv.org/abs/2203.11171"
 pdf_url: "https://arxiv.org/pdf/2203.11171"
 code_url: null
-venue_url: "https://openreview.net/forum?id=1PL1NIMMrw"
+venue_url: null
 
 practical_applicability: high
 reproduction_status: reproduced
@@ -82,7 +82,6 @@ Builds directly on `wei-2022-chain-of-thought` and `kojima-2022-zero-shot-cot` (
 
 - [Paper (PDF)](https://arxiv.org/pdf/2203.11171)
 - [arXiv](https://arxiv.org/abs/2203.11171)
-- [OpenReview](https://openreview.net/forum?id=1PL1NIMMrw)
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

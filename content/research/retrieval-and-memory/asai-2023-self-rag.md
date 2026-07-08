@@ -14,7 +14,7 @@ arxiv_id: "2310.11511"
 arxiv_url: "https://arxiv.org/abs/2310.11511"
 pdf_url: "https://arxiv.org/pdf/2310.11511"
 code_url: "https://github.com/AkariAsai/self-rag"
-venue_url: "https://openreview.net/forum?id=hSyW5go0v8"
+venue_url: null
 
 practical_applicability: medium
 reproduction_status: reproduced

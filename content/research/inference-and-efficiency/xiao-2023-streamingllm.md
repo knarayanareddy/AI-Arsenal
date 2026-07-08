@@ -14,7 +14,7 @@ arxiv_id: "2309.17453"
 arxiv_url: "https://arxiv.org/abs/2309.17453"
 pdf_url: "https://arxiv.org/pdf/2309.17453"
 code_url: "https://github.com/mit-han-lab/streaming-llm"
-venue_url: "https://openreview.net/forum?id=NG7sS51zVF"
+venue_url: null
 
 practical_applicability: high
 reproduction_status: reproduced
