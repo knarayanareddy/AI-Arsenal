@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:07:06.261Z",
+  "generated_at": "2026-07-08T20:07:32.120Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 136,
+      "count": 137,
       "types": {
         "tip": 17,
         "tool": 45,
@@ -15,7 +15,7 @@
         "architecture": 6,
         "benchmark": 5,
         "person": 3,
-        "paper": 13
+        "paper": 14
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -100,6 +100,7 @@
         "microsoft-agent-framework",
         "multi-agent-system",
         "n8n",
+        "nakano-2021-webgpt",
         "openai-agents-sdk",
         "openai-codex-cli",
         "openhands",
@@ -159,11 +160,11 @@
     {
       "id": "alignment",
       "label": "Alignment",
-      "count": 13,
+      "count": 14,
       "types": {
         "guide": 1,
         "person": 4,
-        "paper": 5,
+        "paper": 6,
         "project": 2,
         "tool": 1
       },
@@ -171,6 +172,7 @@
         "alignment-and-rlhf",
         "arvind-narayanan",
         "bai-2022-constitutional-ai",
+        "christiano-2017-rlhf",
         "dario-amodei",
         "lilian-weng",
         "nathan-lambert",
@@ -197,9 +199,9 @@
     {
       "id": "attention",
       "label": "Attention",
-      "count": 7,
+      "count": 8,
       "types": {
-        "paper": 5,
+        "paper": 6,
         "guide": 2
       },
       "entries": [
@@ -209,7 +211,8 @@
         "gu-2023-mamba",
         "su-2021-rope",
         "transformers",
-        "vaswani-2017-attention"
+        "vaswani-2017-attention",
+        "xiao-2023-streamingllm"
       ]
     },
     {
@@ -391,12 +394,12 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 38,
+      "count": 39,
       "types": {
         "tool": 20,
         "guide": 2,
         "project": 7,
-        "paper": 5,
+        "paper": 6,
         "benchmark": 4
       },
       "entries": [
@@ -405,6 +408,7 @@
         "agent-skills-overview",
         "aider",
         "bigcodebench",
+        "chen-2021-codex",
         "chrome-devtools-mcp",
         "claude-code",
         "cline",
@@ -567,9 +571,9 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 46,
+      "count": 49,
       "types": {
-        "paper": 11,
+        "paper": 14,
         "guide": 4,
         "tip": 11,
         "project": 9,
@@ -595,6 +599,7 @@
         "drop-unused-conversation-history",
         "faiss",
         "falcon-3",
+        "fedus-2021-switch-transformer",
         "frantar-2022-gptq",
         "groq",
         "gu-2023-mamba",
@@ -613,6 +618,7 @@
         "pin-model-and-runtime-versions",
         "quantization",
         "set-token-budgets-per-feature",
+        "shazeer-2019-mqa",
         "skypilot",
         "start-with-lora-before-full-fine-tuning",
         "tensorrt-llm",
@@ -622,7 +628,8 @@
         "track-cost-per-successful-outcome",
         "ultralytics-yolo",
         "unsloth",
-        "use-speculative-decoding-for-latency-critical-paths"
+        "use-speculative-decoding-for-latency-critical-paths",
+        "xiao-2023-streamingllm"
       ]
     },
     {
@@ -682,7 +689,7 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 131,
+      "count": 132,
       "types": {
         "digest": 1,
         "tip": 26,
@@ -692,7 +699,7 @@
         "benchmark": 30,
         "tool": 24,
         "person": 9,
-        "paper": 11,
+        "paper": 12,
         "architecture": 6
       },
       "entries": [
@@ -711,6 +718,7 @@
         "beir",
         "bigcodebench",
         "braintrust",
+        "chen-2021-codex",
         "chiang-2024-chatbot-arena",
         "chip-huyen",
         "choose-eval-framework",
@@ -845,11 +853,11 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 31,
+      "count": 32,
       "types": {
         "tool": 13,
         "project": 5,
-        "paper": 2,
+        "paper": 3,
         "tip": 8,
         "guide": 2,
         "architecture": 1
@@ -867,6 +875,7 @@
         "hu-2021-lora",
         "inspect-your-training-data-by-hand",
         "litgpt",
+        "liu-2023-llava",
         "llamafactory",
         "lorax",
         "match-training-and-inference-prompt-formats",
@@ -891,10 +900,10 @@
     {
       "id": "foundational",
       "label": "Foundational",
-      "count": 24,
+      "count": 26,
       "types": {
         "person": 5,
-        "paper": 14,
+        "paper": 16,
         "trend": 1,
         "guide": 2,
         "project": 1,
@@ -904,6 +913,7 @@
         "andrej-karpathy",
         "andrew-ng",
         "brown-2020-gpt3",
+        "chowdhery-2022-palm",
         "devlin-2018-bert",
         "hall-of-fame",
         "hoffmann-2022-chinchilla",
@@ -920,6 +930,7 @@
         "raffel-2019-t5",
         "reimers-2019-sentence-bert",
         "schulman-2017-ppo",
+        "touvron-2023-llama",
         "touvron-2023-llama2",
         "transformers",
         "vaswani-2017-attention",
@@ -1002,13 +1013,13 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 95,
+      "count": 98,
       "types": {
         "tip": 25,
         "tool": 23,
         "project": 26,
         "architecture": 7,
-        "paper": 7,
+        "paper": 10,
         "guide": 6,
         "build-example": 1
       },
@@ -1090,6 +1101,7 @@
         "runpod",
         "separate-offline-batch-jobs-from-chat-serving",
         "sglang",
+        "shazeer-2019-mqa",
         "skypilot",
         "starter-local-llm-chat",
         "stream-user-facing-responses",
@@ -1106,7 +1118,9 @@
         "use-smaller-models-for-classification-steps",
         "use-speculative-decoding-for-latency-critical-paths",
         "vllm",
+        "wang-2022-self-consistency",
         "warm-up-model-servers-before-routing-traffic",
+        "xiao-2023-streamingllm",
         "yi"
       ]
     },
@@ -1158,7 +1172,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 236,
+      "count": 243,
       "types": {
         "tip": 31,
         "guide": 44,
@@ -1166,7 +1180,7 @@
         "project": 45,
         "person": 15,
         "benchmark": 9,
-        "paper": 25,
+        "paper": 32,
         "architecture": 7,
         "build-example": 2
       },
@@ -1193,12 +1207,14 @@
         "candle",
         "cerebras-inference",
         "chainlit",
+        "chen-2021-codex",
         "chiang-2024-chatbot-arena",
         "choose-caching-strategy",
         "choose-guardrails-strategy",
         "choose-llm",
         "choose-serving-stack",
         "choose-structured-output-strategy",
+        "chowdhery-2022-palm",
         "clem-delangue",
         "cohere",
         "command-r-plus",
@@ -1257,12 +1273,14 @@
         "inspect-ai",
         "inspect-your-training-data-by-hand",
         "instructor",
+        "izacard-2020-fid",
         "jan",
         "jason-liu",
         "jiang-2024-mixtral",
         "kaplan-2020-scaling-laws",
         "kimi-k2",
         "kimi-k2-5",
+        "kojima-2022-zero-shot-cot",
         "langchain",
         "langfuse-prompts",
         "langsmith-hub",
@@ -1271,6 +1289,7 @@
         "librechat",
         "litellm",
         "litgpt",
+        "liu-2023-llava",
         "liu-2023-lost-in-the-middle",
         "llama-3",
         "llama-cpp",
@@ -1381,6 +1400,7 @@
         "together-ai",
         "tokenization",
         "torchtune",
+        "touvron-2023-llama",
         "touvron-2023-llama2",
         "trafilatura",
         "transformers",
@@ -1398,6 +1418,7 @@
         "verl",
         "version-system-prompts-like-code",
         "vllm",
+        "wang-2022-self-consistency",
         "web-scraping",
         "wei-2021-flan",
         "wei-2022-chain-of-thought",
@@ -1549,10 +1570,10 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 29,
+      "count": 30,
       "types": {
         "project": 15,
-        "paper": 5,
+        "paper": 6,
         "tool": 5,
         "benchmark": 4
       },
@@ -1566,6 +1587,7 @@
         "ideogram",
         "ideogram-ai",
         "lancedb",
+        "liu-2023-llava",
         "llama-3",
         "mathvista",
         "mineru",
@@ -1822,16 +1844,16 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 107,
+      "count": 110,
       "types": {
         "tip": 19,
         "build-example": 5,
         "guide": 4,
         "tool": 22,
         "project": 31,
+        "paper": 15,
         "benchmark": 4,
         "architecture": 7,
-        "paper": 12,
         "person": 3
       },
       "entries": [
@@ -1843,6 +1865,7 @@
         "ai-engineer-role",
         "airbyte",
         "anythingllm",
+        "asai-2023-self-rag",
         "ask-for-quotes-before-answers-in-rag-prompts",
         "beir",
         "building-rag-systems",
@@ -1875,10 +1898,12 @@
         "gao-2023-rag-survey",
         "gpt-researcher",
         "graphiti",
+        "guu-2020-realm",
         "harrison-chase",
         "haystack",
         "intermediate-document-qa-pipeline",
         "intermediate-production-rag-api",
+        "izacard-2020-fid",
         "jerry-liu",
         "jina-reader",
         "karpukhin-2020-dpr",
@@ -1947,9 +1972,9 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 29,
+      "count": 32,
       "types": {
-        "paper": 9,
+        "paper": 12,
         "project": 6,
         "guide": 3,
         "person": 4,
@@ -1957,6 +1982,7 @@
         "build-example": 1
       },
       "entries": [
+        "asai-2023-self-rag",
         "cobbe-2021-gsm8k",
         "deepseek-ai-2025-r1",
         "deepseek-v3-r1",
@@ -1966,6 +1992,7 @@
         "gaia",
         "gpqa-diamond",
         "gsm8k",
+        "kojima-2022-zero-shot-cot",
         "llm-researcher",
         "madaan-2023-self-refine",
         "melanie-mitchell",
@@ -1982,6 +2009,7 @@
         "smolagents",
         "starter-simple-react-agent",
         "truthfulqa",
+        "wang-2022-self-consistency",
         "wei-2022-chain-of-thought",
         "yang-2024-qwen25-math",
         "yao-2022-react",
@@ -1991,10 +2019,10 @@
     {
       "id": "research",
       "label": "Research",
-      "count": 15,
+      "count": 16,
       "types": {
         "project": 2,
-        "paper": 2,
+        "paper": 3,
         "guide": 4,
         "person": 5,
         "tool": 2
@@ -2004,6 +2032,7 @@
         "chiang-2024-chatbot-arena",
         "emerging-techniques",
         "hendrycks-2020-mmlu",
+        "kojima-2022-zero-shot-cot",
         "lilian-weng",
         "llm-researcher",
         "marimo",
@@ -2020,16 +2049,16 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 86,
+      "count": 89,
       "types": {
         "tip": 20,
         "build-example": 4,
         "tool": 18,
+        "paper": 15,
         "benchmark": 4,
         "guide": 3,
         "architecture": 6,
         "project": 18,
-        "paper": 12,
         "person": 1
       },
       "entries": [
@@ -2038,6 +2067,7 @@
         "advanced-self-correcting-rag",
         "agent-browser-shield",
         "agent-reach",
+        "asai-2023-self-rag",
         "ask-for-quotes-before-answers-in-rag-prompts",
         "beir",
         "building-rag-systems",
@@ -2059,10 +2089,12 @@
         "faiss",
         "gao-2022-hyde",
         "gao-2023-rag-survey",
+        "guu-2020-realm",
         "haystack",
         "inspect-retrieved-chunks-beside-the-answer",
         "intermediate-document-qa-pipeline",
         "intermediate-production-rag-api",
+        "izacard-2020-fid",
         "jerry-liu",
         "ji-2026-mragent",
         "karpukhin-2020-dpr",
@@ -2124,11 +2156,11 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 12,
+      "count": 14,
       "types": {
         "guide": 1,
         "project": 1,
-        "paper": 8,
+        "paper": 10,
         "person": 1,
         "tool": 1
       },
@@ -2136,8 +2168,10 @@
         "alignment-and-rlhf",
         "alignment-handbook",
         "bai-2022-constitutional-ai",
+        "christiano-2017-rlhf",
         "deepseek-ai-2025-r1",
         "liang-2026-mipi",
+        "nakano-2021-webgpt",
         "nathan-lambert",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",
@@ -2393,7 +2427,7 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 57,
+      "count": 58,
       "types": {
         "tip": 14,
         "guide": 6,
@@ -2401,7 +2435,7 @@
         "project": 16,
         "architecture": 2,
         "build-example": 2,
-        "paper": 2,
+        "paper": 3,
         "benchmark": 1
       },
       "entries": [
@@ -2442,6 +2476,7 @@
         "log-agent-state-transitions",
         "microsoft-agent-framework",
         "n8n",
+        "nakano-2021-webgpt",
         "openai-agents-sdk",
         "openai-codex-cli",
         "openhands",
@@ -2512,12 +2547,12 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 37,
+      "count": 42,
       "types": {
         "tool": 8,
         "guide": 4,
         "person": 3,
-        "paper": 19,
+        "paper": 24,
         "project": 3
       },
       "entries": [
@@ -2526,6 +2561,8 @@
         "andrew-ng",
         "bai-2022-constitutional-ai",
         "brown-2020-gpt3",
+        "chowdhery-2022-palm",
+        "christiano-2017-rlhf",
         "clearml",
         "cobbe-2021-gsm8k",
         "deepseek-ai-2024-deepseek-v3",
@@ -2533,8 +2570,10 @@
         "deepspeed",
         "devlin-2018-bert",
         "dubey-2024-llama3",
+        "fedus-2021-switch-transformer",
         "fine-tuning-methods",
         "gunasekar-2023-phi-1",
+        "guu-2020-realm",
         "hoffmann-2022-chinchilla",
         "hu-2021-lora",
         "jeremy-howard",
@@ -2555,6 +2594,7 @@
         "sebastian-raschka",
         "shao-2024-deepseekmath",
         "skypilot",
+        "touvron-2023-llama",
         "trl",
         "wei-2021-flan",
         "yang-2024-qwen25-math"
@@ -2563,9 +2603,9 @@
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 15,
+      "count": 17,
       "types": {
-        "paper": 8,
+        "paper": 10,
         "person": 4,
         "guide": 2,
         "tool": 1
@@ -2575,6 +2615,7 @@
         "andrej-karpathy",
         "attention",
         "devlin-2018-bert",
+        "fedus-2021-switch-transformer",
         "gu-2023-mamba",
         "jay-alammar",
         "jiang-2024-mixtral",
@@ -2582,6 +2623,7 @@
         "megatron-lm",
         "noam-shazeer",
         "radford-2022-whisper",
+        "shazeer-2019-mqa",
         "su-2021-rope",
         "thomas-wolf",
         "transformers",

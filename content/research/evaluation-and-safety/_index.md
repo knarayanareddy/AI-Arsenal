@@ -31,6 +31,7 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 
 ### Recently Added
 
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./chen-2021-codex.md)
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./chiang-2024-chatbot-arena.md)
 - [Training Verifiers to Solve Math Word Problems](./cobbe-2021-gsm8k.md)
 - [Measuring Massive Multitask Language Understanding](./hendrycks-2020-mmlu.md)
@@ -46,6 +47,7 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./chen-2021-codex.md) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./chiang-2024-chatbot-arena.md) — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - [Training Verifiers to Solve Math Word Problems](./cobbe-2021-gsm8k.md) — The GSM8K paper: released the 8.5K grade-school math benchmark that anchored LLM reasoning evaluation for years, and introduced verifier-guided sampling — train a model to judge candidate solutions, sample many, pick the best — the seed of verification-based test-time compute
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
