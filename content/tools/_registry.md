@@ -102,7 +102,6 @@
 | `mlx-lm` | [MLX-LM](./model-layer/mlx-lm.md) | Apple MLX library for running and fine-tuning LLMs on Apple Silicon |
 | `modal` | [Modal](./serving-and-deployment/modal.md) | A serverless platform for deploying Python apps and GPU workloads |
 | `monako-glass` | [Monako Glass](./evaluation-and-observability/monako-glass.md) | Visualize and understand AI model outputs with dynamic Pulse Rings and overlays |
-| `ms-swift` | [ms-swift](./model-layer/ms-swift.md) | ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen |
 | `n8n` | [n8n](./orchestration/n8n.md) | Source-available visual workflow automation platform with first-class AI-agent nodes and 400+ integrations |
 | `nemo-guardrails` | [NeMo Guardrails](./evaluation-and-observability/nemo-guardrails.md) | NVIDIA framework for adding programmable guardrails to LLM applications |
 | `nvidia-nim` | [NVIDIA NIM](./serving-and-deployment/nvidia-nim.md) | Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs |

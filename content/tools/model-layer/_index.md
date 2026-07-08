@@ -33,10 +33,10 @@ Before picking a tool in this phase, consider:
 - [DeepSpeed](./deepspeed.md)
 - [Groq](./groq.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
-- [ms-swift](./ms-swift.md)
 - [OpenRouter](./openrouter.md)
 - [PyTorch Lightning](./pytorch-lightning.md)
 - [Sentence Transformers](./sentence-transformers.md)
+- [Together AI](./together-ai.md)
 
 ### Most Popular
 
@@ -60,7 +60,6 @@ _No star-tracked entries yet._
 - [LM Format Enforcer](./lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [MLflow](./mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 - [MLX-LM](./mlx-lm.md) — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
-- [ms-swift](./ms-swift.md) — ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen
 - [OpenRouter](./openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
 - [Outlines](./outlines.md) — A library for constrained generation and structured outputs with LLMs
 - [PEFT](./peft.md) — Hugging Face library for parameter-efficient fine-tuning methods

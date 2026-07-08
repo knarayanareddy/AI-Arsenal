@@ -12,7 +12,7 @@
 | [data ingestion](./data-ingestion/) | 26 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 40 entries | 2026-07-08 |
 | [evaluation and observability](./evaluation-and-observability/) | 25 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 29 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 28 entries | 2026-07-08 |
 | [orchestration](./orchestration/) | 22 entries | 2026-07-08 |
 | [serving and deployment](./serving-and-deployment/) | 23 entries | 2026-07-08 |
 

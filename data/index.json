@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:22:35.882Z",
+    "generated_at": "2026-07-08T19:24:50.683Z",
     "total_projects": 110,
-    "total_tools": 165,
+    "total_tools": 164,
     "total_papers": 49,
     "total_tips": 102,
     "total_people": 25,
@@ -6376,25 +6376,6 @@
       "url": "content/projects/training-and-alignment/ms-swift",
       "last_updated": "2026-07-08",
       "category": "llms",
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "active",
-      "featured": false
-    },
-    {
-      "id": "ms-swift",
-      "type": "tool",
-      "name": "ms-swift",
-      "description": "ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen",
-      "tags": [
-        "fine-tuning",
-        "rlhf",
-        "multimodal"
-      ],
-      "path": "content/tools/model-layer/ms-swift.md",
-      "url": "content/tools/model-layer/ms-swift",
-      "last_updated": "2026-07-08",
-      "category": null,
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",

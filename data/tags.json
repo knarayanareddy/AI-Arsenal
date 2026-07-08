@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T19:22:35.882Z",
+  "generated_at": "2026-07-08T19:24:50.683Z",
   "tags": [
     {
       "id": "agents",
@@ -783,9 +783,9 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 23,
+      "count": 22,
       "types": {
-        "tool": 13,
+        "tool": 12,
         "project": 5,
         "paper": 2,
         "guide": 2,
@@ -803,7 +803,6 @@
         "llamafactory",
         "ml-engineer-role",
         "mlx-lm",
-        "ms-swift",
         "ms-swift",
         "openrlhf",
         "orchestraml",
@@ -1427,11 +1426,11 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 27,
+      "count": 26,
       "types": {
         "project": 15,
         "paper": 2,
-        "tool": 6,
+        "tool": 5,
         "benchmark": 4
       },
       "entries": [
@@ -1449,7 +1448,6 @@
         "mineru",
         "mmbench",
         "mmmu",
-        "ms-swift",
         "ms-swift",
         "olmocr",
         "paddleocr",
@@ -1969,13 +1967,13 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 10,
+      "count": 9,
       "types": {
         "guide": 1,
         "project": 1,
         "paper": 5,
-        "tool": 2,
-        "person": 1
+        "person": 1,
+        "tool": 1
       },
       "entries": [
         "alignment-and-rlhf",
@@ -1983,7 +1981,6 @@
         "bai-2022-constitutional-ai",
         "deepseek-ai-2025-r1",
         "liang-2026-mipi",
-        "ms-swift",
         "nathan-lambert",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo",

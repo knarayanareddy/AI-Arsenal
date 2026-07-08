@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-08T19:22:37.410Z",
+  "generated_at": "2026-07-08T19:24:52.225Z",
   "config": {
     "document": {
       "id": "id",
@@ -61,7 +61,7 @@
   "facets": {
     "types": {
       "project": 110,
-      "tool": 165,
+      "tool": 164,
       "paper": 49,
       "tip": 102,
       "person": 25,
@@ -77,8 +77,8 @@
       "evaluation": 83,
       "tracing": 29,
       "cloud": 54,
-      "fine-tuning": 23,
-      "rlhf": 10,
+      "fine-tuning": 22,
+      "rlhf": 9,
       "llm": 202,
       "rag": 95,
       "agents": 124,
@@ -94,7 +94,7 @@
       "retrieval": 74,
       "local": 33,
       "memory": 26,
-      "multimodal": 23,
+      "multimodal": 22,
       "data": 75,
       "monitoring": 29,
       "reasoning": 21,
@@ -171,17 +171,17 @@
       "tracing": 1
     },
     "maturity": {
-      "production": 224,
+      "production": 223,
       "beta": 51
     },
     "cost_model": {
       "freemium": 67,
-      "open-source": 178,
+      "open-source": 177,
       "paid": 11,
       "usage-based": 19
     },
     "status": {
-      "active": 383,
+      "active": 382,
       "deprecated": 1,
       "archived": 2,
       "watching": 2
@@ -194,7 +194,7 @@
       "inference-engine": 16,
       "data-and-retrieval": 21,
       "foundation-model": 17,
-      "model-layer": 29,
+      "model-layer": 28,
       "dx-and-tooling": 40,
       "data-ingestion": 26,
       "evaluation-and-observability": 25,
@@ -220,8 +220,8 @@
       "production-deployment": 1
     },
     "audience": {
-      "research": 39,
-      "production": 125,
+      "research": 38,
+      "production": 124,
       "prototype": 95,
       "practitioner": 23,
       "founder": 7,
@@ -15659,55 +15659,6 @@
       "boost_tags": "fine-tuning llm multimodal",
       "boost_description": "ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends",
       "body": "ms-swift ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends fine-tuning llm multimodal llms frameworks Overview A fine tuning and alignment framework from Alibaba's ModelScope covering 600+ text LLMs and 300+ multimodal models, with training paths from single GPU LoRA to Megatron tensor parallel runs. Its distinguishing strength is coverage breadth and freshness for the Qwen/Chinese open model ecosystem, including vision language and omni modal models. Why it's in the Arsenal Alibaba's answer to LLaMA Factory: the broadest model coverage fine tuning framework, especially strong on Chinese ecosystem and multimodal models (Qwen VL, InternVL, DeepSeek VL) that other trainers support late or not a…"
-    },
-    {
-      "id": "ms-swift",
-      "type": "tool",
-      "name": "ms-swift",
-      "title": "ms-swift",
-      "description": "ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen",
-      "tags": [
-        "fine-tuning",
-        "rlhf",
-        "multimodal"
-      ],
-      "category": null,
-      "subcategory": null,
-      "maturity": "production",
-      "cost_model": "open-source",
-      "status": "active",
-      "phase": "model-layer",
-      "audience": [
-        "research",
-        "production"
-      ],
-      "domain": null,
-      "relation_to_stack": null,
-      "practical_applicability": null,
-      "result_status": null,
-      "reproduction_status": null,
-      "effort": null,
-      "verification_status": null,
-      "impact": null,
-      "difficulty": null,
-      "decision_type": null,
-      "confidence": null,
-      "build_status": null,
-      "outcome": null,
-      "scope": null,
-      "signal_types": null,
-      "data_sensitivity": null,
-      "kind": null,
-      "topics": null,
-      "access": null,
-      "activity_level": null,
-      "safety_level": null,
-      "path": "content/tools/model-layer/ms-swift.md",
-      "url": "content/tools/model-layer/ms-swift",
-      "boost_title": "ms-swift",
-      "boost_tags": "fine-tuning rlhf multimodal",
-      "boost_description": "ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen",
-      "body": "ms-swift ModelScope's fine-tuning and RLHF framework covering 500+ LLMs and 200+ multimodal models — the broadest coverage in open fine-tuning, strongest on Qwen fine-tuning rlhf multimodal TL;DR: ModelScope's fine tuning/RLHF framework with the broadest model coverage in the space. Open source. Best for Qwen family and multimodal fine tuning. Overview ms swift (Scalable lightWeight Infrastructure for Fine Tuning) is ModelScope's training framework: SFT, DPO/GRPO/PPO style RLHF, and pretraining across 500+ text LLMs and 200+ multimodal models, with LoRA/QLoRA and quantized training support, a CLI and web UI, and export paths to GGUF/AWQ. Backed by Alibaba's ModelScope, it's effectively the first party training stack for the Qwen ecosystem. Why It's in the Arsenal The fine tuning…"
     },
     {
       "id": "mteb",
