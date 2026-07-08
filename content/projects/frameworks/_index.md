@@ -33,34 +33,36 @@ Before selecting a framework:
 
 ### Recently Added
 
+- [CAMEL](./camel-ai.md)
+- [ComfyUI](./comfyui.md)
 - [Speech To Speech](./speech-to-speech.md)
+- [Spring AI](./spring-ai.md)
+- [Ultralytics YOLO](./ultralytics-yolo.md)
+- [Vercel AI SDK](./vercel-ai-sdk.md)
 - [Uiverse Design](./uiverse-design.md)
 - [AutoGen](./autogen.md)
 - [AutoGPT](./autogpt.md)
 - [CrewAI](./crewai.md)
-- [Dify](./dify.md)
-- [DSPy](./dspy.md)
-- [Google ADK](./google-adk.md)
-- [Haystack](./haystack.md)
-- [LangChain](./langchain.md)
 
 ### Most Popular
 
 - [AutoGPT](./autogpt.md) — ⭐ 184931
 - [Dify](./dify.md) — ⭐ 145081
 - [LangChain](./langchain.md) — ⭐ 139206
+- [ComfyUI](./comfyui.md) — ⭐ 119901
 - [OpenHands](./openhands.md) — ⭐ 76854
 - [MetaGPT](./metagpt.md) — ⭐ 68769
+- [Ultralytics YOLO](./ultralytics-yolo.md) — ⭐ 59255
 - [AutoGen](./autogen.md) — ⭐ 58925
 - [CrewAI](./crewai.md) — ⭐ 53462
 - [LlamaIndex](./llamaindex.md) — ⭐ 50109
-- [DSPy](./dspy.md) — ⭐ 35010
-- [LangGraph](./langgraph.md) — ⭐ 34644
 
 ### Browse All
 
 - [AutoGen](./autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
+- [CAMEL](./camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
+- [ComfyUI](./comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [CrewAI](./crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [Dify](./dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [DSPy](./dspy.md) — A framework for programming and optimizing language model pipelines
@@ -78,5 +80,8 @@ Before selecting a framework:
 - [Semantic Kernel](./semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
 - [Smolagents](./smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
 - [Speech To Speech](./speech-to-speech.md) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
+- [Spring AI](./spring-ai.md) — The Spring ecosystem's official AI framework: portable LLM, RAG, tool-calling and MCP abstractions with Spring Boot auto-configuration for enterprise Java
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
+- [Ultralytics YOLO](./ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
+- [Vercel AI SDK](./vercel-ai-sdk.md) — The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI

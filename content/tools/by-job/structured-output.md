@@ -137,6 +137,7 @@ This table is exhaustive for tools tagged with job = structured-output.
 | [Guidance](../model-layer/guidance.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Honen](../dx-and-tooling/honen.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 | [Instructor](../dx-and-tooling/instructor.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
+| [LM Format Enforcer](../model-layer/lm-format-enforcer.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Outlines](../model-layer/outlines.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
