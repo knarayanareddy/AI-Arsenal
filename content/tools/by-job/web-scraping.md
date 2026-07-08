@@ -153,14 +153,18 @@ This table is exhaustive for tools tagged with job = web-scraping.
 |---|---|---|---|---|---|---|---|
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
 | [Agent Reach](../data-ingestion/agent-reach.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | freemium | Yes | Yes | Yes | java, python | solid-choice |
 | [Browserbase](../data-ingestion/browserbase.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | freemium | Yes | Yes | Yes | typescript | recommended |
+| [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Jina AI Reader](../data-ingestion/jina-reader.md) | data ingestion | freemium | Yes | No | No | polyglot | recommended |
+| [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Playwright](../data-ingestion/playwright.md) | data ingestion | open-source | Yes | Yes | Yes | typescript, python | recommended |
 | [Puppeteer](../data-ingestion/puppeteer.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Tabstack](../data-ingestion/tabstack.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
 | [Taste Lab](../data-ingestion/taste-lab.md) | data ingestion | freemium | Yes | No | No | python | watching |
+| [Trafilatura](../data-ingestion/trafilatura.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

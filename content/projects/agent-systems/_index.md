@@ -32,7 +32,12 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [AnythingLLM](./anythingllm.md)
+- [Browser Use](./browser-use.md)
 - [goose (Block)](./goose.md)
+- [GPT Researcher](./gpt-researcher.md)
+- [Khoj](./khoj.md)
+- [LibreChat](./librechat.md)
 - [PageAgent](./page-agent.md)
 - [Strix](./strix.md)
 - [InsForge](./insforge.md)
@@ -40,16 +45,26 @@ Before selecting an agent system:
 
 ### Most Popular
 
+- [Browser Use](./browser-use.md) — ⭐ 103506
+- [AnythingLLM](./anythingllm.md) — ⭐ 62914
 - [goose (Block)](./goose.md) — ⭐ 50845
+- [LibreChat](./librechat.md) — ⭐ 40447
 - [Strix](./strix.md) — ⭐ 38354
+- [Khoj](./khoj.md) — ⭐ 35524
+- [GPT Researcher](./gpt-researcher.md) — ⭐ 28151
 - [PageAgent](./page-agent.md) — ⭐ 24812
 - [Stagehand](./stagehand.md) — ⭐ 5400
 - [InsForge](./insforge.md) — ⭐ 2300
 
 ### Browse All
 
+- [AnythingLLM](./anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
+- [Browser Use](./browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 - [goose (Block)](./goose.md) — Block's open-source on-machine AI agent that installs, executes, edits, and tests code with any LLM — a local, MCP-extensible coding agent
+- [GPT Researcher](./gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+- [Khoj](./khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
+- [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
 - [Strix](./strix.md) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities

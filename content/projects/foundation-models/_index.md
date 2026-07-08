@@ -34,28 +34,28 @@ Before selecting a foundation model:
 ### Recently Added
 
 - [AudioCraft (Meta)](./audiocraft.md)
+- [GLM-4 / GLM-4.5](./glm-4.md)
+- [Kimi K2](./kimi-k2.md)
+- [OLMo](./olmo.md)
+- [Whisper](./whisper.md)
 - [TranslateGemma](./translategemma.md)
 - [Command R+](./command-r-plus.md)
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md)
 - [Falcon 3](./falcon-3.md)
 - [Gemma](./gemma.md)
-- [Gemma 3](./gemma-3.md)
-- [Llama 3.x](./llama-3.md)
-- [Mistral / Mixtral](./mistral-models.md)
-- [Phi-4](./phi-4.md)
 
 ### Most Popular
 
+- [Whisper](./whisper.md) — ⭐ 104543
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — ⭐ 27298
 - [AudioCraft (Meta)](./audiocraft.md) — ⭐ 23456
 - [Qwen](./qwen.md) — ⭐ 21281
+- [Kimi K2](./kimi-k2.md) — ⭐ 10889
 - [Mistral / Mixtral](./mistral-models.md) — ⭐ 10816
 - [Llama 3.x](./llama-3.md) — ⭐ 9242
 - [Yi](./yi.md) — ⭐ 7820
-- [Gemma](./gemma.md) — ⭐ 5410
-- [TranslateGemma](./translategemma.md) — ⭐ 5000
-- [Phi Cookbook](./phi-cookbook.md) — ⭐ 3750
+- [OLMo](./olmo.md) — ⭐ 6574
 
 ### Browse All
 
@@ -65,11 +65,15 @@ Before selecting a foundation model:
 - [Falcon 3](./falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
 - [Gemma](./gemma.md) — Google open model family designed for efficient language and multimodal applications
 - [Gemma 3](./gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
+- [GLM-4 / GLM-4.5](./glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
+- [Kimi K2](./kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Llama 3.x](./llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
 - [Mistral / Mixtral](./mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
+- [OLMo](./olmo.md) — AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
 - [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [TranslateGemma](./translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
+- [Whisper](./whisper.md) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 - [Yi](./yi.md) — 01.AI open model family with bilingual and long-context variants from small to mid-large sizes
