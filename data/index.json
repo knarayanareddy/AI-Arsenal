@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:30:55.137Z",
+    "generated_at": "2026-07-08T19:36:32.215Z",
     "total_projects": 103,
     "total_tools": 171,
     "total_papers": 49,
@@ -9,9 +9,9 @@
     "total_digests": 1,
     "total_guides": 59,
     "total_build_examples": 8,
-    "total_architectures": 17,
+    "total_architectures": 21,
     "total_observability": 10,
-    "total_community": 23,
+    "total_community": 32,
     "total_benchmarks": 30,
     "total_trending": 4,
     "schema_version": "1.0.0"
@@ -1434,6 +1434,26 @@
       "featured": false
     },
     {
+      "id": "choose-caching-strategy",
+      "type": "architecture",
+      "name": "Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse",
+      "description": "",
+      "tags": [
+        "caching",
+        "inference",
+        "efficiency",
+        "llm"
+      ],
+      "path": "content/architectures/serving-patterns/choose-caching-strategy.md",
+      "url": "content/architectures/serving-patterns/choose-caching-strategy",
+      "last_updated": "2026-07-08",
+      "category": "serving-patterns",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "choose-chunk-size-by-answer-span-length",
       "type": "tip",
       "name": "Choose Chunk Size by Expected Answer Span Length, Not a Default",
@@ -1493,6 +1513,26 @@
       "featured": false
     },
     {
+      "id": "choose-embedding-model",
+      "type": "architecture",
+      "name": "Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted",
+      "description": "",
+      "tags": [
+        "embeddings",
+        "rag",
+        "retrieval",
+        "self-hosted"
+      ],
+      "path": "content/architectures/data-strategy/choose-embedding-model.md",
+      "url": "content/architectures/data-strategy/choose-embedding-model",
+      "last_updated": "2026-07-08",
+      "category": "data-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "choose-eval-framework",
       "type": "architecture",
       "name": "Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review",
@@ -1507,6 +1547,26 @@
       "url": "content/architectures/evaluation-strategy/choose-eval-framework",
       "last_updated": "2026-07-06",
       "category": "evaluation-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-guardrails-strategy",
+      "type": "architecture",
+      "name": "Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates",
+      "description": "",
+      "tags": [
+        "guardrails",
+        "security",
+        "llm",
+        "agents"
+      ],
+      "path": "content/architectures/system-design/choose-guardrails-strategy.md",
+      "url": "content/architectures/system-design/choose-guardrails-strategy",
+      "last_updated": "2026-07-08",
+      "category": "system-design",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -1605,6 +1665,26 @@
       "url": "content/architectures/serving-patterns/choose-serving-stack",
       "last_updated": "2026-07-07",
       "category": "serving-patterns",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-structured-output-strategy",
+      "type": "architecture",
+      "name": "Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding",
+      "description": "",
+      "tags": [
+        "structured-output",
+        "llm",
+        "inference",
+        "tool-use"
+      ],
+      "path": "content/architectures/system-design/choose-structured-output-strategy.md",
+      "url": "content/architectures/system-design/choose-structured-output-strategy",
+      "last_updated": "2026-07-08",
+      "category": "system-design",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -1950,6 +2030,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "common-crawl",
+      "type": "community",
+      "name": "Common Crawl",
+      "description": "",
+      "tags": [],
+      "path": "content/community/datasets/common-crawl.md",
+      "url": "content/community/datasets/common-crawl",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -3206,6 +3301,21 @@
       "featured": false
     },
     {
+      "id": "fineweb",
+      "type": "community",
+      "name": "FineWeb (Hugging Face)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/datasets/fineweb.md",
+      "url": "content/community/datasets/fineweb",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "firecrawl",
       "type": "project",
       "name": "Firecrawl",
@@ -3734,6 +3844,21 @@
       "featured": false
     },
     {
+      "id": "gpu-mode-discord",
+      "type": "community",
+      "name": "GPU MODE Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/gpu-mode-discord.md",
+      "url": "content/community/chat/gpu-mode-discord",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "gradient-dissent-podcast",
       "type": "community",
       "name": "Gradient Dissent (Weights & Biases)",
@@ -4137,6 +4262,21 @@
       "path": "content/community/chat/hugging-face-discord.md",
       "url": "content/community/chat/hugging-face-discord",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "hugging-face-forums",
+      "type": "community",
+      "name": "Hugging Face Forums",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/hugging-face-forums.md",
+      "url": "content/community/forums/hugging-face-forums",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -5103,6 +5243,21 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "last-week-in-ai",
+      "type": "community",
+      "name": "Last Week in AI",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/last-week-in-ai.md",
+      "url": "content/community/newsletters/last-week-in-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -6775,6 +6930,21 @@
       "featured": false
     },
     {
+      "id": "neurips",
+      "type": "community",
+      "name": "NeurIPS (Conference on Neural Information Processing Systems)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/events/neurips.md",
+      "url": "content/community/events/neurips",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "no-priors-podcast",
       "type": "community",
       "name": "No Priors",
@@ -6845,6 +7015,21 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ollama-discord",
+      "type": "community",
+      "name": "Ollama Discord",
+      "description": "",
+      "tags": [],
+      "path": "content/community/chat/ollama-discord.md",
+      "url": "content/community/chat/ollama-discord",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -8024,6 +8209,21 @@
       "path": "content/community/forums/r-localllama.md",
       "url": "content/community/forums/r-localllama",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "r-machinelearning",
+      "type": "community",
+      "name": "r/MachineLearning (Reddit)",
+      "description": "",
+      "tags": [],
+      "path": "content/community/forums/r-machinelearning.md",
+      "url": "content/community/forums/r-machinelearning",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -10096,6 +10296,21 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tldr-ai",
+      "type": "community",
+      "name": "TLDR AI",
+      "description": "",
+      "tags": [],
+      "path": "content/community/newsletters/tldr-ai.md",
+      "url": "content/community/newsletters/tldr-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {

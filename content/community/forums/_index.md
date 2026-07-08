@@ -10,9 +10,11 @@
 
 ## Recently Added
 
+- [Hugging Face Forums](./hugging-face-forums.md)
 - [LangChain Forum](./langchain-forum.md)
 - [OpenAI Developer Community](./openai-developer-forum.md)
 - [r/LocalLLaMA (Reddit)](./r-localllama.md)
+- [r/MachineLearning (Reddit)](./r-machinelearning.md)
 
 ## Most Popular
 
@@ -20,6 +22,8 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Hugging Face Forums](./hugging-face-forums.md) — 
 - [LangChain Forum](./langchain-forum.md) — 
 - [OpenAI Developer Community](./openai-developer-forum.md) — 
 - [r/LocalLLaMA (Reddit)](./r-localllama.md) — 
+- [r/MachineLearning (Reddit)](./r-machinelearning.md) — 
