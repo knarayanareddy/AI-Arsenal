@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:08:55.200Z | Entries: 696 | Schema version: 1.0.0
+Generated: 2026-07-08T20:11:12.920Z | Entries: 705 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 116
-- Tools: 171
+- Projects: 123
+- Tools: 173
 - Papers: 90
 - Tips: 129
 - People: 25
@@ -66,7 +66,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
-- nanoGPT (⭐60962, score:50) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
+- KTransformers (⭐17384, score:60) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 
 ### multimodal
 - ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
@@ -121,9 +121,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
 - DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- Hugging Face Accelerate — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
 - Megatron-LM — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
-- MLX-LM — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence

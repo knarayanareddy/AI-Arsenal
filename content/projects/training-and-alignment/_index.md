@@ -30,6 +30,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Recently Added
 
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md)
 - [LitGPT](./litgpt.md)
 - [ms-swift](./ms-swift.md)
 - [nanoGPT](./nanogpt.md)
@@ -43,9 +44,11 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [ms-swift](./ms-swift.md) — ⭐ 14751
 - [LitGPT](./litgpt.md) — ⭐ 13467
 - [OpenRLHF](./openrlhf.md) — ⭐ 9769
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — ⭐ 5627
 
 ### Browse All
 
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [LitGPT](./litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
 - [ms-swift](./ms-swift.md) — ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends
 - [nanoGPT](./nanogpt.md) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
