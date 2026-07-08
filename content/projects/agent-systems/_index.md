@@ -32,32 +32,39 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [AnythingLLM](./anythingllm.md)
+- [Browser Use](./browser-use.md)
 - [Continue](./continue.md)
+- [GPT Researcher](./gpt-researcher.md)
+- [Khoj](./khoj.md)
+- [LibreChat](./librechat.md)
 - [LobeChat (LobeHub)](./lobe-chat.md)
 - [screenshot-to-code](./screenshot-to-code.md)
 - [Skyvern](./skyvern.md)
 - [Tabby](./tabby.md)
-- [PageAgent](./page-agent.md)
-- [Strix](./strix.md)
-- [InsForge](./insforge.md)
-- [Stagehand](./stagehand.md)
 
 ### Most Popular
 
+- [Browser Use](./browser-use.md) — ⭐ 103506
 - [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 79620
 - [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
+- [AnythingLLM](./anythingllm.md) — ⭐ 62914
+- [LibreChat](./librechat.md) — ⭐ 40447
 - [Strix](./strix.md) — ⭐ 38354
+- [Khoj](./khoj.md) — ⭐ 35524
 - [Continue](./continue.md) — ⭐ 34744
 - [Tabby](./tabby.md) — ⭐ 33679
-- [PageAgent](./page-agent.md) — ⭐ 24812
-- [Skyvern](./skyvern.md) — ⭐ 22154
-- [Stagehand](./stagehand.md) — ⭐ 5400
-- [InsForge](./insforge.md) — ⭐ 2300
+- [GPT Researcher](./gpt-researcher.md) — ⭐ 28151
 
 ### Browse All
 
+- [AnythingLLM](./anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
+- [Browser Use](./browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 - [Continue](./continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- [GPT Researcher](./gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+- [Khoj](./khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
+- [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [LobeChat (LobeHub)](./lobe-chat.md) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [screenshot-to-code](./screenshot-to-code.md) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support

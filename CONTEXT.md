@@ -1,14 +1,14 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T18:30:03.856Z | Entries: 516 | Schema version: 1.0.0
+Generated: 2026-07-08T19:22:30.802Z | Entries: 623 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 86
-- Tools: 113
-- Papers: 44
+- Projects: 116
+- Tools: 171
+- Papers: 63
 - Tips: 102
 - People: 25
 - Digests: 1
@@ -50,13 +50,26 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 - SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
+- PaddleOCR (⭐85010, score:50) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+- Ultralytics YOLO (⭐59255, score:50) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
+
+### data-pipelines
+- Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+
+### evaluation
+- MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
+- Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
+- BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 
 ### llms
 - LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
-- TranslateGemma (⭐5000, score:50) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
+- nanoGPT (⭐60962, score:50) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
+
+### multimodal
+- ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
@@ -80,15 +93,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 - faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
+- Whisper (⭐104543, score:50) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 
 ## Top Tools by Job
 
 ### data-labeling
+- Airbyte — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
+- dlt — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
 - Label Studio — An open-source data labeling platform for ML and AI datasets
-- olmOCR — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
-- Prodigy — Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows
-- Scale AI — Managed data labeling and data engine platform for enterprise AI datasets
+- MarkItDown — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
 
 ### deployment
 - AWS Bedrock — AWS managed service for accessing foundation models and building generative AI apps
@@ -98,18 +112,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Empromptu AI — Build, deploy, and manage custom AI applications that improve over time
 
 ### evaluation
+- AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - Code Arena — Benchmark and compare AI models in a competitive coding environment
-- Giskard — Testing platform for evaluating and scanning ML and LLM applications
-- Humanloop — A platform for prompt management, evaluation, and product feedback workflows
+- Deepchecks — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
+- DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
 - Megatron-LM — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - MLX-LM — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
-- OrchestraML — Automate end-to-end ML workflows from data prep to deployment using AI agents
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
@@ -126,25 +140,25 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Weights & Biases — Experiment tracking and model management platform for ML and AI teams
 
 ### monitoring
+- AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
+- Deepchecks — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
+- Evidently — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
 - LangSmith — A managed platform for tracing, evaluating, and monitoring LangChain applications
-- Monako Glass — Visualize and understand AI model outputs with dynamic Pulse Rings and overlays
-- Portkey — An AI gateway for routing, observability, guardrails, and prompt management
-- Spotlight by Backplanes — Understand, improve, and track AI agent sessions with observability tooling
 
 ### orchestration
+- Agno — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
 - Apache Airflow — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - Cloudskill — Manage, govern, and distribute skills for AI agents across teams
-- Dagster — Data orchestration platform for assets, pipelines, schedules, and observability
 
 ### production-serving
 - BentoML — A framework for packaging, deploying, and scaling AI model services
+- Cerebras Inference — Wafer-scale-engine inference API claiming the fastest open-model token rates available
+- Cloudflare Workers AI — Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure
+- Cohere — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - FastAPI — Python web framework for building APIs around AI services and model workflows
-- Fireworks AI — A managed platform for fast inference and fine-tuning of open models
-- Fly.io — Application hosting platform with global machines and GPU options for AI services
-- Hugging Face Inference Endpoints — Managed Hugging Face service for deploying models as production inference endpoints
 
 ### prompt-management
 - Cloudskill — Manage, govern, and distribute skills for AI agents across teams
@@ -155,17 +169,17 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### prototyping
 - Agent Skills (Addy Osmani) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
+- Aider — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
 - Chainlit — A framework for building conversational AI interfaces and debugging LLM apps
 - Chrome DevTools MCP — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
-- Codex Plugin for Claude Code — Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation
-- Dropstone 3 — Collaborative AI workspace for teams to build, describe, and ship software together
+- Claude Code — Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories
 
 ### security-and-guardrails
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
-- Giskard — Testing platform for evaluating and scanning ML and LLM applications
+- garak — NVIDIA's open-source LLM vulnerability scanner: automated probes for jailbreaks, leakage, injection, and toxicity
 
 ### structured-output
 - Basedash — AI-native platform for generating dashboards, reports, and insights from natural-language queries
@@ -175,24 +189,25 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Guidance — Microsoft guidance library for controlling and constraining language model generation
 
 ### tracing
+- AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - LangSmith — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - Spotlight by Backplanes — Understand, improve, and track AI agent sessions with observability tooling
 - Superlog — Real-time log aggregation platform designed for serverless debugging
-- TruLens — An evaluation and tracking toolkit for LLM and RAG applications
 
 ### vector-search
 - Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
+- FAISS — Meta's foundational library for efficient similarity search over billions of dense vectors
+- Meilisearch — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - Pinecone — A managed vector database for production semantic search applications
-- Text Embeddings Inference (TEI) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
-- Vespa — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference
+- RAGatouille — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
 - Agent Reach — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
+- Airbyte — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - Browserbase — Hosted cloud browser platform for AI agents and automated browser workflows
 - Crawl4AI — Python crawler and scraper designed for LLM-friendly web content extraction
-- Firecrawl — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 
 ## Architecture Quick Refs
 
@@ -299,16 +314,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Must-Read Papers
 
+- GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
 - Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - Constitutional AI: Harmlessness from AI Feedback — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - Language Models are Few-Shot Learners — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - Evaluating Large Language Models Trained on Code (Codex / HumanEval) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
+- Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - PaLM: Scaling Language Modeling with Pathways — 540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size
 - Deep Reinforcement Learning from Human Preferences — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
+- FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness — Reframed attention as an IO problem: tiling and online softmax keep the computation in GPU SRAM, avoiding materializing the N×N matrix — exact attention, 2-4x faster and linear memory, now compiled into effectively all training and serving stacks
 - DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
-- QLoRA: Efficient Finetuning of Quantized LLMs — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
-- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
-- The Llama 3 Herd of Models — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 
 ## High-Impact Tips
 

@@ -152,24 +152,34 @@ This table is exhaustive for tools tagged with job = production-serving.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |
+| [Cerebras Inference](../model-layer/cerebras-inference.md) | model layer | usage-based | Yes | No | No | python, polyglot | watching |
+| [Cloudflare Workers AI](../serving-and-deployment/cloudflare-workers-ai.md) | serving and deployment | usage-based | Yes | No | No | typescript | solid-choice |
+| [Cohere](../model-layer/cohere.md) | model layer | usage-based | Yes | Yes | No | python, polyglot | solid-choice |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [Groq](../model-layer/groq.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | usage-based | Yes | No | No | python, typescript | recommended |
 | [Ideogram](../model-layer/ideogram.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Ideogram AI](../model-layer/ideogram-ai.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
+| [KServe](../serving-and-deployment/kserve.md) | serving and deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
-| [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
+| [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
+| [OpenLLM](../serving-and-deployment/openllm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
+| [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
-| [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Recursi](../dx-and-tooling/recursi.md) | dx and tooling | freemium | Yes | No | No | python | watching |
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
+| [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
 | [ShellMate](../dx-and-tooling/shellmate.md) | dx and tooling | freemium | Yes | No | No | python | watching |
-| [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | recommended |
+| [Together AI](../model-layer/together-ai.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
+| [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |
+| [Voyage AI](../model-layer/voyage-ai.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

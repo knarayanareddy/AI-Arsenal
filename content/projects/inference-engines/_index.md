@@ -33,15 +33,16 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [ExLlamaV2](./exllamav2.md)
 - [faster-whisper](./faster-whisper.md)
+- [MLC LLM](./mlc-llm.md)
+- [TensorRT-LLM](./tensorrt-llm.md)
 - [WhisperX](./whisperx.md)
 - [llama.cpp](./llama-cpp.md)
 - [Llamafile](./llamafile.md)
 - [LMDeploy](./lmdeploy.md)
 - [Ollama](./ollama.md)
 - [SGLang](./sglang.md)
-- [Text Generation Inference](./text-generation-inference.md)
-- [vLLM](./vllm.md)
 
 ### Most Popular
 
@@ -52,17 +53,21 @@ Before selecting an inference engine:
 - [Llamafile](./llamafile.md) — ⭐ 24936
 - [faster-whisper](./faster-whisper.md) — ⭐ 24114
 - [WhisperX](./whisperx.md) — ⭐ 22968
+- [MLC LLM](./mlc-llm.md) — ⭐ 22917
+- [TensorRT-LLM](./tensorrt-llm.md) — ⭐ 14065
 - [Text Generation Inference](./text-generation-inference.md) — ⭐ 10863
-- [LMDeploy](./lmdeploy.md) — ⭐ 7895
 
 ### Browse All
 
+- [ExLlamaV2](./exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
 - [faster-whisper](./faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
 - [LMDeploy](./lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
+- [MLC LLM](./mlc-llm.md) — Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase
 - [Ollama](./ollama.md) — Local runtime for downloading, running, and serving open-weight models on developer machines
 - [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
+- [TensorRT-LLM](./tensorrt-llm.md) — NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput
 - [Text Generation Inference](./text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
 - [vLLM](./vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
 - [WhisperX](./whisperx.md) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput

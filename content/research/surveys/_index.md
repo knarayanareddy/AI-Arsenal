@@ -31,7 +31,9 @@ When I need a map of an entire subfield's landscape — not a single technique, 
 
 ### Recently Added
 
-_No entries yet._
+- [Retrieval-Augmented Generation for Large Language Models: A Survey](./gao-2023-rag-survey.md)
+- [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions](./huang-2023-hallucination-survey.md)
+- [A Survey on Large Language Model based Autonomous Agents](./wang-2023-agents-survey.md)
 
 ### Most Popular
 
@@ -39,4 +41,6 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Retrieval-Augmented Generation for Large Language Models: A Survey](./gao-2023-rag-survey.md) — The standard map of the RAG landscape: organizes the field into Naive, Advanced, and Modular RAG paradigms and systematizes retrieval, generation, and augmentation techniques — the orientation document for anyone building retrieval systems
+- [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions](./huang-2023-hallucination-survey.md) — The reference taxonomy for hallucination: splits it into factuality vs faithfulness, traces causes through data, training, and inference, and catalogs detection benchmarks and mitigation strategies — the structured map behind grounding and guardrail engineering
+- [A Survey on Large Language Model based Autonomous Agents](./wang-2023-agents-survey.md) — The reference taxonomy for LLM agents: a unified four-module framework — profile, memory, planning, action — that organizes agent construction, applications, and evaluation; the profiling/memory/planning/action vocabulary most agent frameworks now use
