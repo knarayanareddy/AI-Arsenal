@@ -38,11 +38,11 @@ Before selecting a framework:
 - [Detectron2 (Meta)](./detectron2.md)
 - [Speech To Speech](./speech-to-speech.md)
 - [Spring AI](./spring-ai.md)
+- [Supervision](./supervision.md)
+- [Ultralytics YOLO](./ultralytics.md)
 - [Ultralytics YOLO](./ultralytics-yolo.md)
 - [Vercel AI SDK](./vercel-ai-sdk.md)
 - [Uiverse Design](./uiverse-design.md)
-- [AutoGen](./autogen.md)
-- [AutoGPT](./autogpt.md)
 
 ### Most Popular
 
@@ -52,10 +52,10 @@ Before selecting a framework:
 - [ComfyUI](./comfyui.md) — ⭐ 119901
 - [OpenHands](./openhands.md) — ⭐ 76854
 - [MetaGPT](./metagpt.md) — ⭐ 68769
+- [Ultralytics YOLO](./ultralytics.md) — ⭐ 59255
 - [Ultralytics YOLO](./ultralytics-yolo.md) — ⭐ 59255
 - [AutoGen](./autogen.md) — ⭐ 58925
 - [CrewAI](./crewai.md) — ⭐ 53462
-- [LlamaIndex](./llamaindex.md) — ⭐ 50109
 
 ### Browse All
 
@@ -82,7 +82,9 @@ Before selecting a framework:
 - [Smolagents](./smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
 - [Speech To Speech](./speech-to-speech.md) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 - [Spring AI](./spring-ai.md) — The Spring ecosystem's official AI framework: portable LLM, RAG, tool-calling and MCP abstractions with Spring Boot auto-configuration for enterprise Java
+- [Supervision](./supervision.md) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
+- [Ultralytics YOLO](./ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - [Ultralytics YOLO](./ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
 - [Vercel AI SDK](./vercel-ai-sdk.md) — The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI

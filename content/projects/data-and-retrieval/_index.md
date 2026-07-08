@@ -33,16 +33,16 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [AnythingLLM](./anything-llm.md)
 - [cleanlab](./cleanlab.md)
 - [Cognee](./cognee.md)
 - [Graphiti](./graphiti.md)
+- [GraphRAG](./graphrag.md)
 - [Marker](./marker.md)
+- [Onyx (formerly Danswer)](./onyx.md)
 - [PaddleOCR](./paddleocr.md)
 - [Surya](./surya.md)
 - [zvec](./zvec.md)
-- [Supabase](./supabase.md)
-- [SurrealDB](./surrealdb.md)
-- [Chroma](./chroma.md)
 
 ### Most Popular
 
@@ -51,14 +51,15 @@ Before selecting a data/retrieval component:
 - [RAGFlow](./ragflow.md) — ⭐ 82655
 - [Supabase](./supabase.md) — ⭐ 74300
 - [Crawl4AI](./crawl4ai.md) — ⭐ 68406
+- [AnythingLLM](./anything-llm.md) — ⭐ 62924
 - [Docling](./docling.md) — ⭐ 61495
 - [Milvus](./milvus.md) — ⭐ 44762
 - [Marker](./marker.md) — ⭐ 37280
-- [Qdrant](./qdrant.md) — ⭐ 32155
-- [Graphiti](./graphiti.md) — ⭐ 28508
+- [GraphRAG](./graphrag.md) — ⭐ 34257
 
 ### Browse All
 
+- [AnythingLLM](./anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [cleanlab](./cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - [Cognee](./cognee.md) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
@@ -66,10 +67,12 @@ Before selecting a data/retrieval component:
 - [Docling](./docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
 - [Firecrawl](./firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
 - [Graphiti](./graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
+- [GraphRAG](./graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [LanceDB](./lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LlamaParse](./llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text
 - [Marker](./marker.md) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
 - [Milvus](./milvus.md) — Cloud-native vector database for large-scale ANN search and production vector workloads
+- [Onyx (formerly Danswer)](./onyx.md) — Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
 - [PaddleOCR](./paddleocr.md) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
 - [pgvector](./pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Pinecone](./pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
