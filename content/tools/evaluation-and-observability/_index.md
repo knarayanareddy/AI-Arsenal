@@ -30,13 +30,13 @@ Before picking a tool in this phase, consider:
 - [AgentOps](./agentops.md)
 - [Deepchecks](./deepchecks.md)
 - [Evidently](./evidently.md)
-- [garak](./garak.md)
-- [Inspect](./inspect-ai.md)
+- [garak (NVIDIA)](./garak.md)
+- [Inspect (UK AI Safety Institute)](./inspect-ai.md)
 - [LLM Guard](./llm-guard.md)
+- [LM Evaluation Harness (EleutherAI)](./lm-evaluation-harness.md)
 - [PyRIT](./pyrit.md)
 - [Ragas](./ragas.md)
 - [UpTrain](./uptrain.md)
-- [SkillSpector](./skillspector.md)
 
 ### Most Popular
 
@@ -50,14 +50,15 @@ _No star-tracked entries yet._
 - [Conan](./conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - [Deepchecks](./deepchecks.md) — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 - [Evidently](./evidently.md) — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
-- [garak](./garak.md) — NVIDIA's open-source LLM vulnerability scanner: automated probes for jailbreaks, leakage, injection, and toxicity
+- [garak (NVIDIA)](./garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 - [Giskard](./giskard.md) — Testing platform for evaluating and scanning ML and LLM applications
 - [Guardrails AI](./guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Humanloop](./humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
-- [Inspect](./inspect-ai.md) — UK AI Safety Institute's framework for LLM evaluations: solvers, scorers, and sandboxed agentic tasks as code
+- [Inspect (UK AI Safety Institute)](./inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
 - [LangSmith](./langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - [Llama Guard](./llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
 - [LLM Guard](./llm-guard.md) — Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more
+- [LM Evaluation Harness (EleutherAI)](./lm-evaluation-harness.md) — The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard
 - [Monako Glass](./monako-glass.md) — Visualize and understand AI model outputs with dynamic Pulse Rings and overlays
 - [NeMo Guardrails](./nemo-guardrails.md) — NVIDIA framework for adding programmable guardrails to LLM applications
 - [OpenAI Evals](./openai-evals.md) — An open-source framework for evaluating language model behavior

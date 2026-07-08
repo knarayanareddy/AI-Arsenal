@@ -1,23 +1,23 @@
 ---
 id: garak
-name: "garak"
+name: garak (NVIDIA)
 type: tool
 job: [security-and-guardrails, evaluation]
-description: "NVIDIA's open-source LLM vulnerability scanner: automated probes for jailbreaks, leakage, injection, and toxicity"
-url: "https://garak.ai"
+description: NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
+url: "https://github.com/NVIDIA/garak"
 cost_model: open-source
-pricing_detail: "Apache-2.0 open source"
-tags: [security, evaluation, llm]
-maturity: beta
+pricing_detail: Open source (Apache-2.0)
+tags: [evaluation, llm, self-hosted]
+maturity: production
 stack: [python]
 free_tier: true
-free_tier_limits: "Open-source software; no imposed usage limits"
+free_tier_limits: Fully open source; compute/API costs are your own
 self_hostable: true
 open_source: true
 source_url: "https://github.com/NVIDIA/garak"
-docs_url: "https://docs.garak.ai"
+docs_url: "https://docs.garak.ai/garak"
 github_url: "https://github.com/NVIDIA/garak"
-alternatives: [pyrit, promptfoo]
+alternatives: [promptfoo, rebuff]
 integrates_with: [nemo-guardrails]
 added_date: "2026-07-08"
 last_reviewed: "2026-07-08"
@@ -26,78 +26,72 @@ reviewed_by: maintainer
 phase: evaluation-and-observability
 audience: [production, research]
 best_when:
-  - "You want an nmap-style scan of a model/endpoint before launch: run the probe library, get a vulnerability report"
-  - "Regression-testing safety posture across model upgrades with a repeatable, versioned probe set"
+  - You need a pre-deployment security scan of an LLM system — garak fires curated attack probes (jailbreaks, injection, encoding smuggling, data leakage, malware generation) and scores responses with detectors, producing a vulnerability report
+  - You want repeatable red-teaming in CI rather than ad-hoc manual jailbreak testing — probes are versioned modules, so scans are comparable across model versions
 avoid_when:
-  - "Application-level red teaming of full agent systems with custom attack goals — PyRIT/promptfoo target that better"
-  - "You need compliance-grade guarantees; probe coverage is necessary-not-sufficient evidence"
+  - You need runtime protection — garak is offline assessment; blocking live attacks is a guardrail's job (NeMo Guardrails, Llama Guard) that scanning complements but doesn't replace
+  - You need application-logic security review (authz, tool-call abuse in your agent) — garak probes the model interface generically, not your business logic
 version_tracked: null
-enrichment_status: draft
-enrichment_notes: "Star count (8,364), license, and last push (2026-07-07) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
 verdict: recommended
-verdict_rationale: "The most comprehensive open LLM vulnerability scanner; NVIDIA stewardship keeps the probe library current"
+verdict_rationale: The most complete open attack-probe library for LLMs, NVIDIA-backed and actively maintained — the standard first move for LLM security assessment, not a runtime defense
 status: active
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/garak", "date": "2026-07-08", "description": "8,364 stars on GitHub as of 2026-07-08 (GitHub API)"}]
 ---
 
 ## Overview
 
-An LLM vulnerability scanner in the lineage of nmap/Metasploit: point garak at a model (HF, OpenAI-compatible, REST) and it runs hundreds of probes — jailbreak suites, prompt injection, data leakage, encoding attacks, misinformation — scoring responses with detectors and emitting a report of failure modes with hit rates.
+garak (Generative AI Red-teaming and Assessment Kit) is an open-source LLM vulnerability scanner, self-described as "nmap for LLMs": it runs libraries of attack probes — jailbreak suites (DAN and descendants), prompt injection, encoding-based smuggling, training-data leakage replay, toxicity elicitation, hallucinated-package prompts — against any target (HF models, OpenAI-compatible APIs, REST endpoints, Ollama), scores responses with paired detectors, and emits a report of what got through.
 
 ## Why It's in the Arsenal
 
-garak earns a place in the Arsenal because it directly addresses a recurring decision point: you want an nmap-style scan of a model/endpoint before launch: run the probe library, get a vulnerability report. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+LLM security guidance is long on advice and short on tooling; garak is the tool: a concrete, runnable answer to "how vulnerable is our deployed model to known attack classes?" Its probe/detector structure operationalizes the OWASP-LLM-style threat lists the catalog's guardrail entries defend against — scan with garak, then configure guardrails for what actually landed.
 
 ## Key Features
 
-- Hundreds of maintained probes across attack categories
-- Works against local models, APIs, and arbitrary REST endpoints
-- Detector-scored reports with per-probe hit rates; adaptive probing
+- Dozens of probe modules spanning jailbreaks, injection, XSS/encoding smuggling, leakage, misinformation, and malware-generation elicitation
+- Detector-scored results (string/ML classifiers) with per-probe hit rates and an HTML/JSONL report
+- Generator abstraction targets HF, OpenAI-compatible, NIM, Ollama, LiteLLM, and raw REST endpoints
+- Extensible: custom probes/detectors as Python modules; buff system mutates probes (paraphrase, encoding) to defeat brittle filters
 
 ## Architecture / How It Works
 
-Each probe generates adversarial prompts (static corpora or generated variants), a generator adapter sends them to the target, and detectors (classifiers, string rules, judge models) score outputs for policy violations; results aggregate into an evaluation report comparable across runs.
+A scan is a matrix: generators (model targets) × probes (attack payload families) × detectors (response classifiers). Each probe sends its payloads N times (sampling matters for stochastic failures), detectors flag harmful/leaky outputs, and the evaluator aggregates hit rates per probe class — making "which attack families does this deployment fail on" a queryable artifact.
 
 ## Getting Started
 
 ```bash
-pip install garak
-garak --model_type openai --model_name gpt-4o-mini --probes promptinject
+python -m pip install -U garak
+python -m garak --model_type openai --model_name gpt-4o-mini --probes promptinject
+python -m garak --model_type huggingface --model_name gpt2 --probes dan.Dan_11_0
 ```
 
 ## Use Cases
 
-1. **Scenario**: you want an nmap-style scan of a model/endpoint before launch: run the probe library, get a vulnerability report
-2. **Scenario**: regression-testing safety posture across model upgrades with a repeatable, versioned probe set
-3. **Scenario where this is NOT the right fit**: application-level red teaming of full agent systems with custom attack goals — PyRIT/promptfoo target that better — evaluate an alternative instead
+1. **Scenario**: pre-launch security gate — scan the exact model+system-prompt combination you'll ship and file the report with the release
+2. **Scenario**: comparing jailbreak resistance across candidate models or after a guardrail change, using identical probe suites
+3. **Scenario where this is NOT the right fit**: stopping a live prompt-injection attack in production — that's runtime guardrail territory; garak tells you where to point the guardrails
 
 ## Strengths
 
-- You want an nmap-style scan of a model/endpoint before launch: run the probe library, get a vulnerability report
-- Regression-testing safety posture across model upgrades with a repeatable, versioned probe set
+- Breadth and currency of the probe library — community-maintained attack suites beat any internally curated jailbreak list
+- Versioned, repeatable methodology turns red-teaming from an art demo into a regression test
 
 ## Limitations / When NOT to Use
 
-- Application-level red teaming of full agent systems with custom attack goals — PyRIT/promptfoo target that better
-- You need compliance-grade guarantees; probe coverage is necessary-not-sufficient evidence
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- Probes cover known attack classes; a clean scan is necessary, not sufficient — novel and application-specific attacks remain your problem
+- Full scans are slow and API-expensive (many probes × many generations); scope probe selection deliberately
 
 ## Integration Patterns
 
-- Compare against `pyrit`, `promptfoo` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `garak`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+Link this tool from reference stacks, decision trees, and project entries using its canonical ID `garak` rather than duplicating details.
 
 ## Resources
 
-- [Official Site](https://garak.ai)
-- [Documentation](https://docs.garak.ai)
 - [GitHub](https://github.com/NVIDIA/garak)
+- [Docs](https://docs.garak.ai/garak)
 
 ## Buzz & Reception
 
-- 8,364 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
+8.4k GitHub stars (verified via API 2026-07-08); Apache-2.0; NVIDIA-maintained with active development. Widely referenced as the default open LLM security scanner in red-teaming guidance.
 
 ---
 *Last reviewed: 2026-07-08 by @maintainer*

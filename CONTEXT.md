@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:12:08.096Z | Entries: 712 | Schema version: 1.0.0
+Generated: 2026-07-08T20:14:26.998Z | Entries: 716 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 130
-- Tools: 173
+- Tools: 177
 - Papers: 90
 - Tips: 129
 - People: 25
@@ -112,8 +112,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - AWS Bedrock — AWS managed service for accessing foundation models and building generative AI apps
 - Azure AI Studio — Microsoft Azure platform for building, evaluating, and deploying AI applications
 - BentoML — A framework for packaging, deploying, and scaling AI model services
+- Cog (Replicate) — Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile
 - CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
-- Empromptu AI — Build, deploy, and manage custom AI applications that improve over time
 
 ### evaluation
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
@@ -183,7 +183,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
-- garak — NVIDIA's open-source LLM vulnerability scanner: automated probes for jailbreaks, leakage, injection, and toxicity
+- garak (NVIDIA) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 
 ### structured-output
 - Basedash — AI-native platform for generating dashboards, reports, and insights from natural-language queries
