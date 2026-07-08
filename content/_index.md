@@ -6,31 +6,31 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 14 entries | 2026-07-07 |
-| [benchmarks](./benchmarks/) | 30 entries | 2026-07-07 |
-| [build examples](./build-examples/) | 8 entries | 2026-07-07 |
-| [community](./community/) | 48 entries | 2026-07-07 |
-| [digests](./digests/) | 1 entries | 2026-07-07 |
-| [observability](./observability/) | 7 entries | 2026-07-07 |
-| [projects](./projects/) | 72 entries | 2026-07-07 |
-| [research](./research/) | 29 entries | 2026-07-07 |
-| [skills](./skills/) | 28 entries | 2026-07-07 |
-| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-07 |
-| [tools](./tools/) | 125 entries | 2026-07-07 |
-| [trending](./trending/) | 4 entries | 2026-07-07 |
+| [architectures](./architectures/) | 14 entries | 2026-07-08 |
+| [benchmarks](./benchmarks/) | 30 entries | 2026-07-08 |
+| [build examples](./build-examples/) | 8 entries | 2026-07-08 |
+| [community](./community/) | 48 entries | 2026-07-08 |
+| [digests](./digests/) | 1 entries | 2026-07-08 |
+| [observability](./observability/) | 7 entries | 2026-07-08 |
+| [projects](./projects/) | 73 entries | 2026-07-08 |
+| [research](./research/) | 29 entries | 2026-07-08 |
+| [skills](./skills/) | 28 entries | 2026-07-08 |
+| [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
+| [tools](./tools/) | 131 entries | 2026-07-08 |
+| [trending](./trending/) | 4 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
+- [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
+- [Orca](./tools/dx-and-tooling/orca.md)
+- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
+- [Superpowers](./tools/dx-and-tooling/superpowers.md)
+- [TencentDB Agent Memory](./tools/dx-and-tooling/tencentdb-agent-memory.md)
 - [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md)
 - [Agent Design](./skills/applied/agent-design.md)
 - [Agent Reach](./tools/data-ingestion/agent-reach.md)
-- [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md)
-- [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md)
-- [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md)
-- [Attention](./skills/core-concepts/attention.md)
-- [Building RAG Systems](./skills/applied/building-rag-systems.md)
-- [Chrome DevTools MCP](./tools/dx-and-tooling/chrome-devtools-mcp.md)
-- [Codebase Memory MCP](./tools/dx-and-tooling/codebase-memory-mcp.md)
 
 ## Most Popular
 
@@ -55,6 +55,7 @@
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./tips-and-tricks/prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./tips-and-tricks/inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./tips-and-tricks/rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
+- [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Multi-Agent Research System](./build-examples/agent-systems/advanced-multi-agent-research.md) — A planner/researcher/writer/reviewer LangGraph system with a citation-checked review loop and bounded retries
 - [Self-Correcting RAG](./build-examples/rag-systems/advanced-self-correcting-rag.md) — A RAG pipeline that grades retrieved context, rewrites the query on insufficient evidence, and falls back honestly after bounded retries
 - [Agent Browser Shield](./tools/data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
@@ -96,4 +97,3 @@
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
-- [Language Models are Few-Shot Learners](./research/foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning

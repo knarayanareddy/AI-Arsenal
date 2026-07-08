@@ -6,28 +6,28 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-07-07 |
-| [by job](./by-job/) | 14 entries | 2026-07-07 |
-| [by stack](./by-stack/) | 8 entries | 2026-07-07 |
-| [data ingestion](./data-ingestion/) | 16 entries | 2026-07-07 |
-| [dx and tooling](./dx-and-tooling/) | 19 entries | 2026-07-07 |
-| [evaluation and observability](./evaluation-and-observability/) | 18 entries | 2026-07-07 |
-| [model layer](./model-layer/) | 16 entries | 2026-07-07 |
-| [orchestration](./orchestration/) | 15 entries | 2026-07-07 |
-| [serving and deployment](./serving-and-deployment/) | 14 entries | 2026-07-07 |
+| [by cost](./by-cost/) | 5 entries | 2026-07-08 |
+| [by job](./by-job/) | 14 entries | 2026-07-08 |
+| [by stack](./by-stack/) | 8 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 16 entries | 2026-07-08 |
+| [dx and tooling](./dx-and-tooling/) | 24 entries | 2026-07-08 |
+| [evaluation and observability](./evaluation-and-observability/) | 18 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 16 entries | 2026-07-08 |
+| [orchestration](./orchestration/) | 15 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 15 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
+- [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md)
+- [CubeSandbox](./serving-and-deployment/cubesandbox.md)
+- [Orca](./dx-and-tooling/orca.md)
+- [Superpowers](./dx-and-tooling/superpowers.md)
+- [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md)
 - [Agent Reach](./data-ingestion/agent-reach.md)
 - [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md)
 - [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md)
 - [Tools by Cost — Freemium](./by-cost/cost-freemium.md)
-- [Tools by Cost — Open Source](./by-cost/cost-open-source.md)
-- [Tools by Cost — Paid](./by-cost/cost-paid.md)
-- [Tools by Cost — Self Hostable](./by-cost/cost-self-hostable.md)
-- [Tools by Cost — Usage Based](./by-cost/cost-usage-based.md)
-- [olmOCR](./data-ingestion/olmocr.md)
-- [SkillSpector](./evaluation-and-observability/skillspector.md)
 
 ## Most Popular
 
@@ -35,6 +35,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Reach](./data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - [AGNT.Hub](./orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
@@ -53,6 +54,7 @@ _No star-tracked entries yet._
 - [Cloudskill](./orchestration/cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
 - [Code Arena](./evaluation-and-observability/code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Codebase Memory MCP](./dx-and-tooling/codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
+- [Codex Plugin for Claude Code](./dx-and-tooling/codex-plugin-cc.md) — Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation
 - [Conan](./evaluation-and-observability/conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - [Tools by Cost — Freemium](./by-cost/cost-freemium.md) — Tools in the Arsenal filtered by Cost facet Freemium, with an auto-generated routing table that keeps this page current
 - [Tools by Cost — Open Source](./by-cost/cost-open-source.md) — Tools in the Arsenal filtered by Cost facet Open Source, with an auto-generated routing table that keeps this page current
@@ -60,6 +62,7 @@ _No star-tracked entries yet._
 - [Tools by Cost — Self Hostable](./by-cost/cost-self-hostable.md) — Tools in the Arsenal filtered by Cost facet Self Hostable, with an auto-generated routing table that keeps this page current
 - [Tools by Cost — Usage Based](./by-cost/cost-usage-based.md) — Tools in the Arsenal filtered by Cost facet Usage Based, with an auto-generated routing table that keeps this page current
 - [Crawl4AI](./data-ingestion/crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
+- [CubeSandbox](./serving-and-deployment/cubesandbox.md) — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
 - [Dagster](./orchestration/dagster.md) — Data orchestration platform for assets, pipelines, schedules, and observability
 - [Data Labeling Tools](./by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
 - [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
@@ -82,6 +85,3 @@ _No star-tracked entries yet._
 - [Honen](./dx-and-tooling/honen.md) — Transform any content into interactive AI-generated courses
 - [Hugging Face Hub](./model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
 - [Humanloop](./evaluation-and-observability/humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
-- [Ideogram](./model-layer/ideogram.md) — AI image generation with reliable text rendering in outputs
-- [Ideogram AI](./model-layer/ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
-- [Instructor](./dx-and-tooling/instructor.md) — A library for extracting typed structured outputs from language models

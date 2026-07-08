@@ -117,6 +117,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
+| [Orca](../dx-and-tooling/orca.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Prefect](../orchestration/prefect.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
