@@ -15,7 +15,7 @@ free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/kserve/kserve"
-docs_url: "https://kserve.github.io/website/latest/"
+docs_url: "https://kserve.github.io/website/docs/intro"
 github_url: "https://github.com/kserve/kserve"
 alternatives: [ray-serve, triton-inference-server, bentoml]
 integrates_with: [vllm]
@@ -91,7 +91,7 @@ kubectl apply --server-side -f https://github.com/kserve/kserve/releases/latest/
 ## Resources
 
 - [Official Site](https://kserve.github.io/website/)
-- [Documentation](https://kserve.github.io/website/latest/)
+- [Documentation](https://kserve.github.io/website/docs/intro)
 - [GitHub](https://github.com/kserve/kserve)
 
 ## Buzz & Reception

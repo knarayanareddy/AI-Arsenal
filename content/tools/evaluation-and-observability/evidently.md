@@ -15,7 +15,7 @@ free_tier_limits: "Cloud free tier; OSS library unlimited"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/evidentlyai/evidently"
-docs_url: "https://docs.evidentlyai.com"
+docs_url: "https://docs.evidentlyai.com/introduction"
 github_url: "https://github.com/evidentlyai/evidently"
 alternatives: [deepchecks, phoenix, ragas-rag-evaluation]
 integrates_with: []
@@ -92,7 +92,7 @@ pip install evidently
 ## Resources
 
 - [Official Site](https://www.evidentlyai.com)
-- [Documentation](https://docs.evidentlyai.com)
+- [Documentation](https://docs.evidentlyai.com/introduction)
 - [GitHub](https://github.com/evidentlyai/evidently)
 
 ## Buzz & Reception

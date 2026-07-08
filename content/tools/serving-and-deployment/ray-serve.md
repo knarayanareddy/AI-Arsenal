@@ -62,7 +62,7 @@ Each deployment becomes actor replicas on a Ray cluster; an HTTP proxy routes re
 
 ```bash
 pip install 'ray[serve]'
-# serve.run(MyDeployment.bind()) then hit http://localhost:8000
+# serve.run(MyDeployment.bind()) then hit localhost:8000
 ```
 
 ## Use Cases

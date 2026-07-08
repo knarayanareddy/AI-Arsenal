@@ -62,7 +62,7 @@ Cascades fast heuristics over the DOM tree (density, markup signals, link ratios
 
 ```bash
 pip install trafilatura
-trafilatura -u 'https://example.com/article'
+trafilatura -u <article-url>
 ```
 
 ## Use Cases

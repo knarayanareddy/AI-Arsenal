@@ -62,7 +62,7 @@ Flows serialize to JSON and execute on an Express backend instantiating LangChai
 
 ```bash
 npm install -g flowise && npx flowise start
-# open http://localhost:3000
+# open localhost:3000 in a browser
 ```
 
 ## Use Cases

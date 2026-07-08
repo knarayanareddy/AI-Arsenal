@@ -15,7 +15,7 @@ free_tier_limits: "Generous free token allowance per model family"
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://docs.voyageai.com"
+docs_url: "https://docs.voyageai.com/docs/introduction"
 github_url: null
 alternatives: [cohere]
 integrates_with: [langchain, llamaindex, pinecone]
@@ -92,7 +92,7 @@ pip install voyageai
 ## Resources
 
 - [Official Site](https://www.voyageai.com)
-- [Documentation](https://docs.voyageai.com)
+- [Documentation](https://docs.voyageai.com/docs/introduction)
 
 
 ## Buzz & Reception

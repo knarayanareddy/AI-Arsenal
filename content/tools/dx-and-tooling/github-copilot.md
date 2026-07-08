@@ -15,7 +15,7 @@ free_tier_limits: "Monthly cap on completions and chat on the free plan"
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://docs.github.com/copilot"
+docs_url: "https://docs.github.com/en/copilot"
 github_url: null
 alternatives: [cursor, continue-dev, tabby-ml]
 integrates_with: []
@@ -92,7 +92,7 @@ code --install-extension GitHub.copilot
 ## Resources
 
 - [Official Site](https://github.com/features/copilot)
-- [Documentation](https://docs.github.com/copilot)
+- [Documentation](https://docs.github.com/en/copilot)
 
 
 ## Buzz & Reception

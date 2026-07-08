@@ -15,7 +15,7 @@ free_tier_limits: "Free-tier variants of some models with daily request caps"
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://openrouter.ai/docs"
+docs_url: "https://openrouter.ai/docs/quickstart"
 github_url: null
 alternatives: [litellm, portkey]
 integrates_with: [litellm]
@@ -92,7 +92,7 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 ## Resources
 
 - [Official Site](https://openrouter.ai)
-- [Documentation](https://openrouter.ai/docs)
+- [Documentation](https://openrouter.ai/docs/quickstart)
 
 
 ## Buzz & Reception

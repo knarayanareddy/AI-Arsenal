@@ -15,7 +15,7 @@ free_tier_limits: "Free tier with monthly tool-call quota"
 self_hostable: false
 open_source: true
 source_url: "https://github.com/ComposioHQ/composio"
-docs_url: "https://docs.composio.dev"
+docs_url: "https://docs.composio.dev/docs"
 github_url: "https://github.com/ComposioHQ/composio"
 alternatives: [chrome-devtools-mcp]
 integrates_with: [langchain, crewai, openai-agents-sdk]
@@ -92,7 +92,7 @@ pip install composio
 ## Resources
 
 - [Official Site](https://composio.dev)
-- [Documentation](https://docs.composio.dev)
+- [Documentation](https://docs.composio.dev/docs)
 - [GitHub](https://github.com/ComposioHQ/composio)
 
 ## Buzz & Reception

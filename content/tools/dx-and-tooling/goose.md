@@ -15,7 +15,7 @@ free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/block/goose"
-docs_url: "https://block.github.io/goose/docs/"
+docs_url: "https://goose-docs.ai"
 github_url: "https://github.com/block/goose"
 alternatives: [claude-code, aider, openai-codex-cli]
 integrates_with: []
@@ -92,7 +92,7 @@ goose configure && goose session
 ## Resources
 
 - [Official Site](https://block.github.io/goose/)
-- [Documentation](https://block.github.io/goose/docs/)
+- [Documentation](https://goose-docs.ai)
 - [GitHub](https://github.com/block/goose)
 
 ## Buzz & Reception

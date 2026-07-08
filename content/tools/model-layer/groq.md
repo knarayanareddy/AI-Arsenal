@@ -15,7 +15,7 @@ free_tier_limits: "Free tier with daily token/request rate limits"
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://console.groq.com/docs"
+docs_url: "https://console.groq.com/docs/overview"
 github_url: null
 alternatives: [together-ai, fireworks-ai, cerebras-inference]
 integrates_with: []
@@ -92,7 +92,7 @@ pip install groq
 ## Resources
 
 - [Official Site](https://groq.com)
-- [Documentation](https://console.groq.com/docs)
+- [Documentation](https://console.groq.com/docs/overview)
 
 
 ## Buzz & Reception

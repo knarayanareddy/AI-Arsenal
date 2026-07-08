@@ -15,7 +15,7 @@ free_tier_limits: "See official pricing page; limits may change"
 self_hostable: true
 open_source: false
 source_url: null
-docs_url: "https://lmstudio.ai/docs"
+docs_url: "https://lmstudio.ai/docs/app"
 github_url: null
 alternatives: [open-webui, jan, ollama]
 integrates_with: []
@@ -61,7 +61,7 @@ Bundles llama.cpp and MLX runtimes behind a GUI: models load with configurable q
 ## Getting Started
 
 ```bash
-# Download from https://lmstudio.ai, then optionally use the CLI:
+# Download the app from the LM Studio site, then optionally use the CLI:
 lms get qwen3-8b && lms server start
 ```
 
@@ -92,7 +92,7 @@ lms get qwen3-8b && lms server start
 ## Resources
 
 - [Official Site](https://lmstudio.ai)
-- [Documentation](https://lmstudio.ai/docs)
+- [Documentation](https://lmstudio.ai/docs/app)
 
 
 ## Buzz & Reception

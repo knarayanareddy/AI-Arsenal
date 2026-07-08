@@ -4,7 +4,7 @@ name: "TRL"
 type: tool
 job: [fine-tuning]
 description: "Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers"
-url: "https://huggingface.co/docs/trl"
+url: "https://huggingface.co/docs/trl/index"
 cost_model: open-source
 pricing_detail: "Apache-2.0 open source"
 tags: [fine-tuning, rlhf, alignment, training, huggingface]
@@ -15,7 +15,7 @@ free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/huggingface/trl"
-docs_url: "https://huggingface.co/docs/trl"
+docs_url: "https://huggingface.co/docs/trl/index"
 github_url: "https://github.com/huggingface/trl"
 alternatives: [axolotl, llamafactory, unsloth]
 integrates_with: [peft, unsloth]
@@ -91,8 +91,8 @@ pip install trl
 
 ## Resources
 
-- [Official Site](https://huggingface.co/docs/trl)
-- [Documentation](https://huggingface.co/docs/trl)
+- [Official Site](https://huggingface.co/docs/trl/index)
+- [Documentation](https://huggingface.co/docs/trl/index)
 - [GitHub](https://github.com/huggingface/trl)
 
 ## Buzz & Reception

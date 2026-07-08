@@ -15,7 +15,7 @@ free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/cline/cline"
-docs_url: "https://docs.cline.bot"
+docs_url: "https://docs.cline.bot/cline-overview"
 github_url: "https://github.com/cline/cline"
 alternatives: [continue-dev, claude-code, cursor]
 integrates_with: []
@@ -92,7 +92,7 @@ code --install-extension saoudrizwan.claude-dev
 ## Resources
 
 - [Official Site](https://cline.bot)
-- [Documentation](https://docs.cline.bot)
+- [Documentation](https://docs.cline.bot/cline-overview)
 - [GitHub](https://github.com/cline/cline)
 
 ## Buzz & Reception

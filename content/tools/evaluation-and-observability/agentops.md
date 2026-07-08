@@ -15,7 +15,7 @@ free_tier_limits: "Free tier with limited monthly events and retention"
 self_hostable: false
 open_source: true
 source_url: "https://github.com/AgentOps-AI/agentops"
-docs_url: "https://docs.agentops.ai"
+docs_url: "https://docs.agentops.ai/v2/introduction"
 github_url: "https://github.com/AgentOps-AI/agentops"
 alternatives: [langsmith, langfuse-prompts, wandb-weave]
 integrates_with: [crewai, autogen, openai-agents-sdk]
@@ -92,7 +92,7 @@ pip install agentops
 ## Resources
 
 - [Official Site](https://www.agentops.ai)
-- [Documentation](https://docs.agentops.ai)
+- [Documentation](https://docs.agentops.ai/v2/introduction)
 - [GitHub](https://github.com/AgentOps-AI/agentops)
 
 ## Buzz & Reception

@@ -15,7 +15,7 @@ free_tier_limits: null
 self_hostable: false
 open_source: true
 source_url: "https://github.com/openai/codex"
-docs_url: "https://developers.openai.com/codex/cli/"
+docs_url: "https://developers.openai.com/codex/cli"
 github_url: "https://github.com/openai/codex"
 alternatives: [claude-code, gemini-cli, aider]
 integrates_with: []
@@ -92,7 +92,7 @@ codex
 ## Resources
 
 - [Official Site](https://github.com/openai/codex)
-- [Documentation](https://developers.openai.com/codex/cli/)
+- [Documentation](https://developers.openai.com/codex/cli)
 - [GitHub](https://github.com/openai/codex)
 
 ## Buzz & Reception

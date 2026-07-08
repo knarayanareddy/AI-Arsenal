@@ -15,7 +15,7 @@ free_tier_limits: "Open-source software; no imposed usage limits"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/uptrain-ai/uptrain"
-docs_url: "https://docs.uptrain.ai"
+docs_url: "https://docs.uptrain.ai/getting-started/introduction"
 github_url: "https://github.com/uptrain-ai/uptrain"
 alternatives: [ragas-rag-evaluation, deepeval, evidently]
 integrates_with: []
@@ -92,7 +92,7 @@ pip install uptrain
 ## Resources
 
 - [Official Site](https://github.com/uptrain-ai/uptrain)
-- [Documentation](https://docs.uptrain.ai)
+- [Documentation](https://docs.uptrain.ai/getting-started/introduction)
 - [GitHub](https://github.com/uptrain-ai/uptrain)
 
 ## Buzz & Reception

@@ -62,7 +62,7 @@ Clones the target repo shallowly, walks it applying ignore/include patterns and 
 
 ```bash
 pip install gitingest
-gitingest https://github.com/user/repo -o digest.txt
+gitingest https://github.com/octocat/Hello-World -o digest.txt
 ```
 
 ## Use Cases

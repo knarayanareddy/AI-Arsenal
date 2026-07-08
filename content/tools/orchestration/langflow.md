@@ -62,7 +62,7 @@ Flows are stored as JSON graphs; the FastAPI backend instantiates each node (lar
 
 ```bash
 uv pip install langflow && uv run langflow run
-# open http://localhost:7860
+# open localhost:7860 in a browser
 ```
 
 ## Use Cases

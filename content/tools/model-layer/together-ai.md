@@ -15,7 +15,7 @@ free_tier_limits: "Trial credits on signup"
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://docs.together.ai"
+docs_url: "https://docs.together.ai/intro"
 github_url: null
 alternatives: [fireworks-ai, openrouter, replicate]
 integrates_with: []
@@ -92,7 +92,7 @@ pip install together
 ## Resources
 
 - [Official Site](https://www.together.ai)
-- [Documentation](https://docs.together.ai)
+- [Documentation](https://docs.together.ai/intro)
 
 
 ## Buzz & Reception

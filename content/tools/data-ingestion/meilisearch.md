@@ -15,7 +15,7 @@ free_tier_limits: "Self-hosted free; cloud trial available"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/meilisearch/meilisearch"
-docs_url: "https://www.meilisearch.com/docs"
+docs_url: "https://www.meilisearch.com/docs/getting_started/overview"
 github_url: "https://github.com/meilisearch/meilisearch"
 alternatives: [typesense, qdrant]
 integrates_with: [langchain, llamaindex]
@@ -92,7 +92,7 @@ curl -L https://install.meilisearch.com | sh && ./meilisearch
 ## Resources
 
 - [Official Site](https://www.meilisearch.com)
-- [Documentation](https://www.meilisearch.com/docs)
+- [Documentation](https://www.meilisearch.com/docs/getting_started/overview)
 - [GitHub](https://github.com/meilisearch/meilisearch)
 
 ## Buzz & Reception

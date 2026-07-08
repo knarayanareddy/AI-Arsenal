@@ -15,7 +15,7 @@ free_tier_limits: "Free plan with limited monthly prompt credits"
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://docs.windsurf.com"
+docs_url: "https://docs.windsurf.com/windsurf/getting-started"
 github_url: null
 alternatives: [cursor, github-copilot, cline]
 integrates_with: []
@@ -92,7 +92,7 @@ Cascade combines a repo index, a trace of your recent editor actions, and tool a
 ## Resources
 
 - [Official Site](https://windsurf.com)
-- [Documentation](https://docs.windsurf.com)
+- [Documentation](https://docs.windsurf.com/windsurf/getting-started)
 
 
 ## Buzz & Reception

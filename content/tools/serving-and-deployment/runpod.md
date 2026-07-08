@@ -15,7 +15,7 @@ free_tier_limits: null
 self_hostable: false
 open_source: false
 source_url: null
-docs_url: "https://docs.runpod.io"
+docs_url: "https://docs.runpod.io/overview"
 github_url: null
 alternatives: [modal, replicate, fireworks-ai]
 integrates_with: [vllm]
@@ -93,7 +93,7 @@ pip install runpod
 ## Resources
 
 - [Official Site](https://www.runpod.io)
-- [Documentation](https://docs.runpod.io)
+- [Documentation](https://docs.runpod.io/overview)
 
 
 ## Buzz & Reception
