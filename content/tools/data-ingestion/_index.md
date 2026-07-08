@@ -29,6 +29,7 @@ Before picking a tool in this phase, consider:
 
 - [Airbyte](./airbyte.md)
 - [dlt](./dlt.md)
+- [Elasticsearch](./elasticsearch.md)
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
 - [MarkItDown](./markitdown.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [MinerU](./mineru.md)
 - [RAGatouille](./ragatouille.md)
 - [Trafilatura](./trafilatura.md)
-- [Typesense](./typesense.md)
 
 ### Most Popular
 
@@ -51,6 +51,7 @@ _No star-tracked entries yet._
 - [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
 - [dlt](./dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
+- [Elasticsearch](./elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - [FAISS](./faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Gitingest](./gitingest.md) — Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL
@@ -70,3 +71,4 @@ _No star-tracked entries yet._
 - [Taste Lab](./taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
 - [Trafilatura](./trafilatura.md) — Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building
 - [Typesense](./typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
+- [Vespa](./vespa.md) — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference

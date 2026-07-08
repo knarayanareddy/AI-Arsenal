@@ -28,15 +28,15 @@ Before picking a tool in this phase, consider:
 ### Recently Added
 
 - [Cerebras Inference](./cerebras-inference.md)
+- [ClearML](./clearml.md)
 - [Cohere](./cohere.md)
 - [DeepSpeed](./deepspeed.md)
 - [Groq](./groq.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
+- [Megatron-LM](./megatron-lm.md)
 - [OpenRouter](./openrouter.md)
 - [Sentence Transformers](./sentence-transformers.md)
 - [Together AI](./together-ai.md)
-- [TRL](./trl.md)
-- [Voyage AI](./voyage-ai.md)
 
 ### Most Popular
 
@@ -46,6 +46,7 @@ _No star-tracked entries yet._
 
 - [Axolotl](./axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Cerebras Inference](./cerebras-inference.md) — Wafer-scale-engine inference API claiming the fastest open-model token rates available
+- [ClearML](./clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - [Cohere](./cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - [DeepSpeed](./deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
 - [DVC](./dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
@@ -57,6 +58,7 @@ _No star-tracked entries yet._
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [LLaMA-Factory](./llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
 - [LM Format Enforcer](./lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
+- [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - [MLflow](./mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 - [MLX-LM](./mlx-lm.md) — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
 - [OpenRouter](./openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing

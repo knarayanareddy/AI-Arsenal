@@ -34,6 +34,7 @@ When I am deciding how to fine-tune, align, or adapt a model, which technique sh
 
 ### Recently Added
 
+- [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md)
 - [Textbooks Are All You Need](./gunasekar-2023-phi-1.md)
 - [ORPO: Monolithic Preference Optimization without Reference Model](./hong-2024-orpo.md)
 - [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](./lee-2023-rlaif.md)
@@ -43,7 +44,6 @@ When I am deciding how to fine-tune, align, or adapt a model, which technique sh
 - [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](./shao-2024-deepseekmath.md)
 - [Finetuned Language Models Are Zero-Shot Learners](./wei-2021-flan.md)
 - [Constitutional AI: Harmlessness from AI Feedback](./bai-2022-constitutional-ai.md)
-- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md)
 
 ### Most Popular
 
@@ -52,6 +52,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Constitutional AI: Harmlessness from AI Feedback](./bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
+- [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md) — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
 - [Textbooks Are All You Need](./gunasekar-2023-phi-1.md) — The phi-1 paper: a 1.3B model trained on 7B tokens of filtered 'textbook-quality' and synthetic data hit 50.6% HumanEval — the flagship argument that data quality can substitute for orders of magnitude of scale, launching the small-language-model program
