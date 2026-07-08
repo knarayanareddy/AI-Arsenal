@@ -13,7 +13,7 @@
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 10 entries | 2026-07-08 |
 | [projects](./projects/) | 110 entries | 2026-07-08 |
-| [research](./research/) | 53 entries | 2026-07-08 |
+| [research](./research/) | 70 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 116 entries | 2026-07-08 |
 | [tools](./tools/) | 191 entries | 2026-07-08 |
