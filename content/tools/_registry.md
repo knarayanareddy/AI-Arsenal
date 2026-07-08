@@ -4,6 +4,7 @@
 
 | ID | Name | Description |
 |---|---|---|
+| `accelerate` | [Hugging Face Accelerate](./model-layer/accelerate.md) | Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes |
 | `addyosmani-agent-skills` | [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) | Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle |
 | `agent-browser-shield` | [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) | Secure AI web browsing by cleaning content and masking PII during agent runs |
 | `agent-reach` | [Agent Reach](./data-ingestion/agent-reach.md) | Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web |
@@ -129,6 +130,7 @@
 | `puppeteer` | [Puppeteer](./data-ingestion/puppeteer.md) | Node.js browser automation library for Chrome and Chromium workflows |
 | `pydantic-ai-tool` | [Pydantic AI](./orchestration/pydantic-ai-tool.md) | Pydantic agent framework focused on typed outputs, tools, and production Python apps |
 | `pyrit` | [PyRIT](./evaluation-and-observability/pyrit.md) | Microsoft's Python Risk Identification Toolkit for red-teaming generative AI systems, born from its AI Red Team |
+| `pytorch-lightning` | [PyTorch Lightning](./model-layer/pytorch-lightning.md) | The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing |
 | `qursor` | [Qursor](./dx-and-tooling/qursor.md) | AI-powered UI context for faster front-end development with agents |
 | `qwen-3` | [Qwen 3](./model-layer/qwen-3.md) | Alibaba open-weight model family with multimodal and coding variants |
 | `ragas` | [Ragas](./evaluation-and-observability/ragas.md) | Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines |
