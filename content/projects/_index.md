@@ -8,24 +8,24 @@
 |---|---:|---|
 | [agent systems](./agent-systems/) | 14 entries | 2026-07-08 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 15 entries | 2026-07-08 |
-| [data and retrieval](./data-and-retrieval/) | 24 entries | 2026-07-08 |
-| [foundation models](./foundation-models/) | 25 entries | 2026-07-08 |
-| [frameworks](./frameworks/) | 28 entries | 2026-07-08 |
-| [inference engines](./inference-engines/) | 18 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 6 entries | 2026-07-08 |
+| [data and retrieval](./data-and-retrieval/) | 25 entries | 2026-07-08 |
+| [foundation models](./foundation-models/) | 26 entries | 2026-07-08 |
+| [frameworks](./frameworks/) | 29 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 19 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 8 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md)
 - [AnythingLLM](./data-and-retrieval/anything-llm.md)
 - [AnythingLLM](./agent-systems/anythingllm.md)
+- [AudioCraft (Meta)](./foundation-models/audiocraft.md)
 - [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md)
 - [BigCodeBench](./benchmarks-and-evals/bigcodebench.md)
 - [Browser Use](./agent-systems/browser-use.md)
 - [CAMEL](./frameworks/camel-ai.md)
 - [Candle](./inference-engines/candle.md)
 - [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md)
-- [CLIP (OpenAI)](./foundation-models/clip.md)
 
 ## Most Popular
 
@@ -46,6 +46,7 @@
 - [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [AnythingLLM](./data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [AnythingLLM](./agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
+- [AudioCraft (Meta)](./foundation-models/audiocraft.md) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
 - [AutoGen](./frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md) — BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG
@@ -56,8 +57,10 @@
 - [Candle](./inference-engines/candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
 - [Chroma](./data-and-retrieval/chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
+- [cleanlab](./data-and-retrieval/cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - [CLIP (OpenAI)](./foundation-models/clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
 - [Cognee](./data-and-retrieval/cognee.md) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
+- [Colossal-AI (HPC-AI Tech)](./training-and-alignment/colossalai.md) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
 - [ComfyUI](./frameworks/comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [Command R+](./foundation-models/command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [Continue](./agent-systems/continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
@@ -65,10 +68,12 @@
 - [CrewAI](./frameworks/crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
 - [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
+- [Detectron2 (Meta)](./frameworks/detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dify](./frameworks/dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [Docling](./data-and-retrieval/docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
 - [DSPy](./frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
 - [ExLlamaV2](./inference-engines/exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
+- [exo (exo-explore)](./inference-engines/exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [F5-TTS](./foundation-models/f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
 - [Falcon 3](./foundation-models/falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
 - [faster-whisper](./inference-engines/faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
@@ -87,8 +92,3 @@
 - [Khoj](./agent-systems/khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
 - [Kimi K2](./foundation-models/kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Kokoro TTS](./foundation-models/kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
-- [KTransformers](./inference-engines/ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
-- [LanceDB](./data-and-retrieval/lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
-- [LangChain](./frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
-- [Langfuse](./benchmarks-and-evals/langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
-- [LangGraph](./frameworks/langgraph.md) — Graph-based framework for building stateful, durable LLM agents and workflows

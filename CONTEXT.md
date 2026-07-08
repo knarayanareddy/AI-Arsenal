@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:14:26.998Z | Entries: 716 | Schema version: 1.0.0
+Generated: 2026-07-08T20:16:06.980Z | Entries: 722 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 130
+- Projects: 136
 - Tools: 177
 - Papers: 90
 - Tips: 129
@@ -49,12 +49,13 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
+- Detectron2 (Meta) (⭐34599, score:55) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 - PaddleOCR (⭐85010, score:50) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
-- Ultralytics YOLO (⭐59255, score:50) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
 
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 
 ### evaluation
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
@@ -63,10 +64,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### llms
 - LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
+- exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
-- KTransformers (⭐17384, score:60) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 
 ### multimodal
 - Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
@@ -93,11 +94,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 
 ### voice-audio
+- AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 - Chatterbox (Resemble AI) (⭐25426, score:55) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
 - faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
-- Whisper (⭐104543, score:50) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 
 ## Top Tools by Job
 

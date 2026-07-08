@@ -8,6 +8,7 @@
 | `alignment-handbook` | [The Alignment Handbook (Hugging Face)](./training-and-alignment/alignment-handbook.md) | Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights |
 | `anything-llm` | [AnythingLLM](./data-and-retrieval/anything-llm.md) | All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required |
 | `anythingllm` | [AnythingLLM](./agent-systems/anythingllm.md) | All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup |
+| `audiocraft` | [AudioCraft (Meta)](./foundation-models/audiocraft.md) | Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec |
 | `autogen` | [AutoGen](./frameworks/autogen.md) | Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence |
 | `autogpt` | [AutoGPT](./frameworks/autogpt.md) | Autonomous agent platform and classic agent project for accessible AI automation |
 | `bge-embeddings` | [BGE / FlagEmbedding (BAAI)](./foundation-models/bge-embeddings.md) | BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG |
@@ -18,8 +19,10 @@
 | `candle` | [Candle](./inference-engines/candle.md) | Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference |
 | `chatterbox` | [Chatterbox (Resemble AI)](./foundation-models/chatterbox.md) | Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default |
 | `chroma` | [Chroma](./data-and-retrieval/chroma.md) | Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG |
+| `cleanlab` | [cleanlab](./data-and-retrieval/cleanlab.md) | Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions |
 | `clip` | [CLIP (OpenAI)](./foundation-models/clip.md) | OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs |
 | `cognee` | [Cognee](./data-and-retrieval/cognee.md) | Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations |
+| `colossalai` | [Colossal-AI (HPC-AI Tech)](./training-and-alignment/colossalai.md) | Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory |
 | `comfyui` | [ComfyUI](./frameworks/comfyui.md) | Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines |
 | `command-r-plus` | [Command R+](./foundation-models/command-r-plus.md) | Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows |
 | `continue` | [Continue](./agent-systems/continue.md) | Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local |
@@ -27,10 +30,12 @@
 | `crewai` | [CrewAI](./frameworks/crewai.md) | Role-based framework for orchestrating collaborative AI agent crews and flows |
 | `deepeval` | [DeepEval](./benchmarks-and-evals/deepeval.md) | An open-source evaluation framework for testing LLM applications in CI |
 | `deepseek-v3-r1` | [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) | DeepSeek open-weight MoE and reasoning model family known for strong cost-performance |
+| `detectron2` | [Detectron2 (Meta)](./frameworks/detectron2.md) | Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work |
 | `dify` | [Dify](./frameworks/dify.md) | Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations |
 | `docling` | [Docling](./data-and-retrieval/docling.md) | IBM-origin open-source toolkit for parsing and exporting documents for generative AI |
 | `dspy` | [DSPy](./frameworks/dspy.md) | A framework for programming and optimizing language model pipelines |
 | `exllamav2` | [ExLlamaV2](./inference-engines/exllamav2.md) | Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM |
+| `exo` | [exo (exo-explore)](./inference-engines/exo.md) | Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine |
 | `f5-tts` | [F5-TTS](./foundation-models/f5-tts.md) | Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple |
 | `falcon-3` | [Falcon 3](./foundation-models/falcon-3.md) | TII open model family with compact 1B to 10B text-only variants for local deployment |
 | `faster-whisper` | [faster-whisper](./inference-engines/faster-whisper.md) | Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs |
@@ -81,6 +86,7 @@
 | `olmo` | [OLMo](./foundation-models/olmo.md) | AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science |
 | `onnxruntime` | [ONNX Runtime](./inference-engines/onnxruntime.md) | Microsoft's cross-platform inference runtime for the ONNX graph format — one exported model runs on CPU, GPU, mobile, and browser via execution providers |
 | `onyx` | [Onyx (formerly Danswer)](./data-and-retrieval/onyx.md) | Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval |
+| `open-r1` | [Open R1 (Hugging Face)](./training-and-alignment/open-r1.md) | Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL |
 | `openai-agents-sdk` | [OpenAI Agents SDK](./frameworks/openai-agents-sdk.md) | Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing |
 | `openhands` | [OpenHands](./frameworks/openhands.md) | AI software engineering agent platform for coding, terminal work, browser actions, and automation |
 | `openlit` | [OpenLIT](./benchmarks-and-evals/openlit.md) | OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails |
