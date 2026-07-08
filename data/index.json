@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T17:45:57.431Z",
-    "total_projects": 73,
-    "total_tools": 104,
+    "generated_at": "2026-07-08T19:20:49.368Z",
+    "total_projects": 103,
+    "total_tools": 162,
     "total_papers": 30,
     "total_tips": 115,
     "total_people": 25,
@@ -379,6 +379,44 @@
       "featured": false
     },
     {
+      "id": "agentops",
+      "type": "tool",
+      "name": "AgentOps",
+      "description": "Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing",
+      "tags": [
+        "observability",
+        "agents",
+        "tracing"
+      ],
+      "path": "content/tools/evaluation-and-observability/agentops.md",
+      "url": "content/tools/evaluation-and-observability/agentops",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agno",
+      "type": "tool",
+      "name": "Agno",
+      "description": "High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime",
+      "tags": [
+        "agents",
+        "orchestration",
+        "memory"
+      ],
+      "path": "content/tools/orchestration/agno.md",
+      "url": "content/tools/orchestration/agno",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agnt-hub",
       "type": "tool",
       "name": "AGNT.Hub",
@@ -464,6 +502,44 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "aider",
+      "type": "tool",
+      "name": "Aider",
+      "description": "Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes",
+      "tags": [
+        "code-gen",
+        "agents",
+        "llm"
+      ],
+      "path": "content/tools/dx-and-tooling/aider.md",
+      "url": "content/tools/dx-and-tooling/aider",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "airbyte",
+      "type": "tool",
+      "name": "Airbyte",
+      "description": "Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines",
+      "tags": [
+        "data",
+        "rag",
+        "cloud"
+      ],
+      "path": "content/tools/data-ingestion/airbyte.md",
+      "url": "content/tools/data-ingestion/airbyte",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -574,6 +650,25 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "anythingllm",
+      "type": "project",
+      "name": "AnythingLLM",
+      "description": "All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup",
+      "tags": [
+        "rag",
+        "agents",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/anythingllm.md",
+      "url": "content/projects/agent-systems/anythingllm",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -950,6 +1045,25 @@
       "featured": false
     },
     {
+      "id": "bigcodebench",
+      "type": "project",
+      "name": "BigCodeBench",
+      "description": "Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval",
+      "tags": [
+        "evaluation",
+        "code-gen",
+        "llm"
+      ],
+      "path": "content/projects/benchmarks-and-evals/bigcodebench.md",
+      "url": "content/projects/benchmarks-and-evals/bigcodebench",
+      "last_updated": "2026-07-08",
+      "category": "evaluation",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "braintrust",
       "type": "project",
       "name": "Braintrust",
@@ -986,6 +1100,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "browser-use",
+      "type": "project",
+      "name": "Browser Use",
+      "description": "The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously",
+      "tags": [
+        "agents",
+        "tool-use",
+        "orchestration"
+      ],
+      "path": "content/projects/agent-systems/browser-use.md",
+      "url": "content/projects/agent-systems/browser-use",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -1102,6 +1235,25 @@
       "featured": false
     },
     {
+      "id": "camel-ai",
+      "type": "project",
+      "name": "CAMEL",
+      "description": "Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation",
+      "tags": [
+        "agents",
+        "orchestration",
+        "research"
+      ],
+      "path": "content/projects/frameworks/camel-ai.md",
+      "url": "content/projects/frameworks/camel-ai",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cap-agent-tool-retries",
       "type": "tip",
       "name": "Cap Agent Tool Retries at a Fixed Count Per Tool",
@@ -1150,6 +1302,25 @@
       "category": "instrumentation",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cerebras-inference",
+      "type": "tool",
+      "name": "Cerebras Inference",
+      "description": "Wafer-scale-engine inference API claiming the fastest open-model token rates available",
+      "tags": [
+        "inference",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/tools/model-layer/cerebras-inference.md",
+      "url": "content/tools/model-layer/cerebras-inference",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -1462,6 +1633,26 @@
       "featured": false
     },
     {
+      "id": "claude-code",
+      "type": "tool",
+      "name": "Claude Code",
+      "description": "Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use",
+        "anthropic"
+      ],
+      "path": "content/tools/dx-and-tooling/claude-code.md",
+      "url": "content/tools/dx-and-tooling/claude-code",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "clem-delangue",
       "type": "person",
       "name": "Clément Delangue",
@@ -1477,6 +1668,44 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cline",
+      "type": "tool",
+      "name": "Cline",
+      "description": "Open-source autonomous coding agent for VS Code with plan/act modes and human-in-the-loop approval of every action",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/tools/dx-and-tooling/cline.md",
+      "url": "content/tools/dx-and-tooling/cline",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cloudflare-workers-ai",
+      "type": "tool",
+      "name": "Cloudflare Workers AI",
+      "description": "Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure",
+      "tags": [
+        "inference",
+        "serverless",
+        "edge"
+      ],
+      "path": "content/tools/serving-and-deployment/cloudflare-workers-ai.md",
+      "url": "content/tools/serving-and-deployment/cloudflare-workers-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -1555,6 +1784,64 @@
       "featured": false
     },
     {
+      "id": "cognee",
+      "type": "project",
+      "name": "Cognee",
+      "description": "Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations",
+      "tags": [
+        "memory",
+        "rag",
+        "agents"
+      ],
+      "path": "content/projects/data-and-retrieval/cognee.md",
+      "url": "content/projects/data-and-retrieval/cognee",
+      "last_updated": "2026-07-08",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cohere",
+      "type": "tool",
+      "name": "Cohere",
+      "description": "Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG",
+      "tags": [
+        "llm",
+        "embeddings",
+        "retrieval",
+        "rag"
+      ],
+      "path": "content/tools/model-layer/cohere.md",
+      "url": "content/tools/model-layer/cohere",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "comfyui",
+      "type": "project",
+      "name": "ComfyUI",
+      "description": "Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines",
+      "tags": [
+        "multimodal",
+        "orchestration",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/comfyui.md",
+      "url": "content/projects/frameworks/comfyui",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "command-r-plus",
       "type": "project",
       "name": "Command R+",
@@ -1591,6 +1878,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "composio",
+      "type": "tool",
+      "name": "Composio",
+      "description": "Integration platform providing 250+ managed, authenticated tools (Gmail, Slack, GitHub...) to any AI agent framework",
+      "tags": [
+        "tool-use",
+        "agents",
+        "orchestration"
+      ],
+      "path": "content/tools/orchestration/composio.md",
+      "url": "content/tools/orchestration/composio",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -1665,6 +1971,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "continue-dev",
+      "type": "tool",
+      "name": "Continue",
+      "description": "Open-source IDE extension (VS Code/JetBrains) for building custom AI coding assistants with any model",
+      "tags": [
+        "code-gen",
+        "llm",
+        "tool-use"
+      ],
+      "path": "content/tools/dx-and-tooling/continue-dev.md",
+      "url": "content/tools/dx-and-tooling/continue-dev",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -1855,6 +2180,25 @@
       "featured": false
     },
     {
+      "id": "cursor",
+      "type": "tool",
+      "name": "Cursor",
+      "description": "AI-native code editor (VS Code fork) with agent mode, codebase-aware chat, and predictive multi-line edits",
+      "tags": [
+        "code-gen",
+        "agents",
+        "llm"
+      ],
+      "path": "content/tools/dx-and-tooling/cursor.md",
+      "url": "content/tools/dx-and-tooling/cursor",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "dagster",
       "type": "tool",
       "name": "Dagster",
@@ -1907,6 +2251,25 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deepchecks",
+      "type": "tool",
+      "name": "Deepchecks",
+      "description": "Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality",
+      "tags": [
+        "evaluation",
+        "monitoring",
+        "data"
+      ],
+      "path": "content/tools/evaluation-and-observability/deepchecks.md",
+      "url": "content/tools/evaluation-and-observability/deepchecks",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -1979,6 +2342,26 @@
       "url": "content/projects/foundation-models/deepseek-v3-r1",
       "last_updated": "2026-07-01",
       "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deepspeed",
+      "type": "tool",
+      "name": "DeepSpeed",
+      "description": "Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory",
+      "tags": [
+        "training",
+        "fine-tuning",
+        "efficiency",
+        "pytorch"
+      ],
+      "path": "content/tools/model-layer/deepspeed.md",
+      "url": "content/tools/model-layer/deepspeed",
+      "last_updated": "2026-07-08",
+      "category": null,
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -2137,6 +2520,25 @@
       "featured": false
     },
     {
+      "id": "dlt",
+      "type": "tool",
+      "name": "dlt",
+      "description": "Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows",
+      "tags": [
+        "data",
+        "llm",
+        "cloud"
+      ],
+      "path": "content/tools/data-ingestion/dlt.md",
+      "url": "content/tools/data-ingestion/dlt",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "do-not-answer",
       "type": "benchmark",
       "name": "Do-Not-Answer",
@@ -2282,6 +2684,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "e2b",
+      "type": "tool",
+      "name": "E2B",
+      "description": "Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale",
+      "tags": [
+        "agents",
+        "security",
+        "code-gen"
+      ],
+      "path": "content/tools/orchestration/e2b.md",
+      "url": "content/tools/orchestration/e2b",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -2507,6 +2928,63 @@
       "featured": false
     },
     {
+      "id": "evidently",
+      "type": "tool",
+      "name": "Evidently",
+      "description": "Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge",
+      "tags": [
+        "evaluation",
+        "observability",
+        "monitoring"
+      ],
+      "path": "content/tools/evaluation-and-observability/evidently.md",
+      "url": "content/tools/evaluation-and-observability/evidently",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "exllamav2",
+      "type": "project",
+      "name": "ExLlamaV2",
+      "description": "Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM",
+      "tags": [
+        "inference",
+        "quantization",
+        "local"
+      ],
+      "path": "content/projects/inference-engines/exllamav2.md",
+      "url": "content/projects/inference-engines/exllamav2",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "faiss",
+      "type": "tool",
+      "name": "FAISS",
+      "description": "Meta's foundational library for efficient similarity search over billions of dense vectors",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "efficiency"
+      ],
+      "path": "content/tools/data-ingestion/faiss.md",
+      "url": "content/tools/data-ingestion/faiss",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "falcon-3",
       "type": "project",
       "name": "Falcon 3",
@@ -2655,6 +3133,25 @@
       "featured": false
     },
     {
+      "id": "flowise",
+      "type": "tool",
+      "name": "Flowise",
+      "description": "Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack",
+      "tags": [
+        "orchestration",
+        "agents",
+        "rag"
+      ],
+      "path": "content/tools/orchestration/flowise.md",
+      "url": "content/tools/orchestration/flowise",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "fly-io",
       "type": "tool",
       "name": "Fly.io",
@@ -2769,6 +3266,25 @@
       "featured": false
     },
     {
+      "id": "garak",
+      "type": "tool",
+      "name": "garak",
+      "description": "NVIDIA's open-source LLM vulnerability scanner: automated probes for jailbreaks, leakage, injection, and toxicity",
+      "tags": [
+        "security",
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tools/evaluation-and-observability/garak.md",
+      "url": "content/tools/evaluation-and-observability/garak",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gate-releases-on-eval-regression",
       "type": "observability",
       "name": "Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship",
@@ -2780,6 +3296,25 @@
       "category": "evaluation-quality",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gemini-cli",
+      "type": "tool",
+      "name": "Gemini CLI",
+      "description": "Google's open-source terminal AI agent that brings Gemini models to the command line with a generous free tier",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/tools/dx-and-tooling/gemini-cli.md",
+      "url": "content/tools/dx-and-tooling/gemini-cli",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -2863,6 +3398,25 @@
       "featured": false
     },
     {
+      "id": "github-copilot",
+      "type": "tool",
+      "name": "GitHub Copilot",
+      "description": "GitHub's AI pair programmer: completions, chat, and an autonomous coding agent woven through GitHub and major IDEs",
+      "tags": [
+        "code-gen",
+        "agents",
+        "llm"
+      ],
+      "path": "content/tools/dx-and-tooling/github-copilot.md",
+      "url": "content/tools/dx-and-tooling/github-copilot",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "github-trending",
       "type": "trend",
       "name": "Source Feed: GitHub Trending",
@@ -2877,6 +3431,44 @@
       "maturity": null,
       "cost_model": null,
       "status": "reviewed",
+      "featured": false
+    },
+    {
+      "id": "gitingest",
+      "type": "tool",
+      "name": "Gitingest",
+      "description": "Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL",
+      "tags": [
+        "code-gen",
+        "data",
+        "llm"
+      ],
+      "path": "content/tools/data-ingestion/gitingest.md",
+      "url": "content/tools/data-ingestion/gitingest",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "glm-4",
+      "type": "project",
+      "name": "GLM-4 / GLM-4.5",
+      "description": "Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants",
+      "tags": [
+        "llm",
+        "agents",
+        "code-gen"
+      ],
+      "path": "content/projects/foundation-models/glm-4.md",
+      "url": "content/projects/foundation-models/glm-4",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -2936,6 +3528,25 @@
       "featured": false
     },
     {
+      "id": "goose",
+      "type": "tool",
+      "name": "Goose",
+      "description": "Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions",
+      "tags": [
+        "agents",
+        "tool-use",
+        "code-gen"
+      ],
+      "path": "content/tools/dx-and-tooling/goose.md",
+      "url": "content/tools/dx-and-tooling/goose",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gpqa-diamond",
       "type": "benchmark",
       "name": "GPQA Diamond",
@@ -2951,6 +3562,25 @@
       "category": "general-llm",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gpt-researcher",
+      "type": "project",
+      "name": "GPT Researcher",
+      "description": "Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports",
+      "tags": [
+        "agents",
+        "rag",
+        "orchestration"
+      ],
+      "path": "content/projects/agent-systems/gpt-researcher.md",
+      "url": "content/projects/agent-systems/gpt-researcher",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -2985,6 +3615,44 @@
       "category": null,
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "graphiti",
+      "type": "project",
+      "name": "Graphiti",
+      "description": "Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents",
+      "tags": [
+        "memory",
+        "rag",
+        "agents"
+      ],
+      "path": "content/projects/data-and-retrieval/graphiti.md",
+      "url": "content/projects/data-and-retrieval/graphiti",
+      "last_updated": "2026-07-08",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "groq",
+      "type": "tool",
+      "name": "Groq",
+      "description": "Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second",
+      "tags": [
+        "inference",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/tools/model-layer/groq.md",
+      "url": "content/tools/model-layer/groq",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -3411,6 +4079,25 @@
       "featured": false
     },
     {
+      "id": "inspect-ai",
+      "type": "tool",
+      "name": "Inspect",
+      "description": "UK AI Safety Institute's framework for LLM evaluations: solvers, scorers, and sandboxed agentic tasks as code",
+      "tags": [
+        "evaluation",
+        "agents",
+        "llm"
+      ],
+      "path": "content/tools/evaluation-and-observability/inspect-ai.md",
+      "url": "content/tools/evaluation-and-observability/inspect-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "inspect-retrieved-chunks-beside-the-answer",
       "type": "tip",
       "name": "Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations",
@@ -3550,6 +4237,25 @@
       "category": "safety",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "jan",
+      "type": "tool",
+      "name": "Jan",
+      "description": "Open-source, offline-first ChatGPT alternative desktop app powered by llama.cpp",
+      "tags": [
+        "llm",
+        "local",
+        "self-hosted"
+      ],
+      "path": "content/tools/dx-and-tooling/jan.md",
+      "url": "content/tools/dx-and-tooling/jan",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -3744,6 +4450,44 @@
       "featured": false
     },
     {
+      "id": "khoj",
+      "type": "project",
+      "name": "Khoj",
+      "description": "Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs",
+      "tags": [
+        "agents",
+        "rag",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/khoj.md",
+      "url": "content/projects/agent-systems/khoj",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "kimi-k2",
+      "type": "project",
+      "name": "Kimi K2",
+      "description": "Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters",
+      "tags": [
+        "llm",
+        "agents",
+        "code-gen"
+      ],
+      "path": "content/projects/foundation-models/kimi-k2.md",
+      "url": "content/projects/foundation-models/kimi-k2",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "kimi-k2-5",
       "type": "tool",
       "name": "Kimi K2.5",
@@ -3758,6 +4502,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "kserve",
+      "type": "tool",
+      "name": "KServe",
+      "description": "Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol",
+      "tags": [
+        "inference",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/kserve.md",
+      "url": "content/tools/serving-and-deployment/kserve",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -3863,6 +4626,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "langflow",
+      "type": "tool",
+      "name": "Langflow",
+      "description": "Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers",
+      "tags": [
+        "orchestration",
+        "agents",
+        "rag"
+      ],
+      "path": "content/tools/orchestration/langflow.md",
+      "url": "content/tools/orchestration/langflow",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -4112,6 +4894,25 @@
       "featured": false
     },
     {
+      "id": "librechat",
+      "type": "project",
+      "name": "LibreChat",
+      "description": "Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth",
+      "tags": [
+        "agents",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/agent-systems/librechat.md",
+      "url": "content/projects/agent-systems/librechat",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lilian-weng",
       "type": "person",
       "name": "Lilian Weng",
@@ -4144,6 +4945,25 @@
       "url": "content/tools/serving-and-deployment/litellm",
       "last_updated": "2026-06-30",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "litgpt",
+      "type": "project",
+      "name": "LitGPT",
+      "description": "Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale",
+      "tags": [
+        "fine-tuning",
+        "training",
+        "llm"
+      ],
+      "path": "content/projects/training-and-alignment/litgpt.md",
+      "url": "content/projects/training-and-alignment/litgpt",
+      "last_updated": "2026-07-08",
+      "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -4399,6 +5219,44 @@
       "featured": false
     },
     {
+      "id": "lm-format-enforcer",
+      "type": "tool",
+      "name": "LM Format Enforcer",
+      "description": "Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM",
+      "tags": [
+        "structured-output",
+        "inference",
+        "llm"
+      ],
+      "path": "content/tools/model-layer/lm-format-enforcer.md",
+      "url": "content/tools/model-layer/lm-format-enforcer",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lm-studio",
+      "type": "tool",
+      "name": "LM Studio",
+      "description": "Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server",
+      "tags": [
+        "llm",
+        "local",
+        "inference"
+      ],
+      "path": "content/tools/dx-and-tooling/lm-studio.md",
+      "url": "content/tools/dx-and-tooling/lm-studio",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lmdeploy",
       "type": "project",
       "name": "LMDeploy",
@@ -4606,6 +5464,62 @@
       "featured": false
     },
     {
+      "id": "marimo",
+      "type": "tool",
+      "name": "marimo",
+      "description": "Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps",
+      "tags": [
+        "data",
+        "research"
+      ],
+      "path": "content/tools/dx-and-tooling/marimo.md",
+      "url": "content/tools/dx-and-tooling/marimo",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "marker",
+      "type": "project",
+      "name": "Marker",
+      "description": "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts",
+      "tags": [
+        "data",
+        "rag",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/marker.md",
+      "url": "content/projects/data-and-retrieval/marker",
+      "last_updated": "2026-07-08",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "markitdown",
+      "type": "tool",
+      "name": "MarkItDown",
+      "description": "Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown",
+      "tags": [
+        "data",
+        "rag",
+        "llm"
+      ],
+      "path": "content/tools/data-ingestion/markitdown.md",
+      "url": "content/tools/data-ingestion/markitdown",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mastra",
       "type": "project",
       "name": "Mastra",
@@ -4753,6 +5667,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "meilisearch",
+      "type": "tool",
+      "name": "Meilisearch",
+      "description": "Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance",
+      "tags": [
+        "retrieval",
+        "rag",
+        "self-hosted"
+      ],
+      "path": "content/tools/data-ingestion/meilisearch.md",
+      "url": "content/tools/data-ingestion/meilisearch",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
       "featured": false
     },
     {
@@ -4910,6 +5843,25 @@
       "featured": false
     },
     {
+      "id": "mineru",
+      "type": "tool",
+      "name": "MinerU",
+      "description": "OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models",
+      "tags": [
+        "data",
+        "rag",
+        "multimodal"
+      ],
+      "path": "content/tools/data-ingestion/mineru.md",
+      "url": "content/tools/data-ingestion/mineru",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mistral-models",
       "type": "project",
       "name": "Mistral / Mixtral",
@@ -4966,6 +5918,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mlc-llm",
+      "type": "project",
+      "name": "MLC LLM",
+      "description": "Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase",
+      "tags": [
+        "inference",
+        "edge",
+        "llm"
+      ],
+      "path": "content/projects/inference-engines/mlc-llm.md",
+      "url": "content/projects/inference-engines/mlc-llm",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -5141,6 +6112,25 @@
       "featured": false
     },
     {
+      "id": "ms-swift",
+      "type": "project",
+      "name": "ms-swift",
+      "description": "ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "multimodal"
+      ],
+      "path": "content/projects/training-and-alignment/ms-swift.md",
+      "url": "content/projects/training-and-alignment/ms-swift",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "msmarco",
       "type": "benchmark",
       "name": "MS MARCO",
@@ -5176,6 +6166,25 @@
       "category": "evaluation-methods",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mteb",
+      "type": "project",
+      "name": "MTEB",
+      "description": "The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks",
+      "tags": [
+        "evaluation",
+        "embeddings",
+        "retrieval"
+      ],
+      "path": "content/projects/benchmarks-and-evals/mteb.md",
+      "url": "content/projects/benchmarks-and-evals/mteb",
+      "last_updated": "2026-07-08",
+      "category": "evaluation",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -5219,6 +6228,25 @@
       "featured": false
     },
     {
+      "id": "n8n",
+      "type": "tool",
+      "name": "n8n",
+      "description": "Source-available visual workflow automation platform with first-class AI-agent nodes and 400+ integrations",
+      "tags": [
+        "orchestration",
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/tools/orchestration/n8n.md",
+      "url": "content/tools/orchestration/n8n",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "name-the-audience-in-the-prompt",
       "type": "tip",
       "name": "Name the Audience Explicitly in the Prompt",
@@ -5234,6 +6262,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "nanogpt",
+      "type": "project",
+      "name": "nanoGPT",
+      "description": "Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining",
+      "tags": [
+        "training",
+        "llm",
+        "foundational"
+      ],
+      "path": "content/projects/training-and-alignment/nanogpt.md",
+      "url": "content/projects/training-and-alignment/nanogpt",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -5329,6 +6376,25 @@
       "featured": false
     },
     {
+      "id": "nvidia-nim",
+      "type": "tool",
+      "name": "NVIDIA NIM",
+      "description": "Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/tools/serving-and-deployment/nvidia-nim.md",
+      "url": "content/tools/serving-and-deployment/nvidia-nim",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ollama",
       "type": "project",
       "name": "Ollama",
@@ -5342,6 +6408,25 @@
       "path": "content/projects/inference-engines/ollama.md",
       "url": "content/projects/inference-engines/ollama",
       "last_updated": "2026-07-01",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "olmo",
+      "type": "project",
+      "name": "OLMo",
+      "description": "AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science",
+      "tags": [
+        "llm",
+        "research",
+        "training"
+      ],
+      "path": "content/projects/foundation-models/olmo.md",
+      "url": "content/projects/foundation-models/olmo",
+      "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
@@ -5368,6 +6453,26 @@
       "featured": false
     },
     {
+      "id": "open-webui",
+      "type": "tool",
+      "name": "Open WebUI",
+      "description": "Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "rag",
+        "local"
+      ],
+      "path": "content/tools/dx-and-tooling/open-webui.md",
+      "url": "content/tools/dx-and-tooling/open-webui",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openai-agents-sdk",
       "type": "project",
       "name": "OpenAI Agents SDK",
@@ -5384,6 +6489,26 @@
       "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openai-codex-cli",
+      "type": "tool",
+      "name": "OpenAI Codex CLI",
+      "description": "OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment",
+      "tags": [
+        "code-gen",
+        "agents",
+        "tool-use",
+        "openai"
+      ],
+      "path": "content/tools/dx-and-tooling/openai-codex-cli.md",
+      "url": "content/tools/dx-and-tooling/openai-codex-cli",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -5462,6 +6587,25 @@
       "featured": false
     },
     {
+      "id": "openllm",
+      "type": "tool",
+      "name": "OpenLLM",
+      "description": "BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command",
+      "tags": [
+        "inference",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/openllm.md",
+      "url": "content/tools/serving-and-deployment/openllm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openllmetry",
       "type": "project",
       "name": "OpenLLMetry",
@@ -5478,6 +6622,44 @@
       "category": "observability",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openrlhf",
+      "type": "project",
+      "name": "OpenRLHF",
+      "description": "High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale",
+      "tags": [
+        "fine-tuning",
+        "alignment",
+        "llm"
+      ],
+      "path": "content/projects/training-and-alignment/openrlhf.md",
+      "url": "content/projects/training-and-alignment/openrlhf",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openrouter",
+      "type": "tool",
+      "name": "OpenRouter",
+      "description": "Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing",
+      "tags": [
+        "llm",
+        "routing",
+        "inference"
+      ],
+      "path": "content/tools/model-layer/openrouter.md",
+      "url": "content/tools/model-layer/openrouter",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -5629,6 +6811,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "paddleocr",
+      "type": "project",
+      "name": "PaddleOCR",
+      "description": "Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge",
+      "tags": [
+        "data",
+        "multimodal",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/paddleocr.md",
+      "url": "content/projects/data-and-retrieval/paddleocr",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -6210,6 +7411,25 @@
       "featured": false
     },
     {
+      "id": "pyrit",
+      "type": "tool",
+      "name": "PyRIT",
+      "description": "Microsoft's Python Risk Identification Toolkit for red-teaming generative AI systems, born from its AI Red Team",
+      "tags": [
+        "security",
+        "evaluation",
+        "agents"
+      ],
+      "path": "content/tools/evaluation-and-observability/pyrit.md",
+      "url": "content/tools/evaluation-and-observability/pyrit",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "qdrant",
       "type": "project",
       "name": "Qdrant",
@@ -6419,6 +7639,25 @@
       "featured": false
     },
     {
+      "id": "ragatouille",
+      "type": "tool",
+      "name": "RAGatouille",
+      "description": "Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines",
+      "tags": [
+        "retrieval",
+        "rag",
+        "research"
+      ],
+      "path": "content/tools/data-ingestion/ragatouille.md",
+      "url": "content/tools/data-ingestion/ragatouille",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ragflow",
       "type": "project",
       "name": "RAGFlow",
@@ -6473,6 +7712,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "ray-serve",
+      "type": "tool",
+      "name": "Ray Serve",
+      "description": "Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python",
+      "tags": [
+        "inference",
+        "orchestration",
+        "batching"
+      ],
+      "path": "content/tools/serving-and-deployment/ray-serve.md",
+      "url": "content/tools/serving-and-deployment/ray-serve",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -6597,6 +7855,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "repomix",
+      "type": "tool",
+      "name": "Repomix",
+      "description": "CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs",
+      "tags": [
+        "code-gen",
+        "llm",
+        "data"
+      ],
+      "path": "content/tools/dx-and-tooling/repomix.md",
+      "url": "content/tools/dx-and-tooling/repomix",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6743,6 +8020,25 @@
       "category": "incident-response",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "runpod",
+      "type": "tool",
+      "name": "RunPod",
+      "description": "GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints",
+      "tags": [
+        "inference",
+        "cloud",
+        "serverless"
+      ],
+      "path": "content/tools/serving-and-deployment/runpod.md",
+      "url": "content/tools/serving-and-deployment/runpod",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -6984,6 +8280,25 @@
       "url": "content/projects/frameworks/semantic-kernel",
       "last_updated": "2026-07-01",
       "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sentence-transformers",
+      "type": "tool",
+      "name": "Sentence Transformers",
+      "description": "The standard Python library for computing, training, and fine-tuning text embedding and reranker models",
+      "tags": [
+        "embeddings",
+        "retrieval",
+        "huggingface"
+      ],
+      "path": "content/tools/model-layer/sentence-transformers.md",
+      "url": "content/tools/model-layer/sentence-transformers",
+      "last_updated": "2026-07-08",
+      "category": null,
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -7247,6 +8562,26 @@
       "featured": false
     },
     {
+      "id": "skypilot",
+      "type": "tool",
+      "name": "SkyPilot",
+      "description": "Run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface",
+      "tags": [
+        "inference",
+        "training",
+        "cloud",
+        "efficiency"
+      ],
+      "path": "content/tools/serving-and-deployment/skypilot.md",
+      "url": "content/tools/serving-and-deployment/skypilot",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "slice-eval-metrics-by-input-segment",
       "type": "tip",
       "name": "Slice Eval Metrics by Input Segment Instead of Trusting the Average",
@@ -7338,6 +8673,25 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "spring-ai",
+      "type": "project",
+      "name": "Spring AI",
+      "description": "The Spring ecosystem's official AI framework: portable LLM, RAG, tool-calling and MCP abstractions with Spring Boot auto-configuration for enterprise Java",
+      "tags": [
+        "agents",
+        "rag",
+        "structured-output"
+      ],
+      "path": "content/projects/frameworks/spring-ai.md",
+      "url": "content/projects/frameworks/spring-ai",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -7878,6 +9232,25 @@
       "featured": false
     },
     {
+      "id": "surya",
+      "type": "project",
+      "name": "Surya",
+      "description": "Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker",
+      "tags": [
+        "data",
+        "multimodal",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/surya.md",
+      "url": "content/projects/data-and-retrieval/surya",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "swe-bench",
       "type": "benchmark",
       "name": "SWE-bench",
@@ -7894,6 +9267,25 @@
       "category": "code",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tabby-ml",
+      "type": "tool",
+      "name": "Tabby",
+      "description": "Self-hosted, open-source AI coding assistant: an on-prem alternative to GitHub Copilot with completions and chat",
+      "tags": [
+        "code-gen",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/tools/dx-and-tooling/tabby-ml.md",
+      "url": "content/tools/dx-and-tooling/tabby-ml",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -7954,6 +9346,25 @@
       "featured": false
     },
     {
+      "id": "temporal",
+      "type": "tool",
+      "name": "Temporal",
+      "description": "Durable-execution platform that guarantees workflow completion — increasingly the reliability backbone under production AI agents",
+      "tags": [
+        "orchestration",
+        "stateful",
+        "agents"
+      ],
+      "path": "content/tools/orchestration/temporal.md",
+      "url": "content/tools/orchestration/temporal",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "tencentdb-agent-memory",
       "type": "tool",
       "name": "TencentDB Agent Memory",
@@ -7966,6 +9377,44 @@
       "url": "content/tools/dx-and-tooling/tencentdb-agent-memory",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tensorrt-llm",
+      "type": "project",
+      "name": "TensorRT-LLM",
+      "description": "NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput",
+      "tags": [
+        "inference",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/projects/inference-engines/tensorrt-llm.md",
+      "url": "content/projects/inference-engines/tensorrt-llm",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "terminal-bench",
+      "type": "project",
+      "name": "Terminal-Bench",
+      "description": "Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models",
+      "tags": [
+        "evaluation",
+        "agents",
+        "llm"
+      ],
+      "path": "content/projects/benchmarks-and-evals/terminal-bench.md",
+      "url": "content/projects/benchmarks-and-evals/terminal-bench",
+      "last_updated": "2026-07-08",
+      "category": "evaluation",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -8057,6 +9506,25 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "together-ai",
+      "type": "tool",
+      "name": "Together AI",
+      "description": "Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints",
+      "tags": [
+        "llm",
+        "inference",
+        "fine-tuning"
+      ],
+      "path": "content/tools/model-layer/together-ai.md",
+      "url": "content/tools/model-layer/together-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -8204,6 +9672,25 @@
       "featured": false
     },
     {
+      "id": "trafilatura",
+      "type": "tool",
+      "name": "Trafilatura",
+      "description": "Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building",
+      "tags": [
+        "data",
+        "retrieval",
+        "llm"
+      ],
+      "path": "content/tools/data-ingestion/trafilatura.md",
+      "url": "content/tools/data-ingestion/trafilatura",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "transformers",
       "type": "guide",
       "name": "Transformers",
@@ -8258,6 +9745,47 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "triton-inference-server",
+      "type": "tool",
+      "name": "NVIDIA Triton Inference Server",
+      "description": "NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "batching",
+        "triton"
+      ],
+      "path": "content/tools/serving-and-deployment/triton-inference-server.md",
+      "url": "content/tools/serving-and-deployment/triton-inference-server",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "trl",
+      "type": "tool",
+      "name": "TRL",
+      "description": "Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers",
+      "tags": [
+        "fine-tuning",
+        "rlhf",
+        "alignment",
+        "training",
+        "huggingface"
+      ],
+      "path": "content/tools/model-layer/trl.md",
+      "url": "content/tools/model-layer/trl",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -8352,6 +9880,25 @@
       "featured": false
     },
     {
+      "id": "typesense",
+      "type": "tool",
+      "name": "Typesense",
+      "description": "Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in",
+      "tags": [
+        "retrieval",
+        "rag",
+        "self-hosted"
+      ],
+      "path": "content/tools/data-ingestion/typesense.md",
+      "url": "content/tools/data-ingestion/typesense",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "uiverse-design",
       "type": "project",
       "name": "Uiverse Design",
@@ -8366,6 +9913,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "watching",
+      "featured": false
+    },
+    {
+      "id": "ultralytics-yolo",
+      "type": "project",
+      "name": "Ultralytics YOLO",
+      "description": "The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API",
+      "tags": [
+        "multimodal",
+        "efficiency",
+        "data"
+      ],
+      "path": "content/projects/frameworks/ultralytics-yolo.md",
+      "url": "content/projects/frameworks/ultralytics-yolo",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -8403,6 +9969,25 @@
       "last_updated": "2026-07-01",
       "category": "rag",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "uptrain",
+      "type": "tool",
+      "name": "UpTrain",
+      "description": "Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics",
+      "tags": [
+        "evaluation",
+        "rag",
+        "observability"
+      ],
+      "path": "content/tools/evaluation-and-observability/uptrain.md",
+      "url": "content/tools/evaluation-and-observability/uptrain",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -8792,6 +10377,44 @@
       "featured": false
     },
     {
+      "id": "vercel-ai-sdk",
+      "type": "project",
+      "name": "Vercel AI SDK",
+      "description": "The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI",
+      "tags": [
+        "agents",
+        "structured-output",
+        "tool-use"
+      ],
+      "path": "content/projects/frameworks/vercel-ai-sdk.md",
+      "url": "content/projects/frameworks/vercel-ai-sdk",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "verl",
+      "type": "project",
+      "name": "verl",
+      "description": "ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs",
+      "tags": [
+        "alignment",
+        "fine-tuning",
+        "llm"
+      ],
+      "path": "content/projects/training-and-alignment/verl.md",
+      "url": "content/projects/training-and-alignment/verl",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "version-system-prompts-like-code",
       "type": "tip",
       "name": "Version System Prompts With the Same Discipline as Application Code",
@@ -8844,6 +10467,25 @@
       "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "voyage-ai",
+      "type": "tool",
+      "name": "Voyage AI",
+      "description": "Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB",
+      "tags": [
+        "embeddings",
+        "retrieval",
+        "rag"
+      ],
+      "path": "content/tools/model-layer/voyage-ai.md",
+      "url": "content/tools/model-layer/voyage-ai",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -8998,6 +10640,25 @@
       "featured": false
     },
     {
+      "id": "whisper",
+      "type": "project",
+      "name": "Whisper",
+      "description": "OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio",
+      "tags": [
+        "voice",
+        "multimodal",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/whisper.md",
+      "url": "content/projects/foundation-models/whisper",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "wildbench",
       "type": "benchmark",
       "name": "WildBench",
@@ -9013,6 +10674,25 @@
       "category": "evaluation-methods",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "windsurf",
+      "type": "tool",
+      "name": "Windsurf",
+      "description": "Agentic AI code editor built around Cascade, a context-aware agent that keeps working across your whole repo",
+      "tags": [
+        "code-gen",
+        "agents",
+        "llm"
+      ],
+      "path": "content/tools/dx-and-tooling/windsurf.md",
+      "url": "content/tools/dx-and-tooling/windsurf",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
