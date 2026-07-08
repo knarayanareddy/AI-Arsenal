@@ -70,7 +70,7 @@ Upstream: the engines it wraps — `llama-cpp` foremost. Competing: Ollama (pers
 
 ```bash
 docker run -p 8080:8080 --name local-ai -ti localai/localai:latest-cpu
-# then: curl http://localhost:8080/v1/chat/completions -d '{"model":"...","messages":[...]}'
+# then POST to localhost:8080/v1/chat/completions with an OpenAI-style body
 ```
 
 ## Key Use Cases

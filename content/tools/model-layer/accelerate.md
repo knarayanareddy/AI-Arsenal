@@ -15,7 +15,7 @@ free_tier_limits: Fully open source; no usage limits
 self_hostable: true
 open_source: true
 source_url: "https://github.com/huggingface/accelerate"
-docs_url: "https://huggingface.co/docs/accelerate"
+docs_url: "https://huggingface.co/docs/accelerate/index"
 github_url: "https://github.com/huggingface/accelerate"
 alternatives: [torchtune, megatron-lm]
 integrates_with: [peft, axolotl]
@@ -92,8 +92,8 @@ accelerate launch train.py
 
 ## Resources
 
-- [Primary site](https://huggingface.co/docs/accelerate)
-- [Documentation](https://huggingface.co/docs/accelerate)
+- [Primary site](https://huggingface.co/docs/accelerate/index)
+- [Documentation](https://huggingface.co/docs/accelerate/index)
 - [Source](https://github.com/huggingface/accelerate)
 
 ## Buzz & Reception

@@ -72,7 +72,7 @@ Upstream: llama.cpp, ExLlama-family, and Transformers as loaders. Competing: Oll
 git clone https://github.com/oobabooga/text-generation-webui
 cd text-generation-webui
 ./start_linux.sh   # or start_windows.bat / start_macos.sh
-# UI at http://localhost:7860
+# UI on localhost port 7860
 ```
 
 ## Key Use Cases
