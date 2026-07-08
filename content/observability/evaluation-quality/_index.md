@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Monitor Guardrail Trip Rate as a First-Class Quality Signal, Because a Guardrail That Never Fires and One That Fires Constantly Are Both Broken](./monitor-guardrail-trip-rate-in-production.md)
 - [Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks](./monitor-retrieval-quality-in-production.md)
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./gate-releases-on-eval-regression.md)
 
@@ -36,4 +37,5 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship](./gate-releases-on-eval-regression.md) — 
+- [Monitor Guardrail Trip Rate as a First-Class Quality Signal, Because a Guardrail That Never Fires and One That Fires Constantly Are Both Broken](./monitor-guardrail-trip-rate-in-production.md) — 
 - [Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks](./monitor-retrieval-quality-in-production.md) — 

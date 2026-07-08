@@ -11,7 +11,7 @@
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
-| [observability](./observability/) | 10 entries | 2026-07-08 |
+| [observability](./observability/) | 16 entries | 2026-07-08 |
 | [projects](./projects/) | 146 entries | 2026-07-08 |
 | [research](./research/) | 104 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
@@ -30,7 +30,7 @@
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md)
 - [Airbyte](./tools/data-ingestion/airbyte.md)
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./research/architectures/alayrac-2022-flamingo.md)
-- [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md)
+- [Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb](./observability/monitoring-alerting/alert-on-tool-call-error-and-retry-rate.md)
 
 ## Most Popular
 
@@ -84,6 +84,7 @@
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./research/architectures/alayrac-2022-flamingo.md) — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./observability/monitoring-alerting/alert-on-streaming-latency-slos.md) — 
+- [Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb](./observability/monitoring-alerting/alert-on-tool-call-error-and-retry-rate.md) — 
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
 - [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
@@ -96,4 +97,3 @@
 - [AnythingLLM](./projects/agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [ARC-AGI (Abstraction and Reasoning Corpus)](./benchmarks/general-llm/arc-agi.md) — 
 - [Arena-Hard-Auto](./benchmarks/evaluation-methods/arena-hard.md) — 
-- [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
