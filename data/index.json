@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:20:18.573Z",
+    "generated_at": "2026-07-08T19:21:31.498Z",
     "total_projects": 103,
     "total_tools": 162,
-    "total_papers": 30,
+    "total_papers": 49,
     "total_tips": 116,
     "total_people": 25,
     "total_digests": 1,
@@ -521,6 +521,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ainslie-2023-gqa",
+      "type": "paper",
+      "name": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+      "description": "Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM",
+      "tags": [
+        "transformers",
+        "attention",
+        "efficiency"
+      ],
+      "path": "content/research/architectures/ainslie-2023-gqa.md",
+      "url": "content/research/architectures/ainslie-2023-gqa",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1321,6 +1340,25 @@
       "url": "content/tips-and-tricks/agents-and-orchestration/checkpoint-agent-state-after-each-tool-call",
       "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "chiang-2024-chatbot-arena",
+      "type": "paper",
+      "name": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+      "description": "Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models",
+      "tags": [
+        "evaluation",
+        "llm",
+        "research"
+      ],
+      "path": "content/research/evaluation-and-safety/chiang-2024-chatbot-arena.md",
+      "url": "content/research/evaluation-and-safety/chiang-2024-chatbot-arena",
+      "last_updated": "2026-07-08",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -2142,6 +2180,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "dao-2022-flashattention",
+      "type": "paper",
+      "name": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "description": "Reframed attention as an IO problem: tiling and online softmax keep the computation in GPU SRAM, avoiding materializing the N×N matrix — exact attention, 2-4x faster and linear memory, now compiled into effectively all training and serving stacks",
+      "tags": [
+        "efficiency",
+        "attention",
+        "inference"
+      ],
+      "path": "content/research/inference-and-efficiency/dao-2022-flashattention.md",
+      "url": "content/research/inference-and-efficiency/dao-2022-flashattention",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -3230,6 +3287,25 @@
       "featured": false
     },
     {
+      "id": "gao-2023-rag-survey",
+      "type": "paper",
+      "name": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+      "description": "The standard map of the RAG landscape: organizes the field into Naive, Advanced, and Modular RAG paradigms and systematizes retrieval, generation, and augmentation techniques — the orientation document for anyone building retrieval systems",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llm"
+      ],
+      "path": "content/research/surveys/gao-2023-rag-survey.md",
+      "url": "content/research/surveys/gao-2023-rag-survey",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "garak",
       "type": "tool",
       "name": "garak",
@@ -3640,6 +3716,25 @@
       "featured": false
     },
     {
+      "id": "gu-2023-mamba",
+      "type": "paper",
+      "name": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+      "description": "Introduced selective state-space models with input-dependent dynamics and a hardware-aware parallel scan, achieving Transformer-quality language modeling with linear-time inference — the strongest attention alternative, now shipping in hybrid production models",
+      "tags": [
+        "transformers",
+        "efficiency",
+        "attention"
+      ],
+      "path": "content/research/architectures/gu-2023-mamba.md",
+      "url": "content/research/architectures/gu-2023-mamba",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "guardrails-ai",
       "type": "tool",
       "name": "Guardrails AI",
@@ -3794,6 +3889,25 @@
       "featured": false
     },
     {
+      "id": "hendrycks-2020-mmlu",
+      "type": "paper",
+      "name": "Measuring Massive Multitask Language Understanding",
+      "description": "Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards",
+      "tags": [
+        "evaluation",
+        "llm",
+        "research"
+      ],
+      "path": "content/research/evaluation-and-safety/hendrycks-2020-mmlu.md",
+      "url": "content/research/evaluation-and-safety/hendrycks-2020-mmlu",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "hf-inference-endpoints",
       "type": "tool",
       "name": "Hugging Face Inference Endpoints",
@@ -3810,6 +3924,25 @@
       "maturity": "production",
       "cost_model": "usage-based",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "hoffmann-2022-chinchilla",
+      "type": "paper",
+      "name": "Training Compute-Optimal Large Language Models",
+      "description": "The Chinchilla paper: showed contemporary LLMs were dramatically undertrained — compute-optimal training scales parameters and data equally (~20 tokens per parameter), and a 70B model trained on 1.4T tokens beat a 280B model — resetting how the field allocates training compute",
+      "tags": [
+        "training",
+        "llm",
+        "foundational"
+      ],
+      "path": "content/research/foundational/hoffmann-2022-chinchilla.md",
+      "url": "content/research/foundational/hoffmann-2022-chinchilla",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -3861,6 +3994,25 @@
       "path": "content/research/training-and-alignment/hu-2021-lora.md",
       "url": "content/research/training-and-alignment/hu-2021-lora",
       "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "huang-2023-hallucination-survey",
+      "type": "paper",
+      "name": "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions",
+      "description": "The reference taxonomy for hallucination: splits it into factuality vs faithfulness, traces causes through data, training, and inference, and catalogs detection benchmarks and mitigation strategies — the structured map behind grounding and guardrail engineering",
+      "tags": [
+        "evaluation",
+        "guardrails",
+        "llm"
+      ],
+      "path": "content/research/surveys/huang-2023-hallucination-survey.md",
+      "url": "content/research/surveys/huang-2023-hallucination-survey",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -4358,6 +4510,25 @@
       "featured": false
     },
     {
+      "id": "jiang-2024-mixtral",
+      "type": "paper",
+      "name": "Mixtral of Experts",
+      "description": "Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models",
+      "tags": [
+        "transformers",
+        "efficiency",
+        "llm"
+      ],
+      "path": "content/research/architectures/jiang-2024-mixtral.md",
+      "url": "content/research/architectures/jiang-2024-mixtral",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "jina-reader",
       "type": "tool",
       "name": "Jina AI Reader",
@@ -4374,6 +4545,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "karpukhin-2020-dpr",
+      "type": "paper",
+      "name": "Dense Passage Retrieval for Open-Domain Question Answering",
+      "description": "Showed a simple dual-encoder trained with in-batch negatives beats BM25 for passage retrieval — the paper that made dense embedding retrieval the default, and the direct ancestor of every embedding model powering today's RAG stacks",
+      "tags": [
+        "retrieval",
+        "rag",
+        "embeddings"
+      ],
+      "path": "content/research/retrieval-and-memory/karpukhin-2020-dpr.md",
+      "url": "content/research/retrieval-and-memory/karpukhin-2020-dpr",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -4452,6 +4642,25 @@
       "featured": false
     },
     {
+      "id": "khattab-2020-colbert",
+      "type": "paper",
+      "name": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+      "description": "Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers",
+      "tags": [
+        "retrieval",
+        "rag",
+        "embeddings"
+      ],
+      "path": "content/research/retrieval-and-memory/khattab-2020-colbert.md",
+      "url": "content/research/retrieval-and-memory/khattab-2020-colbert",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "khoj",
       "type": "project",
       "name": "Khoj",
@@ -4524,6 +4733,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "kwon-2023-pagedattention",
+      "type": "paper",
+      "name": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+      "description": "Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal",
+      "tags": [
+        "inference",
+        "efficiency",
+        "caching"
+      ],
+      "path": "content/research/inference-and-efficiency/kwon-2023-pagedattention.md",
+      "url": "content/research/inference-and-efficiency/kwon-2023-pagedattention",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -4931,6 +5159,25 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lin-2023-awq",
+      "type": "paper",
+      "name": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+      "description": "Showed ~1% of weight channels are 'salient' — identified by activation magnitudes, not weight values — and protecting them via per-channel scaling enables accurate 4-bit weight quantization without backpropagation; AWQ is now a standard deployment format",
+      "tags": [
+        "quantization",
+        "inference",
+        "efficiency"
+      ],
+      "path": "content/research/inference-and-efficiency/lin-2023-awq.md",
+      "url": "content/research/inference-and-efficiency/lin-2023-awq",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -6817,6 +7064,25 @@
       "featured": false
     },
     {
+      "id": "packer-2023-memgpt",
+      "type": "paper",
+      "name": "MemGPT: Towards LLMs as Operating Systems",
+      "description": "Framed context-window management as an OS problem: the LLM manages its own memory hierarchy via self-editing function calls, paging information between in-context 'main memory' and external storage — the founding pattern of agent memory systems",
+      "tags": [
+        "memory",
+        "agents",
+        "rag"
+      ],
+      "path": "content/research/retrieval-and-memory/packer-2023-memgpt.md",
+      "url": "content/research/retrieval-and-memory/packer-2023-memgpt",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "paddleocr",
       "type": "project",
       "name": "PaddleOCR",
@@ -8509,6 +8775,25 @@
       "featured": false
     },
     {
+      "id": "shinn-2023-reflexion",
+      "type": "paper",
+      "name": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "description": "Showed agents improve across retries by writing verbal self-reflections on failures into an episodic memory instead of updating weights — 'verbal reinforcement learning' — the retry-with-reflection loop now standard in coding and tool-use agents",
+      "tags": [
+        "agents",
+        "reasoning",
+        "evaluation"
+      ],
+      "path": "content/research/agents-and-reasoning/shinn-2023-reflexion.md",
+      "url": "content/research/agents-and-reasoning/shinn-2023-reflexion",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "shreya-shankar",
       "type": "person",
       "name": "Shreya Shankar",
@@ -9120,6 +9405,25 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "su-2021-rope",
+      "type": "paper",
+      "name": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+      "description": "Introduced rotary position embeddings (RoPE), which encode positions by rotating query/key vectors so attention depends on relative distance — now the position encoding of essentially every open LLM and the mechanism behind most context-extension tricks",
+      "tags": [
+        "transformers",
+        "attention",
+        "llm"
+      ],
+      "path": "content/research/architectures/su-2021-rope.md",
+      "url": "content/research/architectures/su-2021-rope",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -10551,6 +10855,44 @@
       "featured": false
     },
     {
+      "id": "wang-2023-agents-survey",
+      "type": "paper",
+      "name": "A Survey on Large Language Model based Autonomous Agents",
+      "description": "The reference taxonomy for LLM agents: a unified four-module framework — profile, memory, planning, action — that organizes agent construction, applications, and evaluation; the profiling/memory/planning/action vocabulary most agent frameworks now use",
+      "tags": [
+        "agents",
+        "planning",
+        "memory"
+      ],
+      "path": "content/research/surveys/wang-2023-agents-survey.md",
+      "url": "content/research/surveys/wang-2023-agents-survey",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "wang-2023-voyager",
+      "type": "paper",
+      "name": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "description": "First LLM-powered lifelong-learning agent in Minecraft: an automatic curriculum, an ever-growing skill library of verified executable code, and iterative environment-feedback prompting — the origin of the 'skill library' pattern now reappearing in agent skill systems",
+      "tags": [
+        "agents",
+        "planning",
+        "code-gen"
+      ],
+      "path": "content/research/agents-and-reasoning/wang-2023-voyager.md",
+      "url": "content/research/agents-and-reasoning/wang-2023-voyager",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "weaviate",
       "type": "project",
       "name": "Weaviate",
@@ -10638,6 +10980,25 @@
       "path": "content/research/agents-and-reasoning/wei-2022-chain-of-thought.md",
       "url": "content/research/agents-and-reasoning/wei-2022-chain-of-thought",
       "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "wei-2023-jailbroken",
+      "type": "paper",
+      "name": "Jailbroken: How Does LLM Safety Training Fail?",
+      "description": "Explained why jailbreaks work via two failure modes — competing objectives (helpfulness vs safety) and mismatched generalization (safety training doesn't cover what pretraining can do) — and showed scale alone won't fix them; the conceptual framework behind LLM red-teaming",
+      "tags": [
+        "security",
+        "guardrails",
+        "evaluation"
+      ],
+      "path": "content/research/evaluation-and-safety/wei-2023-jailbroken.md",
+      "url": "content/research/evaluation-and-safety/wei-2023-jailbroken",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
