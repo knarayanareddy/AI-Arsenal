@@ -6,27 +6,27 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 6 entries | 2026-07-08 |
-| [architectures](./architectures/) | 0 entries | 2026-07-08 |
+| [agents and reasoning](./agents-and-reasoning/) | 7 entries | 2026-07-08 |
+| [architectures](./architectures/) | 1 entries | 2026-07-08 |
 | [evaluation and safety](./evaluation-and-safety/) | 2 entries | 2026-07-08 |
 | [foundational](./foundational/) | 5 entries | 2026-07-08 |
 | [inference and efficiency](./inference-and-efficiency/) | 2 entries | 2026-07-08 |
-| [retrieval and memory](./retrieval-and-memory/) | 3 entries | 2026-07-08 |
+| [retrieval and memory](./retrieval-and-memory/) | 5 entries | 2026-07-08 |
 | [surveys](./surveys/) | 0 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 7 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 8 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Gemma 4 Technical Report](./architectures/gemma-team-2026-gemma4.md)
+- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./retrieval-and-memory/ji-2026-mragent.md)
+- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./training-and-alignment/liang-2026-mipi.md)
+- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./retrieval-and-memory/salemi-2026-grepseek.md)
+- [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./agents-and-reasoning/zhou-2026-colleague-skill.md)
 - [Language Models are Few-Shot Learners](./foundational/brown-2020-gpt3.md)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./foundational/devlin-2018-bert.md)
 - [Emerging AI Techniques](./emerging-techniques.md)
 - [Must-Read AI Papers](./must-read-papers.md)
 - [SOTA Benchmarks](./sota-benchmarks.md)
-- [Attention Is All You Need](./foundational/vaswani-2017-attention.md)
-- [Weekly ArXiv Picks](./weekly-arxiv-picks.md)
-- [Constitutional AI: Harmlessness from AI Feedback](./training-and-alignment/bai-2022-constitutional-ai.md)
-- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./training-and-alignment/deepseek-ai-2025-r1.md)
-- [QLoRA: Efficient Finetuning of Quantized LLMs](./training-and-alignment/dettmers-2023-qlora.md)
 
 ## Most Popular
 
@@ -45,13 +45,17 @@ _No star-tracked entries yet._
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./evaluation-and-safety/es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./inference-and-efficiency/frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./retrieval-and-memory/gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
+- [Gemma 4 Technical Report](./architectures/gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
 - [LoRA: Low-Rank Adaptation of Large Language Models](./training-and-alignment/hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
+- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./retrieval-and-memory/ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
 - [Fast Inference from Transformers via Speculative Decoding](./inference-and-efficiency/leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](./foundational/lewis-2020-rag.md) — Coined 'RAG': a jointly-trained retriever plus generator beats closed-book generation on knowledge-intensive tasks -- ground generation in retrieved documents, though production RAG today uses a simpler decoupled pipeline
+- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./training-and-alignment/liang-2026-mipi.md) — LLM RL optimizes the training-engine policy, but you deploy the inference-engine policy -- and the two disagree on trajectory probabilities even with synced weights. Proposes MIPI/MIPU to make the deployed policy the optimization objective
 - [Self-Refine: Iterative Refinement with Self-Feedback](./agents-and-reasoning/madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
 - [Must-Read AI Papers](./must-read-papers.md) — Categorized reading guide for foundational and high-leverage AI papers
 - [Training Language Models to Follow Instructions with Human Feedback](./training-and-alignment/ouyang-2022-instructgpt.md) — Established the 3-stage RLHF recipe (SFT, reward modeling, PPO) that turned GPT-3 into an assistant -- know this pipeline shape, though most teams now reach for simpler DPO instead of implementing PPO-based RLHF directly
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](./training-and-alignment/rafailov-2023-dpo.md) — Showed the RLHF objective can be solved directly with a simple classification loss on preference pairs, with no separate reward model and no online RL -- meaning you should reach for DPO instead of implementing PPO-based RLHF for most alignment/preference-tuning work
+- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./retrieval-and-memory/salemi-2026-grepseek.md) — Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it
 - [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./retrieval-and-memory/sarthi-2024-raptor.md) — Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./agents-and-reasoning/schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
 - [SOTA Benchmarks](./sota-benchmarks.md) — Reference table of model, agent, code, math, and safety benchmark leaderboards
@@ -63,3 +67,4 @@ _No star-tracked entries yet._
 - [ReAct: Synergizing Reasoning and Acting in Language Models](./agents-and-reasoning/yao-2022-react.md) — Showed interleaving reasoning traces with external actions and their observations outperforms reasoning-only or acting-only prompting, meaning the reason-act-observe loop should be your default agent architecture pattern before reaching for something more complex
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](./agents-and-reasoning/yao-2023-tree-of-thoughts.md) — Showed exploring and backtracking across multiple candidate reasoning paths beats single-chain CoT on hard search-style problems -- reach for ToT for problems needing exploration/backtracking, not as a default CoT replacement
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./evaluation-and-safety/zheng-2023-llm-as-a-judge.md) — Showed strong LLM judges agree with human judgments over 80% of the time, matching human-human agreement -- use LLM-as-judge for scalable open-ended evaluation, but mitigate its documented position, verbosity, and self-enhancement biases
+- [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./agents-and-reasoning/zhou-2026-colleague-skill.md) — Automates trace-to-skill distillation: turns a person's heterogeneous work traces into a versioned, inspectable agent skill package with separate capability and behavior tracks -- treat expert knowledge capture as a pipeline, not manual skill authoring

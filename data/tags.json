@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T15:25:19.282Z",
+  "generated_at": "2026-07-08T15:33:38.158Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 90,
+      "count": 93,
       "types": {
         "tip": 14,
         "tool": 26,
@@ -15,7 +15,7 @@
         "architecture": 4,
         "benchmark": 5,
         "person": 3,
-        "paper": 4
+        "paper": 7
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -54,6 +54,7 @@
         "haystack",
         "insforge",
         "intermediate-multi-tool-agent",
+        "ji-2026-mragent",
         "keep-a-kill-switch-for-agent-actions",
         "kimi-k2-5",
         "langchain",
@@ -81,6 +82,7 @@
         "ragflow",
         "recursi",
         "require-human-approval-for-irreversible-actions",
+        "salemi-2026-grepseek",
         "sandbox-code-execution-tools",
         "schick-2023-toolformer",
         "seaticket",
@@ -107,7 +109,8 @@
         "yang-2024-swe-agent",
         "yao-2022-react",
         "yao-2023-tree-of-thoughts",
-        "zep"
+        "zep",
+        "zhou-2026-colleague-skill"
       ]
     },
     {
@@ -303,13 +306,13 @@
     {
       "id": "code-gen",
       "label": "Code Gen",
-      "count": 17,
+      "count": 18,
       "types": {
         "tool": 6,
         "guide": 2,
         "benchmark": 4,
         "project": 4,
-        "paper": 1
+        "paper": 2
       },
       "entries": [
         "addyosmani-agent-skills",
@@ -328,7 +331,8 @@
         "qwen-2-5",
         "superpowers",
         "swe-bench",
-        "yang-2024-swe-agent"
+        "yang-2024-swe-agent",
+        "zhou-2026-colleague-skill"
       ]
     },
     {
@@ -695,12 +699,14 @@
     {
       "id": "graphs",
       "label": "Graphs",
-      "count": 3,
+      "count": 4,
       "types": {
-        "project": 3
+        "project": 3,
+        "paper": 1
       },
       "entries": [
         "google-adk",
+        "ji-2026-mragent",
         "langgraph",
         "microsoft-agent-framework"
       ]
@@ -757,14 +763,14 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 57,
+      "count": 59,
       "types": {
         "tip": 21,
         "tool": 6,
         "architecture": 4,
         "project": 17,
         "guide": 6,
-        "paper": 2,
+        "paper": 4,
         "build-example": 1
       },
       "entries": [
@@ -784,9 +790,11 @@
         "frantar-2022-gptq",
         "gemma",
         "gemma-3",
+        "gemma-team-2026-gemma4",
         "hf-inference-endpoints",
         "inference-optimization",
         "leviathan-2022-speculative-decoding",
+        "liang-2026-mipi",
         "llama-3",
         "llama-cpp",
         "llamafile",
@@ -873,14 +881,14 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 157,
+      "count": 158,
       "types": {
         "tip": 20,
         "guide": 44,
         "person": 15,
         "benchmark": 9,
         "tool": 33,
-        "paper": 8,
+        "paper": 9,
         "architecture": 3,
         "project": 23,
         "build-example": 2
@@ -932,6 +940,7 @@
         "fundamentals",
         "gemma",
         "gemma-3",
+        "gemma-team-2026-gemma4",
         "google-vertex-ai",
         "gradio",
         "gsm8k",
@@ -1092,12 +1101,13 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 20,
+      "count": 21,
       "types": {
         "guide": 3,
         "tip": 7,
         "architecture": 2,
         "tool": 7,
+        "paper": 1,
         "project": 1
       },
       "entries": [
@@ -1108,6 +1118,7 @@
         "context-engineering",
         "context-windows",
         "drop-unused-conversation-history",
+        "ji-2026-mragent",
         "letta",
         "mastra",
         "mem0",
@@ -1168,10 +1179,10 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 18,
+      "count": 19,
       "types": {
         "project": 9,
-        "paper": 1,
+        "paper": 2,
         "tool": 4,
         "benchmark": 4
       },
@@ -1180,6 +1191,7 @@
         "dubey-2024-llama3",
         "gemma",
         "gemma-3",
+        "gemma-team-2026-gemma4",
         "ideogram",
         "ideogram-ai",
         "lancedb",
@@ -1393,7 +1405,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 75,
+      "count": 76,
       "types": {
         "tip": 18,
         "build-example": 5,
@@ -1402,7 +1414,7 @@
         "architecture": 5,
         "project": 24,
         "tool": 7,
-        "paper": 5,
+        "paper": 6,
         "person": 3
       },
       "entries": [
@@ -1466,6 +1478,7 @@
         "ragas-rag-evaluation",
         "ragflow",
         "rgb",
+        "salemi-2026-grepseek",
         "sarthi-2024-raptor",
         "start-with-zero-chunk-overlap",
         "starter-basic-rag-chatbot",
@@ -1547,7 +1560,7 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 64,
+      "count": 66,
       "types": {
         "tip": 19,
         "build-example": 4,
@@ -1556,7 +1569,7 @@
         "guide": 3,
         "architecture": 4,
         "project": 17,
-        "paper": 4,
+        "paper": 6,
         "person": 1
       },
       "entries": [
@@ -1584,6 +1597,7 @@
         "intermediate-document-qa-pipeline",
         "intermediate-production-rag-api",
         "jerry-liu",
+        "ji-2026-mragent",
         "keep-instructions-outside-retrieved-context",
         "lancedb",
         "lewis-2020-rag",
@@ -1607,6 +1621,7 @@
         "rank-context-by-expected-usefulness",
         "redis-memory",
         "rgb",
+        "salemi-2026-grepseek",
         "sarthi-2024-raptor",
         "start-with-zero-chunk-overlap",
         "starter-basic-rag-chatbot",
@@ -1629,16 +1644,17 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 6,
+      "count": 7,
       "types": {
         "guide": 1,
-        "paper": 4,
+        "paper": 5,
         "person": 1
       },
       "entries": [
         "alignment-and-rlhf",
         "bai-2022-constitutional-ai",
         "deepseek-ai-2025-r1",
+        "liang-2026-mipi",
         "nathan-lambert",
         "ouyang-2022-instructgpt",
         "rafailov-2023-dpo"
@@ -1708,10 +1724,11 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 17,
+      "count": 18,
       "types": {
         "architecture": 3,
         "tool": 2,
+        "paper": 1,
         "project": 9,
         "tip": 3
       },
@@ -1719,6 +1736,7 @@
         "choose-deployment-target",
         "choose-vector-db",
         "cubesandbox",
+        "gemma-team-2026-gemma4",
         "helicone",
         "keep-model-files-out-of-git",
         "label-studio",
@@ -1936,11 +1954,11 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 16,
+      "count": 17,
       "types": {
         "guide": 4,
         "person": 3,
-        "paper": 9
+        "paper": 10
       },
       "entries": [
         "alignment-and-rlhf",
@@ -1953,6 +1971,7 @@
         "fine-tuning-methods",
         "hu-2021-lora",
         "jeremy-howard",
+        "liang-2026-mipi",
         "llm-researcher-role",
         "ml-engineer-role",
         "ouyang-2022-instructgpt",
