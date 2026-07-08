@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:07:52.131Z | Entries: 677 | Schema version: 1.0.0
+Generated: 2026-07-08T20:08:41.017Z | Entries: 690 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 103
+- Projects: 116
 - Tools: 175
 - Papers: 80
 - Tips: 129
@@ -39,12 +39,19 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
 - Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
 - PageAgent (⭐24812, score:65) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
-- Browser Use (⭐103506, score:50) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
+- Skyvern (⭐22154, score:60) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
+
+### code-generation
+- screenshot-to-code (⭐73211, score:60) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
+- Continue (⭐34744, score:60) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- Tabby (⭐33679, score:55) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
 
 ### computer-vision
+- Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
+- Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
+- SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 - PaddleOCR (⭐85010, score:50) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
 - Ultralytics YOLO (⭐59255, score:50) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
-- Surya (⭐21057, score:50) — Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker
 
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
@@ -55,11 +62,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 
 ### llms
+- LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
 - Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
 - nanoGPT (⭐60962, score:50) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
-- MLC LLM (⭐22917, score:50) — Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase
 
 ### multimodal
 - ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
@@ -74,9 +81,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### rag
 - LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
-- SurrealDB (⭐28000, score:60) — Multi-model database combining graph, document, vector, and time-series for AI agents
-- zvec (⭐13891, score:60) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory
-- Graphiti (⭐28508, score:50) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
+- AnythingLLM (⭐62924, score:68) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
+- GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
+- Onyx (formerly Danswer) (⭐30772, score:62) — Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
 
 ### tooling
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
@@ -84,6 +91,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### voice-audio
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
+- faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
+- WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
 - Whisper (⭐104543, score:50) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
 
 ## Top Tools by Job
