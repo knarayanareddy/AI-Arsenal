@@ -130,8 +130,12 @@ This table is exhaustive for tools tagged with job = data-labeling.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | freemium | Yes | Yes | Yes | java, python | solid-choice |
 | [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
+| [dlt](../data-ingestion/dlt.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Label Studio](../data-ingestion/label-studio.md) | data ingestion | freemium | Yes | Yes | Yes | python | recommended |
+| [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
+| [MinerU](../data-ingestion/mineru.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | paid | Yes | No | No | python | recommended |
 | [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | paid | Yes | No | No | polyglot | recommended |
