@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:15:59.199Z | Entries: 722 | Schema version: 1.0.0
+Generated: 2026-07-08T20:17:52.318Z | Entries: 732 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -8,7 +8,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 - Projects: 136
 - Tools: 177
-- Papers: 80
+- Papers: 90
 - Tips: 129
 - People: 25
 - Digests: 1
@@ -337,15 +337,15 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Must-Read Papers
 
 - GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
+- Flamingo: a Visual Language Model for Few-Shot Learning — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - Constitutional AI: Harmlessness from AI Feedback — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - Language Models are Few-Shot Learners — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
+- Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads — Speeds up decoding by adding a few extra prediction heads that guess several future tokens at once, verified in parallel with tree attention — no separate draft model, 2-3x faster, and self-contained enough to bolt onto an existing model.
 - Evaluating Large Language Models Trained on Code (Codex / HumanEval) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
 - Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - PaLM: Scaling Language Modeling with Pathways — 540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size
 - Deep Reinforcement Learning from Human Preferences — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
-- Training Verifiers to Solve Math Word Problems — The GSM8K paper: released the 8.5K grade-school math benchmark that anchored LLM reasoning evaluation for years, and introduced verifier-guided sampling — train a model to judge candidate solutions, sample many, pick the best — the seed of verification-based test-time compute
-- FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness — Reframed attention as an IO problem: tiling and online softmax keep the computation in GPU SRAM, avoiding materializing the N×N matrix — exact attention, 2-4x faster and linear memory, now compiled into effectively all training and serving stacks
 
 ## High-Impact Tips
 

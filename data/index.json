@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:15:56.537Z",
+    "generated_at": "2026-07-08T20:17:49.613Z",
     "total_projects": 136,
     "total_tools": 177,
-    "total_papers": 80,
+    "total_papers": 90,
     "total_tips": 129,
     "total_people": 25,
     "total_digests": 1,
@@ -616,6 +616,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "alayrac-2022-flamingo",
+      "type": "paper",
+      "name": "Flamingo: a Visual Language Model for Few-Shot Learning",
+      "description": "Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.",
+      "tags": [
+        "multimodal",
+        "research",
+        "llm"
+      ],
+      "path": "content/research/architectures/alayrac-2022-flamingo.md",
+      "url": "content/research/architectures/alayrac-2022-flamingo",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -1471,6 +1490,25 @@
       "url": "content/tips-and-tricks/cost-and-performance/cache-stable-system-prompts",
       "last_updated": "2026-07-02",
       "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "cai-2024-medusa",
+      "type": "paper",
+      "name": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+      "description": "Speeds up decoding by adding a few extra prediction heads that guess several future tokens at once, verified in parallel with tree attention — no separate draft model, 2-3x faster, and self-contained enough to bolt onto an existing model.",
+      "tags": [
+        "efficiency",
+        "inference",
+        "llm"
+      ],
+      "path": "content/research/inference-and-efficiency/cai-2024-medusa.md",
+      "url": "content/research/inference-and-efficiency/cai-2024-medusa",
+      "last_updated": "2026-07-08",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -2869,6 +2907,25 @@
       ],
       "path": "content/research/inference-and-efficiency/dao-2022-flashattention.md",
       "url": "content/research/inference-and-efficiency/dao-2022-flashattention",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "dao-2023-flashattention2",
+      "type": "paper",
+      "name": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+      "description": "Rewrote FlashAttention to cut non-matmul FLOPs, parallelize across sequence length, and partition work better between GPU warps — roughly 2x faster than v1 and reaching 50-73% of A100 peak, the kernel now underpinning most training and long-context serving.",
+      "tags": [
+        "efficiency",
+        "attention",
+        "inference"
+      ],
+      "path": "content/research/inference-and-efficiency/dao-2023-flashattention2.md",
+      "url": "content/research/inference-and-efficiency/dao-2023-flashattention2",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
@@ -4937,6 +4994,25 @@
       "featured": false
     },
     {
+      "id": "hong-2024-orpo",
+      "type": "paper",
+      "name": "ORPO: Monolithic Preference Optimization without Reference Model",
+      "description": "Folds preference alignment into supervised fine-tuning in a single stage by adding an odds-ratio penalty to the SFT loss — no separate reference model and no separate DPO/RLHF phase, cutting alignment to one training run.",
+      "tags": [
+        "alignment",
+        "fine-tuning",
+        "llm"
+      ],
+      "path": "content/research/training-and-alignment/hong-2024-orpo.md",
+      "url": "content/research/training-and-alignment/hong-2024-orpo",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "hu-2021-lora",
       "type": "paper",
       "name": "LoRA: Low-Rank Adaptation of Large Language Models",
@@ -5357,6 +5433,25 @@
       ],
       "path": "content/research/retrieval-and-memory/izacard-2020-fid.md",
       "url": "content/research/retrieval-and-memory/izacard-2020-fid",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "izacard-2021-contriever",
+      "type": "paper",
+      "name": "Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)",
+      "description": "Trained a competitive dense retriever with no labeled query-document pairs, using contrastive learning over automatically-constructed positive pairs — strong zero-shot retrieval and a much better fine-tuning starting point than BM25 or random init.",
+      "tags": [
+        "rag",
+        "embeddings",
+        "retrieval"
+      ],
+      "path": "content/research/retrieval-and-memory/izacard-2021-contriever.md",
+      "url": "content/research/retrieval-and-memory/izacard-2021-contriever",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
@@ -6147,6 +6242,25 @@
       "featured": false
     },
     {
+      "id": "lee-2023-rlaif",
+      "type": "paper",
+      "name": "RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback",
+      "description": "Showed that preference labels generated by an off-the-shelf LLM (RLAIF) can match human-labeled RLHF on summarization and dialogue, and that policies can even be trained directly against LLM-assigned rewards — making preference alignment far cheaper to scale.",
+      "tags": [
+        "alignment",
+        "fine-tuning",
+        "llm"
+      ],
+      "path": "content/research/training-and-alignment/lee-2023-rlaif.md",
+      "url": "content/research/training-and-alignment/lee-2023-rlaif",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "letta",
       "type": "tool",
       "name": "Letta",
@@ -6198,6 +6312,25 @@
       "path": "content/research/foundational/lewis-2020-rag.md",
       "url": "content/research/foundational/lewis-2020-rag",
       "last_updated": "2026-07-01",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "li-2023-blip2",
+      "type": "paper",
+      "name": "BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models",
+      "description": "Connected a frozen image encoder to a frozen LLM with a small trainable Querying Transformer (Q-Former), two-stage trained — reaching strong VQA/captioning with a tiny fraction of trainable parameters, the efficient bridge pattern behind many open VLMs.",
+      "tags": [
+        "multimodal",
+        "research",
+        "llm"
+      ],
+      "path": "content/research/architectures/li-2023-blip2.md",
+      "url": "content/research/architectures/li-2023-blip2",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -7305,6 +7438,25 @@
       "featured": false
     },
     {
+      "id": "meng-2024-simpo",
+      "type": "paper",
+      "name": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+      "description": "A preference-optimization objective that drops DPO's reference model, using the average log-probability of a response as an implicit reward plus a target margin — simpler, cheaper (no reference forward pass), and often stronger than DPO.",
+      "tags": [
+        "alignment",
+        "fine-tuning",
+        "llm"
+      ],
+      "path": "content/research/training-and-alignment/meng-2024-simpo.md",
+      "url": "content/research/training-and-alignment/meng-2024-simpo",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "mesop",
       "type": "tool",
       "name": "Mesop",
@@ -7362,6 +7514,25 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mikolov-2013-word2vec",
+      "type": "paper",
+      "name": "Efficient Estimation of Word Representations in Vector Space (word2vec)",
+      "description": "Introduced CBOW and skip-gram, shallow models that learn dense word vectors from raw text cheaply enough to scale to billions of words — establishing that meaning can be captured as geometry (king − man + woman ≈ queen) and seeding the entire embedding era.",
+      "tags": [
+        "embeddings",
+        "foundational",
+        "research"
+      ],
+      "path": "content/research/foundational/mikolov-2013-word2vec.md",
+      "url": "content/research/foundational/mikolov-2013-word2vec",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -9422,6 +9593,24 @@
       "tags": [],
       "path": "content/community/forums/r-machinelearning.md",
       "url": "content/community/forums/r-machinelearning",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "radford-2019-gpt2",
+      "type": "paper",
+      "name": "Language Models are Unsupervised Multitask Learners (GPT-2)",
+      "description": "Scaled a decoder-only Transformer LM to 1.5B params on WebText and showed it performs many NLP tasks zero-shot from a natural-language prompt alone — the paper that established prompting and task-agnostic pretraining as the path forward.",
+      "tags": [
+        "llm",
+        "foundational"
+      ],
+      "path": "content/research/foundational/radford-2019-gpt2.md",
+      "url": "content/research/foundational/radford-2019-gpt2",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
