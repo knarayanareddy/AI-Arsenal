@@ -69,5 +69,5 @@ test('stripMarkdown does not embed URL strings (XSS-safe)', () => {
   const stripped = stripMarkdown(md);
   // stripMarkdown extracts link TEXT and removes the URL; bare URLs remain.
   assert.ok(stripped.includes('link'));
-  assert.match(stripped, /https:\/\/other\.com/);
+  assert.ok(stripped.split(/\s+/).some((token) => token === 'https://other.com'));
 });
