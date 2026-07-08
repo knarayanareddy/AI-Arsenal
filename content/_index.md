@@ -7,7 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [architectures](./architectures/) | 17 entries | 2026-07-08 |
-| [benchmarks](./benchmarks/) | 30 entries | 2026-07-08 |
+| [benchmarks](./benchmarks/) | 40 entries | 2026-07-08 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-08 |
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
@@ -66,6 +66,7 @@
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AgentHarm](./benchmarks/safety/agentharm.md) — 
 - [AgentOps](./tools/evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - [Agno](./tools/orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
@@ -81,6 +82,7 @@
 - [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./observability/monitoring-alerting/alert-on-streaming-latency-slos.md) — 
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
+- [AlpacaEval 2.0 (Length-Controlled)](./benchmarks/evaluation-methods/alpacaeval.md) — 
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [AnythingLLM](./projects/agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
@@ -95,5 +97,3 @@
 - [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./projects/frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [AWS Bedrock](./tools/serving-and-deployment/aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
-- [Axolotl](./tools/model-layer/axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
-- [Azure AI Studio](./tools/serving-and-deployment/azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T19:30:28.712Z",
+    "generated_at": "2026-07-08T19:44:45.942Z",
     "total_projects": 103,
     "total_tools": 162,
     "total_papers": 49,
@@ -12,7 +12,7 @@
     "total_architectures": 17,
     "total_observability": 10,
     "total_community": 32,
-    "total_benchmarks": 30,
+    "total_benchmarks": 40,
     "total_trending": 4,
     "schema_version": "1.0.0"
   },
@@ -379,6 +379,25 @@
       "featured": false
     },
     {
+      "id": "agentharm",
+      "type": "benchmark",
+      "name": "AgentHarm",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/safety/agentharm.md",
+      "url": "content/benchmarks/safety/agentharm",
+      "last_updated": "2026-07-08",
+      "category": "safety",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agentops",
       "type": "tool",
       "name": "AgentOps",
@@ -647,6 +666,24 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "alpacaeval",
+      "type": "benchmark",
+      "name": "AlpacaEval 2.0 (Length-Controlled)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/benchmarks/evaluation-methods/alpacaeval.md",
+      "url": "content/benchmarks/evaluation-methods/alpacaeval",
+      "last_updated": "2026-07-08",
+      "category": "evaluation-methods",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -987,6 +1024,25 @@
       "featured": false
     },
     {
+      "id": "bbh",
+      "type": "benchmark",
+      "name": "BIG-Bench Hard (BBH)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/general-llm/bbh.md",
+      "url": "content/benchmarks/general-llm/bbh",
+      "last_updated": "2026-07-08",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "beir",
       "type": "benchmark",
       "name": "BEIR",
@@ -1135,6 +1191,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "browsecomp",
+      "type": "benchmark",
+      "name": "BrowseComp",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/agents/browsecomp.md",
+      "url": "content/benchmarks/agents/browsecomp",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
       "featured": false
     },
     {
@@ -4042,6 +4117,25 @@
       "featured": false
     },
     {
+      "id": "hle",
+      "type": "benchmark",
+      "name": "Humanity's Last Exam (HLE)",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/general-llm/hle.md",
+      "url": "content/benchmarks/general-llm/hle",
+      "last_updated": "2026-07-08",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "hoffmann-2022-chinchilla",
       "type": "paper",
       "name": "Training Compute-Optimal Large Language Models",
@@ -5953,6 +6047,25 @@
       "featured": false
     },
     {
+      "id": "math-500",
+      "type": "benchmark",
+      "name": "MATH-500",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "reasoning",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/general-llm/math-500.md",
+      "url": "content/benchmarks/general-llm/math-500",
+      "last_updated": "2026-07-08",
+      "category": "general-llm",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mathvista",
       "type": "benchmark",
       "name": "MathVista",
@@ -6234,6 +6347,25 @@
       "category": "rag",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mind2web",
+      "type": "benchmark",
+      "name": "Mind2Web",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/agents/mind2web.md",
+      "url": "content/benchmarks/agents/mind2web",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },
@@ -8483,6 +8615,26 @@
       "featured": false
     },
     {
+      "id": "ruler",
+      "type": "benchmark",
+      "name": "RULER",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "retrieval",
+        "rag",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/retrieval-rag/ruler.md",
+      "url": "content/benchmarks/retrieval-rag/ruler",
+      "last_updated": "2026-07-08",
+      "category": "retrieval-rag",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "run-evals-multiple-times-before-trusting-deltas",
       "type": "tip",
       "name": "Run Evals Multiple Times Before Trusting Small Deltas",
@@ -9031,6 +9183,25 @@
       "url": "content/community/people/simon-willison",
       "last_updated": "2026-06-14",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "simpleqa",
+      "type": "benchmark",
+      "name": "SimpleQA",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "benchmark"
+      ],
+      "path": "content/benchmarks/general-llm/simpleqa.md",
+      "url": "content/benchmarks/general-llm/simpleqa",
+      "last_updated": "2026-07-08",
+      "category": "general-llm",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -9591,6 +9762,25 @@
       "category": "agents",
       "maturity": "beta",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "strongreject",
+      "type": "benchmark",
+      "name": "StrongREJECT",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails"
+      ],
+      "path": "content/benchmarks/safety/strongreject.md",
+      "url": "content/benchmarks/safety/strongreject",
+      "last_updated": "2026-07-08",
+      "category": "safety",
+      "maturity": null,
+      "cost_model": null,
       "status": "active",
       "featured": false
     },

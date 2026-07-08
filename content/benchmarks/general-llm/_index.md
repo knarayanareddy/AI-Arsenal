@@ -10,11 +10,15 @@
 
 ## Recently Added
 
+- [BIG-Bench Hard (BBH)](./bbh.md)
 - [GPQA Diamond](./gpqa-diamond.md)
 - [GSM8K](./gsm8k.md)
+- [Humanity's Last Exam (HLE)](./hle.md)
 - [IFEval](./ifeval.md)
+- [MATH-500](./math-500.md)
 - [MMLU](./mmlu.md)
 - [MMLU-Pro](./mmlu-pro.md)
+- [SimpleQA](./simpleqa.md)
 - [TruthfulQA](./truthfulqa.md)
 
 ## Most Popular
@@ -23,9 +27,13 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [BIG-Bench Hard (BBH)](./bbh.md) — 
 - [GPQA Diamond](./gpqa-diamond.md) — 
 - [GSM8K](./gsm8k.md) — 
+- [Humanity's Last Exam (HLE)](./hle.md) — 
 - [IFEval](./ifeval.md) — 
+- [MATH-500](./math-500.md) — 
 - [MMLU](./mmlu.md) — 
 - [MMLU-Pro](./mmlu-pro.md) — 
+- [SimpleQA](./simpleqa.md) — 
 - [TruthfulQA](./truthfulqa.md) — 
