@@ -35,6 +35,7 @@ Before selecting an inference engine:
 
 - [Candle](./candle.md)
 - [ExLlamaV2](./exllamav2.md)
+- [faster-whisper](./faster-whisper.md)
 - [KTransformers](./ktransformers.md)
 - [LocalAI](./localai.md)
 - [mistral.rs](./mistral-rs.md)
@@ -42,7 +43,6 @@ Before selecting an inference engine:
 - [ONNX Runtime](./onnxruntime.md)
 - [TensorRT-LLM](./tensorrt-llm.md)
 - [text-generation-webui (oobabooga)](./text-generation-webui.md)
-- [llama.cpp](./llama-cpp.md)
 
 ### Most Popular
 
@@ -53,14 +53,15 @@ Before selecting an inference engine:
 - [LocalAI](./localai.md) — ⭐ 47415
 - [SGLang](./sglang.md) — ⭐ 28967
 - [Llamafile](./llamafile.md) — ⭐ 24936
+- [faster-whisper](./faster-whisper.md) — ⭐ 24114
+- [WhisperX](./whisperx.md) — ⭐ 22968
 - [MLC LLM](./mlc-llm.md) — ⭐ 22917
-- [ONNX Runtime](./onnxruntime.md) — ⭐ 21037
-- [Candle](./candle.md) — ⭐ 20620
 
 ### Browse All
 
 - [Candle](./candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [ExLlamaV2](./exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
+- [faster-whisper](./faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [KTransformers](./ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
@@ -75,3 +76,4 @@ Before selecting an inference engine:
 - [Text Generation Inference](./text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
 - [text-generation-webui (oobabooga)](./text-generation-webui.md) — The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API
 - [vLLM](./vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
+- [WhisperX](./whisperx.md) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
