@@ -17,8 +17,8 @@ github_stars: 79620
 github_stars_last_30d: 0
 trending_score: 72
 last_commit: "2026-07-08"
-docs_url: "https://lobehub.com/docs"
-demo_url: "https://lobechat.com"
+docs_url: "https://lobehub.com/only-ai/markdown/docs/en/usage/start"
+demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
@@ -94,4 +94,4 @@ This is an agent-system entry: a deployable platform, not a library. Compare wit
 ## Resources
 
 - [GitHub](https://github.com/lobehub/lobehub)
-- [Documentation](https://lobehub.com/docs)
+- [Documentation](https://lobehub.com/only-ai/markdown/docs/en/usage/start)

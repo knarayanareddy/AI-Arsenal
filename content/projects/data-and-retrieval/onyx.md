@@ -17,7 +17,7 @@ github_stars: 30772
 github_stars_last_30d: 0
 trending_score: 62
 last_commit: "2026-07-08"
-docs_url: "https://docs.onyx.app"
+docs_url: "https://docs.onyx.app/welcome"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -96,4 +96,4 @@ The connector-first pole of the RAG-application spectrum — contrast `anything-
 ## Resources
 
 - [GitHub](https://github.com/onyx-dot-app/onyx)
-- [Documentation](https://docs.onyx.app)
+- [Documentation](https://docs.onyx.app/welcome)
