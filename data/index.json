@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:01:16.141Z",
+    "generated_at": "2026-07-08T20:03:44.610Z",
     "total_projects": 103,
     "total_tools": 162,
     "total_papers": 76,
-    "total_tips": 116,
+    "total_tips": 129,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -1006,6 +1006,24 @@
       "featured": false
     },
     {
+      "id": "batch-embedding-requests-during-ingestion",
+      "type": "tip",
+      "name": "Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time",
+      "description": "",
+      "tags": [
+        "embeddings",
+        "batching"
+      ],
+      "path": "content/tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion.md",
+      "url": "content/tips-and-tricks/cost-and-performance/batch-embedding-requests-during-ingestion",
+      "last_updated": "2026-07-08",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "beir",
       "type": "benchmark",
       "name": "BEIR",
@@ -1252,6 +1270,25 @@
       "featured": false
     },
     {
+      "id": "cache-idempotent-tool-results-within-a-run",
+      "type": "tip",
+      "name": "Cache Idempotent Tool Results Within an Agent Run",
+      "description": "",
+      "tags": [
+        "agents",
+        "caching",
+        "tool-use"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/cache-idempotent-tool-results-within-a-run",
+      "last_updated": "2026-07-08",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "cache-stable-system-prompts",
       "type": "tip",
       "name": "Use Prompt Caching for Long, Stable System Prompt Prefixes",
@@ -1321,6 +1358,24 @@
       "url": "content/tips-and-tricks/agents-and-orchestration/cap-agent-tool-retries",
       "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "cap-max-output-tokens-per-request",
+      "type": "tip",
+      "name": "Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults",
+      "description": "",
+      "tags": [
+        "inference",
+        "observability"
+      ],
+      "path": "content/tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request.md",
+      "url": "content/tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request",
+      "last_updated": "2026-07-08",
+      "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -2087,6 +2142,25 @@
       "featured": false
     },
     {
+      "id": "compact-tool-outputs-before-adding-to-context",
+      "type": "tip",
+      "name": "Truncate or Summarize Tool Outputs Before They Enter Agent Context",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/compact-tool-outputs-before-adding-to-context",
+      "last_updated": "2026-07-08",
+      "category": "context-window-management",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "composio",
       "type": "tool",
       "name": "Composio",
@@ -2197,6 +2271,24 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "correlate-llm-traces-with-request-ids",
+      "type": "tip",
+      "name": "Propagate Application Request IDs Into Every LLM Trace",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/correlate-llm-traces-with-request-ids",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -6042,6 +6134,24 @@
       "featured": false
     },
     {
+      "id": "log-latency-by-pipeline-stage",
+      "type": "tip",
+      "name": "Break Down Latency by Pipeline Stage Before Optimizing Anything",
+      "description": "",
+      "tags": [
+        "observability",
+        "tracing"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/log-latency-by-pipeline-stage.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-latency-by-pipeline-stage",
+      "last_updated": "2026-07-08",
+      "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "log-raw-and-parsed-model-outputs",
       "type": "tip",
       "name": "Log Both the Raw Model Output and the Parsed Result",
@@ -9116,6 +9226,24 @@
       "featured": false
     },
     {
+      "id": "sample-production-traffic-into-eval-sets",
+      "type": "tip",
+      "name": "Continuously Sample Production Traffic Into Your Eval Sets",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "observability"
+      ],
+      "path": "content/tips-and-tricks/evaluation/sample-production-traffic-into-eval-sets.md",
+      "url": "content/tips-and-tricks/evaluation/sample-production-traffic-into-eval-sets",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "sandbox-code-execution-tools",
       "type": "tip",
       "name": "Add Resource and Network Limits to Sandboxed Code Execution Calls",
@@ -9452,6 +9580,23 @@
       "featured": false
     },
     {
+      "id": "set-pass-fail-thresholds-before-running-evals",
+      "type": "tip",
+      "name": "Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results",
+      "description": "",
+      "tags": [
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/evaluation/set-pass-fail-thresholds-before-running-evals.md",
+      "url": "content/tips-and-tricks/evaluation/set-pass-fail-thresholds-before-running-evals",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "set-temperature-by-decision-risk",
       "type": "tip",
       "name": "Set Temperature by the Cost of Being Wrong, Not a Generic Default",
@@ -9482,6 +9627,24 @@
       "url": "content/tips-and-tricks/cost-and-performance/set-token-budgets-per-feature",
       "last_updated": "2026-07-02",
       "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-wall-clock-timeouts-for-agent-runs",
+      "type": "tip",
+      "name": "Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets",
+      "description": "",
+      "tags": [
+        "agents",
+        "orchestration"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs",
+      "last_updated": "2026-07-08",
+      "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -9657,6 +9820,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "slice-eval-metrics-by-input-segment",
+      "type": "tip",
+      "name": "Slice Eval Metrics by Input Segment Instead of Trusting the Average",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "observability"
+      ],
+      "path": "content/tips-and-tricks/evaluation/slice-eval-metrics-by-input-segment.md",
+      "url": "content/tips-and-tricks/evaluation/slice-eval-metrics-by-input-segment",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -10804,6 +10985,25 @@
       "featured": false
     },
     {
+      "id": "track-refusal-rates-as-a-regression-signal",
+      "type": "tip",
+      "name": "Track Refusal and Non-Answer Rates as a First-Class Regression Signal",
+      "description": "",
+      "tags": [
+        "observability",
+        "monitoring",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/track-refusal-rates-as-a-regression-signal.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/track-refusal-rates-as-a-regression-signal",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "trafilatura",
       "type": "tool",
       "name": "Trafilatura",
@@ -11290,6 +11490,24 @@
       "featured": false
     },
     {
+      "id": "use-provider-batch-apis-for-offline-workloads",
+      "type": "tip",
+      "name": "Use Provider Batch APIs for Offline Workloads to Halve Token Costs",
+      "description": "",
+      "tags": [
+        "batching",
+        "inference"
+      ],
+      "path": "content/tips-and-tricks/cost-and-performance/use-provider-batch-apis-for-offline-workloads.md",
+      "url": "content/tips-and-tricks/cost-and-performance/use-provider-batch-apis-for-offline-workloads",
+      "last_updated": "2026-07-08",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "use-query-rewriting-for-vague-questions",
       "type": "tip",
       "name": "Rewrite Vague Queries Before Embedding Them",
@@ -11710,6 +11928,24 @@
       "url": "content/research/agents-and-reasoning/wang-2023-voyager",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "warm-up-model-servers-before-routing-traffic",
+      "type": "tip",
+      "name": "Warm Up Model Servers Before Routing Production Traffic to Them",
+      "description": "",
+      "tags": [
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/warm-up-model-servers-before-routing-traffic.md",
+      "url": "content/tips-and-tricks/inference-and-serving/warm-up-model-servers-before-routing-traffic",
+      "last_updated": "2026-07-08",
+      "category": "latency-optimization",
       "maturity": null,
       "cost_model": null,
       "status": null,
