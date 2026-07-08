@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:03:09.413Z",
+    "generated_at": "2026-07-08T20:07:06.261Z",
     "total_projects": 110,
-    "total_tools": 164,
+    "total_tools": 173,
     "total_papers": 66,
     "total_tips": 129,
     "total_people": 25,
@@ -1917,6 +1917,25 @@
       "featured": false
     },
     {
+      "id": "clearml",
+      "type": "tool",
+      "name": "ClearML",
+      "description": "Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration",
+      "tags": [
+        "training",
+        "monitoring",
+        "self-hosted"
+      ],
+      "path": "content/tools/model-layer/clearml.md",
+      "url": "content/tools/model-layer/clearml",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "clem-delangue",
       "type": "person",
       "name": "Clément Delangue",
@@ -3060,6 +3079,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "elasticsearch",
+      "type": "tool",
+      "name": "Elasticsearch",
+      "description": "Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads",
+      "tags": [
+        "retrieval",
+        "rag",
+        "self-hosted",
+        "monitoring"
+      ],
+      "path": "content/tools/data-ingestion/elasticsearch.md",
+      "url": "content/tools/data-ingestion/elasticsearch",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "self-hostable",
+      "status": "active",
       "featured": false
     },
     {
@@ -5921,6 +5960,25 @@
       "featured": false
     },
     {
+      "id": "llm-guard",
+      "type": "tool",
+      "name": "LLM Guard",
+      "description": "Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more",
+      "tags": [
+        "security",
+        "guardrails",
+        "self-hosted"
+      ],
+      "path": "content/tools/evaluation-and-observability/llm-guard.md",
+      "url": "content/tools/evaluation-and-observability/llm-guard",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llm-observability",
       "type": "guide",
       "name": "LLM Observability",
@@ -6165,6 +6223,26 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lorax",
+      "type": "tool",
+      "name": "LoRAX",
+      "description": "Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU",
+      "tags": [
+        "inference",
+        "fine-tuning",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/tools/serving-and-deployment/lorax.md",
+      "url": "content/tools/serving-and-deployment/lorax",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6466,6 +6544,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "megatron-lm",
+      "type": "tool",
+      "name": "Megatron-LM",
+      "description": "NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism",
+      "tags": [
+        "training",
+        "transformers",
+        "efficiency",
+        "self-hosted"
+      ],
+      "path": "content/tools/model-layer/megatron-lm.md",
+      "url": "content/tools/model-layer/megatron-lm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -8689,6 +8787,25 @@
       "featured": false
     },
     {
+      "id": "ragas",
+      "type": "tool",
+      "name": "Ragas",
+      "description": "Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines",
+      "tags": [
+        "evaluation",
+        "rag",
+        "llm"
+      ],
+      "path": "content/tools/evaluation-and-observability/ragas.md",
+      "url": "content/tools/evaluation-and-observability/ragas",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ragas-rag-evaluation",
       "type": "project",
       "name": "Ragas for RAG Evaluation",
@@ -8782,6 +8899,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "ray",
+      "type": "tool",
+      "name": "Ray",
+      "description": "Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving",
+      "tags": [
+        "inference",
+        "training",
+        "orchestration",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/ray.md",
+      "url": "content/tools/serving-and-deployment/ray",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -10700,6 +10837,26 @@
       "featured": false
     },
     {
+      "id": "text-embeddings-inference",
+      "type": "tool",
+      "name": "Text Embeddings Inference (TEI)",
+      "description": "Hugging Face's Rust-based high-throughput inference server for embedding and reranker models",
+      "tags": [
+        "embeddings",
+        "inference",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/tools/serving-and-deployment/text-embeddings-inference.md",
+      "url": "content/tools/serving-and-deployment/text-embeddings-inference",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "text-generation-inference",
       "type": "project",
       "name": "Text Generation Inference",
@@ -11817,6 +11974,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "vespa",
+      "type": "tool",
+      "name": "Vespa",
+      "description": "Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference",
+      "tags": [
+        "retrieval",
+        "rag",
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/tools/data-ingestion/vespa.md",
+      "url": "content/tools/data-ingestion/vespa",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {

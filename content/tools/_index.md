@@ -9,12 +9,12 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-08 |
 | [by job](./by-job/) | 14 entries | 2026-07-08 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-08 |
-| [data ingestion](./data-ingestion/) | 26 entries | 2026-07-08 |
+| [data ingestion](./data-ingestion/) | 28 entries | 2026-07-08 |
 | [dx and tooling](./dx-and-tooling/) | 40 entries | 2026-07-08 |
-| [evaluation and observability](./evaluation-and-observability/) | 25 entries | 2026-07-08 |
-| [model layer](./model-layer/) | 28 entries | 2026-07-08 |
+| [evaluation and observability](./evaluation-and-observability/) | 27 entries | 2026-07-08 |
+| [model layer](./model-layer/) | 30 entries | 2026-07-08 |
 | [orchestration](./orchestration/) | 22 entries | 2026-07-08 |
-| [serving and deployment](./serving-and-deployment/) | 23 entries | 2026-07-08 |
+| [serving and deployment](./serving-and-deployment/) | 26 entries | 2026-07-08 |
 
 ## Recently Added
 
@@ -26,8 +26,8 @@
 - [Airbyte](./data-ingestion/airbyte.md)
 - [Cerebras Inference](./model-layer/cerebras-inference.md)
 - [Claude Code](./dx-and-tooling/claude-code.md)
+- [ClearML](./model-layer/clearml.md)
 - [Cline](./dx-and-tooling/cline.md)
-- [Cloudflare Workers AI](./serving-and-deployment/cloudflare-workers-ai.md)
 
 ## Most Popular
 
@@ -58,6 +58,7 @@ _No star-tracked entries yet._
 - [Chrome DevTools MCP](./dx-and-tooling/chrome-devtools-mcp.md) — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
 - [Claude Artifact Player](./dx-and-tooling/claude-artifact-player.md) — Interact with and manage AI-generated artifacts from Claude and similar models
 - [Claude Code](./dx-and-tooling/claude-code.md) — Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories
+- [ClearML](./model-layer/clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
 - [Cline](./dx-and-tooling/cline.md) — Open-source autonomous coding agent for VS Code with plan/act modes and human-in-the-loop approval of every action
 - [Cloudflare Workers AI](./serving-and-deployment/cloudflare-workers-ai.md) — Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure
 - [Cloudskill](./orchestration/cloudskill.md) — Manage, govern, and distribute skills for AI agents across teams
@@ -84,4 +85,3 @@ _No star-tracked entries yet._
 - [dlt](./data-ingestion/dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
 - [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
 - [DVC](./model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
-- [E2B](./orchestration/e2b.md) — Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale
