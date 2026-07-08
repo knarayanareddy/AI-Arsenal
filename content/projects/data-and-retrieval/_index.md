@@ -38,11 +38,11 @@ Before selecting a data/retrieval component:
 - [Cognee](./cognee.md)
 - [Graphiti](./graphiti.md)
 - [GraphRAG](./graphrag.md)
+- [LightRAG](./lightrag.md)
 - [Marker](./marker.md)
 - [Onyx (formerly Danswer)](./onyx.md)
 - [PaddleOCR](./paddleocr.md)
 - [Surya](./surya.md)
-- [zvec](./zvec.md)
 
 ### Most Popular
 
@@ -54,8 +54,8 @@ Before selecting a data/retrieval component:
 - [AnythingLLM](./anything-llm.md) — ⭐ 62924
 - [Docling](./docling.md) — ⭐ 61495
 - [Milvus](./milvus.md) — ⭐ 44762
+- [LightRAG](./lightrag.md) — ⭐ 37469
 - [Marker](./marker.md) — ⭐ 37280
-- [GraphRAG](./graphrag.md) — ⭐ 34257
 
 ### Browse All
 
@@ -69,6 +69,7 @@ Before selecting a data/retrieval component:
 - [Graphiti](./graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
 - [GraphRAG](./graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [LanceDB](./lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
+- [LightRAG](./lightrag.md) — Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval
 - [LlamaParse](./llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text
 - [Marker](./marker.md) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
 - [Milvus](./milvus.md) — Cloud-native vector database for large-scale ANN search and production vector workloads

@@ -37,25 +37,25 @@ Before selecting a foundation model:
 - [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md)
 - [Chatterbox (Resemble AI)](./chatterbox.md)
 - [CLIP (OpenAI)](./clip.md)
+- [CosyVoice](./cosyvoice.md)
 - [F5-TTS](./f5-tts.md)
 - [FLUX (Black Forest Labs)](./flux.md)
 - [GLM-4 / GLM-4.5](./glm-4.md)
+- [GPT-SoVITS](./gpt-sovits.md)
 - [Kimi K2](./kimi-k2.md)
-- [Kokoro TTS](./kokoro.md)
-- [OLMo](./olmo.md)
 
 ### Most Popular
 
 - [Whisper](./whisper.md) — ⭐ 104543
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
+- [GPT-SoVITS](./gpt-sovits.md) — ⭐ 59564
 - [CLIP (OpenAI)](./clip.md) — ⭐ 33936
+- [Open-Sora](./open-sora.md) — ⭐ 29172
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — ⭐ 27298
+- [MiniCPM-V](./minicpm-v.md) — ⭐ 25801
 - [FLUX (Black Forest Labs)](./flux.md) — ⭐ 25700
 - [Chatterbox (Resemble AI)](./chatterbox.md) — ⭐ 25426
 - [AudioCraft (Meta)](./audiocraft.md) — ⭐ 23456
-- [Qwen](./qwen.md) — ⭐ 21281
-- [Qwen3-VL](./qwen3-vl.md) — ⭐ 19555
-- [SAM 2 (Segment Anything Model 2)](./sam2.md) — ⭐ 19492
 
 ### Browse All
 
@@ -64,6 +64,7 @@ Before selecting a foundation model:
 - [Chatterbox (Resemble AI)](./chatterbox.md) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
 - [CLIP (OpenAI)](./clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
 - [Command R+](./command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
+- [CosyVoice](./cosyvoice.md) — Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
 - [F5-TTS](./f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
 - [Falcon 3](./falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
@@ -71,11 +72,15 @@ Before selecting a foundation model:
 - [Gemma](./gemma.md) — Google open model family designed for efficient language and multimodal applications
 - [Gemma 3](./gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GLM-4 / GLM-4.5](./glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
+- [GPT-SoVITS](./gpt-sovits.md) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
 - [Kimi K2](./kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Kokoro TTS](./kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
 - [Llama 3.x](./llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
+- [MiniCPM-V](./minicpm-v.md) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - [Mistral / Mixtral](./mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
+- [Moshi](./moshi.md) — Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline
 - [OLMo](./olmo.md) — AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science
+- [Open-Sora](./open-sora.md) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
 - [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases

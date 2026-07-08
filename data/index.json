@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:38:17.020Z",
-    "total_projects": 136,
+    "generated_at": "2026-07-08T20:49:50.928Z",
+    "total_projects": 146,
     "total_tools": 187,
     "total_papers": 90,
     "total_tips": 129,
@@ -1851,6 +1851,26 @@
       "featured": false
     },
     {
+      "id": "cherry-studio",
+      "type": "project",
+      "name": "Cherry Studio",
+      "description": "Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app",
+      "tags": [
+        "llm",
+        "agents",
+        "rag",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/cherry-studio.md",
+      "url": "content/projects/frameworks/cherry-studio",
+      "last_updated": "2026-07-08",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "chiang-2024-chatbot-arena",
       "type": "paper",
       "name": "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
@@ -2912,6 +2932,26 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "cosyvoice",
+      "type": "project",
+      "name": "CosyVoice",
+      "description": "Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation",
+      "tags": [
+        "multimodal",
+        "voice",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/cosyvoice.md",
+      "url": "content/projects/foundation-models/cosyvoice",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -4716,6 +4756,26 @@
       "last_updated": "2026-07-08",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gpt-sovits",
+      "type": "project",
+      "name": "GPT-SoVITS",
+      "description": "Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference",
+      "tags": [
+        "multimodal",
+        "voice",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/gpt-sovits.md",
+      "url": "content/projects/foundation-models/gpt-sovits",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -6609,6 +6669,26 @@
       "featured": false
     },
     {
+      "id": "lightrag",
+      "type": "project",
+      "name": "LightRAG",
+      "description": "Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/lightrag.md",
+      "url": "content/projects/data-and-retrieval/lightrag",
+      "last_updated": "2026-07-08",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lilian-weng",
       "type": "person",
       "name": "Lilian Weng",
@@ -6680,6 +6760,25 @@
       "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "litserve",
+      "type": "project",
+      "name": "LitServe",
+      "description": "Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/inference-engines/litserve.md",
+      "url": "content/projects/inference-engines/litserve",
+      "last_updated": "2026-07-08",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -7866,6 +7965,26 @@
       "featured": false
     },
     {
+      "id": "minicpm-v",
+      "type": "project",
+      "name": "MiniCPM-V",
+      "description": "Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones",
+      "tags": [
+        "multimodal",
+        "vision",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/minicpm-v.md",
+      "url": "content/projects/foundation-models/minicpm-v",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mirascope",
       "type": "tool",
       "name": "Mirascope",
@@ -8184,6 +8303,26 @@
       "category": "evaluation-quality",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "moshi",
+      "type": "project",
+      "name": "Moshi",
+      "description": "Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline",
+      "tags": [
+        "multimodal",
+        "voice",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/moshi.md",
+      "url": "content/projects/foundation-models/moshi",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -8649,6 +8788,26 @@
       "url": "content/projects/training-and-alignment/open-r1",
       "last_updated": "2026-07-08",
       "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "open-sora",
+      "type": "project",
+      "name": "Open-Sora",
+      "description": "Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis",
+      "tags": [
+        "multimodal",
+        "vision",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/open-sora.md",
+      "url": "content/projects/foundation-models/open-sora",
+      "last_updated": "2026-07-08",
+      "category": "multimodal",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -9862,6 +10021,25 @@
       "featured": false
     },
     {
+      "id": "qwen-agent",
+      "type": "project",
+      "name": "Qwen-Agent",
+      "description": "Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context",
+      "tags": [
+        "agents",
+        "llm",
+        "rag"
+      ],
+      "path": "content/projects/agent-systems/qwen-agent.md",
+      "url": "content/projects/agent-systems/qwen-agent",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "qwen3-vl",
       "type": "project",
       "name": "Qwen3-VL",
@@ -10194,6 +10372,25 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "rd-agent",
+      "type": "project",
+      "name": "RD-Agent",
+      "description": "Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining",
+      "tags": [
+        "agents",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/projects/agent-systems/rd-agent.md",
+      "url": "content/projects/agent-systems/rd-agent",
+      "last_updated": "2026-07-08",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false

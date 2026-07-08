@@ -34,6 +34,7 @@ Before selecting a framework:
 ### Recently Added
 
 - [CAMEL](./camel-ai.md)
+- [Cherry Studio](./cherry-studio.md)
 - [ComfyUI](./comfyui.md)
 - [Detectron2 (Meta)](./detectron2.md)
 - [Speech To Speech](./speech-to-speech.md)
@@ -42,7 +43,6 @@ Before selecting a framework:
 - [Ultralytics YOLO](./ultralytics.md)
 - [Ultralytics YOLO](./ultralytics-yolo.md)
 - [Vercel AI SDK](./vercel-ai-sdk.md)
-- [Uiverse Design](./uiverse-design.md)
 
 ### Most Popular
 
@@ -62,6 +62,7 @@ Before selecting a framework:
 - [AutoGen](./autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [CAMEL](./camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
+- [Cherry Studio](./cherry-studio.md) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
 - [ComfyUI](./comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [CrewAI](./crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [Detectron2 (Meta)](./detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work

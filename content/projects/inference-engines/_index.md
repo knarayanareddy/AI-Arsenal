@@ -38,11 +38,11 @@ Before selecting an inference engine:
 - [exo (exo-explore)](./exo.md)
 - [faster-whisper](./faster-whisper.md)
 - [KTransformers](./ktransformers.md)
+- [LitServe](./litserve.md)
 - [LocalAI](./localai.md)
 - [mistral.rs](./mistral-rs.md)
 - [MLC LLM](./mlc-llm.md)
 - [ONNX Runtime](./onnxruntime.md)
-- [TensorRT-LLM](./tensorrt-llm.md)
 
 ### Most Popular
 
@@ -64,6 +64,7 @@ Before selecting an inference engine:
 - [exo (exo-explore)](./exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [faster-whisper](./faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [KTransformers](./ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
+- [LitServe](./litserve.md) — Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
 - [Llamafile](./llamafile.md) — Mozilla project for distributing and running LLMs as a single executable file
 - [LMDeploy](./lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
