@@ -32,11 +32,11 @@ Before picking a tool in this phase, consider:
 - [Elasticsearch](./elasticsearch.md)
 - [FAISS](./faiss.md)
 - [Gitingest](./gitingest.md)
+- [Great Expectations (GX Core)](./great-expectations.md)
 - [MarkItDown](./markitdown.md)
 - [Meilisearch](./meilisearch.md)
 - [MinerU](./mineru.md)
 - [RAGatouille](./ragatouille.md)
-- [Trafilatura](./trafilatura.md)
 
 ### Most Popular
 
@@ -55,6 +55,7 @@ _No star-tracked entries yet._
 - [FAISS](./faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
 - [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Gitingest](./gitingest.md) — Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL
+- [Great Expectations (GX Core)](./great-expectations.md) — The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on
 - [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 - [Label Studio](./label-studio.md) — An open-source data labeling platform for ML and AI datasets
 - [MarkItDown](./markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
