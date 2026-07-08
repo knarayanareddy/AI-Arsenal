@@ -36,7 +36,7 @@ Before picking a tool in this phase, consider:
 - [Liger Kernel](./liger-kernel.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
 - [Megatron-LM](./megatron-lm.md)
-- [OpenRouter](./openrouter.md)
+- [OpenPipe ART](./openpipe-art.md)
 
 ### Most Popular
 
@@ -63,6 +63,7 @@ _No star-tracked entries yet._
 - [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - [MLflow](./mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 - [MLX-LM](./mlx-lm.md) — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
+- [OpenPipe ART](./openpipe-art.md) — Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps
 - [OpenRouter](./openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
 - [Outlines](./outlines.md) — A library for constrained generation and structured outputs with LLMs
 - [PEFT](./peft.md) — Hugging Face library for parameter-efficient fine-tuning methods

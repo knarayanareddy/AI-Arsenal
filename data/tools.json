@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:49:50.928Z",
-  "count": 187,
+  "generated_at": "2026-07-08T21:13:49.871Z",
+  "count": 197,
   "items": [
     {
       "id": "accelerate",
@@ -1055,6 +1055,90 @@
       "body_text": "Overview any agent (Mozilla AI) is a single Python API that wraps many agent frameworks — LangChain, OpenAI Agents SDK, Google ADK, smolagents, and more — so you can define an agent once and run it on any of them. It adds a framework agnostic tracing and evaluation layer (OpenTelemetry based) so agents built on different frameworks can be compared on the same footing. Why It's in the Arsenal It earns a place because choosing an agent framework is high stakes and hard to reverse; any agent lets you defer and compare that choice empirically. It is a comparison point / meta layer for the orchestration phase, not an unconditional recommendation — see Strengths / Limitations. Key Features One API over multiple agent frameworks (build once, swap backend) Framework agnostic tracing via OpenTelemetry Built in agent evaluation to compare frameworks/configs Serve agents over A2A/MCP style interfaces Architecture / How It Works any agent defines a common agent configuration (model, tools, instructions) and adapters that translate it into each supported framework's native constructs. Execution is traced through a shared telemetry layer, so runs across frameworks emit comparable spans/metrics that the evaluation module scores against your criteria. Getting Started Use Cases 1. Scenario : benchmark the same agent across frameworks before committing 2. Scenario : get uniform tracing/evaluation regardless of the underlying framework 3. Scenario where this is NOT the right fit : you rely on one framework's advanced, native only features — the abstraction may not expose them Strengths Avoids lock in; empirical framework comparison Consistent observability/evaluation across frameworks Backed by Mozilla AI Limitations / When NOT to Use Abstraction can lag or hide framework specific features Extra indirection layer to maintain and debug Younger project; coverage varies by framework Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against committing directly to openai agents sdk, langchain, or smolagents — any agent wraps these rather than replacing them. Link this tool from job guides using its canonical ID any agent. Record which frameworks/features you depend on before production adoption. Resources Official Site & Docs GitHub Buzz & Reception 1,181 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
+      "id": "anyscale",
+      "name": "Anyscale",
+      "type": "tool",
+      "job": [
+        "deployment",
+        "production-serving"
+      ],
+      "description": "Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters",
+      "url": "content/tools/serving-and-deployment/anyscale",
+      "cost_model": "usage-based",
+      "pricing_detail": "Usage-based compute billing on top of your cloud; enterprise plans available",
+      "tags": [
+        "inference",
+        "cloud",
+        "orchestration"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Trial credits for evaluation; usage-based compute billing thereafter",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://www.anyscale.com",
+      "docs_url": "https://docs.anyscale.com/",
+      "github_url": null,
+      "alternatives": [
+        "ray-serve",
+        "modal",
+        "skypilot",
+        "baseten"
+      ],
+      "integrates_with": [
+        "ray-serve"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "You already build on Ray (Ray Data/Train/Serve) and want a managed control plane for autoscaling clusters, observability, and governance instead of operating Ray yourself",
+        "Your workload is genuinely distributed — large batch inference, distributed training, multi-step pipelines — where a single-node serving tool is insufficient"
+      ],
+      "avoid_when": [
+        "Your serving need is a single model behind an endpoint — a lighter serving tool (Modal, Baseten, a single vLLM box) is simpler and cheaper than a Ray platform",
+        "You want to avoid the Ray programming model entirely, or need a fully self-hosted stack (Ray itself is open source; the Anyscale platform is not)"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Anyscale is the commercial managed platform from the team behind the open-source Ray project (ray-serve is cataloged separately). The platform is closed; Ray is Apache-2.0. Trial-credit terms are directional — confirm on the pricing page.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "The natural managed home for teams standardized on Ray for distributed AI, but overkill for single-model serving where lighter platforms win",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/anyscale.md",
+      "slug": "anyscale",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "Anyscale",
+      "summary": "Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 491,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> The managed platform from Ray's creators for running distributed AI workloads — distributed training, large-scale batch inference, and serving — on autoscaling Ray clusters with added observability and governance. Usage-based; a solid choice for Ray-native, genuinely distributed workloads.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Anyscale is the commercial platform built by the team behind Ray, the open-source distributed-computing framework. It provides a managed control plane for Ray clusters: autoscaling, cluster lifecycle, observability, and governance, so teams can run distributed training, batch inference, and Ray Serve deployments without operating Ray infrastructure themselves.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Ray is a common backbone for distributed AI (Ray Data, Train, Serve), but running production Ray clusters is an ops burden. Anyscale earns a serving-and-deployment entry as the managed answer to that, distinct from single-model serving platforms: its value shows up specifically when workloads are distributed across many nodes, which is exactly where lighter serving tools stop scaling.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Managed, autoscaling Ray clusters with lifecycle and dependency management</li>\n<li>First-class support for Ray Data (batch inference/ETL), Ray Train (distributed training), and Ray Serve (serving)</li>\n<li>Observability, logging, and governance for multi-team cluster usage</li>\n<li>Runs on your cloud provider with usage-based compute billing</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You write Ray applications (or use Ray libraries), and Anyscale provisions and autoscales the underlying Ray cluster, schedules the workload across nodes, and exposes dashboards/logs. Serving uses Ray Serve under the hood, so deployments inherit Ray's distributed scheduling. The programming model is Ray's; Anyscale manages the cluster and platform layer around it.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install anyscale\n# anyscale login\n# author a Ray app or Ray Serve deployment, then submit it:\n# anyscale job submit -- python my_ray_job.py\n# See docs (Resources) for Ray Serve services and autoscaling config.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: distributed batch inference over a huge dataset using Ray Data on an autoscaling cluster</li>\n<li><strong>Scenario</strong>: distributed fine-tuning/training with Ray Train, then serving the result with Ray Serve — all on one managed platform</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Removes Ray cluster ops while preserving the open Ray programming model (portable back to self-hosted Ray)</li>\n<li>Scales to genuinely distributed workloads that single-node serving tools cannot handle</li>\n<li>Unifies distributed training, batch inference, and serving under one platform</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Overkill for single-model serving — Modal, Baseten, or a lone vLLM instance are simpler and cheaper there</li>\n<li>Requires adopting the Ray programming model; teams not on Ray gain little</li>\n<li>Managed platform (not self-hostable), so strict on-prem-only environments must run open-source Ray themselves</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Standardize distributed workloads on Ray, then use Anyscale as the managed control plane; drop to self-hosted <a href=\"./ray-serve.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ray Serve</a> when you need full control</li>\n<li>Compare with <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a> and <a href=\"./baseten.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Baseten</a> for simpler serving, and <a href=\"./skypilot.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">SkyPilot</a> for cloud-agnostic job scheduling</li>\n<li>Serve fine-tuned models (from TRL/Axolotl/LLaMA-Factory) that require multi-node inference</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.anyscale.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.anyscale.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Anyscale is well known as the company behind Ray, which is one of the most widely used open-source distributed-AI frameworks; the platform's relevance tracks the large Ray ecosystem rather than a standalone repo.</p>\n",
+      "body_text": "TL;DR: The managed platform from Ray's creators for running distributed AI workloads — distributed training, large scale batch inference, and serving — on autoscaling Ray clusters with added observability and governance. Usage based; a solid choice for Ray native, genuinely distributed workloads. Overview Anyscale is the commercial platform built by the team behind Ray, the open source distributed computing framework. It provides a managed control plane for Ray clusters: autoscaling, cluster lifecycle, observability, and governance, so teams can run distributed training, batch inference, and Ray Serve deployments without operating Ray infrastructure themselves. Why It's in the Arsenal Ray is a common backbone for distributed AI (Ray Data, Train, Serve), but running production Ray clusters is an ops burden. Anyscale earns a serving and deployment entry as the managed answer to that, distinct from single model serving platforms: its value shows up specifically when workloads are distributed across many nodes, which is exactly where lighter serving tools stop scaling. Key Features Managed, autoscaling Ray clusters with lifecycle and dependency management First class support for Ray Data (batch inference/ETL), Ray Train (distributed training), and Ray Serve (serving) Observability, logging, and governance for multi team cluster usage Runs on your cloud provider with usage based compute billing Architecture / How It Works You write Ray applications (or use Ray libraries), and Anyscale provisions and autoscales the underlying Ray cluster, schedules the workload across nodes, and exposes dashboards/logs. Serving uses Ray Serve under the hood, so deployments inherit Ray's distributed scheduling. The programming model is Ray's; Anyscale manages the cluster and platform layer around it. Getting Started Use Cases 1. Scenario : distributed batch inference over a huge dataset using Ray Data on an autoscaling cluster 2. Scenario : distributed fine tuning/training with Ray Train, then serving the result with Ray Serve — all on one managed platform Strengths Removes Ray cluster ops while preserving the open Ray programming model (portable back to self hosted Ray) Scales to genuinely distributed workloads that single node serving tools cannot handle Unifies distributed training, batch inference, and serving under one platform Limitations / When NOT to Use Overkill for single model serving — Modal, Baseten, or a lone vLLM instance are simpler and cheaper there Requires adopting the Ray programming model; teams not on Ray gain little Managed platform (not self hostable), so strict on prem only environments must run open source Ray themselves Integration Patterns Standardize distributed workloads on Ray, then use Anyscale as the managed control plane; drop to self hosted Ray Serve when you need full control Compare with Modal and Baseten for simpler serving, and SkyPilot for cloud agnostic job scheduling Serve fine tuned models (from TRL/Axolotl/LLaMA Factory) that require multi node inference Resources Website Documentation Buzz & Reception Anyscale is well known as the company behind Ray, which is one of the most widely used open source distributed AI frameworks; the platform's relevance tracks the large Ray ecosystem rather than a standalone repo."
+    },
+    {
       "id": "argilla",
       "name": "Argilla",
       "type": "tool",
@@ -1634,6 +1718,87 @@
       "word_count": 311,
       "body_html": "<h2>Overview</h2>\n<p>An AI-native platform for generating dashboards, reports, and insights from natural-language queries over your data, aimed at letting non-technical users explore data without writing SQL.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Basedash earns a place in the Arsenal because it directly addresses a recurring decision point: you want to generate dashboards and reports from natural-language queries without building BI infrastructure. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Natural-language to dashboard/report generation</li>\n<li>No-SQL data exploration for non-technical users</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Natural-language queries are translated into underlying data queries against connected sources, with results rendered as dashboards or reports automatically.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://basedash.com\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want to generate dashboards and reports from natural-language queries without building BI infrastructure</li>\n<li><strong>Scenario</strong>: non-technical stakeholders need to explore data without writing SQL</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need governed, auditable BI with strict data-access controls (evaluate against established BI tools) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want to generate dashboards and reports from natural-language queries without building BI infrastructure</li>\n<li>Non-technical stakeholders need to explore data without writing SQL</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You need governed, auditable BI with strict data-access controls (evaluate against established BI tools)</p>\n</li>\n<li>\n<p>You need an open-source or self-hostable dashboarding tool</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://basedash.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Basedash</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview An AI native platform for generating dashboards, reports, and insights from natural language queries over your data, aimed at letting non technical users explore data without writing SQL. Why It's in the Arsenal Basedash earns a place in the Arsenal because it directly addresses a recurring decision point: you want to generate dashboards and reports from natural language queries without building BI infrastructure. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Natural language to dashboard/report generation No SQL data exploration for non technical users Architecture / How It Works Natural language queries are translated into underlying data queries against connected sources, with results rendered as dashboards or reports automatically. Getting Started Use Cases 1. Scenario : you want to generate dashboards and reports from natural language queries without building BI infrastructure 2. Scenario : non technical stakeholders need to explore data without writing SQL 3. Scenario where this is NOT the right fit : you need governed, auditable BI with strict data access controls (evaluate against established BI tools) — evaluate an alternative instead Strengths You want to generate dashboards and reports from natural language queries without building BI infrastructure Non technical stakeholders need to explore data without writing SQL Limitations / When NOT to Use You need governed, auditable BI with strict data access controls (evaluate against established BI tools) You need an open source or self hostable dashboarding tool Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Basedash Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "baseten",
+      "name": "Baseten",
+      "type": "tool",
+      "job": [
+        "production-serving",
+        "deployment"
+      ],
+      "description": "Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero",
+      "url": "content/tools/serving-and-deployment/baseten",
+      "cost_model": "usage-based",
+      "pricing_detail": "Usage-based GPU/compute billing; pay for active inference with autoscaling and scale-to-zero",
+      "tags": [
+        "inference",
+        "cloud"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Starter credits for evaluation; usage-based GPU billing thereafter",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://github.com/basetenlabs/truss",
+      "docs_url": "https://docs.baseten.co/overview",
+      "github_url": "https://github.com/basetenlabs/truss",
+      "alternatives": [
+        "modal",
+        "replicate",
+        "runpod",
+        "bentoml"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "You want production model serving (LLMs, embeddings, custom models) with GPU autoscaling, scale-to-zero, and observability without operating a Kubernetes GPU cluster yourself",
+        "You value defining deployments as code via the open Truss format so packaging is portable and version-controlled rather than click-ops"
+      ],
+      "avoid_when": [
+        "You need fully on-prem/self-hosted serving in your own cloud account — Baseten is a managed platform (Truss is open, the platform is not)",
+        "Your workload is a trivial prototype where a simpler hosted inference endpoint or a single always-on box is cheaper and simpler"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Truss (basetenlabs/truss) verified ~1.2k stars, MIT, last push 2026-07-08 via GitHub API. The Baseten platform itself is a closed managed service; performance/autoscaling behavior is vendor-described. Starter-credit amounts are directional.",
+      "verdict": "recommended",
+      "verdict_rationale": "A strong managed serving layer for teams that want production GPU autoscaling and scale-to-zero with code-defined deployments (Truss), without running their own inference infrastructure",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/baseten.md",
+      "slug": "baseten",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "Baseten",
+      "summary": "Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 525,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> A managed platform for deploying and autoscaling ML/LLM models in production, built on the open-source Truss packaging format, with GPU autoscaling, scale-to-zero, and observability. Usage-based; recommended when you want production serving without running GPU infra.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Baseten is a model-serving platform: you package a model as a Truss (an open, code-based format describing the model, dependencies, and inference logic) and deploy it to Baseten, which handles GPU provisioning, autoscaling (including scale-to-zero), and monitoring. It removes the undifferentiated work of standing up and operating GPU inference infrastructure.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Serving a model in production means solving GPU autoscaling, cold starts, packaging, and observability — a large ops surface most teams don't want to own. Baseten earns a serving-and-deployment entry because it packages that surface as a managed service while keeping the packaging format (Truss) open and portable, distinguishing it from lock-in-heavy endpoints and from raw self-managed clusters.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Truss: open-source, code-defined model packaging (model + deps + pre/post-processing) that is version-controllable</li>\n<li>GPU autoscaling with scale-to-zero to control cost on bursty traffic</li>\n<li>Support for LLMs, embeddings, and arbitrary custom models</li>\n<li>Built-in deployment observability (latency, throughput, logs) and model management</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You author a Truss describing how to load and call your model, push it to Baseten, and the platform builds a container, provisions GPUs, and serves an autoscaling HTTP endpoint. Traffic drives replica count (up from and down to zero), so you pay for active inference. Because Truss is open and portable, the packaging isn't tied to the platform even though the runtime is.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install truss baseten\n# truss init my-model &amp;&amp; cd my-model\n# implement model/model.py (load + predict), then:\n# baseten push   # deploys the Truss and returns an autoscaling endpoint\n# See docs (Resources) for GPU config and autoscaling settings.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: serving a fine-tuned LLM or embedding model to production traffic with autoscaling, without building a GPU cluster</li>\n<li><strong>Scenario</strong>: deploying a custom multi-step model (pre/post-processing around a checkpoint) as a single versioned endpoint via Truss</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Offloads GPU autoscaling, cold starts, and ops while keeping packaging (Truss) open and portable</li>\n<li>Scale-to-zero controls cost for spiky or low-baseline workloads</li>\n<li>Code-defined deployments make serving reproducible and reviewable</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Managed platform: no fully self-hosted option in your own account, so it may not satisfy strict data-residency needs</li>\n<li>Usage-based GPU billing can exceed a dedicated box for steady high-throughput workloads — model your traffic first</li>\n<li>For trivial prototypes, a simpler hosted endpoint (or one always-on server) may be cheaper and faster to reach</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Package a model as Truss and deploy to Baseten as your production inference endpoint behind an app or agent</li>\n<li>Compare with <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a>, <a href=\"./replicate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Replicate</a>, and <a href=\"./runpod.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">RunPod</a> for managed GPU serving, and with <a href=\"./bentoml.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">BentoML</a> for open-source packaging you host yourself</li>\n<li>Use for the serving stage after fine-tuning (e.g. models trained via LLaMA-Factory or Axolotl)</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.baseten.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.baseten.co/overview\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/basetenlabs/truss\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Truss (GitHub)</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Baseten is an established name in managed model serving; its open Truss packaging format sits at ~1.2k stars (GitHub API, 2026-07-08) and is the portable, community-visible piece of an otherwise closed platform.</p>\n",
+      "body_text": "TL;DR: A managed platform for deploying and autoscaling ML/LLM models in production, built on the open source Truss packaging format, with GPU autoscaling, scale to zero, and observability. Usage based; recommended when you want production serving without running GPU infra. Overview Baseten is a model serving platform: you package a model as a Truss (an open, code based format describing the model, dependencies, and inference logic) and deploy it to Baseten, which handles GPU provisioning, autoscaling (including scale to zero), and monitoring. It removes the undifferentiated work of standing up and operating GPU inference infrastructure. Why It's in the Arsenal Serving a model in production means solving GPU autoscaling, cold starts, packaging, and observability — a large ops surface most teams don't want to own. Baseten earns a serving and deployment entry because it packages that surface as a managed service while keeping the packaging format (Truss) open and portable, distinguishing it from lock in heavy endpoints and from raw self managed clusters. Key Features Truss: open source, code defined model packaging (model + deps + pre/post processing) that is version controllable GPU autoscaling with scale to zero to control cost on bursty traffic Support for LLMs, embeddings, and arbitrary custom models Built in deployment observability (latency, throughput, logs) and model management Architecture / How It Works You author a Truss describing how to load and call your model, push it to Baseten, and the platform builds a container, provisions GPUs, and serves an autoscaling HTTP endpoint. Traffic drives replica count (up from and down to zero), so you pay for active inference. Because Truss is open and portable, the packaging isn't tied to the platform even though the runtime is. Getting Started Use Cases 1. Scenario : serving a fine tuned LLM or embedding model to production traffic with autoscaling, without building a GPU cluster 2. Scenario : deploying a custom multi step model (pre/post processing around a checkpoint) as a single versioned endpoint via Truss Strengths Offloads GPU autoscaling, cold starts, and ops while keeping packaging (Truss) open and portable Scale to zero controls cost for spiky or low baseline workloads Code defined deployments make serving reproducible and reviewable Limitations / When NOT to Use Managed platform: no fully self hosted option in your own account, so it may not satisfy strict data residency needs Usage based GPU billing can exceed a dedicated box for steady high throughput workloads — model your traffic first For trivial prototypes, a simpler hosted endpoint (or one always on server) may be cheaper and faster to reach Integration Patterns Package a model as Truss and deploy to Baseten as your production inference endpoint behind an app or agent Compare with Modal, Replicate, and RunPod for managed GPU serving, and with BentoML for open source packaging you host yourself Use for the serving stage after fine tuning (e.g. models trained via LLaMA Factory or Axolotl) Resources Website Documentation Truss (GitHub) Buzz & Reception Baseten is an established name in managed model serving; its open Truss packaging format sits at 1.2k stars (GitHub API, 2026 07 08) and is the portable, community visible piece of an otherwise closed platform."
     },
     {
       "id": "bentoml",
@@ -4436,6 +4601,86 @@
       "body_text": "Overview A veteran open source ML observability framework that expanded into LLM evaluation: define Reports and Test Suites over datasets with 100+ built in metrics — data drift, classification quality, text descriptors, RAG metrics, LLM as judge — run them in pipelines or CI, and visualize in notebooks or its dashboard. Why It's in the Arsenal Evidently earns a place in the Arsenal because it directly addresses a recurring decision point: you monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features 100+ metrics: drift, data quality, text descriptors, LLM judges Declarative Reports and Test Suites runnable in CI Self hostable dashboard; tracing for LLM apps in the platform version Architecture / How It Works Metrics compute over pandas friendly datasets (reference vs current for drift); LLM descriptors run per row evaluators including judge prompts; results serialize as JSON/HTML reports or pass/fail test suites, making evaluation a pipeline artifact rather than a dashboard only activity. Getting Started Use Cases 1. Scenario : you monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format 2. Scenario : you want evaluation as code — reports and test suites in CI/pipelines, with an optional dashboard on top 3. Scenario where this is NOT the right fit : pure LLM tracing/debugging is the need — trace first tools (Langfuse, Phoenix) fit the workflow better — evaluate an alternative instead Strengths You monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format You want evaluation as code — reports and test suites in CI/pipelines, with an optional dashboard on top Limitations / When NOT to Use Pure LLM tracing/debugging is the need — trace first tools (Langfuse, Phoenix) fit the workflow better You want fully managed evals with no code; the library first design assumes Python fluency Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against deepchecks, phoenix, ragas rag evaluation before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID evidently. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 7,671 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
+      "id": "exa",
+      "name": "Exa",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity (\"find similar pages\") endpoints",
+      "url": "content/tools/data-ingestion/exa",
+      "cost_model": "freemium",
+      "pricing_detail": "Free API credits to start; usage-based pricing per search/content request above the free allowance",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "rag"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Free starter API credits; usage-based billing beyond them",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://github.com/exa-labs",
+      "docs_url": "https://exa.ai/docs/reference/search-api-guide",
+      "github_url": "https://github.com/exa-labs",
+      "alternatives": [
+        "tavily",
+        "jina-reader"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want search that matches on meaning rather than keywords — an embeddings-based index is better at \"pages like this\" and descriptive queries than keyword engines",
+        "You need a \"find similar\" capability (given a URL, return semantically related pages) as a first-class endpoint, which keyword search APIs do not provide"
+      ],
+      "avoid_when": [
+        "Your queries are navigational/keyword-exact (find a specific known page) — a conventional search API may match as well at lower cost",
+        "You require self-hosting or full control of the index — it is a hosted, closed service"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Python SDK (exa-labs/exa-py) verified at ~217 stars, MIT, last push 2026-07-08 via GitHub API. Neural-vs-keyword advantage is claimed by the vendor and depends on query type; free-credit amounts are directional (confirm on pricing page).",
+      "verdict": "recommended",
+      "verdict_rationale": "A distinctive embeddings-native search API whose meaning-based matching and find-similar endpoint fill a gap keyword search APIs cannot, with clean SDKs and content retrieval built in",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/exa.md",
+      "slug": "exa",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Exa",
+      "summary": "Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity (\"find similar pages\") endpoints",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 522,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> An embeddings-based (\"neural\") web search API for AI apps: matches on meaning, retrieves cleaned page content, and offers a first-class find-similar-pages endpoint. Freemium; recommended when semantic/descriptive search beats keyword matching.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Exa is a search API whose index is built for semantic matching: instead of keyword ranking, it embeds queries and documents so descriptive queries (\"startups building open-source eval tooling\") and similarity queries (\"pages like this URL\") return relevant results. It also retrieves cleaned page contents and highlights, so an agent can search and read in the same workflow.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Keyword search APIs struggle with descriptive intent and cannot answer \"find pages similar to this one.\" Exa's embeddings-native design targets exactly those cases, giving agents a retrieval mode that is complementary to keyword-oriented services like Tavily. That distinct capability — semantic + find-similar over the open web — is why it earns a data-ingestion entry rather than being redundant with existing search tools.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Neural (embeddings-based) search that matches on meaning, plus an optional keyword mode</li>\n<li>Find-similar endpoint: given a URL, return semantically related pages</li>\n<li>Content retrieval with cleaned text and query-relevant highlights in the same API</li>\n<li>Python/TypeScript SDKs and framework integrations</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Exa maintains an embeddings index of web content; a query is embedded and matched against it for semantic relevance (with a keyword fallback mode), then results are returned with optional cleaned content and highlights. Because the index is embeddings-based, \"find similar to this URL\" is a native operation rather than a bolt-on, and content extraction is served alongside search results.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install exa-py\n# from exa_py import Exa\n# exa = Exa(api_key=\"...\")\n# res = exa.search_and_contents(\"open-source LLM eval tools\", type=\"neural\", num_results=5)\n# for r in res.results:\n#     print(r.title, r.url)\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a discovery agent that must surface conceptually-related pages (competitors, similar research) via the find-similar endpoint</li>\n<li><strong>Scenario</strong>: a RAG ingestion step where descriptive queries need meaning-based recall, retrieving cleaned content directly for embedding</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Semantic matching handles descriptive and exploratory queries that trip up keyword search</li>\n<li>Find-similar-by-URL is a genuinely different primitive not offered by keyword search APIs</li>\n<li>Search + content retrieval in one API keeps agent tool count and latency down</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>For exact/navigational lookups, keyword engines can be as good and cheaper — neural search is not always the win</li>\n<li>Hosted, closed index: no self-hosting, and you cannot fully inspect or tune ranking</li>\n<li>Coverage and freshness are bounded by Exa's crawl/index, which varies by domain</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use as the semantic-search tool in an agent, reserving a keyword search API for navigational queries</li>\n<li>Feed <code>search_and_contents</code> output straight into an embedding/RAG pipeline to skip a separate fetch step</li>\n<li>Contrast with <a href=\"./tavily.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Tavily</a> (keyword/agent search) and <a href=\"./jina-reader.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Jina Reader</a> (URL-to-clean-text): Exa's differentiator is semantic recall and find-similar</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://exa.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://exa.ai/docs/reference/search-api-guide\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">API Guide</a></li>\n<li><a href=\"https://github.com/exa-labs\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub (exa-labs)</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Exa is a widely-referenced neural-search option in the AI-app ecosystem; its open Python SDK is smaller (~217 stars, GitHub API 2026-07-08) than keyword-search competitors, reflecting that the value is the hosted index rather than the client.</p>\n",
+      "body_text": "TL;DR: An embeddings based (\"neural\") web search API for AI apps: matches on meaning, retrieves cleaned page content, and offers a first class find similar pages endpoint. Freemium; recommended when semantic/descriptive search beats keyword matching. Overview Exa is a search API whose index is built for semantic matching: instead of keyword ranking, it embeds queries and documents so descriptive queries (\"startups building open source eval tooling\") and similarity queries (\"pages like this URL\") return relevant results. It also retrieves cleaned page contents and highlights, so an agent can search and read in the same workflow. Why It's in the Arsenal Keyword search APIs struggle with descriptive intent and cannot answer \"find pages similar to this one.\" Exa's embeddings native design targets exactly those cases, giving agents a retrieval mode that is complementary to keyword oriented services like Tavily. That distinct capability — semantic + find similar over the open web — is why it earns a data ingestion entry rather than being redundant with existing search tools. Key Features Neural (embeddings based) search that matches on meaning, plus an optional keyword mode Find similar endpoint: given a URL, return semantically related pages Content retrieval with cleaned text and query relevant highlights in the same API Python/TypeScript SDKs and framework integrations Architecture / How It Works Exa maintains an embeddings index of web content; a query is embedded and matched against it for semantic relevance (with a keyword fallback mode), then results are returned with optional cleaned content and highlights. Because the index is embeddings based, \"find similar to this URL\" is a native operation rather than a bolt on, and content extraction is served alongside search results. Getting Started Use Cases 1. Scenario : a discovery agent that must surface conceptually related pages (competitors, similar research) via the find similar endpoint 2. Scenario : a RAG ingestion step where descriptive queries need meaning based recall, retrieving cleaned content directly for embedding Strengths Semantic matching handles descriptive and exploratory queries that trip up keyword search Find similar by URL is a genuinely different primitive not offered by keyword search APIs Search + content retrieval in one API keeps agent tool count and latency down Limitations / When NOT to Use For exact/navigational lookups, keyword engines can be as good and cheaper — neural search is not always the win Hosted, closed index: no self hosting, and you cannot fully inspect or tune ranking Coverage and freshness are bounded by Exa's crawl/index, which varies by domain Integration Patterns Use as the semantic search tool in an agent, reserving a keyword search API for navigational queries Feed search and contents output straight into an embedding/RAG pipeline to skip a separate fetch step Contrast with Tavily (keyword/agent search) and Jina Reader (URL to clean text): Exa's differentiator is semantic recall and find similar Resources Website API Guide GitHub (exa labs) Buzz & Reception Exa is a widely referenced neural search option in the AI app ecosystem; its open Python SDK is smaller ( 217 stars, GitHub API 2026 07 08) than keyword search competitors, reflecting that the value is the hosted index rather than the client."
+    },
+    {
       "id": "faiss",
       "name": "FAISS",
       "type": "tool",
@@ -4936,6 +5181,88 @@
       "word_count": 378,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Application hosting platform with global machines and GPU options for AI services. Usage-based hosting pricing. Best for small globally deployed AI APIs.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An application hosting platform that runs apps as lightweight VMs ('Fly Machines') close to users globally, with GPU machine options for moderate AI inference workloads.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Fly.io earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Global, low-latency app deployment</li>\n<li>GPU machine support for inference workloads</li>\n<li>Minimal DevOps overhead compared to managing Kubernetes</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">fly launch\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps</li>\n<li><strong>Scenario</strong>: you need GPU machines for moderate workloads without managing a full Kubernetes cluster</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need large-scale, multi-GPU distributed training or serving (purpose-built ML platforms scale better there) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps</li>\n<li>You need GPU machines for moderate workloads without managing a full Kubernetes cluster</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need large-scale, multi-GPU distributed training or serving (purpose-built ML platforms scale better there)</li>\n<li>You require deep enterprise compliance certifications that a smaller cloud provider may not yet offer</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./bentoml.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">BentoML</a>, <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a>, <a href=\"./railway.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Railway</a>, <a href=\"./replicate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Replicate</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>fly-io</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://fly.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://fly.io/docs/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for deployment, production-serving.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Application hosting platform with global machines and GPU options for AI services. Usage based hosting pricing. Best for small globally deployed AI APIs. Overview An application hosting platform that runs apps as lightweight VMs ('Fly Machines') close to users globally, with GPU machine options for moderate AI inference workloads. Why It's in the Arsenal Fly.io earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Global, low latency app deployment GPU machine support for inference workloads Minimal DevOps overhead compared to managing Kubernetes Architecture / How It Works Applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance. Getting Started Use Cases 1. Scenario : you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps 2. Scenario : you need GPU machines for moderate workloads without managing a full Kubernetes cluster 3. Scenario where this is NOT the right fit : you need large scale, multi GPU distributed training or serving (purpose built ML platforms scale better there) — evaluate an alternative instead Strengths You want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps You need GPU machines for moderate workloads without managing a full Kubernetes cluster Limitations / When NOT to Use You need large scale, multi GPU distributed training or serving (purpose built ML platforms scale better there) You require deep enterprise compliance certifications that a smaller cloud provider may not yet offer Integration Patterns Compare against BentoML, Modal, Railway, Replicate before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID fly io. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment, production serving. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "galileo",
+      "name": "Galileo",
+      "type": "tool",
+      "job": [
+        "evaluation",
+        "monitoring"
+      ],
+      "description": "Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails",
+      "url": "content/tools/evaluation-and-observability/galileo",
+      "cost_model": "freemium",
+      "pricing_detail": "Free developer tier; paid team/enterprise plans for production scale and governance",
+      "tags": [
+        "observability",
+        "evaluation",
+        "guardrails"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Free developer tier for evaluation; paid plans for production scale, seats, and governance",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://galileo.ai/",
+      "docs_url": "https://docs.galileo.ai/what-is-galileo",
+      "github_url": null,
+      "alternatives": [
+        "langsmith",
+        "langwatch",
+        "humanloop",
+        "trulens"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "You need automated quality/safety metrics (hallucination, factuality, guardrails) on outputs without maintaining ground-truth labels for every case, at production scale",
+        "You want evaluation and runtime guardrails/monitoring from one governance-oriented platform, especially in an enterprise setting"
+      ],
+      "avoid_when": [
+        "You want an open-source, self-hostable stack — Galileo is a closed hosted platform",
+        "Your needs are basic offline prompt tests — a lightweight eval library is cheaper and simpler than an enterprise platform"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Closed hosted platform (no public GitHub repo). Its metrics (e.g. label-free hallucination/factuality scoring) are research-backed by the vendor; independent calibration on your data is advisable before trusting scores. Free-tier limits are directional — confirm on the pricing page.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A strong enterprise-grade eval + guardrails platform whose label-free metrics are its differentiator; the closed, hosted model is the main tradeoff versus open alternatives",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/galileo.md",
+      "slug": "galileo",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "Galileo",
+      "summary": "Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 498,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> A commercial LLM evaluation + observability platform built around research-backed, label-free metrics (hallucination/factuality, guardrail scores) plus runtime monitoring and guardrails — aimed at enterprise scale and governance. Freemium; a solid choice when you need automated quality metrics without ground-truth labels.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Galileo is a platform for evaluating and monitoring LLM applications. Its distinguishing feature is a set of research-backed metrics — for example hallucination/factuality and guardrail scores — that can be computed without hand-labeled ground truth, so teams can quantify output quality and safety at scale during development and in production.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The hardest part of LLM evaluation is scoring open-ended outputs without labels for every case. Galileo earns an evaluation-and-observability entry because its label-free metrics target exactly that, combined with runtime guardrails and monitoring for enterprise governance — a different emphasis than tracing-first tools or open eval libraries, which is where it's worth reaching for.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Research-backed, label-free metrics (e.g. hallucination/factuality, context adherence, guardrail scores)</li>\n<li>Offline evaluation over datasets and online monitoring of production outputs</li>\n<li>Runtime guardrails to detect/flag unsafe or low-quality responses</li>\n<li>Enterprise governance features (access, auditability) around the eval/observability data</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You send prompts/outputs (and optional context) to Galileo via its SDK; the platform computes its metrics — many using model-based scorers that don't require reference answers — and surfaces them in dashboards for both offline test runs and live traffic. Guardrail metrics can be evaluated at runtime so risky outputs are flagged, tying evaluation and monitoring to the same metric definitions.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install galileo\n# from galileo import galileo_context\n# Configure your API key, then log prompts/outputs (and context) for scoring.\n# Metrics like factuality/guardrails compute without ground-truth labels.\n# See docs (Resources) for the current SDK, metrics catalog, and guardrails setup.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: measuring hallucination/factuality on a RAG app's answers at scale where labeling every response is infeasible</li>\n<li><strong>Scenario</strong>: running runtime guardrails on production outputs and monitoring metric trends for regressions in an enterprise deployment</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Label-free metrics make quality/safety measurable without maintaining ground truth for every case</li>\n<li>Combines offline evaluation, online monitoring, and runtime guardrails under one metric framework</li>\n<li>Enterprise governance features suit regulated or large-org deployments</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Closed, hosted platform — no self-hosting, which rules it out where data must stay on-prem</li>\n<li>Enterprise-oriented pricing/complexity is overkill for basic offline prompt testing</li>\n<li>Model-based metrics require calibration/trust — validate scores against spot-checked human judgment on your data before relying on them</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Instrument your app with the Galileo SDK to score outputs offline and monitor them online with shared metrics</li>\n<li>Compare with <a href=\"./langsmith.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangSmith</a> (tracing-first), open <a href=\"./langwatch.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangWatch</a>, and library-style <a href=\"./trulens.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">TruLens</a>; Galileo's edge is label-free metrics + guardrails at enterprise scale</li>\n<li>Pair guardrail metrics with input/output filters (LLM Guard, NeMo Guardrails) for a layered safety approach</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://galileo.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.galileo.ai/what-is-galileo\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Galileo is a well-known commercial entrant in LLM evaluation/observability, frequently cited for its label-free hallucination/quality metrics; as a closed platform, its signal comes from enterprise adoption and its published metric research rather than repo stars.</p>\n",
+      "body_text": "TL;DR: A commercial LLM evaluation + observability platform built around research backed, label free metrics (hallucination/factuality, guardrail scores) plus runtime monitoring and guardrails — aimed at enterprise scale and governance. Freemium; a solid choice when you need automated quality metrics without ground truth labels. Overview Galileo is a platform for evaluating and monitoring LLM applications. Its distinguishing feature is a set of research backed metrics — for example hallucination/factuality and guardrail scores — that can be computed without hand labeled ground truth, so teams can quantify output quality and safety at scale during development and in production. Why It's in the Arsenal The hardest part of LLM evaluation is scoring open ended outputs without labels for every case. Galileo earns an evaluation and observability entry because its label free metrics target exactly that, combined with runtime guardrails and monitoring for enterprise governance — a different emphasis than tracing first tools or open eval libraries, which is where it's worth reaching for. Key Features Research backed, label free metrics (e.g. hallucination/factuality, context adherence, guardrail scores) Offline evaluation over datasets and online monitoring of production outputs Runtime guardrails to detect/flag unsafe or low quality responses Enterprise governance features (access, auditability) around the eval/observability data Architecture / How It Works You send prompts/outputs (and optional context) to Galileo via its SDK; the platform computes its metrics — many using model based scorers that don't require reference answers — and surfaces them in dashboards for both offline test runs and live traffic. Guardrail metrics can be evaluated at runtime so risky outputs are flagged, tying evaluation and monitoring to the same metric definitions. Getting Started Use Cases 1. Scenario : measuring hallucination/factuality on a RAG app's answers at scale where labeling every response is infeasible 2. Scenario : running runtime guardrails on production outputs and monitoring metric trends for regressions in an enterprise deployment Strengths Label free metrics make quality/safety measurable without maintaining ground truth for every case Combines offline evaluation, online monitoring, and runtime guardrails under one metric framework Enterprise governance features suit regulated or large org deployments Limitations / When NOT to Use Closed, hosted platform — no self hosting, which rules it out where data must stay on prem Enterprise oriented pricing/complexity is overkill for basic offline prompt testing Model based metrics require calibration/trust — validate scores against spot checked human judgment on your data before relying on them Integration Patterns Instrument your app with the Galileo SDK to score outputs offline and monitor them online with shared metrics Compare with LangSmith (tracing first), open LangWatch, and library style TruLens; Galileo's edge is label free metrics + guardrails at enterprise scale Pair guardrail metrics with input/output filters (LLM Guard, NeMo Guardrails) for a layered safety approach Resources Website Documentation Buzz & Reception Galileo is a well known commercial entrant in LLM evaluation/observability, frequently cited for its label free hallucination/quality metrics; as a closed platform, its signal comes from enterprise adoption and its published metric research rather than repo stars."
     },
     {
       "id": "garak",
@@ -7502,6 +7829,90 @@
       "body_text": "TL;DR: LangSmith prompt and dataset workflows for LangChain and LangGraph applications. Free tier plus paid LangSmith plans. Best for LangChain prompt workflows. Overview LangSmith's prompt and dataset management surface for LangChain/LangGraph applications, sharing infrastructure with LangSmith's tracing platform. Why It's in the Arsenal LangSmith Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Prompt/dataset sharing within a team Tight coupling to the LangChain/LangGraph ecosystem Architecture / How It Works Prompts and datasets are stored in the LangSmith platform and referenced from LangChain/LangGraph code, with usage automatically tied back to tracing data. Getting Started Use Cases 1. Scenario : you're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing 2. Scenario : you want to share and version prompts across a team already standardized on LangSmith 3. Scenario where this is NOT the right fit : you're not using LangChain/LangGraph (the hub's value is tightly coupled to that ecosystem) — evaluate an alternative instead Strengths You're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing You want to share and version prompts across a team already standardized on LangSmith Limitations / When NOT to Use You're not using LangChain/LangGraph (the hub's value is tightly coupled to that ecosystem) You need a fully open source, self hostable prompt registry (consider Langfuse Prompts instead) Integration Patterns Compare against Langfuse Prompts, PromptLayer before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID langsmith hub. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for prompt management. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "langwatch",
+      "name": "LangWatch",
+      "type": "tool",
+      "job": [
+        "evaluation",
+        "tracing"
+      ],
+      "description": "Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud",
+      "url": "content/tools/evaluation-and-observability/langwatch",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0), self-hostable; managed cloud with free tier and paid plans",
+      "tags": [
+        "observability",
+        "tracing",
+        "evaluation"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python",
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Self-host for free; managed cloud has a free tier with paid plans above it",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/langwatch/langwatch",
+      "docs_url": "https://langwatch.ai/docs/introduction",
+      "github_url": "https://github.com/langwatch/langwatch",
+      "alternatives": [
+        "langsmith",
+        "humanloop",
+        "promptfoo",
+        "ragas"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want LLM tracing and evaluation in one open, self-hostable platform standardized on OpenTelemetry, rather than a closed SaaS or two separate tools",
+        "You need to run evals both offline (on datasets) and online (on live production traffic) against the same traced data"
+      ],
+      "avoid_when": [
+        "You only need lightweight offline prompt testing in CI — a single eval library (Promptfoo, Ragas) is simpler than standing up a platform",
+        "You want a mature, deeply-integrated managed product and are willing to pay for it — a more established SaaS may have broader integrations today"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "langwatch/langwatch verified ~3.3k stars, Apache-2.0, last push 2026-07-08 via GitHub API. OpenTelemetry-based, self-hostable. Beta maturity — feature set and APIs still evolving; evaluate the eval metrics against your needs.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A credible open, self-hostable alternative that unifies OTel-based tracing with online/offline evals; less battle-tested than incumbent SaaS but avoids lock-in",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/langwatch.md",
+      "slug": "langwatch",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "LangWatch",
+      "summary": "Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 481,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> An open-source (Apache-2.0), self-hostable LLM observability + evaluation platform built on OpenTelemetry: trace LLM/agent calls and run online and offline evals over the same data. Free to self-host, cloud available; a solid choice when you want tracing + evals without SaaS lock-in.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>LangWatch is an open-source platform that combines LLM observability (tracing of prompts, chains, and agent steps) with evaluation (running metrics/judges on datasets and on live traffic). It is built on OpenTelemetry, so instrumentation follows an open standard, and it can be self-hosted or used as managed cloud.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>LLM observability and evaluation are often bought as a closed SaaS or assembled from a tracing tool plus a separate eval library. LangWatch earns an evaluation-and-observability entry as an open, self-hostable option that unifies both on OpenTelemetry — filling the \"avoid lock-in but still get tracing + evals together\" gap that neither closed SaaS nor single-purpose eval libraries cover.</p>\n<h2>Key Features</h2>\n<ul>\n<li>OpenTelemetry-based tracing of LLM, chain, and agent executions</li>\n<li>Online evaluations on production traffic and offline evaluations on datasets</li>\n<li>Dataset management and annotation for building eval sets from real traffic</li>\n<li>Self-hostable (open source) or managed cloud; SDKs for Python and TypeScript</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Your app emits OpenTelemetry spans (via LangWatch SDKs or OTel instrumentation) capturing LLM calls and steps; LangWatch ingests and assembles them into traces. Evaluators (metrics or LLM-judges) run against traced data — either continuously on live traffic or on curated datasets — and results surface in dashboards. Because it speaks OTel, instrumentation isn't proprietary and can coexist with other OTel tooling.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install langwatch\n# import langwatch\n# langwatch.setup(api_key=\"...\")  # or point at your self-hosted instance\n# @langwatch.trace()\n# def handle(msg): ...\n# See docs (Resources) for online/offline evaluators and dataset setup.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: tracing a production agent and running online quality/safety evaluators on live traffic to catch regressions</li>\n<li><strong>Scenario</strong>: curating a dataset from real traced failures, then running offline evals on prompt changes before deploy</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Open source and self-hostable — avoids SaaS lock-in and keeps data in your environment</li>\n<li>OpenTelemetry foundation means standards-based, non-proprietary instrumentation</li>\n<li>Unifies tracing and evaluation (online + offline) instead of requiring two tools</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Beta maturity: fewer integrations and less battle-testing than incumbent observability SaaS</li>\n<li>Standing up a platform is overkill if you only need offline prompt tests in CI</li>\n<li>Eval metric depth is evolving; specialized evaluation needs may still want a dedicated framework</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Instrument with OpenTelemetry/LangWatch SDK, self-host the platform, and run online evaluators on production traces</li>\n<li>Compare with closed <a href=\"./langsmith.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangSmith</a> and <a href=\"./humanloop.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Humanloop</a>; use LangWatch when open/self-hosted matters</li>\n<li>Complement with focused eval libraries <a href=\"./promptfoo.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Promptfoo</a> or <a href=\"./ragas.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Ragas</a> for CI-time offline checks</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://langwatch.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://langwatch.ai/docs/introduction\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/langwatch/langwatch\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub (langwatch/langwatch)</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>LangWatch sits at ~3.3k GitHub stars with active daily development (GitHub API, 2026-07-08), reflecting demand for an open, OpenTelemetry-native alternative to closed LLM-observability platforms.</p>\n",
+      "body_text": "TL;DR: An open source (Apache 2.0), self hostable LLM observability + evaluation platform built on OpenTelemetry: trace LLM/agent calls and run online and offline evals over the same data. Free to self host, cloud available; a solid choice when you want tracing + evals without SaaS lock in. Overview LangWatch is an open source platform that combines LLM observability (tracing of prompts, chains, and agent steps) with evaluation (running metrics/judges on datasets and on live traffic). It is built on OpenTelemetry, so instrumentation follows an open standard, and it can be self hosted or used as managed cloud. Why It's in the Arsenal LLM observability and evaluation are often bought as a closed SaaS or assembled from a tracing tool plus a separate eval library. LangWatch earns an evaluation and observability entry as an open, self hostable option that unifies both on OpenTelemetry — filling the \"avoid lock in but still get tracing + evals together\" gap that neither closed SaaS nor single purpose eval libraries cover. Key Features OpenTelemetry based tracing of LLM, chain, and agent executions Online evaluations on production traffic and offline evaluations on datasets Dataset management and annotation for building eval sets from real traffic Self hostable (open source) or managed cloud; SDKs for Python and TypeScript Architecture / How It Works Your app emits OpenTelemetry spans (via LangWatch SDKs or OTel instrumentation) capturing LLM calls and steps; LangWatch ingests and assembles them into traces. Evaluators (metrics or LLM judges) run against traced data — either continuously on live traffic or on curated datasets — and results surface in dashboards. Because it speaks OTel, instrumentation isn't proprietary and can coexist with other OTel tooling. Getting Started Use Cases 1. Scenario : tracing a production agent and running online quality/safety evaluators on live traffic to catch regressions 2. Scenario : curating a dataset from real traced failures, then running offline evals on prompt changes before deploy Strengths Open source and self hostable — avoids SaaS lock in and keeps data in your environment OpenTelemetry foundation means standards based, non proprietary instrumentation Unifies tracing and evaluation (online + offline) instead of requiring two tools Limitations / When NOT to Use Beta maturity: fewer integrations and less battle testing than incumbent observability SaaS Standing up a platform is overkill if you only need offline prompt tests in CI Eval metric depth is evolving; specialized evaluation needs may still want a dedicated framework Integration Patterns Instrument with OpenTelemetry/LangWatch SDK, self host the platform, and run online evaluators on production traces Compare with closed LangSmith and Humanloop; use LangWatch when open/self hosted matters Complement with focused eval libraries Promptfoo or Ragas for CI time offline checks Resources Website Documentation GitHub (langwatch/langwatch) Buzz & Reception LangWatch sits at 3.3k GitHub stars with active daily development (GitHub API, 2026 07 08), reflecting demand for an open, OpenTelemetry native alternative to closed LLM observability platforms."
+    },
+    {
       "id": "letta",
       "name": "Letta",
       "type": "tool",
@@ -9770,6 +10181,87 @@
       "body_text": "TL;DR: NVIDIA framework for adding programmable guardrails to LLM applications. Open source or free to start. Best for programmable LLM guardrails. Overview NVIDIA's open source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang. Why It's in the Arsenal NeMo Guardrails earns a place in the Arsenal because it directly addresses a recurring decision point: you need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Programmable conversational rails via Colang DSL Covers topical, safety, and jailbreak resistance rails Open source, NVIDIA backed Architecture / How It Works Conversation flow is defined as a set of Colang rules describing allowed/disallowed topics and responses; the runtime intercepts the conversation and enforces these rails alongside the underlying LLM. Getting Started Use Cases 1. Scenario : you need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application 2. Scenario : you want NVIDIA backed tooling with Colang based rule definitions for conversational flow control 3. Scenario where this is NOT the right fit : your guardrail needs are simple output validation rather than conversational flow control (Guardrails AI may be simpler) — evaluate an alternative instead Strengths You need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application You want NVIDIA backed tooling with Colang based rule definitions for conversational flow control Limitations / When NOT to Use Your guardrail needs are simple output validation rather than conversational flow control (Guardrails AI may be simpler) Your team doesn't want to learn a new DSL (Colang) for defining rails Integration Patterns Compare against Guardrails AI, Llama Guard, Rebuff before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID nemo guardrails. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for security and guardrails. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "nomic-atlas",
+      "name": "Nomic Atlas",
+      "type": "tool",
+      "job": [
+        "data-labeling"
+      ],
+      "description": "Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation",
+      "url": "content/tools/data-ingestion/nomic-atlas",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier for smaller datasets/public maps; paid plans for larger private datasets and higher limits",
+      "tags": [
+        "embeddings",
+        "data",
+        "multimodal"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Free tier supports smaller datasets and public maps; paid plans raise size/privacy limits",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://github.com/nomic-ai/nomic",
+      "docs_url": "https://docs.nomic.ai/",
+      "github_url": "https://github.com/nomic-ai/nomic",
+      "alternatives": [
+        "argilla",
+        "label-studio",
+        "spotlight-by-backplanes"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You need to actually see the structure of a large text/image dataset — clusters, near-duplicates, outliers, mislabeled regions — before training, fine-tuning, or building an index",
+        "You want an embeddings map you can explore interactively rather than staring at rows, to guide curation and slicing decisions"
+      ],
+      "avoid_when": [
+        "You need row-level human annotation workflows with reviewer queues — a labeling tool (Argilla, Label Studio) fits better than a visualization map",
+        "Data must remain fully on-prem — the map platform is hosted (the client library is open, the Atlas service is not)"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Open Python client (nomic-ai/nomic) verified ~1.9k stars, last push 2025-11-11 via GitHub API on 2026-07-08 (license reported NOASSERTION — verify before assuming permissive terms). The Atlas map service itself is a hosted product; free-tier dataset-size limits are directional.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "Distinctive dataset-understanding tool — interactive embedding maps expose structure, duplicates, and outliers, a curation gap annotation and vector-store tools don't fill",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/nomic-atlas.md",
+      "slug": "nomic-atlas",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Nomic Atlas",
+      "summary": "Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 534,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Nomic Atlas embeds and maps large text/image datasets into an interactive 2-D view so you can see clusters, near-duplicates, and outliers and curate accordingly. Freemium; a solid choice for dataset understanding before training or indexing.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Nomic Atlas turns a large dataset into an explorable embedding map: it embeds your text or images, projects them into an interactive 2-D layout, and lets you pan, zoom, search, and color by metadata. The point is to make the <em>structure</em> of unstructured data visible — where it clusters, what is duplicated, and what is anomalous — which is otherwise invisible in a table of rows.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Teams routinely train, fine-tune, or build RAG indexes on datasets they have never actually looked at, then discover duplication, contamination, or skew after the fact. Atlas fills the dataset-understanding gap upstream of those steps: it is not a labeling queue and not a vector database, but an exploration/curation surface that complements both, which is why it sits in the data-ingestion phase.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Interactive 2-D embedding maps of large text and image datasets</li>\n<li>Cluster, duplicate, and outlier discovery via visual structure and search-over-embeddings</li>\n<li>Metadata coloring/filtering to inspect slices and spot skew or mislabeling</li>\n<li>Open Python client (<code>nomic</code>) to build, update, and query maps programmatically, including Nomic's own embedding models</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The <code>nomic</code> client uploads your data (or embeddings) to the Atlas service, which computes embeddings if needed, builds a nearest-neighbor structure, and generates a dimensionality-reduced interactive map served in the browser. You interact with the map visually and via the client API (search, tag, retrieve neighbors), so exploration and programmatic curation share the same index.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install nomic\n# import nomic\n# nomic.login(\"nk-...\")\n# from nomic import atlas\n# ds = atlas.map_data(data=records, indexed_field=\"text\")\n# print(ds.maps[0])  # open the interactive map URL\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: auditing a fine-tuning dataset for near-duplicates and off-distribution clusters before spending training compute</li>\n<li><strong>Scenario</strong>: exploring a RAG corpus to see topic coverage and gaps, guiding what to add or down-sample before building the index</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Makes dataset structure visible — the single best way to catch duplication, skew, and outliers early</li>\n<li>Open client with Nomic's embedding models lowers the barrier to mapping your own data</li>\n<li>Complements labeling and vector tooling rather than overlapping it</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not an annotation workflow tool: no reviewer queues or task assignment (use Argilla/Label Studio for that)</li>\n<li>Hosted map service — unsuitable where all data must remain on-prem; client license terms are ambiguous (NOASSERTION), so verify before relying on them</li>\n<li>Very large private datasets push you into paid tiers; free limits are modest</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Run Atlas as a pre-training/pre-indexing audit step, then feed cleaned/curated data into training or a vector store</li>\n<li>Pair with annotation tools <a href=\"./argilla.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Argilla</a> or <a href=\"./label-studio.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Label Studio</a>: map first to find what needs labeling, then label those slices</li>\n<li>Compare with data-debugging viewers like <a href=\"../evaluation-and-observability/spotlight-by-backplanes.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Spotlight</a> for tabular/embedding inspection</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://atlas.nomic.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.nomic.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/nomic-ai/nomic\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub (nomic-ai/nomic)</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Nomic (maker of Atlas and the open Nomic Embed models) is a well-known name in open embeddings; the <code>nomic</code> client sits at ~1.9k stars (GitHub API, 2026-07-08), with the interactive map service as the hosted product on top.</p>\n",
+      "body_text": "TL;DR: Nomic Atlas embeds and maps large text/image datasets into an interactive 2 D view so you can see clusters, near duplicates, and outliers and curate accordingly. Freemium; a solid choice for dataset understanding before training or indexing. Overview Nomic Atlas turns a large dataset into an explorable embedding map: it embeds your text or images, projects them into an interactive 2 D layout, and lets you pan, zoom, search, and color by metadata. The point is to make the structure of unstructured data visible — where it clusters, what is duplicated, and what is anomalous — which is otherwise invisible in a table of rows. Why It's in the Arsenal Teams routinely train, fine tune, or build RAG indexes on datasets they have never actually looked at, then discover duplication, contamination, or skew after the fact. Atlas fills the dataset understanding gap upstream of those steps: it is not a labeling queue and not a vector database, but an exploration/curation surface that complements both, which is why it sits in the data ingestion phase. Key Features Interactive 2 D embedding maps of large text and image datasets Cluster, duplicate, and outlier discovery via visual structure and search over embeddings Metadata coloring/filtering to inspect slices and spot skew or mislabeling Open Python client (nomic) to build, update, and query maps programmatically, including Nomic's own embedding models Architecture / How It Works The nomic client uploads your data (or embeddings) to the Atlas service, which computes embeddings if needed, builds a nearest neighbor structure, and generates a dimensionality reduced interactive map served in the browser. You interact with the map visually and via the client API (search, tag, retrieve neighbors), so exploration and programmatic curation share the same index. Getting Started Use Cases 1. Scenario : auditing a fine tuning dataset for near duplicates and off distribution clusters before spending training compute 2. Scenario : exploring a RAG corpus to see topic coverage and gaps, guiding what to add or down sample before building the index Strengths Makes dataset structure visible — the single best way to catch duplication, skew, and outliers early Open client with Nomic's embedding models lowers the barrier to mapping your own data Complements labeling and vector tooling rather than overlapping it Limitations / When NOT to Use Not an annotation workflow tool: no reviewer queues or task assignment (use Argilla/Label Studio for that) Hosted map service — unsuitable where all data must remain on prem; client license terms are ambiguous (NOASSERTION), so verify before relying on them Very large private datasets push you into paid tiers; free limits are modest Integration Patterns Run Atlas as a pre training/pre indexing audit step, then feed cleaned/curated data into training or a vector store Pair with annotation tools Argilla or Label Studio: map first to find what needs labeling, then label those slices Compare with data debugging viewers like Spotlight for tabular/embedding inspection Resources Website Documentation GitHub (nomic ai/nomic) Buzz & Reception Nomic (maker of Atlas and the open Nomic Embed models) is a well known name in open embeddings; the nomic client sits at 1.9k stars (GitHub API, 2026 07 08), with the interactive map service as the hosted product on top."
+    },
+    {
       "id": "nvidia-nim",
       "name": "NVIDIA NIM",
       "type": "tool",
@@ -10287,6 +10779,89 @@
       "word_count": 391,
       "body_html": "<h2>Overview</h2>\n<p>A model-serving convenience tool from the BentoML team: one command starts a curated open model (Llama, Qwen, Mistral...) as an OpenAI-compatible server backed by vLLM, with a built-in chat UI and a path to cloud deployment through BentoML/BentoCloud.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>OpenLLM earns a place in the Arsenal because it directly addresses a recurring decision point: you want <code>openllm serve &lt;model&gt;</code> simplicity with production-grade vLLM serving underneath. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>One-command serving of curated open models</li>\n<li>OpenAI-compatible endpoints plus built-in chat UI</li>\n<li>BentoML integration for packaging and cloud deploys</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>OpenLLM maintains a repo of model recipes (engine config, quantization, prompts); <code>openllm serve</code> pulls the recipe, launches a vLLM-backed BentoML service, and exposes OpenAI-style routes so existing clients work unchanged.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install openllm\nopenllm serve llama3.2:1b\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want <code>openllm serve &lt;model&gt;</code> simplicity with production-grade vLLM serving underneath</li>\n<li><strong>Scenario</strong>: you're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want <code>openllm serve &lt;model&gt;</code> simplicity with production-grade vLLM serving underneath</li>\n<li>You're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer</p>\n</li>\n<li>\n<p>Local laptop experimentation without GPUs; Ollama's quantized-first workflow fits better</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>vllm</code>, <code>ollama</code>, <code>text-generation-inference</code> before adopting — they compete for the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>openllm</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/bentoml/OpenLLM\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://github.com/bentoml/OpenLLM#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/bentoml/OpenLLM\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>12,386 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview A model serving convenience tool from the BentoML team: one command starts a curated open model (Llama, Qwen, Mistral...) as an OpenAI compatible server backed by vLLM, with a built in chat UI and a path to cloud deployment through BentoML/BentoCloud. Why It's in the Arsenal OpenLLM earns a place in the Arsenal because it directly addresses a recurring decision point: you want openllm serve <model simplicity with production grade vLLM serving underneath. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features One command serving of curated open models OpenAI compatible endpoints plus built in chat UI BentoML integration for packaging and cloud deploys Architecture / How It Works OpenLLM maintains a repo of model recipes (engine config, quantization, prompts); openllm serve pulls the recipe, launches a vLLM backed BentoML service, and exposes OpenAI style routes so existing clients work unchanged. Getting Started Use Cases 1. Scenario : you want openllm serve <model simplicity with production grade vLLM serving underneath 2. Scenario : you're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service 3. Scenario where this is NOT the right fit : you need bleeding edge engine features immediately — using vLLM directly removes a wrapper layer — evaluate an alternative instead Strengths You want openllm serve <model simplicity with production grade vLLM serving underneath You're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service Limitations / When NOT to Use You need bleeding edge engine features immediately — using vLLM directly removes a wrapper layer Local laptop experimentation without GPUs; Ollama's quantized first workflow fits better Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against vllm, ollama, text generation inference before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID openllm. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 12,386 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "openpipe-art",
+      "name": "OpenPipe ART",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps",
+      "url": "content/tools/model-layer/openpipe-art",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0); OpenPipe also offers a hosted training/inference platform",
+      "tags": [
+        "fine-tuning",
+        "agents",
+        "rlhf"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Library is free and open source; hosted OpenPipe platform is usage-based",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/OpenPipe/ART",
+      "docs_url": "https://docs.openpipe.ai/introduction",
+      "github_url": "https://github.com/OpenPipe/ART",
+      "alternatives": [
+        "trl",
+        "unsloth",
+        "llamafactory"
+      ],
+      "integrates_with": [
+        "trl"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You want to improve a multi-step agent on a task where success is measurable (did the trajectory achieve the goal?) rather than collecting labeled step-by-step supervision",
+        "You want RL fine-tuning (GRPO) with a reduced reward-engineering burden — its RULER approach uses an LLM judge to score trajectories instead of a hand-built reward function"
+      ],
+      "avoid_when": [
+        "Your task is single-turn or already solved by prompting/SFT — RL fine-tuning adds substantial complexity and compute for little gain",
+        "You cannot define any reliable success signal or judge for the task — RL without a trustworthy reward will optimize the wrong thing"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "OpenPipe/ART verified ~10.3k stars, Apache-2.0, last push 2026-07-08 via GitHub API. RULER (LLM-judge reward) effectiveness is reported by the project and early adopters; RL fine-tuning results are task-dependent — validate on your own task before trusting sample-efficiency claims.",
+      "verdict": "recommended",
+      "verdict_rationale": "A focused, fast-moving open-source library that makes RL fine-tuning of agents tractable by cutting reward engineering via an LLM judge — a distinct capability from SFT-oriented fine-tuning tools",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/openpipe-art.md",
+      "slug": "openpipe-art",
+      "section_path": "content/tools/model-layer",
+      "display_name": "OpenPipe ART",
+      "summary": "Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 553,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> ART (Agent Reinforcement Trainer) is an open-source library for RL fine-tuning of multi-step LLM agents using GRPO, with a \"RULER\" LLM-judge reward that removes most hand-built reward engineering — so you train on task outcomes, not labeled steps. Apache-2.0; recommended for outcome-measurable agent tasks.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>ART, from OpenPipe, is an open-source trainer for improving LLM <em>agents</em> with reinforcement learning. Instead of supervised fine-tuning on labeled examples, it optimizes a model against task outcomes over multi-step trajectories using GRPO. Its RULER component uses an LLM as a judge to score trajectories, so you avoid writing a bespoke reward function for every task.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Most fine-tuning tooling (TRL, Unsloth, LLaMA-Factory) centers on SFT or single-turn preference optimization. Training a multi-step agent to actually complete tasks is a different problem, and reward engineering is the usual blocker. ART earns a model-layer entry because it targets that gap — outcome-driven RL for agents with a judge-based reward — which is why it grew to ~10k stars quickly rather than being redundant with existing trainers.</p>\n<h2>Key Features</h2>\n<ul>\n<li>RL fine-tuning of multi-step agents via GRPO (group-relative policy optimization)</li>\n<li>RULER: an LLM-judge reward that scores trajectories, replacing hand-built reward functions</li>\n<li>Integrations with common inference/training backends and popular open models</li>\n<li>Runnable locally or against OpenPipe's hosted platform for managed training/inference</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You define an agent task and let it roll out trajectories; ART groups sampled trajectories and applies GRPO to update the policy toward higher-reward behavior. Rather than requiring a numeric reward function, RULER prompts an LLM judge to rank/score trajectories against the task goal, and that signal drives the RL update — turning \"did the agent succeed?\" into a usable training reward.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install openpipe-art\n# Define a rollout that runs your agent and returns a trajectory,\n# then train with GRPO + RULER scoring. See the ART docs (Resources)\n# for the current trainer API, backends, and example notebooks.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: improving a tool-using agent on a benchmark where success is checkable (task completed / not), using outcome reward instead of labeled steps</li>\n<li><strong>Scenario</strong>: bootstrapping a reward from an LLM judge (RULER) when writing a precise reward function for a fuzzy task would be impractical</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Makes RL fine-tuning of agents approachable by cutting the biggest cost — reward engineering — via an LLM judge</li>\n<li>Optimizes real task outcomes over trajectories, which SFT cannot directly do</li>\n<li>Open source (Apache-2.0), actively developed, with a hosted option for scaling</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>RL fine-tuning is complex and compute-hungry — unjustified for single-turn tasks solvable by prompting or SFT</li>\n<li>Reward quality is everything: a weak or gameable LLM judge will steer the model toward reward hacking</li>\n<li>Fast-moving beta: APIs and best practices change, so pin versions and expect iteration</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use after SFT: bootstrap with supervised fine-tuning (e.g. via <a href=\"./trl.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">TRL</a> or <a href=\"./llamafactory.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LLaMA-Factory</a>), then apply ART's RL to optimize multi-step outcomes</li>\n<li>Pair with <a href=\"./unsloth.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Unsloth</a>-style efficient training backends where supported to reduce GPU cost</li>\n<li>Serve the resulting agent model on a serving platform (Baseten, Modal) once trained</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://openpipe.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.openpipe.ai/introduction\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/OpenPipe/ART\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub (OpenPipe/ART)</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>ART reached ~10.3k GitHub stars with active daily development (GitHub API, 2026-07-08), reflecting strong interest in practical RL fine-tuning for agents and in the RULER judge-as-reward idea specifically.</p>\n",
+      "body_text": "TL;DR: ART (Agent Reinforcement Trainer) is an open source library for RL fine tuning of multi step LLM agents using GRPO, with a \"RULER\" LLM judge reward that removes most hand built reward engineering — so you train on task outcomes, not labeled steps. Apache 2.0; recommended for outcome measurable agent tasks. Overview ART, from OpenPipe, is an open source trainer for improving LLM agents with reinforcement learning. Instead of supervised fine tuning on labeled examples, it optimizes a model against task outcomes over multi step trajectories using GRPO. Its RULER component uses an LLM as a judge to score trajectories, so you avoid writing a bespoke reward function for every task. Why It's in the Arsenal Most fine tuning tooling (TRL, Unsloth, LLaMA Factory) centers on SFT or single turn preference optimization. Training a multi step agent to actually complete tasks is a different problem, and reward engineering is the usual blocker. ART earns a model layer entry because it targets that gap — outcome driven RL for agents with a judge based reward — which is why it grew to 10k stars quickly rather than being redundant with existing trainers. Key Features RL fine tuning of multi step agents via GRPO (group relative policy optimization) RULER: an LLM judge reward that scores trajectories, replacing hand built reward functions Integrations with common inference/training backends and popular open models Runnable locally or against OpenPipe's hosted platform for managed training/inference Architecture / How It Works You define an agent task and let it roll out trajectories; ART groups sampled trajectories and applies GRPO to update the policy toward higher reward behavior. Rather than requiring a numeric reward function, RULER prompts an LLM judge to rank/score trajectories against the task goal, and that signal drives the RL update — turning \"did the agent succeed?\" into a usable training reward. Getting Started Use Cases 1. Scenario : improving a tool using agent on a benchmark where success is checkable (task completed / not), using outcome reward instead of labeled steps 2. Scenario : bootstrapping a reward from an LLM judge (RULER) when writing a precise reward function for a fuzzy task would be impractical Strengths Makes RL fine tuning of agents approachable by cutting the biggest cost — reward engineering — via an LLM judge Optimizes real task outcomes over trajectories, which SFT cannot directly do Open source (Apache 2.0), actively developed, with a hosted option for scaling Limitations / When NOT to Use RL fine tuning is complex and compute hungry — unjustified for single turn tasks solvable by prompting or SFT Reward quality is everything: a weak or gameable LLM judge will steer the model toward reward hacking Fast moving beta: APIs and best practices change, so pin versions and expect iteration Integration Patterns Use after SFT: bootstrap with supervised fine tuning (e.g. via TRL or LLaMA Factory), then apply ART's RL to optimize multi step outcomes Pair with Unsloth style efficient training backends where supported to reduce GPU cost Serve the resulting agent model on a serving platform (Baseten, Modal) once trained Resources Website Documentation GitHub (OpenPipe/ART) Buzz & Reception ART reached 10.3k GitHub stars with active daily development (GitHub API, 2026 07 08), reflecting strong interest in practical RL fine tuning for agents and in the RULER judge as reward idea specifically."
     },
     {
       "id": "openrouter",
@@ -12503,6 +13078,86 @@
       "body_text": "TL;DR: In memory data store commonly used for caching, session memory, queues, and vector search. Open source or free to start. Best for fast operational memory/cache. Overview A mature, widely deployed in memory data store frequently reused in AI systems as a fast cache, session state store, message queue, or basic vector index, rather than a purpose built AI memory product. Why It's in the Arsenal Redis earns a place in the Arsenal because it directly addresses a recurring decision point: you already operate Redis and want to reuse it for agent session state, caching, or vector search instead of adding a new system. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Sub millisecond key/value and queue operations Optional vector search module for similarity queries Operationally mature with broad hosting support Architecture / How It Works Runs as an in memory data structure server; agent applications use it directly via client libraries for caching, pub/sub, or as a backing store for higher level memory frameworks. Getting Started Use Cases 1. Scenario : you already operate Redis and want to reuse it for agent session state, caching, or vector search instead of adding a new system 2. Scenario : you need very low latency key/value or queue based memory for an agent loop 3. Scenario : you want a mature, battle tested datastore rather than an AI specific memory product 4. Scenario where this is NOT the right fit : you need rich semantic memory extraction/summarization out of the box (consider Mem0 or Zep on top of or instead of Redis) — evaluate an alternative instead Strengths You already operate Redis and want to reuse it for agent session state, caching, or vector search instead of adding a new system You need very low latency key/value or queue based memory for an agent loop You want a mature, battle tested datastore rather than an AI specific memory product Limitations / When NOT to Use You need rich semantic memory extraction/summarization out of the box (consider Mem0 or Zep on top of or instead of Redis) Your dataset and query patterns need a purpose built vector database with advanced filtering at scale Integration Patterns Compare against Letta, Mem0, Zep before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID redis memory. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for memory management. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "reducto",
+      "name": "Reducto",
+      "type": "tool",
+      "job": [
+        "structured-output"
+      ],
+      "description": "Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines",
+      "url": "content/tools/data-ingestion/reducto",
+      "cost_model": "usage-based",
+      "pricing_detail": "Usage-based per-page pricing with starter credits; enterprise plans available",
+      "tags": [
+        "rag",
+        "data",
+        "structured-output"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Starter credits for evaluation; usage-based per-page billing beyond them",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://reducto.ai",
+      "docs_url": "https://docs.reducto.ai/overview",
+      "github_url": null,
+      "alternatives": [
+        "unstructured",
+        "llamaparse",
+        "mineru"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "Your RAG quality is bottlenecked by bad parsing of complex documents — tables, multi-column layouts, figures — where naive PDF-to-text loses structure that retrieval depends on",
+        "You want parsing plus layout-aware chunking as a managed API rather than maintaining an OCR/layout pipeline yourself"
+      ],
+      "avoid_when": [
+        "Your documents are simple, born-digital text where a free parser (or plain PDF text extraction) already produces clean output — a paid API adds cost for no gain",
+        "You need an on-prem/self-hosted parser for data-residency reasons — it is a hosted API"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Hosted document-parsing API (no public GitHub repo). Accuracy claims on complex tables/layouts are vendor-reported; evaluate on your own document mix. Pricing is usage-based per page — confirm current rates on the pricing page.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A strong managed option specifically for high-fidelity parsing of complex, table-heavy documents where open parsers underperform, though it is paid and hosted-only",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/reducto.md",
+      "slug": "reducto",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Reducto",
+      "summary": "Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 498,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> A hosted document-ingestion API focused on high-fidelity parsing of complex PDFs — tables, multi-column layouts, figures — into clean, layout-aware, chunk-ready output for RAG. Usage-based; a solid choice when parsing quality is your retrieval bottleneck.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Reducto is a document-parsing API aimed at the hardest part of RAG ingestion: turning messy real-world documents (financial filings, scientific papers, forms) into faithful structured text. It extracts tables, respects multi-column and figure layouts, and returns layout-aware chunks, so downstream retrieval indexes accurate content instead of garbled text.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>RAG systems fail silently when ingestion mangles tables or column order — retrieval then returns correct-looking but wrong context. Reducto earns a place because it targets that specific, high-impact failure mode with a managed API, competing with open parsers (Unstructured, MinerU) and LlamaParse on parsing fidelity for complex documents rather than on breadth of features.</p>\n<h2>Key Features</h2>\n<ul>\n<li>High-fidelity extraction of tables and complex layouts from PDFs and scanned documents</li>\n<li>Layout-aware chunking that preserves structure for retrieval</li>\n<li>Structured JSON output (blocks, tables, reading order) rather than a flat text dump</li>\n<li>Managed API removing the need to run and tune an OCR/layout stack</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>You submit a document to the API; Reducto performs layout analysis and OCR/parsing server-side, reconstructs reading order and table structure, and returns structured blocks (with tables preserved) plus optional chunking. The value is that layout understanding and table reconstruction — the parts that are hard to build and maintain — are handled as a service.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Hosted API — request an API key from the dashboard, then POST a document:\n# curl -X POST https://api.reducto.ai/parse \\\n#   -H \"Authorization: Bearer $REDUCTO_API_KEY\" \\\n#   -F \"document=@filing.pdf\"\n# See the docs (Resources) for SDKs and the current endpoint/response schema.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a finance RAG app ingesting 10-K filings whose tables must be extracted faithfully or answers become wrong</li>\n<li><strong>Scenario</strong>: a scientific-paper assistant that needs multi-column text and figure captions parsed in correct reading order before chunking</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Targets the highest-leverage RAG failure (bad parsing) rather than adding another orchestration layer</li>\n<li>Preserves tables and reading order, which flat PDF-to-text extraction routinely destroys</li>\n<li>Managed service removes the burden of maintaining OCR/layout models</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Paid and hosted-only: overkill for simple born-digital documents and unusable where data cannot leave your environment</li>\n<li>No public open-source implementation to inspect or self-host</li>\n<li>Accuracy claims are vendor-reported; real-world quality varies by document type, so benchmark on your own corpus</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Slot in as the parsing stage before chunking/embedding in a RAG pipeline, replacing a naive PDF loader</li>\n<li>Compare against open parsers <a href=\"../../projects/data-and-retrieval/unstructured.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Unstructured</a> and <a href=\"./mineru.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">MinerU</a> and against <a href=\"../../projects/data-and-retrieval/llamaparse.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LlamaParse</a>; use Reducto where their fidelity on your hardest documents falls short</li>\n<li>Feed structured output into a vector store (Qdrant, Chroma, pgvector) for retrieval</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://reducto.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.reducto.ai/overview\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Reducto is frequently cited among the managed document-parsing options teams evaluate when open parsers underperform on complex layouts; as a closed API it has no public repo, so adoption signal comes from case studies rather than stars.</p>\n",
+      "body_text": "TL;DR: A hosted document ingestion API focused on high fidelity parsing of complex PDFs — tables, multi column layouts, figures — into clean, layout aware, chunk ready output for RAG. Usage based; a solid choice when parsing quality is your retrieval bottleneck. Overview Reducto is a document parsing API aimed at the hardest part of RAG ingestion: turning messy real world documents (financial filings, scientific papers, forms) into faithful structured text. It extracts tables, respects multi column and figure layouts, and returns layout aware chunks, so downstream retrieval indexes accurate content instead of garbled text. Why It's in the Arsenal RAG systems fail silently when ingestion mangles tables or column order — retrieval then returns correct looking but wrong context. Reducto earns a place because it targets that specific, high impact failure mode with a managed API, competing with open parsers (Unstructured, MinerU) and LlamaParse on parsing fidelity for complex documents rather than on breadth of features. Key Features High fidelity extraction of tables and complex layouts from PDFs and scanned documents Layout aware chunking that preserves structure for retrieval Structured JSON output (blocks, tables, reading order) rather than a flat text dump Managed API removing the need to run and tune an OCR/layout stack Architecture / How It Works You submit a document to the API; Reducto performs layout analysis and OCR/parsing server side, reconstructs reading order and table structure, and returns structured blocks (with tables preserved) plus optional chunking. The value is that layout understanding and table reconstruction — the parts that are hard to build and maintain — are handled as a service. Getting Started Use Cases 1. Scenario : a finance RAG app ingesting 10 K filings whose tables must be extracted faithfully or answers become wrong 2. Scenario : a scientific paper assistant that needs multi column text and figure captions parsed in correct reading order before chunking Strengths Targets the highest leverage RAG failure (bad parsing) rather than adding another orchestration layer Preserves tables and reading order, which flat PDF to text extraction routinely destroys Managed service removes the burden of maintaining OCR/layout models Limitations / When NOT to Use Paid and hosted only: overkill for simple born digital documents and unusable where data cannot leave your environment No public open source implementation to inspect or self host Accuracy claims are vendor reported; real world quality varies by document type, so benchmark on your own corpus Integration Patterns Slot in as the parsing stage before chunking/embedding in a RAG pipeline, replacing a naive PDF loader Compare against open parsers Unstructured and MinerU and against LlamaParse; use Reducto where their fidelity on your hardest documents falls short Feed structured output into a vector store (Qdrant, Chroma, pgvector) for retrieval Resources Website Documentation Buzz & Reception Reducto is frequently cited among the managed document parsing options teams evaluate when open parsers underperform on complex layouts; as a closed API it has no public repo, so adoption signal comes from case studies rather than stars."
+    },
+    {
       "id": "replicate",
       "name": "Replicate",
       "type": "tool",
@@ -14045,6 +14700,87 @@
       "body_text": "Overview A niche tool that extracts a website's visual/design system — colors, typography, layout patterns — into structured data an AI agent can reuse, rather than working from raw screenshots. Why It's in the Arsenal Taste Lab earns a place in the Arsenal because it directly addresses a recurring decision point: you want to extract a website's visual/design system programmatically for an agent to reuse or reference. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Extracts structured 'design DNA' from a live website Output intended for direct agent consumption Architecture / How It Works Analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design aware agent. Getting Started Use Cases 1. Scenario : you want to extract a website's visual/design system programmatically for an agent to reuse or reference 2. Scenario : you're building a design aware agent and need structured 'design DNA' rather than raw screenshots 3. Scenario where this is NOT the right fit : you need general purpose web scraping/crawling (this tool is narrowly scoped to design extraction) — evaluate an alternative instead Strengths You want to extract a website's visual/design system programmatically for an agent to reuse or reference You're building a design aware agent and need structured 'design DNA' rather than raw screenshots Limitations / When NOT to Use You need general purpose web scraping/crawling (this tool is narrowly scoped to design extraction) You need an open source or self hostable option Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Taste Lab Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "tavily",
+      "name": "Tavily",
+      "type": "tool",
+      "job": [
+        "web-scraping"
+      ],
+      "description": "Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call",
+      "url": "content/tools/data-ingestion/tavily",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier with a monthly API-credit allowance; usage-based paid plans above it",
+      "tags": [
+        "agents",
+        "retrieval",
+        "rag"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Free monthly API-credit allowance for development; paid tiers scale credits",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://github.com/tavily-ai",
+      "docs_url": "https://docs.tavily.com/welcome",
+      "github_url": "https://github.com/tavily-ai",
+      "alternatives": [
+        "exa",
+        "firecrawl-tool",
+        "jina-reader"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "Your agent needs current web knowledge and you want one call that returns ranked, de-duplicated, cleaned results instead of raw HTML you must scrape and parse yourself",
+        "You want a search step that already trims boilerplate and can return a synthesized answer plus source snippets, minimizing tokens fed into the model"
+      ],
+      "avoid_when": [
+        "You need to crawl and fully render arbitrary sites (JS-heavy pages, auth walls) — a crawler/browser tool fits better than a search API",
+        "Data residency or offline operation is required — it is a hosted API with no self-hosted option"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Official Python SDK (tavily-ai/tavily-python) verified at 1.3k stars, MIT, last push 2026-06-10 via GitHub API on 2026-07-08. The search API itself is a closed hosted service; free-tier credit limits are directional (confirm current numbers on the pricing page).",
+      "verdict": "recommended",
+      "verdict_rationale": "The de facto search API for agent frameworks — LLM-tuned ranking and cleaned, token-efficient results make it a lower-friction default than scraping search engines yourself",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/tavily.md",
+      "slug": "tavily",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Tavily",
+      "summary": "Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 559,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> A hosted search API designed for LLM agents: one query returns ranked, cleaned, de-duplicated results (optionally with extracted page content and a synthesized answer), so you skip building a search-scrape-clean pipeline. Freemium; recommended as the default agent search step.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Tavily is a search API built specifically to feed LLMs and agents rather than humans. A single call runs a search, filters and de-duplicates results, strips boilerplate, and returns LLM-ready snippets — optionally including extracted full-page content and a short synthesized answer. It exists because wiring general web search into an agent otherwise means scraping a search engine, fetching pages, and cleaning HTML before anything reaches the model.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Almost every agent framework's \"web search\" tool now defaults to or documents Tavily, because it collapses the search→fetch→clean→rank pipeline into one API call and returns token-efficient text. That makes it the pragmatic baseline for giving an agent current web knowledge, which is why it belongs in the data-ingestion phase alongside crawlers and readers rather than as a novelty.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Single-call search returning ranked, de-duplicated, cleaned results tuned for LLM consumption</li>\n<li>Optional content extraction (full page text) and a synthesized answer with cited sources</li>\n<li>Search-depth and domain include/exclude controls to scope results</li>\n<li>First-class SDKs and framework integrations (LangChain, LlamaIndex, and others)</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Tavily runs the query against web sources, applies its own relevance ranking and content cleaning server-side, and returns structured JSON (results, snippets, optional extracted content and answer). The client is thin — you send a query plus parameters (search depth, max results, domain filters) and get back model-ready text, so the heavy lifting of fetching and cleaning happens in the service.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install tavily-python\n# from tavily import TavilyClient\n# client = TavilyClient(api_key=\"tvly-...\")\n# resp = client.search(\"latest on RAG evaluation\", search_depth=\"advanced\")\n# for r in resp[\"results\"]:\n#     print(r[\"title\"], r[\"url\"])\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a research agent that must ground answers in current sources — Tavily supplies ranked snippets with URLs to cite</li>\n<li><strong>Scenario</strong>: a RAG pipeline needing fresh web context to supplement a static index, retrieved as clean text ready to embed or pass to the model</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Removes the search-scrape-clean plumbing: one call yields ranked, cleaned, citation-ready text</li>\n<li>Token-efficient output (boilerplate stripped, optional synthesized answer) reduces context cost versus dumping raw pages</li>\n<li>Broadly integrated across agent frameworks, so adoption is low-friction</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Hosted only — no self-hosted or on-prem option, so it is unsuitable where data must stay in your environment</li>\n<li>It is a search API, not a full crawler/browser: JS-heavy rendering, authenticated pages, or deep site crawls need a different tool</li>\n<li>Result quality and freshness depend on Tavily's index and ranking, which you cannot fully inspect or tune</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Register Tavily as the search tool in an agent framework, then let the planner call it when it needs external facts</li>\n<li>Pair with a crawler like <a href=\"../data-ingestion/firecrawl-tool.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Firecrawl</a> or a reader like <a href=\"../data-ingestion/jina-reader.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Jina Reader</a>: Tavily finds and ranks, the crawler/reader fetches full content when deep extraction is needed</li>\n<li>Contrast with <a href=\"./exa.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Exa</a>, which emphasizes embeddings/neural search semantics over keyword-style web search</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.tavily.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.tavily.com/welcome\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/tavily-ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub (tavily-ai)</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Tavily has become the commonly-documented default search tool across LLM agent frameworks; its open-source Python SDK sits at ~1.3k stars (GitHub API, 2026-07-08) with the closed search service behind it.</p>\n",
+      "body_text": "TL;DR: A hosted search API designed for LLM agents: one query returns ranked, cleaned, de duplicated results (optionally with extracted page content and a synthesized answer), so you skip building a search scrape clean pipeline. Freemium; recommended as the default agent search step. Overview Tavily is a search API built specifically to feed LLMs and agents rather than humans. A single call runs a search, filters and de duplicates results, strips boilerplate, and returns LLM ready snippets — optionally including extracted full page content and a short synthesized answer. It exists because wiring general web search into an agent otherwise means scraping a search engine, fetching pages, and cleaning HTML before anything reaches the model. Why It's in the Arsenal Almost every agent framework's \"web search\" tool now defaults to or documents Tavily, because it collapses the search→fetch→clean→rank pipeline into one API call and returns token efficient text. That makes it the pragmatic baseline for giving an agent current web knowledge, which is why it belongs in the data ingestion phase alongside crawlers and readers rather than as a novelty. Key Features Single call search returning ranked, de duplicated, cleaned results tuned for LLM consumption Optional content extraction (full page text) and a synthesized answer with cited sources Search depth and domain include/exclude controls to scope results First class SDKs and framework integrations (LangChain, LlamaIndex, and others) Architecture / How It Works Tavily runs the query against web sources, applies its own relevance ranking and content cleaning server side, and returns structured JSON (results, snippets, optional extracted content and answer). The client is thin — you send a query plus parameters (search depth, max results, domain filters) and get back model ready text, so the heavy lifting of fetching and cleaning happens in the service. Getting Started Use Cases 1. Scenario : a research agent that must ground answers in current sources — Tavily supplies ranked snippets with URLs to cite 2. Scenario : a RAG pipeline needing fresh web context to supplement a static index, retrieved as clean text ready to embed or pass to the model Strengths Removes the search scrape clean plumbing: one call yields ranked, cleaned, citation ready text Token efficient output (boilerplate stripped, optional synthesized answer) reduces context cost versus dumping raw pages Broadly integrated across agent frameworks, so adoption is low friction Limitations / When NOT to Use Hosted only — no self hosted or on prem option, so it is unsuitable where data must stay in your environment It is a search API, not a full crawler/browser: JS heavy rendering, authenticated pages, or deep site crawls need a different tool Result quality and freshness depend on Tavily's index and ranking, which you cannot fully inspect or tune Integration Patterns Register Tavily as the search tool in an agent framework, then let the planner call it when it needs external facts Pair with a crawler like Firecrawl or a reader like Jina Reader: Tavily finds and ranks, the crawler/reader fetches full content when deep extraction is needed Contrast with Exa, which emphasizes embeddings/neural search semantics over keyword style web search Resources Website Documentation GitHub (tavily ai) Buzz & Reception Tavily has become the commonly documented default search tool across LLM agent frameworks; its open source Python SDK sits at 1.3k stars (GitHub API, 2026 07 08) with the closed search service behind it."
+    },
+    {
       "id": "temporal",
       "name": "Temporal",
       "type": "tool",
@@ -15158,6 +15894,87 @@
       "word_count": 289,
       "body_html": "<h2>Overview</h2>\n<p>A macOS-native dictation tool with AI-assisted formatting and editing, designed to run locally and privately rather than sending audio to a cloud transcription service.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Vaani earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast, private, macOS-native dictation with AI-assisted formatting and editing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Local-first, private macOS dictation</li>\n<li>AI-assisted formatting/editing of transcribed text</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Audio is captured and transcribed locally on-device, with an AI formatting pass cleaning up and structuring the resulting text before insertion.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://vaani.app\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want fast, private, macOS-native dictation with AI-assisted formatting and editing</li>\n<li><strong>Scenario</strong>: you need a local-first dictation tool rather than a cloud-only transcription service</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you're not on macOS — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want fast, private, macOS-native dictation with AI-assisted formatting and editing</li>\n<li>You need a local-first dictation tool rather than a cloud-only transcription service</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You're not on macOS</p>\n</li>\n<li>\n<p>You need a cross-platform or open-source dictation solution</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://vaani.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Vaani</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview A macOS native dictation tool with AI assisted formatting and editing, designed to run locally and privately rather than sending audio to a cloud transcription service. Why It's in the Arsenal Vaani earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast, private, macOS native dictation with AI assisted formatting and editing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Local first, private macOS dictation AI assisted formatting/editing of transcribed text Architecture / How It Works Audio is captured and transcribed locally on device, with an AI formatting pass cleaning up and structuring the resulting text before insertion. Getting Started Use Cases 1. Scenario : you want fast, private, macOS native dictation with AI assisted formatting and editing 2. Scenario : you need a local first dictation tool rather than a cloud only transcription service 3. Scenario where this is NOT the right fit : you're not on macOS — evaluate an alternative instead Strengths You want fast, private, macOS native dictation with AI assisted formatting and editing You need a local first dictation tool rather than a cloud only transcription service Limitations / When NOT to Use You're not on macOS You need a cross platform or open source dictation solution Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Vaani Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "vellum",
+      "name": "Vellum",
+      "type": "tool",
+      "job": [
+        "prompt-management",
+        "evaluation"
+      ],
+      "description": "Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK",
+      "url": "content/tools/dx-and-tooling/vellum",
+      "cost_model": "freemium",
+      "pricing_detail": "Free tier for evaluation; paid team/enterprise plans for production usage and collaboration",
+      "tags": [
+        "llm",
+        "evaluation"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Free tier for small projects/evaluation; paid plans for production volume and team features",
+      "self_hostable": false,
+      "open_source": false,
+      "source_url": "https://www.vellum.ai",
+      "docs_url": "https://docs.vellum.ai/home/getting-started/overview",
+      "github_url": null,
+      "alternatives": [
+        "langsmith",
+        "humanloop",
+        "promptlayer",
+        "langfuse-prompts"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "production"
+      ],
+      "best_when": [
+        "Non-engineers (PMs, domain experts) need to iterate on prompts and workflows collaboratively while engineers keep versioning, evals, and deployment under control",
+        "You want prompt/workflow authoring, side-by-side evaluation, and deployment in one platform rather than stitching several point tools together"
+      ],
+      "avoid_when": [
+        "You are a code-first team happy managing prompts in your repo with an open eval/observability stack — a closed platform adds cost and lock-in you may not need",
+        "You require self-hosting or full data control — Vellum is a hosted, closed product"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Hosted, closed platform (no public GitHub repo). Feature breadth (authoring + eval + deploy) is vendor-described; evaluate the eval rigor against your needs. Free-tier limits are directional — confirm on the pricing page.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A capable all-in-one LLM-app platform whose real edge is cross-functional collaboration (non-engineers + engineers); code-first teams may prefer composing open tools instead",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/vellum.md",
+      "slug": "vellum",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Vellum",
+      "summary": "Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 501,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> A commercial platform for building, evaluating, versioning, and deploying LLM apps, with a visual builder for prompts/workflows plus an SDK — aimed at letting non-engineers and engineers collaborate on the same production app. Freemium; a solid choice when cross-functional prompt iteration matters.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Vellum is an end-to-end platform for LLM application development: authoring prompts and multi-step workflows (visually or via SDK), running evaluations against test suites, versioning changes, and deploying to production behind an API. It targets the workflow gap where product/domain experts want to shape prompts but engineers need versioning, testing, and deployment discipline.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Prompt-and-workflow iteration is often split across a playground, a spreadsheet of test cases, and ad-hoc deploys. Vellum earns a dx-and-tooling entry by unifying authoring, evaluation, and deployment with collaboration for non-engineers — a different emphasis than developer-first tools like LangSmith or open prompt registries, which is where it's worth reaching for over composing point tools.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Visual builder for prompts and multi-step workflows, plus an SDK for code-first use</li>\n<li>Evaluation suites: run prompt/workflow variants against test cases and compare outputs</li>\n<li>Versioning and environment management for prompts/workflows</li>\n<li>Deployment behind a managed API with monitoring of production requests</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Prompts and workflows are authored and versioned in Vellum's platform; you attach evaluation datasets and metrics to compare variants before promoting a version. Deployed workflows are served behind Vellum's API, and production requests are logged for monitoring. Engineers can drive the same objects via the SDK, so visual edits and code stay in sync on one source of truth.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-python\">pip install vellum-ai\n# from vellum.client import Vellum\n# client = Vellum(api_key=\"...\")\n# Author a prompt/workflow in the UI, then invoke the deployed version:\n# result = client.execute_workflow(workflow_deployment_name=\"my-workflow\", inputs=[...])\n# See docs (Resources) for eval suites and versioning.\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a support-automation team where PMs tune prompts and engineers own evals, versioning, and the production endpoint</li>\n<li><strong>Scenario</strong>: comparing several prompt/workflow variants against a labeled test set before promoting the winner to production</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Unifies authoring, evaluation, versioning, and deployment so teams stop stitching tools together</li>\n<li>Visual builder lowers the barrier for non-engineers while the SDK keeps engineers in control</li>\n<li>Built-in evaluation encourages test-before-deploy discipline for prompt changes</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Closed, hosted platform: lock-in and no self-hosting, which some teams cannot accept</li>\n<li>Code-first teams may prefer keeping prompts in-repo with open eval/observability tooling</li>\n<li>Eval depth and metrics are the platform's; specialized eval needs may still require a dedicated tool</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use Vellum as the collaborative authoring + eval + deploy layer, calling deployed workflows from your app via SDK/API</li>\n<li>Compare with developer-first <a href=\"../evaluation-and-observability/langsmith.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangSmith</a> and <a href=\"../evaluation-and-observability/humanloop.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Humanloop</a>, and with prompt registries <a href=\"./promptlayer.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PromptLayer</a> and <a href=\"./langfuse-prompts.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Langfuse Prompts</a></li>\n<li>Pair with a dedicated eval framework (Promptfoo, Ragas) when you need evaluation beyond the platform's built-ins</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.vellum.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Website</a></li>\n<li><a href=\"https://docs.vellum.ai/home/getting-started/overview\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>Vellum is a frequently-shortlisted commercial LLM-app platform, particularly for teams that need non-engineers in the prompt-iteration loop; as a closed product its traction shows through customer case studies rather than repo stars.</p>\n",
+      "body_text": "TL;DR: A commercial platform for building, evaluating, versioning, and deploying LLM apps, with a visual builder for prompts/workflows plus an SDK — aimed at letting non engineers and engineers collaborate on the same production app. Freemium; a solid choice when cross functional prompt iteration matters. Overview Vellum is an end to end platform for LLM application development: authoring prompts and multi step workflows (visually or via SDK), running evaluations against test suites, versioning changes, and deploying to production behind an API. It targets the workflow gap where product/domain experts want to shape prompts but engineers need versioning, testing, and deployment discipline. Why It's in the Arsenal Prompt and workflow iteration is often split across a playground, a spreadsheet of test cases, and ad hoc deploys. Vellum earns a dx and tooling entry by unifying authoring, evaluation, and deployment with collaboration for non engineers — a different emphasis than developer first tools like LangSmith or open prompt registries, which is where it's worth reaching for over composing point tools. Key Features Visual builder for prompts and multi step workflows, plus an SDK for code first use Evaluation suites: run prompt/workflow variants against test cases and compare outputs Versioning and environment management for prompts/workflows Deployment behind a managed API with monitoring of production requests Architecture / How It Works Prompts and workflows are authored and versioned in Vellum's platform; you attach evaluation datasets and metrics to compare variants before promoting a version. Deployed workflows are served behind Vellum's API, and production requests are logged for monitoring. Engineers can drive the same objects via the SDK, so visual edits and code stay in sync on one source of truth. Getting Started Use Cases 1. Scenario : a support automation team where PMs tune prompts and engineers own evals, versioning, and the production endpoint 2. Scenario : comparing several prompt/workflow variants against a labeled test set before promoting the winner to production Strengths Unifies authoring, evaluation, versioning, and deployment so teams stop stitching tools together Visual builder lowers the barrier for non engineers while the SDK keeps engineers in control Built in evaluation encourages test before deploy discipline for prompt changes Limitations / When NOT to Use Closed, hosted platform: lock in and no self hosting, which some teams cannot accept Code first teams may prefer keeping prompts in repo with open eval/observability tooling Eval depth and metrics are the platform's; specialized eval needs may still require a dedicated tool Integration Patterns Use Vellum as the collaborative authoring + eval + deploy layer, calling deployed workflows from your app via SDK/API Compare with developer first LangSmith and Humanloop, and with prompt registries PromptLayer and Langfuse Prompts Pair with a dedicated eval framework (Promptfoo, Ragas) when you need evaluation beyond the platform's built ins Resources Website Documentation Buzz & Reception Vellum is a frequently shortlisted commercial LLM app platform, particularly for teams that need non engineers in the prompt iteration loop; as a closed product its traction shows through customer case studies rather than repo stars."
     },
     {
       "id": "vercel",

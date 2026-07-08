@@ -94,6 +94,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md) | dx and tooling | prompt-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | evaluation, tracing, monitoring | freemium | Yes | No | No | python, typescript | recommended |
 | [LangSmith Hub](../dx-and-tooling/langsmith-hub.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
+| [LangWatch](../evaluation-and-observability/langwatch.md) | evaluation and observability | evaluation, tracing | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | prototyping | freemium | Yes | Yes | No | typescript, cpp | recommended |
 | [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [n8n](../orchestration/n8n.md) | orchestration | orchestration, prototyping | freemium | Yes | Yes | Yes | typescript | recommended |

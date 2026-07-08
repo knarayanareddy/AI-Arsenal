@@ -27,6 +27,8 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Anyscale](./anyscale.md)
+- [Baseten](./baseten.md)
 - [Cloudflare Workers AI](./cloudflare-workers-ai.md)
 - [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
@@ -35,8 +37,6 @@ Before picking a tool in this phase, consider:
 - [LoRAX](./lorax.md)
 - [NVIDIA NIM](./nvidia-nim.md)
 - [OpenLLM](./openllm.md)
-- [Ray](./ray.md)
-- [Ray Serve](./ray-serve.md)
 
 ### Most Popular
 
@@ -44,8 +44,10 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Anyscale](./anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [AWS Bedrock](./aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Azure AI Studio](./azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications
+- [Baseten](./baseten.md) — Managed platform to deploy and autoscale ML/LLM models in production, built on the open-source Truss packaging format with scale-to-zero
 - [BentoML](./bentoml.md) — A framework for packaging, deploying, and scaling AI model services
 - [Cloudflare Workers AI](./cloudflare-workers-ai.md) — Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure
 - [Cog (Replicate)](./cog.md) — Replicate's open tool for packaging ML models into containers — declare Python/CUDA deps and a predict interface, get a served HTTP API with no Dockerfile

@@ -136,6 +136,7 @@ This table is exhaustive for tools tagged with job = data-labeling.
 | [Label Studio](../data-ingestion/label-studio.md) | data ingestion | freemium | Yes | Yes | Yes | python | recommended |
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MinerU](../data-ingestion/mineru.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
+| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | freemium | Yes | No | No | python | solid-choice |
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | paid | Yes | No | No | python | recommended |
 | [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | paid | Yes | No | No | polyglot | recommended |

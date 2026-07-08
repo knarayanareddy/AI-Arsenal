@@ -138,6 +138,7 @@ This table is exhaustive for tools tagged with job = prompt-management.
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | freemium | Yes | No | No | python, typescript | recommended |
 | [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | freemium | Yes | No | No | python, typescript | recommended |
+| [Vellum](../dx-and-tooling/vellum.md) | dx and tooling | freemium | Yes | No | No | python | solid-choice |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

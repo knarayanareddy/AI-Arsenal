@@ -179,11 +179,13 @@ This table is exhaustive for tools tagged with job = evaluation.
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | freemium | Yes | No | No | python | watching |
 | [Deepchecks](../evaluation-and-observability/deepchecks.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
+| [Galileo](../evaluation-and-observability/galileo.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
 | [Inspect (UK AI Safety Institute)](../evaluation-and-observability/inspect-ai.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | freemium | Yes | No | No | python, typescript | recommended |
+| [LangWatch](../evaluation-and-observability/langwatch.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Evaluation Harness (EleutherAI)](../evaluation-and-observability/lm-evaluation-harness.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [OpenAI Evals](../evaluation-and-observability/openai-evals.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
@@ -193,6 +195,7 @@ This table is exhaustive for tools tagged with job = evaluation.
 | [Ragas](../evaluation-and-observability/ragas.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [TruLens](../evaluation-and-observability/trulens.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [UpTrain](../evaluation-and-observability/uptrain.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | use-with-caution |
+| [Vellum](../dx-and-tooling/vellum.md) | dx and tooling | freemium | Yes | No | No | python | solid-choice |
 | [Weights & Biases Weave](../evaluation-and-observability/wandb-weave.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |
 | [Weights & Biases](../model-layer/weights-biases.md) | model layer | freemium | Yes | No | No | python | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

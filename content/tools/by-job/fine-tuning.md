@@ -179,6 +179,7 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [OpenPipe ART](../model-layer/openpipe-art.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [PEFT](../model-layer/peft.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [PyTorch Lightning](../model-layer/pytorch-lightning.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
