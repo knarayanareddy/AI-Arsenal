@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T19:36:49.079Z | Entries: 656 | Schema version: 1.0.0
+Generated: 2026-07-08T19:40:31.335Z | Entries: 673 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -8,7 +8,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 - Projects: 116
 - Tools: 171
-- Papers: 63
+- Papers: 80
 - Tips: 116
 - People: 25
 - Digests: 1
@@ -339,8 +339,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - PaLM: Scaling Language Modeling with Pathways — 540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size
 - Deep Reinforcement Learning from Human Preferences — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
+- Training Verifiers to Solve Math Word Problems — The GSM8K paper: released the 8.5K grade-school math benchmark that anchored LLM reasoning evaluation for years, and introduced verifier-guided sampling — train a model to judge candidate solutions, sample many, pick the best — the seed of verification-based test-time compute
 - FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness — Reframed attention as an IO problem: tiling and online softmax keep the computation in GPU SRAM, avoiding materializing the N×N matrix — exact attention, 2-4x faster and linear memory, now compiled into effectively all training and serving stacks
-- DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 
 ## High-Impact Tips
 
