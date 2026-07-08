@@ -31,7 +31,9 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 
 ### Recently Added
 
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./fedus-2021-switch-transformer.md)
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md)
+- [Visual Instruction Tuning (LLaVA)](./liu-2023-llava.md)
 
 ### Most Popular
 
@@ -39,4 +41,6 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./fedus-2021-switch-transformer.md) — Simplified mixture-of-experts to top-1 routing (one expert per token), showing sparse models reach the same quality as dense ones up to 7× faster per FLOP — the recipe that made MoE the standard architecture for frontier-scale efficiency
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
+- [Visual Instruction Tuning (LLaVA)](./liu-2023-llava.md) — Connected a frozen CLIP vision encoder to a LLaMA-family LLM with just a linear projection, trained on GPT-4-generated visual instruction data — establishing the minimal recipe (encoder + projector + LLM) behind most open vision-language models

@@ -31,6 +31,7 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 
 ### Recently Added
 
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./chen-2021-codex.md)
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md)
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./zheng-2023-llm-as-a-judge.md)
 
@@ -40,5 +41,6 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./chen-2021-codex.md) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./zheng-2023-llm-as-a-judge.md) — Showed strong LLM judges agree with human judgments over 80% of the time, matching human-human agreement -- use LLM-as-judge for scalable open-ended evaluation, but mitigate its documented position, verbosity, and self-enhancement biases

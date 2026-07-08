@@ -32,6 +32,9 @@ When I am designing a retrieval or memory system for an LLM application, which t
 
 ### Recently Added
 
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./asai-2023-self-rag.md)
+- [REALM: Retrieval-Augmented Language Model Pre-Training](./guu-2020-realm.md)
+- [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./izacard-2020-fid.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./ji-2026-mragent.md)
 - [GrepSeek: Training Search Agents for Direct Corpus Interaction](./salemi-2026-grepseek.md)
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./edge-2024-graphrag.md)
@@ -44,8 +47,11 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./edge-2024-graphrag.md) — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
+- [REALM: Retrieval-Augmented Language Model Pre-Training](./guu-2020-realm.md) — First model to pretrain a language model jointly with a learned neural retriever over Wikipedia, backpropagating through retrieval — establishing that external knowledge can be a trained component of an LM rather than a bolt-on
+- [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./izacard-2020-fid.md) — Fusion-in-Decoder: encode each retrieved passage independently, concatenate the encodings, and let the decoder attend across all of them — scaling QA accuracy monotonically with passage count at linear (not quadratic) encoding cost
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
 - [GrepSeek: Training Search Agents for Direct Corpus Interaction](./salemi-2026-grepseek.md) — Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it
 - [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./sarthi-2024-raptor.md) — Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup

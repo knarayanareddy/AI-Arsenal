@@ -34,6 +34,7 @@ When I am deciding how to fine-tune, align, or adapt a model, which technique sh
 
 ### Recently Added
 
+- [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md)
 - [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./liang-2026-mipi.md)
 - [Constitutional AI: Harmlessness from AI Feedback](./bai-2022-constitutional-ai.md)
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md)
@@ -50,6 +51,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Constitutional AI: Harmlessness from AI Feedback](./bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
+- [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md) — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
 - [LoRA: Low-Rank Adaptation of Large Language Models](./hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint

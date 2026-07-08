@@ -33,6 +33,9 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 
 ### Recently Added
 
+- [Large Language Models are Zero-Shot Reasoners](./kojima-2022-zero-shot-cot.md)
+- [WebGPT: Browser-assisted question-answering with human feedback](./nakano-2021-webgpt.md)
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](./wang-2022-self-consistency.md)
 - [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./zhou-2026-colleague-skill.md)
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md)
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md)
@@ -47,8 +50,11 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Large Language Models are Zero-Shot Reasoners](./kojima-2022-zero-shot-cot.md) — Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
+- [WebGPT: Browser-assisted question-answering with human feedback](./nakano-2021-webgpt.md) — Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](./wang-2022-self-consistency.md) — Sample multiple reasoning chains at nonzero temperature and majority-vote the final answers: correct answers are reached by many diverse paths while errors scatter, yielding large accuracy gains at linear compute cost — the founding result of inference-time scaling
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./wei-2022-chain-of-thought.md) — Showed prompting a large enough model to produce intermediate reasoning steps improves multi-step reasoning accuracy -- use CoT for reasoning-heavy tasks, but don't trust the trace as an accurate explanation of the model's actual computation
 - [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](./yang-2024-swe-agent.md) — Showed a custom agent-computer interface (simplified LM-friendly commands for editing/testing code) matters as much as model quality -- treat interface design, not just model choice, as a first-class variable for coding agents
 - [ReAct: Synergizing Reasoning and Acting in Language Models](./yao-2022-react.md) — Showed interleaving reasoning traces with external actions and their observations outperforms reasoning-only or acting-only prompting, meaning the reason-act-observe loop should be your default agent architecture pattern before reaching for something more complex

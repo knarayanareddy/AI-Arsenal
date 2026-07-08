@@ -13,7 +13,7 @@
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
 | [projects](./projects/) | 73 entries | 2026-07-08 |
-| [research](./research/) | 34 entries | 2026-07-08 |
+| [research](./research/) | 48 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
 | [tools](./tools/) | 140 entries | 2026-07-08 |
@@ -22,15 +22,15 @@
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md)
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./research/evaluation-and-safety/chen-2021-codex.md)
+- [PaLM: Scaling Language Modeling with Pathways](./research/foundational/chowdhery-2022-palm.md)
+- [Deep Reinforcement Learning from Human Preferences](./research/training-and-alignment/christiano-2017-rlhf.md)
 - [ClearML](./tools/model-layer/clearml.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
 - [Elasticsearch](./tools/data-ingestion/elasticsearch.md)
-- [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
-- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [LLM Guard](./tools/evaluation-and-observability/llm-guard.md)
-- [LoRAX](./tools/serving-and-deployment/lorax.md)
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./research/architectures/fedus-2021-switch-transformer.md)
 
 ## Most Popular
 
@@ -80,6 +80,7 @@
 - [Arena-Hard-Auto](./benchmarks/evaluation-methods/arena-hard.md) — 
 - [Argilla](./tools/data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Arvind Narayanan](./community/people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./research/retrieval-and-memory/asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./tips-and-tricks/prompting/ask-for-missing-inputs-before-solving.md) — 
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
@@ -96,4 +97,3 @@
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates

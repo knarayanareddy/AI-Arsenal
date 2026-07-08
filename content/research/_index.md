@@ -6,27 +6,27 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 7 entries | 2026-07-08 |
-| [architectures](./architectures/) | 1 entries | 2026-07-08 |
-| [evaluation and safety](./evaluation-and-safety/) | 2 entries | 2026-07-08 |
-| [foundational](./foundational/) | 5 entries | 2026-07-08 |
-| [inference and efficiency](./inference-and-efficiency/) | 2 entries | 2026-07-08 |
-| [retrieval and memory](./retrieval-and-memory/) | 5 entries | 2026-07-08 |
+| [agents and reasoning](./agents-and-reasoning/) | 10 entries | 2026-07-08 |
+| [architectures](./architectures/) | 3 entries | 2026-07-08 |
+| [evaluation and safety](./evaluation-and-safety/) | 3 entries | 2026-07-08 |
+| [foundational](./foundational/) | 7 entries | 2026-07-08 |
+| [inference and efficiency](./inference-and-efficiency/) | 4 entries | 2026-07-08 |
+| [retrieval and memory](./retrieval-and-memory/) | 8 entries | 2026-07-08 |
 | [surveys](./surveys/) | 0 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 8 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 9 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./retrieval-and-memory/asai-2023-self-rag.md)
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./evaluation-and-safety/chen-2021-codex.md)
+- [PaLM: Scaling Language Modeling with Pathways](./foundational/chowdhery-2022-palm.md)
+- [Deep Reinforcement Learning from Human Preferences](./training-and-alignment/christiano-2017-rlhf.md)
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./architectures/fedus-2021-switch-transformer.md)
 - [Gemma 4 Technical Report](./architectures/gemma-team-2026-gemma4.md)
+- [REALM: Retrieval-Augmented Language Model Pre-Training](./retrieval-and-memory/guu-2020-realm.md)
+- [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./retrieval-and-memory/izacard-2020-fid.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./training-and-alignment/liang-2026-mipi.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./retrieval-and-memory/salemi-2026-grepseek.md)
-- [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./agents-and-reasoning/zhou-2026-colleague-skill.md)
-- [Language Models are Few-Shot Learners](./foundational/brown-2020-gpt3.md)
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./foundational/devlin-2018-bert.md)
-- [Emerging AI Techniques](./emerging-techniques.md)
-- [Must-Read AI Papers](./must-read-papers.md)
-- [SOTA Benchmarks](./sota-benchmarks.md)
+- [Large Language Models are Zero-Shot Reasoners](./agents-and-reasoning/kojima-2022-zero-shot-cot.md)
 
 ## Most Popular
 
@@ -34,8 +34,12 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./retrieval-and-memory/asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [Constitutional AI: Harmlessness from AI Feedback](./training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
 - [Language Models are Few-Shot Learners](./foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
+- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./evaluation-and-safety/chen-2021-codex.md) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
+- [PaLM: Scaling Language Modeling with Pathways](./foundational/chowdhery-2022-palm.md) — 540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size
+- [Deep Reinforcement Learning from Human Preferences](./training-and-alignment/christiano-2017-rlhf.md) — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./training-and-alignment/deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./training-and-alignment/dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./foundational/devlin-2018-bert.md) — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
@@ -43,25 +47,35 @@ _No star-tracked entries yet._
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./retrieval-and-memory/edge-2024-graphrag.md) — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
 - [Emerging AI Techniques](./emerging-techniques.md) — Current techniques worth tracking across reasoning, context, inference, and multimodal systems
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./evaluation-and-safety/es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./architectures/fedus-2021-switch-transformer.md) — Simplified mixture-of-experts to top-1 routing (one expert per token), showing sparse models reach the same quality as dense ones up to 7× faster per FLOP — the recipe that made MoE the standard architecture for frontier-scale efficiency
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./inference-and-efficiency/frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./retrieval-and-memory/gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
 - [Gemma 4 Technical Report](./architectures/gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
+- [REALM: Retrieval-Augmented Language Model Pre-Training](./retrieval-and-memory/guu-2020-realm.md) — First model to pretrain a language model jointly with a learned neural retriever over Wikipedia, backpropagating through retrieval — establishing that external knowledge can be a trained component of an LM rather than a bolt-on
 - [LoRA: Low-Rank Adaptation of Large Language Models](./training-and-alignment/hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
+- [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./retrieval-and-memory/izacard-2020-fid.md) — Fusion-in-Decoder: encode each retrieved passage independently, concatenate the encodings, and let the decoder attend across all of them — scaling QA accuracy monotonically with passage count at linear (not quadratic) encoding cost
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./retrieval-and-memory/ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
+- [Large Language Models are Zero-Shot Reasoners](./agents-and-reasoning/kojima-2022-zero-shot-cot.md) — Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone
 - [Fast Inference from Transformers via Speculative Decoding](./inference-and-efficiency/leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](./foundational/lewis-2020-rag.md) — Coined 'RAG': a jointly-trained retriever plus generator beats closed-book generation on knowledge-intensive tasks -- ground generation in retrieved documents, though production RAG today uses a simpler decoupled pipeline
 - [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./training-and-alignment/liang-2026-mipi.md) — LLM RL optimizes the training-engine policy, but you deploy the inference-engine policy -- and the two disagree on trajectory probabilities even with synced weights. Proposes MIPI/MIPU to make the deployed policy the optimization objective
+- [Visual Instruction Tuning (LLaVA)](./architectures/liu-2023-llava.md) — Connected a frozen CLIP vision encoder to a LLaMA-family LLM with just a linear projection, trained on GPT-4-generated visual instruction data — establishing the minimal recipe (encoder + projector + LLM) behind most open vision-language models
 - [Self-Refine: Iterative Refinement with Self-Feedback](./agents-and-reasoning/madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
 - [Must-Read AI Papers](./must-read-papers.md) — Categorized reading guide for foundational and high-leverage AI papers
+- [WebGPT: Browser-assisted question-answering with human feedback](./agents-and-reasoning/nakano-2021-webgpt.md) — Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers
 - [Training Language Models to Follow Instructions with Human Feedback](./training-and-alignment/ouyang-2022-instructgpt.md) — Established the 3-stage RLHF recipe (SFT, reward modeling, PPO) that turned GPT-3 into an assistant -- know this pipeline shape, though most teams now reach for simpler DPO instead of implementing PPO-based RLHF directly
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](./training-and-alignment/rafailov-2023-dpo.md) — Showed the RLHF objective can be solved directly with a simple classification loss on preference pairs, with no separate reward model and no online RL -- meaning you should reach for DPO instead of implementing PPO-based RLHF for most alignment/preference-tuning work
 - [GrepSeek: Training Search Agents for Direct Corpus Interaction](./retrieval-and-memory/salemi-2026-grepseek.md) — Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it
 - [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./retrieval-and-memory/sarthi-2024-raptor.md) — Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](./agents-and-reasoning/schick-2023-toolformer.md) — Showed a model can teach itself which API calls to make via self-supervised annotation and perplexity-based filtering, but this approach is now superseded by native function-calling built into current frontier model APIs
+- [Fast Transformer Decoding: One Write-Head is All You Need (Multi-Query Attention)](./inference-and-efficiency/shazeer-2019-mqa.md) — Multi-query attention: share one key/value head across all query heads, shrinking the KV cache by the head count and making incremental decoding memory-bandwidth-cheap — the idea GQA later refined and every modern serving stack depends on
 - [SOTA Benchmarks](./sota-benchmarks.md) — Reference table of model, agent, code, math, and safety benchmark leaderboards
+- [LLaMA: Open and Efficient Foundation Language Models](./foundational/touvron-2023-llama.md) — Trained 7B–65B models on public data only, overtraining far past Chinchilla-optimal to optimize inference cost rather than training cost — LLaMA-13B beat GPT-3-175B, and the weights' release ignited the open-model ecosystem
 - [Attention Is All You Need](./foundational/vaswani-2017-attention.md) — Showed self-attention alone (no recurrence or convolution) can model sequences, enabling fully parallelised training that made today's LLM-scale training runs computationally feasible
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](./agents-and-reasoning/wang-2022-self-consistency.md) — Sample multiple reasoning chains at nonzero temperature and majority-vote the final answers: correct answers are reached by many diverse paths while errors scatter, yielding large accuracy gains at linear compute cost — the founding result of inference-time scaling
 - [Weekly ArXiv Picks](./weekly-arxiv-picks.md) — Template for weekly AI engineering paper picks and maintainer review
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](./agents-and-reasoning/wei-2022-chain-of-thought.md) — Showed prompting a large enough model to produce intermediate reasoning steps improves multi-step reasoning accuracy -- use CoT for reasoning-heavy tasks, but don't trust the trace as an accurate explanation of the model's actual computation
+- [Efficient Streaming Language Models with Attention Sinks](./inference-and-efficiency/xiao-2023-streamingllm.md) — Discovered 'attention sinks': models dump attention mass on the first few tokens regardless of content, so evicting them collapses windowed attention — keeping just 4 initial tokens plus a sliding window enables stable million-token streaming with no retraining
 - [Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement](./training-and-alignment/yang-2024-qwen25-math.md) — Documented a self-improvement pipeline (using the model to generate and filter its own better math training data) producing strong math-specific models -- narrow applicability, and Qwen's own successors have since surpassed these results
 - [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](./agents-and-reasoning/yang-2024-swe-agent.md) — Showed a custom agent-computer interface (simplified LM-friendly commands for editing/testing code) matters as much as model quality -- treat interface design, not just model choice, as a first-class variable for coding agents
 - [ReAct: Synergizing Reasoning and Acting in Language Models](./agents-and-reasoning/yao-2022-react.md) — Showed interleaving reasoning traces with external actions and their observations outperforms reasoning-only or acting-only prompting, meaning the reason-act-observe loop should be your default agent architecture pattern before reaching for something more complex
