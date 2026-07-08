@@ -6,26 +6,26 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 9 entries | 2026-07-08 |
+| [agent systems](./agent-systems/) | 14 entries | 2026-07-08 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 15 entries | 2026-07-08 |
-| [data and retrieval](./data-and-retrieval/) | 21 entries | 2026-07-08 |
-| [foundation models](./foundation-models/) | 17 entries | 2026-07-08 |
-| [frameworks](./frameworks/) | 26 entries | 2026-07-08 |
-| [inference engines](./inference-engines/) | 10 entries | 2026-07-08 |
+| [data and retrieval](./data-and-retrieval/) | 24 entries | 2026-07-08 |
+| [foundation models](./foundation-models/) | 18 entries | 2026-07-08 |
+| [frameworks](./frameworks/) | 28 entries | 2026-07-08 |
+| [inference engines](./inference-engines/) | 12 entries | 2026-07-08 |
 | [training and alignment](./training-and-alignment/) | 5 entries | 2026-07-08 |
 
 ## Recently Added
 
+- [AnythingLLM](./data-and-retrieval/anything-llm.md)
 - [AnythingLLM](./agent-systems/anythingllm.md)
 - [BigCodeBench](./benchmarks-and-evals/bigcodebench.md)
 - [Browser Use](./agent-systems/browser-use.md)
 - [CAMEL](./frameworks/camel-ai.md)
 - [Cognee](./data-and-retrieval/cognee.md)
 - [ComfyUI](./frameworks/comfyui.md)
+- [Continue](./agent-systems/continue.md)
 - [ExLlamaV2](./inference-engines/exllamav2.md)
-- [GLM-4 / GLM-4.5](./foundation-models/glm-4.md)
-- [GPT Researcher](./agent-systems/gpt-researcher.md)
-- [Graphiti](./data-and-retrieval/graphiti.md)
+- [faster-whisper](./inference-engines/faster-whisper.md)
 
 ## Most Popular
 
@@ -43,6 +43,7 @@
 ## Browse All
 
 - [Agenta](./benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AnythingLLM](./data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [AnythingLLM](./agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [AutoGen](./frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./frameworks/autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
@@ -54,6 +55,7 @@
 - [Cognee](./data-and-retrieval/cognee.md) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
 - [ComfyUI](./frameworks/comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [Command R+](./foundation-models/command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
+- [Continue](./agent-systems/continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
 - [Crawl4AI](./data-and-retrieval/crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [CrewAI](./frameworks/crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
@@ -63,6 +65,7 @@
 - [DSPy](./frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
 - [ExLlamaV2](./inference-engines/exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
 - [Falcon 3](./foundation-models/falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
+- [faster-whisper](./inference-engines/faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [Firecrawl](./data-and-retrieval/firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
 - [Gemma](./foundation-models/gemma.md) — Google open model family designed for efficient language and multimodal applications
 - [Gemma 3](./foundation-models/gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
@@ -70,6 +73,7 @@
 - [Google ADK](./frameworks/google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [GPT Researcher](./agent-systems/gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [Graphiti](./data-and-retrieval/graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
+- [GraphRAG](./data-and-retrieval/graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [Haystack](./frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Helicone](./benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [InsForge](./agent-systems/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
@@ -88,7 +92,3 @@
 - [LlamaIndex](./frameworks/llamaindex.md) — Data framework for building document agents, retrieval pipelines, and production RAG systems
 - [LlamaParse](./data-and-retrieval/llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text
 - [LMDeploy](./inference-engines/lmdeploy.md) — Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
-- [Lunary](./benchmarks-and-evals/lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
-- [Marker](./data-and-retrieval/marker.md) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
-- [Mastra](./frameworks/mastra.md) — TypeScript framework for building AI agents, workflows, evals, and application backends
-- [MetaGPT](./frameworks/metagpt.md) — Multi-agent framework that simulates software-company roles for natural-language programming
