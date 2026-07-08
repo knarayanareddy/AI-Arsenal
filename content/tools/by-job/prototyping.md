@@ -152,16 +152,37 @@ This table is exhaustive for tools tagged with job = prototyping.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Aider](../dx-and-tooling/aider.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
+| [Claude Code](../dx-and-tooling/claude-code.md) | dx and tooling | usage-based | No | No | No | typescript | best-in-class |
+| [Cline](../dx-and-tooling/cline.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Codex Plugin for Claude Code](../dx-and-tooling/codex-plugin-cc.md) | dx and tooling | freemium | Yes | No | Yes | typescript | recommended |
+| [Continue](../dx-and-tooling/continue-dev.md) | dx and tooling | freemium | Yes | Yes | Yes | typescript | recommended |
+| [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | freemium | Yes | No | No | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [Flowise](../orchestration/flowise.md) | orchestration | freemium | Yes | Yes | Yes | typescript | solid-choice |
+| [Gemini CLI](../dx-and-tooling/gemini-cli.md) | dx and tooling | freemium | Yes | No | Yes | typescript | recommended |
+| [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
+| [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [Jan](../dx-and-tooling/jan.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
+| [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
+| [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | freemium | Yes | Yes | No | typescript, cpp | recommended |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
+| [marimo](../dx-and-tooling/marimo.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
+| [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
+| [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | usage-based | No | No | Yes | rust | recommended |
+| [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
+| [Repomix](../dx-and-tooling/repomix.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Streamlit](../dx-and-tooling/streamlit.md) | dx and tooling | freemium | Yes | Yes | Yes | python | recommended |
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | solid-choice |
+| [Windsurf](../dx-and-tooling/windsurf.md) | dx and tooling | freemium | Yes | No | No | typescript | solid-choice |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases
