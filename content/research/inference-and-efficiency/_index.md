@@ -36,10 +36,11 @@ When I am trying to reduce inference cost or latency for a model I'm already run
 - [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](./dao-2023-flashattention2.md)
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./kwon-2023-pagedattention.md)
 - [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](./lin-2023-awq.md)
+- [Mixture-of-Depths: Dynamically Allocating Compute in Transformer-Based Language Models](./raposo-2024-mixture-of-depths.md)
 - [Fast Transformer Decoding: One Write-Head is All You Need (Multi-Query Attention)](./shazeer-2019-mqa.md)
+- [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](./xiao-2022-smoothquant.md)
 - [Efficient Streaming Language Models with Attention Sinks](./xiao-2023-streamingllm.md)
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./frantar-2022-gptq.md)
-- [Fast Inference from Transformers via Speculative Decoding](./leviathan-2022-speculative-decoding.md)
 
 ### Most Popular
 
@@ -54,5 +55,7 @@ _No star-tracked entries yet._
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./kwon-2023-pagedattention.md) — Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal
 - [Fast Inference from Transformers via Speculative Decoding](./leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness
 - [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](./lin-2023-awq.md) — Showed ~1% of weight channels are 'salient' — identified by activation magnitudes, not weight values — and protecting them via per-channel scaling enables accurate 4-bit weight quantization without backpropagation; AWQ is now a standard deployment format
+- [Mixture-of-Depths: Dynamically Allocating Compute in Transformer-Based Language Models](./raposo-2024-mixture-of-depths.md) — Lets a Transformer spend different amounts of compute on different tokens by having a per-layer router send only the top-k tokens through the block and the rest skip via residual -- a compute budget set by capacity, not by every token
 - [Fast Transformer Decoding: One Write-Head is All You Need (Multi-Query Attention)](./shazeer-2019-mqa.md) — Multi-query attention: share one key/value head across all query heads, shrinking the KV cache by the head count and making incremental decoding memory-bandwidth-cheap — the idea GQA later refined and every modern serving stack depends on
+- [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](./xiao-2022-smoothquant.md) — Enables W8A8 (8-bit weight and activation) quantization of LLMs by migrating the quantization difficulty from hard-to-quantize activation outliers into the weights via a per-channel scaling, so both can use simple integer quantization
 - [Efficient Streaming Language Models with Attention Sinks](./xiao-2023-streamingllm.md) — Discovered 'attention sinks': models dump attention mass on the first few tokens regardless of content, so evicting them collapses windowed attention — keeping just 4 initial tokens plus a sliding window enables stable million-token streaming with no retraining

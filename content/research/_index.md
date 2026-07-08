@@ -6,27 +6,27 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 13 entries | 2026-07-08 |
-| [architectures](./architectures/) | 12 entries | 2026-07-08 |
-| [evaluation and safety](./evaluation-and-safety/) | 9 entries | 2026-07-08 |
-| [foundational](./foundational/) | 14 entries | 2026-07-08 |
-| [inference and efficiency](./inference-and-efficiency/) | 9 entries | 2026-07-08 |
-| [retrieval and memory](./retrieval-and-memory/) | 14 entries | 2026-07-08 |
+| [agents and reasoning](./agents-and-reasoning/) | 14 entries | 2026-07-08 |
+| [architectures](./architectures/) | 13 entries | 2026-07-08 |
+| [evaluation and safety](./evaluation-and-safety/) | 10 entries | 2026-07-08 |
+| [foundational](./foundational/) | 16 entries | 2026-07-08 |
+| [inference and efficiency](./inference-and-efficiency/) | 11 entries | 2026-07-08 |
+| [retrieval and memory](./retrieval-and-memory/) | 15 entries | 2026-07-08 |
 | [surveys](./surveys/) | 3 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 16 entries | 2026-07-08 |
+| [training and alignment](./training-and-alignment/) | 18 entries | 2026-07-08 |
 
 ## Recently Added
 
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./architectures/ainslie-2023-gqa.md)
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./architectures/alayrac-2022-flamingo.md)
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./retrieval-and-memory/asai-2023-self-rag.md)
+- [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](./agents-and-reasoning/besta-2023-graph-of-thoughts.md)
+- [Improving Language Models by Retrieving from Trillions of Tokens](./retrieval-and-memory/borgeaud-2021-retro.md)
 - [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](./inference-and-efficiency/cai-2024-medusa.md)
 - [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./evaluation-and-safety/chen-2021-codex.md)
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./evaluation-and-safety/chiang-2024-chatbot-arena.md)
 - [PaLM: Scaling Language Modeling with Pathways](./foundational/chowdhery-2022-palm.md)
 - [Deep Reinforcement Learning from Human Preferences](./training-and-alignment/christiano-2017-rlhf.md)
-- [Training Verifiers to Solve Math Word Problems](./evaluation-and-safety/cobbe-2021-gsm8k.md)
-- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](./inference-and-efficiency/dao-2022-flashattention.md)
 
 ## Most Popular
 
@@ -38,6 +38,8 @@ _No star-tracked entries yet._
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./architectures/alayrac-2022-flamingo.md) — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./retrieval-and-memory/asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [Constitutional AI: Harmlessness from AI Feedback](./training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
+- [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](./agents-and-reasoning/besta-2023-graph-of-thoughts.md) — Generalizes chain- and tree-of-thought by modeling reasoning as an arbitrary graph, where thoughts can be aggregated, refined, and looped -- enabling operations like merging partial solutions that a tree cannot express
+- [Improving Language Models by Retrieving from Trillions of Tokens](./retrieval-and-memory/borgeaud-2021-retro.md) — RETRO augments a Transformer with chunk-level retrieval from a trillions-of-tokens database via cross-attention, letting a small model match much larger ones -- retrieval as a way to move knowledge out of parameters and into an index
 - [Language Models are Few-Shot Learners](./foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](./inference-and-efficiency/cai-2024-medusa.md) — Speeds up decoding by adding a few extra prediction heads that guess several future tokens at once, verified in parallel with tree attention — no separate draft model, 2-3x faster, and self-contained enough to bolt onto an existing model.
 - [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./evaluation-and-safety/chen-2021-codex.md) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
@@ -51,10 +53,12 @@ _No star-tracked entries yet._
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./training-and-alignment/deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./training-and-alignment/dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./foundational/devlin-2018-bert.md) — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](./foundational/dosovitskiy-2020-vit.md) — Splits an image into fixed patches, embeds them like tokens, and feeds them to a plain Transformer encoder -- shows that with enough pretraining data a convolution-free model matches or beats CNNs on image classification
 - [The Llama 3 Herd of Models](./foundational/dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./retrieval-and-memory/edge-2024-graphrag.md) — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
 - [Emerging AI Techniques](./emerging-techniques.md) — Current techniques worth tracking across reasoning, context, inference, and multimodal systems
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./evaluation-and-safety/es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
+- [KTO: Model Alignment as Prospect Theoretic Optimization](./training-and-alignment/ethayarajh-2024-kto.md) — Aligns models from a single binary 'good/bad' label per example instead of pairwise preferences, using a human-aware loss inspired by prospect theory -- removes the need to collect matched preferred/rejected pairs
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./architectures/fedus-2021-switch-transformer.md) — Simplified mixture-of-experts to top-1 routing (one expert per token), showing sparse models reach the same quality as dense ones up to 7× faster per FLOP — the recipe that made MoE the standard architecture for frontier-scale efficiency
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./inference-and-efficiency/frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./retrieval-and-memory/gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
@@ -80,7 +84,3 @@ _No star-tracked entries yet._
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./inference-and-efficiency/kwon-2023-pagedattention.md) — Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal
 - [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](./training-and-alignment/lee-2023-rlaif.md) — Showed that preference labels generated by an off-the-shelf LLM (RLAIF) can match human-labeled RLHF on summarization and dialogue, and that policies can even be trained directly against LLM-assigned rewards — making preference alignment far cheaper to scale.
 - [Fast Inference from Transformers via Speculative Decoding](./inference-and-efficiency/leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness
-- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](./foundational/lewis-2020-rag.md) — Coined 'RAG': a jointly-trained retriever plus generator beats closed-book generation on knowledge-intensive tasks -- ground generation in retrieved documents, though production RAG today uses a simpler decoupled pipeline
-- [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](./architectures/li-2023-blip2.md) — Connected a frozen image encoder to a frozen LLM with a small trainable Querying Transformer (Q-Former), two-stage trained — reaching strong VQA/captioning with a tiny fraction of trainable parameters, the efficient bridge pattern behind many open VLMs.
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./training-and-alignment/liang-2026-mipi.md) — LLM RL optimizes the training-engine policy, but you deploy the inference-engine policy -- and the two disagree on trajectory probabilities even with synced weights. Proposes MIPI/MIPU to make the deployed policy the optimization objective
-- [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](./inference-and-efficiency/lin-2023-awq.md) — Showed ~1% of weight channels are 'salient' — identified by activation magnitudes, not weight values — and protecting them via per-channel scaling enables accurate 4-bit weight quantization without backpropagation; AWQ is now a standard deployment format
