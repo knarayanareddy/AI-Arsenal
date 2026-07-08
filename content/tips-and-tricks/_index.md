@@ -9,10 +9,10 @@
 | [agents and orchestration](./agents-and-orchestration/) | 18 entries | 2026-07-08 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-08 |
 | [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-08 |
-| [evaluation](./evaluation/) | 9 entries | 2026-07-08 |
-| [fine tuning](./fine-tuning/) | 0 entries | 2026-07-08 |
+| [evaluation](./evaluation/) | 13 entries | 2026-07-08 |
+| [fine tuning](./fine-tuning/) | 8 entries | 2026-07-08 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-08 |
-| [prompting](./prompting/) | 19 entries | 2026-07-08 |
+| [prompting](./prompting/) | 21 entries | 2026-07-08 |
 | [rag and retrieval](./rag-and-retrieval/) | 17 entries | 2026-07-08 |
 
 ## Recently Added
@@ -43,6 +43,7 @@ _No star-tracked entries yet._
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
 - [Allowlist Tools Per Agent Role](./agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./prompting/ask-for-missing-inputs-before-solving.md) — 
+- [Ask for Supporting Quotes Before Answers in RAG Prompts](./prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./cost-and-performance/batch-embedding-requests-during-ingestion.md) — 
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./inference-and-serving/benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
@@ -66,8 +67,12 @@ _No star-tracked entries yet._
 - [Detect and Stop Repeated Identical Tool Calls](./agents-and-orchestration/detect-repeated-tool-calls.md) — 
 - [Capture Sampled Traces Before Real Users Hit the System](./debugging-and-observability/do-not-launch-without-trace-sampling.md) — 
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./cost-and-performance/drop-unused-conversation-history.md) — 
+- [Establish a Prompting Baseline Before Fine-Tuning](./fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md) — 
+- [Evaluate Checkpoints on Task Metrics, Not Training Loss](./fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
+- [Hold Out an Eval Set Before Any Training Run Touches the Data](./fine-tuning/hold-out-an-eval-set-before-any-training.md) — 
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
+- [Inspect a Random Sample of Training Data by Hand Before Every Run](./fine-tuning/inspect-your-training-data-by-hand.md) — 
 - [Keep a Kill Switch for Risky Agent Tools](./agents-and-orchestration/keep-a-kill-switch-for-agent-actions.md) — 
 - [Keep Instructions Outside Retrieved Context](./rag-and-retrieval/keep-instructions-outside-retrieved-context.md) — 
 - [Keep Local Model Weight Files Out of Git](./inference-and-serving/keep-model-files-out-of-git.md) — 
@@ -78,9 +83,4 @@ _No star-tracked entries yet._
 - [Log the Retrieved Context for Every RAG Answer](./debugging-and-observability/log-retrieved-context.md) — 
 - [Make Agent Success Criteria Machine-Checkable, Not Self-Reported](./agents-and-orchestration/make-success-criteria-machine-checkable.md) — 
 - [Match Configured Context Length to Available RAM Before Demos](./inference-and-serving/match-context-length-to-ram.md) — 
-- [Measure Time-to-First-Token Separately From Total Generation Time](./cost-and-performance/measure-first-token-latency.md) — 
-- [Track KV Cache Hit Rate for Long-Context Serving Economics](./inference-and-serving/measure-kv-cache-hit-rate.md) — 
-- [Measure Queue Time Separately From Model Generation Time](./cost-and-performance/measure-queue-time-separately.md) — 
-- [Measure Retrieval Recall Before Blaming Answer Quality](./rag-and-retrieval/measure-retrieval-recall-before-answer-quality.md) — 
-- [Name the Audience Explicitly in the Prompt](./prompting/name-the-audience-in-the-prompt.md) — 
-- [Order Few-Shot Examples by Similarity to the Actual Task](./prompting/order-few-shot-examples-by-similarity.md) — 
+- [Match Training and Inference Prompt Formats Exactly](./fine-tuning/match-training-and-inference-prompt-formats.md) — 
