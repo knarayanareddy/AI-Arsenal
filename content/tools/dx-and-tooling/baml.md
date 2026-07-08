@@ -15,7 +15,7 @@ free_tier_limits: "Open-source and free; you pay your own LLM provider costs"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/BoundaryML/baml"
-docs_url: "https://docs.boundaryml.com/"
+docs_url: "https://docs.boundaryml.com/home"
 github_url: "https://github.com/BoundaryML/baml"
 alternatives: [instructor, outlines, guidance]
 integrates_with: [openai-agents-sdk, langchain]
@@ -96,7 +96,7 @@ baml-cli init
 ## Resources
 
 - [Official Site](https://www.boundaryml.com)
-- [Documentation](https://docs.boundaryml.com/)
+- [Documentation](https://docs.boundaryml.com/home)
 - [GitHub](https://github.com/BoundaryML/baml)
 
 ## Buzz & Reception

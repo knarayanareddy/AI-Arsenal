@@ -15,7 +15,7 @@ free_tier_limits: "SDK is free; model inference billed by your chosen provider"
 self_hostable: true
 open_source: true
 source_url: "https://github.com/strands-agents/sdk-python"
-docs_url: "https://strandsagents.com/latest/documentation/"
+docs_url: "https://strandsagents.com/"
 github_url: "https://github.com/strands-agents/sdk-python"
 alternatives: [openai-agents-sdk, pydantic-ai-tool, crewai]
 integrates_with: [composio, litellm]
@@ -95,7 +95,7 @@ pip install strands-agents strands-agents-tools
 ## Resources
 
 - [Official Site](https://strandsagents.com)
-- [Documentation](https://strandsagents.com/latest/documentation/)
+- [Documentation](https://strandsagents.com/)
 - [GitHub](https://github.com/strands-agents/sdk-python)
 
 ## Buzz & Reception

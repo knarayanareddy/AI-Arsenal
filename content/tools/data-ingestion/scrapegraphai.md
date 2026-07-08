@@ -15,7 +15,7 @@ free_tier_limits: "Library is free; you pay your own LLM inference costs. Hosted
 self_hostable: true
 open_source: true
 source_url: "https://github.com/ScrapeGraphAI/Scrapegraph-ai"
-docs_url: "https://docs.scrapegraphai.com/"
+docs_url: "https://docs.scrapegraphai.com/introduction"
 github_url: "https://github.com/ScrapeGraphAI/Scrapegraph-ai"
 alternatives: [crawl4ai-tool, firecrawl-tool]
 integrates_with: [langchain, llamaindex]
@@ -96,7 +96,7 @@ playwright install
 ## Resources
 
 - [Official Site](https://scrapegraphai.com)
-- [Documentation](https://docs.scrapegraphai.com/)
+- [Documentation](https://docs.scrapegraphai.com/introduction)
 - [GitHub](https://github.com/ScrapeGraphAI/Scrapegraph-ai)
 
 ## Buzz & Reception
