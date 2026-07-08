@@ -11,6 +11,7 @@
 ## Recently Added
 
 - [AI Engineer World's Fair](./ai-engineer-worlds-fair.md)
+- [NeurIPS (Conference on Neural Information Processing Systems)](./neurips.md)
 
 ## Most Popular
 
@@ -19,3 +20,4 @@ _No star-tracked entries yet._
 ## Browse All
 
 - [AI Engineer World's Fair](./ai-engineer-worlds-fair.md) — 
+- [NeurIPS (Conference on Neural Information Processing Systems)](./neurips.md) — 
