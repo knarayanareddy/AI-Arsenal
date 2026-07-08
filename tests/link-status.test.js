@@ -72,8 +72,8 @@ test('isTransientError: false for non-transient', () => {
 // --- RATE_LIMIT_DOMAINS ---------------------------------------------------
 
 test('RATE_LIMIT_DOMAINS covers GitHub and X', () => {
-  assert.ok(RATE_LIMIT_DOMAINS.includes('github.com'));
-  assert.ok(RATE_LIMIT_DOMAINS.includes('api.github.com'));
-  assert.ok(RATE_LIMIT_DOMAINS.includes('x.com'));
-  assert.ok(RATE_LIMIT_DOMAINS.includes('twitter.com'));
+  assert.ok(RATE_LIMIT_DOMAINS.some((d) => d === 'github.com'));
+  assert.ok(RATE_LIMIT_DOMAINS.some((d) => d === 'api.github.com'));
+  assert.ok(RATE_LIMIT_DOMAINS.some((d) => d === 'x.com'));
+  assert.ok(RATE_LIMIT_DOMAINS.some((d) => d === 'twitter.com'));
 });

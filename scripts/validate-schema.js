@@ -146,7 +146,7 @@ async function validateFile(file) {
     return;
   }
   const entryType = inferEntryType(file, parsed.data);
-  const schemaKey = entryType ? resolveSchemaKey(entryType, parsed.data) : null;
+  const schemaKey = entryType ? resolveSchemaKey(entryType) : null;
   const validate = schemaKey ? await getValidator(schemaKey) : null;
   if (!validate) {
     errors.push(`${file}: unable to infer entry type from path. Move file under a schema-governed content section.`);

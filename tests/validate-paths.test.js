@@ -9,14 +9,14 @@ test('extractUrls filters and dedupes', () => {
   `;
   const urls = extractUrls(md);
   assert.equal(urls.length, 2);
-  assert.ok(urls.includes('https://example.com'));
-  assert.ok(urls.includes('https://github.com/foo/bar'));
+  assert.ok(urls.some((u) => u === 'https://example.com'));
+  assert.ok(urls.some((u) => u === 'https://github.com/foo/bar'));
 });
 
 test('extractUrls handles URLs inside parentheses correctly', () => {
   const md = 'See [docs](https://example.com/docs?q=1) and [home](https://example.com/)';
   const urls = extractUrls(md);
   assert.equal(urls.length, 2);
-  assert.ok(urls.includes('https://example.com/docs?q=1'));
-  assert.ok(urls.includes('https://example.com/'));
+  assert.ok(urls.some((u) => u === 'https://example.com/docs?q=1'));
+  assert.ok(urls.some((u) => u === 'https://example.com/'));
 });

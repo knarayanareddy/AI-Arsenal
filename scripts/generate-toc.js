@@ -23,7 +23,7 @@ function rel(fromFile, toFile) {
 }
 
 function table(rows, fromFile) {
-  return ['| ID | Name | Description |', '|---|---|---|', ...rows.map((e) => `| \`${e.data.id}\` | [${e.data.name ?? e.data.title}](${rel(fromFile, e.file)}) | ${String(e.data.description ?? e.data.tldr ?? e.data.summary ?? '').replace(/\|/g, '\\|')} |`)].join('\n');
+  return ['| ID | Name | Description |', '|---|---|---|', ...rows.map((e) => `| \`${e.data.id}\` | [${e.data.name ?? e.data.title}](${rel(fromFile, e.file)}) | ${String(e.data.description ?? e.data.tldr ?? e.data.summary ?? '').replace(/\\/g, '\\\\').replace(/\|/g, '\\|')} |`)].join('\n');
 }
 
 const projects = entries.filter((e) => e.type === 'project').sort((a, b) => a.data.id.localeCompare(b.data.id));

@@ -21,12 +21,7 @@ export async function parseTaxonomy(filePath = 'TAXONOMY.md') {
     for (const value of valuesInBackticks(line)) sections.get(current).add(value);
   }
 
-  const tagSections = ['Domain Tags', 'Capability Tags', 'Infrastructure Tags', 'Stack Tags', 'Quality Tags'];
   const allTags = new Set();
-  for (const rawLine of text.split(/\r?\n/)) {
-    // Subheading-aware pass for ### tag groups.
-  }
-
   let inTagTaxonomy = false;
   for (const rawLine of text.split(/\r?\n/)) {
     const line = rawLine.trim();

@@ -7,9 +7,7 @@
 // Usage: node scripts/migrate-projects-inference-engines.js [--dry-run]
 
 import fs from 'node:fs/promises';
-import path from 'node:path';
 import matter from 'gray-matter';
-import { glob } from 'glob';
 import chalk from 'chalk';
 
 const dryRun = process.argv.includes('--dry-run');

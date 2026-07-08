@@ -14,8 +14,8 @@ test('extractUrls finds both bare and markdown link URLs', () => {
   `;
   const urls = extractUrls(md);
   assert.equal(urls.length, 2);
-  assert.ok(urls.includes('https://example.com/path'));
-  assert.ok(urls.includes('https://example.com/path?q=1'));
+  assert.ok(urls.some((u) => u === 'https://example.com/path'));
+  assert.ok(urls.some((u) => u === 'https://example.com/path?q=1'));
 });
 
 test('parseSafeUrl rejects URL shorteners with private destinations', () => {
@@ -69,5 +69,5 @@ test('stripMarkdown does not embed URL strings (XSS-safe)', () => {
   const stripped = stripMarkdown(md);
   // stripMarkdown extracts link TEXT and removes the URL; bare URLs remain.
   assert.ok(stripped.includes('link'));
-  assert.ok(stripped.includes('https://other.com'));
+  assert.ok(stripped.split(/\s+/).some((token) => token === 'https://other.com'));
 });

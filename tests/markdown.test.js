@@ -75,7 +75,7 @@ test('extractUrls captures URLs (does not strip trailing punctuation by default)
   const md = 'Visit https://example.com.';
   const urls = extractUrls(md);
   assert.equal(urls.length, 1);
-  assert.ok(urls[0].startsWith('https://example.com'));
+  assert.equal(urls[0], 'https://example.com.');
 });
 
 test('REQUIRED_ENTRY_HEADINGS is non-empty', () => {

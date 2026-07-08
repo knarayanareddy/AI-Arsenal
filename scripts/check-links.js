@@ -47,7 +47,15 @@ function shouldIgnoreByPattern(url) {
 // URLs inside HTML comments are non-rendered template text (e.g. the
 // contributor template in CONTRIBUTORS.md) and must not be link-checked.
 function stripHtmlComments(markdown) {
-  return markdown.replace(/<!--[\s\S]*?-->/g, '');
+  // Re-apply until stable so nested/overlapping comment markers cannot
+  // survive a single pass.
+  let previous;
+  let current = markdown;
+  do {
+    previous = current;
+    current = current.replace(/<!--[\s\S]*?-->/g, '');
+  } while (current !== previous);
+  return current;
 }
 
 async function fetchOnce(url, method) {
