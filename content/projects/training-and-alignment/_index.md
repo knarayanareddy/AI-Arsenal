@@ -30,6 +30,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Recently Added
 
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md)
 - [Colossal-AI (HPC-AI Tech)](./colossalai.md)
 - [LitGPT](./litgpt.md)
 - [ms-swift](./ms-swift.md)
@@ -47,9 +48,11 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [ms-swift](./ms-swift.md) — ⭐ 14751
 - [LitGPT](./litgpt.md) — ⭐ 13467
 - [OpenRLHF](./openrlhf.md) — ⭐ 9769
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — ⭐ 5627
 
 ### Browse All
 
+- [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [Colossal-AI (HPC-AI Tech)](./colossalai.md) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
 - [LitGPT](./litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
 - [ms-swift](./ms-swift.md) — ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends

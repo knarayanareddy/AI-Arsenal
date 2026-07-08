@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T20:08:47.956Z | Entries: 692 | Schema version: 1.0.0
+Generated: 2026-07-08T20:10:55.117Z | Entries: 701 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 122
-- Tools: 171
+- Projects: 129
+- Tools: 173
 - Papers: 80
 - Tips: 129
 - People: 25
@@ -123,9 +123,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
 - DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- Hugging Face Accelerate — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
 - Megatron-LM — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
-- MLX-LM — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence

@@ -1,8 +1,89 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:08:45.346Z",
-  "count": 171,
+  "generated_at": "2026-07-08T20:10:52.454Z",
+  "count": 173,
   "items": [
+    {
+      "id": "accelerate",
+      "name": "Hugging Face Accelerate",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes",
+      "url": "content/tools/model-layer/accelerate",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0)",
+      "tags": [
+        "training",
+        "fine-tuning",
+        "pytorch"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no usage limits",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/huggingface/accelerate",
+      "docs_url": "https://huggingface.co/docs/accelerate/index",
+      "github_url": "https://github.com/huggingface/accelerate",
+      "alternatives": [
+        "torchtune",
+        "megatron-lm"
+      ],
+      "integrates_with": [
+        "peft",
+        "axolotl"
+      ],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You write your own PyTorch training loops and want them portable across single-GPU, multi-GPU, FSDP, and DeepSpeed without maintaining per-backend code paths",
+        "You use the Hugging Face ecosystem — Trainer, TRL, and most fine-tuning frameworks already run on Accelerate underneath, so understanding it pays off when debugging distributed runs"
+      ],
+      "avoid_when": [
+        "You want a full training framework with configs and recipes rather than a thin loop wrapper — Axolotl or LLaMA-Factory sit at that layer",
+        "Your scale demands hand-tuned parallelism (tensor/pipeline) beyond what FSDP/DeepSpeed-via-config express — Megatron-class stacks apply"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The de facto distribution layer under the Hugging Face training stack; the right abstraction when you own the training loop",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/accelerate.md",
+      "slug": "accelerate",
+      "section_path": "content/tools/model-layer",
+      "display_name": "Hugging Face Accelerate",
+      "summary": "Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 492,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Device-agnostic PyTorch training launcher. Open source. Best for making custom training loops portable across hardware and distributed backends.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>Accelerate wraps a plain PyTorch training loop in a few lines (<code>accelerator.prepare(...)</code>, <code>accelerator.backward(loss)</code>) and moves all device/distribution concerns into a launch-time config: the same script runs on a laptop CPU, a single GPU, multi-node DDP, FSDP, or DeepSpeed. It also provides big-model utilities (<code>device_map=\"auto\"</code> loading, offloading) used across the HF ecosystem.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Most fine-tuning tooling in this phase (Trainer, TRL, Axolotl, PEFT workflows) runs on Accelerate underneath — it's the distribution substrate of the open training stack, and the tool you drop to when a framework's abstraction leaks. For teams writing their own loops, it's the difference between one codebase and one-per-backend. See Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>One training script across CPU/GPU/multi-GPU/multi-node/TPU, selected by <code>accelerate config</code>, not code</li>\n<li>First-class FSDP and DeepSpeed integration via config files</li>\n<li>Big-model inference utilities: automatic device maps, CPU/disk offload for models larger than one GPU</li>\n<li>Mixed precision (fp16/bf16/fp8) handled by the accelerator object</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The <code>Accelerator</code> object inspects the launch environment and wraps model, optimizer, and dataloaders with the right distributed containers; <code>accelerate launch</code> spawns processes per the saved config. Backend-specific behavior (FSDP wrapping policy, DeepSpeed ZeRO stage) lives in config, keeping the loop code backend-neutral.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install accelerate\naccelerate config   # answer prompts once per machine\naccelerate launch train.py\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a custom fine-tuning loop that must run on a dev GPU today and an 8×A100 node next week without a rewrite</li>\n<li><strong>Scenario</strong>: debugging a distributed run launched by a higher-level framework — the failure surface is usually Accelerate/FSDP/DeepSpeed config</li>\n<li><strong>Scenario</strong>: loading a model too large for one GPU for inference or PEFT training via device maps and offload</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want recipes and YAML-config training rather than owning a loop — use a framework layer instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The minimal-abstraction sweet spot: you keep your PyTorch loop, it owns only devices and distribution</li>\n<li>Battle-tested as the substrate of the HF training ecosystem; distributed bugs are widely documented</li>\n<li>FSDP/DeepSpeed become config choices, making backend comparisons cheap</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Not a framework: no recipes, datasets, or method implementations — pair with PEFT/TRL or move up a layer</li>\n<li>Extreme-scale parallelism (tensor/pipeline/expert) is out of scope; Megatron-class tooling applies there</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./megatron-lm.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Megatron-LM</a> and <a href=\"./torchtune.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">torchtune</a> before adopting — they overlap at the distribution layer.</li>\n<li>Underlies <a href=\"./peft.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PEFT</a> and <a href=\"./axolotl.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Axolotl</a> workflows; debugging those often means reading Accelerate config.</li>\n<li>Link this tool from job guides using its canonical ID <code>accelerate</code>.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/docs/accelerate/index\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://huggingface.co/docs/accelerate/index\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/huggingface/accelerate\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>9.7k GitHub stars and position as the default launcher beneath the Hugging Face training stack (verified via the GitHub API, 2026-07-08).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "TL;DR: Device agnostic PyTorch training launcher. Open source. Best for making custom training loops portable across hardware and distributed backends. Overview Accelerate wraps a plain PyTorch training loop in a few lines (accelerator.prepare(...), accelerator.backward(loss)) and moves all device/distribution concerns into a launch time config: the same script runs on a laptop CPU, a single GPU, multi node DDP, FSDP, or DeepSpeed. It also provides big model utilities (device map=\"auto\" loading, offloading) used across the HF ecosystem. Why It's in the Arsenal Most fine tuning tooling in this phase (Trainer, TRL, Axolotl, PEFT workflows) runs on Accelerate underneath — it's the distribution substrate of the open training stack, and the tool you drop to when a framework's abstraction leaks. For teams writing their own loops, it's the difference between one codebase and one per backend. See Strengths / Limitations below before adopting it. Key Features One training script across CPU/GPU/multi GPU/multi node/TPU, selected by accelerate config, not code First class FSDP and DeepSpeed integration via config files Big model inference utilities: automatic device maps, CPU/disk offload for models larger than one GPU Mixed precision (fp16/bf16/fp8) handled by the accelerator object Architecture / How It Works The Accelerator object inspects the launch environment and wraps model, optimizer, and dataloaders with the right distributed containers; accelerate launch spawns processes per the saved config. Backend specific behavior (FSDP wrapping policy, DeepSpeed ZeRO stage) lives in config, keeping the loop code backend neutral. Getting Started Use Cases 1. Scenario : a custom fine tuning loop that must run on a dev GPU today and an 8×A100 node next week without a rewrite 2. Scenario : debugging a distributed run launched by a higher level framework — the failure surface is usually Accelerate/FSDP/DeepSpeed config 3. Scenario : loading a model too large for one GPU for inference or PEFT training via device maps and offload 4. Scenario where this is NOT the right fit : you want recipes and YAML config training rather than owning a loop — use a framework layer instead Strengths The minimal abstraction sweet spot: you keep your PyTorch loop, it owns only devices and distribution Battle tested as the substrate of the HF training ecosystem; distributed bugs are widely documented FSDP/DeepSpeed become config choices, making backend comparisons cheap Limitations / When NOT to Use Not a framework: no recipes, datasets, or method implementations — pair with PEFT/TRL or move up a layer Extreme scale parallelism (tensor/pipeline/expert) is out of scope; Megatron class tooling applies there Integration Patterns Compare against Megatron LM and torchtune before adopting — they overlap at the distribution layer. Underlies PEFT and Axolotl workflows; debugging those often means reading Accelerate config. Link this tool from job guides using its canonical ID accelerate. Resources Primary site Documentation Source Buzz & Reception 9.7k GitHub stars and position as the default launcher beneath the Hugging Face training stack (verified via the GitHub API, 2026 07 08). Last reviewed: 2026 07 08 by @maintainer"
+    },
     {
       "id": "addyosmani-agent-skills",
       "name": "Agent Skills (Addy Osmani)",
@@ -10463,6 +10544,84 @@
       "word_count": 445,
       "body_html": "<h2>Overview</h2>\n<p>A red-teaming framework from Microsoft's AI Red Team: composable orchestrators run single- and multi-turn attack strategies (including LLM-driven adversarial agents like crescendo and PAIR-style loops) against any target, with prompt converters (encodings, translations, obfuscations) and scorers to identify harms systematically.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>PyRIT earns a place in the Arsenal because it directly addresses a recurring decision point: you're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Attack orchestrators: multi-turn, adversarial-LLM, skeleton-key strategies</li>\n<li>Converters mutate payloads (base64, leetspeak, translation) to bypass filters</li>\n<li>Pluggable targets (APIs, Azure, local) and scorers; memory of all attempts</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>An attack combines a target (the system under test), converters that transform seed prompts, an optional adversarial LLM that adapts across turns toward an objective, and scorers that judge success; all interactions persist to memory for analysis — making red-team campaigns reproducible experiments.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install pyrit-ai\n# compose PromptSendingAttack(objective_target=..., converters=[...]) and run\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives</li>\n<li><strong>Scenario</strong>: you want the framework Microsoft's own AI Red Team battle-tested on 100+ products, including automated attacker LLMs</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you want a one-command scan with built-in reporting — garak is turnkey where PyRIT is a framework you program — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives</li>\n<li>You want the framework Microsoft's own AI Red Team battle-tested on 100+ products, including automated attacker LLMs</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You want a one-command scan with built-in reporting — garak is turnkey where PyRIT is a framework you program</p>\n</li>\n<li>\n<p>Non-Python security teams; the orchestration model assumes engineering investment</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>garak</code>, <code>promptfoo</code> before adopting — they compete for the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>pyrit</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://azure.github.io/PyRIT/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://azure.github.io/PyRIT/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/microsoft/PyRIT\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>4,074 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview A red teaming framework from Microsoft's AI Red Team: composable orchestrators run single and multi turn attack strategies (including LLM driven adversarial agents like crescendo and PAIR style loops) against any target, with prompt converters (encodings, translations, obfuscations) and scorers to identify harms systematically. Why It's in the Arsenal PyRIT earns a place in the Arsenal because it directly addresses a recurring decision point: you're red teaming a full application (not just a model): multi turn attack orchestration, converters, and custom objectives. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Attack orchestrators: multi turn, adversarial LLM, skeleton key strategies Converters mutate payloads (base64, leetspeak, translation) to bypass filters Pluggable targets (APIs, Azure, local) and scorers; memory of all attempts Architecture / How It Works An attack combines a target (the system under test), converters that transform seed prompts, an optional adversarial LLM that adapts across turns toward an objective, and scorers that judge success; all interactions persist to memory for analysis — making red team campaigns reproducible experiments. Getting Started Use Cases 1. Scenario : you're red teaming a full application (not just a model): multi turn attack orchestration, converters, and custom objectives 2. Scenario : you want the framework Microsoft's own AI Red Team battle tested on 100+ products, including automated attacker LLMs 3. Scenario where this is NOT the right fit : you want a one command scan with built in reporting — garak is turnkey where PyRIT is a framework you program — evaluate an alternative instead Strengths You're red teaming a full application (not just a model): multi turn attack orchestration, converters, and custom objectives You want the framework Microsoft's own AI Red Team battle tested on 100+ products, including automated attacker LLMs Limitations / When NOT to Use You want a one command scan with built in reporting — garak is turnkey where PyRIT is a framework you program Non Python security teams; the orchestration model assumes engineering investment Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against garak, promptfoo before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID pyrit. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 4,074 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "pytorch-lightning",
+      "name": "PyTorch Lightning",
+      "type": "tool",
+      "job": [
+        "fine-tuning"
+      ],
+      "description": "The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing",
+      "url": "content/tools/model-layer/pytorch-lightning",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0); Lightning AI cloud platform is a separate paid product",
+      "tags": [
+        "training",
+        "pytorch",
+        "fine-tuning"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Framework fully open source; no usage limits",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/Lightning-AI/pytorch-lightning",
+      "docs_url": "https://lightning.ai/docs/pytorch/stable/",
+      "github_url": "https://github.com/Lightning-AI/pytorch-lightning",
+      "alternatives": [
+        "accelerate",
+        "torchtune"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "model-layer",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You train custom models (not just LLM fine-tunes) and want engineering discipline — the LightningModule/Trainer split standardizes checkpointing, logging, precision, and multi-GPU across a research team's codebases",
+        "Your training code must scale from laptop debugging to multi-node without rewrites, with mature callbacks (early stopping, checkpointing, profilers) instead of hand-rolled equivalents"
+      ],
+      "avoid_when": [
+        "Your work is exclusively LLM fine-tuning with standard methods — recipe frameworks (Axolotl, LLaMA-Factory, torchtune) encode more domain knowledge per line of your code",
+        "You want zero framework opinion in your loop — Accelerate keeps you closer to raw PyTorch"
+      ],
+      "version_tracked": null,
+      "verdict": "recommended",
+      "verdict_rationale": "The most mature general PyTorch training framework; the right layer for custom-model teams, one layer too general for pure LLM fine-tuning",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/pytorch-lightning.md",
+      "slug": "pytorch-lightning",
+      "section_path": "content/tools/model-layer",
+      "display_name": "PyTorch Lightning",
+      "summary": "The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 516,
+      "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> The standard general-purpose PyTorch training framework. Open source. Best for custom-model training discipline; recipe frameworks beat it for pure LLM fine-tuning.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>PyTorch Lightning splits training code into a LightningModule (your model, losses, optimizers — pure PyTorch) and a Trainer that owns everything else: device placement, DDP/FSDP/DeepSpeed strategies, mixed precision, gradient accumulation, checkpointing, and logger integrations. The pitch is \"organize, don't abstract\": research code stays visible while the engineering scaffolding becomes framework-provided and uniform.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Not every model-layer job is an LLM fine-tune: teams training encoders, diffusion models, rankers, and bespoke architectures need training infrastructure, and Lightning is that category's long-standing default (31k stars, a decade of production use). It anchors the general-training end of the phase, complementing the LLM-recipe frameworks. See Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Trainer-managed distribution strategies (DDP, FSDP, DeepSpeed) and precision (bf16/fp16) via arguments, not code</li>\n<li>Callback system: checkpointing, early stopping, LR monitoring, profiling — composable and battle-tested</li>\n<li>Logger integrations (W&amp;B, MLflow, TensorBoard) behind one interface</li>\n<li>Fabric, a lower-level sibling API, for teams wanting Accelerate-style minimalism within the Lightning ecosystem</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The Trainer drives a standardized loop calling your LightningModule hooks (<code>training_step</code>, <code>configure_optimizers</code>, etc.); strategies encapsulate distributed backends, plugins handle precision/cluster environments, and callbacks observe lifecycle events. Determinism, sanity-checking, and resume-from-checkpoint semantics are framework responsibilities.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install lightning\n</code></pre>\n<pre><code class=\"language-python\">import lightning as L\ntrainer = L.Trainer(max_epochs=3, devices=4, strategy=\"fsdp\", precision=\"bf16-mixed\")\ntrainer.fit(MyLightningModule(), datamodule=dm)\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: a research team standardizing many custom-model training codebases so any member can run, resume, and scale any project</li>\n<li><strong>Scenario</strong>: training non-LLM deep models (vision, audio, ranking, diffusion) where LLM recipe frameworks don't apply but multi-GPU/precision/checkpointing rigor still does</li>\n<li><strong>Scenario</strong>: scaling a working single-GPU prototype to multi-node FSDP by changing Trainer arguments</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: standard LoRA fine-tuning of an open LLM — recipe frameworks encode the method knowledge you'd otherwise rebuild</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>A decade of hardening: edge cases in resume, precision, and distributed training that DIY loops rediscover are already handled</li>\n<li>Uniform structure across projects is a real team-velocity mechanism, not aesthetics</li>\n<li>Scales down (laptop, <code>fast_dev_run</code>) as well as up (multi-node) — rare among training frameworks</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Hook-based inversion of control: nonstandard training schemes (unusual optimization loops, RL) fight the Trainer's assumptions</li>\n<li>For LLM fine-tuning specifically it knows nothing about templates, PEFT methods, or quantization recipes — you'd reassemble what Axolotl-class tools ship</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./accelerate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Accelerate</a> (thinner) and <a href=\"./torchtune.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">torchtune</a> (LLM-recipe layer) before adopting — the right choice depends on how custom your training is.</li>\n<li>Logs to <a href=\"./weights-biases.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Weights &amp; Biases</a> or <a href=\"./mlflow.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">MLflow</a> via built-in loggers.</li>\n<li>Link this tool from job guides using its canonical ID <code>pytorch-lightning</code>.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://lightning.ai/docs/pytorch/stable/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://lightning.ai/docs/pytorch/stable/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/Lightning-AI/pytorch-lightning\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>31.2k GitHub stars and sustained active development (verified via the GitHub API, 2026-07-08); one of the most-adopted training frameworks in PyTorch history.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
+      "body_text": "TL;DR: The standard general purpose PyTorch training framework. Open source. Best for custom model training discipline; recipe frameworks beat it for pure LLM fine tuning. Overview PyTorch Lightning splits training code into a LightningModule (your model, losses, optimizers — pure PyTorch) and a Trainer that owns everything else: device placement, DDP/FSDP/DeepSpeed strategies, mixed precision, gradient accumulation, checkpointing, and logger integrations. The pitch is \"organize, don't abstract\": research code stays visible while the engineering scaffolding becomes framework provided and uniform. Why It's in the Arsenal Not every model layer job is an LLM fine tune: teams training encoders, diffusion models, rankers, and bespoke architectures need training infrastructure, and Lightning is that category's long standing default (31k stars, a decade of production use). It anchors the general training end of the phase, complementing the LLM recipe frameworks. See Strengths / Limitations below before adopting it. Key Features Trainer managed distribution strategies (DDP, FSDP, DeepSpeed) and precision (bf16/fp16) via arguments, not code Callback system: checkpointing, early stopping, LR monitoring, profiling — composable and battle tested Logger integrations (W&B, MLflow, TensorBoard) behind one interface Fabric, a lower level sibling API, for teams wanting Accelerate style minimalism within the Lightning ecosystem Architecture / How It Works The Trainer drives a standardized loop calling your LightningModule hooks (training step, configure optimizers, etc.); strategies encapsulate distributed backends, plugins handle precision/cluster environments, and callbacks observe lifecycle events. Determinism, sanity checking, and resume from checkpoint semantics are framework responsibilities. Getting Started Use Cases 1. Scenario : a research team standardizing many custom model training codebases so any member can run, resume, and scale any project 2. Scenario : training non LLM deep models (vision, audio, ranking, diffusion) where LLM recipe frameworks don't apply but multi GPU/precision/checkpointing rigor still does 3. Scenario : scaling a working single GPU prototype to multi node FSDP by changing Trainer arguments 4. Scenario where this is NOT the right fit : standard LoRA fine tuning of an open LLM — recipe frameworks encode the method knowledge you'd otherwise rebuild Strengths A decade of hardening: edge cases in resume, precision, and distributed training that DIY loops rediscover are already handled Uniform structure across projects is a real team velocity mechanism, not aesthetics Scales down (laptop, fast dev run) as well as up (multi node) — rare among training frameworks Limitations / When NOT to Use Hook based inversion of control: nonstandard training schemes (unusual optimization loops, RL) fight the Trainer's assumptions For LLM fine tuning specifically it knows nothing about templates, PEFT methods, or quantization recipes — you'd reassemble what Axolotl class tools ship Integration Patterns Compare against Accelerate (thinner) and torchtune (LLM recipe layer) before adopting — the right choice depends on how custom your training is. Logs to Weights & Biases or MLflow via built in loggers. Link this tool from job guides using its canonical ID pytorch lightning. Resources Primary site Documentation Source Buzz & Reception 31.2k GitHub stars and sustained active development (verified via the GitHub API, 2026 07 08); one of the most adopted training frameworks in PyTorch history. Last reviewed: 2026 07 08 by @maintainer"
     },
     {
       "id": "qursor",
