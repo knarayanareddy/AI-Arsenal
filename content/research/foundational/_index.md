@@ -34,15 +34,15 @@ What is the small set of papers I need to have actually read — not just heard 
 ### Recently Added
 
 - [PaLM: Scaling Language Modeling with Pathways](./chowdhery-2022-palm.md)
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](./dosovitskiy-2020-vit.md)
 - [Training Compute-Optimal Large Language Models](./hoffmann-2022-chinchilla.md)
 - [Scaling Laws for Neural Language Models](./kaplan-2020-scaling-laws.md)
+- [RoBERTa: A Robustly Optimized BERT Pretraining Approach](./liu-2019-roberta.md)
 - [Efficient Estimation of Word Representations in Vector Space (word2vec)](./mikolov-2013-word2vec.md)
 - [GPT-4 Technical Report](./openai-2023-gpt4.md)
 - [Language Models are Unsupervised Multitask Learners (GPT-2)](./radford-2019-gpt2.md)
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](./raffel-2019-t5.md)
 - [LLaMA: Open and Efficient Foundation Language Models](./touvron-2023-llama.md)
-- [Llama 2: Open Foundation and Fine-Tuned Chat Models](./touvron-2023-llama2.md)
-- [Language Models are Few-Shot Learners](./brown-2020-gpt3.md)
 
 ### Most Popular
 
@@ -53,10 +53,12 @@ _No star-tracked entries yet._
 - [Language Models are Few-Shot Learners](./brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - [PaLM: Scaling Language Modeling with Pathways](./chowdhery-2022-palm.md) — 540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](./devlin-2018-bert.md) — Showed bidirectional masked-language-model pretraining beats left-to-right pretraining, meaning you should reach for an encoder-only model (not a decoder-only LLM) for classification/embedding tasks
+- [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](./dosovitskiy-2020-vit.md) — Splits an image into fixed patches, embeds them like tokens, and feeds them to a plain Transformer encoder -- shows that with enough pretraining data a convolution-free model matches or beats CNNs on image classification
 - [The Llama 3 Herd of Models](./dubey-2024-llama3.md) — Documented Meta's dense 405B-parameter Llama 3 herd as an open-weight family competitive with GPT-4 -- the reference technical report for an open-weight family, though Meta's current line has moved to Llama 4's MoE design
 - [Training Compute-Optimal Large Language Models](./hoffmann-2022-chinchilla.md) — The Chinchilla paper: showed contemporary LLMs were dramatically undertrained — compute-optimal training scales parameters and data equally (~20 tokens per parameter), and a 70B model trained on 1.4T tokens beat a 280B model — resetting how the field allocates training compute
 - [Scaling Laws for Neural Language Models](./kaplan-2020-scaling-laws.md) — Established that language-model loss falls as smooth power laws in parameters, data, and compute across many orders of magnitude — the empirical foundation of the scaling era — though its specific compute-optimal allocation was later corrected by Chinchilla
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](./lewis-2020-rag.md) — Coined 'RAG': a jointly-trained retriever plus generator beats closed-book generation on knowledge-intensive tasks -- ground generation in retrieved documents, though production RAG today uses a simpler decoupled pipeline
+- [RoBERTa: A Robustly Optimized BERT Pretraining Approach](./liu-2019-roberta.md) — Shows BERT was significantly undertrained: with more data, longer training, bigger batches, no next-sentence-prediction, and dynamic masking, the same architecture reaches much higher scores -- a lesson that training recipe often matters more than architecture
 - [Efficient Estimation of Word Representations in Vector Space (word2vec)](./mikolov-2013-word2vec.md) — Introduced CBOW and skip-gram, shallow models that learn dense word vectors from raw text cheaply enough to scale to billions of words — establishing that meaning can be captured as geometry (king − man + woman ≈ queen) and seeding the entire embedding era.
 - [GPT-4 Technical Report](./openai-2023-gpt4.md) — The GPT-4 report: human-professional-level results on real exams (top-10% bar exam), multimodal input, and loss predicted in advance from 1000x-smaller runs — while disclosing no architecture, size, or data details, setting the closed-frontier-report template
 - [Language Models are Unsupervised Multitask Learners (GPT-2)](./radford-2019-gpt2.md) — Scaled a decoder-only Transformer LM to 1.5B params on WebText and showed it performs many NLP tasks zero-shot from a natural-language prompt alone — the paper that established prompting and task-agnostic pretraining as the path forward.

@@ -35,6 +35,7 @@ When I am deciding how to fine-tune, align, or adapt a model, which technique sh
 ### Recently Added
 
 - [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md)
+- [KTO: Model Alignment as Prospect Theoretic Optimization](./ethayarajh-2024-kto.md)
 - [Textbooks Are All You Need](./gunasekar-2023-phi-1.md)
 - [ORPO: Monolithic Preference Optimization without Reference Model](./hong-2024-orpo.md)
 - [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](./lee-2023-rlaif.md)
@@ -43,7 +44,6 @@ When I am deciding how to fine-tune, align, or adapt a model, which technique sh
 - [Proximal Policy Optimization Algorithms](./schulman-2017-ppo.md)
 - [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](./shao-2024-deepseekmath.md)
 - [Finetuned Language Models Are Zero-Shot Learners](./wei-2021-flan.md)
-- [Constitutional AI: Harmlessness from AI Feedback](./bai-2022-constitutional-ai.md)
 
 ### Most Popular
 
@@ -55,6 +55,7 @@ _No star-tracked entries yet._
 - [Deep Reinforcement Learning from Human Preferences](./christiano-2017-rlhf.md) — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
 - [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](./deepseek-ai-2025-r1.md) — Showed RL with automated, verifiable rewards (not human labels) can train strong reasoning directly, then distills into smaller dense models -- consider RL-from-verifiable-rewards for reasoning-heavy domains, not just human-feedback alignment
 - [QLoRA: Efficient Finetuning of Quantized LLMs](./dettmers-2023-qlora.md) — Showed you can fine-tune a 4-bit-quantized frozen base model with LoRA adapters trained in full precision, meaning you should use QLoRA when you need to fine-tune a large model on a single consumer GPU that couldn't otherwise fit it
+- [KTO: Model Alignment as Prospect Theoretic Optimization](./ethayarajh-2024-kto.md) — Aligns models from a single binary 'good/bad' label per example instead of pairwise preferences, using a human-aware loss inspired by prospect theory -- removes the need to collect matched preferred/rejected pairs
 - [Textbooks Are All You Need](./gunasekar-2023-phi-1.md) — The phi-1 paper: a 1.3B model trained on 7B tokens of filtered 'textbook-quality' and synthetic data hit 50.6% HumanEval — the flagship argument that data quality can substitute for orders of magnitude of scale, launching the small-language-model program
 - [ORPO: Monolithic Preference Optimization without Reference Model](./hong-2024-orpo.md) — Folds preference alignment into supervised fine-tuning in a single stage by adding an odds-ratio penalty to the SFT loss — no separate reference model and no separate DPO/RLHF phase, cutting alignment to one training run.
 - [LoRA: Low-Rank Adaptation of Large Language Models](./hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
@@ -67,3 +68,4 @@ _No star-tracked entries yet._
 - [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](./shao-2024-deepseekmath.md) — Introduced GRPO: group-relative policy optimization drops PPO's value network by baselining rewards against groups of sampled outputs — the algorithm behind DeepSeek-R1 and the reasoning-RL wave — plus a 120B-token math corpus mined from Common Crawl
 - [Finetuned Language Models Are Zero-Shot Learners](./wei-2021-flan.md) — The FLAN paper: fine-tuning a 137B model on 60+ NLP tasks phrased as natural-language instructions makes it follow instructions on unseen tasks — the founding demonstration of instruction tuning, the step every modern usable LLM undergoes
 - [Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement](./yang-2024-qwen25-math.md) — Documented a self-improvement pipeline (using the model to generate and filter its own better math training data) producing strong math-specific models -- narrow applicability, and Qwen's own successors have since surpassed these results
+- [Self-Rewarding Language Models](./yuan-2024-self-rewarding.md) — The model acts as its own reward model via LLM-as-a-judge, generating and scoring its own responses to build preference pairs for iterative DPO -- so reward quality improves alongside generation, escaping a fixed frozen reward model
