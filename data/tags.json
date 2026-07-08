@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:49:50.928Z",
+  "generated_at": "2026-07-08T20:58:46.676Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 152,
+      "count": 153,
       "types": {
         "tip": 17,
         "tool": 49,
@@ -13,9 +13,9 @@
         "guide": 7,
         "benchmark": 9,
         "project": 44,
+        "paper": 15,
         "architecture": 6,
-        "person": 3,
-        "paper": 14
+        "person": 3
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -38,6 +38,7 @@
         "anythingllm",
         "autogen",
         "autogpt",
+        "besta-2023-graph-of-thoughts",
         "browsecomp",
         "browser-use",
         "browserbase",
@@ -175,11 +176,11 @@
     {
       "id": "alignment",
       "label": "Alignment",
-      "count": 18,
+      "count": 20,
       "types": {
         "guide": 1,
         "person": 4,
-        "paper": 9,
+        "paper": 11,
         "project": 2,
         "benchmark": 1,
         "tool": 1
@@ -190,6 +191,7 @@
         "bai-2022-constitutional-ai",
         "christiano-2017-rlhf",
         "dario-amodei",
+        "ethayarajh-2024-kto",
         "hong-2024-orpo",
         "lee-2023-rlaif",
         "lilian-weng",
@@ -202,7 +204,8 @@
         "schulman-2017-ppo",
         "trl",
         "verl",
-        "wei-2021-flan"
+        "wei-2021-flan",
+        "yuan-2024-self-rewarding"
       ]
     },
     {
@@ -622,9 +625,9 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 53,
+      "count": 56,
       "types": {
-        "paper": 16,
+        "paper": 19,
         "guide": 4,
         "tip": 11,
         "project": 10,
@@ -669,9 +672,11 @@
         "megatron-lm",
         "mistral-models",
         "onnxruntime",
+        "peng-2023-rwkv",
         "phi-4",
         "pin-model-and-runtime-versions",
         "quantization",
+        "raposo-2024-mixture-of-depths",
         "set-token-budgets-per-feature",
         "shazeer-2019-mqa",
         "skypilot",
@@ -684,6 +689,7 @@
         "ultralytics-yolo",
         "unsloth",
         "use-speculative-decoding-for-latency-critical-paths",
+        "xiao-2022-smoothquant",
         "xiao-2023-streamingllm"
       ]
     },
@@ -750,7 +756,7 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 159,
+      "count": 160,
       "types": {
         "digest": 1,
         "tool": 29,
@@ -760,7 +766,7 @@
         "project": 15,
         "benchmark": 50,
         "person": 9,
-        "paper": 12,
+        "paper": 13,
         "architecture": 6
       },
       "entries": [
@@ -841,6 +847,7 @@
         "langsmith",
         "langsmith-hub",
         "langsmith-platform",
+        "lin-2021-truthfulqa",
         "liu-2023-lost-in-the-middle",
         "livecodebench",
         "llm-as-a-judge",
@@ -941,11 +948,11 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 39,
+      "count": 41,
       "types": {
         "tool": 14,
         "project": 8,
-        "paper": 6,
+        "paper": 8,
         "tip": 8,
         "guide": 2,
         "architecture": 1
@@ -958,6 +965,7 @@
         "deepspeed",
         "dettmers-2023-qlora",
         "establish-a-prompting-baseline-before-fine-tuning",
+        "ethayarajh-2024-kto",
         "evaluate-checkpoints-on-task-metrics-not-loss",
         "fine-tuning-methods",
         "gpt-sovits",
@@ -989,16 +997,17 @@
         "trl",
         "unsloth",
         "verl",
-        "version-datasets-and-adapters-together"
+        "version-datasets-and-adapters-together",
+        "yuan-2024-self-rewarding"
       ]
     },
     {
       "id": "foundational",
       "label": "Foundational",
-      "count": 28,
+      "count": 29,
       "types": {
         "person": 5,
-        "paper": 18,
+        "paper": 19,
         "trend": 1,
         "guide": 2,
         "project": 1,
@@ -1016,6 +1025,7 @@
         "jeremy-howard",
         "kaplan-2020-scaling-laws",
         "lewis-2020-rag",
+        "liu-2019-roberta",
         "mikolov-2013-word2vec",
         "must-read-papers",
         "nanogpt",
@@ -1112,11 +1122,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 116,
+      "count": 117,
       "types": {
         "tip": 25,
         "tool": 25,
-        "paper": 12,
+        "paper": 13,
         "project": 40,
         "architecture": 7,
         "guide": 6,
@@ -1207,6 +1217,7 @@
         "quantization",
         "qwen",
         "qwen-2-5",
+        "raposo-2024-mixture-of-depths",
         "ray",
         "ray-serve",
         "replicate",
@@ -1290,12 +1301,12 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 272,
+      "count": 281,
       "types": {
         "tool": 66,
         "tip": 31,
         "guide": 44,
-        "paper": 39,
+        "paper": 48,
         "project": 54,
         "benchmark": 14,
         "person": 15,
@@ -1326,8 +1337,10 @@
         "axolotl",
         "azure-ai-studio",
         "baml",
+        "besta-2023-graph-of-thoughts",
         "bigcodebench",
         "bird-sql",
+        "borgeaud-2021-retro",
         "brown-2020-gpt3",
         "cai-2024-medusa",
         "candle",
@@ -1369,6 +1382,7 @@
         "dspy",
         "dubey-2024-llama3",
         "establish-a-prompting-baseline-before-fine-tuning",
+        "ethayarajh-2024-kto",
         "evaluation",
         "evaluation-methodology",
         "falcon-3",
@@ -1421,9 +1435,11 @@
         "li-2023-blip2",
         "librechat",
         "lightrag",
+        "lin-2021-truthfulqa",
         "litellm",
         "litgpt",
         "litserve",
+        "liu-2019-roberta",
         "liu-2023-llava",
         "liu-2023-lost-in-the-middle",
         "llama-3",
@@ -1479,6 +1495,7 @@
         "outlines",
         "paddleocr",
         "peft",
+        "peng-2023-rwkv",
         "phi-4",
         "phi-cookbook",
         "pin-model-versions-in-prompt-regression-tests",
@@ -1499,6 +1516,7 @@
         "raffel-2019-t5",
         "ragas",
         "rank-context-by-expected-usefulness",
+        "raposo-2024-mixture-of-depths",
         "rd-agent",
         "rebuff",
         "repomix",
@@ -1572,8 +1590,10 @@
         "whisper",
         "wildbench",
         "windsurf",
+        "xiao-2022-smoothquant",
         "yann-lecun",
         "yi",
+        "yuan-2024-self-rewarding",
         "zheng-2023-llm-as-a-judge"
       ]
     },
@@ -1718,9 +1738,9 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 48,
+      "count": 49,
       "types": {
-        "paper": 8,
+        "paper": 9,
         "project": 28,
         "benchmark": 7,
         "tool": 5
@@ -1734,6 +1754,7 @@
         "comfyui",
         "command-r-plus",
         "cosyvoice",
+        "dosovitskiy-2020-vit",
         "dubey-2024-llama3",
         "f5-tts",
         "flux",
@@ -1990,10 +2011,10 @@
     {
       "id": "quantization",
       "label": "Quantization",
-      "count": 13,
+      "count": 14,
       "types": {
         "tip": 3,
-        "paper": 3,
+        "paper": 4,
         "project": 5,
         "guide": 2
       },
@@ -2010,20 +2031,21 @@
         "ml-engineer-role",
         "quantization",
         "start-with-a-smaller-quantized-model",
-        "use-int8-for-safer-compression"
+        "use-int8-for-safer-compression",
+        "xiao-2022-smoothquant"
       ]
     },
     {
       "id": "rag",
       "label": "Rag",
-      "count": 122,
+      "count": 123,
       "types": {
         "tip": 19,
         "build-example": 5,
         "guide": 4,
         "tool": 23,
         "project": 38,
-        "paper": 16,
+        "paper": 17,
         "benchmark": 7,
         "architecture": 7,
         "person": 3
@@ -2042,6 +2064,7 @@
         "ask-for-quotes-before-answers-in-rag-prompts",
         "beir",
         "bge-embeddings",
+        "borgeaud-2021-retro",
         "building-rag-systems",
         "cherry-studio",
         "choose-chunk-size-by-answer-span-length",
@@ -2156,10 +2179,10 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 38,
+      "count": 39,
       "types": {
         "benchmark": 11,
-        "paper": 12,
+        "paper": 13,
         "project": 7,
         "guide": 3,
         "person": 4,
@@ -2169,6 +2192,7 @@
         "arc-agi",
         "asai-2023-self-rag",
         "bbh",
+        "besta-2023-graph-of-thoughts",
         "cobbe-2021-gsm8k",
         "crux-eval",
         "deepseek-ai-2025-r1",
@@ -2209,9 +2233,9 @@
     {
       "id": "research",
       "label": "Research",
-      "count": 20,
+      "count": 21,
       "types": {
-        "paper": 6,
+        "paper": 7,
         "project": 3,
         "guide": 4,
         "person": 5,
@@ -2226,6 +2250,7 @@
         "kojima-2022-zero-shot-cot",
         "li-2023-blip2",
         "lilian-weng",
+        "lin-2021-truthfulqa",
         "llm-researcher",
         "marimo",
         "melanie-mitchell",
@@ -2243,12 +2268,12 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 97,
+      "count": 98,
       "types": {
         "tip": 20,
         "build-example": 4,
         "tool": 19,
-        "paper": 16,
+        "paper": 17,
         "benchmark": 7,
         "guide": 3,
         "architecture": 6,
@@ -2264,6 +2289,7 @@
         "asai-2023-self-rag",
         "ask-for-quotes-before-answers-in-rag-prompts",
         "beir",
+        "borgeaud-2021-retro",
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
         "choose-chunking-strategy",
@@ -2845,9 +2871,9 @@
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 17,
+      "count": 20,
       "types": {
-        "paper": 10,
+        "paper": 13,
         "person": 4,
         "guide": 2,
         "tool": 1
@@ -2857,13 +2883,16 @@
         "andrej-karpathy",
         "attention",
         "devlin-2018-bert",
+        "dosovitskiy-2020-vit",
         "fedus-2021-switch-transformer",
         "gu-2023-mamba",
         "jay-alammar",
         "jiang-2024-mixtral",
         "leviathan-2022-speculative-decoding",
+        "liu-2019-roberta",
         "megatron-lm",
         "noam-shazeer",
+        "peng-2023-rwkv",
         "radford-2022-whisper",
         "shazeer-2019-mqa",
         "su-2021-rope",
@@ -2904,14 +2933,15 @@
     {
       "id": "vision",
       "label": "Vision",
-      "count": 13,
+      "count": 14,
       "types": {
         "project": 8,
-        "benchmark": 4,
-        "paper": 1
+        "paper": 2,
+        "benchmark": 4
       },
       "entries": [
         "detectron2",
+        "dosovitskiy-2020-vit",
         "mathvista",
         "minicpm-v",
         "mmbench",

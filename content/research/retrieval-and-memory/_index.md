@@ -33,6 +33,7 @@ When I am designing a retrieval or memory system for an LLM application, which t
 ### Recently Added
 
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./asai-2023-self-rag.md)
+- [Improving Language Models by Retrieving from Trillions of Tokens](./borgeaud-2021-retro.md)
 - [REALM: Retrieval-Augmented Language Model Pre-Training](./guu-2020-realm.md)
 - [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./izacard-2020-fid.md)
 - [Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)](./izacard-2021-contriever.md)
@@ -41,7 +42,6 @@ When I am designing a retrieval or memory system for an LLM application, which t
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./khattab-2020-colbert.md)
 - [Lost in the Middle: How Language Models Use Long Contexts](./liu-2023-lost-in-the-middle.md)
 - [MemGPT: Towards LLMs as Operating Systems](./packer-2023-memgpt.md)
-- [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](./reimers-2019-sentence-bert.md)
 
 ### Most Popular
 
@@ -50,6 +50,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
+- [Improving Language Models by Retrieving from Trillions of Tokens](./borgeaud-2021-retro.md) — RETRO augments a Transformer with chunk-level retrieval from a trillions-of-tokens database via cross-attention, letting a small model match much larger ones -- retrieval as a way to move knowledge out of parameters and into an index
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./edge-2024-graphrag.md) — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
 - [REALM: Retrieval-Augmented Language Model Pre-Training](./guu-2020-realm.md) — First model to pretrain a language model jointly with a learned neural retriever over Wikipedia, backpropagating through retrieval — establishing that external knowledge can be a trained component of an LM rather than a bolt-on
