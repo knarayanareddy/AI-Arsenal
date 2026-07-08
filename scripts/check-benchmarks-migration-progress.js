@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import fs from 'node:fs/promises';
 import chalk from 'chalk';
 import { loadEntries } from './utils/entries.js';
 
