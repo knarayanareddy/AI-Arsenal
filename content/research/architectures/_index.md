@@ -31,7 +31,11 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 
 ### Recently Added
 
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./ainslie-2023-gqa.md)
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md)
+- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](./gu-2023-mamba.md)
+- [Mixtral of Experts](./jiang-2024-mixtral.md)
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding](./su-2021-rope.md)
 
 ### Most Popular
 
@@ -39,4 +43,8 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./ainslie-2023-gqa.md) — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
+- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](./gu-2023-mamba.md) — Introduced selective state-space models with input-dependent dynamics and a hardware-aware parallel scan, achieving Transformer-quality language modeling with linear-time inference — the strongest attention alternative, now shipping in hybrid production models
+- [Mixtral of Experts](./jiang-2024-mixtral.md) — Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding](./su-2021-rope.md) — Introduced rotary position embeddings (RoPE), which encode positions by rotating query/key vectors so attention depends on relative distance — now the position encoding of essentially every open LLM and the mechanism behind most context-extension tricks

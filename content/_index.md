@@ -13,7 +13,7 @@
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 7 entries | 2026-07-08 |
 | [projects](./projects/) | 73 entries | 2026-07-08 |
-| [research](./research/) | 34 entries | 2026-07-08 |
+| [research](./research/) | 53 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 102 entries | 2026-07-08 |
 | [tools](./tools/) | 131 entries | 2026-07-08 |
@@ -22,15 +22,15 @@
 ## Recently Added
 
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md)
+- [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./research/evaluation-and-safety/chiang-2024-chatbot-arena.md)
 - [Codex Plugin for Claude Code](./tools/dx-and-tooling/codex-plugin-cc.md)
 - [CubeSandbox](./tools/serving-and-deployment/cubesandbox.md)
+- [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](./research/inference-and-efficiency/dao-2022-flashattention.md)
+- [Retrieval-Augmented Generation for Large Language Models: A Survey](./research/surveys/gao-2023-rag-survey.md)
 - [Gemma 4 Technical Report](./research/architectures/gemma-team-2026-gemma4.md)
-- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./research/retrieval-and-memory/ji-2026-mragent.md)
-- [The Mirage of Optimizing Training Policies: Monotonic Inference Policies as the Real Objective for LLM Reinforcement Learning](./research/training-and-alignment/liang-2026-mipi.md)
-- [Orca](./tools/dx-and-tooling/orca.md)
-- [GrepSeek: Training Search Agents for Direct Corpus Interaction](./research/retrieval-and-memory/salemi-2026-grepseek.md)
-- [Speech To Speech](./projects/frameworks/speech-to-speech.md)
-- [Superpowers](./tools/dx-and-tooling/superpowers.md)
+- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](./research/architectures/gu-2023-mamba.md)
+- [Measuring Massive Multitask Language Understanding](./research/evaluation-and-safety/hendrycks-2020-mmlu.md)
 
 ## Most Popular
 
@@ -71,6 +71,7 @@
 - [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md) — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Alignment & RLHF](./skills/core-concepts/alignment-and-rlhf.md) — Conceptual guide to instruction tuning, RLHF, DPO, and why aligned model behavior matters to engineers
@@ -96,4 +97,3 @@
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./tips-and-tricks/inference-and-serving/benchmark-with-real-context-lengths.md) — 
 - [BentoML](./tools/serving-and-deployment/bentoml.md) — A framework for packaging, deploying, and scaling AI model services
-- [Braintrust](./projects/benchmarks-and-evals/braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates

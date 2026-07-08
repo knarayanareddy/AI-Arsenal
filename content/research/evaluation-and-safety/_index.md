@@ -31,6 +31,9 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 
 ### Recently Added
 
+- [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./chiang-2024-chatbot-arena.md)
+- [Measuring Massive Multitask Language Understanding](./hendrycks-2020-mmlu.md)
+- [Jailbroken: How Does LLM Safety Training Fail?](./wei-2023-jailbroken.md)
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md)
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./zheng-2023-llm-as-a-judge.md)
 
@@ -40,5 +43,8 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./chiang-2024-chatbot-arena.md) — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
+- [Measuring Massive Multitask Language Understanding](./hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
+- [Jailbroken: How Does LLM Safety Training Fail?](./wei-2023-jailbroken.md) — Explained why jailbreaks work via two failure modes — competing objectives (helpfulness vs safety) and mismatched generalization (safety training doesn't cover what pretraining can do) — and showed scale alone won't fix them; the conceptual framework behind LLM red-teaming
 - [Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena](./zheng-2023-llm-as-a-judge.md) — Showed strong LLM judges agree with human judgments over 80% of the time, matching human-human agreement -- use LLM-as-judge for scalable open-ended evaluation, but mitigate its documented position, verbosity, and self-enhancement biases
