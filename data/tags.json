@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T21:22:59.307Z",
+  "generated_at": "2026-07-08T22:42:07.950Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 155,
+      "count": 156,
       "types": {
         "tip": 17,
         "tool": 51,
@@ -14,7 +14,7 @@
         "benchmark": 9,
         "project": 44,
         "paper": 15,
-        "architecture": 6,
+        "architecture": 7,
         "person": 3
       },
       "entries": [
@@ -50,6 +50,7 @@
         "checkpoint-agent-state-after-each-tool-call",
         "cherry-studio",
         "choose-agent-framework",
+        "choose-context-window-management-strategy",
         "choose-eval-framework",
         "choose-guardrails-strategy",
         "choose-memory-solution",
@@ -702,12 +703,12 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 46,
+      "count": 47,
       "types": {
         "tip": 8,
         "project": 14,
         "guide": 2,
-        "architecture": 4,
+        "architecture": 5,
         "tool": 10,
         "paper": 7,
         "person": 1
@@ -722,6 +723,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
+        "choose-reranking-strategy",
         "choose-vector-db",
         "chroma",
         "clip",
@@ -1135,13 +1137,13 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 119,
+      "count": 120,
       "types": {
         "tip": 25,
         "tool": 27,
         "paper": 13,
         "project": 40,
-        "architecture": 7,
+        "architecture": 8,
         "guide": 6,
         "build-example": 1
       },
@@ -1161,6 +1163,7 @@
         "chatterbox",
         "choose-caching-strategy",
         "choose-deployment-target",
+        "choose-fallback-and-failover-strategy",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
         "choose-serving-stack",
@@ -1316,7 +1319,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 282,
+      "count": 285,
       "types": {
         "tool": 67,
         "tip": 31,
@@ -1325,7 +1328,7 @@
         "project": 54,
         "benchmark": 14,
         "person": 15,
-        "architecture": 7,
+        "architecture": 10,
         "build-example": 2
       },
       "entries": [
@@ -1365,8 +1368,11 @@
         "cherry-studio",
         "chiang-2024-chatbot-arena",
         "choose-caching-strategy",
+        "choose-context-window-management-strategy",
+        "choose-fallback-and-failover-strategy",
         "choose-guardrails-strategy",
         "choose-llm",
+        "choose-reranking-strategy",
         "choose-serving-stack",
         "choose-structured-output-strategy",
         "chowdhery-2022-palm",
@@ -1665,12 +1671,12 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 27,
+      "count": 28,
       "types": {
         "guide": 3,
         "tool": 8,
         "tip": 7,
-        "architecture": 2,
+        "architecture": 3,
         "project": 3,
         "paper": 4
       },
@@ -1678,6 +1684,7 @@
         "agent-builder",
         "agno",
         "budget-context-before-adding-tools",
+        "choose-context-window-management-strategy",
         "choose-memory-solution",
         "codebase-memory-mcp",
         "cognee",
@@ -2058,7 +2065,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 126,
+      "count": 128,
       "types": {
         "tip": 19,
         "build-example": 5,
@@ -2067,7 +2074,7 @@
         "project": 38,
         "paper": 17,
         "benchmark": 7,
-        "architecture": 7,
+        "architecture": 9,
         "person": 3
       },
       "entries": [
@@ -2089,8 +2096,10 @@
         "cherry-studio",
         "choose-chunk-size-by-answer-span-length",
         "choose-chunking-strategy",
+        "choose-context-window-management-strategy",
         "choose-embedding-model",
         "choose-eval-framework",
+        "choose-reranking-strategy",
         "choose-vector-db",
         "chroma",
         "cognee",
@@ -2291,7 +2300,7 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 100,
+      "count": 101,
       "types": {
         "tip": 20,
         "build-example": 4,
@@ -2299,7 +2308,7 @@
         "paper": 17,
         "benchmark": 7,
         "guide": 3,
-        "architecture": 6,
+        "architecture": 7,
         "project": 21,
         "person": 1
       },
@@ -2318,6 +2327,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
+        "choose-reranking-strategy",
         "choose-vector-db",
         "chroma",
         "codebase-memory-mcp",
@@ -2510,10 +2520,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 73,
+      "count": 74,
       "types": {
         "project": 39,
-        "architecture": 5,
+        "architecture": 6,
         "tool": 24,
         "paper": 1,
         "tip": 4
@@ -2527,6 +2537,7 @@
         "cherry-studio",
         "choose-deployment-target",
         "choose-embedding-model",
+        "choose-fallback-and-failover-strategy",
         "choose-serving-stack",
         "choose-vector-db",
         "cleanlab",

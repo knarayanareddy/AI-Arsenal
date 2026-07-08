@@ -27,6 +27,7 @@ _No entries yet. This category folder was created during the Architectures verti
 ### Recently Added
 
 - [Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted](./choose-embedding-model.md)
+- [Choosing a Reranking Strategy: Dense-Only, Cross-Encoder, or LLM Reranker](./choose-reranking-strategy.md)
 - [Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic](./choose-chunking-strategy.md)
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./choose-vector-db.md)
 
@@ -38,4 +39,5 @@ _No star-tracked entries yet._
 
 - [Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic](./choose-chunking-strategy.md) — 
 - [Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted](./choose-embedding-model.md) — 
+- [Choosing a Reranking Strategy: Dense-Only, Cross-Encoder, or LLM Reranker](./choose-reranking-strategy.md) — 
 - [Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed](./choose-vector-db.md) — 

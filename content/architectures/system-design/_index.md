@@ -26,6 +26,7 @@ Choosing *which* vector database, LLM provider, or observability tool to use is 
 
 ### Recently Added
 
+- [Managing a Growing Context Window: Truncation, Summarization, or Retrieval Offload](./choose-context-window-management-strategy.md)
 - [Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates](./choose-guardrails-strategy.md)
 - [Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding](./choose-structured-output-strategy.md)
 - [Single Agent vs Multi-Agent: When Splitting the Work Actually Helps](./single-agent-vs-multi-agent.md)
@@ -38,6 +39,7 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Managing a Growing Context Window: Truncation, Summarization, or Retrieval Offload](./choose-context-window-management-strategy.md) — 
 - [Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates](./choose-guardrails-strategy.md) — 
 - [Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic](./choose-memory-solution.md) — 
 - [Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding](./choose-structured-output-strategy.md) — 

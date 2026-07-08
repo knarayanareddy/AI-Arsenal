@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-08T21:23:02.099Z | Entries: 782 | Schema version: 1.0.0
+Generated: 2026-07-08T22:42:10.723Z | Entries: 785 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,7 +14,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 1
 - Guides: 59
 - Build examples: 8
-- Architectures: 21
+- Architectures: 24
 - Observability: 10
 - Community: 32
 
@@ -231,6 +231,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### data-strategy
 - Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic — 
 - Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted — 
+- Choosing a Reranking Strategy: Dense-Only, Cross-Encoder, or LLM Reranker — 
 - Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
 
 ### evaluation-strategy
@@ -251,14 +252,15 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### serving-patterns
 - Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse — 
 - Choosing a Deployment Target: Separating App Hosting From Model Serving — 
+- Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway — 
 - Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine — 
 
 ### system-design
+- Managing a Growing Context Window: Truncation, Summarization, or Retrieval Offload — 
 - Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates — 
 - Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
 - Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding — 
 - RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
-- Single Agent vs Multi-Agent: When Splitting the Work Actually Helps — 
 
 ## Observability Playbooks by Category
 

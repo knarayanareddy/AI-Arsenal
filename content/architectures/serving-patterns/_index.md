@@ -27,6 +27,7 @@ _No entries yet. This category folder was created during the Architectures verti
 ### Recently Added
 
 - [Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse](./choose-caching-strategy.md)
+- [Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway](./choose-fallback-and-failover-strategy.md)
 - [Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine](./choose-serving-stack.md)
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md)
 
@@ -38,4 +39,5 @@ _No star-tracked entries yet._
 
 - [Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse](./choose-caching-strategy.md) — 
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md) — 
+- [Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway](./choose-fallback-and-failover-strategy.md) — 
 - [Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine](./choose-serving-stack.md) — 
