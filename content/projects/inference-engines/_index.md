@@ -35,6 +35,7 @@ Before selecting an inference engine:
 
 - [Candle](./candle.md)
 - [ExLlamaV2](./exllamav2.md)
+- [exo (exo-explore)](./exo.md)
 - [faster-whisper](./faster-whisper.md)
 - [KTransformers](./ktransformers.md)
 - [LocalAI](./localai.md)
@@ -42,7 +43,6 @@ Before selecting an inference engine:
 - [MLC LLM](./mlc-llm.md)
 - [ONNX Runtime](./onnxruntime.md)
 - [TensorRT-LLM](./tensorrt-llm.md)
-- [text-generation-webui (oobabooga)](./text-generation-webui.md)
 
 ### Most Popular
 
@@ -51,16 +51,17 @@ Before selecting an inference engine:
 - [vLLM](./vllm.md) — ⭐ 82772
 - [text-generation-webui (oobabooga)](./text-generation-webui.md) — ⭐ 47433
 - [LocalAI](./localai.md) — ⭐ 47415
+- [exo (exo-explore)](./exo.md) — ⭐ 46087
 - [SGLang](./sglang.md) — ⭐ 28967
 - [Llamafile](./llamafile.md) — ⭐ 24936
 - [faster-whisper](./faster-whisper.md) — ⭐ 24114
 - [WhisperX](./whisperx.md) — ⭐ 22968
-- [MLC LLM](./mlc-llm.md) — ⭐ 22917
 
 ### Browse All
 
 - [Candle](./candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [ExLlamaV2](./exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
+- [exo (exo-explore)](./exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - [faster-whisper](./faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [KTransformers](./ktransformers.md) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
 - [llama.cpp](./llama-cpp.md) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices

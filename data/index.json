@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T20:11:41.195Z",
-    "total_projects": 130,
+    "generated_at": "2026-07-08T20:14:10.582Z",
+    "total_projects": 136,
     "total_tools": 177,
     "total_papers": 80,
     "total_tips": 129,
@@ -926,6 +926,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "audiocraft",
+      "type": "project",
+      "name": "AudioCraft (Meta)",
+      "description": "Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/audiocraft.md",
+      "url": "content/projects/foundation-models/audiocraft",
+      "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -2050,6 +2069,25 @@
       "featured": false
     },
     {
+      "id": "cleanlab",
+      "type": "project",
+      "name": "cleanlab",
+      "description": "Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions",
+      "tags": [
+        "data",
+        "evaluation",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/cleanlab.md",
+      "url": "content/projects/data-and-retrieval/cleanlab",
+      "last_updated": "2026-07-08",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "clearml",
       "type": "tool",
       "name": "ClearML",
@@ -2293,6 +2331,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "colossalai",
+      "type": "project",
+      "name": "Colossal-AI (HPC-AI Tech)",
+      "description": "Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory",
+      "tags": [
+        "training",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "path": "content/projects/training-and-alignment/colossalai.md",
+      "url": "content/projects/training-and-alignment/colossalai",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -3008,6 +3065,25 @@
       "featured": false
     },
     {
+      "id": "detectron2",
+      "type": "project",
+      "name": "Detectron2 (Meta)",
+      "description": "Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work",
+      "tags": [
+        "vision",
+        "training",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/detectron2.md",
+      "url": "content/projects/frameworks/detectron2",
+      "last_updated": "2026-07-08",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "dettmers-2023-qlora",
       "type": "paper",
       "name": "QLoRA: Efficient Finetuning of Quantized LLMs",
@@ -3565,6 +3641,25 @@
       "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "exo",
+      "type": "project",
+      "name": "exo (exo-explore)",
+      "description": "Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "local"
+      ],
+      "path": "content/projects/inference-engines/exo.md",
+      "url": "content/projects/inference-engines/exo",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "experimental",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -7924,6 +8019,25 @@
       "category": "rag",
       "maturity": "production",
       "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "open-r1",
+      "type": "project",
+      "name": "Open R1 (Hugging Face)",
+      "description": "Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL",
+      "tags": [
+        "reasoning",
+        "rlhf",
+        "fine-tuning"
+      ],
+      "path": "content/projects/training-and-alignment/open-r1.md",
+      "url": "content/projects/training-and-alignment/open-r1",
+      "last_updated": "2026-07-08",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-08T20:11:41.195Z",
-  "count": 130,
+  "generated_at": "2026-07-08T20:14:10.582Z",
+  "count": 136,
   "items": [
     {
       "id": "agenta",
@@ -412,6 +412,102 @@
       "word_count": 505,
       "body_html": "<h2>Overview</h2>\n<p>An open-source AI application that packages the full private-assistant stack — document ingestion, embedding, vector database, RAG chat, multi-user management, and no-code AI agents — into one deployable unit (desktop app or Docker). Its design bet is vertical integration: acceptable defaults for every pipeline stage rather than best-in-class configurability at any one stage.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The 'private ChatGPT over your documents' appliance: a single Docker container or desktop app bundling ingestion, embedding, vector storage, RAG chat, and no-code agents — the lowest-friction path from documents to a working private assistant. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want document-grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Workspaces are containerized RAG contexts: documents are chunked and embedded (built-in or pluggable embedders), stored in LanceDB by default (Pinecone/Chroma/others pluggable), and retrieved into chats pinned to that workspace. An agent framework adds tool use (web browsing, file operations, custom skills via MCP support); every major LLM provider plus local runtimes (Ollama, LM Studio, llama.cpp) is a swappable backend.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: any LLM provider/runtime, LanceDB and pluggable vector stores. Competing: Open WebUI (deeper Ollama-native community), LibreChat (multi-provider chat focus), Onyx (enterprise search focus). Complementary: MCP support lets it consume the same tool servers as Claude/other agent hosts; Mintplex Labs ships weekly releases with a hosted-cloud option funding development.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">docker pull mintplexlabs/anythingllm\ndocker run -d -p 3001:3001 --cap-add SYS_ADMIN -v anythingllm:/app/server/storage mintplexlabs/anythingllm\n# open localhost:3001, pick your LLM + embedder, create a workspace, drop documents in\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want document-grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval</li>\n<li><strong>Scenario</strong>: you need multi-user self-hosted deployment with permissions and embeddable chat widgets — the Docker version adds user management that desktop-only tools lack</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want document-grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval</li>\n<li>You need multi-user self-hosted deployment with permissions and embeddable chat widgets — the Docker version adds user management that desktop-only tools lack</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need fine-grained control over RAG internals (custom chunking strategies, rerankers, hybrid retrieval tuning) — appliance-style defaults trade configurability for simplicity; build on LlamaIndex/Haystack instead</li>\n<li>You are already invested in Open WebUI or LibreChat for chat UX — the overlap is large and migrating workspaces is manual</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see <a href=\"../frameworks/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Frameworks</a>. For job-based tool comparisons, see <a href=\"../../tools/by-job/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/by-job/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/Mintplex-Labs/anything-llm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.anythingllm.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (62,914 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)</em></p>\n",
       "body_text": "Overview An open source AI application that packages the full private assistant stack — document ingestion, embedding, vector database, RAG chat, multi user management, and no code AI agents — into one deployable unit (desktop app or Docker). Its design bet is vertical integration: acceptable defaults for every pipeline stage rather than best in class configurability at any one stage. Why it's in the Arsenal The 'private ChatGPT over your documents' appliance: a single Docker container or desktop app bundling ingestion, embedding, vector storage, RAG chat, and no code agents — the lowest friction path from documents to a working private assistant. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want document grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval. See Strengths / Limitations below before adopting it. Architecture Workspaces are containerized RAG contexts: documents are chunked and embedded (built in or pluggable embedders), stored in LanceDB by default (Pinecone/Chroma/others pluggable), and retrieved into chats pinned to that workspace. An agent framework adds tool use (web browsing, file operations, custom skills via MCP support); every major LLM provider plus local runtimes (Ollama, LM Studio, llama.cpp) is a swappable backend. Ecosystem Position Upstream: any LLM provider/runtime, LanceDB and pluggable vector stores. Competing: Open WebUI (deeper Ollama native community), LibreChat (multi provider chat focus), Onyx (enterprise search focus). Complementary: MCP support lets it consume the same tool servers as Claude/other agent hosts; Mintplex Labs ships weekly releases with a hosted cloud option funding development. Getting Started Key Use Cases 1. Scenario : you want document grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval 2. Scenario : you need multi user self hosted deployment with permissions and embeddable chat widgets — the Docker version adds user management that desktop only tools lack Strengths You want document grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval You need multi user self hosted deployment with permissions and embeddable chat widgets — the Docker version adds user management that desktop only tools lack Limitations You need fine grained control over RAG internals (custom chunking strategies, rerankers, hybrid retrieval tuning) — appliance style defaults trade configurability for simplicity; build on LlamaIndex/Haystack instead You are already invested in Open WebUI or LibreChat for chat UX — the overlap is large and migrating workspaces is manual Relation to the Arsenal This is an agent system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see Frameworks. For job based tool comparisons, see tools/by job/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (62,914 stars, last commit 2026 07 08, verified via GitHub API on 2026 07 08)"
+    },
+    {
+      "id": "audiocraft",
+      "name": "AudioCraft (Meta)",
+      "version_tracked": null,
+      "artifact_type": "model",
+      "category": "voice-audio",
+      "subcategory": "open-source-models",
+      "description": "Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec",
+      "github_url": "https://github.com/facebookresearch/audiocraft",
+      "license": "MIT",
+      "primary_language": "Python",
+      "org_or_maintainer": "Meta AI (FAIR)",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 23456,
+      "github_stars_last_30d": 0,
+      "trending_score": 60,
+      "last_commit": "2026-03-03",
+      "docs_url": "https://github.com/facebookresearch/audiocraft",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/2306.05284",
+      "paper_id": null,
+      "phase": "foundation-model",
+      "domain": [
+        "audio"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "fork-and-adapt"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin"
+      ],
+      "ecosystem_role": [
+        "The reference open stack for generative audio — EnCodec tokenizes audio into discrete codes, and MusicGen/AudioGen are LMs over those codes, making audio generation a language-modeling problem with open weights"
+      ],
+      "best_for": [
+        "You want open-weight, locally runnable music or sound-effect generation with text (and melody) conditioning, including fine-tuning on your own audio",
+        "You want to study the codec-tokens-plus-LM architecture that underlies most modern audio generation systems"
+      ],
+      "avoid_if": [
+        "You need current state-of-the-art commercial music quality — hosted services and newer models have surpassed MusicGen's fidelity; this is the open reference, not the frontier",
+        "You need vocals/singing or long-form structured compositions — MusicGen targets short instrumental clips"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "23.5k stars, MIT license, last push 2026-03-03 verified via the GitHub API on 2026-07-08. Development cadence is slow (research code post-release); included as the canonical open audio-generation reference. Model weights carry their own non-commercial terms for some checkpoints — verify per model card.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "arxiv",
+          "url": "https://arxiv.org/abs/2306.05284",
+          "date": "2026-07-08",
+          "description": "MusicGen paper (Simple and Controllable Music Generation)"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/foundation-models/audiocraft.md",
+      "url": "content/projects/foundation-models/audiocraft",
+      "slug": "audiocraft",
+      "section_path": "content/projects/foundation-models",
+      "display_name": "AudioCraft (Meta)",
+      "summary": "Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 367,
+      "body_html": "<h2>Overview</h2>\n<p>AudioCraft is Meta's open library for generative audio, bundling three components: EnCodec, a neural codec that compresses audio into discrete token streams; MusicGen, a language model over those tokens that generates music from text and optional melody conditioning; and AudioGen, its counterpart for environmental sound effects. Training and inference code are open, with released checkpoints at several sizes.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The catalog's foundation-model phase covers speech (Whisper-family) but generative audio is a distinct slot, and AudioCraft is its canonical open occupant. The architectural idea it embodies — tokenize audio with a neural codec, then model the tokens with an LM — is the pattern nearly all subsequent audio-generation systems use, so it earns a place both as usable open weights and as the reference implementation of the mechanism.</p>\n<h2>Architecture</h2>\n<p>EnCodec encodes waveforms into parallel streams of discrete codes (residual vector quantization); MusicGen is a single-stage transformer LM over those code streams with an interleaving pattern that avoids needing multiple cascaded models. Text conditioning comes from a frozen text encoder; melody conditioning from chromagram features. Generation is autoregressive over audio tokens, then decoded back to waveform by EnCodec.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: PyTorch; frozen text encoders for conditioning. Downstream: fine-tuned music/SFX models and research forks. Competing: hosted commercial music-generation services (higher fidelity, closed) and newer open audio models; complementary to speech models like <code>whisper</code> (recognition) — different task, same modality.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install and generation examples.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: generating instrumental music or sound effects locally from text prompts with open weights</li>\n<li><strong>Scenario</strong>: studying or building on the codec-tokens-plus-LM audio-generation architecture</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>The reference open implementation of modern audio generation, with training code — not just weights</li>\n<li>Melody conditioning and multiple checkpoint sizes make it practical to adapt</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>No longer the fidelity frontier; slow post-release cadence typical of research code</li>\n<li>Short instrumental clips only — no vocals or long-form structure; some checkpoints carry non-commercial weight licenses</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a foundation-model entry: the weights and training code themselves. For serving runtimes see <a href=\"../inference-engines/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Inference Engines</a>; for speech recognition see the Whisper-family entries.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/facebookresearch/audiocraft\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://arxiv.org/abs/2306.05284\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">MusicGen paper</a></li>\n</ul>\n",
+      "body_text": "Overview AudioCraft is Meta's open library for generative audio, bundling three components: EnCodec, a neural codec that compresses audio into discrete token streams; MusicGen, a language model over those tokens that generates music from text and optional melody conditioning; and AudioGen, its counterpart for environmental sound effects. Training and inference code are open, with released checkpoints at several sizes. Why it's in the Arsenal The catalog's foundation model phase covers speech (Whisper family) but generative audio is a distinct slot, and AudioCraft is its canonical open occupant. The architectural idea it embodies — tokenize audio with a neural codec, then model the tokens with an LM — is the pattern nearly all subsequent audio generation systems use, so it earns a place both as usable open weights and as the reference implementation of the mechanism. Architecture EnCodec encodes waveforms into parallel streams of discrete codes (residual vector quantization); MusicGen is a single stage transformer LM over those code streams with an interleaving pattern that avoids needing multiple cascaded models. Text conditioning comes from a frozen text encoder; melody conditioning from chromagram features. Generation is autoregressive over audio tokens, then decoded back to waveform by EnCodec. Ecosystem Position Upstream: PyTorch; frozen text encoders for conditioning. Downstream: fine tuned music/SFX models and research forks. Competing: hosted commercial music generation services (higher fidelity, closed) and newer open audio models; complementary to speech models like whisper (recognition) — different task, same modality. Getting Started Key Use Cases 1. Scenario : generating instrumental music or sound effects locally from text prompts with open weights 2. Scenario : studying or building on the codec tokens plus LM audio generation architecture Strengths The reference open implementation of modern audio generation, with training code — not just weights Melody conditioning and multiple checkpoint sizes make it practical to adapt Limitations No longer the fidelity frontier; slow post release cadence typical of research code Short instrumental clips only — no vocals or long form structure; some checkpoints carry non commercial weight licenses Relation to the Arsenal This is a foundation model entry: the weights and training code themselves. For serving runtimes see Inference Engines; for speech recognition see the Whisper family entries. Resources GitHub MusicGen paper"
     },
     {
       "id": "autogen",
@@ -1421,6 +1517,101 @@
       "body_text": "Overview An open source, developer friendly vector database designed to be embedded directly in an application with minimal setup, widely used as the default choice in RAG tutorials and early stage production applications. Why it's in the Arsenal Developer friendly embedded/lightweight vector database, the most common default for RAG prototyping and small to medium production apps. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, then scale to a client server deployment when needed. See Strengths / Limitations below before adopting it. Architecture Can run fully embedded in process (backed by SQLite/DuckDB style local storage) for prototyping, or as a standalone client server deployment for production, storing embeddings alongside metadata and supporting approximate nearest neighbor search with metadata filtering. Ecosystem Position Upstream: none of particular note. Downstream: none of particular note as a dependency, though it's the most commonly referenced default vector store in LangChain and LlamaIndex documentation/tutorials. Competing: Qdrant, Weaviate, Milvus, LanceDB, Pinecone. Complementary: pairs with LangChain, LlamaIndex, or Haystack as the retrieval backend for a RAG pipeline. Getting Started Key Use Cases 1. Scenario : you want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, then scale to a client server deployment when needed 2. Scenario : you're building a small to medium scale application where operational simplicity matters more than the largest possible scale or the most advanced filtering/indexing features Strengths You want the fastest path to a working RAG prototype — Chroma can run embedded in process with zero infrastructure setup, then scale to a client server deployment when needed You're building a small to medium scale application where operational simplicity matters more than the largest possible scale or the most advanced filtering/indexing features Limitations You need to scale to hundreds of millions or billions of vectors with distributed sharding — Milvus, Qdrant, or a managed service like Pinecone are built for that scale from the ground up You need the most mature enterprise features (RBAC, multi tenancy, SLA backed managed hosting) — Chroma's managed offering is newer than Pinecone's or Weaviate Cloud's Relation to the Arsenal This is a data and retrieval entry: it documents a vector database, document processing tool, or RAG platform. For job based tool comparisons (e.g. web scraping, vector search), see tools/data ingestion/. Resources GitHub Documentation"
     },
     {
+      "id": "cleanlab",
+      "name": "cleanlab",
+      "version_tracked": null,
+      "artifact_type": "library",
+      "category": "data-pipelines",
+      "subcategory": "libraries",
+      "description": "Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions",
+      "github_url": "https://github.com/cleanlab/cleanlab",
+      "license": "AGPL-3.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Cleanlab",
+      "tags": [
+        "data",
+        "evaluation",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 11562,
+      "github_stars_last_30d": 0,
+      "trending_score": 50,
+      "last_commit": "2026-01-13",
+      "docs_url": "https://docs.cleanlab.ai",
+      "demo_url": null,
+      "paper_url": "https://arxiv.org/abs/1911.00068",
+      "paper_id": null,
+      "phase": "data-and-retrieval",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top"
+      ],
+      "health_signals": [
+        "research-origin",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The standard open implementation of confident learning — it cross-examines a model's out-of-sample predicted probabilities against given labels to statistically flag mislabeled, ambiguous, and outlier examples, model-agnostically"
+      ],
+      "best_for": [
+        "You suspect label noise in a training or eval set and want a principled, model-agnostic ranking of which examples to re-review — rather than eyeballing or ad-hoc heuristics",
+        "You want dataset-level quality audits (near-duplicates, outliers, class overlap) as a routine step before fine-tuning or building eval sets"
+      ],
+      "avoid_if": [
+        "Your data has no labels or your task isn't classification-like — confident learning needs predicted probabilities against given labels to work with",
+        "AGPL-3.0 is incompatible with your distribution model — check licensing before embedding it in shipped products"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "11.6k stars, AGPL-3.0, last push 2026-01-13 verified via the GitHub API on 2026-07-08. Cadence has slowed as the company focuses on its commercial platform; the library remains the reference confident-learning implementation. Backed by the peer-reviewed confident-learning paper (Northcutt et al.).",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "arxiv",
+          "url": "https://arxiv.org/abs/1911.00068",
+          "date": "2026-07-08",
+          "description": "Confident Learning: Estimating Uncertainty in Dataset Labels"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/data-and-retrieval/cleanlab.md",
+      "url": "content/projects/data-and-retrieval/cleanlab",
+      "slug": "cleanlab",
+      "section_path": "content/projects/data-and-retrieval",
+      "display_name": "cleanlab",
+      "summary": "Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 394,
+      "body_html": "<h2>Overview</h2>\n<p>cleanlab is a data-centric AI library that audits datasets rather than models: given any classifier's out-of-sample predicted probabilities, it applies confident learning to estimate which labels are likely wrong, which examples are outliers or near-duplicates, and which classes overlap — producing a ranked list of data issues to fix before you train or evaluate on that data.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Label noise silently corrupts both fine-tuning data and eval sets, and the usual response is ad-hoc spot-checking. cleanlab is the principled alternative: confident learning is a published, model-agnostic statistical method, and this library is its reference implementation. It fills the dataset-quality-audit slot in the data-and-retrieval phase — upstream of training and eval-set construction, complementary to pipeline-level validation like <code>great-expectations</code>.</p>\n<h2>Architecture</h2>\n<p>Confident learning estimates the joint distribution between given labels and true labels from out-of-sample predicted probabilities, using per-class probability thresholds to identify confidently mislabeled examples. Because it consumes only predictions and labels, it works with any model (sklearn, PyTorch, LLM-as-classifier). The Datalab interface layers additional issue detectors — outliers, near-duplicates, non-IID drift — over the same audit pass.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: any trained classifier's cross-validated predictions. Downstream: cleaned training sets and trustworthy eval sets. Complementary: <code>great-expectations</code> validates pipeline data against declared expectations (schema/statistics), while cleanlab finds label-level issues expectations can't express; the hosted Cleanlab platform is the commercial extension.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical Datalab audit workflow.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: auditing a fine-tuning or eval dataset for mislabeled examples before trusting metrics computed on it</li>\n<li><strong>Scenario</strong>: routine dataset health checks — outliers, near-duplicates, class overlap — as part of data pipeline hygiene</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Peer-reviewed statistical method, not heuristics — and model-agnostic by construction</li>\n<li>Audits eval sets too, which directly protects the integrity of downstream benchmark numbers</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Needs classification-like tasks with labels and predicted probabilities; not a general text-quality scorer</li>\n<li>AGPL-3.0 license requires care when embedding in distributed products; open-source cadence has slowed</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a data-and-retrieval entry: dataset quality tooling upstream of training and evaluation. For pipeline-level data validation see <code>great-expectations</code>; for eval harnesses that consume clean sets see the benchmark-and-eval phase.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/cleanlab/cleanlab\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.cleanlab.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://arxiv.org/abs/1911.00068\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Confident Learning paper</a></li>\n</ul>\n",
+      "body_text": "Overview cleanlab is a data centric AI library that audits datasets rather than models: given any classifier's out of sample predicted probabilities, it applies confident learning to estimate which labels are likely wrong, which examples are outliers or near duplicates, and which classes overlap — producing a ranked list of data issues to fix before you train or evaluate on that data. Why it's in the Arsenal Label noise silently corrupts both fine tuning data and eval sets, and the usual response is ad hoc spot checking. cleanlab is the principled alternative: confident learning is a published, model agnostic statistical method, and this library is its reference implementation. It fills the dataset quality audit slot in the data and retrieval phase — upstream of training and eval set construction, complementary to pipeline level validation like great expectations. Architecture Confident learning estimates the joint distribution between given labels and true labels from out of sample predicted probabilities, using per class probability thresholds to identify confidently mislabeled examples. Because it consumes only predictions and labels, it works with any model (sklearn, PyTorch, LLM as classifier). The Datalab interface layers additional issue detectors — outliers, near duplicates, non IID drift — over the same audit pass. Ecosystem Position Upstream: any trained classifier's cross validated predictions. Downstream: cleaned training sets and trustworthy eval sets. Complementary: great expectations validates pipeline data against declared expectations (schema/statistics), while cleanlab finds label level issues expectations can't express; the hosted Cleanlab platform is the commercial extension. Getting Started Key Use Cases 1. Scenario : auditing a fine tuning or eval dataset for mislabeled examples before trusting metrics computed on it 2. Scenario : routine dataset health checks — outliers, near duplicates, class overlap — as part of data pipeline hygiene Strengths Peer reviewed statistical method, not heuristics — and model agnostic by construction Audits eval sets too, which directly protects the integrity of downstream benchmark numbers Limitations Needs classification like tasks with labels and predicted probabilities; not a general text quality scorer AGPL 3.0 license requires care when embedding in distributed products; open source cadence has slowed Relation to the Arsenal This is a data and retrieval entry: dataset quality tooling upstream of training and evaluation. For pipeline level data validation see great expectations; for eval harnesses that consume clean sets see the benchmark and eval phase. Resources GitHub Documentation Confident Learning paper"
+    },
+    {
       "id": "clip",
       "name": "CLIP (OpenAI)",
       "version_tracked": null,
@@ -1616,6 +1807,106 @@
       "word_count": 487,
       "body_html": "<h2>Overview</h2>\n<p>An open-source memory engine for AI agents built around ECL (Extract, Cognify, Load) pipelines: data from 30+ source types is extracted, 'cognified' into an entity-relationship knowledge graph with embeddings, and loaded into pluggable graph and vector stores. The pitch is replacing naive RAG's flat chunk retrieval with structured, interconnected memory at developer-friendly API depth.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The pipeline-centric take on agent memory: cognee models memory construction as composable Extract-Cognify-Load (ECL) tasks that build a knowledge graph plus embeddings from any data source, aiming at the space between raw vector RAG and heavyweight graph platforms. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want graph-plus-vector memory with minimal ceremony — <code>add()</code> then <code>cognify()</code> then <code>search()</code> covers ingestion-to-query in three calls while remaining extensible via custom pipeline tasks. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Pipelines are typed Python tasks (chunking, entity extraction, graph construction, embedding) composed into DAGs; storage abstracts over vector backends (LanceDB, Qdrant, pgvector) and graph backends (Neo4j, NetworkX, kuzu). Search modes span graph completion, RAG chunks, summaries, and Cypher-style graph queries; ontology support lets you constrain extraction to a domain schema.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: LiteLLM for model routing, pluggable graph/vector stores. Competing: Graphiti (temporal graphs), Mem0 (conversation-memory focus), LlamaIndex knowledge-graph indices. Complementary: exposes an MCP server for agent hosts; ships evaluation tooling (HotpotQA-style benchmarks) for comparing memory configurations — self-reported numbers, so validate on your data.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install cognee\n# python:\nimport cognee, asyncio\nasync def main():\n    await cognee.add('Natural language processing is a field of AI.')\n    await cognee.cognify()\n    print(await cognee.search('What is NLP?'))\nasyncio.run(main())\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want graph-plus-vector memory with minimal ceremony — <code>add()</code> then <code>cognify()</code> then <code>search()</code> covers ingestion-to-query in three calls while remaining extensible via custom pipeline tasks</li>\n<li><strong>Scenario</strong>: you need to interconnect heterogeneous sources (past chats, files, images, audio transcripts) into one queryable structure rather than per-corpus vector silos</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want graph-plus-vector memory with minimal ceremony — <code>add()</code> then <code>cognify()</code> then <code>search()</code> covers ingestion-to-query in three calls while remaining extensible via custom pipeline tasks</li>\n<li>You need to interconnect heterogeneous sources (past chats, files, images, audio transcripts) into one queryable structure rather than per-corpus vector silos</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need battle-tested temporal fact invalidation for fast-changing data — Graphiti's bi-temporal model is more explicit about time; cognee's graph is fresher but less specialized there</li>\n<li>Simple semantic search meets your needs — the LLM-driven cognify step adds ingestion cost and latency that plain embedding pipelines avoid</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see <a href=\"../../tools/data-ingestion/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/data-ingestion/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/topoteretes/cognee\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.cognee.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (27,350 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)</em></p>\n",
       "body_text": "Overview An open source memory engine for AI agents built around ECL (Extract, Cognify, Load) pipelines: data from 30+ source types is extracted, 'cognified' into an entity relationship knowledge graph with embeddings, and loaded into pluggable graph and vector stores. The pitch is replacing naive RAG's flat chunk retrieval with structured, interconnected memory at developer friendly API depth. Why it's in the Arsenal The pipeline centric take on agent memory: cognee models memory construction as composable Extract Cognify Load (ECL) tasks that build a knowledge graph plus embeddings from any data source, aiming at the space between raw vector RAG and heavyweight graph platforms. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want graph plus vector memory with minimal ceremony — add() then cognify() then search() covers ingestion to query in three calls while remaining extensible via custom pipeline tasks. See Strengths / Limitations below before adopting it. Architecture Pipelines are typed Python tasks (chunking, entity extraction, graph construction, embedding) composed into DAGs; storage abstracts over vector backends (LanceDB, Qdrant, pgvector) and graph backends (Neo4j, NetworkX, kuzu). Search modes span graph completion, RAG chunks, summaries, and Cypher style graph queries; ontology support lets you constrain extraction to a domain schema. Ecosystem Position Upstream: LiteLLM for model routing, pluggable graph/vector stores. Competing: Graphiti (temporal graphs), Mem0 (conversation memory focus), LlamaIndex knowledge graph indices. Complementary: exposes an MCP server for agent hosts; ships evaluation tooling (HotpotQA style benchmarks) for comparing memory configurations — self reported numbers, so validate on your data. Getting Started Key Use Cases 1. Scenario : you want graph plus vector memory with minimal ceremony — add() then cognify() then search() covers ingestion to query in three calls while remaining extensible via custom pipeline tasks 2. Scenario : you need to interconnect heterogeneous sources (past chats, files, images, audio transcripts) into one queryable structure rather than per corpus vector silos Strengths You want graph plus vector memory with minimal ceremony — add() then cognify() then search() covers ingestion to query in three calls while remaining extensible via custom pipeline tasks You need to interconnect heterogeneous sources (past chats, files, images, audio transcripts) into one queryable structure rather than per corpus vector silos Limitations You need battle tested temporal fact invalidation for fast changing data — Graphiti's bi temporal model is more explicit about time; cognee's graph is fresher but less specialized there Simple semantic search meets your needs — the LLM driven cognify step adds ingestion cost and latency that plain embedding pipelines avoid Relation to the Arsenal This is a data and retrieval entry: it documents a vector database, document processing tool, or RAG platform. For job based tool comparisons (e.g. web scraping, vector search), see tools/data ingestion/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (27,350 stars, last commit 2026 07 08, verified via GitHub API on 2026 07 08)"
+    },
+    {
+      "id": "colossalai",
+      "name": "Colossal-AI (HPC-AI Tech)",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "llms",
+      "subcategory": "fine-tuning",
+      "description": "Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory",
+      "github_url": "https://github.com/hpcaitech/ColossalAI",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "HPC-AI Tech",
+      "tags": [
+        "training",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 41407,
+      "github_stars_last_30d": 0,
+      "trending_score": 66,
+      "last_commit": "2026-05-25",
+      "docs_url": "https://colossalai.org/",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "training-and-alignment",
+      "domain": [
+        "language",
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "org-backed",
+        "actively-maintained"
+      ],
+      "ecosystem_role": [
+        "A one-stop distributed-training system exposing the full parallelism toolbox (data/tensor/pipeline/sequence parallelism + ZeRO and CPU/NVMe offload) through a unified API, so scaling a training job is configuration rather than a rewrite"
+      ],
+      "best_for": [
+        "You need to train or fine-tune a model that exceeds single-GPU memory and want the parallelism strategies composable behind one API instead of stitching together separate libraries",
+        "You want to push very large models onto limited hardware via aggressive ZeRO/offload and study how the parallelism dimensions combine"
+      ],
+      "avoid_if": [
+        "You're doing standard single-GPU or small multi-GPU LoRA fine-tuning — a recipe framework (Axolotl, LLaMA-Factory) or Accelerate is far simpler",
+        "Your workflow is already committed to DeepSpeed or Megatron and works — Colossal-AI overlaps heavily and switching buys little"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "accelerate",
+        "deepspeed"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "41.4k stars, Apache-2.0, last push 2026-05-25 verified via the GitHub API on 2026-07-08. Overlaps with DeepSpeed/Megatron; positioned as a unified-API alternative rather than best-in-class. Performance claims are the project's own and not benchmarked here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending",
+          "date": "2026-07-08",
+          "description": "41.4k stars; widely known large-model training system"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/training-and-alignment/colossalai.md",
+      "url": "content/projects/training-and-alignment/colossalai",
+      "slug": "colossalai",
+      "section_path": "content/projects/training-and-alignment",
+      "display_name": "Colossal-AI (HPC-AI Tech)",
+      "summary": "Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 354,
+      "body_html": "<h2>Overview</h2>\n<p>Colossal-AI is a distributed deep-learning system for training and fine-tuning large models. It exposes the full parallelism toolbox — data, tensor, pipeline, and sequence parallelism, together with ZeRO redundancy elimination and CPU/NVMe offload — behind a unified API, so scaling a job across GPUs and nodes is largely a matter of configuration rather than rewriting the training code.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Training beyond a single GPU's memory forces a choice among low-level parallelism libraries; Colossal-AI's contribution is composing those strategies under one interface, which is the mechanism that lowers the barrier to large-model training. It sits in the same slot as <code>accelerate</code> and <code>deepspeed</code> in the training-and-alignment phase, and cataloging it makes that trade-off space explicit rather than defaulting to whichever library a tutorial used.</p>\n<h2>Architecture</h2>\n<p>The system layers parallelism dimensions: data parallelism replicates, tensor parallelism splits individual layers across devices, pipeline parallelism splits the model depth-wise into stages, and sequence parallelism shards long contexts — with ZeRO partitioning optimizer/gradient/parameter state and offloading cold state to CPU/NVMe. A booster/plugin API selects and combines these per job, which is what lets the same model code run at different scales.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: PyTorch and CUDA. Downstream: trained/fine-tuned checkpoints. Competing: <code>deepspeed</code> (ZeRO-centric) and Megatron-LM (tensor/pipeline parallelism) cover overlapping ground; <code>accelerate</code> wraps several backends more thinly. Colossal-AI's pitch is breadth-under-one-API.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install and distributed-launch commands.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: fine-tuning a model too large for one GPU by composing tensor+ZeRO+offload through one configuration</li>\n<li><strong>Scenario</strong>: studying how parallelism dimensions combine to fit large models on limited hardware</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Full parallelism toolbox behind one API — scaling becomes configuration, not a rewrite</li>\n<li>Aggressive ZeRO/offload pushes large models onto constrained hardware</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Overkill and added complexity for standard single/small-multi-GPU LoRA fine-tuning</li>\n<li>Heavy overlap with DeepSpeed/Megatron; limited reason to switch an already-working stack</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a training-and-alignment entry: infrastructure for producing models. For lightweight fine-tuning recipes see <code>axolotl</code>/<code>llamafactory</code>; for the thinner launcher abstraction see <code>accelerate</code>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/hpcaitech/ColossalAI\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://colossalai.org/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview Colossal AI is a distributed deep learning system for training and fine tuning large models. It exposes the full parallelism toolbox — data, tensor, pipeline, and sequence parallelism, together with ZeRO redundancy elimination and CPU/NVMe offload — behind a unified API, so scaling a job across GPUs and nodes is largely a matter of configuration rather than rewriting the training code. Why it's in the Arsenal Training beyond a single GPU's memory forces a choice among low level parallelism libraries; Colossal AI's contribution is composing those strategies under one interface, which is the mechanism that lowers the barrier to large model training. It sits in the same slot as accelerate and deepspeed in the training and alignment phase, and cataloging it makes that trade off space explicit rather than defaulting to whichever library a tutorial used. Architecture The system layers parallelism dimensions: data parallelism replicates, tensor parallelism splits individual layers across devices, pipeline parallelism splits the model depth wise into stages, and sequence parallelism shards long contexts — with ZeRO partitioning optimizer/gradient/parameter state and offloading cold state to CPU/NVMe. A booster/plugin API selects and combines these per job, which is what lets the same model code run at different scales. Ecosystem Position Upstream: PyTorch and CUDA. Downstream: trained/fine tuned checkpoints. Competing: deepspeed (ZeRO centric) and Megatron LM (tensor/pipeline parallelism) cover overlapping ground; accelerate wraps several backends more thinly. Colossal AI's pitch is breadth under one API. Getting Started Key Use Cases 1. Scenario : fine tuning a model too large for one GPU by composing tensor+ZeRO+offload through one configuration 2. Scenario : studying how parallelism dimensions combine to fit large models on limited hardware Strengths Full parallelism toolbox behind one API — scaling becomes configuration, not a rewrite Aggressive ZeRO/offload pushes large models onto constrained hardware Limitations Overkill and added complexity for standard single/small multi GPU LoRA fine tuning Heavy overlap with DeepSpeed/Megatron; limited reason to switch an already working stack Relation to the Arsenal This is a training and alignment entry: infrastructure for producing models. For lightweight fine tuning recipes see axolotl/llamafactory; for the thinner launcher abstraction see accelerate. Resources GitHub Documentation"
     },
     {
       "id": "comfyui",
@@ -2318,6 +2609,107 @@
       "body_text": "Overview An open weight Mixture of Experts language model family from DeepSeek AI: V3 is the general purpose base/chat model, and R1 is a reasoning focused variant post trained on top of it, both released under the MIT license. Why it's in the Arsenal Open weight frontier class reasoning and general purpose model family, MIT licensed. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need frontier class reasoning performance (R1) or general chat/coding performance (V3) in an MIT licensed, self hostable model. See Strengths / Limitations below before adopting it. Architecture 671 billion total parameters with only 37 billion activated per token via a sparse Mixture of Experts design (256 routed experts, DeepSeekMoE). Uses Multi head Latent Attention (MLA) to compress the KV cache and reduce memory pressure at inference, an auxiliary loss free load balancing strategy across experts, a Multi Token Prediction (MTP) module for speculative decoding style training/inference speedups, and native FP8 mixed precision training — trained on 14.8 trillion tokens for roughly 2.788M H800 GPU hours. Ecosystem Position Upstream: builds on standard transformer and MoE research; R1 is post trained on top of the V3 Base checkpoint. Downstream: supported directly by vLLM and SGLang for efficient MoE serving, and referenced heavily in subsequent open weight reasoning model research as a baseline. Competing: Qwen3/Qwen3.6, Llama 4, and Mistral Large 3 among open weight frontier models; against closed models it is frequently benchmarked against GPT 4o class and o1 class reasoning systems. Complementary: distilled smaller variants (DeepSeek R1 Distill) are fine tuned from other open base models (Llama, Qwen) using R1 generated training data. Getting Started Key Use Cases 1. Scenario : you need frontier class reasoning performance (R1) or general chat/coding performance (V3) in an MIT licensed, self hostable model 2. Scenario : you have or can access multi GPU infrastructure capable of serving a 671B parameter MoE model (37B active per token) and want the best open weight reasoning quality available Strengths You need frontier class reasoning performance (R1) or general chat/coding performance (V3) in an MIT licensed, self hostable model You have or can access multi GPU infrastructure capable of serving a 671B parameter MoE model (37B active per token) and want the best open weight reasoning quality available Limitations You need to run inference on a single consumer GPU — even with only 37B active parameters, the full 671B parameter set must be resident for MoE routing, which requires serious multi GPU or high memory infrastructure You need guaranteed data residency outside China affiliated infrastructure for regulatory reasons — evaluate DeepSeek's terms of use and your own compliance requirements before adopting for regulated workloads Relation to the Arsenal This is a foundation model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under content/tools/serving and deployment/ and content/tools/model layer/. Resources GitHub Documentation"
     },
     {
+      "id": "detectron2",
+      "name": "Detectron2 (Meta)",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "computer-vision",
+      "subcategory": "frameworks",
+      "description": "Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work",
+      "github_url": "https://github.com/facebookresearch/detectron2",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Meta AI (FAIR)",
+      "tags": [
+        "vision",
+        "training",
+        "self-hosted"
+      ],
+      "maturity": "production",
+      "cost_model": "open-source",
+      "github_stars": 34599,
+      "github_stars_last_30d": 0,
+      "trending_score": 55,
+      "last_commit": "2026-06-07",
+      "docs_url": "https://detectron2.readthedocs.io/en/latest/",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "framework",
+      "domain": [
+        "vision"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin",
+        "production-proven"
+      ],
+      "ecosystem_role": [
+        "The reference detection/segmentation research platform — modular components (backbones, proposal heads, ROI heads) plus a large pretrained model zoo, designed for swapping architectures rather than shipping one fixed detector"
+      ],
+      "best_for": [
+        "You need a well-tested implementation of classic detection/segmentation architectures (Faster/Mask R-CNN, RetinaNet, panoptic) with pretrained weights and a config system built for experimentation",
+        "You're doing detection research and want the modular abstractions the field's papers are implemented against"
+      ],
+      "avoid_if": [
+        "You want the fastest path from dataset to deployed detector — Ultralytics-style train/predict/export workflows are far more streamlined for applied work",
+        "You need transformer-era open-vocabulary detection as a first-class citizen — Detectron2's zoo centers on the R-CNN lineage; newer approaches live elsewhere"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [
+        "sam2"
+      ],
+      "alternatives": [
+        "ultralytics"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "34.6k stars, Apache-2.0, last push 2026-06-07 verified via the GitHub API on 2026-07-08. Maintenance is steady but conservative; the model zoo reflects the R-CNN era. Included as the reference vision research framework.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending",
+          "date": "2026-07-08",
+          "description": "34.6k stars; long-standing reference detection framework"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/frameworks/detectron2.md",
+      "url": "content/projects/frameworks/detectron2",
+      "slug": "detectron2",
+      "section_path": "content/projects/frameworks",
+      "display_name": "Detectron2 (Meta)",
+      "summary": "Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 341,
+      "body_html": "<h2>Overview</h2>\n<p>Detectron2 is Meta's PyTorch library for object detection, instance/panoptic segmentation, keypoint detection, and related visual recognition tasks. It provides modular implementations of the canonical architectures (Faster R-CNN, Mask R-CNN, RetinaNet, and descendants), a large pretrained model zoo, and a config-driven training system built for swapping components rather than running one fixed pipeline.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The catalog's vision coverage needs the research-platform pole as well as the applied one: <code>ultralytics</code> is the fast path to a deployed detector, while Detectron2 is the framework the detection literature is written against — its backbone/head abstractions and model zoo are what papers fork and benchmarks reference. Cataloging both makes the applied-vs-research trade-off explicit.</p>\n<h2>Architecture</h2>\n<p>Models are composed from interchangeable parts: a backbone (ResNet/FPN variants) produces features, a proposal generator suggests regions, and task-specific ROI heads produce boxes, masks, or keypoints. A registry+config system instantiates any combination from YAML, which is the mechanism that makes architecture swaps a config change. Training uses a hook-based loop with standard distributed support.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: PyTorch. Downstream: countless research forks and derived systems — segmentation work like <code>sam2</code> comes from the same lab lineage. Competing/complementary: <code>ultralytics</code> (streamlined applied YOLO workflows) and MMDetection (the comparable OpenMMLab research platform) occupy the same space.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical install and model-zoo usage.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: training or fine-tuning a classic detection/segmentation architecture with pretrained weights and a modular config system</li>\n<li><strong>Scenario</strong>: implementing detection research against the abstractions the literature already uses</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Battle-tested reference implementations plus a large pretrained zoo — the ground truth many papers compare against</li>\n<li>Modularity by construction: swapping backbones/heads is configuration, not surgery</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>More setup and ceremony than applied-first toolkits for straightforward dataset-to-detector work</li>\n<li>Model zoo centers on the R-CNN era; transformer/open-vocabulary detection is better served elsewhere</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a framework entry: a library you build on. For an applied-first detection toolkit see <code>ultralytics</code>; for promptable segmentation weights see <code>sam2</code>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/facebookresearch/detectron2\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://detectron2.readthedocs.io/en/latest/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
+      "body_text": "Overview Detectron2 is Meta's PyTorch library for object detection, instance/panoptic segmentation, keypoint detection, and related visual recognition tasks. It provides modular implementations of the canonical architectures (Faster R CNN, Mask R CNN, RetinaNet, and descendants), a large pretrained model zoo, and a config driven training system built for swapping components rather than running one fixed pipeline. Why it's in the Arsenal The catalog's vision coverage needs the research platform pole as well as the applied one: ultralytics is the fast path to a deployed detector, while Detectron2 is the framework the detection literature is written against — its backbone/head abstractions and model zoo are what papers fork and benchmarks reference. Cataloging both makes the applied vs research trade off explicit. Architecture Models are composed from interchangeable parts: a backbone (ResNet/FPN variants) produces features, a proposal generator suggests regions, and task specific ROI heads produce boxes, masks, or keypoints. A registry+config system instantiates any combination from YAML, which is the mechanism that makes architecture swaps a config change. Training uses a hook based loop with standard distributed support. Ecosystem Position Upstream: PyTorch. Downstream: countless research forks and derived systems — segmentation work like sam2 comes from the same lab lineage. Competing/complementary: ultralytics (streamlined applied YOLO workflows) and MMDetection (the comparable OpenMMLab research platform) occupy the same space. Getting Started Key Use Cases 1. Scenario : training or fine tuning a classic detection/segmentation architecture with pretrained weights and a modular config system 2. Scenario : implementing detection research against the abstractions the literature already uses Strengths Battle tested reference implementations plus a large pretrained zoo — the ground truth many papers compare against Modularity by construction: swapping backbones/heads is configuration, not surgery Limitations More setup and ceremony than applied first toolkits for straightforward dataset to detector work Model zoo centers on the R CNN era; transformer/open vocabulary detection is better served elsewhere Relation to the Arsenal This is a framework entry: a library you build on. For an applied first detection toolkit see ultralytics; for promptable segmentation weights see sam2. Resources GitHub Documentation"
+    },
+    {
       "id": "dify",
       "name": "Dify",
       "version_tracked": null,
@@ -2705,6 +3097,105 @@
       "word_count": 476,
       "body_html": "<h2>Overview</h2>\n<p>An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP-based EXL3 format.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>The enthusiast-tier quantized-inference engine: EXL2's variable-bitrate quantization (2.0–8.0 bits per weight, mixed within a model) squeezes the largest possible models onto consumer VRAM with better quality-per-bit than fixed-width formats at low bitrates. It earns a place in the Arsenal because it directly addresses a recurring decision point: you run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional-bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade-offs. See Strengths / Limitations below before adopting it.</p>\n<h2>Architecture</h2>\n<p>Custom CUDA kernels implement fused attention and quantized matmul over EXL2 tensors; quantization allocates bitrate per layer/matrix by optimizing measured KL-divergence against calibration data. Paged attention, LoRA loading, speculative decoding, and Q4/Q6/Q8 quantized KV cache round out the runtime; TabbyAPI provides the OpenAI-compatible serving layer.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: PyTorch + custom CUDA extensions. Downstream: TabbyAPI, text-generation-webui, SillyTavern ecosystems standardize on it for GPU-rich local setups. Competing: llama.cpp/GGUF (broader hardware, larger community) and AWQ/GPTQ paths in vLLM (server-side). The EXL2-vs-GGUF choice is the canonical local-inference trade-off: EXL2 for CUDA speed and bitrate precision, GGUF for portability.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install exllamav2\n# Quantize (or download EXL2 weights from HF), then:\npython examples/chat.py -m &lt;path-to-exl2-model&gt; -mode llama3\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional-bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade-offs</li>\n<li><strong>Scenario</strong>: you build local chat/roleplay/agent UIs — it is a standard backend in TabbyAPI and text-generation-webui with fast prompt processing and speculative decoding</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional-bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade-offs</li>\n<li>You build local chat/roleplay/agent UIs — it is a standard backend in TabbyAPI and text-generation-webui with fast prompt processing and speculative decoding</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>You need CPU or Apple Silicon inference — it is CUDA/ROCm only; llama.cpp covers those targets</li>\n<li>You are serving many concurrent users in production — vLLM-class continuous batching and operational tooling are stronger for multi-tenant serving</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>. For hosted/managed serving alternatives, see <a href=\"../../tools/serving-and-deployment/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/serving-and-deployment/</a>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/turboderp-org/exllamav2\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/turboderp-org/exllamav2#readme\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (4,581 stars, last commit 2026-03-04, verified via GitHub API on 2026-07-08)</em></p>\n",
       "body_text": "Overview An inference library optimized for running quantized LLMs on consumer GPUs, built around the EXL2 format: weights are quantized with variable bitrates (mixing 2–8 bits within the same model, allocated by measured sensitivity), which delivers better quality at aggressive compression than uniform formats. The successor ExLlamaV3 introduces the QTIP based EXL3 format. Why it's in the Arsenal The enthusiast tier quantized inference engine: EXL2's variable bitrate quantization (2.0–8.0 bits per weight, mixed within a model) squeezes the largest possible models onto consumer VRAM with better quality per bit than fixed width formats at low bitrates. It earns a place in the Arsenal because it directly addresses a recurring decision point: you run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade offs. See Strengths / Limitations below before adopting it. Architecture Custom CUDA kernels implement fused attention and quantized matmul over EXL2 tensors; quantization allocates bitrate per layer/matrix by optimizing measured KL divergence against calibration data. Paged attention, LoRA loading, speculative decoding, and Q4/Q6/Q8 quantized KV cache round out the runtime; TabbyAPI provides the OpenAI compatible serving layer. Ecosystem Position Upstream: PyTorch + custom CUDA extensions. Downstream: TabbyAPI, text generation webui, SillyTavern ecosystems standardize on it for GPU rich local setups. Competing: llama.cpp/GGUF (broader hardware, larger community) and AWQ/GPTQ paths in vLLM (server side). The EXL2 vs GGUF choice is the canonical local inference trade off: EXL2 for CUDA speed and bitrate precision, GGUF for portability. Getting Started Key Use Cases 1. Scenario : you run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade offs 2. Scenario : you build local chat/roleplay/agent UIs — it is a standard backend in TabbyAPI and text generation webui with fast prompt processing and speculative decoding Strengths You run big models on consumer NVIDIA cards (24GB and under) — EXL2's fractional bit quantization lets you dial model size precisely to your VRAM with measured perplexity trade offs You build local chat/roleplay/agent UIs — it is a standard backend in TabbyAPI and text generation webui with fast prompt processing and speculative decoding Limitations You need CPU or Apple Silicon inference — it is CUDA/ROCm only; llama.cpp covers those targets You are serving many concurrent users in production — vLLM class continuous batching and operational tooling are stronger for multi tenant serving Relation to the Arsenal This is an inference engine entry: it documents the serving runtime itself. For the model weights it serves, see Foundation Models. For hosted/managed serving alternatives, see tools/serving and deployment/. Resources GitHub Documentation Last reviewed: 2026 07 08 by @maintainer — enrichment status: draft (4,581 stars, last commit 2026 03 04, verified via GitHub API on 2026 07 08)"
+    },
+    {
+      "id": "exo",
+      "name": "exo (exo-explore)",
+      "version_tracked": null,
+      "artifact_type": "platform",
+      "category": "llms",
+      "subcategory": "inference-engines",
+      "description": "Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine",
+      "github_url": "https://github.com/exo-explore/exo",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "exo-explore",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "local"
+      ],
+      "maturity": "experimental",
+      "cost_model": "open-source",
+      "github_stars": 46087,
+      "github_stars_last_30d": 0,
+      "trending_score": 72,
+      "last_commit": "2026-06-23",
+      "docs_url": "https://github.com/exo-explore/exo",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "inference-engine",
+      "domain": [
+        "general-purpose"
+      ],
+      "relation_to_stack": [
+        "deploy-as-is",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "community-driven",
+        "experimental"
+      ],
+      "ecosystem_role": [
+        "Distributed inference across heterogeneous consumer devices — pools the combined RAM of machines you already own to run a model none of them could hold alone, an alternative to buying one big GPU box"
+      ],
+      "best_for": [
+        "You want to run a model larger than any single device's memory using hardware you already have — exo dynamically partitions the model across a discovered cluster of mixed devices",
+        "You want to study peer-to-peer model-sharding and device-discovery mechanics for distributed local inference"
+      ],
+      "avoid_if": [
+        "You need production-grade throughput and reliability — cross-device communication over consumer networks is latency-bound and experimental; a single adequate GPU or a real serving engine (vLLM/TGI) wins on stable workloads",
+        "You have one machine that already fits your model — distribution adds overhead with no benefit"
+      ],
+      "upstream_dependencies": [],
+      "downstream_consumers": [],
+      "alternatives": [
+        "llama-cpp",
+        "ollama"
+      ],
+      "integrates_with": [],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "46.1k stars, Apache-2.0, last push 2026-06-23 verified via the GitHub API on 2026-07-08. Cadence has slowed relative to peak; marked experimental. Performance depends heavily on network and device mix and is not benchmarked here.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending",
+          "date": "2026-07-08",
+          "description": "46.1k stars; widely shared distributed-local-inference project"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/inference-engines/exo.md",
+      "url": "content/projects/inference-engines/exo",
+      "slug": "exo",
+      "section_path": "content/projects/inference-engines",
+      "display_name": "exo (exo-explore)",
+      "summary": "Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 391,
+      "body_html": "<h2>Overview</h2>\n<p>exo lets you run large models across a cluster of your own everyday devices — a MacBook, a desktop, a phone, a spare GPU box — by discovering them on the local network and partitioning a single model's layers across their combined memory. The goal is to run a model that no individual device could hold, using hardware you already own instead of renting a large GPU.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>It represents a distinct point in the local-inference design space the catalog already covers with <code>llama-cpp</code> and <code>ollama</code>: rather than shrinking the model to fit one device, exo pools devices to fit the model. That peer-to-peer sharding approach — automatic discovery, dynamic layer partitioning by device capability — is a genuinely different mechanism worth cataloging, even as an experimental one.</p>\n<h2>Architecture</h2>\n<p>Nodes discover each other on the network and form a ring; exo splits the model into contiguous layer shards sized to each node's available memory, and activations are passed device-to-device during the forward pass. An OpenAI-compatible API is exposed on the entry node. Throughput is bounded by the slowest link and node in the ring — the core trade-off of distributing inference over consumer hardware.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: model weights (typically from Hugging Face) and per-device runtimes. Downstream: OpenAI-compatible clients. Competing/complementary: <code>llama-cpp</code> and <code>ollama</code> run models on a single machine with quantization; exo is for when even the quantized model exceeds one device — a different answer to the same \"no big GPU\" constraint.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical cluster setup and launch commands.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: running a model too large for any one of your machines by clustering several devices you already own</li>\n<li><strong>Scenario</strong>: studying device discovery and dynamic model sharding for distributed local inference</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Pools heterogeneous consumer hardware into one inference target — a novel alternative to single-box scaling</li>\n<li>OpenAI-compatible endpoint makes the cluster a drop-in backend for existing clients</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Experimental and network-bound: cross-device latency caps throughput; not for production SLAs</li>\n<li>No benefit (and added overhead) when a single machine already fits your model</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is an inference-engine entry: a runtime for serving weights. For the model weights themselves see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>; for single-machine local runtimes see <code>llama-cpp</code> and <code>ollama</code>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/exo-explore/exo\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n",
+      "body_text": "Overview exo lets you run large models across a cluster of your own everyday devices — a MacBook, a desktop, a phone, a spare GPU box — by discovering them on the local network and partitioning a single model's layers across their combined memory. The goal is to run a model that no individual device could hold, using hardware you already own instead of renting a large GPU. Why it's in the Arsenal It represents a distinct point in the local inference design space the catalog already covers with llama cpp and ollama: rather than shrinking the model to fit one device, exo pools devices to fit the model. That peer to peer sharding approach — automatic discovery, dynamic layer partitioning by device capability — is a genuinely different mechanism worth cataloging, even as an experimental one. Architecture Nodes discover each other on the network and form a ring; exo splits the model into contiguous layer shards sized to each node's available memory, and activations are passed device to device during the forward pass. An OpenAI compatible API is exposed on the entry node. Throughput is bounded by the slowest link and node in the ring — the core trade off of distributing inference over consumer hardware. Ecosystem Position Upstream: model weights (typically from Hugging Face) and per device runtimes. Downstream: OpenAI compatible clients. Competing/complementary: llama cpp and ollama run models on a single machine with quantization; exo is for when even the quantized model exceeds one device — a different answer to the same \"no big GPU\" constraint. Getting Started Key Use Cases 1. Scenario : running a model too large for any one of your machines by clustering several devices you already own 2. Scenario : studying device discovery and dynamic model sharding for distributed local inference Strengths Pools heterogeneous consumer hardware into one inference target — a novel alternative to single box scaling OpenAI compatible endpoint makes the cluster a drop in backend for existing clients Limitations Experimental and network bound: cross device latency caps throughput; not for production SLAs No benefit (and added overhead) when a single machine already fits your model Relation to the Arsenal This is an inference engine entry: a runtime for serving weights. For the model weights themselves see Foundation Models; for single machine local runtimes see llama cpp and ollama. Resources GitHub"
     },
     {
       "id": "f5-tts",
@@ -7810,6 +8301,111 @@
       "word_count": 428,
       "body_html": "<h2>Overview</h2>\n<p>Onyx (renamed from Danswer) is self-hosted enterprise search and chat: 40+ connectors continuously sync content from workplace tools into a hybrid search index, retrieval respects the source systems' document permissions per user, and a chat UI answers with citations. The pitch is Glean without the SaaS — your data, your infrastructure, open core.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>Enterprise RAG's actual hard problems are connectors, permission fidelity, and index freshness — not prompt chains — and Onyx is the most complete open-source implementation of that unglamorous layer (30k+ stars, active company backing). It's in the Arsenal as the deploy-as-is option for workplace search and as the reference for how permission-aware retrieval is engineered.</p>\n<h2>Architecture</h2>\n<p>Python backend with connector workers performing scheduled/incremental syncs per source; documents chunked and indexed into Vespa for hybrid (vector + keyword) retrieval; permission metadata mirrored from sources and enforced as retrieval-time filters per requesting user; chat layer with configurable LLM providers and assistants; deployed via Docker Compose or Kubernetes.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: workplace SaaS APIs (the connector surface), Vespa for retrieval, any LLM provider for generation. Competing: Glean (SaaS incumbent), AnythingLLM/Open WebUI (document-chat, not connector-first). Its Vespa usage makes it a notable production reference for the <code>vespa</code> tool entry.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/onyx-dot-app/onyx.git\ncd onyx/deployment/docker_compose\ndocker compose -f docker-compose.dev.yml up -d\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: company-wide question answering over Slack + Drive + Confluence + Jira where a support engineer must not retrieve documents HR restricted — permission mirroring is the requirement, not a nice-to-have</li>\n<li><strong>Scenario</strong>: studying production RAG architecture — connector sync, hybrid indexing, and permission filtering as implemented by a system deployed at real enterprises</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Permission-aware retrieval across 40+ live connectors — the capability that separates enterprise search from document chat, and the hardest part to build in-house</li>\n<li>Hybrid retrieval on Vespa with continuous incremental sync; open-core MIT with an actively-funded company behind maintenance</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Operationally heavy: Vespa, Postgres, connector workers, and background sync jobs are a real platform to run — expect infrastructure investment, not a desktop app</li>\n<li>Multi-tenancy and parts of enterprise auth sit behind the enterprise license; permission fidelity is only as good as each connector's mirroring implementation — verify per source before trusting it for sensitive data</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>The connector-first pole of the RAG-application spectrum — contrast <code>anything-llm</code> (document-first). Its retrieval layer is a production case study for the <code>vespa</code> entry in <a href=\"../../tools/data-ingestion/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">tools/data-ingestion</a>, and the monitoring guidance in observability/ applies to its sync/freshness failure modes.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/onyx-dot-app/onyx\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.onyx.app/welcome\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n",
       "body_text": "Overview Onyx (renamed from Danswer) is self hosted enterprise search and chat: 40+ connectors continuously sync content from workplace tools into a hybrid search index, retrieval respects the source systems' document permissions per user, and a chat UI answers with citations. The pitch is Glean without the SaaS — your data, your infrastructure, open core. Why it's in the Arsenal Enterprise RAG's actual hard problems are connectors, permission fidelity, and index freshness — not prompt chains — and Onyx is the most complete open source implementation of that unglamorous layer (30k+ stars, active company backing). It's in the Arsenal as the deploy as is option for workplace search and as the reference for how permission aware retrieval is engineered. Architecture Python backend with connector workers performing scheduled/incremental syncs per source; documents chunked and indexed into Vespa for hybrid (vector + keyword) retrieval; permission metadata mirrored from sources and enforced as retrieval time filters per requesting user; chat layer with configurable LLM providers and assistants; deployed via Docker Compose or Kubernetes. Ecosystem Position Upstream: workplace SaaS APIs (the connector surface), Vespa for retrieval, any LLM provider for generation. Competing: Glean (SaaS incumbent), AnythingLLM/Open WebUI (document chat, not connector first). Its Vespa usage makes it a notable production reference for the vespa tool entry. Getting Started Key Use Cases 1. Scenario : company wide question answering over Slack + Drive + Confluence + Jira where a support engineer must not retrieve documents HR restricted — permission mirroring is the requirement, not a nice to have 2. Scenario : studying production RAG architecture — connector sync, hybrid indexing, and permission filtering as implemented by a system deployed at real enterprises Strengths Permission aware retrieval across 40+ live connectors — the capability that separates enterprise search from document chat, and the hardest part to build in house Hybrid retrieval on Vespa with continuous incremental sync; open core MIT with an actively funded company behind maintenance Limitations Operationally heavy: Vespa, Postgres, connector workers, and background sync jobs are a real platform to run — expect infrastructure investment, not a desktop app Multi tenancy and parts of enterprise auth sit behind the enterprise license; permission fidelity is only as good as each connector's mirroring implementation — verify per source before trusting it for sensitive data Relation to the Arsenal The connector first pole of the RAG application spectrum — contrast anything llm (document first). Its retrieval layer is a production case study for the vespa entry in tools/data ingestion, and the monitoring guidance in observability/ applies to its sync/freshness failure modes. Resources GitHub Documentation"
+    },
+    {
+      "id": "open-r1",
+      "name": "Open R1 (Hugging Face)",
+      "version_tracked": null,
+      "artifact_type": "framework",
+      "category": "llms",
+      "subcategory": "fine-tuning",
+      "description": "Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL",
+      "github_url": "https://github.com/huggingface/open-r1",
+      "license": "Apache-2.0",
+      "primary_language": "Python",
+      "org_or_maintainer": "Hugging Face",
+      "tags": [
+        "reasoning",
+        "rlhf",
+        "fine-tuning"
+      ],
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "github_stars": 26399,
+      "github_stars_last_30d": 0,
+      "trending_score": 68,
+      "last_commit": "2026-04-02",
+      "docs_url": "https://github.com/huggingface/open-r1",
+      "demo_url": null,
+      "paper_url": null,
+      "paper_id": null,
+      "phase": "training-and-alignment",
+      "domain": [
+        "reasoning",
+        "reinforcement-learning"
+      ],
+      "relation_to_stack": [
+        "build-on-top",
+        "study-and-reference"
+      ],
+      "health_signals": [
+        "org-backed",
+        "research-origin"
+      ],
+      "ecosystem_role": [
+        "The open, reproducible recipe for training R1-style reasoning models — SFT on reasoning traces plus GRPO reinforcement learning — turning DeepSeek's closed process into runnable scripts on open weights"
+      ],
+      "best_for": [
+        "You want to train or study reasoning models with verifiable-reward RL (GRPO) on open models, using recipes that reproduce a known-good pipeline rather than assembling one from papers",
+        "You need reference dataset-generation and evaluation scripts for the reasoning-model training loop"
+      ],
+      "avoid_if": [
+        "You just want to use a reasoning model — download an open R1-class checkpoint instead; this is training infrastructure, not a served model",
+        "You lack the compute for RL post-training — GRPO on capable base models is resource-intensive"
+      ],
+      "upstream_dependencies": [
+        "trl",
+        "accelerate"
+      ],
+      "downstream_consumers": [],
+      "alternatives": [
+        "alignment-handbook",
+        "verl"
+      ],
+      "integrates_with": [
+        "trl"
+      ],
+      "corresponding_tool_entry": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "26.4k stars, Apache-2.0, last push 2026-04-02 verified via the GitHub API on 2026-07-08. Cadence has slowed since the initial R1 reproduction sprint; it remains the canonical open reproduction recipe. Included for reference-recipe value.",
+      "added_date": "2026-07-08",
+      "last_reviewed": "2026-07-08",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "buzz_sources": [
+        {
+          "source": "github-trending",
+          "url": "https://github.com/trending",
+          "date": "2026-07-08",
+          "description": "26.4k stars; the reference open reproduction of DeepSeek-R1"
+        }
+      ],
+      "featured": false,
+      "status": "active",
+      "entry_type": "project",
+      "path": "content/projects/training-and-alignment/open-r1.md",
+      "url": "content/projects/training-and-alignment/open-r1",
+      "slug": "open-r1",
+      "section_path": "content/projects/training-and-alignment",
+      "display_name": "Open R1 (Hugging Face)",
+      "summary": "Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "Overview",
+        "Why it's in the Arsenal",
+        "Architecture",
+        "Ecosystem Position",
+        "Getting Started",
+        "Key Use Cases",
+        "Strengths",
+        "Limitations",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 367,
+      "body_html": "<h2>Overview</h2>\n<p>Open R1 is Hugging Face's effort to fully reproduce the DeepSeek-R1 reasoning-model pipeline in the open: SFT on curated reasoning traces followed by GRPO reinforcement learning with verifiable rewards, plus the dataset-generation and evaluation tooling around it. It packages a known-good reasoning-training recipe as runnable scripts on open weights.</p>\n<h2>Why it's in the Arsenal</h2>\n<p>When R1 showed that RL with verifiable rewards produces strong reasoning, the details were scattered across a report; Open R1 is the community's canonical, runnable answer — the same reference-recipe role <code>alignment-handbook</code> plays for SFT/DPO, extended to reasoning RL. It's the practical on-ramp for anyone training or studying R1-style models, and it anchors the reasoning corner of the training-and-alignment phase.</p>\n<h2>Architecture</h2>\n<p>The pipeline has two stages: supervised fine-tuning on reasoning traces to instill format and chain-of-thought, then GRPO (Group Relative Policy Optimization) RL where a verifiable reward (e.g. answer correctness on math/code) shapes the policy without a learned reward model. Open R1 builds on <code>trl</code> and <code>accelerate</code> for the training loop and ships evaluation scripts to measure reasoning benchmarks — the mechanism that makes results comparable to the target.</p>\n<h2>Ecosystem Position</h2>\n<p>Upstream: <code>trl</code> (RL trainers), <code>accelerate</code> (distribution), and open base models. Downstream: trained reasoning checkpoints. Complementary: <code>alignment-handbook</code> (preference/SFT recipes) and <code>verl</code> (a scalable RL training engine) cover adjacent training needs; Open R1 is specifically the R1-reasoning reproduction.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># See the project's official documentation (Resources below) for the\n# canonical training and evaluation recipes.\n</code></pre>\n<h2>Key Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: training a reasoning model with GRPO on open weights using a recipe that reproduces a known result</li>\n<li><strong>Scenario</strong>: studying the SFT-then-verifiable-reward-RL pipeline with real, runnable code</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Reproducible, org-backed recipe for reasoning-model RL — not a from-scratch reassembly of papers</li>\n<li>Ships the surrounding dataset-generation and evaluation tooling, not just a trainer</li>\n</ul>\n<h2>Limitations</h2>\n<ul>\n<li>Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast-moving product</li>\n<li>Reasoning RL is compute-heavy; not a lightweight fine-tune</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>This is a training-and-alignment entry: infrastructure for producing models. For served reasoning models see <a href=\"../foundation-models/_index.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Foundation Models</a>; for the underlying RL library see <code>trl</code>.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/open-r1\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n",
+      "body_text": "Overview Open R1 is Hugging Face's effort to fully reproduce the DeepSeek R1 reasoning model pipeline in the open: SFT on curated reasoning traces followed by GRPO reinforcement learning with verifiable rewards, plus the dataset generation and evaluation tooling around it. It packages a known good reasoning training recipe as runnable scripts on open weights. Why it's in the Arsenal When R1 showed that RL with verifiable rewards produces strong reasoning, the details were scattered across a report; Open R1 is the community's canonical, runnable answer — the same reference recipe role alignment handbook plays for SFT/DPO, extended to reasoning RL. It's the practical on ramp for anyone training or studying R1 style models, and it anchors the reasoning corner of the training and alignment phase. Architecture The pipeline has two stages: supervised fine tuning on reasoning traces to instill format and chain of thought, then GRPO (Group Relative Policy Optimization) RL where a verifiable reward (e.g. answer correctness on math/code) shapes the policy without a learned reward model. Open R1 builds on trl and accelerate for the training loop and ships evaluation scripts to measure reasoning benchmarks — the mechanism that makes results comparable to the target. Ecosystem Position Upstream: trl (RL trainers), accelerate (distribution), and open base models. Downstream: trained reasoning checkpoints. Complementary: alignment handbook (preference/SFT recipes) and verl (a scalable RL training engine) cover adjacent training needs; Open R1 is specifically the R1 reasoning reproduction. Getting Started Key Use Cases 1. Scenario : training a reasoning model with GRPO on open weights using a recipe that reproduces a known result 2. Scenario : studying the SFT then verifiable reward RL pipeline with real, runnable code Strengths Reproducible, org backed recipe for reasoning model RL — not a from scratch reassembly of papers Ships the surrounding dataset generation and evaluation tooling, not just a trainer Limitations Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast moving product Reasoning RL is compute heavy; not a lightweight fine tune Relation to the Arsenal This is a training and alignment entry: infrastructure for producing models. For served reasoning models see Foundation Models; for the underlying RL library see trl. Resources GitHub"
     },
     {
       "id": "openai-agents-sdk",

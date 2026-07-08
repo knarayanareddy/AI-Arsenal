@@ -12,7 +12,7 @@
 | [community](./community/) | 57 entries | 2026-07-08 |
 | [digests](./digests/) | 1 entries | 2026-07-08 |
 | [observability](./observability/) | 10 entries | 2026-07-08 |
-| [projects](./projects/) | 130 entries | 2026-07-08 |
+| [projects](./projects/) | 136 entries | 2026-07-08 |
 | [research](./research/) | 84 entries | 2026-07-08 |
 | [skills](./skills/) | 28 entries | 2026-07-08 |
 | [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-08 |
@@ -96,4 +96,4 @@
 - [AssemblyAI (YouTube)](./community/creators/assemblyai-youtube.md) — 
 - [Astra Autonomous Pentest](./tools/evaluation-and-observability/astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Attention](./skills/core-concepts/attention.md) — Conceptual guide to attention mechanisms and their practical consequences for LLM engineering
-- [AutoGen](./projects/frameworks/autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
+- [AudioCraft (Meta)](./projects/foundation-models/audiocraft.md) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
