@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-08T21:48:33.669Z",
+    "generated_at": "2026-07-09T12:13:35.391Z",
     "total_projects": 146,
     "total_tools": 197,
-    "total_papers": 100,
+    "total_papers": 110,
     "total_tips": 129,
     "total_people": 25,
     "total_digests": 1,
@@ -5298,6 +5298,24 @@
       "featured": false
     },
     {
+      "id": "he-2015-resnet",
+      "type": "paper",
+      "name": "Deep Residual Learning for Image Recognition",
+      "description": "Introduced residual connections (skip connections) that let networks learn residual functions relative to the identity, making very deep networks trainable and unblocking the depth scaling that later architectures — including Transformers — depend on",
+      "tags": [
+        "foundational",
+        "transformers"
+      ],
+      "path": "content/research/foundational/he-2015-resnet.md",
+      "url": "content/research/foundational/he-2015-resnet",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "helicone",
       "type": "project",
       "name": "Helicone",
@@ -5356,6 +5374,25 @@
       "featured": false
     },
     {
+      "id": "hinton-2015-distillation",
+      "type": "paper",
+      "name": "Distilling the Knowledge in a Neural Network",
+      "description": "Introduced knowledge distillation — training a small 'student' model to match the soft output distribution of a large 'teacher' — the basis for compressing large models into cheap, fast ones for deployment",
+      "tags": [
+        "inference",
+        "fine-tuning",
+        "llm"
+      ],
+      "path": "content/research/inference-and-efficiency/hinton-2015-distillation.md",
+      "url": "content/research/inference-and-efficiency/hinton-2015-distillation",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "hle",
       "type": "benchmark",
       "name": "Humanity's Last Exam (HLE)",
@@ -5372,6 +5409,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ho-2020-ddpm",
+      "type": "paper",
+      "name": "Denoising Diffusion Probabilistic Models",
+      "description": "Made diffusion models practical for high-quality image generation by training a network to reverse a gradual noising process, establishing the denoising-diffusion recipe behind modern image and video generators",
+      "tags": [
+        "multimodal",
+        "efficiency"
+      ],
+      "path": "content/research/architectures/ho-2020-ddpm.md",
+      "url": "content/research/architectures/ho-2020-ddpm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -6088,6 +6143,25 @@
       "featured": false
     },
     {
+      "id": "johnson-2017-faiss",
+      "type": "paper",
+      "name": "Billion-scale similarity search with GPUs",
+      "description": "The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "rag"
+      ],
+      "path": "content/research/retrieval-and-memory/johnson-2017-faiss.md",
+      "url": "content/research/retrieval-and-memory/johnson-2017-faiss",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "kaplan-2020-scaling-laws",
       "type": "paper",
       "name": "Scaling Laws for Neural Language Models",
@@ -6727,6 +6801,24 @@
       ],
       "path": "content/research/training-and-alignment/lee-2023-rlaif.md",
       "url": "content/research/training-and-alignment/lee-2023-rlaif",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "lester-2021-prompt-tuning",
+      "type": "paper",
+      "name": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+      "description": "Showed you can adapt a frozen LLM to a task by learning only a small set of continuous 'soft prompt' vectors, and that this matches full fine-tuning as model scale grows — an early parameter-efficient tuning method",
+      "tags": [
+        "fine-tuning",
+        "llm"
+      ],
+      "path": "content/research/training-and-alignment/lester-2021-prompt-tuning.md",
+      "url": "content/research/training-and-alignment/lester-2021-prompt-tuning",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
@@ -7647,6 +7739,25 @@
       "url": "content/tips-and-tricks/agents-and-orchestration/make-success-criteria-machine-checkable",
       "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "malkov-2016-hnsw",
+      "type": "paper",
+      "name": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+      "description": "Introduced the HNSW graph index for approximate nearest-neighbor search — the algorithm powering most production vector databases and the retrieval step of essentially every RAG system",
+      "tags": [
+        "retrieval",
+        "embeddings",
+        "rag"
+      ],
+      "path": "content/research/retrieval-and-memory/malkov-2016-hnsw.md",
+      "url": "content/research/retrieval-and-memory/malkov-2016-hnsw",
+      "last_updated": "2026-07-08",
+      "category": null,
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -9594,6 +9705,25 @@
       "featured": false
     },
     {
+      "id": "patil-2023-gorilla",
+      "type": "paper",
+      "name": "Gorilla: Large Language Model Connected with Massive APIs",
+      "description": "Fine-tuned an LLM to select and correctly invoke the right API from thousands of options, using retrieval of live documentation to stay current and reduce hallucinated calls — an early rigorous tool/function-calling result",
+      "tags": [
+        "agents",
+        "llm",
+        "fine-tuning"
+      ],
+      "path": "content/research/agents-and-reasoning/patil-2023-gorilla.md",
+      "url": "content/research/agents-and-reasoning/patil-2023-gorilla",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "peft",
       "type": "tool",
       "name": "PEFT",
@@ -11050,6 +11180,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "rombach-2022-ldm",
+      "type": "paper",
+      "name": "High-Resolution Image Synthesis with Latent Diffusion Models",
+      "description": "Ran diffusion in a compressed latent space rather than pixel space, cutting compute enough to make high-resolution, text-conditioned image generation practical — the architecture behind Stable Diffusion",
+      "tags": [
+        "multimodal",
+        "self-hosted"
+      ],
+      "path": "content/research/architectures/rombach-2022-ldm.md",
+      "url": "content/research/architectures/rombach-2022-ldm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -12686,6 +12834,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sutskever-2014-seq2seq",
+      "type": "paper",
+      "name": "Sequence to Sequence Learning with Neural Networks",
+      "description": "Framed generation as mapping an input sequence to an output sequence with an encoder-decoder RNN, establishing the seq2seq paradigm that every generative LLM (as prompt-in, text-out) still instantiates",
+      "tags": [
+        "foundational",
+        "llm"
+      ],
+      "path": "content/research/foundational/sutskever-2014-seq2seq.md",
+      "url": "content/research/foundational/sutskever-2014-seq2seq",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -14528,6 +14694,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "wu-2023-autogen",
+      "type": "paper",
+      "name": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+      "description": "Framed LLM applications as conversations among configurable agents (including tool-using and human-proxy agents), providing a general multi-agent programming model that became a widely-used agent framework",
+      "tags": [
+        "agents",
+        "llm",
+        "orchestration"
+      ],
+      "path": "content/research/agents-and-reasoning/wu-2023-autogen.md",
+      "url": "content/research/agents-and-reasoning/wu-2023-autogen",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
