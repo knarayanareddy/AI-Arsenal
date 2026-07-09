@@ -37,10 +37,10 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./fedus-2021-switch-transformer.md)
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md)
 - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](./gu-2023-mamba.md)
+- [Denoising Diffusion Probabilistic Models](./ho-2020-ddpm.md)
 - [Mixtral of Experts](./jiang-2024-mixtral.md)
 - [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](./li-2023-blip2.md)
 - [Visual Instruction Tuning (LLaVA)](./liu-2023-llava.md)
-- [RWKV: Reinventing RNNs for the Transformer Era](./peng-2023-rwkv.md)
 
 ### Most Popular
 
@@ -54,10 +54,12 @@ _No star-tracked entries yet._
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](./fedus-2021-switch-transformer.md) — Simplified mixture-of-experts to top-1 routing (one expert per token), showing sparse models reach the same quality as dense ones up to 7× faster per FLOP — the recipe that made MoE the standard architecture for frontier-scale efficiency
 - [Gemma 4 Technical Report](./gemma-team-2026-gemma4.md) — Open-weight, natively multimodal model family (2.3B-31B, dense + MoE) with a thinking mode and an encoder-free 12B that ingests raw audio and image patches -- the strongest open-weight option at small/mid scale as of mid-2026
 - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](./gu-2023-mamba.md) — Introduced selective state-space models with input-dependent dynamics and a hardware-aware parallel scan, achieving Transformer-quality language modeling with linear-time inference — the strongest attention alternative, now shipping in hybrid production models
+- [Denoising Diffusion Probabilistic Models](./ho-2020-ddpm.md) — Made diffusion models practical for high-quality image generation by training a network to reverse a gradual noising process, establishing the denoising-diffusion recipe behind modern image and video generators
 - [Mixtral of Experts](./jiang-2024-mixtral.md) — Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models
 - [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](./li-2023-blip2.md) — Connected a frozen image encoder to a frozen LLM with a small trainable Querying Transformer (Q-Former), two-stage trained — reaching strong VQA/captioning with a tiny fraction of trainable parameters, the efficient bridge pattern behind many open VLMs.
 - [Visual Instruction Tuning (LLaVA)](./liu-2023-llava.md) — Connected a frozen CLIP vision encoder to a LLaMA-family LLM with just a linear projection, trained on GPT-4-generated visual instruction data — establishing the minimal recipe (encoder + projector + LLM) behind most open vision-language models
 - [RWKV: Reinventing RNNs for the Transformer Era](./peng-2023-rwkv.md) — A linear-attention RNN that trains in parallel like a Transformer but runs inference like an RNN -- O(1) memory per token and no growing KV cache, trading some expressivity for constant-cost, unbounded-context generation
 - [Learning Transferable Visual Models From Natural Language Supervision](./radford-2021-clip.md) — CLIP: contrastive training on 400M web image-text pairs yields a shared vision-language embedding space enabling zero-shot classification — the component that underlies multimodal LLM vision encoders, text-to-image guidance, and cross-modal retrieval
 - [Robust Speech Recognition via Large-Scale Weak Supervision](./radford-2022-whisper.md) — Whisper: a plain encoder-decoder transformer trained on 680K hours of weakly-labeled web audio achieves human-competitive, zero-shot-robust speech recognition across 96+ languages — and its released weights became the default open ASR component
+- [High-Resolution Image Synthesis with Latent Diffusion Models](./rombach-2022-ldm.md) — Ran diffusion in a compressed latent space rather than pixel space, cutting compute enough to make high-resolution, text-conditioned image generation practical — the architecture behind Stable Diffusion
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding](./su-2021-rope.md) — Introduced rotary position embeddings (RoPE), which encode positions by rotating query/key vectors so attention depends on relative distance — now the position encoding of essentially every open LLM and the mechanism behind most context-extension tricks
