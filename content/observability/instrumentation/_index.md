@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Capture Context-Window Utilization and Truncation on Every Call, So Silent Prompt Clipping Is Visible Before It Degrades Output](./capture-context-window-utilization-and-truncation.md)
 - [Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces](./capture-user-feedback-events.md)
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./capture-the-llm-call-event.md)
 
@@ -35,5 +36,6 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Capture Context-Window Utilization and Truncation on Every Call, So Silent Prompt Clipping Is Visible Before It Degrades Output](./capture-context-window-utilization-and-truncation.md) — 
 - [Capture a Structured Event for Every LLM Call, Not Just an Access Log Line](./capture-the-llm-call-event.md) — 
 - [Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces](./capture-user-feedback-events.md) — 

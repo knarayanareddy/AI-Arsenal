@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-09T12:15:25.509Z | Entries: 801 | Schema version: 1.0.0
+Generated: 2026-07-09T12:43:28.934Z | Entries: 807 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -15,7 +15,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Guides: 59
 - Build examples: 12
 - Architectures: 26
-- Observability: 10
+- Observability: 16
 - Community: 32
 
 ## Navigation
@@ -269,26 +269,32 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### cost-usage
 - Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total — 
+- Monitor Cache Hit Rate and Realized Token Savings Per Cache Layer, So a Silently Ineffective Cache Stops Costing You Money It Was Supposed to Save — 
 
 ### evaluation-quality
 - Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship — 
+- Monitor Guardrail Trip Rate as a First-Class Quality Signal, Because a Guardrail That Never Fires and One That Fires Constantly Are Both Broken — 
 - Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks — 
 
 ### incident-response
 - Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts — 
+- Runbook: Detect and Fail Over a Model-Provider Outage in Minutes, Because Your Uptime Is Now Capped by a Dependency You Do Not Control — 
 
 ### instrumentation
+- Capture Context-Window Utilization and Truncation on Every Call, So Silent Prompt Clipping Is Visible Before It Degrades Output — 
 - Capture a Structured Event for Every LLM Call, Not Just an Access Log Line — 
 - Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces — 
 
 ### monitoring-alerting
 - Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions — 
 - Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration — 
+- Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb — 
 
 ### privacy-governance
 - Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store — 
 
 ### tracing
+- Propagate a Single Trace Context Across Service Hops and Streaming Responses, So One User Request Is One Trace — 
 - Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer — 
 
 ## Community Directory by Kind
