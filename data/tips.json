@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:30:58.025Z",
-  "count": 159,
+  "generated_at": "2026-07-09T21:32:31.468Z",
+  "count": 165,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -1146,6 +1146,62 @@
       "body_text": "What & Why Limit how many times an agent may retry a single failing tool call before giving up and surfacing the failure, tracked independently per tool rather than as one global counter. Without a per tool cap, an agent that keeps calling a broken or misconfigured tool consumes its entire step budget on one failure instead of trying alternative approaches. Before / After Before: After: Implementation Track a retry counter keyed by tool name (or tool call site if a tool is invoked from multiple points), increment on each failed attempt, and once the cap is hit, return an exhausted result the agent's planner can use to try a different tool or give up gracefully rather than a silent hang. Gotchas A global retry counter across all tools masks a single misbehaving tool — track retries per tool call site, not per agent run Retrying identical failing arguments wastes the budget — only retry if the agent actually changes the arguments between attempts, otherwise fail fast rather than burning all 3 retries on the same mistake Exponential backoff between retries adds latency the user feels — cap total retry wall clock time, not only the count, for latency sensitive paths When NOT to Apply Skip this for tools with no transient failure modes (a pure computation with no external dependency either always succeeds or always fails identically — retrying doesn't help) Skip a fixed numeric cap if your framework already provides adaptive retry with circuit breaker behavior at the infrastructure layer — don't duplicate the mechanism Verification Production verified: per tool retry caps are a standard defensive pattern in tool using agent loops, referenced alongside add a max step budget to every agent in practitioner writeups on bounding agent cost and preventing infinite retry loops in production deployments."
     },
     {
+      "id": "cap-concurrent-requests-with-admission-control",
+      "title": "Cap Concurrent Requests With Admission Control",
+      "category": "production-gotchas",
+      "tags": [
+        "inference",
+        "monitoring",
+        "efficiency"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (GPU serving capacity incidents)",
+      "applies_to": [
+        "llm-serving",
+        "self-hosted-inference"
+      ],
+      "gotchas": [
+        "A self-hosted model server has a finite KV-cache/VRAM budget; accepting unbounded concurrent requests past that point causes out-of-memory crashes or thrashing that takes down in-flight requests too, turning a load spike into an outage",
+        "Queueing without a bound only moves the failure — requests pile up until latency exceeds every client timeout and the whole queue is wasted work; pair a concurrency cap with a max queue depth and a fast reject/503"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "warm-up-model-servers-before-routing-traffic",
+        "tune-batch-size-against-tail-latency"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/cap-concurrent-requests-with-admission-control.md",
+      "url": "content/tips-and-tricks/inference-and-serving/cap-concurrent-requests-with-admission-control",
+      "slug": "cap-concurrent-requests-with-admission-control",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Cap Concurrent Requests With Admission Control",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 351,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Put an explicit ceiling on concurrent in-flight requests to a model server and reject or queue beyond it, rather than accepting everything. A GPU inference server has a hard capacity set by VRAM and KV-cache size; past that, admitting more concurrent sequences does not add throughput — it causes out-of-memory crashes, cache eviction thrashing, or latency collapse that harms the requests already running. Admission control converts an overload into graceful backpressure (a bounded queue plus fast 503s) instead of a cascading failure.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The server accepts every incoming request; a traffic spike pushes concurrency past VRAM capacity, the process OOM-crashes, and in-flight requests die with it — a spike becomes an outage.</p>\n<p><strong>After:</strong> A concurrency limit and bounded queue admit up to capacity, queue a little, and fast-reject the rest with a 503/backoff hint; the server stays up and healthy requests complete.</p>\n<h2>Implementation</h2>\n<p>Determine the safe max concurrency empirically by loading the server until latency/memory degrade, then set the limit below that knee. Enforce it with a semaphore or the runtime's max-concurrency setting, add a bounded queue with a max depth, and return a fast 503 (with <code>Retry-After</code>) when full. Autoscale replicas on queue depth/utilization rather than removing the cap. Monitor rejection rate as a capacity signal.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A server has finite KV-cache/VRAM; unbounded concurrency past that causes OOM crashes or thrashing that also kills in-flight requests, turning a spike into an outage.</li>\n<li>Unbounded queueing only relocates the failure — requests pile up past client timeouts; pair the concurrency cap with a max queue depth and a fast reject.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Hosted-API backends already enforce their own limits — there you handle their 429s with backoff rather than adding your own server-side cap.</li>\n<li>Less critical for low-traffic internal tools that never approach capacity, though a safety cap is cheap insurance.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: admission control/backpressure is standard capacity-management practice reflected in GPU-serving incident writeups; the right limit is hardware- and model-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Put an explicit ceiling on concurrent in flight requests to a model server and reject or queue beyond it, rather than accepting everything. A GPU inference server has a hard capacity set by VRAM and KV cache size; past that, admitting more concurrent sequences does not add throughput — it causes out of memory crashes, cache eviction thrashing, or latency collapse that harms the requests already running. Admission control converts an overload into graceful backpressure (a bounded queue plus fast 503s) instead of a cascading failure. Before / After Before: The server accepts every incoming request; a traffic spike pushes concurrency past VRAM capacity, the process OOM crashes, and in flight requests die with it — a spike becomes an outage. After: A concurrency limit and bounded queue admit up to capacity, queue a little, and fast reject the rest with a 503/backoff hint; the server stays up and healthy requests complete. Implementation Determine the safe max concurrency empirically by loading the server until latency/memory degrade, then set the limit below that knee. Enforce it with a semaphore or the runtime's max concurrency setting, add a bounded queue with a max depth, and return a fast 503 (with Retry After) when full. Autoscale replicas on queue depth/utilization rather than removing the cap. Monitor rejection rate as a capacity signal. Gotchas A server has finite KV cache/VRAM; unbounded concurrency past that causes OOM crashes or thrashing that also kills in flight requests, turning a spike into an outage. Unbounded queueing only relocates the failure — requests pile up past client timeouts; pair the concurrency cap with a max queue depth and a fast reject. When NOT to Apply Hosted API backends already enforce their own limits — there you handle their 429s with backoff rather than adding your own server side cap. Less critical for low traffic internal tools that never approach capacity, though a safety cap is cheap insurance. Verification Community reported: admission control/backpressure is standard capacity management practice reflected in GPU serving incident writeups; the right limit is hardware and model specific and is not benchmarked here."
+    },
+    {
       "id": "cap-max-output-tokens-per-request",
       "title": "Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults",
       "category": "cost-reduction",
@@ -2074,6 +2130,62 @@
       "word_count": 248,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Send only the conversation history relevant to the current turn, rather than the full transcript accumulated so far. As conversations grow, sending the entire history on every turn means paying for the same old tokens repeatedly, even when most of it has no bearing on the current question.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> every turn sends the full accumulated conversation history, regardless of relevance to the current question.</p>\n<p><strong>After:</strong> a relevance filter (recency window, topic-change detection, or explicit reference resolution) determines which prior turns are actually needed, and only those are sent.</p>\n<h2>Implementation</h2>\n<p>Add a relevance filter to conversation history assembly (a simple recency window is a reasonable starting point) that determines which prior turns are included for the current call, dropping turns that have no bearing on the current question.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Dropping history too aggressively can lose context the current turn depends on — validate against real multi-turn conversations</li>\n<li>This is distinct from <code>summarize-repeated-conversation-blocks</code> — dropping removes irrelevant content entirely, summarizing preserves a compressed version of relevant-but-old content</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip aggressive trimming for short conversations that never accumulate enough history to matter for cost</li>\n<li>Not appropriate if your application genuinely requires full conversation context for correctness (e.g. legal or compliance transcripts where nothing can be dropped)</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: trimming conversation history to only relevant turns is a widely repeated recommendation in conversational cost-optimization writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Send only the conversation history relevant to the current turn, rather than the full transcript accumulated so far. As conversations grow, sending the entire history on every turn means paying for the same old tokens repeatedly, even when most of it has no bearing on the current question. Before / After Before: every turn sends the full accumulated conversation history, regardless of relevance to the current question. After: a relevance filter (recency window, topic change detection, or explicit reference resolution) determines which prior turns are actually needed, and only those are sent. Implementation Add a relevance filter to conversation history assembly (a simple recency window is a reasonable starting point) that determines which prior turns are included for the current call, dropping turns that have no bearing on the current question. Gotchas Dropping history too aggressively can lose context the current turn depends on — validate against real multi turn conversations This is distinct from summarize repeated conversation blocks — dropping removes irrelevant content entirely, summarizing preserves a compressed version of relevant but old content When NOT to Apply Skip aggressive trimming for short conversations that never accumulate enough history to matter for cost Not appropriate if your application genuinely requires full conversation context for correctness (e.g. legal or compliance transcripts where nothing can be dropped) Verification Community reported: trimming conversation history to only relevant turns is a widely repeated recommendation in conversational cost optimization writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "enable-prefix-caching-for-shared-system-prompts",
+      "title": "Enable Prefix Caching for Shared System Prompts",
+      "category": "inference-optimization",
+      "tags": [
+        "inference",
+        "caching",
+        "efficiency"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (vLLM/SGLang prefix caching, provider prompt caching)",
+      "applies_to": [
+        "llm-serving",
+        "chat-applications"
+      ],
+      "gotchas": [
+        "Prefix caching only hits when requests share an identical leading token sequence — putting anything variable (a timestamp, the user name, a request ID) at the very start of the prompt breaks the shared prefix and the cache never hits",
+        "Cached prefixes consume memory (KV cache) or, for hosted APIs, may have a minimum length and a short TTL; a prompt shorter than the provider's threshold or reused too infrequently gets no benefit"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "measure-kv-cache-hit-rate",
+        "stream-user-facing-responses"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/enable-prefix-caching-for-shared-system-prompts.md",
+      "url": "content/tips-and-tricks/inference-and-serving/enable-prefix-caching-for-shared-system-prompts",
+      "slug": "enable-prefix-caching-for-shared-system-prompts",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Enable Prefix Caching for Shared System Prompts",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 347,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Turn on prefix (prompt) caching so the shared, unchanging part of your prompts — the long system prompt, tool definitions, few-shot examples — is processed once and reused across requests instead of re-encoded every call. The prefill step recomputes attention over every prompt token; when thousands of requests share the same 2k-token preamble, that is thousands of redundant prefills. Prefix caching reuses the stored key/value state for the shared prefix, cutting prefill latency and cost for every request after the first, with no change to outputs.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Each request re-encodes the identical 2000-token system prompt from scratch; prefill dominates time-to-first-token and every call pays for the same computation.</p>\n<p><strong>After:</strong> The shared prefix is cached (server-side in vLLM/SGLang, or via a provider's prompt-caching flag); subsequent requests skip its prefill, dropping time-to-first-token and per-request cost.</p>\n<h2>Implementation</h2>\n<p>Structure prompts so all stable content leads and all variable content (the user's message, dynamic context) trails — caching keys on the longest common leading token span. Enable the runtime's prefix-caching option (e.g. vLLM/SGLang automatic prefix caching) or the provider's prompt-caching parameter. Verify hits by watching the cache hit-rate metric or the provider's cached-token accounting.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Prefix caching hits only on an identical leading token sequence; a timestamp or user name at the start of the prompt breaks the shared prefix and the cache never hits.</li>\n<li>Cached prefixes cost memory (KV cache) or, for APIs, may require a minimum length and expire on a short TTL; short or infrequently-reused prompts see no benefit.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Little benefit when prompts share almost no common prefix (every request is unique from the first token).</li>\n<li>Skip the memory tradeoff on a tightly RAM-constrained single-GPU server where the KV cache reserved for prefixes would starve concurrent requests.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: prefix/prompt caching is a documented feature of major serving runtimes and hosted APIs; the latency and cost reduction depends on prefix-sharing rate and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Turn on prefix (prompt) caching so the shared, unchanging part of your prompts — the long system prompt, tool definitions, few shot examples — is processed once and reused across requests instead of re encoded every call. The prefill step recomputes attention over every prompt token; when thousands of requests share the same 2k token preamble, that is thousands of redundant prefills. Prefix caching reuses the stored key/value state for the shared prefix, cutting prefill latency and cost for every request after the first, with no change to outputs. Before / After Before: Each request re encodes the identical 2000 token system prompt from scratch; prefill dominates time to first token and every call pays for the same computation. After: The shared prefix is cached (server side in vLLM/SGLang, or via a provider's prompt caching flag); subsequent requests skip its prefill, dropping time to first token and per request cost. Implementation Structure prompts so all stable content leads and all variable content (the user's message, dynamic context) trails — caching keys on the longest common leading token span. Enable the runtime's prefix caching option (e.g. vLLM/SGLang automatic prefix caching) or the provider's prompt caching parameter. Verify hits by watching the cache hit rate metric or the provider's cached token accounting. Gotchas Prefix caching hits only on an identical leading token sequence; a timestamp or user name at the start of the prompt breaks the shared prefix and the cache never hits. Cached prefixes cost memory (KV cache) or, for APIs, may require a minimum length and expire on a short TTL; short or infrequently reused prompts see no benefit. When NOT to Apply Little benefit when prompts share almost no common prefix (every request is unique from the first token). Skip the memory tradeoff on a tightly RAM constrained single GPU server where the KV cache reserved for prefixes would starve concurrent requests. Verification Community reported: prefix/prompt caching is a documented feature of major serving runtimes and hosted APIs; the latency and cost reduction depends on prefix sharing rate and is not benchmarked here."
     },
     {
       "id": "establish-a-prompting-baseline-before-fine-tuning",
@@ -4200,6 +4312,62 @@
       "body_text": "What & Why Move computation of summaries, embeddings, and metadata that don't change per request to an offline batch process, rather than computing them synchronously during the user facing request path. If the same expensive computation (e.g. summarizing a static document) would produce the same result on every request, computing it once offline and reusing it eliminates that latency from every subsequent request. Before / After Before: a document summary is regenerated on every request that needs it, adding a full generation call to the request's critical path. After: document summaries are generated once in an offline batch job whenever the source document changes, and requests read the precomputed summary directly. Implementation Identify computations in the request path that produce the same result for the same static input (summaries, embeddings, derived metadata), move them to an offline batch or event triggered job that runs whenever the underlying source changes, and have the request path read the precomputed result instead of recomputing it. Gotchas Precomputed context needs an invalidation strategy tied to the source changing — otherwise requests can serve stale data This only applies to genuinely static or slowly changing context — precomputing per request varying data defeats the purpose When NOT to Apply Skip this for context that genuinely varies per request and can't be precomputed (e.g. user specific real time data) Not worth the infrastructure overhead if the computation is already cheap enough that request time computation has negligible latency impact Verification Community reported: precomputing static context offline rather than at request time is a widely repeated recommendation in latency optimization writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "prefer-continuous-batching-for-online-serving",
+      "title": "Prefer Continuous Batching Over Static Batching for Online Serving",
+      "category": "latency-optimization",
+      "tags": [
+        "inference",
+        "batching",
+        "efficiency"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (vLLM/TGI continuous batching)",
+      "applies_to": [
+        "llm-serving",
+        "chat-applications"
+      ],
+      "gotchas": [
+        "Static batching waits to fill a fixed batch and then runs all sequences to the length of the longest one, so short requests are held hostage by long ones and GPU cycles idle on finished sequences — continuous batching admits and retires sequences per step instead",
+        "Continuous batching raises throughput and utilization but does not reduce single-request latency on an idle server; if you benchmark with one request at a time you will see no difference and wrongly conclude it does not help"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "tune-batch-size-against-tail-latency",
+        "benchmark-with-production-shaped-inputs"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/prefer-continuous-batching-for-online-serving.md",
+      "url": "content/tips-and-tricks/inference-and-serving/prefer-continuous-batching-for-online-serving",
+      "slug": "prefer-continuous-batching-for-online-serving",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Prefer Continuous Batching Over Static Batching for Online Serving",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 338,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>For online LLM serving, use a runtime that does continuous (in-flight) batching rather than static batching. Static batching groups a fixed set of requests and steps them together until the longest sequence finishes, so a batch of mostly-short requests stalls behind one long generation and the GPU wastes cycles on slots that already completed. Continuous batching schedules at the token-step level: it admits new requests into free slots and retires finished ones every step, keeping the GPU saturated and dramatically improving throughput under concurrent load.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A static-batching server forms a batch of 8, then runs all 8 to the longest one's length; a single 2000-token generation blocks seven 50-token replies from returning.</p>\n<p><strong>After:</strong> A continuous-batching runtime (vLLM, TGI) retires each sequence as it finishes and slots in waiting requests immediately, so short replies return promptly and utilization stays high.</p>\n<h2>Implementation</h2>\n<p>Serve with a runtime that implements continuous batching (e.g. vLLM, Hugging Face TGI) rather than a naive loop that pads and runs fixed batches. Combine it with prefix caching and a tuned max-concurrency. Validate under concurrent, production-shaped load — not a single serial request — so the throughput gain is actually exercised.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Static batching runs all sequences to the longest one's length, so short requests wait on long ones and finished slots idle; continuous batching admits/retires per step.</li>\n<li>The gain is in throughput and utilization under load, not single-request latency on an idle server; a one-request-at-a-time benchmark hides the benefit.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Offline batch jobs with uniform-length inputs and no latency SLA may do fine with simple static batching.</li>\n<li>Not a lever you implement yourself for hosted APIs — the provider already batches server-side; this applies to self-hosted serving.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: continuous batching is the documented default of modern serving stacks (vLLM, TGI) and widely reported to raise throughput; the exact gain is workload-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why For online LLM serving, use a runtime that does continuous (in flight) batching rather than static batching. Static batching groups a fixed set of requests and steps them together until the longest sequence finishes, so a batch of mostly short requests stalls behind one long generation and the GPU wastes cycles on slots that already completed. Continuous batching schedules at the token step level: it admits new requests into free slots and retires finished ones every step, keeping the GPU saturated and dramatically improving throughput under concurrent load. Before / After Before: A static batching server forms a batch of 8, then runs all 8 to the longest one's length; a single 2000 token generation blocks seven 50 token replies from returning. After: A continuous batching runtime (vLLM, TGI) retires each sequence as it finishes and slots in waiting requests immediately, so short replies return promptly and utilization stays high. Implementation Serve with a runtime that implements continuous batching (e.g. vLLM, Hugging Face TGI) rather than a naive loop that pads and runs fixed batches. Combine it with prefix caching and a tuned max concurrency. Validate under concurrent, production shaped load — not a single serial request — so the throughput gain is actually exercised. Gotchas Static batching runs all sequences to the longest one's length, so short requests wait on long ones and finished slots idle; continuous batching admits/retires per step. The gain is in throughput and utilization under load, not single request latency on an idle server; a one request at a time benchmark hides the benefit. When NOT to Apply Offline batch jobs with uniform length inputs and no latency SLA may do fine with simple static batching. Not a lever you implement yourself for hosted APIs — the provider already batches server side; this applies to self hosted serving. Verification Community reported: continuous batching is the documented default of modern serving stacks (vLLM, TGI) and widely reported to raise throughput; the exact gain is workload specific and is not benchmarked here."
+    },
+    {
       "id": "prefer-data-quality-over-quantity",
       "title": "Prefer Data Quality Over Quantity for Instruction Tuning",
       "category": "production-gotchas",
@@ -5183,6 +5351,62 @@
       "body_text": "What & Why Decide and implement an explicit retention window for stored prompts and traces (e.g. 30/90 days) before launch, rather than storing them indefinitely by default. Prompts frequently carry user submitted data, and indefinite retention without a deliberate decision can create compliance exposure that's costly to remediate once discovered. Before / After Before: traces and prompts accumulate in storage indefinitely with no retention policy, decided implicitly by \"we never got around to deleting anything.\" After: an explicit retention window (e.g. 90 days) is decided based on debugging/compliance needs, and automated deletion enforces it. Implementation Decide a retention window based on your actual debugging and compliance requirements, implement automated deletion (a scheduled job or storage lifecycle policy) that enforces it, and document the decision so it's a deliberate policy rather than an accident of never revisiting storage settings. Gotchas Prompts and traces frequently contain user data — indefinite retention by default can create compliance exposure that's costly to remediate later A retention policy needs actual enforcement (automated deletion), in addition to a documented intention When NOT to Apply Skip a formal policy review for internal only tooling with no user data and no compliance requirement Not necessary if your organization already has a platform level data retention policy that automatically covers this data category Verification Community reported: setting explicit, enforced retention windows for stored prompts/traces is a widely repeated recommendation in LLM application compliance writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "route-easy-requests-to-a-smaller-model-first",
+      "title": "Route Easy Requests to a Smaller Model First",
+      "category": "cost-reduction",
+      "tags": [
+        "inference",
+        "routing",
+        "efficiency"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (model cascade/routing deployments)",
+      "applies_to": [
+        "llm-serving",
+        "chat-applications"
+      ],
+      "gotchas": [
+        "A large fraction of real traffic is easy (short factual answers, simple classifications) and does not need your most expensive model, but a single-model deployment pays the top-tier price for every request regardless of difficulty",
+        "The router itself adds latency and can misroute; a too-eager route-to-small policy sends hard queries to a weak model and quietly degrades quality, so you must measure escalation/quality on a labeled set, not only cost savings"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "start-with-a-smaller-quantized-model",
+        "add-provider-timeout-and-retry-policies"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/route-easy-requests-to-a-smaller-model-first.md",
+      "url": "content/tips-and-tricks/inference-and-serving/route-easy-requests-to-a-smaller-model-first",
+      "slug": "route-easy-requests-to-a-smaller-model-first",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Route Easy Requests to a Smaller Model First",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 356,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Send requests to a small, cheap model first and escalate to a larger one only when needed, instead of paying the top-tier price for every call. Production traffic is rarely uniform in difficulty: many requests are short, factual, or simple classifications a small model handles well, while only a minority need the frontier model's capability. A cascade — cheap model with a confidence or verification check, falling through to the expensive model on hard cases — captures most of the quality at a fraction of the average cost.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Every request goes to the largest model; simple \"what's the capital of X\" queries cost the same as complex multi-step reasoning, and the average cost is anchored to the ceiling.</p>\n<p><strong>After:</strong> A small model answers the easy majority; a confidence/verification gate escalates the hard minority to the large model, so average cost drops toward the small-model price while hard queries still get the strong model.</p>\n<h2>Implementation</h2>\n<p>Define a routing signal: a lightweight classifier, a confidence/self-check on the small model's output, or heuristics on the request. Try the cheap model first; escalate on low confidence, a failed verification, or a detected hard category. Measure escalation rate, end-to-end quality on a labeled set, and cost — tune the gate so quality holds rather than optimizing cost alone. Log routing decisions for auditing.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Much real traffic is easy and does not need the top model, yet a single-model deployment pays the top price for every request.</li>\n<li>The router adds latency and can misroute; a too-eager small-model policy degrades quality on hard queries, so measure escalation and quality on labels, not only cost.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Not worth the complexity when traffic is uniformly hard, or volume is low enough that the savings do not justify a router to build and monitor.</li>\n<li>Skip when strict output consistency across all requests matters and mixing two models' styles is unacceptable.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: model cascades/routing are a well-documented cost-reduction pattern; the achievable savings and quality tradeoff are workload-specific and are not benchmarked here.</p>\n",
+      "body_text": "What & Why Send requests to a small, cheap model first and escalate to a larger one only when needed, instead of paying the top tier price for every call. Production traffic is rarely uniform in difficulty: many requests are short, factual, or simple classifications a small model handles well, while only a minority need the frontier model's capability. A cascade — cheap model with a confidence or verification check, falling through to the expensive model on hard cases — captures most of the quality at a fraction of the average cost. Before / After Before: Every request goes to the largest model; simple \"what's the capital of X\" queries cost the same as complex multi step reasoning, and the average cost is anchored to the ceiling. After: A small model answers the easy majority; a confidence/verification gate escalates the hard minority to the large model, so average cost drops toward the small model price while hard queries still get the strong model. Implementation Define a routing signal: a lightweight classifier, a confidence/self check on the small model's output, or heuristics on the request. Try the cheap model first; escalate on low confidence, a failed verification, or a detected hard category. Measure escalation rate, end to end quality on a labeled set, and cost — tune the gate so quality holds rather than optimizing cost alone. Log routing decisions for auditing. Gotchas Much real traffic is easy and does not need the top model, yet a single model deployment pays the top price for every request. The router adds latency and can misroute; a too eager small model policy degrades quality on hard queries, so measure escalation and quality on labels, not only cost. When NOT to Apply Not worth the complexity when traffic is uniformly hard, or volume is low enough that the savings do not justify a router to build and monitor. Skip when strict output consistency across all requests matters and mixing two models' styles is unacceptable. Verification Community reported: model cascades/routing are a well documented cost reduction pattern; the achievable savings and quality tradeoff are workload specific and are not benchmarked here."
+    },
+    {
       "id": "route-simple-tasks-to-smaller-models",
       "title": "Classify Task Difficulty and Route Easy Requests to Cheaper Models",
       "category": "cost-reduction",
@@ -5898,6 +6122,118 @@
       "word_count": 362,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Bound each agent run by a cumulative token and dollar budget, checked live, in addition to a step count. Step limits cap how many times the loop runs but not how expensive each iteration is: one step that pastes a large document or grows a long transcript can dwarf many small steps, so a \"20 step\" cap can still produce a surprise bill. A running budget that halts the agent when tokens or cost cross a threshold is the control that actually bounds spend, and it doubles as a runaway-loop detector.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The agent is capped at 25 steps; one step ingests a 300k-token file and the loop re-sends it every subsequent step, and the run costs 50x a normal one despite staying under the step cap.</p>\n<p><strong>After:</strong> The run tracks cumulative tokens/cost and aborts (or escalates to a human) at a set ceiling, so the expensive path is stopped mid-run instead of discovered on the invoice.</p>\n<h2>Implementation</h2>\n<p>Accumulate prompt+completion tokens (and their cost) across every model call in a run, and check the total against a per-run ceiling before each step; when exceeded, stop the loop and return a partial result or escalate. Emit the running total to logs/traces so budgets can be tuned per task type. Combine with a step cap and a wall-clock timeout — the three bound different failure modes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A step limit alone does not bound cost — one step can balloon the context to hundreds of thousands of tokens, so a few expensive steps can outcost many cheap ones.</li>\n<li>Tracking spend only after the run means discovering a runaway from the invoice; the budget must be checked during the run and halt the loop.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Overkill for trivial, fixed-shape agents whose per-run cost is already small and bounded by their structure.</li>\n<li>Less urgent in development against a local or free model, though the instrumentation is still useful to carry into production.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: live token/cost budgets are a common defense against agent cost incidents; the savings depend on your workload's tail behavior and are not benchmarked here.</p>\n",
       "body_text": "What & Why Bound each agent run by a cumulative token and dollar budget, checked live, in addition to a step count. Step limits cap how many times the loop runs but not how expensive each iteration is: one step that pastes a large document or grows a long transcript can dwarf many small steps, so a \"20 step\" cap can still produce a surprise bill. A running budget that halts the agent when tokens or cost cross a threshold is the control that actually bounds spend, and it doubles as a runaway loop detector. Before / After Before: The agent is capped at 25 steps; one step ingests a 300k token file and the loop re sends it every subsequent step, and the run costs 50x a normal one despite staying under the step cap. After: The run tracks cumulative tokens/cost and aborts (or escalates to a human) at a set ceiling, so the expensive path is stopped mid run instead of discovered on the invoice. Implementation Accumulate prompt+completion tokens (and their cost) across every model call in a run, and check the total against a per run ceiling before each step; when exceeded, stop the loop and return a partial result or escalate. Emit the running total to logs/traces so budgets can be tuned per task type. Combine with a step cap and a wall clock timeout — the three bound different failure modes. Gotchas A step limit alone does not bound cost — one step can balloon the context to hundreds of thousands of tokens, so a few expensive steps can outcost many cheap ones. Tracking spend only after the run means discovering a runaway from the invoice; the budget must be checked during the run and halt the loop. When NOT to Apply Overkill for trivial, fixed shape agents whose per run cost is already small and bounded by their structure. Less urgent in development against a local or free model, though the instrumentation is still useful to carry into production. Verification Community reported: live token/cost budgets are a common defense against agent cost incidents; the savings depend on your workload's tail behavior and are not benchmarked here."
+    },
+    {
+      "id": "set-explicit-stop-sequences-to-prevent-overrun",
+      "title": "Set Explicit Stop Sequences to Prevent Generation Overrun",
+      "category": "inference-optimization",
+      "tags": [
+        "inference",
+        "efficiency",
+        "structured-output"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "20 minutes",
+      "phase": "inference-and-serving",
+      "effort": "minutes",
+      "estimated_time": "~20-30 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (structured LLM output tuning)",
+      "applies_to": [
+        "llm-serving",
+        "structured-generation"
+      ],
+      "gotchas": [
+        "Without a stop sequence, a model that has finished the useful answer often keeps going — hallucinating a follow-up turn, repeating itself, or emitting a fake next-speaker tag — and you pay latency and tokens for output you then discard",
+        "A stop sequence that also appears inside valid output truncates real content; choose a delimiter that cannot occur naturally in the answer (e.g. a role tag like '\\nUser:' or a unique fence), and remember stop tokens are usually not included in the returned text"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "set-max-tokens-to-bound-tail-latency-and-cost",
+        "stream-user-facing-responses"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/set-explicit-stop-sequences-to-prevent-overrun.md",
+      "url": "content/tips-and-tricks/inference-and-serving/set-explicit-stop-sequences-to-prevent-overrun",
+      "slug": "set-explicit-stop-sequences-to-prevent-overrun",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Set Explicit Stop Sequences to Prevent Generation Overrun",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 359,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Provide explicit stop sequences so generation halts as soon as the useful output is complete, rather than running until it hits <code>max_tokens</code>. Models frequently continue past a finished answer — inventing a follow-up user turn, repeating a closing, or emitting a role tag for the next speaker — which wastes latency and tokens on text you discard and can leak confusing artifacts into responses. A stop sequence tied to your output structure (a role delimiter, a closing fence) cuts generation at the right boundary deterministically.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A chat completion with no stop sequence answers the question, then hallucinates <code>\\nUser: thanks!\\nAssistant: You're welcome!</code> — extra tokens, extra latency, and a fabricated turn to strip out.</p>\n<p><strong>After:</strong> With <code>stop=[\"\\nUser:\"]</code>, generation ends exactly when the model starts a new turn, returning only the intended answer and saving the trailing tokens.</p>\n<h2>Implementation</h2>\n<p>Identify the delimiter that marks the end of the intended output for your format — a chat role tag (<code>\\nUser:</code>), a code fence, an end marker in a template — and pass it as a stop sequence on the request. Verify the delimiter cannot occur inside legitimate output. Pair with a <code>max_tokens</code> cap as a backstop. Note most APIs exclude the stop text from the returned content, so do not double-strip it.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without a stop sequence a model often keeps going past the useful answer — a fake follow-up turn, repetition, a next-speaker tag — costing tokens and latency for discarded output.</li>\n<li>A stop sequence that can appear inside valid output truncates real content; pick a delimiter that cannot occur naturally, and remember stop text is usually excluded from the response.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Unnecessary when you use a structured-output/JSON mode that already enforces a terminating grammar, or when the model reliably emits a clean end-of-text token.</li>\n<li>Skip for open-ended generation where you genuinely want the model to continue until it decides to stop.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: stop sequences are a standard generation-control parameter; the token/latency savings depend on how often the model overruns for your prompts and are not benchmarked here.</p>\n",
+      "body_text": "What & Why Provide explicit stop sequences so generation halts as soon as the useful output is complete, rather than running until it hits max tokens. Models frequently continue past a finished answer — inventing a follow up user turn, repeating a closing, or emitting a role tag for the next speaker — which wastes latency and tokens on text you discard and can leak confusing artifacts into responses. A stop sequence tied to your output structure (a role delimiter, a closing fence) cuts generation at the right boundary deterministically. Before / After Before: A chat completion with no stop sequence answers the question, then hallucinates \\nUser: thanks!\\nAssistant: You're welcome! — extra tokens, extra latency, and a fabricated turn to strip out. After: With stop=[\"\\nUser:\"], generation ends exactly when the model starts a new turn, returning only the intended answer and saving the trailing tokens. Implementation Identify the delimiter that marks the end of the intended output for your format — a chat role tag (\\nUser:), a code fence, an end marker in a template — and pass it as a stop sequence on the request. Verify the delimiter cannot occur inside legitimate output. Pair with a max tokens cap as a backstop. Note most APIs exclude the stop text from the returned content, so do not double strip it. Gotchas Without a stop sequence a model often keeps going past the useful answer — a fake follow up turn, repetition, a next speaker tag — costing tokens and latency for discarded output. A stop sequence that can appear inside valid output truncates real content; pick a delimiter that cannot occur naturally, and remember stop text is usually excluded from the response. When NOT to Apply Unnecessary when you use a structured output/JSON mode that already enforces a terminating grammar, or when the model reliably emits a clean end of text token. Skip for open ended generation where you genuinely want the model to continue until it decides to stop. Verification Community reported: stop sequences are a standard generation control parameter; the token/latency savings depend on how often the model overruns for your prompts and are not benchmarked here."
+    },
+    {
+      "id": "set-max-tokens-to-bound-tail-latency-and-cost",
+      "title": "Set max_tokens to Bound Tail Latency and Cost",
+      "category": "latency-optimization",
+      "tags": [
+        "inference",
+        "efficiency",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "20 minutes",
+      "phase": "inference-and-serving",
+      "effort": "minutes",
+      "estimated_time": "~20 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (LLM serving latency tuning)",
+      "applies_to": [
+        "llm-serving",
+        "chat-applications"
+      ],
+      "gotchas": [
+        "Generation latency and cost scale with output tokens, and without a max_tokens cap a single request that runs on to the context limit can dominate p99 latency and spend far more than the median request",
+        "A cap set too low silently truncates legitimate long answers mid-sentence; size it to the longest genuinely-needed response for the endpoint, and detect finish_reason == 'length' so truncations are observable rather than shipped as complete"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "tune-batch-size-against-tail-latency",
+        "stream-user-facing-responses"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/set-max-tokens-to-bound-tail-latency-and-cost.md",
+      "url": "content/tips-and-tricks/inference-and-serving/set-max-tokens-to-bound-tail-latency-and-cost",
+      "slug": "set-max-tokens-to-bound-tail-latency-and-cost",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Set max_tokens to Bound Tail Latency and Cost",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 336,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Set an explicit <code>max_tokens</code> (output length cap) on every generation request, sized to the endpoint's real need. Decoding is autoregressive: latency and cost grow roughly linearly with the number of output tokens, and each token is produced sequentially. With no cap, a single request that keeps generating to the context limit becomes a long-tail outlier that inflates p99 latency and costs a multiple of the median — a runaway that a step or timeout limit elsewhere does not directly bound. A right-sized cap turns that tail into a predictable ceiling.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Requests are sent with no <code>max_tokens</code>; most answers are short, but occasional ones generate thousands of tokens, spiking p99 latency and the bill.</p>\n<p><strong>After:</strong> <code>max_tokens</code> is set to the longest answer the endpoint actually needs (e.g. 512 for a classifier, 1500 for a summary); the tail is bounded and cost per request is predictable.</p>\n<h2>Implementation</h2>\n<p>Pick a <code>max_tokens</code> per endpoint from the longest legitimately-needed response, not a global default. Pass it on every call. Monitor <code>finish_reason</code>/stop reason and alarm when responses hit the length cap so you catch truncation instead of shipping half-answers. Combine with streaming so users see output while it generates.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Latency and cost scale with output tokens; without a cap, one run-on request can dominate p99 and spend far more than the median.</li>\n<li>A cap set too low truncates legitimate answers mid-sentence; size it to the real need and detect <code>finish_reason == \"length\"</code> so truncations are observable.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Do not set an aggressive cap on genuinely open-ended long-form generation (long reports, code files) where truncation defeats the purpose — size generously there instead.</li>\n<li>Less impactful for batch/offline jobs where tail latency does not affect users, though the cost bound still applies.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: bounding output length to control latency and cost is standard serving practice; the tail-latency reduction is workload-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Set an explicit max tokens (output length cap) on every generation request, sized to the endpoint's real need. Decoding is autoregressive: latency and cost grow roughly linearly with the number of output tokens, and each token is produced sequentially. With no cap, a single request that keeps generating to the context limit becomes a long tail outlier that inflates p99 latency and costs a multiple of the median — a runaway that a step or timeout limit elsewhere does not directly bound. A right sized cap turns that tail into a predictable ceiling. Before / After Before: Requests are sent with no max tokens; most answers are short, but occasional ones generate thousands of tokens, spiking p99 latency and the bill. After: max tokens is set to the longest answer the endpoint actually needs (e.g. 512 for a classifier, 1500 for a summary); the tail is bounded and cost per request is predictable. Implementation Pick a max tokens per endpoint from the longest legitimately needed response, not a global default. Pass it on every call. Monitor finish reason/stop reason and alarm when responses hit the length cap so you catch truncation instead of shipping half answers. Combine with streaming so users see output while it generates. Gotchas Latency and cost scale with output tokens; without a cap, one run on request can dominate p99 and spend far more than the median. A cap set too low truncates legitimate answers mid sentence; size it to the real need and detect finish reason == \"length\" so truncations are observable. When NOT to Apply Do not set an aggressive cap on genuinely open ended long form generation (long reports, code files) where truncation defeats the purpose — size generously there instead. Less impactful for batch/offline jobs where tail latency does not affect users, though the cost bound still applies. Verification Community reported: bounding output length to control latency and cost is standard serving practice; the tail latency reduction is workload specific and is not benchmarked here."
     },
     {
       "id": "set-pass-fail-thresholds-before-running-evals",

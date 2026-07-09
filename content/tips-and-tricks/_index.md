@@ -11,7 +11,7 @@
 | [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-07-09 |
 | [evaluation](./evaluation/) | 19 entries | 2026-07-09 |
 | [fine tuning](./fine-tuning/) | 14 entries | 2026-07-09 |
-| [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-09 |
+| [inference and serving](./inference-and-serving/) | 25 entries | 2026-07-09 |
 | [prompting](./prompting/) | 21 entries | 2026-07-09 |
 | [rag and retrieval](./rag-and-retrieval/) | 23 entries | 2026-07-09 |
 
@@ -21,12 +21,12 @@
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./cost-and-performance/batch-embedding-requests-during-ingestion.md)
 - [Cache Embeddings Keyed by a Content Hash](./rag-and-retrieval/cache-embeddings-keyed-by-content-hash.md)
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md)
+- [Cap Concurrent Requests With Admission Control](./inference-and-serving/cap-concurrent-requests-with-admission-control.md)
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
 - [Deduplicate Near-Duplicate Chunks Before Indexing](./rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md)
 - [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md)
-- [Drop Low-Similarity Chunks With a Score Threshold](./rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md)
 
 ## Most Popular
 
@@ -55,6 +55,7 @@ _No star-tracked entries yet._
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md) — 
 - [Use Prompt Caching for Long, Stable System Prompt Prefixes](./cost-and-performance/cache-stable-system-prompts.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./agents-and-orchestration/cap-agent-tool-retries.md) — 
+- [Cap Concurrent Requests With Admission Control](./inference-and-serving/cap-concurrent-requests-with-admission-control.md) — 
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md) — 
 - [Checkpoint Agent State After Each Side-Effecting Tool Call](./agents-and-orchestration/checkpoint-agent-state-after-each-tool-call.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./rag-and-retrieval/choose-chunk-size-by-answer-span-length.md) — 
@@ -72,6 +73,7 @@ _No star-tracked entries yet._
 - [Capture Sampled Traces Before Real Users Hit the System](./debugging-and-observability/do-not-launch-without-trace-sampling.md) — 
 - [Drop Low-Similarity Chunks With a Score Threshold](./rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md) — 
 - [Keep Only Relevant Conversation History, Not the Whole Transcript](./cost-and-performance/drop-unused-conversation-history.md) — 
+- [Enable Prefix Caching for Shared System Prompts](./inference-and-serving/enable-prefix-caching-for-shared-system-prompts.md) — 
 - [Establish a Prompting Baseline Before Fine-Tuning](./fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md) — 
 - [Evaluate Checkpoints on Task Metrics, Not Training Loss](./fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
@@ -82,5 +84,3 @@ _No star-tracked entries yet._
 - [Inspect a Random Sample of Training Data by Hand Before Every Run](./fine-tuning/inspect-your-training-data-by-hand.md) — 
 - [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md) — 
 - [Keep a Kill Switch for Risky Agent Tools](./agents-and-orchestration/keep-a-kill-switch-for-agent-actions.md) — 
-- [Keep Instructions Outside Retrieved Context](./rag-and-retrieval/keep-instructions-outside-retrieved-context.md) — 
-- [Keep Local Model Weight Files Out of Git](./inference-and-serving/keep-model-files-out-of-git.md) — 
