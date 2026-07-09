@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb](./alert-on-tool-call-error-and-retry-rate.md)
 - [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./alert-on-streaming-latency-slos.md)
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./alert-on-quality-and-cost-regressions.md)
 
@@ -37,3 +38,4 @@ _No star-tracked entries yet._
 
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./alert-on-quality-and-cost-regressions.md) — 
 - [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./alert-on-streaming-latency-slos.md) — 
+- [Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb](./alert-on-tool-call-error-and-retry-rate.md) — 
