@@ -6,7 +6,7 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and orchestration](./agents-and-orchestration/) | 18 entries | 2026-07-09 |
+| [agents and orchestration](./agents-and-orchestration/) | 24 entries | 2026-07-09 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-09 |
 | [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-07-09 |
 | [evaluation](./evaluation/) | 19 entries | 2026-07-09 |
@@ -78,9 +78,9 @@ _No star-tracked entries yet._
 - [Evaluate Checkpoints on Task Metrics, Not Training Loss](./fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
 - [Evaluate the End-to-End Task, Not Only Components](./evaluation/evaluate-the-end-to-end-task-not-only-components.md) — 
+- [Give the Agent a Scratchpad Instead of Carrying Everything in Context](./agents-and-orchestration/give-the-agent-a-scratchpad-for-intermediate-results.md) — 
 - [Hold Out an Eval Set Before Any Training Run Touches the Data](./fine-tuning/hold-out-an-eval-set-before-any-training.md) — 
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
 - [Inspect a Random Sample of Training Data by Hand Before Every Run](./fine-tuning/inspect-your-training-data-by-hand.md) — 
 - [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md) — 
 - [Keep a Kill Switch for Risky Agent Tools](./agents-and-orchestration/keep-a-kill-switch-for-agent-actions.md) — 
-- [Keep Instructions Outside Retrieved Context](./rag-and-retrieval/keep-instructions-outside-retrieved-context.md) — 

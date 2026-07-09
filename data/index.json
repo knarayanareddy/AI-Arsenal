@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:31:04.624Z",
+    "generated_at": "2026-07-09T21:32:31.468Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
-    "total_tips": 159,
+    "total_tips": 165,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -5079,6 +5079,25 @@
       "featured": false
     },
     {
+      "id": "give-the-agent-a-scratchpad-for-intermediate-results",
+      "type": "tip",
+      "name": "Give the Agent a Scratchpad Instead of Carrying Everything in Context",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "memory"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/give-the-agent-a-scratchpad-for-intermediate-results.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/give-the-agent-a-scratchpad-for-intermediate-results",
+      "last_updated": "2026-07-08",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "glm-4",
       "type": "project",
       "name": "GLM-4 / GLM-4.5",
@@ -8083,6 +8102,25 @@
       "path": "content/tips-and-tricks/agents-and-orchestration/make-success-criteria-machine-checkable.md",
       "url": "content/tips-and-tricks/agents-and-orchestration/make-success-criteria-machine-checkable",
       "last_updated": "2026-07-02",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "make-tools-idempotent-so-retries-are-safe",
+      "type": "tip",
+      "name": "Make Side-Effecting Tools Idempotent So Retries Are Safe",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "battle-tested"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/make-tools-idempotent-so-retries-are-safe.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/make-tools-idempotent-so-retries-are-safe",
+      "last_updated": "2026-07-08",
       "category": "agent-reliability",
       "maturity": null,
       "cost_model": null,
@@ -11693,6 +11731,25 @@
       "featured": false
     },
     {
+      "id": "return-structured-errors-from-tools-so-the-agent-can-recover",
+      "type": "tip",
+      "name": "Return Structured Errors From Tools So the Agent Can Recover",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/return-structured-errors-from-tools-so-the-agent-can-recover.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/return-structured-errors-from-tools-so-the-agent-can-recover",
+      "last_updated": "2026-07-08",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "review-data-retention-for-prompts",
       "type": "tip",
       "name": "Set an Explicit Data Retention Policy for Stored Prompts Before Launch",
@@ -12392,6 +12449,25 @@
       "url": "content/tips-and-tricks/prompting/separate-user-content-from-system-instructions",
       "last_updated": "2026-07-02",
       "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-a-token-and-cost-budget-per-agent-run",
+      "type": "tip",
+      "name": "Set a Token and Cost Budget Per Agent Run, Not Only a Step Limit",
+      "description": "",
+      "tags": [
+        "agents",
+        "efficiency",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/set-a-token-and-cost-budget-per-agent-run.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/set-a-token-and-cost-budget-per-agent-run",
+      "last_updated": "2026-07-08",
+      "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -14941,6 +15017,25 @@
       "featured": false
     },
     {
+      "id": "verify-tool-side-effects-instead-of-trusting-the-response",
+      "type": "tip",
+      "name": "Verify Tool Side Effects Instead of Trusting the Tool's Response",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/verify-tool-side-effects-instead-of-trusting-the-response.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/verify-tool-side-effects-instead-of-trusting-the-response",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "verl",
       "type": "project",
       "name": "verl",
@@ -15413,6 +15508,25 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "write-tool-descriptions-for-the-model-not-the-codebase",
+      "type": "tip",
+      "name": "Write Tool Descriptions for the Model, Not the Codebase",
+      "description": "",
+      "tags": [
+        "agents",
+        "tool-use",
+        "routing"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/write-tool-descriptions-for-the-model-not-the-codebase.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/write-tool-descriptions-for-the-model-not-the-codebase",
+      "last_updated": "2026-07-08",
+      "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
