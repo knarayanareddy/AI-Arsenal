@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 14 entries | 2026-07-08 |
-| [architectures](./architectures/) | 13 entries | 2026-07-08 |
-| [evaluation and safety](./evaluation-and-safety/) | 10 entries | 2026-07-08 |
-| [foundational](./foundational/) | 16 entries | 2026-07-08 |
-| [inference and efficiency](./inference-and-efficiency/) | 11 entries | 2026-07-08 |
-| [retrieval and memory](./retrieval-and-memory/) | 15 entries | 2026-07-08 |
-| [surveys](./surveys/) | 3 entries | 2026-07-08 |
-| [training and alignment](./training-and-alignment/) | 18 entries | 2026-07-08 |
+| [agents and reasoning](./agents-and-reasoning/) | 16 entries | 2026-07-09 |
+| [architectures](./architectures/) | 15 entries | 2026-07-09 |
+| [evaluation and safety](./evaluation-and-safety/) | 10 entries | 2026-07-09 |
+| [foundational](./foundational/) | 18 entries | 2026-07-09 |
+| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-07-09 |
+| [retrieval and memory](./retrieval-and-memory/) | 17 entries | 2026-07-09 |
+| [surveys](./surveys/) | 3 entries | 2026-07-09 |
+| [training and alignment](./training-and-alignment/) | 19 entries | 2026-07-09 |
 
 ## Recently Added
 
@@ -67,7 +67,10 @@ _No star-tracked entries yet._
 - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](./architectures/gu-2023-mamba.md) — Introduced selective state-space models with input-dependent dynamics and a hardware-aware parallel scan, achieving Transformer-quality language modeling with linear-time inference — the strongest attention alternative, now shipping in hybrid production models
 - [Textbooks Are All You Need](./training-and-alignment/gunasekar-2023-phi-1.md) — The phi-1 paper: a 1.3B model trained on 7B tokens of filtered 'textbook-quality' and synthetic data hit 50.6% HumanEval — the flagship argument that data quality can substitute for orders of magnitude of scale, launching the small-language-model program
 - [REALM: Retrieval-Augmented Language Model Pre-Training](./retrieval-and-memory/guu-2020-realm.md) — First model to pretrain a language model jointly with a learned neural retriever over Wikipedia, backpropagating through retrieval — establishing that external knowledge can be a trained component of an LM rather than a bolt-on
+- [Deep Residual Learning for Image Recognition](./foundational/he-2015-resnet.md) — Introduced residual connections (skip connections) that let networks learn residual functions relative to the identity, making very deep networks trainable and unblocking the depth scaling that later architectures — including Transformers — depend on
 - [Measuring Massive Multitask Language Understanding](./evaluation-and-safety/hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
+- [Distilling the Knowledge in a Neural Network](./inference-and-efficiency/hinton-2015-distillation.md) — Introduced knowledge distillation — training a small 'student' model to match the soft output distribution of a large 'teacher' — the basis for compressing large models into cheap, fast ones for deployment
+- [Denoising Diffusion Probabilistic Models](./architectures/ho-2020-ddpm.md) — Made diffusion models practical for high-quality image generation by training a network to reverse a gradual noising process, establishing the denoising-diffusion recipe behind modern image and video generators
 - [Training Compute-Optimal Large Language Models](./foundational/hoffmann-2022-chinchilla.md) — The Chinchilla paper: showed contemporary LLMs were dramatically undertrained — compute-optimal training scales parameters and data equally (~20 tokens per parameter), and a 70B model trained on 1.4T tokens beat a 280B model — resetting how the field allocates training compute
 - [ORPO: Monolithic Preference Optimization without Reference Model](./training-and-alignment/hong-2024-orpo.md) — Folds preference alignment into supervised fine-tuning in a single stage by adding an odds-ratio penalty to the SFT loss — no separate reference model and no separate DPO/RLHF phase, cutting alignment to one training run.
 - [LoRA: Low-Rank Adaptation of Large Language Models](./training-and-alignment/hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
@@ -77,10 +80,7 @@ _No star-tracked entries yet._
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./retrieval-and-memory/ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
 - [Mixtral of Experts](./architectures/jiang-2024-mixtral.md) — Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./evaluation-and-safety/jimenez-2023-swe-bench.md) — SWE-bench: 2,294 real GitHub issues from 12 Python repos, graded by running the repos' own tests against model-generated patches — the benchmark that replaced toy coding problems and became the scoreboard of the coding-agent era
+- [Billion-scale similarity search with GPUs](./retrieval-and-memory/johnson-2017-faiss.md) — The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends
 - [Scaling Laws for Neural Language Models](./foundational/kaplan-2020-scaling-laws.md) — Established that language-model loss falls as smooth power laws in parameters, data, and compute across many orders of magnitude — the empirical foundation of the scaling era — though its specific compute-optimal allocation was later corrected by Chinchilla
 - [Dense Passage Retrieval for Open-Domain Question Answering](./retrieval-and-memory/karpukhin-2020-dpr.md) — Showed a simple dual-encoder trained with in-batch negatives beats BM25 for passage retrieval — the paper that made dense embedding retrieval the default, and the direct ancestor of every embedding model powering today's RAG stacks
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./retrieval-and-memory/khattab-2020-colbert.md) — Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers
-- [Large Language Models are Zero-Shot Reasoners](./agents-and-reasoning/kojima-2022-zero-shot-cot.md) — Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone
-- [Efficient Memory Management for Large Language Model Serving with PagedAttention](./inference-and-efficiency/kwon-2023-pagedattention.md) — Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal
-- [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](./training-and-alignment/lee-2023-rlaif.md) — Showed that preference labels generated by an off-the-shelf LLM (RLAIF) can match human-labeled RLHF on summarization and dialogue, and that policies can even be trained directly against LLM-assigned rewards — making preference alignment far cheaper to scale.
-- [Fast Inference from Transformers via Speculative Decoding](./inference-and-efficiency/leviathan-2022-speculative-decoding.md) — Showed a small draft model's guesses can be verified in parallel by the full model with zero change to the output distribution, meaning production inference engines should implement speculative decoding to cut generation latency without sacrificing exactness

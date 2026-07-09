@@ -38,10 +38,10 @@ When I am designing a retrieval or memory system for an LLM application, which t
 - [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./izacard-2020-fid.md)
 - [Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)](./izacard-2021-contriever.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./ji-2026-mragent.md)
+- [Billion-scale similarity search with GPUs](./johnson-2017-faiss.md)
 - [Dense Passage Retrieval for Open-Domain Question Answering](./karpukhin-2020-dpr.md)
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./khattab-2020-colbert.md)
 - [Lost in the Middle: How Language Models Use Long Contexts](./liu-2023-lost-in-the-middle.md)
-- [MemGPT: Towards LLMs as Operating Systems](./packer-2023-memgpt.md)
 
 ### Most Popular
 
@@ -57,9 +57,11 @@ _No star-tracked entries yet._
 - [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./izacard-2020-fid.md) — Fusion-in-Decoder: encode each retrieved passage independently, concatenate the encodings, and let the decoder attend across all of them — scaling QA accuracy monotonically with passage count at linear (not quadratic) encoding cost
 - [Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)](./izacard-2021-contriever.md) — Trained a competitive dense retriever with no labeled query-document pairs, using contrastive learning over automatically-constructed positive pairs — strong zero-shot retrieval and a much better fine-tuning starting point than BM25 or random init.
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
+- [Billion-scale similarity search with GPUs](./johnson-2017-faiss.md) — The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends
 - [Dense Passage Retrieval for Open-Domain Question Answering](./karpukhin-2020-dpr.md) — Showed a simple dual-encoder trained with in-batch negatives beats BM25 for passage retrieval — the paper that made dense embedding retrieval the default, and the direct ancestor of every embedding model powering today's RAG stacks
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./khattab-2020-colbert.md) — Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers
 - [Lost in the Middle: How Language Models Use Long Contexts](./liu-2023-lost-in-the-middle.md) — Documented the U-shaped curve: LLMs use information at the beginning and end of long contexts far better than the middle — sometimes scoring worse with relevant context mid-prompt than with no context at all — the finding that shaped RAG context-ordering practice
+- [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](./malkov-2016-hnsw.md) — Introduced the HNSW graph index for approximate nearest-neighbor search — the algorithm powering most production vector databases and the retrieval step of essentially every RAG system
 - [MemGPT: Towards LLMs as Operating Systems](./packer-2023-memgpt.md) — Framed context-window management as an OS problem: the LLM manages its own memory hierarchy via self-editing function calls, paging information between in-context 'main memory' and external storage — the founding pattern of agent memory systems
 - [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](./reimers-2019-sentence-bert.md) — Sentence-BERT: fine-tune BERT in a siamese architecture so sentences map to independently comparable embeddings — turning O(n²) cross-encoder comparison into O(n) encoding + vector similarity, and spawning the sentence-transformers library that underpins semantic search and RAG
 - [GrepSeek: Training Search Agents for Direct Corpus Interaction](./salemi-2026-grepseek.md) — Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it
