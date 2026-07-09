@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Monitor Cache Hit Rate and Realized Token Savings Per Cache Layer, So a Silently Ineffective Cache Stops Costing You Money It Was Supposed to Save](./monitor-cache-hit-rate-and-token-savings.md)
 - [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./instrument-cost-per-feature.md)
 
 ### Most Popular
@@ -35,3 +36,4 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total](./instrument-cost-per-feature.md) — 
+- [Monitor Cache Hit Rate and Realized Token Savings Per Cache Layer, So a Silently Ineffective Cache Stops Costing You Money It Was Supposed to Save](./monitor-cache-hit-rate-and-token-savings.md) — 
