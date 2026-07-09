@@ -15,7 +15,7 @@
 | [projects](./projects/) | 146 entries | 2026-07-09 |
 | [research](./research/) | 114 entries | 2026-07-09 |
 | [skills](./skills/) | 28 entries | 2026-07-09 |
-| [tips and tricks](./tips-and-tricks/) | 147 entries | 2026-07-09 |
+| [tips and tricks](./tips-and-tricks/) | 153 entries | 2026-07-09 |
 | [tools](./tools/) | 224 entries | 2026-07-09 |
 | [trending](./trending/) | 4 entries | 2026-07-09 |
 
@@ -29,8 +29,8 @@
 - [Aider](./tools/dx-and-tooling/aider.md)
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md)
 - [Airbyte](./tools/data-ingestion/airbyte.md)
+- [Alarm on Empty and Unparseable Responses](./tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses.md)
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./research/architectures/alayrac-2022-flamingo.md)
-- [Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb](./observability/monitoring-alerting/alert-on-tool-call-error-and-retry-rate.md)
 
 ## Most Popular
 
@@ -81,6 +81,7 @@
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md) — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
 - [Airbyte](./tools/data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- [Alarm on Empty and Unparseable Responses](./tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses.md) — 
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./research/architectures/alayrac-2022-flamingo.md) — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
 - [Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration](./observability/monitoring-alerting/alert-on-streaming-latency-slos.md) — 
@@ -96,4 +97,3 @@
 - [AnythingLLM](./projects/data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [AnythingLLM](./projects/agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [ARC-AGI (Abstraction and Reasoning Corpus)](./benchmarks/general-llm/arc-agi.md) — 
-- [Arena-Hard-Auto](./benchmarks/evaluation-methods/arena-hard.md) — 
