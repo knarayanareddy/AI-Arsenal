@@ -27,6 +27,7 @@ _No entries yet. This category folder was created during the Architectures verti
 ### Recently Added
 
 - [Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse](./choose-caching-strategy.md)
+- [Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway](./choose-fallback-and-failover-strategy.md)
 - [Choosing a Quantization Strategy: How Low Can You Go Before Quality Breaks?](./choose-quantization-strategy.md)
 - [Synchronous vs Streaming vs Asynchronous: How Should the Answer Reach the User?](./choose-response-delivery-pattern.md)
 - [Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine](./choose-serving-stack.md)
@@ -40,6 +41,7 @@ _No star-tracked entries yet._
 
 - [Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse](./choose-caching-strategy.md) — 
 - [Choosing a Deployment Target: Separating App Hosting From Model Serving](./choose-deployment-target.md) — 
+- [Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway](./choose-fallback-and-failover-strategy.md) — 
 - [Choosing a Quantization Strategy: How Low Can You Go Before Quality Breaks?](./choose-quantization-strategy.md) — 
 - [Synchronous vs Streaming vs Asynchronous: How Should the Answer Reach the User?](./choose-response-delivery-pattern.md) — 
 - [Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine](./choose-serving-stack.md) — 
