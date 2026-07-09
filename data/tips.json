@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:22:35.773Z",
-  "count": 129,
+  "generated_at": "2026-07-09T21:23:21.620Z",
+  "count": 135,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -1474,6 +1474,61 @@
       "body_text": "What & Why Carry the application's request/correlation ID into every LLM span, log line, and eval record, so a single user complaint can be traced from the frontend click through retrieval, each model call, and the final response. LLM observability tools and application APM often live in separate systems; without a shared ID, debugging means timestamp archaeology — matching a 14:32:07 support ticket against thousands of anonymous traces. With it, \"user X got a wrong answer at 14:32\" resolves to the exact trace in seconds. Before / After Before: Support ticket says \"the bot told me to cancel my subscription to fix billing\" — engineers grep logs by approximate time and hope the user's request stands out among hundreds. After: The ticket carries request id=abc123; one query returns the full trace — the retrieved chunks, the prompt version, the model response — and the bad retrieved document is identified in one minute. Implementation Accept/generate the correlation ID at the edge, propagate it via context (HTTP headers, job payloads, async task metadata), and attach it as a standard attribute on every LLM span and structured log line — OpenTelemetry trace context does this for free if your LLM instrumentation joins the existing trace instead of starting its own. Gotchas The ID must originate at the edge and be propagated, not regenerated per service Async/queued work drops context silently — verify the ID survives job serialization When NOT to Apply Rarely skip worthy; the only real exception is throwaway prototypes with no users, where there is nothing to correlate yet Verification Community reported: request ID correlation is standard distributed tracing practice extended to LLM spans, recommended across LLM observability tooling documentation; not independently benchmarked here against a named production system."
     },
     {
+      "id": "deduplicate-training-data-before-fine-tuning",
+      "title": "Deduplicate Training Data Before Fine-Tuning",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "an hour or two",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (dataset-curation practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Exact-string dedup misses near-duplicates (whitespace, casing, boilerplate wrappers); use normalized or embedding-based similarity for the last mile",
+        "Aggressive dedup can delete legitimately repeated high-value patterns -- inspect a sample of what you're removing rather than trusting the threshold blindly"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "inspect-your-training-data-by-hand",
+        "hold-out-an-eval-set-before-any-training"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/deduplicate-training-data-before-fine-tuning.md",
+      "url": "content/tips-and-tricks/fine-tuning/deduplicate-training-data-before-fine-tuning",
+      "slug": "deduplicate-training-data-before-fine-tuning",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Deduplicate Training Data Before Fine-Tuning",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 321,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Remove duplicate and near-duplicate examples from your instruction set before you train. Duplicates get over-weighted by the loss — the model sees the same pattern many times and memorizes it, which both wastes the gradient budget on a handful of examples and skews the model toward whatever those repeats happen to say. Scraped, templated, or multi-source datasets are full of silent duplicates (the same FAQ pasted across pages, boilerplate headers, retried API logs). Deduping is the cheapest quality lever you have and it happens <em>before</em> any GPU time.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A 5,000-example set where ~800 rows are near-copies of 40 templated support macros; the model overfits those phrasings and answers everything in macro voice.</p>\n<p><strong>After:</strong> The deduped ~4,200-example set trains on genuinely distinct patterns; the model generalizes instead of parroting the most-repeated rows.</p>\n<h2>Implementation</h2>\n<p>Normalize first (strip whitespace, lowercase for comparison only, remove boilerplate wrappers), then dedup exact matches. For near-duplicates, hash on normalized text or compute embedding cosine similarity and drop rows above a threshold (e.g. 0.95). Always eyeball a sample of the removed rows to confirm you're cutting noise, not signal. Run this as a versioned preprocessing step so the deduped set is reproducible.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Exact-match dedup leaves near-duplicates untouched — the ones that differ only by punctuation or a name are often the worst offenders</li>\n<li>A too-tight similarity threshold removes distinct-but-similar examples that carry real variety; tune it against a manual review</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip for tiny hand-curated sets where you already know every example is unique</li>\n<li>Don't dedup across a deliberately augmented set where controlled repetition/paraphrase is the training strategy</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: dedup is standard practice in dataset-curation and pretraining-data pipelines (near-duplicate removal measurably improves generalization in published data-cleaning work). The specific similarity threshold is task-dependent and not benchmarked here.</p>\n",
+      "body_text": "What & Why Remove duplicate and near duplicate examples from your instruction set before you train. Duplicates get over weighted by the loss — the model sees the same pattern many times and memorizes it, which both wastes the gradient budget on a handful of examples and skews the model toward whatever those repeats happen to say. Scraped, templated, or multi source datasets are full of silent duplicates (the same FAQ pasted across pages, boilerplate headers, retried API logs). Deduping is the cheapest quality lever you have and it happens before any GPU time. Before / After Before: A 5,000 example set where 800 rows are near copies of 40 templated support macros; the model overfits those phrasings and answers everything in macro voice. After: The deduped 4,200 example set trains on genuinely distinct patterns; the model generalizes instead of parroting the most repeated rows. Implementation Normalize first (strip whitespace, lowercase for comparison only, remove boilerplate wrappers), then dedup exact matches. For near duplicates, hash on normalized text or compute embedding cosine similarity and drop rows above a threshold (e.g. 0.95). Always eyeball a sample of the removed rows to confirm you're cutting noise, not signal. Run this as a versioned preprocessing step so the deduped set is reproducible. Gotchas Exact match dedup leaves near duplicates untouched — the ones that differ only by punctuation or a name are often the worst offenders A too tight similarity threshold removes distinct but similar examples that carry real variety; tune it against a manual review When NOT to Apply Skip for tiny hand curated sets where you already know every example is unique Don't dedup across a deliberately augmented set where controlled repetition/paraphrase is the training strategy Verification Community reported: dedup is standard practice in dataset curation and pretraining data pipelines (near duplicate removal measurably improves generalization in published data cleaning work). The specific similarity threshold is task dependent and not benchmarked here."
+    },
+    {
       "id": "define-fallbacks-for-tool-failures",
       "title": "Define Explicit Fallbacks for Tool Failures",
       "category": "agent-reliability",
@@ -2618,6 +2673,61 @@
       "body_text": "What & Why Define agent task completion as an explicit, externally verifiable check (a test suite passes, an API returns an expected value, a file matches a schema) instead of asking the agent to self report \"I'm done.\" Self reported completion is unreliable because the model that performed the task is the same model judging whether it succeeded, with no independent signal to catch a wrong or incomplete result. Before / After Before: After: Implementation Attach an explicit completion check to each task type — for a coding agent, this is \"the test suite exits 0\"; for a data entry agent, \"the record matches the expected schema and required fields are non null.\" Run this check independently of the agent's own output after each attempt, and only mark the task complete when the check passes. Gotchas A machine check that's too strict (exact string match) fails on semantically correct but differently formatted output — check the property that actually matters, not surface form Machine checks add their own execution cost and latency (running a test suite, hitting an API to verify state) — budget for this in the agent's step/time budget If the check itself can be gamed (an agent that deletes a failing test instead of fixing the code it tests), the check isn't verifying what you think it is — sandbox or restrict the agent's write access to the check itself When NOT to Apply Skip this for genuinely open ended, subjective tasks with no objective completion criterion (creative writing, brainstorming) — use human or LLM as judge review instead, not a fabricated machine check Skip building a custom check if the task already has a natural one (a compiler exit code, an existing test suite) — wire into that directly rather than inventing a parallel mechanism Verification Production verified: machine checkable completion criteria (test suite passes, schema conformance) are the standard evaluation mechanism in coding agent benchmarks (e.g. SWE bench style verification) and are directly cited in this catalog's own use golden questions for every bug fix tip and yang 2024 swe agent research entry as the mechanism separating verifiable agent success from self reported completion."
     },
     {
+      "id": "mask-prompt-tokens-in-the-training-loss",
+      "title": "Mask Prompt Tokens So Loss Trains Only on the Completion",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "efficiency"
+      ],
+      "difficulty": "advanced",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (SFT/instruction-tuning practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Many SFT trainers do NOT mask prompt tokens by default -- check the completion-only / instruction-masking flag rather than assuming it's on",
+        "If your data has very long prompts and short completions, un-masked loss is dominated by prompt tokens and can drown out the signal you actually care about"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "match-training-and-inference-prompt-formats",
+        "establish-a-prompting-baseline-before-fine-tuning"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/mask-prompt-tokens-in-the-training-loss.md",
+      "url": "content/tips-and-tricks/fine-tuning/mask-prompt-tokens-in-the-training-loss",
+      "slug": "mask-prompt-tokens-in-the-training-loss",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Mask Prompt Tokens So Loss Trains Only on the Completion",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 348,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>In supervised fine-tuning you usually want the model to learn to produce the <em>completion</em> given the prompt — not to learn to generate the prompt itself. If the loss is computed over all tokens (prompt + completion), the model spends gradient on predicting the instruction text, which is both wasteful and, when prompts are long relative to completions, actively dilutes the learning signal for the part you care about. Masking the prompt tokens (labeling them so they don't contribute to the loss) focuses training on the response. It's a small config change with an outsized effect on data-heavy-prompt setups.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Loss is averaged over the full sequence; with 800-token RAG-style prompts and 50-token answers, ~94% of the loss is the model learning to echo context it will never need to generate.</p>\n<p><strong>After:</strong> Prompt tokens are masked; the loss reflects answer quality, and the same number of steps yields a noticeably better-aligned completion behavior.</p>\n<h2>Implementation</h2>\n<p>Use your trainer's completion-only / instruction-masking option (e.g. a data collator that sets prompt-token labels to the ignore index). Confirm it's active by inspecting a batch's labels — the prompt positions should be the ignore index and only completion positions should carry targets. Keep the prompt template identical to inference (see the format-matching tip) so masking lines up with real boundaries.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Don't assume masking is the default — several popular trainers train on the full sequence unless you opt in</li>\n<li>Masking helps most when prompts are long relative to completions; for short prompts the effect is minor</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Continued-pretraining objectives (learn to model <em>all</em> text) intentionally train on every token — don't mask there</li>\n<li>If your goal is to teach the model to produce a full structured document including the \"prompt-like\" preamble, the boundary is different — mask accordingly</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: completion-only loss masking is standard in SFT tooling and instruction-tuning guides. The magnitude of improvement depends on the prompt/completion length ratio and is not independently benchmarked here.</p>\n",
+      "body_text": "What & Why In supervised fine tuning you usually want the model to learn to produce the completion given the prompt — not to learn to generate the prompt itself. If the loss is computed over all tokens (prompt + completion), the model spends gradient on predicting the instruction text, which is both wasteful and, when prompts are long relative to completions, actively dilutes the learning signal for the part you care about. Masking the prompt tokens (labeling them so they don't contribute to the loss) focuses training on the response. It's a small config change with an outsized effect on data heavy prompt setups. Before / After Before: Loss is averaged over the full sequence; with 800 token RAG style prompts and 50 token answers, 94% of the loss is the model learning to echo context it will never need to generate. After: Prompt tokens are masked; the loss reflects answer quality, and the same number of steps yields a noticeably better aligned completion behavior. Implementation Use your trainer's completion only / instruction masking option (e.g. a data collator that sets prompt token labels to the ignore index). Confirm it's active by inspecting a batch's labels — the prompt positions should be the ignore index and only completion positions should carry targets. Keep the prompt template identical to inference (see the format matching tip) so masking lines up with real boundaries. Gotchas Don't assume masking is the default — several popular trainers train on the full sequence unless you opt in Masking helps most when prompts are long relative to completions; for short prompts the effect is minor When NOT to Apply Continued pretraining objectives (learn to model all text) intentionally train on every token — don't mask there If your goal is to teach the model to produce a full structured document including the \"prompt like\" preamble, the boundary is different — mask accordingly Verification Community reported: completion only loss masking is standard in SFT tooling and instruction tuning guides. The magnitude of improvement depends on the prompt/completion length ratio and is not independently benchmarked here."
+    },
+    {
       "id": "match-context-length-to-ram",
       "title": "Match Configured Context Length to Available RAM Before Demos",
       "category": "local-model-tips",
@@ -2942,6 +3052,61 @@
       "word_count": 262,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Before tuning prompts or the generator, check whether the correct source passage was actually present in the retrieved context. Answer quality is downstream of retrieval, so a poor answer with the right context retrieved indicates a generation problem, while a poor answer with the wrong context retrieved indicates a retrieval problem — and these require entirely different fixes.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>if answer_is_wrong: tune_prompt()</code> — every quality failure triggers a prompt change regardless of cause.</p>\n<p><strong>After:</strong> <code>if answer_is_wrong: check_if_source_passage_was_retrieved(query, retrieved_chunks)</code> — recall is checked first to route the fix to the right component.</p>\n<h2>Implementation</h2>\n<p>Build a labeled eval set of (query, expected-source-passage-id) pairs, run retrieval for each query, and compute the fraction where the expected passage appears in the retrieved set (recall@k) before attributing failures to the generator.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A low answer-quality score can come from retrieval failing or generation failing — without measuring recall separately, teams commonly tune the wrong component</li>\n<li>Recall measurement requires a labeled set of (query, expected-source-passage) pairs; building even a small one (20-30 examples) is a prerequisite</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this diagnostic step if you already have per-stage tracing that clearly attributes failures to retrieval vs. generation</li>\n<li>Not useful for purely generative (non-RAG) failures where no retrieval step exists</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: separating retrieval recall from generation quality as a diagnostic first step is a widely repeated recommendation in RAG debugging writeups, not yet independently verified against a named production system.</p>\n",
       "body_text": "What & Why Before tuning prompts or the generator, check whether the correct source passage was actually present in the retrieved context. Answer quality is downstream of retrieval, so a poor answer with the right context retrieved indicates a generation problem, while a poor answer with the wrong context retrieved indicates a retrieval problem — and these require entirely different fixes. Before / After Before: if answer is wrong: tune prompt() — every quality failure triggers a prompt change regardless of cause. After: if answer is wrong: check if source passage was retrieved(query, retrieved chunks) — recall is checked first to route the fix to the right component. Implementation Build a labeled eval set of (query, expected source passage id) pairs, run retrieval for each query, and compute the fraction where the expected passage appears in the retrieved set (recall@k) before attributing failures to the generator. Gotchas A low answer quality score can come from retrieval failing or generation failing — without measuring recall separately, teams commonly tune the wrong component Recall measurement requires a labeled set of (query, expected source passage) pairs; building even a small one (20 30 examples) is a prerequisite When NOT to Apply Skip this diagnostic step if you already have per stage tracing that clearly attributes failures to retrieval vs. generation Not useful for purely generative (non RAG) failures where no retrieval step exists Verification Community reported: separating retrieval recall from generation quality as a diagnostic first step is a widely repeated recommendation in RAG debugging writeups, not yet independently verified against a named production system."
+    },
+    {
+      "id": "mix-in-general-data-to-prevent-forgetting",
+      "title": "Mix In General Data to Prevent Catastrophic Forgetting",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "evaluation"
+      ],
+      "difficulty": "advanced",
+      "impact": "medium",
+      "time_to_implement": "a few hours",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~2-3 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (continual-learning and SFT practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Too much general data dilutes the task signal and the fine-tune underperforms on the target task; the mix ratio is a tuning knob, not a fixed rule",
+        "Forgetting is invisible unless you test for it -- a task-only eval will look great while general capability quietly degrades"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "test-for-regressions-outside-the-tuned-task",
+        "hold-out-an-eval-set-before-any-training"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/mix-in-general-data-to-prevent-forgetting.md",
+      "url": "content/tips-and-tricks/fine-tuning/mix-in-general-data-to-prevent-forgetting",
+      "slug": "mix-in-general-data-to-prevent-forgetting",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Mix In General Data to Prevent Catastrophic Forgetting",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 333,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Fine-tuning hard on a narrow task can cause <em>catastrophic forgetting</em>: the model gets better at your task while losing general instruction-following, reasoning, or formatting it previously had. Blending a fraction of general instruction data (or a replay sample of the base model's style) into your task-specific set keeps the weights anchored to broad capability while still shifting toward the target behavior. This matters most for multi-epoch or full-parameter runs, where the drift is largest, but it's cheap insurance for adapter runs too.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A model fine-tuned only on terse SQL generation now answers <em>every</em> prompt tersely and has lost its ability to explain or hold a normal conversation.</p>\n<p><strong>After:</strong> The training mix includes ~10-30% general instruction data; the model gains SQL skill while retaining general helpfulness, confirmed by a broad regression eval.</p>\n<h2>Implementation</h2>\n<p>Assemble your task set, then blend in a portion of diverse general instruction examples (a common starting range is 10-30% general, tuned by eval). Shuffle so the model doesn't see all task data then all general data. Critically, evaluate on <em>both</em> a task metric and a general-capability regression set every run — the mix ratio should be chosen by what keeps both healthy, not by a guess.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>The right ratio is data- and model-dependent; treat it as a hyperparameter and sweep it against a two-sided eval</li>\n<li>Adding general data increases dataset size and training time — budget for it</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip when the fine-tune is deliberately a single-purpose model that will never be asked general queries (e.g. a classifier head)</li>\n<li>LoRA adapters that are unloaded when not needed already limit blast radius; heavy replay may be unnecessary if the base stays intact</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: replay / data-mixing to mitigate catastrophic forgetting is well documented in continual-learning literature and SFT practice. The optimal mixing ratio varies by task and is not independently benchmarked here.</p>\n",
+      "body_text": "What & Why Fine tuning hard on a narrow task can cause catastrophic forgetting : the model gets better at your task while losing general instruction following, reasoning, or formatting it previously had. Blending a fraction of general instruction data (or a replay sample of the base model's style) into your task specific set keeps the weights anchored to broad capability while still shifting toward the target behavior. This matters most for multi epoch or full parameter runs, where the drift is largest, but it's cheap insurance for adapter runs too. Before / After Before: A model fine tuned only on terse SQL generation now answers every prompt tersely and has lost its ability to explain or hold a normal conversation. After: The training mix includes 10 30% general instruction data; the model gains SQL skill while retaining general helpfulness, confirmed by a broad regression eval. Implementation Assemble your task set, then blend in a portion of diverse general instruction examples (a common starting range is 10 30% general, tuned by eval). Shuffle so the model doesn't see all task data then all general data. Critically, evaluate on both a task metric and a general capability regression set every run — the mix ratio should be chosen by what keeps both healthy, not by a guess. Gotchas The right ratio is data and model dependent; treat it as a hyperparameter and sweep it against a two sided eval Adding general data increases dataset size and training time — budget for it When NOT to Apply Skip when the fine tune is deliberately a single purpose model that will never be asked general queries (e.g. a classifier head) LoRA adapters that are unloaded when not needed already limit blast radius; heavy replay may be unnecessary if the base stays intact Verification Community reported: replay / data mixing to mitigate catastrophic forgetting is well documented in continual learning literature and SFT practice. The optimal mixing ratio varies by task and is not independently benchmarked here."
     },
     {
       "id": "name-the-audience-in-the-prompt",
@@ -3311,6 +3476,61 @@
       "word_count": 273,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Move computation of summaries, embeddings, and metadata that don't change per-request to an offline batch process, rather than computing them synchronously during the user-facing request path. If the same expensive computation (e.g. summarizing a static document) would produce the same result on every request, computing it once offline and reusing it eliminates that latency from every subsequent request.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a document summary is regenerated on every request that needs it, adding a full generation call to the request's critical path.</p>\n<p><strong>After:</strong> document summaries are generated once in an offline batch job whenever the source document changes, and requests read the precomputed summary directly.</p>\n<h2>Implementation</h2>\n<p>Identify computations in the request path that produce the same result for the same static input (summaries, embeddings, derived metadata), move them to an offline batch or event-triggered job that runs whenever the underlying source changes, and have the request path read the precomputed result instead of recomputing it.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Precomputed context needs an invalidation strategy tied to the source changing — otherwise requests can serve stale data</li>\n<li>This only applies to genuinely static or slowly-changing context — precomputing per-request-varying data defeats the purpose</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for context that genuinely varies per request and can't be precomputed (e.g. user-specific real-time data)</li>\n<li>Not worth the infrastructure overhead if the computation is already cheap enough that request-time computation has negligible latency impact</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: precomputing static context offline rather than at request time is a widely repeated recommendation in latency-optimization writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Move computation of summaries, embeddings, and metadata that don't change per request to an offline batch process, rather than computing them synchronously during the user facing request path. If the same expensive computation (e.g. summarizing a static document) would produce the same result on every request, computing it once offline and reusing it eliminates that latency from every subsequent request. Before / After Before: a document summary is regenerated on every request that needs it, adding a full generation call to the request's critical path. After: document summaries are generated once in an offline batch job whenever the source document changes, and requests read the precomputed summary directly. Implementation Identify computations in the request path that produce the same result for the same static input (summaries, embeddings, derived metadata), move them to an offline batch or event triggered job that runs whenever the underlying source changes, and have the request path read the precomputed result instead of recomputing it. Gotchas Precomputed context needs an invalidation strategy tied to the source changing — otherwise requests can serve stale data This only applies to genuinely static or slowly changing context — precomputing per request varying data defeats the purpose When NOT to Apply Skip this for context that genuinely varies per request and can't be precomputed (e.g. user specific real time data) Not worth the infrastructure overhead if the computation is already cheap enough that request time computation has negligible latency impact Verification Community reported: precomputing static context offline rather than at request time is a widely repeated recommendation in latency optimization writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "prefer-data-quality-over-quantity",
+      "title": "Prefer Data Quality Over Quantity for Instruction Tuning",
+      "category": "production-gotchas",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "ongoing",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "ongoing curation",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LIMA and instruction-tuning literature)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "A few hundred pristine examples beats tens of thousands of noisy ones -- but 'a few hundred' still has to cover the real distribution of inputs, not only easy cases",
+        "One consistently-wrong or contradictory example teaches the model that contradiction is acceptable; a single bad row can undo many good ones"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "inspect-your-training-data-by-hand",
+        "deduplicate-training-data-before-fine-tuning"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/prefer-data-quality-over-quantity.md",
+      "url": "content/tips-and-tricks/fine-tuning/prefer-data-quality-over-quantity",
+      "slug": "prefer-data-quality-over-quantity",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Prefer Data Quality Over Quantity for Instruction Tuning",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 342,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>For instruction/style fine-tuning, a small, clean, consistent dataset almost always beats a large noisy one. The model learns the <em>distribution</em> of your examples — including their mistakes, inconsistencies, and formatting drift. Ten thousand scraped rows with contradictory answers teach the model to be contradictory; a few hundred carefully written, mutually consistent examples teach it the behavior you actually want. Spending your effort on curation rather than volume is the highest-leverage move at this scale, and it's why teams routinely get strong results from hundreds — not millions — of examples.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> 20,000 auto-generated Q&amp;A pairs of mixed quality; the fine-tune is inconsistent and occasionally adopts the worst patterns in the set.</p>\n<p><strong>After:</strong> 500 hand-reviewed, format-consistent examples covering the real input distribution; the fine-tune is reliably on-style and easier to debug because you know every row.</p>\n<h2>Implementation</h2>\n<p>Start smaller than feels comfortable. Write or curate examples that are mutually consistent in format, tone, and correctness, and that span the <em>range</em> of inputs you expect (including hard and edge cases), not only the easy majority. Review every row at small scale; at larger scale, sample and audit. Grow the set only when a held-out eval shows a specific gap, and add examples targeted at that gap rather than bulk data.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>\"Small\" is not an excuse to skip coverage — a clean set that only has easy cases will fail on the hard ones the model never saw</li>\n<li>Contradictions between rows are worse than omissions; consistency matters more than completeness</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Continued pretraining / domain adaptation genuinely needs large corpora — this tip is about instruction/style tuning, not pretraining</li>\n<li>Tasks with huge natural input diversity may legitimately need more examples for coverage; scale <em>coverage</em>, not raw count</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: the \"less but higher-quality data\" finding is well established in instruction-tuning literature (e.g. small-curated-set results) and widely reproduced in practitioner reports. Exact example counts are task-dependent and not benchmarked here.</p>\n",
+      "body_text": "What & Why For instruction/style fine tuning, a small, clean, consistent dataset almost always beats a large noisy one. The model learns the distribution of your examples — including their mistakes, inconsistencies, and formatting drift. Ten thousand scraped rows with contradictory answers teach the model to be contradictory; a few hundred carefully written, mutually consistent examples teach it the behavior you actually want. Spending your effort on curation rather than volume is the highest leverage move at this scale, and it's why teams routinely get strong results from hundreds — not millions — of examples. Before / After Before: 20,000 auto generated Q&A pairs of mixed quality; the fine tune is inconsistent and occasionally adopts the worst patterns in the set. After: 500 hand reviewed, format consistent examples covering the real input distribution; the fine tune is reliably on style and easier to debug because you know every row. Implementation Start smaller than feels comfortable. Write or curate examples that are mutually consistent in format, tone, and correctness, and that span the range of inputs you expect (including hard and edge cases), not only the easy majority. Review every row at small scale; at larger scale, sample and audit. Grow the set only when a held out eval shows a specific gap, and add examples targeted at that gap rather than bulk data. Gotchas \"Small\" is not an excuse to skip coverage — a clean set that only has easy cases will fail on the hard ones the model never saw Contradictions between rows are worse than omissions; consistency matters more than completeness When NOT to Apply Continued pretraining / domain adaptation genuinely needs large corpora — this tip is about instruction/style tuning, not pretraining Tasks with huge natural input diversity may legitimately need more examples for coverage; scale coverage , not raw count Verification Community reported: the \"less but higher quality data\" finding is well established in instruction tuning literature (e.g. small curated set results) and widely reproduced in practitioner reports. Exact example counts are task dependent and not benchmarked here."
     },
     {
       "id": "prefer-gguf-for-llama-cpp-workflows",
@@ -4780,6 +5000,61 @@
       "word_count": 271,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Tag every eval example with segment metadata (language, intent type, input length, customer tier, difficulty) and report metrics per segment, not only overall. Aggregate scores are dominated by whatever segment is most common in the eval set: a model change that improves easy English queries by 3% while breaking long-context or non-English queries entirely can show up as a net <em>improvement</em> in the average. Slices are where regressions actually live.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"Accuracy went from 86% to 87%, ship it\" — while accuracy on the 8% of traffic that is multi-turn dropped from 80% to 55%.</p>\n<p><strong>After:</strong> Eval report is a table of segments × metrics; the multi-turn row turns red and blocks the release even though the topline improved.</p>\n<h2>Implementation</h2>\n<p>Add a <code>segment</code> metadata field (or several) to each eval example, group results by segment in the report, and set minimum slice sizes so noisy micro-slices are flagged as inconclusive rather than pass/fail.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Small slices are noisy — enforce a minimum slice size (e.g. 30+ examples) before trusting deltas</li>\n<li>Too many slicing dimensions creates micro-slices nobody reviews — start with 3-5 segments tied to real product decisions</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Eval sets under ~100 examples: slicing them produces segments too small to be meaningful — grow the set first</li>\n<li>Genuinely homogeneous workloads (single language, single narrow task) where segments would be arbitrary</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: slice-based evaluation is established ML evaluation practice (subgroup analysis) repeatedly recommended in LLM eval writeups and supported natively by eval tooling; not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Tag every eval example with segment metadata (language, intent type, input length, customer tier, difficulty) and report metrics per segment, not only overall. Aggregate scores are dominated by whatever segment is most common in the eval set: a model change that improves easy English queries by 3% while breaking long context or non English queries entirely can show up as a net improvement in the average. Slices are where regressions actually live. Before / After Before: \"Accuracy went from 86% to 87%, ship it\" — while accuracy on the 8% of traffic that is multi turn dropped from 80% to 55%. After: Eval report is a table of segments × metrics; the multi turn row turns red and blocks the release even though the topline improved. Implementation Add a segment metadata field (or several) to each eval example, group results by segment in the report, and set minimum slice sizes so noisy micro slices are flagged as inconclusive rather than pass/fail. Gotchas Small slices are noisy — enforce a minimum slice size (e.g. 30+ examples) before trusting deltas Too many slicing dimensions creates micro slices nobody reviews — start with 3 5 segments tied to real product decisions When NOT to Apply Eval sets under 100 examples: slicing them produces segments too small to be meaningful — grow the set first Genuinely homogeneous workloads (single language, single narrow task) where segments would be arbitrary Verification Community reported: slice based evaluation is established ML evaluation practice (subgroup analysis) repeatedly recommended in LLM eval writeups and supported natively by eval tooling; not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "start-with-a-low-learning-rate-and-few-epochs",
+      "title": "Start With a Low Learning Rate and Few Epochs",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "evaluation"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "minutes to configure",
+      "phase": "fine-tuning",
+      "effort": "minutes",
+      "estimated_time": "~10 minutes",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (SFT hyperparameter practice)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "Too-low a learning rate or too-few epochs underfits -- the model barely changes; the fix is to increase, guided by the eval curve, not to guess high from the start",
+        "Loss going down is not the same as generalizing; a falling train loss with a rising held-out error is overfitting, not progress"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "hold-out-an-eval-set-before-any-training",
+        "evaluate-checkpoints-on-task-metrics-not-loss"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/start-with-a-low-learning-rate-and-few-epochs.md",
+      "url": "content/tips-and-tricks/fine-tuning/start-with-a-low-learning-rate-and-few-epochs",
+      "slug": "start-with-a-low-learning-rate-and-few-epochs",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Start With a Low Learning Rate and Few Epochs",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 339,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>The two hyperparameters most likely to wreck a fine-tune are learning rate and epoch count set too high. A high learning rate destabilizes the pretrained weights (the model \"forgets\" and outputs degrade); too many epochs over a small set memorizes the data and overfits. Starting conservative — a small learning rate and a single epoch — and increasing only when a held-out eval says the model is underfitting is far cheaper than debugging a model that has already collapsed. It also makes each experiment interpretable: you know which direction to move.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> First run uses an aggressive learning rate and 5 epochs; the model overfits the training set, loses general ability, and it's unclear which knob caused it.</p>\n<p><strong>After:</strong> First run is 1 epoch at a conservative learning rate; the eval shows mild underfitting, so you raise epochs/LR incrementally and watch the held-out curve turn.</p>\n<h2>Implementation</h2>\n<p>Begin at a small learning rate typical for LoRA SFT (commonly ~1e-4 to 2e-4 for adapters; lower for full fine-tuning) with warmup and 1 epoch. Evaluate on a frozen held-out set, not train loss. If underfitting, increase epochs first, then learning rate, in small steps, re-checking the eval each time. Stop as soon as held-out task metrics plateau or start regressing.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Under-training looks like \"fine-tuning didn't work\" — check the eval before concluding the approach failed; the fix may be more steps, not a different method</li>\n<li>Watch the held-out metric, not the training loss, to distinguish learning from memorizing</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>If you already have validated hyperparameters for this exact model/task/dataset shape, reuse them rather than re-searching from conservative defaults</li>\n<li>Large, diverse datasets tolerate (and may need) more epochs — the \"few epochs\" caution is strongest for small sets</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: conservative-LR, low-epoch starting points are standard SFT guidance across PEFT and fine-tuning documentation. Exact optimal values are model- and dataset-specific and are not benchmarked here.</p>\n",
+      "body_text": "What & Why The two hyperparameters most likely to wreck a fine tune are learning rate and epoch count set too high. A high learning rate destabilizes the pretrained weights (the model \"forgets\" and outputs degrade); too many epochs over a small set memorizes the data and overfits. Starting conservative — a small learning rate and a single epoch — and increasing only when a held out eval says the model is underfitting is far cheaper than debugging a model that has already collapsed. It also makes each experiment interpretable: you know which direction to move. Before / After Before: First run uses an aggressive learning rate and 5 epochs; the model overfits the training set, loses general ability, and it's unclear which knob caused it. After: First run is 1 epoch at a conservative learning rate; the eval shows mild underfitting, so you raise epochs/LR incrementally and watch the held out curve turn. Implementation Begin at a small learning rate typical for LoRA SFT (commonly 1e 4 to 2e 4 for adapters; lower for full fine tuning) with warmup and 1 epoch. Evaluate on a frozen held out set, not train loss. If underfitting, increase epochs first, then learning rate, in small steps, re checking the eval each time. Stop as soon as held out task metrics plateau or start regressing. Gotchas Under training looks like \"fine tuning didn't work\" — check the eval before concluding the approach failed; the fix may be more steps, not a different method Watch the held out metric, not the training loss, to distinguish learning from memorizing When NOT to Apply If you already have validated hyperparameters for this exact model/task/dataset shape, reuse them rather than re searching from conservative defaults Large, diverse datasets tolerate (and may need) more epochs — the \"few epochs\" caution is strongest for small sets Verification Community reported: conservative LR, low epoch starting points are standard SFT guidance across PEFT and fine tuning documentation. Exact optimal values are model and dataset specific and are not benchmarked here."
     },
     {
       "id": "start-with-a-smaller-quantized-model",
@@ -6298,6 +6573,61 @@
       "word_count": 283,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Route non-interactive LLM work — dataset labeling, bulk summarization, enrichment backfills, offline eval runs — through the provider's batch endpoint instead of the realtime API. Major providers (OpenAI, Anthropic, and others) price batch submissions at roughly 50% of realtime rates because they can schedule the work into idle capacity. For workloads where nobody is waiting on the response, paying the realtime premium buys you nothing: it is the single easiest large cost cut in most LLM budgets.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A nightly enrichment job fires 200K realtime API calls at full price, competing with production traffic for rate limits.</p>\n<p><strong>After:</strong> The same job uploads one batch file to the batch endpoint, collects results within the completion window at ~half the token cost, and production rate limits are untouched.</p>\n<h2>Implementation</h2>\n<p>Separate workloads by latency requirement, package offline work into the provider's batch format with a custom ID per item, submit, poll for completion, and reconcile results by ID with per-item retry for failures.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Asynchronous by design (up to 24h windows) — never put user-facing requests on it</li>\n<li>Match results by custom ID and handle per-item failures; don't assume order or completeness</li>\n<li>The discount is for the batch endpoint itself, not for client-side parallelism</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Anything interactive or deadline-bound tighter than the provider's completion window</li>\n<li>Self-hosted inference, where the equivalent move is scheduling offline jobs onto idle capacity yourself (see separate-offline-batch-jobs-from-chat-serving)</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: the ~50% batch discount is documented provider pricing (OpenAI Batch API, Anthropic Message Batches) rather than an empirical claim; the tip's judgment is about workload routing, not the discount itself.</p>\n",
       "body_text": "What & Why Route non interactive LLM work — dataset labeling, bulk summarization, enrichment backfills, offline eval runs — through the provider's batch endpoint instead of the realtime API. Major providers (OpenAI, Anthropic, and others) price batch submissions at roughly 50% of realtime rates because they can schedule the work into idle capacity. For workloads where nobody is waiting on the response, paying the realtime premium buys you nothing: it is the single easiest large cost cut in most LLM budgets. Before / After Before: A nightly enrichment job fires 200K realtime API calls at full price, competing with production traffic for rate limits. After: The same job uploads one batch file to the batch endpoint, collects results within the completion window at half the token cost, and production rate limits are untouched. Implementation Separate workloads by latency requirement, package offline work into the provider's batch format with a custom ID per item, submit, poll for completion, and reconcile results by ID with per item retry for failures. Gotchas Asynchronous by design (up to 24h windows) — never put user facing requests on it Match results by custom ID and handle per item failures; don't assume order or completeness The discount is for the batch endpoint itself, not for client side parallelism When NOT to Apply Anything interactive or deadline bound tighter than the provider's completion window Self hosted inference, where the equivalent move is scheduling offline jobs onto idle capacity yourself (see separate offline batch jobs from chat serving) Verification Community reported: the 50% batch discount is documented provider pricing (OpenAI Batch API, Anthropic Message Batches) rather than an empirical claim; the tip's judgment is about workload routing, not the discount itself."
+    },
+    {
+      "id": "use-qlora-to-fit-larger-models-on-one-gpu",
+      "title": "Use QLoRA to Fit Larger Models on a Single GPU",
+      "category": "cost-reduction",
+      "tags": [
+        "fine-tuning",
+        "efficiency",
+        "local"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "an hour of setup",
+      "phase": "fine-tuning",
+      "effort": "hours",
+      "estimated_time": "~1 hour setup",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (QLoRA paper and PEFT adoption)",
+      "applies_to": [
+        "fine-tuning-workflows"
+      ],
+      "gotchas": [
+        "4-bit base weights add quantization/dequantization overhead per step, so QLoRA trains slower per step than fp16 LoRA even though it fits where fp16 can't",
+        "The saved adapter is trained against the quantized base -- for best fidelity, serve it on the same quantized base rather than merging into full-precision weights and assuming identical behavior"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "start-with-lora-before-full-fine-tuning",
+        "version-datasets-and-adapters-together"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/fine-tuning/use-qlora-to-fit-larger-models-on-one-gpu.md",
+      "url": "content/tips-and-tricks/fine-tuning/use-qlora-to-fit-larger-models-on-one-gpu",
+      "slug": "use-qlora-to-fit-larger-models-on-one-gpu",
+      "section_path": "content/tips-and-tricks/fine-tuning",
+      "display_name": "Use QLoRA to Fit Larger Models on a Single GPU",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 337,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>QLoRA loads the base model in 4-bit and trains LoRA adapters on top, so the frozen weights occupy roughly a quarter of their fp16 memory while the trainable adapters stay in higher precision. The practical effect is a step change in what fits: a model that would OOM as an fp16 LoRA on a 24GB card often trains comfortably as QLoRA on the same card. When your bottleneck is \"the model won't fit,\" QLoRA is usually the difference between training on the hardware you have and renting a bigger machine.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Fine-tuning a larger model requires multi-GPU or a rented high-VRAM instance because fp16 base weights alone exhaust the card.</p>\n<p><strong>After:</strong> The 4-bit base leaves enough headroom for adapters, optimizer state, and activations to train the same model on one consumer/prosumer GPU.</p>\n<h2>Implementation</h2>\n<p>Load the base with 4-bit quantization (bitsandbytes NF4 is the common default) and attach LoRA adapters via a PEFT-supporting trainer — libraries like Unsloth wire this up in a few lines. Keep the adapter rank modest to start, use gradient checkpointing, and measure VRAM headroom before scaling context length or batch size, since the KV/activation memory grows with both.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>QLoRA trades speed for memory: expect slower per-step throughput than fp16 LoRA because of on-the-fly dequantization</li>\n<li>Merging a QLoRA adapter into full-precision weights can shift behavior slightly versus serving on the quantized base it was trained against — validate after merging</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>If the model already fits comfortably in fp16 LoRA, skip QLoRA and take the faster fp16 steps</li>\n<li>For very small models where full or fp16 LoRA fine-tuning is already cheap, the quantization overhead isn't worth it</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: QLoRA's memory reduction and near-parity quality on many tasks are documented in the QLoRA paper and widely reproduced across PEFT tooling. Per-task quality and the fp16-vs-4-bit speed tradeoff vary with hardware and are not independently benchmarked here.</p>\n",
+      "body_text": "What & Why QLoRA loads the base model in 4 bit and trains LoRA adapters on top, so the frozen weights occupy roughly a quarter of their fp16 memory while the trainable adapters stay in higher precision. The practical effect is a step change in what fits: a model that would OOM as an fp16 LoRA on a 24GB card often trains comfortably as QLoRA on the same card. When your bottleneck is \"the model won't fit,\" QLoRA is usually the difference between training on the hardware you have and renting a bigger machine. Before / After Before: Fine tuning a larger model requires multi GPU or a rented high VRAM instance because fp16 base weights alone exhaust the card. After: The 4 bit base leaves enough headroom for adapters, optimizer state, and activations to train the same model on one consumer/prosumer GPU. Implementation Load the base with 4 bit quantization (bitsandbytes NF4 is the common default) and attach LoRA adapters via a PEFT supporting trainer — libraries like Unsloth wire this up in a few lines. Keep the adapter rank modest to start, use gradient checkpointing, and measure VRAM headroom before scaling context length or batch size, since the KV/activation memory grows with both. Gotchas QLoRA trades speed for memory: expect slower per step throughput than fp16 LoRA because of on the fly dequantization Merging a QLoRA adapter into full precision weights can shift behavior slightly versus serving on the quantized base it was trained against — validate after merging When NOT to Apply If the model already fits comfortably in fp16 LoRA, skip QLoRA and take the faster fp16 steps For very small models where full or fp16 LoRA fine tuning is already cheap, the quantization overhead isn't worth it Verification Community reported: QLoRA's memory reduction and near parity quality on many tasks are documented in the QLoRA paper and widely reproduced across PEFT tooling. Per task quality and the fp16 vs 4 bit speed tradeoff vary with hardware and are not independently benchmarked here."
     },
     {
       "id": "use-query-rewriting-for-vague-questions",
