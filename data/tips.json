@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:28:53.619Z",
-  "count": 153,
+  "generated_at": "2026-07-09T21:30:58.025Z",
+  "count": 159,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -2294,6 +2294,63 @@
       "body_text": "What & Why Component metrics — retrieval recall, classifier F1, judge score on an isolated step — are necessary but not sufficient. Users experience the whole pipeline , and a system can have excellent component numbers while the end to end output is wrong: the retriever finds the right chunk but the generation prompt ignores it, or each agent step is locally correct but the composed trajectory fails. Always maintain an end to end eval that measures the final user facing outcome, and use component evals to localize failures the system eval surfaces — not as a substitute for it. Before / After Before: Retrieval recall is 95% and the generator scores well on hand fed context, so the team assumes RAG quality is fine — meanwhile users see answers that ignore the retrieved passages. After: An end to end eval on real questions scores the final answer against ground truth, exposes the \"ignores context\" failure, and the component evals then pinpoint it to the generation step. Implementation Define an end to end metric on the actual deliverable (final answer correctness, task completion, resolved ticket) over realistic inputs, ideally sampled from production. Run it alongside your component evals. When the system eval regresses, walk down the component evals and traces to localize the stage at fault. Keep both layers: system level for truth, component level for attribution. Gotchas End to end scores are noisier and harder to attribute — retain component evals to localize the cause A perfect component score is not evidence of a working system; only the end to end result is When NOT to Apply A single step feature with no pipeline (one prompt, one output) is already end to end — no separate layer needed Deep unit level debugging of one component legitimately isolates it temporarily; do not ship on component metrics alone Verification Community reported: end to end (system level) evaluation is emphasized across RAG and agent evaluation guides precisely because component metrics can mislead. Specific metrics are task dependent."
     },
     {
+      "id": "give-the-agent-a-scratchpad-for-intermediate-results",
+      "title": "Give the Agent a Scratchpad Instead of Carrying Everything in Context",
+      "category": "agent-reliability",
+      "tags": [
+        "agents",
+        "tool-use",
+        "memory"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (long-horizon agent design)",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents"
+      ],
+      "gotchas": [
+        "Keeping every intermediate tool output in the running context bloats the window, raises cost per step, and buries the current subgoal under stale detail — long-horizon agents degrade as the transcript grows",
+        "A scratchpad only helps if the agent is prompted to write to and read from it deliberately; a store the agent forgets to use is dead weight, and an unbounded scratchpad recreates the same bloat problem elsewhere"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "compact-tool-outputs-before-adding-to-context",
+        "summarize-long-running-agent-state",
+        "budget-context-before-adding-tools"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/give-the-agent-a-scratchpad-for-intermediate-results.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/give-the-agent-a-scratchpad-for-intermediate-results",
+      "slug": "give-the-agent-a-scratchpad-for-intermediate-results",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Give the Agent a Scratchpad Instead of Carrying Everything in Context",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 353,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Give the agent an external scratchpad — a file, a key-value store, a notes tool — to hold intermediate results, and keep only pointers and the current subgoal in the prompt. Carrying every tool output in the running context is the default that does not scale: the window fills with stale detail, cost per step climbs, and the model loses the thread of what it is currently doing under the weight of everything it has already done. Offloading working memory keeps the active context small and focused while nothing is actually lost.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> After 15 tool calls, the context holds all 15 full outputs; the model is paying for and re-reading a wall of stale data every step and starts to lose track of the goal.</p>\n<p><strong>After:</strong> Each output is written to the scratchpad under a key; the context holds the subgoal plus \"results saved as <code>search_1</code>, <code>parse_2</code>\"; the agent reads back only what a step needs.</p>\n<h2>Implementation</h2>\n<p>Provide read/write tools (or a structured state object) the agent uses to persist intermediate artifacts, and prompt it explicitly to store bulky results there and reference them by key rather than pasting them into its reasoning. Keep the in-context view to the goal, a short plan, and pointers. Periodically compact or expire scratchpad entries so the external store does not become the new bloat.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Keeping every intermediate output in the running context bloats the window, raises per-step cost, and buries the current subgoal under stale detail.</li>\n<li>A scratchpad helps only if the agent is prompted to use it deliberately; an unused store is dead weight, and an unbounded scratchpad recreates the bloat elsewhere.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Unnecessary for short agents (a handful of steps) whose entire transcript fits comfortably in context.</li>\n<li>Skip when every prior result genuinely must stay in active attention for the model to reason correctly across steps.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: externalizing agent working memory to a scratchpad is a common long-horizon design pattern; its effect on reliability and cost is task-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Give the agent an external scratchpad — a file, a key value store, a notes tool — to hold intermediate results, and keep only pointers and the current subgoal in the prompt. Carrying every tool output in the running context is the default that does not scale: the window fills with stale detail, cost per step climbs, and the model loses the thread of what it is currently doing under the weight of everything it has already done. Offloading working memory keeps the active context small and focused while nothing is actually lost. Before / After Before: After 15 tool calls, the context holds all 15 full outputs; the model is paying for and re reading a wall of stale data every step and starts to lose track of the goal. After: Each output is written to the scratchpad under a key; the context holds the subgoal plus \"results saved as search 1, parse 2\"; the agent reads back only what a step needs. Implementation Provide read/write tools (or a structured state object) the agent uses to persist intermediate artifacts, and prompt it explicitly to store bulky results there and reference them by key rather than pasting them into its reasoning. Keep the in context view to the goal, a short plan, and pointers. Periodically compact or expire scratchpad entries so the external store does not become the new bloat. Gotchas Keeping every intermediate output in the running context bloats the window, raises per step cost, and buries the current subgoal under stale detail. A scratchpad helps only if the agent is prompted to use it deliberately; an unused store is dead weight, and an unbounded scratchpad recreates the bloat elsewhere. When NOT to Apply Unnecessary for short agents (a handful of steps) whose entire transcript fits comfortably in context. Skip when every prior result genuinely must stay in active attention for the model to reason correctly across steps. Verification Community reported: externalizing agent working memory to a scratchpad is a common long horizon design pattern; its effect on reliability and cost is task specific and is not benchmarked here."
+    },
+    {
       "id": "hold-out-an-eval-set-before-any-training",
       "title": "Hold Out an Eval Set Before Any Training Run Touches the Data",
       "category": "production-gotchas",
@@ -3115,6 +3172,63 @@
       "word_count": 359,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Define agent task completion as an explicit, externally verifiable check (a test suite passes, an API returns an expected value, a file matches a schema) instead of asking the agent to self-report \"I'm done.\" Self-reported completion is unreliable because the model that performed the task is the same model judging whether it succeeded, with no independent signal to catch a wrong or incomplete result.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong></p>\n<pre><code class=\"language-python\">response = agent.run(task)\nif \"task complete\" in response.lower():\n    mark_done()\n</code></pre>\n<p><strong>After:</strong></p>\n<pre><code class=\"language-python\">response = agent.run(task)\nsuccess = run_verification_check(task.completion_check)\nif success:\n    mark_done()\nelse:\n    return retry_with_feedback(task, failure=success.details)\n</code></pre>\n<h2>Implementation</h2>\n<p>Attach an explicit <code>completion_check</code> to each task type — for a coding agent, this is \"the test suite exits 0\"; for a data-entry agent, \"the record matches the expected schema and required fields are non-null.\" Run this check independently of the agent's own output after each attempt, and only mark the task complete when the check passes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A machine check that's too strict (exact string match) fails on semantically correct but differently-formatted output — check the property that actually matters, not surface form</li>\n<li>Machine checks add their own execution cost and latency (running a test suite, hitting an API to verify state) — budget for this in the agent's step/time budget</li>\n<li>If the check itself can be gamed (an agent that deletes a failing test instead of fixing the code it tests), the check isn't verifying what you think it is — sandbox or restrict the agent's write access to the check itself</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for genuinely open-ended, subjective tasks with no objective completion criterion (creative writing, brainstorming) — use human or LLM-as-judge review instead, not a fabricated machine check</li>\n<li>Skip building a custom check if the task already has a natural one (a compiler exit code, an existing test suite) — wire into that directly rather than inventing a parallel mechanism</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: machine-checkable completion criteria (test-suite-passes, schema-conformance) are the standard evaluation mechanism in coding-agent benchmarks (e.g. SWE-bench-style verification) and are directly cited in this catalog's own <code>use-golden-questions-for-every-bug-fix</code> tip and <code>yang-2024-swe-agent</code> research entry as the mechanism separating verifiable agent success from self-reported completion.</p>\n",
       "body_text": "What & Why Define agent task completion as an explicit, externally verifiable check (a test suite passes, an API returns an expected value, a file matches a schema) instead of asking the agent to self report \"I'm done.\" Self reported completion is unreliable because the model that performed the task is the same model judging whether it succeeded, with no independent signal to catch a wrong or incomplete result. Before / After Before: After: Implementation Attach an explicit completion check to each task type — for a coding agent, this is \"the test suite exits 0\"; for a data entry agent, \"the record matches the expected schema and required fields are non null.\" Run this check independently of the agent's own output after each attempt, and only mark the task complete when the check passes. Gotchas A machine check that's too strict (exact string match) fails on semantically correct but differently formatted output — check the property that actually matters, not surface form Machine checks add their own execution cost and latency (running a test suite, hitting an API to verify state) — budget for this in the agent's step/time budget If the check itself can be gamed (an agent that deletes a failing test instead of fixing the code it tests), the check isn't verifying what you think it is — sandbox or restrict the agent's write access to the check itself When NOT to Apply Skip this for genuinely open ended, subjective tasks with no objective completion criterion (creative writing, brainstorming) — use human or LLM as judge review instead, not a fabricated machine check Skip building a custom check if the task already has a natural one (a compiler exit code, an existing test suite) — wire into that directly rather than inventing a parallel mechanism Verification Production verified: machine checkable completion criteria (test suite passes, schema conformance) are the standard evaluation mechanism in coding agent benchmarks (e.g. SWE bench style verification) and are directly cited in this catalog's own use golden questions for every bug fix tip and yang 2024 swe agent research entry as the mechanism separating verifiable agent success from self reported completion."
+    },
+    {
+      "id": "make-tools-idempotent-so-retries-are-safe",
+      "title": "Make Side-Effecting Tools Idempotent So Retries Are Safe",
+      "category": "agent-reliability",
+      "tags": [
+        "agents",
+        "tool-use",
+        "battle-tested"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": false,
+      "verification_status": "community-reported",
+      "verified_by": "distributed-systems practice applied to agent tool-use",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents"
+      ],
+      "gotchas": [
+        "Agents retry constantly — on timeouts, on parse failures, on loop restarts — so a non-idempotent side-effecting tool (send email, charge card, create ticket) can fire two or three times from what the agent believes was one action",
+        "A timeout does not mean the action failed; the request may have succeeded and only the response was lost, so blind retry without an idempotency key is exactly how duplicates happen"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "cap-agent-tool-retries",
+        "cache-idempotent-tool-results-within-a-run",
+        "require-human-approval-for-irreversible-actions"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/make-tools-idempotent-so-retries-are-safe.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/make-tools-idempotent-so-retries-are-safe",
+      "slug": "make-tools-idempotent-so-retries-are-safe",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Make Side-Effecting Tools Idempotent So Retries Are Safe",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 346,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Design side-effecting tools so that calling them twice with the same input has the same effect as calling them once. Agents retry aggressively — after timeouts, parse failures, or loop restarts — and cannot always tell whether a prior call actually succeeded. A tool that sends an email, charges a card, or creates a ticket without idempotency will duplicate that action every time the agent retries what it thinks was a single step. Idempotency turns an unavoidable retry into a safe no-op instead of a second charge.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>create_ticket(subject, body)</code> inserts a row on every call; a timed-out-then-retried call opens two identical tickets, and the agent never knows.</p>\n<p><strong>After:</strong> <code>create_ticket(subject, body, idempotency_key)</code> — the server records the key and returns the original result on a repeat, so a retry after a lost response yields one ticket.</p>\n<h2>Implementation</h2>\n<p>For any tool with an external side effect, require an idempotency key derived deterministically from the intended action (or generated once and reused across retries of the same logical step). Have the underlying service dedupe on that key, or check-then-act transactionally. Where the downstream API already supports idempotency keys, thread them through; where it does not, add a dedup table keyed by the action signature.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Agents retry constantly, so a non-idempotent side-effecting tool can fire two or three times from what the agent believes was one action.</li>\n<li>A timeout does not mean the action failed — the request may have succeeded with only the response lost, so blind retry without an idempotency key is how duplicates happen.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Read-only tools have no side effect to guard and need no idempotency key.</li>\n<li>Skip the machinery when the downstream system is already naturally idempotent (e.g. an upsert by primary key) — verify that rather than adding a redundant layer.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: idempotent side-effecting operations are standard distributed-systems practice; applying it to agent tools is a direct extension, not benchmarked here against a specific agent framework.</p>\n",
+      "body_text": "What & Why Design side effecting tools so that calling them twice with the same input has the same effect as calling them once. Agents retry aggressively — after timeouts, parse failures, or loop restarts — and cannot always tell whether a prior call actually succeeded. A tool that sends an email, charges a card, or creates a ticket without idempotency will duplicate that action every time the agent retries what it thinks was a single step. Idempotency turns an unavoidable retry into a safe no op instead of a second charge. Before / After Before: create ticket(subject, body) inserts a row on every call; a timed out then retried call opens two identical tickets, and the agent never knows. After: create ticket(subject, body, idempotency key) — the server records the key and returns the original result on a repeat, so a retry after a lost response yields one ticket. Implementation For any tool with an external side effect, require an idempotency key derived deterministically from the intended action (or generated once and reused across retries of the same logical step). Have the underlying service dedupe on that key, or check then act transactionally. Where the downstream API already supports idempotency keys, thread them through; where it does not, add a dedup table keyed by the action signature. Gotchas Agents retry constantly, so a non idempotent side effecting tool can fire two or three times from what the agent believes was one action. A timeout does not mean the action failed — the request may have succeeded with only the response lost, so blind retry without an idempotency key is how duplicates happen. When NOT to Apply Read only tools have no side effect to guard and need no idempotency key. Skip the machinery when the downstream system is already naturally idempotent (e.g. an upsert by primary key) — verify that rather than adding a redundant layer. Verification Community reported: idempotent side effecting operations are standard distributed systems practice; applying it to agent tools is a direct extension, not benchmarked here against a specific agent framework."
     },
     {
       "id": "mask-prompt-tokens-in-the-training-loss",
@@ -4958,6 +5072,63 @@
       "body_text": "What & Why Before deciding how much input context to include, subtract the expected output length from the model's total context window and treat the remainder as the actual input budget. Filling the window with input up to its limit leaves no headroom for the response, which can silently truncate output on providers that don't error clearly when this happens. Before / After Before: input budget = context window size — the full window is treated as available for input. After: input budget = context window size expected output tokens safety margin — a fixed reservation is subtracted before allocating input. Implementation Estimate the expected output length for the task type (from historical traces or a fixed cap you enforce via max tokens), subtract it plus a small safety margin from the total context window, and treat the result as the actual budget available for input context. Gotchas Filling the context window to its limit with input leaves no room for the response, silently truncating output on some providers The required output reservation varies by task — a single fixed reservation doesn't fit every call type When NOT to Apply Skip this if your provider already errors explicitly (rather than silently truncating) when input plus max output would exceed the context window Not necessary for tasks with a small, predictable, tightly capped output length where the reservation is negligible relative to the window Verification Community reported: reserving output token budget before allocating input context is a repeated recommendation in context window management writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "return-structured-errors-from-tools-so-the-agent-can-recover",
+      "title": "Return Structured Errors From Tools So the Agent Can Recover",
+      "category": "agent-reliability",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (tool-use agent design)",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents"
+      ],
+      "gotchas": [
+        "A raw stack trace or an opaque 500 returned to the agent gives it nothing actionable — it cannot tell a transient timeout (retry) from a bad argument (fix and retry) from a permanent failure (give up), so it flails or loops",
+        "Over-detailed errors leak internals and bloat context; the error should say what failed, whether it is retryable, and what to change — not dump the entire exception and SQL query"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "cap-agent-tool-retries",
+        "define-fallbacks-for-tool-failures",
+        "validate-tool-arguments-before-execution"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/return-structured-errors-from-tools-so-the-agent-can-recover.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/return-structured-errors-from-tools-so-the-agent-can-recover",
+      "slug": "return-structured-errors-from-tools-so-the-agent-can-recover",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Return Structured Errors From Tools So the Agent Can Recover",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 344,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Make tools return errors as structured, actionable messages the model can reason over, rather than raw exceptions or bare status codes. An agent decides its next move from the tool's response; when a failure comes back as an opaque stack trace or a generic \"error\", the model cannot distinguish a transient timeout (worth retrying) from an invalid argument (worth fixing) from a permanent condition (worth abandoning). The result is blind retries, loops, or premature give-ups. A structured error tells the agent what happened and what to do about it.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A tool raises and the framework returns <code>\"Error: 500 Internal Server Error\"</code> — the agent retries the identical call five times and then hallucinates a result.</p>\n<p><strong>After:</strong> The tool returns <code>{\"error\": \"invalid_argument\", \"retryable\": false, \"detail\": \"date must be YYYY-MM-DD\", \"field\": \"start_date\"}</code> — the agent corrects the argument and succeeds on the next call.</p>\n<h2>Implementation</h2>\n<p>Wrap tool execution so every failure returns a small structured object: an error category (e.g. <code>invalid_argument</code>, <code>not_found</code>, <code>rate_limited</code>, <code>transient</code>, <code>permanent</code>), a <code>retryable</code> boolean, and a concise human-readable <code>detail</code> naming what to change. Map exceptions to these categories at the tool boundary; never pass raw tracebacks to the model. Keep the payload short so it does not crowd the context window.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A raw stack trace or opaque 500 gives the agent nothing actionable — it cannot tell a transient failure from a bad argument from a permanent one, so it flails or loops.</li>\n<li>Over-detailed errors leak internals and bloat context; say what failed, whether it is retryable, and what to change — not the entire exception.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Overkill for a single-tool agent where the one failure mode is already handled by a simple retry wrapper.</li>\n<li>Skip the elaborate taxonomy when tools are internal and their raw errors are already concise and categorized.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: structured, model-readable tool errors are a recurring agent-reliability recommendation; the recovery-rate improvement is agent- and task-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Make tools return errors as structured, actionable messages the model can reason over, rather than raw exceptions or bare status codes. An agent decides its next move from the tool's response; when a failure comes back as an opaque stack trace or a generic \"error\", the model cannot distinguish a transient timeout (worth retrying) from an invalid argument (worth fixing) from a permanent condition (worth abandoning). The result is blind retries, loops, or premature give ups. A structured error tells the agent what happened and what to do about it. Before / After Before: A tool raises and the framework returns \"Error: 500 Internal Server Error\" — the agent retries the identical call five times and then hallucinates a result. After: The tool returns {\"error\": \"invalid argument\", \"retryable\": false, \"detail\": \"date must be YYYY MM DD\", \"field\": \"start date\"} — the agent corrects the argument and succeeds on the next call. Implementation Wrap tool execution so every failure returns a small structured object: an error category (e.g. invalid argument, not found, rate limited, transient, permanent), a retryable boolean, and a concise human readable detail naming what to change. Map exceptions to these categories at the tool boundary; never pass raw tracebacks to the model. Keep the payload short so it does not crowd the context window. Gotchas A raw stack trace or opaque 500 gives the agent nothing actionable — it cannot tell a transient failure from a bad argument from a permanent one, so it flails or loops. Over detailed errors leak internals and bloat context; say what failed, whether it is retryable, and what to change — not the entire exception. When NOT to Apply Overkill for a single tool agent where the one failure mode is already handled by a simple retry wrapper. Skip the elaborate taxonomy when tools are internal and their raw errors are already concise and categorized. Verification Community reported: structured, model readable tool errors are a recurring agent reliability recommendation; the recovery rate improvement is agent and task specific and is not benchmarked here."
+    },
+    {
       "id": "review-data-retention-for-prompts",
       "title": "Set an Explicit Data Retention Policy for Stored Prompts Before Launch",
       "category": "production-gotchas",
@@ -5670,6 +5841,63 @@
       "word_count": 265,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Use the provider's message-role structure (system vs. user) combined with explicit delimiters to ensure user-submitted content is always treated as data to respond to, never as an instruction that can override system policy. Without this separation, a user can submit input phrased as a command (\"ignore previous instructions and...\") that the model may follow if it can't distinguish policy from content.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>prompt = f\"{system_policy}\\n{user_input}\"</code> concatenated as one string with no role or delimiter boundary.</p>\n<p><strong>After:</strong> <code>messages = [{\"role\": \"system\", \"content\": system_policy}, {\"role\": \"user\", \"content\": f\"&lt;user_input&gt;{user_input}&lt;/user_input&gt;\"}]</code> — role structure plus explicit delimiters mark the boundary.</p>\n<h2>Implementation</h2>\n<p>Use your provider's native system/user message roles rather than a single concatenated string, and additionally wrap raw user content in explicit delimiters so the boundary is marked twice (structurally and textually).</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Delimiters alone, without message-role separation, are a weaker defense — adversarial input can mimic delimiter syntax to try to escape the boundary</li>\n<li>This defends against user input masquerading as policy but not against injection carried in retrieved documents or tool outputs — pair with <code>treat-retrieved-text-as-untrusted</code></li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip additional hardening for internal, fully-trusted-operator tools where no adversarial user input is possible</li>\n<li>Not a complete defense on its own against a determined adversary — combine with output validation and monitoring, not as the sole safeguard</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: role-based separation plus delimiters is a widely cited baseline mitigation in prompt-injection defense writeups, not independently benchmarked here against a named production incident.</p>\n",
       "body_text": "What & Why Use the provider's message role structure (system vs. user) combined with explicit delimiters to ensure user submitted content is always treated as data to respond to, never as an instruction that can override system policy. Without this separation, a user can submit input phrased as a command (\"ignore previous instructions and...\") that the model may follow if it can't distinguish policy from content. Before / After Before: prompt = f\"{system policy}\\n{user input}\" concatenated as one string with no role or delimiter boundary. After: messages = [{\"role\": \"system\", \"content\": system policy}, {\"role\": \"user\", \"content\": f\"<user input {user input}</user input \"}] — role structure plus explicit delimiters mark the boundary. Implementation Use your provider's native system/user message roles rather than a single concatenated string, and additionally wrap raw user content in explicit delimiters so the boundary is marked twice (structurally and textually). Gotchas Delimiters alone, without message role separation, are a weaker defense — adversarial input can mimic delimiter syntax to try to escape the boundary This defends against user input masquerading as policy but not against injection carried in retrieved documents or tool outputs — pair with treat retrieved text as untrusted When NOT to Apply Skip additional hardening for internal, fully trusted operator tools where no adversarial user input is possible Not a complete defense on its own against a determined adversary — combine with output validation and monitoring, not as the sole safeguard Verification Community reported: role based separation plus delimiters is a widely cited baseline mitigation in prompt injection defense writeups, not independently benchmarked here against a named production incident."
+    },
+    {
+      "id": "set-a-token-and-cost-budget-per-agent-run",
+      "title": "Set a Token and Cost Budget Per Agent Run, Not Only a Step Limit",
+      "category": "cost-reduction",
+      "tags": [
+        "agents",
+        "efficiency",
+        "monitoring"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "an hour",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (agent cost incidents)",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents"
+      ],
+      "gotchas": [
+        "A step limit alone does not bound cost — a single step can grow the context to hundreds of thousands of tokens (a giant tool output pasted in), so ten expensive steps can cost more than a hundred cheap ones",
+        "Tracking spend only after the run ends means you discover a runaway agent from the invoice; the budget has to be checked during the run and halt the loop when exceeded"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "add-a-max-step-budget-to-every-agent",
+        "set-wall-clock-timeouts-for-agent-runs",
+        "compact-tool-outputs-before-adding-to-context"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/set-a-token-and-cost-budget-per-agent-run.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/set-a-token-and-cost-budget-per-agent-run",
+      "slug": "set-a-token-and-cost-budget-per-agent-run",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Set a Token and Cost Budget Per Agent Run, Not Only a Step Limit",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 362,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Bound each agent run by a cumulative token and dollar budget, checked live, in addition to a step count. Step limits cap how many times the loop runs but not how expensive each iteration is: one step that pastes a large document or grows a long transcript can dwarf many small steps, so a \"20 step\" cap can still produce a surprise bill. A running budget that halts the agent when tokens or cost cross a threshold is the control that actually bounds spend, and it doubles as a runaway-loop detector.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The agent is capped at 25 steps; one step ingests a 300k-token file and the loop re-sends it every subsequent step, and the run costs 50x a normal one despite staying under the step cap.</p>\n<p><strong>After:</strong> The run tracks cumulative tokens/cost and aborts (or escalates to a human) at a set ceiling, so the expensive path is stopped mid-run instead of discovered on the invoice.</p>\n<h2>Implementation</h2>\n<p>Accumulate prompt+completion tokens (and their cost) across every model call in a run, and check the total against a per-run ceiling before each step; when exceeded, stop the loop and return a partial result or escalate. Emit the running total to logs/traces so budgets can be tuned per task type. Combine with a step cap and a wall-clock timeout — the three bound different failure modes.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A step limit alone does not bound cost — one step can balloon the context to hundreds of thousands of tokens, so a few expensive steps can outcost many cheap ones.</li>\n<li>Tracking spend only after the run means discovering a runaway from the invoice; the budget must be checked during the run and halt the loop.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Overkill for trivial, fixed-shape agents whose per-run cost is already small and bounded by their structure.</li>\n<li>Less urgent in development against a local or free model, though the instrumentation is still useful to carry into production.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: live token/cost budgets are a common defense against agent cost incidents; the savings depend on your workload's tail behavior and are not benchmarked here.</p>\n",
+      "body_text": "What & Why Bound each agent run by a cumulative token and dollar budget, checked live, in addition to a step count. Step limits cap how many times the loop runs but not how expensive each iteration is: one step that pastes a large document or grows a long transcript can dwarf many small steps, so a \"20 step\" cap can still produce a surprise bill. A running budget that halts the agent when tokens or cost cross a threshold is the control that actually bounds spend, and it doubles as a runaway loop detector. Before / After Before: The agent is capped at 25 steps; one step ingests a 300k token file and the loop re sends it every subsequent step, and the run costs 50x a normal one despite staying under the step cap. After: The run tracks cumulative tokens/cost and aborts (or escalates to a human) at a set ceiling, so the expensive path is stopped mid run instead of discovered on the invoice. Implementation Accumulate prompt+completion tokens (and their cost) across every model call in a run, and check the total against a per run ceiling before each step; when exceeded, stop the loop and return a partial result or escalate. Emit the running total to logs/traces so budgets can be tuned per task type. Combine with a step cap and a wall clock timeout — the three bound different failure modes. Gotchas A step limit alone does not bound cost — one step can balloon the context to hundreds of thousands of tokens, so a few expensive steps can outcost many cheap ones. Tracking spend only after the run means discovering a runaway from the invoice; the budget must be checked during the run and halt the loop. When NOT to Apply Overkill for trivial, fixed shape agents whose per run cost is already small and bounded by their structure. Less urgent in development against a local or free model, though the instrumentation is still useful to carry into production. Verification Community reported: live token/cost budgets are a common defense against agent cost incidents; the savings depend on your workload's tail behavior and are not benchmarked here."
     },
     {
       "id": "set-pass-fail-thresholds-before-running-evals",
@@ -8119,6 +8347,63 @@
       "body_text": "What & Why Validate a model generated tool call's arguments against an explicit schema (types, ranges, enums, required fields) before the tool function ever runs, and reject invalid calls with a structured error the agent can read and correct. This catches malformed or hallucinated arguments — a string where a tool expects an integer, an out of range enum value — before they reach code that assumes well formed input. Before / After Before: After: Implementation Define a Pydantic model per tool matching its expected argument schema, validate before calling the underlying function, and on failure return the validation error text back into the agent's context as a tool result (not a raised exception that crashes the loop) so the model can see what was wrong and retry. Gotchas Validating types alone isn't enough — an argument can be well typed but semantically wrong (a negative quantity, a date in the past for a future only field); add field level validators for domain constraints in addition to type checks Silently coercing invalid arguments (stringifying a number, truncating an overlong string) hides model errors instead of surfacing them for the agent to retry If validation errors aren't fed back into the agent's context, it repeats the same invalid call indefinitely — always return the validator's rejection reason to the model, and pair with cap agent tool retries to bound retry loops When NOT to Apply Skip building custom validation if your tool calling framework already enforces JSON schema based argument validation before invocation (check first — many do) Skip this for tools with no meaningful invalid argument space (a no argument get current time() call has nothing to validate) Verification Production verified: schema validated tool arguments with structured rejection and retry is a standard pattern in LangGraph and comparable tool calling frameworks, and is the direct mechanism referenced in this catalog's own use json schema for outputs and multi tool agent build example for reducing malformed structured output rates."
     },
     {
+      "id": "verify-tool-side-effects-instead-of-trusting-the-response",
+      "title": "Verify Tool Side Effects Instead of Trusting the Tool's Response",
+      "category": "production-gotchas",
+      "tags": [
+        "agents",
+        "tool-use",
+        "monitoring"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (agent reliability postmortems)",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents"
+      ],
+      "gotchas": [
+        "A tool returning '200 OK' or 'done' is a claim, not proof — the write may have hit a stale replica, been silently rejected by a validation rule, or partially applied, and the agent proceeds as if the world changed when it did not",
+        "Verification that re-reads through the same cache or the same code path that made the write can confirm a lie; check via an independent read (fresh query, different endpoint) where the failure would actually surface"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "make-success-criteria-machine-checkable",
+        "define-fallbacks-for-tool-failures",
+        "require-human-approval-for-irreversible-actions"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/verify-tool-side-effects-instead-of-trusting-the-response.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/verify-tool-side-effects-instead-of-trusting-the-response",
+      "slug": "verify-tool-side-effects-instead-of-trusting-the-response",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Verify Tool Side Effects Instead of Trusting the Tool's Response",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 369,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>For actions that matter, have the agent confirm the side effect actually happened by reading the resulting state, rather than trusting the tool's success message. A tool response is a claim about what happened, and claims can be wrong: a write can hit a stale replica, be silently dropped by a validation rule, or apply only partially while still returning success. An agent that treats \"done\" as ground truth builds every subsequent step on an assumption that may be false, and the divergence surfaces far downstream where it is hard to trace.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>update_status(order, \"shipped\")</code> returns <code>{\"ok\": true}</code>; the agent tells the user the order shipped, but a hidden guard rejected the transition and the status is unchanged.</p>\n<p><strong>After:</strong> After the update, the agent calls <code>get_order(order)</code> and confirms <code>status == \"shipped\"</code> before reporting success; a silent rejection is caught immediately and can be retried or escalated.</p>\n<h2>Implementation</h2>\n<p>For consequential, state-changing tools, add a verification read after the action that checks the expected post-condition via an independent path — a fresh query, a different endpoint, not the same cached handle that performed the write. Make the success criterion explicit and machine-checkable so the agent can branch on it. Reserve this for actions where a silent failure is costly; not every call needs a read-back.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A \"200 OK\" or \"done\" is a claim, not proof — the write may have hit a stale replica, been rejected by a validation rule, or partially applied, and the agent proceeds as if the world changed.</li>\n<li>Verifying through the same cache or code path that made the write can confirm a lie; check via an independent read where the failure would actually surface.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip read-backs for read-only or low-stakes actions where a silent failure costs nothing and the extra call is pure overhead.</li>\n<li>Unnecessary when the tool already returns the authoritative post-state (e.g. an atomic update that returns the committed row) rather than a bare acknowledgment.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: verifying side effects rather than trusting acknowledgments is standard reliability practice reflected in agent postmortems; the impact is workflow-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why For actions that matter, have the agent confirm the side effect actually happened by reading the resulting state, rather than trusting the tool's success message. A tool response is a claim about what happened, and claims can be wrong: a write can hit a stale replica, be silently dropped by a validation rule, or apply only partially while still returning success. An agent that treats \"done\" as ground truth builds every subsequent step on an assumption that may be false, and the divergence surfaces far downstream where it is hard to trace. Before / After Before: update status(order, \"shipped\") returns {\"ok\": true}; the agent tells the user the order shipped, but a hidden guard rejected the transition and the status is unchanged. After: After the update, the agent calls get order(order) and confirms status == \"shipped\" before reporting success; a silent rejection is caught immediately and can be retried or escalated. Implementation For consequential, state changing tools, add a verification read after the action that checks the expected post condition via an independent path — a fresh query, a different endpoint, not the same cached handle that performed the write. Make the success criterion explicit and machine checkable so the agent can branch on it. Reserve this for actions where a silent failure is costly; not every call needs a read back. Gotchas A \"200 OK\" or \"done\" is a claim, not proof — the write may have hit a stale replica, been rejected by a validation rule, or partially applied, and the agent proceeds as if the world changed. Verifying through the same cache or code path that made the write can confirm a lie; check via an independent read where the failure would actually surface. When NOT to Apply Skip read backs for read only or low stakes actions where a silent failure costs nothing and the extra call is pure overhead. Unnecessary when the tool already returns the authoritative post state (e.g. an atomic update that returns the committed row) rather than a bare acknowledgment. Verification Community reported: verifying side effects rather than trusting acknowledgments is standard reliability practice reflected in agent postmortems; the impact is workflow specific and is not benchmarked here."
+    },
+    {
       "id": "version-datasets-and-adapters-together",
       "title": "Version Datasets and Adapters Together as One Artifact Pair",
       "category": "production-gotchas",
@@ -8335,6 +8620,63 @@
       "word_count": 313,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Gate traffic on a readiness probe that executes real inference requests — not merely a port check — and pre-warm new replicas with production-shaped requests before the load balancer sends them users. LLM servers have deep cold paths: multi-GB weight loading, memory-pool allocation, CUDA-graph capture, and JIT/compilation caches that only build on first execution per shape. A \"healthy\" cold replica can serve its first requests seconds slower than steady state, and every scale-up event replays that penalty onto live users.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Autoscaler adds two replicas during a traffic spike; the LB routes to them the moment port 8000 opens; p99 spikes to 20s+ exactly when the system was supposed to be adding capacity.</p>\n<p><strong>After:</strong> New replicas run a warm-up script (representative context lengths and batch sizes) and only pass readiness after warm inference latency stabilizes; scale-up is latency-invisible to users.</p>\n<h2>Implementation</h2>\n<p>Implement the readiness endpoint to run one or more real generations, add a startup warm-up phase issuing requests that match your production shape distribution, and configure the orchestrator (e.g. Kubernetes readiness probes with appropriate initial delays) so routing strictly follows warm readiness.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Health ≠ warm: probe with real inference, not a port check</li>\n<li>Warm up with production-shaped requests — trivial pings don't build the right caches</li>\n<li>Autoscaling is the high-stakes moment; test warm-up behavior under scale-up, not only at deploy time</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Serverless/scale-to-zero deployments where cold starts are an accepted cost trade-off — there, mitigate with provider snapshotting features instead of blocking on warmth</li>\n<li>Batch/offline serving where first-request latency is irrelevant</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: inference-level readiness probes and shape-matched warm-up are standard guidance in inference-server deployment documentation and cold-start analyses; not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Gate traffic on a readiness probe that executes real inference requests — not merely a port check — and pre warm new replicas with production shaped requests before the load balancer sends them users. LLM servers have deep cold paths: multi GB weight loading, memory pool allocation, CUDA graph capture, and JIT/compilation caches that only build on first execution per shape. A \"healthy\" cold replica can serve its first requests seconds slower than steady state, and every scale up event replays that penalty onto live users. Before / After Before: Autoscaler adds two replicas during a traffic spike; the LB routes to them the moment port 8000 opens; p99 spikes to 20s+ exactly when the system was supposed to be adding capacity. After: New replicas run a warm up script (representative context lengths and batch sizes) and only pass readiness after warm inference latency stabilizes; scale up is latency invisible to users. Implementation Implement the readiness endpoint to run one or more real generations, add a startup warm up phase issuing requests that match your production shape distribution, and configure the orchestrator (e.g. Kubernetes readiness probes with appropriate initial delays) so routing strictly follows warm readiness. Gotchas Health ≠ warm: probe with real inference, not a port check Warm up with production shaped requests — trivial pings don't build the right caches Autoscaling is the high stakes moment; test warm up behavior under scale up, not only at deploy time When NOT to Apply Serverless/scale to zero deployments where cold starts are an accepted cost trade off — there, mitigate with provider snapshotting features instead of blocking on warmth Batch/offline serving where first request latency is irrelevant Verification Community reported: inference level readiness probes and shape matched warm up are standard guidance in inference server deployment documentation and cold start analyses; not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "write-tool-descriptions-for-the-model-not-the-codebase",
+      "title": "Write Tool Descriptions for the Model, Not the Codebase",
+      "category": "agent-reliability",
+      "tags": [
+        "agents",
+        "tool-use",
+        "routing"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "practitioner reports (tool-use agent tuning)",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents"
+      ],
+      "gotchas": [
+        "The model selects and fills tools using only their names, descriptions, and parameter docs — a description auto-generated from a terse function signature ('def q(s, n)') gives it nothing to disambiguate on, so it picks the wrong tool or passes wrong arguments",
+        "Near-duplicate descriptions across two similar tools make selection a coin flip; the descriptions must state the distinguishing 'use this when...' boundary, not only what each does in isolation"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "allowlist-tools-per-agent-role",
+        "validate-tool-arguments-before-execution",
+        "budget-context-before-adding-tools"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/write-tool-descriptions-for-the-model-not-the-codebase.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/write-tool-descriptions-for-the-model-not-the-codebase",
+      "slug": "write-tool-descriptions-for-the-model-not-the-codebase",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Write Tool Descriptions for the Model, Not the Codebase",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 369,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Treat each tool's name, description, and parameter documentation as prompt engineering, because that is exactly what they are: the model chooses which tool to call and how to fill its arguments using only that text. Descriptions auto-generated from bare function signatures, or written in codebase jargon, give the model nothing to reason with — it cannot tell two similar tools apart or infer what a cryptic parameter expects, so it picks wrong or supplies malformed arguments. Descriptions written for the model, with explicit usage boundaries and argument formats, measurably raise tool-selection accuracy.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>search(q: str, n: int)</code> with description <code>\"runs search\"</code> — the model cannot tell this from <code>lookup()</code>, guesses <code>n</code>, and sometimes searches when it should have used a direct lookup.</p>\n<p><strong>After:</strong> <code>search_knowledge_base(query: str, max_results: int)</code> — <code>\"Full-text search over internal docs. Use for open-ended questions; use get_document_by_id when you already have an ID. max_results: 1-10, default 5.\"</code> — selection and arguments become unambiguous.</p>\n<h2>Implementation</h2>\n<p>For every tool, give it a descriptive name, a one-to-two sentence description that includes a \"use this when / use X instead when\" boundary against neighboring tools, and per-parameter docs stating type, allowed range/format, and default. Review descriptions the way you review prompts — test with real queries and adjust the ones the model misuses. Keep them concise so many tools still fit the context budget.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>The model selects and fills tools from their names and descriptions alone; a description auto-generated from a terse signature gives it nothing to disambiguate on.</li>\n<li>Near-duplicate descriptions across similar tools make selection a coin flip; state the distinguishing \"use this when\" boundary, not only what each does in isolation.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Marginal for a single-tool agent where there is nothing to select between and the one call site is obvious.</li>\n<li>Diminishing returns once descriptions are already clear and selection accuracy is measured as high — do not over-tune working tools.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: tool-description quality driving selection accuracy is a widely reported agent-tuning lever; the accuracy gain is agent- and model-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Treat each tool's name, description, and parameter documentation as prompt engineering, because that is exactly what they are: the model chooses which tool to call and how to fill its arguments using only that text. Descriptions auto generated from bare function signatures, or written in codebase jargon, give the model nothing to reason with — it cannot tell two similar tools apart or infer what a cryptic parameter expects, so it picks wrong or supplies malformed arguments. Descriptions written for the model, with explicit usage boundaries and argument formats, measurably raise tool selection accuracy. Before / After Before: search(q: str, n: int) with description \"runs search\" — the model cannot tell this from lookup(), guesses n, and sometimes searches when it should have used a direct lookup. After: search knowledge base(query: str, max results: int) — \"Full text search over internal docs. Use for open ended questions; use get document by id when you already have an ID. max results: 1 10, default 5.\" — selection and arguments become unambiguous. Implementation For every tool, give it a descriptive name, a one to two sentence description that includes a \"use this when / use X instead when\" boundary against neighboring tools, and per parameter docs stating type, allowed range/format, and default. Review descriptions the way you review prompts — test with real queries and adjust the ones the model misuses. Keep them concise so many tools still fit the context budget. Gotchas The model selects and fills tools from their names and descriptions alone; a description auto generated from a terse signature gives it nothing to disambiguate on. Near duplicate descriptions across similar tools make selection a coin flip; state the distinguishing \"use this when\" boundary, not only what each does in isolation. When NOT to Apply Marginal for a single tool agent where there is nothing to select between and the one call site is obvious. Diminishing returns once descriptions are already clear and selection accuracy is measured as high — do not over tune working tools. Verification Community reported: tool description quality driving selection accuracy is a widely reported agent tuning lever; the accuracy gain is agent and model specific and is not benchmarked here."
     }
   ]
 }

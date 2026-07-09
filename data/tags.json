@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:28:53.619Z",
+  "generated_at": "2026-07-09T21:30:58.025Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 159,
+      "count": 165,
       "types": {
-        "tip": 17,
+        "tip": 23,
         "tool": 51,
         "build-example": 3,
         "guide": 7,
@@ -76,6 +76,7 @@
         "gaia",
         "gemini-cli",
         "github-copilot",
+        "give-the-agent-a-scratchpad-for-intermediate-results",
         "glm-4",
         "google-adk",
         "goose",
@@ -102,6 +103,7 @@
         "log-agent-state-transitions",
         "logankilpatrick",
         "make-success-criteria-machine-checkable",
+        "make-tools-idempotent-so-retries-are-safe",
         "manus",
         "mastra",
         "mem0",
@@ -133,6 +135,7 @@
         "rd-agent",
         "recursi",
         "require-human-approval-for-irreversible-actions",
+        "return-structured-errors-from-tools-so-the-agent-can-recover",
         "salemi-2026-grepseek",
         "sandbox-code-execution-tools",
         "schick-2023-toolformer",
@@ -140,6 +143,7 @@
         "seaticket",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
+        "set-a-token-and-cost-budget-per-agent-run",
         "set-wall-clock-timeouts-for-agent-runs",
         "shellmate",
         "shinn-2023-reflexion",
@@ -167,10 +171,12 @@
         "uiverse-design",
         "validate-tool-arguments-before-execution",
         "vercel-ai-sdk",
+        "verify-tool-side-effects-instead-of-trusting-the-response",
         "wang-2023-agents-survey",
         "wang-2023-voyager",
         "webarena",
         "windsurf",
+        "write-tool-descriptions-for-the-model-not-the-codebase",
         "wu-2023-autogen",
         "yang-2024-swe-agent",
         "yao-2022-react",
@@ -266,6 +272,17 @@
         "tune-batch-size-against-tail-latency",
         "use-provider-batch-apis-for-offline-workloads",
         "vllm"
+      ]
+    },
+    {
+      "id": "battle-tested",
+      "label": "Battle Tested",
+      "count": 1,
+      "types": {
+        "tip": 1
+      },
+      "entries": [
+        "make-tools-idempotent-so-retries-are-safe"
       ]
     },
     {
@@ -639,11 +656,11 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 62,
+      "count": 63,
       "types": {
         "paper": 20,
         "guide": 4,
-        "tip": 15,
+        "tip": 16,
         "project": 10,
         "tool": 10,
         "architecture": 3
@@ -696,6 +713,7 @@
         "pin-model-and-runtime-versions",
         "quantization",
         "raposo-2024-mixture-of-depths",
+        "set-a-token-and-cost-budget-per-agent-run",
         "set-token-budgets-per-feature",
         "shazeer-2019-mqa",
         "skypilot",
@@ -1746,11 +1764,11 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 28,
+      "count": 29,
       "types": {
         "guide": 3,
         "tool": 8,
-        "tip": 7,
+        "tip": 8,
         "architecture": 3,
         "project": 3,
         "paper": 4
@@ -1766,6 +1784,7 @@
         "context-engineering",
         "context-windows",
         "drop-unused-conversation-history",
+        "give-the-agent-a-scratchpad-for-intermediate-results",
         "graphiti",
         "ji-2026-mragent",
         "letta",
@@ -1789,9 +1808,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 32,
+      "count": 35,
       "types": {
-        "tip": 8,
+        "tip": 11,
         "person": 1,
         "architecture": 1,
         "tool": 14,
@@ -1827,9 +1846,12 @@
         "opik",
         "phoenix",
         "promptfoo",
+        "return-structured-errors-from-tools-so-the-agent-can-recover",
+        "set-a-token-and-cost-budget-per-agent-run",
         "spotlight-by-backplanes",
         "superlog",
         "track-refusal-rates-as-a-regression-signal",
+        "verify-tool-side-effects-instead-of-trusting-the-response",
         "weights-biases"
       ]
     },
@@ -2555,16 +2577,17 @@
     {
       "id": "routing",
       "label": "Routing",
-      "count": 4,
+      "count": 5,
       "types": {
         "tool": 2,
-        "tip": 2
+        "tip": 3
       },
       "entries": [
         "cloudskill",
         "openrouter",
         "route-simple-tasks-to-smaller-models",
-        "use-smaller-models-for-classification-steps"
+        "use-smaller-models-for-classification-steps",
+        "write-tool-descriptions-for-the-model-not-the-codebase"
       ]
     },
     {
@@ -2832,9 +2855,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 62,
+      "count": 67,
       "types": {
-        "tip": 14,
+        "tip": 19,
         "guide": 6,
         "tool": 16,
         "project": 18,
@@ -2875,11 +2898,13 @@
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
         "gemini-cli",
+        "give-the-agent-a-scratchpad-for-intermediate-results",
         "google-adk",
         "goose",
         "intermediate-multi-tool-agent",
         "langgraph",
         "log-agent-state-transitions",
+        "make-tools-idempotent-so-retries-are-safe",
         "microsoft-agent-framework",
         "n8n",
         "nakano-2021-webgpt",
@@ -2890,6 +2915,7 @@
         "pydantic-ai",
         "pydantic-ai-tool",
         "require-human-approval-for-irreversible-actions",
+        "return-structured-errors-from-tools-so-the-agent-can-recover",
         "sandbox-code-execution-tools",
         "schick-2023-toolformer",
         "semantic-kernel",
@@ -2905,6 +2931,8 @@
         "tau-bench",
         "validate-tool-arguments-before-execution",
         "vercel-ai-sdk",
+        "verify-tool-side-effects-instead-of-trusting-the-response",
+        "write-tool-descriptions-for-the-model-not-the-codebase",
         "yao-2022-react"
       ]
     },
