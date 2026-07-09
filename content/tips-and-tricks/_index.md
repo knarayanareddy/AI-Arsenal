@@ -10,7 +10,7 @@
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-09 |
 | [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-09 |
 | [evaluation](./evaluation/) | 13 entries | 2026-07-09 |
-| [fine tuning](./fine-tuning/) | 8 entries | 2026-07-09 |
+| [fine tuning](./fine-tuning/) | 14 entries | 2026-07-09 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-09 |
 | [prompting](./prompting/) | 21 entries | 2026-07-09 |
 | [rag and retrieval](./rag-and-retrieval/) | 17 entries | 2026-07-09 |
@@ -22,11 +22,11 @@
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
+- [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md)
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md)
-- [Continuously Sample Production Traffic Into Your Eval Sets](./evaluation/sample-production-traffic-into-eval-sets.md)
-- [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./evaluation/set-pass-fail-thresholds-before-running-evals.md)
-- [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./agents-and-orchestration/set-wall-clock-timeouts-for-agent-runs.md)
-- [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./evaluation/slice-eval-metrics-by-input-segment.md)
+- [Mask Prompt Tokens So Loss Trains Only on the Completion](./fine-tuning/mask-prompt-tokens-in-the-training-loss.md)
+- [Mix In General Data to Prevent Catastrophic Forgetting](./fine-tuning/mix-in-general-data-to-prevent-forgetting.md)
+- [Prefer Data Quality Over Quantity for Instruction Tuning](./fine-tuning/prefer-data-quality-over-quantity.md)
 
 ## Most Popular
 
@@ -61,6 +61,7 @@ _No star-tracked entries yet._
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md) — 
 - [Compress or Filter Retrieved Chunks When Context Cost Dominates](./cost-and-performance/compress-retrieved-context-before-generation.md) — 
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md) — 
+- [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md) — 
 - [Define Explicit Fallbacks for Tool Failures](./agents-and-orchestration/define-fallbacks-for-tool-failures.md) — 
 - [Fail Tests When Important Context Sections Are Truncated](./evaluation/detect-context-truncation-in-tests.md) — 
 - [Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval](./rag-and-retrieval/detect-multi-hop-questions-explicitly.md) — 
@@ -82,5 +83,4 @@ _No star-tracked entries yet._
 - [Log Both the Raw Model Output and the Parsed Result](./debugging-and-observability/log-raw-and-parsed-model-outputs.md) — 
 - [Log the Retrieved Context for Every RAG Answer](./debugging-and-observability/log-retrieved-context.md) — 
 - [Make Agent Success Criteria Machine-Checkable, Not Self-Reported](./agents-and-orchestration/make-success-criteria-machine-checkable.md) — 
-- [Match Configured Context Length to Available RAM Before Demos](./inference-and-serving/match-context-length-to-ram.md) — 
-- [Match Training and Inference Prompt Formats Exactly](./fine-tuning/match-training-and-inference-prompt-formats.md) — 
+- [Mask Prompt Tokens So Loss Trains Only on the Completion](./fine-tuning/mask-prompt-tokens-in-the-training-loss.md) — 
