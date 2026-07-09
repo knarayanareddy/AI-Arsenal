@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:26:29.550Z",
+    "generated_at": "2026-07-09T21:27:20.256Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
-    "total_tips": 141,
+    "total_tips": 147,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -4177,6 +4177,25 @@
       "featured": false
     },
     {
+      "id": "evaluate-the-end-to-end-task-not-only-components",
+      "type": "tip",
+      "name": "Evaluate the End-to-End Task, Not Only Components",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "rag"
+      ],
+      "path": "content/tips-and-tricks/evaluation/evaluate-the-end-to-end-task-not-only-components.md",
+      "url": "content/tips-and-tricks/evaluation/evaluate-the-end-to-end-task-not-only-components",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "evaluation",
       "type": "guide",
       "name": "Evaluation Tools",
@@ -7730,6 +7749,25 @@
       "featured": false
     },
     {
+      "id": "log-judge-rationales-not-only-scores",
+      "type": "tip",
+      "name": "Log Judge Rationales, Not Only Scores",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "path": "content/tips-and-tricks/evaluation/log-judge-rationales-not-only-scores.md",
+      "url": "content/tips-and-tricks/evaluation/log-judge-rationales-not-only-scores",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "log-latency-by-pipeline-stage",
       "type": "tip",
       "name": "Break Down Latency by Pipeline Stage Before Optimizing Anything",
@@ -9840,6 +9878,24 @@
       "featured": false
     },
     {
+      "id": "pair-every-eval-score-with-a-baseline",
+      "type": "tip",
+      "name": "Pair Every Eval Score With a Baseline",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/pair-every-eval-score-with-a-baseline.md",
+      "url": "content/tips-and-tricks/evaluation/pair-every-eval-score-with-a-baseline",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "parallelize-independent-retrieval-calls",
       "type": "tip",
       "name": "Run Independent Retrieval or Tool Calls Concurrently, Not Sequentially",
@@ -10266,6 +10322,24 @@
       "url": "content/tips-and-tricks/debugging-and-observability/prefer-id-references-over-copying",
       "last_updated": "2026-07-02",
       "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "prefer-pairwise-comparison-when-scoring-is-noisy",
+      "type": "tip",
+      "name": "Prefer Pairwise Comparison When Absolute Scoring Is Noisy",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/prefer-pairwise-comparison-when-scoring-is-noisy.md",
+      "url": "content/tips-and-tricks/evaluation/prefer-pairwise-comparison-when-scoring-is-noisy",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -11279,6 +11353,24 @@
       "featured": false
     },
     {
+      "id": "report-confidence-intervals-on-eval-scores",
+      "type": "tip",
+      "name": "Report Confidence Intervals on Small-Set Eval Scores",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/report-confidence-intervals-on-eval-scores.md",
+      "url": "content/tips-and-tricks/evaluation/report-confidence-intervals-on-eval-scores",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "require-human-approval-for-irreversible-actions",
       "type": "tip",
       "name": "Require Human Approval Before Irreversible Agent Actions",
@@ -11466,6 +11558,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "run-a-fast-eval-per-commit-and-a-full-eval-nightly",
+      "type": "tip",
+      "name": "Run a Fast Eval Per Commit and a Full Eval Nightly",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/evaluation/run-a-fast-eval-per-commit-and-a-full-eval-nightly.md",
+      "url": "content/tips-and-tricks/evaluation/run-a-fast-eval-per-commit-and-a-full-eval-nightly",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
