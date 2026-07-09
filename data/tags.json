@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T12:43:04.914Z",
+  "generated_at": "2026-07-09T21:22:23.921Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 163,
+      "count": 164,
       "types": {
         "tip": 23,
         "tool": 51,
@@ -14,7 +14,7 @@
         "benchmark": 9,
         "project": 44,
         "paper": 17,
-        "architecture": 6,
+        "architecture": 7,
         "person": 3
       },
       "entries": [
@@ -53,6 +53,7 @@
         "choose-eval-framework",
         "choose-guardrails-strategy",
         "choose-memory-solution",
+        "choose-response-delivery-pattern",
         "chrome-devtools-mcp",
         "claude-code",
         "cline",
@@ -390,11 +391,11 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 56,
+      "count": 57,
       "types": {
         "project": 13,
         "tool": 38,
-        "architecture": 4,
+        "architecture": 5,
         "person": 1
       },
       "entries": [
@@ -449,6 +450,7 @@
         "replicate",
         "runpod",
         "scale-ai",
+        "self-host-vs-hosted-api",
         "skypilot",
         "streamlit",
         "supabase",
@@ -518,16 +520,16 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 87,
+      "count": 88,
       "types": {
         "tool": 33,
         "person": 4,
+        "architecture": 2,
         "project": 13,
         "guide": 28,
         "paper": 1,
         "tip": 6,
-        "build-example": 1,
-        "architecture": 1
+        "build-example": 1
       },
       "entries": [
         "agent-reach",
@@ -535,6 +537,7 @@
         "airflow",
         "argilla",
         "chip-huyen",
+        "choose-retrieval-strategy",
         "cleanlab",
         "clem-delangue",
         "cost-freemium",
@@ -650,14 +653,14 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 58,
+      "count": 59,
       "types": {
         "paper": 20,
         "guide": 4,
         "tip": 12,
         "project": 10,
         "tool": 10,
-        "architecture": 2
+        "architecture": 3
       },
       "entries": [
         "ainslie-2023-gqa",
@@ -668,6 +671,7 @@
         "candle",
         "cerebras-inference",
         "choose-caching-strategy",
+        "choose-quantization-strategy",
         "choose-serving-stack",
         "compact-tool-outputs-before-adding-to-context",
         "compress-retrieved-context-before-generation",
@@ -723,12 +727,12 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 48,
+      "count": 49,
       "types": {
         "tip": 8,
         "project": 14,
         "guide": 2,
-        "architecture": 4,
+        "architecture": 5,
         "tool": 10,
         "paper": 9,
         "person": 1
@@ -743,6 +747,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
+        "choose-retrieval-strategy",
         "choose-vector-db",
         "chroma",
         "clip",
@@ -787,7 +792,7 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 163,
+      "count": 164,
       "types": {
         "digest": 1,
         "tool": 32,
@@ -798,7 +803,7 @@
         "benchmark": 50,
         "person": 9,
         "paper": 13,
-        "architecture": 6
+        "architecture": 7
       },
       "entries": [
         "2026-07",
@@ -884,6 +889,7 @@
         "liu-2023-lost-in-the-middle",
         "livecodebench",
         "llm-as-a-judge",
+        "llm-as-judge-vs-human-evaluation",
         "llm-researcher",
         "llm-researcher-role",
         "lm-evaluation-harness",
@@ -1163,13 +1169,13 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 120,
+      "count": 123,
       "types": {
         "tip": 25,
         "tool": 27,
         "paper": 14,
         "project": 40,
-        "architecture": 7,
+        "architecture": 10,
         "guide": 6,
         "build-example": 1
       },
@@ -1191,6 +1197,8 @@
         "choose-deployment-target",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
+        "choose-quantization-strategy",
+        "choose-response-delivery-pattern",
         "choose-serving-stack",
         "choose-structured-output-strategy",
         "cloudflare-workers-ai",
@@ -1268,6 +1276,7 @@
         "research-platform",
         "route-simple-tasks-to-smaller-models",
         "runpod",
+        "self-host-vs-hosted-api",
         "separate-offline-batch-jobs-from-chat-serving",
         "sglang",
         "shazeer-2019-mqa",
@@ -1345,7 +1354,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 287,
+      "count": 290,
       "types": {
         "tool": 67,
         "tip": 31,
@@ -1354,7 +1363,7 @@
         "project": 54,
         "benchmark": 14,
         "person": 15,
-        "architecture": 7,
+        "architecture": 10,
         "build-example": 2
       },
       "entries": [
@@ -1396,6 +1405,7 @@
         "choose-caching-strategy",
         "choose-guardrails-strategy",
         "choose-llm",
+        "choose-response-delivery-pattern",
         "choose-serving-stack",
         "choose-structured-output-strategy",
         "chowdhery-2022-palm",
@@ -1494,6 +1504,7 @@
         "llamafile",
         "llamaguard",
         "llm-as-a-judge",
+        "llm-as-judge-vs-human-evaluation",
         "llm-researcher",
         "llm-researcher-role",
         "lm-evaluation-harness",
@@ -1573,6 +1584,7 @@
         "sebastian-bubeck",
         "sebastian-raschka",
         "security-and-guardrails",
+        "self-host-vs-hosted-api",
         "separate-a-frozen-holdout-from-your-dev-eval-set",
         "separate-system-and-task-prompts",
         "separate-user-content-from-system-instructions",
@@ -1650,10 +1662,10 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 34,
+      "count": 35,
       "types": {
         "tip": 6,
-        "architecture": 2,
+        "architecture": 3,
         "project": 18,
         "tool": 6,
         "guide": 1,
@@ -1662,6 +1674,7 @@
       "entries": [
         "benchmark-on-the-user-hardware",
         "choose-llm",
+        "choose-quantization-strategy",
         "chroma",
         "crawl4ai",
         "crawl4ai-tool",
@@ -1868,12 +1881,12 @@
     {
       "id": "observability",
       "label": "Observability",
-      "count": 57,
+      "count": 58,
       "types": {
         "tip": 29,
         "project": 12,
         "tool": 10,
-        "architecture": 3,
+        "architecture": 4,
         "person": 1,
         "build-example": 1,
         "guide": 1
@@ -1903,6 +1916,7 @@
         "langsmith",
         "langsmith-platform",
         "langwatch",
+        "llm-as-judge-vs-human-evaluation",
         "llm-observability",
         "log-latency-by-pipeline-stage",
         "log-raw-and-parsed-model-outputs",
@@ -2100,7 +2114,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 128,
+      "count": 129,
       "types": {
         "tip": 19,
         "build-example": 5,
@@ -2109,7 +2123,7 @@
         "project": 38,
         "paper": 19,
         "benchmark": 7,
-        "architecture": 7,
+        "architecture": 8,
         "person": 3
       },
       "entries": [
@@ -2133,6 +2147,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-eval-framework",
+        "choose-retrieval-strategy",
         "choose-vector-db",
         "chroma",
         "cognee",
@@ -2335,7 +2350,7 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 102,
+      "count": 103,
       "types": {
         "tip": 20,
         "build-example": 4,
@@ -2343,7 +2358,7 @@
         "paper": 19,
         "benchmark": 7,
         "guide": 3,
-        "architecture": 6,
+        "architecture": 7,
         "project": 21,
         "person": 1
       },
@@ -2362,6 +2377,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
+        "choose-retrieval-strategy",
         "choose-vector-db",
         "chroma",
         "codebase-memory-mcp",
@@ -2557,10 +2573,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 74,
+      "count": 76,
       "types": {
         "project": 39,
-        "architecture": 5,
+        "architecture": 7,
         "tool": 24,
         "paper": 2,
         "tip": 4
@@ -2574,6 +2590,7 @@
         "cherry-studio",
         "choose-deployment-target",
         "choose-embedding-model",
+        "choose-quantization-strategy",
         "choose-serving-stack",
         "choose-vector-db",
         "cleanlab",
@@ -2629,6 +2646,7 @@
         "qdrant",
         "ray",
         "rombach-2022-ldm",
+        "self-host-vs-hosted-api",
         "supabase",
         "tabby",
         "tabby-ml",
