@@ -8,7 +8,7 @@
 |---|---:|---|
 | [agents and orchestration](./agents-and-orchestration/) | 24 entries | 2026-07-09 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-09 |
-| [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-09 |
+| [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-07-09 |
 | [evaluation](./evaluation/) | 19 entries | 2026-07-09 |
 | [fine tuning](./fine-tuning/) | 14 entries | 2026-07-09 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-09 |
@@ -17,6 +17,7 @@
 
 ## Recently Added
 
+- [Alarm on Empty and Unparseable Responses](./debugging-and-observability/alarm-on-empty-and-unparseable-responses.md)
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./cost-and-performance/batch-embedding-requests-during-ingestion.md)
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md)
 - [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
@@ -26,7 +27,6 @@
 - [Evaluate the End-to-End Task, Not Only Components](./evaluation/evaluate-the-end-to-end-task-not-only-components.md)
 - [Give the Agent a Scratchpad Instead of Carrying Everything in Context](./agents-and-orchestration/give-the-agent-a-scratchpad-for-intermediate-results.md)
 - [Log Judge Rationales, Not Only Scores](./evaluation/log-judge-rationales-not-only-scores.md)
-- [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md)
 
 ## Most Popular
 
@@ -41,6 +41,7 @@ _No star-tracked entries yet._
 - [Add Few-Shot Examples for Edge Cases, Not Just the Happy Path](./prompting/add-output-examples-for-edge-cases.md) — 
 - [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./inference-and-serving/add-provider-timeout-and-retry-policies.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./rag-and-retrieval/add-reranking-after-recall-is-acceptable.md) — 
+- [Alarm on Empty and Unparseable Responses](./debugging-and-observability/alarm-on-empty-and-unparseable-responses.md) — 
 - [Allowlist Tools Per Agent Role](./agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [Instruct the Model to Ask for Missing Inputs Instead of Guessing](./prompting/ask-for-missing-inputs-before-solving.md) — 
 - [Ask for Supporting Quotes Before Answers in RAG Prompts](./prompting/ask-for-quotes-before-answers-in-rag-prompts.md) — 
@@ -83,4 +84,3 @@ _No star-tracked entries yet._
 - [Log Every Agent State Transition, Not Just Final Output](./agents-and-orchestration/log-agent-state-transitions.md) — 
 - [Log Judge Rationales, Not Only Scores](./evaluation/log-judge-rationales-not-only-scores.md) — 
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md) — 
-- [Log Both the Raw Model Output and the Parsed Result](./debugging-and-observability/log-raw-and-parsed-model-outputs.md) — 
