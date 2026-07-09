@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:24:00.620Z",
+    "generated_at": "2026-07-09T21:26:29.550Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
-    "total_tips": 135,
+    "total_tips": 141,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -3347,6 +3347,25 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deduplicate-training-data-before-fine-tuning",
+      "type": "tip",
+      "name": "Deduplicate Training Data Before Fine-Tuning",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/deduplicate-training-data-before-fine-tuning.md",
+      "url": "content/tips-and-tricks/fine-tuning/deduplicate-training-data-before-fine-tuning",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -7973,6 +7992,25 @@
       "featured": false
     },
     {
+      "id": "mask-prompt-tokens-in-the-training-loss",
+      "type": "tip",
+      "name": "Mask Prompt Tokens So Loss Trains Only on the Completion",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/mask-prompt-tokens-in-the-training-loss.md",
+      "url": "content/tips-and-tricks/fine-tuning/mask-prompt-tokens-in-the-training-loss",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "mastra",
       "type": "project",
       "name": "Mastra",
@@ -8505,6 +8543,25 @@
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mix-in-general-data-to-prevent-forgetting",
+      "type": "tip",
+      "name": "Mix In General Data to Prevent Catastrophic Forgetting",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/mix-in-general-data-to-prevent-forgetting.md",
+      "url": "content/tips-and-tricks/fine-tuning/mix-in-general-data-to-prevent-forgetting",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -10154,6 +10211,25 @@
       "url": "content/tips-and-tricks/inference-and-serving/prefer-continuous-batching-for-online-serving",
       "last_updated": "2026-07-08",
       "category": "latency-optimization",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "prefer-data-quality-over-quantity",
+      "type": "tip",
+      "name": "Prefer Data Quality Over Quantity for Instruction Tuning",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "data",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/prefer-data-quality-over-quantity.md",
+      "url": "content/tips-and-tricks/fine-tuning/prefer-data-quality-over-quantity",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -12561,6 +12637,25 @@
       "featured": false
     },
     {
+      "id": "start-with-a-low-learning-rate-and-few-epochs",
+      "type": "tip",
+      "name": "Start With a Low Learning Rate and Few Epochs",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/start-with-a-low-learning-rate-and-few-epochs.md",
+      "url": "content/tips-and-tricks/fine-tuning/start-with-a-low-learning-rate-and-few-epochs",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "start-with-a-smaller-quantized-model",
       "type": "tip",
       "name": "Validate the Workflow With a Smaller Quantized Model Before Downloading Larger Weights",
@@ -14152,6 +14247,25 @@
       ],
       "path": "content/tips-and-tricks/cost-and-performance/use-provider-batch-apis-for-offline-workloads.md",
       "url": "content/tips-and-tricks/cost-and-performance/use-provider-batch-apis-for-offline-workloads",
+      "last_updated": "2026-07-08",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "use-qlora-to-fit-larger-models-on-one-gpu",
+      "type": "tip",
+      "name": "Use QLoRA to Fit Larger Models on a Single GPU",
+      "description": "",
+      "tags": [
+        "fine-tuning",
+        "efficiency",
+        "local"
+      ],
+      "path": "content/tips-and-tricks/fine-tuning/use-qlora-to-fit-larger-models-on-one-gpu.md",
+      "url": "content/tips-and-tricks/fine-tuning/use-qlora-to-fit-larger-models-on-one-gpu",
       "last_updated": "2026-07-08",
       "category": "cost-reduction",
       "maturity": null,

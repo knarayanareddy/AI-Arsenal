@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:24:00.620Z",
+  "generated_at": "2026-07-09T21:26:29.550Z",
   "tags": [
     {
       "id": "agents",
@@ -505,15 +505,15 @@
     {
       "id": "data",
       "label": "Data",
-      "count": 88,
+      "count": 90,
       "types": {
         "tool": 33,
         "person": 4,
         "architecture": 2,
         "project": 13,
         "guide": 28,
+        "tip": 8,
         "paper": 1,
-        "tip": 6,
         "build-example": 1
       },
       "entries": [
@@ -534,6 +534,7 @@
         "crawl4ai-tool",
         "dagster",
         "data-labeling",
+        "deduplicate-training-data-before-fine-tuning",
         "deepchecks",
         "deployment",
         "dlt",
@@ -571,6 +572,7 @@
         "paddleocr",
         "playwright",
         "prefect",
+        "prefer-data-quality-over-quantity",
         "prefer-id-references-over-copying",
         "prodigy",
         "production-serving",
@@ -638,11 +640,11 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 64,
+      "count": 66,
       "types": {
         "paper": 20,
         "guide": 4,
-        "tip": 17,
+        "tip": 19,
         "project": 10,
         "tool": 10,
         "architecture": 3
@@ -686,6 +688,7 @@
         "liger-kernel",
         "lin-2023-awq",
         "lorax",
+        "mask-prompt-tokens-in-the-training-loss",
         "megatron-lm",
         "mistral-models",
         "onnxruntime",
@@ -709,6 +712,7 @@
         "track-cost-per-successful-outcome",
         "ultralytics-yolo",
         "unsloth",
+        "use-qlora-to-fit-larger-models-on-one-gpu",
         "use-speculative-decoding-for-latency-critical-paths",
         "xiao-2022-smoothquant",
         "xiao-2023-streamingllm"
@@ -782,11 +786,11 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 164,
+      "count": 166,
       "types": {
         "digest": 1,
         "tool": 32,
-        "tip": 26,
+        "tip": 28,
         "build-example": 1,
         "guide": 10,
         "project": 15,
@@ -892,6 +896,7 @@
         "measure-retrieval-recall-before-answer-quality",
         "melanie-mitchell",
         "mind2web",
+        "mix-in-general-data-to-prevent-forgetting",
         "ml-engineer",
         "mmbench",
         "mmlu",
@@ -936,6 +941,7 @@
         "simpleqa",
         "slice-eval-metrics-by-input-segment",
         "sota-benchmarks",
+        "start-with-a-low-learning-rate-and-few-epochs",
         "store-prompts-with-release-versions",
         "strongreject",
         "swe-bench",
@@ -978,12 +984,12 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 45,
+      "count": 51,
       "types": {
         "tool": 15,
         "project": 8,
+        "tip": 14,
         "paper": 11,
-        "tip": 8,
         "guide": 2,
         "architecture": 1
       },
@@ -992,6 +998,7 @@
         "alignment-handbook",
         "axolotl",
         "colossalai",
+        "deduplicate-training-data-before-fine-tuning",
         "deepspeed",
         "dettmers-2023-qlora",
         "establish-a-prompting-baseline-before-fine-tuning",
@@ -1011,8 +1018,10 @@
         "liu-2023-llava",
         "llamafactory",
         "lorax",
+        "mask-prompt-tokens-in-the-training-loss",
         "match-training-and-inference-prompt-formats",
         "meng-2024-simpo",
+        "mix-in-general-data-to-prevent-forgetting",
         "ml-engineer-role",
         "mlx-lm",
         "ms-swift",
@@ -1022,14 +1031,17 @@
         "orchestraml",
         "patil-2023-gorilla",
         "peft",
+        "prefer-data-quality-over-quantity",
         "pytorch-lightning",
         "rag-vs-fine-tuning",
+        "start-with-a-low-learning-rate-and-few-epochs",
         "start-with-lora-before-full-fine-tuning",
         "test-for-regressions-outside-the-tuned-task",
         "together-ai",
         "torchtune",
         "trl",
         "unsloth",
+        "use-qlora-to-fit-larger-models-on-one-gpu",
         "verl",
         "version-datasets-and-adapters-together",
         "yuan-2024-self-rewarding"
@@ -1350,10 +1362,10 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 291,
+      "count": 296,
       "types": {
         "tool": 67,
-        "tip": 32,
+        "tip": 37,
         "guide": 44,
         "paper": 53,
         "project": 54,
@@ -1421,6 +1433,7 @@
         "cursor",
         "dario-amodei",
         "data-labeling",
+        "deduplicate-training-data-before-fine-tuning",
         "deepeval",
         "deepseek-ai-2024-deepseek-v3",
         "deepseek-v3-r1",
@@ -1514,6 +1527,7 @@
         "madaan-2023-self-refine",
         "marker",
         "markitdown",
+        "mask-prompt-tokens-in-the-training-loss",
         "match-training-and-inference-prompt-formats",
         "memory-management",
         "meng-2024-simpo",
@@ -1521,6 +1535,7 @@
         "mirascope",
         "mistral-models",
         "mistral-rs",
+        "mix-in-general-data-to-prevent-forgetting",
         "ml-engineer",
         "mlc-llm",
         "mlx-lm",
@@ -1553,6 +1568,7 @@
         "phi-4",
         "phi-cookbook",
         "pin-model-versions-in-prompt-regression-tests",
+        "prefer-data-quality-over-quantity",
         "production-serving",
         "prompt-management",
         "prompt-patterns-catalog",
@@ -1600,6 +1616,7 @@
         "stack-python",
         "stack-rust",
         "stack-typescript",
+        "start-with-a-low-learning-rate-and-few-epochs",
         "start-with-lora-before-full-fine-tuning",
         "starter-basic-rag-chatbot",
         "starter-local-llm-chat",
@@ -1659,9 +1676,9 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 35,
+      "count": 36,
       "types": {
-        "tip": 6,
+        "tip": 7,
         "architecture": 3,
         "project": 18,
         "tool": 6,
@@ -1702,6 +1719,7 @@
         "start-with-a-smaller-quantized-model",
         "starter-local-llm-chat",
         "use-local-models-for-sensitive-prototyping",
+        "use-qlora-to-fit-larger-models-on-one-gpu",
         "yi",
         "zvec"
       ]
