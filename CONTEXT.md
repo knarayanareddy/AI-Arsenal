@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-09T12:42:42.502Z | Entries: 804 | Schema version: 1.0.0
+Generated: 2026-07-09T21:23:31.155Z | Entries: 809 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -14,7 +14,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Digests: 1
 - Guides: 59
 - Build examples: 8
-- Architectures: 21
+- Architectures: 26
 - Observability: 16
 - Community: 32
 
@@ -231,15 +231,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### data-strategy
 - Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic — 
 - Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted — 
+- Dense vs Sparse vs Hybrid Retrieval: How Should You Actually Find the Right Chunks? — 
 - Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
 
 ### evaluation-strategy
 - Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review — 
 - Choosing an Observability Approach: Integration Model First, Feature List Second — 
+- LLM-as-Judge vs Human Evaluation vs Reference-Based Metrics: How Should You Grade Outputs? — 
 
 ### model-selection
 - Choosing an Agent Framework: State Model, Language, and Provider Constraints — 
 - Choosing a Model: Local vs Cloud, and Routing by Primary Need — 
+- Self-Host Open Weights vs Hosted Model API: Who Should Run the GPU? — 
 
 ### reference-stacks
 - Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified — 
@@ -251,6 +254,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### serving-patterns
 - Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse — 
 - Choosing a Deployment Target: Separating App Hosting From Model Serving — 
+- Choosing a Quantization Strategy: How Low Can You Go Before Quality Breaks? — 
+- Synchronous vs Streaming vs Asynchronous: How Should the Answer Reach the User? — 
 - Choosing an LLM Serving Stack: Managed API, Local Runtime, or Self-Hosted Engine — 
 
 ### system-design
