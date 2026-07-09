@@ -15,7 +15,7 @@
 | [projects](./projects/) | 146 entries | 2026-07-09 |
 | [research](./research/) | 114 entries | 2026-07-09 |
 | [skills](./skills/) | 28 entries | 2026-07-09 |
-| [tips and tricks](./tips-and-tricks/) | 147 entries | 2026-07-09 |
+| [tips and tricks](./tips-and-tricks/) | 153 entries | 2026-07-09 |
 | [tools](./tools/) | 224 entries | 2026-07-09 |
 | [trending](./trending/) | 4 entries | 2026-07-09 |
 
