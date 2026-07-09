@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:28:19.414Z",
+  "generated_at": "2026-07-09T21:29:06.635Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 158,
+      "count": 159,
       "types": {
         "tip": 17,
         "tool": 51,
@@ -14,7 +14,7 @@
         "benchmark": 9,
         "project": 44,
         "paper": 17,
-        "architecture": 7,
+        "architecture": 8,
         "person": 3
       },
       "entries": [
@@ -50,6 +50,7 @@
         "checkpoint-agent-state-after-each-tool-call",
         "cherry-studio",
         "choose-agent-framework",
+        "choose-context-window-management-strategy",
         "choose-eval-framework",
         "choose-guardrails-strategy",
         "choose-memory-solution",
@@ -722,12 +723,12 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 49,
+      "count": 50,
       "types": {
         "tip": 8,
         "project": 14,
         "guide": 2,
-        "architecture": 5,
+        "architecture": 6,
         "tool": 10,
         "paper": 9,
         "person": 1
@@ -742,6 +743,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
+        "choose-reranking-strategy",
         "choose-retrieval-strategy",
         "choose-vector-db",
         "chroma",
@@ -1179,13 +1181,13 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 129,
+      "count": 130,
       "types": {
         "tip": 31,
         "tool": 27,
         "paper": 14,
         "project": 40,
-        "architecture": 10,
+        "architecture": 11,
         "guide": 6,
         "build-example": 1
       },
@@ -1206,6 +1208,7 @@
         "chatterbox",
         "choose-caching-strategy",
         "choose-deployment-target",
+        "choose-fallback-and-failover-strategy",
         "choose-int4-only-after-quality-tests",
         "choose-llm",
         "choose-quantization-strategy",
@@ -1370,7 +1373,7 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 308,
+      "count": 311,
       "types": {
         "tool": 67,
         "tip": 49,
@@ -1379,7 +1382,7 @@
         "project": 54,
         "benchmark": 14,
         "person": 15,
-        "architecture": 10,
+        "architecture": 13,
         "build-example": 2
       },
       "entries": [
@@ -1420,8 +1423,11 @@
         "cherry-studio",
         "chiang-2024-chatbot-arena",
         "choose-caching-strategy",
+        "choose-context-window-management-strategy",
+        "choose-fallback-and-failover-strategy",
         "choose-guardrails-strategy",
         "choose-llm",
+        "choose-reranking-strategy",
         "choose-response-delivery-pattern",
         "choose-serving-stack",
         "choose-structured-output-strategy",
@@ -1747,12 +1753,12 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 27,
+      "count": 28,
       "types": {
         "guide": 3,
         "tool": 8,
         "tip": 7,
-        "architecture": 2,
+        "architecture": 3,
         "project": 3,
         "paper": 4
       },
@@ -1760,6 +1766,7 @@
         "agent-builder",
         "agno",
         "budget-context-before-adding-tools",
+        "choose-context-window-management-strategy",
         "choose-memory-solution",
         "codebase-memory-mcp",
         "cognee",
@@ -2153,7 +2160,7 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 130,
+      "count": 132,
       "types": {
         "tip": 20,
         "build-example": 5,
@@ -2162,7 +2169,7 @@
         "project": 38,
         "paper": 19,
         "benchmark": 7,
-        "architecture": 8,
+        "architecture": 10,
         "person": 3
       },
       "entries": [
@@ -2184,8 +2191,10 @@
         "cherry-studio",
         "choose-chunk-size-by-answer-span-length",
         "choose-chunking-strategy",
+        "choose-context-window-management-strategy",
         "choose-embedding-model",
         "choose-eval-framework",
+        "choose-reranking-strategy",
         "choose-retrieval-strategy",
         "choose-vector-db",
         "chroma",
@@ -2390,7 +2399,7 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 103,
+      "count": 104,
       "types": {
         "tip": 20,
         "build-example": 4,
@@ -2398,7 +2407,7 @@
         "paper": 19,
         "benchmark": 7,
         "guide": 3,
-        "architecture": 7,
+        "architecture": 8,
         "project": 21,
         "person": 1
       },
@@ -2417,6 +2426,7 @@
         "choose-chunking-strategy",
         "choose-embedding-model",
         "choose-memory-solution",
+        "choose-reranking-strategy",
         "choose-retrieval-strategy",
         "choose-vector-db",
         "chroma",
@@ -2613,10 +2623,10 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 76,
+      "count": 77,
       "types": {
         "project": 39,
-        "architecture": 7,
+        "architecture": 8,
         "tool": 24,
         "paper": 2,
         "tip": 4
@@ -2630,6 +2640,7 @@
         "cherry-studio",
         "choose-deployment-target",
         "choose-embedding-model",
+        "choose-fallback-and-failover-strategy",
         "choose-quantization-strategy",
         "choose-serving-stack",
         "choose-vector-db",
