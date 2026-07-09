@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [data strategy](./data-strategy/) | 4 entries | 2026-07-08 |
-| [diagrams](./diagrams/) | 0 entries | 2026-07-08 |
-| [evaluation strategy](./evaluation-strategy/) | 3 entries | 2026-07-08 |
-| [model selection](./model-selection/) | 3 entries | 2026-07-08 |
-| [patterns](./patterns/) | 0 entries | 2026-07-08 |
-| [reference stacks](./reference-stacks/) | 6 entries | 2026-07-08 |
-| [serving patterns](./serving-patterns/) | 5 entries | 2026-07-08 |
-| [system design](./system-design/) | 5 entries | 2026-07-08 |
+| [data strategy](./data-strategy/) | 4 entries | 2026-07-09 |
+| [diagrams](./diagrams/) | 0 entries | 2026-07-09 |
+| [evaluation strategy](./evaluation-strategy/) | 3 entries | 2026-07-09 |
+| [model selection](./model-selection/) | 3 entries | 2026-07-09 |
+| [patterns](./patterns/) | 0 entries | 2026-07-09 |
+| [reference stacks](./reference-stacks/) | 6 entries | 2026-07-09 |
+| [serving patterns](./serving-patterns/) | 5 entries | 2026-07-09 |
+| [system design](./system-design/) | 5 entries | 2026-07-09 |
 
 ## Recently Added
 

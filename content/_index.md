@@ -6,18 +6,18 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 26 entries | 2026-07-08 |
-| [benchmarks](./benchmarks/) | 50 entries | 2026-07-08 |
-| [build examples](./build-examples/) | 12 entries | 2026-07-08 |
-| [community](./community/) | 57 entries | 2026-07-08 |
-| [digests](./digests/) | 1 entries | 2026-07-08 |
-| [observability](./observability/) | 10 entries | 2026-07-08 |
-| [projects](./projects/) | 146 entries | 2026-07-08 |
-| [research](./research/) | 104 entries | 2026-07-08 |
-| [skills](./skills/) | 28 entries | 2026-07-08 |
-| [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-08 |
-| [tools](./tools/) | 224 entries | 2026-07-08 |
-| [trending](./trending/) | 4 entries | 2026-07-08 |
+| [architectures](./architectures/) | 26 entries | 2026-07-09 |
+| [benchmarks](./benchmarks/) | 50 entries | 2026-07-09 |
+| [build examples](./build-examples/) | 12 entries | 2026-07-09 |
+| [community](./community/) | 57 entries | 2026-07-09 |
+| [digests](./digests/) | 1 entries | 2026-07-09 |
+| [observability](./observability/) | 10 entries | 2026-07-09 |
+| [projects](./projects/) | 146 entries | 2026-07-09 |
+| [research](./research/) | 114 entries | 2026-07-09 |
+| [skills](./skills/) | 28 entries | 2026-07-09 |
+| [tips and tricks](./tips-and-tricks/) | 129 entries | 2026-07-09 |
+| [tools](./tools/) | 224 entries | 2026-07-09 |
+| [trending](./trending/) | 4 entries | 2026-07-09 |
 
 ## Recently Added
 
