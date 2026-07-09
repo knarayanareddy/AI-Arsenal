@@ -28,16 +28,16 @@ Building an entire evaluation framework or LLM-as-judge pipeline from scratch is
 
 ### Recently Added
 
+- [Evaluate the End-to-End Task, Not Only Components](./evaluate-the-end-to-end-task-not-only-components.md)
+- [Log Judge Rationales, Not Only Scores](./log-judge-rationales-not-only-scores.md)
+- [Pair Every Eval Score With a Baseline](./pair-every-eval-score-with-a-baseline.md)
+- [Prefer Pairwise Comparison When Absolute Scoring Is Noisy](./prefer-pairwise-comparison-when-scoring-is-noisy.md)
+- [Report Confidence Intervals on Small-Set Eval Scores](./report-confidence-intervals-on-eval-scores.md)
+- [Run a Fast Eval Per Commit and a Full Eval Nightly](./run-a-fast-eval-per-commit-and-a-full-eval-nightly.md)
 - [Continuously Sample Production Traffic Into Your Eval Sets](./sample-production-traffic-into-eval-sets.md)
 - [Set Pass/Fail Thresholds Before Running Evals, Not After Seeing Results](./set-pass-fail-thresholds-before-running-evals.md)
 - [Slice Eval Metrics by Input Segment Instead of Trusting the Average](./slice-eval-metrics-by-input-segment.md)
 - [Run Evals Multiple Times Before Trusting Small Deltas](./run-evals-multiple-times-before-trusting-deltas.md)
-- [Separate a Frozen Holdout From Your Dev Eval Set](./separate-a-frozen-holdout-from-your-dev-eval-set.md)
-- [Use Rubric-Anchored Prompts for LLM Judges, Not Bare Score Requests](./use-rubric-anchored-llm-judges.md)
-- [Validate LLM Judges Against Human Labels Before Trusting Their Scores](./validate-llm-judges-against-human-labels.md)
-- [Fail Tests When Important Context Sections Are Truncated](./detect-context-truncation-in-tests.md)
-- [Run a Prompt-Injection Regression Suite on Every CI Run](./run-prompt-injection-regression-tests.md)
-- [Add the Failing Question to Your Eval Set Before Fixing the Bug](./use-golden-questions-for-every-bug-fix.md)
 
 ### Most Popular
 
@@ -47,6 +47,12 @@ _No star-tracked entries yet._
 
 - [Add an Eval Harness Before Refactoring Prompts or Retrieval Logic](./add-evals-before-refactors.md) — 
 - [Fail Tests When Important Context Sections Are Truncated](./detect-context-truncation-in-tests.md) — 
+- [Evaluate the End-to-End Task, Not Only Components](./evaluate-the-end-to-end-task-not-only-components.md) — 
+- [Log Judge Rationales, Not Only Scores](./log-judge-rationales-not-only-scores.md) — 
+- [Pair Every Eval Score With a Baseline](./pair-every-eval-score-with-a-baseline.md) — 
+- [Prefer Pairwise Comparison When Absolute Scoring Is Noisy](./prefer-pairwise-comparison-when-scoring-is-noisy.md) — 
+- [Report Confidence Intervals on Small-Set Eval Scores](./report-confidence-intervals-on-eval-scores.md) — 
+- [Run a Fast Eval Per Commit and a Full Eval Nightly](./run-a-fast-eval-per-commit-and-a-full-eval-nightly.md) — 
 - [Run Evals Multiple Times Before Trusting Small Deltas](./run-evals-multiple-times-before-trusting-deltas.md) — 
 - [Run a Prompt-Injection Regression Suite on Every CI Run](./run-prompt-injection-regression-tests.md) — 
 - [Continuously Sample Production Traffic Into Your Eval Sets](./sample-production-traffic-into-eval-sets.md) — 
