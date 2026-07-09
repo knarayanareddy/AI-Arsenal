@@ -21,7 +21,7 @@ applies_to:
   - production-llm-systems
 gotchas:
   - "Blocking by hostname string is not enough -- a public hostname can resolve to a private IP (DNS rebinding), so validate the resolved IP after DNS resolution and pin it for the actual connection"
-  - "Following redirects re-opens the hole -- a permitted public URL can 302 to `http://169.254.169.254/`, so re-validate every redirect target, not only the first URL"
+  - "Following redirects re-opens the hole -- a permitted public URL can 302 to the link-local metadata address `169.254.169.254`, so re-validate every redirect target, not only the first URL"
   - "Cloud metadata endpoints (169.254.169.254 and link-local ranges) are the highest-value SSRF target because they can hand out credentials -- block link-local, loopback, and private ranges explicitly"
 metrics: []
 related_tips:
@@ -51,7 +51,7 @@ Wrap all model-triggered outbound fetches in one hardened client that: enforces 
 ## Gotchas
 
 - Blocking by hostname string is not enough — a public hostname can resolve to a private IP (DNS rebinding), so validate the resolved IP after DNS resolution and pin it for the actual connection
-- Following redirects re-opens the hole — a permitted public URL can 302 to `http://169.254.169.254/`, so re-validate every redirect target, not only the first URL
+- Following redirects re-opens the hole — a permitted public URL can 302 to the link-local metadata address `169.254.169.254`, so re-validate every redirect target, not only the first URL
 - Cloud metadata endpoints (`169.254.169.254` and link-local ranges) are the highest-value SSRF target because they can hand out credentials — block link-local, loopback, and private ranges explicitly
 
 ## When NOT to Apply
