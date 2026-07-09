@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:28:12.994Z",
+    "generated_at": "2026-07-09T21:29:00.223Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
@@ -9,7 +9,7 @@
     "total_digests": 1,
     "total_guides": 59,
     "total_build_examples": 8,
-    "total_architectures": 26,
+    "total_architectures": 29,
     "total_observability": 16,
     "total_community": 32,
     "total_benchmarks": 50,
@@ -2111,6 +2111,26 @@
       "featured": false
     },
     {
+      "id": "choose-context-window-management-strategy",
+      "type": "architecture",
+      "name": "Managing a Growing Context Window: Truncation, Summarization, or Retrieval Offload",
+      "description": "",
+      "tags": [
+        "llm",
+        "rag",
+        "memory",
+        "agents"
+      ],
+      "path": "content/architectures/system-design/choose-context-window-management-strategy.md",
+      "url": "content/architectures/system-design/choose-context-window-management-strategy",
+      "last_updated": "2026-07-08",
+      "category": "system-design",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "choose-deployment-target",
       "type": "architecture",
       "name": "Choosing a Deployment Target: Separating App Hosting From Model Serving",
@@ -2165,6 +2185,25 @@
       "url": "content/architectures/evaluation-strategy/choose-eval-framework",
       "last_updated": "2026-07-06",
       "category": "evaluation-strategy",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-fallback-and-failover-strategy",
+      "type": "architecture",
+      "name": "Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway",
+      "description": "",
+      "tags": [
+        "inference",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/architectures/serving-patterns/choose-fallback-and-failover-strategy.md",
+      "url": "content/architectures/serving-patterns/choose-fallback-and-failover-strategy",
+      "last_updated": "2026-07-08",
+      "category": "serving-patterns",
       "maturity": null,
       "cost_model": null,
       "status": "active",
@@ -2283,6 +2322,26 @@
       "url": "content/architectures/serving-patterns/choose-quantization-strategy",
       "last_updated": "2026-07-08",
       "category": "serving-patterns",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "choose-reranking-strategy",
+      "type": "architecture",
+      "name": "Choosing a Reranking Strategy: Dense-Only, Cross-Encoder, or LLM Reranker",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "llm"
+      ],
+      "path": "content/architectures/data-strategy/choose-reranking-strategy.md",
+      "url": "content/architectures/data-strategy/choose-reranking-strategy",
+      "last_updated": "2026-07-08",
+      "category": "data-strategy",
       "maturity": null,
       "cost_model": null,
       "status": "active",
