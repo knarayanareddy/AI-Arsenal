@@ -26,6 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
+- [Self-Hosted LLM Serving with vLLM, Metrics, and a Health Gate](./intermediate-vllm-serving-with-observability.md)
 - [Local LLM Chat](./starter-local-llm-chat.md)
 
 ### Most Popular
@@ -34,4 +35,5 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Self-Hosted LLM Serving with vLLM, Metrics, and a Health Gate](./intermediate-vllm-serving-with-observability.md) — Deploy an open-weight model behind vLLM's OpenAI-compatible server with Prometheus metrics, readiness gating, and cost-aware batching
 - [Local LLM Chat](./starter-local-llm-chat.md) — Stand up a private local chat stack: Ollama plus Open WebUI via Docker Compose, no cloud API calls

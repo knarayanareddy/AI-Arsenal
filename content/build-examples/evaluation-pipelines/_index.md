@@ -26,7 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
-_No entries yet._
+- [Golden-Set Eval Harness](./starter-golden-set-eval-harness.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Golden-Set Eval Harness](./starter-golden-set-eval-harness.md) — A minimal, versioned eval harness that scores an LLM feature against a golden question set with both deterministic assertions and an LLM judge

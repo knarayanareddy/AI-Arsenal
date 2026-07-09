@@ -8,7 +8,7 @@
 |---|---:|---|
 | [architectures](./architectures/) | 26 entries | 2026-07-09 |
 | [benchmarks](./benchmarks/) | 50 entries | 2026-07-09 |
-| [build examples](./build-examples/) | 8 entries | 2026-07-09 |
+| [build examples](./build-examples/) | 12 entries | 2026-07-09 |
 | [community](./community/) | 57 entries | 2026-07-09 |
 | [digests](./digests/) | 1 entries | 2026-07-09 |
 | [observability](./observability/) | 16 entries | 2026-07-09 |

@@ -26,7 +26,7 @@ _No entries yet. This phase folder was created during the Build Examples vertica
 
 ### Recently Added
 
-_No entries yet._
+- [Image Q&A with an Open Vision-Language Model](./starter-image-qa-with-vlm.md)
 
 ### Most Popular
 
@@ -34,4 +34,4 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-_No entries yet._
+- [Image Q&A with an Open Vision-Language Model](./starter-image-qa-with-vlm.md) — Ask questions about images using an open vision-language model, with a hosted-API path and a local self-hosted path

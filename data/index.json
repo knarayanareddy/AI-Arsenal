@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T12:42:26.729Z",
+    "generated_at": "2026-07-09T12:43:25.975Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
@@ -8,7 +8,7 @@
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
-    "total_build_examples": 8,
+    "total_build_examples": 12,
     "total_architectures": 26,
     "total_observability": 16,
     "total_community": 32,
@@ -5965,6 +5965,25 @@
       "path": "content/build-examples/rag-systems/intermediate-production-rag-api.md",
       "url": "content/build-examples/rag-systems/intermediate-production-rag-api",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "intermediate-vllm-serving-with-observability",
+      "type": "build-example",
+      "name": "Self-Hosted LLM Serving with vLLM, Metrics, and a Health Gate",
+      "description": "Deploy an open-weight model behind vLLM's OpenAI-compatible server with Prometheus metrics, readiness gating, and cost-aware batching",
+      "tags": [
+        "self-hosted",
+        "inference",
+        "observability"
+      ],
+      "path": "content/build-examples/production-deployment/intermediate-vllm-serving-with-observability.md",
+      "url": "content/build-examples/production-deployment/intermediate-vllm-serving-with-observability",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -12522,6 +12541,44 @@
       "featured": false
     },
     {
+      "id": "starter-golden-set-eval-harness",
+      "type": "build-example",
+      "name": "Golden-Set Eval Harness",
+      "description": "A minimal, versioned eval harness that scores an LLM feature against a golden question set with both deterministic assertions and an LLM judge",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "path": "content/build-examples/evaluation-pipelines/starter-golden-set-eval-harness.md",
+      "url": "content/build-examples/evaluation-pipelines/starter-golden-set-eval-harness",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "starter-image-qa-with-vlm",
+      "type": "build-example",
+      "name": "Image Q&A with an Open Vision-Language Model",
+      "description": "Ask questions about images using an open vision-language model, with a hosted-API path and a local self-hosted path",
+      "tags": [
+        "multimodal",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/build-examples/multimodal/starter-image-qa-with-vlm.md",
+      "url": "content/build-examples/multimodal/starter-image-qa-with-vlm",
+      "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "starter-local-llm-chat",
       "type": "build-example",
       "name": "Local LLM Chat",
@@ -12534,6 +12591,25 @@
       "path": "content/build-examples/production-deployment/starter-local-llm-chat.md",
       "url": "content/build-examples/production-deployment/starter-local-llm-chat",
       "last_updated": "2026-07-06",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "starter-lora-finetune-unsloth",
+      "type": "build-example",
+      "name": "LoRA Fine-Tune on a Single GPU with Unsloth",
+      "description": "Fine-tune a small open-weight model with LoRA on one consumer GPU using Unsloth, then merge and run the adapter locally",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/build-examples/fine-tuning-workflows/starter-lora-finetune-unsloth.md",
+      "url": "content/build-examples/fine-tuning-workflows/starter-lora-finetune-unsloth",
+      "last_updated": "2026-07-08",
       "category": null,
       "maturity": null,
       "cost_model": null,
