@@ -26,6 +26,7 @@ _To be populated once category content is authored._
 
 ### Recently Added
 
+- [Runbook: Detect and Fail Over a Model-Provider Outage in Minutes, Because Your Uptime Is Now Capped by a Dependency You Do Not Control](./runbook-for-model-provider-outage-and-failover.md)
 - [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./runbook-for-agent-and-rag-incidents.md)
 
 ### Most Popular
@@ -35,3 +36,4 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts](./runbook-for-agent-and-rag-incidents.md) — 
+- [Runbook: Detect and Fail Over a Model-Provider Outage in Minutes, Because Your Uptime Is Now Capped by a Dependency You Do Not Control](./runbook-for-model-provider-outage-and-failover.md) — 
