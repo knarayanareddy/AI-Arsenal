@@ -10,7 +10,7 @@
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-09 |
 | [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-09 |
 | [evaluation](./evaluation/) | 13 entries | 2026-07-09 |
-| [fine tuning](./fine-tuning/) | 8 entries | 2026-07-09 |
+| [fine tuning](./fine-tuning/) | 14 entries | 2026-07-09 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-09 |
 | [prompting](./prompting/) | 21 entries | 2026-07-09 |
 | [rag and retrieval](./rag-and-retrieval/) | 23 entries | 2026-07-09 |
@@ -24,9 +24,9 @@
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
 - [Deduplicate Near-Duplicate Chunks Before Indexing](./rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md)
+- [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md)
 - [Drop Low-Similarity Chunks With a Score Threshold](./rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md)
 - [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md)
-- [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md)
 
 ## Most Popular
 
@@ -63,6 +63,7 @@ _No star-tracked entries yet._
 - [Compress or Filter Retrieved Chunks When Context Cost Dominates](./cost-and-performance/compress-retrieved-context-before-generation.md) — 
 - [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md) — 
 - [Deduplicate Near-Duplicate Chunks Before Indexing](./rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md) — 
+- [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md) — 
 - [Define Explicit Fallbacks for Tool Failures](./agents-and-orchestration/define-fallbacks-for-tool-failures.md) — 
 - [Fail Tests When Important Context Sections Are Truncated](./evaluation/detect-context-truncation-in-tests.md) — 
 - [Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval](./rag-and-retrieval/detect-multi-hop-questions-explicitly.md) — 
@@ -83,4 +84,3 @@ _No star-tracked entries yet._
 - [Store Source Page and Section Metadata With Every Chunk](./rag-and-retrieval/keep-source-page-and-section-metadata.md) — 
 - [Log Every Agent State Transition, Not Just Final Output](./agents-and-orchestration/log-agent-state-transitions.md) — 
 - [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md) — 
-- [Log Both the Raw Model Output and the Parsed Result](./debugging-and-observability/log-raw-and-parsed-model-outputs.md) — 
