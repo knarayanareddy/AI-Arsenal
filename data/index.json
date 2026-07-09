@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:29:06.635Z",
+    "generated_at": "2026-07-09T21:31:04.624Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
-    "total_tips": 153,
+    "total_tips": 159,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -1677,6 +1677,25 @@
       "path": "content/tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash.md",
       "url": "content/tips-and-tricks/cost-and-performance/cache-embeddings-by-content-hash",
       "last_updated": "2026-07-02",
+      "category": "cost-reduction",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "cache-embeddings-keyed-by-content-hash",
+      "type": "tip",
+      "name": "Cache Embeddings Keyed by a Content Hash",
+      "description": "",
+      "tags": [
+        "rag",
+        "embeddings",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/rag-and-retrieval/cache-embeddings-keyed-by-content-hash.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/cache-embeddings-keyed-by-content-hash",
+      "last_updated": "2026-07-08",
       "category": "cost-reduction",
       "maturity": null,
       "cost_model": null,
@@ -3427,6 +3446,25 @@
       "featured": false
     },
     {
+      "id": "deduplicate-near-duplicate-chunks-before-indexing",
+      "type": "tip",
+      "name": "Deduplicate Near-Duplicate Chunks Before Indexing",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing",
+      "last_updated": "2026-07-08",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "deduplicate-training-data-before-fine-tuning",
       "type": "tip",
       "name": "Deduplicate Training Data Before Fine-Tuning",
@@ -3857,6 +3895,25 @@
       "url": "content/research/foundational/dosovitskiy-2020-vit",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "drop-low-similarity-chunks-with-a-score-threshold",
+      "type": "tip",
+      "name": "Drop Low-Similarity Chunks With a Score Threshold",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold",
+      "last_updated": "2026-07-08",
+      "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -6012,6 +6069,25 @@
       "path": "content/tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand.md",
       "url": "content/tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand",
       "last_updated": "2026-07-07",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "instruct-the-model-to-answer-only-from-retrieved-context",
+      "type": "tip",
+      "name": "Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch",
+      "description": "",
+      "tags": [
+        "rag",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context",
+      "last_updated": "2026-07-08",
       "category": "production-gotchas",
       "maturity": null,
       "cost_model": null,
@@ -8177,6 +8253,25 @@
       "url": "content/tips-and-tricks/inference-and-serving/match-context-length-to-ram",
       "last_updated": "2026-07-02",
       "category": "local-model-tips",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "match-the-distance-metric-to-your-embedding-model",
+      "type": "tip",
+      "name": "Match the Vector Distance Metric to Your Embedding Model",
+      "description": "",
+      "tags": [
+        "rag",
+        "embeddings",
+        "retrieval"
+      ],
+      "path": "content/tips-and-tricks/rag-and-retrieval/match-the-distance-metric-to-your-embedding-model.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/match-the-distance-metric-to-your-embedding-model",
+      "last_updated": "2026-07-08",
+      "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -10472,6 +10567,25 @@
       "path": "content/tips-and-tricks/rag-and-retrieval/prefer-reranking-before-rechunking.md",
       "url": "content/tips-and-tricks/rag-and-retrieval/prefer-reranking-before-rechunking",
       "last_updated": "2026-07-02",
+      "category": "rag-tuning",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "prepend-document-title-and-section-to-each-chunk",
+      "type": "tip",
+      "name": "Prepend the Document Title and Section Heading to Each Chunk",
+      "description": "",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "path": "content/tips-and-tricks/rag-and-retrieval/prepend-document-title-and-section-to-each-chunk.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/prepend-document-title-and-section-to-each-chunk",
+      "last_updated": "2026-07-08",
       "category": "rag-tuning",
       "maturity": null,
       "cost_model": null,

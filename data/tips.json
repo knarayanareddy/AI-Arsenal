@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:29:06.635Z",
-  "count": 153,
+  "generated_at": "2026-07-09T21:31:04.624Z",
+  "count": 159,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -925,6 +925,62 @@
       "body_text": "What & Why Hash normalized text content before generating an embedding, and check a cache keyed by that hash before making the embedding call. Re ingestion pipelines frequently re process unchanged documents (e.g. a full corpus re run after a code change), and without content hash caching, every re run generates duplicate embeddings for content that hasn't actually changed. Before / After Before: embedding = embed(text) called unconditionally on every ingestion run, even for unchanged documents. After: cache key = sha256(normalize(text)); embedding = cache.get(cache key) or embed(text) — the embedding call is skipped entirely for previously seen content. Implementation Normalize text content (consistent whitespace, casing, encoding) before hashing, use the hash as a cache key, check the cache before calling the embedding API, and store the result on a cache miss. Gotchas The hash must be computed over normalized text — hashing raw unnormalized text produces cache misses for semantically identical but byte different content This differs from use semantic cache for repeated questions (near duplicate matching) — content hash caching only catches exact content re embedding When NOT to Apply Skip this if your ingestion pipeline never re processes previously seen content (e.g. strictly append only, never re run) Not useful if your embedding provider already deduplicates identical inputs server side at no cost to you Verification Community reported: content hash keyed embedding caching to avoid duplicate calls is a widely repeated recommendation in RAG ingestion cost optimization writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "cache-embeddings-keyed-by-content-hash",
+      "title": "Cache Embeddings Keyed by a Content Hash",
+      "category": "cost-reduction",
+      "tags": [
+        "rag",
+        "embeddings",
+        "efficiency"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "rag-and-retrieval",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (RAG ingestion cost writeups)",
+      "applies_to": [
+        "rag-pipelines",
+        "document-ingestion"
+      ],
+      "gotchas": [
+        "The cache key must include the embedding model name and version, not only the text hash — reusing a vector produced by a different model silently mixes incompatible embedding spaces and corrupts retrieval",
+        "Hashing raw text before normalization means trivially different whitespace or casing produces cache misses; decide on a canonicalization step and hash the canonical form, or accept the extra misses"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "evaluate-embedding-models-before-rechunking",
+        "store-parser-version-with-every-chunk"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/rag-and-retrieval/cache-embeddings-keyed-by-content-hash.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/cache-embeddings-keyed-by-content-hash",
+      "slug": "cache-embeddings-keyed-by-content-hash",
+      "section_path": "content/tips-and-tricks/rag-and-retrieval",
+      "display_name": "Cache Embeddings Keyed by a Content Hash",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 344,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Cache each chunk's embedding under a key derived from a hash of its content (plus the model identity), so re-running ingestion only embeds chunks whose text actually changed. Ingestion pipelines are re-run constantly — a re-crawl, a chunking tweak, a schema migration — and naively re-embedding the whole corpus each time pays the full embedding bill and latency for content that is byte-for-byte identical to last run. A content-hash cache turns a full re-embed into an incremental one.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Every ingestion run embeds all N chunks, so fixing a typo in one document re-embeds the entire corpus and re-pays the whole API/compute cost.</p>\n<p><strong>After:</strong> Each chunk is looked up by <code>hash(canonical_text) + model_id</code>; unchanged chunks hit the cache, and only new or edited chunks are embedded — cost and time scale with the diff, not the corpus.</p>\n<h2>Implementation</h2>\n<p>Compute a stable hash of the canonicalized chunk text, concatenate the embedding model name and version into the key, and store <code>key -&gt; vector</code> in a persistent store (a key-value table or a column alongside the chunk). On each run, look up before embedding; embed and write back only on a miss. Invalidate implicitly by changing the model component of the key when you switch models.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>The cache key must include the embedding model name and version, not only the text hash — reusing a vector from a different model mixes incompatible embedding spaces and corrupts retrieval.</li>\n<li>Hashing raw text before normalization makes trivial whitespace/casing differences miss; hash a canonical form or accept the extra misses.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip for a small corpus embedded once and rarely re-ingested — the cache infrastructure outweighs the saving.</li>\n<li>Not worth it when content changes almost entirely between runs (a fully volatile feed), since the hit rate approaches zero.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: content-hash embedding caches are a common ingestion-cost optimization in RAG writeups; exact savings depend on your corpus churn rate and are not benchmarked here.</p>\n",
+      "body_text": "What & Why Cache each chunk's embedding under a key derived from a hash of its content (plus the model identity), so re running ingestion only embeds chunks whose text actually changed. Ingestion pipelines are re run constantly — a re crawl, a chunking tweak, a schema migration — and naively re embedding the whole corpus each time pays the full embedding bill and latency for content that is byte for byte identical to last run. A content hash cache turns a full re embed into an incremental one. Before / After Before: Every ingestion run embeds all N chunks, so fixing a typo in one document re embeds the entire corpus and re pays the whole API/compute cost. After: Each chunk is looked up by hash(canonical text) + model id; unchanged chunks hit the cache, and only new or edited chunks are embedded — cost and time scale with the diff, not the corpus. Implementation Compute a stable hash of the canonicalized chunk text, concatenate the embedding model name and version into the key, and store key vector in a persistent store (a key value table or a column alongside the chunk). On each run, look up before embedding; embed and write back only on a miss. Invalidate implicitly by changing the model component of the key when you switch models. Gotchas The cache key must include the embedding model name and version, not only the text hash — reusing a vector from a different model mixes incompatible embedding spaces and corrupts retrieval. Hashing raw text before normalization makes trivial whitespace/casing differences miss; hash a canonical form or accept the extra misses. When NOT to Apply Skip for a small corpus embedded once and rarely re ingested — the cache infrastructure outweighs the saving. Not worth it when content changes almost entirely between runs (a fully volatile feed), since the hit rate approaches zero. Verification Community reported: content hash embedding caches are a common ingestion cost optimization in RAG writeups; exact savings depend on your corpus churn rate and are not benchmarked here."
+    },
+    {
       "id": "cache-idempotent-tool-results-within-a-run",
       "title": "Cache Idempotent Tool Results Within an Agent Run",
       "category": "agent-reliability",
@@ -1584,6 +1640,62 @@
       "body_text": "What & Why Carry the application's request/correlation ID into every LLM span, log line, and eval record, so a single user complaint can be traced from the frontend click through retrieval, each model call, and the final response. LLM observability tools and application APM often live in separate systems; without a shared ID, debugging means timestamp archaeology — matching a 14:32:07 support ticket against thousands of anonymous traces. With it, \"user X got a wrong answer at 14:32\" resolves to the exact trace in seconds. Before / After Before: Support ticket says \"the bot told me to cancel my subscription to fix billing\" — engineers grep logs by approximate time and hope the user's request stands out among hundreds. After: The ticket carries request id=abc123; one query returns the full trace — the retrieved chunks, the prompt version, the model response — and the bad retrieved document is identified in one minute. Implementation Accept/generate the correlation ID at the edge, propagate it via context (HTTP headers, job payloads, async task metadata), and attach it as a standard attribute on every LLM span and structured log line — OpenTelemetry trace context does this for free if your LLM instrumentation joins the existing trace instead of starting its own. Gotchas The ID must originate at the edge and be propagated, not regenerated per service Async/queued work drops context silently — verify the ID survives job serialization When NOT to Apply Rarely skip worthy; the only real exception is throwaway prototypes with no users, where there is nothing to correlate yet Verification Community reported: request ID correlation is standard distributed tracing practice extended to LLM spans, recommended across LLM observability tooling documentation; not independently benchmarked here against a named production system."
     },
     {
+      "id": "deduplicate-near-duplicate-chunks-before-indexing",
+      "title": "Deduplicate Near-Duplicate Chunks Before Indexing",
+      "category": "rag-tuning",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "half a day",
+      "phase": "rag-and-retrieval",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (RAG ingestion pipeline writeups)",
+      "applies_to": [
+        "rag-pipelines",
+        "document-ingestion"
+      ],
+      "gotchas": [
+        "Near-duplicate boilerplate (headers, footers, repeated legal notices, copy-pasted sections across documents) fills the top-k with the same content phrased slightly differently, crowding out the one distinct passage that actually answers the question",
+        "Exact-hash dedup misses near-duplicates that differ by a timestamp or a whitespace change; you need a similarity threshold (e.g. cosine over embeddings or MinHash) to catch them, and setting that threshold too aggressively deletes genuinely distinct passages"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "measure-retrieval-recall-before-answer-quality",
+        "keep-source-page-and-section-metadata"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing",
+      "slug": "deduplicate-near-duplicate-chunks-before-indexing",
+      "section_path": "content/tips-and-tricks/rag-and-retrieval",
+      "display_name": "Deduplicate Near-Duplicate Chunks Before Indexing",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 332,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Remove near-duplicate chunks before they enter the index. Corpora assembled from real documents are full of repeated boilerplate — navigation headers, footers, legal disclaimers, sections copy-pasted across files. When several near-identical chunks all embed close to a query, they occupy multiple top-k slots with effectively the same content, pushing the one distinct passage that answers the question out of the returned set. The retrieval budget is fixed; duplicates spend it on redundancy.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Every parsed chunk is embedded and indexed as-is, so a disclaimer repeated across 200 documents becomes 200 near-identical vectors that dominate retrieval for any query mentioning its terms.</p>\n<p><strong>After:</strong> A dedup pass collapses near-identical chunks to one (or strips shared boilerplate before chunking), so the top-k carries distinct passages and the answer-bearing chunk is not crowded out.</p>\n<h2>Implementation</h2>\n<p>Run a dedup stage between parsing and indexing. Strip known repeated boilerplate structurally where you can (header/footer templates). For content-level near-duplicates, cluster by a similarity signal — MinHash/SimHash on text, or cosine over embeddings above a threshold — and keep one representative per cluster, recording the collapsed count in metadata. Validate the threshold on a sample so distinct passages are not merged.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Near-duplicate boilerplate crowds the top-k with the same content phrased slightly differently, displacing the distinct passage that answers the question.</li>\n<li>Exact-hash dedup misses near-duplicates differing by a timestamp or whitespace; a too-aggressive similarity threshold deletes genuinely distinct passages.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip when the corpus is already clean and distinct (curated knowledge base with no repeated boilerplate) — the dedup pass is then pure overhead.</li>\n<li>Avoid aggressive dedup when small differences are semantically important (versioned policies where each near-duplicate is a distinct effective document).</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: boilerplate/near-duplicate removal is a recurring recommendation in RAG ingestion writeups; the specific threshold and technique are corpus-dependent and not benchmarked here against a named system.</p>\n",
+      "body_text": "What & Why Remove near duplicate chunks before they enter the index. Corpora assembled from real documents are full of repeated boilerplate — navigation headers, footers, legal disclaimers, sections copy pasted across files. When several near identical chunks all embed close to a query, they occupy multiple top k slots with effectively the same content, pushing the one distinct passage that answers the question out of the returned set. The retrieval budget is fixed; duplicates spend it on redundancy. Before / After Before: Every parsed chunk is embedded and indexed as is, so a disclaimer repeated across 200 documents becomes 200 near identical vectors that dominate retrieval for any query mentioning its terms. After: A dedup pass collapses near identical chunks to one (or strips shared boilerplate before chunking), so the top k carries distinct passages and the answer bearing chunk is not crowded out. Implementation Run a dedup stage between parsing and indexing. Strip known repeated boilerplate structurally where you can (header/footer templates). For content level near duplicates, cluster by a similarity signal — MinHash/SimHash on text, or cosine over embeddings above a threshold — and keep one representative per cluster, recording the collapsed count in metadata. Validate the threshold on a sample so distinct passages are not merged. Gotchas Near duplicate boilerplate crowds the top k with the same content phrased slightly differently, displacing the distinct passage that answers the question. Exact hash dedup misses near duplicates differing by a timestamp or whitespace; a too aggressive similarity threshold deletes genuinely distinct passages. When NOT to Apply Skip when the corpus is already clean and distinct (curated knowledge base with no repeated boilerplate) — the dedup pass is then pure overhead. Avoid aggressive dedup when small differences are semantically important (versioned policies where each near duplicate is a distinct effective document). Verification Community reported: boilerplate/near duplicate removal is a recurring recommendation in RAG ingestion writeups; the specific threshold and technique are corpus dependent and not benchmarked here against a named system."
+    },
+    {
       "id": "deduplicate-training-data-before-fine-tuning",
       "title": "Deduplicate Training Data Before Fine-Tuning",
       "category": "debugging-llm-apps",
@@ -1908,6 +2020,62 @@
       "word_count": 259,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Set up at least sampled trace capture (prompts, responses, key intermediate steps) before a system goes live with real user traffic, rather than adding tracing reactively after the first production incident. Without any pre-launch trace capture, early failures leave no diagnostic record, and by the time tracing is added the specific failing conditions are often gone.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> a feature launches with no tracing infrastructure in place; tracing gets added only after the first significant production incident.</p>\n<p><strong>After:</strong> trace sampling (even at a modest rate, e.g. 10-20% of requests) is wired in before launch, capturing enough real traffic to diagnose early issues.</p>\n<h2>Implementation</h2>\n<p>Wire trace capture into the request path before launch, set an initial sampling rate that balances cost against diagnostic coverage, and adjust the rate upward temporarily around launch if early issue volume warrants closer visibility.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Launching without trace capture means early failures leave no diagnostic record, and reactive tracing often can't reconstruct the failing conditions</li>\n<li>100% sampling can be cost-prohibitive at scale — the goal is a reasonable non-zero rate, not necessarily full capture from day one</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip elaborate sampling infrastructure for an internal-only prototype with no real user traffic or reliability requirement</li>\n<li>Not necessary if a mature tracing platform is already standard across your organization's launches and this is already satisfied by default</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: capturing sampled traces before launch is a widely repeated recommendation in pre-launch observability checklists, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Set up at least sampled trace capture (prompts, responses, key intermediate steps) before a system goes live with real user traffic, rather than adding tracing reactively after the first production incident. Without any pre launch trace capture, early failures leave no diagnostic record, and by the time tracing is added the specific failing conditions are often gone. Before / After Before: a feature launches with no tracing infrastructure in place; tracing gets added only after the first significant production incident. After: trace sampling (even at a modest rate, e.g. 10 20% of requests) is wired in before launch, capturing enough real traffic to diagnose early issues. Implementation Wire trace capture into the request path before launch, set an initial sampling rate that balances cost against diagnostic coverage, and adjust the rate upward temporarily around launch if early issue volume warrants closer visibility. Gotchas Launching without trace capture means early failures leave no diagnostic record, and reactive tracing often can't reconstruct the failing conditions 100% sampling can be cost prohibitive at scale — the goal is a reasonable non zero rate, not necessarily full capture from day one When NOT to Apply Skip elaborate sampling infrastructure for an internal only prototype with no real user traffic or reliability requirement Not necessary if a mature tracing platform is already standard across your organization's launches and this is already satisfied by default Verification Community reported: capturing sampled traces before launch is a widely repeated recommendation in pre launch observability checklists, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "drop-low-similarity-chunks-with-a-score-threshold",
+      "title": "Drop Low-Similarity Chunks With a Score Threshold",
+      "category": "rag-tuning",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "rag-and-retrieval",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (RAG precision tuning writeups)",
+      "applies_to": [
+        "rag-pipelines",
+        "document-qa"
+      ],
+      "gotchas": [
+        "A fixed top-k always returns k chunks even when only one is actually relevant, so the generator receives padding it may treat as evidence — a similarity-score floor drops the padding, but the threshold must be tuned per embedding model since raw score scales differ",
+        "Set the threshold too high and you filter out the answer on hard queries, converting a precision fix into a recall regression; validate it on a labeled set and prefer erring toward keeping borderline chunks"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "measure-retrieval-recall-before-answer-quality",
+        "use-metadata-filters-before-similarity-search"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold",
+      "slug": "drop-low-similarity-chunks-with-a-score-threshold",
+      "section_path": "content/tips-and-tricks/rag-and-retrieval",
+      "display_name": "Drop Low-Similarity Chunks With a Score Threshold",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 353,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Filter retrieved chunks by a minimum similarity score instead of always passing a fixed top-k to the generator. A top-k of, say, 5 returns five chunks whether or not five are relevant; on a narrow query where only one chunk matches, the other four are low-relevance padding the model may still treat as evidence, inviting distraction and hallucination. A score floor keeps only chunks that clear a relevance bar, so easy queries send one strong chunk and hard queries send several — the context adapts to the query.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>retrieve(query, top_k=5)</code> always returns 5 chunks; a precise query about one fact ships 1 relevant chunk plus 4 weak ones the generator has to ignore.</p>\n<p><strong>After:</strong> <code>retrieve(query, top_k=5, min_score=T)</code> returns only chunks above threshold <code>T</code> — often the 1 relevant chunk for a precise query, and still several for a broad one.</p>\n<h2>Implementation</h2>\n<p>Retrieve a top-k as usual, then drop chunks whose similarity score falls below a tuned threshold, keeping at least one to avoid an empty context (or explicitly handling the empty case). Calibrate the threshold on a labeled eval set for your specific embedding model, since raw score ranges are not comparable across models. Re-tune when you change the embedding model.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A fixed top-k always returns k chunks even when only one is relevant, feeding the generator padding it may treat as evidence; the threshold must be tuned per embedding model since score scales differ.</li>\n<li>Too high a threshold filters out the answer on hard queries — a precision fix becomes a recall regression; validate on labels and lean toward keeping borderline chunks.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip when your generator already handles irrelevant context robustly and recall is the binding constraint — filtering then only risks dropping answers.</li>\n<li>Not useful before you have a labeled set to calibrate against, since an uncalibrated threshold is guesswork that can silently hurt recall.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: similarity-threshold filtering is a common RAG precision technique; the right threshold is model- and corpus-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Filter retrieved chunks by a minimum similarity score instead of always passing a fixed top k to the generator. A top k of, say, 5 returns five chunks whether or not five are relevant; on a narrow query where only one chunk matches, the other four are low relevance padding the model may still treat as evidence, inviting distraction and hallucination. A score floor keeps only chunks that clear a relevance bar, so easy queries send one strong chunk and hard queries send several — the context adapts to the query. Before / After Before: retrieve(query, top k=5) always returns 5 chunks; a precise query about one fact ships 1 relevant chunk plus 4 weak ones the generator has to ignore. After: retrieve(query, top k=5, min score=T) returns only chunks above threshold T — often the 1 relevant chunk for a precise query, and still several for a broad one. Implementation Retrieve a top k as usual, then drop chunks whose similarity score falls below a tuned threshold, keeping at least one to avoid an empty context (or explicitly handling the empty case). Calibrate the threshold on a labeled eval set for your specific embedding model, since raw score ranges are not comparable across models. Re tune when you change the embedding model. Gotchas A fixed top k always returns k chunks even when only one is relevant, feeding the generator padding it may treat as evidence; the threshold must be tuned per embedding model since score scales differ. Too high a threshold filters out the answer on hard queries — a precision fix becomes a recall regression; validate on labels and lean toward keeping borderline chunks. When NOT to Apply Skip when your generator already handles irrelevant context robustly and recall is the binding constraint — filtering then only risks dropping answers. Not useful before you have a labeled set to calibrate against, since an uncalibrated threshold is guesswork that can silently hurt recall. Verification Community reported: similarity threshold filtering is a common RAG precision technique; the right threshold is model and corpus specific and is not benchmarked here."
     },
     {
       "id": "drop-unused-conversation-history",
@@ -2398,6 +2566,63 @@
       "word_count": 291,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Before launching any fine-tuning run, read 30-50 uniformly random examples from the final, serialized training file — the exact artifact the trainer will consume. Fine-tuning amplifies whatever is in the data: duplicated examples, leaked eval items, broken chat templates, truncated completions, and mislabeled records all train in silently and surface later as mysterious quality regressions. An hour of reading catches the failure classes that no aggregate statistic flags.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The dataset pipeline reports 12,000 examples and passes a schema check; training starts. The model learns to end every response with a stray <code>&lt;/s&gt;assistant</code> because a template bug affected 40% of examples.</p>\n<p><strong>After:</strong> Random-sample review before the run catches the malformed template in minutes; the run starts on clean data.</p>\n<h2>Implementation</h2>\n<p>Sample uniformly at random from the final training file (not the upstream database). Read each example end-to-end asking: is the completion actually correct, is the format the one inference will use, would I want the model to produce this? Track the defect rate; anything above a few percent blocks the run and triggers a pipeline fix, not manual patching of the sampled items.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Head-of-file sampling misses mid-pipeline corruption — randomize</li>\n<li>Reviewing source records rather than serialized examples misses the template bugs that live in the final formatting step</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip re-review when the data pipeline is unchanged and only hyperparameters differ from the previous inspected run</li>\n<li>Manual reading does not replace automated dedup and eval-leakage checks — it complements them; skip neither</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: hand-inspection before training is a standing recommendation in fine-tuning postmortems and data-quality writeups; the specific defect rates it catches are anecdotal.</p>\n",
       "body_text": "What & Why Before launching any fine tuning run, read 30 50 uniformly random examples from the final, serialized training file — the exact artifact the trainer will consume. Fine tuning amplifies whatever is in the data: duplicated examples, leaked eval items, broken chat templates, truncated completions, and mislabeled records all train in silently and surface later as mysterious quality regressions. An hour of reading catches the failure classes that no aggregate statistic flags. Before / After Before: The dataset pipeline reports 12,000 examples and passes a schema check; training starts. The model learns to end every response with a stray </s assistant because a template bug affected 40% of examples. After: Random sample review before the run catches the malformed template in minutes; the run starts on clean data. Implementation Sample uniformly at random from the final training file (not the upstream database). Read each example end to end asking: is the completion actually correct, is the format the one inference will use, would I want the model to produce this? Track the defect rate; anything above a few percent blocks the run and triggers a pipeline fix, not manual patching of the sampled items. Gotchas Head of file sampling misses mid pipeline corruption — randomize Reviewing source records rather than serialized examples misses the template bugs that live in the final formatting step When NOT to Apply Skip re review when the data pipeline is unchanged and only hyperparameters differ from the previous inspected run Manual reading does not replace automated dedup and eval leakage checks — it complements them; skip neither Verification Community reported: hand inspection before training is a standing recommendation in fine tuning postmortems and data quality writeups; the specific defect rates it catches are anecdotal."
+    },
+    {
+      "id": "instruct-the-model-to-answer-only-from-retrieved-context",
+      "title": "Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch",
+      "category": "production-gotchas",
+      "tags": [
+        "rag",
+        "llm",
+        "evaluation"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "an hour",
+      "phase": "rag-and-retrieval",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (grounded-RAG prompting writeups)",
+      "applies_to": [
+        "rag-pipelines",
+        "document-qa",
+        "citation-required-answers"
+      ],
+      "gotchas": [
+        "Without an explicit 'say you don't know if the context lacks the answer' instruction, the model falls back on parametric knowledge when retrieval misses, producing a fluent answer ungrounded in your corpus that looks identical to a grounded one",
+        "A no-answer escape hatch trades some helpfulness for faithfulness — the model may abstain on questions it could have answered from partial context, so tune the strictness and measure both the hallucination rate and the abstention rate, not only one"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "keep-instructions-outside-retrieved-context",
+        "measure-retrieval-recall-before-answer-quality"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context",
+      "slug": "instruct-the-model-to-answer-only-from-retrieved-context",
+      "section_path": "content/tips-and-tricks/rag-and-retrieval",
+      "display_name": "Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 375,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Tell the model explicitly to answer only from the retrieved context and to say it does not know when the context does not contain the answer. RAG retrieves imperfectly, and when the right passage is missing, an unconstrained model does not fail — it answers from its parametric memory, producing a confident, fluent response that is not grounded in your corpus and is indistinguishable from a grounded one to the end user. An explicit grounding instruction plus a no-answer escape hatch converts silent hallucination into an honest abstention you can detect and route.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The prompt is \"Answer the question using the context: {context}\\n\\nQuestion: {q}\" — on a retrieval miss the model answers anyway from prior knowledge, and no signal distinguishes that from a grounded answer.</p>\n<p><strong>After:</strong> The prompt adds \"Use only the provided context. If the context does not contain the answer, reply exactly: 'I don't have that information.'\" — misses now surface as a detectable abstention instead of a fabricated answer.</p>\n<h2>Implementation</h2>\n<p>Add a grounding directive to the system/instruction portion of the prompt (kept structurally separate from the retrieved text) that (1) restricts answers to the supplied context and (2) specifies a fixed no-answer response. Monitor the rate of the no-answer token in production as a retrieval-health signal, and evaluate on a labeled set that includes unanswerable questions so you measure both hallucination and over-abstention.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Without an explicit \"say you don't know\" instruction, the model falls back on parametric knowledge when retrieval misses, producing an ungrounded answer that looks identical to a grounded one.</li>\n<li>The escape hatch trades helpfulness for faithfulness; the model may abstain when it could have partially answered, so measure both hallucination and abstention rates and tune strictness.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip the strict form when the product intentionally blends retrieved context with the model's general knowledge (an assistant, not a closed-book document QA system).</li>\n<li>Less critical when retrieval recall is measured and consistently high and answers are not user-facing or high-stakes.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: grounding instructions with a no-answer option are standard in faithful-RAG prompting; the effect on hallucination and abstention is prompt- and model-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Tell the model explicitly to answer only from the retrieved context and to say it does not know when the context does not contain the answer. RAG retrieves imperfectly, and when the right passage is missing, an unconstrained model does not fail — it answers from its parametric memory, producing a confident, fluent response that is not grounded in your corpus and is indistinguishable from a grounded one to the end user. An explicit grounding instruction plus a no answer escape hatch converts silent hallucination into an honest abstention you can detect and route. Before / After Before: The prompt is \"Answer the question using the context: {context}\\n\\nQuestion: {q}\" — on a retrieval miss the model answers anyway from prior knowledge, and no signal distinguishes that from a grounded answer. After: The prompt adds \"Use only the provided context. If the context does not contain the answer, reply exactly: 'I don't have that information.'\" — misses now surface as a detectable abstention instead of a fabricated answer. Implementation Add a grounding directive to the system/instruction portion of the prompt (kept structurally separate from the retrieved text) that (1) restricts answers to the supplied context and (2) specifies a fixed no answer response. Monitor the rate of the no answer token in production as a retrieval health signal, and evaluate on a labeled set that includes unanswerable questions so you measure both hallucination and over abstention. Gotchas Without an explicit \"say you don't know\" instruction, the model falls back on parametric knowledge when retrieval misses, producing an ungrounded answer that looks identical to a grounded one. The escape hatch trades helpfulness for faithfulness; the model may abstain when it could have partially answered, so measure both hallucination and abstention rates and tune strictness. When NOT to Apply Skip the strict form when the product intentionally blends retrieved context with the model's general knowledge (an assistant, not a closed book document QA system). Less critical when retrieval recall is measured and consistently high and answers are not user facing or high stakes. Verification Community reported: grounding instructions with a no answer option are standard in faithful RAG prompting; the effect on hallucination and abstention is prompt and model specific and is not benchmarked here."
     },
     {
       "id": "keep-a-kill-switch-for-agent-actions",
@@ -3110,6 +3335,62 @@
       "word_count": 272,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Set the configured maximum context length for a local model based on the actual RAM available on the target hardware, and test with realistic (not minimal) context before a demo or deployment. Context window size directly drives KV cache memory usage; a context length configured for a high-RAM development machine can exhaust memory or degrade badly on lower-spec target hardware.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> context length configured at the model's maximum supported value regardless of target hardware RAM.</p>\n<p><strong>After:</strong> context length capped based on a memory budget calculated from the target hardware's available RAM, verified with a realistic-length test prompt before deployment.</p>\n<h2>Implementation</h2>\n<p>Calculate expected KV cache memory usage at your intended context length (a function of model size, layer count, and context length), compare against actual available RAM on the target hardware, and cap the configured context length below the point where memory pressure appears.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Larger context windows increase KV cache memory usage substantially — a context length fine at short prompts can exhaust RAM at real lengths</li>\n<li>Memory pressure can manifest as a crash, silent truncation, or severe slowdown depending on the runtime — test the actual failure mode on target hardware</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this calculation if you're serving via a cloud API where memory management is the provider's responsibility, not yours</li>\n<li>Not necessary if your target hardware has ample RAM headroom well beyond your maximum realistic context length</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: matching configured context length to available RAM before demos is a widely repeated recommendation in local-model deployment writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Set the configured maximum context length for a local model based on the actual RAM available on the target hardware, and test with realistic (not minimal) context before a demo or deployment. Context window size directly drives KV cache memory usage; a context length configured for a high RAM development machine can exhaust memory or degrade badly on lower spec target hardware. Before / After Before: context length configured at the model's maximum supported value regardless of target hardware RAM. After: context length capped based on a memory budget calculated from the target hardware's available RAM, verified with a realistic length test prompt before deployment. Implementation Calculate expected KV cache memory usage at your intended context length (a function of model size, layer count, and context length), compare against actual available RAM on the target hardware, and cap the configured context length below the point where memory pressure appears. Gotchas Larger context windows increase KV cache memory usage substantially — a context length fine at short prompts can exhaust RAM at real lengths Memory pressure can manifest as a crash, silent truncation, or severe slowdown depending on the runtime — test the actual failure mode on target hardware When NOT to Apply Skip this calculation if you're serving via a cloud API where memory management is the provider's responsibility, not yours Not necessary if your target hardware has ample RAM headroom well beyond your maximum realistic context length Verification Community reported: matching configured context length to available RAM before demos is a widely repeated recommendation in local model deployment writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "match-the-distance-metric-to-your-embedding-model",
+      "title": "Match the Vector Distance Metric to Your Embedding Model",
+      "category": "rag-tuning",
+      "tags": [
+        "rag",
+        "embeddings",
+        "retrieval"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "rag-and-retrieval",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (vector store configuration writeups)",
+      "applies_to": [
+        "rag-pipelines",
+        "document-ingestion"
+      ],
+      "gotchas": [
+        "A vector index configured with the wrong distance metric (e.g. Euclidean on embeddings the model trained for cosine) still returns results and never errors — retrieval quietly degrades and looks like a chunking or embedding-quality problem instead of a config bug",
+        "Cosine and dot-product rankings diverge only when vectors are not unit-normalized; if your model does not normalize outputs, dot product is sensitive to magnitude while cosine is not, and the two can rank candidates differently"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "evaluate-embedding-models-before-rechunking",
+        "measure-retrieval-recall-before-answer-quality"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/rag-and-retrieval/match-the-distance-metric-to-your-embedding-model.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/match-the-distance-metric-to-your-embedding-model",
+      "slug": "match-the-distance-metric-to-your-embedding-model",
+      "section_path": "content/tips-and-tricks/rag-and-retrieval",
+      "display_name": "Match the Vector Distance Metric to Your Embedding Model",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 343,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Configure your vector index with the distance metric the embedding model was trained for — usually cosine similarity, sometimes dot product — rather than the store's default. Vector databases default to a metric (often Euclidean/L2) that may not match how the model's embedding space encodes similarity. The index still returns nearest neighbors under the wrong metric and never raises an error, so retrieval quietly underperforms and the failure gets misattributed to chunking or embedding quality instead of a one-line configuration mismatch.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The collection is created with the store's default L2 metric while the embedding model documents cosine similarity; recall is mediocre and the team starts re-chunking to fix it.</p>\n<p><strong>After:</strong> The collection uses the model's documented metric (cosine, with normalized vectors); rankings reflect the space the model actually learned, and recall improves with no content change.</p>\n<h2>Implementation</h2>\n<p>Check the embedding model's documentation for its intended similarity function and whether it emits normalized vectors. Create the index/collection with that metric explicitly. If the model expects cosine but your store only offers dot product, normalize vectors to unit length at write time so dot product equals cosine. Re-verify the setting whenever you swap embedding models, since the correct metric can change with the model.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A wrong distance metric still returns results and never errors — retrieval degrades quietly and looks like a chunking or embedding-quality problem instead of a config bug.</li>\n<li>Cosine and dot-product rankings diverge when vectors are not unit-normalized; a model that does not normalize makes dot product magnitude-sensitive while cosine is not.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>No action needed when the store's default already matches the model's intended metric (many default to cosine for text embeddings) — verify rather than change blindly.</li>\n<li>Skip re-tuning if you have not changed the embedding model and retrieval is already validated as healthy.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: metric-model mismatch is a well-known silent RAG misconfiguration; the retrieval-quality impact is corpus- and model-specific and is not benchmarked here.</p>\n",
+      "body_text": "What & Why Configure your vector index with the distance metric the embedding model was trained for — usually cosine similarity, sometimes dot product — rather than the store's default. Vector databases default to a metric (often Euclidean/L2) that may not match how the model's embedding space encodes similarity. The index still returns nearest neighbors under the wrong metric and never raises an error, so retrieval quietly underperforms and the failure gets misattributed to chunking or embedding quality instead of a one line configuration mismatch. Before / After Before: The collection is created with the store's default L2 metric while the embedding model documents cosine similarity; recall is mediocre and the team starts re chunking to fix it. After: The collection uses the model's documented metric (cosine, with normalized vectors); rankings reflect the space the model actually learned, and recall improves with no content change. Implementation Check the embedding model's documentation for its intended similarity function and whether it emits normalized vectors. Create the index/collection with that metric explicitly. If the model expects cosine but your store only offers dot product, normalize vectors to unit length at write time so dot product equals cosine. Re verify the setting whenever you swap embedding models, since the correct metric can change with the model. Gotchas A wrong distance metric still returns results and never errors — retrieval degrades quietly and looks like a chunking or embedding quality problem instead of a config bug. Cosine and dot product rankings diverge when vectors are not unit normalized; a model that does not normalize makes dot product magnitude sensitive while cosine is not. When NOT to Apply No action needed when the store's default already matches the model's intended metric (many default to cosine for text embeddings) — verify rather than change blindly. Skip re tuning if you have not changed the embedding model and retrieval is already validated as healthy. Verification Community reported: metric model mismatch is a well known silent RAG misconfiguration; the retrieval quality impact is corpus and model specific and is not benchmarked here."
     },
     {
       "id": "match-training-and-inference-prompt-formats",
@@ -4243,6 +4524,63 @@
       "word_count": 388,
       "body_html": "<h2>What &amp; Why</h2>\n<p>When RAG answer quality is poor, try adding a reranking pass over first-stage retrieved candidates before re-tuning chunk size or overlap. Rechunking requires re-indexing the entire corpus and re-testing extensively; adding a reranker is a smaller, faster, more reversible change that often fixes precision problems (the right chunk was retrieved, but ranked too low to be used) without touching the index at all.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> top-k chunks from a single dense-retrieval pass are sent directly to the generator, with no second-stage quality check on ranking order.</p>\n<p><strong>After:</strong> retrieve a larger first-stage candidate set (e.g. top-20), rerank with a cross-encoder model, and pass only the reranked top-k (e.g. top-4) to the generator.</p>\n<h2>Implementation</h2>\n<p>Increase first-stage retrieval to a wider candidate pool (top-15 to top-30), score each candidate against the query with a cross-encoder reranker, and truncate to the final top-k after reranking — no changes to the underlying index or chunk boundaries are required.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A reranker adds latency (a second model pass over candidates) — for latency-sensitive paths, measure the added time before committing to this over changing chunking</li>\n<li>Reranking only helps if the correct answer is somewhere in the first-stage retrieved set — if first-stage recall is the actual problem, reranking the wrong candidates will not fix it (diagnose with <code>measure-retrieval-recall-before-answer-quality</code> first)</li>\n<li>Cross-encoder rerankers score one (query, candidate) pair at a time — reranking a large candidate set adds meaningful latency; keep the first-stage top-k modest (15–30, not hundreds)</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if diagnosis already shows the correct chunk is never in the first-stage retrieved set at all (a recall problem, not a ranking problem) — fix retrieval or chunking first, reranking a candidate set that never contains the answer cannot help</li>\n<li>Skip this for latency-critical paths where even a modest reranking pass exceeds your budget — consider a lighter-weight reranker or accept the precision tradeoff instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: two-stage retrieve-then-rerank pipelines are one of the most widely reported and validated patterns for improving RAG precision without re-indexing, cited extensively in practitioner RAG-tuning writeups as a lower-cost first intervention than rechunking.</p>\n",
       "body_text": "What & Why When RAG answer quality is poor, try adding a reranking pass over first stage retrieved candidates before re tuning chunk size or overlap. Rechunking requires re indexing the entire corpus and re testing extensively; adding a reranker is a smaller, faster, more reversible change that often fixes precision problems (the right chunk was retrieved, but ranked too low to be used) without touching the index at all. Before / After Before: top k chunks from a single dense retrieval pass are sent directly to the generator, with no second stage quality check on ranking order. After: retrieve a larger first stage candidate set (e.g. top 20), rerank with a cross encoder model, and pass only the reranked top k (e.g. top 4) to the generator. Implementation Increase first stage retrieval to a wider candidate pool (top 15 to top 30), score each candidate against the query with a cross encoder reranker, and truncate to the final top k after reranking — no changes to the underlying index or chunk boundaries are required. Gotchas A reranker adds latency (a second model pass over candidates) — for latency sensitive paths, measure the added time before committing to this over changing chunking Reranking only helps if the correct answer is somewhere in the first stage retrieved set — if first stage recall is the actual problem, reranking the wrong candidates will not fix it (diagnose with measure retrieval recall before answer quality first) Cross encoder rerankers score one (query, candidate) pair at a time — reranking a large candidate set adds meaningful latency; keep the first stage top k modest (15–30, not hundreds) When NOT to Apply Skip this if diagnosis already shows the correct chunk is never in the first stage retrieved set at all (a recall problem, not a ranking problem) — fix retrieval or chunking first, reranking a candidate set that never contains the answer cannot help Skip this for latency critical paths where even a modest reranking pass exceeds your budget — consider a lighter weight reranker or accept the precision tradeoff instead Verification Production verified: two stage retrieve then rerank pipelines are one of the most widely reported and validated patterns for improving RAG precision without re indexing, cited extensively in practitioner RAG tuning writeups as a lower cost first intervention than rechunking."
+    },
+    {
+      "id": "prepend-document-title-and-section-to-each-chunk",
+      "title": "Prepend the Document Title and Section Heading to Each Chunk",
+      "category": "rag-tuning",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "rag-and-retrieval",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (contextual chunking writeups)",
+      "applies_to": [
+        "rag-pipelines",
+        "long-document-rag",
+        "document-qa"
+      ],
+      "gotchas": [
+        "A mid-document chunk often loses the context that gave it meaning — a paragraph under a heading like 'Refund Policy' embeds and reads as generic text once separated from that heading, so it fails to match a query about refunds",
+        "Prepending too much context (full breadcrumb plus a long title) dilutes the chunk's own content in the embedding and eats into the token budget; keep the prefix short and specific"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "keep-source-page-and-section-metadata",
+        "choose-chunk-size-by-answer-span-length"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/rag-and-retrieval/prepend-document-title-and-section-to-each-chunk.md",
+      "url": "content/tips-and-tricks/rag-and-retrieval/prepend-document-title-and-section-to-each-chunk",
+      "slug": "prepend-document-title-and-section-to-each-chunk",
+      "section_path": "content/tips-and-tricks/rag-and-retrieval",
+      "display_name": "Prepend the Document Title and Section Heading to Each Chunk",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 329,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Prepend a short context prefix — the document title and the enclosing section heading — to each chunk's text before embedding it. Chunking severs a passage from the structure that gave it meaning: a paragraph that made sense under the heading \"Refund Policy\" becomes ambiguous generic prose once isolated, so it embeds poorly and misses queries it should answer. A compact prefix restores enough context for both the embedding and the generator to place the chunk correctly.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A chunk reads \"This must be requested within 30 days of purchase.\" — embedded alone, it matches almost nothing, because the subject (\"a refund\") lived in the heading two levels up.</p>\n<p><strong>After:</strong> The embedded text is \"[Acme Returns Guide &gt; Refund Policy] This must be requested within 30 days of purchase.\" — now it matches a refund query and the generator knows what \"this\" refers to.</p>\n<h2>Implementation</h2>\n<p>During chunking, carry the document title and the nearest heading path, and prepend a short bracketed breadcrumb to the chunk text used for embedding (and optionally for the context shown to the model). Keep the prefix terse — title plus one or two heading levels — and store the structural metadata in fields as well so filters and citations can use it.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A mid-document chunk loses the context that gave it meaning; without the heading, it embeds and reads as generic text and misses relevant queries.</li>\n<li>Over-long prefixes dilute the chunk's own content in the embedding and consume token budget; keep the prefix short and specific.</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip for flat, single-topic documents with no meaningful heading structure — there is no useful context to prepend.</li>\n<li>Avoid when chunks are already large and self-contained enough that the enclosing subject is obvious from the text itself.</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: contextual/heading-aware chunking is a widely recommended retrieval improvement; the magnitude depends on document structure and is not benchmarked here against a named system.</p>\n",
+      "body_text": "What & Why Prepend a short context prefix — the document title and the enclosing section heading — to each chunk's text before embedding it. Chunking severs a passage from the structure that gave it meaning: a paragraph that made sense under the heading \"Refund Policy\" becomes ambiguous generic prose once isolated, so it embeds poorly and misses queries it should answer. A compact prefix restores enough context for both the embedding and the generator to place the chunk correctly. Before / After Before: A chunk reads \"This must be requested within 30 days of purchase.\" — embedded alone, it matches almost nothing, because the subject (\"a refund\") lived in the heading two levels up. After: The embedded text is \"[Acme Returns Guide Refund Policy] This must be requested within 30 days of purchase.\" — now it matches a refund query and the generator knows what \"this\" refers to. Implementation During chunking, carry the document title and the nearest heading path, and prepend a short bracketed breadcrumb to the chunk text used for embedding (and optionally for the context shown to the model). Keep the prefix terse — title plus one or two heading levels — and store the structural metadata in fields as well so filters and citations can use it. Gotchas A mid document chunk loses the context that gave it meaning; without the heading, it embeds and reads as generic text and misses relevant queries. Over long prefixes dilute the chunk's own content in the embedding and consume token budget; keep the prefix short and specific. When NOT to Apply Skip for flat, single topic documents with no meaningful heading structure — there is no useful context to prepend. Avoid when chunks are already large and self contained enough that the enclosing subject is obvious from the text itself. Verification Community reported: contextual/heading aware chunking is a widely recommended retrieval improvement; the magnitude depends on document structure and is not benchmarked here against a named system."
     },
     {
       "id": "put-task-inputs-after-instructions",

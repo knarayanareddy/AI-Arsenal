@@ -28,16 +28,16 @@ Choosing between naive RAG and agentic RAG, or designing a new retrieval archite
 
 ### Recently Added
 
+- [Cache Embeddings Keyed by a Content Hash](./cache-embeddings-keyed-by-content-hash.md)
+- [Deduplicate Near-Duplicate Chunks Before Indexing](./deduplicate-near-duplicate-chunks-before-indexing.md)
+- [Drop Low-Similarity Chunks With a Score Threshold](./drop-low-similarity-chunks-with-a-score-threshold.md)
+- [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./instruct-the-model-to-answer-only-from-retrieved-context.md)
+- [Match the Vector Distance Metric to Your Embedding Model](./match-the-distance-metric-to-your-embedding-model.md)
+- [Prepend the Document Title and Section Heading to Each Chunk](./prepend-document-title-and-section-to-each-chunk.md)
 - [Add Hybrid Search for Exact-Match Terms](./add-hybrid-search-for-exact-terms.md)
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./add-reranking-after-recall-is-acceptable.md)
 - [Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval](./detect-multi-hop-questions-explicitly.md)
 - [Keep Instructions Outside Retrieved Context](./keep-instructions-outside-retrieved-context.md)
-- [Measure Retrieval Recall Before Blaming Answer Quality](./measure-retrieval-recall-before-answer-quality.md)
-- [Start With Zero Chunk Overlap, Then Add It Where Needed](./start-with-zero-chunk-overlap.md)
-- [Store Parser and Chunker Version With Every Chunk](./store-parser-version-with-every-chunk.md)
-- [Treat Retrieved Text as Untrusted Input](./treat-retrieved-text-as-untrusted.md)
-- [Apply Metadata Filters Before Similarity Search](./use-metadata-filters-before-similarity-search.md)
-- [Rewrite Vague Queries Before Embedding Them](./use-query-rewriting-for-vague-questions.md)
 
 ### Most Popular
 
@@ -47,13 +47,19 @@ _No star-tracked entries yet._
 
 - [Add Hybrid Search for Exact-Match Terms](./add-hybrid-search-for-exact-terms.md) — 
 - [Add a Reranker Only After First-Stage Recall Is Acceptable](./add-reranking-after-recall-is-acceptable.md) — 
+- [Cache Embeddings Keyed by a Content Hash](./cache-embeddings-keyed-by-content-hash.md) — 
 - [Choose Chunk Size by Expected Answer Span Length, Not a Default](./choose-chunk-size-by-answer-span-length.md) — 
+- [Deduplicate Near-Duplicate Chunks Before Indexing](./deduplicate-near-duplicate-chunks-before-indexing.md) — 
 - [Classify Multi-Hop Questions Before Relying on Single-Pass Retrieval](./detect-multi-hop-questions-explicitly.md) — 
+- [Drop Low-Similarity Chunks With a Score Threshold](./drop-low-similarity-chunks-with-a-score-threshold.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./evaluate-embedding-models-before-rechunking.md) — 
+- [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./instruct-the-model-to-answer-only-from-retrieved-context.md) — 
 - [Keep Instructions Outside Retrieved Context](./keep-instructions-outside-retrieved-context.md) — 
 - [Store Source Page and Section Metadata With Every Chunk](./keep-source-page-and-section-metadata.md) — 
+- [Match the Vector Distance Metric to Your Embedding Model](./match-the-distance-metric-to-your-embedding-model.md) — 
 - [Measure Retrieval Recall Before Blaming Answer Quality](./measure-retrieval-recall-before-answer-quality.md) — 
 - [Add a Reranker Before Changing Your Chunking Strategy](./prefer-reranking-before-rechunking.md) — 
+- [Prepend the Document Title and Section Heading to Each Chunk](./prepend-document-title-and-section-to-each-chunk.md) — 
 - [Tune Chunk Overlap Only After Chunk Size Is Set](./rag-chunk-overlap-tuning.md) — 
 - [Start With Zero Chunk Overlap, Then Add It Where Needed](./start-with-zero-chunk-overlap.md) — 
 - [Store Parser and Chunker Version With Every Chunk](./store-parser-version-with-every-chunk.md) — 
