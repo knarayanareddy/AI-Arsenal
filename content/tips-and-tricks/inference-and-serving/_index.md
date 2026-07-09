@@ -28,6 +28,9 @@ Choosing an entire serving architecture (which inference engine, self-hosted vs.
 
 ### Recently Added
 
+- [Rate-Limit and Cap Spend Per User](./rate-limit-and-cap-spend-per-user.md)
+- [Redact PII Before Sending Prompts to Third-Party APIs](./redact-pii-before-sending-to-third-party-apis.md)
+- [Scope and Rotate LLM API Keys With Least Privilege](./scope-and-rotate-api-keys-with-least-privilege.md)
 - [Cap Concurrent Requests With Admission Control](./cap-concurrent-requests-with-admission-control.md)
 - [Enable Prefix Caching for Shared System Prompts](./enable-prefix-caching-for-shared-system-prompts.md)
 - [Prefer Continuous Batching Over Static Batching for Online Serving](./prefer-continuous-batching-for-online-serving.md)
@@ -35,9 +38,6 @@ Choosing an entire serving architecture (which inference engine, self-hosted vs.
 - [Set Explicit Stop Sequences to Prevent Generation Overrun](./set-explicit-stop-sequences-to-prevent-overrun.md)
 - [Set max_tokens to Bound Tail Latency and Cost](./set-max-tokens-to-bound-tail-latency-and-cost.md)
 - [Warm Up Model Servers Before Routing Production Traffic to Them](./warm-up-model-servers-before-routing-traffic.md)
-- [Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call](./add-provider-timeout-and-retry-policies.md)
-- [Benchmark Local Models on the Actual Hardware Class Users Will Run](./benchmark-on-the-user-hardware.md)
-- [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./benchmark-with-production-shaped-inputs.md)
 
 ### Most Popular
 
@@ -59,7 +59,10 @@ _No star-tracked entries yet._
 - [Pin Model and Runtime Versions Before Running Any Benchmark](./pin-model-and-runtime-versions.md) — 
 - [Prefer Continuous Batching Over Static Batching for Online Serving](./prefer-continuous-batching-for-online-serving.md) — 
 - [Prefer GGUF Format for llama.cpp and Ollama-Style Local Runtimes](./prefer-gguf-for-llama-cpp-workflows.md) — 
+- [Rate-Limit and Cap Spend Per User](./rate-limit-and-cap-spend-per-user.md) — 
+- [Redact PII Before Sending Prompts to Third-Party APIs](./redact-pii-before-sending-to-third-party-apis.md) — 
 - [Route Easy Requests to a Smaller Model First](./route-easy-requests-to-a-smaller-model-first.md) — 
+- [Scope and Rotate LLM API Keys With Least Privilege](./scope-and-rotate-api-keys-with-least-privilege.md) — 
 - [Separate Offline Batch Generation From Interactive Chat Serving](./separate-offline-batch-jobs-from-chat-serving.md) — 
 - [Set Explicit Stop Sequences to Prevent Generation Overrun](./set-explicit-stop-sequences-to-prevent-overrun.md) — 
 - [Set max_tokens to Bound Tail Latency and Cost](./set-max-tokens-to-bound-tail-latency-and-cost.md) — 

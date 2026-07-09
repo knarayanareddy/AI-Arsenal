@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:32:31.468Z",
+    "generated_at": "2026-07-09T21:42:26.731Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
-    "total_tips": 165,
+    "total_tips": 171,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -1509,6 +1509,25 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "block-ssrf-by-validating-outbound-urls",
+      "type": "tip",
+      "name": "Block SSRF by Validating Outbound URLs From Tools",
+      "description": "",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/block-ssrf-by-validating-outbound-urls.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/block-ssrf-by-validating-outbound-urls",
+      "last_updated": "2026-07-09",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -11378,6 +11397,25 @@
       "featured": false
     },
     {
+      "id": "rate-limit-and-cap-spend-per-user",
+      "type": "tip",
+      "name": "Rate-Limit and Cap Spend Per User",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user.md",
+      "url": "content/tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user",
+      "last_updated": "2026-07-09",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "ray",
       "type": "tool",
       "name": "Ray",
@@ -11521,6 +11559,25 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "redact-pii-before-sending-to-third-party-apis",
+      "type": "tip",
+      "name": "Redact PII Before Sending Prompts to Third-Party APIs",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/redact-pii-before-sending-to-third-party-apis.md",
+      "url": "content/tips-and-tricks/inference-and-serving/redact-pii-before-sending-to-third-party-apis",
+      "last_updated": "2026-07-09",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -12080,6 +12137,25 @@
       "featured": false
     },
     {
+      "id": "sandbox-model-generated-code-execution",
+      "type": "tip",
+      "name": "Sandbox Model-Generated Code Execution",
+      "description": "",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution",
+      "last_updated": "2026-07-09",
+      "category": "security-best-practices",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "sarthi-2024-raptor",
       "type": "paper",
       "name": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
@@ -12148,6 +12224,25 @@
       "url": "content/research/training-and-alignment/schulman-2017-ppo",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "scope-and-rotate-api-keys-with-least-privilege",
+      "type": "tip",
+      "name": "Scope and Rotate LLM API Keys With Least Privilege",
+      "description": "",
+      "tags": [
+        "security",
+        "guardrails",
+        "monitoring"
+      ],
+      "path": "content/tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege.md",
+      "url": "content/tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege",
+      "last_updated": "2026-07-09",
+      "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
       "status": null,
@@ -14919,6 +15014,25 @@
       "url": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-before-execution",
       "last_updated": "2026-07-02",
       "category": "agent-reliability",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "validate-tool-arguments-server-side-before-execution",
+      "type": "tip",
+      "name": "Validate Tool Arguments Server-Side Before Execution",
+      "description": "",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "path": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-server-side-before-execution.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-server-side-before-execution",
+      "last_updated": "2026-07-09",
+      "category": "security-best-practices",
       "maturity": null,
       "cost_model": null,
       "status": null,

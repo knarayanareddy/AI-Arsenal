@@ -6,27 +6,27 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and orchestration](./agents-and-orchestration/) | 24 entries | 2026-07-09 |
+| [agents and orchestration](./agents-and-orchestration/) | 27 entries | 2026-07-09 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-09 |
 | [debugging and observability](./debugging-and-observability/) | 22 entries | 2026-07-09 |
 | [evaluation](./evaluation/) | 19 entries | 2026-07-09 |
 | [fine tuning](./fine-tuning/) | 14 entries | 2026-07-09 |
-| [inference and serving](./inference-and-serving/) | 25 entries | 2026-07-09 |
+| [inference and serving](./inference-and-serving/) | 28 entries | 2026-07-09 |
 | [prompting](./prompting/) | 21 entries | 2026-07-09 |
 | [rag and retrieval](./rag-and-retrieval/) | 23 entries | 2026-07-09 |
 
 ## Recently Added
 
+- [Block SSRF by Validating Outbound URLs From Tools](./agents-and-orchestration/block-ssrf-by-validating-outbound-urls.md)
+- [Rate-Limit and Cap Spend Per User](./inference-and-serving/rate-limit-and-cap-spend-per-user.md)
+- [Redact PII Before Sending Prompts to Third-Party APIs](./inference-and-serving/redact-pii-before-sending-to-third-party-apis.md)
+- [Sandbox Model-Generated Code Execution](./agents-and-orchestration/sandbox-model-generated-code-execution.md)
+- [Scope and Rotate LLM API Keys With Least Privilege](./inference-and-serving/scope-and-rotate-api-keys-with-least-privilege.md)
+- [Validate Tool Arguments Server-Side Before Execution](./agents-and-orchestration/validate-tool-arguments-server-side-before-execution.md)
 - [Alarm on Empty and Unparseable Responses](./debugging-and-observability/alarm-on-empty-and-unparseable-responses.md)
 - [Batch Embedding Requests During Ingestion Instead of Embedding One Chunk at a Time](./cost-and-performance/batch-embedding-requests-during-ingestion.md)
 - [Cache Embeddings Keyed by a Content Hash](./rag-and-retrieval/cache-embeddings-keyed-by-content-hash.md)
 - [Cache Idempotent Tool Results Within an Agent Run](./agents-and-orchestration/cache-idempotent-tool-results-within-a-run.md)
-- [Cap Concurrent Requests With Admission Control](./inference-and-serving/cap-concurrent-requests-with-admission-control.md)
-- [Set an Explicit max_tokens Cap Per Request Type Instead of Using Defaults](./cost-and-performance/cap-max-output-tokens-per-request.md)
-- [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./agents-and-orchestration/compact-tool-outputs-before-adding-to-context.md)
-- [Propagate Application Request IDs Into Every LLM Trace](./debugging-and-observability/correlate-llm-traces-with-request-ids.md)
-- [Deduplicate Near-Duplicate Chunks Before Indexing](./rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md)
-- [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md)
 
 ## Most Popular
 
@@ -49,6 +49,7 @@ _No star-tracked entries yet._
 - [Benchmark Local Models on the Actual Hardware Class Users Will Run](./inference-and-serving/benchmark-on-the-user-hardware.md) — 
 - [Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts](./inference-and-serving/benchmark-with-production-shaped-inputs.md) — 
 - [Benchmark Using Real Production Context Lengths, Not Short Toy Prompts](./inference-and-serving/benchmark-with-real-context-lengths.md) — 
+- [Block SSRF by Validating Outbound URLs From Tools](./agents-and-orchestration/block-ssrf-by-validating-outbound-urls.md) — 
 - [Budget Context Before Adding More Tools to an Agent](./agents-and-orchestration/budget-context-before-adding-tools.md) — 
 - [Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls](./cost-and-performance/cache-embeddings-by-content-hash.md) — 
 - [Cache Embeddings Keyed by a Content Hash](./rag-and-retrieval/cache-embeddings-keyed-by-content-hash.md) — 
@@ -83,4 +84,3 @@ _No star-tracked entries yet._
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
 - [Inspect a Random Sample of Training Data by Hand Before Every Run](./fine-tuning/inspect-your-training-data-by-hand.md) — 
 - [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md) — 
-- [Keep a Kill Switch for Risky Agent Tools](./agents-and-orchestration/keep-a-kill-switch-for-agent-actions.md) — 

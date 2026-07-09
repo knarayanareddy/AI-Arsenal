@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:32:31.468Z",
-  "count": 165,
+  "generated_at": "2026-07-09T21:42:26.731Z",
+  "count": 171,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -817,6 +817,65 @@
       "word_count": 241,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Run performance benchmarks using the actual context lengths your production workload will send (including full RAG-retrieved context, conversation history, or long documents), not short toy prompts. Latency, memory usage, and throughput characteristics change substantially — often non-linearly — as context length grows, and a short-prompt benchmark systematically underestimates production cost.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> benchmark suite using 50-100 token prompts to measure \"typical\" latency.</p>\n<p><strong>After:</strong> benchmark suite using the actual distribution of context lengths seen in production (e.g. including full RAG context blocks of 2,000-8,000 tokens).</p>\n<h2>Implementation</h2>\n<p>Measure the actual context-length distribution from production traces (or a realistic estimate if pre-launch), and construct the benchmark input set to match that distribution rather than using arbitrary short prompts.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Inference latency and memory scale non-linearly with context length for many serving stacks — short-prompt benchmarks underestimate production cost, sometimes severely</li>\n<li>KV cache memory footprint at production context lengths can be the actual bottleneck, not compute — a short-prompt benchmark won't surface this</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if your application genuinely always sends short, fixed-length prompts with no variability</li>\n<li>Not necessary for pure API-based serving with no self-hosted infrastructure to capacity-plan for</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: benchmarking with real production context lengths rather than short toy prompts is a widely repeated recommendation in inference benchmarking writeups, not independently benchmarked here against a named production system.</p>\n",
       "body_text": "What & Why Run performance benchmarks using the actual context lengths your production workload will send (including full RAG retrieved context, conversation history, or long documents), not short toy prompts. Latency, memory usage, and throughput characteristics change substantially — often non linearly — as context length grows, and a short prompt benchmark systematically underestimates production cost. Before / After Before: benchmark suite using 50 100 token prompts to measure \"typical\" latency. After: benchmark suite using the actual distribution of context lengths seen in production (e.g. including full RAG context blocks of 2,000 8,000 tokens). Implementation Measure the actual context length distribution from production traces (or a realistic estimate if pre launch), and construct the benchmark input set to match that distribution rather than using arbitrary short prompts. Gotchas Inference latency and memory scale non linearly with context length for many serving stacks — short prompt benchmarks underestimate production cost, sometimes severely KV cache memory footprint at production context lengths can be the actual bottleneck, not compute — a short prompt benchmark won't surface this When NOT to Apply Skip this if your application genuinely always sends short, fixed length prompts with no variability Not necessary for pure API based serving with no self hosted infrastructure to capacity plan for Verification Community reported: benchmarking with real production context lengths rather than short toy prompts is a widely repeated recommendation in inference benchmarking writeups, not independently benchmarked here against a named production system."
+    },
+    {
+      "id": "block-ssrf-by-validating-outbound-urls",
+      "title": "Block SSRF by Validating Outbound URLs From Tools",
+      "category": "security-best-practices",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "2-3 hours",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~2-3 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (OWASP SSRF guidance applied to LLM fetch/browse tools)",
+      "applies_to": [
+        "agent-tool-use",
+        "web-browsing-agents",
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "Blocking by hostname string is not enough -- a public hostname can resolve to a private IP (DNS rebinding), so validate the resolved IP after DNS resolution and pin it for the actual connection",
+        "Following redirects re-opens the hole -- a permitted public URL can 302 to `http://169.254.169.254/`, so re-validate every redirect target, not only the first URL",
+        "Cloud metadata endpoints (169.254.169.254 and link-local ranges) are the highest-value SSRF target because they can hand out credentials -- block link-local, loopback, and private ranges explicitly"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "treat-retrieved-text-as-untrusted",
+        "validate-tool-arguments-server-side-before-execution",
+        "allowlist-tools-per-agent-role"
+      ],
+      "added_date": "2026-07-09",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-09",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/block-ssrf-by-validating-outbound-urls.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/block-ssrf-by-validating-outbound-urls",
+      "slug": "block-ssrf-by-validating-outbound-urls",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Block SSRF by Validating Outbound URLs From Tools",
+      "summary": "",
+      "last_updated": "2026-07-09",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 403,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Any tool that fetches a URL the model supplied — a browser tool, a \"read this link\" tool, a webhook caller — is a server-side request forgery (SSRF) vector: the model can be induced (by prompt injection or a crafted task) to make your server request internal addresses like the cloud metadata endpoint or private services. Validate and constrain outbound URLs at the fetch layer so the model can't turn your fetch tool into a probe of your internal network.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> the fetch tool requests whatever the model passes: <code>requests.get(args[\"url\"])</code>, following redirects, with no host or IP checks.</p>\n<p><strong>After:</strong> the fetch tool parses the URL, requires <code>https</code> (or an allowlisted scheme), resolves the host, rejects loopback/link-local/private IP ranges (including <code>169.254.169.254</code>), pins the resolved IP for the connection, and re-validates on every redirect.</p>\n<h2>Implementation</h2>\n<p>Wrap all model-triggered outbound fetches in one hardened client that: enforces an allowed scheme, resolves DNS and rejects loopback/private/link-local/metadata IP ranges, connects to the pinned resolved IP (to prevent DNS rebinding), caps redirects and re-validates each hop, and applies timeouts and a response-size limit. Prefer an allowlist of permitted hosts when the tool's purpose is narrow; fall back to the denylist of internal ranges when it must reach the open web.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Blocking by hostname string is not enough — a public hostname can resolve to a private IP (DNS rebinding), so validate the resolved IP after DNS resolution and pin it for the actual connection</li>\n<li>Following redirects re-opens the hole — a permitted public URL can 302 to <code>http://169.254.169.254/</code>, so re-validate every redirect target, not only the first URL</li>\n<li>Cloud metadata endpoints (<code>169.254.169.254</code> and link-local ranges) are the highest-value SSRF target because they can hand out credentials — block link-local, loopback, and private ranges explicitly</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>If no tool ever fetches a model-supplied or user-supplied URL, there's no SSRF surface to guard</li>\n<li>For a fetch tool restricted to a single fixed API you control, a strict host allowlist is simpler and stronger than a general denylist — reach for the denylist only when open-web access is genuinely required</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: SSRF is a well-documented web vulnerability class (OWASP), and its application to LLM fetch/browse tools is standard agent-security guidance. Not tied to a specific named incident here, so flagged <code>enrichment_status: draft</code>.</p>\n",
+      "body_text": "What & Why Any tool that fetches a URL the model supplied — a browser tool, a \"read this link\" tool, a webhook caller — is a server side request forgery (SSRF) vector: the model can be induced (by prompt injection or a crafted task) to make your server request internal addresses like the cloud metadata endpoint or private services. Validate and constrain outbound URLs at the fetch layer so the model can't turn your fetch tool into a probe of your internal network. Before / After Before: the fetch tool requests whatever the model passes: requests.get(args[\"url\"]), following redirects, with no host or IP checks. After: the fetch tool parses the URL, requires https (or an allowlisted scheme), resolves the host, rejects loopback/link local/private IP ranges (including 169.254.169.254), pins the resolved IP for the connection, and re validates on every redirect. Implementation Wrap all model triggered outbound fetches in one hardened client that: enforces an allowed scheme, resolves DNS and rejects loopback/private/link local/metadata IP ranges, connects to the pinned resolved IP (to prevent DNS rebinding), caps redirects and re validates each hop, and applies timeouts and a response size limit. Prefer an allowlist of permitted hosts when the tool's purpose is narrow; fall back to the denylist of internal ranges when it must reach the open web. Gotchas Blocking by hostname string is not enough — a public hostname can resolve to a private IP (DNS rebinding), so validate the resolved IP after DNS resolution and pin it for the actual connection Following redirects re opens the hole — a permitted public URL can 302 to http://169.254.169.254/, so re validate every redirect target, not only the first URL Cloud metadata endpoints (169.254.169.254 and link local ranges) are the highest value SSRF target because they can hand out credentials — block link local, loopback, and private ranges explicitly When NOT to Apply If no tool ever fetches a model supplied or user supplied URL, there's no SSRF surface to guard For a fetch tool restricted to a single fixed API you control, a strict host allowlist is simpler and stronger than a general denylist — reach for the denylist only when open web access is genuinely required Verification Community reported: SSRF is a well documented web vulnerability class (OWASP), and its application to LLM fetch/browse tools is standard agent security guidance. Not tied to a specific named incident here, so flagged enrichment status: draft."
     },
     {
       "id": "budget-context-before-adding-tools",
@@ -4858,6 +4917,65 @@
       "body_text": "What & Why Order context sections (retrieved passages, conversation history, tool outputs) by their expected relevance to the current task rather than by the order they were produced or retrieved. Chronological ordering treats every piece of context as equally important, when in practice some passages are far more load bearing for the answer than others. Before / After Before: context assembled strictly in retrieval or generation order, regardless of relevance score. After: context sections sorted by a relevance score (retrieval similarity, task specific heuristic) before insertion into the prompt. Implementation Attach a relevance score to each context section at assembly time (retrieval similarity score is often already available), sort sections by that score, and verify against your eval set that this ordering measurably improves answer quality over chronological ordering. Gotchas Usefulness ranking requires an actual relevance signal — without one, this becomes an arbitrary reordering with no measurable benefit Reordering context can interact with a model's positional biases — verify the effect on your own eval set rather than assuming a universal best ordering When NOT to Apply Skip this if you have no reliable relevance signal to rank by — a bad ranking can be worse than chronological order Not worth the complexity for short contexts where every section fits comfortably within budget regardless of order Verification Theoretical: this entry describes a plausible mechanism (positional/attention bias toward earlier or later context) without independent verification against a named production system or benchmark — flagged enrichment status: draft pending stronger evidence."
     },
     {
+      "id": "rate-limit-and-cap-spend-per-user",
+      "title": "Rate-Limit and Cap Spend Per User",
+      "category": "security-best-practices",
+      "tags": [
+        "security",
+        "guardrails",
+        "monitoring"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "day",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (abuse-prevention / cost-control practice for public LLM endpoints)",
+      "applies_to": [
+        "production-llm-systems",
+        "chat-applications",
+        "llm-serving"
+      ],
+      "gotchas": [
+        "Request-count limits alone don't bound cost -- one request with a huge prompt or a large `max_tokens` can cost more than a hundred small ones, so cap tokens/cost per window, not only request count",
+        "Rate-limit by authenticated identity, not IP alone -- IPs are shared and rotatable, so IP-only limits both punish legitimate shared-network users and fail to stop a determined abuser",
+        "A per-user cap without a global cap still lets a botnet of many accounts drain your budget -- pair per-user limits with a global spend ceiling and alerting"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "scope-and-rotate-api-keys-with-least-privilege",
+        "set-a-token-and-cost-budget-per-agent-run",
+        "cap-concurrent-requests-with-admission-control"
+      ],
+      "added_date": "2026-07-09",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-09",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user.md",
+      "url": "content/tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user",
+      "slug": "rate-limit-and-cap-spend-per-user",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Rate-Limit and Cap Spend Per User",
+      "summary": "",
+      "last_updated": "2026-07-09",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 398,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Any authenticated or public LLM endpoint needs per-user rate and spend limits: each request costs real money, and one abusive or buggy client can generate unbounded load and bill. Limits protect availability, cost, and act as a first line against abuse. Because LLM cost scales with tokens, denominate the limit in tokens/cost, not only request count.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> the endpoint accepts unlimited requests per user, each with unbounded <code>max_tokens</code>, with no per-user accounting — one script can loop and drain the budget overnight.</p>\n<p><strong>After:</strong> each user has a requests-per-minute limit and a rolling token/cost budget per hour/day; over-limit requests get <code>429</code> with a <code>Retry-After</code>, and a global ceiling plus alerting backs the per-user limits.</p>\n<h2>Implementation</h2>\n<p>Track usage per authenticated principal (user/API key/tenant) in a fast store (e.g. Redis) with a token-bucket or sliding-window counter keyed on both request count and tokens. Reject over-limit requests with <code>429</code> and <code>Retry-After</code>. Add a global spend ceiling and alerts so aggregate abuse across many accounts is still caught, and cap <code>max_tokens</code>/input size per request so a single call can't be pathologically expensive.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Request-count limits alone don't bound cost — one request with a huge prompt or a large <code>max_tokens</code> can cost more than a hundred small ones, so cap tokens/cost per window, not only request count</li>\n<li>Rate-limit by authenticated identity, not IP alone — IPs are shared and rotatable, so IP-only limits both punish legitimate shared-network users and fail to stop a determined abuser</li>\n<li>A per-user cap without a global cap still lets a botnet of many accounts drain your budget — pair per-user limits with a global spend ceiling and alerting</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>For a purely internal endpoint behind trusted auth with predictable usage, heavy per-user metering may be more machinery than the risk warrants — a global cap and request-size bound may suffice</li>\n<li>Don't rely on client-side throttling as the control — it's a UX nicety; the enforceable limit must live server-side</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: per-user rate limiting and spend caps are standard abuse-prevention and cost-control practice for metered APIs, applied here to token-denominated LLM cost; LLM gateways expose these controls. Not tied to a specific named incident here, so flagged <code>enrichment_status: draft</code>.</p>\n",
+      "body_text": "What & Why Any authenticated or public LLM endpoint needs per user rate and spend limits: each request costs real money, and one abusive or buggy client can generate unbounded load and bill. Limits protect availability, cost, and act as a first line against abuse. Because LLM cost scales with tokens, denominate the limit in tokens/cost, not only request count. Before / After Before: the endpoint accepts unlimited requests per user, each with unbounded max tokens, with no per user accounting — one script can loop and drain the budget overnight. After: each user has a requests per minute limit and a rolling token/cost budget per hour/day; over limit requests get 429 with a Retry After, and a global ceiling plus alerting backs the per user limits. Implementation Track usage per authenticated principal (user/API key/tenant) in a fast store (e.g. Redis) with a token bucket or sliding window counter keyed on both request count and tokens. Reject over limit requests with 429 and Retry After. Add a global spend ceiling and alerts so aggregate abuse across many accounts is still caught, and cap max tokens/input size per request so a single call can't be pathologically expensive. Gotchas Request count limits alone don't bound cost — one request with a huge prompt or a large max tokens can cost more than a hundred small ones, so cap tokens/cost per window, not only request count Rate limit by authenticated identity, not IP alone — IPs are shared and rotatable, so IP only limits both punish legitimate shared network users and fail to stop a determined abuser A per user cap without a global cap still lets a botnet of many accounts drain your budget — pair per user limits with a global spend ceiling and alerting When NOT to Apply For a purely internal endpoint behind trusted auth with predictable usage, heavy per user metering may be more machinery than the risk warrants — a global cap and request size bound may suffice Don't rely on client side throttling as the control — it's a UX nicety; the enforceable limit must live server side Verification Community reported: per user rate limiting and spend caps are standard abuse prevention and cost control practice for metered APIs, applied here to token denominated LLM cost; LLM gateways expose these controls. Not tied to a specific named incident here, so flagged enrichment status: draft."
+    },
+    {
       "id": "read-a-sample-of-production-traces-every-week",
       "title": "Read a Sample of Production Traces Every Week",
       "category": "production-gotchas",
@@ -4965,6 +5083,65 @@
       "word_count": 300,
       "body_html": "<h2>What &amp; Why</h2>\n<p>The single most useful artifact when debugging an LLM call is the exact string (or message array) that actually reached the model — after templating, context injection, truncation, and tool-result formatting. Teams often log the template and the variables separately and reconstruct the prompt mentally, but the bug is usually in the rendering: a variable that was empty, context that got truncated mid-sentence, messages in the wrong order. Capturing the final rendered payload removes the guesswork; you see precisely what the model saw.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Logs show the template and a dict of variables; an answer is wrong and you assume the model is at fault — until hours later you realize the retrieved context was truncated to zero rows at render time.</p>\n<p><strong>After:</strong> The trace stores the exact rendered messages; you open it, see the empty context block immediately, and fix the truncation logic.</p>\n<h2>Implementation</h2>\n<p>At the point of the API call, serialize and store the final request payload (messages/prompt, plus key parameters) against the request id — after all rendering and truncation. Redact secrets and PII first, and apply your retention policy. Make this the artifact your on-call opens first when a response looks wrong.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Rendered prompts often carry sensitive data — redact before storage and respect retention limits</li>\n<li>Template + variables is insufficient; render-time truncation/ordering is where most prompt bugs live</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Extremely high-volume paths where storing every full prompt is cost-prohibitive can sample or store only on error/flagged cases</li>\n<li>Strict data-handling regimes may forbid storing raw content — store hashes/metadata and reproduce on demand instead</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: capturing the rendered prompt/messages is standard in LLM tracing tools and debugging guides. Redaction and retention specifics depend on your compliance requirements.</p>\n",
       "body_text": "What & Why The single most useful artifact when debugging an LLM call is the exact string (or message array) that actually reached the model — after templating, context injection, truncation, and tool result formatting. Teams often log the template and the variables separately and reconstruct the prompt mentally, but the bug is usually in the rendering: a variable that was empty, context that got truncated mid sentence, messages in the wrong order. Capturing the final rendered payload removes the guesswork; you see precisely what the model saw. Before / After Before: Logs show the template and a dict of variables; an answer is wrong and you assume the model is at fault — until hours later you realize the retrieved context was truncated to zero rows at render time. After: The trace stores the exact rendered messages; you open it, see the empty context block immediately, and fix the truncation logic. Implementation At the point of the API call, serialize and store the final request payload (messages/prompt, plus key parameters) against the request id — after all rendering and truncation. Redact secrets and PII first, and apply your retention policy. Make this the artifact your on call opens first when a response looks wrong. Gotchas Rendered prompts often carry sensitive data — redact before storage and respect retention limits Template + variables is insufficient; render time truncation/ordering is where most prompt bugs live When NOT to Apply Extremely high volume paths where storing every full prompt is cost prohibitive can sample or store only on error/flagged cases Strict data handling regimes may forbid storing raw content — store hashes/metadata and reproduce on demand instead Verification Community reported: capturing the rendered prompt/messages is standard in LLM tracing tools and debugging guides. Redaction and retention specifics depend on your compliance requirements."
+    },
+    {
+      "id": "redact-pii-before-sending-to-third-party-apis",
+      "title": "Redact PII Before Sending Prompts to Third-Party APIs",
+      "category": "security-best-practices",
+      "tags": [
+        "security",
+        "guardrails",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "inference-and-serving",
+      "effort": "day",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (data-privacy / DLP practice for hosted LLM usage)",
+      "applies_to": [
+        "production-llm-systems",
+        "chat-applications",
+        "rag-pipelines"
+      ],
+      "gotchas": [
+        "Redaction that loses the reference breaks the answer -- replace PII with stable placeholders (`<PERSON_1>`, `<EMAIL_1>`) and re-hydrate on the way back, rather than deleting it, or the model loses the entities it needs to reason about",
+        "Detectors miss things -- regex catches emails and card numbers but not names, addresses, or context-dependent identifiers, so a model/NER-based detector plus regex catches more than either alone, and neither is perfect",
+        "PII also arrives via retrieved documents and tool outputs, not only the user's message -- redact on every path that reaches the third-party API, not only the chat input box"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "redact-secrets-before-tracing",
+        "treat-retrieved-text-as-untrusted",
+        "use-local-models-for-sensitive-prototyping"
+      ],
+      "added_date": "2026-07-09",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-09",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/redact-pii-before-sending-to-third-party-apis.md",
+      "url": "content/tips-and-tricks/inference-and-serving/redact-pii-before-sending-to-third-party-apis",
+      "slug": "redact-pii-before-sending-to-third-party-apis",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Redact PII Before Sending Prompts to Third-Party APIs",
+      "summary": "",
+      "last_updated": "2026-07-09",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 407,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>When you call a hosted LLM API, the prompt leaves your trust boundary. If prompts can contain personal data (names, emails, account IDs, health/financial details), detect and mask it before the request, then re-insert it in the response if needed. This limits regulatory exposure (GDPR/CCPA/HIPAA) and the blast radius if the request is logged, cached, or breached provider-side.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> the raw user turn plus retrieved context is sent verbatim: <code>client.responses.create(input=user_text + context)</code>.</p>\n<p><strong>After:</strong> a redaction pass replaces detected PII with stable placeholders before the call — <code>\"email &lt;EMAIL_1&gt; about order &lt;ORDER_1&gt;\"</code> — and a re-hydration pass swaps the real values back into the model's answer for the end user.</p>\n<h2>Implementation</h2>\n<p>Insert a redaction step in the request path that runs a PII detector (regex for structured identifiers plus an NER/model-based detector for names/addresses), replaces each match with a stable, reversible placeholder, and stores the mapping for the request's duration only. Re-hydrate placeholders in the response before returning it. Apply the same step to retrieved chunks and tool outputs, and keep the mapping in short-lived storage, never in long-term logs.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Redaction that loses the reference breaks the answer — replace PII with stable placeholders (<code>&lt;PERSON_1&gt;</code>, <code>&lt;EMAIL_1&gt;</code>) and re-hydrate on the way back, rather than deleting it, or the model loses the entities it needs to reason about</li>\n<li>Detectors miss things — regex catches emails and card numbers but not names, addresses, or context-dependent identifiers, so a model/NER-based detector plus regex catches more than either alone, and neither is perfect</li>\n<li>PII also arrives via retrieved documents and tool outputs, not only the user's message — redact on every path that reaches the third-party API, not only the chat input box</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>If you run the model fully in your own trust boundary (self-hosted, no data leaving), the third-party exposure this addresses doesn't exist — though internal logging/retention controls still apply</li>\n<li>If a data-processing agreement plus provider zero-retention already satisfies your compliance obligations, redaction may be optional — but it still reduces breach blast radius, so weigh it</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: pre-send PII redaction / DLP for hosted LLM calls is standard data-privacy practice, offered by several LLM gateways and guardrail libraries. Not tied to a specific named deployment here, so flagged <code>enrichment_status: draft</code>.</p>\n",
+      "body_text": "What & Why When you call a hosted LLM API, the prompt leaves your trust boundary. If prompts can contain personal data (names, emails, account IDs, health/financial details), detect and mask it before the request, then re insert it in the response if needed. This limits regulatory exposure (GDPR/CCPA/HIPAA) and the blast radius if the request is logged, cached, or breached provider side. Before / After Before: the raw user turn plus retrieved context is sent verbatim: client.responses.create(input=user text + context). After: a redaction pass replaces detected PII with stable placeholders before the call — \"email <EMAIL 1 about order <ORDER 1 \" — and a re hydration pass swaps the real values back into the model's answer for the end user. Implementation Insert a redaction step in the request path that runs a PII detector (regex for structured identifiers plus an NER/model based detector for names/addresses), replaces each match with a stable, reversible placeholder, and stores the mapping for the request's duration only. Re hydrate placeholders in the response before returning it. Apply the same step to retrieved chunks and tool outputs, and keep the mapping in short lived storage, never in long term logs. Gotchas Redaction that loses the reference breaks the answer — replace PII with stable placeholders (<PERSON 1 , <EMAIL 1 ) and re hydrate on the way back, rather than deleting it, or the model loses the entities it needs to reason about Detectors miss things — regex catches emails and card numbers but not names, addresses, or context dependent identifiers, so a model/NER based detector plus regex catches more than either alone, and neither is perfect PII also arrives via retrieved documents and tool outputs, not only the user's message — redact on every path that reaches the third party API, not only the chat input box When NOT to Apply If you run the model fully in your own trust boundary (self hosted, no data leaving), the third party exposure this addresses doesn't exist — though internal logging/retention controls still apply If a data processing agreement plus provider zero retention already satisfies your compliance obligations, redaction may be optional — but it still reduces breach blast radius, so weigh it Verification Community reported: pre send PII redaction / DLP for hosted LLM calls is standard data privacy practice, offered by several LLM gateways and guardrail libraries. Not tied to a specific named deployment here, so flagged enrichment status: draft."
     },
     {
       "id": "redact-secrets-before-tracing",
@@ -5736,6 +5913,124 @@
       "word_count": 330,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Given an existing sandboxed code/shell/browser execution backend, add explicit CPU time, memory, and network-egress limits to each execution call, rather than relying on the sandbox's default configuration. An agent-generated script — whether from a bug or an adversarial prompt injection — should be unable to consume unbounded resources or reach the network even if the code itself is not malicious, because the sandbox boundary must not depend on the code's intent.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>sandbox.execute(code)</code> with the sandbox's default (often permissive) resource and network configuration.</p>\n<p><strong>After:</strong> <code>sandbox.execute(code, timeout_s=10, memory_mb=256, network=\"deny\")</code>, with limits set explicitly per call rather than inherited from a shared default.</p>\n<h2>Implementation</h2>\n<p>Set per-call timeout, memory ceiling, and network policy explicitly at the call site rather than relying on the sandbox provider's defaults; deny network access by default and allowlist specific egress destinations only if a task genuinely requires them (e.g. fetching a package from a known registry).</p>\n<h2>Gotchas</h2>\n<ul>\n<li>This tip assumes an existing sandboxed execution backend is already in place — building sandbox infrastructure from scratch is a multi-day project, not a tip</li>\n<li>A time limit without a network limit still lets a compromised or hallucinated script exfiltrate data before it is killed — both limits are required together</li>\n<li>Resource limits that are too generous provide false confidence — size limits to the smallest values your legitimate workloads actually need, not a large round number</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this if you have no code-execution tool at all — there is nothing to add limits to</li>\n<li>Skip customizing limits per call if your sandbox provider already enforces sufficiently strict organization-wide defaults that meet your risk tolerance</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: explicit per-call resource and network limits on sandboxed code execution are a commonly recommended practice in coding-agent security discussions, though this entry has not yet been independently verified against a named production incident or deployment — flagged <code>enrichment_status: draft</code> pending stronger evidence.</p>\n",
       "body_text": "What & Why Given an existing sandboxed code/shell/browser execution backend, add explicit CPU time, memory, and network egress limits to each execution call, rather than relying on the sandbox's default configuration. An agent generated script — whether from a bug or an adversarial prompt injection — should be unable to consume unbounded resources or reach the network even if the code itself is not malicious, because the sandbox boundary must not depend on the code's intent. Before / After Before: sandbox.execute(code) with the sandbox's default (often permissive) resource and network configuration. After: sandbox.execute(code, timeout s=10, memory mb=256, network=\"deny\"), with limits set explicitly per call rather than inherited from a shared default. Implementation Set per call timeout, memory ceiling, and network policy explicitly at the call site rather than relying on the sandbox provider's defaults; deny network access by default and allowlist specific egress destinations only if a task genuinely requires them (e.g. fetching a package from a known registry). Gotchas This tip assumes an existing sandboxed execution backend is already in place — building sandbox infrastructure from scratch is a multi day project, not a tip A time limit without a network limit still lets a compromised or hallucinated script exfiltrate data before it is killed — both limits are required together Resource limits that are too generous provide false confidence — size limits to the smallest values your legitimate workloads actually need, not a large round number When NOT to Apply Skip this if you have no code execution tool at all — there is nothing to add limits to Skip customizing limits per call if your sandbox provider already enforces sufficiently strict organization wide defaults that meet your risk tolerance Verification Community reported: explicit per call resource and network limits on sandboxed code execution are a commonly recommended practice in coding agent security discussions, though this entry has not yet been independently verified against a named production incident or deployment — flagged enrichment status: draft pending stronger evidence."
+    },
+    {
+      "id": "sandbox-model-generated-code-execution",
+      "title": "Sandbox Model-Generated Code Execution",
+      "category": "security-best-practices",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "difficulty": "advanced",
+      "impact": "high",
+      "time_to_implement": "half a day",
+      "phase": "agents-and-orchestration",
+      "effort": "day",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (code-interpreter and autonomous-coding-agent security discussions)",
+      "applies_to": [
+        "agent-tool-use",
+        "autonomous-coding-agents",
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "A container is not a security boundary by default -- without dropped capabilities, a read-only root filesystem, and disabled networking, container escape and data exfiltration are both realistic",
+        "Network egress is the most commonly forgotten control -- code that can reach the internet can exfiltrate anything it can read and pull in anything it wants to run, so deny egress by default and allowlist specific hosts",
+        "Resource limits (CPU, memory, wall-clock, output size) are part of the sandbox, not an optimization -- unbounded generated code will eventually hang or OOM the host"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "validate-tool-arguments-server-side-before-execution",
+        "require-human-approval-for-irreversible-actions",
+        "allowlist-tools-per-agent-role"
+      ],
+      "added_date": "2026-07-09",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-09",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution",
+      "slug": "sandbox-model-generated-code-execution",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Sandbox Model-Generated Code Execution",
+      "summary": "",
+      "last_updated": "2026-07-09",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 410,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>If your agent runs code the model generated — a code interpreter, a \"run this script\" tool, a data-analysis step — execute it in an isolated sandbox with no ambient access to the host, secrets, or network. Model-generated code is attacker-influenceable (via prompt injection in the task, retrieved data, or tool output), so it must be treated like untrusted user-submitted code, not like your own application code.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> generated code runs in the app process or a plain subprocess: <code>exec(code)</code> / <code>subprocess.run([\"python\", \"-c\", code])</code> — with full access to env vars, the filesystem, and the network.</p>\n<p><strong>After:</strong> generated code runs in a locked-down container/microVM: no host mounts, secrets stripped from the environment, network egress denied by default, non-root user, read-only root FS, and CPU/memory/time/output caps enforced.</p>\n<h2>Implementation</h2>\n<p>Run each execution in a fresh, disposable sandbox (gVisor, a microVM, or a hardened container): dropped Linux capabilities, <code>--network none</code> (or an egress allowlist proxy), a non-root user, a read-only root FS with a small writable scratch dir, no secrets in the environment, and hard CPU/memory/time/output limits. Return only captured stdout/stderr/artifacts, and destroy the sandbox after each run so state can't leak between tasks.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A container is not a security boundary by default — without dropped capabilities, a read-only root filesystem, and disabled networking, container escape and data exfiltration are both realistic</li>\n<li>Network egress is the most commonly forgotten control — code that can reach the internet can exfiltrate anything it can read and pull in anything it wants to run, so deny egress by default and allowlist specific hosts</li>\n<li>Resource limits (CPU, memory, wall-clock, output size) are part of the sandbox, not an optimization — unbounded generated code will eventually hang or OOM the host</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>If you never execute model-generated code (the model only <em>emits</em> code for a human to review and run), this doesn't apply — the review step is the control</li>\n<li>For trusted, fixed, human-written code paths, prefer a validated tool over a general code sandbox — a narrow tool is easier to secure than an arbitrary-code executor</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: sandboxing untrusted code is long-established practice, and applying it to model-generated code is standard code-interpreter/coding-agent security guidance (reflected in how hosted code-execution products isolate runs). Not tied to a specific named incident here, so flagged <code>enrichment_status: draft</code>.</p>\n",
+      "body_text": "What & Why If your agent runs code the model generated — a code interpreter, a \"run this script\" tool, a data analysis step — execute it in an isolated sandbox with no ambient access to the host, secrets, or network. Model generated code is attacker influenceable (via prompt injection in the task, retrieved data, or tool output), so it must be treated like untrusted user submitted code, not like your own application code. Before / After Before: generated code runs in the app process or a plain subprocess: exec(code) / subprocess.run([\"python\", \" c\", code]) — with full access to env vars, the filesystem, and the network. After: generated code runs in a locked down container/microVM: no host mounts, secrets stripped from the environment, network egress denied by default, non root user, read only root FS, and CPU/memory/time/output caps enforced. Implementation Run each execution in a fresh, disposable sandbox (gVisor, a microVM, or a hardened container): dropped Linux capabilities, network none (or an egress allowlist proxy), a non root user, a read only root FS with a small writable scratch dir, no secrets in the environment, and hard CPU/memory/time/output limits. Return only captured stdout/stderr/artifacts, and destroy the sandbox after each run so state can't leak between tasks. Gotchas A container is not a security boundary by default — without dropped capabilities, a read only root filesystem, and disabled networking, container escape and data exfiltration are both realistic Network egress is the most commonly forgotten control — code that can reach the internet can exfiltrate anything it can read and pull in anything it wants to run, so deny egress by default and allowlist specific hosts Resource limits (CPU, memory, wall clock, output size) are part of the sandbox, not an optimization — unbounded generated code will eventually hang or OOM the host When NOT to Apply If you never execute model generated code (the model only emits code for a human to review and run), this doesn't apply — the review step is the control For trusted, fixed, human written code paths, prefer a validated tool over a general code sandbox — a narrow tool is easier to secure than an arbitrary code executor Verification Community reported: sandboxing untrusted code is long established practice, and applying it to model generated code is standard code interpreter/coding agent security guidance (reflected in how hosted code execution products isolate runs). Not tied to a specific named incident here, so flagged enrichment status: draft."
+    },
+    {
+      "id": "scope-and-rotate-api-keys-with-least-privilege",
+      "title": "Scope and Rotate LLM API Keys With Least Privilege",
+      "category": "security-best-practices",
+      "tags": [
+        "security",
+        "guardrails",
+        "monitoring"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "2-3 hours",
+      "phase": "inference-and-serving",
+      "effort": "hours",
+      "estimated_time": "~2-3 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (secrets-management best practice applied to LLM provider keys)",
+      "applies_to": [
+        "production-llm-systems",
+        "llm-serving",
+        "production-deployment"
+      ],
+      "gotchas": [
+        "One shared key across every service means a single leak forces you to rotate everything at once and take an outage -- per-service keys let you revoke the leaked one in isolation",
+        "A key with no spend cap is a blank cheque -- set provider-side usage/budget limits per key so a leaked or looping key can't run up an unbounded bill before you notice",
+        "Keys leak most often through client bundles, logs, and git history, not API calls -- keep keys server-side, scrub them from traces, and scan commits, or rotation alone won't save you"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "redact-secrets-before-tracing",
+        "rate-limit-and-cap-spend-per-user",
+        "set-a-token-and-cost-budget-per-agent-run"
+      ],
+      "added_date": "2026-07-09",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-09",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege.md",
+      "url": "content/tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege",
+      "slug": "scope-and-rotate-api-keys-with-least-privilege",
+      "section_path": "content/tips-and-tricks/inference-and-serving",
+      "display_name": "Scope and Rotate LLM API Keys With Least Privilege",
+      "summary": "",
+      "last_updated": "2026-07-09",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 411,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Give each service (and ideally each environment) its own LLM provider API key with the narrowest scope the provider allows, a spend cap, and a rotation schedule. LLM keys are bearer credentials that map directly to money and data access — treating them like any other production secret (least privilege, per-consumer isolation, rotation, monitoring) limits both the cost and the blast radius of a leak.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> one root API key with full access, shared across prod, staging, and every service, embedded in config, never rotated.</p>\n<p><strong>After:</strong> distinct keys per service/environment, each with a provider-side spend cap and the minimum project/model scope, stored in a secrets manager, rotated on a schedule and immediately on suspected exposure.</p>\n<h2>Implementation</h2>\n<p>Create separate keys per service and environment; apply the tightest provider-side scope available (project, model, and usage/budget limits). Store keys in a secrets manager or platform secret store — never in client-side bundles or committed files. Wire up rotation (scheduled plus on-incident) and, where the provider exposes it, per-key usage alerts so anomalous spend triggers a page. Add a secret scanner to CI to catch keys before they land in git history.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>One shared key across every service means a single leak forces you to rotate everything at once and take an outage — per-service keys let you revoke the leaked one in isolation</li>\n<li>A key with no spend cap is a blank cheque — set provider-side usage/budget limits per key so a leaked or looping key can't run up an unbounded bill before you notice</li>\n<li>Keys leak most often through client bundles, logs, and git history, not API calls — keep keys server-side, scrub them from traces, and scan commits, or rotation alone won't save you</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>For a throwaway local prototype with a spend-capped personal key, full per-service key management is overkill — the spend cap is the one control still worth keeping</li>\n<li>If your provider genuinely offers no sub-scoping or budget controls, per-service isolation and rotation still apply even though least-privilege scoping can't — don't skip the parts you <em>can</em> do</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: least-privilege, per-consumer, rotated secrets are foundational security practice, applied here to LLM provider keys; provider docs and LLM gateways expose per-key scoping, budgets, and rotation for this reason. Not tied to a specific named incident here, so flagged <code>enrichment_status: draft</code>.</p>\n",
+      "body_text": "What & Why Give each service (and ideally each environment) its own LLM provider API key with the narrowest scope the provider allows, a spend cap, and a rotation schedule. LLM keys are bearer credentials that map directly to money and data access — treating them like any other production secret (least privilege, per consumer isolation, rotation, monitoring) limits both the cost and the blast radius of a leak. Before / After Before: one root API key with full access, shared across prod, staging, and every service, embedded in config, never rotated. After: distinct keys per service/environment, each with a provider side spend cap and the minimum project/model scope, stored in a secrets manager, rotated on a schedule and immediately on suspected exposure. Implementation Create separate keys per service and environment; apply the tightest provider side scope available (project, model, and usage/budget limits). Store keys in a secrets manager or platform secret store — never in client side bundles or committed files. Wire up rotation (scheduled plus on incident) and, where the provider exposes it, per key usage alerts so anomalous spend triggers a page. Add a secret scanner to CI to catch keys before they land in git history. Gotchas One shared key across every service means a single leak forces you to rotate everything at once and take an outage — per service keys let you revoke the leaked one in isolation A key with no spend cap is a blank cheque — set provider side usage/budget limits per key so a leaked or looping key can't run up an unbounded bill before you notice Keys leak most often through client bundles, logs, and git history, not API calls — keep keys server side, scrub them from traces, and scan commits, or rotation alone won't save you When NOT to Apply For a throwaway local prototype with a spend capped personal key, full per service key management is overkill — the spend cap is the one control still worth keeping If your provider genuinely offers no sub scoping or budget controls, per service isolation and rotation still apply even though least privilege scoping can't — don't skip the parts you can do Verification Community reported: least privilege, per consumer, rotated secrets are foundational security practice, applied here to LLM provider keys; provider docs and LLM gateways expose per key scoping, budgets, and rotation for this reason. Not tied to a specific named incident here, so flagged enrichment status: draft."
     },
     {
       "id": "separate-a-frozen-holdout-from-your-dev-eval-set",
@@ -8681,6 +8976,65 @@
       "word_count": 328,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Validate a model-generated tool call's arguments against an explicit schema (types, ranges, enums, required fields) before the tool function ever runs, and reject invalid calls with a structured error the agent can read and correct. This catches malformed or hallucinated arguments — a string where a tool expects an integer, an out-of-range enum value — before they reach code that assumes well-formed input.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong></p>\n<pre><code class=\"language-python\">def execute_tool(call):\n    return TOOLS[call.name](**call.args)  # crashes on bad args\n</code></pre>\n<p><strong>After:</strong></p>\n<pre><code class=\"language-python\">def execute_tool(call):\n    schema = TOOL_SCHEMAS[call.name]\n    try:\n        validated = schema.model_validate(call.args)\n    except ValidationError as e:\n        return ToolResult(error=str(e), retry=True)\n    return TOOLS[call.name](**validated.model_dump())\n</code></pre>\n<h2>Implementation</h2>\n<p>Define a Pydantic model per tool matching its expected argument schema, validate before calling the underlying function, and on failure return the validation error text back into the agent's context as a tool result (not a raised exception that crashes the loop) so the model can see what was wrong and retry.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Validating types alone isn't enough — an argument can be well-typed but semantically wrong (a negative quantity, a date in the past for a future-only field); add field-level validators for domain constraints in addition to type checks</li>\n<li>Silently coercing invalid arguments (stringifying a number, truncating an overlong string) hides model errors instead of surfacing them for the agent to retry</li>\n<li>If validation errors aren't fed back into the agent's context, it repeats the same invalid call indefinitely — always return the validator's rejection reason to the model, and pair with <code>cap-agent-tool-retries</code> to bound retry loops</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip building custom validation if your tool-calling framework already enforces JSON-schema-based argument validation before invocation (check first — many do)</li>\n<li>Skip this for tools with no meaningful invalid-argument space (a no-argument <code>get_current_time()</code> call has nothing to validate)</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: schema-validated tool arguments with structured rejection-and-retry is a standard pattern in LangGraph and comparable tool-calling frameworks, and is the direct mechanism referenced in this catalog's own <code>use-json-schema-for-outputs</code> and <code>multi-tool-agent</code> build example for reducing malformed structured-output rates.</p>\n",
       "body_text": "What & Why Validate a model generated tool call's arguments against an explicit schema (types, ranges, enums, required fields) before the tool function ever runs, and reject invalid calls with a structured error the agent can read and correct. This catches malformed or hallucinated arguments — a string where a tool expects an integer, an out of range enum value — before they reach code that assumes well formed input. Before / After Before: After: Implementation Define a Pydantic model per tool matching its expected argument schema, validate before calling the underlying function, and on failure return the validation error text back into the agent's context as a tool result (not a raised exception that crashes the loop) so the model can see what was wrong and retry. Gotchas Validating types alone isn't enough — an argument can be well typed but semantically wrong (a negative quantity, a date in the past for a future only field); add field level validators for domain constraints in addition to type checks Silently coercing invalid arguments (stringifying a number, truncating an overlong string) hides model errors instead of surfacing them for the agent to retry If validation errors aren't fed back into the agent's context, it repeats the same invalid call indefinitely — always return the validator's rejection reason to the model, and pair with cap agent tool retries to bound retry loops When NOT to Apply Skip building custom validation if your tool calling framework already enforces JSON schema based argument validation before invocation (check first — many do) Skip this for tools with no meaningful invalid argument space (a no argument get current time() call has nothing to validate) Verification Production verified: schema validated tool arguments with structured rejection and retry is a standard pattern in LangGraph and comparable tool calling frameworks, and is the direct mechanism referenced in this catalog's own use json schema for outputs and multi tool agent build example for reducing malformed structured output rates."
+    },
+    {
+      "id": "validate-tool-arguments-server-side-before-execution",
+      "title": "Validate Tool Arguments Server-Side Before Execution",
+      "category": "security-best-practices",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "1-2 hours",
+      "phase": "agents-and-orchestration",
+      "effort": "hours",
+      "estimated_time": "~1-2 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (OWASP LLM Top 10 — excessive agency / insecure output handling discussions)",
+      "applies_to": [
+        "agent-tool-use",
+        "multi-tool-agents",
+        "production-llm-systems"
+      ],
+      "gotchas": [
+        "A JSON schema on the tool signature checks shape, not authorization -- a well-formed `{\"path\": \"/etc/passwd\"}` passes schema validation but must still be rejected by a path allowlist",
+        "The model can be argued into supplying malicious arguments via prompt injection in retrieved or tool-returned text, so validation must live in the executor, not in the prompt asking the model to 'only pass safe values'",
+        "Re-validate on every call even for 'internal' tools -- an argument that was safe when the tool was written can become dangerous after the tool's downstream behavior changes"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "allowlist-tools-per-agent-role",
+        "require-human-approval-for-irreversible-actions",
+        "treat-retrieved-text-as-untrusted"
+      ],
+      "added_date": "2026-07-09",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-09",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-server-side-before-execution.md",
+      "url": "content/tips-and-tricks/agents-and-orchestration/validate-tool-arguments-server-side-before-execution",
+      "slug": "validate-tool-arguments-server-side-before-execution",
+      "section_path": "content/tips-and-tricks/agents-and-orchestration",
+      "display_name": "Validate Tool Arguments Server-Side Before Execution",
+      "summary": "",
+      "last_updated": "2026-07-09",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 390,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Treat every argument a model passes to a tool as untrusted input and validate it in the tool executor before the tool does anything. The model chooses tool arguments from context that can include user input, retrieved documents, and prior tool output — any of which can be adversarial. Schema-validating the argument <em>shape</em> is necessary but not sufficient; the executor must also enforce <em>authorization</em> (which values are allowed) before the side effect happens.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> the executor trusts the model's arguments and runs the tool directly: <code>run_sql(query=args[\"query\"])</code>, <code>read_file(path=args[\"path\"])</code>.</p>\n<p><strong>After:</strong> the executor validates shape and authorization first: reject <code>path</code> outside an allowlisted directory, reject SQL that isn't a parameterized read against permitted tables, and only then execute.</p>\n<h2>Implementation</h2>\n<p>Put validation in the function that dispatches the tool call, not in the tool description. For each tool, define (1) a schema for argument shape and (2) an authorization check for allowed values (path prefixes, table names, ID ownership, numeric bounds). Reject on failure with a structured error the agent can read. Keep the allowed-values policy in code/config, never inferred from the model.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A JSON schema on the tool signature checks shape, not authorization — a well-formed <code>{\"path\": \"/etc/passwd\"}</code> passes schema validation but must still be rejected by a path allowlist</li>\n<li>The model can be argued into supplying malicious arguments via prompt injection in retrieved or tool-returned text, so validation must live in the executor, not in a prompt asking the model to \"only pass safe values\"</li>\n<li>Re-validate on every call even for \"internal\" tools — an argument that was safe when the tool was written can become dangerous after the tool's downstream behavior changes</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip the authorization layer only for tools whose entire input space is already safe (e.g. a pure <code>add(a, b)</code> calculator) — shape validation alone is enough there</li>\n<li>Don't use this as a substitute for least-privilege credentials — argument validation limits <em>what</em> a tool is asked to do, not <em>what the tool is technically able to do</em> if the model finds an unvalidated path</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: server-side validation of model-supplied tool arguments is a core OWASP LLM Top 10 mitigation (excessive agency, insecure output handling). Not tied to a specific named incident here, so flagged <code>enrichment_status: draft</code>.</p>\n",
+      "body_text": "What & Why Treat every argument a model passes to a tool as untrusted input and validate it in the tool executor before the tool does anything. The model chooses tool arguments from context that can include user input, retrieved documents, and prior tool output — any of which can be adversarial. Schema validating the argument shape is necessary but not sufficient; the executor must also enforce authorization (which values are allowed) before the side effect happens. Before / After Before: the executor trusts the model's arguments and runs the tool directly: run sql(query=args[\"query\"]), read file(path=args[\"path\"]). After: the executor validates shape and authorization first: reject path outside an allowlisted directory, reject SQL that isn't a parameterized read against permitted tables, and only then execute. Implementation Put validation in the function that dispatches the tool call, not in the tool description. For each tool, define (1) a schema for argument shape and (2) an authorization check for allowed values (path prefixes, table names, ID ownership, numeric bounds). Reject on failure with a structured error the agent can read. Keep the allowed values policy in code/config, never inferred from the model. Gotchas A JSON schema on the tool signature checks shape, not authorization — a well formed {\"path\": \"/etc/passwd\"} passes schema validation but must still be rejected by a path allowlist The model can be argued into supplying malicious arguments via prompt injection in retrieved or tool returned text, so validation must live in the executor, not in a prompt asking the model to \"only pass safe values\" Re validate on every call even for \"internal\" tools — an argument that was safe when the tool was written can become dangerous after the tool's downstream behavior changes When NOT to Apply Skip the authorization layer only for tools whose entire input space is already safe (e.g. a pure add(a, b) calculator) — shape validation alone is enough there Don't use this as a substitute for least privilege credentials — argument validation limits what a tool is asked to do, not what the tool is technically able to do if the model finds an unvalidated path Verification Community reported: server side validation of model supplied tool arguments is a core OWASP LLM Top 10 mitigation (excessive agency, insecure output handling). Not tied to a specific named incident here, so flagged enrichment status: draft."
     },
     {
       "id": "verify-tool-side-effects-instead-of-trusting-the-response",

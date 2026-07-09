@@ -28,6 +28,9 @@ A tip about which reasoning technique to prompt for (chain-of-thought, few-shot 
 
 ### Recently Added
 
+- [Block SSRF by Validating Outbound URLs From Tools](./block-ssrf-by-validating-outbound-urls.md)
+- [Sandbox Model-Generated Code Execution](./sandbox-model-generated-code-execution.md)
+- [Validate Tool Arguments Server-Side Before Execution](./validate-tool-arguments-server-side-before-execution.md)
 - [Cache Idempotent Tool Results Within an Agent Run](./cache-idempotent-tool-results-within-a-run.md)
 - [Truncate or Summarize Tool Outputs Before They Enter Agent Context](./compact-tool-outputs-before-adding-to-context.md)
 - [Give the Agent a Scratchpad Instead of Carrying Everything in Context](./give-the-agent-a-scratchpad-for-intermediate-results.md)
@@ -35,9 +38,6 @@ A tip about which reasoning technique to prompt for (chain-of-thought, few-shot 
 - [Return Structured Errors From Tools So the Agent Can Recover](./return-structured-errors-from-tools-so-the-agent-can-recover.md)
 - [Set a Token and Cost Budget Per Agent Run, Not Only a Step Limit](./set-a-token-and-cost-budget-per-agent-run.md)
 - [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./set-wall-clock-timeouts-for-agent-runs.md)
-- [Verify Tool Side Effects Instead of Trusting the Tool's Response](./verify-tool-side-effects-instead-of-trusting-the-response.md)
-- [Write Tool Descriptions for the Model, Not the Codebase](./write-tool-descriptions-for-the-model-not-the-codebase.md)
-- [Add A Max Step Budget To Every Agent Loop](./add-a-max-step-budget-to-every-agent.md)
 
 ### Most Popular
 
@@ -47,6 +47,7 @@ _No star-tracked entries yet._
 
 - [Add A Max Step Budget To Every Agent Loop](./add-a-max-step-budget-to-every-agent.md) — 
 - [Allowlist Tools Per Agent Role](./allowlist-tools-per-agent-role.md) — 
+- [Block SSRF by Validating Outbound URLs From Tools](./block-ssrf-by-validating-outbound-urls.md) — 
 - [Budget Context Before Adding More Tools to an Agent](./budget-context-before-adding-tools.md) — 
 - [Cache Idempotent Tool Results Within an Agent Run](./cache-idempotent-tool-results-within-a-run.md) — 
 - [Cap Agent Tool Retries at a Fixed Count Per Tool](./cap-agent-tool-retries.md) — 
@@ -62,10 +63,12 @@ _No star-tracked entries yet._
 - [Require Human Approval Before Irreversible Agent Actions](./require-human-approval-for-irreversible-actions.md) — 
 - [Return Structured Errors From Tools So the Agent Can Recover](./return-structured-errors-from-tools-so-the-agent-can-recover.md) — 
 - [Add Resource and Network Limits to Sandboxed Code Execution Calls](./sandbox-code-execution-tools.md) — 
+- [Sandbox Model-Generated Code Execution](./sandbox-model-generated-code-execution.md) — 
 - [Separate Planner and Executor Permissions in Multi-Step Agents](./separate-planner-and-executor-permissions.md) — 
 - [Set a Token and Cost Budget Per Agent Run, Not Only a Step Limit](./set-a-token-and-cost-budget-per-agent-run.md) — 
 - [Set Wall-Clock Timeouts for Agent Runs, Not Just Step Budgets](./set-wall-clock-timeouts-for-agent-runs.md) — 
 - [Summarize Long-Running Agent State Instead of Keeping Full History](./summarize-long-running-agent-state.md) — 
 - [Validate Tool Arguments Before Execution, Not Inside the Tool](./validate-tool-arguments-before-execution.md) — 
+- [Validate Tool Arguments Server-Side Before Execution](./validate-tool-arguments-server-side-before-execution.md) — 
 - [Verify Tool Side Effects Instead of Trusting the Tool's Response](./verify-tool-side-effects-instead-of-trusting-the-response.md) — 
 - [Write Tool Descriptions for the Model, Not the Codebase](./write-tool-descriptions-for-the-model-not-the-codebase.md) — 
