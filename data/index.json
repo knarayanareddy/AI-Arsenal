@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:27:20.256Z",
+    "generated_at": "2026-07-09T21:28:19.414Z",
     "total_projects": 146,
     "total_tools": 197,
     "total_papers": 110,
-    "total_tips": 147,
+    "total_tips": 153,
     "total_people": 25,
     "total_digests": 1,
     "total_guides": 59,
@@ -655,6 +655,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "alarm-on-empty-and-unparseable-responses",
+      "type": "tip",
+      "name": "Alarm on Empty and Unparseable Responses",
+      "description": "",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -7822,6 +7840,25 @@
       "featured": false
     },
     {
+      "id": "log-token-counts-and-cost-per-request",
+      "type": "tip",
+      "name": "Log Token Counts and Cost Per Request",
+      "description": "",
+      "tags": [
+        "observability",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/log-token-counts-and-cost-per-request.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/log-token-counts-and-cost-per-request",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "logankilpatrick",
       "type": "person",
       "name": "Logan Kilpatrick",
@@ -10071,6 +10108,24 @@
       "featured": false
     },
     {
+      "id": "pin-and-log-the-model-version-in-traces",
+      "type": "tip",
+      "name": "Pin and Log the Model Version in Every Trace",
+      "description": "",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/pin-and-log-the-model-version-in-traces.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/pin-and-log-the-model-version-in-traces",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "pin-dependencies-for-inference-images",
       "type": "tip",
       "name": "Pin Runtime, CUDA, Driver, and Model Versions in Inference Container Images",
@@ -11170,6 +11225,25 @@
       "featured": false
     },
     {
+      "id": "read-a-sample-of-production-traces-every-week",
+      "type": "tip",
+      "name": "Read a Sample of Production Traces Every Week",
+      "description": "",
+      "tags": [
+        "observability",
+        "llm",
+        "evaluation"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/read-a-sample-of-production-traces-every-week.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/read-a-sample-of-production-traces-every-week",
+      "last_updated": "2026-07-08",
+      "category": "production-gotchas",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "rebuff",
       "type": "tool",
       "name": "Rebuff",
@@ -11186,6 +11260,24 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "record-the-fully-rendered-prompt-sent-to-the-model",
+      "type": "tip",
+      "name": "Record the Fully Rendered Prompt Sent to the Model",
+      "description": "",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/record-the-fully-rendered-prompt-sent-to-the-model.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/record-the-fully-rendered-prompt-sent-to-the-model",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -12200,6 +12292,24 @@
       "url": "content/tips-and-tricks/prompting/set-temperature-by-decision-risk",
       "last_updated": "2026-07-02",
       "category": "prompting",
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "set-temperature-to-zero-when-reproducing-bugs",
+      "type": "tip",
+      "name": "Set Temperature to Zero When Reproducing Bugs",
+      "description": "",
+      "tags": [
+        "observability",
+        "llm"
+      ],
+      "path": "content/tips-and-tricks/debugging-and-observability/set-temperature-to-zero-when-reproducing-bugs.md",
+      "url": "content/tips-and-tricks/debugging-and-observability/set-temperature-to-zero-when-reproducing-bugs",
+      "last_updated": "2026-07-08",
+      "category": "debugging-llm-apps",
       "maturity": null,
       "cost_model": null,
       "status": null,

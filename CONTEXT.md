@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-09T21:27:23.185Z | Entries: 821 | Schema version: 1.0.0
+Generated: 2026-07-09T21:28:22.371Z | Entries: 827 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -9,7 +9,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Projects: 146
 - Tools: 197
 - Papers: 110
-- Tips: 147
+- Tips: 153
 - People: 25
 - Digests: 1
 - Guides: 59
@@ -368,8 +368,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Add an Eval Harness Before Refactoring Prompts or Retrieval Logic — 
 - Add Hybrid Search for Exact-Match Terms — 
 - Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call — 
+- Alarm on Empty and Unparseable Responses — 
 - Allowlist Tools Per Agent Role — 
 - Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts — 
 - Benchmark Using Real Production Context Lengths, Not Short Toy Prompts — 
 - Cache Embeddings Keyed by Content Hash to Avoid Duplicate Calls — 
-- Use Prompt Caching for Long, Stable System Prompt Prefixes — 
