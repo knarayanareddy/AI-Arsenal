@@ -9,7 +9,7 @@
 | [agents and orchestration](./agents-and-orchestration/) | 18 entries | 2026-07-09 |
 | [cost and performance](./cost-and-performance/) | 17 entries | 2026-07-09 |
 | [debugging and observability](./debugging-and-observability/) | 16 entries | 2026-07-09 |
-| [evaluation](./evaluation/) | 13 entries | 2026-07-09 |
+| [evaluation](./evaluation/) | 19 entries | 2026-07-09 |
 | [fine tuning](./fine-tuning/) | 14 entries | 2026-07-09 |
 | [inference and serving](./inference-and-serving/) | 19 entries | 2026-07-09 |
 | [prompting](./prompting/) | 21 entries | 2026-07-09 |
@@ -26,7 +26,7 @@
 - [Deduplicate Near-Duplicate Chunks Before Indexing](./rag-and-retrieval/deduplicate-near-duplicate-chunks-before-indexing.md)
 - [Deduplicate Training Data Before Fine-Tuning](./fine-tuning/deduplicate-training-data-before-fine-tuning.md)
 - [Drop Low-Similarity Chunks With a Score Threshold](./rag-and-retrieval/drop-low-similarity-chunks-with-a-score-threshold.md)
-- [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md)
+- [Evaluate the End-to-End Task, Not Only Components](./evaluation/evaluate-the-end-to-end-task-not-only-components.md)
 
 ## Most Popular
 
@@ -74,6 +74,7 @@ _No star-tracked entries yet._
 - [Establish a Prompting Baseline Before Fine-Tuning](./fine-tuning/establish-a-prompting-baseline-before-fine-tuning.md) — 
 - [Evaluate Checkpoints on Task Metrics, Not Training Loss](./fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
+- [Evaluate the End-to-End Task, Not Only Components](./evaluation/evaluate-the-end-to-end-task-not-only-components.md) — 
 - [Hold Out an Eval Set Before Any Training Run Touches the Data](./fine-tuning/hold-out-an-eval-set-before-any-training.md) — 
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
 - [Inspect a Random Sample of Training Data by Hand Before Every Run](./fine-tuning/inspect-your-training-data-by-hand.md) — 
@@ -83,4 +84,3 @@ _No star-tracked entries yet._
 - [Keep Local Model Weight Files Out of Git](./inference-and-serving/keep-model-files-out-of-git.md) — 
 - [Store Source Page and Section Metadata With Every Chunk](./rag-and-retrieval/keep-source-page-and-section-metadata.md) — 
 - [Log Every Agent State Transition, Not Just Final Output](./agents-and-orchestration/log-agent-state-transitions.md) — 
-- [Break Down Latency by Pipeline Stage Before Optimizing Anything](./debugging-and-observability/log-latency-by-pipeline-stage.md) — 

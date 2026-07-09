@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:26:16.504Z",
-  "count": 141,
+  "generated_at": "2026-07-09T21:27:07.362Z",
+  "count": 147,
   "items": [
     {
       "id": "add-a-max-step-budget-to-every-agent",
@@ -2185,6 +2185,61 @@
       "body_text": "What & Why Before investing in a chunking strategy change to fix poor retrieval, first compare a couple of alternative embedding models on a small labeled retrieval set. Poor retrieval is sometimes an embedding model quality problem, not a chunking problem, and rechunking is a larger, harder to reverse change (requiring full re indexing) than swapping an embedding model for the same chunks. Before / After Before: poor retrieval quality is diagnosed by immediately trying different chunk sizes and overlaps, without first checking whether the embedding model itself is the weaker link. After: run the same chunked corpus through 2 3 candidate embedding models, measure retrieval recall on a labeled eval set for each, and only proceed to chunking changes if a better embedding model doesn't resolve the gap. Implementation Keep chunking fixed, re embed the same chunk set with each candidate embedding model, and measure recall@k on a labeled (query, correct chunk) eval set for each — a meaningful recall improvement from a model swap alone means chunking wasn't the bottleneck. Gotchas Swapping embedding models requires re embedding and re indexing the entire corpus — budget for this cost before committing, same as a chunking change would require A labeled retrieval eval set of only a handful of examples can produce a misleadingly confident comparison — use enough examples to distinguish real differences from noise When NOT to Apply Skip this comparison if you already have strong evidence your current embedding model is state of the art for your domain and language — the marginal gain from swapping is unlikely to be worth the re indexing cost Skip this if your retrieval problem is clearly diagnosed as a chunking issue already (e.g. answers are consistently split across chunk boundaries) — go directly to chunking fixes Verification Community reported: comparing embedding models before committing to a chunking rewrite is a commonly recommended diagnostic order in RAG tuning discussions, though this entry has not yet been independently verified against a named production case — flagged enrichment status: draft pending stronger evidence."
     },
     {
+      "id": "evaluate-the-end-to-end-task-not-only-components",
+      "title": "Evaluate the End-to-End Task, Not Only Components",
+      "category": "production-gotchas",
+      "tags": [
+        "evaluation",
+        "llm",
+        "rag"
+      ],
+      "difficulty": "intermediate",
+      "impact": "high",
+      "time_to_implement": "a day",
+      "phase": "evaluation",
+      "effort": "day",
+      "estimated_time": "~1 day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (RAG/agent eval practice)",
+      "applies_to": [
+        "evaluation-pipelines"
+      ],
+      "gotchas": [
+        "Strong component scores can coexist with a broken end-to-end result -- perfect retrieval feeding a prompt that ignores the context still fails the user",
+        "End-to-end evals are noisier and harder to attribute; keep component evals too so you can localize a failure once the system eval flags it"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "slice-eval-metrics-by-input-segment",
+        "sample-production-traffic-into-eval-sets"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/evaluate-the-end-to-end-task-not-only-components.md",
+      "url": "content/tips-and-tricks/evaluation/evaluate-the-end-to-end-task-not-only-components",
+      "slug": "evaluate-the-end-to-end-task-not-only-components",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Evaluate the End-to-End Task, Not Only Components",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 335,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Component metrics — retrieval recall, classifier F1, judge score on an isolated step — are necessary but not sufficient. Users experience the <em>whole pipeline</em>, and a system can have excellent component numbers while the end-to-end output is wrong: the retriever finds the right chunk but the generation prompt ignores it, or each agent step is locally correct but the composed trajectory fails. Always maintain an end-to-end eval that measures the final user-facing outcome, and use component evals to <em>localize</em> failures the system eval surfaces — not as a substitute for it.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Retrieval recall is 95% and the generator scores well on hand-fed context, so the team assumes RAG quality is fine — meanwhile users see answers that ignore the retrieved passages.</p>\n<p><strong>After:</strong> An end-to-end eval on real questions scores the final answer against ground truth, exposes the \"ignores context\" failure, and the component evals then pinpoint it to the generation step.</p>\n<h2>Implementation</h2>\n<p>Define an end-to-end metric on the actual deliverable (final answer correctness, task completion, resolved ticket) over realistic inputs, ideally sampled from production. Run it alongside your component evals. When the system eval regresses, walk down the component evals and traces to localize the stage at fault. Keep both layers: system-level for truth, component-level for attribution.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>End-to-end scores are noisier and harder to attribute — retain component evals to localize the cause</li>\n<li>A perfect component score is not evidence of a working system; only the end-to-end result is</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>A single-step feature with no pipeline (one prompt, one output) is already end-to-end — no separate layer needed</li>\n<li>Deep unit-level debugging of one component legitimately isolates it temporarily; do not ship on component metrics alone</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: end-to-end (system-level) evaluation is emphasized across RAG and agent evaluation guides precisely because component metrics can mislead. Specific metrics are task-dependent.</p>\n",
+      "body_text": "What & Why Component metrics — retrieval recall, classifier F1, judge score on an isolated step — are necessary but not sufficient. Users experience the whole pipeline , and a system can have excellent component numbers while the end to end output is wrong: the retriever finds the right chunk but the generation prompt ignores it, or each agent step is locally correct but the composed trajectory fails. Always maintain an end to end eval that measures the final user facing outcome, and use component evals to localize failures the system eval surfaces — not as a substitute for it. Before / After Before: Retrieval recall is 95% and the generator scores well on hand fed context, so the team assumes RAG quality is fine — meanwhile users see answers that ignore the retrieved passages. After: An end to end eval on real questions scores the final answer against ground truth, exposes the \"ignores context\" failure, and the component evals then pinpoint it to the generation step. Implementation Define an end to end metric on the actual deliverable (final answer correctness, task completion, resolved ticket) over realistic inputs, ideally sampled from production. Run it alongside your component evals. When the system eval regresses, walk down the component evals and traces to localize the stage at fault. Keep both layers: system level for truth, component level for attribution. Gotchas End to end scores are noisier and harder to attribute — retain component evals to localize the cause A perfect component score is not evidence of a working system; only the end to end result is When NOT to Apply A single step feature with no pipeline (one prompt, one output) is already end to end — no separate layer needed Deep unit level debugging of one component legitimately isolates it temporarily; do not ship on component metrics alone Verification Community reported: end to end (system level) evaluation is emphasized across RAG and agent evaluation guides precisely because component metrics can mislead. Specific metrics are task dependent."
+    },
+    {
       "id": "hold-out-an-eval-set-before-any-training",
       "title": "Hold Out an Eval Set Before Any Training Run Touches the Data",
       "category": "production-gotchas",
@@ -2676,6 +2731,61 @@
       "word_count": 315,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Record each state transition an agent makes (its reasoning at that step, the action chosen, and the result observed) as a structured log event, not only the final answer returned to the user. When an agent produces a wrong result, the transition log is what lets you determine which specific step introduced the error, rather than guessing from the final output alone.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> <code>logger.info(f\"Agent finished: {final_answer}\")</code> — only the end state is recorded.</p>\n<p><strong>After:</strong> <code>logger.info({\"step\": i, \"thought\": thought, \"action\": action, \"result\": result})</code> emitted at every step, queryable by task ID to reconstruct the full trace.</p>\n<h2>Implementation</h2>\n<p>Emit one structured log event per step containing the agent's stated reasoning, the action taken, and the observed result, tagged with a task/run ID so all events for one execution can be reconstructed in order; route these into the same trace/observability pipeline used for other LLM calls rather than a separate ad hoc log.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Logging only the final answer makes it impossible to tell why an agent reached a wrong conclusion — the intermediate reasoning and tool results are what actually explain a failure</li>\n<li>Unstructured log lines are hard to query at scale — log structured events (state, action, result) rather than free-text messages if you expect to debug more than a handful of traces</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip per-step logging for extremely high-volume, low-stakes agent calls where the storage/query cost of full trace logging outweighs the debugging value — sample instead of logging every run in full</li>\n<li>Skip this if your orchestration framework already provides built-in step-level tracing you can query directly — don't duplicate the mechanism</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: structured per-step logging is a widely recommended agent-observability practice, though this entry has not yet been independently verified against a named production system — flagged <code>enrichment_status: draft</code> pending stronger evidence.</p>\n",
       "body_text": "What & Why Record each state transition an agent makes (its reasoning at that step, the action chosen, and the result observed) as a structured log event, not only the final answer returned to the user. When an agent produces a wrong result, the transition log is what lets you determine which specific step introduced the error, rather than guessing from the final output alone. Before / After Before: logger.info(f\"Agent finished: {final answer}\") — only the end state is recorded. After: logger.info({\"step\": i, \"thought\": thought, \"action\": action, \"result\": result}) emitted at every step, queryable by task ID to reconstruct the full trace. Implementation Emit one structured log event per step containing the agent's stated reasoning, the action taken, and the observed result, tagged with a task/run ID so all events for one execution can be reconstructed in order; route these into the same trace/observability pipeline used for other LLM calls rather than a separate ad hoc log. Gotchas Logging only the final answer makes it impossible to tell why an agent reached a wrong conclusion — the intermediate reasoning and tool results are what actually explain a failure Unstructured log lines are hard to query at scale — log structured events (state, action, result) rather than free text messages if you expect to debug more than a handful of traces When NOT to Apply Skip per step logging for extremely high volume, low stakes agent calls where the storage/query cost of full trace logging outweighs the debugging value — sample instead of logging every run in full Skip this if your orchestration framework already provides built in step level tracing you can query directly — don't duplicate the mechanism Verification Community reported: structured per step logging is a widely recommended agent observability practice, though this entry has not yet been independently verified against a named production system — flagged enrichment status: draft pending stronger evidence."
+    },
+    {
+      "id": "log-judge-rationales-not-only-scores",
+      "title": "Log Judge Rationales, Not Only Scores",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "difficulty": "beginner",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM-judge debugging practice)",
+      "applies_to": [
+        "evaluation-pipelines"
+      ],
+      "gotchas": [
+        "Rationales are debugging aids, not ground truth -- a judge can write a confident, well-argued rationale for a wrong verdict",
+        "Storing full rationales for large eval sets adds cost and storage; sample or store on failures if volume is a concern"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "use-rubric-anchored-llm-judges",
+        "validate-llm-judges-against-human-labels"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/log-judge-rationales-not-only-scores.md",
+      "url": "content/tips-and-tricks/evaluation/log-judge-rationales-not-only-scores",
+      "slug": "log-judge-rationales-not-only-scores",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Log Judge Rationales, Not Only Scores",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 317,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>When an LLM judge returns only a number, a failing eval tells you <em>that</em> something is wrong but not <em>why</em>. Capturing the judge's short rationale alongside each verdict turns eval failures into actionable diagnostics: you can see whether the judge penalized a genuine error, misread the rubric, or tripped on formatting. Rationales also let you audit the judge itself — patterns of bad reasoning across cases reveal a miscalibrated judge prompt far faster than staring at aggregate scores.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The eval shows category X dropped from 90% to 70%; you re-run and hand-inspect dozens of raw outputs to guess what changed.</p>\n<p><strong>After:</strong> The stored rationales for the newly-failing cases all say \"answer omitted the required citation\" — the cause is obvious in minutes, and you confirm it is a real regression, not a judge artifact.</p>\n<h2>Implementation</h2>\n<p>Have the judge emit a structured verdict plus a one-to-two sentence rationale (and ideally the rubric criterion it keyed on). Store both with the case id and the model output. On a failing run, read the rationales for the changed cases first. Periodically sample rationales on <em>passing</em> cases too, to catch a judge that is passing things for the wrong reasons.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A fluent rationale is not proof of a correct verdict — validate the judge against human labels, don't trust its self-justification</li>\n<li>Full-rationale logging on huge sets costs tokens and storage; store on failures or a sample if needed</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Deterministic metrics (exact match, unit tests) already tell you exactly what failed and need no rationale</li>\n<li>Extremely high-volume online scoring where per-call rationale cost is prohibitive can sample instead of logging every one</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: capturing judge reasoning is standard practice in LLM-as-judge tooling and debugging guides. Rationale reliability varies by judge and is not independently benchmarked here.</p>\n",
+      "body_text": "What & Why When an LLM judge returns only a number, a failing eval tells you that something is wrong but not why . Capturing the judge's short rationale alongside each verdict turns eval failures into actionable diagnostics: you can see whether the judge penalized a genuine error, misread the rubric, or tripped on formatting. Rationales also let you audit the judge itself — patterns of bad reasoning across cases reveal a miscalibrated judge prompt far faster than staring at aggregate scores. Before / After Before: The eval shows category X dropped from 90% to 70%; you re run and hand inspect dozens of raw outputs to guess what changed. After: The stored rationales for the newly failing cases all say \"answer omitted the required citation\" — the cause is obvious in minutes, and you confirm it is a real regression, not a judge artifact. Implementation Have the judge emit a structured verdict plus a one to two sentence rationale (and ideally the rubric criterion it keyed on). Store both with the case id and the model output. On a failing run, read the rationales for the changed cases first. Periodically sample rationales on passing cases too, to catch a judge that is passing things for the wrong reasons. Gotchas A fluent rationale is not proof of a correct verdict — validate the judge against human labels, don't trust its self justification Full rationale logging on huge sets costs tokens and storage; store on failures or a sample if needed When NOT to Apply Deterministic metrics (exact match, unit tests) already tell you exactly what failed and need no rationale Extremely high volume online scoring where per call rationale cost is prohibitive can sample instead of logging every one Verification Community reported: capturing judge reasoning is standard practice in LLM as judge tooling and debugging guides. Rationale reliability varies by judge and is not independently benchmarked here."
     },
     {
       "id": "log-latency-by-pipeline-stage",
@@ -3495,6 +3605,60 @@
       "body_text": "What & Why When few shot examples vary in format or domain, place the example most similar to the actual task closest to the task itself, rather than in arbitrary or alphabetical order. Models weight recent context more heavily, so the example nearest the task has outsized influence on the output pattern. Before / After Before: three few shot examples in a fixed, task independent order regardless of which one resembles the current request. After: examples re ranked per request by similarity to the current task, with the most similar example placed immediately before the task. Implementation Compute a similarity score (embedding distance or category match) between the current task and each candidate few shot example, sort by that score, and place the most similar example last in the prompt, immediately before the task input. Gotchas Recency effects mean the example closest to the task has outsized influence — a dissimilar example placed last can pull the output off pattern Similarity based ordering requires a similarity measure; a static example set with no per request reordering doesn't benefit from this When NOT to Apply Skip this if all your few shot examples are already uniformly similar to every task instance Not worth the added complexity for a fixed, single domain task where example order has no measurable effect on your eval set Verification Community reported: similarity based few shot example ordering leveraging recency effects is a commonly discussed pattern in prompting writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "pair-every-eval-score-with-a-baseline",
+      "title": "Pair Every Eval Score With a Baseline",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "beginner",
+      "impact": "high",
+      "time_to_implement": "an hour",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (eval methodology practice)",
+      "applies_to": [
+        "evaluation-pipelines"
+      ],
+      "gotchas": [
+        "A single accuracy number with no baseline is uninterpretable -- 82% could be excellent or terrible depending on task difficulty and the prior system",
+        "The baseline must be run on the same eval set and harness; comparing your score to a number quoted from a paper on a different set is not a valid comparison"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "set-pass-fail-thresholds-before-running-evals",
+        "run-evals-multiple-times-before-trusting-deltas"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/pair-every-eval-score-with-a-baseline.md",
+      "url": "content/tips-and-tricks/evaluation/pair-every-eval-score-with-a-baseline",
+      "slug": "pair-every-eval-score-with-a-baseline",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Pair Every Eval Score With a Baseline",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 310,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>An eval score in isolation carries almost no information. \"The model scores 82%\" tells you nothing until you know what a trivial baseline scores and what the previous system scored on the <em>same</em> set. Always report your number next to at least one reference point: a naive baseline (majority class, retrieval-only, last release) and, when relevant, a strong reference (a bigger model, human performance). The delta against a baseline is the real signal; the absolute number is often a distraction.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> A report says \"the new prompt scores 82% on our eval,\" a stakeholder approves it, and nobody notices the old prompt already scored 84%.</p>\n<p><strong>After:</strong> The report shows new 82% vs. previous 84% vs. majority-class 60%; the regression is obvious and the change is held back.</p>\n<h2>Implementation</h2>\n<p>Define one or two baselines up front and run them through the identical eval harness and dataset: a cheap naive baseline for a floor, and the currently-deployed system for the comparison that matters. Report all scores side by side, always as deltas against the deployed baseline. Re-run the baseline whenever the eval set changes so the comparison stays apples-to-apples.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Quoting a headline number from a paper or leaderboard as your \"baseline\" is invalid unless it ran on your exact set and harness</li>\n<li>A baseline that is stale (run on an old version of the eval set) produces a misleading delta</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Pure exploratory probing where you only want qualitative examples, not a comparison, can skip formal baselines</li>\n<li>If a canonical baseline for the task genuinely does not exist yet, establish the naive floor first rather than skipping the idea</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: baseline-relative reporting is foundational eval methodology across ML and LLM evaluation guides. The choice of baseline is task-specific and not prescribed here.</p>\n",
+      "body_text": "What & Why An eval score in isolation carries almost no information. \"The model scores 82%\" tells you nothing until you know what a trivial baseline scores and what the previous system scored on the same set. Always report your number next to at least one reference point: a naive baseline (majority class, retrieval only, last release) and, when relevant, a strong reference (a bigger model, human performance). The delta against a baseline is the real signal; the absolute number is often a distraction. Before / After Before: A report says \"the new prompt scores 82% on our eval,\" a stakeholder approves it, and nobody notices the old prompt already scored 84%. After: The report shows new 82% vs. previous 84% vs. majority class 60%; the regression is obvious and the change is held back. Implementation Define one or two baselines up front and run them through the identical eval harness and dataset: a cheap naive baseline for a floor, and the currently deployed system for the comparison that matters. Report all scores side by side, always as deltas against the deployed baseline. Re run the baseline whenever the eval set changes so the comparison stays apples to apples. Gotchas Quoting a headline number from a paper or leaderboard as your \"baseline\" is invalid unless it ran on your exact set and harness A baseline that is stale (run on an old version of the eval set) produces a misleading delta When NOT to Apply Pure exploratory probing where you only want qualitative examples, not a comparison, can skip formal baselines If a canonical baseline for the task genuinely does not exist yet, establish the naive floor first rather than skipping the idea Verification Community reported: baseline relative reporting is foundational eval methodology across ML and LLM evaluation guides. The choice of baseline is task specific and not prescribed here."
+    },
+    {
       "id": "parallelize-independent-retrieval-calls",
       "title": "Run Independent Retrieval or Tool Calls Concurrently, Not Sequentially",
       "category": "latency-optimization",
@@ -3920,6 +4084,60 @@
       "body_text": "What & Why Log a stable ID reference to source data (a document ID, chunk ID, prompt version ID) rather than copying that data's metadata directly into every log record. Copying duplicates the data across every record referencing it; if the source is later corrected, every already logged copy stays stale, while an ID reference always resolves to current (or version pinned) source data. Before / After Before: log record = {\"doc title\": \"Q3 Pricing Guide\", \"doc category\": \"sales\", ...} — metadata copied directly into the log. After: log record = {\"doc id\": \"doc 4821\", ...} — the log stores a stable reference, and metadata is looked up from the source by ID when needed. Implementation Identify fields in your log schema that duplicate data owned by another system (documents, prompts, chunks), replace them with a stable ID reference, and ensure the referenced source remains retrievable by that ID for the log's expected inspection lifetime. Gotchas Copying metadata duplicates it across records; corrections to the source later leave already logged copies stale ID reference logging requires the referenced source to remain retrievable by that ID for as long as needed — deleted sources or reused IDs break the reference When NOT to Apply Skip this for genuinely ephemeral metadata that has no persistent source record to reference back to Not worth the added lookup complexity if the source system has no reliable ID based retrieval API, or logs need to remain self contained and readable after the source system is decommissioned Verification Community reported: preferring ID references over copied metadata in log schemas is a widely repeated recommendation in observability log design writeups, not independently benchmarked here against a named production system."
     },
     {
+      "id": "prefer-pairwise-comparison-when-scoring-is-noisy",
+      "title": "Prefer Pairwise Comparison When Absolute Scoring Is Noisy",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "a few hours",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~2-3 hours",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (LLM-judge and preference-eval practice)",
+      "applies_to": [
+        "evaluation-pipelines"
+      ],
+      "gotchas": [
+        "Pairwise judging is O(n^2) across candidates -- for many systems use a tournament or sampled pairs, not all-vs-all",
+        "Position bias is real: judges favor the first (or second) option; randomize order and ideally average both orderings"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "use-rubric-anchored-llm-judges",
+        "validate-llm-judges-against-human-labels"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/prefer-pairwise-comparison-when-scoring-is-noisy.md",
+      "url": "content/tips-and-tricks/evaluation/prefer-pairwise-comparison-when-scoring-is-noisy",
+      "slug": "prefer-pairwise-comparison-when-scoring-is-noisy",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Prefer Pairwise Comparison When Absolute Scoring Is Noisy",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 326,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Asking a judge (LLM or human) to assign an absolute score (e.g. \"rate this answer 1-10\") is notoriously noisy — the scale drifts between examples and raters, and small quality differences vanish into rounding. Asking \"which of these two answers is better?\" is a much easier, more stable judgment. When you are comparing two prompts, models, or versions and the absolute scores are too jittery to trust, switch to pairwise preference and report win rate. It converts an unreliable magnitude estimate into a reliable ordering.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> Version A averages 7.1/10 and version B averages 7.3/10 across runs; the gap is inside the noise and flips run to run, so nobody can decide.</p>\n<p><strong>After:</strong> Head-to-head, B is preferred over A in 63% of paired comparisons with order randomized — a stable, defensible signal to ship B.</p>\n<h2>Implementation</h2>\n<p>For each eval case, generate outputs from both systems, present them to the judge in randomized order, and record the preferred one (allow ties). Aggregate to a win rate with a confidence interval. Control for position bias by randomizing order and, for high-stakes calls, running each pair in both orders and averaging. Keep a rubric so \"better\" means the same thing across cases.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>All-vs-all pairwise scales quadratically; for many candidates, sample pairs or run a tournament</li>\n<li>Judges exhibit position and verbosity bias — randomize order and watch for a systematic preference for longer answers</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>When you need an absolute, threshold-able metric for a gate (e.g. \"must exceed 90% exact match\"), pairwise win rate does not give you that</li>\n<li>Objective tasks with a ground-truth answer (exact match, unit tests) should use the deterministic metric, not preference judging</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: pairwise/preference evaluation is standard in LLM-judge and human-preference workflows (widely used in model comparison and arena-style rankings). Position/verbosity biases are documented; the specific win-rate thresholds are task-dependent.</p>\n",
+      "body_text": "What & Why Asking a judge (LLM or human) to assign an absolute score (e.g. \"rate this answer 1 10\") is notoriously noisy — the scale drifts between examples and raters, and small quality differences vanish into rounding. Asking \"which of these two answers is better?\" is a much easier, more stable judgment. When you are comparing two prompts, models, or versions and the absolute scores are too jittery to trust, switch to pairwise preference and report win rate. It converts an unreliable magnitude estimate into a reliable ordering. Before / After Before: Version A averages 7.1/10 and version B averages 7.3/10 across runs; the gap is inside the noise and flips run to run, so nobody can decide. After: Head to head, B is preferred over A in 63% of paired comparisons with order randomized — a stable, defensible signal to ship B. Implementation For each eval case, generate outputs from both systems, present them to the judge in randomized order, and record the preferred one (allow ties). Aggregate to a win rate with a confidence interval. Control for position bias by randomizing order and, for high stakes calls, running each pair in both orders and averaging. Keep a rubric so \"better\" means the same thing across cases. Gotchas All vs all pairwise scales quadratically; for many candidates, sample pairs or run a tournament Judges exhibit position and verbosity bias — randomize order and watch for a systematic preference for longer answers When NOT to Apply When you need an absolute, threshold able metric for a gate (e.g. \"must exceed 90% exact match\"), pairwise win rate does not give you that Objective tasks with a ground truth answer (exact match, unit tests) should use the deterministic metric, not preference judging Verification Community reported: pairwise/preference evaluation is standard in LLM judge and human preference workflows (widely used in model comparison and arena style rankings). Position/verbosity biases are documented; the specific win rate thresholds are task dependent."
+    },
+    {
       "id": "prefer-reranking-before-rechunking",
       "title": "Add a Reranker Before Changing Your Chunking Strategy",
       "category": "rag-tuning",
@@ -4303,6 +4521,60 @@
       "body_text": "What & Why When investigating a failure, replay the exact original trace with only one variable changed at a time (the prompt, the model, the temperature, the retrieved context), rather than changing several things at once. Changing multiple variables simultaneously makes it impossible to know which change actually caused the resulting behavior difference. Before / After Before: a failing case is re run with a new prompt version and a different model simultaneously, then the change is judged to have \"fixed\" the issue with no way to tell which change mattered. After: the failing trace is replayed first with only the prompt changed (model and context held constant), evaluated, and only then is a second isolated variable changed if needed. Implementation Reconstruct the exact original trace conditions (prompt version, retrieved context, model, parameters), change exactly one variable, re run, and record the outcome before considering any further changes. Gotchas Changing multiple variables at once makes it impossible to attribute the resulting behavior change to a specific cause Replay requires the original trace to be complete enough to reconstruct exactly — an incomplete trace can't be replayed faithfully When NOT to Apply Skip single variable isolation for exploratory debugging where the goal is a fast directional signal, not a rigorous causal attribution Not practical if trace completeness (see store prompt version in every trace) isn't in place yet — fix that gap first Verification Community reported: controlled, single variable replay is a widely repeated debugging discipline in software engineering generally, directly applicable to LLM application debugging, not independently benchmarked here against a named production system."
     },
     {
+      "id": "report-confidence-intervals-on-eval-scores",
+      "title": "Report Confidence Intervals on Small-Set Eval Scores",
+      "category": "debugging-llm-apps",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "an hour",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~1 hour",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (statistical eval practice)",
+      "applies_to": [
+        "evaluation-pipelines"
+      ],
+      "gotchas": [
+        "On a 50-case set, a 4-point score difference is usually inside the noise -- treating it as a real improvement leads to shipping non-changes",
+        "Bootstrapping over eval cases captures sampling noise but not judge/model stochasticity; combine with repeated runs to capture both"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "run-evals-multiple-times-before-trusting-deltas",
+        "pair-every-eval-score-with-a-baseline"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/report-confidence-intervals-on-eval-scores.md",
+      "url": "content/tips-and-tricks/evaluation/report-confidence-intervals-on-eval-scores",
+      "slug": "report-confidence-intervals-on-eval-scores",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Report Confidence Intervals on Small-Set Eval Scores",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 316,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>Small eval sets produce noisy scores, and a point estimate hides that noise. A model that scores 78% on 50 cases has a confidence interval wide enough that 72% and 84% are both plausible — so a \"2-point gain\" over the baseline is very likely nothing. Reporting a confidence interval (or at least the set size and a bootstrap range) forces everyone to reason about whether a delta is real before acting on it. It is the difference between measuring an improvement and imagining one.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> \"New version: 80%, old: 78% — ship it.\" The interval on 50 cases spans roughly ±11 points, so the 2-point gain is noise.</p>\n<p><strong>After:</strong> \"New: 80% [70-89%], old: 78% [68-87%] on n=50 — overlapping intervals, not a real gain,\" and the team either expands the eval set or holds.</p>\n<h2>Implementation</h2>\n<p>Bootstrap resample your eval cases (sample with replacement, recompute the metric, repeat ~1000x) to get a percentile interval, and always report the set size alongside the score. For pass/fail metrics, a binomial interval works too. When the interval is too wide to decide, the fix is more eval cases or more repeated runs — not a bigger claim about a small delta.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>Bootstrapping captures case-sampling variance but not run-to-run model/judge variance; pair it with repeated runs for the full picture</li>\n<li>Overlapping intervals mean \"not distinguishable at this sample size,\" which is information, not failure</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Very large eval sets (tens of thousands of cases) have tight intervals where the point estimate is already reliable enough</li>\n<li>Deterministic pass/fail gates on a fixed regression suite may care about specific failing cases, not aggregate intervals</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: reporting uncertainty on benchmark scores is standard statistical practice and increasingly expected in LLM evaluation. Exact interval widths depend on set size and metric and are illustrative here.</p>\n",
+      "body_text": "What & Why Small eval sets produce noisy scores, and a point estimate hides that noise. A model that scores 78% on 50 cases has a confidence interval wide enough that 72% and 84% are both plausible — so a \"2 point gain\" over the baseline is very likely nothing. Reporting a confidence interval (or at least the set size and a bootstrap range) forces everyone to reason about whether a delta is real before acting on it. It is the difference between measuring an improvement and imagining one. Before / After Before: \"New version: 80%, old: 78% — ship it.\" The interval on 50 cases spans roughly ±11 points, so the 2 point gain is noise. After: \"New: 80% [70 89%], old: 78% [68 87%] on n=50 — overlapping intervals, not a real gain,\" and the team either expands the eval set or holds. Implementation Bootstrap resample your eval cases (sample with replacement, recompute the metric, repeat 1000x) to get a percentile interval, and always report the set size alongside the score. For pass/fail metrics, a binomial interval works too. When the interval is too wide to decide, the fix is more eval cases or more repeated runs — not a bigger claim about a small delta. Gotchas Bootstrapping captures case sampling variance but not run to run model/judge variance; pair it with repeated runs for the full picture Overlapping intervals mean \"not distinguishable at this sample size,\" which is information, not failure When NOT to Apply Very large eval sets (tens of thousands of cases) have tight intervals where the point estimate is already reliable enough Deterministic pass/fail gates on a fixed regression suite may care about specific failing cases, not aggregate intervals Verification Community reported: reporting uncertainty on benchmark scores is standard statistical practice and increasingly expected in LLM evaluation. Exact interval widths depend on set size and metric and are illustrative here."
+    },
+    {
       "id": "require-human-approval-for-irreversible-actions",
       "title": "Require Human Approval Before Irreversible Agent Actions",
       "category": "agent-reliability",
@@ -4521,6 +4793,60 @@
       "word_count": 294,
       "body_html": "<h2>What &amp; Why</h2>\n<p>Classify incoming task difficulty and route straightforward requests to a smaller, cheaper model while reserving the larger model for genuinely complex requests. Not every request needs the largest available model's capability; a classifier that reliably identifies easy cases lets you cut cost on the majority of traffic without degrading quality on the harder tail.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> every request, regardless of complexity, is sent to the largest available model.</p>\n<p><strong>After:</strong> a lightweight classifier (a small model or rule-based heuristic) tags each request's difficulty, routing \"easy\" requests to a smaller model and \"hard\" requests to the larger one.</p>\n<h2>Implementation</h2>\n<p>Build or reuse a difficulty classifier (often a small model or a rule set based on request features), validate its routing accuracy against a labeled sample before deployment, and route based on its output — reserving the larger model only for requests it flags as complex.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>The underlying routing mechanism is the same whether framed as a cost or latency optimization — this absorbs a narrower, latency-framed version of the same practice</li>\n<li>A misrouting classifier produces silently worse answers on hard tasks routed to the smaller model — validate routing accuracy, in addition to cost savings</li>\n<li>Routing adds its own classification step and overhead — for very low-volume features, this overhead can exceed the savings</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>Skip this for low-volume features where the routing infrastructure overhead isn't justified by the modest absolute cost savings</li>\n<li>Not appropriate if you can't build or validate a difficulty classifier with acceptable accuracy — a bad classifier's quality risk outweighs the cost benefit</li>\n</ul>\n<h2>Verification</h2>\n<p>Production-verified: routing simple tasks to smaller/cheaper models based on classified difficulty is a standard, widely documented cost-optimization pattern in production LLM application design.</p>\n",
       "body_text": "What & Why Classify incoming task difficulty and route straightforward requests to a smaller, cheaper model while reserving the larger model for genuinely complex requests. Not every request needs the largest available model's capability; a classifier that reliably identifies easy cases lets you cut cost on the majority of traffic without degrading quality on the harder tail. Before / After Before: every request, regardless of complexity, is sent to the largest available model. After: a lightweight classifier (a small model or rule based heuristic) tags each request's difficulty, routing \"easy\" requests to a smaller model and \"hard\" requests to the larger one. Implementation Build or reuse a difficulty classifier (often a small model or a rule set based on request features), validate its routing accuracy against a labeled sample before deployment, and route based on its output — reserving the larger model only for requests it flags as complex. Gotchas The underlying routing mechanism is the same whether framed as a cost or latency optimization — this absorbs a narrower, latency framed version of the same practice A misrouting classifier produces silently worse answers on hard tasks routed to the smaller model — validate routing accuracy, in addition to cost savings Routing adds its own classification step and overhead — for very low volume features, this overhead can exceed the savings When NOT to Apply Skip this for low volume features where the routing infrastructure overhead isn't justified by the modest absolute cost savings Not appropriate if you can't build or validate a difficulty classifier with acceptable accuracy — a bad classifier's quality risk outweighs the cost benefit Verification Production verified: routing simple tasks to smaller/cheaper models based on classified difficulty is a standard, widely documented cost optimization pattern in production LLM application design."
+    },
+    {
+      "id": "run-a-fast-eval-per-commit-and-a-full-eval-nightly",
+      "title": "Run a Fast Eval Per Commit and a Full Eval Nightly",
+      "category": "production-gotchas",
+      "tags": [
+        "evaluation",
+        "llm"
+      ],
+      "difficulty": "intermediate",
+      "impact": "medium",
+      "time_to_implement": "half a day",
+      "phase": "evaluation",
+      "effort": "hours",
+      "estimated_time": "~half a day",
+      "reversible": true,
+      "verification_status": "community-reported",
+      "verified_by": "community reports (CI/CD eval practice)",
+      "applies_to": [
+        "evaluation-pipelines"
+      ],
+      "gotchas": [
+        "The fast smoke set must include your known past failures, or a regression can slip through the per-commit gate and only surface at night",
+        "If the nightly full eval has no owner who triages failures, it becomes a red badge everyone ignores -- assign triage, not only the job"
+      ],
+      "metrics": [],
+      "related_tips": [
+        "add-evals-before-refactors",
+        "use-golden-questions-for-every-bug-fix"
+      ],
+      "added_date": "2026-07-08",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-07-08",
+      "enrichment_status": "draft",
+      "entry_type": "tip",
+      "path": "content/tips-and-tricks/evaluation/run-a-fast-eval-per-commit-and-a-full-eval-nightly.md",
+      "url": "content/tips-and-tricks/evaluation/run-a-fast-eval-per-commit-and-a-full-eval-nightly",
+      "slug": "run-a-fast-eval-per-commit-and-a-full-eval-nightly",
+      "section_path": "content/tips-and-tricks/evaluation",
+      "display_name": "Run a Fast Eval Per Commit and a Full Eval Nightly",
+      "summary": "",
+      "last_updated": "2026-07-08",
+      "headings": [
+        "What & Why",
+        "Before / After",
+        "Implementation",
+        "Gotchas",
+        "When NOT to Apply",
+        "Verification"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 315,
+      "body_html": "<h2>What &amp; Why</h2>\n<p>A full eval suite is often too slow and too expensive to run on every commit, so teams either run it rarely (regressions land silently) or run it every time (CI becomes glacial and costly). The resolution is tiered: a small, fast smoke eval — a few dozen high-value cases including every known past failure — gates every commit in seconds, while the full suite runs on a schedule (nightly) and on release candidates. You get fast per-commit protection against obvious breaks plus thorough periodic coverage.</p>\n<h2>Before / After</h2>\n<p><strong>Before:</strong> The 2,000-case eval runs only before releases; a prompt change three weeks ago quietly regressed a whole category and nobody knew until launch.</p>\n<p><strong>After:</strong> A 40-case smoke set runs per commit (catches the obvious break immediately); the full 2,000-case suite runs nightly and flags subtler drift with an owner to triage it.</p>\n<h2>Implementation</h2>\n<p>Curate the smoke set deliberately: cover the critical paths and include the golden cases from past bug fixes, keeping it fast and cheap enough to gate every PR. Wire the full suite to a nightly schedule and to release branches. Make both report against a baseline, and assign a human owner to triage nightly failures so results drive action rather than badge blindness.</p>\n<h2>Gotchas</h2>\n<ul>\n<li>A smoke set that omits past failures gives false confidence — seed it from your bug-fix golden cases</li>\n<li>A scheduled eval with no triage owner rots into ignored noise</li>\n</ul>\n<h2>When NOT to Apply</h2>\n<ul>\n<li>If your full suite is already fast and cheap enough to run per commit, run it and skip the tiering</li>\n<li>Very early prototypes without CI may not need the split yet — start with any eval at all</li>\n</ul>\n<h2>Verification</h2>\n<p>Community-reported: tiered smoke-vs-full test suites are standard CI/CD practice, applied directly to LLM eval by many teams. Cadence and set sizes are context-dependent.</p>\n",
+      "body_text": "What & Why A full eval suite is often too slow and too expensive to run on every commit, so teams either run it rarely (regressions land silently) or run it every time (CI becomes glacial and costly). The resolution is tiered: a small, fast smoke eval — a few dozen high value cases including every known past failure — gates every commit in seconds, while the full suite runs on a schedule (nightly) and on release candidates. You get fast per commit protection against obvious breaks plus thorough periodic coverage. Before / After Before: The 2,000 case eval runs only before releases; a prompt change three weeks ago quietly regressed a whole category and nobody knew until launch. After: A 40 case smoke set runs per commit (catches the obvious break immediately); the full 2,000 case suite runs nightly and flags subtler drift with an owner to triage it. Implementation Curate the smoke set deliberately: cover the critical paths and include the golden cases from past bug fixes, keeping it fast and cheap enough to gate every PR. Wire the full suite to a nightly schedule and to release branches. Make both report against a baseline, and assign a human owner to triage nightly failures so results drive action rather than badge blindness. Gotchas A smoke set that omits past failures gives false confidence — seed it from your bug fix golden cases A scheduled eval with no triage owner rots into ignored noise When NOT to Apply If your full suite is already fast and cheap enough to run per commit, run it and skip the tiering Very early prototypes without CI may not need the split yet — start with any eval at all Verification Community reported: tiered smoke vs full test suites are standard CI/CD practice, applied directly to LLM eval by many teams. Cadence and set sizes are context dependent."
     },
     {
       "id": "run-evals-multiple-times-before-trusting-deltas",
