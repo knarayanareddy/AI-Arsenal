@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-09T21:32:31.468Z",
+  "generated_at": "2026-07-09T21:45:39.939Z",
   "tags": [
     {
       "id": "agents",
@@ -1146,9 +1146,9 @@
     {
       "id": "guardrails",
       "label": "Guardrails",
-      "count": 26,
+      "count": 32,
       "types": {
-        "tip": 5,
+        "tip": 11,
         "architecture": 1,
         "tool": 11,
         "benchmark": 5,
@@ -1158,6 +1158,7 @@
       },
       "entries": [
         "allowlist-tools-per-agent-role",
+        "block-ssrf-by-validating-outbound-urls",
         "choose-guardrails-strategy",
         "cubesandbox",
         "do-not-answer",
@@ -1174,14 +1175,19 @@
         "nemo-guardrails",
         "openai-agents-sdk",
         "portkey",
+        "rate-limit-and-cap-spend-per-user",
         "rebuff",
+        "redact-pii-before-sending-to-third-party-apis",
         "salad-bench",
+        "sandbox-model-generated-code-execution",
+        "scope-and-rotate-api-keys-with-least-privilege",
         "separate-user-content-from-system-instructions",
         "skillspector",
         "strongreject",
         "structured-output-and-tool-use",
         "treat-retrieved-text-as-untrusted",
         "use-json-schema-for-outputs",
+        "validate-tool-arguments-server-side-before-execution",
         "wei-2023-jailbroken"
       ]
     },
@@ -1397,10 +1403,10 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 313,
+      "count": 314,
       "types": {
         "tool": 67,
-        "tip": 51,
+        "tip": 52,
         "guide": 44,
         "paper": 53,
         "project": 54,
@@ -1638,6 +1644,7 @@
         "read-a-sample-of-production-traces-every-week",
         "rebuff",
         "record-the-fully-rendered-prompt-sent-to-the-model",
+        "redact-pii-before-sending-to-third-party-apis",
         "repomix",
         "report-confidence-intervals-on-eval-scores",
         "reserve-output-tokens-before-adding-context",
@@ -1823,9 +1830,9 @@
     {
       "id": "monitoring",
       "label": "Monitoring",
-      "count": 36,
+      "count": 38,
       "types": {
-        "tip": 12,
+        "tip": 14,
         "person": 1,
         "architecture": 1,
         "tool": 14,
@@ -1862,7 +1869,9 @@
         "opik",
         "phoenix",
         "promptfoo",
+        "rate-limit-and-cap-spend-per-user",
         "return-structured-errors-from-tools-so-the-agent-can-recover",
+        "scope-and-rotate-api-keys-with-least-privilege",
         "set-a-token-and-cost-budget-per-agent-run",
         "spotlight-by-backplanes",
         "superlog",
@@ -2610,10 +2619,10 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 38,
+      "count": 44,
       "types": {
         "tool": 14,
-        "tip": 12,
+        "tip": 18,
         "person": 3,
         "architecture": 2,
         "benchmark": 5,
@@ -2627,6 +2636,7 @@
         "arvind-narayanan",
         "astra-autonomous-pentest",
         "aws-bedrock",
+        "block-ssrf-by-validating-outbound-urls",
         "choose-guardrails-strategy",
         "cubesandbox",
         "dario-amodei",
@@ -2642,13 +2652,17 @@
         "llm-guard",
         "nemo-guardrails",
         "pyrit",
+        "rate-limit-and-cap-spend-per-user",
         "rebuff",
+        "redact-pii-before-sending-to-third-party-apis",
         "redact-secrets-before-tracing",
         "require-human-approval-for-irreversible-actions",
         "review-data-retention-for-prompts",
         "run-prompt-injection-regression-tests",
         "salad-bench",
         "sandbox-code-execution-tools",
+        "sandbox-model-generated-code-execution",
+        "scope-and-rotate-api-keys-with-least-privilege",
         "separate-planner-and-executor-permissions",
         "separate-user-content-from-system-instructions",
         "simon-willison",
@@ -2658,6 +2672,7 @@
         "test-prompts-with-adversarial-inputs",
         "treat-retrieved-text-as-untrusted",
         "use-local-models-for-sensitive-prototyping",
+        "validate-tool-arguments-server-side-before-execution",
         "wei-2023-jailbroken"
       ]
     },
@@ -2873,9 +2888,9 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 67,
+      "count": 70,
       "types": {
-        "tip": 19,
+        "tip": 22,
         "guide": 6,
         "tool": 16,
         "project": 18,
@@ -2896,6 +2911,7 @@
         "autogen",
         "autogpt",
         "baml",
+        "block-ssrf-by-validating-outbound-urls",
         "browser-use",
         "browserbase",
         "budget-context-before-adding-tools",
@@ -2935,6 +2951,7 @@
         "require-human-approval-for-irreversible-actions",
         "return-structured-errors-from-tools-so-the-agent-can-recover",
         "sandbox-code-execution-tools",
+        "sandbox-model-generated-code-execution",
         "schick-2023-toolformer",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
@@ -2948,6 +2965,7 @@
         "supervision",
         "tau-bench",
         "validate-tool-arguments-before-execution",
+        "validate-tool-arguments-server-side-before-execution",
         "vercel-ai-sdk",
         "verify-tool-side-effects-instead-of-trusting-the-response",
         "write-tool-descriptions-for-the-model-not-the-codebase",

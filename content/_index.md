@@ -15,22 +15,22 @@
 | [projects](./projects/) | 146 entries | 2026-07-09 |
 | [research](./research/) | 114 entries | 2026-07-09 |
 | [skills](./skills/) | 28 entries | 2026-07-09 |
-| [tips and tricks](./tips-and-tricks/) | 165 entries | 2026-07-09 |
+| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-09 |
 | [tools](./tools/) | 224 entries | 2026-07-09 |
 | [trending](./trending/) | 4 entries | 2026-07-09 |
 
 ## Recently Added
 
+- [Block SSRF by Validating Outbound URLs From Tools](./tips-and-tricks/agents-and-orchestration/block-ssrf-by-validating-outbound-urls.md)
+- [Rate-Limit and Cap Spend Per User](./tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user.md)
+- [Redact PII Before Sending Prompts to Third-Party APIs](./tips-and-tricks/inference-and-serving/redact-pii-before-sending-to-third-party-apis.md)
+- [Sandbox Model-Generated Code Execution](./tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution.md)
+- [Scope and Rotate LLM API Keys With Least Privilege](./tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege.md)
+- [Validate Tool Arguments Server-Side Before Execution](./tips-and-tricks/agents-and-orchestration/validate-tool-arguments-server-side-before-execution.md)
 - [Hugging Face Accelerate](./tools/model-layer/accelerate.md)
 - [AdalFlow](./tools/dx-and-tooling/adalflow.md)
 - [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
 - [AgentOps](./tools/evaluation-and-observability/agentops.md)
-- [Agno](./tools/orchestration/agno.md)
-- [Aider](./tools/dx-and-tooling/aider.md)
-- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md)
-- [Airbyte](./tools/data-ingestion/airbyte.md)
-- [Alarm on Empty and Unparseable Responses](./tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses.md)
-- [Flamingo: a Visual Language Model for Few-Shot Learning](./research/architectures/alayrac-2022-flamingo.md)
 
 ## Most Popular
 
