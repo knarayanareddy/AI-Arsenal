@@ -42,7 +42,8 @@ maturity: beta
 cost_model: open-source
 github_stars: 9928
 last_commit: "2026-03-25"
-docs_url: https://huggingface.co/amphion
+docs_url: null
+hf_url: https://huggingface.co/amphion
 phase: framework
 domain:
   - "audio"
