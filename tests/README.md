@@ -37,6 +37,7 @@ When you change a script, add or update tests in `tests/`:
 | `check-duplicates.test.js` | Duplicate ID detection |
 | `check-links.test.js` | URL extraction, ignore patterns, SSRF block |
 | `check-stale.test.js` | Stale entry detection |
+| `generate-toc.test.js` | Browse All is a complete (untruncated) listing |
 | `network-guard.test.js` | Private IP detection, URL parsing safety |
 | `cache-guard.test.js` | Cache validation |
 | `html-sanitizer.test.js` | XSS sanitization |
