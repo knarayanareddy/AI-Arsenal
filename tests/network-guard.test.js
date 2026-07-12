@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { isPrivateIpv4, isPrivateIpv6, isPrivateAddress, parseSafeUrl, domainAllowed, hostCallAllowed, resetHostCallCounts } from '../scripts/utils/network-guard.js';
+import { isPrivateIpv4, isPrivateIpv6, isPrivateAddress, ipv6ToBytes, parseSafeUrl, domainAllowed, hostCallAllowed, resetHostCallCounts } from '../scripts/utils/network-guard.js';
 
 test('isPrivateIpv4 detects all private/loopback/link-local ranges', () => {
   // Loopback
@@ -44,6 +44,38 @@ test('isPrivateIpv6 detects loopback, link-local, ULA, mapped, unspecified', () 
   assert.equal(isPrivateIpv6('2001:4860:4860::8888'), false); // Google public DNS
   assert.equal(isPrivateIpv6('2606:4700:4700::1111'), false); // Cloudflare public DNS
   assert.equal(isPrivateIpv6('not-an-ip'), false);
+});
+
+test('isPrivateIpv6 rejects hex IPv4-mapped private addresses (SSRF bypass)', () => {
+  // Hexadecimal mapped forms that the old string-prefix classifier missed.
+  assert.equal(isPrivateIpv6('::ffff:7f00:1'), true);       // 127.0.0.1
+  assert.equal(isPrivateIpv6('::ffff:a9fe:a9fe'), true);    // 169.254.169.254 (metadata)
+  assert.equal(isPrivateIpv6('::ffff:c0a8:1'), true);       // 192.168.0.1
+  assert.equal(isPrivateIpv6('::ffff:0a00:5'), true);       // 10.0.0.5
+  // Dotted mapped form still classified.
+  assert.equal(isPrivateIpv6('::ffff:127.0.0.1'), true);
+  assert.equal(isPrivateIpv6('::ffff:169.254.169.254'), true);
+  // A public IPv4 mapped in hex must remain public.
+  assert.equal(isPrivateIpv6('::ffff:0808:0808'), false);   // 8.8.8.8
+  assert.equal(isPrivateIpv6('::ffff:8.8.8.8'), false);
+});
+
+test('isPrivateIpv6 rejects multicast and deprecated site-local ranges', () => {
+  assert.equal(isPrivateIpv6('ff00::1'), true);   // multicast
+  assert.equal(isPrivateIpv6('ff02::1'), true);   // link-local all-nodes multicast
+  assert.equal(isPrivateIpv6('fec0::1'), true);   // deprecated site-local
+  assert.equal(isPrivateIpv6('feff::1'), true);   // site-local upper edge
+  // Global unicast stays public.
+  assert.equal(isPrivateIpv6('2606:4700:4700::1111'), false);
+  assert.equal(isPrivateIpv6('2a00:1450:4001::1'), false);
+});
+
+test('ipv6ToBytes expands ::, embedded IPv4, and zone ids', () => {
+  assert.deepEqual([...ipv6ToBytes('::1')], [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]);
+  assert.deepEqual([...ipv6ToBytes('::ffff:127.0.0.1').slice(10)], [0xff,0xff,127,0,0,1]);
+  assert.deepEqual([...ipv6ToBytes('::ffff:7f00:1').slice(10)], [0xff,0xff,127,0,0,1]);
+  assert.equal(ipv6ToBytes('fe80::1%eth0')[0], 0xfe); // zone id stripped
+  assert.equal(ipv6ToBytes('not-an-ip'), null);
 });
 
 test('isPrivateAddress combines v4 and v6', () => {

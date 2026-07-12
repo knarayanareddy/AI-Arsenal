@@ -35,23 +35,73 @@ export function isPrivateIpv4(addr) {
   return PRIVATE_IPV4_RANGES.some(([lo, hi]) => n >= lo && n <= hi);
 }
 
+// Expand an IPv6 address (already validated by net.isIPv6) to its 16 bytes.
+// Handles the `::` zero-run, an optional zone id, and an embedded dotted-quad
+// IPv4 tail (e.g. ::ffff:127.0.0.1). Returns null if it cannot be parsed.
+export function ipv6ToBytes(addr) {
+  if (!net.isIPv6(addr)) return null;
+  let text = addr.toLowerCase();
+  const zone = text.indexOf('%');
+  if (zone !== -1) text = text.slice(0, zone);
+
+  // Convert a trailing dotted-quad into two hextets so the rest is pure hex.
+  const lastColon = text.lastIndexOf(':');
+  const tail = text.slice(lastColon + 1);
+  if (tail.includes('.')) {
+    if (!net.isIPv4(tail)) return null;
+    const [a, b, c, d] = tail.split('.').map(Number);
+    text = `${text.slice(0, lastColon + 1)}${((a << 8) | b).toString(16)}:${((c << 8) | d).toString(16)}`;
+  }
+
+  const halves = text.split('::');
+  if (halves.length > 2) return null;
+  const head = halves[0] ? halves[0].split(':') : [];
+  const hasGap = halves.length === 2;
+  const rear = hasGap ? (halves[1] ? halves[1].split(':') : []) : [];
+
+  let hextets;
+  if (hasGap) {
+    const fill = 8 - head.length - rear.length;
+    if (fill < 0) return null;
+    hextets = [...head, ...Array(fill).fill('0'), ...rear];
+  } else {
+    hextets = head;
+  }
+  if (hextets.length !== 8) return null;
+
+  const bytes = new Uint8Array(16);
+  for (let i = 0; i < 8; i++) {
+    if (!/^[0-9a-f]{1,4}$/.test(hextets[i])) return null;
+    const value = parseInt(hextets[i], 16);
+    bytes[i * 2] = (value >> 8) & 0xff;
+    bytes[i * 2 + 1] = value & 0xff;
+  }
+  return bytes;
+}
+
 export function isPrivateIpv6(addr) {
-  if (!net.isIPv6(addr)) return false;
-  const lower = addr.toLowerCase();
-  // loopback ::1
-  if (lower === '::1') return true;
-  // link-local fe80::/10
-  if (lower.startsWith('fe8') || lower.startsWith('fe9') || lower.startsWith('fea') || lower.startsWith('feb')) return true;
-  // unique-local fc00::/7
-  if (lower.startsWith('fc') || lower.startsWith('fd')) return true;
-  // IPv4-mapped [::ffff:a.b.c.d]
-  const mapped = lower.match(/^::ffff:([0-9.]+)$/);
-  if (mapped) return isPrivateIpv4(mapped[1]);
-  // IPv4-compatible deprecated form [::a.b.c.d]
-  const compat = lower.match(/^::([0-9.]+)$/);
-  if (compat) return isPrivateIpv4(compat[1]);
-  // :: (unspecified)
-  if (lower === '::') return true;
+  const b = ipv6ToBytes(addr);
+  if (!b) return false;
+
+  // IPv4-mapped ::ffff:0:0/96 — the address really reaches the embedded IPv4,
+  // so classify against the v4 policy (defeats the hex-form loopback/metadata
+  // bypass, e.g. ::ffff:7f00:1 -> 127.0.0.1).
+  const first10Zero = b.slice(0, 10).every((x) => x === 0);
+  if (first10Zero && b[10] === 0xff && b[11] === 0xff) {
+    return isPrivateIpv4(`${b[12]}.${b[13]}.${b[14]}.${b[15]}`);
+  }
+  // First 12 bytes zero: unspecified (::), loopback (::1), or the deprecated
+  // IPv4-compatible ::a.b.c.d form — all non-global.
+  if (b.slice(0, 12).every((x) => x === 0)) {
+    if (b[12] === 0 && b[13] === 0 && b[14] === 0 && b[15] <= 1) return true; // :: and ::1
+    return isPrivateIpv4(`${b[12]}.${b[13]}.${b[14]}.${b[15]}`);
+  }
+  // Multicast ff00::/8
+  if (b[0] === 0xff) return true;
+  // Unique-local fc00::/7
+  if ((b[0] & 0xfe) === 0xfc) return true;
+  // Link-local fe80::/10 and deprecated site-local fec0::/10
+  if (b[0] === 0xfe && (b[1] & 0xc0) !== 0x00) return true;
   return false;
 }
 
@@ -143,7 +193,11 @@ export function requestStatus(rawUrl, { method = 'GET', lookup, timeoutMs = 1500
       (res) => {
         const status = res.statusCode;
         const location = res.headers.location ?? null;
-        res.resume();
+        // Only the status line and Location are needed. Destroy the response
+        // immediately so a server cannot keep streaming a body (and holding the
+        // socket) after we've already scored the URL — the request timeout is an
+        // inactivity timer, not a total deadline.
+        res.destroy();
         resolve({ status, location });
       }
     );

@@ -101,6 +101,37 @@ test('requestStatus returns status + Location and never auto-follows redirects',
   }
 });
 
+test('requestStatus terminates a streaming response after headers (no unbounded drain)', async () => {
+  let clientGone = false;
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'application/octet-stream' });
+    // Stream forever until the client tears the socket down.
+    const timer = setInterval(() => {
+      if (!res.write('x'.repeat(1024))) { /* backpressure ok */ }
+    }, 5);
+    const stop = () => { clearInterval(timer); clientGone = true; };
+    res.on('close', stop);
+    req.on('close', stop);
+  });
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  const { port } = server.address();
+  const loopback = (hostname, options, cb) => {
+    const done = typeof options === 'function' ? options : cb;
+    const opts = typeof options === 'function' ? {} : (options ?? {});
+    if (opts.all) done(null, [{ address: '127.0.0.1', family: 4 }]);
+    else done(null, '127.0.0.1', 4);
+  };
+  try {
+    const r = await requestStatus(`http://local.test:${port}/stream`, { method: 'GET', lookup: loopback, timeoutMs: 5000 });
+    assert.equal(r.status, 200);
+    // The server's socket should be torn down promptly once we have the headers.
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    assert.equal(clientGone, true);
+  } finally {
+    server.close();
+  }
+});
+
 test('requestStatus times out with an ETIMEDOUT-coded error', async () => {
   const server = http.createServer(() => { /* never responds */ });
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
