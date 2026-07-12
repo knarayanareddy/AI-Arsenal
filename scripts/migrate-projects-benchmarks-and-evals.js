@@ -8,7 +8,7 @@
 // Usage: node scripts/migrate-projects-benchmarks-and-evals.js [--dry-run]
 
 import fs from 'node:fs/promises';
-import matter from 'gray-matter';
+import matter from './utils/safe-matter.js';
 import chalk from 'chalk';
 
 const dryRun = process.argv.includes('--dry-run');

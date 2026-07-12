@@ -88,5 +88,10 @@
   },
   "devDependencies": {
     "prettier": "^3.2.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "gray-matter>js-yaml": "$js-yaml"
+    }
   }
 }

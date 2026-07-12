@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import chalk from 'chalk';
 import { glob } from 'glob';
-import matter from 'gray-matter';
+import matter from './utils/safe-matter.js';
 import { loadEntries } from './utils/entries.js';
 import { renderBrowseSection } from './utils/toc.js';
 

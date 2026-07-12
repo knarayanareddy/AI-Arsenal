@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import matter from 'gray-matter';
+import matter from './utils/safe-matter.js';
 import chalk from 'chalk';
 import { getEntryFiles, readMarkdown, inferEntryType } from './utils/frontmatter.js';
 import { fetchGitHubRepo, parseGitHubRepo } from './utils/github-api.js';
