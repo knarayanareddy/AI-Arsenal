@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { extractHeadings, stripMarkdown, extractUrls, REQUIRED_ENTRY_HEADINGS } from '../scripts/utils/markdown.js';
+import { extractHeadings, stripMarkdown, extractUrls, stripNonRenderedMarkdown, REQUIRED_ENTRY_HEADINGS } from '../scripts/utils/markdown.js';
 
 test('extractHeadings returns H2 headings', () => {
   const md = `## Overview\n\n## Why It's in the Arsenal\n\n### Subheading (ignored)\n\n## Resources`;
@@ -23,6 +23,14 @@ test('stripMarkdown removes code fences', () => {
   assert.equal(stripped.includes('code'), false);
   assert.match(stripped, /before/);
   assert.match(stripped, /after/);
+});
+
+test('stripNonRenderedMarkdown removes fenced and inline code before link checks', () => {
+  const md = 'https://visible.example `https://inline.example`\n```\nhttps://fenced.example\n```';
+  const stripped = stripNonRenderedMarkdown(md);
+  assert.match(stripped, /visible\.example/);
+  assert.equal(stripped.includes('inline.example'), false);
+  assert.equal(stripped.includes('fenced.example'), false);
 });
 
 test('stripMarkdown removes inline code backticks', () => {
@@ -68,14 +76,10 @@ test('extractUrls dedupes overlapping URLs', () => {
   assert.equal(urls[0], 'https://example.com');
 });
 
-test('extractUrls captures URLs (does not strip trailing punctuation by default)', () => {
-  // Note: the current regex `https?:\/\/[^\s)>'\"]+` keeps trailing dots
-  // in URLs. We document this as known behaviour; callers should treat
-  // URLs as substrings and strip punctuation at the consumer if needed.
-  const md = 'Visit https://example.com.';
+test('extractUrls preserves ordinary punctuation but removes Markdown closing backticks', () => {
+  const md = 'Visit https://example.com. and https://example.com/docs`';
   const urls = extractUrls(md);
-  assert.equal(urls.length, 1);
-  assert.equal(urls[0], 'https://example.com.');
+  assert.deepEqual(urls, ['https://example.com.', 'https://example.com/docs']);
 });
 
 test('REQUIRED_ENTRY_HEADINGS is non-empty', () => {

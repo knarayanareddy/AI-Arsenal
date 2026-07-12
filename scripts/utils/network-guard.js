@@ -57,6 +57,13 @@ export function isPrivateAddress(addr) {
   return isPrivateIpv4(addr) || isPrivateIpv6(addr);
 }
 
+// Resolve an HTTP redirect location relative to the URL that returned it.
+// HTTP Location headers are commonly path-relative (for example, `/docs`).
+export function resolveRedirectUrl(location, baseUrl) {
+  try { return new URL(String(location), String(baseUrl)).toString(); }
+  catch { return null; }
+}
+
 // Parse a URL safely and reject anything that isn't http(s).
 export function parseSafeUrl(input) {
   let url;

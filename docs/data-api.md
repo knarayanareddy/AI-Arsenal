@@ -37,6 +37,11 @@ Generated data refreshes are published through the dedicated `data-release` bran
 | `tips.json` | Full tip records |
 | `guides.json` | Full guide records |
 | `build-examples.json` | Full build-example records |
+| `architectures.json` | Architecture decision records |
+| `observability.json` | Observability playbooks |
+| `community.json` | Community resources |
+| `benchmarks.json` | Benchmark records |
+| `trending.json` | Trending snapshots and source feeds |
 | `people.json` | Full people records |
 | `digests.json` | Monthly digest records |
 | `tags.json` | Tag cloud and type counts |
@@ -94,6 +99,10 @@ Common fields include:
 - `word_count`
 - `reading_time_minutes`
 - original frontmatter fields
+
+## Collection parity
+
+The collection manifest in `scripts/utils/collections.js` is the source of truth for generated collection files. `validate:data` checks that every manifest collection exists, that collection counts and IDs match `index.json`, that `stats.json` totals match the index, and that the search index covers every searchable collection.
 
 ## Search Index
 

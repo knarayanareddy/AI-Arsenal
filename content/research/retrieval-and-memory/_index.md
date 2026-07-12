@@ -32,6 +32,9 @@ When I am designing a retrieval or memory system for an LLM application, which t
 
 ### Recently Added
 
+- [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./belikova-2026-after.md)
+- [Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](./li-2026-dccd-rag.md)
+- [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](./ming-2026-llm-wiki.md)
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./asai-2023-self-rag.md)
 - [Improving Language Models by Retrieving from Trillions of Tokens](./borgeaud-2021-retro.md)
 - [REALM: Retrieval-Augmented Language Model Pre-Training](./guu-2020-realm.md)
@@ -39,9 +42,6 @@ When I am designing a retrieval or memory system for an LLM application, which t
 - [Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)](./izacard-2021-contriever.md)
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./ji-2026-mragent.md)
 - [Billion-scale similarity search with GPUs](./johnson-2017-faiss.md)
-- [Dense Passage Retrieval for Open-Domain Question Answering](./karpukhin-2020-dpr.md)
-- [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./khattab-2020-colbert.md)
-- [Lost in the Middle: How Language Models Use Long Contexts](./liu-2023-lost-in-the-middle.md)
 
 ### Most Popular
 
@@ -50,6 +50,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
+- [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./belikova-2026-after.md) — Introduces AFTER, a 382-task benchmark for testing whether procedural skills learned by agents transfer across tasks, roles, and model backbones.
 - [Improving Language Models by Retrieving from Trillions of Tokens](./borgeaud-2021-retro.md) — RETRO augments a Transformer with chunk-level retrieval from a trillions-of-tokens database via cross-attention, letting a small model match much larger ones -- retrieval as a way to move knowledge out of parameters and into an index
 - [From Local to Global: A Graph RAG Approach to Query-Focused Summarization](./edge-2024-graphrag.md) — Built a knowledge-graph index with hierarchical community summaries for global, holistic corpus queries -- reach for GraphRAG only for 'summarize the whole dataset' queries, given its indexing cost runs 100x-6000x that of standard vector RAG
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
@@ -60,8 +61,10 @@ _No star-tracked entries yet._
 - [Billion-scale similarity search with GPUs](./johnson-2017-faiss.md) — The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends
 - [Dense Passage Retrieval for Open-Domain Question Answering](./karpukhin-2020-dpr.md) — Showed a simple dual-encoder trained with in-batch negatives beats BM25 for passage retrieval — the paper that made dense embedding retrieval the default, and the direct ancestor of every embedding model powering today's RAG stacks
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./khattab-2020-colbert.md) — Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers
+- [Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](./li-2026-dccd-rag.md) — Uses document- and token-level confidence to suppress conflicting retrieved evidence during training-free RAG decoding.
 - [Lost in the Middle: How Language Models Use Long Contexts](./liu-2023-lost-in-the-middle.md) — Documented the U-shaped curve: LLMs use information at the beginning and end of long contexts far better than the middle — sometimes scoring worse with relevant context mid-prompt than with no context at all — the finding that shaped RAG context-ordering practice
 - [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](./malkov-2016-hnsw.md) — Introduced the HNSW graph index for approximate nearest-neighbor search — the algorithm powering most production vector databases and the retrieval step of essentially every RAG system
+- [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](./ming-2026-llm-wiki.md) — Recasts agent retrieval as search, reading, link traversal, and evidence-sufficiency decisions over a compiled, self-evolving wiki rather than flat embedding lookup.
 - [MemGPT: Towards LLMs as Operating Systems](./packer-2023-memgpt.md) — Framed context-window management as an OS problem: the LLM manages its own memory hierarchy via self-editing function calls, paging information between in-context 'main memory' and external storage — the founding pattern of agent memory systems
 - [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](./reimers-2019-sentence-bert.md) — Sentence-BERT: fine-tune BERT in a siamese architecture so sentences map to independently comparable embeddings — turning O(n²) cross-encoder comparison into O(n) encoding + vector similarity, and spawning the sentence-transformers library that underpins semantic search and RAG
 - [GrepSeek: Training Search Agents for Direct Corpus Interaction](./salemi-2026-grepseek.md) — Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it

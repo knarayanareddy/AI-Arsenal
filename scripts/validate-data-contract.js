@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
+import { COLLECTIONS, PUBLIC_DATA_FILES } from './utils/collections.js';
+import { validateCollectionParity } from './utils/data-contract.js';
 
-const requiredFiles = ['index.json', 'projects.json', 'tools.json', 'papers.json', 'tips.json', 'people.json', 'digests.json', 'tags.json', 'stats.json', 'search-index.json', 'guides.json', 'build-examples.json'];
+const requiredFiles = PUBLIC_DATA_FILES;
 const errors = [];
 const data = {};
 
@@ -23,7 +25,9 @@ if (data['index.json']) {
   }
 }
 
-for (const file of ['projects.json', 'tools.json', 'papers.json', 'tips.json', 'people.json', 'digests.json', 'guides.json', 'build-examples.json']) {
+const collectionItems = new Map();
+for (const collection of COLLECTIONS) {
+  const file = collection.file;
   const json = data[file];
   if (!json) continue;
   if (!json.schema_version) errors.push(`data/${file}: schema_version is required`);
@@ -32,7 +36,14 @@ for (const file of ['projects.json', 'tools.json', 'papers.json', 'tips.json', '
   for (const item of json.items ?? []) {
     if (!item.id || !item.path || !item.url) errors.push(`data/${file}: every item requires id, path, and url`);
     if (typeof item.body_text !== 'string') errors.push(`data/${file}: ${item.id} missing body_text string`);
+    if (item.entry_type && item.entry_type !== collection.type) errors.push(`data/${file}: ${item.id} entry_type ${item.entry_type} does not match manifest type ${collection.type}`);
   }
+  collectionItems.set(collection.type, json.items ?? []);
+}
+
+if (data['stats.json']) {
+  if (!data['stats.json'].schema_version) errors.push('data/stats.json: schema_version is required');
+  if (!data['stats.json'].entries || typeof data['stats.json'].entries !== 'object') errors.push('data/stats.json: entries object is required');
 }
 
 if (data['search-index.json']) {
@@ -41,9 +52,18 @@ if (data['search-index.json']) {
   for (const doc of docs ?? []) if (!doc.id || !doc.type || !doc.body) errors.push(`data/search-index.json: invalid document ${JSON.stringify(doc)}`);
 }
 
+if (data['index.json'] && data['stats.json'] && data['search-index.json']) {
+  errors.push(...validateCollectionParity({
+    indexEntries: data['index.json'].entries,
+    collectionItems,
+    statsEntries: data['stats.json'].entries,
+    searchDocuments: data['search-index.json'].documents
+  }));
+}
+
 if (errors.length) {
   console.error(chalk.red(`Data contract validation failed with ${errors.length} error(s):`));
   for (const error of errors) console.error(chalk.red(`- ${error}`));
   process.exit(1);
 }
-console.log(chalk.green('Data contract validation passed.'));
+console.log(chalk.green(`Data contract validation passed for ${COLLECTIONS.length} collections.`));

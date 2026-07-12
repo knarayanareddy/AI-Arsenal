@@ -28,12 +28,17 @@ The frontmatter is validated by JSON Schema. The body is validated for required 
 |---|---|---|
 | `project` | `schemas/project.schema.json` | Open-source project, model, framework, platform, library, dataset, or service |
 | `tool` | `schemas/tool.schema.json` | Tool or product grouped by job, cost, and stack |
-| `paper` | `schemas/paper.schema.json` | Research paper summary |
+| `paper` | `schemas/research.schema.json` | Research paper summary |
 | `tip` | `schemas/tip.schema.json` | Practical tip, trick, or gotcha |
 | `build-example` | `schemas/build-example.schema.json` | Buildable reference implementation guide |
 | `person` | `schemas/person.schema.json` | Community person/resource entry |
 | `digest` | `schemas/digest.schema.json` | Monthly digest snapshot |
 | `guide` | `schemas/guide.schema.json` | Structured guide page such as decision trees or overview pages |
+| `architecture` | `schemas/architecture.schema.json` | Architecture decision or reference stack |
+| `observability` | `schemas/observability.schema.json` | Operational observability playbook |
+| `community` | `schemas/community.schema.json` | Community resource or channel |
+| `benchmark` | `schemas/benchmark.schema.json` | Benchmark definition and evaluation protocol |
+| `trend` | `schemas/trend.schema.json` | Trending snapshot or source feed |
 
 ## Navigation Files Are Not Entries
 
@@ -137,3 +142,18 @@ Some fields are updated by automation:
 
 Do not manually tweak these unless bootstrapping or correcting a broken state.
 
+
+## Editorial promotion gate
+
+Schema and taxonomy validity are necessary but not sufficient for publication. Entries in the newest authoring batch are checked by `pnpm run validate:editorial` before generation.
+
+The gate rejects:
+
+- repeated paragraphs across entries;
+- sections copied from `description`, `tldr`, or `key_contribution` frontmatter;
+- generic `best_for` / `avoid_if` judgments that could describe any project;
+- known bulk-import boilerplate and grammatical interpolation patterns;
+- project sections without named architecture, deployment, ecosystem, or failure-mode detail;
+- research sections without paper-specific method, baseline, result, and limitation detail.
+
+Candidates that do not meet this editorial bar belong in the quarantine inventory, not in `content/`, generated data, search, or public counts. `enrichment_status: draft` records incomplete evidence; it does not excuse generic or mechanically generated prose.

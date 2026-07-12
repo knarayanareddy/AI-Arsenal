@@ -12,7 +12,7 @@ function line(item) {
   const score = item.trending_score !== undefined ? `, score:${item.trending_score}` : '';
   const stars = item.github_stars !== undefined ? `⭐${item.github_stars}${score}` : '';
   const meta = stars ? ` (${stars})` : '';
-  return `- ${name}${meta} — ${description}`;
+  return description ? `- ${name}${meta} — ${description}` : `- ${name}${meta}`;
 }
 async function readJson(file, fallback) { try { return JSON.parse(await fs.readFile(file, 'utf8')); } catch { return fallback; } }
 
@@ -25,6 +25,8 @@ const guides = (await readJson('data/guides.json', { items: [] })).items ?? [];
 const architectures = (await readJson('data/architectures.json', { items: [] })).items ?? [];
 const observability = (await readJson('data/observability.json', { items: [] })).items ?? [];
 const community = (await readJson('data/community.json', { items: [] })).items ?? [];
+const benchmarks = (await readJson('data/benchmarks.json', { items: [] })).items ?? [];
+const trending = (await readJson('data/trending.json', { items: [] })).items ?? [];
 const entries = index.entries ?? [];
 const byType = entries.reduce((acc, entry) => { acc[entry.type] = (acc[entry.type] ?? 0) + 1; return acc; }, {});
 
@@ -49,12 +51,14 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architectures: ${byType.architecture ?? 0}
 - Observability: ${byType.observability ?? 0}
 - Community: ${byType.community ?? 0}
+- Benchmarks: ${byType.benchmark ?? 0}
+- Trending: ${byType.trend ?? 0}
 
 ## Navigation
 
 - Agent map: /AGENT.md
 - Taxonomy: /TAXONOMY.md
-- Data API: /data/index.json, /data/projects.json, /data/tools.json, /data/search-index.json
+- Data API: /data/index.json, all collection JSON files from scripts/utils/collections.js, and /data/search-index.json
 - Architecture decisions: /content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/
 - Reference stacks: /content/architectures/reference-stacks/
 - Observability playbooks: /content/observability/{instrumentation,tracing,evaluation-quality,monitoring-alerting,cost-usage,privacy-governance,incident-response}/
@@ -62,7 +66,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Tool jobs: /content/tools/by-job/
 - Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
-- Research papers: /content/research/papers/
+- Research papers: /content/research/{foundational,architectures,training-and-alignment,inference-and-efficiency,retrieval-and-memory,agents-and-reasoning,evaluation-and-safety,surveys}/
+- Benchmarks: /content/benchmarks/{general-llm,code,retrieval-rag,agents,safety,multimodal,evaluation-methods}/
+- Trending: /content/trending/{this-week,this-month,hall-of-fame,by-source}/
 
 ## Top Projects by Category
 
@@ -87,6 +93,14 @@ ${[...new Set(observability.map((o) => o.category).filter(Boolean))].sort().map(
 ## Community Directory by Kind
 
 ${[...new Set(community.map((c) => c.kind).filter(Boolean))].sort().map((kind) => `### ${escapeMarkdownInline(kind)}\n${top(community.filter((c) => c.kind === kind), 5).map(line).join('\n') || '_None_'}`).join('\n\n') || '_No community entries migrated yet._'}
+
+## Benchmark Catalog
+
+${top(benchmarks, 10, (a, b) => String(a.name ?? a.title ?? a.id).localeCompare(String(b.name ?? b.title ?? b.id))).map(line).join('\n') || '_No benchmark entries yet._'}
+
+## Trending Signals
+
+${top(trending, 10, (a, b) => String(a.id).localeCompare(String(b.id))).map(line).join('\n') || '_No trending entries yet._'}
 
 ## Decision Heuristics
 

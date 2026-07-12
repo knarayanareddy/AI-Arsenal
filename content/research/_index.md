@@ -6,27 +6,27 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 16 entries | 2026-07-09 |
-| [architectures](./architectures/) | 15 entries | 2026-07-09 |
-| [evaluation and safety](./evaluation-and-safety/) | 10 entries | 2026-07-09 |
-| [foundational](./foundational/) | 18 entries | 2026-07-09 |
-| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-07-09 |
-| [retrieval and memory](./retrieval-and-memory/) | 17 entries | 2026-07-09 |
-| [surveys](./surveys/) | 3 entries | 2026-07-09 |
-| [training and alignment](./training-and-alignment/) | 19 entries | 2026-07-09 |
+| [agents and reasoning](./agents-and-reasoning/) | 17 entries | 2026-07-12 |
+| [architectures](./architectures/) | 15 entries | 2026-07-12 |
+| [evaluation and safety](./evaluation-and-safety/) | 22 entries | 2026-07-12 |
+| [foundational](./foundational/) | 18 entries | 2026-07-12 |
+| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-07-12 |
+| [retrieval and memory](./retrieval-and-memory/) | 20 entries | 2026-07-12 |
+| [surveys](./surveys/) | 3 entries | 2026-07-12 |
+| [training and alignment](./training-and-alignment/) | 19 entries | 2026-07-12 |
 
 ## Recently Added
 
-- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./architectures/ainslie-2023-gqa.md)
-- [Flamingo: a Visual Language Model for Few-Shot Learning](./architectures/alayrac-2022-flamingo.md)
-- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./retrieval-and-memory/asai-2023-self-rag.md)
-- [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](./agents-and-reasoning/besta-2023-graph-of-thoughts.md)
-- [Improving Language Models by Retrieving from Trillions of Tokens](./retrieval-and-memory/borgeaud-2021-retro.md)
-- [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](./inference-and-efficiency/cai-2024-medusa.md)
-- [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./evaluation-and-safety/chen-2021-codex.md)
-- [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./evaluation-and-safety/chiang-2024-chatbot-arena.md)
-- [PaLM: Scaling Language Modeling with Pathways](./foundational/chowdhery-2022-palm.md)
-- [Deep Reinforcement Learning from Human Preferences](./training-and-alignment/christiano-2017-rlhf.md)
+- [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./retrieval-and-memory/belikova-2026-after.md)
+- [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./evaluation-and-safety/chen-2026-uniclawbench.md)
+- [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./agents-and-reasoning/cheng-2026-agenticsts.md)
+- [Regression Accumulation in Multi-Turn LLM Programming Conversations](./evaluation-and-safety/huang-2026-regression-accumulation.md)
+- [Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution](./evaluation-and-safety/leung-2026-citation-verifier.md)
+- [ADR: An Agentic Detection System for Enterprise Agentic AI Security](./evaluation-and-safety/li-2026-adr-agentic-security.md)
+- [Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](./retrieval-and-memory/li-2026-dccd-rag.md)
+- [From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes](./evaluation-and-safety/liu-2026-mcp-execution-control.md)
+- [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](./evaluation-and-safety/mazaheri-2026-agentatlas.md)
+- [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](./retrieval-and-memory/ming-2026-llm-wiki.md)
 
 ## Most Popular
 
@@ -38,11 +38,14 @@ _No star-tracked entries yet._
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./architectures/alayrac-2022-flamingo.md) — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](./retrieval-and-memory/asai-2023-self-rag.md) — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - [Constitutional AI: Harmlessness from AI Feedback](./training-and-alignment/bai-2022-constitutional-ai.md) — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
+- [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./retrieval-and-memory/belikova-2026-after.md) — Introduces AFTER, a 382-task benchmark for testing whether procedural skills learned by agents transfer across tasks, roles, and model backbones.
 - [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](./agents-and-reasoning/besta-2023-graph-of-thoughts.md) — Generalizes chain- and tree-of-thought by modeling reasoning as an arbitrary graph, where thoughts can be aggregated, refined, and looped -- enabling operations like merging partial solutions that a tree cannot express
 - [Improving Language Models by Retrieving from Trillions of Tokens](./retrieval-and-memory/borgeaud-2021-retro.md) — RETRO augments a Transformer with chunk-level retrieval from a trillions-of-tokens database via cross-attention, letting a small model match much larger ones -- retrieval as a way to move knowledge out of parameters and into an index
 - [Language Models are Few-Shot Learners](./foundational/brown-2020-gpt3.md) — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](./inference-and-efficiency/cai-2024-medusa.md) — Speeds up decoding by adding a few extra prediction heads that guess several future tokens at once, verified in parallel with tree attention — no separate draft model, 2-3x faster, and self-contained enough to bolt onto an existing model.
 - [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./evaluation-and-safety/chen-2021-codex.md) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
+- [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./evaluation-and-safety/chen-2026-uniclawbench.md) — Evaluates proactive agents on 400 bilingual real-world tasks in live Docker environments using capability-specific checkpoints and hidden closed-loop supervision.
+- [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./agents-and-reasoning/cheng-2026-agenticsts.md) — Tests a bounded-memory contract in which a long-horizon agent receives typed retrieval in a fresh prompt instead of an ever-growing raw transcript.
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./evaluation-and-safety/chiang-2024-chatbot-arena.md) — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - [PaLM: Scaling Language Modeling with Pathways](./foundational/chowdhery-2022-palm.md) — 540B dense transformer trained across two TPU pods — the era's peak few-shot results, the canonical documentation of emergent abilities at scale, and the demonstration that chain-of-thought unlocks reasoning at sufficient size
 - [Deep Reinforcement Learning from Human Preferences](./training-and-alignment/christiano-2017-rlhf.md) — The origin of RLHF: learn a reward model from human comparisons of trajectory pairs, then optimize a policy against it — solving tasks where the objective is easier to recognize than to specify, with under 1% of interactions needing human feedback
@@ -75,12 +78,9 @@ _No star-tracked entries yet._
 - [ORPO: Monolithic Preference Optimization without Reference Model](./training-and-alignment/hong-2024-orpo.md) — Folds preference alignment into supervised fine-tuning in a single stage by adding an odds-ratio penalty to the SFT loss — no separate reference model and no separate DPO/RLHF phase, cutting alignment to one training run.
 - [LoRA: Low-Rank Adaptation of Large Language Models](./training-and-alignment/hu-2021-lora.md) — Showed you can fine-tune a large model by training only small low-rank update matrices injected into attention weights, meaning you should use LoRA (not full fine-tuning) whenever GPU memory or storage for many fine-tuned variants is a constraint
 - [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions](./surveys/huang-2023-hallucination-survey.md) — The reference taxonomy for hallucination: splits it into factuality vs faithfulness, traces causes through data, training, and inference, and catalogs detection benchmarks and mitigation strategies — the structured map behind grounding and guardrail engineering
+- [Regression Accumulation in Multi-Turn LLM Programming Conversations](./evaluation-and-safety/huang-2026-regression-accumulation.md) — Shows that later coding-agent turns can break earlier requirements and evaluates a verification gate that retests prior behavior before accepting a change.
 - [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./retrieval-and-memory/izacard-2020-fid.md) — Fusion-in-Decoder: encode each retrieved passage independently, concatenate the encodings, and let the decoder attend across all of them — scaling QA accuracy monotonically with passage count at linear (not quadratic) encoding cost
 - [Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)](./retrieval-and-memory/izacard-2021-contriever.md) — Trained a competitive dense retriever with no labeled query-document pairs, using contrastive learning over automatically-constructed positive pairs — strong zero-shot retrieval and a much better fine-tuning starting point than BM25 or random init.
 - [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./retrieval-and-memory/ji-2026-mragent.md) — Replaces static retrieve-then-reason agent memory with active reconstruction over a Cue-Tag-Content graph -- the agent iteratively explores and prunes retrieval paths as evidence accumulates, gaining up to 23% on LoCoMo/LongMemEval while cutting tokens
 - [Mixtral of Experts](./architectures/jiang-2024-mixtral.md) — Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./evaluation-and-safety/jimenez-2023-swe-bench.md) — SWE-bench: 2,294 real GitHub issues from 12 Python repos, graded by running the repos' own tests against model-generated patches — the benchmark that replaced toy coding problems and became the scoreboard of the coding-agent era
-- [Billion-scale similarity search with GPUs](./retrieval-and-memory/johnson-2017-faiss.md) — The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends
-- [Scaling Laws for Neural Language Models](./foundational/kaplan-2020-scaling-laws.md) — Established that language-model loss falls as smooth power laws in parameters, data, and compute across many orders of magnitude — the empirical foundation of the scaling era — though its specific compute-optimal allocation was later corrected by Chinchilla
-- [Dense Passage Retrieval for Open-Domain Question Answering](./retrieval-and-memory/karpukhin-2020-dpr.md) — Showed a simple dual-encoder trained with in-batch negatives beats BM25 for passage retrieval — the paper that made dense embedding retrieval the default, and the direct ancestor of every embedding model powering today's RAG stacks
-- [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./retrieval-and-memory/khattab-2020-colbert.md) — Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers

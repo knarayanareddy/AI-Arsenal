@@ -33,6 +33,8 @@ Before selecting an evaluation/observability platform:
 
 ### Recently Added
 
+- [lmms-eval](./lmms-eval.md)
+- [Pipelock](./pipelock.md)
 - [BigCodeBench](./bigcodebench.md)
 - [MTEB](./mteb.md)
 - [Terminal-Bench](./terminal-bench.md)
@@ -41,8 +43,6 @@ Before selecting an evaluation/observability platform:
 - [DeepEval](./deepeval.md)
 - [Helicone](./helicone.md)
 - [Langfuse](./langfuse.md)
-- [LangSmith](./langsmith-platform.md)
-- [Lunary](./lunary.md)
 
 ### Most Popular
 
@@ -53,9 +53,9 @@ Before selecting an evaluation/observability platform:
 - [Phoenix](./phoenix.md) — ⭐ 10124
 - [OpenLLMetry](./openllmetry.md) — ⭐ 7000
 - [Helicone](./helicone.md) — ⭐ 5809
+- [lmms-eval](./lmms-eval.md) — ⭐ 4300
 - [Agenta](./agenta.md) — ⭐ 3900
 - [MTEB](./mteb.md) — ⭐ 3344
-- [OpenLIT](./openlit.md) — ⭐ 2522
 
 ### Browse All
 
@@ -66,11 +66,13 @@ Before selecting an evaluation/observability platform:
 - [Helicone](./helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [Langfuse](./langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - [LangSmith](./langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
+- [lmms-eval](./lmms-eval.md) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
 - [Lunary](./lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
 - [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - [OpenLIT](./openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLMetry](./openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
 - [Opik](./opik.md) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
 - [Phoenix](./phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
+- [Pipelock](./pipelock.md) — AI-agent firewall for MCP, A2A, HTTP, and WebSocket egress with exfiltration and SSRF controls
 - [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — Evaluation framework for measuring retrieval-augmented generation quality and regressions
 - [Terminal-Bench](./terminal-bench.md) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models

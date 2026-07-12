@@ -7,9 +7,10 @@ import chalk from 'chalk';
 import { loadEntries, SCHEMA_VERSION, entryDisplayName, entryDescription, entryDate, canonicalUrl, writeJson, publicEntry } from './utils/entries.js';
 import { stripMarkdown, extractHeadings } from './utils/markdown.js';
 import { sanitizeBodyHtml } from './utils/html-sanitizer.js';
+import { COLLECTIONS, collectionStats } from './utils/collections.js';
 
 const generatedAt = new Date().toISOString();
-const collections = { project: [], tool: [], paper: [], tip: [], person: [], digest: [], 'build-example': [], guide: [], architecture: [], observability: [], community: [], benchmark: [], trend: [] };
+const collections = Object.fromEntries(COLLECTIONS.map((collection) => [collection.type, []]));
 const entries = [];
 
 function readingTime(text) {
@@ -55,31 +56,18 @@ for (const entry of await loadEntries()) {
 
 await fs.mkdir('data', { recursive: true });
 
-const totals = {
-  total_projects: collections.project.length,
-  total_tools: collections.tool.length,
-  total_papers: collections.paper.length,
-  total_tips: collections.tip.length,
-  total_people: collections.person.length,
-  total_digests: collections.digest.length,
-  total_guides: collections.guide.length,
-  total_build_examples: collections['build-example'].length,
-  total_architectures: collections.architecture.length,
-  total_observability: collections.observability.length,
-  total_community: collections.community.length,
-  total_benchmarks: collections.benchmark.length,
-  total_trending: collections.trend.length
-};
+const totals = Object.fromEntries(
+  COLLECTIONS.map((collection) => [`total_${collection.key.replaceAll('-', '_')}`, collections[collection.type].length])
+);
 
 await writeJson('data/index.json', {
   meta: { generated_at: generatedAt, ...totals, schema_version: SCHEMA_VERSION },
   entries: entries.sort((a, b) => String(a.id).localeCompare(String(b.id)))
 });
 
-const map = { projects: 'project', tools: 'tool', papers: 'paper', tips: 'tip', people: 'person', digests: 'digest', 'build-examples': 'build-example', guides: 'guide', architectures: 'architecture', observability: 'observability', community: 'community', benchmarks: 'benchmark', trending: 'trend' };
-for (const [filePrefix, type] of Object.entries(map)) {
-  const items = collections[type].sort((a, b) => String(a.id).localeCompare(String(b.id)));
-  await writeJson(`data/${filePrefix}.json`, { schema_version: SCHEMA_VERSION, generated_at: generatedAt, count: items.length, items });
+for (const collection of COLLECTIONS) {
+  const items = collections[collection.type].sort((a, b) => String(a.id).localeCompare(String(b.id)));
+  await writeJson(`data/${collection.file}`, { schema_version: SCHEMA_VERSION, generated_at: generatedAt, count: items.length, items });
 }
 
 const tagCounts = new Map();
@@ -102,24 +90,7 @@ await writeJson('data/tags.json', { schema_version: SCHEMA_VERSION, generated_at
 await writeJson('data/stats.json', {
   schema_version: SCHEMA_VERSION,
   generated_at: generatedAt,
-  entries: {
-    total: entries.length,
-    projects: collections.project.length,
-    tools: collections.tool.length,
-    papers: collections.paper.length,
-    tips: collections.tip.length,
-    people: collections.person.length,
-    digests: collections.digest.length,
-    guides: collections.guide.length,
-    build_examples: collections['build-example'].length,
-    architectures: collections.architecture.length,
-    observability: collections.observability.length,
-    community: collections.community.length,
-    benchmarks: collections.benchmark.length,
-    trending: collections.trend.length
-  },
-  tags: { total: tagCounts.size },
-  content: { total_words: Object.values(collections).flat().reduce((sum, item) => sum + (item.word_count ?? 0), 0) }
+  entries: collectionStats(collections)
 });
 
 console.log(chalk.green(`Generated data layer for ${entries.length} entries.`));

@@ -182,6 +182,7 @@ This table is exhaustive for tools tagged with job = evaluation.
 | [Galileo](../evaluation-and-observability/galileo.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [Giskard OSS](../evaluation-and-observability/giskard-oss.md) | evaluation and observability | open-source | No | Yes | Yes | python | watching |
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
 | [Inspect (UK AI Safety Institute)](../evaluation-and-observability/inspect-ai.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | freemium | Yes | No | No | python, typescript | recommended |

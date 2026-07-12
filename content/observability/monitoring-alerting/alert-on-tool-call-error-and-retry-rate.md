@@ -175,7 +175,7 @@ def invoke_tool_with_observability(tool, args, max_attempts=3):
 
 ## Privacy & Governance
 
-This outcome event deliberately carries **no** tool arguments or results — only `tool_name`, the outcome enum, `attempt_number`, and timing — because arguments and results are the sensitive part (credentials passed as parameters, PII in search queries, private data in results). Full, redacted argument/result capture belongs on the span defined by [Trace Every Retrieval, Tool Call, and Agent Transition](../tracing/trace-every-agent-and-rag-step.md), governed by [Redact and Govern Trace Data](../privacy-governance/redact-and-govern-trace-data.md). Keeping the metric event content-free lets it be retained and queried broadly (30 days per-invocation, 13 months of rollups) without inheriting the sensitivity of the trace payload.
+This outcome event deliberately carries **no** tool arguments or results — only `tool_name`, the outcome enum, `attempt_number`, and timing — because arguments and results are the sensitive part (credentials passed as parameters, PII in search queries, private data in results). Full, redacted argument/result capture belongs on the span defined by [Trace Every Retrieval, Tool Call, and Agent Transition](../tracing/trace-every-agent-and-rag-step.md), governed by [Redact and Govern Trace Data](../privacy-governance/redact-and-govern-trace-data.md). Keeping the metric event content-free lets it be retained and queried broadly (30 days per-invocation, 13 months of rollups) without inheriting the sensitivity of the trace payload. Access is limited to on-call engineers, service owners, and reliability reviewers; raw tool arguments/results remain restricted to the separately governed redacted trace store.
 
 ## Validation Checklist
 

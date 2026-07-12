@@ -136,6 +136,7 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [Giskard OSS](../evaluation-and-observability/giskard-oss.md) | evaluation and observability | open-source | No | Yes | Yes | python | watching |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
@@ -143,6 +144,7 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [PyRIT](../evaluation-and-observability/pyrit.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [SkillSpector](../evaluation-and-observability/skillspector.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | watching |
+| [ToolHive](../serving-and-deployment/toolhive.md) | serving and deployment | open-source | No | Yes | Yes | go | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

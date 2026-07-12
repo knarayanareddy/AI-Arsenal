@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [ToolHive](./toolhive.md)
 - [Anyscale](./anyscale.md)
 - [Baseten](./baseten.md)
 - [Cloudflare Workers AI](./cloudflare-workers-ai.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [KubeAI](./kubeai.md)
 - [LoRAX](./lorax.md)
 - [NVIDIA NIM](./nvidia-nim.md)
-- [OpenLLM](./openllm.md)
 
 ### Most Popular
 
@@ -72,5 +72,6 @@ _No star-tracked entries yet._
 - [RunPod](./runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
 - [SkyPilot](./skypilot.md) — Run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface
 - [Text Embeddings Inference (TEI)](./text-embeddings-inference.md) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
+- [ToolHive](./toolhive.md) — Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers
 - [NVIDIA Triton Inference Server](./triton-inference-server.md) — NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles
 - [Vercel](./vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions

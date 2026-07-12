@@ -11,9 +11,9 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `validate-structure.js` — validates required Markdown body sections.
 - `validate-paths.js` — validates filenames, folder conventions, `_index.md` coverage, and generated JSON syntax.
 - `validate-references.js` — validates/flags ID references such as alternatives, integrations, related entries, and digest references.
-- `validate-data-contract.js` — validates the generated `/data/*.json` API contract.
+- `validate-data-contract.js` — validates the generated `/data/*.json` API contract, including collection/index/stats/search ID and count parity. The canonical collection list lives in `utils/collections.js`.
 - `check-duplicates.js` — rejects duplicate content IDs.
-- `check-links.js` — concurrent, SSRF-hardened link checker with changed-only/all modes and JSON reporting. Rate limits (429/403), transient network errors, and non-404/410 server errors are reported as **soft warnings**; only confirmed dead links (404/410), DNS misses, and SSRF rejections are **hard failures** that fail CI / open issues. Retries with backoff; known rate-limited hosts (GitHub, X) get a raised per-host budget. URLs inside HTML comments are skipped.
+- `check-links.js` — concurrent, SSRF-hardened link checker with changed-only/all modes and JSON reporting. The full-mode default supports up to 2,000 unique URLs at current repository scale. Relative redirects are resolved against their source URL. Rate limits (429/403), transient network errors, host-cap skips, and non-404/410 server errors are reported as **soft warnings**; only confirmed dead links (404/410), DNS misses, and SSRF rejections are **hard failures** that fail CI / open issues. Retries with backoff; known rate-limited hosts (GitHub, X) get a raised per-host budget. URLs inside HTML comments are skipped.
 
 ## Generation
 

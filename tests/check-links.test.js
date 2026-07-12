@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { extractUrls, stripMarkdown } from '../scripts/utils/markdown.js';
-import { parseSafeUrl, assertPublicHostname, domainAllowed, hostCallAllowed, resetHostCallCounts } from '../scripts/utils/network-guard.js';
+import { parseSafeUrl, resolveRedirectUrl, assertPublicHostname, domainAllowed, hostCallAllowed, resetHostCallCounts } from '../scripts/utils/network-guard.js';
 
 // These tests verify the URL extraction + safety checks used by
 // check-links.js. We do NOT make real HTTP calls; we only verify the
@@ -29,6 +29,12 @@ test('parseSafeUrl rejects non-http schemes that could exfiltrate', () => {
   assert.equal(parseSafeUrl('file:///etc/passwd').ok, false);
   assert.equal(parseSafeUrl('gopher://attacker').ok, false);
   assert.equal(parseSafeUrl('dict://attacker').ok, false);
+});
+
+test('resolveRedirectUrl resolves relative and absolute Location headers', () => {
+  assert.equal(resolveRedirectUrl('/docs', 'https://example.com/start'), 'https://example.com/docs');
+  assert.equal(resolveRedirectUrl('https://other.example/final', 'https://example.com/start'), 'https://other.example/final');
+  assert.equal(resolveRedirectUrl('not a URL', 'https://example.com/start'), 'https://example.com/not%20a%20URL');
 });
 
 test('parseSafeUrl rejects bare hostnames (potential DNS rebinding)', () => {

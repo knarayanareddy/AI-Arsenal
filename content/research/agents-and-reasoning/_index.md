@@ -33,6 +33,7 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 
 ### Recently Added
 
+- [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./cheng-2026-agenticsts.md)
 - [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](./besta-2023-graph-of-thoughts.md)
 - [Large Language Models are Zero-Shot Reasoners](./kojima-2022-zero-shot-cot.md)
 - [WebGPT: Browser-assisted question-answering with human feedback](./nakano-2021-webgpt.md)
@@ -42,7 +43,6 @@ When I am building an agent loop or trying to improve a model's multi-step reaso
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](./wang-2022-self-consistency.md)
 - [Voyager: An Open-Ended Embodied Agent with Large Language Models](./wang-2023-voyager.md)
 - [AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](./wu-2023-autogen.md)
-- [COLLEAGUE.SKILL: Automated AI Skill Generation via Expert Knowledge Distillation](./zhou-2026-colleague-skill.md)
 
 ### Most Popular
 
@@ -51,6 +51,7 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Graph of Thoughts: Solving Elaborate Problems with Large Language Models](./besta-2023-graph-of-thoughts.md) — Generalizes chain- and tree-of-thought by modeling reasoning as an arbitrary graph, where thoughts can be aggregated, refined, and looped -- enabling operations like merging partial solutions that a tree cannot express
+- [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./cheng-2026-agenticsts.md) — Tests a bounded-memory contract in which a long-horizon agent receives typed retrieval in a fresh prompt instead of an ever-growing raw transcript.
 - [Large Language Models are Zero-Shot Reasoners](./kojima-2022-zero-shot-cot.md) — Appending the single trigger phrase 'Let's think step by step' elicits chain-of-thought reasoning zero-shot — no exemplars needed — showing that reasoning behavior in LLMs is latent and can be unlocked by prompt format alone
 - [Self-Refine: Iterative Refinement with Self-Feedback](./madaan-2023-self-refine.md) — Showed self-critique-then-revise loops can improve output quality, but later rigorous studies found weak initial-response prompts inflated the reported improvement -- treat this with caution, not as a validated default
 - [WebGPT: Browser-assisted question-answering with human feedback](./nakano-2021-webgpt.md) — Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers

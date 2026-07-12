@@ -48,7 +48,9 @@ jobs:
         run: node scripts/draft-trending.js
       - name: Check all links (non-blocking)
         env:
-          LINK_CHECK_MAX_URLS: '500'
+          # The current catalog contains ~1.4k unique URLs; keep this above
+          # repository scale while retaining the per-host amplification cap.
+          LINK_CHECK_MAX_URLS: '2000'
           LINK_CHECK_MAX_URLS_PER_HOST: '10'
         continue-on-error: true
         run: pnpm run check:links

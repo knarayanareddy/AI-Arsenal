@@ -6,18 +6,20 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-07-09 |
-| [by job](./by-job/) | 14 entries | 2026-07-09 |
-| [by stack](./by-stack/) | 8 entries | 2026-07-09 |
-| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-09 |
-| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-09 |
-| [evaluation and observability](./evaluation-and-observability/) | 30 entries | 2026-07-09 |
-| [model layer](./model-layer/) | 32 entries | 2026-07-09 |
-| [orchestration](./orchestration/) | 26 entries | 2026-07-09 |
-| [serving and deployment](./serving-and-deployment/) | 30 entries | 2026-07-09 |
+| [by cost](./by-cost/) | 5 entries | 2026-07-12 |
+| [by job](./by-job/) | 14 entries | 2026-07-12 |
+| [by stack](./by-stack/) | 8 entries | 2026-07-12 |
+| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-12 |
+| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-12 |
+| [evaluation and observability](./evaluation-and-observability/) | 31 entries | 2026-07-12 |
+| [model layer](./model-layer/) | 32 entries | 2026-07-12 |
+| [orchestration](./orchestration/) | 26 entries | 2026-07-12 |
+| [serving and deployment](./serving-and-deployment/) | 31 entries | 2026-07-12 |
 
 ## Recently Added
 
+- [Giskard OSS](./evaluation-and-observability/giskard-oss.md)
+- [ToolHive](./serving-and-deployment/toolhive.md)
 - [Hugging Face Accelerate](./model-layer/accelerate.md)
 - [AdalFlow](./dx-and-tooling/adalflow.md)
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
@@ -26,8 +28,6 @@
 - [Aider](./dx-and-tooling/aider.md)
 - [Airbyte](./data-ingestion/airbyte.md)
 - [any-agent](./orchestration/any-agent.md)
-- [Anyscale](./serving-and-deployment/anyscale.md)
-- [BAML](./dx-and-tooling/baml.md)
 
 ## Most Popular
 

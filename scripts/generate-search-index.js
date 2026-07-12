@@ -2,15 +2,16 @@
 import fs from 'node:fs/promises';
 import chalk from 'chalk';
 import { truncate } from './utils/markdown-escape.js';
+import { COLLECTIONS } from './utils/collections.js';
 
-const datasets = ['projects', 'tools', 'papers', 'tips', 'people', 'digests', 'guides', 'build-examples', 'architectures', 'observability', 'community'];
+const datasets = COLLECTIONS.filter((collection) => collection.searchable);
 const docs = [];
 
-for (const dataset of datasets) {
+for (const collection of datasets) {
   try {
-    const json = JSON.parse(await fs.readFile(`data/${dataset}.json`, 'utf8'));
+    const json = JSON.parse(await fs.readFile(`data/${collection.file}`, 'utf8'));
     for (const item of json.items ?? []) {
-      const type = item.entry_type ?? dataset.replace(/s$/, '');
+      const type = item.entry_type ?? collection.type;
       const name = item.name ?? item.title ?? item.display_name ?? item.id;
       const description = item.description ?? item.tldr ?? item.summary ?? '';
       const tags = item.tags ?? [];

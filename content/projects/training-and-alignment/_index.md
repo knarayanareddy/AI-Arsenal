@@ -30,6 +30,8 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Recently Added
 
+- [VLM2Vec](./vlm2vec.md)
+- [XTuner](./xtuner.md)
 - [The Alignment Handbook (Hugging Face)](./alignment-handbook.md)
 - [Colossal-AI (HPC-AI Tech)](./colossalai.md)
 - [LitGPT](./litgpt.md)
@@ -49,6 +51,8 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [LitGPT](./litgpt.md) — ⭐ 13467
 - [OpenRLHF](./openrlhf.md) — ⭐ 9769
 - [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — ⭐ 5627
+- [XTuner](./xtuner.md) — ⭐ 5200
+- [VLM2Vec](./vlm2vec.md) — ⭐ 665
 
 ### Browse All
 
@@ -60,3 +64,5 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [Open R1 (Hugging Face)](./open-r1.md) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 - [OpenRLHF](./openrlhf.md) — High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale
 - [verl](./verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
+- [VLM2Vec](./vlm2vec.md) — Multimodal embedding and training framework covering VLM2Vec, MMEB, and later multimodal embedding benchmarks
+- [XTuner](./xtuner.md) — Training engine and toolkit for efficient fine-tuning and large-scale MoE model training

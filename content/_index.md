@@ -6,34 +6,35 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [architectures](./architectures/) | 29 entries | 2026-07-09 |
-| [benchmarks](./benchmarks/) | 50 entries | 2026-07-09 |
-| [build examples](./build-examples/) | 8 entries | 2026-07-09 |
-| [community](./community/) | 57 entries | 2026-07-09 |
-| [digests](./digests/) | 1 entries | 2026-07-09 |
-| [observability](./observability/) | 16 entries | 2026-07-09 |
-| [projects](./projects/) | 146 entries | 2026-07-09 |
-| [research](./research/) | 114 entries | 2026-07-09 |
-| [skills](./skills/) | 28 entries | 2026-07-09 |
-| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-09 |
-| [tools](./tools/) | 224 entries | 2026-07-09 |
-| [trending](./trending/) | 4 entries | 2026-07-09 |
+| [architectures](./architectures/) | 29 entries | 2026-07-12 |
+| [benchmarks](./benchmarks/) | 50 entries | 2026-07-12 |
+| [build examples](./build-examples/) | 8 entries | 2026-07-12 |
+| [community](./community/) | 57 entries | 2026-07-12 |
+| [digests](./digests/) | 1 entries | 2026-07-12 |
+| [observability](./observability/) | 16 entries | 2026-07-12 |
+| [projects](./projects/) | 175 entries | 2026-07-12 |
+| [research](./research/) | 130 entries | 2026-07-12 |
+| [skills](./skills/) | 28 entries | 2026-07-12 |
+| [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-12 |
+| [tools](./tools/) | 226 entries | 2026-07-12 |
+| [trending](./trending/) | 4 entries | 2026-07-12 |
 
 ## Recently Added
 
-- [Block SSRF by Validating Outbound URLs From Tools](./tips-and-tricks/agents-and-orchestration/block-ssrf-by-validating-outbound-urls.md)
-- [Rate-Limit and Cap Spend Per User](./tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user.md)
-- [Redact PII Before Sending Prompts to Third-Party APIs](./tips-and-tricks/inference-and-serving/redact-pii-before-sending-to-third-party-apis.md)
-- [Sandbox Model-Generated Code Execution](./tips-and-tricks/agents-and-orchestration/sandbox-model-generated-code-execution.md)
-- [Scope and Rotate LLM API Keys With Least Privilege](./tips-and-tricks/inference-and-serving/scope-and-rotate-api-keys-with-least-privilege.md)
-- [Validate Tool Arguments Server-Side Before Execution](./tips-and-tricks/agents-and-orchestration/validate-tool-arguments-server-side-before-execution.md)
-- [Hugging Face Accelerate](./tools/model-layer/accelerate.md)
-- [AdalFlow](./tools/dx-and-tooling/adalflow.md)
-- [Agent Skills (Addy Osmani)](./tools/dx-and-tooling/addyosmani-agent-skills.md)
-- [AgentOps](./tools/evaluation-and-observability/agentops.md)
+- [AgentScope](./projects/frameworks/agentscope.md)
+- [AIBrix](./projects/inference-engines/aibrix.md)
+- [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./research/retrieval-and-memory/belikova-2026-after.md)
+- [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./research/evaluation-and-safety/chen-2026-uniclawbench.md)
+- [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./research/agents-and-reasoning/cheng-2026-agenticsts.md)
+- [Context7](./projects/frameworks/context7.md)
+- [Daft](./projects/data-and-retrieval/daft.md)
+- [DataChain](./projects/data-and-retrieval/datachain.md)
+- [Deep Lake](./projects/data-and-retrieval/deeplake.md)
+- [NVIDIA Dynamo](./projects/inference-engines/dynamo.md)
 
 ## Most Popular
 
+- [Hermes Agent](./projects/agent-systems/hermes-agent.md) — ⭐ 213237
 - [AutoGPT](./projects/frameworks/autogpt.md) — ⭐ 184931
 - [Ollama](./projects/inference-engines/ollama.md) — ⭐ 174059
 - [Dify](./projects/frameworks/dify.md) — ⭐ 145081
@@ -43,7 +44,6 @@
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — ⭐ 116399
 - [Whisper](./projects/foundation-models/whisper.md) — ⭐ 104543
 - [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
-- [Browser Use](./projects/agent-systems/browser-use.md) — ⭐ 103506
 
 ## Browse All
 
@@ -70,12 +70,14 @@
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
 - [AgentHarm](./benchmarks/safety/agentharm.md) — 
 - [AgentOps](./tools/evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
+- [AgentScope](./projects/frameworks/agentscope.md) — Python framework for building observable, multi-agent, and multimodal agent systems
 - [Agno](./tools/orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./tools/orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
+- [AIBrix](./projects/inference-engines/aibrix.md) — Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference
 - [Aider](./tools/dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
 - [Aider Polyglot Coding Benchmark](./benchmarks/code/aider-polyglot.md) — 
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./research/architectures/ainslie-2023-gqa.md) — Introduced grouped-query attention — sharing each key/value head across a group of query heads — cutting KV-cache memory several-fold with near-zero quality loss; now the default attention configuration in almost every open LLM
@@ -95,5 +97,3 @@
 - [any-agent](./tools/orchestration/any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - [Anyscale](./tools/serving-and-deployment/anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [AnythingLLM](./projects/data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
-- [AnythingLLM](./projects/agent-systems/anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
-- [ARC-AGI (Abstraction and Reasoning Corpus)](./benchmarks/general-llm/arc-agi.md) — 

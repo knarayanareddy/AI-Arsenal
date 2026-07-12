@@ -42,6 +42,8 @@ When you change a script, add or update tests in `tests/`:
 | `html-sanitizer.test.js` | XSS sanitization |
 | `taxonomy.test.js` | `TAXONOMY.md` parser |
 | `markdown.test.js` | Heading extraction, URL extraction, strip |
+| `validate-data-contract.test.js` | Collection/index/stats/search count and ID parity |
+| `release-tag.test.js` | Release tag normalization and patch bumping |
 | `frontmatter.test.js` | Frontmatter read, type inference, ID derivation |
 
 ## What's NOT Tested (intentionally)

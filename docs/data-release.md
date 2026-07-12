@@ -23,6 +23,9 @@ https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/index.j
 https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/projects.json
 https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/tools.json
 https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/search-index.json
+https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/architectures.json
+https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/benchmarks.json
+https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/trending.json
 https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/tags.json
 https://raw.githubusercontent.com/knarayanareddy/AI-Arsenal/data-release/stats.json
 ```

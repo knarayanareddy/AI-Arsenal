@@ -53,14 +53,16 @@ test('extractHeadings detects missing headings', () => {
 // scripts/validate-structure.js's researchContentChecks(). Tested as a pure
 // unit here (rather than against the live content/ tree), following the
 // same pattern as tests/check-migration-progress.test.js.
-function findUndatedBenchmarkBullets(keyResultsBody) {
+function findUndatedBenchmarkBullets(keyResultsBody, paperYear = null) {
   const scoreLikePattern = /(\d+(\.\d+)?\s?%|pass@\d+|\bF1\b|\bBLEU\b|\bEM\b|exact match|accuracy|perplexity)/i;
-  const yearPattern = /\((19|20)\d{2}\)/;
+  const yearPattern = /\b(19|20)\d{2}\b/;
+  const currentClaimPattern = /\b(current|today|latest|frontier|recent|independent|post-publication|as of)\b/i;
   const flagged = [];
   for (const line of keyResultsBody.split(/\r?\n/)) {
     const trimmed = line.trim();
     if (!trimmed.startsWith('-') && !trimmed.startsWith('*')) continue;
-    if (scoreLikePattern.test(trimmed) && !yearPattern.test(trimmed)) flagged.push(trimmed);
+    const hasDateContext = yearPattern.test(trimmed) || (paperYear && !currentClaimPattern.test(trimmed));
+    if (scoreLikePattern.test(trimmed) && !hasDateContext) flagged.push(trimmed);
   }
   return flagged;
 }
@@ -72,10 +74,10 @@ test('research Key Results heuristic flags a benchmark claim with no year', () =
   assert.match(flagged[0], /92\.3 accuracy/);
 });
 
-test('research Key Results heuristic accepts a properly date-stamped benchmark claim', () => {
-  const body = '- 92.3 accuracy on GLUE (2019) — now considered saturated\n- 28.4 BLEU on WMT 2014 (2017)';
-  const flagged = findUndatedBenchmarkBullets(body);
-  assert.equal(flagged.length, 0);
+test('research Key Results heuristic accepts explicit years and paper-year context', () => {
+  const body = '- 92.3 accuracy on GLUE (2019) — now considered saturated\n- 28.4 BLEU on WMT 2014 (2017)\n- 91.0 accuracy on the paper benchmark';
+  assert.equal(findUndatedBenchmarkBullets(body).length, 1);
+  assert.equal(findUndatedBenchmarkBullets(body, 2019).length, 0);
 });
 
 test('research Key Results heuristic ignores non-bullet prose and non-score bullets', () => {

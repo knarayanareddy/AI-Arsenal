@@ -64,7 +64,9 @@ function crossFieldChecks(file, type, data, errors, warnings) {
   if (type === 'tool') {
     if (data.open_source === true && !data.source_url && !data.github_url) warnings.push(`${file}: open_source=true should include source_url or github_url`);
     if (data.free_tier === true && !data.free_tier_limits) warnings.push(`${file}: free_tier=true should describe free_tier_limits when known`);
-    if (data.self_hostable === true && data.open_source !== true) warnings.push(`${file}: self_hostable=true usually implies open_source=true; verify metadata`);
+    // Self-hostable describes deployment location, not source licensing. Many
+    // proprietary enterprise products support VPC/on-prem deployment, so do
+    // not infer open_source=true from self_hostable=true.
   }
 
   if (type === 'project') {
@@ -109,8 +111,11 @@ function crossFieldChecks(file, type, data, errors, warnings) {
       if (data.practical_applicability === 'high' && (!data.key_contribution || data.key_contribution.length < 10)) {
         warnings.push(`${file}: practical_applicability is "high" but key_contribution is missing or too short to justify it`);
       }
-      if (data.has_code === false && data.reproduction_status && !['no-code', 'not-reproduced'].includes(data.reproduction_status)) {
-        warnings.push(`${file}: has_code is false but reproduction_status is "${data.reproduction_status}", which implies code exists; verify consistency`);
+      // `has_code` records whether official code is available. A paper can
+      // have no official code and still be independently reproduced by a
+      // third party, so only the code-available status is contradictory.
+      if (data.has_code === false && data.reproduction_status === 'code-available') {
+        warnings.push(`${file}: has_code is false but reproduction_status is "code-available"; verify whether official or third-party code is meant`);
       }
       if (data.has_code === true && !data.code_url) warnings.push(`${file}: has_code=true should include code_url`);
     }

@@ -71,3 +71,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
 | [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | deployment, production-serving | open-source | Yes | Yes | Yes | go | solid-choice |
 | [Temporal](../orchestration/temporal.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |
+| [ToolHive](../serving-and-deployment/toolhive.md) | serving and deployment | security-and-guardrails, deployment | open-source | No | Yes | Yes | go | watching |

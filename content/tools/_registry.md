@@ -69,6 +69,7 @@
 | `garak` | [garak (NVIDIA)](./evaluation-and-observability/garak.md) | NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation |
 | `gemini-cli` | [Gemini CLI](./dx-and-tooling/gemini-cli.md) | Google's open-source terminal AI agent that brings Gemini models to the command line with a generous free tier |
 | `giskard` | [Giskard](./evaluation-and-observability/giskard.md) | Testing platform for evaluating and scanning ML and LLM applications |
+| `giskard-oss` | [Giskard OSS](./evaluation-and-observability/giskard-oss.md) | Open-source evaluation and red-team testing library for LLM agents, RAG systems, and model behavior |
 | `github-copilot` | [GitHub Copilot](./dx-and-tooling/github-copilot.md) | GitHub's AI pair programmer: completions, chat, and an autonomous coding agent woven through GitHub and major IDEs |
 | `gitingest` | [Gitingest](./data-ingestion/gitingest.md) | Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL |
 | `google-pomelli-2-0` | [Google Pomelli 2.0](./dx-and-tooling/google-pomelli-2-0.md) | Explore and interact with large datasets through a visual, intuitive interface |
@@ -184,6 +185,7 @@
 | `tencentdb-agent-memory` | [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md) | Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store |
 | `text-embeddings-inference` | [Text Embeddings Inference (TEI)](./serving-and-deployment/text-embeddings-inference.md) | Hugging Face's Rust-based high-throughput inference server for embedding and reranker models |
 | `together-ai` | [Together AI](./model-layer/together-ai.md) | Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints |
+| `toolhive` | [ToolHive](./serving-and-deployment/toolhive.md) | Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers |
 | `torchtune` | [torchtune](./model-layer/torchtune.md) | PyTorch-native library for fine-tuning and experimenting with LLMs |
 | `trafilatura` | [Trafilatura](./data-ingestion/trafilatura.md) | Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building |
 | `triton-inference-server` | [NVIDIA Triton Inference Server](./serving-and-deployment/triton-inference-server.md) | NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles |

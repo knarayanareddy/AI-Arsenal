@@ -18,6 +18,11 @@ Schemas live in `schemas/`:
 - `person.schema.json`
 - `digest.schema.json`
 - `guide.schema.json`
+- `architecture.schema.json`
+- `observability.schema.json`
+- `community.schema.json`
+- `benchmark.schema.json`
+- `trend.schema.json`
 
 Each schema defines:
 

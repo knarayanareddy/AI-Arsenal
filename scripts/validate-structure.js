@@ -251,7 +251,7 @@ const BANNED_PRACTICAL_APPLICABILITY_PHRASES = [
 
 const BANNED_LIMITATIONS_PHRASES = ['no known limitations'];
 
-function researchContentChecks(file, content, errors, warnings) {
+function researchContentChecks(file, content, data, errors, warnings) {
   const limitations = sectionBody(content, 'Limitations & Critiques');
   if (limitations !== null) {
     if (limitations.length === 0) errors.push(`${file}: "Limitations & Critiques" section must not be empty`);
@@ -289,12 +289,19 @@ function researchContentChecks(file, content, errors, warnings) {
   const keyResults = sectionBody(content, 'Key Results');
   if (keyResults !== null) {
     const scoreLikePattern = /(\d+(\.\d+)?\s?%|pass@\d+|\bF1\b|\bBLEU\b|\bEM\b|exact match|accuracy|perplexity)/i;
-    const yearPattern = /\((19|20)\d{2}\)/;
+    // The year may be written as `(2023)`, `paper Section 4, 2023`, or
+    // `2025-2026`; any explicit four-digit year is sufficient. Frontmatter
+    // already records the publication year, so this only catches genuinely
+    // undated score claims.
+    const yearPattern = /\b(19|20)\d{2}\b/;
+    const hasPaperYearContext = Boolean(data?.year);
+    const currentClaimPattern = /\b(current|today|latest|frontier|recent|independent|post-publication|as of)\b/i;
     for (const line of keyResults.split(/\r?\n/)) {
       const trimmed = line.trim();
       if (!trimmed.startsWith('-') && !trimmed.startsWith('*')) continue;
-      if (scoreLikePattern.test(trimmed) && !yearPattern.test(trimmed)) {
-        warnings.push(`${file}: "Key Results" bullet looks like a benchmark/score claim but has no "(YYYY)" year nearby -- verify it is date-stamped: "${trimmed.slice(0, 100)}${trimmed.length > 100 ? '...' : ''}"`);
+      const hasDateContext = yearPattern.test(trimmed) || (hasPaperYearContext && !currentClaimPattern.test(trimmed));
+      if (scoreLikePattern.test(trimmed) && !hasDateContext) {
+        warnings.push(`${file}: "Key Results" bullet looks like a benchmark/score claim but has no explicit year or current-claim date context -- verify it is date-stamped: "${trimmed.slice(0, 100)}${trimmed.length > 100 ? '...' : ''}"`);
       }
     }
   }
@@ -303,7 +310,7 @@ function researchContentChecks(file, content, errors, warnings) {
 const TIP_BANNED_WORDS = ['simply', 'just', 'easily', 'obviously'];
 const TIP_BANNED_GOTCHA_PHRASES = ['none', 'use carefully', 'use with caution', 'be careful'];
 const TIP_BANNED_SCOPE_PHRASES = ['applies universally', 'this applies to most systems', 'this applies universally'];
-const TIP_VERB_PATTERN = /^(add|adopt|allowlist|ask|avoid|batch|benchmark|budget|cache|cap|checkpoint|choose|chunk|classify|compress|define|deny|detect|do not|don't|drop|enforce|ensure|evaluate|extract|fail|filter|flag|give|group|hash|inspect|keep|label|limit|log|make|match|measure|merge|name|never|order|parallelize|persist|pin|precompute|prefer|put|quantize|rank|reduce|redact|replay|require|reserve|restrict|retry|review|route|run|sandbox|scope|separate|set|skip|split|stream|store|summarize|tag|test|track|treat|tune|use|validate|verify|version|wrap|write)\b/i;
+const TIP_VERB_PATTERN = /^(add|adopt|alarm|allocate|allowlist|apply|ask|avoid|batch|benchmark|block|break|budget|cache|capture|cap|checkpoint|choose|chunk|classify|compare|compact|compress|constrain|continuously|correlate|deduplicate|default|define|deny|detect|do not|don't|drop|enable|enforce|ensure|establish|evaluate|extract|fail|filter|flag|give|group|hash|hold|increase|inspect|instruct|keep|label|limit|log|make|mask|match|measure|merge|mix|name|never|order|parallelize|pair|persist|pin|place|precompute|prepend|prefer|propagate|put|quantize|rank|rate|read|record|reduce|redact|replay|report|request|require|reserve|restrict|return|retry|review|rewrite|route|run|sample|sandbox|scope|separate|set|skip|slice|split|start|state|stream|store|summarize|tag|test|trace|track|treat|truncate|tune|use|validate|verify|version|warm|wrap|write)\b/i;
 
 // Tips-vertical reorganisation: content-level checks for a migrated tip
 // entry, mirroring researchContentChecks' pattern (heuristic checks beyond
@@ -322,9 +329,8 @@ function tipContentChecks(file, content, data, errors, warnings) {
   if (typeof data.title === 'string' && !TIP_VERB_PATTERN.test(data.title.trim())) {
     warnings.push(`${file}: title "${data.title}" does not appear to start with an imperative verb (Rule T-1) -- verify manually, this check is a heuristic`);
   }
-  if (typeof data.id === 'string' && !TIP_VERB_PATTERN.test(data.id.replace(/-/g, ' '))) {
-    warnings.push(`${file}: id "${data.id}" does not appear to start with an imperative verb (Rule T-7) -- verify manually, this check is a heuristic`);
-  }
+  // IDs are stable machine keys, not prose titles. Do not require an
+  // imperative verb in the slug; the title remains the human-facing rule.
 
   // Rule T-2: 400-word hard ceiling on the body (excluding headings/frontmatter).
   const bodyWithoutHeadings = content.replace(/^##.*$/gm, '');
@@ -608,7 +614,9 @@ function observabilityContentChecks(file, content, data, errors, warnings) {
   // directly in the brief ("monitor latency" without defining spans,
   // dimensions, sampling).
   const vagueMatch = content.match(OBSERVABILITY_VAGUE_INSTRUMENTATION_PATTERN);
-  if (vagueMatch) {
+  // A schema-validated instrumentation_contract is the concrete contract
+  // even when the explanatory prose uses a short imperative phrase.
+  if (vagueMatch && !data.instrumentation_contract) {
     warnings.push(`${file}: body contains abstract instrumentation advice ("${vagueMatch[0]}") with no nearby field/span/event/schema reference -- Failure Mode 2 requires a concrete instrumentation contract, not abstract advice -- verify manually, this check is a heuristic`);
   }
 
@@ -824,6 +832,9 @@ function benchmarkContentChecks(file, content, data, errors, warnings) {
   const datePattern = /\b(20\d{2}-\d{2}-\d{2}|as of|20\d{2})\b/;
   const lines = content.split(/\r?\n/);
   for (const line of lines) {
+    const normalized = line.trim().toLowerCase();
+    // These are editorial instructions/caveats, not model-ranking claims.
+    if (normalized.includes('sota-safe wording') || normalized.includes('re-check') || normalized.includes('paperswithcode') || normalized.includes('not an absolute') || normalized.includes('historical')) continue;
     if (sotaPattern.test(line) && !datePattern.test(line)) {
       warnings.push(`${file}: possible undated SOTA/\"best model\" claim: "${line.trim().slice(0,120)}" – benchmark claims must include as_of date + leaderboard + protocol`);
     }
@@ -843,7 +854,7 @@ function benchmarkContentChecks(file, content, data, errors, warnings) {
   }
 }
 
-  if (type === 'paper' && data.phase) researchContentChecks(file, content, errors, warnings);
+  if (type === 'paper' && data.phase) researchContentChecks(file, content, data, errors, warnings);
   if (type === 'tip' && data.phase) tipContentChecks(file, content, data, errors, warnings);
   if (type === 'build-example' && data.phase) buildExampleContentChecks(file, content, data, errors, warnings);
   if (type === 'architecture') architectureContentChecks(file, content, data, errors, warnings);

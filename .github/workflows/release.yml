@@ -32,17 +32,20 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
       - name: Resolve tag
         id: tag
-        run: |
-          if [ -n "${{ inputs.version }}" ]; then
-            echo "value=${{ inputs.version }}" >> "$GITHUB_OUTPUT"
-          else
-            # Bump patch from the latest tag.
-            latest=$(git tag --sort=-version:refname | head -1 || echo "v1.0.0")
-            echo "value=${latest%.${latest##*.}.*}" >> "$GITHUB_OUTPUT"
-            echo "::warning::Auto-bump from latest tag is conservative. Review before tagging."
-          fi
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: node scripts/resolve-release-tag.js
       - name: Generate changelog
         run: pnpm install --frozen-lockfile && node scripts/generate-changelog.js
       - name: Create GitHub release

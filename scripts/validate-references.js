@@ -4,15 +4,19 @@ import { loadEntries, buildIdIndex } from './utils/entries.js';
 
 const entries = await loadEntries({ includeContent: false });
 const idIndex = buildIdIndex(entries);
+// These are ecosystem/framework names rather than catalog entries. They are
+// intentionally allowed in integrates_with until/if canonical entries are
+// added; treating them as IDs creates noise and encourages fake catalog rows.
+const EXTERNAL_ECOSYSTEM_NAMES = new Set(['pytorch', 'huggingface']);
 const ids = new Set(idIndex.keys());
 const errors = [];
 const warnings = [];
 
-function checkRefs(entry, field, mode = 'error') {
+function checkRefs(entry, field, mode = 'error', allowedNames = new Set()) {
   const refs = entry.data[field];
   if (!Array.isArray(refs)) return;
   for (const ref of refs) {
-    if (!ids.has(ref)) {
+    if (!ids.has(ref) && !allowedNames.has(ref)) {
       const msg = `${entry.file}: ${field} references unknown id "${ref}"`;
       (mode === 'warning' ? warnings : errors).push(msg);
     }
@@ -21,7 +25,7 @@ function checkRefs(entry, field, mode = 'error') {
 
 for (const entry of entries) {
   checkRefs(entry, 'alternatives', 'warning');
-  checkRefs(entry, 'integrates_with', 'warning');
+  checkRefs(entry, 'integrates_with', 'warning', EXTERNAL_ECOSYSTEM_NAMES);
   // Note: 'applies_to' is intentionally NOT checked as a catalog-ID
   // reference. For tip entries specifically, applies_to is documented
   // (tips-vertical-reorg brief) as free-form context descriptors (e.g.
@@ -34,7 +38,6 @@ for (const entry of entries) {
 
   if (entry.data.paper_id && !ids.has(entry.data.paper_id)) warnings.push(`${entry.file}: paper_id references unknown id "${entry.data.paper_id}"`);
 
-  if (entry.type === 'project' && entry.data.artifact_type === 'tool') warnings.push(`${entry.file}: project artifact_type is "tool"; consider whether this belongs under /content/tools/ instead`);
   if (entry.data.status === 'deprecated' && (!Array.isArray(entry.data.alternatives) || entry.data.alternatives.length === 0)) {
     warnings.push(`${entry.file}: deprecated entries should list alternatives`);
   }

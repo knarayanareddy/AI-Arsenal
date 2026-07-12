@@ -32,6 +32,9 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [Hermes Agent](./hermes-agent.md)
+- [MemPalace](./mempalace.md)
+- [nono](./nono.md)
 - [AnythingLLM](./anythingllm.md)
 - [Browser Use](./browser-use.md)
 - [Continue](./continue.md)
@@ -39,22 +42,19 @@ Before selecting an agent system:
 - [Khoj](./khoj.md)
 - [LibreChat](./librechat.md)
 - [LobeChat (LobeHub)](./lobe-chat.md)
-- [Qwen-Agent](./qwen-agent.md)
-- [RD-Agent](./rd-agent.md)
-- [screenshot-to-code](./screenshot-to-code.md)
 
 ### Most Popular
 
+- [Hermes Agent](./hermes-agent.md) — ⭐ 213237
 - [Browser Use](./browser-use.md) — ⭐ 103506
 - [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 79620
 - [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
 - [AnythingLLM](./anythingllm.md) — ⭐ 62914
+- [MemPalace](./mempalace.md) — ⭐ 57230
 - [LibreChat](./librechat.md) — ⭐ 40447
 - [Strix](./strix.md) — ⭐ 38354
 - [Khoj](./khoj.md) — ⭐ 35524
 - [Continue](./continue.md) — ⭐ 34744
-- [Tabby](./tabby.md) — ⭐ 33679
-- [GPT Researcher](./gpt-researcher.md) — ⭐ 28151
 
 ### Browse All
 
@@ -62,10 +62,13 @@ Before selecting an agent system:
 - [Browser Use](./browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 - [Continue](./continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
 - [GPT Researcher](./gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
+- [Hermes Agent](./hermes-agent.md) — Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [Khoj](./khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
 - [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [LobeChat (LobeHub)](./lobe-chat.md) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
+- [MemPalace](./mempalace.md) — Open-source AI memory system for persistent agent context, recall, and memory-tool integrations
+- [nono](./nono.md) — Rust sandbox for isolating AI-agent execution with zero-setup positioning
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [Qwen-Agent](./qwen-agent.md) — Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context
 - [RD-Agent](./rd-agent.md) — Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining

@@ -30,9 +30,23 @@ export function stripMarkdown(markdown) {
     .trim();
 }
 
+export function stripNonRenderedMarkdown(markdown) {
+  return String(markdown ?? '')
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/~~~[\s\S]*?~~~/g, '')
+    .replace(/`[^`\n]*`/g, '');
+}
+
+function cleanExtractedUrl(url) {
+  // A closing backtick is Markdown syntax, not part of the URL. Keep other
+  // punctuation unchanged for compatibility with URLs that legitimately use
+  // punctuation in their path/query; URL validation will handle the result.
+  return url.replace(/[`]+$/g, '');
+}
+
 export function extractUrls(markdown) {
   const urls = new Set();
-  for (const match of markdown.matchAll(/\bhttps?:\/\/[^\s)>'"]+/g)) urls.add(match[0]);
-  for (const match of markdown.matchAll(/\[[^\]]+\]\((https?:\/\/[^)]+)\)/g)) urls.add(match[1]);
-  return [...urls];
+  for (const match of markdown.matchAll(/\bhttps?:\/\/[^\s)>'"]+/g)) urls.add(cleanExtractedUrl(match[0]));
+  for (const match of markdown.matchAll(/\[[^\]]+\]\((https?:\/\/[^)]+)\)/g)) urls.add(cleanExtractedUrl(match[1]));
+  return [...urls].filter(Boolean);
 }

@@ -4,7 +4,7 @@ name: Recursi
 type: tool
 job: [production-serving]
 description: Self-improving system for intuitive and efficient AI-assisted coding
-url: "https://recursi.dev"
+url: "https://www.producthunt.com/products/recursi-self-improving-vibe-coding-env"
 cost_model: freemium
 pricing_detail: Free tier with paid upgrades
 tags: [agents]
@@ -61,7 +61,7 @@ Maintains session-level context and feedback signals to adjust its suggestion be
 
 ```bash
 # Open the project page and follow the documented onboarding.
-# https://recursi.dev
+# https://www.producthunt.com/products/recursi-self-improving-vibe-coding-env
 ```
 
 ## Use Cases
@@ -88,7 +88,7 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ## Resources
 
-- [Recursi](https://recursi.dev)
+- [Recursi](https://www.producthunt.com/products/recursi-self-improving-vibe-coding-env)
 
 ## Buzz & Reception
 

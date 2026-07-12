@@ -93,6 +93,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | prototyping, production-serving | open-source | Yes | Yes | Yes | python | recommended |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | evaluation, security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
+| [Giskard OSS](../evaluation-and-observability/giskard-oss.md) | evaluation and observability | evaluation, security-and-guardrails, monitoring | open-source | No | Yes | Yes | python | watching |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | web-scraping, prototyping | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | prototyping, orchestration | open-source | Yes | Yes | Yes | rust | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
@@ -157,6 +158,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [TencentDB Agent Memory](../dx-and-tooling/tencentdb-agent-memory.md) | dx and tooling | memory-management | open-source | Yes | Yes | Yes | typescript | watching |
 | [Text Embeddings Inference (TEI)](../serving-and-deployment/text-embeddings-inference.md) | serving and deployment | production-serving, vector-search | open-source | Yes | Yes | Yes | rust | recommended |
+| [ToolHive](../serving-and-deployment/toolhive.md) | serving and deployment | security-and-guardrails, deployment | open-source | No | Yes | Yes | go | watching |
 | [torchtune](../model-layer/torchtune.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [Trafilatura](../data-ingestion/trafilatura.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | python | recommended |
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |

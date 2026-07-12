@@ -110,6 +110,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Galileo](../evaluation-and-observability/galileo.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | No | No | python | solid-choice |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | evaluation, security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
+| [Giskard OSS](../evaluation-and-observability/giskard-oss.md) | evaluation and observability | evaluation, security-and-guardrails, monitoring | open-source | No | Yes | Yes | python | watching |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | web-scraping, prototyping | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Google Pomelli 2.0](../dx-and-tooling/google-pomelli-2-0.md) | dx and tooling | structured-output | freemium | Yes | No | No | python | watching |

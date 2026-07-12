@@ -89,19 +89,20 @@ Current generated stats:
 
 | Type | Count |
 |---|---:|
-| Projects | 69 |
-| Tools | 93 |
-| Papers | 25 |
-| Tips | 102 |
-| Guides | 27 |
-| Benchmarks | 30 |
+| Projects | 250 |
+| Tools | 202 |
+| Papers | 119 |
+| Tips | 171 |
+| Guides | 59 |
+| Benchmarks | 50 |
 | People | 25 |
-| Community | 23 |
-| Architectures | 14 |
+| Community | 32 |
+| Architectures | 29 |
 | Build examples | 8 |
-| Observability | 7 |
+| Observability | 16 |
+| Trends | 4 |
 | Digests | 1 |
-| Total content entries | 424 |
+| Total content entries | 895 |
 
 Browse the generated statistics in [`data/stats.json`](./data/stats.json).
 
@@ -135,13 +136,13 @@ Intentionally separate/future:
 ### Prerequisites
 
 - Node.js `>=20`
-- pnpm `>=8`
+- pnpm `>=9`
 
 If pnpm is not installed globally, you can use Corepack:
 
 ```bash
 corepack enable
-corepack prepare pnpm@8 --activate
+corepack prepare pnpm@9 --activate
 ```
 
 ### Install
@@ -259,12 +260,17 @@ Human-readable explanation goes here.
 |---|---|---|
 | Project | [`schemas/project.schema.json`](./schemas/project.schema.json) | `content/projects/**/[id].md` |
 | Tool | [`schemas/tool.schema.json`](./schemas/tool.schema.json) | `content/tools/**/[id].md` |
-| Paper | [`schemas/paper.schema.json`](./schemas/paper.schema.json) | `content/research/papers/[id].md` |
-| Tip | [`schemas/tip.schema.json`](./schemas/tip.schema.json) | `content/tips-and-tricks/[id].md` |
-| Build example | [`schemas/build-example.schema.json`](./schemas/build-example.schema.json) | `content/build-examples/[difficulty]/[id].md` |
-| Person | [`schemas/person.schema.json`](./schemas/person.schema.json) | `content/community/[id].md` |
+| Paper | [`schemas/research.schema.json`](./schemas/research.schema.json) | `content/research/{phase}/[id].md` |
+| Tip | [`schemas/tip.schema.json`](./schemas/tip.schema.json) | `content/tips-and-tricks/{phase}/[id].md` |
+| Build example | [`schemas/build-example.schema.json`](./schemas/build-example.schema.json) | `content/build-examples/{phase}/[id].md` |
+| Person | [`schemas/person.schema.json`](./schemas/person.schema.json) | `content/community/people/[id].md` |
 | Digest | [`schemas/digest.schema.json`](./schemas/digest.schema.json) | `content/digests/YYYY-MM/digest.md` |
 | Guide | [`schemas/guide.schema.json`](./schemas/guide.schema.json) | guide pages across content sections |
+| Architecture | [`schemas/architecture.schema.json`](./schemas/architecture.schema.json) | `content/architectures/{category}/[id].md` |
+| Observability | [`schemas/observability.schema.json`](./schemas/observability.schema.json) | `content/observability/{category}/[id].md` |
+| Community | [`schemas/community.schema.json`](./schemas/community.schema.json) | `content/community/{kind}/[id].md` |
+| Benchmark | [`schemas/benchmark.schema.json`](./schemas/benchmark.schema.json) | `content/benchmarks/{category}/[id].md` |
+| Trend | [`schemas/trend.schema.json`](./schemas/trend.schema.json) | `content/trending/{kind}/[id].md` |
 
 ### Controlled vocabulary
 
@@ -296,6 +302,11 @@ The `/data` directory is the generated static API contract.
 | [`data/tips.json`](./data/tips.json) | Full tip records |
 | [`data/guides.json`](./data/guides.json) | Full guide records |
 | [`data/build-examples.json`](./data/build-examples.json) | Full build-example records |
+| [`data/architectures.json`](./data/architectures.json) | Architecture decision records |
+| [`data/observability.json`](./data/observability.json) | Observability playbooks |
+| [`data/community.json`](./data/community.json) | Community resources |
+| [`data/benchmarks.json`](./data/benchmarks.json) | Benchmark records |
+| [`data/trending.json`](./data/trending.json) | Trending snapshots and source feeds |
 | [`data/tags.json`](./data/tags.json) | Tag counts and type distribution |
 | [`data/stats.json`](./data/stats.json) | Repository statistics |
 | [`data/search-index.json`](./data/search-index.json) | FlexSearch-compatible search documents and facets |

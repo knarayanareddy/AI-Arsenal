@@ -184,7 +184,7 @@ def stream_llm_and_finalize_span():
 
 ## Privacy & Governance
 
-Propagation carriers (`traceparent`/`tracestate`, and optional `baggage`) carry only trace/span identifiers and sampling flags — no business data — so they need no redaction; teams should nonetheless avoid putting sensitive values in `baggage`, which is why it is optional and discouraged for anything beyond low-cardinality routing hints. Span attributes added at each hop follow the same secret-pattern scrubbing as any other span (see [Redact and Govern Trace Data](../privacy-governance/redact-and-govern-trace-data.md)). Full cross-service trees are retained 30 days; trace-level summaries (duration, hop count, status, no attributes) for 90 days.
+Propagation carriers (`traceparent`/`tracestate`, and optional `baggage`) carry only trace/span identifiers and sampling flags — no business data — so they need no redaction; teams should nonetheless avoid putting sensitive values in `baggage`, which is why it is optional and discouraged for anything beyond low-cardinality routing hints. Span attributes added at each hop follow the same secret-pattern scrubbing as any other span (see [Redact and Govern Trace Data](../privacy-governance/redact-and-govern-trace-data.md)). Full cross-service trees are retained 30 days; trace-level summaries (duration, hop count, status, no attributes) for 90 days. Access is limited to the service's on-call and observability roles; raw trace attributes are not available to general application users and require the production observability permission set.
 
 ## Validation Checklist
 

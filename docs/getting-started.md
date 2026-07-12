@@ -20,7 +20,7 @@ The most important rule:
 You need:
 
 - Node.js 20 or newer
-- pnpm 8 or newer
+- pnpm 9 or newer
 
 Check your versions:
 
@@ -33,7 +33,7 @@ If pnpm is not available:
 
 ```bash
 corepack enable
-corepack prepare pnpm@8 --activate
+corepack prepare pnpm@9 --activate
 ```
 
 ## 3. Install Dependencies
@@ -62,7 +62,7 @@ Start here:
 
 | Goal | Start Here |
 |---|---|
-| Choose an AI architecture | `content/architectures/decision-trees/` |
+| Choose an AI architecture | `content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/` |
 | Pick a production stack | `content/architectures/reference-stacks/` |
 | Compare AI projects | `content/projects/_registry.md` |
 | Compare AI tools | `content/tools/_registry.md` |
@@ -78,6 +78,9 @@ If you are building a script, dashboard, or future UI, start with:
 data/index.json
 data/projects.json
 data/tools.json
+data/architectures.json
+data/benchmarks.json
+data/trending.json
 data/search-index.json
 ```
 

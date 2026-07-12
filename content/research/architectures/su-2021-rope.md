@@ -59,7 +59,7 @@ A position encoding satisfying three properties no predecessor combined: exact r
 
 - RoFormer outperformed BERT-style baselines with learned absolute positions on Chinese and English benchmarks and on long-text matching (paper Section 4, 2021)
 - Faster convergence in pretraining loss versus sinusoidal/learned baselines at matched settings (2021)
-- Adopted as the position encoding in GPT-NeoX, PaLM, Llama 1-3, Mistral, Qwen, Gemma, DeepSeek — effectively 100% of current open frontier decoders (post-publication adoption)
+- Adopted as the position encoding in GPT-NeoX, PaLM, Llama 1-3, Mistral, Qwen, Gemma, DeepSeek — effectively 100% of current open frontier decoders (post-publication adoption, reviewed 2026)
 
 ## Methodology
 

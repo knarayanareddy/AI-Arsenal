@@ -169,7 +169,7 @@ def route_with_failover(request):
 
 ## Privacy & Governance
 
-Provider-health and failover events carry provider identity, model, HTTP status, error class, and timing — no prompt or response content — so they require no content redaction and can be shared broadly with on-call and vendor-management stakeholders. Incident records may reference affected `request_id`s for forensic joins but never their payloads. Per-call outcomes are retained 90 days for post-incident analysis and provider-SLA reconciliation; daily per-provider availability and failover-event rollups for 13 months to support vendor-reliability trending and contract review.
+Provider-health and failover events carry provider identity, model, HTTP status, error class, and timing — no prompt or response content — so they require no content redaction and can be shared broadly with on-call and vendor-management stakeholders. Incident records may reference affected `request_id`s for forensic joins but never their payloads. Access is limited to the on-call engineering, incident-management, and vendor-management roles; raw request payloads are never exposed to those roles. Per-call outcomes are retained 90 days for post-incident analysis and provider-SLA reconciliation; daily per-provider availability and failover-event rollups for 13 months to support vendor-reliability trending and contract review.
 
 ## Validation Checklist
 

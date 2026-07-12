@@ -45,13 +45,13 @@ Categories: agents, llms, rag, observability, multimodal, voice-audio, computer-
 ### WHAT ARCHITECTURE OR STACK SHOULD I USE?
 
 → `/content/architectures/reference-stacks/` for opinionated stacks
-→ `/content/architectures/decision-trees/` for when-to-use-what guidance
+→ `/content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/` for when-to-use-what guidance
 
 ### RESEARCH PAPERS AND SOTA?
 
 → `/content/research/must-read-papers.md` when present
 → `/content/research/sota-benchmarks.md` when present
-→ `/content/research/papers/` for individual paper summaries
+→ `/content/research/{phase}/` for individual paper summaries
 
 ### OBSERVABILITY AND LLMOPS?
 
@@ -76,6 +76,11 @@ Categories: agents, llms, rag, observability, multimodal, voice-audio, computer-
 → `/data/tools.json` — all tools, denormalized
 → `/data/papers.json` — all papers
 → `/data/tips.json` — all tips
+→ `/data/architectures.json` — architecture decisions
+→ `/data/observability.json` — observability playbooks
+→ `/data/community.json` — community resources
+→ `/data/benchmarks.json` — benchmark records
+→ `/data/trending.json` — trending snapshots and source feeds
 → `/data/people.json` — community people
 → `/data/tags.json` — tag cloud with counts
 → `/data/stats.json` — repository statistics
@@ -84,6 +89,7 @@ Categories: agents, llms, rag, observability, multimodal, voice-audio, computer-
 ## KEY TAXONOMY
 
 Tags include: agents | rag | llm | fine-tuning | embeddings | evaluation | inference | multimodal | observability | self-hosted | trending
+Entry types include: project | tool | paper | tip | build-example | person | digest | guide | architecture | observability | community | benchmark | trend
 Cost: open-source | freemium | paid | self-hostable | usage-based
 Maturity: experimental | alpha | beta | production
 Status: active | archived | deprecated | watching
@@ -97,8 +103,13 @@ Every content entry must:
 3. Use only vocabulary from `TAXONOMY.md`.
 4. Use a unique kebab-case `id` that matches the filename.
 5. Follow the required Markdown body section order.
+6. Pass the editorial-quality gate: `pnpm run validate:editorial`.
+
+## EDITORIAL QUALITY GATE
+
+Structural validity is not sufficient for promotion. New entries must contain bespoke analysis rather than frontmatter restatement or generic filler. Each project/tool must explain its actual architecture, named ecosystem boundaries, workload-specific best/avoid cases, and concrete failure modes. Each paper must explain the method, baselines, results, applicability, and limitations from that paper. Repeated paragraphs, copied frontmatter sections, grammatical interpolation errors, and generic production disclaimers are promotion failures. Discovery candidates that do not meet this bar belong in the quarantine inventory, not `/content/` or generated `/data/`.
 
 ## LAST UPDATED
 
-2026-07-07 — Foundation, core content, automation, benchmarks, trending, and launch content bootstrap. Total content entries: 424.
+2026-07-11 — Schema-first catalog with projects, tools, research, tips, guides, architectures, observability, community, benchmarks, trends, and generated data. Total content entries: 895.
 

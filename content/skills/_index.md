@@ -6,12 +6,12 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent skills](./agent-skills/) | 2 entries | 2026-07-09 |
-| [applied](./applied/) | 6 entries | 2026-07-09 |
-| [by role](./by-role/) | 4 entries | 2026-07-09 |
-| [core concepts](./core-concepts/) | 10 entries | 2026-07-09 |
-| [learning paths](./learning-paths/) | 4 entries | 2026-07-09 |
-| [prompt engineering](./prompt-engineering/) | 2 entries | 2026-07-09 |
+| [agent skills](./agent-skills/) | 2 entries | 2026-07-12 |
+| [applied](./applied/) | 6 entries | 2026-07-12 |
+| [by role](./by-role/) | 4 entries | 2026-07-12 |
+| [core concepts](./core-concepts/) | 10 entries | 2026-07-12 |
+| [learning paths](./learning-paths/) | 4 entries | 2026-07-12 |
+| [prompt engineering](./prompt-engineering/) | 2 entries | 2026-07-12 |
 
 ## Recently Added
 

@@ -3,7 +3,7 @@ id: "eleutherai-discord"
 title: "EleutherAI Discord"
 entry_type: community
 kind: chat
-url: "https://www.eleuther.ai/get-involved"
+url: "https://www.eleuther.ai/"
 topics:
   - open-source
   - research
@@ -49,7 +49,7 @@ Researchers and practitioners who want to participate in or observe open, in-pro
 
 ## How to get value fast
 
-Join through the current invite link on [eleuther.ai/get-involved](https://www.eleuther.ai/get-involved) (the org rotates its invite periodically and republishes it there rather than relying on a single static vanity URL). Read the pinned descriptions in each project channel before posting -- channels map to active research efforts, not general topics. If you want structured, mentored involvement rather than open-ended lurking, watch for and apply to periodic programs like Summer of Open AI Research when applications open.
+Join through the current invite link on [eleuther.ai](https://www.eleuther.ai/) (the org rotates its invite periodically and republishes it there rather than relying on a single static vanity URL). Read the pinned descriptions in each project channel before posting -- channels map to active research efforts, not general topics. If you want structured, mentored involvement rather than open-ended lurking, watch for and apply to periodic programs like Summer of Open AI Research when applications open.
 
 ## What to avoid
 
@@ -69,7 +69,7 @@ Related to [LAION](../datasets/laion.md) as another community-driven open-AI res
 
 ## Resources
 
-- [EleutherAI: Get Involved](https://www.eleuther.ai/get-involved)
+- [EleutherAI: Get Involved](https://www.eleuther.ai/)
 - [EleutherAI (arXiv 2210.06413): organizational-structure paper describing the Discord-native model](https://arxiv.org/pdf/2210.06413)
 - [EleutherAI Summer of Open AI Research 2026 program announcement](https://opportunitiesforyouth.org/2026/05/28/eleutherai-summer-of-open-ai-research-2026-fully-online-ai-research-mentorship-program-for-aspiring-researchers-worldwide/)
 

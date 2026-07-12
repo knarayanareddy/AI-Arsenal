@@ -33,6 +33,7 @@ Before selecting a foundation model:
 
 ### Recently Added
 
+- [MOSS-TTS](./moss-tts.md)
 - [AudioCraft (Meta)](./audiocraft.md)
 - [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md)
 - [Chatterbox (Resemble AI)](./chatterbox.md)
@@ -42,7 +43,6 @@ Before selecting a foundation model:
 - [FLUX (Black Forest Labs)](./flux.md)
 - [GLM-4 / GLM-4.5](./glm-4.md)
 - [GPT-SoVITS](./gpt-sovits.md)
-- [Kimi K2](./kimi-k2.md)
 
 ### Most Popular
 
@@ -79,6 +79,7 @@ Before selecting a foundation model:
 - [MiniCPM-V](./minicpm-v.md) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - [Mistral / Mixtral](./mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
 - [Moshi](./moshi.md) — Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline
+- [MOSS-TTS](./moss-tts.md) — Open-source speech and sound generation model family for expressive, long-form, multi-speaker, and streaming audio
 - [OLMo](./olmo.md) — AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science
 - [Open-Sora](./open-sora.md) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment

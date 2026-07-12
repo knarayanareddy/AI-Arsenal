@@ -3,8 +3,8 @@ import fs from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 import chalk from 'chalk';
 import { getMarkdownFiles, readMarkdown } from './utils/frontmatter.js';
-import { extractUrls } from './utils/markdown.js';
-import { parseSafeUrl, assertPublicHostname, domainAllowed, hostCallAllowed, resetHostCallCounts } from './utils/network-guard.js';
+import { extractUrls, stripNonRenderedMarkdown } from './utils/markdown.js';
+import { parseSafeUrl, resolveRedirectUrl, assertPublicHostname, domainAllowed, hostCallAllowed, resetHostCallCounts } from './utils/network-guard.js';
 import { categorizeHttpStatus, classifyNetError, isTransientError, RATE_LIMIT_DOMAINS } from './utils/link-status.js';
 
 const args = new Set(process.argv.slice(2));
@@ -12,7 +12,7 @@ const changedOnly = args.has('--changed-only');
 const writeReport = !args.has('--no-report');
 const concurrency = Number(process.env.LINK_CHECK_CONCURRENCY ?? 8);
 const timeoutMs = Number(process.env.LINK_CHECK_TIMEOUT_MS ?? 15000);
-const maxUrls = Number(process.env.LINK_CHECK_MAX_URLS ?? 500);
+const maxUrls = Number(process.env.LINK_CHECK_MAX_URLS ?? 2000);
 const maxPerHost = Number(process.env.LINK_CHECK_MAX_URLS_PER_HOST ?? 10);
 const retries = Number(process.env.LINK_CHECK_RETRIES ?? 2);
 const backoffMs = Number(process.env.LINK_CHECK_BACKOFF_MS ?? 400);
@@ -28,14 +28,14 @@ const USER_AGENT = 'AI-Arsenal-Link-Checker/1.0 (+https://github.com/knarayanare
 function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
 async function filesToCheck() {
-  if (!changedOnly) return (await getMarkdownFiles('**/*.md')).filter((f) => !f.startsWith('templates/'));
+  if (!changedOnly) return (await getMarkdownFiles('**/*.md')).filter((f) => !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
   try {
     const output = execFileSync('git', ['diff', '--name-only', 'origin/main...HEAD'], { encoding: 'utf8' });
-    return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/'));
+    return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
   } catch {
     try {
       const output = execFileSync('git', ['diff', '--name-only', 'HEAD~1...HEAD'], { encoding: 'utf8' });
-      return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/'));
+      return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
     } catch { return []; }
   }
 }
@@ -90,7 +90,7 @@ async function fetchWithRetry(url, method) {
   throw lastErr;
 }
 
-async function checkUrl(rawUrl) {
+async function checkUrl(rawUrl, redirectDepth = 0) {
   // Hard limits / pre-flight checks — these are always definitive.
   if (rawUrl.length > 2048) return { url: rawUrl, ok: false, error: 'url-too-long', soft: false };
   if (shouldIgnoreByPattern(rawUrl)) return { url: rawUrl, ok: true, ignored: true };
@@ -133,8 +133,19 @@ async function checkUrl(rawUrl) {
     if (response.status >= 300 && response.status < 400) {
       const location = response.headers.get('location');
       if (!location) return { url: rawUrl, ok: false, status: response.status, error: 'redirect-without-location', soft: false };
-      const recheck = await checkUrl(location);
-      if (!recheck.ok) return { url: rawUrl, ok: false, status: response.status, error: `redirect-unsafe:${recheck.error}` };
+      if (redirectDepth >= 5) return { url: rawUrl, ok: false, status: response.status, error: 'redirect-depth-exceeded', soft: false };
+      const redirectUrl = resolveRedirectUrl(location, url);
+      if (!redirectUrl) return { url: rawUrl, ok: false, status: response.status, error: 'redirect-invalid-location', soft: false };
+      const recheck = await checkUrl(redirectUrl, redirectDepth + 1);
+      if (!recheck.ok) {
+        return {
+          url: rawUrl,
+          ok: false,
+          status: response.status,
+          error: `redirect-unsafe:${recheck.error}`,
+          soft: recheck.soft === true
+        };
+      }
       return { url: rawUrl, ok: true, status: response.status };
     }
 
@@ -165,7 +176,7 @@ const files = await filesToCheck();
 const urlToFiles = new Map();
 for (const file of files) {
   const { raw } = await readMarkdown(file);
-  for (const url of extractUrls(stripHtmlComments(raw))) {
+  for (const url of extractUrls(stripNonRenderedMarkdown(stripHtmlComments(raw)))) {
     if (!urlToFiles.has(url)) urlToFiles.set(url, []);
     urlToFiles.get(url).push(file);
   }

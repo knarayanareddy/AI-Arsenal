@@ -4,7 +4,7 @@ This file is the single source of truth for controlled vocabulary used by schema
 
 ## Entry Types
 
-`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `architecture` | `observability` | `community` | `benchmark`
+`project` | `tool` | `paper` | `tip` | `build-example` | `person` | `digest` | `guide` | `architecture` | `observability` | `community` | `benchmark` | `trend`
 
 ## Project Categories
 

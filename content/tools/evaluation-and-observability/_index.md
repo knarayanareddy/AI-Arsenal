@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Giskard OSS](./giskard-oss.md)
 - [AgentOps](./agentops.md)
 - [Deepchecks](./deepchecks.md)
 - [Evidently](./evidently.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [LangWatch](./langwatch.md)
 - [LLM Guard](./llm-guard.md)
 - [LM Evaluation Harness (EleutherAI)](./lm-evaluation-harness.md)
-- [PyRIT](./pyrit.md)
 
 ### Most Popular
 
@@ -53,6 +53,7 @@ _No star-tracked entries yet._
 - [Galileo](./galileo.md) — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
 - [garak (NVIDIA)](./garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 - [Giskard](./giskard.md) — Testing platform for evaluating and scanning ML and LLM applications
+- [Giskard OSS](./giskard-oss.md) — Open-source evaluation and red-team testing library for LLM agents, RAG systems, and model behavior
 - [Guardrails AI](./guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Humanloop](./humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
 - [Inspect (UK AI Safety Institute)](./inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer

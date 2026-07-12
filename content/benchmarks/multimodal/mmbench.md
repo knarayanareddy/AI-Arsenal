@@ -18,10 +18,7 @@ protocol:
   evaluation_setup: "0-shot. Image + question + options → model selects an answer; a ChatGPT judge maps free-form output to the correct choice. ~3,000 questions, English (en) and Chinese (cn) test sets."
   version: null
 leaderboards:
-  - name: "MMBench Leaderboard (OpenCompass)"
-    url: "https://mmbench.opencompass.net.cn/"
-    last_checked: "2026-07-06"
-  - name: "Open VLM Leaderboard"
+  - name: "Open VLM Leaderboard (OpenCompass)"
     url: "https://opencompass-open-vlm-leaderboard.hf.space/"
     last_checked: "2026-07-06"
 known_issues:
@@ -109,7 +106,7 @@ Multimodal evaluation benchmark. Complements multimodal projects and build examp
 
 ## Resources
 
-- [Leaderboard – MMBench](https://mmbench.opencompass.net.cn/)
+- [Open VLM Leaderboard – MMBench](https://opencompass-open-vlm-leaderboard.hf.space/)
 - [GitHub – MMBench](https://github.com/open-compass/MMBench)
 - Paper: Liu et al., "MMBench: Is Your Multi-modal Model an All-around Player?", arXiv:2307.06281
 

@@ -1,14 +1,14 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-09T21:45:42.875Z | Entries: 848 | Schema version: 1.0.0
+Generated: 2026-07-12T14:35:19.153Z | Entries: 895 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 146
-- Tools: 197
-- Papers: 110
+- Projects: 175
+- Tools: 199
+- Papers: 126
 - Tips: 171
 - People: 25
 - Digests: 1
@@ -17,12 +17,14 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architectures: 29
 - Observability: 16
 - Community: 32
+- Benchmarks: 50
+- Trending: 4
 
 ## Navigation
 
 - Agent map: /AGENT.md
 - Taxonomy: /TAXONOMY.md
-- Data API: /data/index.json, /data/projects.json, /data/tools.json, /data/search-index.json
+- Data API: /data/index.json, all collection JSON files from scripts/utils/collections.js, and /data/search-index.json
 - Architecture decisions: /content/architectures/{system-design,data-strategy,model-selection,serving-patterns,evaluation-strategy}/
 - Reference stacks: /content/architectures/reference-stacks/
 - Observability playbooks: /content/observability/{instrumentation,tracing,evaluation-quality,monitoring-alerting,cost-usage,privacy-governance,incident-response}/
@@ -30,7 +32,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Tool jobs: /content/tools/by-job/
 - Tool phases: /content/tools/data-ingestion/, /content/tools/model-layer/, /content/tools/orchestration/, /content/tools/serving-and-deployment/, /content/tools/evaluation-and-observability/, /content/tools/dx-and-tooling/
 - Observability: /content/observability/
-- Research papers: /content/research/papers/
+- Research papers: /content/research/{foundational,architectures,training-and-alignment,inference-and-efficiency,retrieval-and-memory,agents-and-reasoning,evaluation-and-safety,surveys}/
+- Benchmarks: /content/benchmarks/{general-llm,code,retrieval-rag,agents,safety,multimodal,evaluation-methods}/
+- Trending: /content/trending/{this-week,this-month,hall-of-fame,by-source}/
 
 ## Top Projects by Category
 
@@ -56,11 +60,15 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
 - cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
+- LangExtract (⭐37100, score:0) — Python library for grounded structured extraction from unstructured text with source spans and visualization
+- Daft (⭐5620, score:0) — High-performance data engine for AI and multimodal workloads across images, audio, video, and structured data
+- DataChain (⭐2794, score:0) — Typed and versioned context layer for unstructured data across S3, GCS, and Azure
 
 ### evaluation
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
+- lmms-eval (⭐4300, score:0) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
 
 ### llms
 - LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
@@ -95,6 +103,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Cherry Studio (⭐48319, score:46) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - LitServe (⭐3910, score:32) — Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code
+- Context7 (⭐58934, score:0) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
 
 ### voice-audio
 - AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
@@ -219,126 +228,146 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Architecture Quick Refs
 
-- Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified — 
-- Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff — 
-- Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling — 
-- Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It — 
-- Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost — 
-- Research Platform Stack vs Product Stack: Reproducibility vs Shipping Speed — 
+- Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified
+- Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff
+- Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling
+- Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It
+- Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost
+- Research Platform Stack vs Product Stack: Reproducibility vs Shipping Speed
 
 ## Architecture Decisions by Category
 
 ### data-strategy
-- Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic — 
-- Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted — 
-- Choosing a Reranking Strategy: Dense-Only, Cross-Encoder, or LLM Reranker — 
-- Dense vs Sparse vs Hybrid Retrieval: How Should You Actually Find the Right Chunks? — 
-- Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed — 
+- Choosing a Chunking Strategy: Fixed, Structure-Aware, Parent-Child, or Semantic
+- Choosing an Embedding Model: Managed API, Open-Weight Self-Hosted, or Domain-Adapted
+- Choosing a Reranking Strategy: Dense-Only, Cross-Encoder, or LLM Reranker
+- Dense vs Sparse vs Hybrid Retrieval: How Should You Actually Find the Right Chunks?
+- Choosing Vector Storage: Postgres-Native, Embedded, Self-Hosted, or Managed
 
 ### evaluation-strategy
-- Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review — 
-- Choosing an Observability Approach: Integration Model First, Feature List Second — 
-- LLM-as-Judge vs Human Evaluation vs Reference-Based Metrics: How Should You Grade Outputs? — 
+- Choosing an Evaluation Strategy: Golden Datasets, Model-Graded Evals, and Human Review
+- Choosing an Observability Approach: Integration Model First, Feature List Second
+- LLM-as-Judge vs Human Evaluation vs Reference-Based Metrics: How Should You Grade Outputs?
 
 ### model-selection
-- Choosing an Agent Framework: State Model, Language, and Provider Constraints — 
-- Choosing a Model: Local vs Cloud, and Routing by Primary Need — 
-- Self-Host Open Weights vs Hosted Model API: Who Should Run the GPU? — 
+- Choosing an Agent Framework: State Model, Language, and Provider Constraints
+- Choosing a Model: Local vs Cloud, and Routing by Primary Need
+- Self-Host Open Weights vs Hosted Model API: Who Should Run the GPU?
 
 ### reference-stacks
-- Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified — 
-- Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff — 
-- Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling — 
-- Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It — 
-- Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost — 
+- Enterprise-Scale AI Stack vs Production RAG Stack: When Governance Overhead Is Justified
+- Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff
+- Local-First Stack vs Cloud API Stack: Privacy and Cost Control vs Capability Ceiling
+- Multi-Agent System Stack vs Single-Agent Loop: When Role Decomposition Is Worth It
+- Production RAG Stack vs Lean MVP Stack: When Ingestion, Eval, and Observability Earn Their Cost
 
 ### serving-patterns
-- Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse — 
-- Choosing a Deployment Target: Separating App Hosting From Model Serving — 
-- Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway — 
-- Choosing a Quantization Strategy: How Low Can You Go Before Quality Breaks? — 
-- Synchronous vs Streaming vs Asynchronous: How Should the Answer Reach the User? — 
+- Caching LLM Workloads: Provider Prompt Caching, Gateway Response Caching, Semantic Caching, and Prefix/KV Reuse
+- Choosing a Deployment Target: Separating App Hosting From Model Serving
+- Handling Provider Failures: Retry, Model/Provider Fallback, or a Managed Gateway
+- Choosing a Quantization Strategy: How Low Can You Go Before Quality Breaks?
+- Synchronous vs Streaming vs Asynchronous: How Should the Answer Reach the User?
 
 ### system-design
-- Managing a Growing Context Window: Truncation, Summarization, or Retrieval Offload — 
-- Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates — 
-- Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic — 
-- Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding — 
-- RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation — 
+- Managing a Growing Context Window: Truncation, Summarization, or Retrieval Offload
+- Layering LLM Guardrails: Prompt Hardening, Validation Frameworks, Classifier Screens, and Human Gates
+- Choosing an Agent Memory Architecture: Session, Long-Term, and Semantic
+- Getting Structured Output from LLMs: Prompt-and-Parse, Provider-Native, or Constrained Decoding
+- RAG vs Fine-Tuning: Knowledge Injection vs Behavior Adaptation
 
 ## Observability Playbooks by Category
 
 ### cost-usage
-- Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total — 
-- Monitor Cache Hit Rate and Realized Token Savings Per Cache Layer, So a Silently Ineffective Cache Stops Costing You Money It Was Supposed to Save — 
+- Attribute Every LLM Call's Cost to a Feature, User, and Prompt Version, Not Just a Monthly Invoice Total
+- Monitor Cache Hit Rate and Realized Token Savings Per Cache Layer, So a Silently Ineffective Cache Stops Costing You Money It Was Supposed to Save
 
 ### evaluation-quality
-- Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship — 
-- Monitor Guardrail Trip Rate as a First-Class Quality Signal, Because a Guardrail That Never Fires and One That Fires Constantly Are Both Broken — 
-- Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks — 
+- Gate Prompt, Model, and Retriever Changes on a Versioned Eval Dataset Before They Ship
+- Monitor Guardrail Trip Rate as a First-Class Quality Signal, Because a Guardrail That Never Fires and One That Fires Constantly Are Both Broken
+- Monitor Retrieval Quality Continuously with Reference-Free Signals, Not Just Offline Benchmarks
 
 ### incident-response
-- Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts — 
-- Runbook: Detect and Fail Over a Model-Provider Outage in Minutes, Because Your Uptime Is Now Capped by a Dependency You Do Not Control — 
+- Triage, Kill-Switch, and Postmortem Runbook for Agent Loops, RAG Regressions, and Cost Blowouts
+- Runbook: Detect and Fail Over a Model-Provider Outage in Minutes, Because Your Uptime Is Now Capped by a Dependency You Do Not Control
 
 ### instrumentation
-- Capture Context-Window Utilization and Truncation on Every Call, So Silent Prompt Clipping Is Visible Before It Degrades Output — 
-- Capture a Structured Event for Every LLM Call, Not Just an Access Log Line — 
-- Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces — 
+- Capture Context-Window Utilization and Truncation on Every Call, So Silent Prompt Clipping Is Visible Before It Degrades Output
+- Capture a Structured Event for Every LLM Call, Not Just an Access Log Line
+- Capture Explicit and Implicit User Feedback as Structured Events Joined to Traces
 
 ### monitoring-alerting
-- Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions — 
-- Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration — 
-- Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb — 
+- Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions
+- Define Streaming Latency SLOs on TTFT and Inter-Token Time, Not Total Request Duration
+- Alert on Tool-Call Error and Retry Rate Per Tool, Because an Agent That Retries Around a Broken Tool Looks Healthy While Cost and Latency Climb
 
 ### privacy-governance
-- Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store — 
+- Detect and Redact PII in Traces at the Gateway Boundary, Before It Reaches Any Store
 
 ### tracing
-- Propagate a Single Trace Context Across Service Hops and Streaming Responses, So One User Request Is One Trace — 
-- Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer — 
+- Propagate a Single Trace Context Across Service Hops and Streaming Responses, So One User Request Is One Trace
+- Trace Every Retrieval, Tool Call, and Agent Transition as a Child Span, Not Just the Final Answer
 
 ## Community Directory by Kind
 
 ### chat
-- EleutherAI Discord — 
-- GPU MODE Discord — 
-- Hugging Face Discord — 
-- LangChain Community Slack — 
-- LlamaIndex Discord — 
+- EleutherAI Discord
+- GPU MODE Discord
+- Hugging Face Discord
+- LangChain Community Slack
+- LlamaIndex Discord
 
 ### creator
-- AssemblyAI (YouTube) — 
-- DeepLearning.AI (YouTube) — 
-- fast.ai — 
-- Gradient Dissent (Weights & Biases) — 
-- Hugging Face (YouTube) — 
+- AssemblyAI (YouTube)
+- DeepLearning.AI (YouTube)
+- fast.ai
+- Gradient Dissent (Weights & Biases)
+- Hugging Face (YouTube)
 
 ### dataset
-- Common Crawl — 
-- FineWeb (Hugging Face) — 
-- LAION (Large-scale Artificial Intelligence Open Network) — 
+- Common Crawl
+- FineWeb (Hugging Face)
+- LAION (Large-scale Artificial Intelligence Open Network)
 
 ### event
-- AI Engineer World's Fair — 
-- NeurIPS (Conference on Neural Information Processing Systems) — 
+- AI Engineer World's Fair
+- NeurIPS (Conference on Neural Information Processing Systems)
 
 ### forum
-- Hugging Face Forums — 
-- LangChain Forum — 
-- OpenAI Developer Community — 
-- r/LocalLLaMA (Reddit) — 
-- r/MachineLearning (Reddit) — 
+- Hugging Face Forums
+- LangChain Forum
+- OpenAI Developer Community
+- r/LocalLLaMA (Reddit)
+- r/MachineLearning (Reddit)
 
 ### meetup
-- AI Tinkerers — 
+- AI Tinkerers
 
 ### newsletter
-- Import AI (Jack Clark) — 
-- Interconnects (Nathan Lambert) — 
-- Last Week in AI — 
-- Latent Space (Newsletter) — 
-- The Batch (DeepLearning.AI) — 
+- Import AI (Jack Clark)
+- Interconnects (Nathan Lambert)
+- Last Week in AI
+- Latent Space (Newsletter)
+- The Batch (DeepLearning.AI)
+
+## Benchmark Catalog
+
+- AgentHarm
+- Aider Polyglot Coding Benchmark
+- AlpacaEval 2.0 (Length-Controlled)
+- ARC-AGI (Abstraction and Reasoning Corpus)
+- Arena-Hard-Auto
+- BEIR
+- BIG-Bench Hard (BBH)
+- BIRD (Big Bench for Large-Scale Database Grounded Text-to-SQL)
+- BrowseComp
+- ChartQA
+
+## Trending Signals
+
+- Source Feed: GitHub Trending
+- AI Arsenal Hall of Fame
+- This Week in AI Arsenal
+- Source Feed: ToolRadar / Techpresso
 
 ## Decision Heuristics
 
@@ -355,22 +384,22 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Flamingo: a Visual Language Model for Few-Shot Learning — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection — Trains an LM to emit reflection tokens deciding when to retrieve and whether retrieved passages support its output — making retrieval adaptive and self-critiqued instead of always-on, and improving factuality over standard RAG
 - Constitutional AI: Harmlessness from AI Feedback — Trained a harmless assistant using AI self-critique and AI-judged preferences instead of human harm labels -- consider RLAIF when human labeling of harmful content is a bottleneck, though no reference code exists to reproduce it directly
+- Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation — Introduces AFTER, a 382-task benchmark for testing whether procedural skills learned by agents transfer across tasks, roles, and model backbones.
 - Graph of Thoughts: Solving Elaborate Problems with Large Language Models — Generalizes chain- and tree-of-thought by modeling reasoning as an arbitrary graph, where thoughts can be aggregated, refined, and looped -- enabling operations like merging partial solutions that a tree cannot express
 - Improving Language Models by Retrieving from Trillions of Tokens — RETRO augments a Transformer with chunk-level retrieval from a trillions-of-tokens database via cross-attention, letting a small model match much larger ones -- retrieval as a way to move knowledge out of parameters and into an index
 - Language Models are Few-Shot Learners — Showed scaling a decoder-only Transformer to 175B params produces strong few-shot in-context learning with zero gradient updates, meaning you can often solve a new task via prompting instead of fine-tuning
 - Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads — Speeds up decoding by adding a few extra prediction heads that guess several future tokens at once, verified in parallel with tree attention — no separate draft model, 2-3x faster, and self-contained enough to bolt onto an existing model.
 - Evaluating Large Language Models Trained on Code (Codex / HumanEval) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
-- Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 
 ## High-Impact Tips
 
-- Add A Max Step Budget To Every Agent Loop — 
-- Keep the Smallest Failing Prompt for Every Recurring Issue — 
-- Add an Eval Harness Before Refactoring Prompts or Retrieval Logic — 
-- Add Hybrid Search for Exact-Match Terms — 
-- Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call — 
-- Alarm on Empty and Unparseable Responses — 
-- Allowlist Tools Per Agent Role — 
-- Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts — 
-- Benchmark Using Real Production Context Lengths, Not Short Toy Prompts — 
-- Block SSRF by Validating Outbound URLs From Tools — 
+- Add A Max Step Budget To Every Agent Loop
+- Keep the Smallest Failing Prompt for Every Recurring Issue
+- Add an Eval Harness Before Refactoring Prompts or Retrieval Logic
+- Add Hybrid Search for Exact-Match Terms
+- Add Explicit Timeout, Retry, and Fallback Behavior to Every Provider Call
+- Alarm on Empty and Unparseable Responses
+- Allowlist Tools Per Agent Role
+- Benchmark With Production-Shaped Inputs, Not Synthetic Toy Prompts
+- Benchmark Using Real Production Context Lengths, Not Short Toy Prompts
+- Block SSRF by Validating Outbound URLs From Tools

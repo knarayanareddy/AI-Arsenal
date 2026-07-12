@@ -192,6 +192,7 @@ This table is exhaustive for tools tagged with job = deployment.
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |
 | [SkyPilot](../serving-and-deployment/skypilot.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
+| [ToolHive](../serving-and-deployment/toolhive.md) | serving and deployment | open-source | No | Yes | Yes | go | watching |
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->

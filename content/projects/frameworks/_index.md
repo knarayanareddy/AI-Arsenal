@@ -33,16 +33,16 @@ Before selecting a framework:
 
 ### Recently Added
 
+- [AgentScope](./agentscope.md)
+- [Context7](./context7.md)
+- [Genkit](./genkit.md)
+- [Rerun](./rerun.md)
+- [TanStack AI](./tanstack-ai.md)
 - [CAMEL](./camel-ai.md)
 - [Cherry Studio](./cherry-studio.md)
 - [ComfyUI](./comfyui.md)
 - [Detectron2 (Meta)](./detectron2.md)
 - [Speech To Speech](./speech-to-speech.md)
-- [Spring AI](./spring-ai.md)
-- [Supervision](./supervision.md)
-- [Ultralytics YOLO](./ultralytics.md)
-- [Ultralytics YOLO](./ultralytics-yolo.md)
-- [Vercel AI SDK](./vercel-ai-sdk.md)
 
 ### Most Popular
 
@@ -54,20 +54,23 @@ Before selecting a framework:
 - [MetaGPT](./metagpt.md) — ⭐ 68769
 - [Ultralytics YOLO](./ultralytics.md) — ⭐ 59255
 - [Ultralytics YOLO](./ultralytics-yolo.md) — ⭐ 59255
+- [Context7](./context7.md) — ⭐ 58934
 - [AutoGen](./autogen.md) — ⭐ 58925
-- [CrewAI](./crewai.md) — ⭐ 53462
 
 ### Browse All
 
+- [AgentScope](./agentscope.md) — Python framework for building observable, multi-agent, and multimodal agent systems
 - [AutoGen](./autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [CAMEL](./camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
 - [Cherry Studio](./cherry-studio.md) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
 - [ComfyUI](./comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
+- [Context7](./context7.md) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
 - [CrewAI](./crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
 - [Detectron2 (Meta)](./detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dify](./dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [DSPy](./dspy.md) — A framework for programming and optimizing language model pipelines
+- [Genkit](./genkit.md) — Open-source framework for building AI applications and agents in JavaScript, Go, and Python
 - [Google ADK](./google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [Haystack](./haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [LangChain](./langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
@@ -79,11 +82,13 @@ Before selecting a framework:
 - [OpenAI Agents SDK](./openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
 - [OpenHands](./openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
 - [Pydantic AI](./pydantic-ai.md) — A Python agent framework built around typed models and structured outputs
+- [Rerun](./rerun.md) — Visualize, query, and stream multimodal and robotics data for AI development
 - [Semantic Kernel](./semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
 - [Smolagents](./smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
 - [Speech To Speech](./speech-to-speech.md) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 - [Spring AI](./spring-ai.md) — The Spring ecosystem's official AI framework: portable LLM, RAG, tool-calling and MCP abstractions with Spring Boot auto-configuration for enterprise Java
 - [Supervision](./supervision.md) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
+- [TanStack AI](./tanstack-ai.md) — Type-safe provider-agnostic TypeScript SDK for streaming chat, tool calling, agents, and multimodal apps
 - [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
 - [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - [Ultralytics YOLO](./ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API

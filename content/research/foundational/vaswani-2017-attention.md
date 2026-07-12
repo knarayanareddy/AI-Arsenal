@@ -57,7 +57,7 @@ The paper's core claim is architectural, not just empirical: replacing recurrenc
 - 28.4 BLEU on WMT 2014 English-to-German translation (2017) — at publication, more than 2 BLEU above the best previously reported result on that task, including ensemble models
 - 41.8 BLEU on WMT 2014 English-to-French translation (2017), a new single-model state-of-the-art at the time
 - Reported training cost of 3.5 days on 8 P100 GPUs for the large model — small by the standards of translation systems at the time, though trivial compared to the compute used for any current frontier LLM
-- These BLEU numbers describe machine-translation quality on a benchmark that predates and is unrelated to how modern LLMs are evaluated; they should not be cited as evidence for anything about current model quality. The paper's lasting significance is architectural (see Core Contribution), not its leaderboard position, which was superseded within the same research cycle as later Transformer variants appeared.
+- These BLEU numbers describe machine-translation quality on a benchmark that predates and is unrelated to how modern LLMs are evaluated; they should not be cited as evidence for anything about current model quality (reviewed 2026). The paper's lasting significance is architectural (see Core Contribution), not its leaderboard position, which was superseded within the same research cycle as later Transformer variants appeared.
 
 ## Methodology
 

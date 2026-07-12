@@ -15,6 +15,11 @@ For a fuller explanation of schema and taxonomy decisions, read [`../docs/schema
 | `build-example.schema.json` | `content/build-examples/**/[id].md` |
 | `person.schema.json` | community people/resources entries |
 | `digest.schema.json` | `content/digests/YYYY-MM/digest.md` |
+| `architecture.schema.json` | `content/architectures/{category}/[id].md` |
+| `observability.schema.json` | `content/observability/{category}/[id].md` |
+| `community.schema.json` | `content/community/{kind}/[id].md` |
+| `benchmark.schema.json` | `content/benchmarks/{category}/[id].md` |
+| `trend.schema.json` | `content/trending/{kind}/[id].md` |
 
 ## Validation
 

@@ -8,13 +8,13 @@ Use Corepack:
 
 ```bash
 corepack enable
-corepack prepare pnpm@8 --activate
+corepack prepare pnpm@9 --activate
 ```
 
 Or run through `npx` temporarily:
 
 ```bash
-npx pnpm@8 install
+npx pnpm@9 install
 ```
 
 ## Auto-fix minor formatting issues
