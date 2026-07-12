@@ -4,6 +4,7 @@
   "description": "A curated, structured knowledge base for AI engineering",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
@@ -63,8 +64,8 @@
     "new:tip": "node scripts/scaffold.js --type=tip",
     "dev": "node scripts/watch.js",
     "ci": "pnpm run validate:all && pnpm run check:duplicates && pnpm run check:tool-facets && pnpm run check:tools-by-job && pnpm run migration:enforce && pnpm run migration:projects:enforce && pnpm run migration:research:enforce && pnpm run migration:tips:enforce && pnpm run migration:build-examples:enforce && pnpm run migration:architectures:enforce && pnpm run migration:observability:enforce && pnpm run migration:community:enforce && pnpm run migration:benchmarks:enforce && pnpm run migration:trending:enforce && pnpm test && pnpm run generate:all",
-    "audit": "npm audit --omit=dev && echo 'consider running pnpm audit'",
-    "audit:fix": "npm audit fix --omit=dev",
+    "audit": "pnpm audit --prod",
+    "audit:fix": "pnpm audit --fix",
     "migration:community:progress": "node scripts/check-community-migration-progress.js",
     "migration:community:enforce": "node scripts/check-community-migration-progress.js --enforce",
     "migration:benchmarks:progress": "node scripts/check-benchmarks-migration-progress.js",

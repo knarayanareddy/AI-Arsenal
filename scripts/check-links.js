@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
 import chalk from 'chalk';
 import { getMarkdownFiles, readMarkdown } from './utils/frontmatter.js';
+import { getChangedFiles } from './utils/changed-files.js';
 import { extractUrls, stripNonRenderedMarkdown } from './utils/markdown.js';
 import { parseSafeUrl, resolveRedirectUrl, assertPublicHostname, pinnedLookup, requestStatus, domainAllowed, hostCallAllowed, resetHostCallCounts } from './utils/network-guard.js';
-import { categorizeHttpStatus, classifyNetError, isTransientError, RATE_LIMIT_DOMAINS } from './utils/link-status.js';
+import { categorizeHttpStatus, classifyNetError, isTransientError, warningCategory, RATE_LIMIT_DOMAINS } from './utils/link-status.js';
 
 const args = new Set(process.argv.slice(2));
 const changedOnly = args.has('--changed-only');
@@ -28,17 +28,15 @@ const USER_AGENT = 'AI-Arsenal-Link-Checker/1.0 (+https://github.com/knarayanare
 
 function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
 
+function keepMarkdown(f) {
+  return f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/');
+}
+
 async function filesToCheck() {
-  if (!changedOnly) return (await getMarkdownFiles('**/*.md')).filter((f) => !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
-  try {
-    const output = execFileSync('git', ['diff', '--name-only', 'origin/main...HEAD'], { encoding: 'utf8' });
-    return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/') && existsSync(f));
-  } catch {
-    try {
-      const output = execFileSync('git', ['diff', '--name-only', 'HEAD~1...HEAD'], { encoding: 'utf8' });
-      return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/') && existsSync(f));
-    } catch { return []; }
-  }
+  if (!changedOnly) return (await getMarkdownFiles('**/*.md')).filter(keepMarkdown);
+  // Shared changed-file detection: fails closed in CI (throws) rather than
+  // silently returning no files, so a broken base ref can't skip link checks.
+  return getChangedFiles().filter((f) => keepMarkdown(f) && existsSync(f));
 }
 
 function shouldIgnoreByPattern(url) {
@@ -194,7 +192,13 @@ const results = await pool(allUrls, checkUrl);
 // Hard failures (confirmed dead / SSRF / DNS miss) fail CI and open issues.
 const broken = results.filter((r) => !r.ok && r.soft !== true);
 // Soft warnings (rate-limited, transient, non-404-410) are reported, not failed.
-const warnings = results.filter((r) => !r.ok && r.soft === true);
+const warnings = results.filter((r) => !r.ok && r.soft === true).map((r) => ({ ...r, category: warningCategory(r) }));
+const warningsByType = { host_cap: 0, http_soft: 0, redirect: 0, transient: 0 };
+for (const w of warnings) warningsByType[w.category] += 1;
+// Effective coverage: host-cap skips are NOT contacted; everything else that
+// wasn't ignored had a network request attempted.
+const ignoredCount = results.filter((r) => r.ignored).length;
+const contacted = results.length - ignoredCount - warningsByType.host_cap;
 const report = {
   generated_at: new Date().toISOString(),
   mode: changedOnly ? 'changed-only' : 'all',
@@ -205,9 +209,13 @@ const report = {
   warning_links: warnings.map((r) => ({ ...r, files: urlToFiles.get(r.url) })),
   summary: {
     ok: results.filter((r) => r.ok).length,
-    ignored: results.filter((r) => r.ignored).length,
+    ignored: ignoredCount,
     broken: broken.length,
     warnings: warnings.length,
+    // Distinguish effective network coverage rather than one opaque count.
+    contacted,
+    skipped_host_cap: warningsByType.host_cap,
+    warnings_by_type: warningsByType,
   },
 };
 if (writeReport) {
@@ -221,7 +229,8 @@ if (broken.length) {
   process.exit(1);
 }
 if (warnings.length) {
-  console.warn(chalk.yellow(`Link check passed with ${warnings.length} soft warning(s) (rate-limited / transient / non-404-410). These do NOT fail CI:`));
-  for (const item of warnings.slice(0, 30)) console.warn(chalk.yellow(`- ${item.url} (${item.status ?? item.error})`));
+  const b = warningsByType;
+  console.warn(chalk.yellow(`Link check passed with ${warnings.length} soft warning(s) — host-cap skipped: ${b.host_cap}, transient: ${b.transient}, http-soft: ${b.http_soft}, redirect: ${b.redirect}. These do NOT fail CI:`));
+  for (const item of warnings.slice(0, 30)) console.warn(chalk.yellow(`- [${item.category}] ${item.url} (${item.status ?? item.error})`));
 }
-console.log(chalk.green(`Link check passed. Checked ${results.length} unique URL(s) in ${files.length} file(s); ${broken.length} broken, ${warnings.length} soft warning(s).`));
+console.log(chalk.green(`Link check passed. ${contacted} of ${results.length} unique URL(s) contacted in ${files.length} file(s) (${warningsByType.host_cap} skipped by host cap); ${broken.length} broken, ${warnings.length} soft warning(s).`));

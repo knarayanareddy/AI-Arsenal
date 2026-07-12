@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
+import { unlinkSync } from 'node:fs';
 import path from 'node:path';
 import matter from './utils/safe-matter.js';
 import chalk from 'chalk';
 import { getEntryFiles, readMarkdown, inferEntryType } from './utils/frontmatter.js';
 import { fetchGitHubRepo, parseGitHubRepo } from './utils/github-api.js';
 import { sanitizeRepoCache } from './utils/cache-guard.js';
+import { acquireLock, releaseLock } from './utils/file-lock.js';
 
 const dryRun = process.argv.includes('--dry-run');
 const cachePath = 'data/github-cache.json';
@@ -19,25 +21,22 @@ if (!process.env.GITHUB_TOKEN && !skipTokenCheck && process.env.CI === 'true') {
   process.exit(2);
 }
 
-// Refuse to run if another concurrent run holds the lock.
-let lockHandle;
-try {
-  lockHandle = await fs.open(lockPath, 'wx');
-  await lockHandle.writeFile(`${process.pid}\n`);
-} catch (error) {
-  if (error.code === 'EEXIST') {
-    console.error(chalk.red(`Another star-refresh is in progress (lock at ${lockPath}). Refusing to run.`));
-    process.exit(3);
-  }
-  throw error;
+// Refuse to run if another live run holds the lock; a stale lock left by a
+// crashed run (dead PID or old file) is reclaimed automatically.
+let lockHandle = await acquireLock(lockPath);
+if (!lockHandle) {
+  console.error(chalk.red(`Another star-refresh is in progress (lock at ${lockPath}). Refusing to run.`));
+  process.exit(3);
 }
-async function releaseLock() {
+// Best-effort synchronous safety net: Node does not await async 'exit'
+// handlers, so the real release happens in the awaited finally block below.
+// This only covers abrupt exits that skip the finally.
+process.on('exit', () => {
   if (!lockHandle) return;
-  await lockHandle.close().catch(() => {});
-  await fs.unlink(lockPath).catch(() => {});
-}
-process.on('exit', releaseLock);
+  try { unlinkSync(lockPath); } catch {}
+});
 
+async function run() {
 let cache = { generated_at: null, repos: {} };
 try { cache = sanitizeRepoCache(JSON.parse(await fs.readFile(cachePath, 'utf8'))); } catch {}
 
@@ -112,3 +111,13 @@ if (failures.length) {
   for (const failure of failures) console.warn(chalk.yellow(`- ${failure}`));
 }
 console.log(chalk.green(`Star refresh complete. Checked ${checked}, updated ${updated}, skipped ${skipped}. Dry run: ${dryRun}.`));
+}
+
+try {
+  await run();
+} finally {
+  // Always release the lock — awaited, unlike the 'exit' safety net.
+  const handle = lockHandle;
+  lockHandle = null;
+  await releaseLock(lockPath, handle);
+}

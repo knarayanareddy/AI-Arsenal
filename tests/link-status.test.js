@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { categorizeHttpStatus, classifyNetError, isTransientError, RATE_LIMIT_DOMAINS } from '../scripts/utils/link-status.js';
+import { categorizeHttpStatus, classifyNetError, isTransientError, warningCategory, RATE_LIMIT_DOMAINS } from '../scripts/utils/link-status.js';
 
 // --- categorizeHttpStatus -------------------------------------------------
 
@@ -67,6 +67,27 @@ test('isTransientError: true for transient codes', () => {
 test('isTransientError: false for non-transient', () => {
   assert.equal(isTransientError({ code: 'ENOTFOUND' }), false);
   assert.equal(isTransientError({ message: 'certificate has expired' }), false);
+});
+
+// --- warningCategory ------------------------------------------------------
+
+test('warningCategory: host-cap skip is not contacted', () => {
+  assert.equal(warningCategory({ error: 'host-rate-limited', soft: true }), 'host_cap');
+});
+
+test('warningCategory: soft HTTP statuses are http_soft', () => {
+  assert.equal(warningCategory({ error: 'http-500', soft: true }), 'http_soft');
+  assert.equal(warningCategory({ error: 'http-503', soft: true }), 'http_soft');
+});
+
+test('warningCategory: soft redirect targets are redirect', () => {
+  assert.equal(warningCategory({ error: 'redirect-unsafe:net-transient', soft: true }), 'redirect');
+});
+
+test('warningCategory: transient network reasons default to transient', () => {
+  assert.equal(warningCategory({ error: 'net-transient', soft: true }), 'transient');
+  assert.equal(warningCategory({ error: 'net-ECONNRESET', soft: true }), 'transient');
+  assert.equal(warningCategory({ error: undefined, soft: true }), 'transient');
 });
 
 // --- RATE_LIMIT_DOMAINS ---------------------------------------------------
