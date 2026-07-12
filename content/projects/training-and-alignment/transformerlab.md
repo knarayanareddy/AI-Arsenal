@@ -42,7 +42,7 @@ maturity: beta
 cost_model: open-source
 github_stars: 5111
 last_commit: "2026-07-11"
-docs_url: https://transformerlab.ai/docs/intro
+docs_url: https://transformerlab.ai/docs/
 phase: training-and-alignment
 domain:
   - "language"
@@ -103,4 +103,4 @@ It is an interactive workbench spanning the training-and-alignment and evaluatio
 ## Resources
 
 - [GitHub repository](https://github.com/transformerlab/transformerlab-app)
-- [Documentation](https://transformerlab.ai/docs/intro)
+- [Documentation](https://transformerlab.ai/docs/)

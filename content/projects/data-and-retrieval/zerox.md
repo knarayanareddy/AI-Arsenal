@@ -42,7 +42,7 @@ maturity: beta
 cost_model: open-source
 github_stars: 12240
 last_commit: "2025-05-20"
-docs_url: https://getomni.ai/ocr-demo
+docs_url: https://getomni.ai/
 phase: data-and-retrieval
 domain:
   - "vision"
@@ -103,4 +103,4 @@ It represents the vision-LLM OCR pattern in the document-processing area and con
 ## Resources
 
 - [GitHub repository](https://github.com/getomni-ai/zerox)
-- [OCR demo](https://getomni.ai/ocr-demo)
+- [OmniAI platform](https://getomni.ai/)
