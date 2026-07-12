@@ -42,7 +42,7 @@ maturity: beta
 cost_model: open-source
 github_stars: 9928
 last_commit: "2026-03-25"
-docs_url: https://openhlt.github.io/amphion/
+docs_url: https://huggingface.co/amphion
 phase: framework
 domain:
   - "audio"
@@ -102,4 +102,4 @@ It extends the voice-audio category toward music and singing-voice generation an
 ## Resources
 
 - [GitHub repository](https://github.com/open-mmlab/Amphion)
-- [Project page](https://openhlt.github.io/amphion/)
+- [Model hub](https://huggingface.co/amphion)

@@ -41,7 +41,7 @@ maturity: production
 cost_model: open-source
 github_stars: 54527
 last_commit: "2024-09-18"
-docs_url: https://segment-anything.com
+docs_url: https://ai.meta.com/research/publications/segment-anything/
 phase: foundation-model
 domain:
   - "vision"
