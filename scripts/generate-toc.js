@@ -5,6 +5,7 @@ import chalk from 'chalk';
 import { glob } from 'glob';
 import matter from 'gray-matter';
 import { loadEntries } from './utils/entries.js';
+import { renderBrowseSection } from './utils/toc.js';
 
 const entries = await loadEntries();
 
@@ -34,7 +35,7 @@ await fs.writeFile('content/tools/_registry.md', `# Tools Registry\n\n> Auto-gen
 function buildRegistryBlock(indexFile, dir, title) {
   const local = entries.filter((e) => e.file.startsWith(`${dir}/`));
   const recent = [...local].sort((a, b) => String(b.data.added_date ?? '').localeCompare(String(a.data.added_date ?? ''))).slice(0, 10);
-  const browse = local.map((e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)}) — ${e.data.description ?? e.data.tldr ?? e.data.summary ?? ''}`).join('\n') || '_No entries yet._';
+  const browse = renderBrowseSection(local, (e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)}) — ${e.data.description ?? e.data.tldr ?? e.data.summary ?? ''}`);
   const popular = [...local].filter((e) => e.data.github_stars !== undefined).sort((a, b) => (b.data.github_stars ?? 0) - (a.data.github_stars ?? 0)).slice(0, 10).map((e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)}) — ⭐ ${e.data.github_stars ?? 0}`).join('\n') || '_No star-tracked entries yet._';
   return `## ${title} in This Phase\n\n### Recently Added\n\n${recent.map((e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)})`).join('\n') || '_No entries yet._'}\n\n### Most Popular\n\n${popular}\n\n### Browse All\n\n${browse}\n`;
 }
@@ -64,7 +65,7 @@ for (const indexFile of await glob('content/**/_index.md', { nodir: true, posix:
     return `| [${path.basename(d).replace(/-/g, ' ')}](./${path.basename(d)}/) | ${count} entries | ${new Date().toISOString().slice(0, 10)} |`;
   });
   const recent = [...local].sort((a, b) => String(b.data.added_date ?? '').localeCompare(String(a.data.added_date ?? ''))).slice(0, 10);
-  const browse = local.map((e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)}) — ${e.data.description ?? e.data.tldr ?? e.data.summary ?? ''}`).join('\n') || '_No entries yet._';
+  const browse = renderBrowseSection(local, (e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)}) — ${e.data.description ?? e.data.tldr ?? e.data.summary ?? ''}`);
   const content = `# ${title}\n\n> Navigation file for the ${title} section. This file is auto-generated and is not a content entry.\n\n## Quick Navigation\n\n| Sub-section | Count | Last Updated |\n|---|---:|---|\n${navRows.join('\n') || '| _No sub-sections_ | 0 entries | — |'}\n\n## Recently Added\n\n${recent.map((e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)})`).join('\n') || '_No entries yet._'}\n\n## Most Popular\n\n${[...local].filter((e) => e.data.github_stars !== undefined).sort((a, b) => (b.data.github_stars ?? 0) - (a.data.github_stars ?? 0)).slice(0, 10).map((e) => `- [${e.data.name ?? e.data.title}](${rel(indexFile, e.file)}) — ⭐ ${e.data.github_stars ?? 0}`).join('\n') || '_No star-tracked entries yet._'}\n\n## Browse All\n\n${browse}\n`;
   await fs.writeFile(indexFile, content);
 }
