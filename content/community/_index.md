@@ -84,3 +84,10 @@ _No star-tracked entries yet._
 - [r/MachineLearning (Reddit)](./forums/r-machinelearning.md) — 
 - [Sébastien Bubeck](./people/sebastian-bubeck.md) — Researches reasoning, small models, and theoretical aspects of AI systems
 - [Sebastian Raschka](./people/sebastian-raschka.md) — Explains machine learning, LLMs, PyTorch, and model training with practical depth
+- [Shreya Shankar](./people/shreya-shankar.md) — Researches data, evaluation, and reliable systems for ML and LLM applications
+- [Simon Willison](./people/simon-willison.md) — Tracks practical LLM tooling, prompt injection, evals, and developer workflows
+- [The Batch (DeepLearning.AI)](./newsletters/the-batch.md) — 
+- [Thomas Wolf](./people/thomas-wolf.md) — Key figure in open-source transformer tooling and model ecosystem development
+- [TLDR AI](./newsletters/tldr-ai.md) — 
+- [The TWIML AI Podcast](./creators/twiml-ai-podcast.md) — 
+- [Yann LeCun](./people/yann-lecun.md) — Longtime AI researcher with influential perspective on representation learning and AI systems
