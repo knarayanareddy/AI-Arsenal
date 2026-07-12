@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-12T14:46:37.435Z | Entries: 895 | Schema version: 1.0.0
+Generated: 2026-07-12T15:08:02.523Z | Entries: 908 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 175
+- Projects: 188
 - Tools: 199
 - Papers: 126
 - Tips: 171
@@ -62,7 +62,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - LangExtract (⭐37100, score:0) — Python library for grounded structured extraction from unstructured text with source spans and visualization
 - Daft (⭐5620, score:0) — High-performance data engine for AI and multimodal workloads across images, audio, video, and structured data
-- DataChain (⭐2794, score:0) — Typed and versioned context layer for unstructured data across S3, GCS, and Azure
+- Vortex (⭐3085, score:0) — Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets
 
 ### evaluation
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks

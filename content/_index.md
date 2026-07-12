@@ -12,7 +12,7 @@
 | [community](./community/) | 57 entries | 2026-07-12 |
 | [digests](./digests/) | 1 entries | 2026-07-12 |
 | [observability](./observability/) | 16 entries | 2026-07-12 |
-| [projects](./projects/) | 175 entries | 2026-07-12 |
+| [projects](./projects/) | 188 entries | 2026-07-12 |
 | [research](./research/) | 130 entries | 2026-07-12 |
 | [skills](./skills/) | 28 entries | 2026-07-12 |
 | [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-12 |
@@ -21,16 +21,16 @@
 
 ## Recently Added
 
-- [AgentScope](./projects/frameworks/agentscope.md)
-- [AIBrix](./projects/inference-engines/aibrix.md)
-- [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./research/retrieval-and-memory/belikova-2026-after.md)
-- [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./research/evaluation-and-safety/chen-2026-uniclawbench.md)
-- [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./research/agents-and-reasoning/cheng-2026-agenticsts.md)
-- [Context7](./projects/frameworks/context7.md)
-- [Daft](./projects/data-and-retrieval/daft.md)
-- [DataChain](./projects/data-and-retrieval/datachain.md)
-- [Deep Lake](./projects/data-and-retrieval/deeplake.md)
-- [NVIDIA Dynamo](./projects/inference-engines/dynamo.md)
+- [CopilotKit](./projects/frameworks/copilotkit.md)
+- [DeerFlow](./projects/frameworks/deer-flow.md)
+- [FastGPT](./projects/data-and-retrieval/fastgpt.md)
+- [GenAI Processors](./projects/frameworks/genai-processors.md)
+- [InternVideo](./projects/foundation-models/internvideo.md)
+- [MaxKB](./projects/agent-systems/maxkb.md)
+- [MLX Audio](./projects/foundation-models/mlx-audio.md)
+- [Mobile-Agent](./projects/agent-systems/mobileagent.md)
+- [PraisonAI](./projects/frameworks/praisonai.md)
+- [SillyTavern](./projects/agent-systems/sillytavern.md)
 
 ## Most Popular
 

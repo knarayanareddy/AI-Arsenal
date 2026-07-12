@@ -33,16 +33,16 @@ Before selecting a framework:
 
 ### Recently Added
 
+- [CopilotKit](./copilotkit.md)
+- [DeerFlow](./deer-flow.md)
+- [GenAI Processors](./genai-processors.md)
+- [PraisonAI](./praisonai.md)
 - [AgentScope](./agentscope.md)
 - [Context7](./context7.md)
 - [Genkit](./genkit.md)
 - [Rerun](./rerun.md)
 - [TanStack AI](./tanstack-ai.md)
 - [CAMEL](./camel-ai.md)
-- [Cherry Studio](./cherry-studio.md)
-- [ComfyUI](./comfyui.md)
-- [Detectron2 (Meta)](./detectron2.md)
-- [Speech To Speech](./speech-to-speech.md)
 
 ### Most Popular
 
@@ -51,11 +51,11 @@ Before selecting a framework:
 - [LangChain](./langchain.md) — ⭐ 139206
 - [ComfyUI](./comfyui.md) — ⭐ 119901
 - [OpenHands](./openhands.md) — ⭐ 76854
+- [DeerFlow](./deer-flow.md) — ⭐ 76831
 - [MetaGPT](./metagpt.md) — ⭐ 68769
 - [Ultralytics YOLO](./ultralytics.md) — ⭐ 59255
 - [Ultralytics YOLO](./ultralytics-yolo.md) — ⭐ 59255
 - [Context7](./context7.md) — ⭐ 58934
-- [AutoGen](./autogen.md) — ⭐ 58925
 
 ### Browse All
 
@@ -66,10 +66,13 @@ Before selecting a framework:
 - [Cherry Studio](./cherry-studio.md) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
 - [ComfyUI](./comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [Context7](./context7.md) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
+- [CopilotKit](./copilotkit.md) — React/TypeScript frontend framework for building in-app copilots, agent chat, and generative UI, and the reference implementation of the AG-UI protocol
 - [CrewAI](./crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
+- [DeerFlow](./deer-flow.md) — Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports
 - [Detectron2 (Meta)](./detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dify](./dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [DSPy](./dspy.md) — A framework for programming and optimizing language model pipelines
+- [GenAI Processors](./genai-processors.md) — Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models
 - [Genkit](./genkit.md) — Open-source framework for building AI applications and agents in JavaScript, Go, and Python
 - [Google ADK](./google-adk.md) — Google code-first Python toolkit for building, evaluating, and deploying AI agents
 - [Haystack](./haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
@@ -81,6 +84,7 @@ Before selecting a framework:
 - [Microsoft Agent Framework](./microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
 - [OpenAI Agents SDK](./openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
 - [OpenHands](./openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
+- [PraisonAI](./praisonai.md) — Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML
 - [Pydantic AI](./pydantic-ai.md) — A Python agent framework built around typed models and structured outputs
 - [Rerun](./rerun.md) — Visualize, query, and stream multimodal and robotics data for AI development
 - [Semantic Kernel](./semantic-kernel.md) — An SDK for integrating AI orchestration into production applications

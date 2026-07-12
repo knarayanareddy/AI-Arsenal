@@ -3,8 +3,8 @@
 **Status:** quarantined; not part of the public catalog.
 
 **Screened count:** 152  
-**Still quarantined:** 105  
-**Promoted after bespoke rewrite:** 47
+**Still quarantined:** 92  
+**Promoted after bespoke rewrite:** 60
 
 **Reason:** These entries passed structural validation but failed the editorial-quality review: boilerplate, frontmatter/body duplication, generic judgments, and insufficient entry-specific analysis. The original Markdown files are preserved under `quarantine/2026-07-11/content/`.
 
@@ -38,7 +38,7 @@
 | `codewhale` | still-quarantined | project | CodeWhale | agent-system | MIT | [source](https://github.com/Hmbown/CodeWhale) | `content/projects/agent-systems/codewhale.md` |
 | `codexpro` | still-quarantined | project | CodexPro | agent-system | MIT | [source](https://github.com/rebel0789/codexpro) | `content/projects/agent-systems/codexpro.md` |
 | `context7` | promoted-after-rewrite | project | Context7 | framework | MIT | [source](https://github.com/upstash/context7) | `content/projects/frameworks/context7.md` |
-| `copilotkit` | still-quarantined | project | CopilotKit | framework | MIT | [source](https://github.com/CopilotKit/CopilotKit) | `content/projects/frameworks/copilotkit.md` |
+| `copilotkit` | promoted-after-rewrite | project | CopilotKit | framework | MIT | [source](https://github.com/CopilotKit/CopilotKit) | `content/projects/frameworks/copilotkit.md` |
 | `cowagent` | still-quarantined | project | CowAgent | agent-system | MIT | [source](https://github.com/zhayujie/CowAgent) | `content/projects/agent-systems/cowagent.md` |
 | `cve-mcp-server` | still-quarantined | project | CVE MCP Server | benchmark-and-eval | Apache-2.0 | [source](https://github.com/mukul975/cve-mcp-server) | `content/projects/benchmarks-and-evals/cve-mcp-server.md` |
 | `daft` | promoted-after-rewrite | project | Daft | data-and-retrieval | Apache-2.0 | [source](https://github.com/Eventual-Inc/Daft) | `content/projects/data-and-retrieval/daft.md` |
@@ -47,13 +47,13 @@
 | `deepcode-cli` | still-quarantined | project | Deep Code CLI | agent-system | MIT | [source](https://github.com/lessweb/deepcode-cli) | `content/projects/agent-systems/deepcode-cli.md` |
 | `deeplake` | promoted-after-rewrite | project | Deep Lake | data-and-retrieval | Apache-2.0 | [source](https://github.com/activeloopai/deeplake) | `content/projects/data-and-retrieval/deeplake.md` |
 | `deepseek-reasonix` | still-quarantined | project | DeepSeek-Reasonix | agent-system | MIT | [source](https://github.com/esengine/DeepSeek-Reasonix) | `content/projects/agent-systems/deepseek-reasonix.md` |
-| `deer-flow` | still-quarantined | project | DeerFlow | agent-system | MIT | [source](https://github.com/bytedance/deer-flow) | `content/projects/agent-systems/deer-flow.md` |
+| `deer-flow` | promoted-after-rewrite | project | DeerFlow | agent-system | MIT | [source](https://github.com/bytedance/deer-flow) | `content/projects/agent-systems/deer-flow.md` |
 | `dynamo` | promoted-after-rewrite | project | NVIDIA Dynamo | inference-engine | Apache-2.0 | [source](https://github.com/ai-dynamo/dynamo) | `content/projects/inference-engines/dynamo.md` |
 | `ecc` | still-quarantined | project | Everything Claude Code | agent-system | MIT | [source](https://github.com/affaan-m/ECC) | `content/projects/agent-systems/ecc.md` |
-| `fastgpt` | still-quarantined | project | FastGPT | data-and-retrieval | Apache-2.0 with additional conditions | [source](https://github.com/labring/FastGPT) | `content/projects/data-and-retrieval/fastgpt.md` |
+| `fastgpt` | promoted-after-rewrite | project | FastGPT | data-and-retrieval | Apache-2.0 with additional conditions | [source](https://github.com/labring/FastGPT) | `content/projects/data-and-retrieval/fastgpt.md` |
 | `finsight-ai` | still-quarantined | project | FinSight AI | data-and-retrieval | MIT | [source](https://github.com/juanjuandog/FinSight-AI) | `content/projects/data-and-retrieval/finsight-ai.md` |
 | `flue` | still-quarantined | project | Flue | framework | Apache-2.0 | [source](https://github.com/withastro/flue) | `content/projects/frameworks/flue.md` |
-| `genai-processors` | still-quarantined | project | GenAI Processors | data-and-retrieval | Apache-2.0 | [source](https://github.com/google-gemini/genai-processors) | `content/projects/data-and-retrieval/genai-processors.md` |
+| `genai-processors` | promoted-after-rewrite | project | GenAI Processors | data-and-retrieval | Apache-2.0 | [source](https://github.com/google-gemini/genai-processors) | `content/projects/data-and-retrieval/genai-processors.md` |
 | `genkit` | promoted-after-rewrite | project | Genkit | framework | Apache-2.0 | [source](https://github.com/genkit-ai/genkit) | `content/projects/frameworks/genkit.md` |
 | `gini-agent` | still-quarantined | project | Gini Agent | agent-system | MIT | [source](https://github.com/Open-Curiosity/gini-agent) | `content/projects/agent-systems/gini-agent.md` |
 | `gllm` | still-quarantined | project | gLLM | inference-engine | Other | [source](https://github.com/gty111/gLLM) | `content/projects/inference-engines/gllm.md` |
@@ -62,7 +62,7 @@
 | `hive` | still-quarantined | project | Hive | agent-system | Apache-2.0 | [source](https://github.com/aden-hive/hive) | `content/projects/agent-systems/hive.md` |
 | `huggingface-datasets` | still-quarantined | project | Hugging Face Datasets | data-and-retrieval | Apache-2.0 | [source](https://github.com/huggingface/datasets) | `content/projects/data-and-retrieval/huggingface-datasets.md` |
 | `ii-agent` | still-quarantined | project | II-Agent | agent-system | Apache-2.0 | [source](https://github.com/Intelligent-Internet/ii-agent) | `content/projects/agent-systems/ii-agent.md` |
-| `internvideo` | still-quarantined | project | InternVideo | foundation-model | Apache-2.0 | [source](https://github.com/OpenGVLab/InternVideo) | `content/projects/foundation-models/internvideo.md` |
+| `internvideo` | promoted-after-rewrite | project | InternVideo | foundation-model | Apache-2.0 | [source](https://github.com/OpenGVLab/InternVideo) | `content/projects/foundation-models/internvideo.md` |
 | `ktx` | still-quarantined | project | ktx | data-and-retrieval | Apache-2.0 | [source](https://github.com/Kaelio/ktx) | `content/projects/data-and-retrieval/ktx.md` |
 | `langextract` | promoted-after-rewrite | project | LangExtract | data-and-retrieval | Apache-2.0 | [source](https://github.com/google/langextract) | `content/projects/data-and-retrieval/langextract.md` |
 | `learn-claude-code` | still-quarantined | project | Learn Claude Code | framework | MIT | [source](https://github.com/shareAI-lab/learn-claude-code) | `content/projects/frameworks/learn-claude-code.md` |
@@ -72,14 +72,14 @@
 | `lmms-eval` | promoted-after-rewrite | project | lmms-eval | benchmark-and-eval | MIT | [source](https://github.com/EvolvingLMMs-Lab/lmms-eval) | `content/projects/benchmarks-and-evals/lmms-eval.md` |
 | `loop-engineering` | still-quarantined | project | Loop Engineering | agent-system | MIT | [source](https://github.com/cobusgreyling/loop-engineering) | `content/projects/agent-systems/loop-engineering.md` |
 | `maestro` | still-quarantined | project | Roboflow Maestro | training-and-alignment | Apache-2.0 | [source](https://github.com/roboflow/maestro) | `content/projects/training-and-alignment/maestro.md` |
-| `maxkb` | still-quarantined | project | MaxKB | agent-system | GPL-3.0 | [source](https://github.com/1Panel-dev/MaxKB) | `content/projects/agent-systems/maxkb.md` |
+| `maxkb` | promoted-after-rewrite | project | MaxKB | agent-system | GPL-3.0 | [source](https://github.com/1Panel-dev/MaxKB) | `content/projects/agent-systems/maxkb.md` |
 | `mcpkernel` | still-quarantined | project | MCPKernel | benchmark-and-eval | Other | [source](https://github.com/piyushptiwari1/mcpkernel) | `content/projects/benchmarks-and-evals/mcpkernel.md` |
 | `medusa` | still-quarantined | project | Medusa | benchmark-and-eval | AGPL-3.0 | [source](https://github.com/Pantheon-Security/medusa) | `content/projects/benchmarks-and-evals/medusa.md` |
 | `meetily` | still-quarantined | project | Meetily | agent-system | MIT | [source](https://github.com/Zackriya-Solutions/meetily) | `content/projects/agent-systems/meetily.md` |
 | `mempalace` | promoted-after-rewrite | project | MemPalace | agent-system | MIT | [source](https://github.com/MemPalace/mempalace) | `content/projects/agent-systems/mempalace.md` |
 | `mllm` | promoted-after-rewrite | project | mllm | inference-engine | MIT | [source](https://github.com/UbiquitousLearning/mllm) | `content/projects/inference-engines/mllm.md` |
-| `mlx-audio` | still-quarantined | project | MLX Audio | framework | MIT | [source](https://github.com/Blaizzy/mlx-audio) | `content/projects/frameworks/mlx-audio.md` |
-| `mobileagent` | still-quarantined | project | Mobile-Agent | agent-system | MIT | [source](https://github.com/X-PLUG/MobileAgent) | `content/projects/agent-systems/mobileagent.md` |
+| `mlx-audio` | promoted-after-rewrite | project | MLX Audio | framework | MIT | [source](https://github.com/Blaizzy/mlx-audio) | `content/projects/frameworks/mlx-audio.md` |
+| `mobileagent` | promoted-after-rewrite | project | Mobile-Agent | agent-system | MIT | [source](https://github.com/X-PLUG/MobileAgent) | `content/projects/agent-systems/mobileagent.md` |
 | `moss-tts` | promoted-after-rewrite | project | MOSS-TTS | foundation-model | Apache-2.0 | [source](https://github.com/OpenMOSS/MOSS-TTS) | `content/projects/foundation-models/moss-tts.md` |
 | `mova` | still-quarantined | project | MOVA | foundation-model | Apache-2.0 | [source](https://github.com/OpenMOSS/MOVA) | `content/projects/foundation-models/mova.md` |
 | `nanobot` | still-quarantined | project | nanobot | agent-system | MIT | [source](https://github.com/HKUDS/nanobot) | `content/projects/agent-systems/nanobot.md` |
@@ -103,7 +103,7 @@
 | `pixeltable` | promoted-after-rewrite | project | Pixeltable | data-and-retrieval | Apache-2.0 | [source](https://github.com/pixeltable/pixeltable) | `content/projects/data-and-retrieval/pixeltable.md` |
 | `pocketflow` | still-quarantined | project | PocketFlow | framework | MIT | [source](https://github.com/The-Pocket/PocketFlow) | `content/projects/frameworks/pocketflow.md` |
 | `ponytail` | still-quarantined | project | Ponytail | framework | MIT | [source](https://github.com/DietrichGebert/ponytail) | `content/projects/frameworks/ponytail.md` |
-| `praisonai` | still-quarantined | project | PraisonAI | framework | MIT | [source](https://github.com/MervinPraison/PraisonAI) | `content/projects/frameworks/praisonai.md` |
+| `praisonai` | promoted-after-rewrite | project | PraisonAI | framework | MIT | [source](https://github.com/MervinPraison/PraisonAI) | `content/projects/frameworks/praisonai.md` |
 | `pyod` | still-quarantined | project | PyOD | framework | BSD-2-Clause | [source](https://github.com/yzhao062/pyod) | `content/projects/frameworks/pyod.md` |
 | `pyspur` | still-quarantined | project | PySpur | framework | Apache-2.0 | [source](https://github.com/PySpur-Dev/pyspur) | `content/projects/frameworks/pyspur.md` |
 | `qwen-vl-series-finetune` | still-quarantined | project | Qwen-VL-Series-Finetune | training-and-alignment | Apache-2.0 | [source](https://github.com/2U1/Qwen-VL-Series-Finetune) | `content/projects/training-and-alignment/qwen-vl-series-finetune.md` |
@@ -112,19 +112,19 @@
 | `repoprompt-ce` | still-quarantined | project | RepoPrompt Community Edition | framework | Apache-2.0 | [source](https://github.com/repoprompt/repoprompt-ce) | `content/projects/frameworks/repoprompt-ce.md` |
 | `rerun` | promoted-after-rewrite | project | Rerun | framework | Apache-2.0 | [source](https://github.com/rerun-io/rerun) | `content/projects/frameworks/rerun.md` |
 | `secure-code-game` | still-quarantined | project | Secure Code Game | benchmark-and-eval | MIT | [source](https://github.com/skills/secure-code-game) | `content/projects/benchmarks-and-evals/secure-code-game.md` |
-| `sillytavern` | still-quarantined | project | SillyTavern | agent-system | AGPL-3.0 | [source](https://github.com/SillyTavern/SillyTavern) | `content/projects/agent-systems/sillytavern.md` |
+| `sillytavern` | promoted-after-rewrite | project | SillyTavern | agent-system | AGPL-3.0 | [source](https://github.com/SillyTavern/SillyTavern) | `content/projects/agent-systems/sillytavern.md` |
 | `simplemem` | promoted-after-rewrite | project | SimpleMem | data-and-retrieval | MIT | [source](https://github.com/aiming-lab/SimpleMem) | `content/projects/data-and-retrieval/simplemem.md` |
 | `speculators` | promoted-after-rewrite | project | vLLM Speculators | inference-engine | Apache-2.0 | [source](https://github.com/vllm-project/speculators) | `content/projects/inference-engines/speculators.md` |
 | `tanstack-ai` | promoted-after-rewrite | project | TanStack AI | framework | MIT | [source](https://github.com/TanStack/ai) | `content/projects/frameworks/tanstack-ai.md` |
 | `thclaws` | still-quarantined | project | thClaws | agent-system | Apache-2.0 | [source](https://github.com/thClaws/thClaws) | `content/projects/agent-systems/thclaws.md` |
 | `toon` | still-quarantined | project | TOON | framework | MIT | [source](https://github.com/toon-format/toon) | `content/projects/frameworks/toon.md` |
 | `trendradar` | still-quarantined | project | TrendRadar | data-and-retrieval | GPL-3.0 | [source](https://github.com/sansan0/TrendRadar) | `content/projects/data-and-retrieval/trendradar.md` |
-| `ui-tars-desktop` | still-quarantined | project | UI-TARS Desktop | agent-system | Apache-2.0 | [source](https://github.com/bytedance/UI-TARS-desktop) | `content/projects/agent-systems/ui-tars-desktop.md` |
+| `ui-tars-desktop` | promoted-after-rewrite | project | UI-TARS Desktop | agent-system | Apache-2.0 | [source](https://github.com/bytedance/UI-TARS-desktop) | `content/projects/agent-systems/ui-tars-desktop.md` |
 | `ultrarag` | promoted-after-rewrite | project | UltraRAG | data-and-retrieval | Apache-2.0 | [source](https://github.com/OpenBMB/UltraRAG) | `content/projects/data-and-retrieval/ultrarag.md` |
 | `vllm-omni` | promoted-after-rewrite | project | vLLM-Omni | inference-engine | Apache-2.0 | [source](https://github.com/vllm-project/vllm-omni) | `content/projects/inference-engines/vllm-omni.md` |
-| `vlm-r1` | still-quarantined | project | VLM-R1 | training-and-alignment | Apache-2.0 | [source](https://github.com/om-ai-lab/VLM-R1) | `content/projects/training-and-alignment/vlm-r1.md` |
+| `vlm-r1` | promoted-after-rewrite | project | VLM-R1 | training-and-alignment | Apache-2.0 | [source](https://github.com/om-ai-lab/VLM-R1) | `content/projects/training-and-alignment/vlm-r1.md` |
 | `vlm2vec` | promoted-after-rewrite | project | VLM2Vec | training-and-alignment | Apache-2.0 | [source](https://github.com/TIGER-AI-Lab/VLM2Vec) | `content/projects/training-and-alignment/vlm2vec.md` |
-| `vortex` | still-quarantined | project | Vortex | data-and-retrieval | Apache-2.0 | [source](https://github.com/vortex-data/vortex) | `content/projects/data-and-retrieval/vortex.md` |
+| `vortex` | promoted-after-rewrite | project | Vortex | data-and-retrieval | Apache-2.0 | [source](https://github.com/vortex-data/vortex) | `content/projects/data-and-retrieval/vortex.md` |
 | `vulnclaw` | still-quarantined | project | VulnClaw | benchmark-and-eval | MIT | [source](https://github.com/Unclecheng-li/VulnClaw) | `content/projects/benchmarks-and-evals/vulnclaw.md` |
 | `wesight` | still-quarantined | project | Wesight | agent-system | MIT | [source](https://github.com/freestylefly/wesight) | `content/projects/agent-systems/wesight.md` |
 | `whale` | still-quarantined | project | Whale | agent-system | MIT | [source](https://github.com/usewhale/Whale) | `content/projects/agent-systems/whale.md` |

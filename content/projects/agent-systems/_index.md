@@ -32,16 +32,16 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [MaxKB](./maxkb.md)
+- [Mobile-Agent](./mobileagent.md)
+- [SillyTavern](./sillytavern.md)
+- [UI-TARS Desktop](./ui-tars-desktop.md)
 - [Hermes Agent](./hermes-agent.md)
 - [MemPalace](./mempalace.md)
 - [nono](./nono.md)
 - [AnythingLLM](./anythingllm.md)
 - [Browser Use](./browser-use.md)
 - [Continue](./continue.md)
-- [GPT Researcher](./gpt-researcher.md)
-- [Khoj](./khoj.md)
-- [LibreChat](./librechat.md)
-- [LobeChat (LobeHub)](./lobe-chat.md)
 
 ### Most Popular
 
@@ -53,8 +53,8 @@ Before selecting an agent system:
 - [MemPalace](./mempalace.md) — ⭐ 57230
 - [LibreChat](./librechat.md) — ⭐ 40447
 - [Strix](./strix.md) — ⭐ 38354
+- [UI-TARS Desktop](./ui-tars-desktop.md) — ⭐ 37934
 - [Khoj](./khoj.md) — ⭐ 35524
-- [Continue](./continue.md) — ⭐ 34744
 
 ### Browse All
 
@@ -67,13 +67,17 @@ Before selecting an agent system:
 - [Khoj](./khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
 - [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [LobeChat (LobeHub)](./lobe-chat.md) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
+- [MaxKB](./maxkb.md) — Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration
 - [MemPalace](./mempalace.md) — Open-source AI memory system for persistent agent context, recall, and memory-tool integrations
+- [Mobile-Agent](./mobileagent.md) — Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning
 - [nono](./nono.md) — Rust sandbox for isolating AI-agent execution with zero-setup positioning
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [Qwen-Agent](./qwen-agent.md) — Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context
 - [RD-Agent](./rd-agent.md) — Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining
 - [screenshot-to-code](./screenshot-to-code.md) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
+- [SillyTavern](./sillytavern.md) — Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts
 - [Skyvern](./skyvern.md) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
 - [Strix](./strix.md) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
 - [Tabby](./tabby.md) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
+- [UI-TARS Desktop](./ui-tars-desktop.md) — Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
