@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-12T15:12:16.190Z",
-    "total_projects": 188,
+    "generated_at": "2026-07-12T16:13:04.621Z",
+    "total_projects": 282,
     "total_tools": 199,
     "total_papers": 126,
     "total_tips": 171,
@@ -335,6 +335,26 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agent-lightning",
+      "type": "project",
+      "name": "Agent Lightning",
+      "description": "A Microsoft framework for training and optimizing AI agents, including reinforcement learning, that decouples the training loop from any existing agent",
+      "tags": [
+        "agents",
+        "fine-tuning",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/training-and-alignment/agent-lightning.md",
+      "url": "content/projects/training-and-alignment/agent-lightning",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -860,6 +880,26 @@
       "featured": false
     },
     {
+      "id": "amphion",
+      "type": "project",
+      "name": "Amphion",
+      "description": "An open toolkit for audio, music, and speech generation that gathers reproducible implementations of TTS, singing-voice, vocoder, and audio-generation models",
+      "tags": [
+        "voice",
+        "multimodal",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/amphion.md",
+      "url": "content/projects/frameworks/amphion",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "andrej-karpathy",
       "type": "person",
       "name": "Andrej Karpathy",
@@ -968,6 +1008,24 @@
       "url": "content/projects/agent-systems/anythingllm",
       "last_updated": "2026-07-08",
       "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "apache-arrow",
+      "type": "project",
+      "name": "Apache Arrow",
+      "description": "A universal columnar in-memory format and multi-language toolbox that enables zero-copy data interchange between analytics and ML tools across process and",
+      "tags": [
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/projects/data-and-retrieval/apache-arrow.md",
+      "url": "content/projects/data-and-retrieval/apache-arrow",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -1314,6 +1372,26 @@
       "featured": false
     },
     {
+      "id": "bark",
+      "type": "project",
+      "name": "Bark",
+      "description": "A transformer text-to-audio model from Suno that generates speech, non-speech sounds, music, and sound effects from text prompts via GPT-style audio tokens and",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/bark.md",
+      "url": "content/projects/foundation-models/bark",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "basedash",
       "type": "tool",
       "name": "Basedash",
@@ -1574,6 +1652,27 @@
       "category": "code",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "bisheng",
+      "type": "project",
+      "name": "BISHENG",
+      "description": "An open enterprise LLMOps platform combining visual GenAI workflow building, RAG, agents, model management, evaluation",
+      "tags": [
+        "agents",
+        "rag",
+        "llm",
+        "self-hosted",
+        "observability"
+      ],
+      "path": "content/projects/agent-systems/bisheng.md",
+      "url": "content/projects/agent-systems/bisheng",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -2021,6 +2120,26 @@
       "featured": false
     },
     {
+      "id": "chandra-ocr",
+      "type": "project",
+      "name": "Chandra",
+      "description": "An OCR model from Datalab that handles complex tables, forms, and handwriting with full layout understanding, output as structured Markdown/HTML/JSON",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/chandra-ocr.md",
+      "url": "content/projects/data-and-retrieval/chandra-ocr",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "chartqa",
       "type": "benchmark",
       "name": "ChartQA",
@@ -2054,6 +2173,27 @@
       "last_updated": "2026-07-08",
       "category": "voice-audio",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "chattts",
+      "type": "project",
+      "name": "ChatTTS",
+      "description": "A generative speech model tuned for natural conversational dialogue in English and Chinese, with fine-grained prosody and laughter control tokens",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm",
+        "streaming"
+      ],
+      "path": "content/projects/foundation-models/chattts.md",
+      "url": "content/projects/foundation-models/chattts",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -2990,6 +3130,26 @@
       "featured": false
     },
     {
+      "id": "cognita",
+      "type": "project",
+      "name": "Cognita",
+      "description": "A modular, production-oriented RAG framework from TrueFoundry that organizes ingestion, embedding, retrieval, and serving into configurable",
+      "tags": [
+        "rag",
+        "embeddings",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/cognita.md",
+      "url": "content/projects/data-and-retrieval/cognita",
+      "last_updated": "2026-07-12",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cohere",
       "type": "tool",
       "name": "Cohere",
@@ -3270,6 +3430,27 @@
       "url": "content/projects/frameworks/copilotkit",
       "last_updated": "2026-07-12",
       "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "coqui-tts",
+      "type": "project",
+      "name": "Coqui TTS",
+      "description": "A deep-learning toolkit for text-to-speech with dozens of pretrained models, training recipes, and the XTTS multilingual voice-cloning model",
+      "tags": [
+        "voice",
+        "fine-tuning",
+        "self-hosted",
+        "multimodal",
+        "llm"
+      ],
+      "path": "content/projects/frameworks/coqui-tts.md",
+      "url": "content/projects/frameworks/coqui-tts",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -3697,6 +3878,26 @@
       "featured": false
     },
     {
+      "id": "deep-searcher",
+      "type": "project",
+      "name": "DeepSearcher",
+      "description": "An open deep-research framework from Zilliz that reasons over private data by iteratively planning sub-queries, searching a vector store",
+      "tags": [
+        "rag",
+        "agents",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/deep-searcher.md",
+      "url": "content/projects/data-and-retrieval/deep-searcher",
+      "last_updated": "2026-07-12",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "deepchecks",
       "type": "tool",
       "name": "Deepchecks",
@@ -3827,6 +4028,26 @@
       "last_updated": "2026-07-01",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deepseek-vl",
+      "type": "project",
+      "name": "DeepSeek-VL",
+      "description": "DeepSeek's open vision-language model family for real-world multimodal understanding, combining a hybrid vision encoder with an LLM for document, chart",
+      "tags": [
+        "multimodal",
+        "llm",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/deepseek-vl.md",
+      "url": "content/projects/foundation-models/deepseek-vl",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4022,6 +4243,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "dia-tts",
+      "type": "project",
+      "name": "Dia",
+      "description": "A 1.6B-parameter open dialogue text-to-speech model from Nari Labs that generates multi-speaker conversational audio, including non-verbal cues",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/dia-tts.md",
+      "url": "content/projects/foundation-models/dia-tts",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -4252,6 +4493,24 @@
       "featured": false
     },
     {
+      "id": "duckdb",
+      "type": "project",
+      "name": "DuckDB",
+      "description": "An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server",
+      "tags": [
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/projects/data-and-retrieval/duckdb.md",
+      "url": "content/projects/data-and-retrieval/duckdb",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "dvc",
       "type": "tool",
       "name": "DVC",
@@ -4307,6 +4566,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "easyocr",
+      "type": "project",
+      "name": "EasyOCR",
+      "description": "A ready-to-use Python OCR library supporting 80+ languages with a CRAFT text detector and a CRNN recognizer, requiring no training to run",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/easyocr.md",
+      "url": "content/projects/data-and-retrieval/easyocr",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -4402,6 +4681,25 @@
       "featured": false
     },
     {
+      "id": "emotivoice",
+      "type": "project",
+      "name": "EmotiVoice",
+      "description": "A multi-voice, prompt-controlled text-to-speech engine from NetEase Youdao that synthesizes English and Chinese speech with explicit emotion control via style",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/emotivoice.md",
+      "url": "content/projects/foundation-models/emotivoice",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "empromptu-ai",
       "type": "tool",
       "name": "Empromptu AI",
@@ -4474,6 +4772,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "espnet",
+      "type": "project",
+      "name": "ESPnet",
+      "description": "An end-to-end speech-processing toolkit covering ASR, TTS, speech translation, and enhancement, with Kaldi-style data pipelines and PyTorch models",
+      "tags": [
+        "voice",
+        "fine-tuning",
+        "multimodal",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/espnet.md",
+      "url": "content/projects/frameworks/espnet",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -4741,6 +5059,25 @@
       "featured": false
     },
     {
+      "id": "facebook-mmf",
+      "type": "project",
+      "name": "MMF",
+      "description": "Facebook AI Research's modular PyTorch framework for vision-and-language multimodal research, with datasets, pretrained models, and reproducible task pipelines",
+      "tags": [
+        "multimodal",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/facebook-mmf.md",
+      "url": "content/projects/frameworks/facebook-mmf",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "faiss",
       "type": "tool",
       "name": "FAISS",
@@ -4850,6 +5187,26 @@
       "last_updated": "2026-07-12",
       "category": "rag",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fastvideo",
+      "type": "project",
+      "name": "FastVideo",
+      "description": "A unified inference and post-training framework for accelerating video-generation models via techniques like sliding-tile attention and distillation",
+      "tags": [
+        "multimodal",
+        "inference",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/fastvideo.md",
+      "url": "content/projects/inference-engines/fastvideo",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4983,6 +5340,27 @@
       "featured": false
     },
     {
+      "id": "fish-speech",
+      "type": "project",
+      "name": "Fish Speech",
+      "description": "An open text-to-speech model family using a dual autoregressive transformer over grouped audio tokens with the Firefly neural codec for fast",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm",
+        "streaming"
+      ],
+      "path": "content/projects/foundation-models/fish-speech.md",
+      "url": "content/projects/foundation-models/fish-speech",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "flowise",
       "type": "tool",
       "name": "Flowise",
@@ -5036,6 +5414,24 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "flyte",
+      "type": "project",
+      "name": "Flyte",
+      "description": "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned",
+      "tags": [
+        "self-hosted",
+        "fine-tuning"
+      ],
+      "path": "content/projects/frameworks/flyte.md",
+      "url": "content/projects/frameworks/flyte",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -5095,6 +5491,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "funasr",
+      "type": "project",
+      "name": "FunASR",
+      "description": "An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization",
+      "tags": [
+        "voice",
+        "inference",
+        "self-hosted",
+        "streaming",
+        "multimodal"
+      ],
+      "path": "content/projects/frameworks/funasr.md",
+      "url": "content/projects/frameworks/funasr",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -5577,6 +5994,44 @@
       "featured": false
     },
     {
+      "id": "gpt-engineer",
+      "type": "project",
+      "name": "GPT Engineer",
+      "description": "An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern",
+      "tags": [
+        "agents",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/gpt-engineer.md",
+      "url": "content/projects/agent-systems/gpt-engineer",
+      "last_updated": "2026-07-12",
+      "category": "code-generation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gpt-neox",
+      "type": "project",
+      "name": "GPT-NeoX",
+      "description": "EleutherAI's library for large-scale model-parallel autoregressive transformer training on GPUs, built on Megatron and DeepSpeed",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/training-and-alignment/gpt-neox.md",
+      "url": "content/projects/training-and-alignment/gpt-neox",
+      "last_updated": "2026-07-12",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gpt-researcher",
       "type": "project",
       "name": "GPT Researcher",
@@ -5610,6 +6065,26 @@
       "url": "content/projects/foundation-models/gpt-sovits",
       "last_updated": "2026-07-08",
       "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gptcache",
+      "type": "project",
+      "name": "GPTCache",
+      "description": "A semantic cache for LLM applications that stores past query embeddings and responses to serve similar future queries from cache, cutting API cost and latency",
+      "tags": [
+        "llm",
+        "embeddings",
+        "self-hosted",
+        "observability"
+      ],
+      "path": "content/projects/inference-engines/gptcache.md",
+      "url": "content/projects/inference-engines/gptcache",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -5741,6 +6216,25 @@
       "featured": false
     },
     {
+      "id": "grounding-dino",
+      "type": "project",
+      "name": "Grounding DINO",
+      "description": "An open-set object detector that localizes arbitrary objects from free-text prompts by fusing language and vision in a DINO-style detection transformer",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/grounding-dino.md",
+      "url": "content/projects/foundation-models/grounding-dino",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "gsm8k",
       "type": "benchmark",
       "name": "GSM8K",
@@ -5853,6 +6347,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "h2o-llmstudio",
+      "type": "project",
+      "name": "H2O LLM Studio",
+      "description": "A framework and no-code GUI from H2O.ai for fine-tuning LLMs, supporting LoRA/QLoRA, RLHF/DPO, and experiment tracking without writing training code",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "self-hosted",
+        "evaluation"
+      ],
+      "path": "content/projects/training-and-alignment/h2o-llmstudio.md",
+      "url": "content/projects/training-and-alignment/h2o-llmstudio",
+      "last_updated": "2026-07-12",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -6030,6 +6544,26 @@
       "featured": false
     },
     {
+      "id": "hf-diffusers",
+      "type": "project",
+      "name": "Hugging Face Diffusers",
+      "description": "The de facto Python library for diffusion models, providing pipelines, schedulers, and model components for image, video, and audio generation in PyTorch",
+      "tags": [
+        "multimodal",
+        "fine-tuning",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/frameworks/hf-diffusers.md",
+      "url": "content/projects/frameworks/hf-diffusers",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "hf-inference-endpoints",
       "type": "tool",
       "name": "Hugging Face Inference Endpoints",
@@ -6045,6 +6579,44 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "hf-optimum",
+      "type": "project",
+      "name": "Hugging Face Optimum",
+      "description": "Hugging Face's extension of Transformers that accelerates training and inference on specialized hardware via ONNX Runtime, TensorRT, OpenVINO",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "fine-tuning"
+      ],
+      "path": "content/projects/inference-engines/hf-optimum.md",
+      "url": "content/projects/inference-engines/hf-optimum",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "hf-tokenizers",
+      "type": "project",
+      "name": "Hugging Face Tokenizers",
+      "description": "Hugging Face's fast Rust-backed tokenizers library for training and running BPE, WordPiece, and Unigram tokenizers with full alignment tracking",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "fine-tuning"
+      ],
+      "path": "content/projects/data-and-retrieval/hf-tokenizers.md",
+      "url": "content/projects/data-and-retrieval/hf-tokenizers",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6341,6 +6913,44 @@
       "featured": false
     },
     {
+      "id": "hunyuan3d-2",
+      "type": "project",
+      "name": "Hunyuan3D-2",
+      "description": "Tencent's open model for generating high-resolution textured 3D assets from images or text using a two-stage shape-then-texture diffusion pipeline",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/hunyuan3d-2.md",
+      "url": "content/projects/foundation-models/hunyuan3d-2",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "hunyuanvideo",
+      "type": "project",
+      "name": "HunyuanVideo",
+      "description": "Tencent's large open text-to-video generation model with a diffusion-transformer backbone and a 3D VAE, targeting cinematic-quality clips",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/hunyuanvideo.md",
+      "url": "content/projects/foundation-models/hunyuanvideo",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ideogram",
       "type": "tool",
       "name": "Ideogram",
@@ -6406,6 +7016,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "index-tts",
+      "type": "project",
+      "name": "IndexTTS",
+      "description": "An industrial-grade controllable zero-shot text-to-speech system from Bilibili, designed for efficient",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm",
+        "streaming"
+      ],
+      "path": "content/projects/foundation-models/index-tts.md",
+      "url": "content/projects/foundation-models/index-tts",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -6727,6 +7358,26 @@
       "featured": false
     },
     {
+      "id": "janus",
+      "type": "project",
+      "name": "Janus",
+      "description": "DeepSeek's unified multimodal model that decouples visual understanding from generation, letting one model both interpret images and generate them",
+      "tags": [
+        "multimodal",
+        "llm",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/janus.md",
+      "url": "content/projects/foundation-models/janus",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "jason-liu",
       "type": "person",
       "name": "Jason Liu",
@@ -6881,6 +7532,25 @@
       "featured": false
     },
     {
+      "id": "jina-serve",
+      "type": "project",
+      "name": "Jina-serve",
+      "description": "A cloud-native framework for building and serving multimodal AI services and pipelines as scalable microservices with gRPC/HTTP/WebSocket APIs and Kubernetes",
+      "tags": [
+        "multimodal",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/jina-serve.md",
+      "url": "content/projects/frameworks/jina-serve",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "johnson-2017-faiss",
       "type": "paper",
       "name": "Billion-scale similarity search with GPUs",
@@ -6935,6 +7605,23 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "kedro",
+      "type": "project",
+      "name": "Kedro",
+      "description": "A Python framework that applies software-engineering best practices to data science, structuring reproducible, maintainable",
+      "tags": [
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/kedro.md",
+      "url": "content/projects/frameworks/kedro",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7046,6 +7733,26 @@
       "last_updated": "2026-07-08",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "kiln",
+      "type": "project",
+      "name": "Kiln",
+      "description": "A desktop and library toolkit to build, evaluate, and optimize AI systems, covering evals, synthetic data, fine-tuning, RAG",
+      "tags": [
+        "evaluation",
+        "fine-tuning",
+        "rag",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/kiln.md",
+      "url": "content/projects/frameworks/kiln",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -7306,6 +8013,26 @@
       "featured": false
     },
     {
+      "id": "langchain4j",
+      "type": "project",
+      "name": "LangChain4j",
+      "description": "An idiomatic Java library for building LLM applications on the JVM, with a unified API over providers and vector stores plus tool calling, MCP, agents, and RAG",
+      "tags": [
+        "agents",
+        "rag",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/langchain4j.md",
+      "url": "content/projects/frameworks/langchain4j",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "langextract",
       "type": "project",
       "name": "LangExtract",
@@ -7528,6 +8255,25 @@
       "featured": false
     },
     {
+      "id": "latex-ocr",
+      "type": "project",
+      "name": "LaTeX-OCR (pix2tex)",
+      "description": "A vision-transformer model that converts images of mathematical equations into LaTeX code, with CLI, GUI, and API interfaces",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/data-and-retrieval/latex-ocr.md",
+      "url": "content/projects/data-and-retrieval/latex-ocr",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lean-mvp",
       "type": "architecture",
       "name": "Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff",
@@ -7548,6 +8294,26 @@
       "featured": false
     },
     {
+      "id": "leann",
+      "type": "project",
+      "name": "LEANN",
+      "description": "A storage-efficient vector index for on-device RAG that reportedly cuts index size by ~97% via graph-based selective recomputation instead of storing all",
+      "tags": [
+        "rag",
+        "embeddings",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/leann.md",
+      "url": "content/projects/data-and-retrieval/leann",
+      "last_updated": "2026-07-12",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lee-2023-rlaif",
       "type": "paper",
       "name": "RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback",
@@ -7564,6 +8330,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "leon",
+      "type": "project",
+      "name": "Leon",
+      "description": "An open-source, self-hosted personal assistant with a modular skill system, on-device speech, and a privacy-first design that runs entirely on your own server",
+      "tags": [
+        "agents",
+        "self-hosted",
+        "multimodal"
+      ],
+      "path": "content/projects/agent-systems/leon.md",
+      "url": "content/projects/agent-systems/leon",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7781,6 +8566,44 @@
       "featured": false
     },
     {
+      "id": "lighteval",
+      "type": "project",
+      "name": "LightEval",
+      "description": "Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible",
+      "tags": [
+        "evaluation",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/benchmarks-and-evals/lighteval.md",
+      "url": "content/projects/benchmarks-and-evals/lighteval",
+      "last_updated": "2026-07-12",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lightllm",
+      "type": "project",
+      "name": "LightLLM",
+      "description": "A lightweight, pure-Python LLM inference and serving framework emphasizing scalability and high throughput via token-level scheduling and efficient attention",
+      "tags": [
+        "inference",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/lightllm.md",
+      "url": "content/projects/inference-engines/lightllm",
+      "last_updated": "2026-07-12",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lightrag",
       "type": "project",
       "name": "LightRAG",
@@ -7872,6 +8695,26 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "liteparse",
+      "type": "project",
+      "name": "Liteparse",
+      "description": "A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output",
+      "tags": [
+        "data",
+        "llm",
+        "self-hosted",
+        "rag"
+      ],
+      "path": "content/projects/data-and-retrieval/liteparse.md",
+      "url": "content/projects/data-and-retrieval/liteparse",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -8609,6 +9452,25 @@
       "featured": false
     },
     {
+      "id": "lora-diffusion",
+      "type": "project",
+      "name": "LoRA for Diffusion (cloneofsimo)",
+      "description": "An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters",
+      "tags": [
+        "fine-tuning",
+        "multimodal",
+        "self-hosted"
+      ],
+      "path": "content/projects/training-and-alignment/lora-diffusion.md",
+      "url": "content/projects/training-and-alignment/lora-diffusion",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lorax",
       "type": "tool",
       "name": "LoRAX",
@@ -8624,6 +9486,44 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ltx-video",
+      "type": "project",
+      "name": "LTX-Video",
+      "description": "Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/ltx-video.md",
+      "url": "content/projects/foundation-models/ltx-video",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ludwig",
+      "type": "project",
+      "name": "Ludwig",
+      "description": "A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code",
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/ludwig.md",
+      "url": "content/projects/frameworks/ludwig",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -9220,6 +10120,26 @@
       "featured": false
     },
     {
+      "id": "memvid",
+      "type": "project",
+      "name": "Memvid",
+      "description": "A serverless, single-file memory layer for AI agents that encodes a knowledge base into a compact video-file format for fast semantic retrieval without a",
+      "tags": [
+        "agents",
+        "rag",
+        "embeddings",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/memvid.md",
+      "url": "content/projects/agent-systems/memvid",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "meng-2024-simpo",
       "type": "paper",
       "name": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
@@ -9252,6 +10172,24 @@
       "url": "content/tools/dx-and-tooling/mesop",
       "last_updated": "2026-06-30",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "metaflow",
+      "type": "project",
+      "name": "Metaflow",
+      "description": "Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud",
+      "tags": [
+        "self-hosted",
+        "fine-tuning"
+      ],
+      "path": "content/projects/frameworks/metaflow.md",
+      "url": "content/projects/frameworks/metaflow",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -9294,6 +10232,25 @@
       "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "microsoft-nni",
+      "type": "project",
+      "name": "NNI (Neural Network Intelligence)",
+      "description": "Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/microsoft-nni.md",
+      "url": "content/projects/frameworks/microsoft-nni",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -9635,6 +10592,26 @@
       "featured": false
     },
     {
+      "id": "mmagic",
+      "type": "project",
+      "name": "MMagic",
+      "description": "OpenMMLab's multimodal generative toolbox for AIGC, covering text-to-image, image/video super-resolution, inpainting, matting",
+      "tags": [
+        "multimodal",
+        "fine-tuning",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/frameworks/mmagic.md",
+      "url": "content/projects/frameworks/mmagic",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mmbench",
       "type": "benchmark",
       "name": "MMBench",
@@ -9651,6 +10628,26 @@
       "category": "multimodal",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mmdetection",
+      "type": "project",
+      "name": "MMDetection",
+      "description": "OpenMMLab's PyTorch object-detection toolbox with modular components and hundreds of reproducible detector/segmentation model implementations and pretrained",
+      "tags": [
+        "multimodal",
+        "fine-tuning",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/frameworks/mmdetection.md",
+      "url": "content/projects/frameworks/mmdetection",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -10276,6 +11273,46 @@
       "featured": false
     },
     {
+      "id": "nunchaku",
+      "type": "project",
+      "name": "Nunchaku (SVDQuant)",
+      "description": "An inference engine implementing SVDQuant 4-bit quantization for diffusion transformers, absorbing outliers via low-rank components to run big image models on",
+      "tags": [
+        "multimodal",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/nunchaku.md",
+      "url": "content/projects/inference-engines/nunchaku",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "nvidia-nemo",
+      "type": "project",
+      "name": "NVIDIA NeMo",
+      "description": "NVIDIA's scalable generative-AI framework for building, training, and fine-tuning speech (ASR/TTS), LLM, and multimodal models with GPU-optimized pipelines",
+      "tags": [
+        "voice",
+        "fine-tuning",
+        "multimodal",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/nvidia-nemo.md",
+      "url": "content/projects/frameworks/nvidia-nemo",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "nvidia-nim",
       "type": "tool",
       "name": "NVIDIA NIM",
@@ -10291,6 +11328,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "paid",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ocrmypdf",
+      "type": "project",
+      "name": "OCRmyPDF",
+      "description": "A command-line tool that adds a searchable OCR text layer to scanned PDFs using Tesseract while preserving the original page images and metadata",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/ocrmypdf.md",
+      "url": "content/projects/data-and-retrieval/ocrmypdf",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -10558,6 +11614,25 @@
       "featured": false
     },
     {
+      "id": "openai-swarm",
+      "type": "project",
+      "name": "OpenAI Swarm",
+      "description": "An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK",
+      "tags": [
+        "agents",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/openai-swarm.md",
+      "url": "content/projects/agent-systems/openai-swarm",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "experimental",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openhands",
       "type": "project",
       "name": "OpenHands",
@@ -10694,6 +11769,45 @@
       "featured": false
     },
     {
+      "id": "openvino",
+      "type": "project",
+      "name": "OpenVINO",
+      "description": "Intel's open toolkit for optimizing and deploying AI inference across CPUs, integrated GPUs, and NPUs, with model conversion, quantization",
+      "tags": [
+        "inference",
+        "self-hosted",
+        "multimodal"
+      ],
+      "path": "content/projects/inference-engines/openvino.md",
+      "url": "content/projects/inference-engines/openvino",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openvoice",
+      "type": "project",
+      "name": "OpenVoice",
+      "description": "An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/openvoice.md",
+      "url": "content/projects/foundation-models/openvoice",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "opik",
       "type": "project",
       "name": "Opik",
@@ -10709,6 +11823,26 @@
       "last_updated": "2026-07-01",
       "category": "observability",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "orama",
+      "type": "project",
+      "name": "Orama",
+      "description": "A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server",
+      "tags": [
+        "rag",
+        "embeddings",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/data-and-retrieval/orama.md",
+      "url": "content/projects/data-and-retrieval/orama",
+      "last_updated": "2026-07-12",
+      "category": "rag",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -10806,6 +11940,26 @@
       "featured": false
     },
     {
+      "id": "oumi",
+      "type": "project",
+      "name": "Oumi",
+      "description": "An end-to-end open platform to fine-tune, evaluate, and deploy foundation LLMs and VLMs, spanning data prep, training, evaluation",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/training-and-alignment/oumi.md",
+      "url": "content/projects/training-and-alignment/oumi",
+      "last_updated": "2026-07-12",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "outlines",
       "type": "tool",
       "name": "Outlines",
@@ -10877,6 +12031,47 @@
       "last_updated": "2026-07-08",
       "category": "computer-vision",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "paddlespeech",
+      "type": "project",
+      "name": "PaddleSpeech",
+      "description": "An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation",
+      "tags": [
+        "voice",
+        "inference",
+        "fine-tuning",
+        "self-hosted",
+        "streaming"
+      ],
+      "path": "content/projects/frameworks/paddlespeech.md",
+      "url": "content/projects/frameworks/paddlespeech",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "paddlex",
+      "type": "project",
+      "name": "PaddleX",
+      "description": "PaddlePaddle's all-in-one, low-code development toolkit offering ready model pipelines for OCR, vision, time series",
+      "tags": [
+        "multimodal",
+        "fine-tuning",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/frameworks/paddlex.md",
+      "url": "content/projects/frameworks/paddlex",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -11270,6 +12465,26 @@
       "featured": false
     },
     {
+      "id": "piper-tts",
+      "type": "project",
+      "name": "Piper",
+      "description": "A fast, local neural text-to-speech system optimized for the Raspberry Pi and low-power devices, using VITS-based voices exported to onnxruntime",
+      "tags": [
+        "voice",
+        "inference",
+        "self-hosted",
+        "streaming"
+      ],
+      "path": "content/projects/inference-engines/piper-tts.md",
+      "url": "content/projects/inference-engines/piper-tts",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "pita-2026-amalia-authority",
       "type": "paper",
       "name": "Validity of LLMs as Data Annotators: AMALIA on Authority",
@@ -11330,6 +12545,24 @@
       "featured": false
     },
     {
+      "id": "polars",
+      "type": "project",
+      "name": "Polars",
+      "description": "A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data",
+      "tags": [
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/projects/data-and-retrieval/polars.md",
+      "url": "content/projects/data-and-retrieval/polars",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "portkey",
       "type": "tool",
       "name": "Portkey",
@@ -11345,6 +12578,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "portkey-gateway",
+      "type": "project",
+      "name": "Portkey AI Gateway",
+      "description": "A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability",
+      "tags": [
+        "observability",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/portkey-gateway.md",
+      "url": "content/projects/agent-systems/portkey-gateway",
+      "last_updated": "2026-07-12",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -11804,6 +13056,43 @@
       "url": "content/tools/orchestration/pydantic-ai-tool",
       "last_updated": "2026-06-30",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pymupdf",
+      "type": "project",
+      "name": "PyMuPDF",
+      "description": "A high-performance Python library binding the MuPDF engine for fast text, image, and table extraction and manipulation of PDFs and other document formats",
+      "tags": [
+        "data",
+        "self-hosted",
+        "multimodal"
+      ],
+      "path": "content/projects/data-and-retrieval/pymupdf.md",
+      "url": "content/projects/data-and-retrieval/pymupdf",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pyod",
+      "type": "project",
+      "name": "PyOD",
+      "description": "A comprehensive Python library for anomaly and outlier detection with 60+ algorithms spanning classical, ensemble",
+      "tags": [
+        "self-hosted",
+        "evaluation"
+      ],
+      "path": "content/projects/frameworks/pyod.md",
+      "url": "content/projects/frameworks/pyod",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -12540,6 +13829,25 @@
       "featured": false
     },
     {
+      "id": "refact",
+      "type": "project",
+      "name": "Refact.ai",
+      "description": "An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models",
+      "tags": [
+        "agents",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/refact.md",
+      "url": "content/projects/agent-systems/refact",
+      "last_updated": "2026-07-12",
+      "category": "code-generation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "reimers-2019-sentence-bert",
       "type": "paper",
       "name": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
@@ -12808,6 +14116,26 @@
       "category": "retrieval-rag",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "rig",
+      "type": "project",
+      "name": "Rig",
+      "description": "A Rust library for building modular, scalable LLM applications with typed abstractions for completions, embeddings, vector stores, tools, and agents",
+      "tags": [
+        "agents",
+        "rag",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/rig.md",
+      "url": "content/projects/frameworks/rig",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -13328,6 +14656,25 @@
       "featured": false
     },
     {
+      "id": "segment-anything",
+      "type": "project",
+      "name": "Segment Anything (SAM)",
+      "description": "Meta's promptable segmentation foundation model that produces high-quality object masks from point, box, or text-free prompts, with zero-shot generalization",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/segment-anything.md",
+      "url": "content/projects/foundation-models/segment-anything",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "self-host-vs-hosted-api",
       "type": "architecture",
       "name": "Self-Host Open Weights vs Hosted Model API: Who Should Run the GPU?",
@@ -13368,6 +14715,46 @@
       "featured": false
     },
     {
+      "id": "semantic-router",
+      "type": "project",
+      "name": "Semantic Router (vLLM)",
+      "description": "An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM",
+      "tags": [
+        "inference",
+        "llm",
+        "self-hosted",
+        "observability"
+      ],
+      "path": "content/projects/inference-engines/semantic-router.md",
+      "url": "content/projects/inference-engines/semantic-router",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sensevoice",
+      "type": "project",
+      "name": "SenseVoice",
+      "description": "A non-autoregressive multilingual speech-understanding model from Alibaba that jointly does ASR, spoken-language identification, emotion recognition",
+      "tags": [
+        "voice",
+        "multimodal",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/sensevoice.md",
+      "url": "content/projects/foundation-models/sensevoice",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "sentence-transformers",
       "type": "tool",
       "name": "Sentence Transformers",
@@ -13381,6 +14768,25 @@
       "url": "content/tools/model-layer/sentence-transformers",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sentencepiece",
+      "type": "project",
+      "name": "SentencePiece",
+      "description": "Google's unsupervised text tokenizer and detokenizer implementing BPE and unigram models directly on raw text, widely used to train tokenizers for LLMs and NMT",
+      "tags": [
+        "llm",
+        "self-hosted",
+        "fine-tuning"
+      ],
+      "path": "content/projects/data-and-retrieval/sentencepiece.md",
+      "url": "content/projects/data-and-retrieval/sentencepiece",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -13719,6 +15125,27 @@
       "featured": false
     },
     {
+      "id": "sherpa-onnx",
+      "type": "project",
+      "name": "sherpa-onnx",
+      "description": "An offline, on-device speech toolkit (STT, TTS, diarization, VAD, enhancement) built on next-gen Kaldi and onnxruntime with bindings for a dozen languages and",
+      "tags": [
+        "voice",
+        "inference",
+        "self-hosted",
+        "streaming",
+        "multimodal"
+      ],
+      "path": "content/projects/inference-engines/sherpa-onnx.md",
+      "url": "content/projects/inference-engines/sherpa-onnx",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "shinn-2023-reflexion",
       "type": "paper",
       "name": "Reflexion: Language Agents with Verbal Reinforcement Learning",
@@ -14014,6 +15441,45 @@
       "featured": false
     },
     {
+      "id": "speechbrain",
+      "type": "project",
+      "name": "SpeechBrain",
+      "description": "A PyTorch-based conversational-AI toolkit spanning ASR, TTS, speaker recognition, enhancement, and spoken-language understanding with reproducible training",
+      "tags": [
+        "voice",
+        "fine-tuning",
+        "multimodal",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/speechbrain.md",
+      "url": "content/projects/frameworks/speechbrain",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "speechrecognition",
+      "type": "project",
+      "name": "SpeechRecognition (Python)",
+      "description": "A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/inference-engines/speechrecognition.md",
+      "url": "content/projects/inference-engines/speechrecognition",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "spotlight-by-backplanes",
       "type": "tool",
       "name": "Spotlight by Backplanes",
@@ -14045,6 +15511,45 @@
       "url": "content/projects/frameworks/spring-ai",
       "last_updated": "2026-07-08",
       "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stability-generative-models",
+      "type": "project",
+      "name": "Stability AI Generative Models",
+      "description": "Stability AI's official repository for its generative image models including SDXL and Stable Diffusion 3, with training, sampling, and model definitions",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference",
+        "fine-tuning"
+      ],
+      "path": "content/projects/foundation-models/stability-generative-models.md",
+      "url": "content/projects/foundation-models/stability-generative-models",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "stable-diffusion-webui",
+      "type": "project",
+      "name": "Stable Diffusion WebUI",
+      "description": "AUTOMATIC1111's browser-based application for local Stable Diffusion image generation with an extensive extension ecosystem for control, upscaling",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/frameworks/stable-diffusion-webui.md",
+      "url": "content/projects/frameworks/stable-diffusion-webui",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -14549,6 +16054,26 @@
       "featured": false
     },
     {
+      "id": "styletts2",
+      "type": "project",
+      "name": "StyleTTS 2",
+      "description": "A text-to-speech model that reaches human-level naturalness using style diffusion and adversarial training with large speech language models as discriminators",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "fine-tuning"
+      ],
+      "path": "content/projects/foundation-models/styletts2.md",
+      "url": "content/projects/foundation-models/styletts2",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "su-2021-rope",
       "type": "paper",
       "name": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
@@ -14642,6 +16167,25 @@
       "category": "tooling",
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "superagi",
+      "type": "project",
+      "name": "SuperAGI",
+      "description": "A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory",
+      "tags": [
+        "agents",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/superagi.md",
+      "url": "content/projects/agent-systems/superagi",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -14835,6 +16379,23 @@
       "featured": false
     },
     {
+      "id": "taipy",
+      "type": "project",
+      "name": "Taipy",
+      "description": "A Python framework for turning data and AI algorithms into production-ready web applications, pairing an interactive GUI layer with a pipeline/scenario",
+      "tags": [
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/taipy.md",
+      "url": "content/projects/frameworks/taipy",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "tanstack-ai",
       "type": "project",
       "name": "TanStack AI",
@@ -14970,6 +16531,26 @@
       "featured": false
     },
     {
+      "id": "tensorzero",
+      "type": "project",
+      "name": "TensorZero",
+      "description": "An open-source LLMOps platform in Rust unifying an LLM gateway, observability, evaluation, and data-driven optimization into a feedback loop for improving LLM",
+      "tags": [
+        "observability",
+        "llm",
+        "evaluation",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/tensorzero.md",
+      "url": "content/projects/agent-systems/tensorzero",
+      "last_updated": "2026-07-12",
+      "category": "observability",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "terminal-bench",
       "type": "project",
       "name": "Terminal-Bench",
@@ -14984,6 +16565,45 @@
       "last_updated": "2026-07-08",
       "category": "evaluation",
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tesseract-js",
+      "type": "project",
+      "name": "Tesseract.js",
+      "description": "A pure-JavaScript OCR library that runs Tesseract compiled to WebAssembly in the browser and Node, supporting 100+ languages without a server",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/data-and-retrieval/tesseract-js.md",
+      "url": "content/projects/data-and-retrieval/tesseract-js",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tesseract-ocr",
+      "type": "project",
+      "name": "Tesseract OCR",
+      "description": "The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/tesseract-ocr.md",
+      "url": "content/projects/data-and-retrieval/tesseract-ocr",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -15132,6 +16752,24 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tiktoken",
+      "type": "project",
+      "name": "tiktoken",
+      "description": "OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation",
+      "tags": [
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/tiktoken.md",
+      "url": "content/projects/data-and-retrieval/tiktoken",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -15386,6 +17024,26 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "transformerlab",
+      "type": "project",
+      "name": "Transformer Lab",
+      "description": "An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters",
+      "tags": [
+        "fine-tuning",
+        "evaluation",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/training-and-alignment/transformerlab.md",
+      "url": "content/projects/training-and-alignment/transformerlab",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -15698,6 +17356,25 @@
       "featured": false
     },
     {
+      "id": "unilm",
+      "type": "project",
+      "name": "UniLM",
+      "description": "Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR",
+      "tags": [
+        "multimodal",
+        "fine-tuning",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/unilm.md",
+      "url": "content/projects/foundation-models/unilm",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "unsloth",
       "type": "tool",
       "name": "Unsloth",
@@ -15732,6 +17409,25 @@
       "last_updated": "2026-07-01",
       "category": "rag",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "upsonic",
+      "type": "project",
+      "name": "Upsonic",
+      "description": "A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers",
+      "tags": [
+        "agents",
+        "llm",
+        "self-hosted"
+      ],
+      "path": "content/projects/agent-systems/upsonic.md",
+      "url": "content/projects/agent-systems/upsonic",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -16384,6 +18080,25 @@
       "featured": false
     },
     {
+      "id": "visual-autoregressive",
+      "type": "project",
+      "name": "VAR (Visual Autoregressive)",
+      "description": "A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "inference"
+      ],
+      "path": "content/projects/foundation-models/visual-autoregressive.md",
+      "url": "content/projects/foundation-models/visual-autoregressive",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "vllm",
       "type": "project",
       "name": "vLLM",
@@ -16485,6 +18200,46 @@
       "url": "content/projects/data-and-retrieval/vortex",
       "last_updated": "2026-07-12",
       "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "vosk-api",
+      "type": "project",
+      "name": "Vosk",
+      "description": "An offline speech-recognition API with small, portable Kaldi-based models and bindings for Python, Java, C#, Node, and mobile, supporting 20+ languages",
+      "tags": [
+        "voice",
+        "inference",
+        "self-hosted",
+        "streaming"
+      ],
+      "path": "content/projects/inference-engines/vosk-api.md",
+      "url": "content/projects/inference-engines/vosk-api",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "voxcpm",
+      "type": "project",
+      "name": "VoxCPM",
+      "description": "A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/voxcpm.md",
+      "url": "content/projects/foundation-models/voxcpm",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -16601,6 +18356,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "wav2letter",
+      "type": "project",
+      "name": "wav2letter (Flashlight ASR)",
+      "description": "Facebook AI Research's C++ automatic-speech-recognition toolkit built on the Flashlight library, notable for fully convolutional acoustic models and fast",
+      "tags": [
+        "voice",
+        "inference",
+        "self-hosted"
+      ],
+      "path": "content/projects/frameworks/wav2letter.md",
+      "url": "content/projects/frameworks/wav2letter",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -16775,6 +18549,27 @@
       "featured": false
     },
     {
+      "id": "whisper-cpp",
+      "type": "project",
+      "name": "whisper.cpp",
+      "description": "A dependency-free C/C++ port of OpenAI's Whisper that runs speech-to-text on CPU and consumer hardware via the ggml/GGUF tensor library",
+      "tags": [
+        "voice",
+        "inference",
+        "self-hosted",
+        "llm",
+        "streaming"
+      ],
+      "path": "content/projects/inference-engines/whisper-cpp.md",
+      "url": "content/projects/inference-engines/whisper-cpp",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "whisperx",
       "type": "project",
       "name": "WhisperX",
@@ -16867,6 +18662,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "x-anylabeling",
+      "type": "project",
+      "name": "X-AnyLabeling",
+      "description": "An AI-assisted data-labeling tool that uses models like Segment Anything and detectors to auto-annotate images and video for computer-vision dataset creation",
+      "tags": [
+        "multimodal",
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/projects/data-and-retrieval/x-anylabeling.md",
+      "url": "content/projects/data-and-retrieval/x-anylabeling",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -17139,6 +18953,26 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "zerox",
+      "type": "project",
+      "name": "Zerox OCR",
+      "description": "A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically",
+      "tags": [
+        "multimodal",
+        "llm",
+        "self-hosted",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/zerox.md",
+      "url": "content/projects/data-and-retrieval/zerox",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false

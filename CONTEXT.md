@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-12T15:12:20.093Z | Entries: 908 | Schema version: 1.0.0
+Generated: 2026-07-12T16:13:08.344Z | Entries: 1002 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 188
+- Projects: 282
 - Tools: 199
 - Papers: 126
 - Tips: 171
@@ -49,6 +49,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - screenshot-to-code (⭐73211, score:60) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
 - Continue (⭐34744, score:60) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
 - Tabby (⭐33679, score:55) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
+- GPT Engineer (⭐55189, score:0) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
+- Refact.ai (⭐3548, score:0) — An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models
 
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
@@ -60,15 +62,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
 - cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
+- DuckDB (⭐39306, score:0) — An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server
+- Polars (⭐38987, score:0) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
 - LangExtract (⭐37100, score:0) — Python library for grounded structured extraction from unstructured text with source spans and visualization
-- Daft (⭐5620, score:0) — High-performance data engine for AI and multimodal workloads across images, audio, video, and structured data
-- Vortex (⭐3085, score:0) — Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets
 
 ### evaluation
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - lmms-eval (⭐4300, score:0) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
+- LightEval (⭐2473, score:0) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
 
 ### llms
 - LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment

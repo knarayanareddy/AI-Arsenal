@@ -32,16 +32,16 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [BISHENG](./bisheng.md)
+- [GPT Engineer](./gpt-engineer.md)
+- [Leon](./leon.md)
 - [MaxKB](./maxkb.md)
+- [Memvid](./memvid.md)
 - [Mobile-Agent](./mobileagent.md)
+- [OpenAI Swarm](./openai-swarm.md)
+- [Portkey AI Gateway](./portkey-gateway.md)
+- [Refact.ai](./refact.md)
 - [SillyTavern](./sillytavern.md)
-- [UI-TARS Desktop](./ui-tars-desktop.md)
-- [Hermes Agent](./hermes-agent.md)
-- [MemPalace](./mempalace.md)
-- [nono](./nono.md)
-- [AnythingLLM](./anythingllm.md)
-- [Browser Use](./browser-use.md)
-- [Continue](./continue.md)
 
 ### Most Popular
 
@@ -51,33 +51,43 @@ Before selecting an agent system:
 - [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
 - [AnythingLLM](./anythingllm.md) — ⭐ 62914
 - [MemPalace](./mempalace.md) — ⭐ 57230
+- [GPT Engineer](./gpt-engineer.md) — ⭐ 55189
 - [LibreChat](./librechat.md) — ⭐ 40447
 - [Strix](./strix.md) — ⭐ 38354
 - [UI-TARS Desktop](./ui-tars-desktop.md) — ⭐ 37934
-- [Khoj](./khoj.md) — ⭐ 35524
 
 ### Browse All
 
 - [AnythingLLM](./anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
+- [BISHENG](./bisheng.md) — An open enterprise LLMOps platform combining visual GenAI workflow building, RAG, agents, model management, evaluation
 - [Browser Use](./browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 - [Continue](./continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- [GPT Engineer](./gpt-engineer.md) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
 - [GPT Researcher](./gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [Hermes Agent](./hermes-agent.md) — Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [Khoj](./khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
+- [Leon](./leon.md) — An open-source, self-hosted personal assistant with a modular skill system, on-device speech, and a privacy-first design that runs entirely on your own server
 - [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
 - [LobeChat (LobeHub)](./lobe-chat.md) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 - [MaxKB](./maxkb.md) — Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration
 - [MemPalace](./mempalace.md) — Open-source AI memory system for persistent agent context, recall, and memory-tool integrations
+- [Memvid](./memvid.md) — A serverless, single-file memory layer for AI agents that encodes a knowledge base into a compact video-file format for fast semantic retrieval without a
 - [Mobile-Agent](./mobileagent.md) — Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning
 - [nono](./nono.md) — Rust sandbox for isolating AI-agent execution with zero-setup positioning
+- [OpenAI Swarm](./openai-swarm.md) — An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
+- [Portkey AI Gateway](./portkey-gateway.md) — A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability
 - [Qwen-Agent](./qwen-agent.md) — Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context
 - [RD-Agent](./rd-agent.md) — Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining
+- [Refact.ai](./refact.md) — An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models
 - [screenshot-to-code](./screenshot-to-code.md) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
 - [SillyTavern](./sillytavern.md) — Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts
 - [Skyvern](./skyvern.md) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
 - [Strix](./strix.md) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
+- [SuperAGI](./superagi.md) — A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory
 - [Tabby](./tabby.md) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
+- [TensorZero](./tensorzero.md) — An open-source LLMOps platform in Rust unifying an LLM gateway, observability, evaluation, and data-driven optimization into a feedback loop for improving LLM
 - [UI-TARS Desktop](./ui-tars-desktop.md) — Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
+- [Upsonic](./upsonic.md) — A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers

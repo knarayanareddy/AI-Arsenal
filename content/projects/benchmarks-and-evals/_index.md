@@ -33,6 +33,7 @@ Before selecting an evaluation/observability platform:
 
 ### Recently Added
 
+- [LightEval](./lighteval.md)
 - [lmms-eval](./lmms-eval.md)
 - [Pipelock](./pipelock.md)
 - [BigCodeBench](./bigcodebench.md)
@@ -42,7 +43,6 @@ Before selecting an evaluation/observability platform:
 - [Braintrust](./braintrust.md)
 - [DeepEval](./deepeval.md)
 - [Helicone](./helicone.md)
-- [Langfuse](./langfuse.md)
 
 ### Most Popular
 
@@ -66,6 +66,7 @@ Before selecting an evaluation/observability platform:
 - [Helicone](./helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
 - [Langfuse](./langfuse.md) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
 - [LangSmith](./langsmith-platform.md) — Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
+- [LightEval](./lighteval.md) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
 - [lmms-eval](./lmms-eval.md) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
 - [Lunary](./lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
 - [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
