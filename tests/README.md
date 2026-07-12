@@ -41,6 +41,7 @@ When you change a script, add or update tests in `tests/`:
 | `editorial-selection.test.js` | Editorial gate selection: changed-file mode, backdate/rewrite bypass, deletes/renames, unsupported types |
 | `editorial-baseline.test.js` | Finding-level baseline: fingerprints, suppression, new/stale detection, malformed/duplicate rejection, rename does not inherit exemption |
 | `network-guard.test.js` | Private IP detection, URL parsing safety |
+| `network-lookup.test.js` | DNS-bound outbound: pinned lookup (IPv4/IPv6/mixed/all), private-address filtering, snapshot binding vs rebinding, `requestStatus` status/Location/no-follow and timeout |
 | `cache-guard.test.js` | Cache validation |
 | `html-sanitizer.test.js` | XSS sanitization |
 | `taxonomy.test.js` | `TAXONOMY.md` parser |
