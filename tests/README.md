@@ -38,6 +38,7 @@ When you change a script, add or update tests in `tests/`:
 | `check-links.test.js` | URL extraction, ignore patterns, SSRF block |
 | `check-stale.test.js` | Stale entry detection |
 | `generate-toc.test.js` | Browse All is a complete (untruncated) listing |
+| `editorial-selection.test.js` | Editorial gate selection: changed-file mode, backdate/rewrite bypass, deletes/renames, unsupported types |
 | `network-guard.test.js` | Private IP detection, URL parsing safety |
 | `cache-guard.test.js` | Cache validation |
 | `html-sanitizer.test.js` | XSS sanitization |

@@ -38,6 +38,8 @@ test('editorial inspection rejects known boilerplate in a new project', () => {
     },
     content
   });
-  assert.ok(issues.some((issue) => issue.includes('rejected boilerplate')));
-  assert.ok(issues.some((issue) => issue.includes('generic frontmatter judgment')));
+  assert.ok(issues.some((issue) => issue.message.includes('rejected boilerplate')));
+  assert.ok(issues.some((issue) => issue.message.includes('generic frontmatter judgment')));
+  // Every finding carries a stable rule ID (used for finding-level baselines).
+  assert.ok(issues.every((issue) => typeof issue.rule === 'string' && issue.rule.length > 0));
 });
