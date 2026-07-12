@@ -5,6 +5,8 @@
 // services or cloud metadata endpoints.
 
 import net from 'node:net';
+import http from 'node:http';
+import https from 'node:https';
 import dns from 'node:dns/promises';
 
 const ALLOWED_PROTOCOLS = new Set(['http:', 'https:']);
@@ -88,6 +90,67 @@ export async function assertPublicHostname(hostname) {
     if (isPrivateAddress(address)) return { ok: false, reason: `private-ip-${address}` };
   }
   return { ok: true, addresses: records };
+}
+
+// Build a Node `dns.lookup`-compatible resolver bound to a fixed, pre-validated
+// set of addresses. A naive `fetch`/`http.request` re-resolves DNS at connect
+// time, which reopens the TOCTOU that assertPublicHostname closes: a rebinding
+// server can answer with a public IP at validation time and a private IP at
+// connect time. Pinning the socket to the addresses assertPublicHostname
+// already approved removes that gap; retries cannot silently fall back to fresh
+// resolution because they reuse this same bound lookup. The hostname itself is
+// left untouched, so TLS SNI and certificate verification still use it.
+export function pinnedLookup(addresses) {
+  const approved = (addresses ?? [])
+    .filter((entry) => entry && entry.address && !isPrivateAddress(entry.address))
+    .map((entry) => ({ address: entry.address, family: entry.family === 6 || entry.family === 'IPv6' ? 6 : 4 }));
+  return function lookup(hostname, options, callback) {
+    const cb = typeof options === 'function' ? options : callback;
+    const opts = typeof options === 'function' ? {} : (options ?? {});
+    if (!approved.length) {
+      cb(Object.assign(new Error(`no approved public address for ${hostname}`), { code: 'ENOTFOUND' }));
+      return;
+    }
+    if (opts.all) {
+      cb(null, approved.map((entry) => ({ address: entry.address, family: entry.family })));
+      return;
+    }
+    const match = opts.family === 4 || opts.family === 6
+      ? approved.find((entry) => entry.family === opts.family)
+      : approved[0];
+    if (!match) {
+      cb(Object.assign(new Error(`no approved IPv${opts.family} address for ${hostname}`), { code: 'ENOTFOUND' }));
+      return;
+    }
+    cb(null, match.address, match.family);
+  };
+}
+
+// Issue a single HTTP(S) request whose socket is pinned to `lookup`, returning
+// only the status line and Location header (the body is drained and discarded).
+// Redirects are never auto-followed — the caller re-validates every Location
+// against the SSRF rules. Errors carry Node's socket error codes
+// (ENOTFOUND/ECONNREFUSED/ETIMEDOUT/…) so the existing classifier handles them
+// unchanged. `agent: false` avoids connection pooling so the pinned lookup
+// always applies and sockets are never reused across hosts.
+export function requestStatus(rawUrl, { method = 'GET', lookup, timeoutMs = 15000, headers = {} } = {}) {
+  const url = rawUrl instanceof URL ? rawUrl : new URL(String(rawUrl));
+  const transport = url.protocol === 'https:' ? https : http;
+  return new Promise((resolve, reject) => {
+    const req = transport.request(
+      url,
+      { method, headers, lookup, servername: url.hostname, agent: false },
+      (res) => {
+        const status = res.statusCode;
+        const location = res.headers.location ?? null;
+        res.resume();
+        resolve({ status, location });
+      }
+    );
+    req.setTimeout(timeoutMs, () => req.destroy(Object.assign(new Error('request timeout'), { code: 'ETIMEDOUT' })));
+    req.on('error', reject);
+    req.end();
+  });
 }
 
 // Configurable allow-list of domains (e.g., for internal scanners in

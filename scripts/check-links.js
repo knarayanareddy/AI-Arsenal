@@ -5,7 +5,7 @@ import { execFileSync } from 'node:child_process';
 import chalk from 'chalk';
 import { getMarkdownFiles, readMarkdown } from './utils/frontmatter.js';
 import { extractUrls, stripNonRenderedMarkdown } from './utils/markdown.js';
-import { parseSafeUrl, resolveRedirectUrl, assertPublicHostname, domainAllowed, hostCallAllowed, resetHostCallCounts } from './utils/network-guard.js';
+import { parseSafeUrl, resolveRedirectUrl, assertPublicHostname, pinnedLookup, requestStatus, domainAllowed, hostCallAllowed, resetHostCallCounts } from './utils/network-guard.js';
 import { categorizeHttpStatus, classifyNetError, isTransientError, RATE_LIMIT_DOMAINS } from './utils/link-status.js';
 
 const args = new Set(process.argv.slice(2));
@@ -59,26 +59,23 @@ function stripHtmlComments(markdown) {
   return current;
 }
 
-async function fetchOnce(url, method) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    return await fetch(url, {
-      method,
-      redirect: 'manual', // refuse to follow redirects; we re-check the Location.
-      signal: controller.signal,
-      headers: { 'User-Agent': USER_AGENT },
-    });
-  } finally {
-    clearTimeout(timeout);
-  }
+// The socket is pinned to `lookup` (the addresses assertPublicHostname already
+// approved), so DNS is never re-resolved at connect time and redirects/retries
+// cannot be rebound to a private IP. Redirects are returned, never followed.
+function fetchOnce(url, method, lookup) {
+  return requestStatus(url, {
+    method,
+    lookup,
+    timeoutMs,
+    headers: { 'User-Agent': USER_AGENT },
+  });
 }
 
-async function fetchWithRetry(url, method) {
+async function fetchWithRetry(url, method, lookup) {
   let lastErr;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      return await fetchOnce(url, method);
+      return await fetchOnce(url, method, lookup);
     } catch (error) {
       lastErr = error;
       if (attempt < retries && isTransientError(error)) {
@@ -116,11 +113,14 @@ async function checkUrl(rawUrl, redirectDepth = 0) {
   // Resolve hostname -> IP. Reject private/loopback/link-local (SSRF guard).
   const dns = await assertPublicHostname(url.hostname);
   if (!dns.ok) return { url: rawUrl, ok: false, error: dns.reason, soft: false };
+  // Bind every subsequent connection (incl. retries) to exactly those approved
+  // addresses, so a rebinding server cannot swap in a private IP after the check.
+  const lookup = pinnedLookup(dns.addresses);
 
   for (const method of ['HEAD', 'GET']) {
     let response;
     try {
-      response = await fetchWithRetry(url, method);
+      response = await fetchWithRetry(url, method, lookup);
     } catch (error) {
       if (method === 'GET') {
         const c = classifyNetError(error);
@@ -132,7 +132,7 @@ async function checkUrl(rawUrl, redirectDepth = 0) {
 
     // 3xx redirect: re-validate the Location header against SSRF rules.
     if (response.status >= 300 && response.status < 400) {
-      const location = response.headers.get('location');
+      const location = response.location;
       if (!location) return { url: rawUrl, ok: false, status: response.status, error: 'redirect-without-location', soft: false };
       if (redirectDepth >= 5) return { url: rawUrl, ok: false, status: response.status, error: 'redirect-depth-exceeded', soft: false };
       const redirectUrl = resolveRedirectUrl(location, url);
