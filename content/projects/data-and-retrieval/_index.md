@@ -33,6 +33,8 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [FastGPT](./fastgpt.md)
+- [Vortex](./vortex.md)
 - [Daft](./daft.md)
 - [DataChain](./datachain.md)
 - [Deep Lake](./deeplake.md)
@@ -41,8 +43,6 @@ Before selecting a data/retrieval component:
 - [PageIndex](./pageindex.md)
 - [Pathway LLM App](./pathway-llm-app.md)
 - [Pixeltable](./pixeltable.md)
-- [SimpleMem](./simplemem.md)
-- [UltraRAG](./ultrarag.md)
 
 ### Most Popular
 
@@ -68,6 +68,7 @@ Before selecting a data/retrieval component:
 - [DataChain](./datachain.md) — Typed and versioned context layer for unstructured data across S3, GCS, and Azure
 - [Deep Lake](./deeplake.md) — AI data runtime with multimodal storage, retrieval, training, and agent-oriented data access
 - [Docling](./docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
+- [FastGPT](./fastgpt.md) — Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data
 - [Firecrawl](./firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
 - [Graphiti](./graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
 - [GraphRAG](./graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
@@ -93,5 +94,6 @@ Before selecting a data/retrieval component:
 - [Surya](./surya.md) — Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker
 - [UltraRAG](./ultrarag.md) — Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines
 - [Unstructured](./unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
+- [Vortex](./vortex.md) — Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets
 - [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval
 - [zvec](./zvec.md) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory

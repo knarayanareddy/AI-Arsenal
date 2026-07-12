@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-12T14:46:33.735Z",
+  "generated_at": "2026-07-12T15:12:16.190Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 188,
+      "count": 195,
       "types": {
         "tip": 23,
         "tool": 52,
         "build-example": 3,
         "guide": 7,
         "benchmark": 9,
-        "project": 53,
+        "project": 60,
         "paper": 30,
         "architecture": 8,
         "person": 3
@@ -68,14 +68,17 @@
         "compact-tool-outputs-before-adding-to-context",
         "composio",
         "continue",
+        "copilotkit",
         "crewai",
         "cubesandbox",
         "cursor",
+        "deer-flow",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
         "dify",
         "dropstone-3",
         "e2b",
+        "fastgpt",
         "flowise",
         "gaia",
         "gemini-cli",
@@ -115,6 +118,7 @@
         "make-tools-idempotent-so-retries-are-safe",
         "manus",
         "mastra",
+        "maxkb",
         "mazaheri-2026-agentatlas",
         "mem0",
         "memoriq",
@@ -123,6 +127,7 @@
         "microsoft-agent-framework",
         "mind2web",
         "ming-2026-llm-wiki",
+        "mobileagent",
         "multi-agent-system",
         "n8n",
         "nakano-2021-webgpt",
@@ -138,6 +143,7 @@
         "park-2023-generative-agents",
         "patil-2023-gorilla",
         "pipelock",
+        "praisonai",
         "promptflow",
         "pydantic-ai",
         "pydantic-ai-tool",
@@ -187,6 +193,7 @@
         "tencentdb-agent-memory",
         "terminal-bench",
         "toolhive",
+        "ui-tars-desktop",
         "uiverse-design",
         "ultrarag",
         "validate-tool-arguments-before-execution",
@@ -388,9 +395,9 @@
     {
       "id": "caching",
       "label": "Caching",
-      "count": 15,
+      "count": 16,
       "types": {
-        "project": 4,
+        "project": 5,
         "tip": 7,
         "architecture": 1,
         "guide": 1,
@@ -412,23 +419,26 @@
         "precompute-expensive-static-context",
         "redis-memory",
         "use-semantic-cache-for-repeated-questions",
-        "vllm"
+        "vllm",
+        "vortex"
       ]
     },
     {
       "id": "chunking",
       "label": "Chunking",
-      "count": 8,
+      "count": 9,
       "types": {
         "guide": 2,
         "tip": 5,
-        "architecture": 1
+        "architecture": 1,
+        "project": 1
       },
       "entries": [
         "building-rag-systems",
         "choose-chunk-size-by-answer-span-length",
         "choose-chunking-strategy",
         "context-windows",
+        "fastgpt",
         "rag-chunk-overlap-tuning",
         "start-with-zero-chunk-overlap",
         "use-parent-child-chunking-for-long-documents",
@@ -566,14 +576,25 @@
       ]
     },
     {
+      "id": "community-favorite",
+      "label": "Community Favorite",
+      "count": 1,
+      "types": {
+        "project": 1
+      },
+      "entries": [
+        "sillytavern"
+      ]
+    },
+    {
       "id": "data",
       "label": "Data",
-      "count": 100,
+      "count": 101,
       "types": {
         "tool": 33,
         "person": 4,
         "architecture": 2,
-        "project": 23,
+        "project": 24,
         "guide": 28,
         "tip": 8,
         "paper": 1,
@@ -678,6 +699,7 @@
         "vector-search",
         "version-datasets-and-adapters-together",
         "version-your-eval-datasets",
+        "vortex",
         "web-scraping",
         "whisperx"
       ]
@@ -700,28 +722,29 @@
     {
       "id": "edge",
       "label": "Edge",
-      "count": 5,
+      "count": 6,
       "types": {
         "tool": 2,
-        "project": 3
+        "project": 4
       },
       "entries": [
         "cloudflare-workers-ai",
         "fly-io",
         "llamafile",
         "mlc-llm",
-        "mllm"
+        "mllm",
+        "mlx-audio"
       ]
     },
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 75,
+      "count": 78,
       "types": {
         "paper": 20,
         "guide": 4,
         "tip": 22,
-        "project": 16,
+        "project": 19,
         "tool": 10,
         "architecture": 3
       },
@@ -753,6 +776,7 @@
         "falcon-3",
         "fedus-2021-switch-transformer",
         "frantar-2022-gptq",
+        "genai-processors",
         "groq",
         "gu-2023-mamba",
         "ho-2020-ddpm",
@@ -771,6 +795,7 @@
         "megatron-lm",
         "mistral-models",
         "mllm",
+        "mlx-audio",
         "onnxruntime",
         "peng-2023-rwkv",
         "phi-4",
@@ -798,6 +823,7 @@
         "use-qlora-to-fit-larger-models-on-one-gpu",
         "use-speculative-decoding-for-latency-critical-paths",
         "vllm-omni",
+        "vortex",
         "xiao-2022-smoothquant",
         "xiao-2023-streamingllm",
         "xtuner"
@@ -806,10 +832,10 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 59,
+      "count": 60,
       "types": {
         "tip": 12,
-        "project": 19,
+        "project": 20,
         "guide": 2,
         "architecture": 6,
         "tool": 10,
@@ -841,6 +867,7 @@
         "evaluate-embedding-models-before-rechunking",
         "exa",
         "faiss",
+        "internvideo",
         "izacard-2021-contriever",
         "jay-alammar",
         "johnson-2017-faiss",
@@ -1111,10 +1138,10 @@
     {
       "id": "fine-tuning",
       "label": "Fine Tuning",
-      "count": 53,
+      "count": 54,
       "types": {
         "tool": 15,
-        "project": 10,
+        "project": 11,
         "tip": 14,
         "paper": 11,
         "guide": 2,
@@ -1171,6 +1198,7 @@
         "use-qlora-to-fit-larger-models-on-one-gpu",
         "verl",
         "version-datasets-and-adapters-together",
+        "vlm-r1",
         "vlm2vec",
         "xtuner",
         "yuan-2024-self-rewarding"
@@ -1179,13 +1207,13 @@
     {
       "id": "foundational",
       "label": "Foundational",
-      "count": 31,
+      "count": 33,
       "types": {
         "person": 5,
         "paper": 21,
         "trend": 1,
+        "project": 3,
         "guide": 2,
-        "project": 1,
         "tool": 1
       },
       "entries": [
@@ -1197,6 +1225,7 @@
         "hall-of-fame",
         "he-2015-resnet",
         "hoffmann-2022-chinchilla",
+        "internvideo",
         "jay-alammar",
         "jeremy-howard",
         "kaplan-2020-scaling-laws",
@@ -1218,6 +1247,7 @@
         "touvron-2023-llama2",
         "transformers",
         "vaswani-2017-attention",
+        "vortex",
         "wei-2021-flan",
         "yann-lecun"
       ]
@@ -1310,10 +1340,10 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 138,
+      "count": 139,
       "types": {
         "tip": 31,
-        "project": 47,
+        "project": 48,
         "tool": 27,
         "paper": 15,
         "architecture": 11,
@@ -1401,6 +1431,7 @@
         "ml-engineer-role",
         "mlc-llm",
         "mllm",
+        "mlx-audio",
         "modal",
         "moshi",
         "moss-tts",
@@ -1514,13 +1545,13 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 325,
+      "count": 328,
       "types": {
         "tool": 68,
         "tip": 52,
         "guide": 44,
         "paper": 56,
-        "project": 61,
+        "project": 64,
         "benchmark": 14,
         "person": 15,
         "architecture": 13,
@@ -1582,6 +1613,7 @@
         "context-windows",
         "context7",
         "continue-dev",
+        "copilotkit",
         "cost-freemium",
         "cost-open-source",
         "cost-paid",
@@ -1619,6 +1651,7 @@
         "gemma",
         "gemma-3",
         "gemma-team-2026-gemma4",
+        "genai-processors",
         "giskard-oss",
         "github-copilot",
         "gitingest",
@@ -1784,6 +1817,7 @@
         "sglang",
         "shao-2024-deepseekmath",
         "shreya-shankar",
+        "sillytavern",
         "simon-willison",
         "simpleqa",
         "sota-benchmarks",
@@ -1857,11 +1891,11 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 39,
+      "count": 42,
       "types": {
         "tip": 7,
         "architecture": 3,
-        "project": 21,
+        "project": 24,
         "tool": 6,
         "guide": 1,
         "build-example": 1
@@ -1889,6 +1923,7 @@
         "match-context-length-to-ram",
         "mistral-models",
         "mllm",
+        "mlx-audio",
         "mlx-lm",
         "moss-tts",
         "nono",
@@ -1898,10 +1933,12 @@
         "phi-cookbook",
         "prefer-gguf-for-llama-cpp-workflows",
         "quantization",
+        "sillytavern",
         "smolagents",
         "speech-to-speech",
         "start-with-a-smaller-quantized-model",
         "starter-local-llm-chat",
+        "ui-tars-desktop",
         "use-local-models-for-sensitive-prototyping",
         "use-qlora-to-fit-larger-models-on-one-gpu",
         "yi",
@@ -1911,14 +1948,14 @@
     {
       "id": "memory",
       "label": "Memory",
-      "count": 38,
+      "count": 40,
       "types": {
         "guide": 3,
         "tool": 8,
         "paper": 10,
         "tip": 8,
         "architecture": 3,
-        "project": 6
+        "project": 8
       },
       "entries": [
         "agent-builder",
@@ -1946,10 +1983,12 @@
         "multi-agent-system",
         "packer-2023-memgpt",
         "park-2023-generative-agents",
+        "praisonai",
         "rank-context-by-expected-usefulness",
         "redis-memory",
         "ren-2026-gatemem",
         "reserve-output-tokens-before-adding-context",
+        "sillytavern",
         "simplemem",
         "summarize-long-running-agent-state",
         "summarize-repeated-conversation-blocks",
@@ -2020,9 +2059,9 @@
     {
       "id": "multimodal",
       "label": "Multimodal",
-      "count": 72,
+      "count": 78,
       "types": {
-        "project": 46,
+        "project": 52,
         "paper": 13,
         "benchmark": 7,
         "tool": 6
@@ -2049,11 +2088,13 @@
         "gemma",
         "gemma-3",
         "gemma-team-2026-gemma4",
+        "genai-processors",
         "genkit",
         "gpt-sovits",
         "ho-2020-ddpm",
         "ideogram",
         "ideogram-ai",
+        "internvideo",
         "lancedb",
         "li-2023-blip2",
         "liu-2023-llava",
@@ -2063,9 +2104,11 @@
         "mineru",
         "minicpm-v",
         "mllm",
+        "mlx-audio",
         "mmbench",
         "mmmu",
         "mmstar",
+        "mobileagent",
         "moshi",
         "moss-tts",
         "ms-swift",
@@ -2092,10 +2135,12 @@
         "surya",
         "tanstack-ai",
         "translategemma",
+        "ui-tars-desktop",
         "ultralytics-yolo",
         "ultrarag",
         "video-mme",
         "vllm-omni",
+        "vlm-r1",
         "vlm2vec",
         "whisper",
         "xtuner",
@@ -2212,11 +2257,11 @@
     {
       "id": "orchestration",
       "label": "Orchestration",
-      "count": 57,
+      "count": 63,
       "types": {
         "tool": 26,
         "guide": 2,
-        "project": 24,
+        "project": 30,
         "architecture": 3,
         "tip": 1,
         "paper": 1
@@ -2238,13 +2283,17 @@
         "cloudskill",
         "comfyui",
         "composio",
+        "copilotkit",
         "crewai",
         "dagster",
+        "deer-flow",
         "dify",
         "docetl",
         "dropstone-3",
         "empromptu-ai",
+        "fastgpt",
         "flowise",
+        "genai-processors",
         "genkit",
         "google-adk",
         "gpt-researcher",
@@ -2256,6 +2305,7 @@
         "langgraph",
         "manus",
         "mastra",
+        "maxkb",
         "mempalace",
         "metagpt",
         "microsoft-agent-framework",
@@ -2264,6 +2314,7 @@
         "n8n",
         "orca",
         "orchestraml",
+        "praisonai",
         "prefect",
         "qursor",
         "ray",
@@ -2284,12 +2335,12 @@
     {
       "id": "planning",
       "label": "Planning",
-      "count": 19,
+      "count": 22,
       "types": {
         "tool": 2,
         "build-example": 1,
         "guide": 2,
-        "project": 7,
+        "project": 10,
         "architecture": 3,
         "paper": 4
       },
@@ -2302,8 +2353,10 @@
         "autogpt",
         "choose-agent-framework",
         "crewai",
+        "deer-flow",
         "hermes-agent",
         "metagpt",
+        "mobileagent",
         "multi-agent-system",
         "openhands",
         "park-2023-generative-agents",
@@ -2311,6 +2364,7 @@
         "single-agent-vs-multi-agent",
         "sun-2026-agent-planning-benchmark",
         "superpowers",
+        "ui-tars-desktop",
         "wang-2023-agents-survey",
         "wang-2023-voyager"
       ]
@@ -2369,13 +2423,13 @@
     {
       "id": "rag",
       "label": "Rag",
-      "count": 148,
+      "count": 151,
       "types": {
         "tip": 26,
         "build-example": 5,
         "guide": 4,
         "tool": 27,
-        "project": 45,
+        "project": 48,
         "paper": 21,
         "benchmark": 7,
         "architecture": 10,
@@ -2430,6 +2484,7 @@
         "evaluate-embedding-models-before-rechunking",
         "evaluate-the-end-to-end-task-not-only-components",
         "exa",
+        "fastgpt",
         "firecrawl",
         "firecrawl-tool",
         "flowise",
@@ -2474,6 +2529,7 @@
         "markitdown",
         "marqo",
         "match-the-distance-metric-to-your-embedding-model",
+        "maxkb",
         "measure-retrieval-recall-before-answer-quality",
         "meilisearch",
         "mem0",
@@ -2492,6 +2548,7 @@
         "pinecone",
         "pinecone-vector-db",
         "pixeltable",
+        "praisonai",
         "prefer-reranking-before-rechunking",
         "prepend-document-title-and-section-to-each-chunk",
         "production-rag",
@@ -2535,11 +2592,11 @@
     {
       "id": "reasoning",
       "label": "Reasoning",
-      "count": 47,
+      "count": 49,
       "types": {
         "benchmark": 11,
         "paper": 19,
-        "project": 9,
+        "project": 11,
         "guide": 3,
         "person": 4,
         "build-example": 1
@@ -2554,6 +2611,7 @@
         "crux-eval",
         "deepseek-ai-2025-r1",
         "deepseek-v3-r1",
+        "deer-flow",
         "dspy",
         "emerging-techniques",
         "francois-chollet",
@@ -2586,6 +2644,7 @@
         "smolagents",
         "starter-simple-react-agent",
         "truthfulqa",
+        "vlm-r1",
         "wang-2022-self-consistency",
         "wei-2022-chain-of-thought",
         "xu-2026-evoarena",
@@ -2597,10 +2656,10 @@
     {
       "id": "research",
       "label": "Research",
-      "count": 31,
+      "count": 34,
       "types": {
         "paper": 16,
-        "project": 4,
+        "project": 7,
         "guide": 4,
         "person": 5,
         "tool": 2
@@ -2611,9 +2670,11 @@
         "camel-ai",
         "cheng-2026-agenticsts",
         "chiang-2024-chatbot-arena",
+        "deer-flow",
         "emerging-techniques",
         "hendrycks-2020-mmlu",
         "huang-2026-regression-accumulation",
+        "internvideo",
         "kojima-2022-zero-shot-cot",
         "leung-2026-citation-verifier",
         "li-2023-blip2",
@@ -2625,6 +2686,7 @@
         "marimo",
         "melanie-mitchell",
         "mikolov-2013-word2vec",
+        "mobileagent",
         "must-read-papers",
         "noam-shazeer",
         "olmo",
@@ -2642,7 +2704,7 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 118,
+      "count": 121,
       "types": {
         "tip": 24,
         "build-example": 4,
@@ -2651,7 +2713,7 @@
         "benchmark": 7,
         "guide": 3,
         "architecture": 8,
-        "project": 29,
+        "project": 32,
         "person": 1
       },
       "entries": [
@@ -2689,6 +2751,7 @@
         "evaluate-embedding-models-before-rechunking",
         "exa",
         "faiss",
+        "fastgpt",
         "frames",
         "gao-2022-hyde",
         "gao-2023-rag-survey",
@@ -2717,6 +2780,7 @@
         "malkov-2016-hnsw",
         "marqo",
         "match-the-distance-metric-to-your-embedding-model",
+        "maxkb",
         "measure-retrieval-recall-before-answer-quality",
         "meilisearch",
         "mempalace",
@@ -2769,6 +2833,7 @@
         "use-query-rewriting-for-vague-questions",
         "use-sentence-windows-for-dense-manuals",
         "vespa",
+        "vortex",
         "voyage-ai",
         "weaviate",
         "zep",
@@ -2778,10 +2843,10 @@
     {
       "id": "rlhf",
       "label": "Rlhf",
-      "count": 17,
+      "count": 18,
       "types": {
         "guide": 1,
-        "project": 2,
+        "project": 3,
         "paper": 10,
         "person": 1,
         "tool": 2,
@@ -2804,15 +2869,16 @@
         "schulman-2017-ppo",
         "shao-2024-deepseekmath",
         "touvron-2023-llama2",
-        "trl"
+        "trl",
+        "vlm-r1"
       ]
     },
     {
       "id": "routing",
       "label": "Routing",
-      "count": 9,
+      "count": 10,
       "types": {
-        "project": 3,
+        "project": 4,
         "tool": 2,
         "tip": 4
       },
@@ -2822,6 +2888,7 @@
         "dynamo",
         "llm-d",
         "openrouter",
+        "praisonai",
         "route-easy-requests-to-a-smaller-model-first",
         "route-simple-tasks-to-smaller-models",
         "use-smaller-models-for-classification-steps",
@@ -2898,9 +2965,9 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 85,
+      "count": 88,
       "types": {
-        "project": 46,
+        "project": 49,
         "architecture": 8,
         "tool": 25,
         "paper": 2,
@@ -2934,6 +3001,7 @@
         "elasticsearch",
         "exo",
         "f5-tts",
+        "fastgpt",
         "flux",
         "garak",
         "gemma-team-2026-gemma4",
@@ -2957,6 +3025,7 @@
         "local-first",
         "localai",
         "lorax",
+        "maxkb",
         "megatron-lm",
         "meilisearch",
         "minicpm-v",
@@ -2980,6 +3049,7 @@
         "ray",
         "rombach-2022-ldm",
         "self-host-vs-hosted-api",
+        "sillytavern",
         "supabase",
         "tabby",
         "tabby-ml",
@@ -3044,14 +3114,16 @@
     {
       "id": "streaming",
       "label": "Streaming",
-      "count": 8,
+      "count": 10,
       "types": {
-        "project": 6,
+        "project": 8,
         "guide": 1,
         "tip": 1
       },
       "entries": [
+        "copilotkit",
         "daft",
+        "genai-processors",
         "inference-optimization",
         "moss-tts",
         "pathway-llm-app",
@@ -3064,13 +3136,13 @@
     {
       "id": "structured-output",
       "label": "Structured Output",
-      "count": 45,
+      "count": 46,
       "types": {
         "tip": 14,
         "tool": 14,
         "architecture": 1,
         "guide": 4,
-        "project": 8,
+        "project": 9,
         "benchmark": 1,
         "build-example": 1,
         "person": 1,
@@ -3085,6 +3157,7 @@
         "claude-artifact-player",
         "context-engineering",
         "context7",
+        "copilotkit",
         "fundamentals",
         "genkit",
         "google-pomelli-2-0",
@@ -3127,12 +3200,12 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 78,
+      "count": 86,
       "types": {
         "tip": 22,
         "guide": 6,
         "tool": 16,
-        "project": 23,
+        "project": 31,
         "paper": 6,
         "architecture": 2,
         "build-example": 2,
@@ -3169,10 +3242,13 @@
         "compact-tool-outputs-before-adding-to-context",
         "composio",
         "continue-dev",
+        "copilotkit",
         "crewai",
+        "deer-flow",
         "define-fallbacks-for-tool-failures",
         "detect-repeated-tool-calls",
         "gemini-cli",
+        "genai-processors",
         "give-the-agent-a-scratchpad-for-intermediate-results",
         "google-adk",
         "goose",
@@ -3182,8 +3258,10 @@
         "liu-2026-mcp-execution-control",
         "log-agent-state-transitions",
         "make-tools-idempotent-so-retries-are-safe",
+        "maxkb",
         "mempalace",
         "microsoft-agent-framework",
+        "mobileagent",
         "n8n",
         "nakano-2021-webgpt",
         "openai-agents-sdk",
@@ -3191,6 +3269,7 @@
         "openhands",
         "page-agent",
         "pipelock",
+        "praisonai",
         "pydantic-ai",
         "pydantic-ai-tool",
         "require-human-approval-for-irreversible-actions",
@@ -3200,6 +3279,7 @@
         "schick-2023-toolformer",
         "semantic-kernel",
         "separate-planner-and-executor-permissions",
+        "sillytavern",
         "skyvern",
         "smolagents",
         "starter-simple-react-agent",
@@ -3210,6 +3290,7 @@
         "supervision",
         "tanstack-ai",
         "tau-bench",
+        "ui-tars-desktop",
         "validate-tool-arguments-before-execution",
         "validate-tool-arguments-server-side-before-execution",
         "vercel-ai-sdk",
@@ -3270,13 +3351,13 @@
     {
       "id": "training",
       "label": "Training",
-      "count": 51,
+      "count": 52,
       "types": {
         "tool": 9,
         "guide": 4,
         "person": 3,
         "paper": 24,
-        "project": 11
+        "project": 12
       },
       "entries": [
         "accelerate",
@@ -3326,6 +3407,7 @@
         "touvron-2023-llama",
         "trl",
         "ultralytics",
+        "vlm-r1",
         "vlm2vec",
         "wei-2021-flan",
         "xtuner",
@@ -3335,11 +3417,12 @@
     {
       "id": "transformers",
       "label": "Transformers",
-      "count": 21,
+      "count": 22,
       "types": {
         "paper": 14,
         "person": 4,
         "guide": 2,
+        "project": 1,
         "tool": 1
       },
       "entries": [
@@ -3351,6 +3434,7 @@
         "fedus-2021-switch-transformer",
         "gu-2023-mamba",
         "he-2015-resnet",
+        "internvideo",
         "jay-alammar",
         "jiang-2024-mixtral",
         "leviathan-2022-speculative-decoding",
@@ -3398,21 +3482,23 @@
     {
       "id": "vision",
       "label": "Vision",
-      "count": 20,
+      "count": 24,
       "types": {
-        "project": 14,
+        "project": 18,
         "paper": 2,
         "benchmark": 4
       },
       "entries": [
         "detectron2",
         "dosovitskiy-2020-vit",
+        "internvideo",
         "lmms-eval",
         "mathvista",
         "minicpm-v",
         "mllm",
         "mmbench",
         "mmmu",
+        "mobileagent",
         "open-sora",
         "pixeltable",
         "radford-2021-clip",
@@ -3422,17 +3508,19 @@
         "seed-bench",
         "skyvern",
         "supervision",
+        "ui-tars-desktop",
         "ultralytics",
         "vllm-omni",
+        "vlm-r1",
         "vlm2vec"
       ]
     },
     {
       "id": "voice",
       "label": "Voice",
-      "count": 11,
+      "count": 12,
       "types": {
-        "project": 10,
+        "project": 11,
         "paper": 1
       },
       "entries": [
@@ -3440,6 +3528,7 @@
         "cosyvoice",
         "faster-whisper",
         "gpt-sovits",
+        "mlx-audio",
         "moshi",
         "moss-tts",
         "radford-2022-whisper",

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-12T14:46:33.735Z",
-    "total_projects": 175,
+    "generated_at": "2026-07-12T15:12:16.190Z",
+    "total_projects": 188,
     "total_tools": 199,
     "total_papers": 126,
     "total_tips": 171,
@@ -3254,6 +3254,28 @@
       "featured": false
     },
     {
+      "id": "copilotkit",
+      "type": "project",
+      "name": "CopilotKit",
+      "description": "React/TypeScript frontend framework for building in-app copilots, agent chat, and generative UI, and the reference implementation of the AG-UI protocol",
+      "tags": [
+        "agents",
+        "tool-use",
+        "streaming",
+        "structured-output",
+        "orchestration",
+        "llm"
+      ],
+      "path": "content/projects/frameworks/copilotkit.md",
+      "url": "content/projects/frameworks/copilotkit",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "correlate-llm-traces-with-request-ids",
       "type": "tip",
       "name": "Propagate Application Request IDs Into Every LLM Trace",
@@ -3825,6 +3847,28 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deer-flow",
+      "type": "project",
+      "name": "DeerFlow",
+      "description": "Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports",
+      "tags": [
+        "agents",
+        "orchestration",
+        "planning",
+        "reasoning",
+        "tool-use",
+        "research"
+      ],
+      "path": "content/projects/frameworks/deer-flow.md",
+      "url": "content/projects/frameworks/deer-flow",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4789,6 +4833,28 @@
       "featured": false
     },
     {
+      "id": "fastgpt",
+      "type": "project",
+      "name": "FastGPT",
+      "description": "Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data",
+      "tags": [
+        "rag",
+        "retrieval",
+        "chunking",
+        "orchestration",
+        "agents",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/fastgpt.md",
+      "url": "content/projects/data-and-retrieval/fastgpt",
+      "last_updated": "2026-07-12",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "fedus-2021-switch-transformer",
       "type": "paper",
       "name": "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
@@ -5237,6 +5303,28 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "genai-processors",
+      "type": "project",
+      "name": "GenAI Processors",
+      "description": "Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models",
+      "tags": [
+        "streaming",
+        "orchestration",
+        "multimodal",
+        "tool-use",
+        "llm",
+        "efficiency"
+      ],
+      "path": "content/projects/frameworks/genai-processors.md",
+      "url": "content/projects/frameworks/genai-processors",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -6537,6 +6625,28 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "internvideo",
+      "type": "project",
+      "name": "InternVideo",
+      "description": "Open-source family of video foundation models and datasets from OpenGVLab for video understanding, retrieval, and multimodal tasks",
+      "tags": [
+        "vision",
+        "multimodal",
+        "transformers",
+        "research",
+        "foundational",
+        "embeddings"
+      ],
+      "path": "content/projects/foundation-models/internvideo.md",
+      "url": "content/projects/foundation-models/internvideo",
+      "last_updated": "2026-07-12",
+      "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -8841,6 +8951,28 @@
       "featured": false
     },
     {
+      "id": "maxkb",
+      "type": "project",
+      "name": "MaxKB",
+      "description": "Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration",
+      "tags": [
+        "agents",
+        "rag",
+        "retrieval",
+        "orchestration",
+        "self-hosted",
+        "tool-use"
+      ],
+      "path": "content/projects/agent-systems/maxkb.md",
+      "url": "content/projects/agent-systems/maxkb",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mazaheri-2026-agentatlas",
       "type": "paper",
       "name": "AgentAtlas: Beyond Outcome Leaderboards for LLM Agents",
@@ -9462,6 +9594,28 @@
       "featured": false
     },
     {
+      "id": "mlx-audio",
+      "type": "project",
+      "name": "MLX Audio",
+      "description": "Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use",
+      "tags": [
+        "voice",
+        "multimodal",
+        "local",
+        "edge",
+        "inference",
+        "efficiency"
+      ],
+      "path": "content/projects/foundation-models/mlx-audio.md",
+      "url": "content/projects/foundation-models/mlx-audio",
+      "last_updated": "2026-07-12",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mlx-lm",
       "type": "tool",
       "name": "MLX-LM",
@@ -9574,6 +9728,28 @@
       "category": "multimodal",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mobileagent",
+      "type": "project",
+      "name": "Mobile-Agent",
+      "description": "Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning",
+      "tags": [
+        "agents",
+        "multimodal",
+        "vision",
+        "planning",
+        "tool-use",
+        "research"
+      ],
+      "path": "content/projects/agent-systems/mobileagent.md",
+      "url": "content/projects/agent-systems/mobileagent",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -11185,6 +11361,28 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "praisonai",
+      "type": "project",
+      "name": "PraisonAI",
+      "description": "Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML",
+      "tags": [
+        "agents",
+        "orchestration",
+        "memory",
+        "rag",
+        "tool-use",
+        "routing"
+      ],
+      "path": "content/projects/frameworks/praisonai.md",
+      "url": "content/projects/frameworks/praisonai",
+      "last_updated": "2026-07-12",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -13559,6 +13757,28 @@
       "featured": false
     },
     {
+      "id": "sillytavern",
+      "type": "project",
+      "name": "SillyTavern",
+      "description": "Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts",
+      "tags": [
+        "llm",
+        "local",
+        "self-hosted",
+        "memory",
+        "tool-use",
+        "community-favorite"
+      ],
+      "path": "content/projects/agent-systems/sillytavern.md",
+      "url": "content/projects/agent-systems/sillytavern",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "simon-willison",
       "type": "person",
       "name": "Simon Willison",
@@ -15379,6 +15599,28 @@
       "featured": false
     },
     {
+      "id": "ui-tars-desktop",
+      "type": "project",
+      "name": "UI-TARS Desktop",
+      "description": "Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models",
+      "tags": [
+        "agents",
+        "multimodal",
+        "vision",
+        "tool-use",
+        "planning",
+        "local"
+      ],
+      "path": "content/projects/agent-systems/ui-tars-desktop.md",
+      "url": "content/projects/agent-systems/ui-tars-desktop",
+      "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "uiverse-design",
       "type": "project",
       "name": "Uiverse Design",
@@ -16184,6 +16426,28 @@
       "featured": false
     },
     {
+      "id": "vlm-r1",
+      "type": "project",
+      "name": "VLM-R1",
+      "description": "Open framework for training vision-language models with reinforcement learning (GRPO/R1-style) to improve visual reasoning and grounded understanding",
+      "tags": [
+        "multimodal",
+        "vision",
+        "rlhf",
+        "reasoning",
+        "fine-tuning",
+        "training"
+      ],
+      "path": "content/projects/training-and-alignment/vlm-r1.md",
+      "url": "content/projects/training-and-alignment/vlm-r1",
+      "last_updated": "2026-07-12",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "vlm2vec",
       "type": "project",
       "name": "VLM2Vec",
@@ -16200,6 +16464,27 @@
       "url": "content/projects/training-and-alignment/vlm2vec",
       "last_updated": "2026-07-11",
       "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "vortex",
+      "type": "project",
+      "name": "Vortex",
+      "description": "Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets",
+      "tags": [
+        "data",
+        "efficiency",
+        "caching",
+        "retrieval",
+        "foundational"
+      ],
+      "path": "content/projects/data-and-retrieval/vortex.md",
+      "url": "content/projects/data-and-retrieval/vortex",
+      "last_updated": "2026-07-12",
+      "category": "data-pipelines",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",

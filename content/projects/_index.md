@@ -6,26 +6,26 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 19 entries | 2026-07-12 |
+| [agent systems](./agent-systems/) | 23 entries | 2026-07-12 |
 | [benchmarks and evals](./benchmarks-and-evals/) | 17 entries | 2026-07-12 |
-| [data and retrieval](./data-and-retrieval/) | 36 entries | 2026-07-12 |
-| [foundation models](./foundation-models/) | 32 entries | 2026-07-12 |
-| [frameworks](./frameworks/) | 35 entries | 2026-07-12 |
+| [data and retrieval](./data-and-retrieval/) | 38 entries | 2026-07-12 |
+| [foundation models](./foundation-models/) | 34 entries | 2026-07-12 |
+| [frameworks](./frameworks/) | 39 entries | 2026-07-12 |
 | [inference engines](./inference-engines/) | 26 entries | 2026-07-12 |
-| [training and alignment](./training-and-alignment/) | 10 entries | 2026-07-12 |
+| [training and alignment](./training-and-alignment/) | 11 entries | 2026-07-12 |
 
 ## Recently Added
 
-- [AgentScope](./frameworks/agentscope.md)
-- [AIBrix](./inference-engines/aibrix.md)
-- [Context7](./frameworks/context7.md)
-- [Daft](./data-and-retrieval/daft.md)
-- [DataChain](./data-and-retrieval/datachain.md)
-- [Deep Lake](./data-and-retrieval/deeplake.md)
-- [NVIDIA Dynamo](./inference-engines/dynamo.md)
-- [Genkit](./frameworks/genkit.md)
-- [Hermes Agent](./agent-systems/hermes-agent.md)
-- [LangExtract](./data-and-retrieval/langextract.md)
+- [CopilotKit](./frameworks/copilotkit.md)
+- [DeerFlow](./frameworks/deer-flow.md)
+- [FastGPT](./data-and-retrieval/fastgpt.md)
+- [GenAI Processors](./frameworks/genai-processors.md)
+- [InternVideo](./foundation-models/internvideo.md)
+- [MaxKB](./agent-systems/maxkb.md)
+- [MLX Audio](./foundation-models/mlx-audio.md)
+- [Mobile-Agent](./agent-systems/mobileagent.md)
+- [PraisonAI](./frameworks/praisonai.md)
+- [SillyTavern](./agent-systems/sillytavern.md)
 
 ## Most Popular
 
@@ -68,6 +68,7 @@
 - [Command R+](./foundation-models/command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [Context7](./frameworks/context7.md) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
 - [Continue](./agent-systems/continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- [CopilotKit](./frameworks/copilotkit.md) — React/TypeScript frontend framework for building in-app copilots, agent chat, and generative UI, and the reference implementation of the AG-UI protocol
 - [CosyVoice](./foundation-models/cosyvoice.md) — Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
 - [Crawl4AI](./data-and-retrieval/crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
 - [CrewAI](./frameworks/crewai.md) — Role-based framework for orchestrating collaborative AI agent crews and flows
@@ -76,6 +77,7 @@
 - [DeepEval](./benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
 - [Deep Lake](./data-and-retrieval/deeplake.md) — AI data runtime with multimodal storage, retrieval, training, and agent-oriented data access
 - [DeepSeek-V3 / R1](./foundation-models/deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
+- [DeerFlow](./frameworks/deer-flow.md) — Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports
 - [Detectron2 (Meta)](./frameworks/detectron2.md) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
 - [Dify](./frameworks/dify.md) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
 - [Docling](./data-and-retrieval/docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
@@ -86,9 +88,7 @@
 - [F5-TTS](./foundation-models/f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
 - [Falcon 3](./foundation-models/falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
 - [faster-whisper](./inference-engines/faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
+- [FastGPT](./data-and-retrieval/fastgpt.md) — Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data
 - [Firecrawl](./data-and-retrieval/firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
 - [FLUX (Black Forest Labs)](./foundation-models/flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - [Gemma](./foundation-models/gemma.md) — Google open model family designed for efficient language and multimodal applications
-- [Gemma 3](./foundation-models/gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
-- [Genkit](./frameworks/genkit.md) — Open-source framework for building AI applications and agents in JavaScript, Go, and Python
-- [GLM-4 / GLM-4.5](./foundation-models/glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
