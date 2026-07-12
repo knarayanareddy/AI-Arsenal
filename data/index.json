@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-09T21:45:39.939Z",
-    "total_projects": 146,
-    "total_tools": 197,
-    "total_papers": 110,
+    "generated_at": "2026-07-12T14:46:33.735Z",
+    "total_projects": 175,
+    "total_tools": 199,
+    "total_papers": 126,
     "total_tips": 171,
     "total_people": 25,
     "total_digests": 1,
@@ -455,6 +455,28 @@
       "featured": false
     },
     {
+      "id": "agentscope",
+      "type": "project",
+      "name": "AgentScope",
+      "description": "Python framework for building observable, multi-agent, and multimodal agent systems",
+      "tags": [
+        "agents",
+        "orchestration",
+        "tool-use",
+        "multimodal",
+        "tracing",
+        "stateful"
+      ],
+      "path": "content/projects/frameworks/agentscope.md",
+      "url": "content/projects/frameworks/agentscope",
+      "last_updated": "2026-07-11",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agno",
       "type": "tool",
       "name": "Agno",
@@ -559,6 +581,28 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "aibrix",
+      "type": "project",
+      "name": "AIBrix",
+      "description": "Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference",
+      "tags": [
+        "inference",
+        "routing",
+        "batching",
+        "caching",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/aibrix.md",
+      "url": "content/projects/inference-engines/aibrix",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -1362,6 +1406,28 @@
       "featured": false
     },
     {
+      "id": "belikova-2026-after",
+      "type": "paper",
+      "name": "Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation",
+      "description": "Introduces AFTER, a 382-task benchmark for testing whether procedural skills learned by agents transfer across tasks, roles, and model backbones.",
+      "tags": [
+        "agents",
+        "memory",
+        "evaluation",
+        "benchmark",
+        "research",
+        "tool-use"
+      ],
+      "path": "content/research/retrieval-and-memory/belikova-2026-after.md",
+      "url": "content/research/retrieval-and-memory/belikova-2026-after",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "benchmark-on-the-user-hardware",
       "type": "tip",
       "name": "Benchmark Local Models on the Actual Hardware Class Users Will Run",
@@ -2024,6 +2090,48 @@
       "path": "content/research/evaluation-and-safety/chen-2021-codex.md",
       "url": "content/research/evaluation-and-safety/chen-2021-codex",
       "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "chen-2026-uniclawbench",
+      "type": "paper",
+      "name": "UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks",
+      "description": "Evaluates proactive agents on 400 bilingual real-world tasks in live Docker environments using capability-specific checkpoints and hidden closed-loop supervision.",
+      "tags": [
+        "agents",
+        "evaluation",
+        "benchmark",
+        "multimodal"
+      ],
+      "path": "content/research/evaluation-and-safety/chen-2026-uniclawbench.md",
+      "url": "content/research/evaluation-and-safety/chen-2026-uniclawbench",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "cheng-2026-agenticsts",
+      "type": "paper",
+      "name": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+      "description": "Tests a bounded-memory contract in which a long-horizon agent receives typed retrieval in a fresh prompt instead of an ever-growing raw transcript.",
+      "tags": [
+        "agents",
+        "memory",
+        "evaluation",
+        "benchmark",
+        "reasoning",
+        "research"
+      ],
+      "path": "content/research/agents-and-reasoning/cheng-2026-agenticsts.md",
+      "url": "content/research/agents-and-reasoning/cheng-2026-agenticsts",
+      "last_updated": "2026-07-11",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -3088,6 +3196,26 @@
       "featured": false
     },
     {
+      "id": "context7",
+      "type": "project",
+      "name": "Context7",
+      "description": "Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access",
+      "tags": [
+        "retrieval",
+        "llm",
+        "structured-output",
+        "data"
+      ],
+      "path": "content/projects/frameworks/context7.md",
+      "url": "content/projects/frameworks/context7",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "continue",
       "type": "project",
       "name": "Continue",
@@ -3371,6 +3499,28 @@
       "featured": false
     },
     {
+      "id": "daft",
+      "type": "project",
+      "name": "Daft",
+      "description": "High-performance data engine for AI and multimodal workloads across images, audio, video, and structured data",
+      "tags": [
+        "data",
+        "multimodal",
+        "embeddings",
+        "batching",
+        "streaming",
+        "efficiency"
+      ],
+      "path": "content/projects/data-and-retrieval/daft.md",
+      "url": "content/projects/data-and-retrieval/daft",
+      "last_updated": "2026-07-11",
+      "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "dagster",
       "type": "tool",
       "name": "Dagster",
@@ -3465,6 +3615,28 @@
       "featured": false
     },
     {
+      "id": "datachain",
+      "type": "project",
+      "name": "DataChain",
+      "description": "Typed and versioned context layer for unstructured data across S3, GCS, and Azure",
+      "tags": [
+        "data",
+        "rag",
+        "retrieval",
+        "multimodal",
+        "self-hosted",
+        "embeddings"
+      ],
+      "path": "content/projects/data-and-retrieval/datachain.md",
+      "url": "content/projects/data-and-retrieval/datachain",
+      "last_updated": "2026-07-11",
+      "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "deduplicate-near-duplicate-chunks-before-indexing",
       "type": "tip",
       "name": "Deduplicate Near-Duplicate Chunks Before Indexing",
@@ -3537,6 +3709,28 @@
       "last_updated": "2026-07-01",
       "category": "observability",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deeplake",
+      "type": "project",
+      "name": "Deep Lake",
+      "description": "AI data runtime with multimodal storage, retrieval, training, and agent-oriented data access",
+      "tags": [
+        "rag",
+        "retrieval",
+        "data",
+        "multimodal",
+        "embeddings",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/deeplake.md",
+      "url": "content/projects/data-and-retrieval/deeplake",
+      "last_updated": "2026-07-11",
+      "category": "rag",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4027,6 +4221,28 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "dynamo",
+      "type": "project",
+      "name": "NVIDIA Dynamo",
+      "description": "Datacenter-scale distributed inference serving framework for large language and multimodal models",
+      "tags": [
+        "inference",
+        "routing",
+        "batching",
+        "caching",
+        "kubernetes",
+        "multimodal"
+      ],
+      "path": "content/projects/inference-engines/dynamo.md",
+      "url": "content/projects/inference-engines/dynamo",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -5024,6 +5240,27 @@
       "featured": false
     },
     {
+      "id": "genkit",
+      "type": "project",
+      "name": "Genkit",
+      "description": "Open-source framework for building AI applications and agents in JavaScript, Go, and Python",
+      "tags": [
+        "agents",
+        "orchestration",
+        "structured-output",
+        "multimodal",
+        "rag"
+      ],
+      "path": "content/projects/frameworks/genkit.md",
+      "url": "content/projects/frameworks/genkit",
+      "last_updated": "2026-07-11",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "giskard",
       "type": "tool",
       "name": "Giskard",
@@ -5038,6 +5275,28 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "giskard-oss",
+      "type": "tool",
+      "name": "Giskard OSS",
+      "description": "Open-source evaluation and red-team testing library for LLM agents, RAG systems, and model behavior",
+      "tags": [
+        "evaluation",
+        "security",
+        "guardrails",
+        "llm",
+        "rag",
+        "monitoring"
+      ],
+      "path": "content/tools/evaluation-and-observability/giskard-oss.md",
+      "url": "content/tools/evaluation-and-observability/giskard-oss",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -5662,6 +5921,27 @@
       "featured": false
     },
     {
+      "id": "hermes-agent",
+      "type": "project",
+      "name": "Hermes Agent",
+      "description": "Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes",
+      "tags": [
+        "agents",
+        "orchestration",
+        "memory",
+        "tool-use",
+        "planning"
+      ],
+      "path": "content/projects/agent-systems/hermes-agent.md",
+      "url": "content/projects/agent-systems/hermes-agent",
+      "last_updated": "2026-07-11",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "hf-inference-endpoints",
       "type": "tool",
       "name": "Hugging Face Inference Endpoints",
@@ -5842,6 +6122,28 @@
       "path": "content/research/surveys/huang-2023-hallucination-survey.md",
       "url": "content/research/surveys/huang-2023-hallucination-survey",
       "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "huang-2026-regression-accumulation",
+      "type": "paper",
+      "name": "Regression Accumulation in Multi-Turn LLM Programming Conversations",
+      "description": "Shows that later coding-agent turns can break earlier requirements and evaluates a verification gate that retests prior behavior before accepting a change.",
+      "tags": [
+        "code-gen",
+        "agents",
+        "evaluation",
+        "benchmark",
+        "reasoning",
+        "research"
+      ],
+      "path": "content/research/evaluation-and-safety/huang-2026-regression-accumulation.md",
+      "url": "content/research/evaluation-and-safety/huang-2026-regression-accumulation",
+      "last_updated": "2026-07-11",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -6894,6 +7196,26 @@
       "featured": false
     },
     {
+      "id": "langextract",
+      "type": "project",
+      "name": "LangExtract",
+      "description": "Python library for grounded structured extraction from unstructured text with source spans and visualization",
+      "tags": [
+        "data",
+        "structured-output",
+        "llm",
+        "reasoning"
+      ],
+      "path": "content/projects/data-and-retrieval/langextract.md",
+      "url": "content/projects/data-and-retrieval/langextract",
+      "last_updated": "2026-07-11",
+      "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "langflow",
       "type": "tool",
       "name": "Langflow",
@@ -7172,6 +7494,26 @@
       "featured": false
     },
     {
+      "id": "leung-2026-citation-verifier",
+      "type": "paper",
+      "name": "Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution",
+      "description": "Compares eight LLM judges on deep-research citation attribution and shows why aggregate F1 is insufficient for controlling verifier bias.",
+      "tags": [
+        "evaluation",
+        "research",
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/research/evaluation-and-safety/leung-2026-citation-verifier.md",
+      "url": "content/research/evaluation-and-safety/leung-2026-citation-verifier",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "leviathan-2022-speculative-decoding",
       "type": "paper",
       "name": "Fast Inference from Transformers via Speculative Decoding",
@@ -7223,6 +7565,48 @@
       "path": "content/research/architectures/li-2023-blip2.md",
       "url": "content/research/architectures/li-2023-blip2",
       "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "li-2026-adr-agentic-security",
+      "type": "paper",
+      "name": "ADR: An Agentic Detection System for Enterprise Agentic AI Security",
+      "description": "Describes an enterprise agent-security detection and response system combining high-fidelity telemetry, red-team exploration, and two-tier online detection.",
+      "tags": [
+        "agents",
+        "evaluation",
+        "security",
+        "observability"
+      ],
+      "path": "content/research/evaluation-and-safety/li-2026-adr-agentic-security.md",
+      "url": "content/research/evaluation-and-safety/li-2026-adr-agentic-security",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "li-2026-dccd-rag",
+      "type": "paper",
+      "name": "Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation",
+      "description": "Uses document- and token-level confidence to suppress conflicting retrieved evidence during training-free RAG decoding.",
+      "tags": [
+        "rag",
+        "retrieval",
+        "inference",
+        "evaluation",
+        "research",
+        "llm"
+      ],
+      "path": "content/research/retrieval-and-memory/li-2026-dccd-rag.md",
+      "url": "content/research/retrieval-and-memory/li-2026-dccd-rag",
+      "last_updated": "2026-07-11",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -7479,6 +7863,26 @@
       "featured": false
     },
     {
+      "id": "liu-2026-mcp-execution-control",
+      "type": "paper",
+      "name": "From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes",
+      "description": "Argues that MCP-style connection conventions need an explicit execution-control layer with principals, capabilities, data-flow checks, and deny-path audit.",
+      "tags": [
+        "agents",
+        "security",
+        "evaluation",
+        "tool-use"
+      ],
+      "path": "content/research/evaluation-and-safety/liu-2026-mcp-execution-control.md",
+      "url": "content/research/evaluation-and-safety/liu-2026-mcp-execution-control",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "livecodebench",
       "type": "benchmark",
       "name": "LiveCodeBench",
@@ -7688,6 +8092,28 @@
       "featured": false
     },
     {
+      "id": "llm-d",
+      "type": "project",
+      "name": "llm-d",
+      "description": "Kubernetes-native distributed LLM inference framework with routing, disaggregation, and batch-serving components",
+      "tags": [
+        "inference",
+        "routing",
+        "batching",
+        "caching",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "path": "content/projects/inference-engines/llm-d.md",
+      "url": "content/projects/inference-engines/llm-d",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "llm-guard",
       "type": "tool",
       "name": "LLM Guard",
@@ -7838,6 +8264,28 @@
       "last_updated": "2026-07-01",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lmms-eval",
+      "type": "project",
+      "name": "lmms-eval",
+      "description": "Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "multimodal",
+        "vision",
+        "research",
+        "llm"
+      ],
+      "path": "content/projects/benchmarks-and-evals/lmms-eval.md",
+      "url": "content/projects/benchmarks-and-evals/lmms-eval",
+      "last_updated": "2026-07-11",
+      "category": "evaluation",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -8393,6 +8841,26 @@
       "featured": false
     },
     {
+      "id": "mazaheri-2026-agentatlas",
+      "type": "paper",
+      "name": "AgentAtlas: Beyond Outcome Leaderboards for LLM Agents",
+      "description": "Provides a diagnostic vocabulary for separating agent outcomes, control decisions, trajectory failures, and benchmark coverage instead of relying on one success score.",
+      "tags": [
+        "agents",
+        "evaluation",
+        "reasoning",
+        "benchmark"
+      ],
+      "path": "content/research/evaluation-and-safety/mazaheri-2026-agentatlas.md",
+      "url": "content/research/evaluation-and-safety/mazaheri-2026-agentatlas",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "mbpp",
       "type": "benchmark",
       "name": "MBPP",
@@ -8598,6 +9066,28 @@
       "featured": false
     },
     {
+      "id": "mempalace",
+      "type": "project",
+      "name": "MemPalace",
+      "description": "Open-source AI memory system for persistent agent context, recall, and memory-tool integrations",
+      "tags": [
+        "agents",
+        "memory",
+        "retrieval",
+        "evaluation",
+        "tool-use",
+        "orchestration"
+      ],
+      "path": "content/projects/agent-systems/mempalace.md",
+      "url": "content/projects/agent-systems/mempalace",
+      "last_updated": "2026-07-11",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "meng-2024-simpo",
       "type": "paper",
       "name": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
@@ -8751,6 +9241,27 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ming-2026-llm-wiki",
+      "type": "paper",
+      "name": "Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki",
+      "description": "Recasts agent retrieval as search, reading, link traversal, and evidence-sufficiency decisions over a compiled, self-evolving wiki rather than flat embedding lookup.",
+      "tags": [
+        "rag",
+        "retrieval",
+        "agents",
+        "reasoning",
+        "memory"
+      ],
+      "path": "content/research/retrieval-and-memory/ming-2026-llm-wiki.md",
+      "url": "content/research/retrieval-and-memory/ming-2026-llm-wiki",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -8924,6 +9435,28 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mllm",
+      "type": "project",
+      "name": "mllm",
+      "description": "C++ multimodal LLM runtime for mobile and edge devices with vision and inference benchmarks",
+      "tags": [
+        "multimodal",
+        "vision",
+        "inference",
+        "efficiency",
+        "local",
+        "edge"
+      ],
+      "path": "content/projects/inference-engines/mllm.md",
+      "url": "content/projects/inference-engines/mllm",
+      "last_updated": "2026-07-11",
+      "category": "multimodal",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -9158,6 +9691,28 @@
       "path": "content/projects/foundation-models/moshi.md",
       "url": "content/projects/foundation-models/moshi",
       "last_updated": "2026-07-08",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "moss-tts",
+      "type": "project",
+      "name": "MOSS-TTS",
+      "description": "Open-source speech and sound generation model family for expressive, long-form, multi-speaker, and streaming audio",
+      "tags": [
+        "voice",
+        "multimodal",
+        "inference",
+        "training",
+        "streaming",
+        "local"
+      ],
+      "path": "content/projects/foundation-models/moss-tts.md",
+      "url": "content/projects/foundation-models/moss-tts",
+      "last_updated": "2026-07-11",
       "category": "voice-audio",
       "maturity": "beta",
       "cost_model": "open-source",
@@ -9415,6 +9970,27 @@
       "featured": false
     },
     {
+      "id": "nemo-data-designer",
+      "type": "project",
+      "name": "NeMo Data Designer",
+      "description": "Toolkit for generating synthetic data from scratch or seed data with configurable schemas, constraints, and model providers",
+      "tags": [
+        "data",
+        "training",
+        "evaluation",
+        "llm",
+        "structured-output"
+      ],
+      "path": "content/projects/data-and-retrieval/nemo-data-designer.md",
+      "url": "content/projects/data-and-retrieval/nemo-data-designer",
+      "last_updated": "2026-07-11",
+      "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "nemo-guardrails",
       "type": "tool",
       "name": "NeMo Guardrails",
@@ -9498,6 +10074,28 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "nono",
+      "type": "project",
+      "name": "nono",
+      "description": "Rust sandbox for isolating AI-agent execution with zero-setup positioning",
+      "tags": [
+        "security",
+        "guardrails",
+        "agents",
+        "self-hosted",
+        "local",
+        "docker"
+      ],
+      "path": "content/projects/agent-systems/nono.md",
+      "url": "content/projects/agent-systems/nono",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -10126,6 +10724,27 @@
       "featured": false
     },
     {
+      "id": "pageindex",
+      "type": "project",
+      "name": "PageIndex",
+      "description": "Vectorless, reasoning-based document indexing system for structured retrieval over long documents",
+      "tags": [
+        "rag",
+        "retrieval",
+        "reasoning",
+        "llm",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/pageindex.md",
+      "url": "content/projects/data-and-retrieval/pageindex",
+      "last_updated": "2026-07-11",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "pair-every-eval-score-with-a-baseline",
       "type": "tip",
       "name": "Pair Every Eval Score With a Baseline",
@@ -10179,6 +10798,28 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "pathway-llm-app",
+      "type": "project",
+      "name": "Pathway LLM App",
+      "description": "Ready-to-run RAG and AI pipeline templates that stay synchronized with live enterprise data sources",
+      "tags": [
+        "rag",
+        "retrieval",
+        "data",
+        "streaming",
+        "self-hosted",
+        "multimodal"
+      ],
+      "path": "content/projects/data-and-retrieval/pathway-llm-app.md",
+      "url": "content/projects/data-and-retrieval/pathway-llm-app",
+      "last_updated": "2026-07-11",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -10427,6 +11068,70 @@
       "category": "rag",
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pipelock",
+      "type": "project",
+      "name": "Pipelock",
+      "description": "AI-agent firewall for MCP, A2A, HTTP, and WebSocket egress with exfiltration and SSRF controls",
+      "tags": [
+        "security",
+        "guardrails",
+        "agents",
+        "self-hosted",
+        "monitoring",
+        "tool-use"
+      ],
+      "path": "content/projects/benchmarks-and-evals/pipelock.md",
+      "url": "content/projects/benchmarks-and-evals/pipelock",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pita-2026-amalia-authority",
+      "type": "paper",
+      "name": "Validity of LLMs as Data Annotators: AMALIA on Authority",
+      "description": "Tests whether agreement between the Portuguese AMALIA model and human authority annotations reflects valid construct reasoning or surface-correlated shortcuts.",
+      "tags": [
+        "evaluation",
+        "research",
+        "llm",
+        "reasoning"
+      ],
+      "path": "content/research/evaluation-and-safety/pita-2026-amalia-authority.md",
+      "url": "content/research/evaluation-and-safety/pita-2026-amalia-authority",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "pixeltable",
+      "type": "project",
+      "name": "Pixeltable",
+      "description": "Unified multimodal backend for AI data apps with tables, computed columns, media, and model functions",
+      "tags": [
+        "data",
+        "multimodal",
+        "rag",
+        "embeddings",
+        "vision",
+        "evaluation"
+      ],
+      "path": "content/projects/data-and-retrieval/pixeltable.md",
+      "url": "content/projects/data-and-retrieval/pixeltable",
+      "last_updated": "2026-07-11",
+      "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -11657,6 +12362,28 @@
       "featured": false
     },
     {
+      "id": "ren-2026-gatemem",
+      "type": "paper",
+      "name": "GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents",
+      "description": "Tests whether shared agent memory can provide useful long-horizon assistance without crossing principal boundaries or retaining explicitly deleted information.",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "agents",
+        "memory",
+        "security",
+        "research"
+      ],
+      "path": "content/research/evaluation-and-safety/ren-2026-gatemem.md",
+      "url": "content/research/evaluation-and-safety/ren-2026-gatemem",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "replay-the-same-trace-with-one-variable-changed",
       "type": "tip",
       "name": "Replay a Failing Trace With Exactly One Variable Changed",
@@ -11747,6 +12474,28 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "rerun",
+      "type": "project",
+      "name": "Rerun",
+      "description": "Visualize, query, and stream multimodal and robotics data for AI development",
+      "tags": [
+        "observability",
+        "multimodal",
+        "vision",
+        "data",
+        "monitoring",
+        "tracing"
+      ],
+      "path": "content/projects/frameworks/rerun.md",
+      "url": "content/projects/frameworks/rerun",
+      "last_updated": "2026-07-11",
+      "category": "observability",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -12829,6 +13578,28 @@
       "featured": false
     },
     {
+      "id": "simplemem",
+      "type": "project",
+      "name": "SimpleMem",
+      "description": "Efficient lifelong memory framework for text and multimodal LLM agents",
+      "tags": [
+        "agents",
+        "memory",
+        "retrieval",
+        "multimodal",
+        "efficiency",
+        "evaluation"
+      ],
+      "path": "content/projects/data-and-retrieval/simplemem.md",
+      "url": "content/projects/data-and-retrieval/simplemem",
+      "last_updated": "2026-07-11",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "simpleqa",
       "type": "benchmark",
       "name": "SimpleQA",
@@ -12978,6 +13749,27 @@
       "category": "research",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "speculators",
+      "type": "project",
+      "name": "vLLM Speculators",
+      "description": "Unified library for building, evaluating, and storing speculative-decoding algorithms for LLM inference",
+      "tags": [
+        "inference",
+        "efficiency",
+        "evaluation",
+        "llm",
+        "training"
+      ],
+      "path": "content/projects/inference-engines/speculators.md",
+      "url": "content/projects/inference-engines/speculators",
+      "last_updated": "2026-07-11",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -13593,6 +14385,27 @@
       "featured": false
     },
     {
+      "id": "sun-2026-agent-planning-benchmark",
+      "type": "paper",
+      "name": "Agent Planning Benchmark: A Diagnostic Framework for Planning Capabilities in LLM Agents",
+      "description": "Separates planning from execution with 4,209 multimodal cases covering feedback, tool noise, broken tools, and unsolvable tasks, then tests whether planning diagnostics improve execution.",
+      "tags": [
+        "agents",
+        "evaluation",
+        "benchmark",
+        "planning",
+        "multimodal"
+      ],
+      "path": "content/research/evaluation-and-safety/sun-2026-agent-planning-benchmark.md",
+      "url": "content/research/evaluation-and-safety/sun-2026-agent-planning-benchmark",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "supabase",
       "type": "project",
       "name": "Supabase",
@@ -13798,6 +14611,28 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "tanstack-ai",
+      "type": "project",
+      "name": "TanStack AI",
+      "description": "Type-safe provider-agnostic TypeScript SDK for streaming chat, tool calling, agents, and multimodal apps",
+      "tags": [
+        "agents",
+        "orchestration",
+        "streaming",
+        "structured-output",
+        "multimodal",
+        "tool-use"
+      ],
+      "path": "content/projects/frameworks/tanstack-ai.md",
+      "url": "content/projects/frameworks/tanstack-ai",
+      "last_updated": "2026-07-11",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -14130,6 +14965,27 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "toolhive",
+      "type": "tool",
+      "name": "ToolHive",
+      "description": "Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers",
+      "tags": [
+        "security",
+        "guardrails",
+        "self-hosted",
+        "kubernetes",
+        "agents"
+      ],
+      "path": "content/tools/serving-and-deployment/toolhive.md",
+      "url": "content/tools/serving-and-deployment/toolhive",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -14573,6 +15429,28 @@
       "last_updated": "2026-07-08",
       "category": "computer-vision",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ultrarag",
+      "type": "project",
+      "name": "UltraRAG",
+      "description": "Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines",
+      "tags": [
+        "rag",
+        "retrieval",
+        "orchestration",
+        "agents",
+        "evaluation",
+        "multimodal"
+      ],
+      "path": "content/projects/data-and-retrieval/ultrarag.md",
+      "url": "content/projects/data-and-retrieval/ultrarag",
+      "last_updated": "2026-07-11",
+      "category": "rag",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -15284,6 +16162,50 @@
       "featured": false
     },
     {
+      "id": "vllm-omni",
+      "type": "project",
+      "name": "vLLM-Omni",
+      "description": "Framework for efficient inference with omni-modality models across text, vision, audio, and generation pipelines",
+      "tags": [
+        "multimodal",
+        "inference",
+        "voice",
+        "vision",
+        "efficiency",
+        "batching"
+      ],
+      "path": "content/projects/inference-engines/vllm-omni.md",
+      "url": "content/projects/inference-engines/vllm-omni",
+      "last_updated": "2026-07-11",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "vlm2vec",
+      "type": "project",
+      "name": "VLM2Vec",
+      "description": "Multimodal embedding and training framework covering VLM2Vec, MMEB, and later multimodal embedding benchmarks",
+      "tags": [
+        "multimodal",
+        "embeddings",
+        "fine-tuning",
+        "evaluation",
+        "vision",
+        "training"
+      ],
+      "path": "content/projects/training-and-alignment/vlm2vec.md",
+      "url": "content/projects/training-and-alignment/vlm2vec",
+      "last_updated": "2026-07-11",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "voyage-ai",
       "type": "tool",
       "name": "Voyage AI",
@@ -15663,6 +16585,48 @@
       "featured": false
     },
     {
+      "id": "xi-2026-agentgym2",
+      "type": "paper",
+      "name": "AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments",
+      "description": "Evaluates agents in de-idealized environments where tools must be discovered, inputs are noisy or incomplete, and success requires end-to-end procedures rather than clean API calls.",
+      "tags": [
+        "agents",
+        "evaluation",
+        "benchmark",
+        "tool-use"
+      ],
+      "path": "content/research/evaluation-and-safety/xi-2026-agentgym2.md",
+      "url": "content/research/evaluation-and-safety/xi-2026-agentgym2",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "xiang-2026-memsyco-bench",
+      "type": "paper",
+      "name": "MemSyco-Bench: Benchmarking Sycophancy in Agent Memory",
+      "description": "Tests whether retrieved memories improve personalization without making an agent treat user-supplied memory as authoritative evidence.",
+      "tags": [
+        "evaluation",
+        "agents",
+        "memory",
+        "alignment",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/research/evaluation-and-safety/xiang-2026-memsyco-bench.md",
+      "url": "content/research/evaluation-and-safety/xiang-2026-memsyco-bench",
+      "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "xiao-2022-smoothquant",
       "type": "paper",
       "name": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
@@ -15694,6 +16658,50 @@
       "path": "content/research/inference-and-efficiency/xiao-2023-streamingllm.md",
       "url": "content/research/inference-and-efficiency/xiao-2023-streamingllm",
       "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "xtuner",
+      "type": "project",
+      "name": "XTuner",
+      "description": "Training engine and toolkit for efficient fine-tuning and large-scale MoE model training",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "training",
+        "efficiency",
+        "pytorch",
+        "multimodal"
+      ],
+      "path": "content/projects/training-and-alignment/xtuner.md",
+      "url": "content/projects/training-and-alignment/xtuner",
+      "last_updated": "2026-07-11",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "xu-2026-evoarena",
+      "type": "paper",
+      "name": "EvoArena: Tracking Memory Evolution for Robust LLM Agents in Dynamic Environments",
+      "description": "Benchmarks agents as terminal, software, and social environments change over progressive updates, and evaluates patch-based memory for preserving those changes.",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "agents",
+        "memory",
+        "reasoning",
+        "research"
+      ],
+      "path": "content/research/evaluation-and-safety/xu-2026-evoarena.md",
+      "url": "content/research/evaluation-and-safety/xu-2026-evoarena",
+      "last_updated": "2026-07-11",
       "category": null,
       "maturity": null,
       "cost_model": null,
