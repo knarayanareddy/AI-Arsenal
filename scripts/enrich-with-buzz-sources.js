@@ -5,7 +5,7 @@
 
 import fs from 'node:fs/promises';
 
-import matter from 'gray-matter';
+import matter from './utils/safe-matter.js';
 import chalk from 'chalk';
 
 const SOURCE_URL = 'https://toolradar.com/featured/techpresso';

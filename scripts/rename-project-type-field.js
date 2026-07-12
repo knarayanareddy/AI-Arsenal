@@ -8,7 +8,7 @@
 
 import fs from 'node:fs/promises';
 import { glob } from 'glob';
-import matter from 'gray-matter';
+import matter from './utils/safe-matter.js';
 import chalk from 'chalk';
 
 const dryRun = process.argv.includes('--dry-run');

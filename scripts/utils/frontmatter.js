@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import matter from 'gray-matter';
+import matter from './safe-matter.js';
 import { glob } from 'glob';
 
 export const CONTENT_GLOB = 'content/**/*.md';
