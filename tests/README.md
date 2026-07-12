@@ -40,8 +40,8 @@ When you change a script, add or update tests in `tests/`:
 | `generate-toc.test.js` | Browse All is a complete (untruncated) listing |
 | `editorial-selection.test.js` | Editorial gate selection: changed-file mode, backdate/rewrite bypass, deletes/renames, unsupported types |
 | `editorial-baseline.test.js` | Finding-level baseline: fingerprints, suppression, new/stale detection, malformed/duplicate rejection, rename does not inherit exemption |
-| `network-guard.test.js` | Private IP detection, URL parsing safety |
-| `network-lookup.test.js` | DNS-bound outbound: pinned lookup (IPv4/IPv6/mixed/all), private-address filtering, snapshot binding vs rebinding, `requestStatus` status/Location/no-follow and timeout |
+| `network-guard.test.js` | Private IP detection (incl. byte-level IPv6: hex IPv4-mapped, multicast, unique/link/site-local; `ipv6ToBytes` expansion), URL parsing safety |
+| `network-lookup.test.js` | DNS-bound outbound: pinned lookup (IPv4/IPv6/mixed/all), private-address filtering, snapshot binding vs rebinding, `requestStatus` status/Location/no-follow, streaming-response termination after headers, and timeout |
 | `cache-guard.test.js` | Cache validation |
 | `html-sanitizer.test.js` | XSS sanitization |
 | `taxonomy.test.js` | `TAXONOMY.md` parser |
