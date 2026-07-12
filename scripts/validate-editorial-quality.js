@@ -353,7 +353,9 @@ async function main() {
   const dateIndex = process.argv.indexOf('--date');
   const date = dateIndex >= 0 ? process.argv[dateIndex + 1] : null;
   const baseIndex = process.argv.indexOf('--base');
-  const base = baseIndex >= 0 ? process.argv[baseIndex + 1] : 'origin/main';
+  // Leave undefined when unspecified so getChangedFiles() can resolve the base
+  // from GITHUB_BASE_SHA in CI (and fail closed if it cannot be established).
+  const base = baseIndex >= 0 ? process.argv[baseIndex + 1] : undefined;
 
   const result = await validateEditorialQuality({ mode: 'changed', date, base });
   const scope = result.mode === 'date' ? `entries dated ${result.targetDate}` : `${result.mode} entries`;

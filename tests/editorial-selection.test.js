@@ -67,8 +67,21 @@ test('all mode: selects every supported entry regardless of date or diff', () =>
   assert.deepEqual(selected.map((e) => e.file).sort(), [project.file, paper.file, tool.file].sort());
 });
 
-test('getChangedFiles falls back safely and always returns an array', () => {
-  // A bogus base ref must not throw; the helper walks its fallback candidates.
-  const out = getChangedFiles({ base: 'definitely-not-a-real-ref-zzz' });
+test('getChangedFiles: non-strict walks fallbacks and returns an array', () => {
+  // Locally (strict: false) an unresolvable base must not throw — the helper
+  // walks its fallback candidates and ultimately returns an array.
+  const throwingRun = () => { throw new Error('fatal: bad revision'); };
+  const out = getChangedFiles({ base: 'definitely-not-a-real-ref-zzz', strict: false, run: throwingRun });
   assert.ok(Array.isArray(out));
+  assert.deepEqual(out, []);
+});
+
+test('getChangedFiles: strict fails closed instead of returning []', () => {
+  // In CI (strict: true) an unresolvable base is a hard error, so a broken
+  // comparison can never masquerade as "0 changed entries".
+  const throwingRun = () => { throw new Error('fatal: bad revision'); };
+  assert.throws(
+    () => getChangedFiles({ base: 'definitely-not-a-real-ref-zzz', strict: true, run: throwingRun }),
+    /Refusing to fail open in CI/
+  );
 });
