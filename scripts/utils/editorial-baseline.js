@@ -13,13 +13,18 @@ import crypto from 'node:crypto';
 
 export const BASELINE_VERSION = 1;
 
-// Volatile numerics (character counts, etc.) are collapsed so a finding keeps a
-// stable identity across edits that change the number but not the fact that the
-// finding still applies. If the finding is actually resolved it disappears and
-// becomes prunable; it never silently re-matches a different finding because the
-// rule ID and file path are part of the fingerprint.
+// Reduce a finding message to its stable identity so a fingerprint survives
+// edits that don't actually resolve the finding:
+//   - the repeated-paragraph rule embeds the *set of sibling files* sharing the
+//     paragraph, which churns as unrelated files join/leave the group; that list
+//     is stripped so identity rests on the paragraph text itself; and
+//   - volatile numerics (character counts, etc.) are collapsed.
+// A genuinely resolved finding still disappears (and becomes prunable), and the
+// fingerprint never re-matches a different finding because the rule ID and file
+// path are also part of it.
 export function normalizeFinding(message) {
   return String(message ?? '')
+    .replace(/shared with .*?: "/, 'shared with: "')
     .replace(/\d+/g, '#')
     .replace(/\s+/g, ' ')
     .trim();

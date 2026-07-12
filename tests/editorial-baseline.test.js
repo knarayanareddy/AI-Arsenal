@@ -105,3 +105,19 @@ test('the committed baseline file is valid and internally consistent', () => {
 test('normalizeFinding collapses whitespace and digits', () => {
   assert.equal(normalizeFinding('foo   bar 123\n baz'), 'foo bar # baz');
 });
+
+test('repeated-paragraph fingerprint is stable when the sibling-file list changes', () => {
+  const rule = 'repeated-paragraph';
+  const file = 'content/projects/frameworks/a.md';
+  const para = 'This exact shared paragraph is what identifies the duplication finding.';
+  const two = finding(file, rule, `repeated paragraph shared with content/projects/frameworks/b.md: "${para}..."`);
+  const three = finding(file, rule, `repeated paragraph shared with content/projects/frameworks/b.md, content/projects/frameworks/c.md: "${para}..."`);
+  assert.equal(computeFingerprint(two), computeFingerprint(three));
+  // A different paragraph is still a distinct finding.
+  const other = finding(file, rule, 'repeated paragraph shared with content/projects/frameworks/b.md: "A completely different paragraph body here..."');
+  assert.notEqual(computeFingerprint(two), computeFingerprint(other));
+  // Adding a third file does not spuriously produce a "new" finding for A.
+  const { newFindings, suppressed } = applyBaseline([three], mapOf([two]));
+  assert.equal(newFindings.length, 0);
+  assert.equal(suppressed.length, 1);
+});
