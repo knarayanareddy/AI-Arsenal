@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import chalk from 'chalk';
 import { getMarkdownFiles, readMarkdown } from './utils/frontmatter.js';
@@ -31,11 +32,11 @@ async function filesToCheck() {
   if (!changedOnly) return (await getMarkdownFiles('**/*.md')).filter((f) => !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
   try {
     const output = execFileSync('git', ['diff', '--name-only', 'origin/main...HEAD'], { encoding: 'utf8' });
-    return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
+    return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/') && existsSync(f));
   } catch {
     try {
       const output = execFileSync('git', ['diff', '--name-only', 'HEAD~1...HEAD'], { encoding: 'utf8' });
-      return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/'));
+      return output.split(/\r?\n/).filter((f) => f.endsWith('.md') && !f.startsWith('templates/') && !f.startsWith('tests/fixtures/') && existsSync(f));
     } catch { return []; }
   }
 }
