@@ -109,3 +109,17 @@ Before selecting a framework:
 - [Rerun](./rerun.md) — Visualize, query, and stream multimodal and robotics data for AI development
 - [Rig](./rig.md) — A Rust library for building modular, scalable LLM applications with typed abstractions for completions, embeddings, vector stores, tools, and agents
 - [Semantic Kernel](./semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
+- [Smolagents](./smolagents.md) — Hugging Face library for lightweight agents that can reason and act through code
+- [Speech To Speech](./speech-to-speech.md) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
+- [SpeechBrain](./speechbrain.md) — A PyTorch-based conversational-AI toolkit spanning ASR, TTS, speaker recognition, enhancement, and spoken-language understanding with reproducible training
+- [Spring AI](./spring-ai.md) — The Spring ecosystem's official AI framework: portable LLM, RAG, tool-calling and MCP abstractions with Spring Boot auto-configuration for enterprise Java
+- [Stable Diffusion WebUI](./stable-diffusion-webui.md) — AUTOMATIC1111's browser-based application for local Stable Diffusion image generation with an extensive extension ecosystem for control, upscaling
+- [Supervision](./supervision.md) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
+- [Taipy](./taipy.md) — A Python framework for turning data and AI algorithms into production-ready web applications, pairing an interactive GUI layer with a pipeline/scenario
+- [TanStack AI](./tanstack-ai.md) — Type-safe provider-agnostic TypeScript SDK for streaming chat, tool calling, agents, and multimodal apps
+- [txtai](./txtai.md) — All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
+- [Uiverse Design](./uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
+- [Ultralytics YOLO](./ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
+- [Ultralytics YOLO](./ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
+- [Vercel AI SDK](./vercel-ai-sdk.md) — The standard TypeScript toolkit for AI apps: one provider-agnostic API for text, structured output, tool calling, and agents with React/Next.js streaming UI
+- [wav2letter (Flashlight ASR)](./wav2letter.md) — Facebook AI Research's C++ automatic-speech-recognition toolkit built on the Flashlight library, notable for fully convolutional acoustic models and fast

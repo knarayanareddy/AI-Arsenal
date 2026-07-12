@@ -109,3 +109,7 @@ Before selecting a foundation model:
 - [StyleTTS 2](./styletts2.md) — A text-to-speech model that reaches human-level naturalness using style diffusion and adversarial training with large speech language models as discriminators
 - [TranslateGemma](./translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
 - [UniLM](./unilm.md) — Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR
+- [VAR (Visual Autoregressive)](./visual-autoregressive.md) — A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale
+- [VoxCPM](./voxcpm.md) — A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design
+- [Whisper](./whisper.md) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
+- [Yi](./yi.md) — 01.AI open model family with bilingual and long-context variants from small to mid-large sizes

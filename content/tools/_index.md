@@ -85,3 +85,179 @@ _No star-tracked entries yet._
 - [Cursor](./dx-and-tooling/cursor.md) — AI-native code editor (VS Code fork) with agent mode, codebase-aware chat, and predictive multi-line edits
 - [Dagster](./orchestration/dagster.md) — Data orchestration platform for assets, pipelines, schedules, and observability
 - [Data Labeling Tools](./by-job/data-labeling.md) — Curated tools for data labeling workflows in AI engineering
+- [Deepchecks](./evaluation-and-observability/deepchecks.md) — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
+- [DeepSpeed](./model-layer/deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
+- [Deployment Tools](./by-job/deployment.md) — Curated tools for deployment workflows in AI engineering
+- [dlt](./data-ingestion/dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
+- [DocETL](./data-ingestion/docetl.md) — LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)
+- [Dropstone 3](./dx-and-tooling/dropstone-3.md) — Collaborative AI workspace for teams to build, describe, and ship software together
+- [DVC](./model-layer/dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
+- [E2B](./orchestration/e2b.md) — Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale
+- [Elasticsearch](./data-ingestion/elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
+- [Empromptu AI](./orchestration/empromptu-ai.md) — Build, deploy, and manage custom AI applications that improve over time
+- [Evaluation Tools](./by-job/evaluation.md) — Curated tools for evaluation workflows in AI engineering
+- [Evidently](./evaluation-and-observability/evidently.md) — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
+- [Exa](./data-ingestion/exa.md) — Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity ("find similar pages") endpoints
+- [FAISS](./data-ingestion/faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
+- [FastAPI](./serving-and-deployment/fastapi.md) — Python web framework for building APIs around AI services and model workflows
+- [Fine Tuning Tools](./by-job/fine-tuning.md) — Curated tools for fine tuning workflows in AI engineering
+- [Firecrawl](./data-ingestion/firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
+- [Fireworks AI](./serving-and-deployment/fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
+- [Flowise](./orchestration/flowise.md) — Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack
+- [Fly.io](./serving-and-deployment/fly-io.md) — Application hosting platform with global machines and GPU options for AI services
+- [Galileo](./evaluation-and-observability/galileo.md) — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
+- [garak (NVIDIA)](./evaluation-and-observability/garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
+- [Gemini CLI](./dx-and-tooling/gemini-cli.md) — Google's open-source terminal AI agent that brings Gemini models to the command line with a generous free tier
+- [Giskard](./evaluation-and-observability/giskard.md) — Testing platform for evaluating and scanning ML and LLM applications
+- [Giskard OSS](./evaluation-and-observability/giskard-oss.md) — Open-source evaluation and red-team testing library for LLM agents, RAG systems, and model behavior
+- [GitHub Copilot](./dx-and-tooling/github-copilot.md) — GitHub's AI pair programmer: completions, chat, and an autonomous coding agent woven through GitHub and major IDEs
+- [Gitingest](./data-ingestion/gitingest.md) — Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL
+- [Google Pomelli 2.0](./dx-and-tooling/google-pomelli-2-0.md) — Explore and interact with large datasets through a visual, intuitive interface
+- [Google Vertex AI](./serving-and-deployment/google-vertex-ai.md) — Google Cloud platform for model APIs, training, evaluation, and AI application deployment
+- [Goose](./dx-and-tooling/goose.md) — Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions
+- [Gradio](./dx-and-tooling/gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [Great Expectations (GX Core)](./data-ingestion/great-expectations.md) — The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on
+- [Groq](./model-layer/groq.md) — Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second
+- [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
+- [Guidance](./model-layer/guidance.md) — Microsoft guidance library for controlling and constraining language model generation
+- [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
+- [Honen](./dx-and-tooling/honen.md) — Transform any content into interactive AI-generated courses
+- [Hugging Face Hub](./model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
+- [Humanloop](./evaluation-and-observability/humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
+- [Ideogram](./model-layer/ideogram.md) — AI image generation with reliable text rendering in outputs
+- [Ideogram AI](./model-layer/ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
+- [Inspect (UK AI Safety Institute)](./evaluation-and-observability/inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
+- [Instructor](./dx-and-tooling/instructor.md) — A library for extracting typed structured outputs from language models
+- [Jan](./dx-and-tooling/jan.md) — Open-source, offline-first ChatGPT alternative desktop app powered by llama.cpp
+- [Jina AI Reader](./data-ingestion/jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
+- [Kimi K2.5](./model-layer/kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
+- [KServe](./serving-and-deployment/kserve.md) — Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol
+- [KubeAI](./serving-and-deployment/kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
+- [Label Studio](./data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets
+- [Langflow](./orchestration/langflow.md) — Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers
+- [Langfuse Prompts](./dx-and-tooling/langfuse-prompts.md) — Prompt management and versioning workflows inside the Langfuse observability platform
+- [LangSmith](./evaluation-and-observability/langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
+- [LangSmith Hub](./dx-and-tooling/langsmith-hub.md) — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
+- [LangWatch](./evaluation-and-observability/langwatch.md) — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
+- [Letta](./orchestration/letta.md) — Stateful agent framework and memory system formerly known as MemGPT
+- [Liger Kernel](./model-layer/liger-kernel.md) — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
+- [LiteLLM](./serving-and-deployment/litellm.md) — A proxy and SDK for routing requests across many LLM providers
+- [LLaMA-Factory](./model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [Llama Guard](./evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
+- [LLM Guard](./evaluation-and-observability/llm-guard.md) — Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more
+- [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md) — The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard
+- [LM Format Enforcer](./model-layer/lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
+- [LM Studio](./dx-and-tooling/lm-studio.md) — Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server
+- [LoRAX](./serving-and-deployment/lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
+- [Manus](./orchestration/manus.md) — AI-powered platform for building full-stack web applications and automating tasks
+- [marimo](./dx-and-tooling/marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
+- [MarkItDown](./data-ingestion/markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
+- [Marqo](./data-ingestion/marqo.md) — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
+- [Megatron-LM](./model-layer/megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
+- [Meilisearch](./data-ingestion/meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
+- [Mem0](./orchestration/mem0.md) — Memory layer for AI agents and assistants with long-term user and session memory
+- [Memoriq](./orchestration/memoriq.md) — Private AI memory layer that learns from your conversations and documents
+- [Memory Management Tools](./by-job/memory-management.md) — Curated tools for memory management workflows in AI engineering
+- [Mesop](./dx-and-tooling/mesop.md) — Google Python UI framework for building web apps and AI prototypes
+- [MinerU](./data-ingestion/mineru.md) — OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models
+- [Mirascope](./orchestration/mirascope.md) — Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python
+- [MLflow](./model-layer/mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management
+- [MLX-LM](./model-layer/mlx-lm.md) — Apple MLX library for running and fine-tuning LLMs on Apple Silicon
+- [Modal](./serving-and-deployment/modal.md) — A serverless platform for deploying Python apps and GPU workloads
+- [Model Registry Tools](./by-job/model-registry.md) — Curated tools for model registry workflows in AI engineering
+- [Monako Glass](./evaluation-and-observability/monako-glass.md) — Visualize and understand AI model outputs with dynamic Pulse Rings and overlays
+- [n8n](./orchestration/n8n.md) — Source-available visual workflow automation platform with first-class AI-agent nodes and 400+ integrations
+- [NeMo Guardrails](./evaluation-and-observability/nemo-guardrails.md) — NVIDIA framework for adding programmable guardrails to LLM applications
+- [Nomic Atlas](./data-ingestion/nomic-atlas.md) — Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation
+- [NVIDIA NIM](./serving-and-deployment/nvidia-nim.md) — Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs
+- [olmOCR](./data-ingestion/olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
+- [Open WebUI](./dx-and-tooling/open-webui.md) — Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in
+- [OpenAI Codex CLI](./dx-and-tooling/openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
+- [OpenAI Evals](./evaluation-and-observability/openai-evals.md) — An open-source framework for evaluating language model behavior
+- [OpenLLM](./serving-and-deployment/openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
+- [OpenPipe ART](./model-layer/openpipe-art.md) — Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps
+- [OpenRouter](./model-layer/openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
+- [Orca](./dx-and-tooling/orca.md) — Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree
+- [OrchestraML](./orchestration/orchestraml.md) — Automate end-to-end ML workflows from data prep to deployment using AI agents
+- [Orchestration Tools](./by-job/orchestration.md) — Curated tools for orchestration workflows in AI engineering
+- [Outlines](./model-layer/outlines.md) — A library for constrained generation and structured outputs with LLMs
+- [PEFT](./model-layer/peft.md) — Hugging Face library for parameter-efficient fine-tuning methods
+- [Pinecone](./data-ingestion/pinecone.md) — A managed vector database for production semantic search applications
+- [Playwright](./data-ingestion/playwright.md) — Browser automation framework for reliable end-to-end tests and web scraping workflows
+- [Portkey](./serving-and-deployment/portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
+- [Prefect](./orchestration/prefect.md) — Python workflow orchestration framework useful for AI data, eval, and batch jobs
+- [Prodigy](./data-ingestion/prodigy.md) — Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows
+- [Production Serving Tools](./by-job/production-serving.md) — Curated tools for production serving workflows in AI engineering
+- [Prompt Management Tools](./by-job/prompt-management.md) — Curated tools for prompt management workflows in AI engineering
+- [Prompt flow (Microsoft)](./orchestration/promptflow.md) — Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML
+- [promptfoo](./evaluation-and-observability/promptfoo.md) — An open-source CLI and platform for prompt and LLM regression testing
+- [PromptLayer](./dx-and-tooling/promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [Prototyping Tools](./by-job/prototyping.md) — Curated tools for prototyping workflows in AI engineering
+- [Puppeteer](./data-ingestion/puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
+- [Pydantic AI](./orchestration/pydantic-ai-tool.md) — Pydantic agent framework focused on typed outputs, tools, and production Python apps
+- [PyRIT](./evaluation-and-observability/pyrit.md) — Microsoft's Python Risk Identification Toolkit for red-teaming generative AI systems, born from its AI Red Team
+- [PyTorch Lightning](./model-layer/pytorch-lightning.md) — The organize-don't-abstract PyTorch training framework — LightningModule structures your code while the Trainer owns distribution and checkpointing
+- [Qursor](./dx-and-tooling/qursor.md) — AI-powered UI context for faster front-end development with agents
+- [Qwen 3](./model-layer/qwen-3.md) — Alibaba open-weight model family with multimodal and coding variants
+- [Ragas](./evaluation-and-observability/ragas.md) — Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines
+- [RAGatouille](./data-ingestion/ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
+- [Railway](./serving-and-deployment/railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [Ray](./serving-and-deployment/ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
+- [Ray Serve](./serving-and-deployment/ray-serve.md) — Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python
+- [Rebuff](./evaluation-and-observability/rebuff.md) — Prompt injection detection and guardrail toolkit for LLM applications
+- [Recursi](./dx-and-tooling/recursi.md) — Self-improving system for intuitive and efficient AI-assisted coding
+- [Redis](./orchestration/redis-memory.md) — In-memory data store commonly used for caching, session memory, queues, and vector search
+- [Reducto](./data-ingestion/reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
+- [Replicate](./serving-and-deployment/replicate.md) — A hosted platform for running and deploying machine learning models via API
+- [Repomix](./dx-and-tooling/repomix.md) — CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs
+- [RunPod](./serving-and-deployment/runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
+- [Scale AI](./data-ingestion/scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
+- [ScrapeGraphAI](./data-ingestion/scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors
+- [SeaTicket](./orchestration/seaticket.md) — Unify and resolve customer-support issues with autonomous AI agents
+- [Security And Guardrails Tools](./by-job/security-and-guardrails.md) — Curated tools for security and guardrails workflows in AI engineering
+- [Sentence Transformers](./model-layer/sentence-transformers.md) — The standard Python library for computing, training, and fine-tuning text embedding and reranker models
+- [ShellMate](./dx-and-tooling/shellmate.md) — AI-powered terminal assistant that suggests commands and explains outputs
+- [SkillSpector](./evaluation-and-observability/skillspector.md) — Security scanner from NVIDIA that detects vulnerabilities and malicious patterns in AI agent skills
+- [SkyPilot](./serving-and-deployment/skypilot.md) — Run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface
+- [Spotlight by Backplanes](./evaluation-and-observability/spotlight-by-backplanes.md) — Understand, improve, and track AI agent sessions with observability tooling
+- [Tools by Stack — Cpp](./by-stack/stack-cpp.md) — Tools in the Arsenal filtered by Stack facet Cpp, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Go](./by-stack/stack-go.md) — Tools in the Arsenal filtered by Stack facet Go, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Java](./by-stack/stack-java.md) — Tools in the Arsenal filtered by Stack facet Java, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Julia](./by-stack/stack-julia.md) — Tools in the Arsenal filtered by Stack facet Julia, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Polyglot](./by-stack/stack-polyglot.md) — Tools in the Arsenal filtered by Stack facet Polyglot, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Python](./by-stack/stack-python.md) — Tools in the Arsenal filtered by Stack facet Python, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Rust](./by-stack/stack-rust.md) — Tools in the Arsenal filtered by Stack facet Rust, with an auto-generated routing table that keeps this page current
+- [Tools by Stack — Typescript](./by-stack/stack-typescript.md) — Tools in the Arsenal filtered by Stack facet Typescript, with an auto-generated routing table that keeps this page current
+- [Strands Agents SDK](./orchestration/strands-agents.md) — Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models
+- [Streamlit](./dx-and-tooling/streamlit.md) — A Python framework for building data and AI apps with minimal frontend code
+- [Structured Output Tools](./by-job/structured-output.md) — Curated tools for structured output workflows in AI engineering
+- [Superlog](./evaluation-and-observability/superlog.md) — Real-time log aggregation platform designed for serverless debugging
+- [Superpowers](./dx-and-tooling/superpowers.md) — Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents
+- [Tabby](./dx-and-tooling/tabby-ml.md) — Self-hosted, open-source AI coding assistant: an on-prem alternative to GitHub Copilot with completions and chat
+- [Tabstack](./data-ingestion/tabstack.md) — Empower AI systems to autonomously browse, search, and interact with the web via API
+- [Taste Lab](./data-ingestion/taste-lab.md) — Extracts and analyzes the design DNA of any website for AI agent consumption
+- [Tavily](./data-ingestion/tavily.md) — Search API purpose-built for LLMs and agents — returns ranked, cleaned, LLM-ready results (and optional extracted content) from a single query call
+- [Temporal](./orchestration/temporal.md) — Durable-execution platform that guarantees workflow completion — increasingly the reliability backbone under production AI agents
+- [TencentDB Agent Memory](./dx-and-tooling/tencentdb-agent-memory.md) — Fully local long-term memory for AI agents combining symbolic short-term compression with a layered (persona/scene) long-term store
+- [Text Embeddings Inference (TEI)](./serving-and-deployment/text-embeddings-inference.md) — Hugging Face's Rust-based high-throughput inference server for embedding and reranker models
+- [Together AI](./model-layer/together-ai.md) — Inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints
+- [ToolHive](./serving-and-deployment/toolhive.md) — Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers
+- [torchtune](./model-layer/torchtune.md) — PyTorch-native library for fine-tuning and experimenting with LLMs
+- [Trafilatura](./data-ingestion/trafilatura.md) — Python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building
+- [NVIDIA Triton Inference Server](./serving-and-deployment/triton-inference-server.md) — NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles
+- [TRL](./model-layer/trl.md) — Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers
+- [TruLens](./evaluation-and-observability/trulens.md) — An evaluation and tracking toolkit for LLM and RAG applications
+- [Typesense](./data-ingestion/typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
+- [Unsloth](./model-layer/unsloth.md) — Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models
+- [UpTrain](./evaluation-and-observability/uptrain.md) — Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics
+- [Vaani](./dx-and-tooling/vaani.md) — Fast, private macOS dictation with AI formatting and editing
+- [Vector Search Tools](./by-job/vector-search.md) — Curated tools for vector search workflows in AI engineering
+- [Vellum](./dx-and-tooling/vellum.md) — Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK
+- [Vercel](./serving-and-deployment/vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions
+- [Vespa](./data-ingestion/vespa.md) — Open-source search and ranking platform combining vector, lexical, and structured search with on-node ML inference
+- [Voyage AI](./model-layer/voyage-ai.md) — Embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB
+- [Weights & Biases Weave](./evaluation-and-observability/wandb-weave.md) — An observability and evaluation toolkit for AI applications from Weights & Biases
+- [Web Scraping Tools](./by-job/web-scraping.md) — Curated tools for web scraping workflows in AI engineering
+- [Weights & Biases](./model-layer/weights-biases.md) — Experiment tracking and model management platform for ML and AI teams
+- [Windsurf](./dx-and-tooling/windsurf.md) — Agentic AI code editor built around Cascade, a context-aware agent that keeps working across your whole repo
+- [Zep](./orchestration/zep.md) — Memory and context engineering platform for AI agents and assistants

@@ -109,3 +109,11 @@ Before selecting a data/retrieval component:
 - [Surya](./surya.md) — Modern OCR toolkit with 90+ language text recognition, layout analysis, reading-order detection, and table recognition — the models behind Marker
 - [Tesseract.js](./tesseract-js.md) — A pure-JavaScript OCR library that runs Tesseract compiled to WebAssembly in the browser and Node, supporting 100+ languages without a server
 - [Tesseract OCR](./tesseract-ocr.md) — The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend
+- [tiktoken](./tiktoken.md) — OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation
+- [UltraRAG](./ultrarag.md) — Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines
+- [Unstructured](./unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
+- [Vortex](./vortex.md) — Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets
+- [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval
+- [X-AnyLabeling](./x-anylabeling.md) — An AI-assisted data-labeling tool that uses models like Segment Anything and detectors to auto-annotate images and video for computer-vision dataset creation
+- [Zerox OCR](./zerox.md) — A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically
+- [zvec](./zvec.md) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory
