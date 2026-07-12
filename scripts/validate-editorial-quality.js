@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getEntryFiles, inferEntryType, readMarkdown } from './utils/frontmatter.js';
 import { getChangedMarkdownFiles, isContentEntryCandidate } from './utils/changed-files.js';
+import { applyBaseline, parseBaseline } from './utils/editorial-baseline.js';
+
+// Committed, human-reviewed baseline of pre-existing full-catalog findings.
+// Only consulted in --all mode; changed-file mode stays strict and baseline-free.
+export const BASELINE_PATH = 'docs/editorial-baseline.json';
 
 // Entry kinds that currently have bespoke editorial rules. Other content
 // types (tips, benchmarks, architectures, observability, community, build
@@ -303,14 +309,53 @@ export function formatIssue({ file, rule, message }) {
   return `${file} [${rule}]: ${message}`;
 }
 
+// Load the committed baseline. A missing file yields an empty baseline, which
+// is safe: every finding is then treated as new and fails loudly rather than
+// being silently tolerated.
+export async function loadBaseline(baselinePath = BASELINE_PATH) {
+  let raw;
+  try {
+    raw = await fs.readFile(baselinePath, 'utf8');
+  } catch {
+    return new Map();
+  }
+  return parseBaseline(raw);
+}
+
+async function runAll() {
+  const { issues } = await validateEditorialQuality({ mode: 'all' });
+  const baseline = await loadBaseline();
+  const { newFindings, suppressed, stale } = applyBaseline(issues, baseline);
+
+  console.log(`Full-catalog editorial validation: ${issues.length} findings, ${suppressed.length} suppressed by baseline (${BASELINE_PATH}).`);
+
+  if (newFindings.length) {
+    console.error(`\n${newFindings.length} NEW editorial finding(s) not covered by the baseline:`);
+    for (const issue of newFindings) console.error(`- ${formatIssue(issue)}`);
+    console.error(`\nFix these entries. If they are intentionally accepted debt, a maintainer can regenerate the baseline with \`pnpm run editorial:baseline\` (a reviewed change).`);
+    process.exitCode = 1;
+    return;
+  }
+  if (stale.length) {
+    console.error(`\n${stale.length} baseline entr${stale.length === 1 ? 'y is' : 'ies are'} stale (the finding is resolved). The baseline must only shrink — prune with \`pnpm run editorial:baseline:prune\`:`);
+    for (const entry of stale) console.error(`- ${entry.file} [${entry.rule}]: ${entry.finding}`);
+    process.exitCode = 1;
+    return;
+  }
+  console.log('No new findings; baseline is current.');
+}
+
 async function main() {
+  if (process.argv.includes('--all')) {
+    await runAll();
+    return;
+  }
   const dateIndex = process.argv.indexOf('--date');
   const date = dateIndex >= 0 ? process.argv[dateIndex + 1] : null;
   const baseIndex = process.argv.indexOf('--base');
   const base = baseIndex >= 0 ? process.argv[baseIndex + 1] : 'origin/main';
-  const mode = process.argv.includes('--all') ? 'all' : process.argv.includes('--changed-only') ? 'changed' : 'changed';
 
-  const result = await validateEditorialQuality({ mode, date, base });
+  const result = await validateEditorialQuality({ mode: 'changed', date, base });
   const scope = result.mode === 'date' ? `entries dated ${result.targetDate}` : `${result.mode} entries`;
   if (result.structuralOnly.length) {
     console.log(`Note: ${result.structuralOnly.length} changed entr${result.structuralOnly.length === 1 ? 'y receives' : 'ies receive'} structural-only validation (no bespoke editorial rules yet): ${result.structuralOnly.join(', ')}`);

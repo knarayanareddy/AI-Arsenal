@@ -39,6 +39,7 @@ When you change a script, add or update tests in `tests/`:
 | `check-stale.test.js` | Stale entry detection |
 | `generate-toc.test.js` | Browse All is a complete (untruncated) listing |
 | `editorial-selection.test.js` | Editorial gate selection: changed-file mode, backdate/rewrite bypass, deletes/renames, unsupported types |
+| `editorial-baseline.test.js` | Finding-level baseline: fingerprints, suppression, new/stale detection, malformed/duplicate rejection, rename does not inherit exemption |
 | `network-guard.test.js` | Private IP detection, URL parsing safety |
 | `cache-guard.test.js` | Cache validation |
 | `html-sanitizer.test.js` | XSS sanitization |

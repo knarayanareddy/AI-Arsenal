@@ -131,6 +131,31 @@ pnpm run update:trending
 pnpm run generate:all
 ```
 
+### Editorial quality gate & baseline
+
+Editorial validation runs in two complementary modes:
+
+- **Changed-file (strict, baseline-free)** — `pnpm run validate:editorial` inspects
+  every added/modified content entry vs the merge base and fails on *every*
+  finding. This is the gate for a PR's own changes.
+- **Full-catalog (baselined)** — `pnpm run validate:editorial:all` inspects all
+  supported entries but suppresses pre-existing findings recorded in
+  `docs/editorial-baseline.json`. It fails on any **new** finding and on any
+  **stale** (resolved) baseline entry, so the baseline can only shrink.
+
+The baseline is a committed, human-reviewed file of finding fingerprints
+(`path + rule ID + normalized finding`) — never a file allowlist, never edited by
+hand. Maintenance commands (not run in CI):
+
+```bash
+pnpm run editorial:baseline         # regenerate from current findings (accepts current debt; review the diff)
+pnpm run editorial:baseline:prune   # drop only resolved entries so the baseline shrinks
+```
+
+When CI reports stale entries, run the prune command and commit the smaller
+baseline. Only regenerate when intentionally accepting new debt — that diff must
+be reviewed like any other change.
+
 ### Check links
 
 ```bash
