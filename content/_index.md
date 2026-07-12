@@ -12,7 +12,7 @@
 | [community](./community/) | 57 entries | 2026-07-12 |
 | [digests](./digests/) | 1 entries | 2026-07-12 |
 | [observability](./observability/) | 16 entries | 2026-07-12 |
-| [projects](./projects/) | 188 entries | 2026-07-12 |
+| [projects](./projects/) | 282 entries | 2026-07-12 |
 | [research](./research/) | 130 entries | 2026-07-12 |
 | [skills](./skills/) | 28 entries | 2026-07-12 |
 | [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-12 |
@@ -21,29 +21,29 @@
 
 ## Recently Added
 
+- [Agent Lightning](./projects/training-and-alignment/agent-lightning.md)
+- [Amphion](./projects/frameworks/amphion.md)
+- [Apache Arrow](./projects/data-and-retrieval/apache-arrow.md)
+- [Bark](./projects/foundation-models/bark.md)
+- [BISHENG](./projects/agent-systems/bisheng.md)
+- [Chandra](./projects/data-and-retrieval/chandra-ocr.md)
+- [ChatTTS](./projects/foundation-models/chattts.md)
+- [Cognita](./projects/data-and-retrieval/cognita.md)
 - [CopilotKit](./projects/frameworks/copilotkit.md)
-- [DeerFlow](./projects/frameworks/deer-flow.md)
-- [FastGPT](./projects/data-and-retrieval/fastgpt.md)
-- [GenAI Processors](./projects/frameworks/genai-processors.md)
-- [InternVideo](./projects/foundation-models/internvideo.md)
-- [MaxKB](./projects/agent-systems/maxkb.md)
-- [MLX Audio](./projects/foundation-models/mlx-audio.md)
-- [Mobile-Agent](./projects/agent-systems/mobileagent.md)
-- [PraisonAI](./projects/frameworks/praisonai.md)
-- [SillyTavern](./projects/agent-systems/sillytavern.md)
+- [Coqui TTS](./projects/frameworks/coqui-tts.md)
 
 ## Most Popular
 
 - [Hermes Agent](./projects/agent-systems/hermes-agent.md) — ⭐ 213237
 - [AutoGPT](./projects/frameworks/autogpt.md) — ⭐ 184931
 - [Ollama](./projects/inference-engines/ollama.md) — ⭐ 174059
+- [Stable Diffusion WebUI](./projects/frameworks/stable-diffusion-webui.md) — ⭐ 164197
 - [Dify](./projects/frameworks/dify.md) — ⭐ 145081
 - [LangChain](./projects/frameworks/langchain.md) — ⭐ 139206
 - [Firecrawl](./projects/data-and-retrieval/firecrawl.md) — ⭐ 132342
 - [ComfyUI](./projects/frameworks/comfyui.md) — ⭐ 119901
 - [llama.cpp](./projects/inference-engines/llama-cpp.md) — ⭐ 116399
 - [Whisper](./projects/foundation-models/whisper.md) — ⭐ 104543
-- [DeepSeek-V3 / R1](./projects/foundation-models/deepseek-v3-r1.md) — ⭐ 103749
 
 ## Browse All
 
@@ -64,6 +64,7 @@
 - [Agent Builder Learning Path](./skills/learning-paths/agent-builder.md) — Project-first path for building reliable tool-using agents and multi-agent systems
 - [Agent Builder — Role Overview](./skills/by-role/agent-builder-role.md) — Role overview mapping the Agent Builder job to the Arsenal's learning paths, skill guides, and tooling
 - [Agent Design](./skills/applied/agent-design.md) — The skill of designing reliable LLM agents: tool interfaces, control loops, guardrails, and failure recovery
+- [Agent Lightning](./projects/training-and-alignment/agent-lightning.md) — A Microsoft framework for training and optimizing AI agents, including reinforcement learning, that decouples the training loop from any existing agent
 - [Agent Reach](./tools/data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
@@ -92,8 +93,7 @@
 - [The Alignment Handbook (Hugging Face)](./projects/training-and-alignment/alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [Allowlist Tools Per Agent Role](./tips-and-tricks/agents-and-orchestration/allowlist-tools-per-agent-role.md) — 
 - [AlpacaEval 2.0 (Length-Controlled)](./benchmarks/evaluation-methods/alpacaeval.md) — 
+- [Amphion](./projects/frameworks/amphion.md) — An open toolkit for audio, music, and speech generation that gathers reproducible implementations of TTS, singing-voice, vocoder, and audio-generation models
 - [Andrej Karpathy](./community/people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./community/people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [any-agent](./tools/orchestration/any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
-- [Anyscale](./tools/serving-and-deployment/anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
-- [AnythingLLM](./projects/data-and-retrieval/anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
