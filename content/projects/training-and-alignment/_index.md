@@ -31,15 +31,15 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 ### Recently Added
 
 - [DeepSpec](./deepspec.md)
+- [mlx-tune](./mlx-tune.md)
 - [OpenEnv](./openenv.md)
+- [rLLM](./rllm.md)
 - [SkillOpt](./skillopt.md)
 - [Agent Lightning](./agent-lightning.md)
 - [GPT-NeoX](./gpt-neox.md)
 - [H2O LLM Studio](./h2o-llmstudio.md)
 - [LoRA for Diffusion (cloneofsimo)](./lora-diffusion.md)
 - [Oumi](./oumi.md)
-- [Transformer Lab](./transformerlab.md)
-- [VLM-R1](./vlm-r1.md)
 
 ### Most Popular
 
@@ -64,12 +64,14 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [H2O LLM Studio](./h2o-llmstudio.md) — A framework and no-code GUI from H2O.ai for fine-tuning LLMs, supporting LoRA/QLoRA, RLHF/DPO, and experiment tracking without writing training code
 - [LitGPT](./litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
 - [LoRA for Diffusion (cloneofsimo)](./lora-diffusion.md) — An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters
+- [mlx-tune](./mlx-tune.md) — Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows
 - [ms-swift](./ms-swift.md) — ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends
 - [nanoGPT](./nanogpt.md) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
 - [Open R1 (Hugging Face)](./open-r1.md) — Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
 - [OpenEnv](./openenv.md) — Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
 - [OpenRLHF](./openrlhf.md) — High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale
 - [Oumi](./oumi.md) — An end-to-end open platform to fine-tune, evaluate, and deploy foundation LLMs and VLMs, spanning data prep, training, evaluation
+- [rLLM](./rllm.md) — Reinforcement-learning framework for training language agents across model backends, sandboxes, rollouts, and benchmarks
 - [SkillOpt](./skillopt.md) — Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen
 - [Transformer Lab](./transformerlab.md) — An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters
 - [verl](./verl.md) — ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
