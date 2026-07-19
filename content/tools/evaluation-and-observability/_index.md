@@ -31,12 +31,12 @@ Before picking a tool in this phase, consider:
 - [AI Infra Guard](./ai-infra-guard.md)
 - [EvalScope](./evalscope.md)
 - [FuzzyAI](./fuzzyai.md)
+- [Inspect Petri](./inspect-petri.md)
 - [Laminar](./laminar.md)
 - [OpenJudge](./openjudge.md)
 - [UltraEval-Audio](./ultraeval-audio.md)
 - [UQLM](./uqlm.md)
 - [Giskard OSS](./giskard-oss.md)
-- [AgentOps](./agentops.md)
 
 ### Most Popular
 
@@ -61,6 +61,7 @@ _No star-tracked entries yet._
 - [Guardrails AI](./guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Humanloop](./humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
 - [Inspect (UK AI Safety Institute)](./inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
+- [Inspect Petri](./inspect-petri.md) — An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior
 - [Laminar](./laminar.md) — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - [LangSmith](./langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - [LangWatch](./langwatch.md) — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud

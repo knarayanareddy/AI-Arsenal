@@ -7,7 +7,7 @@
 | Sub-section | Count | Last Updated |
 |---|---:|---|
 | [architectures](./architectures/) | 29 entries | 2026-07-19 |
-| [benchmarks](./benchmarks/) | 50 entries | 2026-07-19 |
+| [benchmarks](./benchmarks/) | 52 entries | 2026-07-19 |
 | [build examples](./build-examples/) | 8 entries | 2026-07-19 |
 | [community](./community/) | 57 entries | 2026-07-19 |
 | [digests](./digests/) | 1 entries | 2026-07-19 |
@@ -16,12 +16,13 @@
 | [research](./research/) | 132 entries | 2026-07-19 |
 | [skills](./skills/) | 28 entries | 2026-07-19 |
 | [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-19 |
-| [tools](./tools/) | 238 entries | 2026-07-19 |
+| [tools](./tools/) | 241 entries | 2026-07-19 |
 | [trending](./trending/) | 4 entries | 2026-07-19 |
 
 ## Recently Added
 
 - [Agentic Security](./tools/evaluation-and-observability/agentic-security.md)
+- [Envoy AI Gateway](./tools/serving-and-deployment/ai-gateway.md)
 - [AI Infra Guard](./tools/evaluation-and-observability/ai-infra-guard.md)
 - [Airweave](./projects/data-and-retrieval/airweave.md)
 - [Hugging Face AI Sheets](./tools/data-ingestion/aisheets.md)
@@ -30,7 +31,6 @@
 - [candle-vllm](./projects/inference-engines/candle-vllm.md)
 - [DeepAnalyze](./projects/agent-systems/deepanalyze.md)
 - [DeepSeek-OCR](./projects/foundation-models/deepseek-ocr.md)
-- [DeepSpec](./projects/training-and-alignment/deepspec.md)
 
 ## Most Popular
 
@@ -69,6 +69,8 @@
 - [Agent Skills — Ecosystem](./skills/agent-skills/agent-skills-ecosystem.md) — Verified map of the agent-skills ecosystem: the official spec, first-party packs, and major community collections
 - [Agent Skills — Overview](./skills/agent-skills/agent-skills-overview.md) — What agent skills are: reusable instruction packs for coding agents, how they work, and how to author them
 - [Agenta](./projects/benchmarks-and-evals/agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AgentBench](./benchmarks/agents/agentbench.md) — 
+- [AgentDojo](./benchmarks/safety/agentdojo.md) — 
 - [AgentHarm](./benchmarks/safety/agentharm.md) — 
 - [Agentic Security](./tools/evaluation-and-observability/agentic-security.md) — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
 - [AgentOps](./tools/evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
@@ -78,6 +80,7 @@
 - [AI Engineer Learning Path](./skills/learning-paths/ai-engineer.md) — Six-month practical path for becoming an AI engineer who can ship LLM, RAG, and agent systems
 - [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
+- [Envoy AI Gateway](./tools/serving-and-deployment/ai-gateway.md) — An Envoy Gateway extension for routing and governing traffic to generative AI services
 - [AI Infra Guard](./tools/evaluation-and-observability/ai-infra-guard.md) — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
 - [AIBrix](./projects/inference-engines/aibrix.md) — Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference
@@ -330,6 +333,7 @@
 - [Fara](./projects/foundation-models/fara.md) — Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark
 - [fast.ai](./community/creators/fastai-youtube.md) — 
 - [FastAPI](./tools/serving-and-deployment/fastapi.md) — Python web framework for building APIs around AI services and model workflows
+- [FastEmbed](./tools/model-layer/fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [faster-whisper](./projects/inference-engines/faster-whisper.md) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - [FastGPT](./projects/data-and-retrieval/fastgpt.md) — Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data
 - [FastVideo](./projects/inference-engines/fastvideo.md) — A unified inference and post-training framework for accelerating video-generation models via techniques like sliding-tile attention and distillation
@@ -439,6 +443,7 @@
 - [Inference Optimization](./skills/core-concepts/inference-optimization.md) — Conceptual guide to LLM serving performance: batching, KV cache, speculative decoding, and latency metrics
 - [InsForge](./projects/agent-systems/insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
 - [Inspect (UK AI Safety Institute)](./tools/evaluation-and-observability/inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
+- [Inspect Petri](./tools/evaluation-and-observability/inspect-petri.md) — An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior
 - [Inspect Retrieved Chunks Alongside the Answer When Debugging Hallucinations](./tips-and-tricks/debugging-and-observability/inspect-retrieved-chunks-beside-the-answer.md) — 
 - [Inspect a Random Sample of Training Data by Hand Before Every Run](./tips-and-tricks/fine-tuning/inspect-your-training-data-by-hand.md) — 
 - [Instruct the Model to Answer Only From Retrieved Context, With a No-Answer Escape Hatch](./tips-and-tricks/rag-and-retrieval/instruct-the-model-to-answer-only-from-retrieved-context.md) — 

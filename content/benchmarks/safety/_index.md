@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [AgentDojo](./agentdojo.md)
 - [AgentHarm](./agentharm.md)
 - [Do-Not-Answer](./do-not-answer.md)
 - [HarmBench](./harmbench.md)
@@ -23,6 +24,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [AgentDojo](./agentdojo.md) — 
 - [AgentHarm](./agentharm.md) — 
 - [Do-Not-Answer](./do-not-answer.md) — 
 - [HarmBench](./harmbench.md) — 

@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Envoy AI Gateway](./ai-gateway.md)
 - [MCP Context Forge](./mcp-context-forge.md)
 - [RamaLama](./ramalama.md)
 - [ToolHive](./toolhive.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
 - [KServe](./kserve.md)
-- [KubeAI](./kubeai.md)
 
 ### Most Popular
 
@@ -44,6 +44,7 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [Envoy AI Gateway](./ai-gateway.md) — An Envoy Gateway extension for routing and governing traffic to generative AI services
 - [Anyscale](./anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [AWS Bedrock](./aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Azure AI Studio](./azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications

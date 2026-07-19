@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [FastEmbed](./fastembed.md)
 - [Hugging Face Accelerate](./accelerate.md)
 - [Cerebras Inference](./cerebras-inference.md)
 - [ClearML](./clearml.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Liger Kernel](./liger-kernel.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
 - [Megatron-LM](./megatron-lm.md)
-- [OpenPipe ART](./openpipe-art.md)
 
 ### Most Popular
 
@@ -51,6 +51,7 @@ _No star-tracked entries yet._
 - [Cohere](./cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - [DeepSpeed](./deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
 - [DVC](./dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
+- [FastEmbed](./fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [Groq](./groq.md) — Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second
 - [Guidance](./guidance.md) — Microsoft guidance library for controlling and constraining language model generation
 - [Hugging Face Hub](./hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts

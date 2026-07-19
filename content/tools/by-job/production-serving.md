@@ -151,6 +151,7 @@ This table is exhaustive for tools tagged with job = production-serving.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Envoy AI Gateway](../serving-and-deployment/ai-gateway.md) | serving and deployment | open-source | Yes | Yes | Yes | go | recommended |
 | [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | usage-based | Yes | No | No | python | solid-choice |
 | [Baseten](../serving-and-deployment/baseten.md) | serving and deployment | usage-based | Yes | No | No | python | recommended |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | freemium | Yes | Yes | Yes | python | recommended |

@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-19T21:17:34.654Z | Entries: 1056 | Schema version: 1.0.0
+Generated: 2026-07-19T21:22:58.055Z | Entries: 1061 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 322
-- Tools: 211
+- Tools: 214
 - Papers: 128
 - Tips: 171
 - People: 25
@@ -17,7 +17,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Architectures: 29
 - Observability: 16
 - Community: 32
-- Benchmarks: 50
+- Benchmarks: 52
 - Trending: 4
 
 ## Navigation
@@ -218,9 +218,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### vector-search
 - Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - FAISS — Meta's foundational library for efficient similarity search over billions of dense vectors
+- FastEmbed — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - Marqo — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
 - Meilisearch — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
-- Pinecone — A managed vector database for production semantic search applications
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
@@ -354,6 +354,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ## Benchmark Catalog
 
+- AgentBench
+- AgentDojo
 - AgentHarm
 - Aider Polyglot Coding Benchmark
 - AlpacaEval 2.0 (Length-Controlled)
@@ -362,8 +364,6 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - BEIR
 - BIG-Bench Hard (BBH)
 - BIRD (Big Bench for Large-Scale Database Grounded Text-to-SQL)
-- BrowseComp
-- ChartQA
 
 ## Trending Signals
 

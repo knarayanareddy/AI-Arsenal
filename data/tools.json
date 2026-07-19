@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-19T21:17:31.273Z",
-  "count": 211,
+  "generated_at": "2026-07-19T21:22:54.218Z",
+  "count": 214,
   "items": [
     {
       "id": "accelerate",
@@ -784,6 +784,90 @@
       "word_count": 326,
       "body_html": "<h2>Overview</h2>\n<p>A platform for centrally governing AI agents across a team or company: defining what skills/tools an agent may use, enforcing policy, and tracking which agents are deployed where.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>AGNT.Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you need centralized policy and skill governance across many internal AI agents in a regulated org. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Centralized skill/permission registry for agents</li>\n<li>Policy enforcement across multiple deployed agents</li>\n<li>Audit visibility into agent capabilities org-wide</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\"># Open the project page and follow the documented onboarding.\n# https://github.com/search?q=agnt.hub\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you need centralized policy and skill governance across many internal AI agents in a regulated org</li>\n<li><strong>Scenario</strong>: multiple teams are building agents independently and you need a shared skill/permission registry</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you are a solo developer or small team building a single agent — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You need centralized policy and skill governance across many internal AI agents in a regulated org</li>\n<li>Multiple teams are building agents independently and you need a shared skill/permission registry</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You are a solo developer or small team building a single agent</p>\n</li>\n<li>\n<p>You need an open-source, self-hostable option for compliance reasons</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Reference this entry by ID from guides, stacks, and build examples.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/search?q=agnt.hub\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AGNT.Hub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Featured in <a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Techpresso</a>.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
       "body_text": "Overview A platform for centrally governing AI agents across a team or company: defining what skills/tools an agent may use, enforcing policy, and tracking which agents are deployed where. Why It's in the Arsenal AGNT.Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you need centralized policy and skill governance across many internal AI agents in a regulated org. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Centralized skill/permission registry for agents Policy enforcement across multiple deployed agents Audit visibility into agent capabilities org wide Architecture / How It Works Acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy. Getting Started Use Cases 1. Scenario : you need centralized policy and skill governance across many internal AI agents in a regulated org 2. Scenario : multiple teams are building agents independently and you need a shared skill/permission registry 3. Scenario where this is NOT the right fit : you are a solo developer or small team building a single agent — evaluate an alternative instead Strengths You need centralized policy and skill governance across many internal AI agents in a regulated org Multiple teams are building agents independently and you need a shared skill/permission registry Limitations / When NOT to Use You are a solo developer or small team building a single agent You need an open source, self hostable option for compliance reasons Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources AGNT.Hub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "ai-gateway",
+      "name": "Envoy AI Gateway",
+      "type": "tool",
+      "job": [
+        "production-serving",
+        "deployment"
+      ],
+      "description": "An Envoy Gateway extension for routing and governing traffic to generative AI services",
+      "url": "content/tools/serving-and-deployment/ai-gateway",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0); infrastructure, provider, and cluster costs are separate",
+      "tags": [
+        "inference",
+        "routing",
+        "cloud",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "go"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "The gateway is open source; managed providers and model endpoints have their own charges",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/envoyproxy/ai-gateway",
+      "docs_url": "https://aigateway.envoyproxy.io/docs/",
+      "github_url": "https://github.com/envoyproxy/ai-gateway",
+      "alternatives": [
+        "litellm"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "recommended",
+      "verdict_rationale": "A credible cloud-native gateway boundary for teams that already operate Envoy Gateway and Kubernetes",
+      "status": "active",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "production",
+        "prototype"
+      ],
+      "best_when": [
+        "You need a Kubernetes-native policy boundary for authentication, top-level routing, and rate limiting across multiple model providers",
+        "You operate self-hosted inference clusters and want a second gateway tier to select or govern model endpoints",
+        "Your platform team already understands Envoy Gateway and prefers declarative infrastructure over a Python SDK"
+      ],
+      "avoid_when": [
+        "You need a single-process local proxy with minimal dependencies; an Envoy Gateway deployment is a larger operational commitment",
+        "Your workload depends on provider-specific features that are not represented consistently through the gateway abstraction",
+        "You cannot operate Kubernetes, Envoy Gateway, and the supporting control-plane resources"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "README and official documentation reviewed 2026-07-19; two-tier gateway and Envoy Gateway dependency are load-bearing placement details.",
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/ai-gateway.md",
+      "slug": "ai-gateway",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "Envoy AI Gateway",
+      "summary": "An Envoy Gateway extension for routing and governing traffic to generative AI services",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 602,
+      "body_html": "<h2>Overview</h2>\n<p>Envoy AI Gateway extends Envoy Gateway for generative-AI traffic. Its reference architecture separates a tier-one gateway, which handles authentication, global routing, and rate limits, from a tier-two gateway in front of self-hosted model-serving clusters. The project exposes provider integrations while keeping the traffic boundary in the cloud-native gateway layer.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>AI gateways often collapse provider translation, authentication, routing, and inference operations into one application. Envoy AI Gateway is worth tracking because it brings those concerns into the Envoy Gateway/Kubernetes ecosystem, where platform teams already manage policy and traffic infrastructure. It is a stronger fit for an infrastructure-owned boundary than for an application developer looking for a quick OpenAI-compatible proxy.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Tier-one and tier-two gateway pattern for hosted providers and self-hosted inference</li>\n<li>Authentication, global routing, and rate-limiting controls at the gateway boundary</li>\n<li>Provider integrations including OpenAI, Azure OpenAI, Gemini, Vertex AI, Bedrock, Mistral, Cohere, Groq, and others</li>\n<li>Endpoint-picker support for fine-grained selection within self-hosted model clusters</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>The tier-one gateway is the central application entry point. It applies cross-provider policy and routes requests toward provider services or a tier-two gateway. The tier-two gateway sits closer to a self-hosted serving cluster and can select among model endpoints. This split preserves a global policy layer while allowing model-serving concerns to remain local to a cluster, but it also creates two deployment surfaces and two places to reason about authentication and observability.</p>\n<h2>Getting Started</h2>\n<p>The project is designed to run with Envoy Gateway and Kubernetes rather than as a standalone binary:</p>\n<pre><code class=\"language-bash\">git clone https://github.com/envoyproxy/ai-gateway.git\ncd ai-gateway\nkubectl version --client\n</code></pre>\n<p>Follow the official <a href=\"https://aigateway.envoyproxy.io/docs/getting-started/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">getting-started guide</a> to install Envoy Gateway, apply the AI Gateway CRDs/manifests, configure provider credentials as Kubernetes secrets, and send a request through the resulting gateway. Keep provider keys in cluster secrets rather than embedding them in manifests or shell history.</p>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: centralize authentication and rate limits for applications calling several hosted model providers</li>\n<li><strong>Scenario</strong>: expose a self-hosted vLLM or equivalent cluster behind a tier-two gateway while retaining a platform-owned tier-one boundary</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: route a local developer's requests through a lightweight desktop proxy — the Kubernetes control plane is unnecessary overhead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Aligns AI traffic policy with established Envoy Gateway and Kubernetes operations</li>\n<li>Separates global provider routing from local self-hosted endpoint selection</li>\n<li>Apache-2.0 project in a mature cloud-native ecosystem rather than a provider-specific SDK</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>The two-tier model increases installation, upgrade, and troubleshooting surface compared with a single gateway process</li>\n<li>Provider APIs and feature parity continue to evolve; a common route does not erase provider-specific semantics</li>\n<li>The project does not remove the need to secure provider credentials, enforce payload policy, or instrument downstream model servers</li>\n<li>Kubernetes and Envoy expertise are prerequisites for a production deployment</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Place tier one behind the platform's existing ingress and identity controls; keep provider credentials in Kubernetes secrets.</li>\n<li>Put tier two close to the serving cluster and test endpoint selection under realistic latency and capacity conditions.</li>\n<li>Compare with <a href=\"mcp-context-forge.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">MCP Context Forge</a> when protocol federation and registry governance matter more than Envoy-native traffic policy.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://aigateway.envoyproxy.io/docs/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official documentation</a></li>\n<li><a href=\"https://aigateway.envoyproxy.io/docs/getting-started/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Getting started</a></li>\n<li><a href=\"https://github.com/envoyproxy/ai-gateway\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/envoyproxy/gateway\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Envoy Gateway</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>1.8k GitHub stars verified via the repository API on 2026-07-19; Apache-2.0 and actively developed under the Envoy Proxy ecosystem. Adoption value is highest for teams with existing Kubernetes gateway operations.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-19 by @maintainer</em></p>\n",
+      "body_text": "Overview Envoy AI Gateway extends Envoy Gateway for generative AI traffic. Its reference architecture separates a tier one gateway, which handles authentication, global routing, and rate limits, from a tier two gateway in front of self hosted model serving clusters. The project exposes provider integrations while keeping the traffic boundary in the cloud native gateway layer. Why It's in the Arsenal AI gateways often collapse provider translation, authentication, routing, and inference operations into one application. Envoy AI Gateway is worth tracking because it brings those concerns into the Envoy Gateway/Kubernetes ecosystem, where platform teams already manage policy and traffic infrastructure. It is a stronger fit for an infrastructure owned boundary than for an application developer looking for a quick OpenAI compatible proxy. Key Features Tier one and tier two gateway pattern for hosted providers and self hosted inference Authentication, global routing, and rate limiting controls at the gateway boundary Provider integrations including OpenAI, Azure OpenAI, Gemini, Vertex AI, Bedrock, Mistral, Cohere, Groq, and others Endpoint picker support for fine grained selection within self hosted model clusters Architecture / How It Works The tier one gateway is the central application entry point. It applies cross provider policy and routes requests toward provider services or a tier two gateway. The tier two gateway sits closer to a self hosted serving cluster and can select among model endpoints. This split preserves a global policy layer while allowing model serving concerns to remain local to a cluster, but it also creates two deployment surfaces and two places to reason about authentication and observability. Getting Started The project is designed to run with Envoy Gateway and Kubernetes rather than as a standalone binary: Follow the official getting started guide to install Envoy Gateway, apply the AI Gateway CRDs/manifests, configure provider credentials as Kubernetes secrets, and send a request through the resulting gateway. Keep provider keys in cluster secrets rather than embedding them in manifests or shell history. Use Cases 1. Scenario : centralize authentication and rate limits for applications calling several hosted model providers 2. Scenario : expose a self hosted vLLM or equivalent cluster behind a tier two gateway while retaining a platform owned tier one boundary 3. Scenario where this is NOT the right fit : route a local developer's requests through a lightweight desktop proxy — the Kubernetes control plane is unnecessary overhead Strengths Aligns AI traffic policy with established Envoy Gateway and Kubernetes operations Separates global provider routing from local self hosted endpoint selection Apache 2.0 project in a mature cloud native ecosystem rather than a provider specific SDK Limitations / When NOT to Use The two tier model increases installation, upgrade, and troubleshooting surface compared with a single gateway process Provider APIs and feature parity continue to evolve; a common route does not erase provider specific semantics The project does not remove the need to secure provider credentials, enforce payload policy, or instrument downstream model servers Kubernetes and Envoy expertise are prerequisites for a production deployment Integration Patterns Place tier one behind the platform's existing ingress and identity controls; keep provider credentials in Kubernetes secrets. Put tier two close to the serving cluster and test endpoint selection under realistic latency and capacity conditions. Compare with MCP Context Forge when protocol federation and registry governance matter more than Envoy native traffic policy. Resources Official documentation Getting started GitHub Envoy Gateway Buzz & Reception 1.8k GitHub stars verified via the repository API on 2026 07 19; Apache 2.0 and actively developed under the Envoy Proxy ecosystem. Adoption value is highest for teams with existing Kubernetes gateway operations. Last reviewed: 2026 07 19 by @maintainer"
     },
     {
       "id": "ai-infra-guard",
@@ -5191,6 +5275,93 @@
       "body_text": "TL;DR: Python web framework for building APIs around AI services and model workflows. Open source or free to start. Best for API wrappers for AI apps. Overview A modern Python web framework for building APIs, widely used to wrap AI/ML models and pipelines behind an HTTP interface with automatic request/response validation and docs. Why It's in the Arsenal FastAPI earns a place in the Arsenal because it directly addresses a recurring decision point: you're wrapping an AI/ML model or pipeline in a Python API and want async support, automatic docs, and type validation. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Async first request handling Automatic OpenAPI docs and request validation via type hints Pairs naturally with Pydantic for structured request/response models Architecture / How It Works Endpoints are defined as typed Python functions; FastAPI generates request validation, serialization, and interactive API docs automatically from those type annotations. Getting Started Use Cases 1. Scenario : you're wrapping an AI/ML model or pipeline in a Python API and want async support, automatic docs, and type validation 2. Scenario : you need a lightweight, widely adopted framework that pairs well with Pydantic based structured output 3. Scenario where this is NOT the right fit : you need a full batteries included web framework with built in admin/ORM tooling (Django may fit better for non AI centric apps) — evaluate an alternative instead Strengths You're wrapping an AI/ML model or pipeline in a Python API and want async support, automatic docs, and type validation You need a lightweight, widely adopted framework that pairs well with Pydantic based structured output Limitations / When NOT to Use You need a full batteries included web framework with built in admin/ORM tooling (Django may fit better for non AI centric apps) Your team is not using Python for the serving layer Integration Patterns Compare against Chainlit, Gradio, Mesop, Streamlit before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID fastapi. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for prototyping, production serving. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "fastembed",
+      "name": "FastEmbed",
+      "type": "tool",
+      "job": [
+        "vector-search"
+      ],
+      "description": "A lightweight ONNX Runtime library for embedding and reranking without PyTorch",
+      "url": "content/tools/model-layer/fastembed",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (Apache-2.0); model downloads and compute are your responsibility",
+      "tags": [
+        "embeddings",
+        "retrieval",
+        "efficiency",
+        "inference",
+        "onnx",
+        "local",
+        "serverless"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "The library is free; model downloads, storage, and compute are not",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/qdrant/fastembed",
+      "docs_url": "https://qdrant.github.io/fastembed/",
+      "github_url": "https://github.com/qdrant/fastembed",
+      "alternatives": [
+        "sentence-transformers"
+      ],
+      "integrates_with": [
+        "qdrant"
+      ],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "recommended",
+      "verdict_rationale": "A practical low-dependency embedding path for CPU, serverless, and Qdrant-backed retrieval workloads",
+      "status": "active",
+      "phase": "model-layer",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You need embedding generation in a CPU-oriented service or serverless function without pulling the full PyTorch stack",
+        "Your retrieval pipeline needs dense, sparse, or late-interaction encoders behind one Python API",
+        "You want to batch encoding work locally and hand vectors directly to Qdrant or another vector store"
+      ],
+      "avoid_when": [
+        "You require every Hugging Face model or custom transformer architecture to run unchanged; supported ONNX model definitions are a narrower set",
+        "You need PyTorch-native fine-tuning or gradient access; FastEmbed is an inference library",
+        "Your quality decision depends on a vendor-reported speed claim without benchmarking your model, hardware, and batch size"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "README and official documentation reviewed 2026-07-19; ONNX Runtime, model coverage, and Qdrant integration caveats retained.",
+      "entry_type": "tool",
+      "path": "content/tools/model-layer/fastembed.md",
+      "slug": "fastembed",
+      "section_path": "content/tools/model-layer",
+      "display_name": "FastEmbed",
+      "summary": "A lightweight ONNX Runtime library for embedding and reranking without PyTorch",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 557,
+      "body_html": "<h2>Overview</h2>\n<p>FastEmbed is Qdrant's Python library for generating embeddings and reranking scores with ONNX Runtime. The README emphasizes a small dependency footprint and CPU-friendly execution instead of downloading the PyTorch ecosystem. Its model APIs cover dense text, sparse text, late interaction, image, and multimodal late-interaction embeddings, with model files downloaded on first use.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Embedding generation is often the quietest source of deployment weight in a RAG stack: a service that only needs vectors should not necessarily carry a training framework and its GPU dependencies. FastEmbed gives the Arsenal a concrete low-overhead alternative to Sentence Transformers, while its sparse and late-interaction APIs make it more than a thin wrapper around one dense encoder. Its Qdrant integration is useful, but the library remains usable with other stores.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Dense <code>TextEmbedding</code> models with query/passage-oriented encoders</li>\n<li>Sparse encoders such as SPLADE++ and late-interaction text models such as ColBERT</li>\n<li>Image and multimodal late-interaction embedding APIs</li>\n<li>CPU and GPU package options through ONNX Runtime, plus data-parallel batch encoding</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>FastEmbed loads an ONNX model description from its supported model registry and runs inference through ONNX Runtime. The embedding classes expose generators so callers can stream or batch vectors without materializing every intermediate tensor. Separate classes represent dense, sparse, late-interaction, and multimodal outputs; downstream code therefore needs to preserve the corresponding vector shape and distance semantics rather than treating every result as one dense array.</p>\n<h2>Getting Started</h2>\n<p>Install the CPU package, then instantiate an embedding model:</p>\n<pre><code class=\"language-bash\">python -m venv .venv\nsource .venv/bin/activate\npip install fastembed\n</code></pre>\n<pre><code class=\"language-python\">from fastembed import TextEmbedding\n\ndocuments = [\"FastEmbed runs embedding inference with ONNX Runtime.\"]\nmodel = TextEmbedding(model_name=\"BAAI/bge-small-en-v1.5\")\nvectors = list(model.embed(documents))\nprint(len(vectors), len(vectors[0]))\n</code></pre>\n<p>The first model invocation downloads the selected model files. For a CUDA-oriented install, use the documented <code>fastembed-gpu</code> package and benchmark it against the CPU package on your actual batch sizes:</p>\n<pre><code class=\"language-bash\">pip install fastembed-gpu\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: generate document and query vectors in a lightweight ingestion worker before writing them to Qdrant</li>\n<li><strong>Scenario</strong>: add sparse or late-interaction retrieval to an existing Python service without adopting a full training framework</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: fine-tune an encoder or inspect gradients — use a training-oriented transformer stack instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Avoids the large PyTorch install for supported inference models</li>\n<li>One package covers several retrieval representation families</li>\n<li>Generator-based APIs and data parallelism fit batch ingestion workloads</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>ONNX conversion and model registry support determine what can run; arbitrary transformer checkpoints are not automatically compatible</li>\n<li>Embedding quality and dimensions are properties of the selected model, not of FastEmbed itself</li>\n<li>The README's speed and quality comparisons are workload-dependent and should not replace local measurements</li>\n<li>Multimodal and late-interaction paths have different storage and query-shape requirements than dense vectors</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use the <a href=\"https://qdrant.github.io/fastembed/qdrant/Usage_With_Qdrant/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qdrant integration examples</a> for collection dimensions, batching, and query/document prefixes.</li>\n<li>Keep the model name, ONNX revision, vector dimension, and distance metric in the index configuration so a model swap cannot silently corrupt retrieval.</li>\n<li>Compare with <a href=\"https://www.sbert.net/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Sentence Transformers</a> when you need broader model coverage or training-time control.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://qdrant.github.io/fastembed/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://qdrant.github.io/fastembed/examples/Supported_Models/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Supported models</a></li>\n<li><a href=\"https://github.com/qdrant/fastembed\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://qdrant.github.io/fastembed/qdrant/Usage_With_Qdrant/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qdrant usage</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>3.1k GitHub stars verified via the repository API on 2026-07-19; Apache-2.0 and maintained by Qdrant. Its strongest signal is practical adoption in lightweight retrieval services, not a claim that ONNX inference is universally faster or more accurate.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-19 by @maintainer</em></p>\n",
+      "body_text": "Overview FastEmbed is Qdrant's Python library for generating embeddings and reranking scores with ONNX Runtime. The README emphasizes a small dependency footprint and CPU friendly execution instead of downloading the PyTorch ecosystem. Its model APIs cover dense text, sparse text, late interaction, image, and multimodal late interaction embeddings, with model files downloaded on first use. Why It's in the Arsenal Embedding generation is often the quietest source of deployment weight in a RAG stack: a service that only needs vectors should not necessarily carry a training framework and its GPU dependencies. FastEmbed gives the Arsenal a concrete low overhead alternative to Sentence Transformers, while its sparse and late interaction APIs make it more than a thin wrapper around one dense encoder. Its Qdrant integration is useful, but the library remains usable with other stores. Key Features Dense TextEmbedding models with query/passage oriented encoders Sparse encoders such as SPLADE++ and late interaction text models such as ColBERT Image and multimodal late interaction embedding APIs CPU and GPU package options through ONNX Runtime, plus data parallel batch encoding Architecture / How It Works FastEmbed loads an ONNX model description from its supported model registry and runs inference through ONNX Runtime. The embedding classes expose generators so callers can stream or batch vectors without materializing every intermediate tensor. Separate classes represent dense, sparse, late interaction, and multimodal outputs; downstream code therefore needs to preserve the corresponding vector shape and distance semantics rather than treating every result as one dense array. Getting Started Install the CPU package, then instantiate an embedding model: The first model invocation downloads the selected model files. For a CUDA oriented install, use the documented fastembed gpu package and benchmark it against the CPU package on your actual batch sizes: Use Cases 1. Scenario : generate document and query vectors in a lightweight ingestion worker before writing them to Qdrant 2. Scenario : add sparse or late interaction retrieval to an existing Python service without adopting a full training framework 3. Scenario where this is NOT the right fit : fine tune an encoder or inspect gradients — use a training oriented transformer stack instead Strengths Avoids the large PyTorch install for supported inference models One package covers several retrieval representation families Generator based APIs and data parallelism fit batch ingestion workloads Limitations / When NOT to Use ONNX conversion and model registry support determine what can run; arbitrary transformer checkpoints are not automatically compatible Embedding quality and dimensions are properties of the selected model, not of FastEmbed itself The README's speed and quality comparisons are workload dependent and should not replace local measurements Multimodal and late interaction paths have different storage and query shape requirements than dense vectors Integration Patterns Use the Qdrant integration examples for collection dimensions, batching, and query/document prefixes. Keep the model name, ONNX revision, vector dimension, and distance metric in the index configuration so a model swap cannot silently corrupt retrieval. Compare with Sentence Transformers when you need broader model coverage or training time control. Resources Documentation Supported models GitHub Qdrant usage Buzz & Reception 3.1k GitHub stars verified via the repository API on 2026 07 19; Apache 2.0 and maintained by Qdrant. Its strongest signal is practical adoption in lightweight retrieval services, not a claim that ONNX inference is universally faster or more accurate. Last reviewed: 2026 07 19 by @maintainer"
+    },
+    {
       "id": "firecrawl-tool",
       "name": "Firecrawl",
       "type": "tool",
@@ -7400,6 +7571,93 @@
       "word_count": 460,
       "body_html": "<h2>Overview</h2>\n<p>Inspect is an LLM evaluation framework from the UK AI Safety Institute: you compose an eval from a dataset, a solver (the strategy that produces answers — a prompt, a tool-use loop, a multi-turn agent, a self-critique chain), and a scorer (exact match, pattern, or model-graded), then run it across providers with a rich interactive log viewer for post-hoc inspection. It's built for the evaluations governments and labs use to assess model capabilities and risks.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Evaluation is bifurcating: standardized benchmarks (lm-eval's turf) versus bespoke evals of agentic and safety-relevant behaviour, which need real code. Inspect is the best open answer for the second class, and its institutional provenance and log-viewer transparency make it credible where results carry weight. It complements, rather than competes with, the benchmark harness.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Solver/scorer abstraction expressing multi-step, tool-using, and self-critique evals — not just single-shot Q&amp;A</li>\n<li>Built-in tool support and sandboxing for agent evals; model-graded scoring with reference judges</li>\n<li>Interactive log viewer replaying messages, tool calls, and per-sample scores</li>\n<li>Provider-agnostic (OpenAI, Anthropic, Google, HF, vLLM, and more) via one model interface</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p><code>@task</code> composes dataset + solver + scorer. Solvers are chainable steps operating on a <code>TaskState</code> (messages, tool calls, model outputs); tools are Python functions the solver may invoke in a loop; scorers reduce completed states to metrics, optionally by calling a grader model. Every run writes a structured <code>.eval</code> log the viewer renders — the mechanism behind its debuggability.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install inspect-ai\ninspect eval my_eval.py --model openai/gpt-4o\ninspect view   # open the interactive log viewer\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: measuring whether an agent completes a multi-step tool task safely — model the tools and success criteria as a solver+scorer</li>\n<li><strong>Scenario</strong>: capability/safety evals whose results need audit-grade transparency into every model interaction</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you just need MMLU/GSM8K numbers — reach for lm-evaluation-harness's ready tasks instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Expresses agentic/tool-using evals natively, where benchmark harnesses assume single-shot tasks</li>\n<li>Log viewer makes eval results inspectable and defensible — a real differentiator for safety work</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>It's a framework: you author evals in Python, which is more effort than running a prebuilt benchmark suite</li>\n<li>Younger and smaller ecosystem than the established harnesses; fewer off-the-shelf tasks</li>\n</ul>\n<h2>Integration Patterns</h2>\n<p>Link this tool from reference stacks, decision trees, and project entries using its canonical ID <code>inspect-ai</code> rather than duplicating details.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/UKGovernmentBEIS/inspect_ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://inspect.aisi.org.uk\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Docs</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>2.3k GitHub stars (verified via API 2026-07-08); MIT; actively developed by the UK AI Safety Institute. Increasingly adopted for agentic and safety evaluations where authorship credibility matters.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview Inspect is an LLM evaluation framework from the UK AI Safety Institute: you compose an eval from a dataset, a solver (the strategy that produces answers — a prompt, a tool use loop, a multi turn agent, a self critique chain), and a scorer (exact match, pattern, or model graded), then run it across providers with a rich interactive log viewer for post hoc inspection. It's built for the evaluations governments and labs use to assess model capabilities and risks. Why It's in the Arsenal Evaluation is bifurcating: standardized benchmarks (lm eval's turf) versus bespoke evals of agentic and safety relevant behaviour, which need real code. Inspect is the best open answer for the second class, and its institutional provenance and log viewer transparency make it credible where results carry weight. It complements, rather than competes with, the benchmark harness. Key Features Solver/scorer abstraction expressing multi step, tool using, and self critique evals — not just single shot Q&A Built in tool support and sandboxing for agent evals; model graded scoring with reference judges Interactive log viewer replaying messages, tool calls, and per sample scores Provider agnostic (OpenAI, Anthropic, Google, HF, vLLM, and more) via one model interface Architecture / How It Works @task composes dataset + solver + scorer. Solvers are chainable steps operating on a TaskState (messages, tool calls, model outputs); tools are Python functions the solver may invoke in a loop; scorers reduce completed states to metrics, optionally by calling a grader model. Every run writes a structured .eval log the viewer renders — the mechanism behind its debuggability. Getting Started Use Cases 1. Scenario : measuring whether an agent completes a multi step tool task safely — model the tools and success criteria as a solver+scorer 2. Scenario : capability/safety evals whose results need audit grade transparency into every model interaction 3. Scenario where this is NOT the right fit : you just need MMLU/GSM8K numbers — reach for lm evaluation harness's ready tasks instead Strengths Expresses agentic/tool using evals natively, where benchmark harnesses assume single shot tasks Log viewer makes eval results inspectable and defensible — a real differentiator for safety work Limitations / When NOT to Use It's a framework: you author evals in Python, which is more effort than running a prebuilt benchmark suite Younger and smaller ecosystem than the established harnesses; fewer off the shelf tasks Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID inspect ai rather than duplicating details. Resources GitHub Docs Buzz & Reception 2.3k GitHub stars (verified via API 2026 07 08); MIT; actively developed by the UK AI Safety Institute. Increasingly adopted for agentic and safety evaluations where authorship credibility matters. Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "inspect-petri",
+      "name": "Inspect Petri",
+      "type": "tool",
+      "job": [
+        "evaluation",
+        "security-and-guardrails"
+      ],
+      "description": "An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior",
+      "url": "content/tools/evaluation-and-observability/inspect-petri",
+      "cost_model": "open-source",
+      "pricing_detail": "Open source (MIT); model-provider and compute costs are separate",
+      "tags": [
+        "evaluation",
+        "agents",
+        "alignment",
+        "security",
+        "tool-use",
+        "research"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "The software is open source; auditor, target, and judge model calls are not free",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/meridianlabs-ai/inspect_petri",
+      "docs_url": "https://meridianlabs-ai.github.io/inspect_petri/",
+      "github_url": "https://github.com/meridianlabs-ai/inspect_petri",
+      "alternatives": [
+        "inspect-ai"
+      ],
+      "integrates_with": [
+        "inspect-ai"
+      ],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "verdict": "watching",
+      "verdict_rationale": "A focused alignment-auditing layer for Inspect AI, with useful multi-turn probes but model-dependent evidence",
+      "status": "active",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "prototype"
+      ],
+      "best_when": [
+        "You need to turn a concrete alignment hypothesis into a repeatable multi-turn audit with an auditor, target, and judge model",
+        "Your audit needs simulated tools and rollback behavior rather than a single prompt-response safety check",
+        "You want transcript-level evidence that can be reviewed after a probe instead of only an aggregate refusal score"
+      ],
+      "avoid_when": [
+        "You need a production guardrail that blocks requests synchronously; Petri is an audit harness, not an inline policy enforcement layer",
+        "Your team cannot budget for several model roles per scenario or lacks a safe sandbox for tool simulations",
+        "You need stable Python APIs across major versions without pinning; the v3 release is not fully compatible with the v2 branch"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "README and official documentation reviewed 2026-07-19; v3/v2 compatibility caveat retained.",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/inspect-petri.md",
+      "slug": "inspect-petri",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "Inspect Petri",
+      "summary": "An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Resources",
+        "Buzz & Reception"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 588,
+      "body_html": "<h2>Overview</h2>\n<p>Inspect Petri is an auditing agent built on Inspect AI. Instead of asking a model one safety question, it generates an audit scenario from seed instructions, has an auditor model interact with a target model over multiple turns, simulates tools and rollbacks, and sends the resulting transcript to a judge model with a defined rubric. The unit of analysis is therefore a behavioral trace rather than a single refusal.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Most safety scanners stop at prompt-response probes or report a binary jailbreak result. Petri occupies a narrower but important space: testing an alignment hypothesis end to end while the model is allowed to act, revise plans, and encounter simulated tools. It belongs beside Inspect and agent-safety benchmarks as a way to investigate why a model exhibits a concerning behavior, not as a replacement for deployment-time controls.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Seed-instruction-driven generation of realistic audit scenarios</li>\n<li>Separate auditor, target, and judge model roles for multi-turn testing</li>\n<li>Simulated tools and rollback paths for probing agentic behavior</li>\n<li>Rubric-based scoring over complete transcripts</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Petri orchestrates an auditor model that constructs and drives an audit against a target model. The scenario can expose tools and reversible actions, allowing the target's behavior to unfold over several turns. A judge model then evaluates the transcript against the audit rubric. This separation makes the audit reusable across target models, but it also means that the auditor and judge are part of the measurement apparatus and can introduce their own blind spots.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/meridianlabs-ai/inspect_petri.git\ncd inspect_petri\npython -m venv .venv\nsource .venv/bin/activate\npip install -e .\n</code></pre>\n<p>The official documentation at <a href=\"https://meridianlabs-ai.github.io/inspect_petri/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">meridianlabs-ai.github.io/inspect_petri</a> contains the current CLI and scenario instructions. Pin the v3 revision when reproducing an audit; the README documents a separate <code>petri-v2</code> install for users who need the older API:</p>\n<pre><code class=\"language-bash\">pip install git+https://github.com/meridianlabs-ai/inspect_petri@petri-v2\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: test whether an agent follows a reward signal into an unsafe strategy across multiple tool calls</li>\n<li><strong>Scenario</strong>: compare a safety intervention by replaying the same audit hypothesis against two target-model configurations</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: enforce a live request policy at an API gateway — use a guardrail or policy layer for that path</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Models alignment questions as executable, multi-turn audits rather than static prompt lists</li>\n<li>Transcript judging makes the evidence inspectable and supports qualitative follow-up</li>\n<li>Simulated tools and rollback affordances cover failure modes that single-turn red-team suites cannot exercise</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>Auditor and judge models shape both the scenarios and the conclusions; a weak judge can hide or overstate a failure</li>\n<li>Simulated environments do not establish that the same behavior will occur with real credentials, tools, or users</li>\n<li>Multi-role audits can be expensive and slow compared with a batch of single-model probes</li>\n<li>The v3 Python/API surface changed from v2, so old audit code needs explicit version pinning</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Use Inspect AI as the surrounding evaluation runner and preserve Petri transcripts with the rest of the eval artifacts.</li>\n<li>Pair findings with <a href=\"../../benchmarks/safety/agentdojo.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AgentDojo</a> or AgentHarm to distinguish a bespoke hypothesis from benchmark coverage.</li>\n<li>Feed confirmed failure modes into a separate runtime guardrail and regression suite; Petri itself should not sit on the request path.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/meridianlabs-ai/inspect_petri\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://meridianlabs-ai.github.io/inspect_petri/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://inspect.aisi.org.uk/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Inspect AI</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<p>1.2k GitHub stars verified via the repository API on 2026-07-19; MIT-licensed and actively developed by Meridian Labs around the Inspect AI ecosystem. Its significance is in focused alignment auditing, not breadth of integrations.</p>\n<hr />\n<p><em>Last reviewed: 2026-07-19 by @maintainer</em></p>\n",
+      "body_text": "Overview Inspect Petri is an auditing agent built on Inspect AI. Instead of asking a model one safety question, it generates an audit scenario from seed instructions, has an auditor model interact with a target model over multiple turns, simulates tools and rollbacks, and sends the resulting transcript to a judge model with a defined rubric. The unit of analysis is therefore a behavioral trace rather than a single refusal. Why It's in the Arsenal Most safety scanners stop at prompt response probes or report a binary jailbreak result. Petri occupies a narrower but important space: testing an alignment hypothesis end to end while the model is allowed to act, revise plans, and encounter simulated tools. It belongs beside Inspect and agent safety benchmarks as a way to investigate why a model exhibits a concerning behavior, not as a replacement for deployment time controls. Key Features Seed instruction driven generation of realistic audit scenarios Separate auditor, target, and judge model roles for multi turn testing Simulated tools and rollback paths for probing agentic behavior Rubric based scoring over complete transcripts Architecture / How It Works Petri orchestrates an auditor model that constructs and drives an audit against a target model. The scenario can expose tools and reversible actions, allowing the target's behavior to unfold over several turns. A judge model then evaluates the transcript against the audit rubric. This separation makes the audit reusable across target models, but it also means that the auditor and judge are part of the measurement apparatus and can introduce their own blind spots. Getting Started The official documentation at meridianlabs ai.github.io/inspect petri contains the current CLI and scenario instructions. Pin the v3 revision when reproducing an audit; the README documents a separate petri v2 install for users who need the older API: Use Cases 1. Scenario : test whether an agent follows a reward signal into an unsafe strategy across multiple tool calls 2. Scenario : compare a safety intervention by replaying the same audit hypothesis against two target model configurations 3. Scenario where this is NOT the right fit : enforce a live request policy at an API gateway — use a guardrail or policy layer for that path Strengths Models alignment questions as executable, multi turn audits rather than static prompt lists Transcript judging makes the evidence inspectable and supports qualitative follow up Simulated tools and rollback affordances cover failure modes that single turn red team suites cannot exercise Limitations / When NOT to Use Auditor and judge models shape both the scenarios and the conclusions; a weak judge can hide or overstate a failure Simulated environments do not establish that the same behavior will occur with real credentials, tools, or users Multi role audits can be expensive and slow compared with a batch of single model probes The v3 Python/API surface changed from v2, so old audit code needs explicit version pinning Integration Patterns Use Inspect AI as the surrounding evaluation runner and preserve Petri transcripts with the rest of the eval artifacts. Pair findings with AgentDojo or AgentHarm to distinguish a bespoke hypothesis from benchmark coverage. Feed confirmed failure modes into a separate runtime guardrail and regression suite; Petri itself should not sit on the request path. Resources GitHub Documentation Inspect AI Buzz & Reception 1.2k GitHub stars verified via the repository API on 2026 07 19; MIT licensed and actively developed by Meridian Labs around the Inspect AI ecosystem. Its significance is in focused alignment auditing, not breadth of integrations. Last reviewed: 2026 07 19 by @maintainer"
     },
     {
       "id": "instructor",

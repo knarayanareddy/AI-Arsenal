@@ -1,8 +1,194 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-19T21:17:31.273Z",
-  "count": 50,
+  "generated_at": "2026-07-19T21:22:54.218Z",
+  "count": 52,
   "items": [
+    {
+      "id": "agentbench",
+      "title": "AgentBench",
+      "entry_type": "benchmark",
+      "category": "agents",
+      "modality": [
+        "text",
+        "code"
+      ],
+      "status": "active",
+      "protocol_confidence": "evolving",
+      "score_interpretation": "higher-is-better",
+      "what_it_measures": "LLM agent task completion across heterogeneous environments including web shopping, databases, knowledge graphs, operating systems, and household tasks, with a current function-calling release.",
+      "metrics": [
+        {
+          "name": "task success rate",
+          "direction": "higher",
+          "notes": "Environment-specific completion score aggregated across the benchmark tasks"
+        },
+        {
+          "name": "test-set score",
+          "direction": "higher",
+          "notes": "Leaderboard result under the selected AgentBench release and prompting protocol"
+        }
+      ],
+      "protocol": {
+        "dataset": "AgentBench environments",
+        "dataset_url": "https://github.com/THUDM/AgentBench",
+        "evaluation_setup": "Deploy an agent against the selected environment workers and score completed tasks; the current FC release uses function-calling prompts and containerized workers for five environments.",
+        "version": "Current AgentBench FC release; original v0.1/v0.2 environments remain available by tag"
+      },
+      "leaderboards": [
+        {
+          "name": "AgentBench leaderboard",
+          "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRR3Wl7wsCgHpwUw1_eUXW_fptAPLL3FkhnW_rua0O1Ji_GIVrpTjY5LaKAhwO-WeARjnY_KNw0SYNJ/pubhtml",
+          "last_checked": "2026-07-19"
+        }
+      ],
+      "known_issues": [
+        "The current FC release is not directly comparable with original v0.1/v0.2 scores because prompts, task coverage, and deployment differ",
+        "Environment dependencies are heavy: Docker workers, Redis, MySQL, operating-system images, and a Freebase database may be required",
+        "Different environments expose different tool APIs and failure modes, so the aggregate score hides important per-task variation",
+        "Several original environments and dependencies use older Python packages; reproducibility requires the documented Python and container versions"
+      ],
+      "recommended_usage": [
+        "Report per-environment results and the exact AgentBench release rather than treating the aggregate as a general intelligence score",
+        "Use the function-calling release to test multi-turn tool interaction across several environment types",
+        "Record container images, database snapshots, model prompt format, and resource limits with every run",
+        "Pair it with focused benchmarks such as WebArena or OSWorld when a deployment depends on one environment family"
+      ],
+      "last_reviewed": "2026-07-19",
+      "reference_paper": null,
+      "benchmark_suite_project": null,
+      "harness_tools": [],
+      "related_benchmarks": [
+        "gaia",
+        "webarena",
+        "osworld",
+        "tau-bench"
+      ],
+      "enrichment_status": "draft",
+      "enrichment_notes": "Based on THUDM/AgentBench README and AgentBench, arXiv:2308.03688; title verified 2026-07-19.",
+      "tags": [
+        "evaluation",
+        "agents",
+        "tool-use",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/benchmarks/agents/agentbench.md",
+      "url": "content/benchmarks/agents/agentbench",
+      "slug": "agentbench",
+      "section_path": "content/benchmarks/agents",
+      "display_name": "AgentBench",
+      "summary": "",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "What it Measures (and what it doesn’t)",
+        "Dataset & Protocol",
+        "Metrics",
+        "How to Run",
+        "Known Issues, Leakage & Gaming Risks",
+        "How to Interpret Scores",
+        "Recommended Usage",
+        "Related Benchmarks",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 505,
+      "body_html": "<h2>Overview</h2>\n<p>AgentBench evaluates LLMs as agents across several environments instead of reducing the task to a single response. The original release covered operating systems, databases, knowledge graphs, games, puzzles, household tasks, web shopping, and web browsing. The repository now foregrounds AgentBench FC, a function-calling release with containerized workers for ALFWorld, DBBench, KnowledgeGraph, OS interaction, and WebShop.</p>\n<h2>What it Measures (and what it doesn’t)</h2>\n<p>Measures an agent's ability to follow a multi-turn function-calling protocol, select tools, and complete tasks in heterogeneous environments.</p>\n<p>Does not measure: one uniform capability across environments, production reliability, cost/latency, or GUI competence outside the specific environments selected for a run. Its aggregate is a portfolio score, not a universal agent ranking.</p>\n<h2>Dataset &amp; Protocol</h2>\n<ul>\n<li><strong>Dataset:</strong> AgentBench environment workers and task sets</li>\n<li><strong>Dataset URL:</strong> https://github.com/THUDM/AgentBench</li>\n<li><strong>Evaluation setup:</strong> deploy the agent against selected environment workers and score completed tasks; AgentBench FC uses function-calling prompts and Docker Compose orchestration</li>\n<li><strong>Version:</strong> current FC release, with original v0.1/v0.2 available by tag</li>\n</ul>\n<h2>Metrics</h2>\n<ul>\n<li><strong>task success rate</strong> — higher is better — environment-specific completion score</li>\n<li><strong>test-set score</strong> — higher is better — reported leaderboard result under the selected release and prompt protocol</li>\n</ul>\n<h2>How to Run</h2>\n<p>The current FC release requires more than a Python package install. The README recommends Python 3.9 and Docker:</p>\n<pre><code class=\"language-bash\">git clone https://github.com/THUDM/AgentBench.git\ncd AgentBench\nconda create -n agent-bench python=3.9\nconda activate agent-bench\npip install -r requirements.txt\ndocker pull mysql:8\ndocker build -t local-os/default -f data/os_interaction/res/dockerfiles/default data/os_interaction/res/dockerfiles\ndocker build -t local-os/packages -f data/os_interaction/res/dockerfiles/packages data/os_interaction/res/dockerfiles\ndocker build -t local-os/ubuntu -f data/os_interaction/res/dockerfiles/ubuntu data/os_interaction/res/dockerfiles\ndocker compose -f extra/docker-compose.yml up\n</code></pre>\n<p>Knowledge-graph tasks additionally require the Freebase database from the repository's setup instructions. WebShop can require roughly 16 GB of RAM, and the README warns that the ALFWorld worker can leak memory and disk space until restarted.</p>\n<h2>Known Issues, Leakage &amp; Gaming Risks</h2>\n<ul>\n<li>FC and original AgentBench results are separate protocols; mixing them creates a false trend line.</li>\n<li>Containerized environments can fail for infrastructure reasons before the model is meaningfully evaluated.</li>\n<li>WebShop, ALFWorld, and knowledge-graph workers have materially different resource and data dependencies.</li>\n<li>Prompt format, tool descriptions, environment state, and task selection can dominate the score; publish them with results.</li>\n</ul>\n<h2>How to Interpret Scores</h2>\n<ul>\n<li>Start with the per-environment table. A high WebShop score does not imply operating-system or database competence.</li>\n<li>Treat the aggregate as a rough portfolio summary only when the same environment set, task split, prompt format, and resource limits are used.</li>\n<li>Current FC results should be compared with other FC runs, not with the original v0.1/v0.2 leaderboard without a protocol note.</li>\n</ul>\n<h2>Recommended Usage</h2>\n<ul>\n<li>Use AgentBench to smoke-test an agent framework across several tool and environment interfaces.</li>\n<li>Report environment-level success, failure modes, and infrastructure assumptions.</li>\n<li>Use a focused benchmark for the production domain after AgentBench identifies a capability gap.</li>\n</ul>\n<h2>Related Benchmarks</h2>\n<ul>\n<li><a href=\"../agents/gaia.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GAIA</a> — general assistant tasks with tool use and multimodal inputs</li>\n<li><a href=\"../agents/webarena.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">WebArena</a> — browser-based web tasks</li>\n<li><a href=\"../agents/osworld.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">OSWorld</a> — multimodal computer-use tasks</li>\n<li><a href=\"../agents/tau-bench.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">TAU-bench</a> — customer-service tool-agent interaction</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>AgentBench is a broad agent-capability reference point: useful for comparing environment coverage and orchestration choices, but intentionally less diagnostic than a domain-specific benchmark. It complements the Arsenal's browser, computer-use, and tool-agent entries by covering multiple interaction surfaces in one repository.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/THUDM/AgentBench\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://docs.google.com/spreadsheets/d/e/2PACX-1vRR3Wl7wsCgHpwUw1_eUXW_fptAPLL3FkhnW_rua0O1Ji_GIVrpTjY5LaKAhwO-WeARjnY_KNw0SYNJ/pubhtml\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Leaderboard</a></li>\n<li><a href=\"https://arxiv.org/abs/2308.03688\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper</a></li>\n</ul>\n",
+      "body_text": "Overview AgentBench evaluates LLMs as agents across several environments instead of reducing the task to a single response. The original release covered operating systems, databases, knowledge graphs, games, puzzles, household tasks, web shopping, and web browsing. The repository now foregrounds AgentBench FC, a function calling release with containerized workers for ALFWorld, DBBench, KnowledgeGraph, OS interaction, and WebShop. What it Measures (and what it doesn’t) Measures an agent's ability to follow a multi turn function calling protocol, select tools, and complete tasks in heterogeneous environments. Does not measure: one uniform capability across environments, production reliability, cost/latency, or GUI competence outside the specific environments selected for a run. Its aggregate is a portfolio score, not a universal agent ranking. Dataset & Protocol Dataset: AgentBench environment workers and task sets Dataset URL: https://github.com/THUDM/AgentBench Evaluation setup: deploy the agent against selected environment workers and score completed tasks; AgentBench FC uses function calling prompts and Docker Compose orchestration Version: current FC release, with original v0.1/v0.2 available by tag Metrics task success rate — higher is better — environment specific completion score test set score — higher is better — reported leaderboard result under the selected release and prompt protocol How to Run The current FC release requires more than a Python package install. The README recommends Python 3.9 and Docker: Knowledge graph tasks additionally require the Freebase database from the repository's setup instructions. WebShop can require roughly 16 GB of RAM, and the README warns that the ALFWorld worker can leak memory and disk space until restarted. Known Issues, Leakage & Gaming Risks FC and original AgentBench results are separate protocols; mixing them creates a false trend line. Containerized environments can fail for infrastructure reasons before the model is meaningfully evaluated. WebShop, ALFWorld, and knowledge graph workers have materially different resource and data dependencies. Prompt format, tool descriptions, environment state, and task selection can dominate the score; publish them with results. How to Interpret Scores Start with the per environment table. A high WebShop score does not imply operating system or database competence. Treat the aggregate as a rough portfolio summary only when the same environment set, task split, prompt format, and resource limits are used. Current FC results should be compared with other FC runs, not with the original v0.1/v0.2 leaderboard without a protocol note. Recommended Usage Use AgentBench to smoke test an agent framework across several tool and environment interfaces. Report environment level success, failure modes, and infrastructure assumptions. Use a focused benchmark for the production domain after AgentBench identifies a capability gap. Related Benchmarks GAIA — general assistant tasks with tool use and multimodal inputs WebArena — browser based web tasks OSWorld — multimodal computer use tasks TAU bench — customer service tool agent interaction Relation to the Arsenal AgentBench is a broad agent capability reference point: useful for comparing environment coverage and orchestration choices, but intentionally less diagnostic than a domain specific benchmark. It complements the Arsenal's browser, computer use, and tool agent entries by covering multiple interaction surfaces in one repository. Resources GitHub Leaderboard Paper"
+    },
+    {
+      "id": "agentdojo",
+      "title": "AgentDojo",
+      "entry_type": "benchmark",
+      "category": "safety",
+      "modality": [
+        "text"
+      ],
+      "status": "active",
+      "protocol_confidence": "evolving",
+      "score_interpretation": "mixed",
+      "what_it_measures": "Prompt-injection robustness for tool-using LLM agents: whether attacks can manipulate an agent through untrusted tool or task content while the agent retains utility on benign tasks.",
+      "metrics": [
+        {
+          "name": "attack success rate",
+          "direction": "lower",
+          "notes": "Fraction of adversarial cases in which the injection causes the targeted unsafe or incorrect agent behavior"
+        },
+        {
+          "name": "utility",
+          "direction": "higher",
+          "notes": "Success on benign tasks under the same agent and tool configuration"
+        }
+      ],
+      "protocol": {
+        "dataset": "AgentDojo dynamic suites",
+        "dataset_url": "https://github.com/ethz-spylab/agentdojo",
+        "evaluation_setup": "Run an agent against task suites with simulated tools, injected adversarial content, and defense configurations; report security outcomes alongside benign-task utility.",
+        "version": "NeurIPS 2024 Datasets and Benchmarks release"
+      },
+      "leaderboards": [
+        {
+          "name": "AgentDojo results",
+          "url": "https://agentdojo.spylab.ai/results/",
+          "last_checked": "2026-07-19"
+        }
+      ],
+      "known_issues": [
+        "The simulated tools and task suites approximate real integrations; a passing result does not establish safety with production credentials or side effects",
+        "Attack success depends on the target model, tool wrapper, defense implementation, and exact suite revision",
+        "The package API is still under development, so reproductions need pinned dependencies and recorded commits",
+        "Utility and security tradeoffs can move in opposite directions; a defense that blocks attacks may also over-block benign tasks"
+      ],
+      "recommended_usage": [
+        "Evaluate the complete agent scaffold, including tool descriptions, content handling, and defenses, rather than the base model alone",
+        "Report attack success and benign utility together with model, suite, defense, and commit identifiers",
+        "Use it for regression tests of prompt-injection defenses before granting agents access to consequential tools",
+        "Pair it with an in-domain red-team exercise because the benchmark's simulated environments cannot represent every tool boundary"
+      ],
+      "last_reviewed": "2026-07-19",
+      "reference_paper": null,
+      "benchmark_suite_project": null,
+      "harness_tools": [],
+      "related_benchmarks": [
+        "agentharm",
+        "tau-bench"
+      ],
+      "enrichment_status": "draft",
+      "enrichment_notes": "Based on ethz-spylab/agentdojo README and AgentDojo, arXiv:2406.13352; title verified 2026-07-19.",
+      "tags": [
+        "evaluation",
+        "agents",
+        "security",
+        "tool-use",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/benchmarks/safety/agentdojo.md",
+      "url": "content/benchmarks/safety/agentdojo",
+      "slug": "agentdojo",
+      "section_path": "content/benchmarks/safety",
+      "display_name": "AgentDojo",
+      "summary": "",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "What it Measures (and what it doesn’t)",
+        "Dataset & Protocol",
+        "Metrics",
+        "How to Run",
+        "Known Issues, Leakage & Gaming Risks",
+        "How to Interpret Scores",
+        "Recommended Usage",
+        "Related Benchmarks",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 487,
+      "body_html": "<h2>Overview</h2>\n<p>AgentDojo is a dynamic environment for evaluating prompt-injection attacks and defenses against LLM agents. Its scenarios give an agent tools and tasks, then place untrusted or adversarial instructions in the environment the agent must process. The benchmark keeps benign task utility in view so a defense is not rewarded merely for refusing every action.</p>\n<h2>What it Measures (and what it doesn’t)</h2>\n<p>Measures whether an agent's tool-use behavior can be redirected by prompt injection, together with whether the same agent remains useful on benign tasks under the selected defense configuration.</p>\n<p>Does not measure: exploitation of real external services, credential handling, deployment isolation, or every class of agent failure unrelated to instruction injection.</p>\n<h2>Dataset &amp; Protocol</h2>\n<ul>\n<li><strong>Dataset:</strong> AgentDojo dynamic task and tool suites</li>\n<li><strong>Dataset URL:</strong> https://github.com/ethz-spylab/agentdojo</li>\n<li><strong>Evaluation setup:</strong> agent plus simulated tools, adversarial content, and an optional defense; run the official benchmark script and report security outcomes alongside benign utility</li>\n<li><strong>Version:</strong> NeurIPS 2024 Datasets and Benchmarks release; repository API remains under development</li>\n</ul>\n<h2>Metrics</h2>\n<ul>\n<li><strong>attack success rate</strong> — lower is better — fraction of adversarial cases that achieve the attack objective</li>\n<li><strong>utility</strong> — higher is better — benign task performance under the same agent and defense</li>\n</ul>\n<h2>How to Run</h2>\n<pre><code class=\"language-bash\">python -m venv .venv\nsource .venv/bin/activate\npip install agentdojo\npip install \"agentdojo[transformers]\"  # only when using the prompt-injection detector\n</code></pre>\n<p>The repository documents a concrete workspace-suite run:</p>\n<pre><code class=\"language-bash\">python -m agentdojo.scripts.benchmark \\\n  -s workspace \\\n  -ut user_task_0 \\\n  -ut user_task_1 \\\n  --model gpt-4o-2024-05-13 \\\n  --defense tool_filter \\\n  --attack tool_knowledge\n</code></pre>\n<p>Pin the package and model identifiers when comparing runs; the official results page and documentation describe the available suites and result inspection.</p>\n<h2>Known Issues, Leakage &amp; Gaming Risks</h2>\n<ul>\n<li>Synthetic tools are safer and more reproducible than live integrations, but they cannot establish real-world exploit impact.</li>\n<li>Attack and defense implementations are part of the protocol; changing tool descriptions or wrappers can change the measured threat.</li>\n<li>The API is explicitly still under development, so an unpinned rerun may not reproduce an older result.</li>\n<li>Optimizing only for attack success can produce a defense that simply refuses benign tasks; utility must remain a co-equal metric.</li>\n</ul>\n<h2>How to Interpret Scores</h2>\n<ul>\n<li>Prefer the security/utility pair to a single headline number: lower attack success with sharply lower utility is a different operating point from a balanced defense.</li>\n<li>State the target model, attack strategy, defense, suite revision, and package commit for every result.</li>\n<li>Compare only runs using compatible suites and tool semantics; a changed simulated environment is a protocol change, not a minor implementation detail.</li>\n</ul>\n<h2>Recommended Usage</h2>\n<ul>\n<li>Gate prompt-injection defenses before exposing agents to sensitive tool outputs.</li>\n<li>Use the same scenarios as regression tests after changing tool schemas, system prompts, or content filters.</li>\n<li>Pair the benchmark with production-like sandbox and authorization tests.</li>\n</ul>\n<h2>Related Benchmarks</h2>\n<ul>\n<li><a href=\"./agentharm.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AgentHarm</a> — multi-step harmful-task safety with synthetic tools</li>\n<li><a href=\"../agents/tau-bench.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">TAU-bench</a> — tool-agent task completion and policy compliance</li>\n</ul>\n<h2>Relation to the Arsenal</h2>\n<p>AgentDojo fills the prompt-injection-specific gap between single-turn jailbreak tests and broad agent capability benchmarks. It is especially relevant to the security-and-guardrails tools in the evaluation phase and to agent architectures that ingest third-party content.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://agentdojo.spylab.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://agentdojo.spylab.ai/results/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Results</a></li>\n<li><a href=\"https://github.com/ethz-spylab/agentdojo\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://arxiv.org/abs/2406.13352\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Paper</a></li>\n</ul>\n",
+      "body_text": "Overview AgentDojo is a dynamic environment for evaluating prompt injection attacks and defenses against LLM agents. Its scenarios give an agent tools and tasks, then place untrusted or adversarial instructions in the environment the agent must process. The benchmark keeps benign task utility in view so a defense is not rewarded merely for refusing every action. What it Measures (and what it doesn’t) Measures whether an agent's tool use behavior can be redirected by prompt injection, together with whether the same agent remains useful on benign tasks under the selected defense configuration. Does not measure: exploitation of real external services, credential handling, deployment isolation, or every class of agent failure unrelated to instruction injection. Dataset & Protocol Dataset: AgentDojo dynamic task and tool suites Dataset URL: https://github.com/ethz spylab/agentdojo Evaluation setup: agent plus simulated tools, adversarial content, and an optional defense; run the official benchmark script and report security outcomes alongside benign utility Version: NeurIPS 2024 Datasets and Benchmarks release; repository API remains under development Metrics attack success rate — lower is better — fraction of adversarial cases that achieve the attack objective utility — higher is better — benign task performance under the same agent and defense How to Run The repository documents a concrete workspace suite run: Pin the package and model identifiers when comparing runs; the official results page and documentation describe the available suites and result inspection. Known Issues, Leakage & Gaming Risks Synthetic tools are safer and more reproducible than live integrations, but they cannot establish real world exploit impact. Attack and defense implementations are part of the protocol; changing tool descriptions or wrappers can change the measured threat. The API is explicitly still under development, so an unpinned rerun may not reproduce an older result. Optimizing only for attack success can produce a defense that simply refuses benign tasks; utility must remain a co equal metric. How to Interpret Scores Prefer the security/utility pair to a single headline number: lower attack success with sharply lower utility is a different operating point from a balanced defense. State the target model, attack strategy, defense, suite revision, and package commit for every result. Compare only runs using compatible suites and tool semantics; a changed simulated environment is a protocol change, not a minor implementation detail. Recommended Usage Gate prompt injection defenses before exposing agents to sensitive tool outputs. Use the same scenarios as regression tests after changing tool schemas, system prompts, or content filters. Pair the benchmark with production like sandbox and authorization tests. Related Benchmarks AgentHarm — multi step harmful task safety with synthetic tools TAU bench — tool agent task completion and policy compliance Relation to the Arsenal AgentDojo fills the prompt injection specific gap between single turn jailbreak tests and broad agent capability benchmarks. It is especially relevant to the security and guardrails tools in the evaluation phase and to agent architectures that ingest third party content. Resources Documentation Results GitHub Paper"
+    },
     {
       "id": "agentharm",
       "title": "AgentHarm",

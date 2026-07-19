@@ -172,6 +172,7 @@ This table is exhaustive for tools tagged with job = deployment.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Envoy AI Gateway](../serving-and-deployment/ai-gateway.md) | serving and deployment | open-source | Yes | Yes | Yes | go | recommended |
 | [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | usage-based | Yes | No | No | python | solid-choice |
 | [AWS Bedrock](../serving-and-deployment/aws-bedrock.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Azure AI Studio](../serving-and-deployment/azure-ai-studio.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |

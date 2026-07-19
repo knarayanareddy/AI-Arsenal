@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T21:17:31.273Z",
+    "generated_at": "2026-07-19T21:22:54.218Z",
     "total_projects": 322,
-    "total_tools": 211,
+    "total_tools": 214,
     "total_papers": 128,
     "total_tips": 171,
     "total_people": 25,
@@ -12,7 +12,7 @@
     "total_architectures": 29,
     "total_observability": 16,
     "total_community": 32,
-    "total_benchmarks": 50,
+    "total_benchmarks": 52,
     "total_trending": 4,
     "schema_version": "1.0.0"
   },
@@ -437,6 +437,49 @@
       "featured": false
     },
     {
+      "id": "agentbench",
+      "type": "benchmark",
+      "name": "AgentBench",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "tool-use",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/benchmarks/agents/agentbench.md",
+      "url": "content/benchmarks/agents/agentbench",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agentdojo",
+      "type": "benchmark",
+      "name": "AgentDojo",
+      "description": "",
+      "tags": [
+        "evaluation",
+        "agents",
+        "security",
+        "tool-use",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/benchmarks/safety/agentdojo.md",
+      "url": "content/benchmarks/safety/agentdojo",
+      "last_updated": "2026-07-19",
+      "category": "safety",
+      "maturity": null,
+      "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agentharm",
       "type": "benchmark",
       "name": "AgentHarm",
@@ -607,6 +650,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "ai-gateway",
+      "type": "tool",
+      "name": "Envoy AI Gateway",
+      "description": "An Envoy Gateway extension for routing and governing traffic to generative AI services",
+      "tags": [
+        "inference",
+        "routing",
+        "cloud",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "path": "content/tools/serving-and-deployment/ai-gateway.md",
+      "url": "content/tools/serving-and-deployment/ai-gateway",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -5420,6 +5484,29 @@
       "featured": false
     },
     {
+      "id": "fastembed",
+      "type": "tool",
+      "name": "FastEmbed",
+      "description": "A lightweight ONNX Runtime library for embedding and reranking without PyTorch",
+      "tags": [
+        "embeddings",
+        "retrieval",
+        "efficiency",
+        "inference",
+        "onnx",
+        "local",
+        "serverless"
+      ],
+      "path": "content/tools/model-layer/fastembed.md",
+      "url": "content/tools/model-layer/fastembed",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "faster-whisper",
       "type": "project",
       "name": "faster-whisper",
@@ -7483,6 +7570,28 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "inspect-petri",
+      "type": "tool",
+      "name": "Inspect Petri",
+      "description": "An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior",
+      "tags": [
+        "evaluation",
+        "agents",
+        "alignment",
+        "security",
+        "tool-use",
+        "research"
+      ],
+      "path": "content/tools/evaluation-and-observability/inspect-petri.md",
+      "url": "content/tools/evaluation-and-observability/inspect-petri",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
