@@ -39,9 +39,9 @@ Before selecting an agent system:
 - [Open-AutoGLM](./open-autoglm.md)
 - [Open Code Review](./open-code-review.md)
 - [Symphony](./symphony.md)
+- [trpc-agent-go](./trpc-agent-go.md)
 - [BISHENG](./bisheng.md)
 - [GPT Engineer](./gpt-engineer.md)
-- [Leon](./leon.md)
 
 ### Most Popular
 
@@ -96,5 +96,6 @@ Before selecting an agent system:
 - [Symphony](./symphony.md) — OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board
 - [Tabby](./tabby.md) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
 - [TensorZero](./tensorzero.md) — An open-source LLMOps platform in Rust unifying an LLM gateway, observability, evaluation, and data-driven optimization into a feedback loop for improving LLM
+- [trpc-agent-go](./trpc-agent-go.md) — Go framework for production agent systems with graph workflows, tools, memory, MCP, A2A, AG-UI, evaluation, and observability
 - [UI-TARS Desktop](./ui-tars-desktop.md) — Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
 - [Upsonic](./upsonic.md) — A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers
