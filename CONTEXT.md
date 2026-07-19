@@ -1,14 +1,14 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-19T21:09:01.850Z | Entries: 1042 | Schema version: 1.0.0
+Generated: 2026-07-19T21:17:34.654Z | Entries: 1056 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 322
-- Tools: 199
-- Papers: 126
+- Tools: 211
+- Papers: 128
 - Tips: 171
 - People: 25
 - Digests: 1
@@ -121,8 +121,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Airbyte — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - dlt — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
+- Hugging Face AI Sheets — Hugging Face open-source no-code tool for generating and enriching datasets with AI models
 - Label Studio — An open-source data labeling platform for ML and AI datasets
-- MarkItDown — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
 
 ### deployment
 - Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
@@ -132,11 +132,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - BentoML — A framework for packaging, deploying, and scaling AI model services
 
 ### evaluation
+- Agentic Security — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
+- AI Infra Guard — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
 - any-agent — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
-- Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
-- Code Arena — Benchmark and compare AI models in a competitive coding environment
 
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
@@ -196,10 +196,10 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### security-and-guardrails
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
+- Agentic Security — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
+- AI Infra Guard — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
-- CubeSandbox — Self-hostable, hardware-isolated sandbox service for AI agent code execution with tens-of-milliseconds startup and an E2B-compatible API
-- garak (NVIDIA) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 
 ### structured-output
 - BAML — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
@@ -211,9 +211,9 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### tracing
 - AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
+- Laminar — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - LangSmith — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - LangWatch — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
-- Spotlight by Backplanes — Understand, improve, and track AI agent sessions with observability tooling
 
 ### vector-search
 - Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads

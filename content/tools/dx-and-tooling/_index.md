@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Prompty](./prompty.md)
 - [AdalFlow](./adalflow.md)
 - [Agent Skills (Addy Osmani)](./addyosmani-agent-skills.md)
 - [Aider](./aider.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Codex Plugin for Claude Code](./codex-plugin-cc.md)
 - [Continue](./continue-dev.md)
 - [Cursor](./cursor.md)
-- [Gemini CLI](./gemini-cli.md)
 
 ### Most Popular
 
@@ -76,6 +76,7 @@ _No star-tracked entries yet._
 - [OpenAI Codex CLI](./openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
 - [Orca](./orca.md) — Desktop "agent development environment" for running fleets of coding agents (Codex, Claude Code, OpenCode, Pi) in parallel, each in its own git worktree
 - [PromptLayer](./promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [Prompty](./prompty.md) — Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts
 - [Qursor](./qursor.md) — AI-powered UI context for faster front-end development with agents
 - [Recursi](./recursi.md) — Self-improving system for intuitive and efficient AI-assisted coding
 - [Repomix](./repomix.md) — CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs

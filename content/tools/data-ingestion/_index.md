@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Hugging Face AI Sheets](./aisheets.md)
 - [Airbyte](./airbyte.md)
 - [dlt](./dlt.md)
 - [DocETL](./docetl.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Gitingest](./gitingest.md)
 - [Great Expectations (GX Core)](./great-expectations.md)
 - [MarkItDown](./markitdown.md)
-- [Marqo](./marqo.md)
 
 ### Most Popular
 
@@ -47,6 +47,7 @@ _No star-tracked entries yet._
 - [Agent Browser Shield](./agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Reach](./agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
 - [Airbyte](./airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
+- [Hugging Face AI Sheets](./aisheets.md) — Hugging Face open-source no-code tool for generating and enriching datasets with AI models
 - [Argilla](./argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
 - [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
 - [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction

@@ -169,12 +169,14 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [KubeAI](../serving-and-deployment/kubeai.md) | serving and deployment | open-source | Yes | Yes | Yes | go | solid-choice |
 | [LiteLLM](../serving-and-deployment/litellm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [LoRAX](../serving-and-deployment/lorax.md) | serving and deployment | open-source | Yes | Yes | Yes | python, rust | solid-choice |
+| [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [OpenLLM](../serving-and-deployment/openllm.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Recursi](../dx-and-tooling/recursi.md) | dx and tooling | freemium | Yes | No | No | python | watching |

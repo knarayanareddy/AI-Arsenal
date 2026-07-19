@@ -131,15 +131,19 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
+| [Agentic Security](../evaluation-and-observability/agentic-security.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | paid | No | No | No | python | watching |
+| [AI Infra Guard](../evaluation-and-observability/ai-infra-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [CubeSandbox](../serving-and-deployment/cubesandbox.md) | serving and deployment | open-source | Yes | Yes | Yes | rust | watching |
+| [FuzzyAI](../evaluation-and-observability/fuzzyai.md) | evaluation and observability | open-source | Yes | Yes | Yes | polyglot | use-with-caution |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard OSS](../evaluation-and-observability/giskard-oss.md) | evaluation and observability | open-source | No | Yes | Yes | python | watching |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
+| [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [PyRIT](../evaluation-and-observability/pyrit.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | recommended |
