@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T20:36:17.953Z",
-    "total_projects": 306,
+    "generated_at": "2026-07-19T21:08:58.360Z",
+    "total_projects": 322,
     "total_tools": 199,
     "total_papers": 126,
     "total_tips": 171,
@@ -722,6 +722,27 @@
       "featured": false
     },
     {
+      "id": "airweave",
+      "type": "project",
+      "name": "Airweave",
+      "description": "Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs",
+      "tags": [
+        "rag",
+        "retrieval",
+        "embeddings",
+        "self-hosted",
+        "data"
+      ],
+      "path": "content/projects/data-and-retrieval/airweave.md",
+      "url": "content/projects/data-and-retrieval/airweave",
+      "last_updated": "2026-07-19",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "alarm-on-empty-and-unparseable-responses",
       "type": "tip",
       "name": "Alarm on Empty and Unparseable Responses",
@@ -1090,6 +1111,27 @@
       "featured": false
     },
     {
+      "id": "arkflow",
+      "type": "project",
+      "name": "ArkFlow",
+      "description": "High-performance Rust stream-processing engine integrating messaging, databases, SQL/DataFusion, and machine-learning model execution",
+      "tags": [
+        "data",
+        "streaming",
+        "inference",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/projects/frameworks/arkflow.md",
+      "url": "content/projects/frameworks/arkflow",
+      "last_updated": "2026-07-19",
+      "category": "data-pipelines",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "arvind-narayanan",
       "type": "person",
       "name": "Arvind Narayanan",
@@ -1272,6 +1314,27 @@
       "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "autorag",
+      "type": "project",
+      "name": "AutoRAG",
+      "description": "AutoML-style framework for evaluating and optimizing retrieval-augmented-generation pipelines",
+      "tags": [
+        "rag",
+        "retrieval",
+        "evaluation",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/projects/data-and-retrieval/autorag.md",
+      "url": "content/projects/data-and-retrieval/autorag",
+      "last_updated": "2026-07-19",
+      "category": "rag",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -1976,6 +2039,26 @@
       "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "candle-vllm",
+      "type": "project",
+      "name": "candle-vllm",
+      "description": "Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API",
+      "tags": [
+        "llm",
+        "inference",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/projects/inference-engines/candle-vllm.md",
+      "url": "content/projects/inference-engines/candle-vllm",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4422,6 +4505,27 @@
       "featured": false
     },
     {
+      "id": "docext",
+      "type": "project",
+      "name": "docext",
+      "description": "On-premises vision-language document extraction, Markdown conversion, and benchmarking toolkit from Nanonets",
+      "tags": [
+        "vision",
+        "multimodal",
+        "data",
+        "benchmark",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/docext.md",
+      "url": "content/projects/data-and-retrieval/docext",
+      "last_updated": "2026-07-19",
+      "category": "data-pipelines",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "docling",
       "type": "project",
       "name": "Docling",
@@ -5443,6 +5547,27 @@
       "featured": false
     },
     {
+      "id": "flashrag",
+      "type": "project",
+      "name": "FlashRAG",
+      "description": "Python toolkit for modular RAG research with retrievers, rerankers, generators, datasets, and benchmark pipelines",
+      "tags": [
+        "rag",
+        "retrieval",
+        "benchmark",
+        "research",
+        "evaluation"
+      ],
+      "path": "content/projects/data-and-retrieval/flashrag.md",
+      "url": "content/projects/data-and-retrieval/flashrag",
+      "last_updated": "2026-07-19",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "flowise",
       "type": "tool",
       "name": "Flowise",
@@ -6145,6 +6270,27 @@
       "path": "content/projects/training-and-alignment/gpt-neox.md",
       "url": "content/projects/training-and-alignment/gpt-neox",
       "last_updated": "2026-07-12",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "gpt-oss",
+      "type": "project",
+      "name": "gpt-oss",
+      "description": "OpenAI open-weight language models for reasoning, agentic tasks, and developer applications",
+      "tags": [
+        "llm",
+        "reasoning",
+        "tool-use",
+        "structured-output",
+        "foundational"
+      ],
+      "path": "content/projects/foundation-models/gpt-oss.md",
+      "url": "content/projects/foundation-models/gpt-oss",
+      "last_updated": "2026-07-19",
       "category": "llms",
       "maturity": "beta",
       "cost_model": "open-source",
@@ -9708,6 +9854,25 @@
       "featured": false
     },
     {
+      "id": "magenta-realtime",
+      "type": "project",
+      "name": "Magenta RealTime 2",
+      "description": "Google Magenta open-weight model for real-time and offline live-music generation",
+      "tags": [
+        "voice",
+        "streaming",
+        "foundational"
+      ],
+      "path": "content/projects/foundation-models/magenta-realtime.md",
+      "url": "content/projects/foundation-models/magenta-realtime",
+      "last_updated": "2026-07-19",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "make-success-criteria-machine-checkable",
       "type": "tip",
       "name": "Make Agent Success Criteria Machine-Checkable, Not Self-Reported",
@@ -10235,6 +10400,27 @@
       "category": "tools",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "memoryos",
+      "type": "project",
+      "name": "MemoryOS",
+      "description": "EMNLP 2025 memory operating system for personalized agents with hierarchical storage and retrieval",
+      "tags": [
+        "memory",
+        "retrieval",
+        "agents",
+        "rag",
+        "research"
+      ],
+      "path": "content/projects/data-and-retrieval/memoryos.md",
+      "url": "content/projects/data-and-retrieval/memoryos",
+      "last_updated": "2026-07-19",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -10770,6 +10956,29 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "mlx-tune",
+      "type": "project",
+      "name": "mlx-tune",
+      "description": "Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows",
+      "tags": [
+        "llm",
+        "fine-tuning",
+        "training",
+        "multimodal",
+        "voice",
+        "vision",
+        "local"
+      ],
+      "path": "content/projects/training-and-alignment/mlx-tune.md",
+      "url": "content/projects/training-and-alignment/mlx-tune",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -13880,6 +14089,27 @@
       "featured": false
     },
     {
+      "id": "raglite",
+      "type": "project",
+      "name": "RAGLite",
+      "description": "Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters",
+      "tags": [
+        "rag",
+        "retrieval",
+        "chunking",
+        "embeddings",
+        "efficiency"
+      ],
+      "path": "content/projects/data-and-retrieval/raglite.md",
+      "url": "content/projects/data-and-retrieval/raglite",
+      "last_updated": "2026-07-19",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "railway",
       "type": "tool",
       "name": "Railway",
@@ -14447,6 +14677,26 @@
       "featured": false
     },
     {
+      "id": "rf-detr",
+      "type": "project",
+      "name": "RF-DETR",
+      "description": "Roboflow real-time DETR architecture for object detection, instance segmentation, and preview keypoint detection",
+      "tags": [
+        "vision",
+        "inference",
+        "fine-tuning",
+        "benchmark"
+      ],
+      "path": "content/projects/foundation-models/rf-detr.md",
+      "url": "content/projects/foundation-models/rf-detr",
+      "last_updated": "2026-07-19",
+      "category": "computer-vision",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "rgb",
       "type": "benchmark",
       "name": "RGB",
@@ -14482,6 +14732,28 @@
       "last_updated": "2026-07-12",
       "category": "agents",
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "rllm",
+      "type": "project",
+      "name": "rLLM",
+      "description": "Reinforcement-learning framework for training language agents across model backends, sandboxes, rollouts, and benchmarks",
+      "tags": [
+        "agents",
+        "training",
+        "rlhf",
+        "reasoning",
+        "benchmark",
+        "tool-use"
+      ],
+      "path": "content/projects/training-and-alignment/rllm.md",
+      "url": "content/projects/training-and-alignment/rllm",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -15610,6 +15882,27 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sie",
+      "type": "project",
+      "name": "Superlinked Inference Engine",
+      "description": "Superlinked open-source inference server and production cluster for serving the model mix used by agent applications",
+      "tags": [
+        "llm",
+        "inference",
+        "batching",
+        "self-hosted",
+        "cloud"
+      ],
+      "path": "content/projects/inference-engines/sie.md",
+      "url": "content/projects/inference-engines/sie",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -17638,6 +17931,28 @@
       "featured": false
     },
     {
+      "id": "trpc-agent-go",
+      "type": "project",
+      "name": "trpc-agent-go",
+      "description": "Go framework for production agent systems with graph workflows, tools, memory, MCP, A2A, AG-UI, evaluation, and observability",
+      "tags": [
+        "agents",
+        "graphs",
+        "memory",
+        "tool-use",
+        "orchestration",
+        "observability"
+      ],
+      "path": "content/projects/agent-systems/trpc-agent-go.md",
+      "url": "content/projects/agent-systems/trpc-agent-go",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "trulens",
       "type": "tool",
       "name": "TruLens",
@@ -18605,6 +18920,27 @@
       "last_updated": "2026-07-01",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "vllm-mlx",
+      "type": "project",
+      "name": "vLLM-MLX",
+      "description": "MLX-backed OpenAI- and Anthropic-compatible local inference server for Apple Silicon with batching, vision, and MCP tool calling",
+      "tags": [
+        "llm",
+        "inference",
+        "batching",
+        "multimodal",
+        "local"
+      ],
+      "path": "content/projects/inference-engines/vllm-mlx.md",
+      "url": "content/projects/inference-engines/vllm-mlx",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false

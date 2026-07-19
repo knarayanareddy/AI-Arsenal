@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-19T20:36:21.283Z | Entries: 1026 | Schema version: 1.0.0
+Generated: 2026-07-19T21:09:01.850Z | Entries: 1042 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 306
+- Projects: 322
 - Tools: 199
 - Papers: 126
 - Tips: 171
