@@ -9,25 +9,25 @@
 | [by cost](./by-cost/) | 5 entries | 2026-07-19 |
 | [by job](./by-job/) | 14 entries | 2026-07-19 |
 | [by stack](./by-stack/) | 8 entries | 2026-07-19 |
-| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-19 |
-| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-19 |
-| [evaluation and observability](./evaluation-and-observability/) | 32 entries | 2026-07-19 |
+| [data ingestion](./data-ingestion/) | 37 entries | 2026-07-19 |
+| [dx and tooling](./dx-and-tooling/) | 44 entries | 2026-07-19 |
+| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-07-19 |
 | [model layer](./model-layer/) | 33 entries | 2026-07-19 |
 | [orchestration](./orchestration/) | 26 entries | 2026-07-19 |
-| [serving and deployment](./serving-and-deployment/) | 32 entries | 2026-07-19 |
+| [serving and deployment](./serving-and-deployment/) | 34 entries | 2026-07-19 |
 
 ## Recently Added
 
+- [Agentic Security](./evaluation-and-observability/agentic-security.md)
 - [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md)
+- [AI Infra Guard](./evaluation-and-observability/ai-infra-guard.md)
+- [Hugging Face AI Sheets](./data-ingestion/aisheets.md)
+- [EvalScope](./evaluation-and-observability/evalscope.md)
 - [FastEmbed](./model-layer/fastembed.md)
+- [FuzzyAI](./evaluation-and-observability/fuzzyai.md)
 - [Inspect Petri](./evaluation-and-observability/inspect-petri.md)
-- [Giskard OSS](./evaluation-and-observability/giskard-oss.md)
-- [ToolHive](./serving-and-deployment/toolhive.md)
-- [Hugging Face Accelerate](./model-layer/accelerate.md)
-- [AdalFlow](./dx-and-tooling/adalflow.md)
-- [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
-- [AgentOps](./evaluation-and-observability/agentops.md)
-- [Agno](./orchestration/agno.md)
+- [Laminar](./evaluation-and-observability/laminar.md)
+- [MCP Context Forge](./serving-and-deployment/mcp-context-forge.md)
 
 ## Most Popular
 
@@ -40,13 +40,16 @@ _No star-tracked entries yet._
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
 - [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
 - [Agent Reach](./data-ingestion/agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
+- [Agentic Security](./evaluation-and-observability/agentic-security.md) — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
 - [AgentOps](./evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - [Agno](./orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
 - [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md) — An Envoy Gateway extension for routing and governing traffic to generative AI services
+- [AI Infra Guard](./evaluation-and-observability/ai-infra-guard.md) — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
 - [Aider](./dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
 - [Airbyte](./data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
+- [Hugging Face AI Sheets](./data-ingestion/aisheets.md) — Hugging Face open-source no-code tool for generating and enriching datasets with AI models
 - [any-agent](./orchestration/any-agent.md) — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
 - [Anyscale](./serving-and-deployment/anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [Argilla](./data-ingestion/argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
@@ -96,6 +99,7 @@ _No star-tracked entries yet._
 - [E2B](./orchestration/e2b.md) — Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale
 - [Elasticsearch](./data-ingestion/elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
 - [Empromptu AI](./orchestration/empromptu-ai.md) — Build, deploy, and manage custom AI applications that improve over time
+- [EvalScope](./evaluation-and-observability/evalscope.md) — ModelScope framework for LLM, VLM, AIGC, agent evaluation, stress testing, and reports
 - [Evaluation Tools](./by-job/evaluation.md) — Curated tools for evaluation workflows in AI engineering
 - [Evidently](./evaluation-and-observability/evidently.md) — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
 - [Exa](./data-ingestion/exa.md) — Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity ("find similar pages") endpoints
@@ -107,6 +111,7 @@ _No star-tracked entries yet._
 - [Fireworks AI](./serving-and-deployment/fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
 - [Flowise](./orchestration/flowise.md) — Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack
 - [Fly.io](./serving-and-deployment/fly-io.md) — Application hosting platform with global machines and GPU options for AI services
+- [FuzzyAI](./evaluation-and-observability/fuzzyai.md) — CyberArk toolkit for automated LLM API fuzzing and jailbreak testing
 - [Galileo](./evaluation-and-observability/galileo.md) — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
 - [garak (NVIDIA)](./evaluation-and-observability/garak.md) — NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation
 - [Gemini CLI](./dx-and-tooling/gemini-cli.md) — Google's open-source terminal AI agent that brings Gemini models to the command line with a generous free tier
@@ -137,6 +142,7 @@ _No star-tracked entries yet._
 - [KServe](./serving-and-deployment/kserve.md) — Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol
 - [KubeAI](./serving-and-deployment/kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
 - [Label Studio](./data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets
+- [Laminar](./evaluation-and-observability/laminar.md) — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - [Langflow](./orchestration/langflow.md) — Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers
 - [Langfuse Prompts](./dx-and-tooling/langfuse-prompts.md) — Prompt management and versioning workflows inside the Langfuse observability platform
 - [LangSmith](./evaluation-and-observability/langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
@@ -156,6 +162,7 @@ _No star-tracked entries yet._
 - [marimo](./dx-and-tooling/marimo.md) — Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps
 - [MarkItDown](./data-ingestion/markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
 - [Marqo](./data-ingestion/marqo.md) — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
+- [MCP Context Forge](./serving-and-deployment/mcp-context-forge.md) — IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance
 - [Megatron-LM](./model-layer/megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - [Meilisearch](./data-ingestion/meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - [Mem0](./orchestration/mem0.md) — Memory layer for AI agents and assistants with long-term user and session memory
@@ -177,6 +184,7 @@ _No star-tracked entries yet._
 - [Open WebUI](./dx-and-tooling/open-webui.md) — Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in
 - [OpenAI Codex CLI](./dx-and-tooling/openai-codex-cli.md) — OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment
 - [OpenAI Evals](./evaluation-and-observability/openai-evals.md) — An open-source framework for evaluating language model behavior
+- [OpenJudge](./evaluation-and-observability/openjudge.md) — AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training
 - [OpenLLM](./serving-and-deployment/openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
 - [OpenPipe ART](./model-layer/openpipe-art.md) — Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps
 - [OpenRouter](./model-layer/openrouter.md) — Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing
@@ -195,6 +203,7 @@ _No star-tracked entries yet._
 - [Prompt flow (Microsoft)](./orchestration/promptflow.md) — Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML
 - [promptfoo](./evaluation-and-observability/promptfoo.md) — An open-source CLI and platform for prompt and LLM regression testing
 - [PromptLayer](./dx-and-tooling/promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [Prompty](./dx-and-tooling/prompty.md) — Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts
 - [Prototyping Tools](./by-job/prototyping.md) — Curated tools for prototyping workflows in AI engineering
 - [Puppeteer](./data-ingestion/puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
 - [Pydantic AI](./orchestration/pydantic-ai-tool.md) — Pydantic agent framework focused on typed outputs, tools, and production Python apps
@@ -205,6 +214,7 @@ _No star-tracked entries yet._
 - [Ragas](./evaluation-and-observability/ragas.md) — Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines
 - [RAGatouille](./data-ingestion/ragatouille.md) — Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines
 - [Railway](./serving-and-deployment/railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [RamaLama](./serving-and-deployment/ramalama.md) — Containers-native CLI for pulling, isolating, and serving AI models on local systems
 - [Ray](./serving-and-deployment/ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
 - [Ray Serve](./serving-and-deployment/ray-serve.md) — Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python
 - [Rebuff](./evaluation-and-observability/rebuff.md) — Prompt injection detection and guardrail toolkit for LLM applications
@@ -251,8 +261,10 @@ _No star-tracked entries yet._
 - [TRL](./model-layer/trl.md) — Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers
 - [TruLens](./evaluation-and-observability/trulens.md) — An evaluation and tracking toolkit for LLM and RAG applications
 - [Typesense](./data-ingestion/typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
+- [UltraEval-Audio](./evaluation-and-observability/ultraeval-audio.md) — OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models
 - [Unsloth](./model-layer/unsloth.md) — Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models
 - [UpTrain](./evaluation-and-observability/uptrain.md) — Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics
+- [UQLM](./evaluation-and-observability/uqlm.md) — Python uncertainty-quantification library for detecting unreliable LLM responses
 - [Vaani](./dx-and-tooling/vaani.md) — Fast, private macOS dictation with AI formatting and editing
 - [Vector Search Tools](./by-job/vector-search.md) — Curated tools for vector search workflows in AI engineering
 - [Vellum](./dx-and-tooling/vellum.md) — Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK

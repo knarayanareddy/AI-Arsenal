@@ -9,13 +9,16 @@
 | `addyosmani-agent-skills` | [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md) | Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle |
 | `agent-browser-shield` | [Agent Browser Shield](./data-ingestion/agent-browser-shield.md) | Secure AI web browsing by cleaning content and masking PII during agent runs |
 | `agent-reach` | [Agent Reach](./data-ingestion/agent-reach.md) | Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web |
+| `agentic-security` | [Agentic Security](./evaluation-and-observability/agentic-security.md) | Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications |
 | `agentops` | [AgentOps](./evaluation-and-observability/agentops.md) | Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing |
 | `agno` | [Agno](./orchestration/agno.md) | High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime |
 | `agnt-hub` | [AGNT.Hub](./orchestration/agnt-hub.md) | Build and manage secure, private AI agents with custom skills and policies |
 | `ai-gateway` | [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md) | An Envoy Gateway extension for routing and governing traffic to generative AI services |
+| `ai-infra-guard` | [AI Infra Guard](./evaluation-and-observability/ai-infra-guard.md) | Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure |
 | `aider` | [Aider](./dx-and-tooling/aider.md) | Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes |
 | `airbyte` | [Airbyte](./data-ingestion/airbyte.md) | Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines |
 | `airflow` | [Apache Airflow](./orchestration/airflow.md) | Mature workflow scheduler for batch data, ML, and AI pipeline orchestration |
+| `aisheets` | [Hugging Face AI Sheets](./data-ingestion/aisheets.md) | Hugging Face open-source no-code tool for generating and enriching datasets with AI models |
 | `any-agent` | [any-agent](./orchestration/any-agent.md) | One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation |
 | `anyscale` | [Anyscale](./serving-and-deployment/anyscale.md) | Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters |
 | `argilla` | [Argilla](./data-ingestion/argilla.md) | Open-source platform for human and AI feedback, data curation, and evaluation datasets |
@@ -58,6 +61,7 @@
 | `e2b` | [E2B](./orchestration/e2b.md) | Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale |
 | `elasticsearch` | [Elasticsearch](./data-ingestion/elasticsearch.md) | Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads |
 | `empromptu-ai` | [Empromptu AI](./orchestration/empromptu-ai.md) | Build, deploy, and manage custom AI applications that improve over time |
+| `evalscope` | [EvalScope](./evaluation-and-observability/evalscope.md) | ModelScope framework for LLM, VLM, AIGC, agent evaluation, stress testing, and reports |
 | `evidently` | [Evidently](./evaluation-and-observability/evidently.md) | Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge |
 | `exa` | [Exa](./data-ingestion/exa.md) | Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity ("find similar pages") endpoints |
 | `faiss` | [FAISS](./data-ingestion/faiss.md) | Meta's foundational library for efficient similarity search over billions of dense vectors |
@@ -67,6 +71,7 @@
 | `fireworks-ai` | [Fireworks AI](./serving-and-deployment/fireworks-ai.md) | A managed platform for fast inference and fine-tuning of open models |
 | `flowise` | [Flowise](./orchestration/flowise.md) | Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack |
 | `fly-io` | [Fly.io](./serving-and-deployment/fly-io.md) | Application hosting platform with global machines and GPU options for AI services |
+| `fuzzyai` | [FuzzyAI](./evaluation-and-observability/fuzzyai.md) | CyberArk toolkit for automated LLM API fuzzing and jailbreak testing |
 | `galileo` | [Galileo](./evaluation-and-observability/galileo.md) | Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails |
 | `garak` | [garak (NVIDIA)](./evaluation-and-observability/garak.md) | NVIDIA's open LLM vulnerability scanner — nmap for language models, probing deployed systems for jailbreaks, prompt injection, leakage, and toxic generation |
 | `gemini-cli` | [Gemini CLI](./dx-and-tooling/gemini-cli.md) | Google's open-source terminal AI agent that brings Gemini models to the command line with a generous free tier |
@@ -97,6 +102,7 @@
 | `kserve` | [KServe](./serving-and-deployment/kserve.md) | Kubernetes-native model-inference platform (CNCF) with serverless autoscaling and standardized inference protocol |
 | `kubeai` | [KubeAI](./serving-and-deployment/kubeai.md) | Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends |
 | `label-studio` | [Label Studio](./data-ingestion/label-studio.md) | An open-source data labeling platform for ML and AI datasets |
+| `laminar` | [Laminar](./evaluation-and-observability/laminar.md) | OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications |
 | `langflow` | [Langflow](./orchestration/langflow.md) | Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers |
 | `langfuse-prompts` | [Langfuse Prompts](./dx-and-tooling/langfuse-prompts.md) | Prompt management and versioning workflows inside the Langfuse observability platform |
 | `langsmith` | [LangSmith](./evaluation-and-observability/langsmith.md) | A managed platform for tracing, evaluating, and monitoring LangChain applications |
@@ -116,6 +122,7 @@
 | `marimo` | [marimo](./dx-and-tooling/marimo.md) | Reactive Python notebook stored as pure Python, reproducible by construction, deployable as scripts and apps |
 | `markitdown` | [MarkItDown](./data-ingestion/markitdown.md) | Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown |
 | `marqo` | [Marqo](./data-ingestion/marqo.md) | Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline |
+| `mcp-context-forge` | [MCP Context Forge](./serving-and-deployment/mcp-context-forge.md) | IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance |
 | `megatron-lm` | [Megatron-LM](./model-layer/megatron-lm.md) | NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism |
 | `meilisearch` | [Meilisearch](./data-ingestion/meilisearch.md) | Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance |
 | `mem0` | [Mem0](./orchestration/mem0.md) | Memory layer for AI agents and assistants with long-term user and session memory |
@@ -135,6 +142,7 @@
 | `open-webui` | [Open WebUI](./dx-and-tooling/open-webui.md) | Self-hosted, extensible chat UI for local and API LLMs with RAG, tools, and multi-user management built in |
 | `openai-codex-cli` | [OpenAI Codex CLI](./dx-and-tooling/openai-codex-cli.md) | OpenAI's open-source terminal coding agent, written in Rust, that runs code changes in a sandboxed local environment |
 | `openai-evals` | [OpenAI Evals](./evaluation-and-observability/openai-evals.md) | An open-source framework for evaluating language model behavior |
+| `openjudge` | [OpenJudge](./evaluation-and-observability/openjudge.md) | AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training |
 | `openllm` | [OpenLLM](./serving-and-deployment/openllm.md) | BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command |
 | `openpipe-art` | [OpenPipe ART](./model-layer/openpipe-art.md) | Open-source Agent Reinforcement Trainer that fine-tunes multi-step LLM agents with RL (GRPO) using an LLM-judge reward instead of labeled steps |
 | `openrouter` | [OpenRouter](./model-layer/openrouter.md) | Unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing |
@@ -150,6 +158,7 @@
 | `promptflow` | [Prompt flow (Microsoft)](./orchestration/promptflow.md) | Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML |
 | `promptfoo` | [promptfoo](./evaluation-and-observability/promptfoo.md) | An open-source CLI and platform for prompt and LLM regression testing |
 | `promptlayer` | [PromptLayer](./dx-and-tooling/promptlayer.md) | Prompt management and logging platform for versioning, collaboration, and observability |
+| `prompty` | [Prompty](./dx-and-tooling/prompty.md) | Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts |
 | `puppeteer` | [Puppeteer](./data-ingestion/puppeteer.md) | Node.js browser automation library for Chrome and Chromium workflows |
 | `pydantic-ai-tool` | [Pydantic AI](./orchestration/pydantic-ai-tool.md) | Pydantic agent framework focused on typed outputs, tools, and production Python apps |
 | `pyrit` | [PyRIT](./evaluation-and-observability/pyrit.md) | Microsoft's Python Risk Identification Toolkit for red-teaming generative AI systems, born from its AI Red Team |
@@ -159,6 +168,7 @@
 | `ragas` | [Ragas](./evaluation-and-observability/ragas.md) | Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines |
 | `ragatouille` | [RAGatouille](./data-ingestion/ragatouille.md) | Library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines |
 | `railway` | [Railway](./serving-and-deployment/railway.md) | Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes |
+| `ramalama` | [RamaLama](./serving-and-deployment/ramalama.md) | Containers-native CLI for pulling, isolating, and serving AI models on local systems |
 | `ray` | [Ray](./serving-and-deployment/ray.md) | Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving |
 | `ray-serve` | [Ray Serve](./serving-and-deployment/ray-serve.md) | Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python |
 | `rebuff` | [Rebuff](./evaluation-and-observability/rebuff.md) | Prompt injection detection and guardrail toolkit for LLM applications |
@@ -195,8 +205,10 @@
 | `trl` | [TRL](./model-layer/trl.md) | Hugging Face's library for post-training LLMs: SFT, DPO, GRPO, PPO, and reward modeling on top of Transformers |
 | `trulens` | [TruLens](./evaluation-and-observability/trulens.md) | An evaluation and tracking toolkit for LLM and RAG applications |
 | `typesense` | [Typesense](./data-ingestion/typesense.md) | Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in |
+| `ultraeval-audio` | [UltraEval-Audio](./evaluation-and-observability/ultraeval-audio.md) | OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models |
 | `unsloth` | [Unsloth](./model-layer/unsloth.md) | Efficient fine-tuning toolkit for Llama, Qwen, Mistral, and other open models |
 | `uptrain` | [UpTrain](./evaluation-and-observability/uptrain.md) | Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics |
+| `uqlm` | [UQLM](./evaluation-and-observability/uqlm.md) | Python uncertainty-quantification library for detecting unreliable LLM responses |
 | `vaani` | [Vaani](./dx-and-tooling/vaani.md) | Fast, private macOS dictation with AI formatting and editing |
 | `vellum` | [Vellum](./dx-and-tooling/vellum.md) | Commercial platform to build LLM apps — prompt/workflow authoring, evaluation, versioning, and deployment via a visual builder plus SDK |
 | `vercel` | [Vercel](./serving-and-deployment/vercel.md) | Frontend cloud platform for deploying and scaling Next.js apps with edge functions |

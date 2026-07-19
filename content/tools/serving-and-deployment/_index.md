@@ -28,6 +28,8 @@ Before picking a tool in this phase, consider:
 ### Recently Added
 
 - [Envoy AI Gateway](./ai-gateway.md)
+- [MCP Context Forge](./mcp-context-forge.md)
+- [RamaLama](./ramalama.md)
 - [ToolHive](./toolhive.md)
 - [Anyscale](./anyscale.md)
 - [Baseten](./baseten.md)
@@ -35,8 +37,6 @@ Before picking a tool in this phase, consider:
 - [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
 - [KServe](./kserve.md)
-- [KubeAI](./kubeai.md)
-- [LoRAX](./lorax.md)
 
 ### Most Popular
 
@@ -62,11 +62,13 @@ _No star-tracked entries yet._
 - [KubeAI](./kubeai.md) — Kubernetes operator for serving LLMs and embeddings: an OpenAI-compatible endpoint with autoscaling (scale-from-zero) over vLLM/Ollama backends
 - [LiteLLM](./litellm.md) — A proxy and SDK for routing requests across many LLM providers
 - [LoRAX](./lorax.md) — Multi-LoRA inference server that serves thousands of fine-tuned adapters on a single base model and GPU
+- [MCP Context Forge](./mcp-context-forge.md) — IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance
 - [Modal](./modal.md) — A serverless platform for deploying Python apps and GPU workloads
 - [NVIDIA NIM](./nvidia-nim.md) — Prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs
 - [OpenLLM](./openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
 - [Portkey](./portkey.md) — An AI gateway for routing, observability, guardrails, and prompt management
 - [Railway](./railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [RamaLama](./ramalama.md) — Containers-native CLI for pulling, isolating, and serving AI models on local systems
 - [Ray](./ray.md) — Distributed compute engine for scaling Python and AI workloads — training, tuning, batch inference, and serving
 - [Ray Serve](./ray-serve.md) — Scalable model-serving library on Ray for composing multi-model inference graphs in pure Python
 - [Replicate](./replicate.md) — A hosted platform for running and deploying machine learning models via API

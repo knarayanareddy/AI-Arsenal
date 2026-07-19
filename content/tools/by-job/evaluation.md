@@ -172,13 +172,17 @@ This table is exhaustive for tools tagged with job = evaluation.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
+| [Agentic Security](../evaluation-and-observability/agentic-security.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [AgentOps](../evaluation-and-observability/agentops.md) | evaluation and observability | freemium | Yes | No | Yes | python | watching |
+| [AI Infra Guard](../evaluation-and-observability/ai-infra-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [any-agent](../orchestration/any-agent.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Astra Autonomous Pentest](../evaluation-and-observability/astra-autonomous-pentest.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | freemium | Yes | No | No | python | watching |
 | [Deepchecks](../evaluation-and-observability/deepchecks.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | solid-choice |
+| [EvalScope](../evaluation-and-observability/evalscope.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
+| [FuzzyAI](../evaluation-and-observability/fuzzyai.md) | evaluation and observability | open-source | Yes | Yes | Yes | polyglot | use-with-caution |
 | [Galileo](../evaluation-and-observability/galileo.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |
 | [garak (NVIDIA)](../evaluation-and-observability/garak.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
@@ -186,17 +190,22 @@ This table is exhaustive for tools tagged with job = evaluation.
 | [Humanloop](../evaluation-and-observability/humanloop.md) | evaluation and observability | paid | No | No | No | python, typescript | solid-choice |
 | [Inspect (UK AI Safety Institute)](../evaluation-and-observability/inspect-ai.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Inspect Petri](../evaluation-and-observability/inspect-petri.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | watching |
+| [Laminar](../evaluation-and-observability/laminar.md) | evaluation and observability | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | freemium | Yes | No | No | python, typescript | recommended |
 | [LangWatch](../evaluation-and-observability/langwatch.md) | evaluation and observability | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Evaluation Harness (EleutherAI)](../evaluation-and-observability/lm-evaluation-harness.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | best-in-class |
 | [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | paid | No | No | No | python | watching |
 | [OpenAI Evals](../evaluation-and-observability/openai-evals.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
+| [OpenJudge](../evaluation-and-observability/openjudge.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [promptfoo](../evaluation-and-observability/promptfoo.md) | evaluation and observability | open-source | Yes | Yes | Yes | typescript | recommended |
+| [Prompty](../dx-and-tooling/prompty.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [PyRIT](../evaluation-and-observability/pyrit.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Ragas](../evaluation-and-observability/ragas.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [TruLens](../evaluation-and-observability/trulens.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
+| [UltraEval-Audio](../evaluation-and-observability/ultraeval-audio.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [UpTrain](../evaluation-and-observability/uptrain.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | use-with-caution |
+| [UQLM](../evaluation-and-observability/uqlm.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Vellum](../dx-and-tooling/vellum.md) | dx and tooling | freemium | Yes | No | No | python | solid-choice |
 | [Weights & Biases Weave](../evaluation-and-observability/wandb-weave.md) | evaluation and observability | freemium | Yes | No | No | python | solid-choice |
 | [Weights & Biases](../model-layer/weights-biases.md) | model layer | freemium | Yes | No | No | python | recommended |

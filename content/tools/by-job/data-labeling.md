@@ -131,6 +131,7 @@ This table is exhaustive for tools tagged with job = data-labeling.
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
 | [Airbyte](../data-ingestion/airbyte.md) | data ingestion | freemium | Yes | Yes | Yes | java, python | solid-choice |
+| [Hugging Face AI Sheets](../data-ingestion/aisheets.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | watching |
 | [Argilla](../data-ingestion/argilla.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [dlt](../data-ingestion/dlt.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Label Studio](../data-ingestion/label-studio.md) | data ingestion | freemium | Yes | Yes | Yes | python | recommended |

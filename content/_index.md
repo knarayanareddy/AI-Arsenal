@@ -13,24 +13,24 @@
 | [digests](./digests/) | 1 entries | 2026-07-19 |
 | [observability](./observability/) | 16 entries | 2026-07-19 |
 | [projects](./projects/) | 322 entries | 2026-07-19 |
-| [research](./research/) | 130 entries | 2026-07-19 |
+| [research](./research/) | 132 entries | 2026-07-19 |
 | [skills](./skills/) | 28 entries | 2026-07-19 |
 | [tips and tricks](./tips-and-tricks/) | 171 entries | 2026-07-19 |
-| [tools](./tools/) | 229 entries | 2026-07-19 |
+| [tools](./tools/) | 241 entries | 2026-07-19 |
 | [trending](./trending/) | 4 entries | 2026-07-19 |
 
 ## Recently Added
 
+- [Agentic Security](./tools/evaluation-and-observability/agentic-security.md)
 - [Envoy AI Gateway](./tools/serving-and-deployment/ai-gateway.md)
+- [AI Infra Guard](./tools/evaluation-and-observability/ai-infra-guard.md)
 - [Airweave](./projects/data-and-retrieval/airweave.md)
+- [Hugging Face AI Sheets](./tools/data-ingestion/aisheets.md)
 - [ArkFlow](./projects/frameworks/arkflow.md)
 - [AutoRAG](./projects/data-and-retrieval/autorag.md)
 - [candle-vllm](./projects/inference-engines/candle-vllm.md)
 - [DeepAnalyze](./projects/agent-systems/deepanalyze.md)
 - [DeepSeek-OCR](./projects/foundation-models/deepseek-ocr.md)
-- [DeepSpec](./projects/training-and-alignment/deepspec.md)
-- [docext](./projects/data-and-retrieval/docext.md)
-- [Fara](./projects/foundation-models/fara.md)
 
 ## Most Popular
 
@@ -72,6 +72,7 @@
 - [AgentBench](./benchmarks/agents/agentbench.md) — 
 - [AgentDojo](./benchmarks/safety/agentdojo.md) — 
 - [AgentHarm](./benchmarks/safety/agentharm.md) — 
+- [Agentic Security](./tools/evaluation-and-observability/agentic-security.md) — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
 - [AgentOps](./tools/evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - [AgentScope](./projects/frameworks/agentscope.md) — Python framework for building observable, multi-agent, and multimodal agent systems
 - [Agno](./tools/orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
@@ -80,6 +81,7 @@
 - [AI Engineer — Role Overview](./skills/by-role/ai-engineer-role.md) — Role overview mapping the AI Engineer job to the Arsenal's learning paths, build examples, and tools
 - [AI Engineer World's Fair](./community/events/ai-engineer-worlds-fair.md) — 
 - [Envoy AI Gateway](./tools/serving-and-deployment/ai-gateway.md) — An Envoy Gateway extension for routing and governing traffic to generative AI services
+- [AI Infra Guard](./tools/evaluation-and-observability/ai-infra-guard.md) — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
 - [AI Tinkerers](./community/meetups/ai-tinkerers.md) — 
 - [AIBrix](./projects/inference-engines/aibrix.md) — Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference
 - [Aider](./tools/dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
@@ -88,6 +90,7 @@
 - [Airbyte](./tools/data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./tools/orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
 - [Airweave](./projects/data-and-retrieval/airweave.md) — Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs
+- [Hugging Face AI Sheets](./tools/data-ingestion/aisheets.md) — Hugging Face open-source no-code tool for generating and enriching datasets with AI models
 - [Alarm on Empty and Unparseable Responses](./tips-and-tricks/debugging-and-observability/alarm-on-empty-and-unparseable-responses.md) — 
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./research/architectures/alayrac-2022-flamingo.md) — Bridged a frozen vision encoder and a frozen LLM with trainable cross-attention (Perceiver Resampler + gated cross-attention), enabling few-shot vision-language tasks from interleaved image-text prompts — the template most modern VLMs follow.
 - [Alert on SLO Burn Rate, Not Raw Thresholds, for Latency, Cost, and Quality Regressions](./observability/monitoring-alerting/alert-on-quality-and-cost-regressions.md) — 
@@ -313,6 +316,7 @@
 - [KTO: Model Alignment as Prospect Theoretic Optimization](./research/training-and-alignment/ethayarajh-2024-kto.md) — Aligns models from a single binary 'good/bad' label per example instead of pairwise preferences, using a human-aware loss inspired by prospect theory -- removes the need to collect matched preferred/rejected pairs
 - [Eugene Yan](./community/people/eugene-yan.md) — Writes practical essays on retrieval, recommendation, evaluation, and ML systems
 - [Evals in Production](./skills/applied/evals-in-production.md) — Operationalizing LLM evaluation: CI gates, online monitoring, feedback loops, and regression discipline
+- [EvalScope](./tools/evaluation-and-observability/evalscope.md) — ModelScope framework for LLM, VLM, AIGC, agent evaluation, stress testing, and reports
 - [Evaluate Checkpoints on Task Metrics, Not Training Loss](./tips-and-tricks/fine-tuning/evaluate-checkpoints-on-task-metrics-not-loss.md) — 
 - [Compare Embedding Models Before Changing Your Chunking Strategy](./tips-and-tricks/rag-and-retrieval/evaluate-embedding-models-before-rechunking.md) — 
 - [Evaluate the End-to-End Task, Not Only Components](./tips-and-tricks/evaluation/evaluate-the-end-to-end-task-not-only-components.md) — 
@@ -351,6 +355,7 @@
 - [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](./research/inference-and-efficiency/frantar-2022-gptq.md) — Showed one-shot post-training quantization to 3-4 bits is feasible for 100B+ param models in hours with minimal accuracy loss -- reach for GPTQ (or AWQ) as a default quantization option before more disruptive approaches
 - [FunASR](./projects/frameworks/funasr.md) — An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization
 - [Prompt Engineering Fundamentals](./skills/prompt-engineering/fundamentals.md) — Practical prompt engineering fundamentals for production LLM applications
+- [FuzzyAI](./tools/evaluation-and-observability/fuzzyai.md) — CyberArk toolkit for automated LLM API fuzzing and jailbreak testing
 - [GAIA](./benchmarks/agents/gaia.md) — 
 - [Galileo](./tools/evaluation-and-observability/galileo.md) — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
 - [Precise Zero-Shot Dense Retrieval without Relevance Labels](./research/retrieval-and-memory/gao-2022-hyde.md) — Showed you can retrieve well in a zero-shot setting by generating a hypothetical answer first and embedding that instead of the raw query, meaning you should reach for HyDE specifically when you have no labeled relevance data to train or fine-tune a retriever
@@ -405,6 +410,7 @@
 - [Haystack](./projects/frameworks/haystack.md) — Modular framework for production search, RAG, agents, routing, and generation pipelines
 - [Deep Residual Learning for Image Recognition](./research/foundational/he-2015-resnet.md) — Introduced residual connections (skip connections) that let networks learn residual functions relative to the identity, making very deep networks trainable and unblocking the depth scaling that later architectures — including Transformers — depend on
 - [Helicone](./projects/benchmarks-and-evals/helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
+- [Holistic Evaluation of Language Models](./research/evaluation-and-safety/helm.md) — HELM established a reproducible evaluation framework that compares language models across scenarios and multiple quality, robustness, fairness, and efficiency metrics rather than relying on one accuracy leaderboard.
 - [Measuring Massive Multitask Language Understanding](./research/evaluation-and-safety/hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
 - [Hermes Agent](./projects/agent-systems/hermes-agent.md) — Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes
 - [Hugging Face Diffusers](./projects/frameworks/hf-diffusers.md) — The de facto Python library for diffusion models, providing pipelines, schedulers, and model components for image, video, and audio generation in PyTorch
@@ -483,6 +489,7 @@
 - [Efficient Memory Management for Large Language Model Serving with PagedAttention](./research/inference-and-efficiency/kwon-2023-pagedattention.md) — Applied OS virtual-memory paging to the KV cache: non-contiguous fixed-size blocks eliminate the 60-80% memory waste of contiguous allocation, enabling 2-4x serving throughput — this is the vLLM paper, and paged KV caches are now universal
 - [Label Studio](./tools/data-ingestion/label-studio.md) — An open-source data labeling platform for ML and AI datasets
 - [LAION (Large-scale Artificial Intelligence Open Network)](./community/datasets/laion.md) — 
+- [Laminar](./tools/evaluation-and-observability/laminar.md) — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - [LanceDB](./projects/data-and-retrieval/lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LangChain](./projects/frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - [LangChain Forum](./community/forums/langchain-forum.md) — 
@@ -588,6 +595,7 @@
 - [MaxKB](./projects/agent-systems/maxkb.md) — Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration
 - [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](./research/evaluation-and-safety/mazaheri-2026-agentatlas.md) — Provides a diagnostic vocabulary for separating agent outcomes, control decisions, trajectory failures, and benchmark coverage instead of relying on one success score.
 - [MBPP](./benchmarks/code/mbpp.md) — 
+- [MCP Context Forge](./tools/serving-and-deployment/mcp-context-forge.md) — IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance
 - [Measure Time-to-First-Token Separately From Total Generation Time](./tips-and-tricks/cost-and-performance/measure-first-token-latency.md) — 
 - [Track KV Cache Hit Rate for Long-Context Serving Economics](./tips-and-tricks/inference-and-serving/measure-kv-cache-hit-rate.md) — 
 - [Measure Queue Time Separately From Model Generation Time](./tips-and-tricks/cost-and-performance/measure-queue-time-separately.md) — 
@@ -660,6 +668,7 @@
 - [NeMo Data Designer](./projects/data-and-retrieval/nemo-data-designer.md) — Toolkit for generating synthetic data from scratch or seed data with configurable schemas, constraints, and model providers
 - [NeMo Guardrails](./tools/evaluation-and-observability/nemo-guardrails.md) — NVIDIA framework for adding programmable guardrails to LLM applications
 - [NeurIPS (Conference on Neural Information Processing Systems)](./community/events/neurips.md) — 
+- [NExT-GPT: Any-to-Any Multimodal LLM](./research/architectures/next-gpt.md) — NExT-GPT combines a language model with modality encoders and diffusion decoders so one instruction-tuned system can perceive and generate text, images, video, and audio in arbitrary combinations.
 - [No Priors](./community/creators/no-priors-podcast.md) — 
 - [Noam Shazeer](./community/people/noam-shazeer.md) — Influential contributor to Transformers, mixture-of-experts, and large-scale model architecture
 - [Nomic Atlas](./tools/data-ingestion/nomic-atlas.md) — Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation
@@ -688,6 +697,7 @@
 - [OpenAI Swarm](./projects/agent-systems/openai-swarm.md) — An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK
 - [OpenEnv](./projects/training-and-alignment/openenv.md) — Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
 - [OpenHands](./projects/frameworks/openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
+- [OpenJudge](./tools/evaluation-and-observability/openjudge.md) — AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training
 - [OpenLIT](./projects/benchmarks-and-evals/openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLM](./tools/serving-and-deployment/openllm.md) — BentoML's tool for running any open-source LLM as an OpenAI-compatible API with one command
 - [OpenLLMetry](./projects/benchmarks-and-evals/openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
@@ -757,6 +767,7 @@
 - [Prompt flow (Microsoft)](./tools/orchestration/promptflow.md) — Microsoft's LLM app development suite — build flows as executable DAGs with a visual trace UI, batch-evaluate them, and deploy the same flow to Azure ML
 - [promptfoo](./tools/evaluation-and-observability/promptfoo.md) — An open-source CLI and platform for prompt and LLM regression testing
 - [PromptLayer](./tools/dx-and-tooling/promptlayer.md) — Prompt management and logging platform for versioning, collaboration, and observability
+- [Prompty](./tools/dx-and-tooling/prompty.md) — Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts
 - [Propagate a Single Trace Context Across Service Hops and Streaming Responses, So One User Request Is One Trace](./observability/tracing/propagate-trace-context-across-services-and-streaming.md) — 
 - [Prototyping Tools](./tools/by-job/prototyping.md) — Curated tools for prototyping workflows in AI engineering
 - [Puppeteer](./tools/data-ingestion/puppeteer.md) — Node.js browser automation library for Chrome and Chromium workflows
@@ -792,6 +803,7 @@
 - [RAGFlow](./projects/data-and-retrieval/ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
 - [RAGLite](./projects/data-and-retrieval/raglite.md) — Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters
 - [Railway](./tools/serving-and-deployment/railway.md) — Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes
+- [RamaLama](./tools/serving-and-deployment/ramalama.md) — Containers-native CLI for pulling, isolating, and serving AI models on local systems
 - [Rank Context Sections by Expected Usefulness, Not Chronology](./tips-and-tricks/prompting/rank-context-by-expected-usefulness.md) — 
 - [Mixture-of-Depths: Dynamically Allocating Compute in Transformer-Based Language Models](./research/inference-and-efficiency/raposo-2024-mixture-of-depths.md) — Lets a Transformer spend different amounts of compute on different tokens by having a per-layer router send only the top-k tokens through the block and the rest skip via residual -- a compute budget set by capacity, not by every token
 - [Rate-Limit and Cap Spend Per User](./tips-and-tricks/inference-and-serving/rate-limit-and-cap-spend-per-user.md) — 
@@ -1002,6 +1014,7 @@
 - [Typesense](./tools/data-ingestion/typesense.md) — Open-source, typo-tolerant search engine — an Algolia alternative with vector and hybrid search built in
 - [UI-TARS Desktop](./projects/agent-systems/ui-tars-desktop.md) — Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
 - [Uiverse Design](./projects/frameworks/uiverse-design.md) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
+- [UltraEval-Audio](./tools/evaluation-and-observability/ultraeval-audio.md) — OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models
 - [Ultralytics YOLO](./projects/frameworks/ultralytics.md) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
 - [Ultralytics YOLO](./projects/frameworks/ultralytics-yolo.md) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
 - [UltraRAG](./projects/data-and-retrieval/ultrarag.md) — Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines
@@ -1010,6 +1023,7 @@
 - [Unstructured](./projects/data-and-retrieval/unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
 - [Upsonic](./projects/agent-systems/upsonic.md) — A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers
 - [UpTrain](./tools/evaluation-and-observability/uptrain.md) — Open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics
+- [UQLM](./tools/evaluation-and-observability/uqlm.md) — Python uncertainty-quantification library for detecting unreliable LLM responses
 - [Allocate a Fixed Token Budget to Each Prompt Section](./tips-and-tricks/prompting/use-context-budgets-per-section.md) — 
 - [Wrap Retrieved Context in Explicit Delimiters](./tips-and-tricks/prompting/use-delimiters-around-retrieved-context.md) — 
 - [Add the Failing Question to Your Eval Set Before Fixing the Bug](./tips-and-tricks/evaluation/use-golden-questions-for-every-bug-fix.md) — 

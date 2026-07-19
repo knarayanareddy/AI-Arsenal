@@ -111,4 +111,4 @@ Structural validity is not sufficient for promotion. New entries must contain be
 
 ## LAST UPDATED
 
-2026-07-19 — Schema-first catalog with projects, tools, research, tips, guides, architectures, observability, community, benchmarks, trends, and generated data. Total content entries: 1047.
+2026-07-19 — Schema-first catalog with projects, tools, research, tips, guides, architectures, observability, community, benchmarks, trends, and generated data. Total content entries: 1061.

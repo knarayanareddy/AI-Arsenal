@@ -189,6 +189,7 @@ This table is exhaustive for tools tagged with job = deployment.
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | usage-based | No | No | No | python | recommended |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | usage-based | Yes | No | No | polyglot | recommended |
+| [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Replicate](../serving-and-deployment/replicate.md) | serving and deployment | usage-based | No | No | No | python, typescript | solid-choice |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | usage-based | No | No | No | python, polyglot | solid-choice |

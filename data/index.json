@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T21:20:09.420Z",
+    "generated_at": "2026-07-19T21:22:19.143Z",
     "total_projects": 322,
-    "total_tools": 202,
-    "total_papers": 126,
+    "total_tools": 214,
+    "total_papers": 128,
     "total_tips": 171,
     "total_people": 25,
     "total_digests": 1,
@@ -499,6 +499,27 @@
       "featured": false
     },
     {
+      "id": "agentic-security",
+      "type": "tool",
+      "name": "Agentic Security",
+      "description": "Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications",
+      "tags": [
+        "security",
+        "guardrails",
+        "agents",
+        "tool-use",
+        "evaluation"
+      ],
+      "path": "content/tools/evaluation-and-observability/agentic-security.md",
+      "url": "content/tools/evaluation-and-observability/agentic-security",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agentops",
       "type": "tool",
       "name": "AgentOps",
@@ -645,6 +666,27 @@
       ],
       "path": "content/tools/serving-and-deployment/ai-gateway.md",
       "url": "content/tools/serving-and-deployment/ai-gateway",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ai-infra-guard",
+      "type": "tool",
+      "name": "AI Infra Guard",
+      "description": "Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure",
+      "tags": [
+        "security",
+        "guardrails",
+        "evaluation",
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/tools/evaluation-and-observability/ai-infra-guard.md",
+      "url": "content/tools/evaluation-and-observability/ai-infra-guard",
       "last_updated": "2026-07-19",
       "category": null,
       "maturity": "beta",
@@ -804,6 +846,26 @@
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "aisheets",
+      "type": "tool",
+      "name": "Hugging Face AI Sheets",
+      "description": "Hugging Face open-source no-code tool for generating and enriching datasets with AI models",
+      "tags": [
+        "data",
+        "llm",
+        "huggingface",
+        "batching"
+      ],
+      "path": "content/tools/data-ingestion/aisheets.md",
+      "url": "content/tools/data-ingestion/aisheets",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "watching",
       "featured": false
     },
     {
@@ -5100,6 +5162,27 @@
       "featured": false
     },
     {
+      "id": "evalscope",
+      "type": "tool",
+      "name": "EvalScope",
+      "description": "ModelScope framework for LLM, VLM, AIGC, agent evaluation, stress testing, and reports",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "llm",
+        "multimodal",
+        "inference"
+      ],
+      "path": "content/tools/evaluation-and-observability/evalscope.md",
+      "url": "content/tools/evaluation-and-observability/evalscope",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "evaluate-checkpoints-on-task-metrics-not-loss",
       "type": "tip",
       "name": "Evaluate Checkpoints on Task Metrics, Not Training Loss",
@@ -5825,6 +5908,26 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "fuzzyai",
+      "type": "tool",
+      "name": "FuzzyAI",
+      "description": "CyberArk toolkit for automated LLM API fuzzing and jailbreak testing",
+      "tags": [
+        "security",
+        "evaluation",
+        "llm",
+        "guardrails"
+      ],
+      "path": "content/tools/evaluation-and-observability/fuzzyai.md",
+      "url": "content/tools/evaluation-and-observability/fuzzyai",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "watching",
       "featured": false
     },
     {
@@ -6854,6 +6957,27 @@
       "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "helm",
+      "type": "paper",
+      "name": "Holistic Evaluation of Language Models",
+      "description": "HELM established a reproducible evaluation framework that compares language models across scenarios and multiple quality, robustness, fairness, and efficiency metrics rather than relying on one accuracy leaderboard.",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "llm",
+        "research",
+        "foundational"
+      ],
+      "path": "content/research/evaluation-and-safety/helm.md",
+      "url": "content/research/evaluation-and-safety/helm",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -8315,6 +8439,27 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "laminar",
+      "type": "tool",
+      "name": "Laminar",
+      "description": "OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications",
+      "tags": [
+        "observability",
+        "tracing",
+        "monitoring",
+        "evaluation",
+        "agents"
+      ],
+      "path": "content/tools/evaluation-and-observability/laminar.md",
+      "url": "content/tools/evaluation-and-observability/laminar",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -10327,6 +10472,28 @@
       "featured": false
     },
     {
+      "id": "mcp-context-forge",
+      "type": "tool",
+      "name": "MCP Context Forge",
+      "description": "IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance",
+      "tags": [
+        "agents",
+        "tool-use",
+        "orchestration",
+        "routing",
+        "monitoring",
+        "security"
+      ],
+      "path": "content/tools/serving-and-deployment/mcp-context-forge.md",
+      "url": "content/tools/serving-and-deployment/mcp-context-forge",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "measure-first-token-latency",
       "type": "tip",
       "name": "Measure Time-to-First-Token Separately From Total Generation Time",
@@ -11720,6 +11887,27 @@
       "featured": false
     },
     {
+      "id": "next-gpt",
+      "type": "paper",
+      "name": "NExT-GPT: Any-to-Any Multimodal LLM",
+      "description": "NExT-GPT combines a language model with modality encoders and diffusion decoders so one instruction-tuned system can perceive and generate text, images, video, and audio in arbitrary combinations.",
+      "tags": [
+        "multimodal",
+        "vision",
+        "voice",
+        "llm",
+        "research"
+      ],
+      "path": "content/research/architectures/next-gpt.md",
+      "url": "content/research/architectures/next-gpt",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "no-priors-podcast",
       "type": "community",
       "name": "No Priors",
@@ -12252,6 +12440,27 @@
       "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openjudge",
+      "type": "tool",
+      "name": "OpenJudge",
+      "description": "AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training",
+      "tags": [
+        "evaluation",
+        "agents",
+        "llm",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/tools/evaluation-and-observability/openjudge.md",
+      "url": "content/tools/evaluation-and-observability/openjudge",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -13579,6 +13788,26 @@
       "featured": false
     },
     {
+      "id": "prompty",
+      "type": "tool",
+      "name": "Prompty",
+      "description": "Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts",
+      "tags": [
+        "llm",
+        "structured-output",
+        "evaluation",
+        "observability"
+      ],
+      "path": "content/tools/dx-and-tooling/prompty.md",
+      "url": "content/tools/dx-and-tooling/prompty",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "propagate-trace-context-across-services-and-streaming",
       "type": "observability",
       "name": "Propagate a Single Trace Context Across Service Hops and Streaming Responses, So One User Request Is One Trace",
@@ -14233,6 +14462,27 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ramalama",
+      "type": "tool",
+      "name": "RamaLama",
+      "description": "Containers-native CLI for pulling, isolating, and serving AI models on local systems",
+      "tags": [
+        "inference",
+        "local",
+        "docker",
+        "self-hosted",
+        "edge"
+      ],
+      "path": "content/tools/serving-and-deployment/ramalama.md",
+      "url": "content/tools/serving-and-deployment/ramalama",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -18211,6 +18461,27 @@
       "featured": false
     },
     {
+      "id": "ultraeval-audio",
+      "type": "tool",
+      "name": "UltraEval-Audio",
+      "description": "OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models",
+      "tags": [
+        "evaluation",
+        "voice",
+        "multimodal",
+        "benchmark",
+        "research"
+      ],
+      "path": "content/tools/evaluation-and-observability/ultraeval-audio.md",
+      "url": "content/tools/evaluation-and-observability/ultraeval-audio",
+      "last_updated": "2026-07-19",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ultralytics",
       "type": "project",
       "name": "Ultralytics YOLO",
@@ -18360,6 +18631,26 @@
       "path": "content/tools/evaluation-and-observability/uptrain.md",
       "url": "content/tools/evaluation-and-observability/uptrain",
       "last_updated": "2026-07-08",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "uqlm",
+      "type": "tool",
+      "name": "UQLM",
+      "description": "Python uncertainty-quantification library for detecting unreliable LLM responses",
+      "tags": [
+        "llm",
+        "evaluation",
+        "efficiency",
+        "research"
+      ],
+      "path": "content/tools/evaluation-and-observability/uqlm.md",
+      "url": "content/tools/evaluation-and-observability/uqlm",
+      "last_updated": "2026-07-19",
       "category": null,
       "maturity": "beta",
       "cost_model": "open-source",
