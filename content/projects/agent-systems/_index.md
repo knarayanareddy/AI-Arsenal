@@ -32,16 +32,16 @@ Before selecting an agent system:
 
 ### Recently Added
 
+- [DeepAnalyze](./deepanalyze.md)
+- [Mistral Vibe](./mistral-vibe.md)
+- [ml-intern](./ml-intern.md)
+- [nanobot](./nanobot.md)
+- [Open-AutoGLM](./open-autoglm.md)
+- [Open Code Review](./open-code-review.md)
+- [Symphony](./symphony.md)
 - [BISHENG](./bisheng.md)
 - [GPT Engineer](./gpt-engineer.md)
 - [Leon](./leon.md)
-- [MaxKB](./maxkb.md)
-- [Memvid](./memvid.md)
-- [Mobile-Agent](./mobileagent.md)
-- [OpenAI Swarm](./openai-swarm.md)
-- [Portkey AI Gateway](./portkey-gateway.md)
-- [Refact.ai](./refact.md)
-- [SillyTavern](./sillytavern.md)
 
 ### Most Popular
 
@@ -52,9 +52,9 @@ Before selecting an agent system:
 - [AnythingLLM](./anythingllm.md) — ⭐ 62914
 - [MemPalace](./mempalace.md) — ⭐ 57230
 - [GPT Engineer](./gpt-engineer.md) — ⭐ 55189
+- [nanobot](./nanobot.md) — ⭐ 45890
 - [LibreChat](./librechat.md) — ⭐ 40447
 - [Strix](./strix.md) — ⭐ 38354
-- [UI-TARS Desktop](./ui-tars-desktop.md) — ⭐ 37934
 
 ### Browse All
 
@@ -62,6 +62,7 @@ Before selecting an agent system:
 - [BISHENG](./bisheng.md) — An open enterprise LLMOps platform combining visual GenAI workflow building, RAG, agents, model management, evaluation
 - [Browser Use](./browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
 - [Continue](./continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- [DeepAnalyze](./deepanalyze.md) — RUC DataLab's DeepAnalyze-8B agentic LLM and framework for autonomous data preparation, analysis, modeling, visualization, and report generation
 - [GPT Engineer](./gpt-engineer.md) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
 - [GPT Researcher](./gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [Hermes Agent](./hermes-agent.md) — Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes
@@ -73,8 +74,13 @@ Before selecting an agent system:
 - [MaxKB](./maxkb.md) — Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration
 - [MemPalace](./mempalace.md) — Open-source AI memory system for persistent agent context, recall, and memory-tool integrations
 - [Memvid](./memvid.md) — A serverless, single-file memory layer for AI agents that encodes a knowledge base into a compact video-file format for fast semantic retrieval without a
+- [Mistral Vibe](./mistral-vibe.md) — Mistral's open-source CLI coding assistant with subagents, delegated tasks, skills, and a voice mode
+- [ml-intern](./ml-intern.md) — Hugging Face's autonomous ML engineer agent that reads papers and docs, trains models, and ships them through Inference Providers and the Hub
 - [Mobile-Agent](./mobileagent.md) — Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning
+- [nanobot](./nanobot.md) — HKU Data Intelligence Lab's lightweight open-source agent for tool use, chats, and workflows, distributed as the nanobot-ai PyPI package
 - [nono](./nono.md) — Rust sandbox for isolating AI-agent execution with zero-setup positioning
+- [Open-AutoGLM](./open-autoglm.md) — Z.ai's Phone Agent framework that uses AutoGLM, VLM screen perception, planning, and ADB to control Android applications with confirmation and takeover paths
+- [Open Code Review](./open-code-review.md) — Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings
 - [OpenAI Swarm](./openai-swarm.md) — An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK
 - [PageAgent](./page-agent.md) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
 - [Portkey AI Gateway](./portkey-gateway.md) — A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability
@@ -87,6 +93,7 @@ Before selecting an agent system:
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
 - [Strix](./strix.md) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
 - [SuperAGI](./superagi.md) — A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory
+- [Symphony](./symphony.md) — OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board
 - [Tabby](./tabby.md) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
 - [TensorZero](./tensorzero.md) — An open-source LLMOps platform in Rust unifying an LLM gateway, observability, evaluation, and data-driven optimization into a feedback loop for improving LLM
 - [UI-TARS Desktop](./ui-tars-desktop.md) — Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
