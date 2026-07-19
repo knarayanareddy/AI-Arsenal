@@ -33,6 +33,9 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [candle-vllm](./candle-vllm.md)
+- [Superlinked Inference Engine](./sie.md)
+- [vLLM-MLX](./vllm-mlx.md)
 - [FastVideo](./fastvideo.md)
 - [GPTCache](./gptcache.md)
 - [Hugging Face Optimum](./hf-optimum.md)
@@ -40,9 +43,6 @@ Before selecting an inference engine:
 - [Nunchaku (SVDQuant)](./nunchaku.md)
 - [OpenVINO](./openvino.md)
 - [Piper](./piper-tts.md)
-- [Semantic Router (vLLM)](./semantic-router.md)
-- [sherpa-onnx](./sherpa-onnx.md)
-- [SpeechRecognition (Python)](./speechrecognition.md)
 
 ### Most Popular
 
@@ -61,6 +61,7 @@ Before selecting an inference engine:
 
 - [AIBrix](./aibrix.md) — Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference
 - [Candle](./candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
+- [candle-vllm](./candle-vllm.md) — Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API
 - [NVIDIA Dynamo](./dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models
 - [ExLlamaV2](./exllamav2.md) — Consumer-GPU-focused inference library with the EXL2 variable-bitrate quantization format for running large models on limited VRAM
 - [exo (exo-explore)](./exo.md) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
@@ -87,12 +88,14 @@ Before selecting an inference engine:
 - [Semantic Router (vLLM)](./semantic-router.md) — An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM
 - [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
 - [sherpa-onnx](./sherpa-onnx.md) — An offline, on-device speech toolkit (STT, TTS, diarization, VAD, enhancement) built on next-gen Kaldi and onnxruntime with bindings for a dozen languages and
+- [Superlinked Inference Engine](./sie.md) — Superlinked open-source inference server and production cluster for serving the model mix used by agent applications
 - [vLLM Speculators](./speculators.md) — Unified library for building, evaluating, and storing speculative-decoding algorithms for LLM inference
 - [SpeechRecognition (Python)](./speechrecognition.md) — A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk
 - [TensorRT-LLM](./tensorrt-llm.md) — NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput
 - [Text Generation Inference](./text-generation-inference.md) — Hugging Face inference server for serving large text-generation models in production
 - [text-generation-webui (oobabooga)](./text-generation-webui.md) — The Gradio-based local LLM workbench — multiple loader backends, deep sampling control, character/instruct modes, extensions, and an OpenAI-compatible API
 - [vLLM](./vllm.md) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
+- [vLLM-MLX](./vllm-mlx.md) — MLX-backed OpenAI- and Anthropic-compatible local inference server for Apple Silicon with batching, vision, and MCP tool calling
 - [vLLM-Omni](./vllm-omni.md) — Framework for efficient inference with omni-modality models across text, vision, audio, and generation pipelines
 - [Vosk](./vosk-api.md) — An offline speech-recognition API with small, portable Kaldi-based models and bindings for Python, Java, C#, Node, and mobile, supporting 20+ languages
 - [whisper.cpp](./whisper-cpp.md) — A dependency-free C/C++ port of OpenAI's Whisper that runs speech-to-text on CPU and consumer hardware via the ggml/GGUF tensor library

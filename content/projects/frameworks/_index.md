@@ -33,6 +33,7 @@ Before selecting a framework:
 
 ### Recently Added
 
+- [ArkFlow](./arkflow.md)
 - [Amphion](./amphion.md)
 - [CopilotKit](./copilotkit.md)
 - [Coqui TTS](./coqui-tts.md)
@@ -42,7 +43,6 @@ Before selecting a framework:
 - [Flyte](./flyte.md)
 - [FunASR](./funasr.md)
 - [GenAI Processors](./genai-processors.md)
-- [Hugging Face Diffusers](./hf-diffusers.md)
 
 ### Most Popular
 
@@ -61,6 +61,7 @@ Before selecting a framework:
 
 - [AgentScope](./agentscope.md) — Python framework for building observable, multi-agent, and multimodal agent systems
 - [Amphion](./amphion.md) — An open toolkit for audio, music, and speech generation that gathers reproducible implementations of TTS, singing-voice, vocoder, and audio-generation models
+- [ArkFlow](./arkflow.md) — High-performance Rust stream-processing engine integrating messaging, databases, SQL/DataFusion, and machine-learning model execution
 - [AutoGen](./autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [AutoGPT](./autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
 - [CAMEL](./camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation

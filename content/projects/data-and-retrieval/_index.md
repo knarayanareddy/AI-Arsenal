@@ -33,16 +33,16 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [Airweave](./airweave.md)
+- [AutoRAG](./autorag.md)
+- [docext](./docext.md)
+- [FlashRAG](./flashrag.md)
+- [MemoryOS](./memoryos.md)
+- [RAGLite](./raglite.md)
 - [Apache Arrow](./apache-arrow.md)
 - [Chandra](./chandra-ocr.md)
 - [Cognita](./cognita.md)
 - [DeepSearcher](./deep-searcher.md)
-- [DuckDB](./duckdb.md)
-- [EasyOCR](./easyocr.md)
-- [FastGPT](./fastgpt.md)
-- [Hugging Face Tokenizers](./hf-tokenizers.md)
-- [LaTeX-OCR (pix2tex)](./latex-ocr.md)
-- [LEANN](./leann.md)
 
 ### Most Popular
 
@@ -59,8 +59,10 @@ Before selecting a data/retrieval component:
 
 ### Browse All
 
+- [Airweave](./airweave.md) — Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs
 - [AnythingLLM](./anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [Apache Arrow](./apache-arrow.md) — A universal columnar in-memory format and multi-language toolbox that enables zero-copy data interchange between analytics and ML tools across process and
+- [AutoRAG](./autorag.md) — AutoML-style framework for evaluating and optimizing retrieval-augmented-generation pipelines
 - [Chandra](./chandra-ocr.md) — An OCR model from Datalab that handles complex tables, forms, and handwriting with full layout understanding, output as structured Markdown/HTML/JSON
 - [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [cleanlab](./cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
@@ -71,11 +73,13 @@ Before selecting a data/retrieval component:
 - [DataChain](./datachain.md) — Typed and versioned context layer for unstructured data across S3, GCS, and Azure
 - [DeepSearcher](./deep-searcher.md) — An open deep-research framework from Zilliz that reasons over private data by iteratively planning sub-queries, searching a vector store
 - [Deep Lake](./deeplake.md) — AI data runtime with multimodal storage, retrieval, training, and agent-oriented data access
+- [docext](./docext.md) — On-premises vision-language document extraction, Markdown conversion, and benchmarking toolkit from Nanonets
 - [Docling](./docling.md) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
 - [DuckDB](./duckdb.md) — An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server
 - [EasyOCR](./easyocr.md) — A ready-to-use Python OCR library supporting 80+ languages with a CRAFT text detector and a CRNN recognizer, requiring no training to run
 - [FastGPT](./fastgpt.md) — Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data
 - [Firecrawl](./firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
+- [FlashRAG](./flashrag.md) — Python toolkit for modular RAG research with retrievers, rerankers, generators, datasets, and benchmark pipelines
 - [Graphiti](./graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
 - [GraphRAG](./graphrag.md) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
 - [Hugging Face Tokenizers](./hf-tokenizers.md) — Hugging Face's fast Rust-backed tokenizers library for training and running BPE, WordPiece, and Unigram tokenizers with full alignment tracking
@@ -87,6 +91,7 @@ Before selecting a data/retrieval component:
 - [Liteparse](./liteparse.md) — A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output
 - [LlamaParse](./llamaparse.md) — Managed document parser from LlamaIndex for turning complex files into RAG-ready text
 - [Marker](./marker.md) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- [MemoryOS](./memoryos.md) — EMNLP 2025 memory operating system for personalized agents with hierarchical storage and retrieval
 - [Milvus](./milvus.md) — Cloud-native vector database for large-scale ANN search and production vector workloads
 - [NeMo Data Designer](./nemo-data-designer.md) — Toolkit for generating synthetic data from scratch or seed data with configurable schemas, constraints, and model providers
 - [OCRmyPDF](./ocrmypdf.md) — A command-line tool that adds a searchable OCR text layer to scanned PDFs using Tesseract while preserving the original page images and metadata
@@ -102,6 +107,7 @@ Before selecting a data/retrieval component:
 - [PyMuPDF](./pymupdf.md) — A high-performance Python library binding the MuPDF engine for fast text, image, and table extraction and manipulation of PDFs and other document formats
 - [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
 - [RAGFlow](./ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
+- [RAGLite](./raglite.md) — Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters
 - [SentencePiece](./sentencepiece.md) — Google's unsupervised text tokenizer and detokenizer implementing BPE and unigram models directly on raw text, widely used to train tokenizers for LLMs and NMT
 - [SimpleMem](./simplemem.md) — Efficient lifelong memory framework for text and multimodal LLM agents
 - [Supabase](./supabase.md) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs

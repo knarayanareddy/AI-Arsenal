@@ -33,6 +33,9 @@ Before selecting a foundation model:
 
 ### Recently Added
 
+- [gpt-oss](./gpt-oss.md)
+- [Magenta RealTime 2](./magenta-realtime.md)
+- [RF-DETR](./rf-detr.md)
 - [Bark](./bark.md)
 - [ChatTTS](./chattts.md)
 - [DeepSeek-VL](./deepseek-vl.md)
@@ -40,9 +43,6 @@ Before selecting a foundation model:
 - [EmotiVoice](./emotivoice.md)
 - [Fish Speech](./fish-speech.md)
 - [Grounding DINO](./grounding-dino.md)
-- [Hunyuan3D-2](./hunyuan3d-2.md)
-- [HunyuanVideo](./hunyuanvideo.md)
-- [IndexTTS](./index-tts.md)
 
 ### Most Popular
 
@@ -78,6 +78,7 @@ Before selecting a foundation model:
 - [Gemma](./gemma.md) — Google open model family designed for efficient language and multimodal applications
 - [Gemma 3](./gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GLM-4 / GLM-4.5](./glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
+- [gpt-oss](./gpt-oss.md) — OpenAI open-weight language models for reasoning, agentic tasks, and developer applications
 - [GPT-SoVITS](./gpt-sovits.md) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
 - [Grounding DINO](./grounding-dino.md) — An open-set object detector that localizes arbitrary objects from free-text prompts by fusing language and vision in a DINO-style detection transformer
 - [Hunyuan3D-2](./hunyuan3d-2.md) — Tencent's open model for generating high-resolution textured 3D assets from images or text using a two-stage shape-then-texture diffusion pipeline
@@ -89,6 +90,7 @@ Before selecting a foundation model:
 - [Kokoro TTS](./kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
 - [Llama 3.x](./llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
 - [LTX-Video](./ltx-video.md) — Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU
+- [Magenta RealTime 2](./magenta-realtime.md) — Google Magenta open-weight model for real-time and offline live-music generation
 - [MiniCPM-V](./minicpm-v.md) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - [Mistral / Mixtral](./mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
 - [MLX Audio](./mlx-audio.md) — Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use
@@ -102,6 +104,7 @@ Before selecting a foundation model:
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
 - [Qwen3-VL](./qwen3-vl.md) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
+- [RF-DETR](./rf-detr.md) — Roboflow real-time DETR architecture for object detection, instance segmentation, and preview keypoint detection
 - [SAM 2 (Segment Anything Model 2)](./sam2.md) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 - [Segment Anything (SAM)](./segment-anything.md) — Meta's promptable segmentation foundation model that produces high-quality object masks from point, box, or text-free prompts, with zero-shot generalization
 - [SenseVoice](./sensevoice.md) — A non-autoregressive multilingual speech-understanding model from Alibaba that jointly does ASR, spoken-language identification, emotion recognition
