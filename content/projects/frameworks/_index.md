@@ -34,6 +34,7 @@ Before selecting a framework:
 ### Recently Added
 
 - [ArkFlow](./arkflow.md)
+- [OpenShell](./openshell.md)
 - [Amphion](./amphion.md)
 - [CopilotKit](./copilotkit.md)
 - [Coqui TTS](./coqui-tts.md)
@@ -42,7 +43,6 @@ Before selecting a framework:
 - [MMF](./facebook-mmf.md)
 - [Flyte](./flyte.md)
 - [FunASR](./funasr.md)
-- [GenAI Processors](./genai-processors.md)
 
 ### Most Popular
 
@@ -102,6 +102,7 @@ Before selecting a framework:
 - [NVIDIA NeMo](./nvidia-nemo.md) — NVIDIA's scalable generative-AI framework for building, training, and fine-tuning speech (ASR/TTS), LLM, and multimodal models with GPU-optimized pipelines
 - [OpenAI Agents SDK](./openai-agents-sdk.md) — Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
 - [OpenHands](./openhands.md) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
+- [OpenShell](./openshell.md) — NVIDIA's Rust sandboxed runtime for autonomous agents, governed by declarative YAML policies for files, network, and data exfiltration
 - [PaddleSpeech](./paddlespeech.md) — An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation
 - [PaddleX](./paddlex.md) — PaddlePaddle's all-in-one, low-code development toolkit offering ready model pipelines for OCR, vision, time series
 - [PraisonAI](./praisonai.md) — Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML

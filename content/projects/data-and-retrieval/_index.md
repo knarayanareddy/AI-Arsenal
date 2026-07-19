@@ -39,10 +39,10 @@ Before selecting a data/retrieval component:
 - [FlashRAG](./flashrag.md)
 - [MemoryOS](./memoryos.md)
 - [RAGLite](./raglite.md)
+- [Semble](./semble.md)
 - [Apache Arrow](./apache-arrow.md)
 - [Chandra](./chandra-ocr.md)
 - [Cognita](./cognita.md)
-- [DeepSearcher](./deep-searcher.md)
 
 ### Most Popular
 
@@ -108,6 +108,7 @@ Before selecting a data/retrieval component:
 - [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
 - [RAGFlow](./ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
 - [RAGLite](./raglite.md) — Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters
+- [Semble](./semble.md) — MinishLab's CPU code-search library for agents, returning relevant snippets through natural-language retrieval, CLI, MCP, or subagent integrations
 - [SentencePiece](./sentencepiece.md) — Google's unsupervised text tokenizer and detokenizer implementing BPE and unigram models directly on raw text, widely used to train tokenizers for LLMs and NMT
 - [SimpleMem](./simplemem.md) — Efficient lifelong memory framework for text and multimodal LLM agents
 - [Supabase](./supabase.md) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs

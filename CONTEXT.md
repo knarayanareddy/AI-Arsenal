@@ -1,12 +1,12 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-19T20:40:42.866Z | Entries: 1018 | Schema version: 1.0.0
+Generated: 2026-07-19T21:08:21.927Z | Entries: 1042 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 298
+- Projects: 322
 - Tools: 199
 - Papers: 126
 - Tips: 171
@@ -50,7 +50,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Continue (⭐34744, score:60) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
 - Tabby (⭐33679, score:55) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
 - GPT Engineer (⭐55189, score:0) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
-- Refact.ai (⭐3548, score:0) — An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models
+- Open Code Review (⭐10699, score:0) — Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings
 
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API

@@ -34,6 +34,7 @@ Before selecting an inference engine:
 ### Recently Added
 
 - [candle-vllm](./candle-vllm.md)
+- [Shimmy](./shimmy.md)
 - [Superlinked Inference Engine](./sie.md)
 - [vLLM-MLX](./vllm-mlx.md)
 - [FastVideo](./fastvideo.md)
@@ -42,7 +43,6 @@ Before selecting an inference engine:
 - [LightLLM](./lightllm.md)
 - [Nunchaku (SVDQuant)](./nunchaku.md)
 - [OpenVINO](./openvino.md)
-- [Piper](./piper-tts.md)
 
 ### Most Popular
 
@@ -88,6 +88,7 @@ Before selecting an inference engine:
 - [Semantic Router (vLLM)](./semantic-router.md) — An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM
 - [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
 - [sherpa-onnx](./sherpa-onnx.md) — An offline, on-device speech toolkit (STT, TTS, diarization, VAD, enhancement) built on next-gen Kaldi and onnxruntime with bindings for a dozen languages and
+- [Shimmy](./shimmy.md) — A pure-Rust, OpenAI-API-compatible local inference server that is GGUF-native, supports WebGPU, and avoids Python or llama.cpp dependencies
 - [Superlinked Inference Engine](./sie.md) — Superlinked open-source inference server and production cluster for serving the model mix used by agent applications
 - [vLLM Speculators](./speculators.md) — Unified library for building, evaluating, and storing speculative-decoding algorithms for LLM inference
 - [SpeechRecognition (Python)](./speechrecognition.md) — A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk
