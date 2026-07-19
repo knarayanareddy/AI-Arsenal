@@ -6,17 +6,19 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agents and reasoning](./agents-and-reasoning/) | 17 entries | 2026-07-12 |
-| [architectures](./architectures/) | 15 entries | 2026-07-12 |
-| [evaluation and safety](./evaluation-and-safety/) | 22 entries | 2026-07-12 |
-| [foundational](./foundational/) | 18 entries | 2026-07-12 |
-| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-07-12 |
-| [retrieval and memory](./retrieval-and-memory/) | 20 entries | 2026-07-12 |
-| [surveys](./surveys/) | 3 entries | 2026-07-12 |
-| [training and alignment](./training-and-alignment/) | 19 entries | 2026-07-12 |
+| [agents and reasoning](./agents-and-reasoning/) | 17 entries | 2026-07-19 |
+| [architectures](./architectures/) | 16 entries | 2026-07-19 |
+| [evaluation and safety](./evaluation-and-safety/) | 23 entries | 2026-07-19 |
+| [foundational](./foundational/) | 18 entries | 2026-07-19 |
+| [inference and efficiency](./inference-and-efficiency/) | 12 entries | 2026-07-19 |
+| [retrieval and memory](./retrieval-and-memory/) | 20 entries | 2026-07-19 |
+| [surveys](./surveys/) | 3 entries | 2026-07-19 |
+| [training and alignment](./training-and-alignment/) | 19 entries | 2026-07-19 |
 
 ## Recently Added
 
+- [Holistic Evaluation of Language Models](./evaluation-and-safety/helm.md)
+- [NExT-GPT: Any-to-Any Multimodal LLM](./architectures/next-gpt.md)
 - [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./retrieval-and-memory/belikova-2026-after.md)
 - [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./evaluation-and-safety/chen-2026-uniclawbench.md)
 - [AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents](./agents-and-reasoning/cheng-2026-agenticsts.md)
@@ -25,8 +27,6 @@
 - [ADR: An Agentic Detection System for Enterprise Agentic AI Security](./evaluation-and-safety/li-2026-adr-agentic-security.md)
 - [Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](./retrieval-and-memory/li-2026-dccd-rag.md)
 - [From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes](./evaluation-and-safety/liu-2026-mcp-execution-control.md)
-- [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](./evaluation-and-safety/mazaheri-2026-agentatlas.md)
-- [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](./retrieval-and-memory/ming-2026-llm-wiki.md)
 
 ## Most Popular
 
@@ -71,6 +71,7 @@ _No star-tracked entries yet._
 - [Textbooks Are All You Need](./training-and-alignment/gunasekar-2023-phi-1.md) — The phi-1 paper: a 1.3B model trained on 7B tokens of filtered 'textbook-quality' and synthetic data hit 50.6% HumanEval — the flagship argument that data quality can substitute for orders of magnitude of scale, launching the small-language-model program
 - [REALM: Retrieval-Augmented Language Model Pre-Training](./retrieval-and-memory/guu-2020-realm.md) — First model to pretrain a language model jointly with a learned neural retriever over Wikipedia, backpropagating through retrieval — establishing that external knowledge can be a trained component of an LM rather than a bolt-on
 - [Deep Residual Learning for Image Recognition](./foundational/he-2015-resnet.md) — Introduced residual connections (skip connections) that let networks learn residual functions relative to the identity, making very deep networks trainable and unblocking the depth scaling that later architectures — including Transformers — depend on
+- [Holistic Evaluation of Language Models](./evaluation-and-safety/helm.md) — HELM established a reproducible evaluation framework that compares language models across scenarios and multiple quality, robustness, fairness, and efficiency metrics rather than relying on one accuracy leaderboard.
 - [Measuring Massive Multitask Language Understanding](./evaluation-and-safety/hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
 - [Distilling the Knowledge in a Neural Network](./inference-and-efficiency/hinton-2015-distillation.md) — Introduced knowledge distillation — training a small 'student' model to match the soft output distribution of a large 'teacher' — the basis for compressing large models into cheap, fast ones for deployment
 - [Denoising Diffusion Probabilistic Models](./architectures/ho-2020-ddpm.md) — Made diffusion models practical for high-quality image generation by training a network to reverse a gradual noising process, establishing the denoising-diffusion recipe behind modern image and video generators
@@ -114,6 +115,7 @@ _No star-tracked entries yet._
 - [MTEB: Massive Text Embedding Benchmark](./evaluation-and-safety/muennighoff-2022-mteb.md) — MTEB: 8 embedding task families across 58 datasets and 112 languages, with a public leaderboard — the benchmark that made embedding models comparable and whose central finding still holds: no single model wins everywhere
 - [Must-Read AI Papers](./must-read-papers.md) — Categorized reading guide for foundational and high-leverage AI papers
 - [WebGPT: Browser-assisted question-answering with human feedback](./agents-and-reasoning/nakano-2021-webgpt.md) — Trained GPT-3 to operate a text-based web browser — searching, clicking, quoting — and answer questions with citations, using imitation learning plus human-preference RL; the first serious tool-using LLM agent and the origin of citation-grounded answers
+- [NExT-GPT: Any-to-Any Multimodal LLM](./architectures/next-gpt.md) — NExT-GPT combines a language model with modality encoders and diffusion decoders so one instruction-tuned system can perceive and generate text, images, video, and audio in arbitrary combinations.
 - [GPT-4 Technical Report](./foundational/openai-2023-gpt4.md) — The GPT-4 report: human-professional-level results on real exams (top-10% bar exam), multimodal input, and loss predicted in advance from 1000x-smaller runs — while disclosing no architecture, size, or data details, setting the closed-frontier-report template
 - [Training Language Models to Follow Instructions with Human Feedback](./training-and-alignment/ouyang-2022-instructgpt.md) — Established the 3-stage RLHF recipe (SFT, reward modeling, PPO) that turned GPT-3 into an assistant -- know this pipeline shape, though most teams now reach for simpler DPO instead of implementing PPO-based RLHF directly
 - [MemGPT: Towards LLMs as Operating Systems](./retrieval-and-memory/packer-2023-memgpt.md) — Framed context-window management as an OS problem: the LLM manages its own memory hierarchy via self-editing function calls, paging information between in-context 'main memory' and external storage — the founding pattern of agent memory systems

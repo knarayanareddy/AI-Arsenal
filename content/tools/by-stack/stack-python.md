@@ -70,9 +70,11 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [AdalFlow](../dx-and-tooling/adalflow.md) | dx and tooling | prototyping, prompt-management | open-source | Yes | Yes | Yes | python | watching |
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | security-and-guardrails, web-scraping | freemium | Yes | No | No | python | watching |
 | [Agent Reach](../data-ingestion/agent-reach.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | python | watching |
+| [Agentic Security](../evaluation-and-observability/agentic-security.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [AgentOps](../evaluation-and-observability/agentops.md) | evaluation and observability | tracing, monitoring, evaluation | freemium | Yes | No | Yes | python | watching |
 | [Agno](../orchestration/agno.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | watching |
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | orchestration, security-and-guardrails | paid | No | No | No | python | watching |
+| [AI Infra Guard](../evaluation-and-observability/ai-infra-guard.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [Aider](../dx-and-tooling/aider.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | freemium | Yes | Yes | Yes | java, python | solid-choice |
 | [Apache Airflow](../orchestration/airflow.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
@@ -102,6 +104,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [DVC](../model-layer/dvc.md) | model layer | model-registry | open-source | Yes | Yes | Yes | python | recommended |
 | [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | orchestration, deployment | freemium | Yes | No | No | python | watching |
+| [EvalScope](../evaluation-and-observability/evalscope.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | recommended |
 | [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | freemium | Yes | No | No | python | recommended |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
@@ -130,6 +133,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | production-serving, orchestration | freemium | Yes | No | No | python | watching |
 | [KServe](../serving-and-deployment/kserve.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | go, python | solid-choice |
 | [Label Studio](../data-ingestion/label-studio.md) | data ingestion | data-labeling | freemium | Yes | Yes | Yes | python | recommended |
+| [Laminar](../evaluation-and-observability/laminar.md) | evaluation and observability | tracing, monitoring, evaluation | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [Langflow](../orchestration/langflow.md) | orchestration | orchestration, prototyping | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Langfuse Prompts](../dx-and-tooling/langfuse-prompts.md) | dx and tooling | prompt-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | evaluation, tracing, monitoring | freemium | Yes | No | No | python, typescript | recommended |
@@ -148,6 +152,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [marimo](../dx-and-tooling/marimo.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | web-scraping, data-labeling | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Marqo](../data-ingestion/marqo.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | python | solid-choice |
+| [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | production-serving, orchestration, monitoring, security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | memory-management | freemium | Yes | No | No | python | watching |
@@ -164,6 +169,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [OpenAI Evals](../evaluation-and-observability/openai-evals.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
+| [OpenJudge](../evaluation-and-observability/openjudge.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenLLM](../serving-and-deployment/openllm.md) | serving and deployment | production-serving | open-source | Yes | Yes | Yes | python | solid-choice |
 | [OpenPipe ART](../model-layer/openpipe-art.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
@@ -177,12 +183,14 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | data-labeling | paid | Yes | No | No | python | recommended |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | orchestration, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
+| [Prompty](../dx-and-tooling/prompty.md) | dx and tooling | prompt-management, evaluation, prototyping | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | structured-output, orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [PyRIT](../evaluation-and-observability/pyrit.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [PyTorch Lightning](../model-layer/pytorch-lightning.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | production-serving | freemium | Yes | No | No | python | watching |
 | [Ragas](../evaluation-and-observability/ragas.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [RAGatouille](../data-ingestion/ragatouille.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | python | watching |
+| [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | production-serving, deployment, prototyping | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | production-serving, orchestration, fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [Ray Serve](../serving-and-deployment/ray-serve.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Rebuff](../evaluation-and-observability/rebuff.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python, typescript | recommended |
@@ -207,8 +215,10 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | production-serving, deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [TRL](../model-layer/trl.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | best-in-class |
 | [TruLens](../evaluation-and-observability/trulens.md) | evaluation and observability | evaluation, tracing | open-source | Yes | Yes | Yes | python | recommended |
+| [UltraEval-Audio](../evaluation-and-observability/ultraeval-audio.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Unsloth](../model-layer/unsloth.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | recommended |
 | [UpTrain](../evaluation-and-observability/uptrain.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | use-with-caution |
+| [UQLM](../evaluation-and-observability/uqlm.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Vaani](../dx-and-tooling/vaani.md) | dx and tooling | structured-output | freemium | Yes | No | No | python | watching |
 | [Vellum](../dx-and-tooling/vellum.md) | dx and tooling | prompt-management, evaluation | freemium | Yes | No | No | python | solid-choice |
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |

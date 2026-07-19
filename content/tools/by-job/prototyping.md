@@ -154,6 +154,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [AdalFlow](../dx-and-tooling/adalflow.md) | dx and tooling | open-source | Yes | Yes | Yes | python | watching |
 | [Agent Skills (Addy Osmani)](../dx-and-tooling/addyosmani-agent-skills.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Aider](../dx-and-tooling/aider.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [Hugging Face AI Sheets](../data-ingestion/aisheets.md) | data ingestion | open-source | Yes | Yes | Yes | typescript | watching |
 | [Chainlit](../dx-and-tooling/chainlit.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | recommended |
 | [Chrome DevTools MCP](../dx-and-tooling/chrome-devtools-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Claude Code](../dx-and-tooling/claude-code.md) | dx and tooling | usage-based | No | No | No | typescript | best-in-class |
@@ -179,6 +180,8 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | usage-based | No | No | Yes | rust | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
+| [Prompty](../dx-and-tooling/prompty.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
+| [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Repomix](../dx-and-tooling/repomix.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
 | [Streamlit](../dx-and-tooling/streamlit.md) | dx and tooling | freemium | Yes | Yes | Yes | python | recommended |
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |

@@ -31,6 +31,7 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 
 ### Recently Added
 
+- [NExT-GPT: Any-to-Any Multimodal LLM](./next-gpt.md)
 - [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](./ainslie-2023-gqa.md)
 - [Flamingo: a Visual Language Model for Few-Shot Learning](./alayrac-2022-flamingo.md)
 - [DeepSeek-V3 Technical Report](./deepseek-ai-2024-deepseek-v3.md)
@@ -40,7 +41,6 @@ When I am choosing or evaluating a model architecture (attention mechanism, MoE 
 - [Denoising Diffusion Probabilistic Models](./ho-2020-ddpm.md)
 - [Mixtral of Experts](./jiang-2024-mixtral.md)
 - [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](./li-2023-blip2.md)
-- [Visual Instruction Tuning (LLaVA)](./liu-2023-llava.md)
 
 ### Most Popular
 
@@ -58,6 +58,7 @@ _No star-tracked entries yet._
 - [Mixtral of Experts](./jiang-2024-mixtral.md) — Proved sparse mixture-of-experts works at open-weights scale: Mixtral 8x7B matched or beat Llama 2 70B while activating only 13B parameters per token, making MoE the default architecture for efficient frontier models
 - [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](./li-2023-blip2.md) — Connected a frozen image encoder to a frozen LLM with a small trainable Querying Transformer (Q-Former), two-stage trained — reaching strong VQA/captioning with a tiny fraction of trainable parameters, the efficient bridge pattern behind many open VLMs.
 - [Visual Instruction Tuning (LLaVA)](./liu-2023-llava.md) — Connected a frozen CLIP vision encoder to a LLaMA-family LLM with just a linear projection, trained on GPT-4-generated visual instruction data — establishing the minimal recipe (encoder + projector + LLM) behind most open vision-language models
+- [NExT-GPT: Any-to-Any Multimodal LLM](./next-gpt.md) — NExT-GPT combines a language model with modality encoders and diffusion decoders so one instruction-tuned system can perceive and generate text, images, video, and audio in arbitrary combinations.
 - [RWKV: Reinventing RNNs for the Transformer Era](./peng-2023-rwkv.md) — A linear-attention RNN that trains in parallel like a Transformer but runs inference like an RNN -- O(1) memory per token and no growing KV cache, trading some expressivity for constant-cost, unbounded-context generation
 - [Learning Transferable Visual Models From Natural Language Supervision](./radford-2021-clip.md) — CLIP: contrastive training on 400M web image-text pairs yields a shared vision-language embedding space enabling zero-shot classification — the component that underlies multimodal LLM vision encoders, text-to-image guidance, and cross-modal retrieval
 - [Robust Speech Recognition via Large-Scale Weak Supervision](./radford-2022-whisper.md) — Whisper: a plain encoder-decoder transformer trained on 680K hours of weakly-labeled web audio achieves human-competitive, zero-shot-robust speech recognition across 96+ languages — and its released weights became the default open ASR component

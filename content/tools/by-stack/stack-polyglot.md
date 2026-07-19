@@ -72,6 +72,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Cerebras Inference](../model-layer/cerebras-inference.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | watching |
 | [Cohere](../model-layer/cohere.md) | model layer | production-serving | usage-based | Yes | Yes | No | python, polyglot | solid-choice |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
+| [FuzzyAI](../evaluation-and-observability/fuzzyai.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | polyglot | use-with-caution |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
 | [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Groq](../model-layer/groq.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |

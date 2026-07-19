@@ -31,6 +31,7 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 
 ### Recently Added
 
+- [Holistic Evaluation of Language Models](./helm.md)
 - [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./chen-2026-uniclawbench.md)
 - [Regression Accumulation in Multi-Turn LLM Programming Conversations](./huang-2026-regression-accumulation.md)
 - [Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution](./leung-2026-citation-verifier.md)
@@ -40,7 +41,6 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 - [Validity of LLMs as Data Annotators: AMALIA on Authority](./pita-2026-amalia-authority.md)
 - [GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents](./ren-2026-gatemem.md)
 - [Agent Planning Benchmark: A Diagnostic Framework for Planning Capabilities in LLM Agents](./sun-2026-agent-planning-benchmark.md)
-- [AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments](./xi-2026-agentgym2.md)
 
 ### Most Popular
 
@@ -53,6 +53,7 @@ _No star-tracked entries yet._
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./chiang-2024-chatbot-arena.md) — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
 - [Training Verifiers to Solve Math Word Problems](./cobbe-2021-gsm8k.md) — The GSM8K paper: released the 8.5K grade-school math benchmark that anchored LLM reasoning evaluation for years, and introduced verifier-guided sampling — train a model to judge candidate solutions, sample many, pick the best — the seed of verification-based test-time compute
 - [RAGAS: Automated Evaluation of Retrieval Augmented Generation](./es-2023-ragas.md) — Defined reference-free metrics (faithfulness, answer relevance, context relevance) for evaluating RAG pipelines with no human-labeled ground truth -- use RAGAS-style metrics as your default RAG evaluation approach rather than building bespoke evaluation
+- [Holistic Evaluation of Language Models](./helm.md) — HELM established a reproducible evaluation framework that compares language models across scenarios and multiple quality, robustness, fairness, and efficiency metrics rather than relying on one accuracy leaderboard.
 - [Measuring Massive Multitask Language Understanding](./hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
 - [Regression Accumulation in Multi-Turn LLM Programming Conversations](./huang-2026-regression-accumulation.md) — Shows that later coding-agent turns can break earlier requirements and evaluates a verification gate that retests prior behavior before accepting a change.
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./jimenez-2023-swe-bench.md) — SWE-bench: 2,294 real GitHub issues from 12 Python repos, graded by running the repos' own tests against model-generated patches — the benchmark that replaced toy coding problems and became the scoreboard of the coding-agent era

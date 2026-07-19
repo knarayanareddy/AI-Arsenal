@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-12T16:23:11.977Z",
-  "count": 199,
+  "generated_at": "2026-07-19T20:52:26.931Z",
+  "count": 211,
   "items": [
     {
       "id": "accelerate",
@@ -435,6 +435,90 @@
       "body_text": "TL;DR: Open source toolkit (CLI + MCP) that lets agents read and search X/Twitter, Reddit, YouTube, GitHub, and the web through one interface. Free, MIT. Best for prototyping research/monitoring agents; verify per source reliability and ToS before production. Overview An open source toolkit that gives AI agents \"eyes on the internet\": unified read and search access to platform content — X/Twitter threads, Reddit posts, YouTube transcripts, GitHub repos, and general web pages — exposed as a CLI and MCP server so any agent harness can consume it. Why It's in the Arsenal Generic scrapers (Firecrawl, Jina Reader) convert pages well but handle platforms poorly — logged out X or Reddit content is where most agent research tasks die. Agent Reach earns a place in the Arsenal because it packages per platform access behind one interface, which is exactly the gap between \"web scraping\" and \"the places practitioners actually discuss things\". Its 52k stars in under five months (verified 2026 07 07) reflect how common that gap is. Key Features Platform readers: X/Twitter, Reddit, YouTube (transcripts), GitHub, Bilibili, Xiaohongshu, and general web Search across sources plus content extraction in agent friendly text Dual interface: CLI for scripts, MCP server for agent harnesses (Claude Code, Cursor, etc.) Python, MIT licensed, no paid API required for basic use Architecture / How It Works Per platform adapters normalize each source's access path (public APIs, free endpoints, or scraping fallbacks) into a common read/search interface. The MCP server exposes these as tools; the CLI exposes the same operations for scripted pipelines. Because some adapters depend on unofficial endpoints, individual sources can degrade independently — treat each adapter's reliability as its own dependency. Getting Started Use Cases 1. Scenario : a research agent asked \"what are practitioners saying about X\" pulls actual Reddit/X/HN discussion instead of SEO blog posts 2. Scenario : a monitoring agent tracks mentions of your project across platforms and summarizes weekly Strengths Breadth: platform coverage (especially X/Reddit/YouTube) that generic page scrapers don't provide Harness agnostic (CLI + MCP), MIT licensed, explosive community adoption (52.5k stars as of 2026 07 07) Limitations / When NOT to Use Unofficial endpoints break without notice — unsuitable as a production dependency without per source fallbacks Platform terms of service vary; verify your access pattern is permitted for each source you rely on Integration Patterns Use as the discovery layer for research agents, with Firecrawl or Jina Reader for clean full page extraction of what it finds Wrap calls with caching and per source failure handling so one broken adapter doesn't take down the pipeline Resources GitHub Buzz & Reception On GitHub monthly trending with 52.5k stars as of 2026 07 07 — one of the fastest growing agent infrastructure repos of 2026; created 2026 02 24."
     },
     {
+      "id": "agentic-security",
+      "name": "Agentic Security",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails",
+        "evaluation"
+      ],
+      "description": "Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications",
+      "url": "content/tools/evaluation-and-observability/agentic-security",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; target models, sandboxes, and test infrastructure are separate costs",
+      "tags": [
+        "security",
+        "guardrails",
+        "agents",
+        "tool-use",
+        "evaluation"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted tier required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/msoedov/agentic_security",
+      "docs_url": "https://github.com/msoedov/agentic_security",
+      "github_url": "https://github.com/msoedov/agentic_security",
+      "alternatives": [
+        "ai-infra-guard",
+        "garak",
+        "pyrit"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need targeted adversarial tests for prompt injection, tool misuse, and agent workflow boundaries rather than only model-level jailbreak probes",
+        "You want an inspectable Python scanner that can be adapted to the tools and permissions in your own agent"
+      ],
+      "avoid_when": [
+        "You need a complete vulnerability-management platform, continuous runtime blocking, or a compliance report without adding your own controls",
+        "You cannot provide a safe replica of the agent and its tools for destructive or state-changing attack experiments"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A focused open scanner for agent-specific attack paths that complements model red-team suites",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/agentic-security.md",
+      "slug": "agentic-security",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "Agentic Security",
+      "summary": "Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 516,
+      "body_html": "<h2>Overview</h2>\n<p>Agentic Security is an open-source Python red-team kit aimed at vulnerabilities that appear when an LLM can call tools, retain state, and follow multi-step workflows. Its purpose is narrower than a general model benchmark: it helps probe the control loop and the permissions around it.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The toolkit merits inclusion because prompt-injection advice often stops at the model boundary while real agent failures occur in tool selection, untrusted context handling, and action authorization. An inspectable scanner focused on those paths gives teams a practical starting point for testing the exact agent graph they plan to deploy.</p>\n<h2>Key Features</h2>\n<p>The project provides attack-oriented checks for agentic LLM applications, including prompt-injection and malicious-tool-use scenarios. Its Python implementation can be read and extended alongside the target agent, which is valuable when generic probe suites cannot express the application's tool schemas, approval steps, or state transitions.</p>\n<h2>Architecture / How It Works</h2>\n<p>The scanner drives a configured agent or model through adversarial prompts and tool-facing inputs, then evaluates whether untrusted instructions cross the intended trust boundary. The useful unit is an agent trajectory rather than a single completion: a benign-looking response can still be a failure if it invokes the wrong tool, leaks context, or bypasses an approval step.</p>\n<h2>Getting Started</h2>\n<p>Clone the repository and follow its Python setup instructions, then point the scanner at a disposable agent replica with synthetic secrets and reversible tools. Start with read-only tools and capture the complete trajectory, including tool arguments and authorization decisions, before expanding to state-changing actions. Keep the target isolated from production accounts and networks.</p>\n<h2>Use Cases</h2>\n<p>Use Agentic Security to test whether retrieved documents can induce an agent to call an unrelated tool, whether a tool description grants more authority than intended, or whether a multi-step plan can smuggle an instruction past a human approval checkpoint. It is also useful for regression testing after changing the system prompt, tool schemas, or memory policy.</p>\n<h2>Strengths</h2>\n<p>The project concentrates on the application-specific attack surface that broad LLM scanners often abstract away. Its small, inspectable Python footprint makes it easier to modify for custom tools and to connect failures to concrete remediation such as capability reduction, argument validation, or approval gates.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Scanner coverage depends on the attack corpus and on how faithfully the test harness reproduces the production agent. A clean run does not establish that authorization, secrets, dependencies, or network egress are safe, and a finding may require manual reconstruction to distinguish a real exploit from a harness artifact.</p>\n<h2>Integration Patterns</h2>\n<p>Run it against a versioned staging agent in CI with synthetic credentials, retain failed trajectories, and require a human review before adding a new attack to the regression set. Pair it with AI Infra Guard or garak for broader probes and with gateway audit logs to verify that the attempted action was actually denied.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>1,933 GitHub stars verified during the 2026-07-19 discovery sweep; community security toolkit with active recent commits.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/msoedov/agentic_security\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n",
+      "body_text": "Overview Agentic Security is an open source Python red team kit aimed at vulnerabilities that appear when an LLM can call tools, retain state, and follow multi step workflows. Its purpose is narrower than a general model benchmark: it helps probe the control loop and the permissions around it. Why It's in the Arsenal The toolkit merits inclusion because prompt injection advice often stops at the model boundary while real agent failures occur in tool selection, untrusted context handling, and action authorization. An inspectable scanner focused on those paths gives teams a practical starting point for testing the exact agent graph they plan to deploy. Key Features The project provides attack oriented checks for agentic LLM applications, including prompt injection and malicious tool use scenarios. Its Python implementation can be read and extended alongside the target agent, which is valuable when generic probe suites cannot express the application's tool schemas, approval steps, or state transitions. Architecture / How It Works The scanner drives a configured agent or model through adversarial prompts and tool facing inputs, then evaluates whether untrusted instructions cross the intended trust boundary. The useful unit is an agent trajectory rather than a single completion: a benign looking response can still be a failure if it invokes the wrong tool, leaks context, or bypasses an approval step. Getting Started Clone the repository and follow its Python setup instructions, then point the scanner at a disposable agent replica with synthetic secrets and reversible tools. Start with read only tools and capture the complete trajectory, including tool arguments and authorization decisions, before expanding to state changing actions. Keep the target isolated from production accounts and networks. Use Cases Use Agentic Security to test whether retrieved documents can induce an agent to call an unrelated tool, whether a tool description grants more authority than intended, or whether a multi step plan can smuggle an instruction past a human approval checkpoint. It is also useful for regression testing after changing the system prompt, tool schemas, or memory policy. Strengths The project concentrates on the application specific attack surface that broad LLM scanners often abstract away. Its small, inspectable Python footprint makes it easier to modify for custom tools and to connect failures to concrete remediation such as capability reduction, argument validation, or approval gates. Limitations / When NOT to Use Scanner coverage depends on the attack corpus and on how faithfully the test harness reproduces the production agent. A clean run does not establish that authorization, secrets, dependencies, or network egress are safe, and a finding may require manual reconstruction to distinguish a real exploit from a harness artifact. Integration Patterns Run it against a versioned staging agent in CI with synthetic credentials, retain failed trajectories, and require a human review before adding a new attack to the regression set. Pair it with AI Infra Guard or garak for broader probes and with gateway audit logs to verify that the attempted action was actually denied. Buzz & Reception 1,933 GitHub stars verified during the 2026 07 19 discovery sweep; community security toolkit with active recent commits. Resources GitHub"
+    },
+    {
       "id": "agentops",
       "name": "AgentOps",
       "type": "tool",
@@ -702,6 +786,90 @@
       "body_text": "Overview A platform for centrally governing AI agents across a team or company: defining what skills/tools an agent may use, enforcing policy, and tracking which agents are deployed where. Why It's in the Arsenal AGNT.Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you need centralized policy and skill governance across many internal AI agents in a regulated org. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Centralized skill/permission registry for agents Policy enforcement across multiple deployed agents Audit visibility into agent capabilities org wide Architecture / How It Works Acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy. Getting Started Use Cases 1. Scenario : you need centralized policy and skill governance across many internal AI agents in a regulated org 2. Scenario : multiple teams are building agents independently and you need a shared skill/permission registry 3. Scenario where this is NOT the right fit : you are a solo developer or small team building a single agent — evaluate an alternative instead Strengths You need centralized policy and skill governance across many internal AI agents in a regulated org Multiple teams are building agents independently and you need a shared skill/permission registry Limitations / When NOT to Use You are a solo developer or small team building a single agent You need an open source, self hostable option for compliance reasons Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources AGNT.Hub Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "ai-infra-guard",
+      "name": "AI Infra Guard",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails",
+        "evaluation"
+      ],
+      "description": "Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure",
+      "url": "content/tools/evaluation-and-observability/ai-infra-guard",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; target-model, sandbox, and infrastructure costs are separate",
+      "tags": [
+        "security",
+        "guardrails",
+        "evaluation",
+        "agents",
+        "tool-use"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted tier required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/Tencent/AI-Infra-Guard",
+      "docs_url": "https://tencent.github.io/AI-Infra-Guard/",
+      "github_url": "https://github.com/Tencent/AI-Infra-Guard",
+      "alternatives": [
+        "garak",
+        "pyrit",
+        "agentic-security"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need repeatable adversarial scans spanning model jailbreaks, agent behavior, MCP endpoints, skills, and infrastructure rather than only prompt probes",
+        "You are building a security review pipeline that can keep attack modules, datasets, and target adapters under version control"
+      ],
+      "avoid_when": [
+        "You need a runtime guardrail that blocks attacks inline; a red-team scanner is an assessment tool, not an enforcement proxy",
+        "Your team cannot isolate destructive probes or independently validate the provenance and coverage of third-party attack datasets"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "use-with-caution",
+      "verdict_rationale": "Unusually broad AI red-team coverage, but attack breadth and vendor-associated claims require local validation",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/ai-infra-guard.md",
+      "slug": "ai-infra-guard",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "AI Infra Guard",
+      "summary": "Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 551,
+      "body_html": "<h2>Overview</h2>\n<p>AI Infra Guard is Tencent's broad red-team platform for AI systems. Its repository spans LLM jailbreak evaluation, agent scans, skills scans, MCP scans, and infrastructure checks, making it a security workbench for the surrounding AI stack rather than a single prompt-injection detector.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The project earns a slot because modern agent risk is distributed across model prompts, tool descriptions, skills, protocol servers, and deployment infrastructure. A platform that can exercise those surfaces from one repository is useful for mapping a threat model before choosing narrower scanners, provided its attack modules and datasets are treated as inputs to validate rather than authoritative evidence.</p>\n<h2>Key Features</h2>\n<p>The README describes modules for OpenClaw, agents, skills, MCP, AI infrastructure, and LLM jailbreak evaluation, with configurable probes, target endpoints, datasets, thresholds, and reports. It also includes examples for extending dataset collections and connecting an OpenAI-compatible target, which makes the scanner adaptable to local evaluation environments.</p>\n<h2>Architecture / How It Works</h2>\n<p>AI Infra Guard organizes security checks as modules that send attack or probe traffic to a configured model, agent, skill, protocol server, or infrastructure component. Module options select datasets, model endpoints, ports, thresholds, and multi-step behavior; the runner aggregates findings so teams can compare attack classes across targets. The breadth means each module has its own assumptions and isolation requirements.</p>\n<h2>Getting Started</h2>\n<p>Follow the repository's installation and deployment instructions, then start with a non-production OpenAI-compatible target and one scan module. The README's examples configure a local endpoint such as <code>http://0.0.0.0:8718/v1/self-probe</code>, a dataset module, and thresholds before running the scanner. Keep credentials and attack payloads in a disposable test environment, and inspect the module-specific setup before enabling multi-step attacks.</p>\n<h2>Use Cases</h2>\n<p>Use the platform to compare jailbreak resistance before and after a system-prompt change, to test whether an MCP registry exposes an over-privileged tool, or to exercise an agent skill package against known attack datasets. It can also structure a red-team review across model and infrastructure layers, but it should not be the only evidence in a security sign-off.</p>\n<h2>Strengths</h2>\n<p>AI Infra Guard's differentiator is coverage across adjacent attack surfaces that are often reviewed by separate teams. The module and dataset model gives a security engineer a place to add organization-specific probes, while threshold configuration and target adapters make repeated scans more comparable than ad hoc demonstrations.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>A broad scanner can create a broad false sense of coverage: a passing module may reflect an incomplete dataset, an incompatible target adapter, or a threshold that hides useful failures. The README includes vendor-associated datasets and examples, so reproduce important claims, pin module versions, and pair results with manual review of authorization, secrets, network boundaries, and destructive tool behavior.</p>\n<h2>Integration Patterns</h2>\n<p>Run selected modules in an isolated pre-release environment, archive the exact dataset and target configuration, and compare findings across model or agent revisions. Combine it with a runtime guardrail and gateway audit logs; the scanner should discover weaknesses while the live system enforces policy and records attempted abuse.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>4,150 GitHub stars verified during the 2026-07-19 discovery sweep; Tencent-backed red-team project with broad AI infrastructure coverage.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://tencent.github.io/AI-Infra-Guard/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Project documentation</a></li>\n<li><a href=\"https://github.com/Tencent/AI-Infra-Guard\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/Tencent/AI-Infra-Guard/releases\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Release history</a></li>\n<li><a href=\"https://www.blackhat.com/eu-25/arsenal/schedule/index.html\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Black Hat Arsenal listing</a></li>\n</ul>\n",
+      "body_text": "Overview AI Infra Guard is Tencent's broad red team platform for AI systems. Its repository spans LLM jailbreak evaluation, agent scans, skills scans, MCP scans, and infrastructure checks, making it a security workbench for the surrounding AI stack rather than a single prompt injection detector. Why It's in the Arsenal The project earns a slot because modern agent risk is distributed across model prompts, tool descriptions, skills, protocol servers, and deployment infrastructure. A platform that can exercise those surfaces from one repository is useful for mapping a threat model before choosing narrower scanners, provided its attack modules and datasets are treated as inputs to validate rather than authoritative evidence. Key Features The README describes modules for OpenClaw, agents, skills, MCP, AI infrastructure, and LLM jailbreak evaluation, with configurable probes, target endpoints, datasets, thresholds, and reports. It also includes examples for extending dataset collections and connecting an OpenAI compatible target, which makes the scanner adaptable to local evaluation environments. Architecture / How It Works AI Infra Guard organizes security checks as modules that send attack or probe traffic to a configured model, agent, skill, protocol server, or infrastructure component. Module options select datasets, model endpoints, ports, thresholds, and multi step behavior; the runner aggregates findings so teams can compare attack classes across targets. The breadth means each module has its own assumptions and isolation requirements. Getting Started Follow the repository's installation and deployment instructions, then start with a non production OpenAI compatible target and one scan module. The README's examples configure a local endpoint such as http://0.0.0.0:8718/v1/self probe, a dataset module, and thresholds before running the scanner. Keep credentials and attack payloads in a disposable test environment, and inspect the module specific setup before enabling multi step attacks. Use Cases Use the platform to compare jailbreak resistance before and after a system prompt change, to test whether an MCP registry exposes an over privileged tool, or to exercise an agent skill package against known attack datasets. It can also structure a red team review across model and infrastructure layers, but it should not be the only evidence in a security sign off. Strengths AI Infra Guard's differentiator is coverage across adjacent attack surfaces that are often reviewed by separate teams. The module and dataset model gives a security engineer a place to add organization specific probes, while threshold configuration and target adapters make repeated scans more comparable than ad hoc demonstrations. Limitations / When NOT to Use A broad scanner can create a broad false sense of coverage: a passing module may reflect an incomplete dataset, an incompatible target adapter, or a threshold that hides useful failures. The README includes vendor associated datasets and examples, so reproduce important claims, pin module versions, and pair results with manual review of authorization, secrets, network boundaries, and destructive tool behavior. Integration Patterns Run selected modules in an isolated pre release environment, archive the exact dataset and target configuration, and compare findings across model or agent revisions. Combine it with a runtime guardrail and gateway audit logs; the scanner should discover weaknesses while the live system enforces policy and records attempted abuse. Buzz & Reception 4,150 GitHub stars verified during the 2026 07 19 discovery sweep; Tencent backed red team project with broad AI infrastructure coverage. Resources Project documentation GitHub Release history Black Hat Arsenal listing"
+    },
+    {
       "id": "aider",
       "name": "Aider",
       "type": "tool",
@@ -958,6 +1126,91 @@
       "word_count": 427,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Mature workflow scheduler for batch data, ML, and AI pipeline orchestration. Open source or free to start. Best for established scheduled workflows.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>A widely-used open-source workflow scheduler originally built for data engineering, commonly repurposed to orchestrate batch AI/ML pipelines — ingestion, training jobs, evaluation runs — as directed acyclic graphs (DAGs).</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Apache Airflow earns a place in the Arsenal because it directly addresses a recurring decision point: you already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>DAG-based scheduling with dependency management</li>\n<li>Huge ecosystem of pre-built operators/providers</li>\n<li>Mature retry, backfill, and SLA-monitoring tooling</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Pipelines are defined as Python DAGs of discrete tasks; a scheduler triggers tasks based on time or external sensors, and a web UI shows run history and task state.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install apache-airflow\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability</li>\n<li><strong>Scenario</strong>: you need mature, battle-tested DAG orchestration with a huge plugin ecosystem and broad community support</li>\n<li><strong>Scenario</strong>: your workflows are primarily time- or sensor-triggered batch jobs, not low-latency agent loops</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need sub-second or streaming-style orchestration for live agent conversations — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability</li>\n<li>You need mature, battle-tested DAG orchestration with a huge plugin ecosystem and broad community support</li>\n<li>Your workflows are primarily time- or sensor-triggered batch jobs, not low-latency agent loops</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need sub-second or streaming-style orchestration for live agent conversations</li>\n<li>Your team has no data-engineering background; Airflow's operational overhead is non-trivial for a small AI app</li>\n<li>You want a lightweight library to embed directly in a Python service rather than run a separate scheduler</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Link this tool from job guides using its canonical ID <code>airflow</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n<li>Pair with tracing and evaluation for production LLM workflows.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/apache/airflow\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://github.com/apache/airflow\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/apache/airflow\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Source</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for orchestration.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Mature workflow scheduler for batch data, ML, and AI pipeline orchestration. Open source or free to start. Best for established scheduled workflows. Overview A widely used open source workflow scheduler originally built for data engineering, commonly repurposed to orchestrate batch AI/ML pipelines — ingestion, training jobs, evaluation runs — as directed acyclic graphs (DAGs). Why It's in the Arsenal Apache Airflow earns a place in the Arsenal because it directly addresses a recurring decision point: you already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features DAG based scheduling with dependency management Huge ecosystem of pre built operators/providers Mature retry, backfill, and SLA monitoring tooling Architecture / How It Works Pipelines are defined as Python DAGs of discrete tasks; a scheduler triggers tasks based on time or external sensors, and a web UI shows run history and task state. Getting Started Use Cases 1. Scenario : you already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability 2. Scenario : you need mature, battle tested DAG orchestration with a huge plugin ecosystem and broad community support 3. Scenario : your workflows are primarily time or sensor triggered batch jobs, not low latency agent loops 4. Scenario where this is NOT the right fit : you need sub second or streaming style orchestration for live agent conversations — evaluate an alternative instead Strengths You already run batch data pipelines and want AI/ML jobs to share the same scheduler and observability You need mature, battle tested DAG orchestration with a huge plugin ecosystem and broad community support Your workflows are primarily time or sensor triggered batch jobs, not low latency agent loops Limitations / When NOT to Use You need sub second or streaming style orchestration for live agent conversations Your team has no data engineering background; Airflow's operational overhead is non trivial for a small AI app You want a lightweight library to embed directly in a Python service rather than run a separate scheduler Integration Patterns Link this tool from job guides using its canonical ID airflow. Record pricing, hosting, and data retention assumptions before production adoption. Pair with tracing and evaluation for production LLM workflows. Resources Primary site Documentation Source Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for orchestration. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "aisheets",
+      "name": "Hugging Face AI Sheets",
+      "type": "tool",
+      "job": [
+        "data-labeling",
+        "prototyping"
+      ],
+      "description": "Hugging Face open-source no-code tool for generating and enriching datasets with AI models",
+      "url": "content/tools/data-ingestion/aisheets",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; hosted inference and storage costs are separate",
+      "tags": [
+        "data",
+        "llm",
+        "huggingface",
+        "batching"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Self-host the open-source application or use Hugging Face services",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/huggingface/aisheets",
+      "docs_url": "https://github.com/huggingface/aisheets",
+      "github_url": "https://github.com/huggingface/aisheets",
+      "alternatives": [
+        "argilla",
+        "label-studio",
+        "prodigy"
+      ],
+      "integrates_with": [
+        "vllm"
+      ],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "data-ingestion",
+      "audience": [
+        "prototype",
+        "research"
+      ],
+      "best_when": [
+        "You need a visual, low-code workflow for adding model-generated columns, labels, or transformations to a dataset",
+        "Your team wants to move between a local Docker deployment, Hugging Face Hub data, and hosted inference providers"
+      ],
+      "avoid_when": [
+        "You need deterministic ETL guarantees, strict row-level lineage, or high-volume processing without validating the current release's scaling behavior",
+        "Your data cannot leave the approved model/provider boundary or you have not budgeted for hosted inference and batch execution"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "watching",
+      "verdict_rationale": "An approachable Hugging Face data-preparation interface, with maintenance and scale assumptions still needing review",
+      "status": "watching",
+      "entry_type": "tool",
+      "path": "content/tools/data-ingestion/aisheets.md",
+      "slug": "aisheets",
+      "section_path": "content/tools/data-ingestion",
+      "display_name": "Hugging Face AI Sheets",
+      "summary": "Hugging Face open-source no-code tool for generating and enriching datasets with AI models",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 525,
+      "body_html": "<h2>Overview</h2>\n<p>AI Sheets is Hugging Face's open-source, spreadsheet-like interface for building, enriching, and transforming datasets with AI models. It can run locally or on the Hub and can call thousands of Hub models through Inference Providers or local inference, making model-assisted data preparation accessible to people who do not want to write an entire pipeline first.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>AI Sheets deserves a place as a data-preparation tool because it turns common enrichment operations—classification, generation, rewriting, and extraction—into inspectable dataset transformations. The Hugging Face integration also connects the visual workflow to Hub datasets and model choices rather than locking the user into one proprietary model endpoint.</p>\n<h2>Key Features</h2>\n<p>The README describes no-code row transformations, local Docker deployment, Hugging Face Hub integration, hosted Inference Providers, local models, and scripts for extending datasets with inference clients or vLLM. A user can prototype a transformation in the sheet UI, then move a larger job into the repository's command-line scripts.</p>\n<h2>Architecture / How It Works</h2>\n<p>The web application represents a dataset as rows and generated or transformed columns. A model/provider configuration supplies the operation for a column, while the backend executes requests and materializes the results into a dataset that can be exported or pushed to the Hub. The companion scripts expose a more reproducible batch path for larger jobs and local vLLM execution.</p>\n<h2>Getting Started</h2>\n<p>The README offers a Docker quick start:</p>\n<pre><code class=\"language-bash\">git clone https://github.com/huggingface/aisheets.git\ncd aisheets\ndocker run -p 3000:3000 ghcr.io/huggingface/aisheets:latest\n</code></pre>\n<p>For local development, install pnpm dependencies with <code>pnpm install --frozen-lockfile</code> and run the app as documented. Configure a Hugging Face token only after deciding whether the dataset can be sent to an external inference provider.</p>\n<h2>Use Cases</h2>\n<p>Use AI Sheets to add synthetic questions to a seed dataset, label support messages with a candidate taxonomy, or enrich Hub rows with model-generated explanations before a human review pass. Its batch scripts are a better fit than the UI for generating a large training set, but the same prompts and model revision should be recorded for reproducibility.</p>\n<h2>Strengths</h2>\n<p>The visual row-and-column interaction lowers the cost of exploring a data transformation, while Hugging Face integration provides an unusually broad model and dataset surface. The project also shows a path from interactive experimentation to <code>hf jobs</code> or vLLM-backed batch execution rather than forcing every user to choose one mode.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Generated labels and text inherit model bias, prompt drift, and provider nondeterminism; a spreadsheet view does not replace schema validation, deduplication, or human sampling. The default branch was last updated 2026-04-09 in the discovery metadata, so teams should verify current deployment instructions and scale behavior before making it a critical data pipeline.</p>\n<h2>Integration Patterns</h2>\n<p>Prototype a column transformation on a small, redacted sample, export the prompt and model configuration, then run the corresponding repository script against a versioned input. Add row-level provenance and human acceptance checks before pushing enriched data into training or retrieval systems.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>1,637 GitHub stars verified during the 2026-07-19 discovery sweep; Hugging Face project whose default branch was last updated 2026-04-09.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/huggingface/aisheets\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://huggingface.co/blog/aisheets\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Hugging Face announcement</a></li>\n<li><a href=\"https://huggingface.co/spaces/aisheets/sheets\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Hosted Sheets Space</a></li>\n</ul>\n",
+      "body_text": "Overview AI Sheets is Hugging Face's open source, spreadsheet like interface for building, enriching, and transforming datasets with AI models. It can run locally or on the Hub and can call thousands of Hub models through Inference Providers or local inference, making model assisted data preparation accessible to people who do not want to write an entire pipeline first. Why It's in the Arsenal AI Sheets deserves a place as a data preparation tool because it turns common enrichment operations—classification, generation, rewriting, and extraction—into inspectable dataset transformations. The Hugging Face integration also connects the visual workflow to Hub datasets and model choices rather than locking the user into one proprietary model endpoint. Key Features The README describes no code row transformations, local Docker deployment, Hugging Face Hub integration, hosted Inference Providers, local models, and scripts for extending datasets with inference clients or vLLM. A user can prototype a transformation in the sheet UI, then move a larger job into the repository's command line scripts. Architecture / How It Works The web application represents a dataset as rows and generated or transformed columns. A model/provider configuration supplies the operation for a column, while the backend executes requests and materializes the results into a dataset that can be exported or pushed to the Hub. The companion scripts expose a more reproducible batch path for larger jobs and local vLLM execution. Getting Started The README offers a Docker quick start: For local development, install pnpm dependencies with pnpm install frozen lockfile and run the app as documented. Configure a Hugging Face token only after deciding whether the dataset can be sent to an external inference provider. Use Cases Use AI Sheets to add synthetic questions to a seed dataset, label support messages with a candidate taxonomy, or enrich Hub rows with model generated explanations before a human review pass. Its batch scripts are a better fit than the UI for generating a large training set, but the same prompts and model revision should be recorded for reproducibility. Strengths The visual row and column interaction lowers the cost of exploring a data transformation, while Hugging Face integration provides an unusually broad model and dataset surface. The project also shows a path from interactive experimentation to hf jobs or vLLM backed batch execution rather than forcing every user to choose one mode. Limitations / When NOT to Use Generated labels and text inherit model bias, prompt drift, and provider nondeterminism; a spreadsheet view does not replace schema validation, deduplication, or human sampling. The default branch was last updated 2026 04 09 in the discovery metadata, so teams should verify current deployment instructions and scale behavior before making it a critical data pipeline. Integration Patterns Prototype a column transformation on a small, redacted sample, export the prompt and model configuration, then run the corresponding repository script against a versioned input. Add row level provenance and human acceptance checks before pushing enriched data into training or retrieval systems. Buzz & Reception 1,637 GitHub stars verified during the 2026 07 19 discovery sweep; Hugging Face project whose default branch was last updated 2026 04 09. Resources GitHub Hugging Face announcement Hosted Sheets Space"
     },
     {
       "id": "any-agent",
@@ -4512,6 +4765,89 @@
       "body_text": "Overview A platform for building, deploying, and iterating on custom AI applications without assembling the underlying infrastructure (model calls, deployment, feedback loops) by hand. Why It's in the Arsenal Empromptu AI earns a place in the Arsenal because it directly addresses a recurring decision point: you want to spin up a custom AI application quickly without assembling infrastructure yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Managed application build/deploy workflow Built in iteration loop for improving the app over time Architecture / How It Works Provides a hosted environment where an application's logic, model calls, and deployment are managed together rather than as separate services you wire up yourself. Getting Started Use Cases 1. Scenario : you want to spin up a custom AI application quickly without assembling infrastructure yourself 2. Scenario : you are validating a product idea and value speed over long term portability 3. Scenario where this is NOT the right fit : you need full control over the orchestration layer or want to avoid vendor lock in — evaluate an alternative instead Strengths You want to spin up a custom AI application quickly without assembling infrastructure yourself You are validating a product idea and value speed over long term portability Limitations / When NOT to Use You need full control over the orchestration layer or want to avoid vendor lock in You require an open source or self hostable deployment model Enrichment status: draft — best when/avoid when above are based on the vendor's own description; not yet confirmed against third party production usage reports. Last reviewed: 2026 06 30. Integration Patterns Reference this entry by ID from guides, stacks, and build examples. Resources Empromptu AI Buzz & Reception Featured in Techpresso. Last reviewed: 2026 06 14 by @maintainer"
     },
     {
+      "id": "evalscope",
+      "name": "EvalScope",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "ModelScope framework for LLM, VLM, AIGC, agent evaluation, stress testing, and reports",
+      "url": "content/tools/evaluation-and-observability/evalscope",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; model/API, GPU, and dataset costs are separate",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "llm",
+        "multimodal",
+        "inference"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; you pay for models, endpoints, and compute",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/modelscope/evalscope",
+      "docs_url": "https://evalscope.readthedocs.io/en/latest/",
+      "github_url": "https://github.com/modelscope/evalscope",
+      "alternatives": [
+        "lm-evaluation-harness",
+        "openjudge"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "prototype",
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need one runner for capability benchmarks, OpenAI-compatible endpoint checks, agent traces, and inference performance metrics",
+        "You are comparing LLM or VLM candidates across GSM8K, MMLU-style suites, custom datasets, or service-level TTFT and TPOT targets"
+      ],
+      "avoid_when": [
+        "Your acceptance decision depends on a private domain distribution that the built-in benchmarks do not represent",
+        "You need a low-overhead production monitor rather than an offline evaluator that records and visualizes test runs"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "recommended",
+      "verdict_rationale": "A broad, extensible evaluation runner with both model-quality and serving-performance paths",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/evalscope.md",
+      "slug": "evalscope",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "EvalScope",
+      "summary": "ModelScope framework for LLM, VLM, AIGC, agent evaluation, stress testing, and reports",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 522,
+      "body_html": "<h2>Overview</h2>\n<p>EvalScope is a Python evaluation framework from the ModelScope community that puts capability tests, agent evaluation, inference stress tests, and report visualization behind one command-oriented workflow. It is useful when a team wants to compare models and serving endpoints without stitching together separate benchmark runners and load-test scripts.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>EvalScope earns a place because it covers a wider evaluation surface than a single benchmark harness: its README describes LLM, VLM, embedding, reranker, AIGC, and agent modes alongside TTFT and TPOT performance measurements. The extensible dataset, model, and metric interfaces also make it a practical bridge between public benchmark reproduction and a team's own regression suite.</p>\n<h2>Key Features</h2>\n<p>The framework includes recognized suites such as MMLU, C-Eval, and GSM8K, an OpenAI-compatible backend, Docker-sandboxed agent loops with per-sample traces, stress testing, pairwise arena comparisons, and a web dashboard for score and prediction inspection. Those pieces let an evaluator keep quality results and service measurements in the same experiment record.</p>\n<h2>Architecture / How It Works</h2>\n<p>EvalScope separates backends from datasets, model adapters, metrics, and report generation. A run selects a model or API endpoint, a dataset or agent task, and an evaluation backend; the runner emits structured predictions and metrics that the dashboard can compare across runs. Agent mode adds a controlled multi-turn loop and optional tools, while performance mode measures serving behavior rather than answer quality.</p>\n<h2>Getting Started</h2>\n<p>Install the package and point the OpenAI-compatible backend at a reachable endpoint:</p>\n<pre><code class=\"language-bash\">pip install evalscope\nevalscope eval --model your-model-name --api-url \"$OPENAI_API_BASE_URL\" --api-key \"$OPENAI_API_KEY\" --eval-type openai_api --datasets gsm8k --limit 5\n</code></pre>\n<p>Start with a small limit, then replace the built-in dataset with a versioned internal set before treating the score as a release gate.</p>\n<h2>Use Cases</h2>\n<p>Use EvalScope to compare several chat endpoints on the same reasoning suite, to run a VLM or embedding regression after changing a checkpoint, or to stress an OpenAI-compatible service while recording TTFT and TPOT. Its agent mode is a fit for measuring tool trajectories and failure traces in a sandbox, not for silently probing production users.</p>\n<h2>Strengths</h2>\n<p>The combination of capability evaluation, agent traces, load testing, and interactive reports is the project's main advantage. Built-in support for multiple model modalities and custom extension points reduces the amount of glue code needed when an evaluation program grows beyond a single text benchmark.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>A benchmark score remains conditional on prompts, model versions, sampling settings, backend adapters, and dataset contamination; EvalScope does not make those variables disappear. Agent evaluation can also require Docker and substantial model/API spend, while the dashboard is not a substitute for a production telemetry system or a carefully curated domain test set.</p>\n<h2>Integration Patterns</h2>\n<p>Run EvalScope from a pinned environment in CI or a scheduled benchmark worker, store its reports with the model and prompt revision, and feed selected failures into a team-owned regression dataset. Pair it with an inference gateway for endpoint routing and with tracing when you need live request-level evidence beyond offline runs.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>3,105 GitHub stars verified during the 2026-07-19 discovery sweep; ModelScope community project with active benchmark and dashboard development.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://evalscope.readthedocs.io/en/latest/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/modelscope/evalscope\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://evalscope.readthedocs.io/en/latest/get_started/visualization.html\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Visualization guide</a></li>\n</ul>\n",
+      "body_text": "Overview EvalScope is a Python evaluation framework from the ModelScope community that puts capability tests, agent evaluation, inference stress tests, and report visualization behind one command oriented workflow. It is useful when a team wants to compare models and serving endpoints without stitching together separate benchmark runners and load test scripts. Why It's in the Arsenal EvalScope earns a place because it covers a wider evaluation surface than a single benchmark harness: its README describes LLM, VLM, embedding, reranker, AIGC, and agent modes alongside TTFT and TPOT performance measurements. The extensible dataset, model, and metric interfaces also make it a practical bridge between public benchmark reproduction and a team's own regression suite. Key Features The framework includes recognized suites such as MMLU, C Eval, and GSM8K, an OpenAI compatible backend, Docker sandboxed agent loops with per sample traces, stress testing, pairwise arena comparisons, and a web dashboard for score and prediction inspection. Those pieces let an evaluator keep quality results and service measurements in the same experiment record. Architecture / How It Works EvalScope separates backends from datasets, model adapters, metrics, and report generation. A run selects a model or API endpoint, a dataset or agent task, and an evaluation backend; the runner emits structured predictions and metrics that the dashboard can compare across runs. Agent mode adds a controlled multi turn loop and optional tools, while performance mode measures serving behavior rather than answer quality. Getting Started Install the package and point the OpenAI compatible backend at a reachable endpoint: Start with a small limit, then replace the built in dataset with a versioned internal set before treating the score as a release gate. Use Cases Use EvalScope to compare several chat endpoints on the same reasoning suite, to run a VLM or embedding regression after changing a checkpoint, or to stress an OpenAI compatible service while recording TTFT and TPOT. Its agent mode is a fit for measuring tool trajectories and failure traces in a sandbox, not for silently probing production users. Strengths The combination of capability evaluation, agent traces, load testing, and interactive reports is the project's main advantage. Built in support for multiple model modalities and custom extension points reduces the amount of glue code needed when an evaluation program grows beyond a single text benchmark. Limitations / When NOT to Use A benchmark score remains conditional on prompts, model versions, sampling settings, backend adapters, and dataset contamination; EvalScope does not make those variables disappear. Agent evaluation can also require Docker and substantial model/API spend, while the dashboard is not a substitute for a production telemetry system or a carefully curated domain test set. Integration Patterns Run EvalScope from a pinned environment in CI or a scheduled benchmark worker, store its reports with the model and prompt revision, and feed selected failures into a team owned regression dataset. Pair it with an inference gateway for endpoint routing and with tracing when you need live request level evidence beyond offline runs. Buzz & Reception 3,105 GitHub stars verified during the 2026 07 19 discovery sweep; ModelScope community project with active benchmark and dashboard development. Resources Documentation GitHub Visualization guide"
+    },
+    {
       "id": "evidently",
       "name": "Evidently",
       "type": "tool",
@@ -5181,6 +5517,91 @@
       "word_count": 378,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Application hosting platform with global machines and GPU options for AI services. Usage-based hosting pricing. Best for small globally deployed AI APIs.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>An application hosting platform that runs apps as lightweight VMs ('Fly Machines') close to users globally, with GPU machine options for moderate AI inference workloads.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Fly.io earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Global, low-latency app deployment</li>\n<li>GPU machine support for inference workloads</li>\n<li>Minimal DevOps overhead compared to managing Kubernetes</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">fly launch\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps</li>\n<li><strong>Scenario</strong>: you need GPU machines for moderate workloads without managing a full Kubernetes cluster</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need large-scale, multi-GPU distributed training or serving (purpose-built ML platforms scale better there) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps</li>\n<li>You need GPU machines for moderate workloads without managing a full Kubernetes cluster</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need large-scale, multi-GPU distributed training or serving (purpose-built ML platforms scale better there)</li>\n<li>You require deep enterprise compliance certifications that a smaller cloud provider may not yet offer</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./bentoml.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">BentoML</a>, <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a>, <a href=\"./railway.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Railway</a>, <a href=\"./replicate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Replicate</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>fly-io</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://fly.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://fly.io/docs/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for deployment, production-serving.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Application hosting platform with global machines and GPU options for AI services. Usage based hosting pricing. Best for small globally deployed AI APIs. Overview An application hosting platform that runs apps as lightweight VMs ('Fly Machines') close to users globally, with GPU machine options for moderate AI inference workloads. Why It's in the Arsenal Fly.io earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Global, low latency app deployment GPU machine support for inference workloads Minimal DevOps overhead compared to managing Kubernetes Architecture / How It Works Applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance. Getting Started Use Cases 1. Scenario : you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps 2. Scenario : you need GPU machines for moderate workloads without managing a full Kubernetes cluster 3. Scenario where this is NOT the right fit : you need large scale, multi GPU distributed training or serving (purpose built ML platforms scale better there) — evaluate an alternative instead Strengths You want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps You need GPU machines for moderate workloads without managing a full Kubernetes cluster Limitations / When NOT to Use You need large scale, multi GPU distributed training or serving (purpose built ML platforms scale better there) You require deep enterprise compliance certifications that a smaller cloud provider may not yet offer Integration Patterns Compare against BentoML, Modal, Railway, Replicate before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID fly io. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment, production serving. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "fuzzyai",
+      "name": "FuzzyAI",
+      "type": "tool",
+      "job": [
+        "security-and-guardrails",
+        "evaluation"
+      ],
+      "description": "CyberArk toolkit for automated LLM API fuzzing and jailbreak testing",
+      "url": "content/tools/evaluation-and-observability/fuzzyai",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; target API and local-model compute costs are separate",
+      "tags": [
+        "security",
+        "evaluation",
+        "llm",
+        "guardrails"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "polyglot"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted tier required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/cyberark/FuzzyAI",
+      "docs_url": "https://github.com/cyberark/FuzzyAI",
+      "github_url": "https://github.com/cyberark/FuzzyAI",
+      "alternatives": [
+        "garak",
+        "pyrit",
+        "agentic-security"
+      ],
+      "integrates_with": [
+        "ollama"
+      ],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need repeatable jailbreak and fuzzing experiments against an LLM API or local Ollama model",
+        "You want reusable attack datasets and a web UI for inspecting which prompt mutations pass through a target"
+      ],
+      "avoid_when": [
+        "You need a live filter that blocks attacks during user requests rather than an offline fuzzing harness",
+        "You require current coverage for a newly released model without first checking the repository's older attack modules and dependencies"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "use-with-caution",
+      "verdict_rationale": "CyberArk-backed attack experimentation with useful datasets, but the default branch is stale for a security scanner",
+      "status": "watching",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/fuzzyai.md",
+      "slug": "fuzzyai",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "FuzzyAI",
+      "summary": "CyberArk toolkit for automated LLM API fuzzing and jailbreak testing",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 500,
+      "body_html": "<h2>Overview</h2>\n<p>FuzzyAI is CyberArk's automated fuzzing toolkit for finding jailbreaks and unsafe behavior in LLM APIs. It packages attack strategies, datasets, optional classifier models, and a web interface so a security researcher can run repeatable probes instead of manually collecting jailbreak prompts.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>FuzzyAI is worth keeping as a security-testing reference because it turns jailbreak research into a configurable fuzzing workflow with target adapters and included resources. CyberArk's security context makes the project relevant to defensive review, while its 2026-02-06 last commit means the entry should be treated as a useful but not actively maintained snapshot.</p>\n<h2>Key Features</h2>\n<p>The README documents standalone and in-project installation, Ollama as an optional local model path, a web UI, attack resources, and command-line fuzzing against HTTP or OpenAI-style targets. Attack options can select a classifier model and target endpoint, allowing researchers to compare payload families under controlled conditions.</p>\n<h2>Architecture / How It Works</h2>\n<p>FuzzyAI combines an attack generator with a target adapter and an evaluator or classifier that decides whether the response exhibits the tested failure. The target can be a local Ollama model or an HTTP API; the included resources provide starting attack and dataset material, while the command-line options determine the model, endpoint, and auxiliary classifier.</p>\n<h2>Getting Started</h2>\n<p>The README's quick path installs directly from the repository:</p>\n<pre><code class=\"language-bash\">pip install git+https://github.com/cyberark/FuzzyAI.git\nollama run llama3.1\nfuzzyai fuzz --help\n</code></pre>\n<p>For a standalone checkout, use Poetry and the documented editable install. Begin with a local target or a tightly scoped staging API, and never point an attack loop at an account with irreversible tools.</p>\n<h2>Use Cases</h2>\n<p>Use FuzzyAI to compare jailbreak resistance after a system-prompt or guardrail change, to test a local model before exposing it through an API, or to seed an internal red-team corpus with reproducible attack cases. It is a security research harness, not a replacement for application authorization or runtime moderation.</p>\n<h2>Strengths</h2>\n<p>The combination of fuzzing commands, attack resources, optional local inference, and a UI makes the first jailbreak experiment approachable. It also exposes the auxiliary classifier and target configuration instead of presenting a single opaque score, which helps a researcher inspect why a case was marked successful.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>The default branch has not been updated since 2026-02-06, so model API changes, dependency vulnerabilities, and newer attack techniques may not be reflected. Classifier judgments and included datasets can over- or under-report risk, and a passing fuzz run says little about business-logic authorization or agent tool misuse.</p>\n<h2>Integration Patterns</h2>\n<p>Pin the repository revision and attack corpus in a staging security job, archive raw responses, and review classifier-positive cases manually before filing a vulnerability. Pair FuzzyAI with garak or AI Infra Guard for broader probe families and with a runtime guardrail for the mitigations discovered by the scan.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>1,530 GitHub stars verified during the 2026-07-19 discovery sweep; CyberArk project whose default branch was last updated 2026-02-06.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/cyberark/FuzzyAI\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/cyberark/FuzzyAI/wiki\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Wiki</a></li>\n<li><a href=\"https://github.com/cyberark/FuzzyAI/wiki/Attacks\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Attacks guide</a></li>\n<li><a href=\"https://arxiv.org/abs/2402.11753\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Related paper</a></li>\n</ul>\n",
+      "body_text": "Overview FuzzyAI is CyberArk's automated fuzzing toolkit for finding jailbreaks and unsafe behavior in LLM APIs. It packages attack strategies, datasets, optional classifier models, and a web interface so a security researcher can run repeatable probes instead of manually collecting jailbreak prompts. Why It's in the Arsenal FuzzyAI is worth keeping as a security testing reference because it turns jailbreak research into a configurable fuzzing workflow with target adapters and included resources. CyberArk's security context makes the project relevant to defensive review, while its 2026 02 06 last commit means the entry should be treated as a useful but not actively maintained snapshot. Key Features The README documents standalone and in project installation, Ollama as an optional local model path, a web UI, attack resources, and command line fuzzing against HTTP or OpenAI style targets. Attack options can select a classifier model and target endpoint, allowing researchers to compare payload families under controlled conditions. Architecture / How It Works FuzzyAI combines an attack generator with a target adapter and an evaluator or classifier that decides whether the response exhibits the tested failure. The target can be a local Ollama model or an HTTP API; the included resources provide starting attack and dataset material, while the command line options determine the model, endpoint, and auxiliary classifier. Getting Started The README's quick path installs directly from the repository: For a standalone checkout, use Poetry and the documented editable install. Begin with a local target or a tightly scoped staging API, and never point an attack loop at an account with irreversible tools. Use Cases Use FuzzyAI to compare jailbreak resistance after a system prompt or guardrail change, to test a local model before exposing it through an API, or to seed an internal red team corpus with reproducible attack cases. It is a security research harness, not a replacement for application authorization or runtime moderation. Strengths The combination of fuzzing commands, attack resources, optional local inference, and a UI makes the first jailbreak experiment approachable. It also exposes the auxiliary classifier and target configuration instead of presenting a single opaque score, which helps a researcher inspect why a case was marked successful. Limitations / When NOT to Use The default branch has not been updated since 2026 02 06, so model API changes, dependency vulnerabilities, and newer attack techniques may not be reflected. Classifier judgments and included datasets can over or under report risk, and a passing fuzz run says little about business logic authorization or agent tool misuse. Integration Patterns Pin the repository revision and attack corpus in a staging security job, archive raw responses, and review classifier positive cases manually before filing a vulnerability. Pair FuzzyAI with garak or AI Infra Guard for broader probe families and with a runtime guardrail for the mitigations discovered by the scan. Buzz & Reception 1,530 GitHub stars verified during the 2026 07 19 discovery sweep; CyberArk project whose default branch was last updated 2026 02 06. Resources GitHub Wiki Attacks guide Related paper"
     },
     {
       "id": "galileo",
@@ -7584,6 +8005,91 @@
       "body_text": "Overview A flexible, open source labeling tool supporting many data types (text, image, audio, video) for building training and evaluation datasets, designed to be self hosted. Why It's in the Arsenal Label Studio earns a place in the Arsenal because it directly addresses a recurring decision point: you need a flexible, open source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Multi modal labeling (text, image, audio, video) Self hostable open source deployment Configurable labeling interfaces per task type Architecture / How It Works Projects define a labeling interface and task data source; annotators work through a queue of tasks in the UI, with results exportable in standard formats. Getting Started Use Cases 1. Scenario : you need a flexible, open source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets 2. Scenario : you want to self host your annotation tooling for data control or cost reasons 3. Scenario where this is NOT the right fit : you need fully managed annotation workforce operations rather than just the tool (consider Scale AI) — evaluate an alternative instead Strengths You need a flexible, open source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets You want to self host your annotation tooling for data control or cost reasons Limitations / When NOT to Use You need fully managed annotation workforce operations rather than just the tool (consider Scale AI) Your annotation task is NLP specific and would benefit from Prodigy's scripted, model in the loop workflow Integration Patterns Compare against Argilla, Prodigy, Scale AI before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID label studio. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "laminar",
+      "name": "Laminar",
+      "type": "tool",
+      "job": [
+        "tracing",
+        "monitoring",
+        "evaluation"
+      ],
+      "description": "OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications",
+      "url": "content/tools/evaluation-and-observability/laminar",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 core; hosted plans and provider/API costs are separate",
+      "tags": [
+        "observability",
+        "tracing",
+        "monitoring",
+        "evaluation",
+        "agents"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript",
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Self-host the open-source stack or use the hosted service; model calls remain billable",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/lmnr-ai/lmnr",
+      "docs_url": "https://laminar.sh",
+      "github_url": "https://github.com/lmnr-ai/lmnr",
+      "alternatives": [
+        "langsmith",
+        "wandb-weave"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You need spans that preserve agent steps, LLM calls, tool calls, latency, and token information for debugging",
+        "You want to turn captured traces into annotated datasets and evaluations instead of maintaining separate logging and labeling systems"
+      ],
+      "avoid_when": [
+        "Your organization requires a mature self-hosted control plane and has not verified parity with Laminar's managed product",
+        "You cannot send prompts, tool arguments, or model outputs to a system whose retention and redaction behavior you have not reviewed"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A focused AI trace-to-evaluation workflow with both SDKs and a Docker Compose self-hosting path",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/laminar.md",
+      "slug": "laminar",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "Laminar",
+      "summary": "OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 541,
+      "body_html": "<h2>Overview</h2>\n<p>Laminar is an AI observability platform that captures OpenTelemetry-style traces from LLM and agent applications, then makes those traces useful for evaluation, annotation, datasets, and custom dashboards. The repository presents a self-hostable Docker Compose deployment alongside a managed Laminar service, so the deployment choice is part of the adoption decision.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Laminar is worth cataloging because it treats an agent trace as the beginning of an improvement loop rather than a terminal log line. Its README connects tracing with dataset creation, signals, evaluations, MCP support, and a CLI, giving teams a concrete path from a failed tool call to a labeled example without first exporting events into an unrelated annotation product.</p>\n<h2>Key Features</h2>\n<p>The platform records model and tool spans, supports Python and TypeScript SDKs, offers trace inspection, custom signals, dataset annotation, evaluations, MCP-related workflows, and dashboards. The project also documents an isolated local deployment, which matters for teams that need to test instrumentation before deciding whether a hosted control plane is acceptable.</p>\n<h2>Architecture / How It Works</h2>\n<p>Application SDKs emit structured spans to a Laminar backend, where traces can be searched, rendered, scored, and promoted into datasets. The trace model follows OpenTelemetry concepts while adding AI-specific attributes such as prompts, completions, token usage, and agent/tool relationships. Docker Compose provides the local service topology; the managed product is a separate operational boundary.</p>\n<h2>Getting Started</h2>\n<p>The repository's self-hosting path starts the local services with Docker Compose:</p>\n<pre><code class=\"language-bash\">git clone https://github.com/lmnr-ai/lmnr.git\ncd lmnr\ndocker compose up -d\n</code></pre>\n<p>Then configure the SDK's <code>baseUrl</code> and ports as described in the self-hosting guide, install the SDK for the application language, and send a test trace before enabling prompt or output capture for sensitive workloads.</p>\n<h2>Use Cases</h2>\n<p>Laminar fits an agent team debugging why a tool loop stalls, a support team labeling real conversations for an offline evaluator, or an inference team comparing latency and token cost across provider changes. It is especially useful when the same trace needs both human annotation and automated scoring, rather than only a time-series metric.</p>\n<h2>Strengths</h2>\n<p>The trace-to-dataset path is more concrete than generic application logging, and the OpenTelemetry orientation gives the emitted spans a familiar interoperability target. First-class attention to agent sessions, MCP, evaluations, and annotation also matches the failure modes of multi-step systems better than a dashboard that only records one request and one response.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Self-hosting is not equivalent to feature parity with the managed Laminar service; verify which integrations, authentication controls, upgrades, and retention policies are available in the deployment you will operate. Captured prompts, tool arguments, and outputs can contain secrets or personal data, so redaction, access control, and retention must be designed before broad instrumentation.</p>\n<h2>Integration Patterns</h2>\n<p>Instrument the agent boundary and provider client first, attach stable run and dataset identifiers, and export only the fields needed for evaluation. Pair Laminar with an inference gateway for routing and with a security scanner for adversarial tests; use the resulting traces to promote representative failures into regression cases.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>3,100 GitHub stars verified during the 2026-07-19 discovery sweep; YC-backed project with an open-source self-hosting path and a separate managed service.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://laminar.sh\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Laminar</a></li>\n<li><a href=\"https://github.com/lmnr-ai/lmnr\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://laminar.sh/docs/tracing/introduction\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Tracing documentation</a></li>\n<li><a href=\"https://laminar.sh/docs/hosting-options#self-hosted-docker-compose\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Self-hosting guide</a></li>\n</ul>\n",
+      "body_text": "Overview Laminar is an AI observability platform that captures OpenTelemetry style traces from LLM and agent applications, then makes those traces useful for evaluation, annotation, datasets, and custom dashboards. The repository presents a self hostable Docker Compose deployment alongside a managed Laminar service, so the deployment choice is part of the adoption decision. Why It's in the Arsenal Laminar is worth cataloging because it treats an agent trace as the beginning of an improvement loop rather than a terminal log line. Its README connects tracing with dataset creation, signals, evaluations, MCP support, and a CLI, giving teams a concrete path from a failed tool call to a labeled example without first exporting events into an unrelated annotation product. Key Features The platform records model and tool spans, supports Python and TypeScript SDKs, offers trace inspection, custom signals, dataset annotation, evaluations, MCP related workflows, and dashboards. The project also documents an isolated local deployment, which matters for teams that need to test instrumentation before deciding whether a hosted control plane is acceptable. Architecture / How It Works Application SDKs emit structured spans to a Laminar backend, where traces can be searched, rendered, scored, and promoted into datasets. The trace model follows OpenTelemetry concepts while adding AI specific attributes such as prompts, completions, token usage, and agent/tool relationships. Docker Compose provides the local service topology; the managed product is a separate operational boundary. Getting Started The repository's self hosting path starts the local services with Docker Compose: Then configure the SDK's baseUrl and ports as described in the self hosting guide, install the SDK for the application language, and send a test trace before enabling prompt or output capture for sensitive workloads. Use Cases Laminar fits an agent team debugging why a tool loop stalls, a support team labeling real conversations for an offline evaluator, or an inference team comparing latency and token cost across provider changes. It is especially useful when the same trace needs both human annotation and automated scoring, rather than only a time series metric. Strengths The trace to dataset path is more concrete than generic application logging, and the OpenTelemetry orientation gives the emitted spans a familiar interoperability target. First class attention to agent sessions, MCP, evaluations, and annotation also matches the failure modes of multi step systems better than a dashboard that only records one request and one response. Limitations / When NOT to Use Self hosting is not equivalent to feature parity with the managed Laminar service; verify which integrations, authentication controls, upgrades, and retention policies are available in the deployment you will operate. Captured prompts, tool arguments, and outputs can contain secrets or personal data, so redaction, access control, and retention must be designed before broad instrumentation. Integration Patterns Instrument the agent boundary and provider client first, attach stable run and dataset identifiers, and export only the fields needed for evaluation. Pair Laminar with an inference gateway for routing and with a security scanner for adversarial tests; use the resulting traces to promote representative failures into regression cases. Buzz & Reception 3,100 GitHub stars verified during the 2026 07 19 discovery sweep; YC backed project with an open source self hosting path and a separate managed service. Resources Laminar GitHub Tracing documentation Self hosting guide"
+    },
+    {
       "id": "langflow",
       "name": "Langflow",
       "type": "tool",
@@ -9166,6 +9672,91 @@
       "word_count": 453,
       "body_html": "<h2>Overview</h2>\n<p>Marqo is a vector search engine that folds embedding inference into the database itself: you POST documents (text or images) and it embeds, indexes, and stores them; at query time you send natural-language or image queries and it embeds and searches in one call. This collapses the usual \"run an embedding model, then push vectors to a separate index\" pipeline into a single service.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Marqo earns a place in the Arsenal because it addresses a recurring decision point: teams that want semantic/multimodal search but don't want to build and operate a separate embedding-inference tier. It is included as a comparison point against the other vector-search tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Embedding inference built in (text and image) — no separate embed service to run</li>\n<li>Multimodal search (CLIP-style) over combined text/image collections</li>\n<li>Tensor and lexical (hybrid) search with filtering</li>\n<li>Self-hostable via Docker or managed via Marqo Cloud</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Marqo wraps a vector index (backed by an OpenSearch/Vespa-style engine) with model-hosting: on ingest it runs the configured embedding model over each field and stores the resulting tensors; queries are embedded with the same model and matched via approximate nearest neighbor, with optional lexical scoring and metadata filters combined server-side.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">docker run -p 8882:8882 marqoai/marqo:latest\npip install marqo\n# then create an index and add_documents(); Marqo embeds them automatically\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: build multimodal (text + image) semantic search without standing up your own embedding service</li>\n<li><strong>Scenario</strong>: prototype a RAG retriever quickly, then self-host the same engine in production</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you already have an embedding pipeline and only need a raw vector index — a standalone store avoids duplicating inference</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>Bundles embedding inference with the index, removing an operational component</li>\n<li>First-class multimodal search</li>\n<li>Same engine self-hosted or on Cloud</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>Bundling inference means less freedom to swap embedding models/pipelines independently</p>\n</li>\n<li>\n<p>Smaller integration/filtering ecosystem than the most mature vector DBs</p>\n</li>\n<li>\n<p>Running models inside the DB raises its resource footprint vs a pure index</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>qdrant</code>, <code>weaviate</code>, and <code>milvus</code> before adopting — they compete for the same vector-search job.</li>\n<li>Link this tool from job guides using its canonical ID <code>marqo</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.marqo.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://docs.marqo.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/marqo-ai/marqo\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>5,017 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview Marqo is a vector search engine that folds embedding inference into the database itself: you POST documents (text or images) and it embeds, indexes, and stores them; at query time you send natural language or image queries and it embeds and searches in one call. This collapses the usual \"run an embedding model, then push vectors to a separate index\" pipeline into a single service. Why It's in the Arsenal Marqo earns a place in the Arsenal because it addresses a recurring decision point: teams that want semantic/multimodal search but don't want to build and operate a separate embedding inference tier. It is included as a comparison point against the other vector search tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below. Key Features Embedding inference built in (text and image) — no separate embed service to run Multimodal search (CLIP style) over combined text/image collections Tensor and lexical (hybrid) search with filtering Self hostable via Docker or managed via Marqo Cloud Architecture / How It Works Marqo wraps a vector index (backed by an OpenSearch/Vespa style engine) with model hosting: on ingest it runs the configured embedding model over each field and stores the resulting tensors; queries are embedded with the same model and matched via approximate nearest neighbor, with optional lexical scoring and metadata filters combined server side. Getting Started Use Cases 1. Scenario : build multimodal (text + image) semantic search without standing up your own embedding service 2. Scenario : prototype a RAG retriever quickly, then self host the same engine in production 3. Scenario where this is NOT the right fit : you already have an embedding pipeline and only need a raw vector index — a standalone store avoids duplicating inference Strengths Bundles embedding inference with the index, removing an operational component First class multimodal search Same engine self hosted or on Cloud Limitations / When NOT to Use Bundling inference means less freedom to swap embedding models/pipelines independently Smaller integration/filtering ecosystem than the most mature vector DBs Running models inside the DB raises its resource footprint vs a pure index Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against qdrant, weaviate, and milvus before adopting — they compete for the same vector search job. Link this tool from job guides using its canonical ID marqo. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 5,017 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "mcp-context-forge",
+      "name": "MCP Context Forge",
+      "type": "tool",
+      "job": [
+        "production-serving",
+        "orchestration",
+        "monitoring",
+        "security-and-guardrails"
+      ],
+      "description": "IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance",
+      "url": "content/tools/serving-and-deployment/mcp-context-forge",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; infrastructure, Redis, and model/provider costs are separate",
+      "tags": [
+        "agents",
+        "tool-use",
+        "orchestration",
+        "routing",
+        "monitoring",
+        "security"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Self-hostable through PyPI, Docker, or Compose",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/ibm/mcp-context-forge",
+      "docs_url": "https://ibm.github.io/mcp-context-forge/",
+      "github_url": "https://github.com/ibm/mcp-context-forge",
+      "alternatives": [
+        "litellm"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You need one governed endpoint for a changing collection of MCP servers, A2A agents, and conventional APIs",
+        "You need discovery, authentication, rate limits, metrics, and federation around tool calls rather than direct point-to-point agent connections"
+      ],
+      "avoid_when": [
+        "You only have one local MCP server and do not need a registry, policy boundary, or multi-cluster topology",
+        "Your team cannot operate Redis, plugins, gateway upgrades, and protocol compatibility as production infrastructure"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "recommended",
+      "verdict_rationale": "A substantial open gateway that puts governance and discovery around heterogeneous agent tool protocols",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/mcp-context-forge.md",
+      "slug": "mcp-context-forge",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "MCP Context Forge",
+      "summary": "IBM gateway and registry for MCP, A2A, REST, and gRPC services with discovery and governance",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 527,
+      "body_html": "<h2>Overview</h2>\n<p>MCP Context Forge, also called ContextForge, is an IBM-backed registry and proxy that federates Model Context Protocol servers, A2A servers, and REST or gRPC APIs behind a governed gateway. It is aimed at the point where an agent platform has outgrown manually configured tool endpoints and needs discovery, policy, observability, and federation.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>ContextForge earns a slot because it addresses an infrastructure boundary that individual MCP servers do not: how a team registers, secures, observes, and routes a large tool catalog. Its Apache-2.0 code, PyPI and container delivery, Redis-backed caching, and multi-cluster federation make it relevant to platform engineers building a shared agent gateway rather than a single assistant.</p>\n<h2>Key Features</h2>\n<p>The README describes MCP, A2A, REST, and gRPC federation, centralized discovery, plugins, authentication and authorization controls, rate limiting, auditability, LLM-specific metrics, and Kubernetes-oriented scaling. The gateway can expose heterogeneous services through a consistent endpoint while retaining a registry view of the underlying tools and agents.</p>\n<h2>Architecture / How It Works</h2>\n<p>ContextForge places a Python gateway between agent clients and registered upstream services. Registrations describe MCP tools or other API endpoints; the gateway applies policy and routing, then forwards calls while emitting request, token, cost, and performance signals. Redis supports caching and federation-related state, and the project documents Docker, PyPI, Compose, and multi-cluster deployment shapes.</p>\n<h2>Getting Started</h2>\n<p>The README provides a PyPI quick start:</p>\n<pre><code class=\"language-bash\">python -m venv .venv\nsource .venv/bin/activate\npip install --upgrade pip\npip install mcp-contextforge-gateway\n</code></pre>\n<p>Run the gateway using the documented environment variables and <code>mcpgateway</code> command, or use the published container image <code>ghcr.io/ibm/mcp-context-forge</code>. Register one test MCP server before adding credentials, plugins, or federation.</p>\n<h2>Use Cases</h2>\n<p>Use ContextForge as the shared ingress for internal MCP tools, as a compatibility layer while A2A and MCP services evolve, or as a policy point where an enterprise can audit tool calls and enforce rate limits. Redis-backed federation is relevant when several clusters need a consistent registry, not when a developer is experimenting with one server on a laptop.</p>\n<h2>Strengths</h2>\n<p>Its strongest design choice is treating agent protocols as gateway-managed infrastructure rather than embedding every tool connection in every agent. The combination of registry, proxy, plugin, observability, and federation features is materially broader than a thin OpenAI-compatible proxy and gives platform teams a place to centralize operational controls.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>A gateway becomes a high-value control plane and a high-impact failure domain: protocol mismatches, registry drift, plugin bugs, or Redis outages can affect many agents at once. Teams must validate authentication semantics, tenant isolation, upstream timeout behavior, sensitive argument logging, and the exact Kubernetes and federation features they intend to operate.</p>\n<h2>Integration Patterns</h2>\n<p>Put ContextForge behind the organization's ingress, register least-privilege MCP and REST tools, and send gateway audit events to the existing observability system. Pair it with an agent framework for workflow execution and with a red-team scanner that exercises the gateway's authorization and tool-routing paths rather than only testing the underlying model.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>4,112 GitHub stars verified during the 2026-07-19 discovery sweep; IBM-backed project with active protocol, gateway, and federation work.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://ibm.github.io/mcp-context-forge/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/ibm/mcp-context-forge\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://ibm.github.io/mcp-context-forge/architecture/roadmap/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Architecture roadmap</a></li>\n<li><a href=\"https://github.com/IBM/mcp-context-forge/pkgs/container/mcp-context-forge\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Container image</a></li>\n</ul>\n",
+      "body_text": "Overview MCP Context Forge, also called ContextForge, is an IBM backed registry and proxy that federates Model Context Protocol servers, A2A servers, and REST or gRPC APIs behind a governed gateway. It is aimed at the point where an agent platform has outgrown manually configured tool endpoints and needs discovery, policy, observability, and federation. Why It's in the Arsenal ContextForge earns a slot because it addresses an infrastructure boundary that individual MCP servers do not: how a team registers, secures, observes, and routes a large tool catalog. Its Apache 2.0 code, PyPI and container delivery, Redis backed caching, and multi cluster federation make it relevant to platform engineers building a shared agent gateway rather than a single assistant. Key Features The README describes MCP, A2A, REST, and gRPC federation, centralized discovery, plugins, authentication and authorization controls, rate limiting, auditability, LLM specific metrics, and Kubernetes oriented scaling. The gateway can expose heterogeneous services through a consistent endpoint while retaining a registry view of the underlying tools and agents. Architecture / How It Works ContextForge places a Python gateway between agent clients and registered upstream services. Registrations describe MCP tools or other API endpoints; the gateway applies policy and routing, then forwards calls while emitting request, token, cost, and performance signals. Redis supports caching and federation related state, and the project documents Docker, PyPI, Compose, and multi cluster deployment shapes. Getting Started The README provides a PyPI quick start: Run the gateway using the documented environment variables and mcpgateway command, or use the published container image ghcr.io/ibm/mcp context forge. Register one test MCP server before adding credentials, plugins, or federation. Use Cases Use ContextForge as the shared ingress for internal MCP tools, as a compatibility layer while A2A and MCP services evolve, or as a policy point where an enterprise can audit tool calls and enforce rate limits. Redis backed federation is relevant when several clusters need a consistent registry, not when a developer is experimenting with one server on a laptop. Strengths Its strongest design choice is treating agent protocols as gateway managed infrastructure rather than embedding every tool connection in every agent. The combination of registry, proxy, plugin, observability, and federation features is materially broader than a thin OpenAI compatible proxy and gives platform teams a place to centralize operational controls. Limitations / When NOT to Use A gateway becomes a high value control plane and a high impact failure domain: protocol mismatches, registry drift, plugin bugs, or Redis outages can affect many agents at once. Teams must validate authentication semantics, tenant isolation, upstream timeout behavior, sensitive argument logging, and the exact Kubernetes and federation features they intend to operate. Integration Patterns Put ContextForge behind the organization's ingress, register least privilege MCP and REST tools, and send gateway audit events to the existing observability system. Pair it with an agent framework for workflow execution and with a red team scanner that exercises the gateway's authorization and tool routing paths rather than only testing the underlying model. Buzz & Reception 4,112 GitHub stars verified during the 2026 07 19 discovery sweep; IBM backed project with active protocol, gateway, and federation work. Resources Documentation GitHub Architecture roadmap Container image"
     },
     {
       "id": "megatron-lm",
@@ -10771,6 +11362,91 @@
       "body_text": "Overview An open source framework for writing and running custom evaluation suites against any model's behavior, code first rather than UI driven. Why It's in the Arsenal OpenAI Evals earns a place in the Arsenal because it directly addresses a recurring decision point: you want a free, open source framework to write and run custom evaluation suites against any model behavior. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Code first custom evaluation suites Free, open source, framework agnostic in practice Extensible to custom grading logic Architecture / How It Works Evaluations are defined as Python code specifying inputs, expected behavior, and grading logic; the framework runs the target model against the eval set and reports pass/fail or scored results. Getting Started Use Cases 1. Scenario : you want a free, open source framework to write and run custom evaluation suites against any model behavior 2. Scenario : you're comfortable writing eval logic in code rather than using a managed no code UI 3. Scenario where this is NOT the right fit : you want a managed dashboard with built in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop) — evaluate an alternative instead Strengths You want a free, open source framework to write and run custom evaluation suites against any model behavior You're comfortable writing eval logic in code rather than using a managed no code UI Limitations / When NOT to Use You want a managed dashboard with built in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop) You need RAG specific evaluation metrics out of the box (use RAGAS or DeepEval instead) Integration Patterns Link this tool from reference stacks, decision trees, and project entries using its canonical ID openai evals rather than duplicating details. Resources Official Site Buzz & Reception Reception should be updated with verified sources during regular content reviews. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "openjudge",
+      "name": "OpenJudge",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training",
+      "url": "content/tools/evaluation-and-observability/openjudge",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; hosted OpenJudge and model/provider usage may incur separate costs",
+      "tags": [
+        "evaluation",
+        "agents",
+        "llm",
+        "benchmark",
+        "research"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Local package is open source; an online grader service is also available",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/agentscope-ai/OpenJudge",
+      "docs_url": "https://agentscope-ai.github.io/OpenJudge/",
+      "github_url": "https://github.com/agentscope-ai/OpenJudge",
+      "alternatives": [
+        "evalscope",
+        "promptfoo"
+      ],
+      "integrates_with": [
+        "agentscope"
+      ],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "prototype",
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need reusable rubric-based graders and datasets for evaluating agent, RAG, reference, or paper-review outputs",
+        "You want grader validation and leaderboard-style comparison rather than a single uncalibrated LLM-as-judge prompt"
+      ],
+      "avoid_when": [
+        "You need a deterministic metric for a high-stakes decision and cannot provide human labels or calibrate the judge",
+        "Your evaluation is a simple unit test where a full grader registry, benchmark dataset, and judge-model workflow adds more machinery than value"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A broad grader and benchmark framework with explicit validation and a judge-model training path",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/openjudge.md",
+      "slug": "openjudge",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "OpenJudge",
+      "summary": "AgentScope framework for reusable LLM graders, benchmark-backed evaluation, and judge-model training",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 521,
+      "body_html": "<h2>Overview</h2>\n<p>OpenJudge is an AgentScope evaluation framework for building, validating, and running reusable LLM graders. It includes benchmark-backed graders, a web application, dataset integrations, agent and reference-answer evaluation, and a path to training dedicated judge models when prompt-based judging is not enough.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>OpenJudge earns a slot because evaluation quality depends as much on the grader as on the system being tested. Its insistence that graders ship with benchmark data and pytest validation, plus applications such as agent evaluation and academic-reference checking, makes it a more concrete foundation for judge workflows than an isolated scoring prompt.</p>\n<h2>Key Features</h2>\n<p>The project provides built-in graders, custom rubric construction, benchmark datasets, leaderboard views, pytest-based grader validation, AgentScope integration, and a training pipeline for dedicated judge models. The README also highlights PawBench, a model-by-harness agent benchmark, and online execution through openjudge.me.</p>\n<h2>Architecture / How It Works</h2>\n<p>An OpenJudge grader combines an input schema, rubric or scoring logic, model configuration, and validation examples. Evaluation runs feed system outputs and reference information into that grader, producing structured quality judgments that can be compared across models or harnesses. Local Python execution and the hosted application are two deployment surfaces over the same grader-oriented model.</p>\n<h2>Getting Started</h2>\n<p>Install the Python package and follow the quickstart example:</p>\n<pre><code class=\"language-bash\">pip install py-openjudge\n</code></pre>\n<p>Then import a model such as <code>OpenAIChatModel</code>, select a built-in grader or define a rubric, and run it on a small labeled set. The online app at <code>https://openjudge.me/app/</code> is useful for exploring graders, but production decisions should run from pinned local code and datasets.</p>\n<h2>Use Cases</h2>\n<p>Use OpenJudge to score agent trajectories against a task rubric, evaluate hallucinated references in generated papers, or compare RAG answers when a reference answer is incomplete but quality dimensions can be stated explicitly. Its benchmark and grader-training paths are useful when a team has enough reviewed examples to calibrate a judge beyond one prompt.</p>\n<h2>Strengths</h2>\n<p>OpenJudge treats grader artifacts and their test data as first-class objects, which makes judge behavior easier to inspect and regress. The breadth from prompt-based graders to trained judge models also lets a team start with a rubric and move toward a specialized evaluator only when the data and scale justify it.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>An LLM judge can reproduce model biases, reward fluent but incorrect answers, or disagree with domain experts; benchmark-backed validation reduces but does not eliminate that risk. The online service is convenient but introduces a hosted-data boundary, and judge-model training requires substantial labeled data and compute that a small evaluation may not have.</p>\n<h2>Integration Patterns</h2>\n<p>Version grader prompts, judge models, benchmark rows, and expected score distributions together. Use OpenJudge for offline release gates, then sample production traces into a human-reviewed dataset before changing the rubric; pair it with tracing so a surprising score can be linked back to the exact tool calls and retrieved evidence.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>734 GitHub stars verified during the 2026-07-19 discovery sweep; AgentScope project with public graders, benchmarks, and an online application.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://agentscope-ai.github.io/OpenJudge/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/agentscope-ai/OpenJudge\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://openjudge.me/app/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Online app</a></li>\n<li><a href=\"https://github.com/agentscope-ai/PawBench\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">PawBench</a></li>\n</ul>\n",
+      "body_text": "Overview OpenJudge is an AgentScope evaluation framework for building, validating, and running reusable LLM graders. It includes benchmark backed graders, a web application, dataset integrations, agent and reference answer evaluation, and a path to training dedicated judge models when prompt based judging is not enough. Why It's in the Arsenal OpenJudge earns a slot because evaluation quality depends as much on the grader as on the system being tested. Its insistence that graders ship with benchmark data and pytest validation, plus applications such as agent evaluation and academic reference checking, makes it a more concrete foundation for judge workflows than an isolated scoring prompt. Key Features The project provides built in graders, custom rubric construction, benchmark datasets, leaderboard views, pytest based grader validation, AgentScope integration, and a training pipeline for dedicated judge models. The README also highlights PawBench, a model by harness agent benchmark, and online execution through openjudge.me. Architecture / How It Works An OpenJudge grader combines an input schema, rubric or scoring logic, model configuration, and validation examples. Evaluation runs feed system outputs and reference information into that grader, producing structured quality judgments that can be compared across models or harnesses. Local Python execution and the hosted application are two deployment surfaces over the same grader oriented model. Getting Started Install the Python package and follow the quickstart example: Then import a model such as OpenAIChatModel, select a built in grader or define a rubric, and run it on a small labeled set. The online app at https://openjudge.me/app/ is useful for exploring graders, but production decisions should run from pinned local code and datasets. Use Cases Use OpenJudge to score agent trajectories against a task rubric, evaluate hallucinated references in generated papers, or compare RAG answers when a reference answer is incomplete but quality dimensions can be stated explicitly. Its benchmark and grader training paths are useful when a team has enough reviewed examples to calibrate a judge beyond one prompt. Strengths OpenJudge treats grader artifacts and their test data as first class objects, which makes judge behavior easier to inspect and regress. The breadth from prompt based graders to trained judge models also lets a team start with a rubric and move toward a specialized evaluator only when the data and scale justify it. Limitations / When NOT to Use An LLM judge can reproduce model biases, reward fluent but incorrect answers, or disagree with domain experts; benchmark backed validation reduces but does not eliminate that risk. The online service is convenient but introduces a hosted data boundary, and judge model training requires substantial labeled data and compute that a small evaluation may not have. Integration Patterns Version grader prompts, judge models, benchmark rows, and expected score distributions together. Use OpenJudge for offline release gates, then sample production traces into a human reviewed dataset before changing the rubric; pair it with tracing so a surprising score can be linked back to the exact tool calls and retrieved evidence. Buzz & Reception 734 GitHub stars verified during the 2026 07 19 discovery sweep; AgentScope project with public graders, benchmarks, and an online application. Resources Documentation GitHub Online app PawBench"
+    },
+    {
       "id": "openllm",
       "name": "OpenLLM",
       "type": "tool",
@@ -11992,6 +12668,91 @@
       "body_text": "TL;DR: Prompt management and logging platform for versioning, collaboration, and observability. Free and paid SaaS plans. Best for prompt collaboration and logs. Overview A framework agnostic platform for prompt versioning, logging, and team collaboration, used as a dedicated layer independent of any specific orchestration framework. Why It's in the Arsenal PromptLayer earns a place in the Arsenal because it directly addresses a recurring decision point: you want prompt versioning, logging, and collaboration as a dedicated, framework agnostic platform. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Framework agnostic prompt versioning and logging Non engineer friendly review/approval workflow Request logging for observability Architecture / How It Works Application code calls models through or alongside PromptLayer's SDK, which logs requests and ties them to managed, versioned prompt templates. Getting Started Use Cases 1. Scenario : you want prompt versioning, logging, and collaboration as a dedicated, framework agnostic platform 2. Scenario : your team needs non engineers to review and approve prompt changes through a UI 3. Scenario where this is NOT the right fit : you already have an observability platform (Langfuse, LangSmith) that includes adequate prompt management — evaluate an alternative instead Strengths You want prompt versioning, logging, and collaboration as a dedicated, framework agnostic platform Your team needs non engineers to review and approve prompt changes through a UI Limitations / When NOT to Use You already have an observability platform (Langfuse, LangSmith) that includes adequate prompt management You need a free, fully open source, self hostable option Integration Patterns Compare against Langfuse Prompts, LangSmith Hub before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID promptlayer. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for prompt management. Last reviewed: 2026 06 30 by @maintainer"
     },
     {
+      "id": "prompty",
+      "name": "Prompty",
+      "type": "tool",
+      "job": [
+        "prompt-management",
+        "evaluation",
+        "prototyping"
+      ],
+      "description": "Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts",
+      "url": "content/tools/dx-and-tooling/prompty",
+      "cost_model": "open-source",
+      "pricing_detail": "MIT open source; provider/API usage is billed separately",
+      "tags": [
+        "llm",
+        "structured-output",
+        "evaluation",
+        "observability"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "typescript",
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted tier required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/microsoft/prompty",
+      "docs_url": "https://github.com/microsoft/prompty",
+      "github_url": "https://github.com/microsoft/prompty",
+      "alternatives": [
+        "langfuse-prompts",
+        "promptlayer",
+        "dspy"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "dx-and-tooling",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You need prompts stored as portable, reviewable assets with model connection metadata and templated inputs",
+        "You want Python and TypeScript runtimes to render the same prompt artifact against OpenAI, Foundry, Anthropic, or self-hosted endpoints"
+      ],
+      "avoid_when": [
+        "Your team already has a stable prompt registry and does not need another asset format or adapter layer",
+        "You require provider-neutral semantics for every advanced feature; adapter behavior still follows the selected provider"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A concrete prompt-file format and multi-language runtime for teams that need portability and debuggability",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/dx-and-tooling/prompty.md",
+      "slug": "prompty",
+      "section_path": "content/tools/dx-and-tooling",
+      "display_name": "Prompty",
+      "summary": "Microsoft prompt asset format and SDKs for managing, debugging, and evaluating LLM prompts",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 500,
+      "body_html": "<h2>Overview</h2>\n<p>Prompty is Microsoft's prompt asset format and runtime tooling for making prompts portable, inspectable, and easier to evaluate. A <code>.prompty</code> file can carry templating, model connection details, and prompt content, while Python and TypeScript packages render it against supported providers or self-hosted endpoints.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Prompty earns a slot because prompt text often lives in application code, notebooks, and vendor consoles with no common review or execution boundary. A versionable asset format gives teams a place to diff prompt changes, attach model settings, and run the same artifact through different SDKs without copying the entire application around an experiment.</p>\n<h2>Key Features</h2>\n<p>The repository provides a core format, Jinja-style templating, provider packages for Python and npm, connection metadata, a VS Code extension, and examples for OpenAI, Microsoft Foundry, Anthropic, gateways, and self-hosted servers. The format is designed to support debugging and evaluation as well as final prompt execution.</p>\n<h2>Architecture / How It Works</h2>\n<p>A Prompty asset separates frontmatter-like connection metadata from the templated prompt body. The runtime resolves variables, selects a provider adapter, and sends the rendered messages to the configured endpoint. The file remains a portable source artifact, while provider packages handle the details of authentication and request construction.</p>\n<h2>Getting Started</h2>\n<p>Install the runtime for the provider you want to test:</p>\n<pre><code class=\"language-bash\">pip install \"prompty[jinja2,openai]\"\n# or\nnpm install @prompty/core @prompty/openai\n</code></pre>\n<p>Create a <code>.prompty</code> file with the model connection and template variables shown in the README, set the provider credentials, and render it through the Python or TypeScript API before adding it to a prompt regression suite.</p>\n<h2>Use Cases</h2>\n<p>Use Prompty to review a customer-support system prompt as a normal repository artifact, to run one templated prompt against OpenAI and Anthropic during a provider migration, or to let a product and engineering team share a prompt with explicit input fields. It is also a useful bridge between an IDE authoring workflow and automated evaluation.</p>\n<h2>Strengths</h2>\n<p>The format makes prompt provenance and provider configuration visible without forcing every prompt to become a bespoke Python class. First-party TypeScript and Python packages, plus an editor experience, give the same asset a path from experimentation to an application repository.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Portability ends where provider-specific features begin: tool schemas, safety settings, streaming semantics, and error behavior still differ across endpoints. Teams must also decide how secrets, rendered prompts, and user data are kept out of the asset repository and whether the editor extension's lifecycle matches the core format.</p>\n<h2>Integration Patterns</h2>\n<p>Store Prompty files beside the evaluation fixtures that exercise them, render them in CI against mock or low-cost endpoints, and promote a version only after checking output structure and provider-specific behavior. Pair the format with an observability tool for runtime traces and with a secrets manager rather than embedding credentials in frontmatter.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>1,231 GitHub stars verified during the 2026-07-19 discovery sweep; Microsoft open-source format with Python, npm, and VS Code integrations.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/microsoft/prompty\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://pypi.org/project/prompty/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Python package</a></li>\n<li><a href=\"https://www.npmjs.com/package/@prompty/core\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">TypeScript core package</a></li>\n<li><a href=\"https://marketplace.visualstudio.com/items?itemName=ms-toolsai.prompty\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">VS Code extension</a></li>\n</ul>\n",
+      "body_text": "Overview Prompty is Microsoft's prompt asset format and runtime tooling for making prompts portable, inspectable, and easier to evaluate. A .prompty file can carry templating, model connection details, and prompt content, while Python and TypeScript packages render it against supported providers or self hosted endpoints. Why It's in the Arsenal Prompty earns a slot because prompt text often lives in application code, notebooks, and vendor consoles with no common review or execution boundary. A versionable asset format gives teams a place to diff prompt changes, attach model settings, and run the same artifact through different SDKs without copying the entire application around an experiment. Key Features The repository provides a core format, Jinja style templating, provider packages for Python and npm, connection metadata, a VS Code extension, and examples for OpenAI, Microsoft Foundry, Anthropic, gateways, and self hosted servers. The format is designed to support debugging and evaluation as well as final prompt execution. Architecture / How It Works A Prompty asset separates frontmatter like connection metadata from the templated prompt body. The runtime resolves variables, selects a provider adapter, and sends the rendered messages to the configured endpoint. The file remains a portable source artifact, while provider packages handle the details of authentication and request construction. Getting Started Install the runtime for the provider you want to test: Create a .prompty file with the model connection and template variables shown in the README, set the provider credentials, and render it through the Python or TypeScript API before adding it to a prompt regression suite. Use Cases Use Prompty to review a customer support system prompt as a normal repository artifact, to run one templated prompt against OpenAI and Anthropic during a provider migration, or to let a product and engineering team share a prompt with explicit input fields. It is also a useful bridge between an IDE authoring workflow and automated evaluation. Strengths The format makes prompt provenance and provider configuration visible without forcing every prompt to become a bespoke Python class. First party TypeScript and Python packages, plus an editor experience, give the same asset a path from experimentation to an application repository. Limitations / When NOT to Use Portability ends where provider specific features begin: tool schemas, safety settings, streaming semantics, and error behavior still differ across endpoints. Teams must also decide how secrets, rendered prompts, and user data are kept out of the asset repository and whether the editor extension's lifecycle matches the core format. Integration Patterns Store Prompty files beside the evaluation fixtures that exercise them, render them in CI against mock or low cost endpoints, and promote a version only after checking output structure and provider specific behavior. Pair the format with an observability tool for runtime traces and with a secrets manager rather than embedding credentials in frontmatter. Buzz & Reception 1,231 GitHub stars verified during the 2026 07 19 discovery sweep; Microsoft open source format with Python, npm, and VS Code integrations. Resources GitHub Python package TypeScript core package VS Code extension"
+    },
+    {
       "id": "puppeteer",
       "name": "Puppeteer",
       "type": "tool",
@@ -12740,6 +13501,90 @@
       "word_count": 393,
       "body_html": "<blockquote>\n<p><strong>TL;DR:</strong> Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes. Usage-based cloud pricing. Best for quick AI app deployment.</p>\n</blockquote>\n<h2>Overview</h2>\n<p>A developer-friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>Railway earns a place in the Arsenal because it directly addresses a recurring decision point: you want a Heroku-like developer experience to deploy an app, worker, and database together with minimal config. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>One-click deploy for apps, workers, and databases together</li>\n<li>Minimal configuration required to go from repo to running service</li>\n<li>Built-in observability for deployed services</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Connects to a Git repository (or Docker image) and builds/deploys it automatically, provisioning any declared databases or services alongside it in the same project.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">railway up\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want a Heroku-like developer experience to deploy an app, worker, and database together with minimal config</li>\n<li><strong>Scenario</strong>: you're shipping a small-to-medium production service and value speed of setup over fine-grained infra control</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need large-scale GPU training or serving infrastructure (use Modal, BentoML, or a cloud ML platform instead) — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want a Heroku-like developer experience to deploy an app, worker, and database together with minimal config</li>\n<li>You're shipping a small-to-medium production service and value speed of setup over fine-grained infra control</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>You need large-scale GPU training or serving infrastructure (use Modal, BentoML, or a cloud ML platform instead)</li>\n<li>You require multi-region, enterprise-grade SLAs that smaller PaaS providers may not yet guarantee</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <a href=\"./bentoml.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">BentoML</a>, <a href=\"./fly-io.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Fly.io</a>, <a href=\"./modal.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Modal</a>, <a href=\"./replicate.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Replicate</a> before adopting — they solve the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>railway</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://railway.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary site</a></li>\n<li><a href=\"https://railway.app\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>Included because this tool appears in current AI engineering tool comparisons for deployment, production-serving.</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-30 by @maintainer</em></p>\n",
       "body_text": "TL;DR: Developer friendly cloud deployment platform for apps, workers, databases, and prototypes. Usage based cloud pricing. Best for quick AI app deployment. Overview A developer friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience. Why It's in the Arsenal Railway earns a place in the Arsenal because it directly addresses a recurring decision point: you want a Heroku like developer experience to deploy an app, worker, and database together with minimal config. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features One click deploy for apps, workers, and databases together Minimal configuration required to go from repo to running service Built in observability for deployed services Architecture / How It Works Connects to a Git repository (or Docker image) and builds/deploys it automatically, provisioning any declared databases or services alongside it in the same project. Getting Started Use Cases 1. Scenario : you want a Heroku like developer experience to deploy an app, worker, and database together with minimal config 2. Scenario : you're shipping a small to medium production service and value speed of setup over fine grained infra control 3. Scenario where this is NOT the right fit : you need large scale GPU training or serving infrastructure (use Modal, BentoML, or a cloud ML platform instead) — evaluate an alternative instead Strengths You want a Heroku like developer experience to deploy an app, worker, and database together with minimal config You're shipping a small to medium production service and value speed of setup over fine grained infra control Limitations / When NOT to Use You need large scale GPU training or serving infrastructure (use Modal, BentoML, or a cloud ML platform instead) You require multi region, enterprise grade SLAs that smaller PaaS providers may not yet guarantee Integration Patterns Compare against BentoML, Fly.io, Modal, Replicate before adopting — they solve the same job in this phase. Link this tool from job guides using its canonical ID railway. Record pricing, hosting, and data retention assumptions before production adoption. Resources Primary site Documentation Buzz & Reception Included because this tool appears in current AI engineering tool comparisons for deployment, production serving. Last reviewed: 2026 06 30 by @maintainer"
+    },
+    {
+      "id": "ramalama",
+      "name": "RamaLama",
+      "type": "tool",
+      "job": [
+        "production-serving",
+        "deployment",
+        "prototyping"
+      ],
+      "description": "Containers-native CLI for pulling, isolating, and serving AI models on local systems",
+      "url": "content/tools/serving-and-deployment/ramalama",
+      "cost_model": "open-source",
+      "pricing_detail": "MIT open source; users pay their own host, registry, and model compute costs",
+      "tags": [
+        "inference",
+        "local",
+        "docker",
+        "self-hosted",
+        "edge"
+      ],
+      "maturity": "production",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted account required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/containers/ramalama",
+      "docs_url": "https://ramalama.ai",
+      "github_url": "https://github.com/containers/ramalama",
+      "alternatives": [
+        "ollama",
+        "vllm"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "serving-and-deployment",
+      "audience": [
+        "prototype",
+        "production"
+      ],
+      "best_when": [
+        "You want model images and inference commands to follow Podman or Docker workflows instead of bespoke host installations",
+        "You need rootless container isolation and a CLI that selects model-serving images for the detected accelerator"
+      ],
+      "avoid_when": [
+        "Your target environment cannot expose a supported container engine or GPU device to the model container",
+        "You need a hosted multi-tenant inference service with autoscaling and provider-level SLA rather than local container orchestration"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A pragmatic bridge between container operations and local model serving, especially for Podman-oriented teams",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/serving-and-deployment/ramalama.md",
+      "slug": "ramalama",
+      "section_path": "content/tools/serving-and-deployment",
+      "display_name": "RamaLama",
+      "summary": "Containers-native CLI for pulling, isolating, and serving AI models on local systems",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 529,
+      "body_html": "<h2>Overview</h2>\n<p>RamaLama is a Containers project that makes AI models behave more like container images: pull them from supported registries, select an appropriate runtime image, and run them through familiar Podman or Docker commands. It focuses on local and self-managed inference while retaining a path to REST serving and chatbot use.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>RamaLama belongs in the Arsenal because it addresses the operational gap between a model file and a reproducible local deployment. Rather than asking every engineer to install a separate Python stack, CUDA combination, and runtime, it uses container images and host accelerator detection to make model execution fit existing container-centric development and isolation practices.</p>\n<h2>Key Features</h2>\n<p>The README highlights multiple model registries, OCI image support, rootless containers, GPU-aware image selection, REST APIs, chatbot interaction, and model commands modeled after container workflows. Fedora packaging, a macOS installer, and Python installation give the tool several entry points without changing the underlying container boundary.</p>\n<h2>Architecture / How It Works</h2>\n<p>RamaLama is a Python CLI that resolves a model reference, chooses or pulls a serving image, and asks Podman or Docker to run that image with the required device and volume configuration. The model is treated as a transportable artifact while the runtime remains encapsulated in the selected container, reducing host-level dependency conflicts but making the container engine part of the runtime contract.</p>\n<h2>Getting Started</h2>\n<p>On Fedora, install the packaged CLI and run a model through the container engine:</p>\n<pre><code class=\"language-bash\">sudo dnf install ramalama\nramalama run llama3.2\n</code></pre>\n<p>The README also documents <code>pip install ramalama</code>, a macOS installer from Releases, and container-engine setup for Toolbox. Confirm that Podman or Docker can see the required GPU before downloading a large model image.</p>\n<h2>Use Cases</h2>\n<p>RamaLama fits a developer who wants to try a Hugging Face or OCI-hosted model without polluting the workstation, a platform team standardizing local inference across Fedora and macOS, or an edge deployment that needs a rootless container boundary. It is less suited to a centralized service where scheduling, quotas, and request-level autoscaling are the primary problems.</p>\n<h2>Strengths</h2>\n<p>The model-as-container mental model is the important win: existing registry, image, and rootless-isolation habits carry over to AI workloads. Hardware-aware image selection and support for multiple model sources also reduce the repetitive setup work that otherwise makes local inference fragile across machines.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Container abstraction does not remove hardware compatibility or model-license obligations; the selected runtime image, accelerator driver, and model format still have to align. Pulling large images and weights can also be expensive in bandwidth and disk space, and the CLI does not replace a production scheduler, multi-tenant gateway, or model-quality evaluation process.</p>\n<h2>Integration Patterns</h2>\n<p>Use RamaLama in developer environments and edge nodes, pin the model and runtime references in scripts, and expose its REST mode only behind the local network controls appropriate to the workload. Pair it with an inference benchmark to compare container overhead and with a gateway when several local runtimes need shared routing.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>2,963 GitHub stars verified during the 2026-07-19 discovery sweep; Containers project with Fedora and macOS distribution paths.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://ramalama.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">RamaLama</a></li>\n<li><a href=\"https://github.com/containers/ramalama\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://github.com/containers/ramalama/releases\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Releases</a></li>\n<li><a href=\"https://ramalama.ai/install.sh\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Installation script</a></li>\n</ul>\n",
+      "body_text": "Overview RamaLama is a Containers project that makes AI models behave more like container images: pull them from supported registries, select an appropriate runtime image, and run them through familiar Podman or Docker commands. It focuses on local and self managed inference while retaining a path to REST serving and chatbot use. Why It's in the Arsenal RamaLama belongs in the Arsenal because it addresses the operational gap between a model file and a reproducible local deployment. Rather than asking every engineer to install a separate Python stack, CUDA combination, and runtime, it uses container images and host accelerator detection to make model execution fit existing container centric development and isolation practices. Key Features The README highlights multiple model registries, OCI image support, rootless containers, GPU aware image selection, REST APIs, chatbot interaction, and model commands modeled after container workflows. Fedora packaging, a macOS installer, and Python installation give the tool several entry points without changing the underlying container boundary. Architecture / How It Works RamaLama is a Python CLI that resolves a model reference, chooses or pulls a serving image, and asks Podman or Docker to run that image with the required device and volume configuration. The model is treated as a transportable artifact while the runtime remains encapsulated in the selected container, reducing host level dependency conflicts but making the container engine part of the runtime contract. Getting Started On Fedora, install the packaged CLI and run a model through the container engine: The README also documents pip install ramalama, a macOS installer from Releases, and container engine setup for Toolbox. Confirm that Podman or Docker can see the required GPU before downloading a large model image. Use Cases RamaLama fits a developer who wants to try a Hugging Face or OCI hosted model without polluting the workstation, a platform team standardizing local inference across Fedora and macOS, or an edge deployment that needs a rootless container boundary. It is less suited to a centralized service where scheduling, quotas, and request level autoscaling are the primary problems. Strengths The model as container mental model is the important win: existing registry, image, and rootless isolation habits carry over to AI workloads. Hardware aware image selection and support for multiple model sources also reduce the repetitive setup work that otherwise makes local inference fragile across machines. Limitations / When NOT to Use Container abstraction does not remove hardware compatibility or model license obligations; the selected runtime image, accelerator driver, and model format still have to align. Pulling large images and weights can also be expensive in bandwidth and disk space, and the CLI does not replace a production scheduler, multi tenant gateway, or model quality evaluation process. Integration Patterns Use RamaLama in developer environments and edge nodes, pin the model and runtime references in scripts, and expose its REST mode only behind the local network controls appropriate to the workload. Pair it with an inference benchmark to compare container overhead and with a gateway when several local runtimes need shared routing. Buzz & Reception 2,963 GitHub stars verified during the 2026 07 19 discovery sweep; Containers project with Fedora and macOS distribution paths. Resources RamaLama GitHub Releases Installation script"
     },
     {
       "id": "ray",
@@ -15806,6 +16651,88 @@
       "body_text": "Overview A C++ in memory search engine focused on speed and operational simplicity: typo tolerance, faceting, geosearch, and vector/hybrid search (with automatic embedding generation) behind a clean REST API, deployable as a single binary or a Raft replicated HA cluster — positioning itself as the open Algolia. Why It's in the Arsenal Typesense earns a place in the Arsenal because it directly addresses a recurring decision point: you want Algolia style instant search you can self host, with in memory speed and simple clustering (Raft HA). It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features In memory indexes for consistently low latency search Hybrid search with auto embedding (built in or OpenAI models) Raft based clustering for high availability Architecture / How It Works Indexes live fully in RAM backed by disk snapshots; vector fields use HNSW, and hybrid queries fuse keyword and vector rankings with rank fusion. Embedding fields can be declared to auto generate from document text at index and query time. Getting Started Use Cases 1. Scenario : you want Algolia style instant search you can self host, with in memory speed and simple clustering (Raft HA) 2. Scenario : hybrid semantic+keyword retrieval with built in or custom embedding models, without adding a second engine 3. Scenario where this is NOT the right fit : memory constrained deployments with large corpora — the all in RAM design gets expensive — evaluate an alternative instead Strengths You want Algolia style instant search you can self host, with in memory speed and simple clustering (Raft HA) Hybrid semantic+keyword retrieval with built in or custom embedding models, without adding a second engine Limitations / When NOT to Use Memory constrained deployments with large corpora — the all in RAM design gets expensive GPL 3.0 constraints conflict with your distribution model (server side use is typically fine) Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against meilisearch, qdrant before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID typesense. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 26,252 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
     },
     {
+      "id": "ultraeval-audio",
+      "name": "UltraEval-Audio",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models",
+      "url": "content/tools/evaluation-and-observability/ultraeval-audio",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 software; audio model downloads and GPU/API costs are separate",
+      "tags": [
+        "evaluation",
+        "voice",
+        "multimodal",
+        "benchmark",
+        "research"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted tier required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/OpenBMB/UltraEval-Audio",
+      "docs_url": "https://github.com/OpenBMB/UltraEval-Audio",
+      "github_url": "https://github.com/OpenBMB/UltraEval-Audio",
+      "alternatives": [
+        "evalscope",
+        "lighteval"
+      ],
+      "integrates_with": [],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need one reproducible harness for speech understanding, speech generation, codec, sound, medicine, and music evaluations",
+        "You want benchmark download, metric binding, isolated model dependencies, and replication commands rather than assembling each audio test manually"
+      ],
+      "avoid_when": [
+        "Your target is a text-only model or a production audio monitor rather than an offline foundation-model evaluation",
+        "You need to compare scores without pinning exact model checkpoints, dataset versions, language coverage, and metric implementations"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A distinctive audio-evaluation niche with broad benchmark and model-replication coverage from OpenBMB",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/ultraeval-audio.md",
+      "slug": "ultraeval-audio",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "UltraEval-Audio",
+      "summary": "OpenBMB framework for evaluating ASR, TTS, audio codec, and audio-language models",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 496,
+      "body_html": "<h2>Overview</h2>\n<p>UltraEval-Audio is OpenBMB's evaluation framework for audio foundation models. Its README covers ASR, TTS, audio codecs, speech, sound, medicine, and music across 34 benchmarks and provides replication recipes for named models, making it a specialized alternative to general LLM evaluation suites.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>The project deserves a slot despite its smaller star count because audio evaluation remains fragmented across task-specific scripts and metrics. UltraEval-Audio combines benchmark acquisition, model-specific replication, metric execution, custom datasets, and isolated dependency environments in one repository, which is a useful engineering reference for teams comparing audio models.</p>\n<h2>Key Features</h2>\n<p>The framework automates downloads for datasets such as LibriSpeech and TED-LIUM, binds benchmark data to metrics including WER, BLEU, and quality measures, supports one-click replication documentation, and can install model-specific dependencies in isolated runtimes that communicate over IPC. The README lists ASR, TTS, codec, and multilingual evaluation paths.</p>\n<h2>Architecture / How It Works</h2>\n<p>An evaluation task selects a dataset, model adapter, inference environment, and metric implementation. The isolated runtime keeps conflicting model dependencies out of the main process, while the evaluator collects predictions and computes task-appropriate scores. Replication directories make the model-specific setup explicit rather than pretending every audio checkpoint has the same interface.</p>\n<h2>Getting Started</h2>\n<p>Clone the repository and follow its environment setup, then choose a replication recipe under <code>replication/</code>:</p>\n<pre><code class=\"language-bash\">git clone https://github.com/OpenBMB/UltraEval-Audio.git\ncd UltraEval-Audio\npip install -r requirements.txt\n</code></pre>\n<p>Use the documented one-command replication for a supported ASR or TTS model, pin the benchmark and checkpoint versions, and begin with a small subset before launching the full 34-benchmark matrix.</p>\n<h2>Use Cases</h2>\n<p>Use UltraEval-Audio to compare Qwen3-ASR checkpoints across English and Chinese tasks, reproduce a TTS model's published benchmark table, or evaluate an audio codec and speech-quality pipeline on the same harness. Custom dataset support also makes it relevant for checking domain audio, but only after the public metric assumptions have been audited.</p>\n<h2>Strengths</h2>\n<p>The isolated-runtime design directly addresses the dependency conflicts that make audio-model comparison painful. Its model replication documentation and task-specific metric bindings are also stronger than a generic benchmark runner that leaves waveform preprocessing, reference alignment, and score calculation to each user.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Audio scores are highly sensitive to sampling rate, normalization, language mix, reference quality, and model version; a unified command does not make those variables comparable automatically. The project is new and its ACL 2026 demo and replication claims should be reproduced on the exact hardware and checkpoints intended for deployment.</p>\n<h2>Integration Patterns</h2>\n<p>Pin each evaluation recipe in a benchmark manifest, store raw predictions and audio preprocessing settings, and publish score tables with confidence intervals where sampling is involved. Feed important failures into a domain-specific listening or transcription review rather than making a release decision from one aggregate metric.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>308 GitHub stars verified during the 2026-07-19 discovery sweep; OpenBMB project announced with an ACL 2026 demo paper.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/OpenBMB/UltraEval-Audio\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://aclanthology.org/2026.acl-demo.56/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">ACL 2026 demo paper</a></li>\n<li><a href=\"https://github.com/OpenBMB/UltraEval-Audio/blob/main/docs/how%20use%20UTMOS%2C%20DNSMOS%20eval%20speech%20quality.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">UTMOS/DNSMOS guide</a></li>\n</ul>\n",
+      "body_text": "Overview UltraEval Audio is OpenBMB's evaluation framework for audio foundation models. Its README covers ASR, TTS, audio codecs, speech, sound, medicine, and music across 34 benchmarks and provides replication recipes for named models, making it a specialized alternative to general LLM evaluation suites. Why It's in the Arsenal The project deserves a slot despite its smaller star count because audio evaluation remains fragmented across task specific scripts and metrics. UltraEval Audio combines benchmark acquisition, model specific replication, metric execution, custom datasets, and isolated dependency environments in one repository, which is a useful engineering reference for teams comparing audio models. Key Features The framework automates downloads for datasets such as LibriSpeech and TED LIUM, binds benchmark data to metrics including WER, BLEU, and quality measures, supports one click replication documentation, and can install model specific dependencies in isolated runtimes that communicate over IPC. The README lists ASR, TTS, codec, and multilingual evaluation paths. Architecture / How It Works An evaluation task selects a dataset, model adapter, inference environment, and metric implementation. The isolated runtime keeps conflicting model dependencies out of the main process, while the evaluator collects predictions and computes task appropriate scores. Replication directories make the model specific setup explicit rather than pretending every audio checkpoint has the same interface. Getting Started Clone the repository and follow its environment setup, then choose a replication recipe under replication/: Use the documented one command replication for a supported ASR or TTS model, pin the benchmark and checkpoint versions, and begin with a small subset before launching the full 34 benchmark matrix. Use Cases Use UltraEval Audio to compare Qwen3 ASR checkpoints across English and Chinese tasks, reproduce a TTS model's published benchmark table, or evaluate an audio codec and speech quality pipeline on the same harness. Custom dataset support also makes it relevant for checking domain audio, but only after the public metric assumptions have been audited. Strengths The isolated runtime design directly addresses the dependency conflicts that make audio model comparison painful. Its model replication documentation and task specific metric bindings are also stronger than a generic benchmark runner that leaves waveform preprocessing, reference alignment, and score calculation to each user. Limitations / When NOT to Use Audio scores are highly sensitive to sampling rate, normalization, language mix, reference quality, and model version; a unified command does not make those variables comparable automatically. The project is new and its ACL 2026 demo and replication claims should be reproduced on the exact hardware and checkpoints intended for deployment. Integration Patterns Pin each evaluation recipe in a benchmark manifest, store raw predictions and audio preprocessing settings, and publish score tables with confidence intervals where sampling is involved. Feed important failures into a domain specific listening or transcription review rather than making a release decision from one aggregate metric. Buzz & Reception 308 GitHub stars verified during the 2026 07 19 discovery sweep; OpenBMB project announced with an ACL 2026 demo paper. Resources GitHub ACL 2026 demo paper UTMOS/DNSMOS guide"
+    },
+    {
       "id": "unsloth",
       "name": "Unsloth",
       "type": "tool",
@@ -15974,6 +16901,90 @@
       "word_count": 414,
       "body_html": "<h2>Overview</h2>\n<p>An open-source evaluation framework offering prebuilt operators for the common LLM quality dimensions — RAG metrics (context relevance, groundedness), response quality (completeness, conciseness), safety (jailbreak detection), and conversation satisfaction — runnable locally with a dashboard, or via its API client.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>UpTrain earns a place in the Arsenal because it directly addresses a recurring decision point: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.</p>\n<h2>Key Features</h2>\n<ul>\n<li>20+ prebuilt evals across RAG, safety, and response quality</li>\n<li>Local execution with open judge models (Ollama) supported</li>\n<li>Root-cause-analysis views for failing cases</li>\n</ul>\n<h2>Architecture / How It Works</h2>\n<p>Each eval is an operator prompting a judge model with structured rubrics over your logged inputs/outputs/contexts, returning normalized scores; batches run through the Python client with results in dataframes or its self-hosted dashboard.</p>\n<h2>Getting Started</h2>\n<pre><code class=\"language-bash\">pip install uptrain\n# from uptrain import EvalLLM, Evals; EvalLLM(...).evaluate(data, checks=[Evals.CONTEXT_RELEVANCE])\n</code></pre>\n<h2>Use Cases</h2>\n<ol>\n<li><strong>Scenario</strong>: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself</li>\n<li><strong>Scenario</strong>: evaluating with locally hosted judge models via Ollama for cost/privacy</li>\n<li><strong>Scenario where this is NOT the right fit</strong>: you need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024 — evaluate an alternative instead</li>\n</ol>\n<h2>Strengths</h2>\n<ul>\n<li>You want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself</li>\n<li>Evaluating with locally hosted judge models via Ollama for cost/privacy</li>\n</ul>\n<h2>Limitations / When NOT to Use</h2>\n<ul>\n<li>\n<p>You need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024</p>\n</li>\n<li>\n<p>Pytest-style eval-in-CI workflows; DeepEval's testing ergonomics are stronger</p>\n</li>\n<li>\n<p><em>Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08.</em></p>\n</li>\n</ul>\n<h2>Integration Patterns</h2>\n<ul>\n<li>Compare against <code>ragas-rag-evaluation</code>, <code>deepeval</code>, <code>evidently</code> before adopting — they compete for the same job in this phase.</li>\n<li>Link this tool from job guides using its canonical ID <code>uptrain</code>.</li>\n<li>Record pricing, hosting, and data-retention assumptions before production adoption.</li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/uptrain-ai/uptrain\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Official Site</a></li>\n<li><a href=\"https://docs.uptrain.ai/getting-started/introduction\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/uptrain-ai/uptrain\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n</ul>\n<h2>Buzz &amp; Reception</h2>\n<ul>\n<li>2,354 stars on GitHub as of 2026-07-08 (verified via the GitHub API).</li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-08 by @maintainer</em></p>\n",
       "body_text": "Overview An open source evaluation framework offering prebuilt operators for the common LLM quality dimensions — RAG metrics (context relevance, groundedness), response quality (completeness, conciseness), safety (jailbreak detection), and conversation satisfaction — runnable locally with a dashboard, or via its API client. Why It's in the Arsenal UpTrain earns a place in the Arsenal because it directly addresses a recurring decision point: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features 20+ prebuilt evals across RAG, safety, and response quality Local execution with open judge models (Ollama) supported Root cause analysis views for failing cases Architecture / How It Works Each eval is an operator prompting a judge model with structured rubrics over your logged inputs/outputs/contexts, returning normalized scores; batches run through the Python client with results in dataframes or its self hosted dashboard. Getting Started Use Cases 1. Scenario : you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself 2. Scenario : evaluating with locally hosted judge models via Ollama for cost/privacy 3. Scenario where this is NOT the right fit : you need an actively maintained project for long term production reliance — commit activity has slowed markedly since 2024 — evaluate an alternative instead Strengths You want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself Evaluating with locally hosted judge models via Ollama for cost/privacy Limitations / When NOT to Use You need an actively maintained project for long term production reliance — commit activity has slowed markedly since 2024 Pytest style eval in CI workflows; DeepEval's testing ergonomics are stronger Enrichment status: draft — best when/avoid when above are based on official documentation and public reception; not yet confirmed against hands on production usage here. Last reviewed: 2026 07 08. Integration Patterns Compare against ragas rag evaluation, deepeval, evidently before adopting — they compete for the same job in this phase. Link this tool from job guides using its canonical ID uptrain. Record pricing, hosting, and data retention assumptions before production adoption. Resources Official Site Documentation GitHub Buzz & Reception 2,354 stars on GitHub as of 2026 07 08 (verified via the GitHub API). Last reviewed: 2026 07 08 by @maintainer"
+    },
+    {
+      "id": "uqlm",
+      "name": "UQLM",
+      "type": "tool",
+      "job": [
+        "evaluation"
+      ],
+      "description": "Python uncertainty-quantification library for detecting unreliable LLM responses",
+      "url": "content/tools/evaluation-and-observability/uqlm",
+      "cost_model": "open-source",
+      "pricing_detail": "Apache-2.0 package; model/provider calls and repeated samples are separate costs",
+      "tags": [
+        "llm",
+        "evaluation",
+        "efficiency",
+        "research"
+      ],
+      "maturity": "beta",
+      "stack": [
+        "python"
+      ],
+      "free_tier": true,
+      "free_tier_limits": "Fully open source; no hosted tier required",
+      "self_hostable": true,
+      "open_source": true,
+      "source_url": "https://github.com/cvs-health/uqlm",
+      "docs_url": "https://cvs-health.github.io/uqlm/latest/index.html",
+      "github_url": "https://github.com/cvs-health/uqlm",
+      "alternatives": [
+        "lm-evaluation-harness",
+        "openjudge",
+        "ragas"
+      ],
+      "integrates_with": [
+        "langchain"
+      ],
+      "added_date": "2026-07-19",
+      "last_reviewed": "2026-07-19",
+      "added_by": "maintainer",
+      "reviewed_by": "maintainer",
+      "phase": "evaluation-and-observability",
+      "audience": [
+        "research",
+        "production"
+      ],
+      "best_when": [
+        "You need a response-level confidence signal to triage generated answers before human review or downstream action",
+        "You can afford repeated sampling, semantic comparison, or access to token probabilities for the scorer you select"
+      ],
+      "avoid_when": [
+        "You need a calibrated factuality guarantee for a high-stakes decision without validating the scorer on your domain",
+        "Your latency or provider budget cannot accommodate multiple generations or an additional entailment/semantic model"
+      ],
+      "version_tracked": null,
+      "enrichment_status": "draft",
+      "enrichment_notes": "Metadata and feature claims are grounded in the project README and public repository state; draft pending maintainer review.",
+      "verdict": "solid-choice",
+      "verdict_rationale": "A practical collection of black-box and white-box UQ scorers with a clear distinction between confidence and correctness",
+      "status": "active",
+      "entry_type": "tool",
+      "path": "content/tools/evaluation-and-observability/uqlm.md",
+      "slug": "uqlm",
+      "section_path": "content/tools/evaluation-and-observability",
+      "display_name": "UQLM",
+      "summary": "Python uncertainty-quantification library for detecting unreliable LLM responses",
+      "last_updated": "2026-07-19",
+      "headings": [
+        "Overview",
+        "Why It's in the Arsenal",
+        "Key Features",
+        "Architecture / How It Works",
+        "Getting Started",
+        "Use Cases",
+        "Strengths",
+        "Limitations / When NOT to Use",
+        "Integration Patterns",
+        "Buzz & Reception",
+        "Resources"
+      ],
+      "reading_time_minutes": 3,
+      "word_count": 530,
+      "body_html": "<h2>Overview</h2>\n<p>UQLM is a Python library for uncertainty quantification over LLM responses. It exposes response-level scorers that estimate how likely an answer is to be unreliable, including black-box methods that compare multiple sampled answers and white-box methods that can use model internals or token probabilities.</p>\n<h2>Why It's in the Arsenal</h2>\n<p>UQLM earns a slot because it turns the vague question 'how much should I trust this answer?' into a set of testable scoring strategies. The CVS Health project brings recent uncertainty methods into a reusable package, while its own documentation is appropriately narrower than a factuality guarantee: a confidence score is a signal for triage and mitigation, not proof that an answer is true.</p>\n<h2>Key Features</h2>\n<p>The package includes consistency-style black-box scorers, semantic entropy and semantic-set approaches, non-contradiction and entailment probabilities, exact-match and BERTScore-style comparisons, and mitigation that can select a lower-uncertainty response. It works with LangChain chat models and separates scorer choice from the application that consumes the score.</p>\n<h2>Architecture / How It Works</h2>\n<p>A scorer receives a prompt and one or more model responses, then maps agreement, semantic clustering, entailment, or token-level evidence to a confidence value between zero and one. Black-box scorers do not need hidden model states but usually require multiple generations; white-box variants can be cheaper or more direct when log probabilities and internal representations are available.</p>\n<h2>Getting Started</h2>\n<p>Install UQLM from PyPI and connect a supported chat model:</p>\n<pre><code class=\"language-bash\">pip install uqlm\n</code></pre>\n<p>The README's examples initialize a <code>ChatOpenAI</code> model and call a response scorer with <code>use_best=True</code> when selecting the lowest-uncertainty answer. Recalibrate the threshold on held-out domain questions before wiring the score to an automated rejection or escalation policy.</p>\n<h2>Use Cases</h2>\n<p>Use UQLM to route uncertain medical or finance-support answers to review, to compare uncertainty before and after retrieval changes, or to select among several sampled completions for a low-risk drafting workflow. It is also useful for measuring whether a model change increases disagreement, even when the application still requires a separate factuality check.</p>\n<h2>Strengths</h2>\n<p>UQLM presents several families of uncertainty methods behind a consistent Python interface, including approaches that work when only API access is available. The library also makes mitigation explicit, so teams can test whether uncertainty scoring improves answer selection rather than merely adding another dashboard number.</p>\n<h2>Limitations / When NOT to Use</h2>\n<p>Agreement can be confidently wrong, and semantic similarity or entailment models can inherit the same blind spots as the generator. Multiple samples add latency and cost, white-box methods narrow model compatibility, and thresholds are domain-dependent; a UQLM score should therefore be validated against labeled errors and paired with provenance or retrieval checks.</p>\n<h2>Integration Patterns</h2>\n<p>Log the score, scorer version, sampling parameters, and eventual human outcome together so calibration can be revisited. Use UQLM as one feature in an evaluation pipeline or review router, and combine it with RAG citation checks and application-specific validators before allowing an answer to trigger an external action.</p>\n<h2>Buzz &amp; Reception</h2>\n<p>1,186 GitHub stars verified during the 2026-07-19 discovery sweep; CVS Health open-source research library with a JMLR reference.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://cvs-health.github.io/uqlm/latest/index.html\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Documentation</a></li>\n<li><a href=\"https://github.com/cvs-health/uqlm\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub</a></li>\n<li><a href=\"https://www.jmlr.org/papers/v27/25-1557.html\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">JMLR reference</a></li>\n</ul>\n",
+      "body_text": "Overview UQLM is a Python library for uncertainty quantification over LLM responses. It exposes response level scorers that estimate how likely an answer is to be unreliable, including black box methods that compare multiple sampled answers and white box methods that can use model internals or token probabilities. Why It's in the Arsenal UQLM earns a slot because it turns the vague question 'how much should I trust this answer?' into a set of testable scoring strategies. The CVS Health project brings recent uncertainty methods into a reusable package, while its own documentation is appropriately narrower than a factuality guarantee: a confidence score is a signal for triage and mitigation, not proof that an answer is true. Key Features The package includes consistency style black box scorers, semantic entropy and semantic set approaches, non contradiction and entailment probabilities, exact match and BERTScore style comparisons, and mitigation that can select a lower uncertainty response. It works with LangChain chat models and separates scorer choice from the application that consumes the score. Architecture / How It Works A scorer receives a prompt and one or more model responses, then maps agreement, semantic clustering, entailment, or token level evidence to a confidence value between zero and one. Black box scorers do not need hidden model states but usually require multiple generations; white box variants can be cheaper or more direct when log probabilities and internal representations are available. Getting Started Install UQLM from PyPI and connect a supported chat model: The README's examples initialize a ChatOpenAI model and call a response scorer with use best=True when selecting the lowest uncertainty answer. Recalibrate the threshold on held out domain questions before wiring the score to an automated rejection or escalation policy. Use Cases Use UQLM to route uncertain medical or finance support answers to review, to compare uncertainty before and after retrieval changes, or to select among several sampled completions for a low risk drafting workflow. It is also useful for measuring whether a model change increases disagreement, even when the application still requires a separate factuality check. Strengths UQLM presents several families of uncertainty methods behind a consistent Python interface, including approaches that work when only API access is available. The library also makes mitigation explicit, so teams can test whether uncertainty scoring improves answer selection rather than merely adding another dashboard number. Limitations / When NOT to Use Agreement can be confidently wrong, and semantic similarity or entailment models can inherit the same blind spots as the generator. Multiple samples add latency and cost, white box methods narrow model compatibility, and thresholds are domain dependent; a UQLM score should therefore be validated against labeled errors and paired with provenance or retrieval checks. Integration Patterns Log the score, scorer version, sampling parameters, and eventual human outcome together so calibration can be revisited. Use UQLM as one feature in an evaluation pipeline or review router, and combine it with RAG citation checks and application specific validators before allowing an answer to trigger an external action. Buzz & Reception 1,186 GitHub stars verified during the 2026 07 19 discovery sweep; CVS Health open source research library with a JMLR reference. Resources Documentation GitHub JMLR reference"
     },
     {
       "id": "vaani",

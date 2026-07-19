@@ -127,6 +127,7 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
 | [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
+| [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Mirascope](../orchestration/mirascope.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
