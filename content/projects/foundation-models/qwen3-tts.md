@@ -51,7 +51,7 @@ relation_to_stack:
   - "build-on-top"
 health_signals:
   - "org-backed"
-  - "actively-maintained"
+  - "research-origin"
 ecosystem_role:
   - "Open multilingual TTS family for voice agents, cloning, and voice design"
   - "Self-hosted alternative to provider-only speech APIs"

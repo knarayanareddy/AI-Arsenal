@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-19T20:29:08.776Z",
+  "generated_at": "2026-07-19T20:36:17.953Z",
   "count": 306,
   "items": [
     {
@@ -21880,7 +21880,7 @@
       ],
       "health_signals": [
         "org-backed",
-        "actively-maintained"
+        "research-origin"
       ],
       "ecosystem_role": [
         "Open multilingual TTS family for voice agents, cloning, and voice design",
@@ -23345,8 +23345,8 @@
         "CPU-only code retrieval without API keys or external services"
       ],
       "avoid_if": [
-        "You need semantic code navigation with low token overhead",
-        "Your repository is too dynamic for index refreshes or needs exact static analysis"
+        "You need exhaustive, deterministic matches (e.g. security audits) where ranked semantic results can miss occurrences",
+        "Your repository is too dynamic for index refreshes or needs exact symbol-level static analysis"
       ],
       "enrichment_notes": "The README reports approximately 98% fewer tokens than grep-plus-read and benchmark quality near specialized transformers; these are project benchmarks requiring local validation. Draft pending review.",
       "entry_type": "project",

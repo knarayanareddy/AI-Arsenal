@@ -60,8 +60,8 @@ best_for:
   - "Token-efficient repository search for coding agents"
   - "CPU-only code retrieval without API keys or external services"
 avoid_if:
-  - "You need semantic code navigation with low token overhead"
-  - "Your repository is too dynamic for index refreshes or needs exact static analysis"
+  - "You need exhaustive, deterministic matches (e.g. security audits) where ranked semantic results can miss occurrences"
+  - "Your repository is too dynamic for index refreshes or needs exact symbol-level static analysis"
 enrichment_notes: "The README reports approximately 98% fewer tokens than grep-plus-read and benchmark quality near specialized transformers; these are project benchmarks requiring local validation. Draft pending review."
 ---
 
