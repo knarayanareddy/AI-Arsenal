@@ -33,6 +33,7 @@ Before selecting a data/retrieval component:
 
 ### Recently Added
 
+- [Semble](./semble.md)
 - [Apache Arrow](./apache-arrow.md)
 - [Chandra](./chandra-ocr.md)
 - [Cognita](./cognita.md)
@@ -42,7 +43,6 @@ Before selecting a data/retrieval component:
 - [FastGPT](./fastgpt.md)
 - [Hugging Face Tokenizers](./hf-tokenizers.md)
 - [LaTeX-OCR (pix2tex)](./latex-ocr.md)
-- [LEANN](./leann.md)
 
 ### Most Popular
 
@@ -102,6 +102,7 @@ Before selecting a data/retrieval component:
 - [PyMuPDF](./pymupdf.md) — A high-performance Python library binding the MuPDF engine for fast text, image, and table extraction and manipulation of PDFs and other document formats
 - [Qdrant](./qdrant.md) — Rust vector database for high-performance similarity search with filtering and hybrid search
 - [RAGFlow](./ragflow.md) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
+- [Semble](./semble.md) — MinishLab's CPU code-search library for agents, returning relevant snippets through natural-language retrieval, CLI, MCP, or subagent integrations
 - [SentencePiece](./sentencepiece.md) — Google's unsupervised text tokenizer and detokenizer implementing BPE and unigram models directly on raw text, widely used to train tokenizers for LLMs and NMT
 - [SimpleMem](./simplemem.md) — Efficient lifelong memory framework for text and multimodal LLM agents
 - [Supabase](./supabase.md) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs

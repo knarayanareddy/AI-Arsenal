@@ -89,7 +89,7 @@ Current generated stats:
 
 | Type | Count |
 |---|---:|
-| Projects | 282 |
+| Projects | 306 |
 | Tools | 211 |
 | Papers | 128 |
 | Tips | 171 |
@@ -102,7 +102,7 @@ Current generated stats:
 | Observability | 16 |
 | Trends | 4 |
 | Digests | 1 |
-| Total content entries | 1016 |
+| Total content entries | 1040 |
 
 Browse the generated statistics in [`data/stats.json`](./data/stats.json).
 

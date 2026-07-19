@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T20:52:26.931Z",
-    "total_projects": 282,
+    "generated_at": "2026-07-19T21:11:07.855Z",
+    "total_projects": 306,
     "total_tools": 211,
     "total_papers": 128,
     "total_tips": 171,
@@ -3960,6 +3960,27 @@
       "featured": false
     },
     {
+      "id": "deepanalyze",
+      "type": "project",
+      "name": "DeepAnalyze",
+      "description": "RUC DataLab's DeepAnalyze-8B agentic LLM and framework for autonomous data preparation, analysis, modeling, visualization, and report generation",
+      "tags": [
+        "agents",
+        "reasoning",
+        "data",
+        "tool-use",
+        "research"
+      ],
+      "path": "content/projects/agent-systems/deepanalyze.md",
+      "url": "content/projects/agent-systems/deepanalyze",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "deepchecks",
       "type": "tool",
       "name": "Deepchecks",
@@ -4075,6 +4096,25 @@
       "featured": false
     },
     {
+      "id": "deepseek-ocr",
+      "type": "project",
+      "name": "DeepSeek-OCR",
+      "description": "DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens",
+      "tags": [
+        "multimodal",
+        "vision",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/deepseek-ocr.md",
+      "url": "content/projects/foundation-models/deepseek-ocr",
+      "last_updated": "2026-07-19",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "deepseek-v3-r1",
       "type": "project",
       "name": "DeepSeek-V3 / R1",
@@ -4110,6 +4150,27 @@
       "last_updated": "2026-07-12",
       "category": "multimodal",
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deepspec",
+      "type": "project",
+      "name": "DeepSpec",
+      "description": "DeepSeek's full-stack codebase for preparing data, training draft models, and evaluating speculative-decoding acceptance rates",
+      "tags": [
+        "efficiency",
+        "inference",
+        "training",
+        "benchmark",
+        "llm"
+      ],
+      "path": "content/projects/training-and-alignment/deepspec.md",
+      "url": "content/projects/training-and-alignment/deepspec",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -5200,6 +5261,27 @@
       "featured": false
     },
     {
+      "id": "fara",
+      "type": "project",
+      "name": "Fara",
+      "description": "Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark",
+      "tags": [
+        "agents",
+        "multimodal",
+        "vision",
+        "tool-use",
+        "benchmark"
+      ],
+      "path": "content/projects/foundation-models/fara.md",
+      "url": "content/projects/foundation-models/fara",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "fastai-youtube",
       "type": "community",
       "name": "fast.ai",
@@ -5998,6 +6080,44 @@
       "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "glm-5",
+      "type": "project",
+      "name": "GLM-5",
+      "description": "Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare",
+      "tags": [
+        "llm",
+        "reasoning",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/glm-5.md",
+      "url": "content/projects/foundation-models/glm-5",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "glm-ocr",
+      "type": "project",
+      "name": "GLM-OCR",
+      "description": "Compact 0.9B multimodal OCR model from Z.ai (Zhipu) for complex document understanding, built on GLM-V",
+      "tags": [
+        "multimodal",
+        "vision",
+        "self-hosted"
+      ],
+      "path": "content/projects/foundation-models/glm-ocr.md",
+      "url": "content/projects/foundation-models/glm-ocr",
+      "last_updated": "2026-07-19",
+      "category": "multimodal",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -9636,6 +9756,27 @@
       "featured": false
     },
     {
+      "id": "ltx-2",
+      "type": "project",
+      "name": "LTX-2",
+      "description": "Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API",
+      "tags": [
+        "multimodal",
+        "vision",
+        "voice",
+        "streaming",
+        "training"
+      ],
+      "path": "content/projects/foundation-models/ltx-2.md",
+      "url": "content/projects/foundation-models/ltx-2",
+      "last_updated": "2026-07-19",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ltx-video",
       "type": "project",
       "name": "LTX-Video",
@@ -10599,6 +10740,27 @@
       "featured": false
     },
     {
+      "id": "mistral-vibe",
+      "type": "project",
+      "name": "Mistral Vibe",
+      "description": "Mistral's open-source CLI coding assistant with subagents, delegated tasks, skills, and a voice mode",
+      "tags": [
+        "code-gen",
+        "agents",
+        "orchestration",
+        "tool-use",
+        "voice"
+      ],
+      "path": "content/projects/agent-systems/mistral-vibe.md",
+      "url": "content/projects/agent-systems/mistral-vibe",
+      "last_updated": "2026-07-19",
+      "category": "code-generation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "mix-in-general-data-to-prevent-forgetting",
       "type": "tip",
       "name": "Mix In General Data to Prevent Catastrophic Forgetting",
@@ -10654,6 +10816,27 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ml-intern",
+      "type": "project",
+      "name": "ml-intern",
+      "description": "Hugging Face's autonomous ML engineer agent that reads papers and docs, trains models, and ships them through Inference Providers and the Hub",
+      "tags": [
+        "agents",
+        "training",
+        "tool-use",
+        "research",
+        "huggingface"
+      ],
+      "path": "content/projects/agent-systems/ml-intern.md",
+      "url": "content/projects/agent-systems/ml-intern",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -11252,6 +11435,27 @@
       "featured": false
     },
     {
+      "id": "nanobot",
+      "type": "project",
+      "name": "nanobot",
+      "description": "HKU Data Intelligence Lab's lightweight open-source agent for tool use, chats, and workflows, distributed as the nanobot-ai PyPI package",
+      "tags": [
+        "agents",
+        "tool-use",
+        "orchestration",
+        "memory",
+        "community-favorite"
+      ],
+      "path": "content/projects/agent-systems/nanobot.md",
+      "url": "content/projects/agent-systems/nanobot",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "nanogpt",
       "type": "project",
       "name": "nanoGPT",
@@ -11612,6 +11816,25 @@
       "featured": false
     },
     {
+      "id": "omnilingual-asr",
+      "type": "project",
+      "name": "Omnilingual ASR",
+      "description": "Meta's speech recognition family covering more than 1,600 languages, including zero-shot adaptation to languages with few paired examples",
+      "tags": [
+        "voice",
+        "research",
+        "foundational"
+      ],
+      "path": "content/projects/foundation-models/omnilingual-asr.md",
+      "url": "content/projects/foundation-models/omnilingual-asr",
+      "last_updated": "2026-07-19",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "onnxruntime",
       "type": "project",
       "name": "ONNX Runtime",
@@ -11646,6 +11869,48 @@
       "category": "rag",
       "maturity": "production",
       "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "open-autoglm",
+      "type": "project",
+      "name": "Open-AutoGLM",
+      "description": "Z.ai's Phone Agent framework that uses AutoGLM, VLM screen perception, planning, and ADB to control Android applications with confirmation and takeover paths",
+      "tags": [
+        "agents",
+        "multimodal",
+        "vision",
+        "planning",
+        "tool-use"
+      ],
+      "path": "content/projects/agent-systems/open-autoglm.md",
+      "url": "content/projects/agent-systems/open-autoglm",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "open-code-review",
+      "type": "project",
+      "name": "Open Code Review",
+      "description": "Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings",
+      "tags": [
+        "code-gen",
+        "agents",
+        "evaluation",
+        "benchmark",
+        "battle-tested"
+      ],
+      "path": "content/projects/agent-systems/open-code-review.md",
+      "url": "content/projects/agent-systems/open-code-review",
+      "last_updated": "2026-07-19",
+      "category": "code-generation",
+      "maturity": "beta",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -11821,6 +12086,27 @@
       "featured": false
     },
     {
+      "id": "openenv",
+      "type": "project",
+      "name": "OpenEnv",
+      "description": "Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment",
+      "tags": [
+        "agents",
+        "rlhf",
+        "training",
+        "security",
+        "huggingface"
+      ],
+      "path": "content/projects/training-and-alignment/openenv.md",
+      "url": "content/projects/training-and-alignment/openenv",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openhands",
       "type": "project",
       "name": "OpenHands",
@@ -11974,6 +12260,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openshell",
+      "type": "project",
+      "name": "OpenShell",
+      "description": "NVIDIA's Rust sandboxed runtime for autonomous agents, governed by declarative YAML policies for files, network, and data exfiltration",
+      "tags": [
+        "agents",
+        "security",
+        "self-hosted",
+        "kubernetes"
+      ],
+      "path": "content/projects/frameworks/openshell.md",
+      "url": "content/projects/frameworks/openshell",
+      "last_updated": "2026-07-19",
+      "category": "tooling",
+      "maturity": "alpha",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -13501,6 +13807,47 @@
       "featured": false
     },
     {
+      "id": "qwen3-omni",
+      "type": "project",
+      "name": "Qwen3-Omni",
+      "description": "Qwen's end-to-end omni-modal model family that accepts text, images, audio, and video and can return text plus streaming speech",
+      "tags": [
+        "multimodal",
+        "vision",
+        "voice",
+        "streaming",
+        "llm"
+      ],
+      "path": "content/projects/foundation-models/qwen3-omni.md",
+      "url": "content/projects/foundation-models/qwen3-omni",
+      "last_updated": "2026-07-19",
+      "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "qwen3-tts",
+      "type": "project",
+      "name": "Qwen3-TTS",
+      "description": "Alibaba's open-source TTS series for expressive speech synthesis, voice cloning, and voice design across ten languages",
+      "tags": [
+        "voice",
+        "multimodal",
+        "self-hosted",
+        "streaming"
+      ],
+      "path": "content/projects/foundation-models/qwen3-tts.md",
+      "url": "content/projects/foundation-models/qwen3-tts",
+      "last_updated": "2026-07-19",
+      "category": "voice-audio",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "qwen3-vl",
       "type": "project",
       "name": "Qwen3-VL",
@@ -14606,6 +14953,46 @@
       "featured": false
     },
     {
+      "id": "sam-3d-objects",
+      "type": "project",
+      "name": "SAM 3D Objects",
+      "description": "Meta's foundation model for reconstructing object shape, texture, and layout in 3D from a single masked image",
+      "tags": [
+        "vision",
+        "multimodal",
+        "research",
+        "foundational"
+      ],
+      "path": "content/projects/foundation-models/sam-3d-objects.md",
+      "url": "content/projects/foundation-models/sam-3d-objects",
+      "last_updated": "2026-07-19",
+      "category": "computer-vision",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "sam-audio",
+      "type": "project",
+      "name": "SAM-Audio",
+      "description": "Meta's promptable audio foundation model for isolating sounds from mixtures with text, visual, or temporal prompts",
+      "tags": [
+        "voice",
+        "multimodal",
+        "research",
+        "vision"
+      ],
+      "path": "content/projects/foundation-models/sam-audio.md",
+      "url": "content/projects/foundation-models/sam-audio",
+      "last_updated": "2026-07-19",
+      "category": "voice-audio",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "sam2",
       "type": "project",
       "name": "SAM 2 (Segment Anything Model 2)",
@@ -14978,6 +15365,27 @@
       "path": "content/projects/inference-engines/semantic-router.md",
       "url": "content/projects/inference-engines/semantic-router",
       "last_updated": "2026-07-12",
+      "category": "tooling",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "semble",
+      "type": "project",
+      "name": "Semble",
+      "description": "MinishLab's CPU code-search library for agents, returning relevant snippets through natural-language retrieval, CLI, MCP, or subagent integrations",
+      "tags": [
+        "retrieval",
+        "efficiency",
+        "agents",
+        "embeddings",
+        "tool-use"
+      ],
+      "path": "content/projects/data-and-retrieval/semble.md",
+      "url": "content/projects/data-and-retrieval/semble",
+      "last_updated": "2026-07-19",
       "category": "tooling",
       "maturity": "beta",
       "cost_model": "open-source",
@@ -15396,6 +15804,28 @@
       "featured": false
     },
     {
+      "id": "shimmy",
+      "type": "project",
+      "name": "Shimmy",
+      "description": "A pure-Rust, OpenAI-API-compatible local inference server that is GGUF-native, supports WebGPU, and avoids Python or llama.cpp dependencies",
+      "tags": [
+        "inference",
+        "llm",
+        "local",
+        "edge",
+        "self-hosted",
+        "efficiency"
+      ],
+      "path": "content/projects/inference-engines/shimmy.md",
+      "url": "content/projects/inference-engines/shimmy",
+      "last_updated": "2026-07-19",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "shinn-2023-reflexion",
       "type": "paper",
       "name": "Reflexion: Language Agents with Verbal Reinforcement Learning",
@@ -15531,6 +15961,27 @@
       "category": "system-design",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "skillopt",
+      "type": "project",
+      "name": "SkillOpt",
+      "description": "Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen",
+      "tags": [
+        "agents",
+        "training",
+        "efficiency",
+        "evaluation",
+        "reasoning"
+      ],
+      "path": "content/projects/training-and-alignment/skillopt.md",
+      "url": "content/projects/training-and-alignment/skillopt",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -16573,6 +17024,26 @@
       "featured": false
     },
     {
+      "id": "symphony",
+      "type": "project",
+      "name": "Symphony",
+      "description": "OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board",
+      "tags": [
+        "agents",
+        "orchestration",
+        "planning",
+        "code-gen"
+      ],
+      "path": "content/projects/agent-systems/symphony.md",
+      "url": "content/projects/agent-systems/symphony",
+      "last_updated": "2026-07-19",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "tabby",
       "type": "project",
       "name": "Tabby",
@@ -17353,6 +17824,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "trellis-2",
+      "type": "project",
+      "name": "TRELLIS.2",
+      "description": "Microsoft's 4B image-to-3D generative model using a field-free sparse-voxel representation and physically based materials",
+      "tags": [
+        "vision",
+        "multimodal",
+        "foundational",
+        "research"
+      ],
+      "path": "content/projects/foundation-models/trellis-2.md",
+      "url": "content/projects/foundation-models/trellis-2",
+      "last_updated": "2026-07-19",
+      "category": "computer-vision",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
