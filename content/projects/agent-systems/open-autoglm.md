@@ -43,7 +43,7 @@ maturity: alpha
 cost_model: open-source
 github_stars: 25822
 last_commit: "2026-03-06"
-docs_url: https://autoglm.z.ai/blog
+docs_url: https://autoglm.z.ai/blog/
 phase: agent-system
 domain:
   - "multimodal"
@@ -104,4 +104,4 @@ Open-AutoGLM complements Midscene.js and mobile-agent projects in the Arsenal, w
 ## Resources
 
 - [GitHub](https://github.com/zai-org/Open-AutoGLM)
-- [Project blog](https://autoglm.z.ai/blog)
+- [Project blog](https://autoglm.z.ai/blog/)
