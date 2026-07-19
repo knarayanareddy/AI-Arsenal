@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "A foundation-model source for downstream 3D asset and robotics workflows"
+  - "Meta foundation model for single-image object geometry, texture, and layout reconstruction"
+  - "Upstream 3D asset source for graphics and robotics workflows"
 best_for:
   - "Single-image asset reconstruction for 3D and robotics prototypes"
   - "A reference point for image-conditioned 3D generation"
@@ -70,7 +71,7 @@ SAM 3D Objects turns a single natural image plus object mask into a structured 3
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. SAM 3D Objects is especially useful because rapid 3d asset blocking from photographs.
+SAM 3D Objects earns inclusion because it brings Meta's single-image 3D reconstruction research into a runnable repository with code, checkpoints, an online demo, and a dedicated benchmark. Its emphasis on occlusion and clutter addresses the natural-image conditions that make many image-to-3D demos less useful.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ SAM 3D Objects complements segmentation and 3D asset tools, while competing with
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For SAM 3D Objects, consult the GitHub entry first.
+Request access to the gated checkpoint, install the repository's Python requirements, and place the selected checkpoint under the documented `checkpoints/<tag>` layout. Run `python demo.py` with an image and object mask, then inspect the exported Gaussian splat before attempting multi-object or alignment examples.
 
 ## Key Use Cases
 
-The strongest fits are Rapid 3D asset blocking from photographs; Research on object reconstruction in cluttered scenes. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it to block out textured 3D objects from reference photographs, explore reconstruction of small or partially occluded items, or align object and human reconstructions in a shared frame. Robotics and graphics teams can treat the output as an initialization for later mesh cleanup rather than a finished asset.
 
 ## Strengths
 
-Handles occlusion-aware natural imagery, includes code and checkpoints, and offers a bridge between 2D vision prompts and usable 3D scene representations.
+The pipeline reconstructs geometry, texture, pose, and layout from a masked image and is designed for unusual poses, occlusion, and clutter. The repository includes a demo, released checkpoints, a web experience, and a benchmark rather than only an architecture description.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ The license is non-standard rather than a familiar MIT or Apache grant, and the 
 
 ## Relation to the Arsenal
 
-SAM 3D Objects sits at a distinct boundary in the catalog: a foundation-model source for downstream 3d asset and robotics workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+SAM 3D Objects sits beside TRELLIS.2 and other computer-vision foundation models, complementing segmentation and downstream graphics tooling. Its output feeds robotics, rendering, and asset pipelines; it does not occupy the role of a general 3D editor or serving runtime.
 
 ## Resources
 

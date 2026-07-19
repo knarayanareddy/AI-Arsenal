@@ -54,7 +54,8 @@ health_signals:
   - "community-driven"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Lightweight Python chat-and-tools agent distributed as nanobot-ai"
+  - "Approachable alternative to heavyweight agent orchestration platforms"
 best_for:
   - "Small self-hosted assistants with chat and tool integrations"
   - "Learning agent workflow composition without a large framework"
@@ -70,7 +71,7 @@ nanobot deliberately keeps the surface area of an AI agent small: a Python proce
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. nanobot is especially useful because personal or team tool-using assistants.
+nanobot earns a slot by keeping a tool-using chat agent small enough to install, inspect, and adapt without adopting a large orchestration platform. The HKU Data Intelligence Lab project is actively developed, MIT-licensed, and distributed as `nanobot-ai`, which lowers the barrier to experimenting with chat and workflow integrations.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ nanobot overlaps with larger agent frameworks and complements model-serving APIs
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For nanobot, consult the GitHub entry first.
+Install the PyPI package with `pip install nanobot-ai` or use the repository's documented development setup, then initialize the configuration and provider credentials. Launch the CLI, connect one chat channel, and add a least-privilege tool before composing longer workflows or persistent memory.
 
 ## Key Use Cases
 
-The strongest fits are Personal or team tool-using assistants; Rapid prototyping of chat-driven workflows. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use nanobot for a personal assistant that can call a few local tools, for chat-triggered team workflows, or for teaching agent concepts in a small Python codebase. Its lightweight runtime is also a useful starting point for testing provider routing and tool permissions before moving to a fleet platform.
 
 ## Strengths
 
-Low setup cost, Python extensibility, PyPI distribution, and a deliberately small runtime make it approachable for agent experiments.
+The project combines Python extensibility, chat integrations, tool calls, and workflow composition in a compact MIT-licensed package. The `nanobot-ai` distribution and current documentation make the first local experiment substantially simpler than assembling those pieces from unrelated libraries.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ Lightweight does not mean automatically safe: tool permissions, prompt injection
 
 ## Relation to the Arsenal
 
-nanobot sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+nanobot complements larger agent frameworks, MCP tools, and local model servers, while competing with minimal personal-assistant runtimes. It is an approachable agent core in the Arsenal rather than a replacement for OpenShell isolation, enterprise observability, or multi-tenant scheduling.
 
 ## Resources
 

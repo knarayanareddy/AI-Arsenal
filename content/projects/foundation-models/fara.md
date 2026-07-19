@@ -55,7 +55,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Open 7B multimodal computer-use model for browser tasks"
+  - "Model and WebTailBench baseline for visual agent trajectories"
 best_for:
   - "Browser and desktop task automation research"
   - "Evaluating multimodal computer-use trajectories"
@@ -71,7 +72,7 @@ Fara-7B is designed to turn screenshots and task instructions into computer acti
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Fara is especially useful because browser-agent trajectory research.
+Fara belongs in the Arsenal as an open computer-use model paired with WebTailBench, giving teams both an action policy and a named benchmark for browser-task research. The MIT release makes the model easier to inspect and adapt than a closed computer-use endpoint, while keeping the safety boundary visible.
 
 ## Architecture
 
@@ -83,15 +84,15 @@ Fara complements browser-agent frameworks and competes with proprietary computer
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Fara, consult the GitHub entry first.
+Download the Fara-7B model and install the Python dependencies from the repository. Reproduce the WebTailBench or browser example inside a dedicated sandbox with no sensitive credentials, then connect the model to an action executor only after measuring screenshot latency and failure recovery.
 
 ## Key Use Cases
 
-The strongest fits are Browser-agent trajectory research; Sandboxed web task automation experiments. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use Fara to study browser trajectories, evaluate visual grounding on web tasks, or prototype supervised automation on a disposable account. It is a useful baseline for agent research where screenshots and language goals must become clicks, typing, and navigation actions.
 
 ## Strengths
 
-An open 7B computer-use model paired with a named benchmark gives engineers a concrete baseline for multimodal agent evaluation.
+Fara-7B is purpose-built for computer use rather than generic image captioning, and the repository ships WebTailBench to make browser-agent comparisons more concrete. MIT licensing supports experimentation, while the multimodal policy keeps screen state in the model loop.
 
 ## Limitations
 
@@ -99,7 +100,7 @@ Computer-use policies can click the wrong control, leak sensitive screen content
 
 ## Relation to the Arsenal
 
-Fara sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Fara complements browser-use, UI-TARS, and other agent-system entries, while competing with proprietary computer-use models. It supplies a model policy, not the browser sandbox, credentials layer, or approval gate that production automation requires.
 
 ## Resources
 

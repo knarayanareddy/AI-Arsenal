@@ -53,7 +53,8 @@ health_signals:
   - "org-backed"
   - "experimental"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Elixir reference orchestrator for autonomous Codex work-board tasks"
+  - "Proof-of-work workflow for monitored coding-agent operations"
 best_for:
   - "Autonomous software work queues with proof-of-work"
   - "Studying orchestration patterns for coding agents"
@@ -69,7 +70,7 @@ Symphony frames autonomous coding as a work-board control problem: tasks become 
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Symphony is especially useful because queue-driven autonomous coding experiments.
+Symphony earns a slot because it treats autonomous coding as an operational work-board system rather than a single prompt. Its specification and Elixir reference implementation connect Codex agent runs to monitoring and proof-of-work artifacts such as CI, PR review, and walkthrough videos.
 
 ## Architecture
 
@@ -81,15 +82,15 @@ Symphony overlaps with coding-agent orchestrators and complements issue trackers
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Symphony, consult the GitHub entry first.
+Read the OpenAI specification and clone the Elixir reference implementation, then configure a disposable work board and Codex environment as shown by the repository. Run one small repository task with CI and review enabled, inspect the emitted proof artifacts, and only then broaden concurrency or permissions.
 
 ## Key Use Cases
 
-The strongest fits are Queue-driven autonomous coding experiments; Auditable multi-task Codex operations. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use Symphony to experiment with queues of independent engineering tasks, long-running Codex work, and evidence-backed completion reports. It is also a useful reference when designing an internal agent control plane that needs task status, retries, and review signals rather than chat transcripts alone.
 
 ## Strengths
 
-Clear specification, reference implementation, work-board orchestration, and proof-of-work artifacts make the preview valuable for agent-platform design.
+The design makes task selection, agent spawning, board monitoring, and completion evidence explicit. CI, PR review, and walkthrough videos are treated as proof-of-work signals, giving autonomous coding operations a more inspectable contract than an untracked collection of shell sessions.
 
 ## Limitations
 
@@ -97,7 +98,7 @@ The project is an engineering preview, Elixir is a less common language for AI p
 
 ## Relation to the Arsenal
 
-Symphony sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Symphony complements Codex, repository hosting, CI, and the coding-agent entries in the Arsenal, while overlapping with orchestration platforms for autonomous software work. It belongs above an individual agent runtime and below organizational policy, identity, and release governance.
 
 ## Resources
 

@@ -54,7 +54,8 @@ health_signals:
   - "community-driven"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "CPU semantic code search for token-efficient coding agents"
+  - "MCP, CLI, and subagent retrieval layer without external services"
 best_for:
   - "Token-efficient repository search for coding agents"
   - "CPU-only code retrieval without API keys or external services"
@@ -70,7 +71,7 @@ Semble treats code search as retrieval rather than a sequence of shell greps. It
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Semble is especially useful because token-efficient context retrieval for coding agents.
+Semble earns a place because it treats repository exploration as semantic retrieval and returns only the snippets an agent needs. The CPU-only, no-key design and integrations through MCP, AGENTS.md instructions, and a subagent make its reported token savings directly actionable in coding workflows.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ Semble complements grep, language servers, and code-specialized transformers and
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Semble, consult the GitHub entry first.
+Install it with `uv tool install semble`, run `semble install`, and select an MCP, instructions, or subagent integration for the coding agent in use. Index a local repository, ask a natural-language query such as `How is authentication handled?`, and tune `--top-k` while checking freshness and recall.
 
 ## Key Use Cases
 
-The strongest fits are Token-efficient context retrieval for coding agents; Local semantic search in air-gapped repositories. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use Semble to answer architecture questions over a local codebase, reduce context passed to a coding agent, or search a remote repository without an external embedding API. MCP mode fits agents that can call tools, while AGENTS.md guidance and the dedicated subagent support simpler integrations.
 
 ## Strengths
 
-No API keys, GPU, or external service are required; MCP and instruction integrations make adoption practical across several coding agents.
+The README reports CPU-only operation, no API keys or external services, approximately 98% fewer tokens than grep-plus-read, and sub-second end-to-end indexing. Its MCP server, CLI, instructions, and subagent modes let one index serve several coding-agent products.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ Semantic retrieval can miss exact symbol relationships, stale indexes can return
 
 ## Relation to the Arsenal
 
-Semble sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Semble complements grep, language servers, embeddings, and code-review agents, while competing with code-specialized semantic search tools. It belongs in data and retrieval as a context-selection layer; the agent, repository permissions, and exact-symbol analysis remain separate responsibilities.
 
 ## Resources
 

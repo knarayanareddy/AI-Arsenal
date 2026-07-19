@@ -53,8 +53,8 @@ health_signals:
   - "org-backed"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a multilingual speech layer for voice agents and audio applications"
-  - "Competes with hosted TTS APIs while remaining adaptable through local inference"
+  - "Open multilingual TTS family for voice agents, cloning, and voice design"
+  - "Self-hosted alternative to provider-only speech APIs"
 best_for:
   - "Multilingual voice assistants with streaming responses"
   - "Voice cloning or designed voices for controlled product experiences"
@@ -70,7 +70,7 @@ Qwen3-TTS packages 0.6B and 1.7B text-to-speech checkpoints into a family that s
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Qwen3-TTS is especially useful because low-latency spoken replies in an agent.
+Qwen3-TTS earns a slot as an open speech model family that covers synthesis, voice cloning, and voice design rather than only one fixed speaker style. The 0.6B and 1.7B checkpoints, ten-language target, and vLLM path give engineers a practical choice between footprint and expressiveness.
 
 ## Architecture
 
@@ -82,15 +82,15 @@ Qwen3-TTS complements local voice stacks such as open TTS runtimes and competes 
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Qwen3-TTS, consult the GitHub entry first.
+Create a Python environment, install the repository dependencies, and download a Qwen3-TTS checkpoint from the linked Hugging Face collection. Start with the supplied Python inference example, then try the vLLM serving path before wiring streaming audio into an agent.
 
 ## Key Use Cases
 
-The strongest fits are Low-latency spoken replies in an agent; Multilingual narration and accessibility audio. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use the smaller checkpoint for multilingual spoken responses or accessibility narration, and use reference audio when a product needs a consistent voice. Voice-design prompts are also useful for prototyping distinct characters without training a speaker model from scratch.
 
 ## Strengths
 
-Small and large checkpoints, voice-clone and voice-design modes, multilingual coverage, and a documented vLLM path make the family flexible for experimentation.
+The family spans 0.6B and 1.7B sizes, supports ten languages, exposes both cloning and text-described voice design, and uses a 12 Hz tokenizer. Documented vLLM support makes the model easier to place behind a self-hosted service.
 
 ## Limitations
 
@@ -98,7 +98,7 @@ The ten-language coverage is not equivalent to uniform quality across accents, p
 
 ## Relation to the Arsenal
 
-Qwen3-TTS sits at a distinct boundary in the catalog: provides a multilingual speech layer for voice agents and audio applications. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Qwen3-TTS complements the voice-audio models and inference engines in the Arsenal, while sitting downstream of foundation-model serving and upstream of spoken agents. It is a model choice alongside other open TTS entries, not a replacement for consent, moderation, or audio delivery infrastructure.
 
 ## Resources
 

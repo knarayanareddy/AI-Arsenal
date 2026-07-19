@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Gymnasium-style Python environments for agent RL post-training"
+  - "HF Spaces deployment layer for reproducible isolated agent tasks"
 best_for:
   - "RL post-training with reproducible tool environments"
   - "Packaging agent tasks for local or Space execution"
@@ -70,7 +71,7 @@ OpenEnv standardizes the environment side of agent training. Its Gymnasium-like 
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. OpenEnv is especially useful because reproducible agent rl environments.
+OpenEnv earns inclusion by giving agent RL post-training a standard environment contract instead of forcing every project to invent reset, action, observation, and deployment glue. Its Gymnasium-style Python interface and Hugging Face Spaces path connect local experiments to shareable isolated environments.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ OpenEnv complements Gymnasium, RL trainers, and agent frameworks while competing
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For OpenEnv, consult the GitHub entry first.
+Install the OpenEnv Python package and follow the documentation's Gymnasium-style environment example, implementing reset and step behavior for a small task. Run the environment locally first, then package or deploy it to an HF Space and connect it to the chosen RL post-training loop.
 
 ## Key Use Cases
 
-The strongest fits are Reproducible agent RL environments; Post-training experiments with tool feedback. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it to train an agent against browser, coding, or tool-use feedback where trajectories must be reset and scored consistently. Teams can publish a reproducible environment for collaborators, compare policies under the same reward contract, or use Spaces to demonstrate an environment without distributing a full cluster.
 
 ## Strengths
 
-A familiar Gymnasium-style contract, isolated execution, and HF Spaces path provide a practical bridge from agent tasks to RL post-training.
+The library provides a familiar environment interface, isolated execution model, and deployment path through Hugging Face Spaces. BSD-3-Clause licensing and the separation between agent policy and environment make it a practical substrate for reinforcement-learning experiments.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ Environment bugs and reward leakage can teach an agent the wrong behavior, while
 
 ## Relation to the Arsenal
 
-OpenEnv sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+OpenEnv complements Gymnasium, RL trainers, SkillOpt, and benchmark harnesses, while competing with bespoke agent-environment wrappers. It belongs in training and alignment: it supplies task interaction and isolation, not a reward model, optimizer, or production sandbox for arbitrary users.
 
 ## Resources
 

@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "4B image-to-3D model with O-Voxel geometry and PBR material generation"
+  - "Open foundation for synthetic assets and graphics experiments"
 best_for:
   - "Generating textured 3D assets from reference images"
   - "Prototyping PBR-aware scene and object reconstruction"
@@ -70,7 +71,7 @@ TRELLIS.2 is an image-to-3D model aimed at the difficult last mile between a fla
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. TRELLIS.2 is especially useful because reference-image asset generation.
+TRELLIS.2 earns its place as a substantial open image-to-3D model focused on detailed geometry and physically based appearance. Its O-Voxel representation and 4B scale target the gap between a concept image and an asset that can actually enter a rendering or synthetic-data workflow.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ TRELLIS.2 complements SAM 3D Objects and competes with other image-to-3D model g
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For TRELLIS.2, consult the GitHub entry first.
+Install the Python environment described in the TRELLIS.2 repository, download the 4B checkpoint, and run the supplied image-to-3D inference example on a CUDA GPU. Export a generated asset, inspect its PBR materials, and benchmark resolution, sampling time, and memory before building a batch service.
 
 ## Key Use Cases
 
-The strongest fits are Reference-image asset generation; Synthetic 3D data for vision experiments. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Generate rough but textured props from concept art, create synthetic objects for vision experiments, or explore PBR-aware asset variations for design review. Keep an artist or geometry cleanup step in the loop when topology, hidden surfaces, or exact dimensions matter.
 
 ## Strengths
 
-The O-Voxel representation and PBR-oriented output address practical asset concerns that many image-to-3D demos leave to downstream tooling.
+The model uses the field-free O-Voxel sparse-voxel representation and explicitly targets PBR materials, not just a coarse silhouette. Its 4B image-to-3D checkpoint gives researchers a concrete baseline for comparing geometry, texture, and material quality.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ A 4B model is expensive for interactive edge use, and image ambiguity still prod
 
 ## Relation to the Arsenal
 
-TRELLIS.2 sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+TRELLIS.2 complements SAM 3D Objects and downstream graphics tools, while competing with other image-to-3D foundation models. It belongs above renderers and asset editors in the stack: those systems consume and repair its output rather than being replaced by it.
 
 ## Resources
 

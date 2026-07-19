@@ -53,7 +53,8 @@ health_signals:
   - "org-backed"
   - "experimental"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "NVIDIA Rust runtime for policy-governed autonomous-agent sandboxes"
+  - "Agent-specific isolation alternative to broad container permissions"
 best_for:
   - "Running untrusted agent tools with explicit policy"
   - "Building a private execution layer for autonomous workflows"
@@ -69,7 +70,7 @@ OpenShell addresses the missing runtime boundary around autonomous agents. Inste
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. OpenShell is especially useful because sandboxed tool execution for coding agents.
+OpenShell earns a slot because it makes the runtime boundary around autonomous agents explicit: MicroVM or container isolation is governed by declarative policy rather than broad host permissions. NVIDIA's Rust implementation and YAML controls target file access, network reachability, and exfiltration risks that ordinary agent frameworks leave to operators.
 
 ## Architecture
 
@@ -81,15 +82,15 @@ OpenShell complements agent frameworks and competes with generic containers, gVi
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For OpenShell, consult the GitHub entry first.
+Install the Alpha release from NVIDIA's documented distribution, provision the required container or MicroVM backend, and write a minimal YAML policy allowing only a test workspace and approved network destination. Launch one agent inside the sandbox, inspect policy and logs, then expand capabilities incrementally.
 
 ## Key Use Cases
 
-The strongest fits are Sandboxed tool execution for coding agents; Private runtime for autonomous research tasks. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use OpenShell to run coding agents that need a compiler but must not read host secrets, or to isolate research agents that can fetch approved data without arbitrary egress. It is also useful for testing deny-by-default policy and measuring the startup and throughput cost of stronger isolation.
 
 ## Strengths
 
-Rust implementation, explicit YAML policy, MicroVM/container isolation, and a direct focus on exfiltration make the runtime relevant to agent safety engineering.
+The runtime is written in Rust and combines sandbox lifecycle management with declarative YAML policy for filesystem, network, and exfiltration controls. Its focus on autonomous-agent capabilities is more precise than granting a generic Docker container broad access.
 
 ## Limitations
 
@@ -97,7 +98,7 @@ Alpha status means isolation, escape resistance, startup latency, and policy com
 
 ## Relation to the Arsenal
 
-OpenShell sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+OpenShell complements nanobot, Symphony, and other agent orchestration entries by supplying the execution boundary, while competing with Docker, gVisor, and MicroVM sandbox approaches. It belongs below the agent loop and beside deployment infrastructure, not inside model training or prompt management.
 
 ## Resources
 

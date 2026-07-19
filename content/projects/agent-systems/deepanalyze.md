@@ -55,7 +55,8 @@ health_signals:
   - "research-origin"
   - "community-driven"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Open 8B autonomous data-science agent with model, code, data, and UI"
+  - "Execution-grounded analyst workflow for mixed structured and unstructured files"
 best_for:
   - "Open-ended analysis over mixed business data"
   - "Research on execution-grounded data-science agents"
@@ -71,7 +72,7 @@ DeepAnalyze-8B is aimed at the full data-science arc: discovering relevant files
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. DeepAnalyze is especially useful because sandboxed exploratory analysis of mixed files.
+DeepAnalyze belongs in the Arsenal because it attempts the entire data-science loop: discovering files, preparing data, writing analysis code, producing visualizations, and generating a report. The release includes the DeepAnalyze-8B model, code, training data, a web UI, and Docker execution support, making the agent loop unusually inspectable.
 
 ## Architecture
 
@@ -83,15 +84,15 @@ DeepAnalyze complements notebook copilots, RAG systems, and data-agent framework
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For DeepAnalyze, consult the GitHub entry first.
+Download DeepAnalyze-8B, serve it with `vllm serve DeepAnalyze-8B`, install the demo frontend dependencies, and launch the supplied backend and UI scripts. Prefer the WebUI v2 Docker sandbox for untrusted generated code, and test with a small CSV or JSON corpus before connecting databases or sensitive files.
 
 ## Key Use Cases
 
-The strongest fits are Sandboxed exploratory analysis of mixed files; Research into autonomous data-science agents. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it for exploratory analysis across CSV, Excel, JSON, Markdown, and database-like sources, or for research into execution-grounded data-science agents. It can generate analyst-style reports and visualizations, but numerical conclusions should be checked with deterministic code and a human analyst.
 
 ## Strengths
 
-Open model, code, training data, web UI, vLLM deployment, and Docker execution make the complete agent loop unusually inspectable.
+The open release covers model, repository, DataScience-Instruct-500K training data, demo, API, Jupyter integration, and Docker-based code execution. vLLM support and an OpenAI-style endpoint make the 8B model accessible to existing serving and UI patterns.
 
 ## Limitations
 
@@ -99,7 +100,7 @@ Generated code can leak data, silently choose poor transformations, or produce p
 
 ## Relation to the Arsenal
 
-DeepAnalyze sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+DeepAnalyze complements data pipelines, notebook tools, RAG, and sandbox runtimes such as OpenShell, while competing with hosted autonomous analyst products. It occupies the data-agent layer; governance, provenance, deterministic calculations, and approval workflows belong to neighboring Arsenal components.
 
 ## Resources
 

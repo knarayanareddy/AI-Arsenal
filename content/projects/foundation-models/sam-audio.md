@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Promptable audio separation model with text, visual, and temporal controls"
+  - "Research pipeline for Judge-scored candidate reranking"
 best_for:
   - "Separating a described sound from complex recordings"
   - "Interactive audio editing with prompt and span control"
@@ -70,7 +71,7 @@ SAM-Audio applies the Segment Anything idea to sound: a user can describe the ta
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. SAM-Audio is especially useful because dialogue cleanup and sound-effect extraction.
+SAM-Audio merits a place because it makes sound separation promptable: the target can be described with text, indicated visually in video, or selected by a time span. The accompanying Judge model and candidate reranking turn an interesting separation model into an experimentally controllable audio-editing pipeline.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ SAM-Audio complements classic source-separation libraries and overlaps with inte
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For SAM-Audio, consult the GitHub entry first.
+Use Python 3.11 or newer, install the repository with `pip install .`, and request authenticated access to the gated SAM-Audio and PE-AV checkpoints. Load `facebook/sam-audio-large` on a CUDA GPU, call `separate` with a lowercase noun or verb phrase, and enable span prediction or reranking only after the basic path works.
 
 ## Key Use Cases
 
-The strongest fits are Dialogue cleanup and sound-effect extraction; Prompt-driven audio editing for video tools. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+A post-production tool can isolate dialogue, a named sound effect, or a foreground event from a complex recording. Video editors can combine visual prompts with audio prompts, while researchers can compare precision, recall, and faithfulness across reranked candidate separations.
 
 ## Strengths
 
-Text, visual, and temporal prompting plus explicit Judge reranking provide a richer control surface than class-label source separation.
+Text, visual, and temporal prompts provide more control than a fixed source label. Optional span prediction and multi-candidate reranking use a dedicated Judge model with precision, recall, and faithfulness axes, making quality trade-offs visible.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ Access to gated checkpoints is required, the license is non-standard, and infere
 
 ## Relation to the Arsenal
 
-SAM-Audio sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+SAM-Audio complements source-separation libraries and the voice-audio projects in the Arsenal, while competing with interactive audio editing products. PE-AV and Judge are upstream model dependencies; this repository is not a complete DSP workstation or media pipeline.
 
 ## Resources
 

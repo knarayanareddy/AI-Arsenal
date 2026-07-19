@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Deterministic-plus-agent CLI for token-efficient AI code review"
+  - "Alibaba production-origin review tool with diff and whole-file modes"
 best_for:
   - "Token-efficient pull-request review in CI"
   - "Whole-file audits of unfamiliar repositories"
@@ -70,7 +71,7 @@ Open Code Review is not just a prompt over a Git diff. It first selects and bund
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Open Code Review is especially useful because fast pr review with bounded token usage.
+Open Code Review earns a slot because Alibaba's design separates deterministic review coverage from LLM judgment. Smart file bundling, rule matching, tool-assisted context retrieval, and line-level comments address the incompleteness and position drift that generic coding agents often show on large diffs.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ Open Code Review complements compiler checks, linters, and human review while co
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Open Code Review, consult the GitHub entry first.
+Install the CLI with `npm install -g @alibaba-group/open-code-review`, configure a compatible model endpoint, and run `ocr` from a test repository. Use the diff review flow first, then try `ocr scan` for whole-file auditing; disable automatic updates with `OCR_NO_UPDATE=1` if release pinning is required.
 
 ## Key Use Cases
 
-The strongest fits are Fast PR review with bounded token usage; Auditing complete files or unfamiliar codebases. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it as a token-conscious pull-request review stage, as a full-file audit for an unfamiliar codebase, or as a second opinion alongside deterministic linters. Its precision-oriented behavior is most useful when reviewers need fewer noisy findings and can accept that recall may be lower.
 
 ## Strengths
 
-Battle-tested origin, deterministic coverage controls, line-level comments, configurable endpoints, and an explicit precision/recall benchmark make the design unusually concrete.
+The hybrid architecture bundles related files, matches rules to file characteristics, and gives an agent targeted tools for repository context. Alibaba reports evaluation across 50 repositories, 200 pull requests, ten languages, and 1,505 annotated issues, including roughly one-ninth the token use of a general-purpose agent.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ The benchmark is vendor-produced, and precision-focused review can miss real def
 
 ## Relation to the Arsenal
 
-Open Code Review sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Open Code Review complements compilers, linters, CI, and human review, while competing with Claude Code-style review skills and other coding agents. It belongs in evaluation and code-generation workflows; its precision benchmark does not make it a formal verifier or a substitute for tests.
 
 ## Resources
 

@@ -56,7 +56,8 @@ health_signals:
   - "org-backed"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "DiT-based synchronized audio-video foundation model with LoRA support"
+  - "Open-code alternative to silent video models and hosted generation APIs"
 best_for:
   - "Synchronized audio-video generation for creative prototypes"
   - "LoRA adaptation of audiovisual generation to a house style"
@@ -72,7 +73,7 @@ LTX-2 treats sound and moving images as one generation problem rather than addin
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. LTX-2 is especially useful because short synchronized audiovisual concept clips.
+LTX-2 deserves a slot because it makes synchronized audio and video a native generation target instead of an afterthought added to silent clips. The open Python package, LoRA trainer, hosted API, and model weights give creative teams several ways to prototype audiovisual generation while retaining an adaptation path.
 
 ## Architecture
 
@@ -84,15 +85,15 @@ LTX-2 overlaps with commercial video-generation APIs and complements image/video
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For LTX-2, consult the GitHub entry first.
+Install the LTX-2 Python package and follow the repository's inference example with the required model access. Download the gated Hugging Face weights after accepting the applicable terms, or use the API for a first test; then try the documented LoRA trainer on short clips before scaling resolution and duration.
 
 ## Key Use Cases
 
-The strongest fits are Short synchronized audiovisual concept clips; LoRA-tuned branded video experiments. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use LTX-2 for short concept videos where dialogue, ambience, or effects must stay synchronized with motion. The LoRA path is appropriate for testing a visual or audiovisual house style, while the API provides a lower-friction comparison point before provisioning local GPU inference.
 
 ## Strengths
 
-Native synchronized sound, open training hooks, and both local-package and API paths make LTX-2 unusually complete for audiovisual prototyping.
+LTX-2 is a DiT-based audiovisual foundation model with native synchronized sound, open inference code, and an official LoRA training path. The combination of local package, hosted API, and adapter workflow is unusually practical for experimenting with audio-video generation.
 
 ## Limitations
 
@@ -100,7 +101,7 @@ Weights are gated and the license is custom/Other, so access and commercial-use 
 
 ## Relation to the Arsenal
 
-LTX-2 sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+LTX-2 complements the Arsenal's multimodal and vision-generation entries and competes with hosted video-generation APIs. It is upstream of creative applications and media pipelines, while its custom license, gated weights, and GPU requirements keep it distinct from simple open image-generation libraries.
 
 ## Resources
 

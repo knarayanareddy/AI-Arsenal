@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Full-stack speculative-decoding draft-model training and evaluation codebase"
+  - "Upstream checkpoint source for faster LLM inference engines"
 best_for:
   - "Training draft models for faster LLM decoding"
   - "Reproducing speculative-decoding algorithm comparisons"
@@ -70,7 +71,7 @@ DeepSpec focuses on the less visible model-training side of speculative decoding
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. DeepSpec is especially useful because reproducing speculative-decoding experiments.
+DeepSpec earns a slot because it covers the full experimental path for speculative decoding: data preparation, draft-model training, released checkpoints, and acceptance evaluation. Supporting DSpark, DFlash, and Eagle3-style approaches makes it a useful bridge between research papers and inference-engine integration.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ DeepSpec complements inference engines that implement speculative decoding and c
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For DeepSpec, consult the GitHub entry first.
+Install the requirements with `python -m pip install -r requirements.txt`, prepare target outputs using an inference engine, and select a configuration under `config/`. Run `train.sh` with the visible GPUs available, then use `eval.sh` with the target model and draft checkpoint on the listed benchmark datasets.
 
 ## Key Use Cases
 
-The strongest fits are Reproducing speculative-decoding experiments; Domain-adapting a draft checkpoint to a target LLM. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use DeepSpec to reproduce speculative-decoding comparisons, train a draft model for a specific Qwen or Gemma target, or measure acceptance on coding and math workloads before deploying a faster serving path. Re-train when target reasoning mode or domain prompts differ from the released setup.
 
 ## Strengths
 
-End-to-end data, training, checkpoint, and acceptance-rate evaluation workflows make speculative decoding experimentally reproducible.
+The repository includes data scripts, configurable multi-GPU training, DSpark/DFlash/Eagle3 draft implementations, checkpoint output conventions, and evaluation over GSM8K, HumanEval, MBPP, LiveCodeBench, and other tasks. That coverage exposes the acceptance-rate trade-off rather than only reporting a decoding idea.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ The default setup assumes eight GPUs and a carefully matched target/draft pair; 
 
 ## Relation to the Arsenal
 
-DeepSpec sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+DeepSpec complements vLLM, SGLang, and other inference engines that consume draft checkpoints, while competing with SpecForge-style training stacks. It belongs upstream of serving in training and alignment; target-model scheduling, batching, and API operation remain inference concerns.
 
 ## Resources
 

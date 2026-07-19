@@ -55,7 +55,8 @@ health_signals:
   - "community-driven"
   - "experimental"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Pure-Rust GGUF local inference server with OpenAI-compatible API"
+  - "Portable CPU/WebGPU endpoint for edge and desktop applications"
 best_for:
   - "Embedding local GGUF inference in Rust services"
   - "Running an OpenAI-compatible endpoint on CPU or WebGPU"
@@ -71,7 +72,7 @@ Shimmy targets developers who want local model inference without bringing a Pyth
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Shimmy is especially useful because private local inference in rust applications.
+Shimmy earns a slot for taking a narrow but valuable deployment position: a local OpenAI-compatible endpoint implemented entirely in Rust. GGUF-native loading and WebGPU support let Rust applications and edge devices avoid a Python service or a separate llama.cpp dependency.
 
 ## Architecture
 
@@ -83,15 +84,15 @@ Shimmy complements llama.cpp, Ollama, and larger engines such as vLLM while comp
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Shimmy, consult the GitHub entry first.
+Install the Rust binary or build Shimmy from the repository, obtain a compatible GGUF model, and launch the local server with the documented model path and host options. Point an OpenAI SDK at the endpoint, then compare WebGPU and CPU latency, context limits, and streaming behavior for the selected model.
 
 ## Key Use Cases
 
-The strongest fits are Private local inference in Rust applications; Small edge or desktop model servers. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use Shimmy to embed local model inference in a Rust desktop or edge application, expose a private OpenAI-style endpoint on a developer workstation, or test GGUF models without operating a larger serving cluster. It is best evaluated with the exact model architecture and hardware planned for deployment.
 
 ## Strengths
 
-Pure Rust, GGUF focus, WebGPU support, and an OpenAI-compatible endpoint reduce integration friction for self-hosted inference.
+The pure-Rust implementation removes Python and llama.cpp runtime dependencies, while GGUF support and WebGPU broaden packaging options. OpenAI API compatibility makes existing client code and agent integrations reusable for common chat and completion flows.
 
 ## Limitations
 
@@ -99,7 +100,7 @@ A solo-maintainer, sponsor-funded project has a different support and release ri
 
 ## Relation to the Arsenal
 
-Shimmy sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Shimmy complements Ollama, llama.cpp, and high-throughput engines such as vLLM, competing primarily on binary simplicity and edge portability rather than fleet throughput. It belongs in inference engines and can serve the model and agent entries above it without becoming a gateway or scheduler.
 
 ## Resources
 

@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Text-space optimizer for reusable skills on frozen LLM agents"
+  - "Prompt-level alternative to weight updates and conventional fine-tuning"
 best_for:
   - "Optimizing prompts and skills without weight updates"
   - "Studying trajectory-based agent improvement"
@@ -70,7 +71,7 @@ SkillOpt reframes agent improvement as optimization in text space. Instead of fi
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. SkillOpt is especially useful because reusable skill optimization for frozen llms.
+SkillOpt deserves a slot because it improves reusable agent instructions without changing the underlying model weights. Its trajectory-feedback loop exposes training-like epochs and batch controls in text space, offering a practical research path when teams can edit skills but cannot fine-tune a frozen LLM.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ SkillOpt complements prompt optimizers and traditional fine-tuning while competi
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For SkillOpt, consult the GitHub entry first.
+Clone the repository, install its Python requirements, configure the target frozen LLM and evaluator, and provide a small set of representative task trajectories. Run the documented optimizer example, inspect each proposed skill revision, and evaluate it on held-out tasks before adopting it in an agent.
 
 ## Key Use Cases
 
-The strongest fits are Reusable skill optimization for frozen LLMs; Research on feedback-driven agent learning. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use SkillOpt to refine a repository skill, tool-use instruction, or domain procedure from successful and failed trajectories. It is suited to comparing prompt-level adaptation against weight updates, especially when the same model endpoint must remain unchanged for deployment or governance reasons.
 
 ## Strengths
 
-Avoids weight updates, exposes familiar optimization controls, and makes the learned artifact human-readable and reviewable.
+The learned artifact remains readable natural-language skill text, while the optimizer provides epochs, batch-size, and learning-rate-like controls without GPU weight updates. Trajectory feedback and an explicit rubric make the improvement loop inspectable rather than hiding changes inside model parameters.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ Text-space optimization can overfit a rubric, amplify evaluator bias, or produce
 
 ## Relation to the Arsenal
 
-SkillOpt sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+SkillOpt complements prompt optimizers, evaluation judges, and OpenEnv-style environments, while offering an alternative to LoRA or full fine-tuning. It sits in training and alignment above the agent runtime; its results still depend on trajectory quality, evaluator bias, and provider behavior.
 
 ## Resources
 

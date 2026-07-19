@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "ADB-controlled Android phone-agent framework built on AutoGLM"
+  - "Reference for supervised multimodal mobile automation and takeover"
 best_for:
   - "Android automation research with visual screen understanding"
   - "Human-supervised phone-agent prototypes"
@@ -70,7 +71,7 @@ Open-AutoGLM packages a phone agent around AutoGLM-Phone-9B models: a natural-la
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Open-AutoGLM is especially useful because supervised android ui-agent research.
+Open-AutoGLM earns inclusion as a concrete phone-agent reference that combines AutoGLM perception with real Android control through ADB. Its sensitive-action confirmation and human takeover paths acknowledge the operational risks that are often omitted from screenshot-only agent demos.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ Open-AutoGLM complements UI automation SDKs such as Midscene.js and competes wit
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Open-AutoGLM, consult the GitHub entry first.
+Prepare Python 3.10 or newer, install Android platform-tools and an Android 7+ device with USB debugging, then install the repository dependencies. Download AutoGLM-Phone-9B or its multilingual variant, verify `adb devices`, and run the supplied phone-agent command on a dedicated test phone.
 
 ## Key Use Cases
 
-The strongest fits are Supervised Android UI-agent research; Testing visual planning on a dedicated device. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it for supervised Android UI automation experiments such as opening an app, searching, or navigating a form. Researchers can compare screen perception and planning across Chinese and multilingual model variants, while human takeover handles login, CAPTCHA, and other interruption points.
 
 ## Strengths
 
-Combines real-device ADB control, VLM perception, planning, confirmation, and human takeover in an accessible reference implementation.
+The framework combines VLM screen perception, natural-language planning, ADB action execution, remote debugging, sensitive-operation confirmation, and manual takeover. It also documents integration with Midscene.js and provides distinct Chinese and multilingual phone checkpoints.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ The repository is research/learning-only, stale by the catalog date, and mobile 
 
 ## Relation to the Arsenal
 
-Open-AutoGLM sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Open-AutoGLM complements Midscene.js and mobile-agent projects in the Arsenal, while competing with proprietary phone automation systems. It belongs at the agent-system layer above ADB and VLM checkpoints; device permissions, account security, and policy enforcement remain external.
 
 ## Resources
 

@@ -52,7 +52,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Low-resource and multilingual ASR foundation for 1,600-plus languages"
+  - "Research baseline for zero-shot language expansion"
 best_for:
   - "Transcribing underserved languages and dialects"
   - "Researching low-resource ASR adaptation"
@@ -68,7 +69,7 @@ Omnilingual ASR targets the long tail of speech recognition: more than 1,600 lan
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Omnilingual ASR is especially useful because low-resource language transcription studies.
+Omnilingual ASR earns a slot for addressing the long tail of speech recognition rather than optimizing only the most common languages. Its release combines a 1,600-plus-language ambition, zero-shot expansion from a few paired examples, and both CTC and LLM-ASR model families.
 
 ## Architecture
 
@@ -80,15 +81,15 @@ Omnilingual ASR complements commercial speech APIs and established multilingual 
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Omnilingual ASR, consult the GitHub entry first.
+Install the repository's Python dependencies and begin with the hosted Omnilingual transcription Space or the smallest local checkpoint. For experiments, download the model and corpus resources linked in the README, then compare character error rate by language before selecting a 300M-to-7B family member.
 
 ## Key Use Cases
 
-The strongest fits are Low-resource language transcription studies; Language coverage experiments for global voice products. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it to test transcription for languages absent from ordinary commercial ASR catalogs or to bootstrap a low-resource language study from a small paired sample. It is also valuable for measuring language coverage and CER across a multilingual product before committing to per-language model work.
 
 ## Strengths
 
-Unusually broad language coverage, few-shot extensibility, and both CTC and LLM-ASR families make it a strong research reference for inclusive speech technology.
+The project covers more than 1,600 languages, includes hundreds with little prior ASR support, and offers both CTC and LLM-ASR approaches. The few-shot language-addition story and released corpus make it useful as a research baseline, not merely a hosted demo.
 
 ## Limitations
 
@@ -96,7 +97,7 @@ The repository is not actively maintained by the catalog's date, and the license
 
 ## Relation to the Arsenal
 
-Omnilingual ASR sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Omnilingual ASR complements Whisper, FunASR, and other speech entries by prioritizing language breadth and adaptation. It belongs in the foundation-model layer and feeds transcription or retrieval systems; diarization, punctuation, translation, and production monitoring remain separate Arsenal concerns.
 
 ## Resources
 

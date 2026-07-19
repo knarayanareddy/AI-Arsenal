@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "research-origin"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Autonomous ML-engineer agent connecting research, training, inference, and Hub publishing"
+  - "smolagents reference for end-to-end ML workflow automation"
 best_for:
   - "Automating reproducible ML experiment loops"
   - "Learning how agents connect papers, training, and model publishing"
@@ -70,7 +71,7 @@ ml-intern is an agentic ML workflow rather than a single training script: it can
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. ml-intern is especially useful because agent-driven ml experiment prototypes.
+ml-intern earns a slot because it demonstrates an agent that can span paper reading, experiment execution, model training, and Hub publication. Built on smolagents and backed by Hugging Face Inference Providers, it makes the research-to-checkpoint loop concrete while still allowing local OpenAI-compatible servers.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ ml-intern complements experiment trackers, training frameworks, and model regist
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For ml-intern, consult the GitHub entry first.
+Install the `ml-intern` CLI, set an `HF_TOKEN` authorized for Inference Providers, and run a small prompt such as `ml-intern "fine-tune llama on my dataset"`. For local inference, start an Ollama or vLLM endpoint and select it with `--model`; use `--sandbox-tools` when opting into HF Space sandbox tools.
 
 ## Key Use Cases
 
-The strongest fits are Agent-driven ML experiment prototypes; Paper-to-checkpoint workflows in a sandbox. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use it to turn a paper or training request into a supervised experiment on controlled data, compare hosted and local model providers, or prototype a path from training to a Hugging Face Hub checkpoint. Keep GPU allocation, dataset access, and publishing behind explicit approvals.
 
 ## Strengths
 
-Connects research reading, training actions, inference providers, local endpoints, and Hub publishing in one inspectable smolagents workflow.
+The smolagents-based workflow can read papers and docs, invoke training tools, use HF Inference Providers, connect to Ollama/vLLM-compatible endpoints, and ship artifacts to the Hub. Both hosted and local model paths are documented rather than implied.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ Autonomous training can consume substantial GPU time, publish flawed checkpoints
 
 ## Relation to the Arsenal
 
-ml-intern sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+ml-intern complements OpenEnv, training frameworks, and model-registry entries, while overlapping with general coding agents configured for ML. It belongs in agent systems as a research-to-delivery harness, not as a replacement for cluster scheduling, dataset lineage, or experiment tracking.
 
 ## Resources
 

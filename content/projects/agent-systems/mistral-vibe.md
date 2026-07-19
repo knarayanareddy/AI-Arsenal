@@ -54,7 +54,8 @@ health_signals:
   - "org-backed"
   - "actively-maintained"
 ecosystem_role:
-  - "Provides a focused building block for downstream AI workflows"
+  - "Mistral open-source CLI coding assistant with skills and subagents"
+  - "Terminal alternative for delegated repository work and voice interaction"
 best_for:
   - "Terminal coding assistance with delegated subagents"
   - "Exploring reusable skills for repository work"
@@ -70,7 +71,7 @@ Mistral Vibe brings an interactive coding-agent experience to a Python CLI, emph
 
 ## Why it's in the Arsenal
 
-This entry adds a concrete, currently relevant building block to the Arsenal: its README exposes a runnable workflow rather than only a paper, while its open repository makes the integration boundary inspectable for engineers. Mistral Vibe is especially useful because interactive terminal coding assistance.
+Mistral Vibe earns a place as an open CLI coding assistant that exposes subagents, delegated tasks, a skills system, and voice interaction in one operator-facing workflow. Apache-2.0 licensing and a PyPI distribution make it a useful counterpart to hosted terminal agents for teams evaluating Mistral's coding stack.
 
 ## Architecture
 
@@ -82,15 +83,15 @@ Mistral Vibe competes with terminal assistants such as Claude Code and Codex whi
 
 ## Getting Started
 
-Begin with the linked README and documentation, install the project in an isolated environment, and reproduce the smallest supplied example before connecting it to production data or an agent loop. For Mistral Vibe, consult the GitHub entry first.
+Install the published Python package from PyPI in an isolated environment, configure the Mistral model endpoint and repository permissions, and launch the Vibe CLI from a test checkout. Exercise one skill and one delegated subtask first, then review shell access and model spend before enabling voice mode.
 
 ## Key Use Cases
 
-The strongest fits are Interactive terminal coding assistance; Skill-based delegation across repository tasks. These scenarios keep the project's intended interface visible and avoid implying capabilities that the README does not promise.
+Use Vibe for interactive repository changes, delegating independent investigation tasks, and packaging recurring coding guidance as reusable skills. Voice mode can support hands-busy exploration, but generated commands and edits still need the same review gates as any terminal agent.
 
 ## Strengths
 
-Open Apache-2.0 CLI, subagents, skills, task delegation, and voice interaction offer a distinctive operator-facing coding workflow.
+The CLI combines a skills system with subagent delegation instead of relying on one undifferentiated conversation. Apache-2.0 source, Python packaging, and voice mode give developers both inspectability and a broader interaction surface for coding work.
 
 ## Limitations
 
@@ -98,7 +99,7 @@ A coding agent can execute unsafe shell commands, expose source code to a provid
 
 ## Relation to the Arsenal
 
-Mistral Vibe sits at a distinct boundary in the catalog: provides a focused building block for downstream ai workflows. Teams can connect its outputs to adjacent model, tool, or workflow entries, while retaining ownership of deployment policy and workload-specific evaluation.
+Mistral Vibe complements Claude Code, Codex, Open Code Review, and local inference endpoints, while competing with terminal coding assistants. It is an operator tool above shell and repository access, not a CI reviewer, sandbox, or model-serving engine.
 
 ## Resources
 
