@@ -6,18 +6,21 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-07-12 |
-| [by job](./by-job/) | 14 entries | 2026-07-12 |
-| [by stack](./by-stack/) | 8 entries | 2026-07-12 |
-| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-12 |
-| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-12 |
-| [evaluation and observability](./evaluation-and-observability/) | 31 entries | 2026-07-12 |
-| [model layer](./model-layer/) | 32 entries | 2026-07-12 |
-| [orchestration](./orchestration/) | 26 entries | 2026-07-12 |
-| [serving and deployment](./serving-and-deployment/) | 31 entries | 2026-07-12 |
+| [by cost](./by-cost/) | 5 entries | 2026-07-19 |
+| [by job](./by-job/) | 14 entries | 2026-07-19 |
+| [by stack](./by-stack/) | 8 entries | 2026-07-19 |
+| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-19 |
+| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-19 |
+| [evaluation and observability](./evaluation-and-observability/) | 32 entries | 2026-07-19 |
+| [model layer](./model-layer/) | 33 entries | 2026-07-19 |
+| [orchestration](./orchestration/) | 26 entries | 2026-07-19 |
+| [serving and deployment](./serving-and-deployment/) | 32 entries | 2026-07-19 |
 
 ## Recently Added
 
+- [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md)
+- [FastEmbed](./model-layer/fastembed.md)
+- [Inspect Petri](./evaluation-and-observability/inspect-petri.md)
 - [Giskard OSS](./evaluation-and-observability/giskard-oss.md)
 - [ToolHive](./serving-and-deployment/toolhive.md)
 - [Hugging Face Accelerate](./model-layer/accelerate.md)
@@ -25,9 +28,6 @@
 - [Agent Skills (Addy Osmani)](./dx-and-tooling/addyosmani-agent-skills.md)
 - [AgentOps](./evaluation-and-observability/agentops.md)
 - [Agno](./orchestration/agno.md)
-- [Aider](./dx-and-tooling/aider.md)
-- [Airbyte](./data-ingestion/airbyte.md)
-- [any-agent](./orchestration/any-agent.md)
 
 ## Most Popular
 
@@ -43,6 +43,7 @@ _No star-tracked entries yet._
 - [AgentOps](./evaluation-and-observability/agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
 - [Agno](./orchestration/agno.md) — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
 - [AGNT.Hub](./orchestration/agnt-hub.md) — Build and manage secure, private AI agents with custom skills and policies
+- [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md) — An Envoy Gateway extension for routing and governing traffic to generative AI services
 - [Aider](./dx-and-tooling/aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
 - [Airbyte](./data-ingestion/airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
 - [Apache Airflow](./orchestration/airflow.md) — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
@@ -100,6 +101,7 @@ _No star-tracked entries yet._
 - [Exa](./data-ingestion/exa.md) — Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity ("find similar pages") endpoints
 - [FAISS](./data-ingestion/faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
 - [FastAPI](./serving-and-deployment/fastapi.md) — Python web framework for building APIs around AI services and model workflows
+- [FastEmbed](./model-layer/fastembed.md) — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
 - [Fine Tuning Tools](./by-job/fine-tuning.md) — Curated tools for fine tuning workflows in AI engineering
 - [Firecrawl](./data-ingestion/firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
 - [Fireworks AI](./serving-and-deployment/fireworks-ai.md) — A managed platform for fast inference and fine-tuning of open models
@@ -127,6 +129,7 @@ _No star-tracked entries yet._
 - [Ideogram](./model-layer/ideogram.md) — AI image generation with reliable text rendering in outputs
 - [Ideogram AI](./model-layer/ideogram-ai.md) — AI image generation platform with reliable text rendering and broad style coverage
 - [Inspect (UK AI Safety Institute)](./evaluation-and-observability/inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
+- [Inspect Petri](./evaluation-and-observability/inspect-petri.md) — An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior
 - [Instructor](./dx-and-tooling/instructor.md) — A library for extracting typed structured outputs from language models
 - [Jan](./dx-and-tooling/jan.md) — Open-source, offline-first ChatGPT alternative desktop app powered by llama.cpp
 - [Jina AI Reader](./data-ingestion/jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown

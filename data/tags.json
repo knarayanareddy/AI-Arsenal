@@ -1,18 +1,18 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-12T16:23:11.977Z",
+  "generated_at": "2026-07-19T21:06:25.948Z",
   "tags": [
     {
       "id": "agents",
       "label": "Agents",
-      "count": 207,
+      "count": 210,
       "types": {
         "tip": 23,
-        "tool": 52,
+        "tool": 53,
         "build-example": 3,
         "guide": 7,
         "project": 72,
-        "benchmark": 9,
+        "benchmark": 11,
         "paper": 30,
         "architecture": 8,
         "person": 3
@@ -28,6 +28,8 @@
         "agent-reach",
         "agent-skills-ecosystem",
         "agent-skills-overview",
+        "agentbench",
+        "agentdojo",
         "agentharm",
         "agentops",
         "agentscope",
@@ -100,6 +102,7 @@
         "huang-2026-regression-accumulation",
         "insforge",
         "inspect-ai",
+        "inspect-petri",
         "intermediate-multi-tool-agent",
         "ji-2026-mragent",
         "jimenez-2023-swe-bench",
@@ -230,14 +233,14 @@
     {
       "id": "alignment",
       "label": "Alignment",
-      "count": 21,
+      "count": 22,
       "types": {
         "guide": 1,
         "person": 4,
         "paper": 12,
+        "tool": 2,
         "project": 2,
-        "benchmark": 1,
-        "tool": 1
+        "benchmark": 1
       },
       "entries": [
         "alignment-and-rlhf",
@@ -247,6 +250,7 @@
         "dario-amodei",
         "ethayarajh-2024-kto",
         "hong-2024-orpo",
+        "inspect-petri",
         "lee-2023-rlaif",
         "lilian-weng",
         "meng-2024-simpo",
@@ -337,16 +341,18 @@
     {
       "id": "benchmark",
       "label": "Benchmark",
-      "count": 56,
+      "count": 58,
       "types": {
         "digest": 1,
-        "benchmark": 38,
+        "benchmark": 40,
         "paper": 13,
         "guide": 3,
         "project": 1
       },
       "entries": [
         "2026-07",
+        "agentbench",
+        "agentdojo",
         "agentharm",
         "aider-polyglot",
         "arc-agi",
@@ -460,15 +466,16 @@
     {
       "id": "cloud",
       "label": "Cloud",
-      "count": 57,
+      "count": 58,
       "types": {
         "project": 13,
-        "tool": 38,
+        "tool": 39,
         "architecture": 5,
         "person": 1
       },
       "entries": [
         "agenta",
+        "ai-gateway",
         "airbyte",
         "airflow",
         "anyscale",
@@ -758,13 +765,13 @@
     {
       "id": "efficiency",
       "label": "Efficiency",
-      "count": 78,
+      "count": 79,
       "types": {
         "paper": 20,
         "guide": 4,
         "tip": 22,
         "project": 19,
-        "tool": 10,
+        "tool": 11,
         "architecture": 3
       },
       "entries": [
@@ -793,6 +800,7 @@
         "enable-prefix-caching-for-shared-system-prompts",
         "faiss",
         "falcon-3",
+        "fastembed",
         "fedus-2021-switch-transformer",
         "frantar-2022-gptq",
         "genai-processors",
@@ -851,13 +859,13 @@
     {
       "id": "embeddings",
       "label": "Embeddings",
-      "count": 69,
+      "count": 70,
       "types": {
         "tip": 12,
         "project": 29,
         "guide": 2,
         "architecture": 6,
-        "tool": 10,
+        "tool": 11,
         "paper": 9,
         "person": 1
       },
@@ -889,6 +897,7 @@
         "evaluate-embedding-models-before-rechunking",
         "exa",
         "faiss",
+        "fastembed",
         "gptcache",
         "internvideo",
         "izacard-2021-contriever",
@@ -936,15 +945,15 @@
     {
       "id": "evaluation",
       "label": "Evaluation",
-      "count": 206,
+      "count": 209,
       "types": {
         "digest": 1,
-        "tool": 33,
+        "tool": 34,
         "tip": 36,
         "build-example": 1,
         "guide": 10,
         "project": 31,
-        "benchmark": 50,
+        "benchmark": 52,
         "person": 9,
         "paper": 28,
         "architecture": 7
@@ -956,6 +965,8 @@
         "advanced-self-correcting-rag",
         "agent-builder-role",
         "agenta",
+        "agentbench",
+        "agentdojo",
         "agentharm",
         "ai-engineer",
         "ai-engineer-role",
@@ -1027,6 +1038,7 @@
         "humanloop",
         "ifeval",
         "inspect-ai",
+        "inspect-petri",
         "instruct-the-model-to-answer-only-from-retrieved-context",
         "jailbreakbench",
         "jason-liu",
@@ -1405,11 +1417,11 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 174,
+      "count": 176,
       "types": {
         "tip": 31,
+        "tool": 29,
         "project": 83,
-        "tool": 27,
         "paper": 15,
         "architecture": 11,
         "guide": 6,
@@ -1417,6 +1429,7 @@
       },
       "entries": [
         "add-provider-timeout-and-retry-policies",
+        "ai-gateway",
         "aibrix",
         "anyscale",
         "baseten",
@@ -1456,6 +1469,7 @@
         "exo",
         "f5-tts",
         "falcon-3",
+        "fastembed",
         "faster-whisper",
         "fastvideo",
         "fireworks-ai",
@@ -1595,13 +1609,14 @@
     {
       "id": "kubernetes",
       "label": "Kubernetes",
-      "count": 8,
+      "count": 9,
       "types": {
+        "tool": 4,
         "project": 4,
-        "architecture": 1,
-        "tool": 3
+        "architecture": 1
       },
       "entries": [
+        "ai-gateway",
         "aibrix",
         "dynamo",
         "enterprise-scale",
@@ -2032,12 +2047,12 @@
     {
       "id": "local",
       "label": "Local",
-      "count": 42,
+      "count": 43,
       "types": {
         "tip": 7,
         "architecture": 3,
         "project": 24,
-        "tool": 6,
+        "tool": 7,
         "guide": 1,
         "build-example": 1
       },
@@ -2051,6 +2066,7 @@
         "exllamav2",
         "exo",
         "falcon-3",
+        "fastembed",
         "gemma",
         "gemma-3",
         "gradio",
@@ -2435,6 +2451,17 @@
         "use-golden-questions-for-every-bug-fix",
         "version-datasets-and-adapters-together",
         "wandb-weave"
+      ]
+    },
+    {
+      "id": "onnx",
+      "label": "Onnx",
+      "count": 1,
+      "types": {
+        "tool": 1
+      },
+      "entries": [
+        "fastembed"
       ]
     },
     {
@@ -2861,15 +2888,18 @@
     {
       "id": "research",
       "label": "Research",
-      "count": 34,
+      "count": 37,
       "types": {
+        "benchmark": 2,
         "paper": 16,
         "project": 7,
         "guide": 4,
-        "person": 5,
-        "tool": 2
+        "tool": 3,
+        "person": 5
       },
       "entries": [
+        "agentbench",
+        "agentdojo",
         "alayrac-2022-flamingo",
         "belikova-2026-after",
         "camel-ai",
@@ -2879,6 +2909,7 @@
         "emerging-techniques",
         "hendrycks-2020-mmlu",
         "huang-2026-regression-accumulation",
+        "inspect-petri",
         "internvideo",
         "kojima-2022-zero-shot-cot",
         "leung-2026-citation-verifier",
@@ -2909,11 +2940,11 @@
     {
       "id": "retrieval",
       "label": "Retrieval",
-      "count": 121,
+      "count": 122,
       "types": {
         "tip": 24,
         "build-example": 4,
-        "tool": 21,
+        "tool": 22,
         "paper": 21,
         "benchmark": 7,
         "guide": 3,
@@ -2956,6 +2987,7 @@
         "evaluate-embedding-models-before-rechunking",
         "exa",
         "faiss",
+        "fastembed",
         "fastgpt",
         "frames",
         "gao-2022-hyde",
@@ -3081,13 +3113,14 @@
     {
       "id": "routing",
       "label": "Routing",
-      "count": 10,
+      "count": 11,
       "types": {
+        "tool": 3,
         "project": 4,
-        "tool": 2,
         "tip": 4
       },
       "entries": [
+        "ai-gateway",
         "aibrix",
         "cloudskill",
         "dynamo",
@@ -3103,18 +3136,19 @@
     {
       "id": "security",
       "label": "Security",
-      "count": 51,
+      "count": 53,
       "types": {
-        "tool": 16,
+        "tool": 17,
+        "benchmark": 6,
         "tip": 18,
         "person": 3,
         "architecture": 2,
-        "benchmark": 5,
         "paper": 4,
         "project": 3
       },
       "entries": [
         "agent-browser-shield",
+        "agentdojo",
         "agnt-hub",
         "allowlist-tools-per-agent-role",
         "arvind-narayanan",
@@ -3131,6 +3165,7 @@
         "giskard-oss",
         "guardrails-ai",
         "harmbench",
+        "inspect-petri",
         "jailbreakbench",
         "keep-a-kill-switch-for-agent-actions",
         "li-2026-adr-agentic-security",
@@ -3170,16 +3205,17 @@
     {
       "id": "self-hosted",
       "label": "Self Hosted",
-      "count": 182,
+      "count": 183,
       "types": {
         "project": 143,
+        "tool": 26,
         "architecture": 8,
-        "tool": 25,
         "paper": 2,
         "tip": 4
       },
       "entries": [
         "agent-lightning",
+        "ai-gateway",
         "aibrix",
         "amphion",
         "anything-llm",
@@ -3366,15 +3402,16 @@
     {
       "id": "serverless",
       "label": "Serverless",
-      "count": 8,
+      "count": 9,
       "types": {
         "architecture": 1,
-        "tool": 7
+        "tool": 8
       },
       "entries": [
         "choose-deployment-target",
         "cloudflare-workers-ai",
         "fastapi",
+        "fastembed",
         "fly-io",
         "modal",
         "railway",
@@ -3508,16 +3545,16 @@
     {
       "id": "tool-use",
       "label": "Tool Use",
-      "count": 86,
+      "count": 89,
       "types": {
         "tip": 22,
         "guide": 6,
-        "tool": 16,
+        "tool": 17,
+        "benchmark": 3,
         "project": 31,
         "paper": 6,
         "architecture": 2,
-        "build-example": 2,
-        "benchmark": 1
+        "build-example": 2
       },
       "entries": [
         "add-a-max-step-budget-to-every-agent",
@@ -3527,6 +3564,8 @@
         "agent-reach",
         "agent-skills-ecosystem",
         "agent-skills-overview",
+        "agentbench",
+        "agentdojo",
         "agentscope",
         "allowlist-tools-per-agent-role",
         "autogen",
@@ -3561,6 +3600,7 @@
         "google-adk",
         "goose",
         "hermes-agent",
+        "inspect-petri",
         "intermediate-multi-tool-agent",
         "langgraph",
         "liu-2026-mcp-execution-control",

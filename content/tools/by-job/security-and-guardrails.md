@@ -138,6 +138,7 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 | [Giskard](../evaluation-and-observability/giskard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [Giskard OSS](../evaluation-and-observability/giskard-oss.md) | evaluation and observability | open-source | No | Yes | Yes | python | watching |
 | [Guardrails AI](../evaluation-and-observability/guardrails-ai.md) | evaluation and observability | freemium | Yes | Yes | Yes | python | recommended |
+| [Inspect Petri](../evaluation-and-observability/inspect-petri.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | watching |
 | [Llama Guard](../evaluation-and-observability/llamaguard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |
 | [LLM Guard](../evaluation-and-observability/llm-guard.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | solid-choice |
 | [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | open-source | Yes | Yes | Yes | python | recommended |

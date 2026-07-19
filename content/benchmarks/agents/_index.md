@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [AgentBench](./agentbench.md)
 - [BrowseComp](./browsecomp.md)
 - [GAIA](./gaia.md)
 - [Mind2Web](./mind2web.md)
@@ -23,6 +24,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [AgentBench](./agentbench.md) — 
 - [BrowseComp](./browsecomp.md) — 
 - [GAIA](./gaia.md) — 
 - [Mind2Web](./mind2web.md) — 

@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [Inspect Petri](./inspect-petri.md)
 - [Giskard OSS](./giskard-oss.md)
 - [AgentOps](./agentops.md)
 - [Deepchecks](./deepchecks.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Inspect (UK AI Safety Institute)](./inspect-ai.md)
 - [LangWatch](./langwatch.md)
 - [LLM Guard](./llm-guard.md)
-- [LM Evaluation Harness (EleutherAI)](./lm-evaluation-harness.md)
 
 ### Most Popular
 
@@ -57,6 +57,7 @@ _No star-tracked entries yet._
 - [Guardrails AI](./guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Humanloop](./humanloop.md) — A platform for prompt management, evaluation, and product feedback workflows
 - [Inspect (UK AI Safety Institute)](./inspect-ai.md) — The UK AI Safety Institute's evaluation framework — a Python-first way to build agentic, tool-using, and graded evals with a built-in log viewer
+- [Inspect Petri](./inspect-petri.md) — An Inspect AI auditing agent for probing alignment failures, reward hacking, and unsafe model behavior
 - [LangSmith](./langsmith.md) — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - [LangWatch](./langwatch.md) — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
 - [Llama Guard](./llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs

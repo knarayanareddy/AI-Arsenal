@@ -90,11 +90,11 @@ Current generated stats:
 | Type | Count |
 |---|---:|
 | Projects | 282 |
-| Tools | 199 |
+| Tools | 202 |
 | Papers | 126 |
 | Tips | 171 |
 | Guides | 59 |
-| Benchmarks | 50 |
+| Benchmarks | 52 |
 | People | 25 |
 | Community | 32 |
 | Architectures | 29 |
@@ -102,7 +102,7 @@ Current generated stats:
 | Observability | 16 |
 | Trends | 4 |
 | Digests | 1 |
-| Total content entries | 1002 |
+| Total content entries | 1007 |
 
 Browse the generated statistics in [`data/stats.json`](./data/stats.json).
 
@@ -550,4 +550,3 @@ Because it creates git history noise and merge conflicts at scale. Generated fil
 ## License
 
 MIT. See [`LICENSE`](./LICENSE).
-
