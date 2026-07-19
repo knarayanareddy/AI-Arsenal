@@ -33,6 +33,7 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [Shimmy](./shimmy.md)
 - [FastVideo](./fastvideo.md)
 - [GPTCache](./gptcache.md)
 - [Hugging Face Optimum](./hf-optimum.md)
@@ -42,7 +43,6 @@ Before selecting an inference engine:
 - [Piper](./piper-tts.md)
 - [Semantic Router (vLLM)](./semantic-router.md)
 - [sherpa-onnx](./sherpa-onnx.md)
-- [SpeechRecognition (Python)](./speechrecognition.md)
 
 ### Most Popular
 
@@ -87,6 +87,7 @@ Before selecting an inference engine:
 - [Semantic Router (vLLM)](./semantic-router.md) — An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM
 - [SGLang](./sglang.md) — High-performance serving framework for large language and multimodal models
 - [sherpa-onnx](./sherpa-onnx.md) — An offline, on-device speech toolkit (STT, TTS, diarization, VAD, enhancement) built on next-gen Kaldi and onnxruntime with bindings for a dozen languages and
+- [Shimmy](./shimmy.md) — A pure-Rust, OpenAI-API-compatible local inference server that is GGUF-native, supports WebGPU, and avoids Python or llama.cpp dependencies
 - [vLLM Speculators](./speculators.md) — Unified library for building, evaluating, and storing speculative-decoding algorithms for LLM inference
 - [SpeechRecognition (Python)](./speechrecognition.md) — A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk
 - [TensorRT-LLM](./tensorrt-llm.md) — NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput

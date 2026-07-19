@@ -33,16 +33,16 @@ Before selecting a foundation model:
 
 ### Recently Added
 
-- [Bark](./bark.md)
-- [ChatTTS](./chattts.md)
-- [DeepSeek-VL](./deepseek-vl.md)
-- [Dia](./dia-tts.md)
-- [EmotiVoice](./emotivoice.md)
-- [Fish Speech](./fish-speech.md)
-- [Grounding DINO](./grounding-dino.md)
-- [Hunyuan3D-2](./hunyuan3d-2.md)
-- [HunyuanVideo](./hunyuanvideo.md)
-- [IndexTTS](./index-tts.md)
+- [DeepSeek-OCR](./deepseek-ocr.md)
+- [Fara](./fara.md)
+- [GLM-5](./glm-5.md)
+- [GLM-OCR](./glm-ocr.md)
+- [LTX-2](./ltx-2.md)
+- [Omnilingual ASR](./omnilingual-asr.md)
+- [Qwen3-Omni](./qwen3-omni.md)
+- [Qwen3-TTS](./qwen3-tts.md)
+- [SAM 3D Objects](./sam-3d-objects.md)
+- [SAM-Audio](./sam-audio.md)
 
 ### Most Popular
 
@@ -67,17 +67,21 @@ Before selecting a foundation model:
 - [CLIP (OpenAI)](./clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
 - [Command R+](./command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [CosyVoice](./cosyvoice.md) — Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
+- [DeepSeek-OCR](./deepseek-ocr.md) — DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
 - [DeepSeek-VL](./deepseek-vl.md) — DeepSeek's open vision-language model family for real-world multimodal understanding, combining a hybrid vision encoder with an LLM for document, chart
 - [Dia](./dia-tts.md) — A 1.6B-parameter open dialogue text-to-speech model from Nari Labs that generates multi-speaker conversational audio, including non-verbal cues
 - [EmotiVoice](./emotivoice.md) — A multi-voice, prompt-controlled text-to-speech engine from NetEase Youdao that synthesizes English and Chinese speech with explicit emotion control via style
 - [F5-TTS](./f5-tts.md) — Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
 - [Falcon 3](./falcon-3.md) — TII open model family with compact 1B to 10B text-only variants for local deployment
+- [Fara](./fara.md) — Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark
 - [Fish Speech](./fish-speech.md) — An open text-to-speech model family using a dual autoregressive transformer over grouped audio tokens with the Firefly neural codec for fast
 - [FLUX (Black Forest Labs)](./flux.md) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - [Gemma](./gemma.md) — Google open model family designed for efficient language and multimodal applications
 - [Gemma 3](./gemma-3.md) — Google open model family with efficient text and multimodal variants for local and hosted use
 - [GLM-4 / GLM-4.5](./glm-4.md) — Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
+- [GLM-5](./glm-5.md) — Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare
+- [GLM-OCR](./glm-ocr.md) — Compact 0.9B multimodal OCR model from Z.ai (Zhipu) for complex document understanding, built on GLM-V
 - [GPT-SoVITS](./gpt-sovits.md) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
 - [Grounding DINO](./grounding-dino.md) — An open-set object detector that localizes arbitrary objects from free-text prompts by fusing language and vision in a DINO-style detection transformer
 - [Hunyuan3D-2](./hunyuan3d-2.md) — Tencent's open model for generating high-resolution textured 3D assets from images or text using a two-stage shape-then-texture diffusion pipeline
@@ -88,6 +92,7 @@ Before selecting a foundation model:
 - [Kimi K2](./kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Kokoro TTS](./kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
 - [Llama 3.x](./llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
+- [LTX-2](./ltx-2.md) — Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API
 - [LTX-Video](./ltx-video.md) — Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU
 - [MiniCPM-V](./minicpm-v.md) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
 - [Mistral / Mixtral](./mistral-models.md) — Mistral open-weight model family including dense and mixture-of-experts language models
@@ -95,19 +100,25 @@ Before selecting a foundation model:
 - [Moshi](./moshi.md) — Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline
 - [MOSS-TTS](./moss-tts.md) — Open-source speech and sound generation model family for expressive, long-form, multi-speaker, and streaming audio
 - [OLMo](./olmo.md) — AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science
+- [Omnilingual ASR](./omnilingual-asr.md) — Meta's speech recognition family covering more than 1,600 languages, including zero-shot adaptation to languages with few paired examples
 - [Open-Sora](./open-sora.md) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
 - [OpenVoice](./openvoice.md) — An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
 - [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
 - [Qwen](./qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - [Qwen 2.5 / QwQ](./qwen-2-5.md) — Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
+- [Qwen3-Omni](./qwen3-omni.md) — Qwen's end-to-end omni-modal model family that accepts text, images, audio, and video and can return text plus streaming speech
+- [Qwen3-TTS](./qwen3-tts.md) — Alibaba's open-source TTS series for expressive speech synthesis, voice cloning, and voice design across ten languages
 - [Qwen3-VL](./qwen3-vl.md) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
+- [SAM 3D Objects](./sam-3d-objects.md) — Meta's foundation model for reconstructing object shape, texture, and layout in 3D from a single masked image
+- [SAM-Audio](./sam-audio.md) — Meta's promptable audio foundation model for isolating sounds from mixtures with text, visual, or temporal prompts
 - [SAM 2 (Segment Anything Model 2)](./sam2.md) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
 - [Segment Anything (SAM)](./segment-anything.md) — Meta's promptable segmentation foundation model that produces high-quality object masks from point, box, or text-free prompts, with zero-shot generalization
 - [SenseVoice](./sensevoice.md) — A non-autoregressive multilingual speech-understanding model from Alibaba that jointly does ASR, spoken-language identification, emotion recognition
 - [Stability AI Generative Models](./stability-generative-models.md) — Stability AI's official repository for its generative image models including SDXL and Stable Diffusion 3, with training, sampling, and model definitions
 - [StyleTTS 2](./styletts2.md) — A text-to-speech model that reaches human-level naturalness using style diffusion and adversarial training with large speech language models as discriminators
 - [TranslateGemma](./translategemma.md) — Open translation model family built on Gemma 3 supporting 55 languages efficiently
+- [TRELLIS.2](./trellis-2.md) — Microsoft's 4B image-to-3D generative model using a field-free sparse-voxel representation and physically based materials
 - [UniLM](./unilm.md) — Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR
 - [VAR (Visual Autoregressive)](./visual-autoregressive.md) — A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale
 - [VoxCPM](./voxcpm.md) — A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design

@@ -6,15 +6,15 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-07-12 |
-| [by job](./by-job/) | 14 entries | 2026-07-12 |
-| [by stack](./by-stack/) | 8 entries | 2026-07-12 |
-| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-12 |
-| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-12 |
-| [evaluation and observability](./evaluation-and-observability/) | 31 entries | 2026-07-12 |
-| [model layer](./model-layer/) | 32 entries | 2026-07-12 |
-| [orchestration](./orchestration/) | 26 entries | 2026-07-12 |
-| [serving and deployment](./serving-and-deployment/) | 31 entries | 2026-07-12 |
+| [by cost](./by-cost/) | 5 entries | 2026-07-19 |
+| [by job](./by-job/) | 14 entries | 2026-07-19 |
+| [by stack](./by-stack/) | 8 entries | 2026-07-19 |
+| [data ingestion](./data-ingestion/) | 36 entries | 2026-07-19 |
+| [dx and tooling](./dx-and-tooling/) | 43 entries | 2026-07-19 |
+| [evaluation and observability](./evaluation-and-observability/) | 31 entries | 2026-07-19 |
+| [model layer](./model-layer/) | 32 entries | 2026-07-19 |
+| [orchestration](./orchestration/) | 26 entries | 2026-07-19 |
+| [serving and deployment](./serving-and-deployment/) | 31 entries | 2026-07-19 |
 
 ## Recently Added
 
