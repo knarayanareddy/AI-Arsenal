@@ -6,18 +6,22 @@ artifact_type: library
 category: llms
 subcategory: inference-engines
 description: Mozilla project for distributing and running LLMs as a single executable file
-github_url: "https://github.com/mozilla-ai/llamafile"
+github_url: https://github.com/mozilla-ai/llamafile
 license: Apache-2.0 / MIT components
 primary_language: C++
 org_or_maintainer: null
-tags: [llm, inference, local, edge]
+tags:
+  - llm
+  - inference
+  - local
+  - edge
 maturity: production
 cost_model: open-source
-github_stars: 24936
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-09"
-docs_url: "https://docs.mozilla.ai/llamafile"
+github_stars: 25404
+github_stars_last_30d: 468
+trending_score: 52
+last_commit: '2026-07-17'
+docs_url: https://docs.mozilla.ai/llamafile
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,12 +29,17 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [GGUF]
+supported_formats:
+  - GGUF
 api_compatible: openai
 phase: inference-engine
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Mozilla-backed project distributing LLMs as a single portable executable file, built on top of llama.cpp
 best_for:
@@ -46,8 +55,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production evidence found; this is primarily a distribution-convenience project rather than a production-serving engine, so production-proven is not claimed.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

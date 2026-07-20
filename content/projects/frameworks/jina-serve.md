@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "jina-ai"
+org_or_maintainer: jina-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 2
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: jina-serve
-name: "Jina-serve"
+name: Jina-serve
 artifact_type: framework
 category: multimodal
 subcategory: platforms
-description: "A cloud-native framework for building and serving multimodal AI services and pipelines as scalable microservices with gRPC/HTTP/WebSocket APIs and Kubernetes"
+description: A cloud-native framework for building and serving multimodal AI services and pipelines as scalable microservices with gRPC/HTTP/WebSocket APIs and Kubernetes
 github_url: https://github.com/jina-ai/serve
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "inference"
-  - "self-hosted"
+  - multimodal
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 21858
-last_commit: "2025-03-24"
+github_stars: 21860
+last_commit: '2025-03-24'
 docs_url: https://jina.ai/serve
 phase: framework
 domain:
-  - "multimodal"
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
+  - org-backed
 ecosystem_role:
-  - "A framework for composing and serving multimodal model pipelines as cloud-native microservices."
+  - A framework for composing and serving multimodal model pipelines as cloud-native microservices.
 best_for:
-  - "You need to wrap models into scalable microservices with gRPC/HTTP/WebSocket APIs and pipeline them"
-  - "You are serving multimodal (text, image, audio) inference and want built-in scaling and Kubernetes export"
+  - You need to wrap models into scalable microservices with gRPC/HTTP/WebSocket APIs and pipeline them
+  - You are serving multimodal (text, image, audio) inference and want built-in scaling and Kubernetes export
 avoid_if:
-  - "You want a very actively maintained framework, since upstream cadence has slowed since 2025"
-  - "You only need to serve a single model, where a lighter server is simpler"
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-03-24 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; evaluate maintenance for new production use."
+  - You want a very actively maintained framework, since upstream cadence has slowed since 2025
+  - You only need to serve a single model, where a lighter server is simpler
+enrichment_notes: Repository, Apache-2.0 license, and 2025-03-24 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; evaluate maintenance for new production use.
 ---
 
 ## Overview

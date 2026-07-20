@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 264
+trending_score: 51
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,8 +42,8 @@ tags:
   - orchestration
 maturity: beta
 cost_model: open-source
-github_stars: 57230
-last_commit: '2026-07-10'
+github_stars: 57494
+last_commit: '2026-07-17'
 docs_url: https://github.com/MemPalace/mempalace
 phase: agent-system
 domain:

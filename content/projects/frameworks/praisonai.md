@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "MervinPraison"
+org_or_maintainer: MervinPraison
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,52 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 87
+trending_score: 37
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: praisonai
-name: "PraisonAI"
+name: PraisonAI
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML"
+description: Python multi-agent framework for building autonomous agents with built-in memory, RAG, and tool support across many LLM providers, configured in code or YAML
 github_url: https://github.com/MervinPraison/PraisonAI
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "orchestration"
-  - "memory"
-  - "rag"
-  - "tool-use"
-  - "routing"
+  - agents
+  - orchestration
+  - memory
+  - rag
+  - tool-use
+  - routing
 maturity: beta
 cost_model: open-source
-github_stars: 8410
-last_commit: "2026-07-12"
+github_stars: 8497
+last_commit: '2026-07-20'
 docs_url: https://docs.praison.ai
 phase: framework
 domain:
-  - "language"
-  - "reasoning"
+  - language
+  - reasoning
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A multi-agent framework that assembles role-based agents, tasks, memory, and tools with a low-code YAML option and a Python SDK over 100+ model providers."
+  - A multi-agent framework that assembles role-based agents, tasks, memory, and tools with a low-code YAML option and a Python SDK over 100+ model providers.
 best_for:
-  - "You want to stand up multi-agent workflows quickly with built-in memory and RAG and minimal boilerplate."
-  - "You need provider flexibility across many LLMs and a choice between YAML configuration and programmatic control."
+  - You want to stand up multi-agent workflows quickly with built-in memory and RAG and minimal boilerplate.
+  - You need provider flexibility across many LLMs and a choice between YAML configuration and programmatic control.
 avoid_if:
-  - "You need a hardened, single-vendor supported platform with SLAs rather than a fast-moving open framework."
-  - "Your task is a single deterministic call where an agent framework adds needless indirection."
-enrichment_notes: "Official repository, MIT license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Autonomy and self-improvement claims remain draft."
+  - You need a hardened, single-vendor supported platform with SLAs rather than a fast-moving open framework.
+  - Your task is a single deterministic call where an agent framework adds needless indirection.
+enrichment_notes: Official repository, MIT license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Autonomy and self-improvement claims remain draft.
 ---
 
 ## Overview

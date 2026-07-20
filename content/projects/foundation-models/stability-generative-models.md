@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Stability-AI"
+org_or_maintainer: Stability-AI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 13
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: stability-generative-models
-name: "Stability AI Generative Models"
+name: Stability AI Generative Models
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Stability AI's official repository for its generative image models including SDXL and Stable Diffusion 3, with training, sampling, and model definitions"
+description: Stability AI's official repository for its generative image models including SDXL and Stable Diffusion 3, with training, sampling, and model definitions
 github_url: https://github.com/Stability-AI/generative-models
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
-  - "fine-tuning"
+  - multimodal
+  - self-hosted
+  - inference
+  - fine-tuning
 maturity: beta
 cost_model: open-source
-github_stars: 27215
-last_commit: "2025-12-16"
+github_stars: 27228
+last_commit: '2025-12-16'
 docs_url: https://github.com/Stability-AI/generative-models
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "study-and-reference"
-  - "build-on-top"
+  - study-and-reference
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "org-backed"
-  - "community-driven"
+  - research-origin
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The upstream reference implementation and model definitions for Stability's SDXL and SD3 image generators."
+  - The upstream reference implementation and model definitions for Stability's SDXL and SD3 image generators.
 best_for:
-  - "You want the authoritative model definitions and sampling code for SDXL/SD3 rather than a third-party wrapper"
-  - "You are studying or extending Stability's diffusion architectures and training recipes"
+  - You want the authoritative model definitions and sampling code for SDXL/SD3 rather than a third-party wrapper
+  - You are studying or extending Stability's diffusion architectures and training recipes
 avoid_if:
-  - "You want the easiest inference path, where the Diffusers library wraps these models more conveniently"
-  - "Your use is commercial and you have not reviewed the separate model-weight licenses"
-enrichment_notes: "Repository, MIT code license, and 2025-12-16 activity verified via the GitHub API on 2026-07-12. Model weights (SDXL/SD3) carry their own licenses distinct from the MIT code."
+  - You want the easiest inference path, where the Diffusers library wraps these models more conveniently
+  - Your use is commercial and you have not reviewed the separate model-weight licenses
+enrichment_notes: Repository, MIT code license, and 2025-12-16 activity verified via the GitHub API on 2026-07-12. Model weights (SDXL/SD3) carry their own licenses distinct from the MIT code.
 ---
 
 ## Overview

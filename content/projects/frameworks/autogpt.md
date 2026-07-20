@@ -6,25 +6,35 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Autonomous agent platform and classic agent project for accessible AI automation
-github_url: "https://github.com/Significant-Gravitas/AutoGPT"
+github_url: https://github.com/Significant-Gravitas/AutoGPT
 license: MIT + Polyform Shield
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, planning, tool-use, cloud]
+tags:
+  - agents
+  - planning
+  - tool-use
+  - cloud
 maturity: production
 cost_model: open-source
-github_stars: 184931
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://docs.agpt.co/"
+github_stars: 185618
+github_stars_last_30d: 687
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://docs.agpt.co/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Early, highly-visible autonomous-agent platform that popularized the 'autonomous AI agent' concept
 best_for:
@@ -35,17 +45,22 @@ avoid_if:
   - You need the most current agent-architecture patterns (planning, tool-use reliability) — AutoGPT's original 2023 design was more exploratory/experimental than today's more disciplined agent frameworks
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: GitHub releases confirm Significant-Gravitas/AutoGPT is actively shipping platform releases as of May 2026 (autogpt-platform-beta-v0.6.61), addressing UX, credential handling, and security concerns -- this is an actively maintained platform, not the abandoned early-2023 script many associate with the AutoGPT name.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://docs.agpt.co/","date":"2026-06-13","description":"Official docs"}
+  - source: newsletter
+    url: https://docs.agpt.co/
+    date: '2026-06-13'
+    description: Official docs
 featured: false
 status: active
 ---

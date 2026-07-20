@@ -6,46 +6,59 @@ artifact_type: library
 category: voice-audio
 subcategory: libraries
 description: Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
-github_url: "https://github.com/m-bain/whisperX"
+github_url: https://github.com/m-bain/whisperX
 license: BSD-2-Clause
 primary_language: Python
 org_or_maintainer: m-bain
-tags: [voice, inference, data]
+tags:
+  - voice
+  - inference
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 22968
-github_stars_last_30d: 0
+github_stars: 23154
+github_stars_last_30d: 186
 trending_score: 55
-last_commit: "2026-06-26"
-docs_url: "https://github.com/m-bain/whisperX#readme"
+last_commit: '2026-07-13'
+docs_url: https://github.com/m-bain/whisperX#readme
 demo_url: null
-paper_url: "https://arxiv.org/abs/2303.00747"
+paper_url: https://arxiv.org/abs/2303.00747
 paper_id: null
 phase: inference-engine
-domain: [audio]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [research-origin, community-driven, production-proven]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - research-origin
+  - community-driven
+  - production-proven
 ecosystem_role:
-  - "The standard answer to Whisper's two biggest production gaps — imprecise timestamps and no speaker attribution: forced alignment with a phoneme model fixes word timing, pyannote integration adds who-spoke-when, VAD-based chunking enables 70x-realtime batching"
+  - 'The standard answer to Whisper''s two biggest production gaps — imprecise timestamps and no speaker attribution: forced alignment with a phoneme model fixes word timing, pyannote integration adds who-spoke-when, VAD-based chunking enables 70x-realtime batching'
 best_for:
   - You need word-accurate timestamps — subtitles, video editing, audio search, training-data alignment — where Whisper's native segment timestamps (often off by seconds) are unusable
-  - "You need diarized transcripts (meetings, interviews, calls) from one pipeline: transcription + alignment + speaker labels in a single pass"
+  - 'You need diarized transcripts (meetings, interviews, calls) from one pipeline: transcription + alignment + speaker labels in a single pass'
 avoid_if:
   - You only need plain transcripts — faster-whisper alone is simpler and avoids the alignment/diarization model downloads and pyannote's gated-model setup
   - You need streaming/low-latency output — WhisperX is a batch pipeline; its VAD-chunked design assumes you have the whole file
-upstream_dependencies: [faster-whisper]
+upstream_dependencies:
+  - faster-whisper
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (22.9k), BSD-2-Clause, and active maintenance (last push 2026-06-26) verified via the GitHub API on 2026-07-08. The 70x-realtime figure and alignment accuracy are from the WhisperX paper (arXiv:2303.00747, INTERSPEECH 2023) using large-v2 with batching; diarization quality depends on the pyannote model version and is not re-measured here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/m-bain/whisperX","date":"2026-07-08","description":"22.9k stars, research-origin (INTERSPEECH 2023), actively maintained"}
+  - source: github-trending
+    url: https://github.com/m-bain/whisperX
+    date: '2026-07-08'
+    description: 22.9k stars, research-origin (INTERSPEECH 2023), actively maintained
 featured: false
 status: active
 ---

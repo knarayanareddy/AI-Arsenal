@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "zai-org"
+org_or_maintainer: zai-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: open-autoglm
-name: "Open-AutoGLM"
+name: Open-AutoGLM
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "Z.ai's Phone Agent framework that uses AutoGLM, VLM screen perception, planning, and ADB to control Android applications with confirmation and takeover paths"
+description: Z.ai's Phone Agent framework that uses AutoGLM, VLM screen perception, planning, and ADB to control Android applications with confirmation and takeover paths
 github_url: https://github.com/zai-org/Open-AutoGLM
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "agents"
-  - "multimodal"
-  - "vision"
-  - "planning"
-  - "tool-use"
+  - agents
+  - multimodal
+  - vision
+  - planning
+  - tool-use
 maturity: alpha
 cost_model: open-source
-github_stars: 25822
-last_commit: "2026-03-06"
+github_stars: 25827
+last_commit: '2026-03-06'
 docs_url: https://autoglm.z.ai/blog/
 phase: agent-system
 domain:
-  - "multimodal"
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "ADB-controlled Android phone-agent framework built on AutoGLM"
-  - "Reference for supervised multimodal mobile automation and takeover"
+  - ADB-controlled Android phone-agent framework built on AutoGLM
+  - Reference for supervised multimodal mobile automation and takeover
 best_for:
-  - "Android automation research with visual screen understanding"
-  - "Human-supervised phone-agent prototypes"
+  - Android automation research with visual screen understanding
+  - Human-supervised phone-agent prototypes
 avoid_if:
-  - "You need unattended control over banking or sensitive mobile workflows"
-  - "You cannot provision ADB-enabled devices and manual takeover"
-enrichment_notes: "The March 2026 commit is intentionally not labeled actively-maintained; the README limits use to research and learning and includes privacy/legal warnings. Draft pending review."
+  - You need unattended control over banking or sensitive mobile workflows
+  - You cannot provision ADB-enabled devices and manual takeover
+enrichment_notes: The March 2026 commit is intentionally not labeled actively-maintained; the README limits use to research and learning and includes privacy/legal warnings. Draft pending review.
 ---
 
 ## Overview

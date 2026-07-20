@@ -6,27 +6,37 @@ artifact_type: library
 category: rag
 subcategory: advanced-rag
 description: Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
-github_url: "https://github.com/microsoft/graphrag"
+github_url: https://github.com/microsoft/graphrag
 license: MIT
 primary_language: Python
 org_or_maintainer: microsoft
-tags: [rag, graphs, retrieval]
+tags:
+  - rag
+  - graphs
+  - retrieval
 maturity: production
 cost_model: open-source
-github_stars: 34257
-github_stars_last_30d: 0
-trending_score: 65
-last_commit: "2026-07-08"
-docs_url: "https://microsoft.github.io/graphrag/"
+github_stars: 34524
+github_stars_last_30d: 267
+trending_score: 61
+last_commit: '2026-07-20'
+docs_url: https://microsoft.github.io/graphrag/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2404.16130"
+paper_url: https://arxiv.org/abs/2404.16130
 paper_id: null
 phase: data-and-retrieval
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained, research-origin]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The reference implementation of graph-based RAG: named the pattern, published the paper, and defined the pipeline (entity extraction → graph construction → community detection → hierarchical summarization) that the graph-RAG ecosystem now measures itself against"
+  - 'The reference implementation of graph-based RAG: named the pattern, published the paper, and defined the pipeline (entity extraction → graph construction → community detection → hierarchical summarization) that the graph-RAG ecosystem now measures itself against'
 best_for:
   - Your questions are global/sensemaking queries over a corpus ("what are the main themes?", "how do these actors relate?") — exactly where chunk-level vector retrieval structurally fails and community summaries win
   - Your corpus is entity-rich (investigations, research collections, org documents) and multi-hop relations carry the value — the extracted graph makes relationships first-class instead of hoping they co-occur in a chunk
@@ -40,12 +50,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (34.2k), MIT license, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Global-vs-local query claims from the GraphRAG paper (arXiv:2404.16130); cost characteristics from official docs and widely-reported community experience, not benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/microsoft/graphrag","date":"2026-07-08","description":"34.2k stars, Microsoft-backed, active development"}
+  - source: github-trending
+    url: https://github.com/microsoft/graphrag
+    date: '2026-07-08'
+    description: 34.2k stars, Microsoft-backed, active development
 featured: false
 status: active
 ---

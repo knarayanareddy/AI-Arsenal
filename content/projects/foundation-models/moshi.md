@@ -6,31 +6,41 @@ artifact_type: model
 category: voice-audio
 subcategory: models
 description: Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline
-github_url: "https://github.com/kyutai-labs/moshi"
+github_url: https://github.com/kyutai-labs/moshi
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Kyutai"
-tags: [multimodal, voice, inference, self-hosted]
+org_or_maintainer: Kyutai
+tags:
+  - multimodal
+  - voice
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 10525
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-05-16"
-docs_url: "https://github.com/kyutai-labs/moshi"
+github_stars: 10629
+github_stars_last_30d: 104
+trending_score: 48
+last_commit: '2026-05-16'
+docs_url: https://github.com/kyutai-labs/moshi
 demo_url: null
-paper_url: "https://arxiv.org/abs/2410.00037"
+paper_url: https://arxiv.org/abs/2410.00037
 paper_id: null
-hf_url: "https://huggingface.co/kyutai"
+hf_url: https://huggingface.co/kyutai
 model_sizes: []
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [research-origin, org-backed, actively-maintained]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - research-origin
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Open real-time speech-to-speech model that demonstrates the full-duplex conversational architecture, an alternative to chaining ASR + LLM + TTS with the latency and turn-taking rigidity that pipeline imposes
 best_for:
@@ -45,12 +55,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (10,525), Apache-2.0 license, and last commit (2026-05-16) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (10,525), Apache-2.0 license, and last commit (2026-05-16) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/kyutai-labs/moshi", "date": "2026-07-08", "description": "10,525 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/kyutai-labs/moshi
+    date: '2026-07-08'
+    description: 10,525 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

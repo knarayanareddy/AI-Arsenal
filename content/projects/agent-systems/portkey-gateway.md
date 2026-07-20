@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Portkey-AI"
+org_or_maintainer: Portkey-AI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 77
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: portkey-gateway
-name: "Portkey AI Gateway"
+name: Portkey AI Gateway
 artifact_type: platform
 category: observability
 subcategory: platforms
-description: "A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability"
+description: A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability
 github_url: https://github.com/Portkey-AI/gateway
-license: "MIT"
-primary_language: "TypeScript"
+license: MIT
+primary_language: TypeScript
 tags:
-  - "observability"
-  - "llm"
-  - "self-hosted"
+  - observability
+  - llm
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 12403
-last_commit: "2026-05-25"
+github_stars: 12480
+last_commit: '2026-05-25'
 docs_url: https://portkey.ai/docs
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A unified LLM gateway that routes across many providers with reliability and guardrail features."
+  - A unified LLM gateway that routes across many providers with reliability and guardrail features.
 best_for:
-  - "You want one API over many LLM providers with fallbacks, retries, caching, and load balancing"
-  - "You need integrated guardrails and observability at the gateway layer for production LLM traffic"
+  - You want one API over many LLM providers with fallbacks, retries, caching, and load balancing
+  - You need integrated guardrails and observability at the gateway layer for production LLM traffic
 avoid_if:
-  - "You call a single provider and need no routing, guardrails, or fallback logic"
-  - "You want a full LLMOps optimization loop rather than a routing/reliability gateway"
-enrichment_notes: "Repository, MIT license, and 2026-05-25 activity verified via the GitHub API on 2026-07-12. Adds a hop in the request path; account for its latency and availability."
+  - You call a single provider and need no routing, guardrails, or fallback logic
+  - You want a full LLMOps optimization loop rather than a routing/reliability gateway
+enrichment_notes: Repository, MIT license, and 2026-05-25 activity verified via the GitHub API on 2026-07-12. Adds a hop in the request path; account for its latency and availability.
 ---
 
 ## Overview

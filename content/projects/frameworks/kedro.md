@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "kedro-org"
+org_or_maintainer: kedro-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,46 +18,46 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 15
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: kedro
-name: "Kedro"
+name: Kedro
 artifact_type: framework
 category: data-pipelines
 subcategory: frameworks
-description: "A Python framework that applies software-engineering best practices to data science, structuring reproducible, maintainable"
+description: A Python framework that applies software-engineering best practices to data science, structuring reproducible, maintainable
 github_url: https://github.com/kedro-org/kedro
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "self-hosted"
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 10911
-last_commit: "2026-07-09"
+github_stars: 10926
+last_commit: '2026-07-16'
 docs_url: https://docs.kedro.org/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A framework that imposes software-engineering structure (nodes, pipelines, data catalog) on data-science projects."
+  - A framework that imposes software-engineering structure (nodes, pipelines, data catalog) on data-science projects.
 best_for:
-  - "You want to turn ad-hoc notebooks into modular, testable, reproducible data-science pipelines"
-  - "You need a data catalog and config abstraction that decouples code from storage locations"
+  - You want to turn ad-hoc notebooks into modular, testable, reproducible data-science pipelines
+  - You need a data catalog and config abstraction that decouples code from storage locations
 avoid_if:
-  - "You need a runtime scheduler/executor, since Kedro structures code but relies on runners to deploy"
-  - "Your project is a throwaway script that does not benefit from project structure"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-09 activity verified via the GitHub API on 2026-07-12. Structures pipelines; production scheduling uses plugins/runners."
+  - You need a runtime scheduler/executor, since Kedro structures code but relies on runners to deploy
+  - Your project is a throwaway script that does not benefit from project structure
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-09 activity verified via the GitHub API on 2026-07-12. Structures pipelines; production scheduling uses plugins/runners.
 ---
 
 ## Overview

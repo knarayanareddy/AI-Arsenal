@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: openenv
-name: "OpenEnv"
+name: OpenEnv
 artifact_type: framework
 category: agents
 subcategory: libraries
-description: "Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment"
+description: Hugging Face's Gymnasium-style interface library for isolated agent environments used in reinforcement-learning post-training and HF Spaces deployment
 github_url: https://github.com/huggingface/OpenEnv
-license: "BSD-3-Clause"
-primary_language: "Python"
+license: BSD-3-Clause
+primary_language: Python
 tags:
-  - "agents"
-  - "rlhf"
-  - "training"
-  - "security"
-  - "huggingface"
+  - agents
+  - rlhf
+  - training
+  - security
+  - huggingface
 maturity: beta
 cost_model: open-source
-github_stars: 2431
-last_commit: "2026-07-15"
+github_stars: 2436
+last_commit: '2026-07-17'
 docs_url: https://huggingface.co/docs/openenv
 phase: training-and-alignment
 domain:
-  - "reinforcement-learning"
+  - reinforcement-learning
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Gymnasium-style Python environments for agent RL post-training"
-  - "HF Spaces deployment layer for reproducible isolated agent tasks"
+  - Gymnasium-style Python environments for agent RL post-training
+  - HF Spaces deployment layer for reproducible isolated agent tasks
 best_for:
-  - "RL post-training with reproducible tool environments"
-  - "Packaging agent tasks for local or Space execution"
+  - RL post-training with reproducible tool environments
+  - Packaging agent tasks for local or Space execution
 avoid_if:
-  - "You need ordinary supervised fine-tuning without environment interaction"
-  - "Your environment cannot be isolated or reset between trajectories"
-enrichment_notes: "OpenEnv targets RL post-training and is not a general production agent runtime; task reward and environment security remain user responsibilities. Draft pending review."
+  - You need ordinary supervised fine-tuning without environment interaction
+  - Your environment cannot be isolated or reset between trajectories
+enrichment_notes: OpenEnv targets RL post-training and is not a general production agent runtime; task reward and environment security remain user responsibilities. Draft pending review.
 ---
 
 ## Overview

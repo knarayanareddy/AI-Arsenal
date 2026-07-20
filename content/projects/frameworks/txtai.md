@@ -6,18 +6,22 @@ artifact_type: framework
 category: rag
 subcategory: frameworks
 description: All-in-one framework for semantic search, LLM orchestration, embeddings, and workflows
-github_url: "https://github.com/neuml/txtai"
+github_url: https://github.com/neuml/txtai
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, orchestration]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 12653
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-11"
-docs_url: "https://neuml.github.io/txtai/"
+github_stars: 12738
+github_stars_last_30d: 85
+trending_score: 22
+last_commit: '2026-07-14'
+docs_url: https://neuml.github.io/txtai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - All-in-one embeddings/semantic-search framework, positioned as a lighter, more self-contained alternative to assembling separate vector-DB plus orchestration-framework stacks
 best_for:
@@ -46,8 +56,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond the project's own documentation; assessment is based on GitHub repository activity and public feature documentation rather than an external case study or paper.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

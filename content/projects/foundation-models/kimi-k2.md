@@ -1,50 +1,65 @@
 ---
 id: kimi-k2
-name: "Kimi K2"
+name: Kimi K2
 version_tracked: null
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters"
-github_url: "https://github.com/MoonshotAI/Kimi-K2"
-license: "Modified-MIT"
+description: Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
+github_url: https://github.com/MoonshotAI/Kimi-K2
+license: Modified-MIT
 primary_language: Python
-org_or_maintainer: "Moonshot AI"
-tags: [llm, agents, code-gen]
+org_or_maintainer: Moonshot AI
+tags:
+  - llm
+  - agents
+  - code-gen
 maturity: production
 cost_model: open-source
-github_stars: 10889
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-01-21"
-docs_url: "https://platform.kimi.ai/docs/overview"
+github_stars: 10968
+github_stars_last_30d: 79
+trending_score: 46
+last_commit: '2026-01-21'
+docs_url: https://platform.kimi.ai/docs/overview
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The open-weights model that made 'agentic-first' a training target rather than a fine-tune: a 1T-parameter MoE (32B active) trained with the MuonClip optimizer and large-scale synthetic tool-use data, competing with closed frontier models on coding and agentic benchmarks."
+  - 'The open-weights model that made ''agentic-first'' a training target rather than a fine-tune: a 1T-parameter MoE (32B active) trained with the MuonClip optimizer and large-scale synthetic tool-use data, competing with closed frontier models on coding and agentic benchmarks.'
 best_for:
-  - "You run agentic/coding workloads on self-hosted or provider-hosted open weights — K2 was purpose-trained for multi-step tool use and tops open-model agentic benchmarks (SWE-bench Verified, Tau2)"
-  - "You need frontier-adjacent capability with weight access for customization — the modified-MIT license permits commercial use with an attribution condition at very large scale"
+  - You run agentic/coding workloads on self-hosted or provider-hosted open weights — K2 was purpose-trained for multi-step tool use and tops open-model agentic benchmarks (SWE-bench Verified, Tau2)
+  - You need frontier-adjacent capability with weight access for customization — the modified-MIT license permits commercial use with an attribution condition at very large scale
 avoid_if:
-  - "You self-host on modest infrastructure — serving a 1T MoE (even at 32B active) requires multi-GPU node configurations beyond most teams; use hosted providers instead"
-  - "You need strong multimodal input — K2's headline strengths are text, code, and tool use; vision-language options elsewhere fit image-heavy workloads better"
+  - You self-host on modest infrastructure — serving a 1T MoE (even at 32B active) requires multi-GPU node configurations beyond most teams; use hosted providers instead
+  - You need strong multimodal input — K2's headline strengths are text, code, and tool use; vision-language options elsewhere fit image-heavy workloads better
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [deepseek-v3-r1, qwen-2-5]
+alternatives:
+  - deepseek-v3-r1
+  - qwen-2-5
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (10,889), primary language, license, and last commit (2026-01-21) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (10,889), primary language, license, and last commit (2026-01-21) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/MoonshotAI/Kimi-K2", "date": "2026-07-08", "description": "10,889 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/MoonshotAI/Kimi-K2
+    date: '2026-07-08'
+    description: 10,889 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

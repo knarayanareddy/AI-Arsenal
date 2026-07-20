@@ -6,18 +6,22 @@ artifact_type: library
 category: observability
 subcategory: tracing
 description: OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
-github_url: "https://github.com/traceloop/openllmetry"
+github_url: https://github.com/traceloop/openllmetry
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [observability, tracing, monitoring, self-hosted]
+tags:
+  - observability
+  - tracing
+  - monitoring
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 7000
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-04-08"
-docs_url: "https://www.traceloop.com/docs/openllmetry"
+github_stars: 7312
+github_stars_last_30d: 312
+trending_score: 40
+last_commit: '2026-07-13'
+docs_url: https://www.traceloop.com/docs/openllmetry
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,14 @@ supported_formats: []
 api_compatible: null
 approach: otel-native
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Traceloop's OpenTelemetry-native instrumentation library for GenAI/LLM applications
 best_for:
@@ -42,13 +51,17 @@ avoid_if:
   - You're not using or planning to use OpenTelemetry-based observability — a purpose-built platform may have a simpler onboarding path
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Backed by Traceloop (a named company with a commercial hosted product built on the same open-source instrumentation), giving credible org-backing signal distinct from a purely community project.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

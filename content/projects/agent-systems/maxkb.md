@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "1Panel-dev"
+org_or_maintainer: 1Panel-dev
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 89
+trending_score: 37
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: maxkb
-name: "MaxKB"
+name: MaxKB
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration"
+description: Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration
 github_url: https://github.com/1Panel-dev/MaxKB
-license: "GPL-3.0"
-primary_language: "Python"
+license: GPL-3.0
+primary_language: Python
 tags:
-  - "agents"
-  - "rag"
-  - "retrieval"
-  - "orchestration"
-  - "self-hosted"
-  - "tool-use"
+  - agents
+  - rag
+  - retrieval
+  - orchestration
+  - self-hosted
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 22053
-last_commit: "2026-07-10"
+github_stars: 22142
+last_commit: '2026-07-20'
 docs_url: https://maxkb.cn
 phase: agent-system
 domain:
-  - "language"
-  - "general-purpose"
+  - language
+  - general-purpose
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
-  - "community-driven"
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "A self-hosted platform that combines document RAG, an agent/workflow engine, and model-backend abstraction for building internal knowledge assistants."
+  - A self-hosted platform that combines document RAG, an agent/workflow engine, and model-backend abstraction for building internal knowledge assistants.
 best_for:
-  - "You want a deployable, enterprise-oriented KB assistant with document ingestion, RAG, and a workflow builder out of the box."
-  - "You run models via Ollama, vLLM, or hosted APIs and want a UI to connect them to a governed knowledge base."
+  - You want a deployable, enterprise-oriented KB assistant with document ingestion, RAG, and a workflow builder out of the box.
+  - You run models via Ollama, vLLM, or hosted APIs and want a UI to connect them to a governed knowledge base.
 avoid_if:
-  - "You need a lightweight retrieval SDK to embed in an existing app rather than a standalone platform."
-  - "You cannot accept GPL-3.0 copyleft obligations for your deployment or derivatives."
-enrichment_notes: "Official repository, GPL-3.0 license, and 2026-07-10 activity were reviewed on 2026-07-12. Enterprise-grade claims remain draft pending your own security and scale testing."
+  - You need a lightweight retrieval SDK to embed in an existing app rather than a standalone platform.
+  - You cannot accept GPL-3.0 copyleft obligations for your deployment or derivatives.
+enrichment_notes: Official repository, GPL-3.0 license, and 2026-07-10 activity were reviewed on 2026-07-12. Enterprise-grade claims remain draft pending your own security and scale testing.
 ---
 
 ## Overview

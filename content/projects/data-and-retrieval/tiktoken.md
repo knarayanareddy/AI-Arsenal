@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openai"
+org_or_maintainer: openai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 50
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: tiktoken
-name: "tiktoken"
+name: tiktoken
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation"
+description: OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation
 github_url: https://github.com/openai/tiktoken
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "llm"
-  - "self-hosted"
+  - llm
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 18733
-last_commit: "2026-05-24"
+github_stars: 18783
+last_commit: '2026-05-24'
 docs_url: https://github.com/openai/tiktoken
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The canonical tokenizer for OpenAI models, used for token counting, cost estimation, and context budgeting."
+  - The canonical tokenizer for OpenAI models, used for token counting, cost estimation, and context budgeting.
 best_for:
-  - "You need accurate token counts for OpenAI models to budget context windows and estimate cost"
-  - "You want a fast, exact BPE encoder/decoder matching OpenAI's model tokenization"
+  - You need accurate token counts for OpenAI models to budget context windows and estimate cost
+  - You want a fast, exact BPE encoder/decoder matching OpenAI's model tokenization
 avoid_if:
-  - "You are targeting non-OpenAI models, whose tokenizers differ and need their own libraries"
-  - "You need to train a new tokenizer, which is not tiktoken's purpose"
-enrichment_notes: "Repository, MIT license, and 2026-05-24 activity verified via the GitHub API on 2026-07-12. Encodings are OpenAI-model-specific."
+  - You are targeting non-OpenAI models, whose tokenizers differ and need their own libraries
+  - You need to train a new tokenizer, which is not tiktoken's purpose
+enrichment_notes: Repository, MIT license, and 2026-05-24 activity verified via the GitHub API on 2026-07-12. Encodings are OpenAI-model-specific.
 ---
 
 ## Overview

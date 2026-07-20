@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "tesseract-ocr"
+org_or_maintainer: tesseract-ocr
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 193
+trending_score: 45
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: tesseract-ocr
-name: "Tesseract OCR"
+name: Tesseract OCR
 artifact_type: library
 category: computer-vision
 subcategory: document-processing
-description: "The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend"
+description: The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend
 github_url: https://github.com/tesseract-ocr/tesseract
-license: "Apache-2.0"
-primary_language: "C++"
+license: Apache-2.0
+primary_language: C++
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
-  - "data"
+  - multimodal
+  - self-hosted
+  - inference
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 75262
-last_commit: "2026-07-09"
+github_stars: 75455
+last_commit: '2026-07-19'
 docs_url: https://tesseract-ocr.github.io/
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The default open-source OCR engine that most document pipelines and wrappers depend on for text extraction from images."
+  - The default open-source OCR engine that most document pipelines and wrappers depend on for text extraction from images.
 best_for:
-  - "You need dependable, free OCR for many languages embedded in a document pipeline or wrapped by a higher-level tool"
-  - "You want an offline, CPU-friendly text-extraction engine with mature language data packs"
+  - You need dependable, free OCR for many languages embedded in a document pipeline or wrapped by a higher-level tool
+  - You want an offline, CPU-friendly text-extraction engine with mature language data packs
 avoid_if:
-  - "Your inputs are complex layouts, tables, or handwriting, where vision-language OCR models are more accurate"
-  - "You need built-in layout analysis and reading-order reconstruction beyond simple page segmentation"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-09 activity verified via the GitHub API on 2026-07-12. Accuracy is best on clean printed text; preprocessing matters."
+  - Your inputs are complex layouts, tables, or handwriting, where vision-language OCR models are more accurate
+  - You need built-in layout analysis and reading-order reconstruction beyond simple page segmentation
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-09 activity verified via the GitHub API on 2026-07-12. Accuracy is best on clean printed text; preprocessing matters.
 ---
 
 ## Overview

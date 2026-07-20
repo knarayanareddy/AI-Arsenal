@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "nari-labs"
+org_or_maintainer: nari-labs
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: dia-tts
-name: "Dia"
+name: Dia
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A 1.6B-parameter open dialogue text-to-speech model from Nari Labs that generates multi-speaker conversational audio, including non-verbal cues"
+description: A 1.6B-parameter open dialogue text-to-speech model from Nari Labs that generates multi-speaker conversational audio, including non-verbal cues
 github_url: https://github.com/nari-labs/dia
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 19339
-last_commit: "2025-11-19"
+github_stars: 19340
+last_commit: '2025-11-19'
 docs_url: https://github.com/nari-labs/dia
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A dialogue-first TTS model that renders an entire multi-speaker conversation, with non-verbal sounds, from a single tagged transcript."
+  - A dialogue-first TTS model that renders an entire multi-speaker conversation, with non-verbal sounds, from a single tagged transcript.
 best_for:
-  - "You want to generate two-speaker dialogue or podcast-style audio from one script rather than stitching single-speaker clips"
-  - "You need an Apache-2.0 dialogue model that emits non-verbal cues like laughter and coughs inline"
+  - You want to generate two-speaker dialogue or podcast-style audio from one script rather than stitching single-speaker clips
+  - You need an Apache-2.0 dialogue model that emits non-verbal cues like laughter and coughs inline
 avoid_if:
-  - "You need single-speaker narration or fine long-form control, which sentence-level TTS handles more predictably"
-  - "You require active upstream support, since commits slowed after late 2025"
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-11-19 activity verified via the GitHub API on 2026-07-12. Included as a distinct dialogue-generation model with a maintenance caveat."
+  - You need single-speaker narration or fine long-form control, which sentence-level TTS handles more predictably
+  - You require active upstream support, since commits slowed after late 2025
+enrichment_notes: Repository, Apache-2.0 license, and 2025-11-19 activity verified via the GitHub API on 2026-07-12. Included as a distinct dialogue-generation model with a maintenance caveat.
 ---
 
 ## Overview

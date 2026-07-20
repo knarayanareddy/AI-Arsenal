@@ -1,50 +1,66 @@
 ---
 id: browser-use
-name: "Browser Use"
+name: Browser Use
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: browser-agents
-description: "The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously"
-github_url: "https://github.com/browser-use/browser-use"
-license: "MIT"
+description: 'The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously'
+github_url: https://github.com/browser-use/browser-use
+license: MIT
 primary_language: Python
-org_or_maintainer: "Browser Use"
-tags: [agents, tool-use, orchestration]
+org_or_maintainer: Browser Use
+tags:
+  - agents
+  - tool-use
+  - orchestration
 maturity: beta
 cost_model: open-source
-github_stars: 103506
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://docs.browser-use.com/cloud/quickstart"
+github_stars: 105674
+github_stars_last_30d: 2168
+trending_score: 80
+last_commit: '2026-07-17'
+docs_url: https://docs.browser-use.com/cloud/quickstart
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained, org-backed]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The default open-source answer to 'let my agent use the web': it fuses DOM extraction with vision, feeds an LLM a structured view of interactive elements, and executes actions — the model most autonomous web-agent products are built on or benchmarked against."
+  - 'The default open-source answer to ''let my agent use the web'': it fuses DOM extraction with vision, feeds an LLM a structured view of interactive elements, and executes actions — the model most autonomous web-agent products are built on or benchmarked against.'
 best_for:
-  - "You want fully autonomous web task execution (research, form-filling, multi-site workflows) driven by natural-language goals rather than hand-authored automation scripts"
-  - "You are prototyping agent products that need web access today — the Python API is a few lines, supports any LangChain-compatible LLM, and has a large community of examples"
+  - You want fully autonomous web task execution (research, form-filling, multi-site workflows) driven by natural-language goals rather than hand-authored automation scripts
+  - You are prototyping agent products that need web access today — the Python API is a few lines, supports any LangChain-compatible LLM, and has a large community of examples
 avoid_if:
-  - "You need deterministic, repeatable automation for stable pages — LLM-driven navigation is slower, costlier, and less predictable than Playwright scripts or Stagehand's hybrid code+AI model"
-  - "You are deploying unattended agents against authenticated/sensitive accounts — prompt-injection-via-webpage is an unsolved risk class for autonomous browser agents"
+  - You need deterministic, repeatable automation for stable pages — LLM-driven navigation is slower, costlier, and less predictable than Playwright scripts or Stagehand's hybrid code+AI model
+  - You are deploying unattended agents against authenticated/sensitive accounts — prompt-injection-via-webpage is an unsolved risk class for autonomous browser agents
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [stagehand, playwright]
-integrates_with: [browserbase]
+alternatives:
+  - stagehand
+  - playwright
+integrates_with:
+  - browserbase
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (103,506), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (103,506), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/browser-use/browser-use", "date": "2026-07-08", "description": "103,506 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/browser-use/browser-use
+    date: '2026-07-08'
+    description: 103,506 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

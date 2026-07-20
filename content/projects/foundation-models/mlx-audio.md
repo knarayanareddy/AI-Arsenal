@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Blaizzy"
+org_or_maintainer: Blaizzy
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,52 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 48
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: mlx-audio
-name: "MLX Audio"
+name: MLX Audio
 artifact_type: library
 category: voice-audio
 subcategory: open-source-models
-description: "Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use"
+description: Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use
 github_url: https://github.com/Blaizzy/mlx-audio
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "local"
-  - "edge"
-  - "inference"
-  - "efficiency"
+  - voice
+  - multimodal
+  - local
+  - edge
+  - inference
+  - efficiency
 maturity: beta
 cost_model: open-source
-github_stars: 7531
-last_commit: "2026-07-10"
+github_stars: 7579
+last_commit: '2026-07-10'
 docs_url: https://blaizzy.github.io/mlx-audio/
 phase: foundation-model
 domain:
-  - "audio"
-  - "multimodal"
+  - audio
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "fork-and-adapt"
+  - deploy-as-is
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "An MLX-based speech toolkit that runs TTS, STT, and speech-to-speech models locally on Apple Silicon with hardware-optimized inference."
+  - An MLX-based speech toolkit that runs TTS, STT, and speech-to-speech models locally on Apple Silicon with hardware-optimized inference.
 best_for:
-  - "You want on-device speech synthesis or transcription on Apple Silicon without sending audio to a cloud API."
-  - "You are prototyping voice interfaces on Mac/iOS-class hardware and want MLX-optimized model runtimes."
+  - You want on-device speech synthesis or transcription on Apple Silicon without sending audio to a cloud API.
+  - You are prototyping voice interfaces on Mac/iOS-class hardware and want MLX-optimized model runtimes.
 avoid_if:
-  - "You need cross-platform (NVIDIA/CPU) deployment; MLX targets Apple Silicon specifically."
-  - "You require guaranteed accuracy for a regulated transcription workload without your own evaluation."
-enrichment_notes: "Official repository, MIT license, and 2026-07-10 activity were reviewed on 2026-07-12. On-device performance varies by chip and model and remains draft."
+  - You need cross-platform (NVIDIA/CPU) deployment; MLX targets Apple Silicon specifically.
+  - You require guaranteed accuracy for a regulated transcription workload without your own evaluation.
+enrichment_notes: Official repository, MIT license, and 2026-07-10 activity were reviewed on 2026-07-12. On-device performance varies by chip and model and remains draft.
 ---
 
 ## Overview

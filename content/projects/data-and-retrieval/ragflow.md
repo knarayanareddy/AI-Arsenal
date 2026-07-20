@@ -6,18 +6,22 @@ artifact_type: platform
 category: rag
 subcategory: frameworks
 description: Open-source RAG engine combining document understanding, retrieval, and agent capabilities
-github_url: "https://github.com/infiniflow/ragflow"
+github_url: https://github.com/infiniflow/ragflow
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, retrieval, agents, cloud]
+tags:
+  - rag
+  - retrieval
+  - agents
+  - cloud
 maturity: production
 cost_model: open-source
-github_stars: 82655
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://ragflow.io/docs/dev/"
+github_stars: 85454
+github_stars_last_30d: 2799
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://ragflow.io/docs/dev/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Self-hosted, all-in-one RAG engine combining deep document understanding, retrieval, agent workflows, and a web UI in a single deployable stack
 best_for:
@@ -46,8 +56,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: RAGFlow (maintained by InfiniFlow) shows active 2026 release activity (v0.25.1 and ongoing nightly builds per third-party deployment guides) and a documented public roadmap for 2026, confirming ongoing maintenance; independent named enterprise production deployments were not found beyond community self-hosting guides.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

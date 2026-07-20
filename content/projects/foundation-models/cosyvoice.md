@@ -6,31 +6,41 @@ artifact_type: model
 category: voice-audio
 subcategory: models
 description: Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
-github_url: "https://github.com/FunAudioLLM/CosyVoice"
+github_url: https://github.com/FunAudioLLM/CosyVoice
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Alibaba (FunAudioLLM)"
-tags: [multimodal, voice, inference, self-hosted]
+org_or_maintainer: Alibaba (FunAudioLLM)
+tags:
+  - multimodal
+  - voice
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 22044
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-05-25"
-docs_url: "https://github.com/FunAudioLLM/CosyVoice"
+github_stars: 22289
+github_stars_last_30d: 245
+trending_score: 60
+last_commit: '2026-05-25'
+docs_url: https://github.com/FunAudioLLM/CosyVoice
 demo_url: null
-paper_url: "https://arxiv.org/abs/2412.10117"
+paper_url: https://arxiv.org/abs/2412.10117
 paper_id: null
-hf_url: "https://huggingface.co/FunAudioLLM"
+hf_url: https://huggingface.co/FunAudioLLM
 model_sizes: []
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, research-origin, actively-maintained]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - research-origin
+  - actively-maintained
 ecosystem_role:
   - Open-weight multilingual TTS/voice-cloning model family, one of the leading self-hostable alternatives to closed TTS APIs like ElevenLabs for teams that need on-prem or cost control
 best_for:
@@ -45,12 +55,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (22,044), Apache-2.0 license, and last commit (2026-05-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (22,044), Apache-2.0 license, and last commit (2026-05-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/FunAudioLLM/CosyVoice", "date": "2026-07-08", "description": "22,044 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/FunAudioLLM/CosyVoice
+    date: '2026-07-08'
+    description: 22,044 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

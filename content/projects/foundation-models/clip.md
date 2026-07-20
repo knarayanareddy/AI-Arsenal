@@ -6,33 +6,43 @@ artifact_type: model
 category: multimodal
 subcategory: open-source-models
 description: OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
-github_url: "https://github.com/openai/CLIP"
+github_url: https://github.com/openai/CLIP
 license: MIT
 primary_language: Python
 org_or_maintainer: openai
-tags: [embeddings, multimodal, llm]
+tags:
+  - embeddings
+  - multimodal
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 33936
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-03-25"
-docs_url: "https://github.com/openai/CLIP"
+github_stars: 34036
+github_stars_last_30d: 100
+trending_score: 48
+last_commit: '2026-03-25'
+docs_url: https://github.com/openai/CLIP
 demo_url: null
-paper_url: "https://arxiv.org/abs/2103.00020"
+paper_url: https://arxiv.org/abs/2103.00020
 paper_id: null
 phase: foundation-model
-domain: [vision, multimodal]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, production-proven, research-origin]
+domain:
+  - vision
+  - multimodal
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - production-proven
+  - research-origin
 ecosystem_role:
-  - "The foundational primitive of open multimodality: contrastive pretraining on 400M image-text pairs produced a shared embedding space that made zero-shot vision classification real — and CLIP-family encoders became the standard vision front-end inside LLaVA-class VLMs and the text conditioning inside Stable Diffusion"
+  - 'The foundational primitive of open multimodality: contrastive pretraining on 400M image-text pairs produced a shared embedding space that made zero-shot vision classification real — and CLIP-family encoders became the standard vision front-end inside LLaVA-class VLMs and the text conditioning inside Stable Diffusion'
 best_for:
-  - "Image-text retrieval and zero-shot classification: embed images and label prompts in one space and compare by cosine similarity — no task-specific training"
-  - "Building multimodal systems: CLIP-family encoders (via open_clip's reproductions) remain the default choice for vision features feeding an LLM or a diffusion model"
+  - 'Image-text retrieval and zero-shot classification: embed images and label prompts in one space and compare by cosine similarity — no task-specific training'
+  - 'Building multimodal systems: CLIP-family encoders (via open_clip''s reproductions) remain the default choice for vision features feeding an LLM or a diffusion model'
 avoid_if:
-  - "You need dense per-pixel understanding (segmentation, OCR, counting) — CLIP embeds whole images; its known failure modes include fine-grained spatial reasoning"
-  - "You want SOTA retrieval today — SigLIP-class successors and modern multimodal embedders outperform original CLIP checkpoints; use this repo as reference, open_clip for practice"
+  - You need dense per-pixel understanding (segmentation, OCR, counting) — CLIP embeds whole images; its known failure modes include fine-grained spatial reasoning
+  - You want SOTA retrieval today — SigLIP-class successors and modern multimodal embedders outperform original CLIP checkpoints; use this repo as reference, open_clip for practice
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -40,12 +50,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (33.9k), MIT, last push 2026-03-25 verified via the GitHub API on 2026-07-08. The repo is a stable reference release (2021 weights); currency lives in successors, which the entry states plainly. Paper is Radford et al. 2021.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/openai/CLIP","date":"2026-07-08","description":"33.9k stars; canonical repo of the 2021 model that started open multimodality"}
+  - source: github-trending
+    url: https://github.com/openai/CLIP
+    date: '2026-07-08'
+    description: 33.9k stars; canonical repo of the 2021 model that started open multimodality
 featured: false
 status: active
 ---

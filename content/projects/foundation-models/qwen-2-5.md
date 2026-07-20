@@ -6,31 +6,50 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Alibaba Qwen open-weight family spanning small, large, coding, math, and reasoning models
-github_url: "https://github.com/QwenLM/Qwen3"
+github_url: https://github.com/QwenLM/Qwen3
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, reasoning, code-gen]
+tags:
+  - llm
+  - inference
+  - reasoning
+  - code-gen
 maturity: production
 cost_model: open-source
-github_stars: 27298
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-01-09"
-docs_url: "https://github.com/QwenLM/Qwen3"
+github_stars: 27408
+github_stars_last_30d: 110
+trending_score: 24
+last_commit: '2026-01-09'
+docs_url: https://github.com/QwenLM/Qwen3
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/Qwen"
-model_sizes: [0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B]
+hf_url: https://huggingface.co/Qwen
+model_sizes:
+  - 0.5B
+  - 1.5B
+  - 3B
+  - 7B
+  - 14B
+  - 32B
+  - 72B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Alibaba's widely-adopted open-weight model generation spanning general, coding, and reasoning-specialized variants
 best_for:
@@ -46,12 +65,15 @@ integrates_with: []
 corresponding_tool_entry: qwen-3
 enrichment_status: reviewed
 enrichment_notes: This entry's github_url (QwenLM/Qwen3) actually points to the Qwen3 repo, not Qwen2.5 -- a pre-existing data issue from the original population sprint, flagged here rather than silently corrected since fixing it requires a maintainer decision on re-scoping vs. URL correction.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"reddit","url":"https://www.reddit.com/r/Qwen_AI/comments/1mvl274/7_months_of_qwen_in_production_enterprise_what/","date":"2025-08-20","description":"Practitioner report of 7 months running Qwen in production enterprise workflows with 99.9% uptime across 50+ concurrent users on vLLM"}
+  - source: reddit
+    url: https://www.reddit.com/r/Qwen_AI/comments/1mvl274/7_months_of_qwen_in_production_enterprise_what/
+    date: '2025-08-20'
+    description: Practitioner report of 7 months running Qwen in production enterprise workflows with 99.9% uptime across 50+ concurrent users on vLLM
 featured: false
 status: active
 ---

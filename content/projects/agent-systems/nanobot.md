@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "HKUDS"
+org_or_maintainer: HKUDS
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 34
+trending_score: 33
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: nanobot
-name: "nanobot"
+name: nanobot
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "HKU Data Intelligence Lab's lightweight open-source agent for tool use, chats, and workflows, distributed as the nanobot-ai PyPI package"
+description: HKU Data Intelligence Lab's lightweight open-source agent for tool use, chats, and workflows, distributed as the nanobot-ai PyPI package
 github_url: https://github.com/HKUDS/nanobot
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "tool-use"
-  - "orchestration"
-  - "memory"
-  - "community-favorite"
+  - agents
+  - tool-use
+  - orchestration
+  - memory
+  - community-favorite
 maturity: beta
 cost_model: open-source
-github_stars: 45890
-last_commit: "2026-07-19"
+github_stars: 45924
+last_commit: '2026-07-20'
 docs_url: https://nanobot.wiki/docs/latest/getting-started/nanobot-overview
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "Lightweight Python chat-and-tools agent distributed as nanobot-ai"
-  - "Approachable alternative to heavyweight agent orchestration platforms"
+  - Lightweight Python chat-and-tools agent distributed as nanobot-ai
+  - Approachable alternative to heavyweight agent orchestration platforms
 best_for:
-  - "Small self-hosted assistants with chat and tool integrations"
-  - "Learning agent workflow composition without a large framework"
+  - Small self-hosted assistants with chat and tool integrations
+  - Learning agent workflow composition without a large framework
 avoid_if:
-  - "You need enterprise governance and isolation out of the box"
-  - "Your workload requires a heavyweight distributed orchestration platform"
-enrichment_notes: "The README and metadata identify an actively developed lightweight project; integrations, model providers, and security posture should still be reviewed before production. Draft pending review."
+  - You need enterprise governance and isolation out of the box
+  - Your workload requires a heavyweight distributed orchestration platform
+enrichment_notes: The README and metadata identify an actively developed lightweight project; integrations, model providers, and security posture should still be reviewed before production. Draft pending review.
 ---
 
 ## Overview

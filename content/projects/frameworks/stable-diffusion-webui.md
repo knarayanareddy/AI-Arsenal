@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "AUTOMATIC1111"
+org_or_maintainer: AUTOMATIC1111
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 54
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: stable-diffusion-webui
-name: "Stable Diffusion WebUI"
+name: Stable Diffusion WebUI
 artifact_type: platform
 category: multimodal
 subcategory: platforms
-description: "AUTOMATIC1111's browser-based application for local Stable Diffusion image generation with an extensive extension ecosystem for control, upscaling"
+description: AUTOMATIC1111's browser-based application for local Stable Diffusion image generation with an extensive extension ecosystem for control, upscaling
 github_url: https://github.com/AUTOMATIC1111/stable-diffusion-webui
-license: "AGPL-3.0"
-primary_language: "Python"
+license: AGPL-3.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 164197
-last_commit: "2026-03-02"
+github_stars: 164251
+last_commit: '2026-03-02'
 docs_url: https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki
 phase: framework
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
+  - community-driven
 ecosystem_role:
-  - "A local web application that turns diffusion models into an interactive image-generation studio with a large extension ecosystem."
+  - A local web application that turns diffusion models into an interactive image-generation studio with a large extension ecosystem.
 best_for:
-  - "You want a full local GUI for Stable Diffusion with txt2img, img2img, inpainting, upscaling, and ControlNet via extensions"
-  - "You are an artist or hobbyist who wants point-and-click control without writing code"
+  - You want a full local GUI for Stable Diffusion with txt2img, img2img, inpainting, upscaling, and ControlNet via extensions
+  - You are an artist or hobbyist who wants point-and-click control without writing code
 avoid_if:
-  - "You need a programmatic library to embed generation in an app, where Diffusers is the better fit"
-  - "AGPL-3.0 licensing is incompatible with how you intend to distribute or host derivatives"
-enrichment_notes: "Repository, AGPL-3.0 license, and 2026-03-02 activity verified via the GitHub API on 2026-07-12. One of the most-starred AI repos; community-maintained."
+  - You need a programmatic library to embed generation in an app, where Diffusers is the better fit
+  - AGPL-3.0 licensing is incompatible with how you intend to distribute or host derivatives
+enrichment_notes: Repository, AGPL-3.0 license, and 2026-03-02 activity verified via the GitHub API on 2026-07-12. One of the most-starred AI repos; community-maintained.
 ---
 
 ## Overview

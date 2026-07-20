@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "modelscope"
+org_or_maintainer: modelscope
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 192
+trending_score: 45
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: funasr
-name: "FunASR"
+name: FunASR
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization"
+description: An industrial speech-recognition toolkit from Alibaba DAMO offering ASR, VAD, punctuation, diarization
 github_url: https://github.com/modelscope/FunASR
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "voice"
-  - "inference"
-  - "self-hosted"
-  - "streaming"
-  - "multimodal"
+  - voice
+  - inference
+  - self-hosted
+  - streaming
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 19167
-last_commit: "2026-07-10"
+github_stars: 19359
+last_commit: '2026-07-20'
 docs_url: https://modelscope.github.io/FunASR/
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An end-to-end ASR framework bundling non-autoregressive recognition, VAD, punctuation, and diarization with training and serving tooling."
+  - An end-to-end ASR framework bundling non-autoregressive recognition, VAD, punctuation, and diarization with training and serving tooling.
 best_for:
-  - "You need production Chinese/multilingual ASR with punctuation and diarization and want fast non-autoregressive decoding"
-  - "You want one framework covering model training, fine-tuning, and an OpenAI-compatible serving endpoint"
+  - You need production Chinese/multilingual ASR with punctuation and diarization and want fast non-autoregressive decoding
+  - You want one framework covering model training, fine-tuning, and an OpenAI-compatible serving endpoint
 avoid_if:
-  - "Your priority is a tiny embeddable runtime rather than a full Python framework, where whisper.cpp or sherpa-onnx fit better"
-  - "You need best-in-class accuracy on a language poorly covered by the shipped models"
-enrichment_notes: "Repository, MIT license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Speed multiples (e.g. 170x realtime) are project-reported and hardware-dependent."
+  - Your priority is a tiny embeddable runtime rather than a full Python framework, where whisper.cpp or sherpa-onnx fit better
+  - You need best-in-class accuracy on a language poorly covered by the shipped models
+enrichment_notes: Repository, MIT license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Speed multiples (e.g. 170x realtime) are project-reported and hardware-dependent.
 ---
 
 ## Overview

@@ -6,31 +6,48 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Google open model family with efficient text and multimodal variants for local and hosted use
-github_url: "https://github.com/google-deepmind/gemma"
+github_url: https://github.com/google-deepmind/gemma
 license: Custom
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, multimodal, local]
+tags:
+  - llm
+  - inference
+  - multimodal
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 985
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-05-09"
-docs_url: "https://ai.google.dev/gemma"
+github_stars: 5574
+github_stars_last_30d: 164
+trending_score: 28
+last_commit: '2026-07-17'
+docs_url: https://ai.google.dev/gemma
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/google"
-model_sizes: [1B, 4B, 12B, 27B]
+hf_url: https://huggingface.co/google
+model_sizes:
+  - 1B
+  - 4B
+  - 12B
+  - 27B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language, vision, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - language
+  - vision
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Google DeepMind's third-generation open-weight model family with efficient long-context multimodal support
 best_for:
@@ -45,13 +62,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Architecture details (5:1 local:global sliding-window attention interleaving, 128K context except 1B model at 32K, GQA with QK-norm, RoPE base frequency split between local/global layers) are drawn directly from the Gemma 3 Technical Report (arXiv 2503.19786) and corroborated by independent technical write-ups, not vendor marketing copy."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: Architecture details (5:1 local:global sliding-window attention interleaving, 128K context except 1B model at 32K, GQA with QK-norm, RoPE base frequency split between local/global layers) are drawn directly from the Gemma 3 Technical Report (arXiv 2503.19786) and corroborated by independent technical write-ups, not vendor marketing copy.
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://infohub.delltechnologies.com/en-us/p/from-lab-to-production-running-gemma-3-using-dell-enterprise-hub-on-openshift/","date":"2026-04-01","description":"Dell Technologies documents production deployment of Gemma 3 12B/27B on PowerEdge XE9680 servers via Dell Enterprise Hub on OpenShift"}
+  - source: conference
+    url: https://infohub.delltechnologies.com/en-us/p/from-lab-to-production-running-gemma-3-using-dell-enterprise-hub-on-openshift/
+    date: '2026-04-01'
+    description: Dell Technologies documents production deployment of Gemma 3 12B/27B on PowerEdge XE9680 servers via Dell Enterprise Hub on OpenShift
 featured: false
 status: active
 ---

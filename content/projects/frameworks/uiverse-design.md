@@ -6,43 +6,51 @@ artifact_type: platform
 category: tooling
 subcategory: platforms
 description: Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
-github_url: "https://github.com/uiverse-io/galaxy"
+github_url: https://github.com/uiverse-io/galaxy
 license: MIT
 primary_language: Other
 org_or_maintainer: null
-tags: [agents]
+tags:
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 11000
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
+github_stars: 11464
+github_stars_last_30d: 464
+trending_score: 52
+last_commit: '2024-09-02'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - community-driven
 ecosystem_role:
-  - "Community-sourced CSS/Tailwind UI component library, used as a front-end asset source rather than an AI-specific building block"
+  - Community-sourced CSS/Tailwind UI component library, used as a front-end asset source rather than an AI-specific building block
 best_for:
-  - "You're building an AI product's front-end and want a library of ready-made, community-contributed UI components (buttons, loaders, form elements) rather than designing every element from scratch"
+  - You're building an AI product's front-end and want a library of ready-made, community-contributed UI components (buttons, loaders, form elements) rather than designing every element from scratch
 avoid_if:
-  - "You're looking for an AI-specific project (this is a general front-end CSS component library with no AI functionality of its own) — it was included in the original population sprint's broad newsletter sweep and its fit for an AI-focused catalog is questionable"
+  - You're looking for an AI-specific project (this is a general front-end CSS component library with no AI functionality of its own) — it was included in the original population sprint's broad newsletter sweep and its fit for an AI-focused catalog is questionable
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Scope concern for maintainer review: general-purpose CSS/Tailwind library with no AI functionality, added via a broad newsletter sweep. 'framework' phase is a low-confidence placement, not a genuine classification -- recommend keep/recategorize/remove review."
-added_date: "2026-06-14"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'Scope concern for maintainer review: general-purpose CSS/Tailwind library with no AI functionality, added via a broad newsletter sweep. ''framework'' phase is a low-confidence placement, not a genuine classification -- recommend keep/recategorize/remove review.'
+added_date: '2026-06-14'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso under platforms"}]
+buzz_sources:
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso under platforms
 featured: false
 status: watching
 ---

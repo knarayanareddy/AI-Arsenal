@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "alibaba"
+org_or_maintainer: alibaba
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 24
+trending_score: 32
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: open-code-review
-name: "Open Code Review"
+name: Open Code Review
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings"
+description: Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings
 github_url: https://github.com/alibaba/open-code-review
-license: "Apache-2.0"
-primary_language: "Go"
+license: Apache-2.0
+primary_language: Go
 tags:
-  - "code-gen"
-  - "agents"
-  - "evaluation"
-  - "benchmark"
-  - "battle-tested"
+  - code-gen
+  - agents
+  - evaluation
+  - benchmark
+  - battle-tested
 maturity: beta
 cost_model: usage-based
-github_stars: 10699
-last_commit: "2026-07-17"
+github_stars: 10723
+last_commit: '2026-07-20'
 docs_url: https://alibaba.github.io/open-code-review/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Deterministic-plus-agent CLI for token-efficient AI code review"
-  - "Alibaba production-origin review tool with diff and whole-file modes"
+  - Deterministic-plus-agent CLI for token-efficient AI code review
+  - Alibaba production-origin review tool with diff and whole-file modes
 best_for:
-  - "Token-efficient pull-request review in CI"
-  - "Whole-file audits of unfamiliar repositories"
+  - Token-efficient pull-request review in CI
+  - Whole-file audits of unfamiliar repositories
 avoid_if:
-  - "You need maximum recall rather than precision-focused review"
-  - "Your code cannot be sent to an LLM endpoint or you require formal verification"
-enrichment_notes: "The README reports internal Alibaba production use and a benchmark with a precision/recall trade-off; independent validation is still needed. Draft pending review."
+  - You need maximum recall rather than precision-focused review
+  - Your code cannot be sent to an LLM endpoint or you require formal verification
+enrichment_notes: The README reports internal Alibaba production use and a benchmark with a precision/recall trade-off; independent validation is still needed. Draft pending review.
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "NanoNets"
+org_or_maintainer: NanoNets
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,50 +19,50 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: docext
-name: "docext"
+name: docext
 artifact_type: tool
 category: data-pipelines
 subcategory: document-processing
-description: "On-premises vision-language document extraction, Markdown conversion, and benchmarking toolkit from Nanonets"
+description: On-premises vision-language document extraction, Markdown conversion, and benchmarking toolkit from Nanonets
 github_url: https://github.com/NanoNets/docext
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "vision"
-  - "multimodal"
-  - "data"
-  - "benchmark"
-  - "self-hosted"
+  - vision
+  - multimodal
+  - data
+  - benchmark
+  - self-hosted
 maturity: beta
 cost_model: open-source
 github_stars: 2032
-last_commit: "2026-03-17"
+last_commit: '2026-03-17'
 docs_url: https://github.com/NanoNets/docext
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "On-prem document-intelligence tool that complements OCR/VLM models and competes with hosted extraction APIs"
+  - On-prem document-intelligence tool that complements OCR/VLM models and competes with hosted extraction APIs
 best_for:
-  - "Extracting structured fields and Markdown from sensitive documents on-premises"
-  - "Benchmarking OCR-free VLM extraction across tables and long documents"
+  - Extracting structured fields and Markdown from sensitive documents on-premises
+  - Benchmarking OCR-free VLM extraction across tables and long documents
 avoid_if:
-  - "You need a continuously maintained connector and workflow platform"
-  - "Your compliance policy disallows vendor-associated model or benchmark components"
-enrichment_notes: "Last commit 2026-03-17; do not mark actively-maintained. Nanonets-OCR-s and leaderboard claims are vendor-associated. Draft pending review."
+  - You need a continuously maintained connector and workflow platform
+  - Your compliance policy disallows vendor-associated model or benchmark components
+enrichment_notes: Last commit 2026-03-17; do not mark actively-maintained. Nanonets-OCR-s and leaderboard claims are vendor-associated. Draft pending review.
 ---
 
 ## Overview

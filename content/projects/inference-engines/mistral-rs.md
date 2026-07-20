@@ -6,46 +6,60 @@ artifact_type: framework
 category: llms
 subcategory: inference-engines
 description: Pure-Rust cross-modality LLM inference server — text, vision, image generation, and speech behind OpenAI-compatible APIs with ISQ in-place quantization
-github_url: "https://github.com/EricLBuehler/mistral.rs"
+github_url: https://github.com/EricLBuehler/mistral.rs
 license: MIT
 primary_language: Rust
 org_or_maintainer: EricLBuehler
-tags: [inference, llm, self-hosted]
+tags:
+  - inference
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7441
-github_stars_last_30d: 0
+github_stars: 7501
+github_stars_last_30d: 60
 trending_score: 45
-last_commit: "2026-07-07"
-docs_url: "https://ericlbuehler.github.io/mistral.rs/"
+last_commit: '2026-07-17'
+docs_url: https://ericlbuehler.github.io/mistral.rs/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [actively-maintained, community-driven]
+domain:
+  - general-purpose
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The Rust ecosystem's answer to a full LLM inference server: what llama.cpp is to C/C++, mistral.rs aims to be for Rust — Candle-lineage kernels, multi-modality (text/vision/image-gen/speech), PagedAttention-style batching, and in-situ quantization (ISQ) that quantizes safetensors weights at load time"
+  - 'The Rust ecosystem''s answer to a full LLM inference server: what llama.cpp is to C/C++, mistral.rs aims to be for Rust — Candle-lineage kernels, multi-modality (text/vision/image-gen/speech), PagedAttention-style batching, and in-situ quantization (ISQ) that quantizes safetensors weights at load time'
 best_for:
-  - "Rust-native applications that want in-process LLM inference (Rust API, plus Python bindings) instead of shelling out to a separate C++ or Python server"
-  - "Serving from original safetensors checkpoints without a separate quantization step — ISQ quantizes at load, removing the GGUF-conversion pipeline stage"
+  - Rust-native applications that want in-process LLM inference (Rust API, plus Python bindings) instead of shelling out to a separate C++ or Python server
+  - Serving from original safetensors checkpoints without a separate quantization step — ISQ quantizes at load, removing the GGUF-conversion pipeline stage
 avoid_if:
-  - "You need maximum multi-GPU datacenter throughput — vLLM/SGLang remain ahead on batched serving performance and ecosystem tooling"
-  - "You want the largest model-format community — llama.cpp's GGUF ecosystem has far more coverage, quants, and debugging lore"
+  - You need maximum multi-GPU datacenter throughput — vLLM/SGLang remain ahead on batched serving performance and ecosystem tooling
+  - You want the largest model-format community — llama.cpp's GGUF ecosystem has far more coverage, quants, and debugging lore
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [llama-cpp, vllm]
+alternatives:
+  - llama-cpp
+  - vllm
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (7.4k), MIT, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-08. Feature claims (ISQ, modality coverage, PagedAttention) from official docs; no independent benchmarking here. Below the usual star bar but admitted as the leading Rust-native inference server, complementing the candle entry.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/EricLBuehler/mistral.rs","date":"2026-07-08","description":"7.4k stars; the most active Rust-native LLM inference server"}
+  - source: github-trending
+    url: https://github.com/EricLBuehler/mistral.rs
+    date: '2026-07-08'
+    description: 7.4k stars; the most active Rust-native LLM inference server
 featured: false
 status: active
 ---

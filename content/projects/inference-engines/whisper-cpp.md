@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ggml-org"
+org_or_maintainer: ggml-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 155
+trending_score: 42
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: whisper-cpp
-name: "whisper.cpp"
+name: whisper.cpp
 artifact_type: library
 category: voice-audio
 subcategory: inference-engines
-description: "A dependency-free C/C++ port of OpenAI's Whisper that runs speech-to-text on CPU and consumer hardware via the ggml/GGUF tensor library"
+description: A dependency-free C/C++ port of OpenAI's Whisper that runs speech-to-text on CPU and consumer hardware via the ggml/GGUF tensor library
 github_url: https://github.com/ggml-org/whisper.cpp
-license: "MIT"
-primary_language: "C++"
+license: MIT
+primary_language: C++
 tags:
-  - "voice"
-  - "inference"
-  - "self-hosted"
-  - "llm"
-  - "streaming"
+  - voice
+  - inference
+  - self-hosted
+  - llm
+  - streaming
 maturity: production
 cost_model: open-source
-github_stars: 51732
-last_commit: "2026-07-11"
+github_stars: 51887
+last_commit: '2026-07-11'
 docs_url: https://github.com/ggml-org/whisper.cpp
 phase: inference-engine
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A portable ASR runtime that executes the Whisper encoder-decoder from quantized GGUF weights with no Python or CUDA dependency."
+  - A portable ASR runtime that executes the Whisper encoder-decoder from quantized GGUF weights with no Python or CUDA dependency.
 best_for:
-  - "You need offline, on-device transcription on a laptop, phone, or edge board where a PyTorch + CUDA stack is impractical"
-  - "You want to embed speech-to-text directly into a C/C++, Swift, or WASM application as a single linked library"
+  - You need offline, on-device transcription on a laptop, phone, or edge board where a PyTorch + CUDA stack is impractical
+  - You want to embed speech-to-text directly into a C/C++, Swift, or WASM application as a single linked library
 avoid_if:
-  - "You need training or fine-tuning of Whisper; this is inference-only and expects existing GGUF checkpoints"
-  - "You require the absolute lowest word-error-rate at scale on datacenter GPUs, where the PyTorch/faster-whisper path can be tuned further"
-enrichment_notes: "Repository, MIT license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. Accuracy/latency characteristics are model- and hardware-dependent and not benchmarked here."
+  - You need training or fine-tuning of Whisper; this is inference-only and expects existing GGUF checkpoints
+  - You require the absolute lowest word-error-rate at scale on datacenter GPUs, where the PyTorch/faster-whisper path can be tuned further
+enrichment_notes: Repository, MIT license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. Accuracy/latency characteristics are model- and hardware-dependent and not benchmarked here.
 ---
 
 ## Overview

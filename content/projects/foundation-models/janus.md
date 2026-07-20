@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "deepseek-ai"
+org_or_maintainer: deepseek-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 4
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: janus
-name: "Janus"
+name: Janus
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "DeepSeek's unified multimodal model that decouples visual understanding from generation, letting one model both interpret images and generate them"
+description: DeepSeek's unified multimodal model that decouples visual understanding from generation, letting one model both interpret images and generate them
 github_url: https://github.com/deepseek-ai/Janus
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "llm"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - llm
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 17753
-last_commit: "2025-02-01"
+github_stars: 17757
+last_commit: '2025-02-01'
 docs_url: https://github.com/deepseek-ai/Janus
 phase: foundation-model
 domain:
-  - "multimodal"
-  - "vision"
-  - "language"
+  - multimodal
+  - vision
+  - language
 relation_to_stack:
-  - "study-and-reference"
-  - "build-on-top"
+  - study-and-reference
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "org-backed"
+  - research-origin
+  - org-backed
 ecosystem_role:
-  - "A unified any-to-any model that both understands and generates images by decoupling the visual encoding pathways."
+  - A unified any-to-any model that both understands and generates images by decoupling the visual encoding pathways.
 best_for:
-  - "You want one open model that can both answer questions about images and generate images from text"
-  - "You are researching unified understanding-plus-generation architectures with decoupled visual encoders"
+  - You want one open model that can both answer questions about images and generate images from text
+  - You are researching unified understanding-plus-generation architectures with decoupled visual encoders
 avoid_if:
-  - "You need best-in-class quality on either understanding or generation alone, where specialized models lead"
-  - "You need production stability rather than a research release"
-enrichment_notes: "Repository, MIT license, and 2025-02-01 activity verified via the GitHub API on 2026-07-12. Research release; quality varies by task."
+  - You need best-in-class quality on either understanding or generation alone, where specialized models lead
+  - You need production stability rather than a research release
+enrichment_notes: Repository, MIT license, and 2025-02-01 activity verified via the GitHub API on 2026-07-12. Research release; quality varies by task.
 ---
 
 ## Overview

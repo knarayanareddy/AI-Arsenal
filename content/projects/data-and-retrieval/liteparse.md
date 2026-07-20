@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "run-llama"
+org_or_maintainer: run-llama
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 199
+trending_score: 46
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: liteparse
-name: "Liteparse"
+name: Liteparse
 artifact_type: library
 category: data-pipelines
 subcategory: document-processing
-description: "A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output"
+description: A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output
 github_url: https://github.com/run-llama/liteparse
-license: "Apache-2.0"
-primary_language: "Rust"
+license: Apache-2.0
+primary_language: Rust
 tags:
-  - "data"
-  - "llm"
-  - "self-hosted"
-  - "rag"
+  - data
+  - llm
+  - self-hosted
+  - rag
 maturity: beta
 cost_model: open-source
-github_stars: 11495
-last_commit: "2026-07-11"
+github_stars: 11694
+last_commit: '2026-07-20'
 docs_url: https://developers.llamaindex.ai/liteparse/
 phase: data-and-retrieval
 domain:
-  - "language"
-  - "vision"
+  - language
+  - vision
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A Rust-based document parser that produces clean, structured text for LLM and RAG ingestion as a self-hostable alternative to hosted parsing APIs."
+  - A Rust-based document parser that produces clean, structured text for LLM and RAG ingestion as a self-hostable alternative to hosted parsing APIs.
 best_for:
-  - "You want a fast, self-hostable document parser producing LLM-ready structured text without a per-page cloud fee"
-  - "You are in the LlamaIndex ecosystem and want tight integration for RAG ingestion"
+  - You want a fast, self-hostable document parser producing LLM-ready structured text without a per-page cloud fee
+  - You are in the LlamaIndex ecosystem and want tight integration for RAG ingestion
 avoid_if:
-  - "You need the most accurate extraction on highly complex scanned layouts, where heavier vision models may do better"
-  - "You need a mature, long-stable API, since the project is young and evolving"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. Young project; the hosted LlamaParse is the managed counterpart."
+  - You need the most accurate extraction on highly complex scanned layouts, where heavier vision models may do better
+  - You need a mature, long-stable API, since the project is young and evolving
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. Young project; the hosted LlamaParse is the managed counterpart.
 ---
 
 ## Overview

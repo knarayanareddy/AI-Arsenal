@@ -6,25 +6,33 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
-github_url: "https://github.com/exo-explore/exo"
+github_url: https://github.com/exo-explore/exo
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: exo-explore
-tags: [inference, self-hosted, local]
+tags:
+  - inference
+  - self-hosted
+  - local
 maturity: experimental
 cost_model: open-source
-github_stars: 46087
-github_stars_last_30d: 0
-trending_score: 72
-last_commit: "2026-06-23"
-docs_url: "https://github.com/exo-explore/exo"
+github_stars: 46383
+github_stars_last_30d: 296
+trending_score: 64
+last_commit: '2026-06-23'
+docs_url: https://github.com/exo-explore/exo
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [community-driven, experimental]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - community-driven
+  - experimental
 ecosystem_role:
   - Distributed inference across heterogeneous consumer devices — pools the combined RAM of machines you already own to run a model none of them could hold alone, an alternative to buying one big GPU box
 best_for:
@@ -35,17 +43,22 @@ avoid_if:
   - You have one machine that already fits your model — distribution adds overhead with no benefit
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [llama-cpp, ollama]
+alternatives:
+  - llama-cpp
+  - ollama
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: 46.1k stars, Apache-2.0, last push 2026-06-23 verified via the GitHub API on 2026-07-08. Cadence has slowed relative to peak; marked experimental. Performance depends heavily on network and device mix and is not benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending","date":"2026-07-08","description":"46.1k stars; widely shared distributed-local-inference project"}
+  - source: github-trending
+    url: https://github.com/trending
+    date: '2026-07-08'
+    description: 46.1k stars; widely shared distributed-local-inference project
 featured: false
 status: active
 ---

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "OpenGVLab"
+org_or_maintainer: OpenGVLab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 10
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: internvideo
-name: "InternVideo"
+name: InternVideo
 artifact_type: model
 category: computer-vision
 subcategory: open-source-models
-description: "Open-source family of video foundation models and datasets from OpenGVLab for video understanding, retrieval, and multimodal tasks"
+description: Open-source family of video foundation models and datasets from OpenGVLab for video understanding, retrieval, and multimodal tasks
 github_url: https://github.com/OpenGVLab/InternVideo
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "vision"
-  - "multimodal"
-  - "transformers"
-  - "research"
-  - "foundational"
-  - "embeddings"
+  - vision
+  - multimodal
+  - transformers
+  - research
+  - foundational
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 2329
-last_commit: "2026-07-02"
+github_stars: 2339
+last_commit: '2026-07-02'
 docs_url: https://github.com/OpenGVLab/InternVideo
 phase: foundation-model
 domain:
-  - "vision"
-  - "multimodal"
+  - vision
+  - multimodal
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "org-backed"
-  - "actively-maintained"
+  - research-origin
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "A video foundation-model family combining masked and contrastive pretraining to produce transferable video representations for understanding and retrieval."
+  - A video foundation-model family combining masked and contrastive pretraining to produce transferable video representations for understanding and retrieval.
 best_for:
-  - "You need pretrained video encoders or video-language models for tasks like action recognition, video retrieval, or video QA."
-  - "You are researching video foundation models and want published checkpoints, datasets, and training recipes to build on."
+  - You need pretrained video encoders or video-language models for tasks like action recognition, video retrieval, or video QA.
+  - You are researching video foundation models and want published checkpoints, datasets, and training recipes to build on.
 avoid_if:
-  - "You only need image or text understanding, where lighter single-modality models are more efficient."
-  - "You require a turnkey hosted video API rather than research checkpoints you must serve yourself."
-enrichment_notes: "Official OpenGVLab repository (ECCV 2024 lineage), Apache-2.0 license, and 2026-07-02 activity were reviewed on 2026-07-12. Benchmark results are paper-reported."
+  - You only need image or text understanding, where lighter single-modality models are more efficient.
+  - You require a turnkey hosted video API rather than research checkpoints you must serve yourself.
+enrichment_notes: Official OpenGVLab repository (ECCV 2024 lineage), Apache-2.0 license, and 2026-07-02 activity were reviewed on 2026-07-12. Benchmark results are paper-reported.
 ---
 
 ## Overview

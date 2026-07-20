@@ -6,18 +6,21 @@ artifact_type: library
 category: rag
 subcategory: document-processing
 description: IBM-origin open-source toolkit for parsing and exporting documents for generative AI
-github_url: "https://github.com/docling-project/docling"
+github_url: https://github.com/docling-project/docling
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, data, retrieval]
+tags:
+  - rag
+  - data
+  - retrieval
 maturity: production
 cost_model: open-source
-github_stars: 61495
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://docling-project.github.io/docling/"
+github_stars: 63499
+github_stars_last_30d: 2004
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://docling-project.github.io/docling/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +31,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, vision]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - IBM's open-source document conversion library, specializing in high-fidelity parsing of complex document formats (PDF, DOCX) into structured, LLM-ready representations
 best_for:
@@ -46,8 +55,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Docling is developed and backed by IBM Research, giving credible org-backing signal; it's increasingly cited alongside Unstructured and LlamaParse as a leading open-source document-parsing option specifically for RAG pipelines dealing with complex layouts.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

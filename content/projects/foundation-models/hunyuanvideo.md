@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Tencent-Hunyuan"
+org_or_maintainer: Tencent-Hunyuan
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 22
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: hunyuanvideo
-name: "HunyuanVideo"
+name: HunyuanVideo
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Tencent's large open text-to-video generation model with a diffusion-transformer backbone and a 3D VAE, targeting cinematic-quality clips"
+description: Tencent's large open text-to-video generation model with a diffusion-transformer backbone and a 3D VAE, targeting cinematic-quality clips
 github_url: https://github.com/Tencent-Hunyuan/HunyuanVideo
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 12330
-last_commit: "2026-06-29"
+github_stars: 12352
+last_commit: '2026-06-29'
 docs_url: https://aivideo.hunyuan.tencent.com
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A large diffusion-transformer video model targeting high-fidelity text-to-video generation you can self-host."
+  - A large diffusion-transformer video model targeting high-fidelity text-to-video generation you can self-host.
 best_for:
-  - "You want one of the highest-quality open text-to-video models and have multi-GPU or high-memory hardware"
-  - "You are researching large-scale video diffusion transformers and their 3D VAE latent design"
+  - You want one of the highest-quality open text-to-video models and have multi-GPU or high-memory hardware
+  - You are researching large-scale video diffusion transformers and their 3D VAE latent design
 avoid_if:
-  - "You need fast generation on a single modest GPU, where lighter models like LTX-Video fit better"
-  - "You cannot verify the model's non-standard license terms for your use case"
-enrichment_notes: "Repository and 2026-06-29 activity verified via the GitHub API on 2026-07-12. License is NOASSERTION (custom Tencent terms); verify before use. Very GPU-heavy."
+  - You need fast generation on a single modest GPU, where lighter models like LTX-Video fit better
+  - You cannot verify the model's non-standard license terms for your use case
+enrichment_notes: Repository and 2026-06-29 activity verified via the GitHub API on 2026-07-12. License is NOASSERTION (custom Tencent terms); verify before use. Very GPU-heavy.
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Avaiga"
+org_or_maintainer: Avaiga
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,46 +18,46 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 55
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: taipy
-name: "Taipy"
+name: Taipy
 artifact_type: framework
 category: tooling
 subcategory: frameworks
-description: "A Python framework for turning data and AI algorithms into production-ready web applications, pairing an interactive GUI layer with a pipeline/scenario"
+description: A Python framework for turning data and AI algorithms into production-ready web applications, pairing an interactive GUI layer with a pipeline/scenario
 github_url: https://github.com/Avaiga/taipy
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "self-hosted"
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 19253
-last_commit: "2026-06-21"
+github_stars: 19308
+last_commit: '2026-06-21'
 docs_url: https://docs.taipy.io/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A Python app framework combining GUI building with data/AI pipeline orchestration and scenario management."
+  - A Python app framework combining GUI building with data/AI pipeline orchestration and scenario management.
 best_for:
-  - "You want to build a data/AI web app in pure Python with both UI and back-end pipeline orchestration"
-  - "You need scenario management (versioned pipeline runs with different inputs) beyond a simple dashboard"
+  - You want to build a data/AI web app in pure Python with both UI and back-end pipeline orchestration
+  - You need scenario management (versioned pipeline runs with different inputs) beyond a simple dashboard
 avoid_if:
-  - "You need a full custom web frontend, where a JavaScript framework offers more control"
-  - "A lightweight dashboard tool already covers your needs without pipeline orchestration"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-21 activity verified via the GitHub API on 2026-07-12. GUI plus orchestration breadth adds concepts to learn."
+  - You need a full custom web frontend, where a JavaScript framework offers more control
+  - A lightweight dashboard tool already covers your needs without pipeline orchestration
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-21 activity verified via the GitHub API on 2026-07-12. GUI plus orchestration breadth adds concepts to learn.
 ---
 
 ## Overview

@@ -1,50 +1,67 @@
 ---
 id: camel-ai
-name: "CAMEL"
+name: CAMEL
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation"
-github_url: "https://github.com/camel-ai/camel"
-license: "Apache-2.0"
+description: Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
+github_url: https://github.com/camel-ai/camel
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "CAMEL-AI.org"
-tags: [agents, orchestration, research]
+org_or_maintainer: CAMEL-AI.org
+tags:
+  - agents
+  - orchestration
+  - research
 maturity: production
 cost_model: open-source
-github_stars: 17343
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-07"
-docs_url: "https://docs.camel-ai.org/get_started/introduction"
+github_stars: 17442
+github_stars_last_30d: 99
+trending_score: 48
+last_commit: '2026-07-20'
+docs_url: https://docs.camel-ai.org/get_started/introduction
 demo_url: null
-paper_url: "https://arxiv.org/abs/2303.17760"
+paper_url: https://arxiv.org/abs/2303.17760
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [research-origin, community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - research-origin
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The oldest living multi-agent framework (the March 2023 CAMEL paper predates AutoGen and CrewAI) with a research identity: finding the scaling laws of agents by simulating million-agent societies, generating synthetic training data, and spawning the OWL and Loong projects."
+  - 'The oldest living multi-agent framework (the March 2023 CAMEL paper predates AutoGen and CrewAI) with a research identity: finding the scaling laws of agents by simulating million-agent societies, generating synthetic training data, and spawning the OWL and Loong projects.'
 best_for:
-  - "You research multi-agent behavior — role-playing societies, emergent cooperation, and large-scale simulations are the framework's founding use case, with stateful memory and evolvable environments"
-  - "You generate synthetic data with agents — CAMEL's pipelines for instruction data and reasoning traces (feeding projects like Loong) are among the most developed open implementations"
+  - You research multi-agent behavior — role-playing societies, emergent cooperation, and large-scale simulations are the framework's founding use case, with stateful memory and evolvable environments
+  - You generate synthetic data with agents — CAMEL's pipelines for instruction data and reasoning traces (feeding projects like Loong) are among the most developed open implementations
 avoid_if:
-  - "You want a production business-workflow orchestrator with opinionated guardrails — CrewAI/LangGraph have stronger deployment stories and commercial support"
-  - "You need a minimal learning curve — the framework's breadth (societies, benchmarks, environments, data pipelines) is oriented to researchers comfortable reading source"
+  - You want a production business-workflow orchestrator with opinionated guardrails — CrewAI/LangGraph have stronger deployment stories and commercial support
+  - You need a minimal learning curve — the framework's breadth (societies, benchmarks, environments, data pipelines) is oriented to researchers comfortable reading source
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [autogen, crewai, metagpt]
+alternatives:
+  - autogen
+  - crewai
+  - metagpt
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (17,343), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (17,343), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/camel-ai/camel", "date": "2026-07-08", "description": "17,343 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/camel-ai/camel
+    date: '2026-07-08'
+    description: 17,343 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

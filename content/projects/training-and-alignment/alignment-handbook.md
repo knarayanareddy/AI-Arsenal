@@ -6,46 +6,60 @@ artifact_type: library
 category: llms
 subcategory: fine-tuning
 description: Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
-github_url: "https://github.com/huggingface/alignment-handbook"
+github_url: https://github.com/huggingface/alignment-handbook
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: huggingface
-tags: [fine-tuning, rlhf, llm]
+tags:
+  - fine-tuning
+  - rlhf
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 5627
-github_stars_last_30d: 0
-trending_score: 35
-last_commit: "2026-05-26"
-docs_url: "https://github.com/huggingface/alignment-handbook"
+github_stars: 5639
+github_stars_last_30d: 12
+trending_score: 41
+last_commit: '2026-05-26'
+docs_url: https://github.com/huggingface/alignment-handbook
 demo_url: null
-paper_url: "https://arxiv.org/abs/2310.16944"
+paper_url: https://arxiv.org/abs/2310.16944
 paper_id: null
 phase: training-and-alignment
-domain: [language, safety-and-alignment]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [org-backed, research-origin]
+domain:
+  - language
+  - safety-and-alignment
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "The reference recipes of open post-training: not a framework but the published, reproducible configs (datasets, hyperparameters, multi-stage pipelines) that produced Zephyr and its successors — the closest thing the field has to a canonical answer for 'what settings actually work for SFT then DPO on a 7B model'"
+  - 'The reference recipes of open post-training: not a framework but the published, reproducible configs (datasets, hyperparameters, multi-stage pipelines) that produced Zephyr and its successors — the closest thing the field has to a canonical answer for ''what settings actually work for SFT then DPO on a 7B model'''
 best_for:
-  - "Starting a post-training project from known-good hyperparameters — fork the recipe for your model size and method (full SFT, QLoRA, DPO, ORPO) instead of rediscovering learning rates and beta values"
-  - "Learning post-training practice by reading working pipelines: each recipe is a complete, runnable account of a published model's training, which no paper's methods section actually provides"
+  - Starting a post-training project from known-good hyperparameters — fork the recipe for your model size and method (full SFT, QLoRA, DPO, ORPO) instead of rediscovering learning rates and beta values
+  - 'Learning post-training practice by reading working pipelines: each recipe is a complete, runnable account of a published model''s training, which no paper''s methods section actually provides'
 avoid_if:
-  - "You want a maintained end-to-end training product — it's a recipe collection over TRL/Accelerate with research-cadence upkeep (last push 2026-05), not a supported framework"
-  - "Your target models or methods postdate the recipes — coverage centers on Mistral/Llama-class dense models; newest architectures and RL methods (GRPO-era) live in TRL and newer repos first"
-upstream_dependencies: [peft, accelerate]
+  - You want a maintained end-to-end training product — it's a recipe collection over TRL/Accelerate with research-cadence upkeep (last push 2026-05), not a supported framework
+  - Your target models or methods postdate the recipes — coverage centers on Mistral/Llama-class dense models; newest architectures and RL methods (GRPO-era) live in TRL and newer repos first
+upstream_dependencies:
+  - peft
+  - accelerate
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (5.6k), Apache-2.0, and last push (2026-05-26) verified via the GitHub API on 2026-07-08. Linked paper is the Zephyr report the recipes reproduce. Below the usual star bar but admitted for its reference-recipe role — its value is canonicity, not adoption volume.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/huggingface/alignment-handbook","date":"2026-07-08","description":"5.6k stars; HF H4 team's published post-training recipes"}
+  - source: github-trending
+    url: https://github.com/huggingface/alignment-handbook
+    date: '2026-07-08'
+    description: 5.6k stars; HF H4 team's published post-training recipes
 featured: false
 status: active
 ---

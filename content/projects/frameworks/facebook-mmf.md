@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "facebookresearch"
+org_or_maintainer: facebookresearch
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,49 +19,49 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: facebook-mmf
-name: "MMF"
+name: MMF
 artifact_type: framework
 category: multimodal
 subcategory: frameworks
-description: "Facebook AI Research's modular PyTorch framework for vision-and-language multimodal research, with datasets, pretrained models, and reproducible task pipelines"
+description: Facebook AI Research's modular PyTorch framework for vision-and-language multimodal research, with datasets, pretrained models, and reproducible task pipelines
 github_url: https://github.com/facebookresearch/mmf
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
+  - multimodal
+  - fine-tuning
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 5636
-last_commit: "2026-07-07"
+github_stars: 5635
+last_commit: '2026-07-07'
 docs_url: https://mmf.sh/
 phase: framework
 domain:
-  - "multimodal"
-  - "vision"
-  - "language"
+  - multimodal
+  - vision
+  - language
 relation_to_stack:
-  - "study-and-reference"
-  - "build-on-top"
+  - study-and-reference
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A modular research framework for vision-and-language tasks with standardized datasets and model zoo."
+  - A modular research framework for vision-and-language tasks with standardized datasets and model zoo.
 best_for:
-  - "You are doing vision-and-language research and want standardized datasets, tasks, and baselines like VisualBERT/MMBT"
-  - "You want a modular framework to prototype new multimodal models against established benchmarks"
+  - You are doing vision-and-language research and want standardized datasets, tasks, and baselines like VisualBERT/MMBT
+  - You want a modular framework to prototype new multimodal models against established benchmarks
 avoid_if:
-  - "You need modern large VLM inference/serving, where current multimodal models and libraries fit better"
-  - "You want a production system rather than a research framework"
-enrichment_notes: "Repository and 2026-07-07 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION. Research-focused; predates the current large-VLM era."
+  - You need modern large VLM inference/serving, where current multimodal models and libraries fit better
+  - You want a production system rather than a research framework
+enrichment_notes: Repository and 2026-07-07 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION. Research-focused; predates the current large-VLM era.
 ---
 
 ## Overview

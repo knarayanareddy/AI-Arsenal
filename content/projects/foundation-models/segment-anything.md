@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "facebookresearch"
+org_or_maintainer: facebookresearch
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 36
+trending_score: 33
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: segment-anything
-name: "Segment Anything (SAM)"
+name: Segment Anything (SAM)
 artifact_type: model
 category: computer-vision
 subcategory: open-source-models
-description: "Meta's promptable segmentation foundation model that produces high-quality object masks from point, box, or text-free prompts, with zero-shot generalization"
+description: Meta's promptable segmentation foundation model that produces high-quality object masks from point, box, or text-free prompts, with zero-shot generalization
 github_url: https://github.com/facebookresearch/segment-anything
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 54527
-last_commit: "2024-09-18"
+github_stars: 54563
+last_commit: '2024-09-18'
 docs_url: https://ai.meta.com/research/publications/segment-anything/
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A promptable segmentation foundation model that many downstream vision tools call to generate object masks."
+  - A promptable segmentation foundation model that many downstream vision tools call to generate object masks.
 best_for:
-  - "You need high-quality, zero-shot object masks from point or box prompts to power labeling, editing, or extraction tools"
-  - "You want a segmentation backbone to build interactive selection or auto-masking features on top of"
+  - You need high-quality, zero-shot object masks from point or box prompts to power labeling, editing, or extraction tools
+  - You want a segmentation backbone to build interactive selection or auto-masking features on top of
 avoid_if:
-  - "You need real-time segmentation on constrained hardware, where distilled variants like MobileSAM/FastSAM fit better"
-  - "You need semantic class labels; SAM segments regions but does not name them"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-09-18 activity verified via the GitHub API on 2026-07-12. SAM 2 exists for video; this entry covers the original image model."
+  - You need real-time segmentation on constrained hardware, where distilled variants like MobileSAM/FastSAM fit better
+  - You need semantic class labels; SAM segments regions but does not name them
+enrichment_notes: Repository, Apache-2.0 license, and 2024-09-18 activity verified via the GitHub API on 2026-07-12. SAM 2 exists for video; this entry covers the original image model.
 ---
 
 ## Overview

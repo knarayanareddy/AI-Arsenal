@@ -6,25 +6,36 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Multi-agent framework that simulates software-company roles for natural-language programming
-github_url: "https://github.com/FoundationAgents/MetaGPT"
+github_url: https://github.com/FoundationAgents/MetaGPT
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, orchestration, planning, code-gen]
+tags:
+  - agents
+  - orchestration
+  - planning
+  - code-gen
 maturity: production
 cost_model: open-source
-github_stars: 68769
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-01-21"
-docs_url: "https://docs.deepwisdom.ai/"
+github_stars: 69440
+github_stars_last_30d: 671
+trending_score: 55
+last_commit: '2026-01-21'
+docs_url: https://docs.deepwisdom.ai/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, deploy-as-is]
-health_signals: [research-origin, community-driven, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - deploy-as-is
+health_signals:
+  - research-origin
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Multi-agent framework modeling a software company's roles (PM, architect, engineer, QA) to collaboratively generate software from a requirement
 best_for:
@@ -35,17 +46,22 @@ avoid_if:
   - You want an actively-supported commercial product — MGX (MetaGPT's commercial launch) is the productized direction, but the open-source repo itself is maintained more as an active research codebase than an enterprise product
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "MetaGPT originated as a paper ('MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework') with continued academic output (AFlow accepted at ICLR 2025, further papers at NeurIPS/ICML 2025 per third-party coverage), and the GitHub repo shows active issue activity through June 2026, confirming both research-origin and ongoing maintenance."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'MetaGPT originated as a paper (''MetaGPT: Meta Programming for a Multi-Agent Collaborative Framework'') with continued academic output (AFlow accepted at ICLR 2025, further papers at NeurIPS/ICML 2025 per third-party coverage), and the GitHub repo shows active issue activity through June 2026, confirming both research-origin and ongoing maintenance.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://docs.deepwisdom.ai/","date":"2026-06-13","description":"Official docs"}
+  - source: newsletter
+    url: https://docs.deepwisdom.ai/
+    date: '2026-06-13'
+    description: Official docs
 featured: false
 status: active
 ---

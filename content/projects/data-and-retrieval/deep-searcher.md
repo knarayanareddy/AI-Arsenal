@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "zilliztech"
+org_or_maintainer: zilliztech
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 70
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: deep-searcher
-name: "DeepSearcher"
+name: DeepSearcher
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "An open deep-research framework from Zilliz that reasons over private data by iteratively planning sub-queries, searching a vector store"
+description: An open deep-research framework from Zilliz that reasons over private data by iteratively planning sub-queries, searching a vector store
 github_url: https://github.com/zilliztech/deep-searcher
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "rag"
-  - "agents"
-  - "llm"
-  - "self-hosted"
+  - rag
+  - agents
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7939
-last_commit: "2025-11-19"
+github_stars: 8009
+last_commit: '2025-11-19'
 docs_url: https://github.com/zilliztech/deep-searcher
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An agentic deep-research pipeline that decomposes questions and iteratively retrieves over private data to produce cited reports."
+  - An agentic deep-research pipeline that decomposes questions and iteratively retrieves over private data to produce cited reports.
 best_for:
-  - "You want an open, self-hostable deep-research agent over your own documents rather than a hosted service"
-  - "You need multi-step, cited answers that iterate retrieval rather than a single-shot RAG lookup"
+  - You want an open, self-hostable deep-research agent over your own documents rather than a hosted service
+  - You need multi-step, cited answers that iterate retrieval rather than a single-shot RAG lookup
 avoid_if:
-  - "You need simple, low-latency single-turn RAG, where an iterative agent adds unnecessary cost and latency"
-  - "You cannot supply an LLM and a vector database to back the pipeline"
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-11-19 activity verified via the GitHub API on 2026-07-12. Agentic loops cost multiple LLM calls per query."
+  - You need simple, low-latency single-turn RAG, where an iterative agent adds unnecessary cost and latency
+  - You cannot supply an LLM and a vector database to back the pipeline
+enrichment_notes: Repository, Apache-2.0 license, and 2025-11-19 activity verified via the GitHub API on 2026-07-12. Agentic loops cost multiple LLM calls per query.
 ---
 
 ## Overview

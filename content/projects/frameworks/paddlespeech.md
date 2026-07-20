@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "PaddlePaddle"
+org_or_maintainer: PaddlePaddle
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 9
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: paddlespeech
-name: "PaddleSpeech"
+name: PaddleSpeech
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation"
+description: An easy-to-use speech toolkit on PaddlePaddle covering streaming ASR with punctuation, streaming TTS, speaker verification, speech translation
 github_url: https://github.com/PaddlePaddle/PaddleSpeech
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "inference"
-  - "fine-tuning"
-  - "self-hosted"
-  - "streaming"
+  - voice
+  - inference
+  - fine-tuning
+  - self-hosted
+  - streaming
 maturity: production
 cost_model: open-source
-github_stars: 12641
-last_commit: "2026-06-21"
+github_stars: 12650
+last_commit: '2026-06-21'
 docs_url: https://paddlespeech.readthedocs.io
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
-  - "community-driven"
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "A PaddlePaddle-based speech framework offering streaming ASR/TTS, speaker verification, translation, and keyword spotting with pretrained models."
+  - A PaddlePaddle-based speech framework offering streaming ASR/TTS, speaker verification, translation, and keyword spotting with pretrained models.
 best_for:
-  - "You work in the PaddlePaddle ecosystem and want streaming ASR with punctuation and streaming TTS out of the box"
-  - "You need strong Chinese speech support with a full task suite (verification, translation, keyword spotting)"
+  - You work in the PaddlePaddle ecosystem and want streaming ASR with punctuation and streaming TTS out of the box
+  - You need strong Chinese speech support with a full task suite (verification, translation, keyword spotting)
 avoid_if:
-  - "Your stack is PyTorch-only and adopting PaddlePaddle is undesirable"
-  - "You need a minimal embedded runtime rather than a full framework"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-21 activity verified via the GitHub API on 2026-07-12. Won a NAACL 2022 best-demo award; strongest for Chinese."
+  - Your stack is PyTorch-only and adopting PaddlePaddle is undesirable
+  - You need a minimal embedded runtime rather than a full framework
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-21 activity verified via the GitHub API on 2026-07-12. Won a NAACL 2022 best-demo award; strongest for Chinese.
 ---
 
 ## Overview

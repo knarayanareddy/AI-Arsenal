@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 19
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: hf-tokenizers
-name: "Hugging Face Tokenizers"
+name: Hugging Face Tokenizers
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "Hugging Face's fast Rust-backed tokenizers library for training and running BPE, WordPiece, and Unigram tokenizers with full alignment tracking"
+description: Hugging Face's fast Rust-backed tokenizers library for training and running BPE, WordPiece, and Unigram tokenizers with full alignment tracking
 github_url: https://github.com/huggingface/tokenizers
-license: "Apache-2.0"
-primary_language: "Rust"
+license: Apache-2.0
+primary_language: Rust
 tags:
-  - "llm"
-  - "self-hosted"
-  - "fine-tuning"
+  - llm
+  - self-hosted
+  - fine-tuning
 maturity: production
 cost_model: open-source
-github_stars: 10878
-last_commit: "2026-07-12"
+github_stars: 10897
+last_commit: '2026-07-20'
 docs_url: https://huggingface.co/docs/tokenizers
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The tokenizer engine behind Hugging Face Transformers, offering fast training and inference with offset tracking."
+  - The tokenizer engine behind Hugging Face Transformers, offering fast training and inference with offset tracking.
 best_for:
-  - "You work in the Hugging Face ecosystem and need fast tokenization with alignment/offset information"
-  - "You want to train or customize BPE/WordPiece/Unigram tokenizers with a modern pipeline API"
+  - You work in the Hugging Face ecosystem and need fast tokenization with alignment/offset information
+  - You want to train or customize BPE/WordPiece/Unigram tokenizers with a modern pipeline API
 avoid_if:
-  - "You only need OpenAI token counts, where tiktoken matches those models exactly"
-  - "You need no tokenization control and a model's default `AutoTokenizer` already suffices"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Tightly coupled to the Hugging Face stack."
+  - You only need OpenAI token counts, where tiktoken matches those models exactly
+  - You need no tokenization control and a model's default `AutoTokenizer` already suffices
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Tightly coupled to the Hugging Face stack.
 ---
 
 ## Overview

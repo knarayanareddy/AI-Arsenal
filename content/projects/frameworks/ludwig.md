@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ludwig-ai"
+org_or_maintainer: ludwig-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 6
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: ludwig
-name: "Ludwig"
+name: Ludwig
 artifact_type: framework
 category: tooling
 subcategory: frameworks
-description: "A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code"
+description: A declarative, low-code framework for building custom models and fine-tuning LLMs from a YAML config, without writing training code
 github_url: https://github.com/ludwig-ai/ludwig
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "llm"
-  - "self-hosted"
+  - fine-tuning
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 11736
-last_commit: "2026-07-04"
+github_stars: 11742
+last_commit: '2026-07-13'
 docs_url: https://ludwig.ai/
 phase: framework
 domain:
-  - "general-purpose"
-  - "language"
+  - general-purpose
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A declarative training framework that turns a YAML spec into a full model or LLM fine-tuning pipeline."
+  - A declarative training framework that turns a YAML spec into a full model or LLM fine-tuning pipeline.
 best_for:
-  - "You want to fine-tune an LLM or train a tabular/multimodal model from a config without writing training loops"
-  - "You need reproducible, declarative experiments that data scientists can run without deep PyTorch code"
+  - You want to fine-tune an LLM or train a tabular/multimodal model from a config without writing training loops
+  - You need reproducible, declarative experiments that data scientists can run without deep PyTorch code
 avoid_if:
-  - "You need full low-level control over a custom training loop or novel architecture"
-  - "You want the newest LLM training features immediately, which specialized libraries ship first"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-04 activity verified via the GitHub API on 2026-07-12. Declarative approach trades flexibility for simplicity."
+  - You need full low-level control over a custom training loop or novel architecture
+  - You want the newest LLM training features immediately, which specialized libraries ship first
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-04 activity verified via the GitHub API on 2026-07-12. Declarative approach trades flexibility for simplicity.
 ---
 
 ## Overview

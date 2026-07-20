@@ -1,50 +1,67 @@
 ---
 id: glm-4
-name: "GLM-4 / GLM-4.5"
+name: GLM-4 / GLM-4.5
 version_tracked: null
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants"
-github_url: "https://github.com/zai-org/GLM-4.5"
-license: "MIT"
+description: Zhipu AI's open-weights model family unifying reasoning, coding, and agentic capability, with MoE flagships and strong small dense variants
+github_url: https://github.com/zai-org/GLM-4.5
+license: MIT
 primary_language: Python
-org_or_maintainer: "Zhipu AI (Z.ai)"
-tags: [llm, agents, code-gen]
+org_or_maintainer: Zhipu AI (Z.ai)
+tags:
+  - llm
+  - agents
+  - code-gen
 maturity: production
 cost_model: open-source
-github_stars: 4392
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-02-01"
-docs_url: "https://docs.z.ai/guides/overview/quick-start"
+github_stars: 4401
+github_stars_last_30d: 9
+trending_score: 41
+last_commit: '2026-02-01'
+docs_url: https://docs.z.ai/guides/overview/quick-start
 demo_url: null
-paper_url: "https://arxiv.org/abs/2508.06471"
+paper_url: https://arxiv.org/abs/2508.06471
 paper_id: null
 phase: foundation-model
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, research-origin]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The third pillar of China's open-weights frontier alongside DeepSeek and Qwen: GLM-4.5's ARC (agentic-reasoning-coding) focus and hybrid thinking/non-thinking modes made it a leading open choice for coding agents, with MIT licensing removing commercial friction."
+  - 'The third pillar of China''s open-weights frontier alongside DeepSeek and Qwen: GLM-4.5''s ARC (agentic-reasoning-coding) focus and hybrid thinking/non-thinking modes made it a leading open choice for coding agents, with MIT licensing removing commercial friction.'
 best_for:
-  - "You run coding-agent workloads on open weights — GLM-4.5 was trained explicitly for agentic coding and scores near the top of open models on agentic benchmarks, with native tool-calling in both thinking and instant modes"
-  - "You want frontier-adjacent capability at moderate self-host cost — GLM-4.5-Air (106B total/12B active) delivers much of the flagship's capability at drastically lower serving requirements"
+  - You run coding-agent workloads on open weights — GLM-4.5 was trained explicitly for agentic coding and scores near the top of open models on agentic benchmarks, with native tool-calling in both thinking and instant modes
+  - You want frontier-adjacent capability at moderate self-host cost — GLM-4.5-Air (106B total/12B active) delivers much of the flagship's capability at drastically lower serving requirements
 avoid_if:
-  - "Your evaluation depends on English-ecosystem long-tail knowledge — Qwen/Llama lines sometimes edge GLM on Western-centric knowledge benchmarks; test on your distribution"
-  - "You need the single best open reasoning model regardless of cost — DeepSeek-R1-class or larger thinking models may win on pure reasoning depth"
+  - Your evaluation depends on English-ecosystem long-tail knowledge — Qwen/Llama lines sometimes edge GLM on Western-centric knowledge benchmarks; test on your distribution
+  - You need the single best open reasoning model regardless of cost — DeepSeek-R1-class or larger thinking models may win on pure reasoning depth
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [deepseek-v3-r1, qwen-2-5, kimi-k2]
+alternatives:
+  - deepseek-v3-r1
+  - qwen-2-5
+  - kimi-k2
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (4,392), primary language, license, and last commit (2026-02-01) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (4,392), primary language, license, and last commit (2026-02-01) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/zai-org/GLM-4.5", "date": "2026-07-08", "description": "4,392 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/zai-org/GLM-4.5
+    date: '2026-07-08'
+    description: 4,392 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

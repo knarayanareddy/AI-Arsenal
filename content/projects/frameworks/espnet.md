@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "espnet"
+org_or_maintainer: espnet
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 10
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: espnet
-name: "ESPnet"
+name: ESPnet
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "An end-to-end speech-processing toolkit covering ASR, TTS, speech translation, and enhancement, with Kaldi-style data pipelines and PyTorch models"
+description: An end-to-end speech-processing toolkit covering ASR, TTS, speech translation, and enhancement, with Kaldi-style data pipelines and PyTorch models
 github_url: https://github.com/espnet/espnet
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "fine-tuning"
-  - "multimodal"
-  - "self-hosted"
+  - voice
+  - fine-tuning
+  - multimodal
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 9887
-last_commit: "2026-07-10"
+github_stars: 9897
+last_commit: '2026-07-20'
 docs_url: https://espnet.github.io/espnet/
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
-  - "community-driven"
+  - actively-maintained
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A research-grade end-to-end speech framework with Kaldi-style recipes and a large catalog of reproducible ASR/TTS/ST benchmarks."
+  - A research-grade end-to-end speech framework with Kaldi-style recipes and a large catalog of reproducible ASR/TTS/ST benchmarks.
 best_for:
-  - "You need reproducible, benchmark-grade recipes for ASR, TTS, or speech translation across many public datasets"
-  - "You are doing speech research and want conformer, transducer, and self-supervised model implementations you can extend"
+  - You need reproducible, benchmark-grade recipes for ASR, TTS, or speech translation across many public datasets
+  - You are doing speech research and want conformer, transducer, and self-supervised model implementations you can extend
 avoid_if:
-  - "You want a simple inference package rather than a Kaldi-influenced recipe framework with a steep learning curve"
-  - "You need edge deployment, where an exported-model runtime is more appropriate"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. A long-standing academic speech toolkit with extensive published recipes."
+  - You want a simple inference package rather than a Kaldi-influenced recipe framework with a steep learning curve
+  - You need edge deployment, where an exported-model runtime is more appropriate
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. A long-standing academic speech toolkit with extensive published recipes.
 ---
 
 ## Overview

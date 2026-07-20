@@ -6,18 +6,22 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: High-performance serving framework for large language and multimodal models
-github_url: "https://github.com/sgl-project/sglang"
+github_url: https://github.com/sgl-project/sglang
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, batching, multimodal]
+tags:
+  - llm
+  - inference
+  - batching
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 28967
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://docs.sglang.ai/"
+github_stars: 30540
+github_stars_last_30d: 1573
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://docs.sglang.ai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,12 +29,24 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [HF, FP8, AWQ, GPTQ]
+supported_formats:
+  - HF
+  - FP8
+  - AWQ
+  - GPTQ
 api_compatible: openai
 phase: inference-engine
-domain: [language, vision]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - High-performance serving framework distinguished by RadixAttention prefix caching, increasingly positioned as a leading alternative to vLLM
 best_for:
@@ -46,12 +62,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: 2026 independent benchmark comparisons (buildmvpfast.com, techsy.io) confirm SGLang shows measurable throughput and latency advantages over vLLM in specific scenarios (smaller models, structured output, prefix-heavy workloads), giving concrete third-party technical evidence beyond the project's own claims.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://techsy.io/en/blog/vllm-vs-sglang","date":"2026-06-13","description":"Independent 2026 benchmark comparison: SGLang shows ~29% higher throughput than vLLM on 7B-8B models on H100 GPUs, with lower tail latency and better structured-output performance"}
+  - source: hackernews
+    url: https://techsy.io/en/blog/vllm-vs-sglang
+    date: '2026-06-13'
+    description: 'Independent 2026 benchmark comparison: SGLang shows ~29% higher throughput than vLLM on 7B-8B models on H100 GPUs, with lower tail latency and better structured-output performance'
 featured: false
 status: active
 ---

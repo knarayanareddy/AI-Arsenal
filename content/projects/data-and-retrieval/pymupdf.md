@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "pymupdf"
+org_or_maintainer: pymupdf
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 69
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: pymupdf
-name: "PyMuPDF"
+name: PyMuPDF
 artifact_type: library
 category: data-pipelines
 subcategory: document-processing
-description: "A high-performance Python library binding the MuPDF engine for fast text, image, and table extraction and manipulation of PDFs and other document formats"
+description: A high-performance Python library binding the MuPDF engine for fast text, image, and table extraction and manipulation of PDFs and other document formats
 github_url: https://github.com/pymupdf/PyMuPDF
-license: "AGPL-3.0"
-primary_language: "Python"
+license: AGPL-3.0
+primary_language: Python
 tags:
-  - "data"
-  - "self-hosted"
-  - "multimodal"
+  - data
+  - self-hosted
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 10201
-last_commit: "2026-07-11"
+github_stars: 10270
+last_commit: '2026-07-20'
 docs_url: https://pymupdf.readthedocs.io/
 phase: data-and-retrieval
 domain:
-  - "language"
-  - "vision"
+  - language
+  - vision
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A fast PDF/document toolkit for extracting text, images, and tables and for rendering pages to images in ingestion pipelines."
+  - A fast PDF/document toolkit for extracting text, images, and tables and for rendering pages to images in ingestion pipelines.
 best_for:
-  - "You need fast, reliable extraction of digital-PDF text, images, and tables for RAG ingestion"
-  - "You need to render PDF pages to images to feed OCR or vision-LLM extractors"
+  - You need fast, reliable extraction of digital-PDF text, images, and tables for RAG ingestion
+  - You need to render PDF pages to images to feed OCR or vision-LLM extractors
 avoid_if:
-  - "Your PDFs are scanned images with no text layer, which require an OCR engine rather than extraction"
-  - "AGPL-3.0 copyleft is incompatible with your product and you cannot obtain a commercial MuPDF license"
-enrichment_notes: "Repository, AGPL-3.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. AGPL/commercial dual license from Artifex; review terms before proprietary use."
+  - Your PDFs are scanned images with no text layer, which require an OCR engine rather than extraction
+  - AGPL-3.0 copyleft is incompatible with your product and you cannot obtain a commercial MuPDF license
+enrichment_notes: Repository, AGPL-3.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. AGPL/commercial dual license from Artifex; review terms before proprietary use.
 ---
 
 ## Overview

@@ -1,50 +1,66 @@
 ---
 id: terminal-bench
-name: "Terminal-Bench"
+name: Terminal-Bench
 version_tracked: null
 artifact_type: framework
 category: evaluation
 subcategory: evaluation
-description: "Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models"
-github_url: "https://github.com/laude-institute/terminal-bench"
-license: "Apache-2.0"
+description: Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
+github_url: https://github.com/laude-institute/terminal-bench
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Stanford / Laude Institute"
-tags: [evaluation, agents, llm]
+org_or_maintainer: Stanford / Laude Institute
+tags:
+  - evaluation
+  - agents
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 2427
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-01-22"
-docs_url: "https://www.tbench.ai/docs/run-terminal-bench-2-0"
+github_stars: 2466
+github_stars_last_30d: 39
+trending_score: 43
+last_commit: '2026-07-11'
+docs_url: https://www.tbench.ai/docs/run-terminal-bench-2-0
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language, reasoning, general-purpose]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [research-origin, org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+  - general-purpose
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - research-origin
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The benchmark that measures what coding agents actually do all day: multi-step tasks executed in real Docker-sandboxed terminals with outcome-based verification, adopted by frontier labs as a headline agentic metric alongside SWE-bench."
+  - 'The benchmark that measures what coding agents actually do all day: multi-step tasks executed in real Docker-sandboxed terminals with outcome-based verification, adopted by frontier labs as a headline agentic metric alongside SWE-bench.'
 best_for:
-  - "You are evaluating or building terminal/coding agents — tasks span compiling, debugging, sysadmin, data processing and even model training, each verified by executable checks rather than LLM judges"
-  - "You want a harness, not just a dataset — the tb CLI runs any agent (built-in adapters for Claude Code, Codex CLI, and custom agents) against containerized tasks reproducibly"
+  - You are evaluating or building terminal/coding agents — tasks span compiling, debugging, sysadmin, data processing and even model training, each verified by executable checks rather than LLM judges
+  - You want a harness, not just a dataset — the tb CLI runs any agent (built-in adapters for Claude Code, Codex CLI, and custom agents) against containerized tasks reproducibly
 avoid_if:
-  - "You need a mature, saturated benchmark with years of comparable scores — it is young and the task set is still evolving between versions"
-  - "Your agents do not operate through a shell — browser-only or API-orchestration agents need different harnesses"
+  - You need a mature, saturated benchmark with years of comparable scores — it is young and the task set is still evolving between versions
+  - Your agents do not operate through a shell — browser-only or API-orchestration agents need different harnesses
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [swe-bench]
+alternatives:
+  - swe-bench
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (2,427), primary language, license, and last commit (2026-01-22) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (2,427), primary language, license, and last commit (2026-01-22) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/laude-institute/terminal-bench", "date": "2026-07-08", "description": "2,427 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/laude-institute/terminal-bench
+    date: '2026-07-08'
+    description: 2,427 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

@@ -1,50 +1,67 @@
 ---
 id: anythingllm
-name: "AnythingLLM"
+name: AnythingLLM
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: platforms
-description: "All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup"
-github_url: "https://github.com/Mintplex-Labs/anything-llm"
-license: "MIT"
+description: 'All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup'
+github_url: https://github.com/Mintplex-Labs/anything-llm
+license: MIT
 primary_language: Other
-org_or_maintainer: "Mintplex Labs"
-tags: [rag, agents, self-hosted]
+org_or_maintainer: Mintplex Labs
+tags:
+  - rag
+  - agents
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 62914
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://docs.anythingllm.com"
+github_stars: 63597
+github_stars_last_30d: 683
+trending_score: 80
+last_commit: '2026-07-18'
+docs_url: https://docs.anythingllm.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The 'private ChatGPT over your documents' appliance: a single Docker container or desktop app bundling ingestion, embedding, vector storage, RAG chat, and no-code agents — the lowest-friction path from documents to a working private assistant."
+  - 'The ''private ChatGPT over your documents'' appliance: a single Docker container or desktop app bundling ingestion, embedding, vector storage, RAG chat, and no-code agents — the lowest-friction path from documents to a working private assistant.'
 best_for:
-  - "You want document-grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval"
-  - "You need multi-user self-hosted deployment with permissions and embeddable chat widgets — the Docker version adds user management that desktop-only tools lack"
+  - You want document-grounded private chat running today with zero pipeline code — drag in PDFs/docx/websites, pick any LLM (local via Ollama or hosted), and workspaces handle chunking/embedding/retrieval
+  - You need multi-user self-hosted deployment with permissions and embeddable chat widgets — the Docker version adds user management that desktop-only tools lack
 avoid_if:
-  - "You need fine-grained control over RAG internals (custom chunking strategies, rerankers, hybrid retrieval tuning) — appliance-style defaults trade configurability for simplicity; build on LlamaIndex/Haystack instead"
-  - "You are already invested in Open WebUI or LibreChat for chat UX — the overlap is large and migrating workspaces is manual"
+  - You need fine-grained control over RAG internals (custom chunking strategies, rerankers, hybrid retrieval tuning) — appliance-style defaults trade configurability for simplicity; build on LlamaIndex/Haystack instead
+  - You are already invested in Open WebUI or LibreChat for chat UX — the overlap is large and migrating workspaces is manual
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [open-webui, librechat]
-integrates_with: [ollama, lm-studio]
+alternatives:
+  - open-webui
+  - librechat
+integrates_with:
+  - ollama
+  - lm-studio
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (62,914), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (62,914), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Mintplex-Labs/anything-llm", "date": "2026-07-08", "description": "62,914 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Mintplex-Labs/anything-llm
+    date: '2026-07-08'
+    description: 62,914 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

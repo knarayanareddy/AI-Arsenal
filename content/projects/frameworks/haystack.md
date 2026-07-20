@@ -6,18 +6,22 @@ artifact_type: framework
 category: rag
 subcategory: frameworks
 description: Modular framework for production search, RAG, agents, routing, and generation pipelines
-github_url: "https://github.com/deepset-ai/haystack"
+github_url: https://github.com/deepset-ai/haystack
 license: Apache-2.0
 primary_language: Other
 org_or_maintainer: null
-tags: [rag, retrieval, orchestration, agents]
+tags:
+  - rag
+  - retrieval
+  - orchestration
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 25559
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-12"
-docs_url: "https://docs.haystack.deepset.ai/"
+github_stars: 25954
+github_stars_last_30d: 395
+trending_score: 47
+last_commit: '2026-07-20'
+docs_url: https://docs.haystack.deepset.ai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,16 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - Modular pipeline framework spanning production RAG, semantic search, and agent orchestration — deepset's flagship open-source project
 best_for:
@@ -46,12 +57,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: deepset (Haystack's maintaining org) publishes case studies and the project has multi-year production adoption in retrieval/QA systems predating the LLM-agent wave, giving it a longer production track record than most agent-specific frameworks.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://en.wikipedia.org/wiki/Deepset","date":"2026-06-15","description":"deepset's enterprise Haystack offerings are documented in production use by the European Commission, Airbus, Intel, NVIDIA, Lufthansa, Netflix, and other Global 500 enterprises"}
+  - source: conference
+    url: https://en.wikipedia.org/wiki/Deepset
+    date: '2026-06-15'
+    description: deepset's enterprise Haystack offerings are documented in production use by the European Commission, Airbus, Intel, NVIDIA, Lufthansa, Netflix, and other Global 500 enterprises
 featured: false
 status: active
 ---

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "speechbrain"
+org_or_maintainer: speechbrain
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 19
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: speechbrain
-name: "SpeechBrain"
+name: SpeechBrain
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "A PyTorch-based conversational-AI toolkit spanning ASR, TTS, speaker recognition, enhancement, and spoken-language understanding with reproducible training"
+description: A PyTorch-based conversational-AI toolkit spanning ASR, TTS, speaker recognition, enhancement, and spoken-language understanding with reproducible training
 github_url: https://github.com/speechbrain/speechbrain
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "fine-tuning"
-  - "multimodal"
-  - "self-hosted"
+  - voice
+  - fine-tuning
+  - multimodal
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 11678
-last_commit: "2026-06-15"
+github_stars: 11697
+last_commit: '2026-06-15'
 docs_url: https://speechbrain.github.io
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
-  - "community-driven"
+  - actively-maintained
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A unified PyTorch speech framework that provides models, training recipes, and pretrained checkpoints across most speech tasks."
+  - A unified PyTorch speech framework that provides models, training recipes, and pretrained checkpoints across most speech tasks.
 best_for:
-  - "You want one PyTorch framework to train, fine-tune, and evaluate models across many speech tasks with reproducible recipes"
-  - "You are a researcher or engineer who needs building-block modules (features, augmentation, decoders) rather than a single fixed model"
+  - You want one PyTorch framework to train, fine-tune, and evaluate models across many speech tasks with reproducible recipes
+  - You are a researcher or engineer who needs building-block modules (features, augmentation, decoders) rather than a single fixed model
 avoid_if:
-  - "You need a tiny embeddable runtime for edge devices, where onnxruntime-based tools fit better"
-  - "You want a turnkey product; SpeechBrain is a toolkit that expects you to assemble and train pipelines"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-15 activity verified via the GitHub API on 2026-07-12. A widely used academic and applied speech framework."
+  - You need a tiny embeddable runtime for edge devices, where onnxruntime-based tools fit better
+  - You want a turnkey product; SpeechBrain is a toolkit that expects you to assemble and train pipelines
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-15 activity verified via the GitHub API on 2026-07-12. A widely used academic and applied speech framework.
 ---
 
 ## Overview

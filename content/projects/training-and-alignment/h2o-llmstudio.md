@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "h2oai"
+org_or_maintainer: h2oai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,48 +19,48 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: h2o-llmstudio
-name: "H2O LLM Studio"
+name: H2O LLM Studio
 artifact_type: platform
 category: llms
 subcategory: fine-tuning
-description: "A framework and no-code GUI from H2O.ai for fine-tuning LLMs, supporting LoRA/QLoRA, RLHF/DPO, and experiment tracking without writing training code"
+description: A framework and no-code GUI from H2O.ai for fine-tuning LLMs, supporting LoRA/QLoRA, RLHF/DPO, and experiment tracking without writing training code
 github_url: https://github.com/h2oai/h2o-llmstudio
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "llm"
-  - "self-hosted"
-  - "evaluation"
+  - fine-tuning
+  - llm
+  - self-hosted
+  - evaluation
 maturity: beta
 cost_model: open-source
 github_stars: 5040
-last_commit: "2026-07-10"
+last_commit: '2026-07-14'
 docs_url: https://docs.h2o.ai/h2o-llmstudio/
 phase: training-and-alignment
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A no-code GUI plus framework for fine-tuning open LLMs with modern PEFT and preference-optimization methods."
+  - A no-code GUI plus framework for fine-tuning open LLMs with modern PEFT and preference-optimization methods.
 best_for:
-  - "You want to fine-tune open LLMs through a GUI with experiment tracking rather than writing scripts"
-  - "You need LoRA/QLoRA and DPO/RLHF options with sensible defaults for non-expert users"
+  - You want to fine-tune open LLMs through a GUI with experiment tracking rather than writing scripts
+  - You need LoRA/QLoRA and DPO/RLHF options with sensible defaults for non-expert users
 avoid_if:
-  - "You need to embed training programmatically in a larger automated pipeline, where a library API is better"
-  - "You require the absolute newest training techniques the moment they appear"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. GUI-first; still requires GPU resources for training."
+  - You need to embed training programmatically in a larger automated pipeline, where a library API is better
+  - You require the absolute newest training techniques the moment they appear
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. GUI-first; still requires GPU resources for training.
 ---
 
 ## Overview

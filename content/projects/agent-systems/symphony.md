@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openai"
+org_or_maintainer: openai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 9
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: symphony
-name: "Symphony"
+name: Symphony
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board"
+description: OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board
 github_url: https://github.com/openai/symphony
-license: "Apache-2.0"
-primary_language: "Other"
+license: Apache-2.0
+primary_language: Other
 tags:
-  - "agents"
-  - "orchestration"
-  - "planning"
-  - "code-gen"
+  - agents
+  - orchestration
+  - planning
+  - code-gen
 maturity: alpha
 cost_model: open-source
-github_stars: 26046
-last_commit: "2026-07-18"
+github_stars: 26055
+last_commit: '2026-07-18'
 docs_url: https://openai.com/index/open-source-codex-orchestration-symphony/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "experimental"
+  - org-backed
+  - experimental
 ecosystem_role:
-  - "Elixir reference orchestrator for autonomous Codex work-board tasks"
-  - "Proof-of-work workflow for monitored coding-agent operations"
+  - Elixir reference orchestrator for autonomous Codex work-board tasks
+  - Proof-of-work workflow for monitored coding-agent operations
 best_for:
-  - "Autonomous software work queues with proof-of-work"
-  - "Studying orchestration patterns for coding agents"
+  - Autonomous software work queues with proof-of-work
+  - Studying orchestration patterns for coding agents
 avoid_if:
-  - "You need a stable production control plane today"
-  - "Your organization cannot supervise agents making repository changes"
-enrichment_notes: "Symphony is explicitly an engineering preview; the Elixir reference implementation and Codex coupling make maturity and portability important caveats. Draft pending review."
+  - You need a stable production control plane today
+  - Your organization cannot supervise agents making repository changes
+enrichment_notes: Symphony is explicitly an engineering preview; the Elixir reference implementation and Codex coupling make maturity and portability important caveats. Draft pending review.
 ---
 
 ## Overview

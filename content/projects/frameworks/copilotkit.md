@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "CopilotKit"
+org_or_maintainer: CopilotKit
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 223
+trending_score: 48
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: copilotkit
-name: "CopilotKit"
+name: CopilotKit
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "React/TypeScript frontend framework for building in-app copilots, agent chat, and generative UI, and the reference implementation of the AG-UI protocol"
+description: React/TypeScript frontend framework for building in-app copilots, agent chat, and generative UI, and the reference implementation of the AG-UI protocol
 github_url: https://github.com/CopilotKit/CopilotKit
-license: "MIT"
-primary_language: "TypeScript"
+license: MIT
+primary_language: TypeScript
 tags:
-  - "agents"
-  - "tool-use"
-  - "streaming"
-  - "structured-output"
-  - "orchestration"
-  - "llm"
+  - agents
+  - tool-use
+  - streaming
+  - structured-output
+  - orchestration
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 35946
-last_commit: "2026-07-12"
+github_stars: 36169
+last_commit: '2026-07-20'
 docs_url: https://docs.copilotkit.ai
 phase: framework
 domain:
-  - "language"
-  - "general-purpose"
+  - language
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
-  - "org-backed"
+  - actively-maintained
+  - community-driven
+  - org-backed
 ecosystem_role:
-  - "A frontend/UI layer that renders agent state, streams tokens, and lets an agent read and act on application context through typed React hooks."
+  - A frontend/UI layer that renders agent state, streams tokens, and lets an agent read and act on application context through typed React hooks.
 best_for:
-  - "You are adding an in-app assistant or generative-UI surface to a React or Next.js application and want the agent to see page state and call frontend actions."
-  - "You want a standard client protocol (AG-UI) between your UI and a LangGraph, CrewAI, or custom agent backend rather than hand-rolling a websocket contract."
+  - You are adding an in-app assistant or generative-UI surface to a React or Next.js application and want the agent to see page state and call frontend actions.
+  - You want a standard client protocol (AG-UI) between your UI and a LangGraph, CrewAI, or custom agent backend rather than hand-rolling a websocket contract.
 avoid_if:
-  - "You need a backend agent runtime; CopilotKit is the presentation and interaction layer, not the planner or tool executor."
-  - "Your product is not React/JS-based, or you require a fully self-contained no-JS assistant."
-enrichment_notes: "Official repository, MIT license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Production fit and protocol stability remain draft pending hands-on integration testing."
+  - You need a backend agent runtime; CopilotKit is the presentation and interaction layer, not the planner or tool executor.
+  - Your product is not React/JS-based, or you require a fully self-contained no-JS assistant.
+enrichment_notes: Official repository, MIT license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Production fit and protocol stability remain draft pending hands-on integration testing.
 ---
 
 ## Overview

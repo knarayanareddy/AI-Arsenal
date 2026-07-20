@@ -6,18 +6,21 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context
-github_url: "https://github.com/QwenLM/Qwen-Agent"
+github_url: https://github.com/QwenLM/Qwen-Agent
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Qwen Team (Alibaba)"
-tags: [agents, llm, rag]
+org_or_maintainer: Qwen Team (Alibaba)
+tags:
+  - agents
+  - llm
+  - rag
 maturity: beta
 cost_model: open-source
-github_stars: 16694
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-03-04"
-docs_url: "https://github.com/QwenLM/Qwen-Agent"
+github_stars: 16821
+github_stars_last_30d: 127
+trending_score: 50
+last_commit: '2026-03-04'
+docs_url: https://github.com/QwenLM/Qwen-Agent
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +31,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: agent-system
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
   - Qwen-native agent framework; the reference option when your stack is built on Qwen models and you want function calling, code interpreter, and RAG components tuned to Qwen rather than a model-agnostic framework
 best_for:
@@ -45,12 +54,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (16,694), Apache-2.0 license, and last commit (2026-03-04) verified via the GitHub API on 2026-07-08. Feature claims from the README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (16,694), Apache-2.0 license, and last commit (2026-03-04) verified via the GitHub API on 2026-07-08. Feature claims from the README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/QwenLM/Qwen-Agent", "date": "2026-07-08", "description": "16,694 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/QwenLM/Qwen-Agent
+    date: '2026-07-08'
+    description: 16,694 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

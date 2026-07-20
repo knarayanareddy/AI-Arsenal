@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "flashlight"
+org_or_maintainer: flashlight
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,47 +19,47 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: wav2letter
-name: "wav2letter (Flashlight ASR)"
+name: wav2letter (Flashlight ASR)
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "Facebook AI Research's C++ automatic-speech-recognition toolkit built on the Flashlight library, notable for fully convolutional acoustic models and fast"
+description: Facebook AI Research's C++ automatic-speech-recognition toolkit built on the Flashlight library, notable for fully convolutional acoustic models and fast
 github_url: https://github.com/flashlight/wav2letter
-license: "NOASSERTION"
-primary_language: "C++"
+license: NOASSERTION
+primary_language: C++
 tags:
-  - "voice"
-  - "inference"
-  - "self-hosted"
+  - voice
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
 github_stars: 6440
-last_commit: "2026-01-12"
+last_commit: '2026-07-14'
 docs_url: https://github.com/flashlight/wav2letter/wiki
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A C++ ASR research toolkit demonstrating fully convolutional acoustic models and an efficient WFST-style beam-search decoder."
+  - A C++ ASR research toolkit demonstrating fully convolutional acoustic models and an efficient WFST-style beam-search decoder.
 best_for:
-  - "You want a fast, C++-native ASR training/decoding codebase to study convolutional acoustic modeling"
-  - "You are building on the Flashlight ML library and need its integrated speech recognition components"
+  - You want a fast, C++-native ASR training/decoding codebase to study convolutional acoustic modeling
+  - You are building on the Flashlight ML library and need its integrated speech recognition components
 avoid_if:
-  - "You need an actively developed, easy-to-use framework; wav2letter has largely folded into Flashlight and is research-first"
-  - "You want Python-first ergonomics, which PyTorch toolkits provide"
-enrichment_notes: "Repository and 2026-01-12 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION. Development has largely consolidated into Flashlight; included as a study reference."
+  - You need an actively developed, easy-to-use framework; wav2letter has largely folded into Flashlight and is research-first
+  - You want Python-first ergonomics, which PyTorch toolkits provide
+enrichment_notes: Repository and 2026-01-12 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION. Development has largely consolidated into Flashlight; included as a study reference.
 ---
 
 ## Overview

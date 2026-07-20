@@ -6,27 +6,36 @@ artifact_type: platform
 category: code-generation
 subcategory: coding-agents
 description: Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
-github_url: "https://github.com/continuedev/continue"
+github_url: https://github.com/continuedev/continue
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: continuedev
-tags: [code-gen, agents, self-hosted]
+tags:
+  - code-gen
+  - agents
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 34744
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-07-08"
-docs_url: "https://docs.continue.dev"
+github_stars: 34981
+github_stars_last_30d: 237
+trending_score: 59
+last_commit: '2026-07-20'
+docs_url: https://docs.continue.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [actively-maintained, org-backed, community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "The open-source, bring-your-own-model counterpart to Copilot/Cursor: the reference choice when the constraint is model control (local models, self-hosted endpoints, no code leaving the network) rather than maximum assistant capability"
+  - 'The open-source, bring-your-own-model counterpart to Copilot/Cursor: the reference choice when the constraint is model control (local models, self-hosted endpoints, no code leaving the network) rather than maximum assistant capability'
 best_for:
   - Your organization cannot send code to third-party SaaS — Continue + Ollama/vLLM gives chat, autocomplete, and edit against models running entirely on your infrastructure
   - You want per-capability model routing (a fast local model for autocomplete, a frontier API model for chat/agent) — Continue's config makes each role independently pluggable
@@ -35,17 +44,25 @@ avoid_if:
   - You expect local models to match hosted frontier assistants — the honest trade is privacy and control for capability, especially in agent mode
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [aider, cline, tabby]
-integrates_with: [ollama, vllm]
+alternatives:
+  - aider
+  - cline
+  - tabby
+integrates_with:
+  - ollama
+  - vllm
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (34.7k), Apache-2.0, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Capability descriptions from official docs; comparative capability claims are qualitative, not benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/continuedev/continue","date":"2026-07-08","description":"34.7k stars, Apache-2.0, active development"}
+  - source: github-trending
+    url: https://github.com/continuedev/continue
+    date: '2026-07-08'
+    description: 34.7k stars, Apache-2.0, active development
 featured: false
 status: active
 ---

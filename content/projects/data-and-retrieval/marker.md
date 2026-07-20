@@ -1,50 +1,66 @@
 ---
 id: marker
-name: "Marker"
+name: Marker
 version_tracked: null
 artifact_type: tool
 category: data-pipelines
 subcategory: document-processing
-description: "Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts"
-github_url: "https://github.com/datalab-to/marker"
-license: "GPL-3.0"
+description: Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+github_url: https://github.com/datalab-to/marker
+license: GPL-3.0
 primary_language: Python
-org_or_maintainer: "Datalab (Surya lineage)"
-tags: [data, rag, llm]
+org_or_maintainer: Datalab (Surya lineage)
+tags:
+  - data
+  - rag
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 37280
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-07"
-docs_url: "https://github.com/datalab-to/marker#readme"
+github_stars: 37664
+github_stars_last_30d: 384
+trending_score: 71
+last_commit: '2026-07-07'
+docs_url: https://github.com/datalab-to/marker#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language, vision]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The model-pipeline approach to PDF conversion: purpose-trained layout/OCR models (the Surya stack) rather than heuristics, sitting between fast-but-lossy converters (MarkItDown) and heavy full-service extractors — a standard choice for scientific-PDF RAG ingestion."
+  - 'The model-pipeline approach to PDF conversion: purpose-trained layout/OCR models (the Surya stack) rather than heuristics, sitting between fast-but-lossy converters (MarkItDown) and heavy full-service extractors — a standard choice for scientific-PDF RAG ingestion.'
 best_for:
-  - "You ingest scientific papers or technical PDFs where equations (to LaTeX), tables, and multi-column layout must survive conversion — Marker's benchmark suite specifically targets these failure modes"
-  - "You need batch throughput on GPUs — pages process in parallel with reported ~100+ pages/sec on H100-class hardware in batch mode"
+  - You ingest scientific papers or technical PDFs where equations (to LaTeX), tables, and multi-column layout must survive conversion — Marker's benchmark suite specifically targets these failure modes
+  - You need batch throughput on GPUs — pages process in parallel with reported ~100+ pages/sec on H100-class hardware in batch mode
 avoid_if:
-  - "GPL-3.0 (plus revenue-conditional commercial terms for the models) conflicts with your product's licensing — Docling (MIT) or MarkItDown (MIT) are safer embeds"
-  - "Your documents are simple digital-native PDFs — pdfplumber-class text extraction is orders of magnitude cheaper than running layout models"
+  - GPL-3.0 (plus revenue-conditional commercial terms for the models) conflicts with your product's licensing — Docling (MIT) or MarkItDown (MIT) are safer embeds
+  - Your documents are simple digital-native PDFs — pdfplumber-class text extraction is orders of magnitude cheaper than running layout models
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [docling, mineru, markitdown]
+alternatives:
+  - docling
+  - mineru
+  - markitdown
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (37,280), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (37,280), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/datalab-to/marker", "date": "2026-07-08", "description": "37,280 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/datalab-to/marker
+    date: '2026-07-08'
+    description: 37,280 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

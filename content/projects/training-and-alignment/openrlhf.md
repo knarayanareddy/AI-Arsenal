@@ -1,50 +1,69 @@
 ---
 id: openrlhf
-name: "OpenRLHF"
+name: OpenRLHF
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale"
-github_url: "https://github.com/OpenRLHF/OpenRLHF"
-license: "Apache-2.0"
+description: High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale
+github_url: https://github.com/OpenRLHF/OpenRLHF
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "OpenRLHF"
-tags: [fine-tuning, alignment, llm]
+org_or_maintainer: OpenRLHF
+tags:
+  - fine-tuning
+  - alignment
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 9769
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-06"
-docs_url: "https://openrlhf.readthedocs.io/en/latest/"
+github_stars: 9828
+github_stars_last_30d: 59
+trending_score: 45
+last_commit: '2026-07-14'
+docs_url: https://openrlhf.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language, reinforcement-learning]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [community-driven, actively-maintained, research-origin]
+domain:
+  - language
+  - reinforcement-learning
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - community-driven
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The community-standard distributed RLHF stack: it separates actor/critic/reward/reference models across GPUs via Ray and accelerates rollout generation with vLLM, making full-scale PPO practical outside big labs."
+  - 'The community-standard distributed RLHF stack: it separates actor/critic/reward/reference models across GPUs via Ray and accelerates rollout generation with vLLM, making full-scale PPO practical outside big labs.'
 best_for:
-  - "You need distributed PPO/GRPO/REINFORCE++ on models too large for single-node TRL — OpenRLHF's Ray-based actor separation and vLLM rollout acceleration are built for 7B–70B+ scale"
-  - "You want implementations of newer alignment algorithms (GRPO, REINFORCE++, DPO variants) validated by the community before they land in more conservative frameworks"
+  - You need distributed PPO/GRPO/REINFORCE++ on models too large for single-node TRL — OpenRLHF's Ray-based actor separation and vLLM rollout acceleration are built for 7B–70B+ scale
+  - You want implementations of newer alignment algorithms (GRPO, REINFORCE++, DPO variants) validated by the community before they land in more conservative frameworks
 avoid_if:
-  - "You are fine-tuning a small model on one node — TRL or Axolotl is far simpler to operate than a Ray cluster"
-  - "You need a stable, long-term-supported API — the framework tracks research fast and interfaces shift between releases"
-upstream_dependencies: [vllm, deepspeed]
+  - You are fine-tuning a small model on one node — TRL or Axolotl is far simpler to operate than a Ray cluster
+  - You need a stable, long-term-supported API — the framework tracks research fast and interfaces shift between releases
+upstream_dependencies:
+  - vllm
+  - deepspeed
 downstream_consumers: []
-alternatives: [trl]
-integrates_with: [vllm, deepspeed]
+alternatives:
+  - trl
+integrates_with:
+  - vllm
+  - deepspeed
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (9,769), primary language, license, and last commit (2026-07-06) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (9,769), primary language, license, and last commit (2026-07-06) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/OpenRLHF/OpenRLHF", "date": "2026-07-08", "description": "9,769 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/OpenRLHF/OpenRLHF
+    date: '2026-07-08'
+    description: 9,769 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

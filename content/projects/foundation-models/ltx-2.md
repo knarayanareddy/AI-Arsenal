@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Lightricks"
+org_or_maintainer: Lightricks
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 6
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: ltx-2
-name: "LTX-2"
+name: LTX-2
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API"
+description: Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API
 github_url: https://github.com/Lightricks/LTX-2
-license: "Other"
-primary_language: "Python"
+license: Other
+primary_language: Python
 tags:
-  - "multimodal"
-  - "vision"
-  - "voice"
-  - "streaming"
-  - "training"
+  - multimodal
+  - vision
+  - voice
+  - streaming
+  - training
 maturity: beta
 cost_model: open-source
-github_stars: 8320
-last_commit: "2026-07-08"
+github_stars: 8326
+last_commit: '2026-07-08'
 docs_url: https://ltx.io/model/ltx-2
 phase: foundation-model
 domain:
-  - "multimodal"
-  - "vision"
-  - "audio"
+  - multimodal
+  - vision
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "DiT-based synchronized audio-video foundation model with LoRA support"
-  - "Open-code alternative to silent video models and hosted generation APIs"
+  - DiT-based synchronized audio-video foundation model with LoRA support
+  - Open-code alternative to silent video models and hosted generation APIs
 best_for:
-  - "Synchronized audio-video generation for creative prototypes"
-  - "LoRA adaptation of audiovisual generation to a house style"
+  - Synchronized audio-video generation for creative prototypes
+  - LoRA adaptation of audiovisual generation to a house style
 avoid_if:
-  - "You need a permissive license or deterministic frame-perfect production output"
-  - "Your hardware cannot support a large diffusion-transformer workload"
-enrichment_notes: "The repository metadata reports NOASSERTION, normalized here to Other; the README and model distribution include gated Hugging Face weights despite open code and an API. Draft pending review."
+  - You need a permissive license or deterministic frame-perfect production output
+  - Your hardware cannot support a large diffusion-transformer workload
+enrichment_notes: The repository metadata reports NOASSERTION, normalized here to Other; the README and model distribution include gated Hugging Face weights despite open code and an API. Draft pending review.
 ---
 
 ## Overview

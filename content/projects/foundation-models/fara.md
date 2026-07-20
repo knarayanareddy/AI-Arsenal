@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,51 +19,51 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: fara
-name: "Fara"
+name: Fara
 artifact_type: model
 category: agents
 subcategory: open-source-models
-description: "Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark"
+description: Microsoft's Fara-7B multimodal agentic model for computer use, with browser-task training and the WebTailBench benchmark
 github_url: https://github.com/microsoft/fara
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "multimodal"
-  - "vision"
-  - "tool-use"
-  - "benchmark"
+  - agents
+  - multimodal
+  - vision
+  - tool-use
+  - benchmark
 maturity: beta
 cost_model: open-source
-github_stars: 6015
-last_commit: "2026-06-16"
+github_stars: 6014
+last_commit: '2026-07-17'
 docs_url: https://aka.ms/msaif/fara
 phase: foundation-model
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Open 7B multimodal computer-use model for browser tasks"
-  - "Model and WebTailBench baseline for visual agent trajectories"
+  - Open 7B multimodal computer-use model for browser tasks
+  - Model and WebTailBench baseline for visual agent trajectories
 best_for:
-  - "Browser and desktop task automation research"
-  - "Evaluating multimodal computer-use trajectories"
+  - Browser and desktop task automation research
+  - Evaluating multimodal computer-use trajectories
 avoid_if:
-  - "You need safe unattended control of sensitive production accounts"
-  - "Your tasks are better served by a conventional API integration"
-enrichment_notes: "Fara is a research-oriented computer-use model; WebTailBench and model claims should be independently reproduced. Draft pending review."
+  - You need safe unattended control of sensitive production accounts
+  - Your tasks are better served by a conventional API integration
+enrichment_notes: Fara is a research-oriented computer-use model; WebTailBench and model claims should be independently reproduced. Draft pending review.
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "facebookresearch"
+org_or_maintainer: facebookresearch
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 4
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: sam-3d-objects
-name: "SAM 3D Objects"
+name: SAM 3D Objects
 artifact_type: model
 category: computer-vision
 subcategory: open-source-models
-description: "Meta's foundation model for reconstructing object shape, texture, and layout in 3D from a single masked image"
+description: Meta's foundation model for reconstructing object shape, texture, and layout in 3D from a single masked image
 github_url: https://github.com/facebookresearch/sam-3d-objects
-license: "Other"
-primary_language: "Python"
+license: Other
+primary_language: Python
 tags:
-  - "vision"
-  - "multimodal"
-  - "research"
-  - "foundational"
+  - vision
+  - multimodal
+  - research
+  - foundational
 maturity: alpha
 cost_model: open-source
-github_stars: 7142
-last_commit: "2026-06-02"
+github_stars: 7146
+last_commit: '2026-06-02'
 docs_url: https://ai.meta.com/sam3d/
 phase: foundation-model
 domain:
-  - "vision"
-  - "multimodal"
+  - vision
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Meta foundation model for single-image object geometry, texture, and layout reconstruction"
-  - "Upstream 3D asset source for graphics and robotics workflows"
+  - Meta foundation model for single-image object geometry, texture, and layout reconstruction
+  - Upstream 3D asset source for graphics and robotics workflows
 best_for:
-  - "Single-image asset reconstruction for 3D and robotics prototypes"
-  - "A reference point for image-conditioned 3D generation"
+  - Single-image asset reconstruction for 3D and robotics prototypes
+  - A reference point for image-conditioned 3D generation
 avoid_if:
-  - "You need editable 3D assets from cluttered natural images"
-  - "You require a permissive standard license and turnkey production serving"
-enrichment_notes: "NOASSERTION was normalized to Other; the README points to a non-standard SAM License and gated model checkpoints. Draft pending review."
+  - You need editable 3D assets from cluttered natural images
+  - You require a permissive standard license and turnkey production serving
+enrichment_notes: NOASSERTION was normalized to Other; the README points to a non-standard SAM License and gated model checkpoints. Draft pending review.
 ---
 
 ## Overview

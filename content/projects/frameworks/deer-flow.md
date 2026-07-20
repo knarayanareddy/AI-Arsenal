@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "bytedance"
+org_or_maintainer: bytedance
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 605
+trending_score: 70
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: deer-flow
-name: "DeerFlow"
+name: DeerFlow
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports"
+description: Open-source deep-research multi-agent framework built on LangChain/LangGraph that plans, searches, codes, and synthesizes long-horizon tasks into reports
 github_url: https://github.com/bytedance/deer-flow
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "orchestration"
-  - "planning"
-  - "reasoning"
-  - "tool-use"
-  - "research"
+  - agents
+  - orchestration
+  - planning
+  - reasoning
+  - tool-use
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 76831
-last_commit: "2026-07-12"
+github_stars: 77436
+last_commit: '2026-07-20'
 docs_url: https://deerflow.tech
 phase: framework
 domain:
-  - "language"
-  - "reasoning"
+  - language
+  - reasoning
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
-  - "community-driven"
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "A LangGraph-based multi-agent framework that decomposes research tasks into planning, retrieval, coding, and writing stages with human-in-the-loop checkpoints."
+  - A LangGraph-based multi-agent framework that decomposes research tasks into planning, retrieval, coding, and writing stages with human-in-the-loop checkpoints.
 best_for:
-  - "You are building deep-research or report-generation agents that need planning, web/search retrieval, code execution, and multi-step synthesis."
-  - "You already use LangChain/LangGraph and want a structured multi-agent reference rather than a single-prompt loop."
+  - You are building deep-research or report-generation agents that need planning, web/search retrieval, code execution, and multi-step synthesis.
+  - You already use LangChain/LangGraph and want a structured multi-agent reference rather than a single-prompt loop.
 avoid_if:
-  - "You need a lightweight single-tool assistant; the multi-agent planner adds latency and cost that short tasks do not justify."
-  - "You require deterministic, auditable outputs; long-horizon agent runs are variable and need evaluation."
-enrichment_notes: "Official repository, MIT license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Output reliability for long-horizon runs remains draft."
+  - You need a lightweight single-tool assistant; the multi-agent planner adds latency and cost that short tasks do not justify.
+  - You require deterministic, auditable outputs; long-horizon agent runs are variable and need evaluation.
+enrichment_notes: Official repository, MIT license, and same-day 2026-07-12 activity were reviewed on 2026-07-12. Output reliability for long-horizon runs remains draft.
 ---
 
 ## Overview

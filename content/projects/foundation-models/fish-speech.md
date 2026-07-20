@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "fishaudio"
+org_or_maintainer: fishaudio
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 98
+trending_score: 38
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: fish-speech
-name: "Fish Speech"
+name: Fish Speech
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "An open text-to-speech model family using a dual autoregressive transformer over grouped audio tokens with the Firefly neural codec for fast"
+description: An open text-to-speech model family using a dual autoregressive transformer over grouped audio tokens with the Firefly neural codec for fast
 github_url: https://github.com/fishaudio/fish-speech
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
-  - "streaming"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
+  - streaming
 maturity: beta
 cost_model: open-source
-github_stars: 31234
-last_commit: "2026-06-09"
+github_stars: 31332
+last_commit: '2026-06-09'
 docs_url: https://speech.fish.audio
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A high-fidelity multilingual TTS model that uses a dual autoregressive transformer over codec tokens for zero-shot voice cloning and streaming."
+  - A high-fidelity multilingual TTS model that uses a dual autoregressive transformer over codec tokens for zero-shot voice cloning and streaming.
 best_for:
-  - "You need high-quality, low-latency multilingual synthesis with zero-shot cloning that is actively maintained"
-  - "You want a modern codec-token TTS architecture you can self-host and integrate with a streaming voice loop"
+  - You need high-quality, low-latency multilingual synthesis with zero-shot cloning that is actively maintained
+  - You want a modern codec-token TTS architecture you can self-host and integrate with a streaming voice loop
 avoid_if:
-  - "You cannot resolve non-standard licensing; the repository license is reported as NOASSERTION and must be verified before commercial use"
-  - "You need a stable, unchanging API, since the model line iterates quickly across versions"
-enrichment_notes: "Repository and 2026-06-09 activity verified via the GitHub API on 2026-07-12. License metadata is NOASSERTION (custom terms); confirm licensing and any model-weight terms before adoption."
+  - You cannot resolve non-standard licensing; the repository license is reported as NOASSERTION and must be verified before commercial use
+  - You need a stable, unchanging API, since the model line iterates quickly across versions
+enrichment_notes: Repository and 2026-06-09 activity verified via the GitHub API on 2026-07-12. License metadata is NOASSERTION (custom terms); confirm licensing and any model-weight terms before adoption.
 ---
 
 ## Overview

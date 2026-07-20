@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: ml-intern
-name: "ml-intern"
+name: ml-intern
 artifact_type: tool
 category: agents
 subcategory: autonomous
-description: "Hugging Face's autonomous ML engineer agent that reads papers and docs, trains models, and ships them through Inference Providers and the Hub"
+description: Hugging Face's autonomous ML engineer agent that reads papers and docs, trains models, and ships them through Inference Providers and the Hub
 github_url: https://github.com/huggingface/ml-intern
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "agents"
-  - "training"
-  - "tool-use"
-  - "research"
-  - "huggingface"
+  - agents
+  - training
+  - tool-use
+  - research
+  - huggingface
 maturity: alpha
 cost_model: usage-based
-github_stars: 10661
-last_commit: "2026-06-18"
+github_stars: 10666
+last_commit: '2026-07-16'
 docs_url: https://smolagents-ml-intern.hf.space/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Autonomous ML-engineer agent connecting research, training, inference, and Hub publishing"
-  - "smolagents reference for end-to-end ML workflow automation"
+  - Autonomous ML-engineer agent connecting research, training, inference, and Hub publishing
+  - smolagents reference for end-to-end ML workflow automation
 best_for:
-  - "Automating reproducible ML experiment loops"
-  - "Learning how agents connect papers, training, and model publishing"
+  - Automating reproducible ML experiment loops
+  - Learning how agents connect papers, training, and model publishing
 avoid_if:
-  - "You need a fully autonomous production training pipeline"
-  - "Your data, credentials, or compute cannot be exposed to agent tools"
-enrichment_notes: "The agent uses hosted Inference Providers by default and can use local OpenAI-compatible servers; compute billing and sandbox controls are operator concerns. Draft pending review."
+  - You need a fully autonomous production training pipeline
+  - Your data, credentials, or compute cannot be exposed to agent tools
+enrichment_notes: The agent uses hosted Inference Providers by default and can use local OpenAI-compatible servers; compute billing and sandbox controls are operator concerns. Draft pending review.
 ---
 
 ## Overview

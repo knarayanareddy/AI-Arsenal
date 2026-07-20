@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "leon-ai"
+org_or_maintainer: leon-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 13
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: leon
-name: "Leon"
+name: Leon
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: "An open-source, self-hosted personal assistant with a modular skill system, on-device speech, and a privacy-first design that runs entirely on your own server"
+description: An open-source, self-hosted personal assistant with a modular skill system, on-device speech, and a privacy-first design that runs entirely on your own server
 github_url: https://github.com/leon-ai/leon
-license: "MIT"
-primary_language: "TypeScript"
+license: MIT
+primary_language: TypeScript
 tags:
-  - "agents"
-  - "self-hosted"
-  - "multimodal"
+  - agents
+  - self-hosted
+  - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 17353
-last_commit: "2026-06-29"
+github_stars: 17366
+last_commit: '2026-07-20'
 docs_url: https://docs.getleon.ai/
 phase: agent-system
 domain:
-  - "language"
-  - "audio"
+  - language
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A self-hosted, privacy-first personal assistant with a modular, extensible skill system and voice interface."
+  - A self-hosted, privacy-first personal assistant with a modular, extensible skill system and voice interface.
 best_for:
-  - "You want a private, self-hosted voice/text assistant you fully control rather than a cloud service"
-  - "You want to write custom skills to automate personal tasks in an extensible assistant"
+  - You want a private, self-hosted voice/text assistant you fully control rather than a cloud service
+  - You want to write custom skills to automate personal tasks in an extensible assistant
 avoid_if:
-  - "You want the broad general knowledge and polish of a large hosted assistant out of the box"
-  - "You do not want to operate and extend a self-hosted server"
-enrichment_notes: "Repository, MIT license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Capability depends on installed skills and configured models."
+  - You want the broad general knowledge and polish of a large hosted assistant out of the box
+  - You do not want to operate and extend a self-hosted server
+enrichment_notes: Repository, MIT license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Capability depends on installed skills and configured models.
 ---
 
 ## Overview

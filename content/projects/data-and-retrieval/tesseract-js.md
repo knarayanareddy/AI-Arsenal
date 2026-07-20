@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "naptha"
+org_or_maintainer: naptha
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 175
+trending_score: 44
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: tesseract-js
-name: "Tesseract.js"
+name: Tesseract.js
 artifact_type: library
 category: computer-vision
 subcategory: document-processing
-description: "A pure-JavaScript OCR library that runs Tesseract compiled to WebAssembly in the browser and Node, supporting 100+ languages without a server"
+description: A pure-JavaScript OCR library that runs Tesseract compiled to WebAssembly in the browser and Node, supporting 100+ languages without a server
 github_url: https://github.com/naptha/tesseract.js
-license: "Apache-2.0"
-primary_language: "Other"
+license: Apache-2.0
+primary_language: Other
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 38368
-last_commit: "2026-05-17"
+github_stars: 38543
+last_commit: '2026-05-17'
 docs_url: http://tesseract.projectnaptha.com/
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A WebAssembly build of Tesseract that brings offline OCR to browsers and Node without a backend service."
+  - A WebAssembly build of Tesseract that brings offline OCR to browsers and Node without a backend service.
 best_for:
-  - "You need client-side OCR in a web app so images never leave the user's browser"
-  - "You want JavaScript/Node OCR without deploying a separate Python or C++ OCR service"
+  - You need client-side OCR in a web app so images never leave the user's browser
+  - You want JavaScript/Node OCR without deploying a separate Python or C++ OCR service
 avoid_if:
-  - "You need maximum throughput on large batches, where native Tesseract or GPU models are faster"
-  - "Your documents need advanced layout/table understanding beyond Tesseract's capabilities"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-05-17 activity verified via the GitHub API on 2026-07-12. Performance is bounded by the WebAssembly Tesseract core."
+  - You need maximum throughput on large batches, where native Tesseract or GPU models are faster
+  - Your documents need advanced layout/table understanding beyond Tesseract's capabilities
+enrichment_notes: Repository, Apache-2.0 license, and 2026-05-17 activity verified via the GitHub API on 2026-07-12. Performance is bounded by the WebAssembly Tesseract core.
 ---
 
 ## Overview

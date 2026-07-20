@@ -4,10 +4,10 @@ title: "This Week in AI Arsenal"
 entry_type: "trend"
 kind: "weekly-snapshot"
 status: "draft"
-as_of: "2026-07-06"
+as_of: "2026-07-20"
 window:
-  start: "2026-06-29"
-  end: "2026-07-06"
+  start: "2026-07-13"
+  end: "2026-07-20"
 signals_used:
   - github-stars-velocity
   - github-stars-total
@@ -15,61 +15,61 @@ signals_used:
 sources:
   - source: "github"
     url: "https://github.com/trending"
-    last_checked: "2026-07-06"
+    last_checked: "2026-07-20"
     notes: "GitHub Trending is the primary star-velocity signal."
 ranked_entries:
   - rank: 1
-    entry_id: "deepeval"
+    entry_id: "anythingllm"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 2
-    entry_id: "dspy"
+    entry_id: "browser-use"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 3
-    entry_id: "gemma"
+    entry_id: "cognee"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 4
-    entry_id: "langchain"
+    entry_id: "comfyui"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 5
-    entry_id: "phi-cookbook"
+    entry_id: "ktransformers"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 6
-    entry_id: "pydantic-ai"
+    entry_id: "librechat"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 7
-    entry_id: "qwen"
+    entry_id: "lobe-chat"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 8
-    entry_id: "semantic-kernel"
+    entry_id: "paddleocr"
     entry_type: "project"
-    why_here: "Trending score 70/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 70
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 9
-    entry_id: "surrealdb"
+    entry_id: "page-agent"
     entry_type: "project"
-    why_here: "Trending score 60/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 60
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
   - rank: 10
-    entry_id: "microsoft-agent-framework"
+    entry_id: "speech-to-speech"
     entry_type: "project"
-    why_here: "Trending score 50/100 from GitHub star velocity, recency, and buzz sources."
-    score_snapshot: 50
-last_reviewed: "2026-07-06"
-added_date: "2026-07-06"
+    why_here: "Trending score 80/100 from GitHub star velocity, recency, and buzz sources."
+    score_snapshot: 80
+last_reviewed: "2026-07-20"
+added_date: "2026-07-20"
 added_by: "maintainer"
 enrichment_status: "draft"
 tags:
@@ -82,7 +82,7 @@ This weekly draft summarizes notable project movement and ecosystem signals for 
 
 ## What this snapshot covers
 
-Top projects by trending score (GitHub star velocity, recency, and buzz sources) over the trailing 7-day window (2026-06-29 → 2026-07-06).
+Top projects by trending score (GitHub star velocity, recency, and buzz sources) over the trailing 7-day window (2026-07-13 → 2026-07-20).
 
 ## Method (signals + caveats)
 
@@ -90,16 +90,16 @@ Trending scores are computed by `scripts/calculate-trending.js` from structured 
 
 ## Ranked entries (with why)
 
-1. [DeepEval](content/projects/benchmarks-and-evals/deepeval) — An open-source evaluation framework for testing LLM applications in CI
-2. [DSPy](content/projects/frameworks/dspy) — A framework for programming and optimizing language model pipelines
-3. [Gemma](content/projects/foundation-models/gemma) — Google open model family designed for efficient language and multimodal applications
-4. [LangChain](content/projects/frameworks/langchain) — A framework for composing LLM applications, retrieval flows, tools, and agents
-5. [Phi Cookbook](content/projects/foundation-models/phi-cookbook) — Microsoft examples and recipes for building with the Phi model family
-6. [Pydantic AI](content/projects/frameworks/pydantic-ai) — A Python agent framework built around typed models and structured outputs
-7. [Qwen](content/projects/foundation-models/qwen) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-8. [Semantic Kernel](content/projects/frameworks/semantic-kernel) — An SDK for integrating AI orchestration into production applications
-9. [SurrealDB](content/projects/data-and-retrieval/surrealdb) — Multi-model database combining graph, document, vector, and time-series for AI agents
-10. [Microsoft Agent Framework](content/projects/frameworks/microsoft-agent-framework) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
+1. [AnythingLLM](content/projects/agent-systems/anythingllm) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
+2. [Browser Use](content/projects/agent-systems/browser-use) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
+3. [Cognee](content/projects/data-and-retrieval/cognee) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
+4. [ComfyUI](content/projects/frameworks/comfyui) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
+5. [KTransformers](content/projects/inference-engines/ktransformers) — CPU/GPU heterogeneous inference for giant MoE models — experts on CPU with AMX kernels, attention on GPU, running DeepSeek-class models on desktops
+6. [LibreChat](content/projects/agent-systems/librechat) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
+7. [LobeChat (LobeHub)](content/projects/agent-systems/lobe-chat) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
+8. [PaddleOCR](content/projects/data-and-retrieval/paddleocr) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+9. [PageAgent](content/projects/agent-systems/page-agent) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
+10. [Speech To Speech](content/projects/frameworks/speech-to-speech) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
 
 ## Notable changes to watch
 
@@ -111,4 +111,4 @@ Link the weekly draft from monthly digests and launch posts once reviewed. Pair 
 
 ## Sources
 
-- [GitHub Trending](https://github.com/trending) (last_checked: 2026-07-06)
+- [GitHub Trending](https://github.com/trending) (last_checked: 2026-07-20)

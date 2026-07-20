@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "airweave-ai"
+org_or_maintainer: airweave-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: airweave
-name: "Airweave"
+name: Airweave
 artifact_type: platform
 category: rag
 subcategory: advanced-rag
-description: "Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs"
+description: Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs
 github_url: https://github.com/airweave-ai/airweave
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "rag"
-  - "retrieval"
-  - "embeddings"
-  - "self-hosted"
-  - "data"
+  - rag
+  - retrieval
+  - embeddings
+  - self-hosted
+  - data
 maturity: beta
 cost_model: open-source
-github_stars: 6487
-last_commit: "2026-06-05"
+github_stars: 6488
+last_commit: '2026-06-05'
 docs_url: https://docs.airweave.ai/welcome
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Connector-rich retrieval platform that complements agent frameworks and competes with bespoke ingestion pipelines"
+  - Connector-rich retrieval platform that complements agent frameworks and competes with bespoke ingestion pipelines
 best_for:
-  - "Making SaaS and internal sources searchable by an agent without writing every connector"
-  - "Self-hosting a connector, embedding, and retrieval service with Docker"
+  - Making SaaS and internal sources searchable by an agent without writing every connector
+  - Self-hosting a connector, embedding, and retrieval service with Docker
 avoid_if:
-  - "You need strict single-binary deployment with no database or worker services"
-  - "Your data sources cannot grant a durable least-privilege connector credential"
-enrichment_notes: "MIT platform with multi-service Docker deployment; provider costs, freshness, and connector permissions remain operator concerns. Draft pending review."
+  - You need strict single-binary deployment with no database or worker services
+  - Your data sources cannot grant a durable least-privilege connector credential
+enrichment_notes: MIT platform with multi-service Docker deployment; provider costs, freshness, and connector permissions remain operator concerns. Draft pending review.
 ---
 
 ## Overview

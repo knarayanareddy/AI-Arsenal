@@ -6,18 +6,22 @@ artifact_type: tool
 category: tooling
 subcategory: tools
 description: Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
-github_url: "https://github.com/CherryHQ/cherry-studio"
+github_url: https://github.com/CherryHQ/cherry-studio
 license: AGPL-3.0
 primary_language: TypeScript
-org_or_maintainer: "CherryHQ"
-tags: [llm, agents, rag, self-hosted]
+org_or_maintainer: CherryHQ
+tags:
+  - llm
+  - agents
+  - rag
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 48319
-github_stars_last_30d: 0
-trending_score: 46
-last_commit: "2026-07-08"
-docs_url: "https://docs.cherry-ai.com/"
+github_stars: 48789
+github_stars_last_30d: 470
+trending_score: 78
+last_commit: '2026-07-20'
+docs_url: https://docs.cherry-ai.com/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: framework
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [community-driven, actively-maintained, production-proven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Popular open desktop front-end that unifies many LLM providers (cloud + local) with assistants, RAG knowledge bases, and MCP tools, competing with clients like LibreChat/Open WebUI but as a native desktop app
 best_for:
@@ -45,12 +55,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (48,319), AGPL-3.0 license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (48,319), AGPL-3.0 license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/CherryHQ/cherry-studio", "date": "2026-07-08", "description": "48,319 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/CherryHQ/cherry-studio
+    date: '2026-07-08'
+    description: 48,319 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

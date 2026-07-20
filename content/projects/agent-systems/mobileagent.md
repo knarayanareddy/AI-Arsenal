@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "X-PLUG"
+org_or_maintainer: X-PLUG
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 30
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: mobileagent
-name: "Mobile-Agent"
+name: Mobile-Agent
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning"
+description: Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning
 github_url: https://github.com/X-PLUG/MobileAgent
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "multimodal"
-  - "vision"
-  - "planning"
-  - "tool-use"
-  - "research"
+  - agents
+  - multimodal
+  - vision
+  - planning
+  - tool-use
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 8926
-last_commit: "2026-07-07"
+github_stars: 8956
+last_commit: '2026-07-07'
 docs_url: https://github.com/X-PLUG/MobileAgent
 phase: agent-system
 domain:
-  - "language"
-  - "multimodal"
+  - language
+  - multimodal
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "actively-maintained"
-  - "community-driven"
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A research codebase of mobile GUI agents that perceive phone screens, plan multi-step operations, and execute taps and text input to complete app tasks."
+  - A research codebase of mobile GUI agents that perceive phone screens, plan multi-step operations, and execute taps and text input to complete app tasks.
 best_for:
-  - "You are researching mobile/GUI automation agents and want reference implementations (Mobile-Agent-v1/v2/E) with published methods."
-  - "You need a starting point for screenshot-driven Android task automation with vision-language perception and planning."
+  - You are researching mobile/GUI automation agents and want reference implementations (Mobile-Agent-v1/v2/E) with published methods.
+  - You need a starting point for screenshot-driven Android task automation with vision-language perception and planning.
 avoid_if:
-  - "You need a production, reliability-guaranteed mobile automation product rather than a research reference."
-  - "The target app exposes a stable API or accessibility interface that is more robust than pixel-level control."
-enrichment_notes: "Official repository from Alibaba X-PLUG, MIT license, and 2026-07-07 activity were reviewed on 2026-07-12. Results are research-reported and not independently production-verified."
+  - You need a production, reliability-guaranteed mobile automation product rather than a research reference.
+  - The target app exposes a stable API or accessibility interface that is more robust than pixel-level control.
+enrichment_notes: Official repository from Alibaba X-PLUG, MIT license, and 2026-07-07 activity were reviewed on 2026-07-12. Results are research-reported and not independently production-verified.
 ---
 
 ## Overview

@@ -6,46 +6,62 @@ artifact_type: model
 category: multimodal
 subcategory: open-source-models
 description: Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
-github_url: "https://github.com/QwenLM/Qwen3-VL"
+github_url: https://github.com/QwenLM/Qwen3-VL
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: QwenLM (Alibaba)
-tags: [multimodal, llm, agents]
+tags:
+  - multimodal
+  - llm
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 19555
-github_stars_last_30d: 0
-trending_score: 55
-last_commit: "2026-01-30"
-docs_url: "https://github.com/QwenLM/Qwen3-VL"
+github_stars: 19627
+github_stars_last_30d: 72
+trending_score: 46
+last_commit: '2026-01-30'
+docs_url: https://github.com/QwenLM/Qwen3-VL
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [vision, language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - vision
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
-  - "The open-weights VLM to beat: the Qwen-VL lineage set the open standard for document/OCR understanding and GUI grounding (locating UI elements from instructions), which is why it powers most open computer-use and document-AI stacks — the vision-side counterpart to Qwen's dominance in open text models"
+  - 'The open-weights VLM to beat: the Qwen-VL lineage set the open standard for document/OCR understanding and GUI grounding (locating UI elements from instructions), which is why it powers most open computer-use and document-AI stacks — the vision-side counterpart to Qwen''s dominance in open text models'
 best_for:
-  - "Document AI and OCR-heavy workloads — parsing scans, tables, charts, and multilingual text where the Qwen-VL family has consistently led open benchmarks"
-  - "Vision-grounded agents: GUI element grounding and video understanding make it the default open model behind browser/computer-use agents that need to point at pixels"
+  - Document AI and OCR-heavy workloads — parsing scans, tables, charts, and multilingual text where the Qwen-VL family has consistently led open benchmarks
+  - 'Vision-grounded agents: GUI element grounding and video understanding make it the default open model behind browser/computer-use agents that need to point at pixels'
 avoid_if:
-  - "Text-only workloads — the VL variants trade some pure-text quality against Qwen3 text models of equal size; use the text family unless you need vision"
-  - "You need frontier-level visual reasoning with guarantees — closed models (Gemini/GPT-4o class) still lead on the hardest visual-reasoning evals; validate on your task first"
+  - Text-only workloads — the VL variants trade some pure-text quality against Qwen3 text models of equal size; use the text family unless you need vision
+  - You need frontier-level visual reasoning with guarantees — closed models (Gemini/GPT-4o class) still lead on the hardest visual-reasoning evals; validate on your task first
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
-integrates_with: [vllm, skyvern]
+integrates_with:
+  - vllm
+  - skyvern
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (19.6k), Apache-2.0, last push 2026-01-30 verified via the GitHub API on 2026-07-08 — the repo is the model-family cookbook/release hub; weights update on the Hub. Benchmark-leadership claims are stated as the family's track record, not per-checkpoint numbers.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/QwenLM/Qwen3-VL","date":"2026-07-08","description":"19.6k stars; Alibaba's flagship open VLM family"}
+  - source: github-trending
+    url: https://github.com/QwenLM/Qwen3-VL
+    date: '2026-07-08'
+    description: 19.6k stars; Alibaba's flagship open VLM family
 featured: false
 status: active
 ---

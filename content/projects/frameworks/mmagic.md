@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "open-mmlab"
+org_or_maintainer: open-mmlab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 4
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: mmagic
-name: "MMagic"
+name: MMagic
 artifact_type: framework
 category: multimodal
 subcategory: frameworks
-description: "OpenMMLab's multimodal generative toolbox for AIGC, covering text-to-image, image/video super-resolution, inpainting, matting"
+description: OpenMMLab's multimodal generative toolbox for AIGC, covering text-to-image, image/video super-resolution, inpainting, matting
 github_url: https://github.com/open-mmlab/mmagic
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - fine-tuning
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 7438
-last_commit: "2024-08-06"
+github_stars: 7442
+last_commit: '2024-08-06'
 docs_url: https://mmagic.readthedocs.io/en/latest/
 phase: framework
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A unified toolbox of generative and low-level vision models spanning generation, restoration, and enhancement."
+  - A unified toolbox of generative and low-level vision models spanning generation, restoration, and enhancement.
 best_for:
-  - "You want one framework covering diffusion generation plus super-resolution, inpainting, matting, and restoration"
-  - "You are comparing or fine-tuning many low-level vision and AIGC models under a consistent config API"
+  - You want one framework covering diffusion generation plus super-resolution, inpainting, matting, and restoration
+  - You are comparing or fine-tuning many low-level vision and AIGC models under a consistent config API
 avoid_if:
-  - "You only need mainstream diffusion inference, where the Diffusers library is more current and convenient"
-  - "You want an actively evolving project, since upstream cadence slowed after 2024"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-06 activity verified via the GitHub API on 2026-07-12. Broad but upstream cadence slowed; treat as a reference toolbox."
+  - You only need mainstream diffusion inference, where the Diffusers library is more current and convenient
+  - You want an actively evolving project, since upstream cadence slowed after 2024
+enrichment_notes: Repository, Apache-2.0 license, and 2024-08-06 activity verified via the GitHub API on 2026-07-12. Broad but upstream cadence slowed; treat as a reference toolbox.
 ---
 
 ## Overview

@@ -6,33 +6,41 @@ artifact_type: model
 category: multimodal
 subcategory: open-source-models
 description: Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
-github_url: "https://github.com/black-forest-labs/flux"
-license: "Apache-2.0 (code); weights vary by variant"
+github_url: https://github.com/black-forest-labs/flux
+license: Apache-2.0 (code); weights vary by variant
 primary_language: Python
 org_or_maintainer: black-forest-labs
-tags: [multimodal, inference, self-hosted]
+tags:
+  - multimodal
+  - inference
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 25700
-github_stars_last_30d: 0
-trending_score: 45
-last_commit: "2025-07-31"
-docs_url: "https://github.com/black-forest-labs/flux"
+github_stars: 25745
+github_stars_last_30d: 45
+trending_score: 44
+last_commit: '2025-07-31'
+docs_url: https://github.com/black-forest-labs/flux
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [vision]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, production-proven]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The successor to Stable Diffusion's open-weights crown: built by the original SD authors after leaving Stability, FLUX's 12B rectified-flow transformers raised open image-generation quality (prompt adherence, text rendering, anatomy) to near-closed-model level — and its [dev]/[schnell] license split defines how the ecosystem now ships 'open' image models"
+  - 'The successor to Stable Diffusion''s open-weights crown: built by the original SD authors after leaving Stability, FLUX''s 12B rectified-flow transformers raised open image-generation quality (prompt adherence, text rendering, anatomy) to near-closed-model level — and its [dev]/[schnell] license split defines how the ecosystem now ships ''open'' image models'
 best_for:
-  - "Self-hosted high-quality image generation: [schnell] (Apache-2.0, few-step) for permissive commercial use, [dev] for maximum open quality where the non-commercial license fits"
-  - "Building on an active tooling ecosystem — ComfyUI workflows, LoRA fine-tuning, and ControlNet-style tools ported to FLUX quickly, inheriting SD's community energy"
+  - 'Self-hosted high-quality image generation: [schnell] (Apache-2.0, few-step) for permissive commercial use, [dev] for maximum open quality where the non-commercial license fits'
+  - Building on an active tooling ecosystem — ComfyUI workflows, LoRA fine-tuning, and ControlNet-style tools ported to FLUX quickly, inheriting SD's community energy
 avoid_if:
-  - "You need permissive weights at maximum quality — [dev]'s non-commercial license is the catch; commercial [dev]-quality access is API-only, so read the license before building a product on it"
-  - "You're VRAM-constrained — 12B-parameter generation models want 24GB-class GPUs; quantized variants trade quality for fit"
+  - You need permissive weights at maximum quality — [dev]'s non-commercial license is the catch; commercial [dev]-quality access is API-only, so read the license before building a product on it
+  - You're VRAM-constrained — 12B-parameter generation models want 24GB-class GPUs; quantized variants trade quality for fit
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -40,12 +48,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (25.7k), Apache-2.0 code license, last push 2025-07-31 verified via the GitHub API on 2026-07-08 — release-hub cadence; family activity continues via weight releases (Kontext etc.) on the Hub. Weight-license split documented from official model cards.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/black-forest-labs/flux","date":"2026-07-08","description":"25.7k stars; the open image-generation reference since 2024"}
+  - source: github-trending
+    url: https://github.com/black-forest-labs/flux
+    date: '2026-07-08'
+    description: 25.7k stars; the open image-generation reference since 2024
 featured: false
 status: active
 ---

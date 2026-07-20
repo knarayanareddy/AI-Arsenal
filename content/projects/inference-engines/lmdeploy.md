@@ -6,18 +6,22 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: Toolkit for compressing, deploying, and serving LLMs with TurboMind and PyTorch backends
-github_url: "https://github.com/InternLM/lmdeploy"
+github_url: https://github.com/InternLM/lmdeploy
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, quantization, cloud]
+tags:
+  - llm
+  - inference
+  - quantization
+  - cloud
 maturity: production
 cost_model: open-source
-github_stars: 7895
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-11"
-docs_url: "https://lmdeploy.readthedocs.io/en/latest/"
+github_stars: 7965
+github_stars_last_30d: 70
+trending_score: 21
+last_commit: '2026-07-20'
+docs_url: https://lmdeploy.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,12 +29,21 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [HF, AWQ, W4A16]
+supported_formats:
+  - HF
+  - AWQ
+  - W4A16
 api_compatible: openai
 phase: inference-engine
-domain: [language, vision]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - InternLM's (Shanghai AI Lab) inference and serving toolkit, with particular strength serving InternLM and other Chinese-origin open-weight models
 best_for:
@@ -46,8 +59,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production evidence found beyond the project's own documentation and its association with InternLM's model releases; architecture claims are based on the public repository structure.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

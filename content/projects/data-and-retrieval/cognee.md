@@ -1,50 +1,64 @@
 ---
 id: cognee
-name: "Cognee"
+name: Cognee
 version_tracked: null
 artifact_type: framework
 category: rag
 subcategory: vector-databases
-description: "Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations"
-github_url: "https://github.com/topoteretes/cognee"
-license: "Apache-2.0"
+description: Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
+github_url: https://github.com/topoteretes/cognee
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Topoteretes"
-tags: [memory, rag, agents]
+org_or_maintainer: Topoteretes
+tags:
+  - memory
+  - rag
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 27350
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://docs.cognee.ai"
+github_stars: 28574
+github_stars_last_30d: 1224
+trending_score: 80
+last_commit: '2026-07-20'
+docs_url: https://docs.cognee.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The pipeline-centric take on agent memory: cognee models memory construction as composable Extract-Cognify-Load (ECL) tasks that build a knowledge graph plus embeddings from any data source, aiming at the space between raw vector RAG and heavyweight graph platforms."
+  - 'The pipeline-centric take on agent memory: cognee models memory construction as composable Extract-Cognify-Load (ECL) tasks that build a knowledge graph plus embeddings from any data source, aiming at the space between raw vector RAG and heavyweight graph platforms.'
 best_for:
-  - "You want graph-plus-vector memory with minimal ceremony — `add()` then `cognify()` then `search()` covers ingestion-to-query in three calls while remaining extensible via custom pipeline tasks"
-  - "You need to interconnect heterogeneous sources (past chats, files, images, audio transcripts) into one queryable structure rather than per-corpus vector silos"
+  - You want graph-plus-vector memory with minimal ceremony — `add()` then `cognify()` then `search()` covers ingestion-to-query in three calls while remaining extensible via custom pipeline tasks
+  - You need to interconnect heterogeneous sources (past chats, files, images, audio transcripts) into one queryable structure rather than per-corpus vector silos
 avoid_if:
-  - "You need battle-tested temporal fact invalidation for fast-changing data — Graphiti's bi-temporal model is more explicit about time; cognee's graph is fresher but less specialized there"
-  - "Simple semantic search meets your needs — the LLM-driven cognify step adds ingestion cost and latency that plain embedding pipelines avoid"
+  - You need battle-tested temporal fact invalidation for fast-changing data — Graphiti's bi-temporal model is more explicit about time; cognee's graph is fresher but less specialized there
+  - Simple semantic search meets your needs — the LLM-driven cognify step adds ingestion cost and latency that plain embedding pipelines avoid
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [graphiti, mem0]
+alternatives:
+  - graphiti
+  - mem0
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (27,350), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (27,350), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/topoteretes/cognee", "date": "2026-07-08", "description": "27,350 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/topoteretes/cognee
+    date: '2026-07-08'
+    description: 27,350 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

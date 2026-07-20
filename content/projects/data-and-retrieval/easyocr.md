@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "JaidedAI"
+org_or_maintainer: JaidedAI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 58
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: easyocr
-name: "EasyOCR"
+name: EasyOCR
 artifact_type: library
 category: computer-vision
 subcategory: document-processing
-description: "A ready-to-use Python OCR library supporting 80+ languages with a CRAFT text detector and a CRNN recognizer, requiring no training to run"
+description: A ready-to-use Python OCR library supporting 80+ languages with a CRAFT text detector and a CRNN recognizer, requiring no training to run
 github_url: https://github.com/JaidedAI/EasyOCR
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
-  - "data"
+  - multimodal
+  - self-hosted
+  - inference
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 29735
-last_commit: "2025-12-05"
+github_stars: 29793
+last_commit: '2025-12-05'
 docs_url: https://www.jaided.ai
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "A batteries-included Python OCR library that pairs a deep text detector with a recognizer for scene and document text."
+  - A batteries-included Python OCR library that pairs a deep text detector with a recognizer for scene and document text.
 best_for:
-  - "You want a simple Python API for multilingual OCR on scene text, receipts, or documents with minimal setup"
-  - "You need bounding-box detection plus recognition together and can use a GPU for speed"
+  - You want a simple Python API for multilingual OCR on scene text, receipts, or documents with minimal setup
+  - You need bounding-box detection plus recognition together and can use a GPU for speed
 avoid_if:
-  - "You need the absolute lowest latency on CPU for high-volume batches, where lighter engines may win"
-  - "Your documents require full layout, table, and reading-order reconstruction beyond line-level text"
-enrichment_notes: "Repository, Apache-2.0 license, and 2025-12-05 activity verified via the GitHub API on 2026-07-12. GPU strongly improves throughput."
+  - You need the absolute lowest latency on CPU for high-volume batches, where lighter engines may win
+  - Your documents require full layout, table, and reading-order reconstruction beyond line-level text
+enrichment_notes: Repository, Apache-2.0 license, and 2025-12-05 activity verified via the GitHub API on 2026-07-12. GPU strongly improves throughput.
 ---
 
 ## Overview

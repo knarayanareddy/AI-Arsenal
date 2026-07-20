@@ -6,18 +6,22 @@ artifact_type: model
 category: voice-audio
 subcategory: models
 description: Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
-github_url: "https://github.com/RVC-Boss/GPT-SoVITS"
+github_url: https://github.com/RVC-Boss/GPT-SoVITS
 license: MIT
 primary_language: Python
-org_or_maintainer: "RVC-Boss (community)"
-tags: [multimodal, voice, fine-tuning, self-hosted]
+org_or_maintainer: RVC-Boss (community)
+tags:
+  - multimodal
+  - voice
+  - fine-tuning
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 59564
-github_stars_last_30d: 0
-trending_score: 48
-last_commit: "2026-06-20"
-docs_url: "https://github.com/RVC-Boss/GPT-SoVITS"
+github_stars: 59975
+github_stars_last_30d: 411
+trending_score: 73
+last_commit: '2026-07-13'
+docs_url: https://github.com/RVC-Boss/GPT-SoVITS
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven, actively-maintained, production-proven]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Extremely popular community voice-cloning toolkit; the go-to open option when you have a small amount of target-speaker audio and want a full train-and-serve WebUI rather than an API
 best_for:
@@ -45,12 +55,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (59,564), MIT license, and last commit (2026-06-20) verified via the GitHub API on 2026-07-08. Capability claims from the README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (59,564), MIT license, and last commit (2026-06-20) verified via the GitHub API on 2026-07-08. Capability claims from the README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/RVC-Boss/GPT-SoVITS", "date": "2026-07-08", "description": "59,564 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/RVC-Boss/GPT-SoVITS
+    date: '2026-07-08'
+    description: 59,564 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

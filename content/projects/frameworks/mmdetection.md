@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "open-mmlab"
+org_or_maintainer: open-mmlab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 23
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: mmdetection
-name: "MMDetection"
+name: MMDetection
 artifact_type: framework
 category: computer-vision
 subcategory: frameworks
-description: "OpenMMLab's PyTorch object-detection toolbox with modular components and hundreds of reproducible detector/segmentation model implementations and pretrained"
+description: OpenMMLab's PyTorch object-detection toolbox with modular components and hundreds of reproducible detector/segmentation model implementations and pretrained
 github_url: https://github.com/open-mmlab/mmdetection
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - fine-tuning
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 32809
-last_commit: "2024-08-21"
+github_stars: 32832
+last_commit: '2024-08-21'
 docs_url: https://mmdetection.readthedocs.io
 phase: framework
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A modular detection framework providing reproducible implementations of most detection and instance-segmentation models."
+  - A modular detection framework providing reproducible implementations of most detection and instance-segmentation models.
 best_for:
-  - "You need to train, fine-tune, or benchmark closed-set object detection and instance segmentation with many model choices"
-  - "You want a modular config-driven framework and a large model zoo of pretrained detectors"
+  - You need to train, fine-tune, or benchmark closed-set object detection and instance segmentation with many model choices
+  - You want a modular config-driven framework and a large model zoo of pretrained detectors
 avoid_if:
-  - "You need open-vocabulary or promptable detection, where Grounding DINO and SAM fit better"
-  - "You want a lightweight single-model dependency rather than a large framework"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-08-21 activity verified via the GitHub API on 2026-07-12. A canonical detection framework; upstream cadence slowed after 2024."
+  - You need open-vocabulary or promptable detection, where Grounding DINO and SAM fit better
+  - You want a lightweight single-model dependency rather than a large framework
+enrichment_notes: Repository, Apache-2.0 license, and 2024-08-21 activity verified via the GitHub API on 2026-07-12. A canonical detection framework; upstream cadence slowed after 2024.
 ---
 
 ## Overview

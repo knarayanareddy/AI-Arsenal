@@ -5,47 +5,58 @@ version_tracked: null
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Open-source backend platform: Postgres database, auth, storage, and realtime APIs"
-github_url: "https://github.com/supabase/supabase"
+description: 'Open-source backend platform: Postgres database, auth, storage, and realtime APIs'
+github_url: https://github.com/supabase/supabase
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: supabase
-tags: [data, self-hosted, cloud, retrieval]
+tags:
+  - data
+  - self-hosted
+  - cloud
+  - retrieval
 maturity: production
 cost_model: freemium
-github_stars: 74300
-trending_score: 50
-last_commit: "2026-06-13"
-docs_url: "https://supabase.com/docs"
+github_stars: 106643
+trending_score: 63
+last_commit: '2026-07-20'
+docs_url: https://supabase.com/docs
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "Open-source backend platform (Postgres + Auth + Storage + Realtime) commonly used as the data and persistence layer for AI agents and AI-native apps"
+  - Open-source backend platform (Postgres + Auth + Storage + Realtime) commonly used as the data and persistence layer for AI agents and AI-native apps
 best_for:
-  - "You need a managed or self-hosted Postgres backend with auth, storage, and realtime out of the box for an AI app or agent"
-  - "You want vector/embeddings storage via pgvector alongside relational data in one system"
+  - You need a managed or self-hosted Postgres backend with auth, storage, and realtime out of the box for an AI app or agent
+  - You want vector/embeddings storage via pgvector alongside relational data in one system
 avoid_if:
-  - "You require a non-Postgres datastore or a fully proprietary managed-only backend with no self-host option"
-  - "Your team needs deep single-tenant isolation guarantees beyond what a shared Postgres instance provides"
+  - You require a non-Postgres datastore or a fully proprietary managed-only backend with no self-host option
+  - Your team needs deep single-tenant isolation guarantees beyond what a shared Postgres instance provides
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Stub added 2026-07-06 to resolve a dangling 'alternatives' reference from content/projects/agent-systems/insforge.md. Full evaluation pending human review."
-added_date: "2026-07-06"
-last_reviewed: "2026-07-06"
+enrichment_notes: Stub added 2026-07-06 to resolve a dangling 'alternatives' reference from content/projects/agent-systems/insforge.md. Full evaluation pending human review.
+added_date: '2026-07-06'
+last_reviewed: '2026-07-06'
 added_by: maintainer
 reviewed_by: null
 buzz_sources: []
 featured: false
 status: active
+github_stars_last_30d: 32343
 ---
 
 ## Overview

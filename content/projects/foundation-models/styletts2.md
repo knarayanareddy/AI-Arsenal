@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "yl4579"
+org_or_maintainer: yl4579
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: styletts2
-name: "StyleTTS 2"
+name: StyleTTS 2
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A text-to-speech model that reaches human-level naturalness using style diffusion and adversarial training with large speech language models as discriminators"
+description: A text-to-speech model that reaches human-level naturalness using style diffusion and adversarial training with large speech language models as discriminators
 github_url: https://github.com/yl4579/StyleTTS2
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "fine-tuning"
+  - voice
+  - multimodal
+  - self-hosted
+  - fine-tuning
 maturity: beta
 cost_model: open-source
-github_stars: 6307
-last_commit: "2024-08-10"
+github_stars: 6312
+last_commit: '2024-08-10'
 docs_url: https://github.com/yl4579/StyleTTS2
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A high-naturalness TTS model that samples speaking style via a diffusion model and refines fidelity with SLM-based adversarial training."
+  - A high-naturalness TTS model that samples speaking style via a diffusion model and refines fidelity with SLM-based adversarial training.
 best_for:
-  - "You want near-human read-aloud naturalness and are willing to work with a research codebase or a fine-tune of it"
-  - "You are studying style-diffusion and SLM-adversarial techniques for expressive single-speaker TTS"
+  - You want near-human read-aloud naturalness and are willing to work with a research codebase or a fine-tune of it
+  - You are studying style-diffusion and SLM-adversarial techniques for expressive single-speaker TTS
 avoid_if:
-  - "You need production packaging, streaming, or active upstream support out of the box"
-  - "You need multi-speaker dialogue or broad multilingual coverage, which specialized models handle better"
-enrichment_notes: "Repository, MIT license, and last commit 2024-08-10 verified via the GitHub API on 2026-07-12. Human-parity claims are from the paper's listening tests, not independently reproduced here."
+  - You need production packaging, streaming, or active upstream support out of the box
+  - You need multi-speaker dialogue or broad multilingual coverage, which specialized models handle better
+enrichment_notes: Repository, MIT license, and last commit 2024-08-10 verified via the GitHub API on 2026-07-12. Human-parity claims are from the paper's listening tests, not independently reproduced here.
 ---
 
 ## Overview

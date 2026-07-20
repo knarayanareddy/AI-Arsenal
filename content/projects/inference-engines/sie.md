@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "superlinked"
+org_or_maintainer: superlinked
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 8
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: sie
-name: "Superlinked Inference Engine"
+name: Superlinked Inference Engine
 artifact_type: platform
 category: llms
 subcategory: inference-engines
-description: "Superlinked open-source inference server and production cluster for serving the model mix used by agent applications"
+description: Superlinked open-source inference server and production cluster for serving the model mix used by agent applications
 github_url: https://github.com/superlinked/sie
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "llm"
-  - "inference"
-  - "batching"
-  - "self-hosted"
-  - "cloud"
+  - llm
+  - inference
+  - batching
+  - self-hosted
+  - cloud
 maturity: beta
 cost_model: open-source
-github_stars: 2272
-last_commit: "2026-07-15"
+github_stars: 2280
+last_commit: '2026-07-19'
 docs_url: https://superlinked.com/docs
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Superlinked model-serving layer that complements its retrieval stack and competes with general-purpose inference servers"
+  - Superlinked model-serving layer that complements its retrieval stack and competes with general-purpose inference servers
 best_for:
-  - "Serving several embedding and generation models behind one agent-facing service"
-  - "Evaluating a self-hosted inference cluster alongside Superlinked retrieval components"
+  - Serving several embedding and generation models behind one agent-facing service
+  - Evaluating a self-hosted inference cluster alongside Superlinked retrieval components
 avoid_if:
-  - "You need a vendor-neutral serving stack with no adjacent commercial ecosystem"
-  - "You only need one small local model and do not need cluster or readiness features"
-enrichment_notes: "Apache-2.0 server from Superlinked; adjacent-service boundaries should be reviewed before production adoption. Draft pending review."
+  - You need a vendor-neutral serving stack with no adjacent commercial ecosystem
+  - You only need one small local model and do not need cluster or readiness features
+enrichment_notes: Apache-2.0 server from Superlinked; adjacent-service boundaries should be reviewed before production adoption. Draft pending review.
 ---
 
 ## Overview

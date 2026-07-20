@@ -6,25 +6,36 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
-github_url: "https://github.com/langgenius/dify"
+github_url: https://github.com/langgenius/dify
 license: Modified Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [agents, orchestration, rag, cloud]
+tags:
+  - agents
+  - orchestration
+  - rag
+  - cloud
 maturity: production
 cost_model: open-source
-github_stars: 145081
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://docs.dify.ai/"
+github_stars: 149460
+github_stars_last_30d: 4379
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://docs.dify.ai/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - Open-source LLM application development platform with a visual workflow builder, positioned as a low-code alternative to hand-coded agent frameworks
 best_for:
@@ -35,17 +46,22 @@ avoid_if:
   - You need deep custom logic that doesn't map cleanly onto Dify's node-based workflow model — at that point a code framework like LangGraph or a custom FastAPI service gives more control
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Dify's very high GitHub star count (145K+) and active documentation site (docs.dify.ai) reflect substantial community adoption; specific enterprise production case studies were not independently verified beyond the project's own marketing, so production-proven is not claimed here.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://docs.dify.ai/","date":"2026-06-13","description":"Official docs"}
+  - source: newsletter
+    url: https://docs.dify.ai/
+    date: '2026-06-13'
+    description: Official docs
 featured: false
 status: active
 ---

@@ -6,25 +6,36 @@ artifact_type: framework
 category: voice-audio
 subcategory: frameworks
 description: Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
-github_url: "https://github.com/huggingface/speech-to-speech"
+github_url: https://github.com/huggingface/speech-to-speech
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: huggingface
-tags: [voice, agents, streaming, local]
+tags:
+  - voice
+  - agents
+  - streaming
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 5654
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-07-07"
-docs_url: "https://github.com/huggingface/speech-to-speech#readme"
+github_stars: 6188
+github_stars_last_30d: 534
+trending_score: 80
+last_commit: '2026-07-17'
+docs_url: https://github.com/huggingface/speech-to-speech#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [audio, language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - audio
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - The reference open-source voice-agent pipeline — every stage (VAD, STT, LLM, TTS) swappable, speaking the OpenAI Realtime protocol, so it serves as both a deployable backend and a drop-in self-hosted replacement for hosted realtime voice APIs
 best_for:
@@ -40,12 +51,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Star count (5.7k), Apache-2.0 license, and last push (2026-07-07) verified via the GitHub API on 2026-07-08; on GitHub weekly trending same day. Production-proven signal is README-documented (conversation backend for thousands of Reachy Mini robots — first-party but concrete). Latency claims not independently benchmarked.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending?since=weekly","date":"2026-07-08","description":"On GitHub weekly trending; 5.7k stars"}
+  - source: github-trending
+    url: https://github.com/trending?since=weekly
+    date: '2026-07-08'
+    description: On GitHub weekly trending; 5.7k stars
 featured: false
 status: active
 ---

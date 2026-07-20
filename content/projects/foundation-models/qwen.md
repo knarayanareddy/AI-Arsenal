@@ -6,25 +6,35 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Alibaba open-weight model family covering language, coding, and multimodal use cases
-github_url: "https://github.com/QwenLM/Qwen"
+github_url: https://github.com/QwenLM/Qwen
 license: Apache-2.0
 primary_language: Other
 org_or_maintainer: null
-tags: [llm, inference, multimodal, code-gen]
+tags:
+  - llm
+  - inference
+  - multimodal
+  - code-gen
 maturity: production
 cost_model: open-source
-github_stars: 21281
-github_stars_last_30d: 21281
-trending_score: 70
-last_commit: "2026-03-05"
+github_stars: 21455
+github_stars_last_30d: 174
+trending_score: 29
+last_commit: '2026-03-05'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Alibaba's original open-weight Qwen model family (Qwen 1/2 generation)
 best_for:
@@ -40,8 +50,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: GitHub org activity (QwenLM/Qwen3, QwenLM/Qwen3.6 repos actively updated through June 2026 per github.com/orgs/QwenLM/repositories) confirms this original Qwen/Qwen2 repo is a legacy generation relative to Alibaba's current, very actively maintained line.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

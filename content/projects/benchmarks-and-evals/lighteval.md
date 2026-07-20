@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 13
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: lighteval
-name: "LightEval"
+name: LightEval
 artifact_type: library
 category: evaluation
 subcategory: evaluation
-description: "Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible"
+description: Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
 github_url: https://github.com/huggingface/lighteval
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "evaluation"
-  - "llm"
-  - "self-hosted"
+  - evaluation
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 2473
-last_commit: "2026-06-29"
+github_stars: 2486
+last_commit: '2026-06-29'
 docs_url: https://huggingface.co/docs/lighteval/
 phase: benchmark-and-eval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A configurable LLM evaluation harness that runs benchmark suites across multiple inference backends."
+  - A configurable LLM evaluation harness that runs benchmark suites across multiple inference backends.
 best_for:
-  - "You need to evaluate LLMs on standard benchmarks reproducibly across different inference backends"
-  - "You want detailed per-sample logging and configurable task suites in the Hugging Face ecosystem"
+  - You need to evaluate LLMs on standard benchmarks reproducibly across different inference backends
+  - You want detailed per-sample logging and configurable task suites in the Hugging Face ecosystem
 avoid_if:
-  - "You need production application-level evaluation (tracing real traffic) rather than benchmark scoring"
-  - "You require a hosted evaluation service rather than a self-run harness"
-enrichment_notes: "Repository, MIT license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Benchmark scores depend on prompt formatting and backend choices."
+  - You need production application-level evaluation (tracing real traffic) rather than benchmark scoring
+  - You require a hosted evaluation service rather than a self-run harness
+enrichment_notes: Repository, MIT license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Benchmark scores depend on prompt formatting and backend choices.
 ---
 
 ## Overview

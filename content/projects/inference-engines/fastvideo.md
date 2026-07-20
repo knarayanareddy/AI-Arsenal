@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "hao-ai-lab"
+org_or_maintainer: hao-ai-lab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 40
+trending_score: 33
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: fastvideo
-name: "FastVideo"
+name: FastVideo
 artifact_type: library
 category: multimodal
 subcategory: inference-engines
-description: "A unified inference and post-training framework for accelerating video-generation models via techniques like sliding-tile attention and distillation"
+description: A unified inference and post-training framework for accelerating video-generation models via techniques like sliding-tile attention and distillation
 github_url: https://github.com/hao-ai-lab/FastVideo
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "inference"
-  - "fine-tuning"
-  - "self-hosted"
+  - multimodal
+  - inference
+  - fine-tuning
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 3822
-last_commit: "2026-07-12"
+github_stars: 3862
+last_commit: '2026-07-20'
 docs_url: https://hao-ai-lab.github.io/FastVideo
 phase: inference-engine
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "An acceleration framework that speeds up video-diffusion inference and provides distillation-based post-training."
+  - An acceleration framework that speeds up video-diffusion inference and provides distillation-based post-training.
 best_for:
-  - "You need to accelerate open video-diffusion models and want kernels plus distillation recipes in one framework"
-  - "You are researching efficient video generation (sparse attention, step distillation)"
+  - You need to accelerate open video-diffusion models and want kernels plus distillation recipes in one framework
+  - You are researching efficient video generation (sparse attention, step distillation)
 avoid_if:
-  - "You want a ready single video model rather than an acceleration/post-training layer"
-  - "Your target model is unsupported, since optimizations are architecture-specific"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. From UCSD's Hao AI Lab; young and evolving."
+  - You want a ready single video model rather than an acceleration/post-training layer
+  - Your target model is unsupported, since optimizations are architecture-specific
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. From UCSD's Hao AI Lab; young and evolving.
 ---
 
 ## Overview

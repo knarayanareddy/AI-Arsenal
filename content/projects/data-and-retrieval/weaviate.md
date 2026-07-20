@@ -6,18 +6,22 @@ artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval
-github_url: "https://github.com/weaviate/weaviate"
+github_url: https://github.com/weaviate/weaviate
 license: BSD-3-Clause
 primary_language: Go
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, self-hosted]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 16323
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-12"
-docs_url: "https://weaviate.io/developers/weaviate/"
+github_stars: 16622
+github_stars_last_30d: 299
+trending_score: 39
+last_commit: '2026-07-20'
+docs_url: https://weaviate.io/developers/weaviate/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,17 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Open-source vector database with built-in hybrid search (vector + keyword/BM25) and native module system for embeddings/generation
 best_for:
@@ -46,12 +58,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Weaviate has a well-established managed cloud offering (Weaviate Cloud) with named enterprise customers and is frequently cited alongside Qdrant and Milvus in vector-database production comparisons, giving credible production-adoption evidence.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://weaviate.io/case-studies/instabase","date":"2024-05-17","description":"Weaviate case study: Instabase brought Weaviate into production for hybrid dense/sparse search across regulated, on-prem and cloud enterprise deployments"}
+  - source: conference
+    url: https://weaviate.io/case-studies/instabase
+    date: '2024-05-17'
+    description: 'Weaviate case study: Instabase brought Weaviate into production for hybrid dense/sparse search across regulated, on-prem and cloud enterprise deployments'
 featured: false
 status: active
 ---

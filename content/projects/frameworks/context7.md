@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 533
+trending_score: 70
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -40,8 +40,8 @@ tags:
   - data
 maturity: beta
 cost_model: freemium
-github_stars: 58934
-last_commit: '2026-07-10'
+github_stars: 59467
+last_commit: '2026-07-20'
 docs_url: https://github.com/upstash/context7
 phase: framework
 domain:

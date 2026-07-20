@@ -6,46 +6,56 @@ artifact_type: library
 category: agents
 subcategory: browser-agents
 description: JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
-github_url: "https://github.com/alibaba/page-agent"
+github_url: https://github.com/alibaba/page-agent
 license: MIT
 primary_language: TypeScript
 org_or_maintainer: alibaba
-tags: [agents, tool-use]
+tags:
+  - agents
+  - tool-use
 maturity: beta
 cost_model: open-source
-github_stars: 24812
-github_stars_last_30d: 0
-trending_score: 65
-last_commit: "2026-07-07"
-docs_url: "https://alibaba.github.io/page-agent/"
-demo_url: "https://alibaba.github.io/page-agent/"
+github_stars: 27246
+github_stars_last_30d: 2434
+trending_score: 80
+last_commit: '2026-07-20'
+docs_url: https://alibaba.github.io/page-agent/
+demo_url: https://alibaba.github.io/page-agent/
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - In-page GUI agent that runs inside the web page itself (a script tag, not a separate browser process), letting any site add "control this UI with natural language" — a different architecture from external browser agents like Stagehand or Browser Use
 best_for:
   - You want to add a natural-language copilot to your own web app so users can drive its UI conversationally — PageAgent runs in-page with direct DOM access, no browser infrastructure to operate
-  - "You need GUI automation that works without screenshots or CDP: it reads the live DOM directly, which is cheaper and faster than vision-based agents for structured web UIs"
+  - 'You need GUI automation that works without screenshots or CDP: it reads the live DOM directly, which is cheaper and faster than vision-based agents for structured web UIs'
 avoid_if:
   - You need to automate third-party sites you don't control — an in-page agent must be embedded by the site owner; use an external browser agent (see the Stagehand entry) instead
   - Your UI is canvas-heavy or renders outside the DOM — DOM-based perception has nothing to read there and vision-based approaches will do better
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [stagehand]
+alternatives:
+  - stagehand
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Star count (24.8k), MIT license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub weekly and monthly trending. Architecture description (in-page script, DOM-based perception, MCP support) from the project's own documentation.
-added_date: "2026-07-07"
-last_reviewed: "2026-07-07"
+added_date: '2026-07-07'
+last_reviewed: '2026-07-07'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending?since=weekly","date":"2026-07-07","description":"On GitHub weekly and monthly trending; 24.8k stars"}
+  - source: github-trending
+    url: https://github.com/trending?since=weekly
+    date: '2026-07-07'
+    description: On GitHub weekly and monthly trending; 24.8k stars
 featured: false
 status: active
 ---

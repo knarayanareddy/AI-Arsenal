@@ -6,18 +6,22 @@ artifact_type: platform
 category: observability
 subcategory: tracing
 description: Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
-github_url: "https://github.com/Helicone/helicone"
+github_url: https://github.com/Helicone/helicone
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, monitoring, cloud, self-hosted]
+tags:
+  - observability
+  - monitoring
+  - cloud
+  - self-hosted
 maturity: production
 cost_model: freemium
-github_stars: 5809
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-11"
-docs_url: "https://docs.helicone.ai/"
+github_stars: 5970
+github_stars_last_30d: 161
+trending_score: 28
+last_commit: '2026-07-05'
+docs_url: https://docs.helicone.ai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,15 @@ supported_formats: []
 api_compatible: null
 approach: proxy
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source LLM observability platform positioned around a simple proxy-based integration model
 best_for:
@@ -42,13 +52,17 @@ avoid_if:
   - A proxy-based architecture doesn't fit your infrastructure constraints — some teams prefer SDK-based instrumentation that doesn't route traffic through an intermediary
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, opik]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - opik
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond the project's own documentation; the proxy-based architectural approach is verifiable from public documentation but a named enterprise production deployment was not confirmed.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 44
+trending_score: 34
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: skillopt
-name: "SkillOpt"
+name: SkillOpt
 artifact_type: framework
 category: agents
 subcategory: libraries
-description: "Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen"
+description: Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen
 github_url: https://github.com/microsoft/SkillOpt
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "training"
-  - "efficiency"
-  - "evaluation"
-  - "reasoning"
+  - agents
+  - training
+  - efficiency
+  - evaluation
+  - reasoning
 maturity: alpha
 cost_model: open-source
-github_stars: 13165
-last_commit: "2026-07-18"
+github_stars: 13209
+last_commit: '2026-07-18'
 docs_url: https://microsoft.github.io/SkillOpt/
 phase: training-and-alignment
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Text-space optimizer for reusable skills on frozen LLM agents"
-  - "Prompt-level alternative to weight updates and conventional fine-tuning"
+  - Text-space optimizer for reusable skills on frozen LLM agents
+  - Prompt-level alternative to weight updates and conventional fine-tuning
 best_for:
-  - "Optimizing prompts and skills without weight updates"
-  - "Studying trajectory-based agent improvement"
+  - Optimizing prompts and skills without weight updates
+  - Studying trajectory-based agent improvement
 avoid_if:
-  - "You need to change model weights or guarantee skill transfer across providers"
-  - "You lack reliable task feedback or enough representative trajectories"
-enrichment_notes: "SkillOpt is a research release whose optimizer behavior depends on trajectory quality and task rubric; arXiv claims need replication. Draft pending review."
+  - You need to change model weights or guarantee skill transfer across providers
+  - You lack reliable task feedback or enough representative trajectories
+enrichment_notes: SkillOpt is a research release whose optimizer behavior depends on trajectory quality and task rubric; arXiv claims need replication. Draft pending review.
 ---
 
 ## Overview

@@ -6,27 +6,36 @@ artifact_type: model
 category: computer-vision
 subcategory: models
 description: Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
-github_url: "https://github.com/facebookresearch/sam2"
+github_url: https://github.com/facebookresearch/sam2
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: facebookresearch
-tags: [vision, multimodal, research]
+tags:
+  - vision
+  - multimodal
+  - research
 maturity: production
 cost_model: open-source
-github_stars: 19492
-github_stars_last_30d: 0
-trending_score: 55
-last_commit: "2026-05-30"
-docs_url: "https://ai.meta.com/sam2/"
-demo_url: "https://sam2.metademolab.com"
-paper_url: "https://arxiv.org/abs/2408.00714"
+github_stars: 19562
+github_stars_last_30d: 70
+trending_score: 46
+last_commit: '2026-05-30'
+docs_url: https://ai.meta.com/sam2/
+demo_url: https://sam2.metademolab.com
+paper_url: https://arxiv.org/abs/2408.00714
 paper_id: null
 phase: foundation-model
-domain: [vision]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, research-origin, production-proven]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - research-origin
+  - production-proven
 ecosystem_role:
-  - "The reference promptable-segmentation foundation model: zero-shot mask generation from points/boxes on anything, extended to video via a streaming memory architecture — the \"segmentation as a promptable capability\" paradigm that closed-set models can't offer"
+  - 'The reference promptable-segmentation foundation model: zero-shot mask generation from points/boxes on anything, extended to video via a streaming memory architecture — the "segmentation as a promptable capability" paradigm that closed-set models can''t offer'
 best_for:
   - Interactive or automated segmentation of arbitrary objects without training — annotation tooling, image editing, robotics perception, and medical/scientific imaging pipelines all build on its zero-shot masks
   - Video object segmentation and tracking from a single click — the memory-bank design tracks masklets through occlusion at interactive speed, previously a train-your-own-model problem
@@ -34,18 +43,23 @@ avoid_if:
   - You need semantic labels — SAM 2 produces masks, not classes; pair it with a detector (e.g. Grounding DINO for text-prompted boxes) for labeled segmentation
   - You need closed-set real-time segmentation on known classes at the edge — a fine-tuned YOLO-seg model is smaller, faster, and label-aware
 upstream_dependencies: []
-downstream_consumers: [supervision]
+downstream_consumers:
+  - supervision
 alternatives: []
-integrates_with: [ultralytics]
+integrates_with:
+  - ultralytics
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (19.4k), Apache-2.0, and repository state (last push 2026-05-30 — research-release cadence, not abandonment) verified via the GitHub API on 2026-07-08. Capability and speed claims (44 FPS video, 6x faster than SAM 1 on images) from the SAM 2 paper (arXiv:2408.00714) and Meta's release notes; not re-benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/facebookresearch/sam2","date":"2026-07-08","description":"19.4k stars, Apache-2.0 weights + code, Meta research release"}
+  - source: github-trending
+    url: https://github.com/facebookresearch/sam2
+    date: '2026-07-08'
+    description: 19.4k stars, Apache-2.0 weights + code, Meta research release
 featured: false
 status: active
 ---

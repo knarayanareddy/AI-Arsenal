@@ -6,18 +6,22 @@ artifact_type: platform
 category: observability
 subcategory: tracing
 description: OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
-github_url: "https://github.com/openlit/openlit"
+github_url: https://github.com/openlit/openlit
 license: Apache-2.0
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, tracing, monitoring, self-hosted]
+tags:
+  - observability
+  - tracing
+  - monitoring
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 2522
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-12"
-docs_url: "https://docs.openlit.io/"
+github_stars: 2623
+github_stars_last_30d: 101
+trending_score: 23
+last_commit: '2026-07-20'
+docs_url: https://docs.openlit.io/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,14 @@ supported_formats: []
 api_compatible: null
 approach: otel-native
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source, OpenTelemetry-native observability toolkit for LLM applications
 best_for:
@@ -42,13 +51,17 @@ avoid_if:
   - You need the richest LLM-specific evaluation features built directly into the observability tool — OTel-native tools tend to focus on tracing/metrics standardization rather than LLM-specific evaluation workflows
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: OpenLIT's OpenTelemetry-native architecture is independently verifiable from its public positioning and is architecturally distinct from proprietary-format observability platforms, which is a meaningful and checkable technical differentiator rather than a vague marketing claim.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

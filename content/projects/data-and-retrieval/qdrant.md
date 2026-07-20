@@ -6,18 +6,22 @@ artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Rust vector database for high-performance similarity search with filtering and hybrid search
-github_url: "https://github.com/qdrant/qdrant"
+github_url: https://github.com/qdrant/qdrant
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, self-hosted]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 32155
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://qdrant.tech/documentation/"
+github_stars: 33424
+github_stars_last_30d: 1275
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://qdrant.tech/documentation/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,16 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source vector database written in Rust, positioned as a performance-focused, self-hostable alternative with a strong managed-cloud option
 best_for:
@@ -45,9 +56,9 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "production-proven requires third-party adoption evidence; only technical/how-to production-tuning content was found (Qdrant's own blog, third-party config guides), not a named-customer case study. Not claimed. Last reviewed: 2026-07-01."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'production-proven requires third-party adoption evidence; only technical/how-to production-tuning content was found (Qdrant''s own blog, third-party config guides), not a named-customer case study. Not claimed. Last reviewed: 2026-07-01.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

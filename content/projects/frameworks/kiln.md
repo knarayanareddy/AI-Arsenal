@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Kiln-AI"
+org_or_maintainer: Kiln-AI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 6
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: kiln
-name: "Kiln"
+name: Kiln
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "A desktop and library toolkit to build, evaluate, and optimize AI systems, covering evals, synthetic data, fine-tuning, RAG"
+description: A desktop and library toolkit to build, evaluate, and optimize AI systems, covering evals, synthetic data, fine-tuning, RAG
 github_url: https://github.com/Kiln-AI/Kiln
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "evaluation"
-  - "fine-tuning"
-  - "rag"
-  - "self-hosted"
+  - evaluation
+  - fine-tuning
+  - rag
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 4961
-last_commit: "2026-07-12"
+github_stars: 4967
+last_commit: '2026-07-20'
 docs_url: https://docs.kiln.tech/
 phase: framework
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A collaborative toolkit tying together evals, synthetic data, and fine-tuning to iterate on AI systems."
+  - A collaborative toolkit tying together evals, synthetic data, and fine-tuning to iterate on AI systems.
 best_for:
-  - "You want an integrated GUI+library loop of evals, synthetic data, and fine-tuning to improve a model"
-  - "Non-engineers and engineers need to collaborate on datasets and evaluations with version control"
+  - You want an integrated GUI+library loop of evals, synthetic data, and fine-tuning to improve a model
+  - Non-engineers and engineers need to collaborate on datasets and evaluations with version control
 avoid_if:
-  - "You want a single-purpose CLI rather than an integrated app-plus-library toolkit"
-  - "The non-standard license conflicts with how you intend to use or distribute it"
-enrichment_notes: "Repository and 2026-07-12 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION, so review terms before commercial use."
+  - You want a single-purpose CLI rather than an integrated app-plus-library toolkit
+  - The non-standard license conflicts with how you intend to use or distribute it
+enrichment_notes: Repository and 2026-07-12 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION, so review terms before commercial use.
 ---
 
 ## Overview

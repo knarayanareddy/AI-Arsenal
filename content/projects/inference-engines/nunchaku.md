@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "nunchaku-ai"
+org_or_maintainer: nunchaku-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 7
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: nunchaku
-name: "Nunchaku (SVDQuant)"
+name: Nunchaku (SVDQuant)
 artifact_type: library
 category: multimodal
 subcategory: inference-engines
-description: "An inference engine implementing SVDQuant 4-bit quantization for diffusion transformers, absorbing outliers via low-rank components to run big image models on"
+description: An inference engine implementing SVDQuant 4-bit quantization for diffusion transformers, absorbing outliers via low-rank components to run big image models on
 github_url: https://github.com/nunchaku-ai/nunchaku
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "inference"
-  - "self-hosted"
+  - multimodal
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 3905
-last_commit: "2026-03-07"
+github_stars: 3912
+last_commit: '2026-03-07'
 docs_url: https://nunchaku.tech/docs/nunchaku/
 phase: inference-engine
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "A 4-bit inference engine for diffusion transformers that cuts VRAM and speeds up image generation with minimal quality loss."
+  - A 4-bit inference engine for diffusion transformers that cuts VRAM and speeds up image generation with minimal quality loss.
 best_for:
-  - "You want to run large diffusion transformers like FLUX at 4-bit on consumer GPUs with limited VRAM"
-  - "You need faster image generation and are willing to use a specialized quantized runtime"
+  - You want to run large diffusion transformers like FLUX at 4-bit on consumer GPUs with limited VRAM
+  - You need faster image generation and are willing to use a specialized quantized runtime
 avoid_if:
-  - "You need broad model coverage rather than diffusion-transformer-specific kernels"
-  - "You require lossless full-precision fidelity, since 4-bit quantization introduces small quality trade-offs"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-03-07 activity verified via the GitHub API on 2026-07-12. ICLR 2025 Spotlight (SVDQuant). Quality/speed depend on model and hardware."
+  - You need broad model coverage rather than diffusion-transformer-specific kernels
+  - You require lossless full-precision fidelity, since 4-bit quantization introduces small quality trade-offs
+enrichment_notes: Repository, Apache-2.0 license, and 2026-03-07 activity verified via the GitHub API on 2026-07-12. ICLR 2025 Spotlight (SVDQuant). Quality/speed depend on model and hardware.
 ---
 
 ## Overview

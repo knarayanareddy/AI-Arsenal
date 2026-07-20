@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "NVIDIA"
+org_or_maintainer: NVIDIA
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 13
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: openshell
-name: "OpenShell"
+name: OpenShell
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "NVIDIA's Rust sandboxed runtime for autonomous agents, governed by declarative YAML policies for files, network, and data exfiltration"
+description: NVIDIA's Rust sandboxed runtime for autonomous agents, governed by declarative YAML policies for files, network, and data exfiltration
 github_url: https://github.com/NVIDIA/OpenShell
-license: "Apache-2.0"
-primary_language: "Rust"
+license: Apache-2.0
+primary_language: Rust
 tags:
-  - "agents"
-  - "security"
-  - "self-hosted"
-  - "kubernetes"
+  - agents
+  - security
+  - self-hosted
+  - kubernetes
 maturity: alpha
 cost_model: self-hostable
-github_stars: 7672
-last_commit: "2026-07-17"
+github_stars: 7685
+last_commit: '2026-07-20'
 docs_url: https://docs.nvidia.com/openshell/latest/index.html
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "experimental"
+  - org-backed
+  - experimental
 ecosystem_role:
-  - "NVIDIA Rust runtime for policy-governed autonomous-agent sandboxes"
-  - "Agent-specific isolation alternative to broad container permissions"
+  - NVIDIA Rust runtime for policy-governed autonomous-agent sandboxes
+  - Agent-specific isolation alternative to broad container permissions
 best_for:
-  - "Running untrusted agent tools with explicit policy"
-  - "Building a private execution layer for autonomous workflows"
+  - Running untrusted agent tools with explicit policy
+  - Building a private execution layer for autonomous workflows
 avoid_if:
-  - "You need a mature, compliance-certified isolation platform today"
-  - "Your workload cannot tolerate MicroVM startup or policy integration overhead"
-enrichment_notes: "OpenShell is explicitly Alpha; its sandbox and policy guarantees require threat-model testing rather than assumption. Draft pending review."
+  - You need a mature, compliance-certified isolation platform today
+  - Your workload cannot tolerate MicroVM startup or policy integration overhead
+enrichment_notes: OpenShell is explicitly Alpha; its sandbox and policy guarantees require threat-model testing rather than assumption. Draft pending review.
 ---
 
 ## Overview

@@ -6,18 +6,22 @@ artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
-github_url: "https://github.com/chroma-core/chroma"
+github_url: https://github.com/chroma-core/chroma
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, local]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 28419
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://docs.trychroma.com/"
+github_stars: 28837
+github_stars_last_30d: 419
+trending_score: 49
+last_commit: '2026-07-18'
+docs_url: https://docs.trychroma.com/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Developer-friendly embedded/lightweight vector database, the most common default for RAG prototyping and small-to-medium production apps
 best_for:
@@ -46,8 +56,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Chroma is the most frequently used vector database in RAG tutorials, LangChain/LlamaIndex quickstarts, and starter templates across the ecosystem, which is strong practical-adoption evidence for the prototyping/small-scale niche it targets.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

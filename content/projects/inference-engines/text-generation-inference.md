@@ -6,18 +6,22 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: Hugging Face inference server for serving large text-generation models in production
-github_url: "https://github.com/huggingface/text-generation-inference"
+github_url: https://github.com/huggingface/text-generation-inference
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, streaming, batching]
+tags:
+  - llm
+  - inference
+  - streaming
+  - batching
 maturity: production
 cost_model: open-source
-github_stars: 10863
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-03-21"
-docs_url: "https://huggingface.co/docs/text-generation-inference"
+github_stars: 10876
+github_stars_last_30d: 13
+trending_score: 16
+last_commit: '2026-03-21'
+docs_url: https://huggingface.co/docs/text-generation-inference
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,12 +29,19 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [HF, GPTQ, AWQ]
+supported_formats:
+  - HF
+  - GPTQ
+  - AWQ
 api_compatible: openai
 phase: inference-engine
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Hugging Face's original production LLM serving toolkit, now in maintenance mode as HF redirects investment to vLLM and SGLang
 best_for:
@@ -45,13 +56,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: verified
-enrichment_notes: "Directly confirmed via Hugging Face's own official documentation (huggingface.co/docs/inference-endpoints/en/engines/tgi): 'Text Generation Inference is in maintenance mode as of 12/11/2025... only pull requests for minor bug fixes, documentation improvements, and lightweight maintenance tasks will be accepted.' This is a primary-source status confirmation, not third-party inference."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'Directly confirmed via Hugging Face''s own official documentation (huggingface.co/docs/inference-endpoints/en/engines/tgi): ''Text Generation Inference is in maintenance mode as of 12/11/2025... only pull requests for minor bug fixes, documentation improvements, and lightweight maintenance tasks will be accepted.'' This is a primary-source status confirmation, not third-party inference.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://huggingface.co/docs/inference-endpoints/en/engines/tgi","date":"2025-12-11","description":"Hugging Face's own documentation confirms TGI entered maintenance mode on 12/11/2025, redirecting new inference-engine investment to vLLM, SGLang, llama.cpp, and MLX"}
+  - source: hackernews
+    url: https://huggingface.co/docs/inference-endpoints/en/engines/tgi
+    date: '2025-12-11'
+    description: Hugging Face's own documentation confirms TGI entered maintenance mode on 12/11/2025, redirecting new inference-engine investment to vLLM, SGLang, llama.cpp, and MLX
 featured: false
 status: archived
 ---

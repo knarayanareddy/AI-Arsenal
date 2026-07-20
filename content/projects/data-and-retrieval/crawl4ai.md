@@ -6,18 +6,21 @@ artifact_type: library
 category: rag
 subcategory: document-processing
 description: Open-source crawler and scraper designed to produce LLM-friendly web content
-github_url: "https://github.com/unclecode/crawl4ai"
+github_url: https://github.com/unclecode/crawl4ai
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, data, local]
+tags:
+  - rag
+  - data
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 68406
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-04"
-docs_url: "https://docs.crawl4ai.com/"
+github_stars: 73378
+github_stars_last_30d: 4972
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://docs.crawl4ai.com/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +31,14 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source Python crawler specifically designed to output LLM-ready Markdown for RAG ingestion pipelines
 best_for:
@@ -46,8 +54,8 @@ integrates_with: []
 corresponding_tool_entry: crawl4ai-tool
 enrichment_status: reviewed
 enrichment_notes: This entry is architecturally identical to the crawl4ai-tool entry in the tools vertical (content/tools/data-ingestion/); this project entry documents the project's architecture and ecosystem position, while the tool entry covers usage-oriented job guidance. See corresponding_tool_entry cross-reference.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

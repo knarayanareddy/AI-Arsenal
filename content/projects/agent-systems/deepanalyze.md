@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ruc-datalab"
+org_or_maintainer: ruc-datalab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,52 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: deepanalyze
-name: "DeepAnalyze"
+name: DeepAnalyze
 artifact_type: model
 category: agents
 subcategory: autonomous
-description: "RUC DataLab's DeepAnalyze-8B agentic LLM and framework for autonomous data preparation, analysis, modeling, visualization, and report generation"
+description: RUC DataLab's DeepAnalyze-8B agentic LLM and framework for autonomous data preparation, analysis, modeling, visualization, and report generation
 github_url: https://github.com/ruc-datalab/DeepAnalyze
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "reasoning"
-  - "data"
-  - "tool-use"
-  - "research"
+  - agents
+  - reasoning
+  - data
+  - tool-use
+  - research
 maturity: alpha
 cost_model: open-source
-github_stars: 4378
-last_commit: "2026-07-01"
+github_stars: 4379
+last_commit: '2026-07-01'
 docs_url: https://ruc-deepanalyze.github.io
 phase: agent-system
 domain:
-  - "language"
-  - "reasoning"
+  - language
+  - reasoning
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "Open 8B autonomous data-science agent with model, code, data, and UI"
-  - "Execution-grounded analyst workflow for mixed structured and unstructured files"
+  - Open 8B autonomous data-science agent with model, code, data, and UI
+  - Execution-grounded analyst workflow for mixed structured and unstructured files
 best_for:
-  - "Open-ended analysis over mixed business data"
-  - "Research on execution-grounded data-science agents"
+  - Open-ended analysis over mixed business data
+  - Research on execution-grounded data-science agents
 avoid_if:
-  - "You need certified financial or scientific analysis without review"
-  - "Your environment cannot sandbox generated Python and file access"
-enrichment_notes: "DeepAnalyze is an academic/research release with a Docker sandbox option, open model, code, and training data; its reports require independent validation. Draft pending review."
+  - You need certified financial or scientific analysis without review
+  - Your environment cannot sandbox generated Python and file access
+enrichment_notes: DeepAnalyze is an academic/research release with a Docker sandbox option, open model, code, and training data; its reports require independent validation. Draft pending review.
 ---
 
 ## Overview

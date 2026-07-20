@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "waybarrios"
+org_or_maintainer: waybarrios
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,49 +19,49 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: vllm-mlx
-name: "vLLM-MLX"
+name: vLLM-MLX
 artifact_type: tool
 category: llms
 subcategory: inference-engines
-description: "MLX-backed OpenAI- and Anthropic-compatible local inference server for Apple Silicon with batching, vision, and MCP tool calling"
+description: MLX-backed OpenAI- and Anthropic-compatible local inference server for Apple Silicon with batching, vision, and MCP tool calling
 github_url: https://github.com/waybarrios/vllm-mlx
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "llm"
-  - "inference"
-  - "batching"
-  - "multimodal"
-  - "local"
+  - llm
+  - inference
+  - batching
+  - multimodal
+  - local
 maturity: alpha
 cost_model: open-source
 github_stars: 1446
-last_commit: "2026-06-28"
+last_commit: '2026-06-28'
 docs_url: https://github.com/waybarrios/vllm-mlx
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "experimental"
+  - community-driven
+  - experimental
 ecosystem_role:
-  - "Apple-Silicon alternative to CUDA-centric vLLM deployments, complementing MLX and local coding-agent clients"
+  - Apple-Silicon alternative to CUDA-centric vLLM deployments, complementing MLX and local coding-agent clients
 best_for:
-  - "Serving Llama or Qwen models behind an OpenAI-compatible local endpoint"
-  - "Testing multimodal and MCP-enabled agents on an Apple Silicon workstation"
+  - Serving Llama or Qwen models behind an OpenAI-compatible local endpoint
+  - Testing multimodal and MCP-enabled agents on an Apple Silicon workstation
 avoid_if:
-  - "You need NVIDIA production clusters or broad CUDA model compatibility"
-  - "You require a long-established serving API with extensive conformance testing"
-enrichment_notes: "Young community project; Apple-only scope and 400+ tokens/sec claim are repository-reported. Draft pending review."
+  - You need NVIDIA production clusters or broad CUDA model compatibility
+  - You require a long-established serving API with extensive conformance testing
+enrichment_notes: Young community project; Apple-only scope and 400+ tokens/sec claim are repository-reported. Draft pending review.
 ---
 
 ## Overview

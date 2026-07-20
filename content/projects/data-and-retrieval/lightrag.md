@@ -6,20 +6,24 @@ artifact_type: framework
 category: rag
 subcategory: advanced-rag
 description: Graph-based RAG that builds an entity/relationship knowledge graph over your corpus and does dual-level (local + global) retrieval
-github_url: "https://github.com/HKUDS/LightRAG"
+github_url: https://github.com/HKUDS/LightRAG
 license: MIT
 primary_language: Python
-org_or_maintainer: "HKU Data Intelligence Lab (HKUDS)"
-tags: [rag, retrieval, embeddings, llm]
+org_or_maintainer: HKU Data Intelligence Lab (HKUDS)
+tags:
+  - rag
+  - retrieval
+  - embeddings
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 37469
-github_stars_last_30d: 0
-trending_score: 45
-last_commit: "2026-07-08"
-docs_url: "https://github.com/HKUDS/LightRAG"
+github_stars: 37883
+github_stars_last_30d: 414
+trending_score: 73
+last_commit: '2026-07-20'
+docs_url: https://github.com/HKUDS/LightRAG
 demo_url: null
-paper_url: "https://arxiv.org/abs/2410.05779"
+paper_url: https://arxiv.org/abs/2410.05779
 paper_id: null
 hf_url: null
 model_sizes: []
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [research-origin, actively-maintained, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
   - Lightweight graph-RAG framework that positions between plain vector RAG and heavier systems like Microsoft GraphRAG, trading some indexing depth for lower cost and faster incremental updates
 best_for:
@@ -45,12 +55,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (37,469), MIT license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture claims from the paper/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (37,469), MIT license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture claims from the paper/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/HKUDS/LightRAG", "date": "2026-07-08", "description": "37,469 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/HKUDS/LightRAG
+    date: '2026-07-08'
+    description: 37,469 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

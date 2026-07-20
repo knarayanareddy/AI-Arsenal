@@ -6,46 +6,60 @@ artifact_type: model
 category: voice-audio
 subcategory: open-source-models
 description: Flow-matching open TTS with zero-shot voice cloning from seconds of reference audio — the fully non-autoregressive design that made open cloning fast and simple
-github_url: "https://github.com/SWivid/F5-TTS"
+github_url: https://github.com/SWivid/F5-TTS
 license: MIT
 primary_language: Python
 org_or_maintainer: SWivid (SJTU)
-tags: [multimodal, self-hosted, inference]
+tags:
+  - multimodal
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 14902
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-05"
-docs_url: "https://github.com/SWivid/F5-TTS"
-demo_url: "https://huggingface.co/spaces/mrfakename/E2-F5-TTS"
-paper_url: "https://arxiv.org/abs/2410.06885"
+github_stars: 14981
+github_stars_last_30d: 79
+trending_score: 46
+last_commit: '2026-07-05'
+docs_url: https://github.com/SWivid/F5-TTS
+demo_url: https://huggingface.co/spaces/mrfakename/E2-F5-TTS
+paper_url: https://arxiv.org/abs/2410.06885
 paper_id: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [research-origin, actively-maintained, community-driven]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The open reference for flow-matching TTS: where autoregressive cloning systems (XTTS lineage) generate token-by-token with alignment machinery, F5 pads text to speech length and denoises the whole utterance in parallel via flow matching — a radical simplification that delivers zero-shot cloning at real-time-plus speeds and made it the community's fine-tuning base for new languages"
+  - 'The open reference for flow-matching TTS: where autoregressive cloning systems (XTTS lineage) generate token-by-token with alignment machinery, F5 pads text to speech length and denoises the whole utterance in parallel via flow matching — a radical simplification that delivers zero-shot cloning at real-time-plus speeds and made it the community''s fine-tuning base for new languages'
 best_for:
-  - "Zero-shot voice cloning from a few seconds of reference audio, self-hosted under MIT (code) — narration, dubbing, and dataset generation without per-voice training"
-  - "Fine-tuning for underserved languages: the community has produced dozens of language ports precisely because the non-autoregressive recipe trains stably on modest data"
+  - Zero-shot voice cloning from a few seconds of reference audio, self-hosted under MIT (code) — narration, dubbing, and dataset generation without per-voice training
+  - 'Fine-tuning for underserved languages: the community has produced dozens of language ports precisely because the non-autoregressive recipe trains stably on modest data'
 avoid_if:
-  - "You need streaming conversational latency — non-autoregressive generation produces whole utterances; dialogue-agent stacks want streaming-first systems (Kokoro-class for speed, commercial APIs for polish)"
-  - "Cloning ethics/consent can't be enforced in your product — released checkpoints are trained under CC-BY-NC data terms (Emilia); check the model-license note, and gate voice inputs"
+  - You need streaming conversational latency — non-autoregressive generation produces whole utterances; dialogue-agent stacks want streaming-first systems (Kokoro-class for speed, commercial APIs for polish)
+  - Cloning ethics/consent can't be enforced in your product — released checkpoints are trained under CC-BY-NC data terms (Emilia); check the model-license note, and gate voice inputs
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [kokoro, chatterbox]
+alternatives:
+  - kokoro
+  - chatterbox
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (14.9k), MIT code license, active development (last push 2026-07-05) verified via the GitHub API on 2026-07-08. Checkpoint data licensing (CC-BY-NC training data for the main release) noted from the repo. Paper arXiv:2410.06885.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/SWivid/F5-TTS","date":"2026-07-08","description":"14.9k stars; leading open flow-matching TTS with zero-shot cloning"}
+  - source: github-trending
+    url: https://github.com/SWivid/F5-TTS
+    date: '2026-07-08'
+    description: 14.9k stars; leading open flow-matching TTS with zero-shot cloning
 featured: false
 status: active
 ---

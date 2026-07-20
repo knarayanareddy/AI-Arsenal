@@ -6,46 +6,61 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: Self-hosted drop-in OpenAI API replacement serving text, embeddings, images, and audio from one binary — multiple backends, consumer hardware, no GPU required
-github_url: "https://github.com/mudler/LocalAI"
+github_url: https://github.com/mudler/LocalAI
 license: MIT
 primary_language: Go
 org_or_maintainer: mudler
-tags: [llm, self-hosted, inference]
+tags:
+  - llm
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 47415
-github_stars_last_30d: 0
-trending_score: 58
-last_commit: "2026-07-08"
-docs_url: "https://localai.io"
+github_stars: 47701
+github_stars_last_30d: 286
+trending_score: 63
+last_commit: '2026-07-20'
+docs_url: https://localai.io
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose, multimodal]
-relation_to_stack: [deploy-as-is]
-health_signals: [actively-maintained, community-driven, production-proven]
+domain:
+  - general-purpose
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - community-driven
+  - production-proven
 ecosystem_role:
-  - "The API-compatibility pole of local inference: where Ollama optimizes the single-user local-model experience, LocalAI optimizes being an OpenAI-API-shaped drop-in across modalities — one endpoint serving chat, embeddings, Whisper transcription, TTS, and image generation from swappable backends"
+  - 'The API-compatibility pole of local inference: where Ollama optimizes the single-user local-model experience, LocalAI optimizes being an OpenAI-API-shaped drop-in across modalities — one endpoint serving chat, embeddings, Whisper transcription, TTS, and image generation from swappable backends'
 best_for:
-  - "You have OpenAI-API-shaped application code and want to point it at self-hosted infrastructure without changes — including the non-chat endpoints (embeddings, audio, images) most local runtimes don't cover"
-  - "Heterogeneous or modest hardware: backend-per-model flexibility (llama.cpp, whisper.cpp, diffusers, vLLM) with CPU-only operation as a first-class mode"
+  - You have OpenAI-API-shaped application code and want to point it at self-hosted infrastructure without changes — including the non-chat endpoints (embeddings, audio, images) most local runtimes don't cover
+  - 'Heterogeneous or modest hardware: backend-per-model flexibility (llama.cpp, whisper.cpp, diffusers, vLLM) with CPU-only operation as a first-class mode'
 avoid_if:
-  - "You need maximum single-GPU LLM throughput — a dedicated vLLM/SGLang deployment outperforms LocalAI's generalist packaging for pure LLM serving"
-  - "You want the simplest personal local-model UX — Ollama's model management is more polished for the laptop case"
-upstream_dependencies: [llama-cpp]
+  - You need maximum single-GPU LLM throughput — a dedicated vLLM/SGLang deployment outperforms LocalAI's generalist packaging for pure LLM serving
+  - You want the simplest personal local-model UX — Ollama's model management is more polished for the laptop case
+upstream_dependencies:
+  - llama-cpp
 downstream_consumers: []
-alternatives: [ollama, vllm]
+alternatives:
+  - ollama
+  - vllm
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (47.4k), MIT, Go, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Multi-modality endpoint coverage per official docs; throughput comparisons are qualitative positioning, not benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/mudler/LocalAI","date":"2026-07-08","description":"47.4k stars, MIT, active daily development"}
+  - source: github-trending
+    url: https://github.com/mudler/LocalAI
+    date: '2026-07-08'
+    description: 47.4k stars, MIT, active daily development
 featured: false
 status: active
 ---

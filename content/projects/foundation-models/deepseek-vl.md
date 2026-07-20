@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "deepseek-ai"
+org_or_maintainer: deepseek-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 9
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: deepseek-vl
-name: "DeepSeek-VL"
+name: DeepSeek-VL
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "DeepSeek's open vision-language model family for real-world multimodal understanding, combining a hybrid vision encoder with an LLM for document, chart"
+description: DeepSeek's open vision-language model family for real-world multimodal understanding, combining a hybrid vision encoder with an LLM for document, chart
 github_url: https://github.com/deepseek-ai/DeepSeek-VL
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "llm"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - llm
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 4132
-last_commit: "2024-04-24"
+github_stars: 4141
+last_commit: '2024-04-24'
 docs_url: https://github.com/deepseek-ai/DeepSeek-VL
 phase: foundation-model
 domain:
-  - "multimodal"
-  - "vision"
-  - "language"
+  - multimodal
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "org-backed"
+  - research-origin
+  - org-backed
 ecosystem_role:
-  - "An open vision-language model that reads images, documents, and charts and reasons about them in natural language."
+  - An open vision-language model that reads images, documents, and charts and reasons about them in natural language.
 best_for:
-  - "You need an MIT-licensed VLM for document, chart, and general image understanding you can self-host"
-  - "You want a strong open baseline for multimodal reasoning to fine-tune or benchmark against"
+  - You need an MIT-licensed VLM for document, chart, and general image understanding you can self-host
+  - You want a strong open baseline for multimodal reasoning to fine-tune or benchmark against
 avoid_if:
-  - "You need the newest state of the art, where later VL models (including DeepSeek's own successors) surpass it"
-  - "You need lightweight edge inference, since VLMs require significant GPU memory"
-enrichment_notes: "Repository, MIT license, and 2024-04-24 activity verified via the GitHub API on 2026-07-12. Superseded by newer DeepSeek VL releases; included as an MIT-licensed reference model."
+  - You need the newest state of the art, where later VL models (including DeepSeek's own successors) surpass it
+  - You need lightweight edge inference, since VLMs require significant GPU memory
+enrichment_notes: Repository, MIT license, and 2024-04-24 activity verified via the GitHub API on 2026-07-12. Superseded by newer DeepSeek VL releases; included as an MIT-licensed reference model.
 ---
 
 ## Overview

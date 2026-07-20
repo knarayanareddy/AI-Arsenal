@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "superlinear-ai"
+org_or_maintainer: superlinear-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,49 +19,49 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: raglite
-name: "RAGLite"
+name: RAGLite
 artifact_type: library
 category: rag
 subcategory: advanced-rag
-description: "Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters"
+description: Python RAG toolkit using DuckDB or PostgreSQL with late chunking, late interaction, reranking, and query adapters
 github_url: https://github.com/superlinear-ai/raglite
-license: "MPL-2.0"
-primary_language: "Python"
+license: MPL-2.0
+primary_language: Python
 tags:
-  - "rag"
-  - "retrieval"
-  - "chunking"
-  - "embeddings"
-  - "efficiency"
+  - rag
+  - retrieval
+  - chunking
+  - embeddings
+  - efficiency
 maturity: beta
 cost_model: open-source
 github_stars: 1195
-last_commit: "2026-07-09"
+last_commit: '2026-07-09'
 docs_url: https://github.com/superlinear-ai/raglite
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "Compact database-backed RAG alternative that complements larger orchestration frameworks and connector platforms"
+  - Compact database-backed RAG alternative that complements larger orchestration frameworks and connector platforms
 best_for:
-  - "Building a Python RAG service on PostgreSQL or DuckDB"
-  - "Testing late chunking, reranking, and hybrid retrieval without adopting a large framework"
+  - Building a Python RAG service on PostgreSQL or DuckDB
+  - Testing late chunking, reranking, and hybrid retrieval without adopting a large framework
 avoid_if:
-  - "Your legal policy rejects MPL-2.0 file-level obligations"
-  - "You need built-in enterprise connectors, access control, or a hosted vector service"
-enrichment_notes: "MPL-2.0 licensing requires file-level copyleft review when modified files are distributed. Draft pending review."
+  - Your legal policy rejects MPL-2.0 file-level obligations
+  - You need built-in enterprise connectors, access control, or a hosted vector service
+enrichment_notes: MPL-2.0 licensing requires file-level copyleft review when modified files are distributed. Draft pending review.
 ---
 
 ## Overview

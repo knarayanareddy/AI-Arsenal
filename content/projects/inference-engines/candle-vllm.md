@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "EricLBuehler"
+org_or_maintainer: EricLBuehler
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,48 +19,48 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 29
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: candle-vllm
-name: "candle-vllm"
+name: candle-vllm
 artifact_type: tool
 category: llms
 subcategory: inference-engines
-description: "Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API"
+description: Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API
 github_url: https://github.com/EricLBuehler/candle-vllm
-license: "MIT"
-primary_language: "Rust"
+license: MIT
+primary_language: Rust
 tags:
-  - "llm"
-  - "inference"
-  - "self-hosted"
-  - "efficiency"
+  - llm
+  - inference
+  - self-hosted
+  - efficiency
 maturity: alpha
 cost_model: open-source
 github_stars: 699
-last_commit: "2026-07-14"
+last_commit: '2026-07-14'
 docs_url: https://github.com/EricLBuehler/candle-vllm
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "contribute-to"
+  - deploy-as-is
+  - contribute-to
 health_signals:
-  - "community-driven"
-  - "experimental"
+  - community-driven
+  - experimental
 ecosystem_role:
-  - "Rust and Candle alternative to Python-heavy LLM servers, with a narrower model surface than vLLM"
+  - Rust and Candle alternative to Python-heavy LLM servers, with a narrower model surface than vLLM
 best_for:
-  - "Embedding a local LLM server into a Rust service"
-  - "Experimenting with Candle inference behind an OpenAI-compatible endpoint"
+  - Embedding a local LLM server into a Rust service
+  - Experimenting with Candle inference behind an OpenAI-compatible endpoint
 avoid_if:
-  - "You need the widest possible model and quantization support today"
-  - "Your team cannot maintain a young Rust serving stack or debug unsupported architectures"
-enrichment_notes: "MIT-licensed community project with a smaller model-coverage footprint than vLLM. Draft pending review."
+  - You need the widest possible model and quantization support today
+  - Your team cannot maintain a young Rust serving stack or debug unsupported architectures
+enrichment_notes: MIT-licensed community project with a smaller model-coverage footprint than vLLM. Draft pending review.
 ---
 
 ## Overview

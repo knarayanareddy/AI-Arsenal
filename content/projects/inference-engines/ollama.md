@@ -6,18 +6,22 @@ artifact_type: platform
 category: llms
 subcategory: inference-engines
 description: Local runtime for downloading, running, and serving open-weight models on developer machines
-github_url: "https://github.com/ollama/ollama"
+github_url: https://github.com/ollama/ollama
 license: MIT
 primary_language: Go
 org_or_maintainer: null
-tags: [llm, inference, local, self-hosted]
+tags:
+  - llm
+  - inference
+  - local
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 174059
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://ollama.com/"
+github_stars: 176494
+github_stars_last_30d: 2438
+trending_score: 55
+last_commit: '2026-07-18'
+docs_url: https://ollama.com/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,16 +29,23 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [GGUF]
+supported_formats:
+  - GGUF
 api_compatible: openai
 phase: inference-engine
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - The dominant local-LLM developer tool, providing a Docker-like CLI/API experience for pulling and running open-weight models built on llama.cpp
 best_for:
-  - "You want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly"
+  - You want the fastest path from zero to a running local LLM with a simple CLI ("ollama run llama3") and an OpenAI-compatible local API, without hand-managing GGUF files or llama.cpp flags directly
   - You're building a local-first application and want a stable, well-documented local inference API that abstracts away the underlying engine details
 avoid_if:
   - You need maximum inference throughput or fine-grained control over quantization/batching parameters — Ollama trades some of that control for ease of use; llama.cpp directly or vLLM for production serving give you more knobs
@@ -46,12 +57,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Ollama has become the de facto standard reference point in local-LLM tutorials, benchmarks, and comparisons across the ecosystem (frequently cited alongside llama.cpp in the search results gathered for this migration), constituting strong practical-adoption evidence beyond star count alone.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://cohorte.co/blog/ollama-advanced-use-cases-and-integrations","date":"2026-05-13","description":"Documents Continue (open-source VS Code AI assistant) using Ollama in production for fully local code completion and chat, plus internal enterprise knowledge-base assistant deployments"}
+  - source: hackernews
+    url: https://cohorte.co/blog/ollama-advanced-use-cases-and-integrations
+    date: '2026-05-13'
+    description: Documents Continue (open-source VS Code AI assistant) using Ollama in production for fully local code completion and chat, plus internal enterprise knowledge-base assistant deployments
 featured: false
 status: active
 ---

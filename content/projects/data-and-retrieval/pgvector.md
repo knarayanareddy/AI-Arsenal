@@ -6,18 +6,22 @@ artifact_type: library
 category: rag
 subcategory: vector-databases
 description: PostgreSQL extension for vector similarity search inside an existing relational database
-github_url: "https://github.com/pgvector/pgvector"
+github_url: https://github.com/pgvector/pgvector
 license: PostgreSQL
 primary_language: C++
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, self-hosted]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 21738
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-11"
-docs_url: "https://github.com/pgvector/pgvector"
+github_stars: 22272
+github_stars_last_30d: 537
+trending_score: 55
+last_commit: '2026-07-11'
+docs_url: https://github.com/pgvector/pgvector
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [community-driven, actively-maintained, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - PostgreSQL extension adding vector similarity search, positioned as the 'use the database you already have' option rather than adding a new dedicated vector store
 best_for:
@@ -46,12 +56,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: pgvector's production-proven status is well-established precisely because it rides on PostgreSQL's decades-long production track record; the extension itself is widely adopted specifically because teams already trust and operate Postgres in production.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.instacart.com/company/tech-innovation/how-instacart-built-a-modern-search-infrastructure-on-postgres","date":"2025-05-29","description":"Instacart engineering blog: pgvector deployed in a production A/B test, reducing zero-result searches by 6% and driving incremental revenue at scale"}
+  - source: conference
+    url: https://www.instacart.com/company/tech-innovation/how-instacart-built-a-modern-search-infrastructure-on-postgres
+    date: '2025-05-29'
+    description: 'Instacart engineering blog: pgvector deployed in a production A/B test, reducing zero-result searches by 6% and driving incremental revenue at scale'
 featured: false
 status: active
 ---

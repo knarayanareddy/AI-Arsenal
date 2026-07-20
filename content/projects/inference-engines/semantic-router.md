@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "vllm-project"
+org_or_maintainer: vllm-project
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 64
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: semantic-router
-name: "Semantic Router (vLLM)"
+name: Semantic Router (vLLM)
 artifact_type: library
 category: tooling
 subcategory: inference-engines
-description: "An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM"
+description: An intelligent mixture-of-models router that classifies each request semantically and routes it to the most suitable model for efficient heterogeneous LLM
 github_url: https://github.com/vllm-project/semantic-router
-license: "Apache-2.0"
-primary_language: "Go"
+license: Apache-2.0
+primary_language: Go
 tags:
-  - "inference"
-  - "llm"
-  - "self-hosted"
-  - "observability"
+  - inference
+  - llm
+  - self-hosted
+  - observability
 maturity: beta
 cost_model: open-source
-github_stars: 4932
-last_commit: "2026-07-12"
+github_stars: 4996
+last_commit: '2026-07-20'
 docs_url: https://github.com/vllm-project/semantic-router
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A semantic request router that sends each query to the cheapest capable model across a heterogeneous fleet."
+  - A semantic request router that sends each query to the cheapest capable model across a heterogeneous fleet.
 best_for:
-  - "You run several models of different size/cost and want to route each request to the cheapest capable one"
-  - "You want to cut inference cost and latency by reserving large models for queries that need them"
+  - You run several models of different size/cost and want to route each request to the cheapest capable one
+  - You want to cut inference cost and latency by reserving large models for queries that need them
 avoid_if:
-  - "You serve a single model, where routing adds complexity without benefit"
-  - "You cannot tolerate occasional misrouting of borderline queries"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. A vLLM-project component; routing accuracy depends on the classifier and configuration."
+  - You serve a single model, where routing adds complexity without benefit
+  - You cannot tolerate occasional misrouting of borderline queries
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. A vLLM-project component; routing accuracy depends on the classifier and configuration.
 ---
 
 ## Overview

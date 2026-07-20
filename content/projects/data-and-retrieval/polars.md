@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "pola-rs"
+org_or_maintainer: pola-rs
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 74
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: polars
-name: "Polars"
+name: Polars
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data"
+description: A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
 github_url: https://github.com/pola-rs/polars
-license: "MIT"
-primary_language: "Rust"
+license: MIT
+primary_language: Rust
 tags:
-  - "self-hosted"
-  - "embeddings"
+  - self-hosted
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 38987
-last_commit: "2026-07-12"
+github_stars: 39061
+last_commit: '2026-07-20'
 docs_url: https://docs.pola.rs/
 phase: data-and-retrieval
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A high-performance DataFrame engine that speeds up data prep and feature engineering over pandas."
+  - A high-performance DataFrame engine that speeds up data prep and feature engineering over pandas.
 best_for:
-  - "You need to process large tabular datasets faster than pandas, using all CPU cores"
-  - "You want a lazy, query-optimized DataFrame API for AI/ML feature pipelines"
+  - You need to process large tabular datasets faster than pandas, using all CPU cores
+  - You want a lazy, query-optimized DataFrame API for AI/ML feature pipelines
 avoid_if:
-  - "You depend heavily on the mature pandas ecosystem of third-party integrations"
-  - "Your data is small enough that pandas' familiarity outweighs any speed gain"
-enrichment_notes: "Repository, MIT license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. API differs from pandas; expect a learning curve."
+  - You depend heavily on the mature pandas ecosystem of third-party integrations
+  - Your data is small enough that pandas' familiarity outweighs any speed gain
+enrichment_notes: Repository, MIT license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. API differs from pandas; expect a learning curve.
 ---
 
 ## Overview

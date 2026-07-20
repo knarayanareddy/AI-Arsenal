@@ -6,18 +6,22 @@ artifact_type: framework
 category: rag
 subcategory: frameworks
 description: Data framework for building document agents, retrieval pipelines, and production RAG systems
-github_url: "https://github.com/run-llama/llama_index"
+github_url: https://github.com/run-llama/llama_index
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, retrieval, embeddings, llamaindex]
+tags:
+  - rag
+  - retrieval
+  - embeddings
+  - llamaindex
 maturity: production
 cost_model: open-source
-github_stars: 50109
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-12"
-docs_url: "https://developers.llamaindex.ai/"
+github_stars: 50956
+github_stars_last_30d: 847
+trending_score: 55
+last_commit: '2026-07-16'
+docs_url: https://developers.llamaindex.ai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - Data framework specifically focused on connecting LLMs to your data via document ingestion, indexing, and retrieval
 best_for:
@@ -46,12 +56,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: LlamaIndex is one of the two most commonly cited RAG frameworks (alongside LangChain) across LLMOps production case-study collections, and LlamaParse (also in this catalog) is its commercial document-parsing companion product, giving concrete evidence of both open-source and commercial production usage.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.llamaindex.ai/blog/case-study-netchex-more-efficient-hr-operations-with-llamaindex-powered-askhr-netchex-ai","date":"2024-09-04","description":"LlamaIndex case study: Netchex built and deployed AskHR, a production LlamaIndex-powered HR assistant serving employees 24x7"}
+  - source: conference
+    url: https://www.llamaindex.ai/blog/case-study-netchex-more-efficient-hr-operations-with-llamaindex-powered-askhr-netchex-ai
+    date: '2024-09-04'
+    description: 'LlamaIndex case study: Netchex built and deployed AskHR, a production LlamaIndex-powered HR assistant serving employees 24x7'
 featured: false
 status: active
 ---

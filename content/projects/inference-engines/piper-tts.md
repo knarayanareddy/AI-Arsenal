@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "rhasspy"
+org_or_maintainer: rhasspy
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 30
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
-status: active
+status: archived
 id: piper-tts
-name: "Piper"
+name: Piper
 artifact_type: library
 category: voice-audio
 subcategory: inference-engines
-description: "A fast, local neural text-to-speech system optimized for the Raspberry Pi and low-power devices, using VITS-based voices exported to onnxruntime"
+description: A fast, local neural text-to-speech system optimized for the Raspberry Pi and low-power devices, using VITS-based voices exported to onnxruntime
 github_url: https://github.com/rhasspy/piper
-license: "MIT"
-primary_language: "C++"
+license: MIT
+primary_language: C++
 tags:
-  - "voice"
-  - "inference"
-  - "self-hosted"
-  - "streaming"
+  - voice
+  - inference
+  - self-hosted
+  - streaming
 maturity: production
 cost_model: open-source
-github_stars: 11214
-last_commit: "2025-08-26"
+github_stars: 11244
+last_commit: '2025-08-26'
 docs_url: https://rhasspy.github.io/piper-samples/
 phase: inference-engine
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "A lightweight offline TTS runtime that renders VITS voices with onnxruntime for embedded and accessibility use."
+  - A lightweight offline TTS runtime that renders VITS voices with onnxruntime for embedded and accessibility use.
 best_for:
-  - "You need fast, fully offline speech synthesis on a Raspberry Pi, embedded board, or CPU-only server"
-  - "You want a large library of ready-made local voices for many languages behind a simple command-line/streaming interface"
+  - You need fast, fully offline speech synthesis on a Raspberry Pi, embedded board, or CPU-only server
+  - You want a large library of ready-made local voices for many languages behind a simple command-line/streaming interface
 avoid_if:
-  - "You need zero-shot voice cloning or highly expressive prosody, which larger models provide"
-  - "You want to train new voices without an ML pipeline; Piper focuses on running exported voices"
-enrichment_notes: "Repository, MIT license, and 2025-08-26 activity verified via the GitHub API on 2026-07-12. Widely used in the Home Assistant/Rhasspy ecosystem."
+  - You need zero-shot voice cloning or highly expressive prosody, which larger models provide
+  - You want to train new voices without an ML pipeline; Piper focuses on running exported voices
+enrichment_notes: Repository, MIT license, and 2025-08-26 activity verified via the GitHub API on 2026-07-12. Widely used in the Home Assistant/Rhasspy ecosystem.
 ---
 
 ## Overview

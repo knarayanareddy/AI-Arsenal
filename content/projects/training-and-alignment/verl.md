@@ -1,50 +1,70 @@
 ---
 id: verl
-name: "verl"
+name: verl
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs"
-github_url: "https://github.com/verl-project/verl"
-license: "Apache-2.0"
+description: ByteDance's flexible RL training library for LLMs implementing the HybridFlow paper, powering large-scale GRPO/PPO reasoning runs
+github_url: https://github.com/verl-project/verl
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Volcengine (ByteDance)"
-tags: [alignment, fine-tuning, llm]
+org_or_maintainer: Volcengine (ByteDance)
+tags:
+  - alignment
+  - fine-tuning
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 22377
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://verl.readthedocs.io/en/latest/"
+github_stars: 22564
+github_stars_last_30d: 187
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://verl.readthedocs.io/en/latest/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2409.19256v2"
+paper_url: https://arxiv.org/abs/2409.19256v2
 paper_id: null
 phase: training-and-alignment
-domain: [language, reinforcement-learning, reasoning]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained, research-origin]
+domain:
+  - language
+  - reinforcement-learning
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The RL library behind much of the open reasoning-model wave: verl's HybridFlow design decouples the RL dataflow definition from execution backends, and most open GRPO reasoning reproductions built on it."
+  - 'The RL library behind much of the open reasoning-model wave: verl''s HybridFlow design decouples the RL dataflow definition from execution backends, and most open GRPO reasoning reproductions built on it.'
 best_for:
-  - "You are training reasoning models with GRPO/PPO at serious scale — verl is the stack many open o1-style reproductions standardized on, with FSDP/Megatron backends and vLLM/SGLang rollouts"
-  - "You need to express non-standard RL dataflows (multi-turn, tool-calling rewards, agentic rollouts) — the hybrid-controller programming model makes custom pipelines first-class rather than forks"
+  - You are training reasoning models with GRPO/PPO at serious scale — verl is the stack many open o1-style reproductions standardized on, with FSDP/Megatron backends and vLLM/SGLang rollouts
+  - You need to express non-standard RL dataflows (multi-turn, tool-calling rewards, agentic rollouts) — the hybrid-controller programming model makes custom pipelines first-class rather than forks
 avoid_if:
-  - "You want a small-scale alignment run with minimal infrastructure — TRL on a single node covers DPO/PPO without Megatron/FSDP operational overhead"
-  - "Your team cannot invest in understanding the hybrid-controller abstraction — the flexibility comes with a steeper learning curve than recipe-style trainers"
-upstream_dependencies: [vllm]
+  - You want a small-scale alignment run with minimal infrastructure — TRL on a single node covers DPO/PPO without Megatron/FSDP operational overhead
+  - Your team cannot invest in understanding the hybrid-controller abstraction — the flexibility comes with a steeper learning curve than recipe-style trainers
+upstream_dependencies:
+  - vllm
 downstream_consumers: []
-alternatives: [openrlhf, trl]
-integrates_with: [vllm, sglang]
+alternatives:
+  - openrlhf
+  - trl
+integrates_with:
+  - vllm
+  - sglang
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (22,377), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (22,377), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/verl-project/verl", "date": "2026-07-08", "description": "22,377 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/verl-project/verl
+    date: '2026-07-08'
+    description: 22,377 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

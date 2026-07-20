@@ -1,50 +1,63 @@
 ---
 id: ultralytics-yolo
-name: "Ultralytics YOLO"
+name: Ultralytics YOLO
 version_tracked: null
 artifact_type: framework
 category: computer-vision
 subcategory: frameworks
-description: "The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API"
-github_url: "https://github.com/ultralytics/ultralytics"
-license: "AGPL-3.0"
+description: 'The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API'
+github_url: https://github.com/ultralytics/ultralytics
+license: AGPL-3.0
 primary_language: Python
-org_or_maintainer: "Ultralytics"
-tags: [multimodal, efficiency, data]
+org_or_maintainer: Ultralytics
+tags:
+  - multimodal
+  - efficiency
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 59255
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://docs.ultralytics.com"
+github_stars: 59659
+github_stars_last_30d: 404
+trending_score: 72
+last_commit: '2026-07-20'
+docs_url: https://docs.ultralytics.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
-  - "The default production path for real-time vision: Ultralytics packaged the YOLO lineage into a train/validate/deploy toolchain so complete that 'use YOLO' effectively means 'use this repo' for detection, segmentation, pose, and tracking tasks."
+  - 'The default production path for real-time vision: Ultralytics packaged the YOLO lineage into a train/validate/deploy toolchain so complete that ''use YOLO'' effectively means ''use this repo'' for detection, segmentation, pose, and tracking tasks.'
 best_for:
-  - "You need real-time detection/segmentation/pose on edge or GPU with minimal ML engineering — pretrained models, a three-line Python API, and exports to ONNX/TensorRT/CoreML/TFLite cover the full path to deployment"
-  - "You fine-tune on custom objects — the training loop, augmentation, and dataset tooling are battle-tested across millions of community runs"
+  - You need real-time detection/segmentation/pose on edge or GPU with minimal ML engineering — pretrained models, a three-line Python API, and exports to ONNX/TensorRT/CoreML/TFLite cover the full path to deployment
+  - You fine-tune on custom objects — the training loop, augmentation, and dataset tooling are battle-tested across millions of community runs
 avoid_if:
-  - "AGPL-3.0 is incompatible with your product and you won't buy the commercial license — deploying it in closed-source products triggers copyleft obligations; consider Apache-licensed alternatives (RT-DETR variants, D-FINE)"
-  - "You need open-vocabulary or promptable detection — grounding-DINO/SAM-class models handle novel-category queries that fixed-class YOLO cannot"
+  - AGPL-3.0 is incompatible with your product and you won't buy the commercial license — deploying it in closed-source products triggers copyleft obligations; consider Apache-licensed alternatives (RT-DETR variants, D-FINE)
+  - You need open-vocabulary or promptable detection — grounding-DINO/SAM-class models handle novel-category queries that fixed-class YOLO cannot
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (59,255), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (59,255), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/ultralytics/ultralytics", "date": "2026-07-08", "description": "59,255 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/ultralytics/ultralytics
+    date: '2026-07-08'
+    description: 59,255 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

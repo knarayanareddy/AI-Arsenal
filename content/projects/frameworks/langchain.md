@@ -6,25 +6,35 @@ artifact_type: framework
 category: rag
 subcategory: frameworks
 description: A framework for composing LLM applications, retrieval flows, tools, and agents
-github_url: "https://github.com/langchain-ai/langchain"
+github_url: https://github.com/langchain-ai/langchain
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, rag, agents, orchestration]
+tags:
+  - llm
+  - rag
+  - agents
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 139206
-github_stars_last_30d: 139206
-trending_score: 70
-last_commit: "2026-06-13"
+github_stars: 142154
+github_stars_last_30d: 2948
+trending_score: 55
+last_commit: '2026-07-20'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - The most widely-adopted general-purpose framework for composing LLM applications, spanning retrieval, tool use, and agent orchestration
 best_for:
@@ -40,12 +50,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Consolidates the former langchain-rag.md entry (same codebase). ZenML's LLMOps database documents Rakuten Group's production use of LangChain+LangSmith across multiple internal/external AI applications, giving concrete production evidence beyond star count.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://www.zenml.io/llmops-database/building-enterprise-scale-ai-applications-with-langchain-and-langsmith","date":"2025-01-01","description":"ZenML LLMOps case study: Rakuten Group built and deployed multiple production LLM applications (AI Analyst, AI Agent, AI Librarian) using LangChain and LangSmith"}
+  - source: hackernews
+    url: https://www.zenml.io/llmops-database/building-enterprise-scale-ai-applications-with-langchain-and-langsmith
+    date: '2025-01-01'
+    description: 'ZenML LLMOps case study: Rakuten Group built and deployed multiple production LLM applications (AI Analyst, AI Agent, AI Librarian) using LangChain and LangSmith'
 featured: false
 status: active
 ---

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "BAI-LAB"
+org_or_maintainer: BAI-LAB
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: memoryos
-name: "MemoryOS"
+name: MemoryOS
 artifact_type: library
 category: rag
 subcategory: libraries
-description: "EMNLP 2025 memory operating system for personalized agents with hierarchical storage and retrieval"
+description: EMNLP 2025 memory operating system for personalized agents with hierarchical storage and retrieval
 github_url: https://github.com/BAI-LAB/MemoryOS
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "memory"
-  - "retrieval"
-  - "agents"
-  - "rag"
-  - "research"
+  - memory
+  - retrieval
+  - agents
+  - rag
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 1517
-last_commit: "2026-07-07"
+github_stars: 1518
+last_commit: '2026-07-07'
 docs_url: https://bai-lab.github.io/MemoryOS/docs
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "actively-maintained"
+  - research-origin
+  - actively-maintained
 ecosystem_role:
-  - "Hierarchical agent-memory library that complements RAG stacks and competes with ad hoc conversation-summary stores"
+  - Hierarchical agent-memory library that complements RAG stacks and competes with ad hoc conversation-summary stores
 best_for:
-  - "Adding persistent personalized memory to a conversational agent"
-  - "Evaluating short-, mid-, and long-term memory retrieval policies"
+  - Adding persistent personalized memory to a conversational agent
+  - Evaluating short-, mid-, and long-term memory retrieval policies
 avoid_if:
-  - "Your application cannot retain user data under a clear consent and deletion policy"
-  - "You need deterministic stateless responses with no memory side effects"
-enrichment_notes: "EMNLP 2025 research system using OpenAI-compatible model APIs; privacy and memory-quality evaluation are required. Draft pending review."
+  - Your application cannot retain user data under a clear consent and deletion policy
+  - You need deterministic stateless responses with no memory side effects
+enrichment_notes: EMNLP 2025 research system using OpenAI-compatible model APIs; privacy and memory-quality evaluation are required. Draft pending review.
 ---
 
 ## Overview

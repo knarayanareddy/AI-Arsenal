@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "SillyTavern"
+org_or_maintainer: SillyTavern
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,52 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 340
+trending_score: 57
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: sillytavern
-name: "SillyTavern"
+name: SillyTavern
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts"
+description: Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts
 github_url: https://github.com/SillyTavern/SillyTavern
-license: "AGPL-3.0"
-primary_language: "Other"
+license: AGPL-3.0
+primary_language: Other
 tags:
-  - "llm"
-  - "local"
-  - "self-hosted"
-  - "memory"
-  - "tool-use"
-  - "community-favorite"
+  - llm
+  - local
+  - self-hosted
+  - memory
+  - tool-use
+  - community-favorite
 maturity: production
 cost_model: open-source
-github_stars: 30583
-last_commit: "2026-07-11"
+github_stars: 30923
+last_commit: '2026-07-11'
 docs_url: https://docs.sillytavern.app
 phase: agent-system
 domain:
-  - "language"
-  - "general-purpose"
+  - language
+  - general-purpose
 relation_to_stack:
-  - "deploy-as-is"
-  - "fork-and-adapt"
+  - deploy-as-is
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A locally hosted conversation frontend that manages personas, prompt assembly, context budgeting, and connections to many local or hosted model backends."
+  - A locally hosted conversation frontend that manages personas, prompt assembly, context budgeting, and connections to many local or hosted model backends.
 best_for:
-  - "You want a self-hosted, provider-agnostic chat UI with fine-grained control over system prompts, sampling parameters, and context assembly."
-  - "You run local models (via KoboldCpp, Ollama, text-generation-webui, or an OpenAI-compatible endpoint) and want character/persona management and extensions."
+  - You want a self-hosted, provider-agnostic chat UI with fine-grained control over system prompts, sampling parameters, and context assembly.
+  - You run local models (via KoboldCpp, Ollama, text-generation-webui, or an OpenAI-compatible endpoint) and want character/persona management and extensions.
 avoid_if:
-  - "You need a governed, multi-tenant enterprise assistant with SSO and audit controls rather than a single-user power tool."
-  - "You want an opinionated, minimal chat box; SillyTavern exposes many knobs that are unnecessary for simple use."
-enrichment_notes: "Official repository, AGPL-3.0 license, and 2026-07-11 activity were reviewed on 2026-07-12. Suitability beyond single-user/local use remains draft."
+  - You need a governed, multi-tenant enterprise assistant with SSO and audit controls rather than a single-user power tool.
+  - You want an opinionated, minimal chat box; SillyTavern exposes many knobs that are unnecessary for simple use.
+enrichment_notes: Official repository, AGPL-3.0 license, and 2026-07-11 activity were reviewed on 2026-07-12. Suitability beyond single-user/local use remains draft.
 ---
 
 ## Overview

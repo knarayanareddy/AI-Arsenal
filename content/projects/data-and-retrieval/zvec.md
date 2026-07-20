@@ -6,25 +6,33 @@ artifact_type: library
 category: rag
 subcategory: vector-databases
 description: Lightweight, in-process vector database from Alibaba for local RAG and agent memory
-github_url: "https://github.com/alibaba/zvec"
+github_url: https://github.com/alibaba/zvec
 license: Apache-2.0
 primary_language: C++
 org_or_maintainer: alibaba
-tags: [rag, retrieval, embeddings, local]
+tags:
+  - rag
+  - retrieval
+  - embeddings
+  - local
 maturity: beta
 cost_model: open-source
-github_stars: 13891
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-07-07"
-docs_url: "https://zvec.org"
+github_stars: 15173
+github_stars_last_30d: 1282
+trending_score: 80
+last_commit: '2026-07-20'
+docs_url: https://zvec.org
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - In-process ("SQLite for vectors") vector database — embeds directly in your application with no server to run, filling the gap between FAISS-style raw indexes and full server-based vector databases like Qdrant
 best_for:
@@ -35,17 +43,21 @@ avoid_if:
   - Your team is Python-only and already happy with pgvector inside an existing Postgres — adding a second storage engine needs a concrete reason
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [qdrant]
+alternatives:
+  - qdrant
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Star count (13.9k), Apache-2.0 license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; on GitHub monthly trending. HNSW-based indexing and in-process architecture from the project's own documentation; performance claims not independently benchmarked here.
-added_date: "2026-07-07"
-last_reviewed: "2026-07-07"
+added_date: '2026-07-07'
+last_reviewed: '2026-07-07'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending?since=monthly","date":"2026-07-07","description":"On GitHub monthly trending; 13.9k stars"}
+  - source: github-trending
+    url: https://github.com/trending?since=monthly
+    date: '2026-07-07'
+    description: On GitHub monthly trending; 13.9k stars
 featured: false
 status: active
 ---

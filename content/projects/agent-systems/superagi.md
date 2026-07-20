@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "TransformerOptimus"
+org_or_maintainer: TransformerOptimus
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 15
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: superagi
-name: "SuperAGI"
+name: SuperAGI
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory"
+description: A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory
 github_url: https://github.com/TransformerOptimus/SuperAGI
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 17615
-last_commit: "2025-01-22"
+github_stars: 17630
+last_commit: '2025-01-22'
 docs_url: https://superagi.com/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "study-and-reference"
-  - "deploy-as-is"
+  - study-and-reference
+  - deploy-as-is
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "An early autonomous-agent platform pairing a GUI and tool marketplace with concurrent, memory-backed agents."
+  - An early autonomous-agent platform pairing a GUI and tool marketplace with concurrent, memory-backed agents.
 best_for:
-  - "You want a GUI-driven platform to configure and run autonomous agents with a tool marketplace"
-  - "You are studying the autonomous-agent-platform pattern that followed AutoGPT"
+  - You want a GUI-driven platform to configure and run autonomous agents with a tool marketplace
+  - You are studying the autonomous-agent-platform pattern that followed AutoGPT
 avoid_if:
-  - "You need an actively maintained framework, since upstream cadence largely stopped in early 2025"
-  - "You need reliable production autonomy, which open autonomous agents rarely deliver unattended"
-enrichment_notes: "Repository, MIT license, and 2025-01-22 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; include as a reference-era platform."
+  - You need an actively maintained framework, since upstream cadence largely stopped in early 2025
+  - You need reliable production autonomy, which open autonomous agents rarely deliver unattended
+enrichment_notes: Repository, MIT license, and 2025-01-22 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; include as a reference-era platform.
 ---
 
 ## Overview

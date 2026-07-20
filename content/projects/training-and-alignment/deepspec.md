@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "deepseek-ai"
+org_or_maintainer: deepseek-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 6
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: deepspec
-name: "DeepSpec"
+name: DeepSpec
 artifact_type: library
 category: llms
 subcategory: libraries
-description: "DeepSeek's full-stack codebase for preparing data, training draft models, and evaluating speculative-decoding acceptance rates"
+description: DeepSeek's full-stack codebase for preparing data, training draft models, and evaluating speculative-decoding acceptance rates
 github_url: https://github.com/deepseek-ai/deepspec
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "efficiency"
-  - "inference"
-  - "training"
-  - "benchmark"
-  - "llm"
+  - efficiency
+  - inference
+  - training
+  - benchmark
+  - llm
 maturity: alpha
 cost_model: open-source
-github_stars: 6696
-last_commit: "2026-07-09"
+github_stars: 6702
+last_commit: '2026-07-09'
 docs_url: https://github.com/deepseek-ai/deepspec
 phase: training-and-alignment
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Full-stack speculative-decoding draft-model training and evaluation codebase"
-  - "Upstream checkpoint source for faster LLM inference engines"
+  - Full-stack speculative-decoding draft-model training and evaluation codebase
+  - Upstream checkpoint source for faster LLM inference engines
 best_for:
-  - "Training draft models for faster LLM decoding"
-  - "Reproducing speculative-decoding algorithm comparisons"
+  - Training draft models for faster LLM decoding
+  - Reproducing speculative-decoding algorithm comparisons
 avoid_if:
-  - "You lack an 8-GPU node or a compatible target model"
-  - "Your latency bottleneck is retrieval or networking rather than decode"
-enrichment_notes: "Default scripts assume a single node with eight GPUs and benchmark results depend on target/draft pairing; third-party notices must be reviewed. Draft pending review."
+  - You lack an 8-GPU node or a compatible target model
+  - Your latency bottleneck is retrieval or networking rather than decode
+enrichment_notes: Default scripts assume a single node with eight GPUs and benchmark results depend on target/draft pairing; third-party notices must be reviewed. Draft pending review.
 ---
 
 ## Overview

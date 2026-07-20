@@ -6,25 +6,36 @@ artifact_type: framework
 category: rag
 subcategory: frameworks
 description: A framework for programming and optimizing language model pipelines
-github_url: "https://github.com/stanfordnlp/dspy"
+github_url: https://github.com/stanfordnlp/dspy
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, rag, evaluation, reasoning]
+tags:
+  - llm
+  - rag
+  - evaluation
+  - reasoning
 maturity: production
 cost_model: open-source
-github_stars: 35010
-github_stars_last_30d: 35010
-trending_score: 70
-last_commit: "2026-06-11"
+github_stars: 36244
+github_stars_last_30d: 1234
+trending_score: 55
+last_commit: '2026-07-16'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [research-origin, org-backed, community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - research-origin
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Stanford NLP's framework for programmatically optimizing LLM pipelines rather than hand-tuning prompts
 best_for:
@@ -40,8 +51,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: DSPy originated from Stanford NLP research (research-origin confirmed by its academic authorship and continued Stanford affiliation) and has since been adopted by a substantial open-source community (35K+ GitHub stars), a credible dual signal of both research rigor and practical adoption.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

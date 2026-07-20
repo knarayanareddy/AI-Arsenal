@@ -6,25 +6,36 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Google open model family designed for efficient language and multimodal applications
-github_url: "https://github.com/google-deepmind/gemma"
+github_url: https://github.com/google-deepmind/gemma
 license: Custom
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, multimodal, local]
+tags:
+  - llm
+  - inference
+  - multimodal
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 5410
-github_stars_last_30d: 5410
-trending_score: 70
-last_commit: "2026-06-12"
+github_stars: 5574
+github_stars_last_30d: 0
+trending_score: 15
+last_commit: '2026-07-17'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Google DeepMind's first-generation open-weight small model family (Gemma 1/2)
 best_for:
@@ -40,8 +51,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Gemma 4 launched publicly in April 2026 per GitHub issue activity on google-deepmind/gemma referencing 'the April 2026 launch of Gemma 4'; this entry is kept as the original Gemma 1/2 generation, distinct from gemma-3 and the newer, not-yet-catalogued Gemma 4.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

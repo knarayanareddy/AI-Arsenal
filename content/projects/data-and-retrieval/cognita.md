@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "truefoundry"
+org_or_maintainer: truefoundry
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,48 +19,48 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
-status: active
+status: archived
 id: cognita
-name: "Cognita"
+name: Cognita
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "A modular, production-oriented RAG framework from TrueFoundry that organizes ingestion, embedding, retrieval, and serving into configurable"
+description: A modular, production-oriented RAG framework from TrueFoundry that organizes ingestion, embedding, retrieval, and serving into configurable
 github_url: https://github.com/truefoundry/cognita
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "rag"
-  - "embeddings"
-  - "llm"
-  - "self-hosted"
+  - rag
+  - embeddings
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
 github_stars: 4412
-last_commit: "2026-03-13"
+last_commit: '2026-03-13'
 docs_url: https://github.com/truefoundry/cognita
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A structured RAG framework that turns notebook-style pipelines into modular, deployable, API-driven services."
+  - A structured RAG framework that turns notebook-style pipelines into modular, deployable, API-driven services.
 best_for:
-  - "You want to move a prototype RAG pipeline to a modular, configurable, deployable service"
-  - "You need swappable ingestion, embedding, vector-store, and retriever components behind APIs with a UI"
+  - You want to move a prototype RAG pipeline to a modular, configurable, deployable service
+  - You need swappable ingestion, embedding, vector-store, and retriever components behind APIs with a UI
 avoid_if:
-  - "You want a one-line RAG helper for a quick script, where lighter libraries are faster to start"
-  - "You do not want to run the accompanying backend services and infrastructure"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-03-13 activity verified via the GitHub API on 2026-07-12. Production framing; expect to operate backing services."
+  - You want a one-line RAG helper for a quick script, where lighter libraries are faster to start
+  - You do not want to run the accompanying backend services and infrastructure
+enrichment_notes: Repository, Apache-2.0 license, and 2026-03-13 activity verified via the GitHub API on 2026-07-12. Production framing; expect to operate backing services.
 ---
 
 ## Overview

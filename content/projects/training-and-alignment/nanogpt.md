@@ -1,50 +1,63 @@
 ---
 id: nanogpt
-name: "nanoGPT"
+name: nanoGPT
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining"
-github_url: "https://github.com/karpathy/nanoGPT"
-license: "MIT"
+description: Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
+github_url: https://github.com/karpathy/nanoGPT
+license: MIT
 primary_language: Python
-org_or_maintainer: "Andrej Karpathy"
-tags: [training, llm, foundational]
+org_or_maintainer: Andrej Karpathy
+tags:
+  - training
+  - llm
+  - foundational
 maturity: production
 cost_model: open-source
-github_stars: 60962
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2025-11-12"
-docs_url: "https://github.com/karpathy/nanoGPT#readme"
+github_stars: 61345
+github_stars_last_30d: 383
+trending_score: 71
+last_commit: '2025-11-12'
+docs_url: https://github.com/karpathy/nanoGPT#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [community-driven, research-origin]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "The canonical minimal GPT pretraining codebase: ~300 lines of model and ~300 lines of training loop that reproduce GPT-2 (124M) on OpenWebText, forked thousands of times as the substrate for training experiments and the speedrun community."
+  - 'The canonical minimal GPT pretraining codebase: ~300 lines of model and ~300 lines of training loop that reproduce GPT-2 (124M) on OpenWebText, forked thousands of times as the substrate for training experiments and the speedrun community.'
 best_for:
-  - "You want to understand exactly what LLM pretraining does — the whole stack (model, data loader, training loop, DDP) fits in two readable files"
-  - "You are running small-scale architecture or optimizer experiments — its simplicity makes it the standard fork target (the nanoGPT speedrun ecosystem measures training-efficiency research against it)"
+  - You want to understand exactly what LLM pretraining does — the whole stack (model, data loader, training loop, DDP) fits in two readable files
+  - You are running small-scale architecture or optimizer experiments — its simplicity makes it the standard fork target (the nanoGPT speedrun ecosystem measures training-efficiency research against it)
 avoid_if:
-  - "You need production fine-tuning of modern instruction models — it implements GPT-2-era architecture only (no RoPE, GQA, SwiGLU out of the box)"
-  - "You need multi-node scale-out or modern parallelism — it stops at simple DDP; use LitGPT, torchtune, or Megatron-class stacks beyond one node"
+  - You need production fine-tuning of modern instruction models — it implements GPT-2-era architecture only (no RoPE, GQA, SwiGLU out of the box)
+  - You need multi-node scale-out or modern parallelism — it stops at simple DDP; use LitGPT, torchtune, or Megatron-class stacks beyond one node
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [litgpt]
+alternatives:
+  - litgpt
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count, license, and last commit verified via the GitHub API on 2026-07-08. Deliberately minimal and infrequently updated by design — 'simplest, fastest repository for training/finetuning medium-sized GPTs'; low commit frequency is not a health concern for a reference implementation."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count, license, and last commit verified via the GitHub API on 2026-07-08. Deliberately minimal and infrequently updated by design — 'simplest, fastest repository for training/finetuning medium-sized GPTs'; low commit frequency is not a health concern for a reference implementation.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/karpathy/nanoGPT", "date": "2026-07-08", "description": "60,962 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/karpathy/nanoGPT
+    date: '2026-07-08'
+    description: 60,962 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

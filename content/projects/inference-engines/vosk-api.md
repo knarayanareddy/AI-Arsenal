@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "alphacep"
+org_or_maintainer: alphacep
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 31
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: vosk-api
-name: "Vosk"
+name: Vosk
 artifact_type: library
 category: voice-audio
 subcategory: inference-engines
-description: "An offline speech-recognition API with small, portable Kaldi-based models and bindings for Python, Java, C#, Node, and mobile, supporting 20+ languages"
+description: An offline speech-recognition API with small, portable Kaldi-based models and bindings for Python, Java, C#, Node, and mobile, supporting 20+ languages
 github_url: https://github.com/alphacep/vosk-api
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "inference"
-  - "self-hosted"
-  - "streaming"
+  - voice
+  - inference
+  - self-hosted
+  - streaming
 maturity: production
 cost_model: open-source
-github_stars: 14931
-last_commit: "2026-07-02"
+github_stars: 14962
+last_commit: '2026-07-02'
 docs_url: https://alphacephei.com/vosk/
 phase: inference-engine
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A lightweight offline ASR runtime with compact streaming models and broad language bindings for embedded and desktop use."
+  - A lightweight offline ASR runtime with compact streaming models and broad language bindings for embedded and desktop use.
 best_for:
-  - "You need small-footprint, streaming offline speech recognition on mobile, Raspberry Pi, or desktop across many languages"
-  - "You want simple per-language model packs and bindings in Python, Java, C#, or Node without a heavy ML stack"
+  - You need small-footprint, streaming offline speech recognition on mobile, Raspberry Pi, or desktop across many languages
+  - You want simple per-language model packs and bindings in Python, Java, C#, or Node without a heavy ML stack
 avoid_if:
-  - "You need top-tier accuracy on noisy or accented audio, where larger Whisper-class models do better"
-  - "You require rich features like diarization or emotion, which broader toolkits provide"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-02 activity verified via the GitHub API on 2026-07-12. Accuracy depends on the chosen model pack."
+  - You need top-tier accuracy on noisy or accented audio, where larger Whisper-class models do better
+  - You require rich features like diarization or emotion, which broader toolkits provide
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-02 activity verified via the GitHub API on 2026-07-12. Accuracy depends on the chosen model pack.
 ---
 
 ## Overview

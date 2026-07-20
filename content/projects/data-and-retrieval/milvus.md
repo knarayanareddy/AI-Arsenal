@@ -6,18 +6,22 @@ artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Cloud-native vector database for large-scale ANN search and production vector workloads
-github_url: "https://github.com/milvus-io/milvus"
+github_url: https://github.com/milvus-io/milvus
 license: Apache-2.0
 primary_language: Go
 org_or_maintainer: null
-tags: [rag, embeddings, retrieval, kubernetes]
+tags:
+  - rag
+  - embeddings
+  - retrieval
+  - kubernetes
 maturity: production
 cost_model: open-source
-github_stars: 44762
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://github.com/milvus-io/milvus"
+github_stars: 45277
+github_stars_last_30d: 515
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://github.com/milvus-io/milvus
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,16 +32,24 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Distributed, horizontally-scalable vector database designed from the ground up for billion-scale vector search, a CNCF-adjacent project backed by Zilliz
 best_for:
   - You need to scale vector search to hundreds of millions or billions of vectors with distributed, horizontally-scalable infrastructure
   - You need enterprise-grade features (multi-tenancy, RBAC, hybrid search combining vector and scalar filtering) in a self-hostable, open-source system rather than only through a managed vendor
 avoid_if:
-  - "You're prototyping or building a small-scale application — Milvus's distributed architecture (multiple microservices: proxy, query nodes, data nodes, etc.) is meaningful operational overhead compared to Chroma or LanceDB's embedded simplicity"
+  - 'You''re prototyping or building a small-scale application — Milvus''s distributed architecture (multiple microservices: proxy, query nodes, data nodes, etc.) is meaningful operational overhead compared to Chroma or LanceDB''s embedded simplicity'
   - You want the simplest possible operational model — Milvus typically requires Kubernetes or a comparable orchestration layer for production deployment at scale
 upstream_dependencies: []
 downstream_consumers: []
@@ -46,12 +58,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Milvus has a long production track record (predating the LLM/RAG wave, originally built for general large-scale similarity search) and is backed by Zilliz, which also offers a managed cloud version — this combination of open-source maturity plus commercial backing gives strong production-proven signal.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://cloud.google.com/customers/zilliz","date":"2025-06-19","description":"Google Cloud case study: Milvus/Zilliz Cloud reported over 10,000 global enterprise customers by end of 2024, running production semantic search, RAG, and agentic workloads"}
+  - source: conference
+    url: https://cloud.google.com/customers/zilliz
+    date: '2025-06-19'
+    description: 'Google Cloud case study: Milvus/Zilliz Cloud reported over 10,000 global enterprise customers by end of 2024, running production semantic search, RAG, and agentic workloads'
 featured: false
 status: active
 ---

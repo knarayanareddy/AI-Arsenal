@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "magenta"
+org_or_maintainer: magenta
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: magenta-realtime
-name: "Magenta RealTime 2"
+name: Magenta RealTime 2
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "Google Magenta open-weight model for real-time and offline live-music generation"
+description: Google Magenta open-weight model for real-time and offline live-music generation
 github_url: https://github.com/magenta/magenta-realtime
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "streaming"
-  - "foundational"
+  - voice
+  - streaming
+  - foundational
 maturity: beta
 cost_model: open-source
-github_stars: 1686
-last_commit: "2026-06-17"
+github_stars: 1687
+last_commit: '2026-07-16'
 docs_url: https://magenta.github.io/magenta-realtime/
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Open-weight live-music model that complements DAW plugins and audio-generation applications rather than general TTS"
+  - Open-weight live-music model that complements DAW plugins and audio-generation applications rather than general TTS
 best_for:
-  - "Interactive musical improvisation on an Apple Silicon Mac"
-  - "Offline music-generation experiments embedded in a Python application"
+  - Interactive musical improvisation on an Apple Silicon Mac
+  - Offline music-generation experiments embedded in a Python application
 avoid_if:
-  - "You need real-time generation on ordinary x86 CPU hardware"
-  - "Your product requires speech synthesis, lyrics alignment, or a general-purpose audio model"
-enrichment_notes: "Real-time streaming requires Apple Silicon; offline inference also supports NVIDIA GPUs. Draft pending review."
+  - You need real-time generation on ordinary x86 CPU hardware
+  - Your product requires speech synthesis, lyrics alignment, or a general-purpose audio model
+enrichment_notes: Real-time streaming requires Apple Silicon; offline inference also supports NVIDIA GPUs. Draft pending review.
 ---
 
 ## Overview

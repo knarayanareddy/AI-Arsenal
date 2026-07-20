@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "lukas-blecher"
+org_or_maintainer: lukas-blecher
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 16
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: latex-ocr
-name: "LaTeX-OCR (pix2tex)"
+name: LaTeX-OCR (pix2tex)
 artifact_type: model
 category: computer-vision
 subcategory: document-processing
-description: "A vision-transformer model that converts images of mathematical equations into LaTeX code, with CLI, GUI, and API interfaces"
+description: A vision-transformer model that converts images of mathematical equations into LaTeX code, with CLI, GUI, and API interfaces
 github_url: https://github.com/lukas-blecher/LaTeX-OCR
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 16481
-last_commit: "2025-01-18"
+github_stars: 16497
+last_commit: '2025-01-18'
 docs_url: https://lukas-blecher.github.io/LaTeX-OCR/
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A specialized image-to-LaTeX model that transcribes rendered math into editable markup."
+  - A specialized image-to-LaTeX model that transcribes rendered math into editable markup.
 best_for:
-  - "You need to convert screenshots or photos of equations into LaTeX for papers, notes, or accessibility"
-  - "You want a self-hostable math-OCR model with CLI, GUI, and API entry points"
+  - You need to convert screenshots or photos of equations into LaTeX for papers, notes, or accessibility
+  - You want a self-hostable math-OCR model with CLI, GUI, and API entry points
 avoid_if:
-  - "You need general document or prose OCR, where full-text engines and layout models fit better"
-  - "You require guaranteed correctness on very complex multi-line derivations without human review"
-enrichment_notes: "Repository, MIT license, and 2025-01-18 activity verified via the GitHub API on 2026-07-12. Specialized to math; verify transcriptions for complex expressions."
+  - You need general document or prose OCR, where full-text engines and layout models fit better
+  - You require guaranteed correctness on very complex multi-line derivations without human review
+enrichment_notes: Repository, MIT license, and 2025-01-18 activity verified via the GitHub API on 2026-07-12. Specialized to math; verify transcriptions for complex expressions.
 ---
 
 ## Overview

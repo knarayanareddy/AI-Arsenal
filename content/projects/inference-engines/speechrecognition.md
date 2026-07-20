@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Uberi"
+org_or_maintainer: Uberi
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 3
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: speechrecognition
-name: "SpeechRecognition (Python)"
+name: SpeechRecognition (Python)
 artifact_type: library
 category: voice-audio
 subcategory: libraries
-description: "A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk"
+description: A long-standing Python library offering one simple API over many speech-to-text engines and APIs, both offline and online, including Whisper, Vosk
 github_url: https://github.com/Uberi/speech_recognition
-license: "BSD-3-Clause"
-primary_language: "Python"
+license: BSD-3-Clause
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 8972
-last_commit: "2026-06-16"
+github_stars: 8975
+last_commit: '2026-06-16'
 docs_url: https://github.com/Uberi/speech_recognition
 phase: inference-engine
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A unifying Python API over many speech-to-text engines, easing prototyping and engine switching."
+  - A unifying Python API over many speech-to-text engines, easing prototyping and engine switching.
 best_for:
-  - "You want one simple Python API to try multiple STT engines (Whisper, Vosk, cloud) without rewrites"
-  - "You are prototyping voice input and want microphone capture plus recognition in a few lines"
+  - You want one simple Python API to try multiple STT engines (Whisper, Vosk, cloud) without rewrites
+  - You are prototyping voice input and want microphone capture plus recognition in a few lines
 avoid_if:
-  - "You need the deepest control over a specific engine's advanced features and streaming internals"
-  - "You need a production streaming ASR service rather than a convenience wrapper"
-enrichment_notes: "Repository, BSD-3-Clause license, and 2026-06-16 activity verified via the GitHub API on 2026-07-12. A wrapper; underlying engines/APIs have their own accuracy, cost, and keys."
+  - You need the deepest control over a specific engine's advanced features and streaming internals
+  - You need a production streaming ASR service rather than a convenience wrapper
+enrichment_notes: Repository, BSD-3-Clause license, and 2026-06-16 activity verified via the GitHub API on 2026-07-12. A wrapper; underlying engines/APIs have their own accuracy, cost, and keys.
 ---
 
 ## Overview

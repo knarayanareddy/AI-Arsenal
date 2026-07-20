@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "oramasearch"
+org_or_maintainer: oramasearch
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 19
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: orama
-name: "Orama"
+name: Orama
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server"
+description: A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server
 github_url: https://github.com/oramasearch/orama
-license: "NOASSERTION"
-primary_language: "TypeScript"
+license: NOASSERTION
+primary_language: TypeScript
 tags:
-  - "rag"
-  - "embeddings"
-  - "self-hosted"
-  - "llm"
+  - rag
+  - embeddings
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 10475
-last_commit: "2026-07-03"
+github_stars: 10494
+last_commit: '2026-07-03'
 docs_url: https://docs.orama.com/
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A lightweight, isomorphic search library bringing full-text, vector, and hybrid search to browsers and edge runtimes."
+  - A lightweight, isomorphic search library bringing full-text, vector, and hybrid search to browsers and edge runtimes.
 best_for:
-  - "You need in-browser or edge search over a bounded dataset without a separate search server"
-  - "You want full-text, vector, and hybrid search in a tiny TypeScript dependency for a JS/TS app"
+  - You need in-browser or edge search over a bounded dataset without a separate search server
+  - You want full-text, vector, and hybrid search in a tiny TypeScript dependency for a JS/TS app
 avoid_if:
-  - "You have very large corpora needing a scalable distributed backend, where a server-side engine fits better"
-  - "You need managed persistence and sharding rather than an in-memory index built at runtime"
-enrichment_notes: "Repository and 2026-07-03 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION, so review terms. Best for bounded, client-side datasets."
+  - You have very large corpora needing a scalable distributed backend, where a server-side engine fits better
+  - You need managed persistence and sharding rather than an in-memory index built at runtime
+enrichment_notes: Repository and 2026-07-03 activity verified via the GitHub API on 2026-07-12; license metadata is NOASSERTION, so review terms. Best for bounded, client-side datasets.
 ---
 
 ## Overview

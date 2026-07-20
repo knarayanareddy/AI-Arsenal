@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "CVHub520"
+org_or_maintainer: CVHub520
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 68
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: x-anylabeling
-name: "X-AnyLabeling"
+name: X-AnyLabeling
 artifact_type: tool
 category: computer-vision
 subcategory: tools
-description: "An AI-assisted data-labeling tool that uses models like Segment Anything and detectors to auto-annotate images and video for computer-vision dataset creation"
+description: An AI-assisted data-labeling tool that uses models like Segment Anything and detectors to auto-annotate images and video for computer-vision dataset creation
 github_url: https://github.com/CVHub520/X-AnyLabeling
-license: "GPL-3.0"
-primary_language: "Python"
+license: GPL-3.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "embeddings"
+  - multimodal
+  - self-hosted
+  - embeddings
 maturity: beta
 cost_model: open-source
-github_stars: 9734
-last_commit: "2026-07-12"
+github_stars: 9802
+last_commit: '2026-07-19'
 docs_url: https://github.com/CVHub520/X-AnyLabeling
 phase: data-and-retrieval
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A model-assisted labeling tool that accelerates computer-vision dataset annotation with built-in AI models."
+  - A model-assisted labeling tool that accelerates computer-vision dataset annotation with built-in AI models.
 best_for:
-  - "You need to label images/video for CV tasks faster using model-assisted auto-annotation"
-  - "You want built-in support for models like Segment Anything to pre-label then human-correct"
+  - You need to label images/video for CV tasks faster using model-assisted auto-annotation
+  - You want built-in support for models like Segment Anything to pre-label then human-correct
 avoid_if:
-  - "You need a hosted, multi-user labeling platform with workflow management at scale"
-  - "GPL-3.0 licensing conflicts with how you intend to distribute derivatives"
-enrichment_notes: "Repository, GPL-3.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. GPL license and model weights have separate terms to review."
+  - You need a hosted, multi-user labeling platform with workflow management at scale
+  - GPL-3.0 licensing conflicts with how you intend to distribute derivatives
+enrichment_notes: Repository, GPL-3.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. GPL license and model weights have separate terms to review.
 ---
 
 ## Overview

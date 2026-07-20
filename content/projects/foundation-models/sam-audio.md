@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "facebookresearch"
+org_or_maintainer: facebookresearch
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,50 +19,50 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: sam-audio
-name: "SAM-Audio"
+name: SAM-Audio
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "Meta's promptable audio foundation model for isolating sounds from mixtures with text, visual, or temporal prompts"
+description: Meta's promptable audio foundation model for isolating sounds from mixtures with text, visual, or temporal prompts
 github_url: https://github.com/facebookresearch/sam-audio
-license: "Other"
-primary_language: "Python"
+license: Other
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "research"
-  - "vision"
+  - voice
+  - multimodal
+  - research
+  - vision
 maturity: alpha
 cost_model: open-source
 github_stars: 3571
-last_commit: "2026-05-26"
+last_commit: '2026-05-26'
 docs_url: https://ai.meta.com/blog/sam-audio/
 phase: foundation-model
 domain:
-  - "audio"
-  - "multimodal"
+  - audio
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Promptable audio separation model with text, visual, and temporal controls"
-  - "Research pipeline for Judge-scored candidate reranking"
+  - Promptable audio separation model with text, visual, and temporal controls
+  - Research pipeline for Judge-scored candidate reranking
 best_for:
-  - "Separating a described sound from complex recordings"
-  - "Interactive audio editing with prompt and span control"
+  - Separating a described sound from complex recordings
+  - Interactive audio editing with prompt and span control
 avoid_if:
-  - "You cannot obtain gated HF checkpoints or run a CUDA-compatible GPU"
-  - "You need guaranteed music mastering quality without human review"
-enrichment_notes: "The README requires authenticated access to gated Hugging Face checkpoints and recommends a CUDA GPU; the SAM-Audio and Judge licenses are represented as Other. Draft pending review."
+  - You cannot obtain gated HF checkpoints or run a CUDA-compatible GPU
+  - You need guaranteed music mastering quality without human review
+enrichment_notes: The README requires authenticated access to gated Hugging Face checkpoints and recommends a CUDA GPU; the SAM-Audio and Judge licenses are represented as Other. Draft pending review.
 ---
 
 ## Overview

@@ -6,25 +6,31 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Open translation model family built on Gemma 3 supporting 55 languages efficiently
-github_url: "https://github.com/google-deepmind/gemma"
+github_url: https://github.com/google-deepmind/gemma
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [multimodal, llm]
+tags:
+  - multimodal
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 5000
+github_stars: 5574
 github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-06-13"
+trending_score: 15
+last_commit: '2026-07-17'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
 ecosystem_role:
   - Specialized translation fine-tune built on the Gemma 3 base architecture
 best_for:
@@ -35,17 +41,21 @@ avoid_if:
   - You need enterprise translation quality guarantees or the widest language coverage — compare against Cohere's Command A Translate (23 languages, enterprise-positioned) or dedicated commercial translation APIs depending on your quality/language-coverage requirements
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [gemma-3]
+alternatives:
+  - gemma-3
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party coverage found beyond the model's own description; architecture claims (built on Gemma 3, 55-language support) are consistent with Google's Gemma 3 technical report lineage but the translation-specific fine-tuning details have not been independently verified against a technical report or paper.
-added_date: "2026-06-14"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-14'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso under open-source-models"}
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso under open-source-models
 featured: false
 status: active
 ---

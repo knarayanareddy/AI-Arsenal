@@ -6,25 +6,35 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Google code-first Python toolkit for building, evaluating, and deploying AI agents
-github_url: "https://github.com/google/adk-python"
+github_url: https://github.com/google/adk-python
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, orchestration, graphs, tool-use]
+tags:
+  - agents
+  - orchestration
+  - graphs
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 20097
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://google.github.io/adk-docs/"
+github_stars: 20785
+github_stars_last_30d: 688
+trending_score: 55
+last_commit: '2026-07-17'
+docs_url: https://google.github.io/adk-docs/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Google's official agent development framework, positioned as the Google Cloud-native path for building and deploying agents
 best_for:
@@ -35,17 +45,22 @@ avoid_if:
   - You want the largest possible existing community and third-party tutorial base — as a comparatively newer entrant, ADK's community resources are smaller than LangChain/LangGraph's
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies were found beyond Google's own documentation and sample repos (adk-python, adk-samples); architecture claims are based on the official GitHub repo structure rather than a technical paper.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://google.github.io/adk-docs/","date":"2026-06-13","description":"Official ADK docs"}
+  - source: newsletter
+    url: https://google.github.io/adk-docs/
+    date: '2026-06-13'
+    description: Official ADK docs
 featured: false
 status: active
 ---

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "om-ai-lab"
+org_or_maintainer: om-ai-lab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,54 +18,54 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 4
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: vlm-r1
-name: "VLM-R1"
+name: VLM-R1
 artifact_type: framework
 category: multimodal
 subcategory: fine-tuning
-description: "Open framework for training vision-language models with reinforcement learning (GRPO/R1-style) to improve visual reasoning and grounded understanding"
+description: Open framework for training vision-language models with reinforcement learning (GRPO/R1-style) to improve visual reasoning and grounded understanding
 github_url: https://github.com/om-ai-lab/VLM-R1
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "vision"
-  - "rlhf"
-  - "reasoning"
-  - "fine-tuning"
-  - "training"
+  - multimodal
+  - vision
+  - rlhf
+  - reasoning
+  - fine-tuning
+  - training
 maturity: beta
 cost_model: open-source
-github_stars: 6005
-last_commit: "2026-07-07"
+github_stars: 6009
+last_commit: '2026-07-07'
 docs_url: https://github.com/om-ai-lab/VLM-R1
 phase: training-and-alignment
 domain:
-  - "vision"
-  - "multimodal"
-  - "reinforcement-learning"
+  - vision
+  - multimodal
+  - reinforcement-learning
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "actively-maintained"
-  - "community-driven"
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A training framework applying R1-style reinforcement learning with verifiable rewards (GRPO) to vision-language models for visual reasoning and grounding."
+  - A training framework applying R1-style reinforcement learning with verifiable rewards (GRPO) to vision-language models for visual reasoning and grounding.
 best_for:
-  - "You want to apply RL with verifiable rewards to a VLM (for example Qwen-VL) to improve grounded visual reasoning."
-  - "You are researching how DeepSeek-R1-style reward optimization transfers from text to multimodal models."
+  - You want to apply RL with verifiable rewards to a VLM (for example Qwen-VL) to improve grounded visual reasoning.
+  - You are researching how DeepSeek-R1-style reward optimization transfers from text to multimodal models.
 avoid_if:
-  - "You only need supervised fine-tuning or inference; RL training adds significant complexity and compute."
-  - "You lack the reward-verification setup and GPU budget that RL fine-tuning requires."
-enrichment_notes: "Official repository, Apache-2.0 license, and 2026-07-07 activity were reviewed on 2026-07-12. Results are research-reported and workload-dependent."
+  - You only need supervised fine-tuning or inference; RL training adds significant complexity and compute.
+  - You lack the reward-verification setup and GPU budget that RL fine-tuning requires.
+enrichment_notes: Official repository, Apache-2.0 license, and 2026-07-07 activity were reviewed on 2026-07-12. Results are research-reported and workload-dependent.
 ---
 
 ## Overview

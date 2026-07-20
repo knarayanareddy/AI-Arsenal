@@ -6,25 +6,36 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: AI software engineering agent platform for coding, terminal work, browser actions, and automation
-github_url: "https://github.com/OpenHands/OpenHands"
+github_url: https://github.com/OpenHands/OpenHands
 license: MIT + Enterprise
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, code-gen, tool-use, planning]
+tags:
+  - agents
+  - code-gen
+  - tool-use
+  - planning
 maturity: production
 cost_model: open-source
-github_stars: 76854
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://docs.all-hands.dev/"
+github_stars: 81383
+github_stars_last_30d: 4529
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://docs.all-hands.dev/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven, org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Open-source autonomous coding-agent platform (formerly OpenDevin) for end-to-end software engineering tasks
 best_for:
@@ -35,17 +46,22 @@ avoid_if:
   - You're not prepared to operate the sandboxed execution environment autonomous coding agents require — running arbitrary generated code safely needs real infrastructure investment
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: OpenHands has a substantial GitHub star count (76K+) and is frequently referenced in coding-agent benchmark comparisons (e.g. SWE-bench leaderboards), which is a stronger signal of real usage than star count alone, though a specific named enterprise production deployment was not independently confirmed.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://docs.all-hands.dev/","date":"2026-06-13","description":"Official docs"}
+  - source: newsletter
+    url: https://docs.all-hands.dev/
+    date: '2026-06-13'
+    description: Official docs
 featured: false
 status: active
 ---

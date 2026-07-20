@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "0xPlaygrounds"
+org_or_maintainer: 0xPlaygrounds
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 84
+trending_score: 37
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: rig
-name: "Rig"
+name: Rig
 artifact_type: library
 category: agents
 subcategory: agent-frameworks
-description: "A Rust library for building modular, scalable LLM applications with typed abstractions for completions, embeddings, vector stores, tools, and agents"
+description: A Rust library for building modular, scalable LLM applications with typed abstractions for completions, embeddings, vector stores, tools, and agents
 github_url: https://github.com/0xPlaygrounds/rig
-license: "MIT"
-primary_language: "Rust"
+license: MIT
+primary_language: Rust
 tags:
-  - "agents"
-  - "rag"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - rag
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7904
-last_commit: "2026-07-12"
+github_stars: 7988
+last_commit: '2026-07-19'
 docs_url: https://docs.rig.rs/
 phase: framework
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A Rust-native LLM-application framework bringing typed agents, RAG, and tool calling to systems-level services."
+  - A Rust-native LLM-application framework bringing typed agents, RAG, and tool calling to systems-level services.
 best_for:
-  - "You are building LLM features in Rust and want typed, async-native abstractions for agents and RAG"
-  - "You need the performance, memory safety, and single-binary deployment of Rust for an LLM service"
+  - You are building LLM features in Rust and want typed, async-native abstractions for agents and RAG
+  - You need the performance, memory safety, and single-binary deployment of Rust for an LLM service
 avoid_if:
-  - "Your team is Python-first and values ecosystem breadth over Rust's performance"
-  - "You want a visual or no-code builder rather than a code-first typed library"
-enrichment_notes: "Repository, MIT license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Younger and smaller ecosystem than Python frameworks."
+  - Your team is Python-first and values ecosystem breadth over Rust's performance
+  - You want a visual or no-code builder rather than a code-first typed library
+enrichment_notes: Repository, MIT license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Younger and smaller ecosystem than Python frameworks.
 ---
 
 ## Overview

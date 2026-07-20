@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "EleutherAI"
+org_or_maintainer: EleutherAI
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,47 +19,47 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: gpt-neox
-name: "GPT-NeoX"
+name: GPT-NeoX
 artifact_type: library
 category: llms
 subcategory: frameworks
-description: "EleutherAI's library for large-scale model-parallel autoregressive transformer training on GPUs, built on Megatron and DeepSpeed"
+description: EleutherAI's library for large-scale model-parallel autoregressive transformer training on GPUs, built on Megatron and DeepSpeed
 github_url: https://github.com/EleutherAI/gpt-neox
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "llm"
-  - "self-hosted"
+  - fine-tuning
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
 github_stars: 7444
-last_commit: "2026-06-11"
+last_commit: '2026-06-11'
 docs_url: https://github.com/EleutherAI/gpt-neox
 phase: training-and-alignment
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "A battle-tested framework for pretraining large autoregressive transformers across many GPUs."
+  - A battle-tested framework for pretraining large autoregressive transformers across many GPUs.
 best_for:
-  - "You are pretraining or continued-pretraining large LLMs from scratch across multi-node GPU clusters"
-  - "You want a proven Megatron/DeepSpeed-based codebase that trained models like GPT-NeoX-20B and Pythia"
+  - You are pretraining or continued-pretraining large LLMs from scratch across multi-node GPU clusters
+  - You want a proven Megatron/DeepSpeed-based codebase that trained models like GPT-NeoX-20B and Pythia
 avoid_if:
-  - "You only need to fine-tune an existing model, where lighter fine-tuning libraries are simpler"
-  - "You lack multi-GPU/multi-node infrastructure, since the framework targets large-scale training"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-11 activity verified via the GitHub API on 2026-07-12. Aimed at large-scale pretraining, not casual use."
+  - You only need to fine-tune an existing model, where lighter fine-tuning libraries are simpler
+  - You lack multi-GPU/multi-node infrastructure, since the framework targets large-scale training
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-11 activity verified via the GitHub API on 2026-07-12. Aimed at large-scale pretraining, not casual use.
 ---
 
 ## Overview

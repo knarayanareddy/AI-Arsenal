@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "open-mmlab"
+org_or_maintainer: open-mmlab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 29
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: amphion
-name: "Amphion"
+name: Amphion
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "An open toolkit for audio, music, and speech generation that gathers reproducible implementations of TTS, singing-voice, vocoder, and audio-generation models"
+description: An open toolkit for audio, music, and speech generation that gathers reproducible implementations of TTS, singing-voice, vocoder, and audio-generation models
 github_url: https://github.com/open-mmlab/Amphion
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
+  - voice
+  - multimodal
+  - fine-tuning
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 9928
-last_commit: "2026-03-25"
+github_stars: 9957
+last_commit: '2026-03-25'
 docs_url: null
 hf_url: https://huggingface.co/amphion
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "study-and-reference"
-  - "build-on-top"
+  - study-and-reference
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A generation-focused audio toolkit that collects reproducible TTS, vocoder, singing-voice, and audio-generation model implementations under one API."
+  - A generation-focused audio toolkit that collects reproducible TTS, vocoder, singing-voice, and audio-generation model implementations under one API.
 best_for:
-  - "You want reference implementations of many audio-generation models (TTS, vocoders, singing voice) to compare or extend"
-  - "You are researching audio generation and want a unified codebase with visualizations and evaluation tooling"
+  - You want reference implementations of many audio-generation models (TTS, vocoders, singing voice) to compare or extend
+  - You are researching audio generation and want a unified codebase with visualizations and evaluation tooling
 avoid_if:
-  - "You need a hardened production system rather than a research toolkit"
-  - "You need ASR/understanding rather than generation, which sibling toolkits cover better"
-enrichment_notes: "Repository, MIT license, and 2026-03-25 activity verified via the GitHub API on 2026-07-12. Research-oriented; treat models as reference implementations."
+  - You need a hardened production system rather than a research toolkit
+  - You need ASR/understanding rather than generation, which sibling toolkits cover better
+enrichment_notes: Repository, MIT license, and 2026-03-25 activity verified via the GitHub API on 2026-07-12. Research-oriented; treat models as reference implementations.
 ---
 
 ## Overview

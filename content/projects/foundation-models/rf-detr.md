@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "roboflow"
+org_or_maintainer: roboflow
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 13
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: rf-detr
-name: "RF-DETR"
+name: RF-DETR
 artifact_type: model
 category: computer-vision
 subcategory: models
-description: "Roboflow real-time DETR architecture for object detection, instance segmentation, and preview keypoint detection"
+description: Roboflow real-time DETR architecture for object detection, instance segmentation, and preview keypoint detection
 github_url: https://github.com/roboflow/rf-detr
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "vision"
-  - "inference"
-  - "fine-tuning"
-  - "benchmark"
+  - vision
+  - inference
+  - fine-tuning
+  - benchmark
 maturity: beta
 cost_model: open-source
-github_stars: 8602
-last_commit: "2026-07-18"
+github_stars: 8615
+last_commit: '2026-07-20'
 docs_url: https://github.com/roboflow/rf-detr
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Real-time DETR alternative to YOLO-style detectors, with Roboflow training and deployment integrations"
+  - Real-time DETR alternative to YOLO-style detectors, with Roboflow training and deployment integrations
 best_for:
-  - "Fine-tuning a real-time detector on a custom object dataset"
-  - "A single Python API spanning detection and instance segmentation"
+  - Fine-tuning a real-time detector on a custom object dataset
+  - A single Python API spanning detection and instance segmentation
 avoid_if:
-  - "You require a fully permissive license for every Plus model variant"
-  - "Your target device lacks the CUDA or TensorRT path used by the published latency comparisons"
-enrichment_notes: "Core package is Apache-2.0; RF-DETR Plus uses PML 1.0 and benchmarks are Roboflow-reported. Draft pending review."
+  - You require a fully permissive license for every Plus model variant
+  - Your target device lacks the CUDA or TensorRT path used by the published latency comparisons
+enrichment_notes: Core package is Apache-2.0; RF-DETR Plus uses PML 1.0 and benchmarks are Roboflow-reported. Draft pending review.
 ---
 
 ## Overview

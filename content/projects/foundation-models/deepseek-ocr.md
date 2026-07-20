@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "deepseek-ai"
+org_or_maintainer: deepseek-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 6
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: deepseek-ocr
-name: "DeepSeek-OCR"
+name: DeepSeek-OCR
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens"
+description: DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens
 github_url: https://github.com/deepseek-ai/DeepSeek-OCR
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "vision"
-  - "self-hosted"
+  - multimodal
+  - vision
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 23609
-last_commit: "2026-01-27"
+github_stars: 23615
+last_commit: '2026-01-27'
 docs_url: https://huggingface.co/deepseek-ai/DeepSeek-OCR
 phase: foundation-model
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Alternative to layout-first OCR pipelines such as PaddleOCR and to VLM-based document readers"
+  - Alternative to layout-first OCR pipelines such as PaddleOCR and to VLM-based document readers
 best_for:
-  - "Compressing long documents into few vision tokens before an LLM reads them"
-  - "Self-hosted document OCR where a vision encoder replaces a text tokenizer"
+  - Compressing long documents into few vision tokens before an LLM reads them
+  - Self-hosted document OCR where a vision encoder replaces a text tokenizer
 avoid_if:
-  - "You need a turnkey layout-analysis pipeline with table/formula post-processing out of the box"
-  - "You lack a CUDA GPU and flash-attention build environment"
-enrichment_notes: "Verified via GitHub API + repo README; arXiv 2510.18234. Draft pending human review."
+  - You need a turnkey layout-analysis pipeline with table/formula post-processing out of the box
+  - You lack a CUDA GPU and flash-attention build environment
+enrichment_notes: Verified via GitHub API + repo README; arXiv 2510.18234. Draft pending human review.
 ---
 
 ## Overview

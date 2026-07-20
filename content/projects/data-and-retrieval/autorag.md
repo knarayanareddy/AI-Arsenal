@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Marker-Inc-Korea"
+org_or_maintainer: Marker-Inc-Korea
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 4
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: autorag
-name: "AutoRAG"
+name: AutoRAG
 artifact_type: framework
 category: rag
 subcategory: advanced-rag
-description: "AutoML-style framework for evaluating and optimizing retrieval-augmented-generation pipelines"
+description: AutoML-style framework for evaluating and optimizing retrieval-augmented-generation pipelines
 github_url: https://github.com/Marker-Inc-Korea/AutoRAG
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "rag"
-  - "retrieval"
-  - "evaluation"
-  - "benchmark"
-  - "research"
+  - rag
+  - retrieval
+  - evaluation
+  - benchmark
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 4928
-last_commit: "2026-04-03"
+github_stars: 4932
+last_commit: '2026-07-20'
 docs_url: https://marker-inc-korea.github.io/AutoRAG/
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "RAG pipeline optimizer that complements retrieval libraries and competes with manual benchmark-and-tune workflows"
+  - RAG pipeline optimizer that complements retrieval libraries and competes with manual benchmark-and-tune workflows
 best_for:
-  - "Comparing retrievers, rerankers, prompts, and generators on a fixed corpus"
-  - "Automating RAG configuration search before production pipeline selection"
+  - Comparing retrievers, rerankers, prompts, and generators on a fixed corpus
+  - Automating RAG configuration search before production pipeline selection
 avoid_if:
-  - "You need current connector synchronization or a production serving API"
-  - "Your benchmark corpus and evaluator are not stable enough for automated comparisons"
-enrichment_notes: "Default-branch last commit is 2026-04-03; do not mark actively-maintained. AutoML results depend on benchmark data and model/provider costs. Draft pending review."
+  - You need current connector synchronization or a production serving API
+  - Your benchmark corpus and evaluator are not stable enough for automated comparisons
+enrichment_notes: Default-branch last commit is 2026-04-03; do not mark actively-maintained. AutoML results depend on benchmark data and model/provider costs. Draft pending review.
 ---
 
 ## Overview

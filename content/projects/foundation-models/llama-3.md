@@ -6,38 +6,58 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
-github_url: "https://github.com/meta-llama/llama-models"
+github_url: https://github.com/meta-llama/llama-models
 license: Custom
 primary_language: Other
 org_or_maintainer: null
-tags: [llm, inference, local, multimodal]
+tags:
+  - llm
+  - inference
+  - local
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 9242
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://www.llama.com/"
+github_stars: 7657
+github_stars_last_30d: 29
+trending_score: 17
+last_commit: '2026-02-11'
+docs_url: https://www.llama.com/
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/meta-llama"
-model_sizes: [1B, 3B, 8B, 11B, 70B, 90B, 405B]
+hf_url: https://huggingface.co/meta-llama
+model_sizes:
+  - 1B
+  - 3B
+  - 8B
+  - 11B
+  - 70B
+  - 90B
+  - 405B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language, vision, multimodal]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - vision
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - Meta's open-weight model family with the broadest inference/tooling ecosystem support of any open model line
 best_for:
   - You need the broadest possible ecosystem compatibility — Llama models have the deepest support across inference engines (vLLM, SGLang, TGI, Ollama, llama.cpp), quantization tooling, and fine-tuning frameworks of any open-weight family
   - You need a range of sizes from edge (1B/3B) through frontier-adjacent (405B) within one consistent model family and licensing structure
 avoid_if:
-  - "You need Meta's current-generation architecture — Llama 4 (April 2025) introduced Meta's first mixture-of-experts design (Scout: 109B total/17B active with a 10M-token context; Maverick: 400B total/17B active) and is the vendor's recommended path for new projects"
+  - 'You need Meta''s current-generation architecture — Llama 4 (April 2025) introduced Meta''s first mixture-of-experts design (Scout: 109B total/17B active with a 10M-token context; Maverick: 400B total/17B active) and is the vendor''s recommended path for new projects'
   - Your use case is EU-based commercial deployment — Llama 4's license carries EU-specific restrictions, and Llama 3's custom license also requires review of acceptable-use terms before commercial use
 upstream_dependencies: []
 downstream_consumers: []
@@ -46,12 +66,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Llama 4 (Scout/Maverick MoE, April 2025) and reports of an internal 'Muse Spark' replacement (Wikipedia, April 2026) indicate Llama 3.x is not Meta's current frontier line as of mid-2026, though it remains the most widely deployed and tooled open-weight generation.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://www.zenml.io/blog/llmops-in-production-457-case-studies-of-what-actually-works","date":"2025-01-20","description":"ZenML's LLMOps case-study collection documents Addverb using edge-deployed Llama 3 in production for multi-lingual AGV fleet voice control across warehouses"}
+  - source: hackernews
+    url: https://www.zenml.io/blog/llmops-in-production-457-case-studies-of-what-actually-works
+    date: '2025-01-20'
+    description: ZenML's LLMOps case-study collection documents Addverb using edge-deployed Llama 3 in production for multi-lingual AGV fleet voice control across warehouses
 featured: false
 status: active
 ---

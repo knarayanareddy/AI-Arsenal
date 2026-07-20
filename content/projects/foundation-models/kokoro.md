@@ -6,46 +6,59 @@ artifact_type: model
 category: voice-audio
 subcategory: open-source-models
 description: 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
-github_url: "https://github.com/hexgrad/kokoro"
+github_url: https://github.com/hexgrad/kokoro
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: hexgrad
-tags: [self-hosted, inference, efficiency]
+tags:
+  - self-hosted
+  - inference
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 7888
-github_stars_last_30d: 0
-trending_score: 45
-last_commit: "2025-08-06"
-docs_url: "https://github.com/hexgrad/kokoro"
-demo_url: "https://huggingface.co/spaces/hexgrad/Kokoro-TTS"
+github_stars: 8052
+github_stars_last_30d: 164
+trending_score: 53
+last_commit: '2025-08-06'
+docs_url: https://github.com/hexgrad/kokoro
+demo_url: https://huggingface.co/spaces/hexgrad/Kokoro-TTS
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [community-driven, production-proven]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - community-driven
+  - production-proven
 ecosystem_role:
-  - "The efficiency pole of open TTS: 82M parameters (roughly 1/100th of flagship systems) delivering quality that topped community TTS arenas, under Apache-2.0 — the model that made 'just bundle TTS into the app' viable, spawning ONNX/WASM ports that run in browsers, on edge boxes, and on CPUs"
+  - 'The efficiency pole of open TTS: 82M parameters (roughly 1/100th of flagship systems) delivering quality that topped community TTS arenas, under Apache-2.0 — the model that made ''just bundle TTS into the app'' viable, spawning ONNX/WASM ports that run in browsers, on edge boxes, and on CPUs'
 best_for:
-  - "Voice output for applications where TTS is a feature, not the product — assistants, reading modes, notifications — with negligible compute cost and permissive licensing"
-  - "Edge/embedded/browser deployment: kokoro-onnx and web ports run where no GPU exists; real-time synthesis on modest CPUs"
+  - Voice output for applications where TTS is a feature, not the product — assistants, reading modes, notifications — with negligible compute cost and permissive licensing
+  - 'Edge/embedded/browser deployment: kokoro-onnx and web ports run where no GPU exists; real-time synthesis on modest CPUs'
 avoid_if:
-  - "You need voice cloning or emotional/expressive range — Kokoro ships a fixed voice set (voicepack embeddings) and trades expressiveness for size; F5-TTS/Chatterbox-class systems own cloning"
-  - "You need long-form prosody consistency at audiobook quality — flagship-scale systems still lead on naturalness over long passages"
+  - You need voice cloning or emotional/expressive range — Kokoro ships a fixed voice set (voicepack embeddings) and trades expressiveness for size; F5-TTS/Chatterbox-class systems own cloning
+  - You need long-form prosody consistency at audiobook quality — flagship-scale systems still lead on naturalness over long passages
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [f5-tts, chatterbox]
+alternatives:
+  - f5-tts
+  - chatterbox
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (7.9k repo; the model's reach is better measured by its HF download volume, consistently among the top TTS models), Apache-2.0, last push 2025-08-06 verified via the GitHub API on 2026-07-08 — checkpoint-release cadence. Arena-ranking claim reflects TTS-Arena community results at release; below the usual star bar, admitted as the efficiency anchor of open TTS.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/hexgrad/kokoro","date":"2026-07-08","description":"7.9k stars; top HF-downloads open TTS at 82M parameters"}
+  - source: github-trending
+    url: https://github.com/hexgrad/kokoro
+    date: '2026-07-08'
+    description: 7.9k stars; top HF-downloads open TTS at 82M parameters
 featured: false
 status: active
 ---

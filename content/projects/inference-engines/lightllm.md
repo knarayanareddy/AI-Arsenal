@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ModelTC"
+org_or_maintainer: ModelTC
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 23
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: lightllm
-name: "LightLLM"
+name: LightLLM
 artifact_type: framework
 category: llms
 subcategory: inference-engines
-description: "A lightweight, pure-Python LLM inference and serving framework emphasizing scalability and high throughput via token-level scheduling and efficient attention"
+description: A lightweight, pure-Python LLM inference and serving framework emphasizing scalability and high throughput via token-level scheduling and efficient attention
 github_url: https://github.com/ModelTC/LightLLM
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "inference"
-  - "llm"
-  - "self-hosted"
+  - inference
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 4160
-last_commit: "2026-07-12"
+github_stars: 4183
+last_commit: '2026-07-20'
 docs_url: https://github.com/ModelTC/LightLLM
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A Python-native LLM serving framework focused on throughput via fine-grained token scheduling."
+  - A Python-native LLM serving framework focused on throughput via fine-grained token scheduling.
 best_for:
-  - "You want a hackable, pure-Python serving framework to study or customize LLM inference internals"
-  - "You need high-throughput batched serving and want token-level scheduling you can modify"
+  - You want a hackable, pure-Python serving framework to study or customize LLM inference internals
+  - You need high-throughput batched serving and want token-level scheduling you can modify
 avoid_if:
-  - "You want the most mature, widely deployed server with the largest community, where vLLM leads"
-  - "You need turnkey enterprise support rather than a community framework"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Performance depends on model and hardware; compare against vLLM/SGLang for your workload."
+  - You want the most mature, widely deployed server with the largest community, where vLLM leads
+  - You need turnkey enterprise support rather than a community framework
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Performance depends on model and hardware; compare against vLLM/SGLang for your workload.
 ---
 
 ## Overview

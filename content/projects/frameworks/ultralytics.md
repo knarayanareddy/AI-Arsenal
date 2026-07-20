@@ -6,27 +6,36 @@ artifact_type: framework
 category: computer-vision
 subcategory: frameworks
 description: The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
-github_url: "https://github.com/ultralytics/ultralytics"
+github_url: https://github.com/ultralytics/ultralytics
 license: AGPL-3.0
 primary_language: Python
 org_or_maintainer: ultralytics
-tags: [vision, inference, training]
+tags:
+  - vision
+  - inference
+  - training
 maturity: production
 cost_model: self-hostable
-github_stars: 59255
+github_stars: 59659
 github_stars_last_30d: 0
-trending_score: 62
-last_commit: "2026-07-08"
-docs_url: "https://docs.ultralytics.com"
+trending_score: 40
+last_commit: '2026-07-20'
+docs_url: https://docs.ultralytics.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed, production-proven]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The default entry point to production computer vision: the YOLO lineage (v5/v8/v11) wrapped in one framework covering detect/segment/pose/classify/track, with export to every deployment target (ONNX, TensorRT, CoreML, TFLite) — real-time CV's equivalent of what Transformers is to NLP"
+  - 'The default entry point to production computer vision: the YOLO lineage (v5/v8/v11) wrapped in one framework covering detect/segment/pose/classify/track, with export to every deployment target (ONNX, TensorRT, CoreML, TFLite) — real-time CV''s equivalent of what Transformers is to NLP'
 best_for:
   - You need real-time detection/segmentation on your own classes fast — pretrained weights, a three-line fine-tuning API, and mature export paths take you from labeled data to an edge or server deployment in hours
   - Deployment targets are heterogeneous (Jetson, mobile, browser, server GPU) — the export matrix is the most battle-tested in open CV
@@ -34,18 +43,22 @@ avoid_if:
   - AGPL-3.0 is incompatible with your product and you won't buy the commercial license — the license applies to the models you train with it, which surprises teams; check legal early
   - Your task is open-vocabulary or promptable detection — zero-shot models (Grounding DINO, OWL-ViT) or SAM-family segmentation fit better than closed-set YOLO training
 upstream_dependencies: []
-downstream_consumers: [supervision]
+downstream_consumers:
+  - supervision
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (59.2k), AGPL-3.0, and daily active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. AGPL applying to trained-model derivatives reflects Ultralytics' own licensing FAQ; accuracy/speed claims per model family come from Ultralytics' published benchmarks, not re-measured here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/ultralytics/ultralytics","date":"2026-07-08","description":"59.2k stars, the dominant real-time CV training/deployment framework"}
+  - source: github-trending
+    url: https://github.com/ultralytics/ultralytics
+    date: '2026-07-08'
+    description: 59.2k stars, the dominant real-time CV training/deployment framework
 featured: false
 status: active
 ---

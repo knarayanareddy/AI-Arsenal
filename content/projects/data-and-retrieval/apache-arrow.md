@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "apache"
+org_or_maintainer: apache
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 23
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: apache-arrow
-name: "Apache Arrow"
+name: Apache Arrow
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "A universal columnar in-memory format and multi-language toolbox that enables zero-copy data interchange between analytics and ML tools across process and"
+description: A universal columnar in-memory format and multi-language toolbox that enables zero-copy data interchange between analytics and ML tools across process and
 github_url: https://github.com/apache/arrow
-license: "Apache-2.0"
-primary_language: "C++"
+license: Apache-2.0
+primary_language: C++
 tags:
-  - "self-hosted"
-  - "embeddings"
+  - self-hosted
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 16919
-last_commit: "2026-07-10"
+github_stars: 16942
+last_commit: '2026-07-20'
 docs_url: https://arrow.apache.org/docs/
 phase: data-and-retrieval
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The columnar interchange standard that lets AI data tools share memory without copying or serialization."
+  - The columnar interchange standard that lets AI data tools share memory without copying or serialization.
 best_for:
-  - "You need zero-copy data exchange between tools/languages (pandas, Polars, DuckDB, Spark) in a pipeline"
-  - "You are building data infrastructure and want a standard columnar format and compute kernels"
+  - You need zero-copy data exchange between tools/languages (pandas, Polars, DuckDB, Spark) in a pipeline
+  - You are building data infrastructure and want a standard columnar format and compute kernels
 avoid_if:
-  - "You just want a high-level DataFrame API, where Polars/pandas built on Arrow are more ergonomic"
-  - "Your data is tiny and interchange overhead is irrelevant"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Foundational infrastructure rather than an end-user tool."
+  - You just want a high-level DataFrame API, where Polars/pandas built on Arrow are more ergonomic
+  - Your data is tiny and interchange overhead is irrelevant
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Foundational infrastructure rather than an end-user tool.
 ---
 
 ## Overview

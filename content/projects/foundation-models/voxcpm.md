@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "OpenBMB"
+org_or_maintainer: OpenBMB
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 659
+trending_score: 70
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: voxcpm
-name: "VoxCPM"
+name: VoxCPM
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design"
+description: A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design
 github_url: https://github.com/OpenBMB/VoxCPM
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 33194
-last_commit: "2026-07-08"
+github_stars: 33853
+last_commit: '2026-07-08'
 docs_url: https://voxcpm.com
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "A tokenizer-free TTS model that predicts continuous acoustic representations rather than discrete codec tokens, aiming for higher naturalness."
+  - A tokenizer-free TTS model that predicts continuous acoustic representations rather than discrete codec tokens, aiming for higher naturalness.
 best_for:
-  - "You want an Apache-2.0 TTS model with strong multilingual quality and zero-shot cloning that avoids discrete-codec quantization artifacts"
-  - "You are exploring tokenizer-free (continuous) speech generation as an alternative to codec-token approaches"
+  - You want an Apache-2.0 TTS model with strong multilingual quality and zero-shot cloning that avoids discrete-codec quantization artifacts
+  - You are exploring tokenizer-free (continuous) speech generation as an alternative to codec-token approaches
 avoid_if:
-  - "You need a long track record in production; the model line is new and still maturing"
-  - "You require ultra-low-latency streaming on constrained hardware, where lighter models may be preferable"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-08 activity verified via the GitHub API on 2026-07-12. Quality claims are project-reported and not independently benchmarked here."
+  - You need a long track record in production; the model line is new and still maturing
+  - You require ultra-low-latency streaming on constrained hardware, where lighter models may be preferable
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-08 activity verified via the GitHub API on 2026-07-12. Quality claims are project-reported and not independently benchmarked here.
 ---
 
 ## Overview

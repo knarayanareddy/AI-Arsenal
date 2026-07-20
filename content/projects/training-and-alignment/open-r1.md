@@ -6,25 +6,34 @@ artifact_type: framework
 category: llms
 subcategory: fine-tuning
 description: Hugging Face's fully open reproduction of the DeepSeek-R1 reasoning pipeline — scripts and recipes to train reasoning models with GRPO-style RL
-github_url: "https://github.com/huggingface/open-r1"
+github_url: https://github.com/huggingface/open-r1
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: Hugging Face
-tags: [reasoning, rlhf, fine-tuning]
+tags:
+  - reasoning
+  - rlhf
+  - fine-tuning
 maturity: beta
 cost_model: open-source
-github_stars: 26399
-github_stars_last_30d: 0
-trending_score: 68
-last_commit: "2026-04-02"
-docs_url: "https://github.com/huggingface/open-r1"
+github_stars: 26410
+github_stars_last_30d: 11
+trending_score: 41
+last_commit: '2026-04-02'
+docs_url: https://github.com/huggingface/open-r1
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [reasoning, reinforcement-learning]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, research-origin]
+domain:
+  - reasoning
+  - reinforcement-learning
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - research-origin
 ecosystem_role:
   - The open, reproducible recipe for training R1-style reasoning models — SFT on reasoning traces plus GRPO reinforcement learning — turning DeepSeek's closed process into runnable scripts on open weights
 best_for:
@@ -33,19 +42,27 @@ best_for:
 avoid_if:
   - You just want to use a reasoning model — download an open R1-class checkpoint instead; this is training infrastructure, not a served model
   - You lack the compute for RL post-training — GRPO on capable base models is resource-intensive
-upstream_dependencies: [trl, accelerate]
+upstream_dependencies:
+  - trl
+  - accelerate
 downstream_consumers: []
-alternatives: [alignment-handbook, verl]
-integrates_with: [trl]
+alternatives:
+  - alignment-handbook
+  - verl
+integrates_with:
+  - trl
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: 26.4k stars, Apache-2.0, last push 2026-04-02 verified via the GitHub API on 2026-07-08. Cadence has slowed since the initial R1 reproduction sprint; it remains the canonical open reproduction recipe. Included for reference-recipe value.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending","date":"2026-07-08","description":"26.4k stars; the reference open reproduction of DeepSeek-R1"}
+  - source: github-trending
+    url: https://github.com/trending
+    date: '2026-07-08'
+    description: 26.4k stars; the reference open reproduction of DeepSeek-R1
 featured: false
 status: active
 ---

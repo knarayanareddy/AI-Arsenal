@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "google"
+org_or_maintainer: google
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 14
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: sentencepiece
-name: "SentencePiece"
+name: SentencePiece
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "Google's unsupervised text tokenizer and detokenizer implementing BPE and unigram models directly on raw text, widely used to train tokenizers for LLMs and NMT"
+description: Google's unsupervised text tokenizer and detokenizer implementing BPE and unigram models directly on raw text, widely used to train tokenizers for LLMs and NMT
 github_url: https://github.com/google/sentencepiece
-license: "Apache-2.0"
-primary_language: "C++"
+license: Apache-2.0
+primary_language: C++
 tags:
-  - "llm"
-  - "self-hosted"
-  - "fine-tuning"
+  - llm
+  - self-hosted
+  - fine-tuning
 maturity: production
 cost_model: open-source
-github_stars: 11958
-last_commit: "2026-07-12"
+github_stars: 11972
+last_commit: '2026-07-19'
 docs_url: https://github.com/google/sentencepiece
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The standard toolkit for training language-independent subword tokenizers used by many LLMs and translation models."
+  - The standard toolkit for training language-independent subword tokenizers used by many LLMs and translation models.
 best_for:
-  - "You are training a new subword tokenizer for a model, including multilingual or non-whitespace languages"
-  - "You need a reproducible, language-agnostic tokenizer that operates directly on raw text"
+  - You are training a new subword tokenizer for a model, including multilingual or non-whitespace languages
+  - You need a reproducible, language-agnostic tokenizer that operates directly on raw text
 avoid_if:
-  - "You just need to count tokens for an existing model, where its own tokenizer library is correct"
-  - "You want a pretrained OpenAI-compatible encoder rather than a trainable tokenizer"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. A tokenizer trainer, not a token-count utility for a specific API."
+  - You just need to count tokens for an existing model, where its own tokenizer library is correct
+  - You want a pretrained OpenAI-compatible encoder rather than a trainable tokenizer
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. A tokenizer trainer, not a token-count utility for a specific API.
 ---
 
 ## Overview

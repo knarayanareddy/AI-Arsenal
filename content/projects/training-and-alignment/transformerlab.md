@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "transformerlab"
+org_or_maintainer: transformerlab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 51
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: transformerlab
-name: "Transformer Lab"
+name: Transformer Lab
 artifact_type: platform
 category: tooling
 subcategory: fine-tuning
-description: "An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters"
+description: An open desktop research environment to download, train, fine-tune, evaluate, and chat with LLMs and diffusion models across local hardware and GPU clusters
 github_url: https://github.com/transformerlab/transformerlab-app
-license: "AGPL-3.0"
-primary_language: "Python"
+license: AGPL-3.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "evaluation"
-  - "llm"
-  - "self-hosted"
+  - fine-tuning
+  - evaluation
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 5111
-last_commit: "2026-07-11"
+github_stars: 5162
+last_commit: '2026-07-19'
 docs_url: https://transformerlab.ai/docs/
 phase: training-and-alignment
 domain:
-  - "language"
-  - "multimodal"
+  - language
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A GUI research workbench that unifies model download, fine-tuning, evaluation, and inference across local and remote hardware."
+  - A GUI research workbench that unifies model download, fine-tuning, evaluation, and inference across local and remote hardware.
 best_for:
-  - "You want a desktop app to experiment with fine-tuning, evaluation, and inference without stitching CLIs together"
-  - "You need to move workloads seamlessly between local hardware and a remote GPU cluster from one UI"
+  - You want a desktop app to experiment with fine-tuning, evaluation, and inference without stitching CLIs together
+  - You need to move workloads seamlessly between local hardware and a remote GPU cluster from one UI
 avoid_if:
-  - "You need headless, scriptable automation in CI, where a GUI workbench is the wrong shape"
-  - "AGPL-3.0 licensing conflicts with how you intend to distribute derivatives"
-enrichment_notes: "Repository, AGPL-3.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. GUI workbench; plugin ecosystem is evolving."
+  - You need headless, scriptable automation in CI, where a GUI workbench is the wrong shape
+  - AGPL-3.0 licensing conflicts with how you intend to distribute derivatives
+enrichment_notes: Repository, AGPL-3.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. GUI workbench; plugin ecosystem is evolving.
 ---
 
 ## Overview

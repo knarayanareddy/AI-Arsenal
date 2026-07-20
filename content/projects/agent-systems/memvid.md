@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "memvid"
+org_or_maintainer: memvid
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 267
+trending_score: 51
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: memvid
-name: "Memvid"
+name: Memvid
 artifact_type: library
 category: agents
 subcategory: libraries
-description: "A serverless, single-file memory layer for AI agents that encodes a knowledge base into a compact video-file format for fast semantic retrieval without a"
+description: A serverless, single-file memory layer for AI agents that encodes a knowledge base into a compact video-file format for fast semantic retrieval without a
 github_url: https://github.com/memvid/memvid
-license: "Apache-2.0"
-primary_language: "Rust"
+license: Apache-2.0
+primary_language: Rust
 tags:
-  - "agents"
-  - "rag"
-  - "embeddings"
-  - "self-hosted"
+  - agents
+  - rag
+  - embeddings
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 15746
-last_commit: "2026-07-10"
+github_stars: 16013
+last_commit: '2026-07-14'
 docs_url: https://www.memvid.com
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A single-file agent memory layer offering portable semantic retrieval without operating a vector database."
+  - A single-file agent memory layer offering portable semantic retrieval without operating a vector database.
 best_for:
-  - "You want portable, embeddable agent memory in a single file rather than running a vector database"
-  - "You need to ship a self-contained knowledge base with an agent for offline or edge use"
+  - You want portable, embeddable agent memory in a single file rather than running a vector database
+  - You need to ship a self-contained knowledge base with an agent for offline or edge use
 avoid_if:
-  - "You need a scalable multi-tenant vector store with live updates at datacenter scale"
-  - "You require battle-tested, mature infrastructure over a novel storage approach"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Novel approach; benchmark against a conventional vector store for your workload."
+  - You need a scalable multi-tenant vector store with live updates at datacenter scale
+  - You require battle-tested, mature infrastructure over a novel storage approach
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Novel approach; benchmark against a conventional vector store for your workload.
 ---
 
 ## Overview

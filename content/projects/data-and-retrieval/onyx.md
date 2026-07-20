@@ -6,46 +6,60 @@ artifact_type: platform
 category: rag
 subcategory: platforms
 description: Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
-github_url: "https://github.com/onyx-dot-app/onyx"
-license: "MIT (core) with enterprise-licensed directory"
+github_url: https://github.com/onyx-dot-app/onyx
+license: MIT (core) with enterprise-licensed directory
 primary_language: Python
 org_or_maintainer: onyx-dot-app
-tags: [rag, self-hosted, retrieval]
+tags:
+  - rag
+  - self-hosted
+  - retrieval
 maturity: production
 cost_model: self-hostable
-github_stars: 30772
-github_stars_last_30d: 0
-trending_score: 62
-last_commit: "2026-07-08"
-docs_url: "https://docs.onyx.app/welcome"
+github_stars: 31023
+github_stars_last_30d: 251
+trending_score: 60
+last_commit: '2026-07-20'
+docs_url: https://docs.onyx.app/welcome
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, org-backed, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The leading open-source answer to Glean-style enterprise search: connector-first RAG where the hard problems are sync, document permissions, and freshness across dozens of workplace tools — not the chat layer"
+  - 'The leading open-source answer to Glean-style enterprise search: connector-first RAG where the hard problems are sync, document permissions, and freshness across dozens of workplace tools — not the chat layer'
 best_for:
   - Your knowledge lives across Slack, Google Drive, Confluence, Jira, GitHub etc. and answers must respect per-user document permissions — Onyx's connector + permission-mirroring layer is the differentiator no chat-first RAG app has
   - You want self-hosted "company brain" search with hybrid retrieval and citations without paying per-seat for a Glean-class SaaS
 avoid_if:
   - Your corpus is a folder of files rather than SaaS tools — connector-first architecture is overhead there; AnythingLLM-style apps are simpler
-  - "You need every capability open-source: multi-tenancy and some enterprise auth features live in the enterprise-licensed directory"
+  - 'You need every capability open-source: multi-tenancy and some enterprise auth features live in the enterprise-licensed directory'
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [anything-llm, open-webui]
+alternatives:
+  - anything-llm
+  - open-webui
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (30.7k) and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. License split (MIT core + ee directory) from the repository. Connector count and permission-sync claims from official docs; not independently tested here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/onyx-dot-app/onyx","date":"2026-07-08","description":"30.7k stars, active development, formerly Danswer"}
+  - source: github-trending
+    url: https://github.com/onyx-dot-app/onyx
+    date: '2026-07-08'
+    description: 30.7k stars, active development, formerly Danswer
 featured: false
 status: active
 ---

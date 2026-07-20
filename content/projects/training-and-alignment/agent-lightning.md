@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 20
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: agent-lightning
-name: "Agent Lightning"
+name: Agent Lightning
 artifact_type: framework
 category: agents
 subcategory: fine-tuning
-description: "A Microsoft framework for training and optimizing AI agents, including reinforcement learning, that decouples the training loop from any existing agent"
+description: A Microsoft framework for training and optimizing AI agents, including reinforcement learning, that decouples the training loop from any existing agent
 github_url: https://github.com/microsoft/agent-lightning
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "fine-tuning"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - fine-tuning
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 17381
-last_commit: "2026-04-29"
+github_stars: 17401
+last_commit: '2026-07-16'
 docs_url: https://github.com/microsoft/agent-lightning
 phase: training-and-alignment
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A training layer that optimizes agents via RL and other methods without rewriting the agent's code."
+  - A training layer that optimizes agents via RL and other methods without rewriting the agent's code.
 best_for:
-  - "You want to improve an existing agent with reinforcement learning without rebuilding it around a trainer"
-  - "You are researching agent optimization and need a framework that separates rollout from training"
+  - You want to improve an existing agent with reinforcement learning without rebuilding it around a trainer
+  - You are researching agent optimization and need a framework that separates rollout from training
 avoid_if:
-  - "You only need to run agents, not train them, where an agent runtime alone suffices"
-  - "You lack reward signals or environments to drive the optimization loop"
-enrichment_notes: "Repository, MIT license, and 2026-04-29 activity verified via the GitHub API on 2026-07-12. Emerging area; expect setup effort to wire rewards and environments."
+  - You only need to run agents, not train them, where an agent runtime alone suffices
+  - You lack reward signals or environments to drive the optimization loop
+enrichment_notes: Repository, MIT license, and 2026-04-29 activity verified via the GitHub API on 2026-07-12. Emerging area; expect setup effort to wire rewards and environments.
 ---
 
 ## Overview

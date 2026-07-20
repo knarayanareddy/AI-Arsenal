@@ -6,25 +6,33 @@ artifact_type: platform
 category: agents
 subcategory: autonomous
 description: Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
-github_url: "https://github.com/usestrix/strix"
+github_url: https://github.com/usestrix/strix
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: usestrix
-tags: [agents, security, tool-use]
+tags:
+  - agents
+  - security
+  - tool-use
 maturity: beta
 cost_model: open-source
-github_stars: 38354
-github_stars_last_30d: 0
-trending_score: 70
-last_commit: "2026-07-07"
-docs_url: "https://strix.ai"
+github_stars: 42793
+github_stars_last_30d: 4439
+trending_score: 80
+last_commit: '2026-07-19'
+docs_url: https://strix.ai
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Autonomous offensive-security agent that runs real exploitation attempts (in sandboxed environments) against your own applications, rather than static scanning — one of the most visible examples of agents applied to security testing
 best_for:
@@ -40,12 +48,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Star count (38.4k), Apache-2.0 license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-07; appeared on GitHub weekly trending the same day. Exploitation-validation claims come from the project's own documentation and have not been independently benchmarked here.
-added_date: "2026-07-07"
-last_reviewed: "2026-07-07"
+added_date: '2026-07-07'
+last_reviewed: '2026-07-07'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending?since=weekly","date":"2026-07-07","description":"On GitHub weekly and monthly trending; 38.4k stars"}
+  - source: github-trending
+    url: https://github.com/trending?since=weekly
+    date: '2026-07-07'
+    description: On GitHub weekly and monthly trending; 38.4k stars
 featured: false
 status: active
 ---

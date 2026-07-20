@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 81
+trending_score: 36
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,8 +42,8 @@ tags:
   - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 7459
-last_commit: '2026-07-11'
+github_stars: 7540
+last_commit: '2026-07-20'
 docs_url: https://github.com/ai-dynamo/dynamo
 phase: inference-engine
 domain:

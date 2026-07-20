@@ -45,16 +45,16 @@ Before selecting an agent system:
 
 ### Most Popular
 
-- [Hermes Agent](./hermes-agent.md) — ⭐ 213237
-- [Browser Use](./browser-use.md) — ⭐ 103506
-- [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 79620
-- [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
-- [AnythingLLM](./anythingllm.md) — ⭐ 62914
-- [MemPalace](./mempalace.md) — ⭐ 57230
-- [GPT Engineer](./gpt-engineer.md) — ⭐ 55189
-- [nanobot](./nanobot.md) — ⭐ 45890
-- [LibreChat](./librechat.md) — ⭐ 40447
-- [Strix](./strix.md) — ⭐ 38354
+- [Hermes Agent](./hermes-agent.md) — ⭐ 217530
+- [Browser Use](./browser-use.md) — ⭐ 105674
+- [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 80560
+- [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73392
+- [AnythingLLM](./anythingllm.md) — ⭐ 63597
+- [MemPalace](./mempalace.md) — ⭐ 57494
+- [GPT Engineer](./gpt-engineer.md) — ⭐ 55190
+- [nanobot](./nanobot.md) — ⭐ 45924
+- [Strix](./strix.md) — ⭐ 42793
+- [LibreChat](./librechat.md) — ⭐ 40974
 
 ### Browse All
 

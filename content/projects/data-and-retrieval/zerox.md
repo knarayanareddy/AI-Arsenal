@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "getomni-ai"
+org_or_maintainer: getomni-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 19
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: zerox
-name: "Zerox OCR"
+name: Zerox OCR
 artifact_type: library
 category: computer-vision
 subcategory: document-processing
-description: "A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically"
+description: A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically
 github_url: https://github.com/getomni-ai/zerox
-license: "MIT"
-primary_language: "TypeScript"
+license: MIT
+primary_language: TypeScript
 tags:
-  - "multimodal"
-  - "llm"
-  - "self-hosted"
-  - "data"
+  - multimodal
+  - llm
+  - self-hosted
+  - data
 maturity: beta
 cost_model: open-source
-github_stars: 12240
-last_commit: "2025-05-20"
+github_stars: 12259
+last_commit: '2025-05-20'
 docs_url: https://getomni.ai/
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A vision-LLM OCR pipeline that turns arbitrary document pages into structured Markdown regardless of layout complexity."
+  - A vision-LLM OCR pipeline that turns arbitrary document pages into structured Markdown regardless of layout complexity.
 best_for:
-  - "You need clean Markdown from messy PDFs with tables and mixed layouts and can call a vision LLM per page"
-  - "You want a model-agnostic extractor that works with GPT-4o-class, Claude, or local vision models"
+  - You need clean Markdown from messy PDFs with tables and mixed layouts and can call a vision LLM per page
+  - You want a model-agnostic extractor that works with GPT-4o-class, Claude, or local vision models
 avoid_if:
-  - "You need cheap, offline, high-volume OCR, since per-page vision-LLM calls cost tokens and add latency"
-  - "You require deterministic output, as generative extraction can vary run to run"
-enrichment_notes: "Repository, MIT license, and 2025-05-20 activity verified via the GitHub API on 2026-07-12. Cost and accuracy depend on the chosen vision LLM."
+  - You need cheap, offline, high-volume OCR, since per-page vision-LLM calls cost tokens and add latency
+  - You require deterministic output, as generative extraction can vary run to run
+enrichment_notes: Repository, MIT license, and 2025-05-20 activity verified via the GitHub API on 2026-07-12. Cost and accuracy depend on the chosen vision LLM.
 ---
 
 ## Overview

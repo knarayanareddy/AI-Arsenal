@@ -6,25 +6,33 @@ artifact_type: model
 category: voice-audio
 subcategory: open-source-models
 description: Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
-github_url: "https://github.com/facebookresearch/audiocraft"
+github_url: https://github.com/facebookresearch/audiocraft
 license: MIT
 primary_language: Python
 org_or_maintainer: Meta AI (FAIR)
-tags: [voice, multimodal, self-hosted]
+tags:
+  - voice
+  - multimodal
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 23456
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-03-03"
-docs_url: "https://github.com/facebookresearch/audiocraft"
+github_stars: 23505
+github_stars_last_30d: 49
+trending_score: 44
+last_commit: '2026-03-03'
+docs_url: https://github.com/facebookresearch/audiocraft
 demo_url: null
-paper_url: "https://arxiv.org/abs/2306.05284"
+paper_url: https://arxiv.org/abs/2306.05284
 paper_id: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [org-backed, research-origin]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - research-origin
 ecosystem_role:
   - The reference open stack for generative audio — EnCodec tokenizes audio into discrete codes, and MusicGen/AudioGen are LMs over those codes, making audio generation a language-modeling problem with open weights
 best_for:
@@ -40,12 +48,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: 23.5k stars, MIT license, last push 2026-03-03 verified via the GitHub API on 2026-07-08. Development cadence is slow (research code post-release); included as the canonical open audio-generation reference. Model weights carry their own non-commercial terms for some checkpoints — verify per model card.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"arxiv","url":"https://arxiv.org/abs/2306.05284","date":"2026-07-08","description":"MusicGen paper (Simple and Controllable Music Generation)"}
+  - source: arxiv
+    url: https://arxiv.org/abs/2306.05284
+    date: '2026-07-08'
+    description: MusicGen paper (Simple and Controllable Music Generation)
 featured: false
 status: active
 ---

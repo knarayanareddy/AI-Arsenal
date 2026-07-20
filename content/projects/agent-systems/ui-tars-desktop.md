@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "bytedance"
+org_or_maintainer: bytedance
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,53 +18,53 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 202
+trending_score: 46
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: ui-tars-desktop
-name: "UI-TARS Desktop"
+name: UI-TARS Desktop
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: "Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models"
+description: Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
 github_url: https://github.com/bytedance/UI-TARS-desktop
-license: "Apache-2.0"
-primary_language: "TypeScript"
+license: Apache-2.0
+primary_language: TypeScript
 tags:
-  - "agents"
-  - "multimodal"
-  - "vision"
-  - "tool-use"
-  - "planning"
-  - "local"
+  - agents
+  - multimodal
+  - vision
+  - tool-use
+  - planning
+  - local
 maturity: beta
 cost_model: open-source
-github_stars: 37934
-last_commit: "2026-07-01"
+github_stars: 38136
+last_commit: '2026-07-01'
 docs_url: https://agent-tars.com
 phase: agent-system
 domain:
-  - "language"
-  - "multimodal"
+  - language
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "fork-and-adapt"
+  - deploy-as-is
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
-  - "community-driven"
+  - actively-maintained
+  - org-backed
+  - community-driven
 ecosystem_role:
-  - "A desktop GUI-agent runtime that pairs a vision-language grounding model with screen capture and input control to operate computer and browser interfaces."
+  - A desktop GUI-agent runtime that pairs a vision-language grounding model with screen capture and input control to operate computer and browser interfaces.
 best_for:
-  - "You are researching or building computer-use/GUI agents that click, type, and navigate real desktop or browser interfaces from screenshots."
-  - "You want a runnable reference stack around the UI-TARS grounding models rather than assembling capture, action, and planning loops yourself."
+  - You are researching or building computer-use/GUI agents that click, type, and navigate real desktop or browser interfaces from screenshots.
+  - You want a runnable reference stack around the UI-TARS grounding models rather than assembling capture, action, and planning loops yourself.
 avoid_if:
-  - "You need reliable, unattended production automation; GUI agents remain error-prone and should run with supervision."
-  - "Your task can be done with a stable API or DOM-level automation, which is more robust than pixel-level GUI control."
-enrichment_notes: "Official repository, Apache-2.0 license, and 2026-07-01 activity were reviewed on 2026-07-12. Reliability and safety of autonomous computer-use remain draft and require sandboxing."
+  - You need reliable, unattended production automation; GUI agents remain error-prone and should run with supervision.
+  - Your task can be done with a stable API or DOM-level automation, which is more robust than pixel-level GUI control.
+enrichment_notes: Official repository, Apache-2.0 license, and 2026-07-01 activity were reviewed on 2026-07-12. Reliability and safety of autonomous computer-use remain draft and require sandboxing.
 ---
 
 ## Overview

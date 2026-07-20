@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "cloneofsimo"
+org_or_maintainer: cloneofsimo
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,47 +19,47 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: lora-diffusion
-name: "LoRA for Diffusion (cloneofsimo)"
+name: LoRA for Diffusion (cloneofsimo)
 artifact_type: library
 category: multimodal
 subcategory: fine-tuning
-description: "An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters"
+description: An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters
 github_url: https://github.com/cloneofsimo/lora
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "multimodal"
-  - "self-hosted"
+  - fine-tuning
+  - multimodal
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7548
-last_commit: "2024-03-22"
+github_stars: 7547
+last_commit: '2024-03-22'
 docs_url: https://arxiv.org/abs/2106.09685
 phase: training-and-alignment
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A reference implementation that brought LoRA fine-tuning to diffusion models, seeding the modern adapter ecosystem."
+  - A reference implementation that brought LoRA fine-tuning to diffusion models, seeding the modern adapter ecosystem.
 best_for:
-  - "You want to understand how LoRA adapters are applied to diffusion UNets and text encoders from a canonical implementation"
-  - "You are studying lightweight, composable fine-tuning that trains a small fraction of parameters"
+  - You want to understand how LoRA adapters are applied to diffusion UNets and text encoders from a canonical implementation
+  - You are studying lightweight, composable fine-tuning that trains a small fraction of parameters
 avoid_if:
-  - "You want a maintained production training pipeline, where Diffusers' built-in LoRA support is current"
-  - "You need general-purpose LLM LoRA tooling rather than diffusion-focused code"
-enrichment_notes: "Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries."
+  - You want a maintained production training pipeline, where Diffusers' built-in LoRA support is current
+  - You need general-purpose LLM LoRA tooling rather than diffusion-focused code
+enrichment_notes: Repository, Apache-2.0 license, and 2024-03-22 activity verified via the GitHub API on 2026-07-12. Historically pivotal; superseded by integrated LoRA in mainstream libraries.
 ---
 
 ## Overview

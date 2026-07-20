@@ -6,31 +6,42 @@ artifact_type: model
 category: multimodal
 subcategory: models
 description: Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
-github_url: "https://github.com/OpenBMB/MiniCPM-V"
+github_url: https://github.com/OpenBMB/MiniCPM-V
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "OpenBMB"
-tags: [multimodal, vision, inference, self-hosted]
+org_or_maintainer: OpenBMB
+tags:
+  - multimodal
+  - vision
+  - inference
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 25801
-github_stars_last_30d: 0
-trending_score: 42
-last_commit: "2026-06-25"
-docs_url: "https://github.com/OpenBMB/MiniCPM-V"
+github_stars: 25944
+github_stars_last_30d: 143
+trending_score: 51
+last_commit: '2026-06-25'
+docs_url: https://github.com/OpenBMB/MiniCPM-V
 demo_url: null
-paper_url: "https://arxiv.org/abs/2408.01800"
+paper_url: https://arxiv.org/abs/2408.01800
 paper_id: null
-hf_url: "https://huggingface.co/openbmb"
+hf_url: https://huggingface.co/openbmb
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [gguf]
+supported_formats:
+  - gguf
 api_compatible: null
 phase: foundation-model
-domain: [multimodal]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, research-origin, actively-maintained]
+domain:
+  - multimodal
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - research-origin
+  - actively-maintained
 ecosystem_role:
   - Efficiency-focused open VLM series; the reference option when you need capable image/video/OCR understanding at a small parameter count that can run on edge devices, versus large VLMs that require server GPUs
 best_for:
@@ -45,12 +56,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (25,801), Apache-2.0 license, and last commit (2026-06-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (25,801), Apache-2.0 license, and last commit (2026-06-25) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/OpenBMB/MiniCPM-V", "date": "2026-07-08", "description": "25,801 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/OpenBMB/MiniCPM-V
+    date: '2026-07-08'
+    description: 25,801 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

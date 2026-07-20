@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "trpc-group"
+org_or_maintainer: trpc-group
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 3
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: trpc-agent-go
-name: "trpc-agent-go"
+name: trpc-agent-go
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Go framework for production agent systems with graph workflows, tools, memory, MCP, A2A, AG-UI, evaluation, and observability"
+description: Go framework for production agent systems with graph workflows, tools, memory, MCP, A2A, AG-UI, evaluation, and observability
 github_url: https://github.com/trpc-group/trpc-agent-go
-license: "Apache-2.0"
-primary_language: "Go"
+license: Apache-2.0
+primary_language: Go
 tags:
-  - "agents"
-  - "graphs"
-  - "memory"
-  - "tool-use"
-  - "orchestration"
-  - "observability"
+  - agents
+  - graphs
+  - memory
+  - tool-use
+  - orchestration
+  - observability
 maturity: beta
 cost_model: open-source
-github_stars: 1562
-last_commit: "2026-07-19"
+github_stars: 1565
+last_commit: '2026-07-20'
 docs_url: https://trpc-group.github.io/trpc-agent-go/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Go alternative to Python agent frameworks, spanning graph orchestration, protocols, evaluation, and observability"
+  - Go alternative to Python agent frameworks, spanning graph orchestration, protocols, evaluation, and observability
 best_for:
-  - "Building a typed Go service with tool-calling and graph workflows"
-  - "Connecting agents to MCP, A2A, or AG-UI protocols in a production backend"
+  - Building a typed Go service with tool-calling and graph workflows
+  - Connecting agents to MCP, A2A, or AG-UI protocols in a production backend
 avoid_if:
-  - "Your team is committed to Python-only model and evaluation libraries"
-  - "You need a stable narrow API rather than a rapidly expanding protocol surface"
-enrichment_notes: "Apache-2.0 framework with broad, fast-moving features; interoperability and persistence require validation. Draft pending review."
+  - Your team is committed to Python-only model and evaluation libraries
+  - You need a stable narrow API rather than a rapidly expanding protocol surface
+enrichment_notes: Apache-2.0 framework with broad, fast-moving features; interoperability and persistence require validation. Draft pending review.
 ---
 
 ## Overview

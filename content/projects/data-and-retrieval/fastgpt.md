@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "labring"
+org_or_maintainer: labring
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,52 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 129
+trending_score: 40
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: fastgpt
-name: "FastGPT"
+name: FastGPT
 artifact_type: platform
 category: rag
 subcategory: platforms
-description: "Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data"
+description: Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data
 github_url: https://github.com/labring/FastGPT
-license: "Other"
-primary_language: "TypeScript"
+license: Other
+primary_language: TypeScript
 tags:
-  - "rag"
-  - "retrieval"
-  - "chunking"
-  - "orchestration"
-  - "agents"
-  - "self-hosted"
+  - rag
+  - retrieval
+  - chunking
+  - orchestration
+  - agents
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 28911
-last_commit: "2026-07-10"
+github_stars: 29040
+last_commit: '2026-07-20'
 docs_url: https://doc.fastgpt.io
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
-  - "org-backed"
+  - actively-maintained
+  - community-driven
+  - org-backed
 ecosystem_role:
-  - "A self-hostable RAG platform that combines document ingestion, chunking, vector retrieval, and a visual flow builder for QA and agent pipelines."
+  - A self-hostable RAG platform that combines document ingestion, chunking, vector retrieval, and a visual flow builder for QA and agent pipelines.
 best_for:
-  - "You need a deployable knowledge-base/QA system over private documents with a UI for ingestion, retrieval tuning, and workflow design."
-  - "You want visual orchestration of retrieval, LLM calls, and tools without building the RAG plumbing from scratch."
+  - You need a deployable knowledge-base/QA system over private documents with a UI for ingestion, retrieval tuning, and workflow design.
+  - You want visual orchestration of retrieval, LLM calls, and tools without building the RAG plumbing from scratch.
 avoid_if:
-  - "You need a lightweight embeddable retrieval library rather than a full platform with its own database and UI."
-  - "You require guaranteed answer correctness; retrieval quality still depends on your chunking, embeddings, and evaluation."
-enrichment_notes: "Official repository and 2026-07-10 activity were reviewed on 2026-07-12; the license is a modified open-source license (verify terms before commercial redeployment). Retrieval quality claims remain draft."
+  - You need a lightweight embeddable retrieval library rather than a full platform with its own database and UI.
+  - You require guaranteed answer correctness; retrieval quality still depends on your chunking, embeddings, and evaluation.
+enrichment_notes: Official repository and 2026-07-10 activity were reviewed on 2026-07-12; the license is a modified open-source license (verify terms before commercial redeployment). Retrieval quality claims remain draft.
 ---
 
 ## Overview

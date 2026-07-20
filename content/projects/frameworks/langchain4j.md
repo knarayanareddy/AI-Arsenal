@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "langchain4j"
+org_or_maintainer: langchain4j
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 69
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: langchain4j
-name: "LangChain4j"
+name: LangChain4j
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "An idiomatic Java library for building LLM applications on the JVM, with a unified API over providers and vector stores plus tool calling, MCP, agents, and RAG"
+description: An idiomatic Java library for building LLM applications on the JVM, with a unified API over providers and vector stores plus tool calling, MCP, agents, and RAG
 github_url: https://github.com/langchain4j/langchain4j
-license: "Apache-2.0"
-primary_language: "Java"
+license: Apache-2.0
+primary_language: Java
 tags:
-  - "agents"
-  - "rag"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - rag
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 12578
-last_commit: "2026-07-12"
+github_stars: 12647
+last_commit: '2026-07-20'
 docs_url: https://docs.langchain4j.dev/
 phase: framework
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The de facto LLM-application framework for the JVM, integrating with enterprise Java stacks like Quarkus and Spring Boot."
+  - The de facto LLM-application framework for the JVM, integrating with enterprise Java stacks like Quarkus and Spring Boot.
 best_for:
-  - "You are building LLM features in Java/Kotlin and want idiomatic APIs plus Quarkus/Spring Boot integration"
-  - "You need tool calling, MCP, agents, and RAG in a JVM stack without shelling out to Python"
+  - You are building LLM features in Java/Kotlin and want idiomatic APIs plus Quarkus/Spring Boot integration
+  - You need tool calling, MCP, agents, and RAG in a JVM stack without shelling out to Python
 avoid_if:
-  - "Your stack is Python-first, where the original LangChain/LlamaIndex ecosystems are more mature"
-  - "You want a no-code visual builder rather than a code-first library"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Independent project inspired by LangChain, not an official port."
+  - Your stack is Python-first, where the original LangChain/LlamaIndex ecosystems are more mature
+  - You want a no-code visual builder rather than a code-first library
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Independent project inspired by LangChain, not an official port.
 ---
 
 ## Overview

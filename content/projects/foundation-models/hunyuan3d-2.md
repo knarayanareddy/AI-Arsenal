@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Tencent-Hunyuan"
+org_or_maintainer: Tencent-Hunyuan
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 69
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: hunyuan3d-2
-name: "Hunyuan3D-2"
+name: Hunyuan3D-2
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Tencent's open model for generating high-resolution textured 3D assets from images or text using a two-stage shape-then-texture diffusion pipeline"
+description: Tencent's open model for generating high-resolution textured 3D assets from images or text using a two-stage shape-then-texture diffusion pipeline
 github_url: https://github.com/Tencent-Hunyuan/Hunyuan3D-2
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 14242
-last_commit: "2025-10-28"
+github_stars: 14311
+last_commit: '2025-10-28'
 docs_url: https://3d.hunyuan.tencent.com/
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A two-stage 3D generation model that produces textured meshes from a single image or text prompt."
+  - A two-stage 3D generation model that produces textured meshes from a single image or text prompt.
 best_for:
-  - "You need to generate textured 3D meshes from a single image or text for games, AR, or prototyping"
-  - "You want a self-hostable open 3D-generation model rather than a paid cloud service"
+  - You need to generate textured 3D meshes from a single image or text for games, AR, or prototyping
+  - You want a self-hostable open 3D-generation model rather than a paid cloud service
 avoid_if:
-  - "You need production-ready, topology-clean meshes without cleanup, which generated assets rarely provide"
-  - "You cannot verify the model's non-standard license for your use case"
-enrichment_notes: "Repository and 2025-10-28 activity verified via the GitHub API on 2026-07-12. License is NOASSERTION (custom terms); verify before use."
+  - You need production-ready, topology-clean meshes without cleanup, which generated assets rarely provide
+  - You cannot verify the model's non-standard license for your use case
+enrichment_notes: Repository and 2025-10-28 activity verified via the GitHub API on 2026-07-12. License is NOASSERTION (custom terms); verify before use.
 ---
 
 ## Overview

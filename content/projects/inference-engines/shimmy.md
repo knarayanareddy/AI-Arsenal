@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Michael-A-Kuykendall"
+org_or_maintainer: Michael-A-Kuykendall
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,52 +18,52 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 21
+trending_score: 32
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: shimmy
-name: "Shimmy"
+name: Shimmy
 artifact_type: tool
 category: llms
 subcategory: inference-engines
-description: "A pure-Rust, OpenAI-API-compatible local inference server that is GGUF-native, supports WebGPU, and avoids Python or llama.cpp dependencies"
+description: A pure-Rust, OpenAI-API-compatible local inference server that is GGUF-native, supports WebGPU, and avoids Python or llama.cpp dependencies
 github_url: https://github.com/Michael-A-Kuykendall/shimmy
-license: "Apache-2.0"
-primary_language: "Rust"
+license: Apache-2.0
+primary_language: Rust
 tags:
-  - "inference"
-  - "llm"
-  - "local"
-  - "edge"
-  - "self-hosted"
-  - "efficiency"
+  - inference
+  - llm
+  - local
+  - edge
+  - self-hosted
+  - efficiency
 maturity: beta
 cost_model: self-hostable
-github_stars: 5652
-last_commit: "2026-06-30"
+github_stars: 5673
+last_commit: '2026-06-30'
 docs_url: https://github.com/Michael-A-Kuykendall/shimmy
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "experimental"
+  - community-driven
+  - experimental
 ecosystem_role:
-  - "Pure-Rust GGUF local inference server with OpenAI-compatible API"
-  - "Portable CPU/WebGPU endpoint for edge and desktop applications"
+  - Pure-Rust GGUF local inference server with OpenAI-compatible API
+  - Portable CPU/WebGPU endpoint for edge and desktop applications
 best_for:
-  - "Embedding local GGUF inference in Rust services"
-  - "Running an OpenAI-compatible endpoint on CPU or WebGPU"
+  - Embedding local GGUF inference in Rust services
+  - Running an OpenAI-compatible endpoint on CPU or WebGPU
 avoid_if:
-  - "You need broad model-format coverage or mature multi-GPU serving"
-  - "Your team requires an enterprise-backed inference SLA"
-enrichment_notes: "Shimmy is community-driven and sponsor-funded under a solo-maintainer model; verify supported architectures and performance for production. Draft pending review."
+  - You need broad model-format coverage or mature multi-GPU serving
+  - Your team requires an enterprise-backed inference SLA
+enrichment_notes: Shimmy is community-driven and sponsor-funded under a solo-maintainer model; verify supported architectures and performance for production. Draft pending review.
 ---
 
 ## Overview

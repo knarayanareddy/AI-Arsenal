@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ARahim3"
+org_or_maintainer: ARahim3
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,54 +18,54 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: mlx-tune
-name: "mlx-tune"
+name: mlx-tune
 artifact_type: library
 category: llms
 subcategory: fine-tuning
-description: "Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows"
+description: Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows
 github_url: https://github.com/ARahim3/mlx-tune
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "llm"
-  - "fine-tuning"
-  - "training"
-  - "multimodal"
-  - "voice"
-  - "vision"
-  - "local"
+  - llm
+  - fine-tuning
+  - training
+  - multimodal
+  - voice
+  - vision
+  - local
 maturity: beta
 cost_model: open-source
-github_stars: 1363
-last_commit: "2026-06-23"
+github_stars: 1364
+last_commit: '2026-06-23'
 docs_url: https://arahim3.github.io/mlx-tune/
 phase: training-and-alignment
 domain:
-  - "language"
-  - "vision"
-  - "audio"
+  - language
+  - vision
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "Apple-Silicon fine-tuning alternative that complements MLX model tooling without being an official Unsloth distribution"
+  - Apple-Silicon fine-tuning alternative that complements MLX model tooling without being an official Unsloth distribution
 best_for:
-  - "Fine-tuning supported models locally on an Apple Silicon Mac"
-  - "Porting an Unsloth-like training script to MLX before using CUDA infrastructure"
+  - Fine-tuning supported models locally on an Apple Silicon Mac
+  - Porting an Unsloth-like training script to MLX before using CUDA infrastructure
 avoid_if:
-  - "You need CUDA multi-node training or a model unsupported by the current MLX adapters"
-  - "Your project requires official Unsloth support or identical numerical behavior"
-enrichment_notes: "The README explicitly says mlx-tune is not an official Unsloth project; model and MLX-version compatibility require checking. Draft pending review."
+  - You need CUDA multi-node training or a model unsupported by the current MLX adapters
+  - Your project requires official Unsloth support or identical numerical behavior
+enrichment_notes: The README explicitly says mlx-tune is not an official Unsloth project; model and MLX-version compatibility require checking. Draft pending review.
 ---
 
 ## Overview

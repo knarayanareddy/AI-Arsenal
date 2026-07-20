@@ -6,18 +6,22 @@ artifact_type: service
 category: observability
 subcategory: tracing
 description: Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
-github_url: "https://lunary.ai"
+github_url: https://lunary.ai
 license: Unknown
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, tracing, rag, cloud]
+tags:
+  - observability
+  - tracing
+  - rag
+  - cloud
 maturity: production
 cost_model: freemium
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://lunary.ai/docs"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://lunary.ai/docs
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,13 @@ supported_formats: []
 api_compatible: null
 approach: sdk
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [community-driven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - community-driven
 ecosystem_role:
   - Smaller open-source LLM observability platform offering tracing, analytics, and prompt management
 best_for:
@@ -42,13 +50,17 @@ avoid_if:
   - You need advanced evaluation workflows — Lunary's public documentation footprint suggests a narrower feature set than platforms purpose-built around rigorous evaluation
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Very limited independent third-party coverage found beyond the project's own FAQ/documentation pages; could not confirm production-scale adoption or recent architectural details with confidence. Flagging for a deeper maintainer review given the sparse public footprint found during this migration's research pass.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

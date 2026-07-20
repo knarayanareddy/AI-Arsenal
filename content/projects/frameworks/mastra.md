@@ -6,25 +6,33 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: TypeScript framework for building AI agents, workflows, evals, and application backends
-github_url: "https://github.com/mastra-ai/mastra"
+github_url: https://github.com/mastra-ai/mastra
 license: Apache-2.0 + EE
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [agents, orchestration, memory, evaluation]
+tags:
+  - agents
+  - orchestration
+  - memory
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 25023
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://mastra.ai/docs"
+github_stars: 26356
+github_stars_last_30d: 1334
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://mastra.ai/docs
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - TypeScript-native agent framework, positioned to serve the JS/TS ecosystem the way LangGraph/CrewAI serve Python
 best_for:
@@ -35,17 +43,22 @@ avoid_if:
   - You need the widest possible third-party integration coverage — as a newer, smaller-ecosystem framework, Mastra has fewer pre-built integrations than the most established Python frameworks
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production evidence found; assessment is based on the project's public positioning and GitHub repository rather than a technical report or case study.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://mastra.ai/docs","date":"2026-06-13","description":"Official docs"}
+  - source: newsletter
+    url: https://mastra.ai/docs
+    date: '2026-06-13'
+    description: Official docs
 featured: false
 status: active
 ---

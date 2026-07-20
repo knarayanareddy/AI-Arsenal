@@ -6,25 +6,35 @@ artifact_type: framework
 category: agents
 subcategory: frameworks
 description: An SDK for integrating AI orchestration into production applications
-github_url: "https://github.com/microsoft/semantic-kernel"
+github_url: https://github.com/microsoft/semantic-kernel
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, orchestration, tool-use, planning]
+tags:
+  - agents
+  - orchestration
+  - tool-use
+  - planning
 maturity: production
 cost_model: open-source
-github_stars: 28114
-github_stars_last_30d: 28114
-trending_score: 70
-last_commit: "2026-06-12"
+github_stars: 28337
+github_stars_last_30d: 223
+trending_score: 33
+last_commit: '2026-07-17'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Microsoft's earlier SDK for integrating AI orchestration into applications, now being converged into Microsoft Agent Framework
 best_for:
@@ -40,8 +50,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Per Visual Studio Magazine's April 2026 coverage of Agent Framework 1.0, Microsoft explicitly frames the new framework as building on and providing migration guidance from Semantic Kernel, indicating Semantic Kernel is being superseded for new agent-development work.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

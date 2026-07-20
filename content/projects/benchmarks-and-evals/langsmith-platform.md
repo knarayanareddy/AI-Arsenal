@@ -6,18 +6,22 @@ artifact_type: service
 category: observability
 subcategory: tracing
 description: Managed LangChain platform for tracing, evaluation, prompt workflows, and deployment feedback
-github_url: "https://smith.langchain.com"
+github_url: https://smith.langchain.com
 license: Proprietary
 primary_language: Other
 org_or_maintainer: null
-tags: [observability, tracing, evaluation, langchain]
+tags:
+  - observability
+  - tracing
+  - evaluation
+  - langchain
 maturity: production
 cost_model: freemium
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://docs.smith.langchain.com/"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://docs.smith.langchain.com/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,13 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
   - LangChain's managed observability and evaluation platform, with the deepest first-party integration for LangChain/LangGraph applications
 best_for:
@@ -42,17 +50,26 @@ avoid_if:
   - Cost at high trace volume is a concern and you haven't compared pricing against self-hosted alternatives — LangSmith is a managed-only, closed-source product
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, phoenix, helicone, opik]
-integrates_with: [langchain, langgraph]
+alternatives:
+  - langfuse
+  - phoenix
+  - helicone
+  - opik
+integrates_with:
+  - langchain
+  - langgraph
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Documents the LangSmith platform as a project; the tools/by-job/langsmith.md entry covers usage guidance. Production usage is evidenced via its tight LangChain coupling -- LangChain's own frameworks-phase evidence (Rakuten's production use of LangChain+LangSmith together) applies here too.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.ibm.com/think/topics/langsmith","date":"2025-11-17","description":"IBM documents Factory's production use of LangSmith (integrated with AWS CloudWatch) for secure, reliable LLM operations, doubling iteration speed and reducing open-to-merge time by 20%"}
+  - source: conference
+    url: https://www.ibm.com/think/topics/langsmith
+    date: '2025-11-17'
+    description: IBM documents Factory's production use of LangSmith (integrated with AWS CloudWatch) for secure, reliable LLM operations, doubling iteration speed and reducing open-to-merge time by 20%
 featured: false
 status: active
 ---

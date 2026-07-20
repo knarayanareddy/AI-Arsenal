@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "AntonOsika"
+org_or_maintainer: AntonOsika
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
-status: active
+status: archived
 id: gpt-engineer
-name: "GPT Engineer"
+name: GPT Engineer
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern"
+description: An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
 github_url: https://github.com/AntonOsika/gpt-engineer
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 55189
-last_commit: "2025-05-14"
+github_stars: 55190
+last_commit: '2025-05-14'
 docs_url: https://gpt-engineer.readthedocs.io/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "study-and-reference"
-  - "deploy-as-is"
+  - study-and-reference
+  - deploy-as-is
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A pioneering CLI coding agent that turns a natural-language spec into a generated, iteratively refined codebase."
+  - A pioneering CLI coding agent that turns a natural-language spec into a generated, iteratively refined codebase.
 best_for:
-  - "You want to scaffold a small project or prototype from a natural-language description"
-  - "You are studying the prompt-to-codebase agent pattern from a canonical, readable implementation"
+  - You want to scaffold a small project or prototype from a natural-language description
+  - You are studying the prompt-to-codebase agent pattern from a canonical, readable implementation
 avoid_if:
-  - "You need a maintained, IDE-integrated coding agent for daily work, where newer tools are stronger"
-  - "You need reliable output on large existing codebases rather than greenfield scaffolding"
-enrichment_notes: "Repository, MIT license, and 2025-05-14 activity verified via the GitHub API on 2026-07-12. Historically pivotal (precursor to Lovable); upstream cadence slowed."
+  - You need a maintained, IDE-integrated coding agent for daily work, where newer tools are stronger
+  - You need reliable output on large existing codebases rather than greenfield scaffolding
+enrichment_notes: Repository, MIT license, and 2025-05-14 activity verified via the GitHub API on 2026-07-12. Historically pivotal (precursor to Lovable); upstream cadence slowed.
 ---
 
 ## Overview

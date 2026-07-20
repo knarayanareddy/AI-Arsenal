@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openai"
+org_or_maintainer: openai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 57
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: openai-swarm
-name: "OpenAI Swarm"
+name: OpenAI Swarm
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK"
+description: An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK
 github_url: https://github.com/openai/swarm
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - llm
+  - self-hosted
 maturity: experimental
 cost_model: open-source
-github_stars: 21789
-last_commit: "2026-04-15"
+github_stars: 21846
+last_commit: '2026-04-15'
 docs_url: https://github.com/openai/swarm
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "study-and-reference"
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "org-backed"
+  - research-origin
+  - org-backed
 ecosystem_role:
-  - "An educational reference for lightweight multi-agent orchestration via agents, routines, and handoffs."
+  - An educational reference for lightweight multi-agent orchestration via agents, routines, and handoffs.
 best_for:
-  - "You want to learn multi-agent orchestration concepts (handoffs, routines) from a minimal reference"
-  - "You are prototyping simple agent-to-agent delegation patterns before adopting a production SDK"
+  - You want to learn multi-agent orchestration concepts (handoffs, routines) from a minimal reference
+  - You are prototyping simple agent-to-agent delegation patterns before adopting a production SDK
 avoid_if:
-  - "You need a production-supported framework, where OpenAI directs users to the Agents SDK"
-  - "You need built-in state persistence, retries, and observability rather than a teaching sample"
-enrichment_notes: "Repository, MIT license, and 2026-04-15 activity verified via the GitHub API on 2026-07-12. Explicitly educational and not for production; superseded by the OpenAI Agents SDK."
+  - You need a production-supported framework, where OpenAI directs users to the Agents SDK
+  - You need built-in state persistence, retries, and observability rather than a teaching sample
+enrichment_notes: Repository, MIT license, and 2026-04-15 activity verified via the GitHub API on 2026-07-12. Explicitly educational and not for production; superseded by the OpenAI Agents SDK.
 ---
 
 ## Overview

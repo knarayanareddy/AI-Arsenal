@@ -6,31 +6,42 @@ artifact_type: model
 category: multimodal
 subcategory: models
 description: Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
-github_url: "https://github.com/hpcaitech/Open-Sora"
+github_url: https://github.com/hpcaitech/Open-Sora
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "HPC-AI Tech"
-tags: [multimodal, vision, inference, self-hosted]
+org_or_maintainer: HPC-AI Tech
+tags:
+  - multimodal
+  - vision
+  - inference
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 29172
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-04-09"
-docs_url: "https://github.com/hpcaitech/Open-Sora"
+github_stars: 29200
+github_stars_last_30d: 28
+trending_score: 42
+last_commit: '2026-04-09'
+docs_url: https://github.com/hpcaitech/Open-Sora
 demo_url: null
-paper_url: "https://arxiv.org/abs/2412.20404"
+paper_url: https://arxiv.org/abs/2412.20404
 paper_id: null
-hf_url: "https://huggingface.co/hpcai-tech"
+hf_url: https://huggingface.co/hpcai-tech
 model_sizes: []
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [vision]
-relation_to_stack: [deploy-as-is, study-and-reference, fork-and-adapt]
-health_signals: [org-backed, research-origin, community-driven]
+domain:
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - research-origin
+  - community-driven
 ecosystem_role:
   - Leading open reproduction of text/image-to-video generation; the reference option for teams that want to self-host or study video diffusion rather than call a closed model like Sora, Runway, or Kling
 best_for:
@@ -45,12 +56,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (29,172), Apache-2.0 license, and last commit (2026-04-09) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (29,172), Apache-2.0 license, and last commit (2026-04-09) verified via the GitHub API on 2026-07-08. Capability claims from the paper/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/hpcaitech/Open-Sora", "date": "2026-07-08", "description": "29,172 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/hpcaitech/Open-Sora
+    date: '2026-07-08'
+    description: 29,172 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

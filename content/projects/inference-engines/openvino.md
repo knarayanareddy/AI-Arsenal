@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openvinotoolkit"
+org_or_maintainer: openvinotoolkit
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 48
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: openvino
-name: "OpenVINO"
+name: OpenVINO
 artifact_type: framework
 category: tooling
 subcategory: inference-engines
-description: "Intel's open toolkit for optimizing and deploying AI inference across CPUs, integrated GPUs, and NPUs, with model conversion, quantization"
+description: Intel's open toolkit for optimizing and deploying AI inference across CPUs, integrated GPUs, and NPUs, with model conversion, quantization
 github_url: https://github.com/openvinotoolkit/openvino
-license: "Apache-2.0"
-primary_language: "C++"
+license: Apache-2.0
+primary_language: C++
 tags:
-  - "inference"
-  - "self-hosted"
-  - "multimodal"
+  - inference
+  - self-hosted
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 10501
-last_commit: "2026-07-10"
+github_stars: 10549
+last_commit: '2026-07-20'
 docs_url: https://docs.openvino.ai/
 phase: inference-engine
 domain:
-  - "general-purpose"
-  - "vision"
-  - "language"
+  - general-purpose
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An inference-optimization toolkit that accelerates models on Intel CPUs, GPUs, and NPUs from edge to datacenter."
+  - An inference-optimization toolkit that accelerates models on Intel CPUs, GPUs, and NPUs from edge to datacenter.
 best_for:
-  - "You need to run AI inference efficiently on Intel CPUs, integrated GPUs, or NPUs, including edge devices"
-  - "You want model conversion and quantization to accelerate deployment without dedicated accelerators"
+  - You need to run AI inference efficiently on Intel CPUs, integrated GPUs, or NPUs, including edge devices
+  - You want model conversion and quantization to accelerate deployment without dedicated accelerators
 avoid_if:
-  - "You are deploying on NVIDIA GPUs, where TensorRT and CUDA-native runtimes are the better fit"
-  - "You need training rather than inference optimization"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Optimized for Intel hardware; benefits are hardware-specific."
+  - You are deploying on NVIDIA GPUs, where TensorRT and CUDA-native runtimes are the better fit
+  - You need training rather than inference optimization
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. Optimized for Intel hardware; benefits are hardware-specific.
 ---
 
 ## Overview

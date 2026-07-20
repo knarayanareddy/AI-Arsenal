@@ -6,46 +6,58 @@ artifact_type: framework
 category: llms
 subcategory: inference-engines
 description: Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
-github_url: "https://github.com/huggingface/candle"
+github_url: https://github.com/huggingface/candle
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: huggingface
-tags: [inference, efficiency, llm]
+tags:
+  - inference
+  - efficiency
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 20620
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-06"
-docs_url: "https://huggingface.github.io/candle/"
+github_stars: 20689
+github_stars_last_30d: 69
+trending_score: 46
+last_commit: '2026-07-14'
+docs_url: https://huggingface.github.io/candle/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The Rust foundation of Hugging Face's production inference stack: where PyTorch deployment drags the Python runtime along, Candle compiles model inference into small static binaries — the substrate under text-embeddings-inference and the base layer the Rust ML ecosystem (mistral.rs and others) builds on"
+  - 'The Rust foundation of Hugging Face''s production inference stack: where PyTorch deployment drags the Python runtime along, Candle compiles model inference into small static binaries — the substrate under text-embeddings-inference and the base layer the Rust ML ecosystem (mistral.rs and others) builds on'
 best_for:
-  - "Deploying inference where Python is a liability — serverless (cold-start-sensitive), edge devices, WASM in the browser, or security-conscious environments that want one static binary"
-  - "Building Rust ML infrastructure: a PyTorch-like tensor/module API with CUDA/Metal backends and ready ports of major architectures (Llama, Whisper, Stable Diffusion, BERT-class embedders)"
+  - Deploying inference where Python is a liability — serverless (cold-start-sensitive), edge devices, WASM in the browser, or security-conscious environments that want one static binary
+  - 'Building Rust ML infrastructure: a PyTorch-like tensor/module API with CUDA/Metal backends and ready ports of major architectures (Llama, Whisper, Stable Diffusion, BERT-class embedders)'
 avoid_if:
-  - "You're training or researching models — the ecosystem, autograd maturity, and iteration speed of PyTorch remain far ahead; Candle is inference-first"
-  - "You want maximum LLM serving throughput out of the box — vLLM-class engines or mistral.rs (built on Candle's lineage) package that better than raw Candle"
+  - You're training or researching models — the ecosystem, autograd maturity, and iteration speed of PyTorch remain far ahead; Candle is inference-first
+  - You want maximum LLM serving throughput out of the box — vLLM-class engines or mistral.rs (built on Candle's lineage) package that better than raw Candle
 upstream_dependencies: []
-downstream_consumers: [text-embeddings-inference]
+downstream_consumers:
+  - text-embeddings-inference
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (20.6k), Apache-2.0, and active maintenance (last push 2026-07-06) verified via the GitHub API on 2026-07-08. Its role under text-embeddings-inference is documented in that project's repository; performance positioning is qualitative.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/huggingface/candle","date":"2026-07-08","description":"20.6k stars, Hugging Face's core Rust ML framework"}
+  - source: github-trending
+    url: https://github.com/huggingface/candle
+    date: '2026-07-08'
+    description: 20.6k stars, Hugging Face's core Rust ML framework
 featured: false
 status: active
 ---

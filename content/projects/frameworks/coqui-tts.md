@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "coqui-ai"
+org_or_maintainer: coqui-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 37
+trending_score: 33
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: coqui-tts
-name: "Coqui TTS"
+name: Coqui TTS
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "A deep-learning toolkit for text-to-speech with dozens of pretrained models, training recipes, and the XTTS multilingual voice-cloning model"
+description: A deep-learning toolkit for text-to-speech with dozens of pretrained models, training recipes, and the XTTS multilingual voice-cloning model
 github_url: https://github.com/coqui-ai/TTS
-license: "MPL-2.0"
-primary_language: "Python"
+license: MPL-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "fine-tuning"
-  - "self-hosted"
-  - "multimodal"
-  - "llm"
+  - voice
+  - fine-tuning
+  - self-hosted
+  - multimodal
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 45745
-last_commit: "2024-08-16"
+github_stars: 45782
+last_commit: '2024-08-16'
 docs_url: https://tts.readthedocs.io
 phase: framework
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A batteries-included TTS training and inference framework that spans acoustic models, vocoders, and end-to-end voice cloning."
+  - A batteries-included TTS training and inference framework that spans acoustic models, vocoders, and end-to-end voice cloning.
 best_for:
-  - "You want to fine-tune or self-host a high-quality TTS voice, including cloning from a few seconds of reference audio with XTTS"
-  - "You need a research-grade framework with many model architectures (Tacotron, VITS, XTTS) and reproducible training recipes"
+  - You want to fine-tune or self-host a high-quality TTS voice, including cloning from a few seconds of reference audio with XTTS
+  - You need a research-grade framework with many model architectures (Tacotron, VITS, XTTS) and reproducible training recipes
 avoid_if:
-  - "You need an actively maintained upstream; the original company wound down and pushes here effectively stopped in 2024, so treat it as community-maintained"
-  - "You only need simple one-off synthesis and would be better served by a smaller single-model package or a hosted API"
-enrichment_notes: "Repository, MPL-2.0 license, and last-commit date of 2024-08-16 verified via the GitHub API on 2026-07-12. The upstream company ceased operations; community forks continue. Included with an explicit maintenance caveat."
+  - You need an actively maintained upstream; the original company wound down and pushes here effectively stopped in 2024, so treat it as community-maintained
+  - You only need simple one-off synthesis and would be better served by a smaller single-model package or a hosted API
+enrichment_notes: Repository, MPL-2.0 license, and last-commit date of 2024-08-16 verified via the GitHub API on 2026-07-12. The upstream company ceased operations; community forks continue. Included with an explicit maintenance caveat.
 ---
 
 ## Overview

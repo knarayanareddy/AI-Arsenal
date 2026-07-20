@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "oumi-ai"
+org_or_maintainer: oumi-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 21
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: oumi
-name: "Oumi"
+name: Oumi
 artifact_type: framework
 category: llms
 subcategory: fine-tuning
-description: "An end-to-end open platform to fine-tune, evaluate, and deploy foundation LLMs and VLMs, spanning data prep, training, evaluation"
+description: An end-to-end open platform to fine-tune, evaluate, and deploy foundation LLMs and VLMs, spanning data prep, training, evaluation
 github_url: https://github.com/oumi-ai/oumi
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "evaluation"
-  - "llm"
-  - "self-hosted"
+  - fine-tuning
+  - evaluation
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 9342
-last_commit: "2026-07-11"
+github_stars: 9363
+last_commit: '2026-07-20'
 docs_url: https://oumi.ai/docs
 phase: training-and-alignment
 domain:
-  - "language"
-  - "multimodal"
+  - language
+  - multimodal
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An end-to-end LLM/VLM lifecycle platform unifying data, training, evaluation, and deployment in one config-driven system."
+  - An end-to-end LLM/VLM lifecycle platform unifying data, training, evaluation, and deployment in one config-driven system.
 best_for:
-  - "You want one framework covering fine-tuning, evaluation, and deployment of open LLMs and VLMs"
-  - "You need to move the same config from a laptop to a multi-GPU cluster reproducibly"
+  - You want one framework covering fine-tuning, evaluation, and deployment of open LLMs and VLMs
+  - You need to move the same config from a laptop to a multi-GPU cluster reproducibly
 avoid_if:
-  - "You only need a single narrow step (e.g. just eval), where a focused tool is lighter"
-  - "You want a no-code GUI rather than a config-and-code platform"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. Young but active; breadth means depth varies by step."
+  - You only need a single narrow step (e.g. just eval), where a focused tool is lighter
+  - You want a no-code GUI rather than a config-and-code platform
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12. Young but active; breadth means depth varies by step.
 ---
 
 ## Overview

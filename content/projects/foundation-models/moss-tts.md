@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 92
+trending_score: 37
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,7 +42,7 @@ tags:
   - local
 maturity: beta
 cost_model: open-source
-github_stars: 3759
+github_stars: 3851
 last_commit: '2026-06-22'
 docs_url: https://github.com/OpenMOSS/MOSS-TTS
 phase: foundation-model

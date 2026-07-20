@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "zai-org"
+org_or_maintainer: zai-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 16
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: glm-5
-name: "GLM-5"
+name: GLM-5
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare"
+description: Z.ai's open-weight GLM-5 series for long-horizon agentic coding, with 1M-token context and sparse-attention IndexShare
 github_url: https://github.com/zai-org/GLM-5
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "llm"
-  - "reasoning"
-  - "self-hosted"
+  - llm
+  - reasoning
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 6664
-last_commit: "2026-07-15"
+github_stars: 6680
+last_commit: '2026-07-15'
 docs_url: https://docs.z.ai/guides/llm/glm-5.2
 phase: foundation-model
 domain:
-  - "language"
-  - "reasoning"
+  - language
+  - reasoning
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Competes with open-weight coding LLMs (Qwen3, DeepSeek) and closed frontier models on agentic-engineering benchmarks"
+  - Competes with open-weight coding LLMs (Qwen3, DeepSeek) and closed frontier models on agentic-engineering benchmarks
 best_for:
-  - "Long-horizon agentic coding tasks that run for hundreds of tool-calling rounds"
-  - "Self-hosting an open-weight frontier-class model with 1M-token context"
+  - Long-horizon agentic coding tasks that run for hundreds of tool-calling rounds
+  - Self-hosting an open-weight frontier-class model with 1M-token context
 avoid_if:
-  - "You need small on-device models — this is a large flagship series"
-  - "Your workload is simple single-turn chat where a smaller model is cheaper"
-enrichment_notes: "Verified via GitHub API + README; benchmark claims (SWE-bench Pro, Terminal-Bench) vendor-reported. Draft pending review."
+  - You need small on-device models — this is a large flagship series
+  - Your workload is simple single-turn chat where a smaller model is cheaper
+enrichment_notes: Verified via GitHub API + README; benchmark claims (SWE-bench Pro, Terminal-Bench) vendor-reported. Draft pending review.
 ---
 
 ## Overview

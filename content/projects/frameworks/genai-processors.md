@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "google-gemini"
+org_or_maintainer: google-gemini
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,53 +19,53 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: genai-processors
-name: "GenAI Processors"
+name: GenAI Processors
 artifact_type: framework
 category: agents
 subcategory: frameworks
-description: "Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models"
+description: Lightweight Python library from Google for building asynchronous, streaming, multimodal content-processing pipelines around Gemini and other models
 github_url: https://github.com/google-gemini/genai-processors
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "streaming"
-  - "orchestration"
-  - "multimodal"
-  - "tool-use"
-  - "llm"
-  - "efficiency"
+  - streaming
+  - orchestration
+  - multimodal
+  - tool-use
+  - llm
+  - efficiency
 maturity: beta
 cost_model: open-source
 github_stars: 2116
-last_commit: "2026-07-08"
+last_commit: '2026-07-08'
 docs_url: https://google-gemini.github.io/genai-processors/
 phase: framework
 domain:
-  - "language"
-  - "multimodal"
-  - "general-purpose"
+  - language
+  - multimodal
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
-  - "community-driven"
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A composable async-streaming abstraction where units of work (\"processors\") transform bidirectional streams of multimodal parts for real-time GenAI pipelines."
+  - A composable async-streaming abstraction where units of work ("processors") transform bidirectional streams of multimodal parts for real-time GenAI pipelines.
 best_for:
-  - "You are building real-time or streaming multimodal pipelines (audio/video/text) around Gemini and want structured concurrency instead of ad hoc callbacks."
-  - "You want to compose reusable processing stages (transcription, model calls, tool steps) that run in parallel over a stream."
+  - You are building real-time or streaming multimodal pipelines (audio/video/text) around Gemini and want structured concurrency instead of ad hoc callbacks.
+  - You want to compose reusable processing stages (transcription, model calls, tool steps) that run in parallel over a stream.
 avoid_if:
-  - "You only make single, synchronous model calls where a streaming pipeline abstraction is overkill."
-  - "You need a full agent orchestration framework with planning and memory rather than a stream-processing primitive."
-enrichment_notes: "Official Google Gemini repository, Apache-2.0 license, and 2026-07-08 activity were reviewed on 2026-07-12. API is early and may change; production fit remains draft."
+  - You only make single, synchronous model calls where a streaming pipeline abstraction is overkill.
+  - You need a full agent orchestration framework with planning and memory rather than a stream-processing primitive.
+enrichment_notes: Official Google Gemini repository, Apache-2.0 license, and 2026-07-08 activity were reviewed on 2026-07-12. API is early and may change; production fit remains draft.
 ---
 
 ## Overview

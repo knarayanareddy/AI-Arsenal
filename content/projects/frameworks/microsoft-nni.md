@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 7
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
-status: active
+status: archived
 id: microsoft-nni
-name: "NNI (Neural Network Intelligence)"
+name: NNI (Neural Network Intelligence)
 artifact_type: framework
 category: tooling
 subcategory: frameworks
-description: "Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute"
+description: Microsoft's AutoML toolkit automating hyperparameter tuning, neural architecture search, and model compression across training frameworks and compute
 github_url: https://github.com/microsoft/nni
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "fine-tuning"
-  - "evaluation"
-  - "self-hosted"
+  - fine-tuning
+  - evaluation
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 14357
-last_commit: "2024-07-03"
+github_stars: 14364
+last_commit: '2024-07-03'
 docs_url: https://nni.readthedocs.io/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "org-backed"
+  - research-origin
+  - org-backed
 ecosystem_role:
-  - "An AutoML framework that orchestrates hyperparameter search, NAS, and compression across trials and environments."
+  - An AutoML framework that orchestrates hyperparameter search, NAS, and compression across trials and environments.
 best_for:
-  - "You need systematic hyperparameter tuning or neural architecture search across many trials"
-  - "You want framework-agnostic model compression (pruning/quantization) with an experiment manager"
+  - You need systematic hyperparameter tuning or neural architecture search across many trials
+  - You want framework-agnostic model compression (pruning/quantization) with an experiment manager
 avoid_if:
-  - "You need an actively evolving project, since upstream cadence largely stopped after 2024"
-  - "You want a fully managed cloud AutoML service rather than a self-hosted toolkit"
-enrichment_notes: "Repository, MIT license, and 2024-07-03 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; treat as a stable-but-quiet toolkit."
+  - You need an actively evolving project, since upstream cadence largely stopped after 2024
+  - You want a fully managed cloud AutoML service rather than a self-hosted toolkit
+enrichment_notes: Repository, MIT license, and 2024-07-03 activity verified via the GitHub API on 2026-07-12. Upstream cadence slowed; treat as a stable-but-quiet toolkit.
 ---
 
 ## Overview

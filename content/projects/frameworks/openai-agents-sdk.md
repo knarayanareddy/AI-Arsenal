@@ -6,25 +6,35 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Lightweight Python framework for OpenAI-style agents, tools, handoffs, guardrails, and tracing
-github_url: "https://github.com/openai/openai-agents-python"
+github_url: https://github.com/openai/openai-agents-python
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, tool-use, guardrails, tracing]
+tags:
+  - agents
+  - tool-use
+  - guardrails
+  - tracing
 maturity: production
 cost_model: open-source
-github_stars: 27129
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://openai.github.io/openai-agents-python/"
+github_stars: 28034
+github_stars_last_30d: 905
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://openai.github.io/openai-agents-python/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - OpenAI's official, lightweight agent-building SDK, positioned as the provider-native path for building agents against OpenAI's models
 best_for:
@@ -35,17 +45,22 @@ avoid_if:
   - You need the deep durability/checkpointing features of a graph-based framework — this SDK's simplicity trades away some of that fine-grained state control
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond OpenAI's own documentation and examples repo; architecture description reflects the publicly documented agents/handoffs/guardrails model rather than an academic source.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://openai.github.io/openai-agents-python/","date":"2026-06-13","description":"Official documentation"}
+  - source: newsletter
+    url: https://openai.github.io/openai-agents-python/
+    date: '2026-06-13'
+    description: Official documentation
 featured: false
 status: active
 ---

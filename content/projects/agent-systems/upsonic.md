@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Upsonic"
+org_or_maintainer: Upsonic
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 7
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: upsonic
-name: "Upsonic"
+name: Upsonic
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers"
+description: A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers
 github_url: https://github.com/Upsonic/Upsonic
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "agents"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7908
-last_commit: "2026-06-18"
+github_stars: 7915
+last_commit: '2026-06-18'
 docs_url: https://docs.upsonic.ai/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "An agent framework emphasizing reliability through task typing, structured outputs, and verification of results."
+  - An agent framework emphasizing reliability through task typing, structured outputs, and verification of results.
 best_for:
-  - "You want an agent framework that stresses reliability and structured, verifiable task outputs"
-  - "You need typed tasks with tool and MCP integration for building production-leaning agents"
+  - You want an agent framework that stresses reliability and structured, verifiable task outputs
+  - You need typed tasks with tool and MCP integration for building production-leaning agents
 avoid_if:
-  - "You want the largest ecosystem and community, where more established frameworks lead"
-  - "You prefer a minimal library and find task/verification abstractions unnecessary"
-enrichment_notes: "Repository, MIT license, and 2026-06-18 activity verified via the GitHub API on 2026-07-12. Reliability features help but do not guarantee correctness."
+  - You want the largest ecosystem and community, where more established frameworks lead
+  - You prefer a minimal library and find task/verification abstractions unnecessary
+enrichment_notes: Repository, MIT license, and 2026-06-18 activity verified via the GitHub API on 2026-07-12. Reliability features help but do not guarantee correctness.
 ---
 
 ## Overview

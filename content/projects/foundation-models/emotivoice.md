@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "netease-youdao"
+org_or_maintainer: netease-youdao
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: emotivoice
-name: "EmotiVoice"
+name: EmotiVoice
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A multi-voice, prompt-controlled text-to-speech engine from NetEase Youdao that synthesizes English and Chinese speech with explicit emotion control via style"
+description: A multi-voice, prompt-controlled text-to-speech engine from NetEase Youdao that synthesizes English and Chinese speech with explicit emotion control via style
 github_url: https://github.com/netease-youdao/EmotiVoice
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
+  - voice
+  - multimodal
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 8486
-last_commit: "2024-08-13"
+github_stars: 8491
+last_commit: '2024-08-13'
 docs_url: https://github.com/netease-youdao/EmotiVoice
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A prompt-controlled TTS engine that steers emotional style through natural-language prompts across 2000+ preset voices."
+  - A prompt-controlled TTS engine that steers emotional style through natural-language prompts across 2000+ preset voices.
 best_for:
-  - "You need emotion-controllable English/Chinese speech driven by simple style prompts across many preset voices"
-  - "You want an Apache-2.0 TTS engine with an easy web UI and batch scripting for expressive output"
+  - You need emotion-controllable English/Chinese speech driven by simple style prompts across many preset voices
+  - You want an Apache-2.0 TTS engine with an easy web UI and batch scripting for expressive output
 avoid_if:
-  - "You need active upstream maintenance, since commits slowed after 2024"
-  - "You need zero-shot cloning of arbitrary voices rather than a fixed preset voice bank"
-enrichment_notes: "Repository, Apache-2.0 license, and last commit 2024-08-13 verified via the GitHub API on 2026-07-12. Included with a maintenance caveat."
+  - You need active upstream maintenance, since commits slowed after 2024
+  - You need zero-shot cloning of arbitrary voices rather than a fixed preset voice bank
+enrichment_notes: Repository, Apache-2.0 license, and last commit 2024-08-13 verified via the GitHub API on 2026-07-12. Included with a maintenance caveat.
 ---
 
 ## Overview

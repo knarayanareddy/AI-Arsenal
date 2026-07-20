@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "NVIDIA"
+org_or_maintainer: NVIDIA
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 31
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: nvidia-nemo
-name: "NVIDIA NeMo"
+name: NVIDIA NeMo
 artifact_type: framework
 category: voice-audio
 subcategory: frameworks
-description: "NVIDIA's scalable generative-AI framework for building, training, and fine-tuning speech (ASR/TTS), LLM, and multimodal models with GPU-optimized pipelines"
+description: NVIDIA's scalable generative-AI framework for building, training, and fine-tuning speech (ASR/TTS), LLM, and multimodal models with GPU-optimized pipelines
 github_url: https://github.com/NVIDIA/NeMo
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "fine-tuning"
-  - "multimodal"
-  - "llm"
-  - "self-hosted"
+  - voice
+  - fine-tuning
+  - multimodal
+  - llm
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 17762
-last_commit: "2026-07-11"
+github_stars: 17793
+last_commit: '2026-07-20'
 docs_url: https://docs.nvidia.com/nemo/
 phase: framework
 domain:
-  - "audio"
-  - "multimodal"
+  - audio
+  - multimodal
 relation_to_stack:
-  - "build-on-top"
-  - "fork-and-adapt"
+  - build-on-top
+  - fork-and-adapt
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A GPU-optimized framework for training and fine-tuning speech, language, and multimodal models with NVIDIA's Parakeet/Canary ASR and TTS families."
+  - A GPU-optimized framework for training and fine-tuning speech, language, and multimodal models with NVIDIA's Parakeet/Canary ASR and TTS families.
 best_for:
-  - "You train or fine-tune speech models on NVIDIA GPUs and want production ASR (Parakeet/Canary) and TTS with tensor/pipeline parallelism"
-  - "You need one framework that scales speech, LLM, and multimodal training across many GPUs"
+  - You train or fine-tune speech models on NVIDIA GPUs and want production ASR (Parakeet/Canary) and TTS with tensor/pipeline parallelism
+  - You need one framework that scales speech, LLM, and multimodal training across many GPUs
 avoid_if:
-  - "You are not on NVIDIA hardware or want a vendor-neutral, lightweight toolkit"
-  - "You only need inference of a single model, where a smaller runtime avoids the framework's weight"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12 (canonical URL redirects to the NeMo org). GPU-centric; benefits are largest on NVIDIA hardware."
+  - You are not on NVIDIA hardware or want a vendor-neutral, lightweight toolkit
+  - You only need inference of a single model, where a smaller runtime avoids the framework's weight
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-11 activity verified via the GitHub API on 2026-07-12 (canonical URL redirects to the NeMo org). GPU-centric; benefits are largest on NVIDIA hardware.
 ---
 
 ## Overview

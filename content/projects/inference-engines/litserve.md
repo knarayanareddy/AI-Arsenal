@@ -6,18 +6,21 @@ artifact_type: framework
 category: tooling
 subcategory: inference-engines
 description: Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code
-github_url: "https://github.com/Lightning-AI/LitServe"
+github_url: https://github.com/Lightning-AI/LitServe
 license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Lightning AI"
-tags: [inference, self-hosted, llm]
+org_or_maintainer: Lightning AI
+tags:
+  - inference
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 3910
-github_stars_last_30d: 0
-trending_score: 32
-last_commit: "2026-07-06"
-docs_url: "https://lightning.ai/docs/litserve"
+github_stars: 3920
+github_stars_last_30d: 10
+trending_score: 41
+last_commit: '2026-07-06'
+docs_url: https://lightning.ai/docs/litserve
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +31,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: inference-engine
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
   - General-purpose model-serving layer over FastAPI; fills the gap between raw FastAPI (no batching/GPU features) and specialized LLM servers like vLLM (fast but LLM-specific), for teams serving arbitrary models
 best_for:
@@ -45,12 +54,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (3,910), Apache-2.0 license, and last commit (2026-07-06) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (3,910), Apache-2.0 license, and last commit (2026-07-06) verified via the GitHub API on 2026-07-08. Feature claims from the docs/README; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/Lightning-AI/LitServe", "date": "2026-07-08", "description": "3,910 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/Lightning-AI/LitServe
+    date: '2026-07-08'
+    description: 3,910 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

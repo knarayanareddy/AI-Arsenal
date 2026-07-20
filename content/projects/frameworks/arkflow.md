@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "arkflow-rs"
+org_or_maintainer: arkflow-rs
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,49 +19,49 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: arkflow
-name: "ArkFlow"
+name: ArkFlow
 artifact_type: framework
 category: data-pipelines
 subcategory: frameworks
-description: "High-performance Rust stream-processing engine integrating messaging, databases, SQL/DataFusion, and machine-learning model execution"
+description: High-performance Rust stream-processing engine integrating messaging, databases, SQL/DataFusion, and machine-learning model execution
 github_url: https://github.com/arkflow-rs/arkflow
-license: "Apache-2.0"
-primary_language: "Rust"
+license: Apache-2.0
+primary_language: Rust
 tags:
-  - "data"
-  - "streaming"
-  - "inference"
-  - "self-hosted"
-  - "efficiency"
+  - data
+  - streaming
+  - inference
+  - self-hosted
+  - efficiency
 maturity: alpha
 cost_model: open-source
 github_stars: 1296
-last_commit: "2026-06-20"
+last_commit: '2026-07-15'
 docs_url: https://arkflow-rs.com/docs/intro/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "community-driven"
-  - "experimental"
+  - community-driven
+  - experimental
 ecosystem_role:
-  - "Rust stream-processing alternative to JVM or standalone dataflow systems, with AI inference as a pipeline stage"
+  - Rust stream-processing alternative to JVM or standalone dataflow systems, with AI inference as a pipeline stage
 best_for:
-  - "Building low-latency Rust dataflows across Kafka, NATS, or WebSocket inputs"
-  - "Embedding model inference and SQL transformations in one streaming pipeline"
+  - Building low-latency Rust dataflows across Kafka, NATS, or WebSocket inputs
+  - Embedding model inference and SQL transformations in one streaming pipeline
 avoid_if:
-  - "You need a mature connector ecosystem with long-term compatibility guarantees"
-  - "Your workload is batch ETL and does not benefit from Rust streaming or in-process inference"
-enrichment_notes: "Young Apache-2.0 ecosystem with a broad connector surface; default-branch last commit is 2026-06-20. Draft pending review."
+  - You need a mature connector ecosystem with long-term compatibility guarantees
+  - Your workload is batch ETL and does not benefit from Rust streaming or in-process inference
+enrichment_notes: Young Apache-2.0 ecosystem with a broad connector surface; default-branch last commit is 2026-06-20. Draft pending review.
 ---
 
 ## Overview

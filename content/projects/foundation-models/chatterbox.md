@@ -6,46 +6,60 @@ artifact_type: model
 category: voice-audio
 subcategory: open-source-models
 description: Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
-github_url: "https://github.com/resemble-ai/chatterbox"
+github_url: https://github.com/resemble-ai/chatterbox
 license: MIT
 primary_language: Python
 org_or_maintainer: resemble-ai
-tags: [self-hosted, multimodal, inference]
+tags:
+  - self-hosted
+  - multimodal
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 25426
-github_stars_last_30d: 0
-trending_score: 55
-last_commit: "2026-06-10"
-docs_url: "https://github.com/resemble-ai/chatterbox"
-demo_url: "https://huggingface.co/spaces/ResembleAI/Chatterbox"
+github_stars: 25587
+github_stars_last_30d: 161
+trending_score: 53
+last_commit: '2026-06-10'
+docs_url: https://github.com/resemble-ai/chatterbox
+demo_url: https://huggingface.co/spaces/ResembleAI/Chatterbox
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [audio]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, production-proven, actively-maintained]
+domain:
+  - audio
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - production-proven
+  - actively-maintained
 ecosystem_role:
-  - "The commercial-vendor gambit in open TTS: a voice-AI company (Resemble) open-sourcing a production-grade cloning model under MIT — bringing things research repos skip (default perceptual watermarking, emotion-intensity control, multilingual checkpoints, a paid-API upgrade path) and instantly becoming the most-starred open cloning-TTS release of its generation"
+  - 'The commercial-vendor gambit in open TTS: a voice-AI company (Resemble) open-sourcing a production-grade cloning model under MIT — bringing things research repos skip (default perceptual watermarking, emotion-intensity control, multilingual checkpoints, a paid-API upgrade path) and instantly becoming the most-starred open cloning-TTS release of its generation'
 best_for:
-  - "Commercial products needing self-hosted voice cloning — MIT license end to end (code and weights), which the F5-class alternatives' non-commercial training-data terms can't offer"
-  - "Expressive dialogue/agent voices: the exaggeration control dials emotion intensity per utterance — a control axis most open TTS lacks"
+  - Commercial products needing self-hosted voice cloning — MIT license end to end (code and weights), which the F5-class alternatives' non-commercial training-data terms can't offer
+  - 'Expressive dialogue/agent voices: the exaggeration control dials emotion intensity per utterance — a control axis most open TTS lacks'
 avoid_if:
-  - "You need minimal-footprint TTS — it's a 0.5B-parameter GPU-class model; Kokoro serves the embedded/CPU case at a fraction of the cost"
-  - "Your compliance posture forbids watermark removal debates entirely — outputs carry Resemble's PerTh watermark by design; verify that fits (or is required by) your policy before deploying"
+  - You need minimal-footprint TTS — it's a 0.5B-parameter GPU-class model; Kokoro serves the embedded/CPU case at a fraction of the cost
+  - Your compliance posture forbids watermark removal debates entirely — outputs carry Resemble's PerTh watermark by design; verify that fits (or is required by) your policy before deploying
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [f5-tts, kokoro]
+alternatives:
+  - f5-tts
+  - kokoro
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (25.4k), MIT, last push 2026-06-10 verified via the GitHub API on 2026-07-08. Benchmark claim (preferred over ElevenLabs in side-by-side evals) is the vendor's published result, flagged as such. Multilingual v2 coverage per official README.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/resemble-ai/chatterbox","date":"2026-07-08","description":"25.4k stars; Resemble AI's open production TTS, a 2025 breakout release"}
+  - source: github-trending
+    url: https://github.com/resemble-ai/chatterbox
+    date: '2026-07-08'
+    description: 25.4k stars; Resemble AI's open production TTS, a 2025 breakout release
 featured: false
 status: active
 ---

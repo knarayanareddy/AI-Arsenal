@@ -6,27 +6,36 @@ artifact_type: library
 category: voice-audio
 subcategory: inference-engines
 description: Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
-github_url: "https://github.com/SYSTRAN/faster-whisper"
+github_url: https://github.com/SYSTRAN/faster-whisper
 license: MIT
 primary_language: Python
 org_or_maintainer: SYSTRAN
-tags: [voice, inference, quantization]
+tags:
+  - voice
+  - inference
+  - quantization
 maturity: production
 cost_model: open-source
-github_stars: 24114
-github_stars_last_30d: 0
-trending_score: 55
-last_commit: "2025-11-19"
-docs_url: "https://github.com/SYSTRAN/faster-whisper#readme"
+github_stars: 24397
+github_stars_last_30d: 283
+trending_score: 63
+last_commit: '2025-11-19'
+docs_url: https://github.com/SYSTRAN/faster-whisper#readme
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [audio]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [actively-maintained, org-backed, production-proven]
+domain:
+  - audio
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - actively-maintained
+  - org-backed
+  - production-proven
 ecosystem_role:
-  - "The de facto production runtime for Whisper: same models, same accuracy, a fraction of the compute — the default backend that downstream speech tooling (WhisperX, speech-to-text servers, home-automation assistants) builds on instead of openai/whisper"
+  - 'The de facto production runtime for Whisper: same models, same accuracy, a fraction of the compute — the default backend that downstream speech tooling (WhisperX, speech-to-text servers, home-automation assistants) builds on instead of openai/whisper'
 best_for:
   - You're deploying Whisper transcription at scale or on constrained hardware — CTranslate2's fused kernels plus int8/float16 quantization cut latency and memory ~4x with no accuracy loss, changing the cost math of speech pipelines
   - You need batch transcription throughput — the batched inference pipeline multiplies throughput further on long-audio workloads
@@ -34,18 +43,23 @@ avoid_if:
   - You need word-level timestamps with high precision or speaker diarization — that's WhisperX's layer on top, not faster-whisper's job
   - You want maximum-accuracy streaming/realtime ASR with sub-second latency — Whisper's 30-second-window architecture is the wrong base; purpose-built streaming models fit better
 upstream_dependencies: []
-downstream_consumers: [whisperx]
-alternatives: [whisper]
+downstream_consumers:
+  - whisperx
+alternatives:
+  - whisper
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (24.1k), MIT, and last push (2025-11-19) verified via the GitHub API on 2026-07-08 — release cadence is slower than app-layer projects, consistent with a mature runtime. The ~4x speed and quantization figures are the project's own benchmarks against openai/whisper, widely corroborated by community reports but not re-measured here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/SYSTRAN/faster-whisper","date":"2026-07-08","description":"24.1k stars, MIT, backbone of the Whisper deployment ecosystem"}
+  - source: github-trending
+    url: https://github.com/SYSTRAN/faster-whisper
+    date: '2026-07-08'
+    description: 24.1k stars, MIT, backbone of the Whisper deployment ecosystem
 featured: false
 status: active
 ---

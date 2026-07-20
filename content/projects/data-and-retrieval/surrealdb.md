@@ -6,25 +6,36 @@ artifact_type: platform
 category: rag
 subcategory: vector-databases
 description: Multi-model database combining graph, document, vector, and time-series for AI agents
-github_url: "https://github.com/surrealdb/surrealdb"
+github_url: https://github.com/surrealdb/surrealdb
 license: Apache-2.0
 primary_language: Rust
 org_or_maintainer: null
-tags: [rag, retrieval, agents]
+tags:
+  - rag
+  - retrieval
+  - agents
 maturity: production
 cost_model: open-source
-github_stars: 28000
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-06-13"
+github_stars: 32733
+github_stars_last_30d: 4733
+trending_score: 55
+last_commit: '2026-07-06'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: data-and-retrieval
-domain: [language, multimodal, general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - language
+  - multimodal
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Multi-model database (relational, document, graph, vector, time-series) positioned specifically around unifying AI agent memory and context alongside application data
 best_for:
@@ -35,18 +46,26 @@ avoid_if:
   - You need best-in-class performance in any single data model (pure vector search, pure graph traversal) rather than a well-rounded multi-model system — specialized single-purpose databases will generally outperform a generalist in their specific niche
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [milvus, lancedb]
+alternatives:
+  - milvus
+  - lancedb
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: SurrealDB raised a $23M Series A extension (total $44M) in Feb 2026 citing 'strong momentum in real-world usage'; 2.3M downloads and 31K stars reported. Independent named enterprise cases beyond investor-quoted customers (e.g. Later) were limited.
-added_date: "2026-06-14"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-14'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso under vector-databases"}
-  - {"source":"conference","url":"https://www.finsmes.com/2026/02/surrealdb-raises-23m-in-additional-series-a-funding.html","date":"2026-02-17","description":"SurrealDB raised $23M Series A extension (total $44M) in Feb 2026, reporting 2.3M downloads and 31K GitHub stars; VP of Engineering at Later quoted describing production use for autonomous AI capabilities"}
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso under vector-databases
+  - source: conference
+    url: https://www.finsmes.com/2026/02/surrealdb-raises-23m-in-additional-series-a-funding.html
+    date: '2026-02-17'
+    description: SurrealDB raised $23M Series A extension (total $44M) in Feb 2026, reporting 2.3M downloads and 31K GitHub stars; VP of Engineering at Later quoted describing production use for autonomous AI capabilities
 featured: false
 status: active
 ---

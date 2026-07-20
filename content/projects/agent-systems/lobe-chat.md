@@ -6,25 +6,34 @@ artifact_type: platform
 category: llms
 subcategory: platforms
 description: Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
-github_url: "https://github.com/lobehub/lobehub"
-license: "Apache-2.0 (with additional terms for multi-tenant SaaS)"
+github_url: https://github.com/lobehub/lobehub
+license: Apache-2.0 (with additional terms for multi-tenant SaaS)
 primary_language: TypeScript
 org_or_maintainer: lobehub
-tags: [llm, self-hosted, agents]
+tags:
+  - llm
+  - self-hosted
+  - agents
 maturity: production
 cost_model: self-hostable
-github_stars: 79620
-github_stars_last_30d: 0
-trending_score: 72
-last_commit: "2026-07-08"
-docs_url: "https://lobehub.com/only-ai/markdown/docs/en/usage/start"
+github_stars: 80560
+github_stars_last_30d: 940
+trending_score: 80
+last_commit: '2026-07-20'
+docs_url: https://lobehub.com/only-ai/markdown/docs/en/usage/start
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [actively-maintained, community-driven, production-proven]
+domain:
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - actively-maintained
+  - community-driven
+  - production-proven
 ecosystem_role:
   - One of the two dominant self-hosted chat frontends (alongside Open WebUI), differentiated by its TypeScript/Next.js stack, agent/plugin marketplace, and polished multi-provider UX — the "bring your own API keys" deployment pattern for teams that want a ChatGPT-class interface without sending data to a SaaS
 best_for:
@@ -35,17 +44,23 @@ avoid_if:
   - You only need a thin UI over a local Ollama instance — Open WebUI is lighter to run and more tightly integrated with local-model workflows
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [open-webui, librechat]
-integrates_with: [ollama]
+alternatives:
+  - open-webui
+  - librechat
+integrates_with:
+  - ollama
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (79.6k), TypeScript, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. License nuance (Apache-2.0 base with additional terms) from the repository's LICENSE file. Feature claims from official docs; not independently benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/lobehub/lobehub","date":"2026-07-08","description":"79.6k stars, active daily development"}
+  - source: github-trending
+    url: https://github.com/lobehub/lobehub
+    date: '2026-07-08'
+    description: 79.6k stars, active daily development
 featured: false
 status: active
 ---

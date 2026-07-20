@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "smallcloudai"
+org_or_maintainer: smallcloudai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
-status: active
+status: archived
 id: refact
-name: "Refact.ai"
+name: Refact.ai
 artifact_type: platform
 category: code-generation
 subcategory: coding-agents
-description: "An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models"
+description: An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models
 github_url: https://github.com/smallcloudai/refact
-license: "BSD-3-Clause"
-primary_language: "Rust"
+license: BSD-3-Clause
+primary_language: Rust
 tags:
-  - "agents"
-  - "llm"
-  - "self-hosted"
+  - agents
+  - llm
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 3548
-last_commit: "2026-05-30"
+github_stars: 3549
+last_commit: '2026-05-30'
 docs_url: https://docs.refact.ai/
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A self-hostable coding agent that plans, executes, and iterates on engineering tasks across developer tools."
+  - A self-hostable coding agent that plans, executes, and iterates on engineering tasks across developer tools.
 best_for:
-  - "You want a self-hosted coding agent that integrates with your IDE and tools and can run local models"
-  - "You need an end-to-end agent that plans and iterates on tasks rather than just autocompleting code"
+  - You want a self-hosted coding agent that integrates with your IDE and tools and can run local models
+  - You need an end-to-end agent that plans and iterates on tasks rather than just autocompleting code
 avoid_if:
-  - "You prefer a fully managed cloud coding assistant with no infrastructure to run"
-  - "You need the broadest IDE ecosystem and polish of the largest commercial assistants"
-enrichment_notes: "Repository, BSD-3-Clause license, and 2026-05-30 activity verified via the GitHub API on 2026-07-12. Agentic code changes require review before merging."
+  - You prefer a fully managed cloud coding assistant with no infrastructure to run
+  - You need the broadest IDE ecosystem and polish of the largest commercial assistants
+enrichment_notes: Repository, BSD-3-Clause license, and 2026-05-30 activity verified via the GitHub API on 2026-07-12. Agentic code changes require review before merging.
 ---
 
 ## Overview

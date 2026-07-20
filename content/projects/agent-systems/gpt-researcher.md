@@ -1,50 +1,64 @@
 ---
 id: gpt-researcher
-name: "GPT Researcher"
+name: GPT Researcher
 version_tracked: null
 artifact_type: framework
 category: agents
 subcategory: autonomous
-description: "Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports"
-github_url: "https://github.com/assafelovic/gpt-researcher"
-license: "Apache-2.0"
+description: Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
+github_url: https://github.com/assafelovic/gpt-researcher
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Assaf Elovic / community"
-tags: [agents, rag, orchestration]
+org_or_maintainer: Assaf Elovic / community
+tags:
+  - agents
+  - rag
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 28151
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-05"
-docs_url: "https://docs.gptr.dev"
+github_stars: 28482
+github_stars_last_30d: 331
+trending_score: 66
+last_commit: '2026-07-18'
+docs_url: https://docs.gptr.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, fork-and-adapt]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The reference open-source implementation of 'deep research': a planner-executor architecture that decomposes a question into parallel search queries, scrapes and filters sources, and synthesizes a long-form cited report — predating and paralleling the commercial deep-research products."
+  - 'The reference open-source implementation of ''deep research'': a planner-executor architecture that decomposes a question into parallel search queries, scrapes and filters sources, and synthesizes a long-form cited report — predating and paralleling the commercial deep-research products.'
 best_for:
-  - "You want deep-research capability you can self-host, point at internal documents, or embed in your own product rather than paying per-report for commercial equivalents"
-  - "You need reports with traceable citations aggregated from many sources — the planner/executor design cross-validates across 20+ scraped pages by default, reducing single-source hallucination"
+  - You want deep-research capability you can self-host, point at internal documents, or embed in your own product rather than paying per-report for commercial equivalents
+  - You need reports with traceable citations aggregated from many sources — the planner/executor design cross-validates across 20+ scraped pages by default, reducing single-source hallucination
 avoid_if:
-  - "You need guaranteed factual accuracy for high-stakes decisions — aggregation reduces but does not eliminate hallucination, and web-source quality gates are heuristic"
-  - "A single web search suffices for your use case — a full research run costs multiple LLM calls and minutes of latency versus one cheap query"
+  - You need guaranteed factual accuracy for high-stakes decisions — aggregation reduces but does not eliminate hallucination, and web-source quality gates are heuristic
+  - A single web search suffices for your use case — a full research run costs multiple LLM calls and minutes of latency versus one cheap query
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
-integrates_with: [langgraph]
+integrates_with:
+  - langgraph
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (28,151), primary language, license, and last commit (2026-07-05) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (28,151), primary language, license, and last commit (2026-07-05) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/assafelovic/gpt-researcher", "date": "2026-07-08", "description": "28,151 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/assafelovic/gpt-researcher
+    date: '2026-07-08'
+    description: 28,151 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

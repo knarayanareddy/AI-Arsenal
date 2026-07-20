@@ -6,25 +6,36 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Role-based framework for orchestrating collaborative AI agent crews and flows
-github_url: "https://github.com/crewAIInc/crewAI"
+github_url: https://github.com/crewAIInc/crewAI
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, orchestration, planning, tool-use]
+tags:
+  - agents
+  - orchestration
+  - planning
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 53462
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://docs.crewai.com/"
+github_stars: 55834
+github_stars_last_30d: 2373
+trending_score: 55
+last_commit: '2026-07-19'
+docs_url: https://docs.crewai.com/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - Role-based multi-agent orchestration framework, positioned as more opinionated/higher-level than graph-based alternatives
 best_for:
@@ -35,17 +46,23 @@ avoid_if:
   - Your workflow doesn't naturally decompose into distinct agent 'roles' — a role-based framing can add unnecessary structure for simple pipeline tasks
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, metagpt, autogpt]
+alternatives:
+  - langgraph
+  - metagpt
+  - autogpt
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: CrewAI is frequently cited in LLMOps production case-study collections (e.g. ZenML's compiled case studies) as a framework used in real multi-agent production deployments, distinguishing it from purely experimental agent frameworks.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://docs.crewai.com/","date":"2026-06-13","description":"Official CrewAI documentation"}
+  - source: newsletter
+    url: https://docs.crewai.com/
+    date: '2026-06-13'
+    description: Official CrewAI documentation
 featured: false
 status: active
 ---

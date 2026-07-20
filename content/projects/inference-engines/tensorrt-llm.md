@@ -1,50 +1,68 @@
 ---
 id: tensorrt-llm
-name: "TensorRT-LLM"
+name: TensorRT-LLM
 version_tracked: null
 artifact_type: library
 category: llms
 subcategory: inference-engines
-description: "NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput"
-github_url: "https://github.com/NVIDIA/TensorRT-LLM"
-license: "Apache-2.0"
+description: NVIDIA's open-source LLM inference library with hand-tuned kernels, in-flight batching and FP8/FP4 quantization for peak GPU throughput
+github_url: https://github.com/NVIDIA/TensorRT-LLM
+license: Apache-2.0
 primary_language: C++
-org_or_maintainer: "NVIDIA"
-tags: [inference, llm, efficiency]
+org_or_maintainer: NVIDIA
+tags:
+  - inference
+  - llm
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 14065
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://nvidia.github.io/TensorRT-LLM/"
+github_stars: 14161
+github_stars_last_30d: 96
+trending_score: 48
+last_commit: '2026-07-20'
+docs_url: https://nvidia.github.io/TensorRT-LLM/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, actively-maintained, production-proven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - production-proven
 ecosystem_role:
-  - "NVIDIA's first-party inference stack: when you need the last 20-30% of throughput from H100/B200-class hardware and are willing to trade flexibility for hand-optimized kernels, FP8/NVFP4 quantization, and tight Triton Inference Server integration."
+  - 'NVIDIA''s first-party inference stack: when you need the last 20-30% of throughput from H100/B200-class hardware and are willing to trade flexibility for hand-optimized kernels, FP8/NVFP4 quantization, and tight Triton Inference Server integration.'
 best_for:
-  - "You run large fleets of NVIDIA GPUs where peak tokens-per-dollar justifies engine-build complexity — TRT-LLM's fused kernels and FP8/FP4 paths typically lead published throughput benchmarks on Hopper/Blackwell"
-  - "You already operate Triton Inference Server and want LLMs behind the same production serving layer as your other models"
+  - You run large fleets of NVIDIA GPUs where peak tokens-per-dollar justifies engine-build complexity — TRT-LLM's fused kernels and FP8/FP4 paths typically lead published throughput benchmarks on Hopper/Blackwell
+  - You already operate Triton Inference Server and want LLMs behind the same production serving layer as your other models
 avoid_if:
-  - "You iterate over many models or need instant model swaps — TRT-LLM historically requires per-model engine compilation, and its PyTorch runtime is still maturing relative to vLLM's load-and-go workflow"
-  - "You may ever need non-NVIDIA hardware — the stack is CUDA-only by design; vLLM/SGLang preserve portability"
+  - You iterate over many models or need instant model swaps — TRT-LLM historically requires per-model engine compilation, and its PyTorch runtime is still maturing relative to vLLM's load-and-go workflow
+  - You may ever need non-NVIDIA hardware — the stack is CUDA-only by design; vLLM/SGLang preserve portability
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [vllm, sglang, lmdeploy]
-integrates_with: [triton-inference-server]
+alternatives:
+  - vllm
+  - sglang
+  - lmdeploy
+integrates_with:
+  - triton-inference-server
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (14,065), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (14,065), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/NVIDIA/TensorRT-LLM", "date": "2026-07-08", "description": "14,065 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/NVIDIA/TensorRT-LLM
+    date: '2026-07-08'
+    description: 14,065 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

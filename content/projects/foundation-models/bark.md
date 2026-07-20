@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "suno-ai"
+org_or_maintainer: suno-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 10
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: bark
-name: "Bark"
+name: Bark
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A transformer text-to-audio model from Suno that generates speech, non-speech sounds, music, and sound effects from text prompts via GPT-style audio tokens and"
+description: A transformer text-to-audio model from Suno that generates speech, non-speech sounds, music, and sound effects from text prompts via GPT-style audio tokens and
 github_url: https://github.com/suno-ai/bark
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 39191
-last_commit: "2024-08-19"
+github_stars: 39201
+last_commit: '2024-08-19'
 docs_url: https://github.com/suno-ai/bark
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A generative text-to-audio model that produces speech plus laughter, music, and sound effects rather than clean read-aloud narration only."
+  - A generative text-to-audio model that produces speech plus laughter, music, and sound effects rather than clean read-aloud narration only.
 best_for:
-  - "You want expressive, creative audio generation including non-speech sounds, music cues, and multilingual speech from a single model"
-  - "You need an MIT-licensed model to study GPT-style audio token generation with the EnCodec codec"
+  - You want expressive, creative audio generation including non-speech sounds, music cues, and multilingual speech from a single model
+  - You need an MIT-licensed model to study GPT-style audio token generation with the EnCodec codec
 avoid_if:
-  - "You need reliable, controllable, word-accurate narration; Bark is generative and can hallucinate or drift from the text"
-  - "You need active upstream maintenance, since development effectively paused in 2024"
-enrichment_notes: "Repository, MIT license, and last commit 2024-08-19 verified via the GitHub API on 2026-07-12. Maintenance has stalled; included as a canonical study reference with that caveat."
+  - You need reliable, controllable, word-accurate narration; Bark is generative and can hallucinate or drift from the text
+  - You need active upstream maintenance, since development effectively paused in 2024
+enrichment_notes: Repository, MIT license, and last commit 2024-08-19 verified via the GitHub API on 2026-07-12. Maintenance has stalled; included as a canonical study reference with that caveat.
 ---
 
 ## Overview

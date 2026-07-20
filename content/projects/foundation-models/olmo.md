@@ -1,50 +1,63 @@
 ---
 id: olmo
-name: "OLMo"
+name: OLMo
 version_tracked: null
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science"
-github_url: "https://github.com/allenai/OLMo"
-license: "Apache-2.0"
+description: 'AI2''s fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science'
+github_url: https://github.com/allenai/OLMo
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Allen Institute for AI"
-tags: [llm, research, training]
+org_or_maintainer: Allen Institute for AI
+tags:
+  - llm
+  - research
+  - training
 maturity: production
 cost_model: open-source
-github_stars: 6574
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2025-11-24"
-docs_url: "https://allenai.org/olmo"
+github_stars: 6595
+github_stars_last_30d: 21
+trending_score: 42
+last_commit: '2025-11-24'
+docs_url: https://allenai.org/olmo
 demo_url: null
-paper_url: "https://arxiv.org/abs/2501.00656"
+paper_url: https://arxiv.org/abs/2501.00656
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [org-backed, research-origin, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - research-origin
+  - actively-maintained
 ecosystem_role:
-  - "The only major model family that is open in the full sense — weights, pretraining data (Dolma), training code, intermediate checkpoints, and logs — making it the substrate for research on training dynamics, data attribution, and memorization that closed-weights 'open' models cannot support."
+  - The only major model family that is open in the full sense — weights, pretraining data (Dolma), training code, intermediate checkpoints, and logs — making it the substrate for research on training dynamics, data attribution, and memorization that closed-weights 'open' models cannot support.
 best_for:
-  - "You do research that needs the full training story — intermediate checkpoints, exact data ordering, and training code let you study learning dynamics and data attribution rigorously"
-  - "You need a truly-auditable model for provenance-sensitive deployments — every token of training data is inspectable, unlike open-weights-only releases"
+  - You do research that needs the full training story — intermediate checkpoints, exact data ordering, and training code let you study learning dynamics and data attribution rigorously
+  - You need a truly-auditable model for provenance-sensitive deployments — every token of training data is inspectable, unlike open-weights-only releases
 avoid_if:
-  - "You just want the best open-weights model per parameter at inference time — Qwen, Llama, and Gemma families typically lead OLMo on capability benchmarks at matched sizes"
-  - "You need multimodal or very large scale options — the OLMo line focuses on fully-open text models at small-to-mid scales (Molmo covers vision separately)"
+  - You just want the best open-weights model per parameter at inference time — Qwen, Llama, and Gemma families typically lead OLMo on capability benchmarks at matched sizes
+  - You need multimodal or very large scale options — the OLMo line focuses on fully-open text models at small-to-mid scales (Molmo covers vision separately)
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (6,574), primary language, license, and last commit (2025-11-24) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (6,574), primary language, license, and last commit (2025-11-24) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/allenai/OLMo", "date": "2026-07-08", "description": "6,574 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/allenai/OLMo
+    date: '2026-07-08'
+    description: 6,574 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

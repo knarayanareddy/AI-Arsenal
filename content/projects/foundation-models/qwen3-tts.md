@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "QwenLM"
+org_or_maintainer: QwenLM
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 6
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: qwen3-tts
-name: "Qwen3-TTS"
+name: Qwen3-TTS
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "Alibaba's open-source TTS series for expressive speech synthesis, voice cloning, and voice design across ten languages"
+description: Alibaba's open-source TTS series for expressive speech synthesis, voice cloning, and voice design across ten languages
 github_url: https://github.com/QwenLM/Qwen3-TTS
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "streaming"
+  - voice
+  - multimodal
+  - self-hosted
+  - streaming
 maturity: beta
 cost_model: open-source
-github_stars: 12480
-last_commit: "2026-03-17"
+github_stars: 12486
+last_commit: '2026-03-17'
 docs_url: https://huggingface.co/collections/Qwen/qwen3-tts
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Open multilingual TTS family for voice agents, cloning, and voice design"
-  - "Self-hosted alternative to provider-only speech APIs"
+  - Open multilingual TTS family for voice agents, cloning, and voice design
+  - Self-hosted alternative to provider-only speech APIs
 best_for:
-  - "Multilingual voice assistants with streaming responses"
-  - "Voice cloning or designed voices for controlled product experiences"
+  - Multilingual voice assistants with streaming responses
+  - Voice cloning or designed voices for controlled product experiences
 avoid_if:
-  - "You need strict speaker-consent and provenance controls not supplied by the model"
-  - "Your product cannot provision GPU inference or review generated speech"
-enrichment_notes: "Verified against the cached README and GitHub metadata; model quality and voice similarity claims remain workload-dependent. Draft pending review."
+  - You need strict speaker-consent and provenance controls not supplied by the model
+  - Your product cannot provision GPU inference or review generated speech
+enrichment_notes: Verified against the cached README and GitHub metadata; model quality and voice similarity claims remain workload-dependent. Draft pending review.
 ---
 
 ## Overview

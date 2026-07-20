@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "QwenLM"
+org_or_maintainer: QwenLM
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 1
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: qwen3-omni
-name: "Qwen3-Omni"
+name: Qwen3-Omni
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Qwen's end-to-end omni-modal model family that accepts text, images, audio, and video and can return text plus streaming speech"
+description: Qwen's end-to-end omni-modal model family that accepts text, images, audio, and video and can return text plus streaming speech
 github_url: https://github.com/QwenLM/Qwen3-Omni
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "vision"
-  - "voice"
-  - "streaming"
-  - "llm"
+  - multimodal
+  - vision
+  - voice
+  - streaming
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 3898
-last_commit: "2026-04-23"
+github_stars: 3899
+last_commit: '2026-04-23'
 docs_url: https://huggingface.co/collections/Qwen/qwen3-omni-68d100a86cd0906843ceccbe
 phase: foundation-model
 domain:
-  - "multimodal"
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Open omni-modal model spanning text, image, audio, video, and speech"
-  - "Alternative to chaining separate modality APIs"
+  - Open omni-modal model spanning text, image, audio, video, and speech
+  - Alternative to chaining separate modality APIs
 best_for:
-  - "Multimodal assistants that need synchronized audio and video understanding"
-  - "Research on streaming speech output from mixed media prompts"
+  - Multimodal assistants that need synchronized audio and video understanding
+  - Research on streaming speech output from mixed media prompts
 avoid_if:
-  - "You need a small CPU model or predictable single-modality latency"
-  - "Your deployment cannot accommodate the model's multimodal preprocessing and GPU needs"
-enrichment_notes: "Verified from the cached README and API metadata; streaming quality and cross-modal reasoning should be benchmarked on representative media. Draft pending review."
+  - You need a small CPU model or predictable single-modality latency
+  - Your deployment cannot accommodate the model's multimodal preprocessing and GPU needs
+enrichment_notes: Verified from the cached README and API metadata; streaming quality and cross-modal reasoning should be benchmarked on representative media. Draft pending review.
 ---
 
 ## Overview

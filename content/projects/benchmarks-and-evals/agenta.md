@@ -6,18 +6,22 @@ artifact_type: platform
 category: observability
 subcategory: tracing
 description: Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
-github_url: "https://github.com/agenta-ai/agenta"
+github_url: https://github.com/agenta-ai/agenta
 license: MIT
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, evaluation, tracing, cloud]
+tags:
+  - observability
+  - evaluation
+  - tracing
+  - cloud
 maturity: production
 cost_model: freemium
-github_stars: 3900
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://docs.agenta.ai/"
+github_stars: 4312
+github_stars_last_30d: 412
+trending_score: 48
+last_commit: '2026-07-20'
+docs_url: https://docs.agenta.ai/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,15 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Open-source LLMOps platform combining prompt management, evaluation, and observability in a self-hostable stack
 best_for:
@@ -42,13 +52,17 @@ avoid_if:
   - You want the largest, most established ecosystem — Langfuse and LangSmith have substantially larger adoption and community integration coverage
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond the project's own documentation; assessment is based on public repository structure and feature documentation rather than an external case study.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

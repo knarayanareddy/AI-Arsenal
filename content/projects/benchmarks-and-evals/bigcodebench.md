@@ -1,50 +1,65 @@
 ---
 id: bigcodebench
-name: "BigCodeBench"
+name: BigCodeBench
 version_tracked: null
 artifact_type: dataset
 category: evaluation
 subcategory: evaluation
-description: "Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval"
-github_url: "https://github.com/bigcode-project/bigcodebench"
-license: "Apache-2.0"
+description: Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
+github_url: https://github.com/bigcode-project/bigcodebench
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "BigCode"
-tags: [evaluation, code-gen, llm]
+org_or_maintainer: BigCode
+tags:
+  - evaluation
+  - code-gen
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 513
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-01-03"
-docs_url: "https://bigcode-bench.github.io/"
+github_stars: 515
+github_stars_last_30d: 2
+trending_score: 39
+last_commit: '2026-01-03'
+docs_url: https://bigcode-bench.github.io/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2406.15877"
+paper_url: https://arxiv.org/abs/2406.15877
 paper_id: null
 phase: benchmark-and-eval
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference]
-health_signals: [research-origin, org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+health_signals:
+  - research-origin
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "The 'HumanEval is saturated' answer for practical code generation: 1,140 tasks requiring real library usage (pandas, requests, matplotlib across 139 libraries) with branch-coverage test suites, measuring whether models can compose APIs rather than write algorithmic toy functions."
+  - 'The ''HumanEval is saturated'' answer for practical code generation: 1,140 tasks requiring real library usage (pandas, requests, matplotlib across 139 libraries) with branch-coverage test suites, measuring whether models can compose APIs rather than write algorithmic toy functions.'
 best_for:
-  - "You are comparing code models on realistic library-composition tasks — average 5.6 test cases per task with ~99% branch coverage makes pass@k scores far more meaningful than HumanEval's"
-  - "You want both completion and instruction-following variants — BigCodeBench-Complete (docstring-driven) and -Instruct (NL-driven) separate raw coding ability from instruction alignment"
+  - You are comparing code models on realistic library-composition tasks — average 5.6 test cases per task with ~99% branch coverage makes pass@k scores far more meaningful than HumanEval's
+  - You want both completion and instruction-following variants — BigCodeBench-Complete (docstring-driven) and -Instruct (NL-driven) separate raw coding ability from instruction alignment
 avoid_if:
-  - "You need repo-scale, multi-file evaluation — tasks are single-function; SWE-bench and Terminal-Bench cover repository and operational settings"
-  - "You need contamination-proof scoring for the newest models — the dataset is public and static; LiveCodeBench's rolling problems address recency better"
+  - You need repo-scale, multi-file evaluation — tasks are single-function; SWE-bench and Terminal-Bench cover repository and operational settings
+  - You need contamination-proof scoring for the newest models — the dataset is public and static; LiveCodeBench's rolling problems address recency better
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [swe-bench, livecodebench]
+alternatives:
+  - swe-bench
+  - livecodebench
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (513), primary language, license, and last commit (2026-01-03) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (513), primary language, license, and last commit (2026-01-03) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/bigcode-project/bigcodebench", "date": "2026-07-08", "description": "513 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/bigcode-project/bigcodebench
+    date: '2026-07-08'
+    description: 513 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

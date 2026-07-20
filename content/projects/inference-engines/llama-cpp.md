@@ -6,18 +6,22 @@ artifact_type: library
 category: llms
 subcategory: inference-engines
 description: C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
-github_url: "https://github.com/ggml-org/llama.cpp"
+github_url: https://github.com/ggml-org/llama.cpp
 license: MIT
 primary_language: C++
 org_or_maintainer: null
-tags: [llm, inference, quantization, local]
+tags:
+  - llm
+  - inference
+  - quantization
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 116399
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://github.com/ggml-org/llama.cpp"
+github_stars: 121014
+github_stars_last_30d: 4620
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://github.com/ggml-org/llama.cpp
 demo_url: null
 paper_url: null
 paper_id: null
@@ -25,12 +29,20 @@ hf_url: null
 model_sizes: []
 benchmark_scores: []
 supports_quantization: true
-supported_formats: [GGUF]
+supported_formats:
+  - GGUF
 api_compatible: openai
 phase: inference-engine
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top, fork-and-adapt]
-health_signals: [community-driven, actively-maintained, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - fork-and-adapt
+health_signals:
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Pure C/C++ CPU/GPU inference engine underlying much of the local-LLM ecosystem (Ollama, LM Studio, and others build on it)
 best_for:
@@ -45,13 +57,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "llama.cpp is the most widely-embedded inference engine in the local-LLM ecosystem: Ollama, LM Studio, GPT4All, and many other downstream tools build directly on it, which is strong production/adoption evidence beyond star count alone."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'llama.cpp is the most widely-embedded inference engine in the local-LLM ecosystem: Ollama, LM Studio, GPT4All, and many other downstream tools build directly on it, which is strong production/adoption evidence beyond star count alone.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"hackernews","url":"https://www.xda-developers.com/ditched-lm-studio-for-llama-cpp-and-local-llm-doesnt-feel-like-downgrade-anymore/","date":"2026-05-23","description":"Independent reporting confirms llama.cpp is the core backend engine underlying LM Studio, Ollama, and most other local-LLM applications in production use"}
+  - source: hackernews
+    url: https://www.xda-developers.com/ditched-lm-studio-for-llama-cpp-and-local-llm-doesnt-feel-like-downgrade-anymore/
+    date: '2026-05-23'
+    description: Independent reporting confirms llama.cpp is the core backend engine underlying LM Studio, Ollama, and most other local-LLM applications in production use
 featured: false
 status: active
 ---

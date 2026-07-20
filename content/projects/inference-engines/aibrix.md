@@ -19,7 +19,7 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
+trending_score: 30
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,8 +42,8 @@ tags:
   - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 5000
-last_commit: '2026-07-11'
+github_stars: 4968
+last_commit: '2026-07-20'
 docs_url: https://aibrix.github.io/
 phase: inference-engine
 domain:

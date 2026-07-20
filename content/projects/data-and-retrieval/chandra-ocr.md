@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "datalab-to"
+org_or_maintainer: datalab-to
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 206
+trending_score: 46
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: chandra-ocr
-name: "Chandra"
+name: Chandra
 artifact_type: model
 category: computer-vision
 subcategory: document-processing
-description: "An OCR model from Datalab that handles complex tables, forms, and handwriting with full layout understanding, output as structured Markdown/HTML/JSON"
+description: An OCR model from Datalab that handles complex tables, forms, and handwriting with full layout understanding, output as structured Markdown/HTML/JSON
 github_url: https://github.com/datalab-to/chandra
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
-  - "data"
+  - multimodal
+  - self-hosted
+  - inference
+  - data
 maturity: beta
 cost_model: open-source
-github_stars: 11465
-last_commit: "2026-06-26"
+github_stars: 11671
+last_commit: '2026-06-26'
 docs_url: https://www.datalab.to
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A layout-aware OCR model that reconstructs tables, forms, and reading order into structured output."
+  - A layout-aware OCR model that reconstructs tables, forms, and reading order into structured output.
 best_for:
-  - "You need accurate extraction of complex tables, forms, and handwriting with preserved layout and reading order"
-  - "You want a self-hostable, Apache-2.0 document model that emits Markdown, HTML, or JSON"
+  - You need accurate extraction of complex tables, forms, and handwriting with preserved layout and reading order
+  - You want a self-hostable, Apache-2.0 document model that emits Markdown, HTML, or JSON
 avoid_if:
-  - "You only need simple printed-text extraction, where lighter engines are cheaper"
-  - "You lack a GPU and need very high throughput, since layout models are compute-heavy"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-26 activity verified via the GitHub API on 2026-07-12. From the Datalab team behind Marker; accuracy claims are project-reported."
+  - You only need simple printed-text extraction, where lighter engines are cheaper
+  - You lack a GPU and need very high throughput, since layout models are compute-heavy
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-26 activity verified via the GitHub API on 2026-07-12. From the Datalab team behind Marker; accuracy claims are project-reported.
 ---
 
 ## Overview

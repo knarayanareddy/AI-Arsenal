@@ -6,18 +6,22 @@ artifact_type: platform
 category: observability
 subcategory: tracing
 description: Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
-github_url: "https://github.com/comet-ml/opik"
+github_url: https://github.com/comet-ml/opik
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [observability, tracing, evaluation, monitoring]
+tags:
+  - observability
+  - tracing
+  - evaluation
+  - monitoring
 maturity: production
 cost_model: open-source
-github_stars: 19609
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://www.comet.com/docs/opik/"
+github_stars: 20718
+github_stars_last_30d: 1109
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://www.comet.com/docs/opik/
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,15 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Comet's open-source LLM evaluation and observability platform, extending Comet's existing ML experiment-tracking product line into the LLM/agent space
 best_for:
@@ -42,13 +52,17 @@ avoid_if:
   - You need the deepest LangChain-specific integration — LangSmith, built by the LangChain team, has tighter native support for that specific framework
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond Comet's own marketing; org-backing signal (Comet ML, an established experiment-tracking company) is solid, but a genuine named third-party production deployment specifically for Opik was not confirmed.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

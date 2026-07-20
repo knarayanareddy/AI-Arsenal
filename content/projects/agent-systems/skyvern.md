@@ -6,27 +6,36 @@ artifact_type: platform
 category: agents
 subcategory: browser-agents
 description: LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
-github_url: "https://github.com/Skyvern-AI/skyvern"
+github_url: https://github.com/Skyvern-AI/skyvern
 license: AGPL-3.0
 primary_language: Python
 org_or_maintainer: Skyvern-AI
-tags: [agents, tool-use, vision]
+tags:
+  - agents
+  - tool-use
+  - vision
 maturity: production
 cost_model: self-hostable
-github_stars: 22154
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-07-08"
-docs_url: "https://docs.skyvern.com"
+github_stars: 22518
+github_stars_last_30d: 364
+trending_score: 69
+last_commit: '2026-07-20'
+docs_url: https://docs.skyvern.com
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose, vision]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [actively-maintained, org-backed]
+domain:
+  - general-purpose
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The workflow-automation pole of the browser-agent space: where browser-use targets developers building agents, Skyvern targets replacing brittle RPA scripts — vision + LLM planning over screenshots so automations survive website redesigns"
+  - 'The workflow-automation pole of the browser-agent space: where browser-use targets developers building agents, Skyvern targets replacing brittle RPA scripts — vision + LLM planning over screenshots so automations survive website redesigns'
 best_for:
   - You maintain Selenium/Playwright/RPA scripts that break on every site update — Skyvern's per-run visual grounding (annotated screenshots → LLM-chosen actions) removes the hardcoded-selector fragility by mechanism
   - Your automation spans many unknown or changing third-party sites (procurement portals, government forms, invoice downloads) where writing per-site scripts doesn't scale
@@ -35,17 +44,22 @@ avoid_if:
   - AGPL-3.0 is incompatible with how you'd embed it — the license propagates for network-service usage; the hosted cloud is the escape hatch
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [browser-use, stagehand]
+alternatives:
+  - browser-use
+  - stagehand
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (22.1k), AGPL-3.0, and active development (last push 2026-07-08) verified via the GitHub API on 2026-07-08. Anti-fragility claims describe the mechanism (vision-based grounding vs selectors) per official docs; per-task reliability not independently benchmarked here.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/Skyvern-AI/skyvern","date":"2026-07-08","description":"22.1k stars, YC-backed company, active development"}
+  - source: github-trending
+    url: https://github.com/Skyvern-AI/skyvern
+    date: '2026-07-08'
+    description: 22.1k stars, YC-backed company, active development
 featured: false
 status: active
 ---

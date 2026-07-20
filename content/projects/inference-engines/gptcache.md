@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "zilliztech"
+org_or_maintainer: zilliztech
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: gptcache
-name: "GPTCache"
+name: GPTCache
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "A semantic cache for LLM applications that stores past query embeddings and responses to serve similar future queries from cache, cutting API cost and latency"
+description: A semantic cache for LLM applications that stores past query embeddings and responses to serve similar future queries from cache, cutting API cost and latency
 github_url: https://github.com/zilliztech/GPTCache
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "llm"
-  - "embeddings"
-  - "self-hosted"
-  - "observability"
+  - llm
+  - embeddings
+  - self-hosted
+  - observability
 maturity: beta
 cost_model: open-source
-github_stars: 8094
-last_commit: "2025-07-11"
+github_stars: 8099
+last_commit: '2025-07-11'
 docs_url: https://gptcache.readthedocs.io/
 phase: inference-engine
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "org-backed"
+  - org-backed
 ecosystem_role:
-  - "A semantic caching layer that reuses answers to similar prompts to reduce LLM cost and latency."
+  - A semantic caching layer that reuses answers to similar prompts to reduce LLM cost and latency.
 best_for:
-  - "You have repetitive or similar LLM queries and want to cut cost and latency with a semantic cache"
-  - "You want drop-in caching for LangChain/LlamaIndex apps keyed by embedding similarity, not exact match"
+  - You have repetitive or similar LLM queries and want to cut cost and latency with a semantic cache
+  - You want drop-in caching for LangChain/LlamaIndex apps keyed by embedding similarity, not exact match
 avoid_if:
-  - "Your queries are highly unique so cache hit rates would be low"
-  - "Serving slightly stale or approximate answers is unacceptable for your use case"
-enrichment_notes: "Repository, MIT license, and 2025-07-11 activity verified via the GitHub API on 2026-07-12. Upstream cadence has slowed; validate similarity thresholds to avoid wrong-answer hits."
+  - Your queries are highly unique so cache hit rates would be low
+  - Serving slightly stale or approximate answers is unacceptable for your use case
+enrichment_notes: Repository, MIT license, and 2025-07-11 activity verified via the GitHub API on 2026-07-12. Upstream cadence has slowed; validate similarity thresholds to avoid wrong-answer hits.
 ---
 
 ## Overview

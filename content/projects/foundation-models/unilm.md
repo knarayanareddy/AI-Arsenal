@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 9
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: unilm
-name: "UniLM"
+name: UniLM
 artifact_type: library
 category: multimodal
 subcategory: models
-description: "Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR"
+description: Microsoft's large research repository of self-supervised pretrained models across languages, tasks, and modalities, including BEiT, LayoutLM, WavLM, and TrOCR
 github_url: https://github.com/microsoft/unilm
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
+  - multimodal
+  - fine-tuning
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 22157
-last_commit: "2026-01-23"
+github_stars: 22166
+last_commit: '2026-01-23'
 docs_url: https://github.com/microsoft/unilm
 phase: foundation-model
 domain:
-  - "multimodal"
-  - "language"
-  - "vision"
+  - multimodal
+  - language
+  - vision
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "org-backed"
+  - research-origin
+  - org-backed
 ecosystem_role:
-  - "A collection of influential Microsoft foundation-model families spanning text, document, vision, and speech pretraining."
+  - A collection of influential Microsoft foundation-model families spanning text, document, vision, and speech pretraining.
 best_for:
-  - "You need a canonical model family like LayoutLM (documents), BEiT (vision), or WavLM (speech) to fine-tune"
-  - "You are studying self-supervised pretraining methods across modalities from an authoritative source"
+  - You need a canonical model family like LayoutLM (documents), BEiT (vision), or WavLM (speech) to fine-tune
+  - You are studying self-supervised pretraining methods across modalities from an authoritative source
 avoid_if:
-  - "You want a single packaged product, since this is a research monorepo of many separate models"
-  - "You need long-term maintenance guarantees for a specific sub-project"
-enrichment_notes: "Repository, MIT license, and 2026-01-23 activity verified via the GitHub API on 2026-07-12. A monorepo; individual sub-projects vary in maintenance."
+  - You want a single packaged product, since this is a research monorepo of many separate models
+  - You need long-term maintenance guarantees for a specific sub-project
+enrichment_notes: Repository, MIT license, and 2026-01-23 activity verified via the GitHub API on 2026-07-12. A monorepo; individual sub-projects vary in maintenance.
 ---
 
 ## Overview

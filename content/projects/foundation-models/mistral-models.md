@@ -6,31 +6,46 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Mistral open-weight model family including dense and mixture-of-experts language models
-github_url: "https://github.com/mistralai/mistral-inference"
+github_url: https://github.com/mistralai/mistral-inference
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, local, efficiency]
+tags:
+  - llm
+  - inference
+  - local
+  - efficiency
 maturity: production
 cost_model: open-source
-github_stars: 10816
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-04-20"
-docs_url: "https://docs.mistral.ai/"
+github_stars: 10831
+github_stars_last_30d: 15
+trending_score: 16
+last_commit: '2026-06-16'
+docs_url: https://docs.mistral.ai/
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/mistralai"
-model_sizes: [7B, 8x7B, 8x22B, 24B]
+hf_url: https://huggingface.co/mistralai
+model_sizes:
+  - 7B
+  - 8x7B
+  - 8x22B
+  - 24B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language, vision]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Mistral AI's open-weight model family, notable for early and influential sparse Mixture-of-Experts (Mixtral) releases
 best_for:
@@ -46,8 +61,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Mistral's 2025-2026 release cadence (Mistral Large 3 in Dec 2025, Ministral 3 and Devstral 2 in Dec 2025, Mistral Small 4 in March 2026, per Wikipedia's Mistral AI page) confirms the 7B/Mixtral generation catalogued here is now a legacy tier relative to Mistral's current lineup, though it remains widely deployed and referenced as the influential early MoE release.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

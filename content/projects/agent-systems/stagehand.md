@@ -6,25 +6,33 @@ artifact_type: framework
 category: agents
 subcategory: browser-agents
 description: Open-source browser-AI framework for reliable AI agent web interactions
-github_url: "https://github.com/browserbase/stagehand"
+github_url: https://github.com/browserbase/stagehand
 license: MIT
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [agents, orchestration]
+tags:
+  - agents
+  - orchestration
 maturity: production
 cost_model: open-source
-github_stars: 5400
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-06-13"
+github_stars: 23568
+github_stars_last_30d: 18168
+trending_score: 55
+last_commit: '2026-07-17'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - Hybrid AI+code browser automation framework from Browserbase, positioned between brittle CSS-selector scripts and fully autonomous browsing agents
 best_for:
@@ -35,17 +43,23 @@ avoid_if:
   - You need pure deterministic browser automation for a well-defined, stable test suite — plain Playwright without the AI layer is simpler and has no LLM-call latency/cost
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [playwright, firecrawl]
-integrates_with: [browserbase]
+alternatives:
+  - playwright
+  - firecrawl
+integrates_with:
+  - browserbase
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture (CDP-native as of v3, removing the prior Playwright dependency for a 44% performance improvement on complex DOM interactions; act()/extract()/observe()/agent() primitives; multi-provider LLM support) is sourced from Browserbase's own deepwiki documentation and corroborated by independent third-party comparison coverage (scrapfly.io), not just marketing copy.
-added_date: "2026-06-14"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-14'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://toolradar.com/featured/techpresso","date":"2026-06-14","description":"Featured in Techpresso under browser-agents"}
+  - source: newsletter
+    url: https://toolradar.com/featured/techpresso
+    date: '2026-06-14'
+    description: Featured in Techpresso under browser-agents
 featured: false
 status: active
 ---

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "2noise"
+org_or_maintainer: 2noise
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 53
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: chattts
-name: "ChatTTS"
+name: ChatTTS
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "A generative speech model tuned for natural conversational dialogue in English and Chinese, with fine-grained prosody and laughter control tokens"
+description: A generative speech model tuned for natural conversational dialogue in English and Chinese, with fine-grained prosody and laughter control tokens
 github_url: https://github.com/2noise/ChatTTS
-license: "AGPL-3.0"
-primary_language: "Python"
+license: AGPL-3.0
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
-  - "streaming"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
+  - streaming
 maturity: beta
 cost_model: open-source
-github_stars: 39599
-last_commit: "2026-04-10"
+github_stars: 39652
+last_commit: '2026-04-10'
 docs_url: https://github.com/2noise/ChatTTS
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "community-driven"
-  - "research-origin"
+  - community-driven
+  - research-origin
 ecosystem_role:
-  - "A dialogue-optimized TTS model that emits expressive, multi-speaker conversational speech with inline prosody and disfluency control."
+  - A dialogue-optimized TTS model that emits expressive, multi-speaker conversational speech with inline prosody and disfluency control.
 best_for:
-  - "You need conversational, chatbot-style speech with natural pauses, laughter, and prosody rather than flat read-aloud narration"
-  - "You are building English/Chinese voice agents and want an open model you can run locally for that specific dialogue register"
+  - You need conversational, chatbot-style speech with natural pauses, laughter, and prosody rather than flat read-aloud narration
+  - You are building English/Chinese voice agents and want an open model you can run locally for that specific dialogue register
 avoid_if:
-  - "Your use case is commercial and cannot accept AGPL-3.0 copyleft obligations on derived services"
-  - "You need broad multilingual coverage beyond English and Chinese, where multilingual models like XTTS fit better"
-enrichment_notes: "Repository, AGPL-3.0 license, and 2026-04-10 activity verified via the GitHub API on 2026-07-12. AGPL copyleft has real implications for hosted services; verify licensing before production use."
+  - Your use case is commercial and cannot accept AGPL-3.0 copyleft obligations on derived services
+  - You need broad multilingual coverage beyond English and Chinese, where multilingual models like XTTS fit better
+enrichment_notes: Repository, AGPL-3.0 license, and 2026-04-10 activity verified via the GitHub API on 2026-07-12. AGPL copyleft has real implications for hosted services; verify licensing before production use.
 ---
 
 ## Overview

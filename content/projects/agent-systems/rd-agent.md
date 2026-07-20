@@ -6,20 +6,23 @@ artifact_type: framework
 category: agents
 subcategory: autonomous
 description: Microsoft agent framework that automates R&D — proposing ideas, writing and running code, and iterating on data-science/quant modeling and factor mining
-github_url: "https://github.com/microsoft/RD-Agent"
+github_url: https://github.com/microsoft/RD-Agent
 license: MIT
 primary_language: Python
-org_or_maintainer: "Microsoft Research"
-tags: [agents, llm, evaluation]
+org_or_maintainer: Microsoft Research
+tags:
+  - agents
+  - llm
+  - evaluation
 maturity: beta
 cost_model: open-source
-github_stars: 13824
-github_stars_last_30d: 0
-trending_score: 38
-last_commit: "2026-06-15"
-docs_url: "https://rdagent.readthedocs.io/en/latest/"
+github_stars: 13953
+github_stars_last_30d: 129
+trending_score: 50
+last_commit: '2026-07-16'
+docs_url: https://rdagent.readthedocs.io/en/latest/
 demo_url: null
-paper_url: "https://arxiv.org/abs/2505.14738"
+paper_url: https://arxiv.org/abs/2505.14738
 paper_id: null
 hf_url: null
 model_sizes: []
@@ -28,9 +31,15 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: agent-system
-domain: [language]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, research-origin, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - research-origin
+  - actively-maintained
 ecosystem_role:
   - Research-and-development automation agent from Microsoft; a specialized alternative to general coding agents, targeting the propose->implement->evaluate loop of data-science and quantitative modeling rather than generic software tasks
 best_for:
@@ -45,12 +54,16 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (13,824), MIT license, and last commit (2026-06-15) verified via the GitHub API on 2026-07-08. Capability claims from the paper/docs; not hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (13,824), MIT license, and last commit (2026-06-15) verified via the GitHub API on 2026-07-08. Capability claims from the paper/docs; not hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/microsoft/RD-Agent", "date": "2026-07-08", "description": "13,824 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/microsoft/RD-Agent
+    date: '2026-07-08'
+    description: 13,824 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

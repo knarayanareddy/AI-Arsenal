@@ -6,18 +6,22 @@ artifact_type: platform
 category: observability
 subcategory: tracing
 description: Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
-github_url: "https://github.com/langfuse/langfuse"
+github_url: https://github.com/langfuse/langfuse
 license: MIT core / Enterprise
 primary_language: TypeScript
 org_or_maintainer: null
-tags: [observability, tracing, evaluation, self-hosted]
+tags:
+  - observability
+  - tracing
+  - evaluation
+  - self-hosted
 maturity: production
 cost_model: freemium
-github_stars: 29021
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-06-13"
-docs_url: "https://langfuse.com/docs"
+github_stars: 31476
+github_stars_last_30d: 2457
+trending_score: 55
+last_commit: '2026-07-20'
+docs_url: https://langfuse.com/docs
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,16 @@ supported_formats: []
 api_compatible: null
 approach: sdk
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained, production-proven]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
+  - production-proven
 ecosystem_role:
   - Open-source LLM observability and evaluation platform, one of the most widely adopted self-hostable options with a fully-open-source product model
 best_for:
@@ -42,17 +53,26 @@ avoid_if:
   - You need a fully managed-only experience with zero self-hosting operational responsibility — Langfuse's strength is precisely its self-hostable flexibility, which is not relevant if you always intend to use the managed cloud
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langsmith-platform, phoenix, helicone, opik]
-integrates_with: [langchain, langgraph]
+alternatives:
+  - langsmith-platform
+  - phoenix
+  - helicone
+  - opik
+integrates_with:
+  - langchain
+  - langgraph
 corresponding_tool_entry: langfuse-prompts
 enrichment_status: reviewed
 enrichment_notes: Langfuse's co-founder/CEO confirmed via a public July 2025 Reddit response that OSS Langfuse 'scales to billions of events' and runs the same backend as their largest self-hosted enterprise deployments -- primary-source confirmation, not marketing. A separate 'case study' found elsewhere was explicitly an anonymised composite, not used as evidence.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"reddit","url":"https://www.reddit.com/r/LangChain/comments/1m27js0/is_langfuse_selfhosted_really_equal_to_the/","date":"2025-07-17","description":"Langfuse co-founder/CEO confirms in a public reddit response that Langfuse OSS scales to billions of events and runs the same backend as their largest self-hosted enterprise deployments"}
+  - source: reddit
+    url: https://www.reddit.com/r/LangChain/comments/1m27js0/is_langfuse_selfhosted_really_equal_to_the/
+    date: '2025-07-17'
+    description: Langfuse co-founder/CEO confirms in a public reddit response that Langfuse OSS scales to billions of events and runs the same backend as their largest self-hosted enterprise deployments
 featured: false
 status: active
 ---

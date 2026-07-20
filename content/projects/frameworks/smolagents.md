@@ -6,25 +6,35 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Hugging Face library for lightweight agents that can reason and act through code
-github_url: "https://github.com/huggingface/smolagents"
+github_url: https://github.com/huggingface/smolagents
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, tool-use, reasoning, local]
+tags:
+  - agents
+  - tool-use
+  - reasoning
+  - local
 maturity: production
 cost_model: open-source
-github_stars: 27839
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-09"
-docs_url: "https://huggingface.co/docs/smolagents"
+github_stars: 28446
+github_stars_last_30d: 607
+trending_score: 55
+last_commit: '2026-07-14'
+docs_url: https://huggingface.co/docs/smolagents
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Hugging Face's minimal, code-first agent framework emphasizing simplicity over feature breadth
 best_for:
@@ -35,17 +45,22 @@ avoid_if:
   - You need multi-agent orchestration at scale — smolagents is oriented toward single or simply-composed agents rather than complex multi-agent graphs
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langgraph, crewai]
+alternatives:
+  - langgraph
+  - crewai
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Backed by Hugging Face (a major, well-established AI infrastructure org), which supports the org-backed signal despite the project's intentionally small scope and correspondingly modest production case-study footprint.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://huggingface.co/docs/smolagents","date":"2026-06-13","description":"Hugging Face docs"}
+  - source: newsletter
+    url: https://huggingface.co/docs/smolagents
+    date: '2026-06-13'
+    description: Hugging Face docs
 featured: false
 status: active
 ---

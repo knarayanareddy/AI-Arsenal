@@ -1,50 +1,66 @@
 ---
 id: graphiti
-name: "Graphiti"
+name: Graphiti
 version_tracked: null
 artifact_type: framework
 category: rag
 subcategory: vector-databases
-description: "Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents"
-github_url: "https://github.com/getzep/graphiti"
-license: "Apache-2.0"
+description: Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
+github_url: https://github.com/getzep/graphiti
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "Zep AI"
-tags: [memory, rag, agents]
+org_or_maintainer: Zep AI
+tags:
+  - memory
+  - rag
+  - agents
 maturity: beta
 cost_model: open-source
-github_stars: 28508
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://help.getzep.com/graphiti/getting-started/overview"
+github_stars: 28956
+github_stars_last_30d: 448
+trending_score: 76
+last_commit: '2026-07-20'
+docs_url: https://help.getzep.com/graphiti/getting-started/overview
 demo_url: null
-paper_url: "https://arxiv.org/abs/2501.13956"
+paper_url: https://arxiv.org/abs/2501.13956
 paper_id: null
 phase: data-and-retrieval
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained, research-origin]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "The temporal-knowledge-graph approach to agent memory: instead of appending embeddings to a vector store, Graphiti incrementally builds an entity-relationship graph where every edge carries validity intervals, so agents can ask what was true when — the engine underneath Zep's memory platform."
+  - 'The temporal-knowledge-graph approach to agent memory: instead of appending embeddings to a vector store, Graphiti incrementally builds an entity-relationship graph where every edge carries validity intervals, so agents can ask what was true when — the engine underneath Zep''s memory platform.'
 best_for:
-  - "Your agent's memory must handle facts that change (preferences, org charts, project status) — bi-temporal edges invalidate stale facts instead of letting contradictory chunks compete at retrieval time"
-  - "You need sub-second memory queries without LLM calls at read time — retrieval fuses semantic, BM25, and graph-traversal search over precomputed structure rather than summarizing on the fly"
+  - Your agent's memory must handle facts that change (preferences, org charts, project status) — bi-temporal edges invalidate stale facts instead of letting contradictory chunks compete at retrieval time
+  - You need sub-second memory queries without LLM calls at read time — retrieval fuses semantic, BM25, and graph-traversal search over precomputed structure rather than summarizing on the fly
 avoid_if:
-  - "Your use case is stateless document Q&A — a plain vector store is simpler and cheaper than running Neo4j/FalkorDB plus LLM-driven graph extraction per ingested episode"
-  - "You cannot afford ingestion-time LLM costs — every episode triggers entity/edge extraction and deduplication calls, which dominates cost at high write volumes"
+  - Your use case is stateless document Q&A — a plain vector store is simpler and cheaper than running Neo4j/FalkorDB plus LLM-driven graph extraction per ingested episode
+  - You cannot afford ingestion-time LLM costs — every episode triggers entity/edge extraction and deduplication calls, which dominates cost at high write volumes
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [mem0]
-integrates_with: [letta, zep]
+alternatives:
+  - mem0
+integrates_with:
+  - letta
+  - zep
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (28,508), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (28,508), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/getzep/graphiti", "date": "2026-07-08", "description": "28,508 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/getzep/graphiti
+    date: '2026-07-08'
+    description: 28,508 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

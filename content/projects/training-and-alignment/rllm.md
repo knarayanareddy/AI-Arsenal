@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "rllm-org"
+org_or_maintainer: rllm-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -19,51 +19,51 @@ reviewed_by: maintainer
 buzz_sources: []
 featured: false
 github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: rllm
-name: "rLLM"
+name: rLLM
 artifact_type: framework
 category: agents
 subcategory: frameworks
-description: "Reinforcement-learning framework for training language agents across model backends, sandboxes, rollouts, and benchmarks"
+description: Reinforcement-learning framework for training language agents across model backends, sandboxes, rollouts, and benchmarks
 github_url: https://github.com/rllm-org/rllm
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "agents"
-  - "training"
-  - "rlhf"
-  - "reasoning"
-  - "benchmark"
-  - "tool-use"
+  - agents
+  - training
+  - rlhf
+  - reasoning
+  - benchmark
+  - tool-use
 maturity: alpha
 cost_model: open-source
 github_stars: 5708
-last_commit: "2026-07-15"
+last_commit: '2026-07-19'
 docs_url: https://docs.rllm-project.com/
 phase: training-and-alignment
 domain:
-  - "reinforcement-learning"
-  - "language"
+  - reinforcement-learning
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "study-and-reference"
+  - build-on-top
+  - study-and-reference
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "Agentic-RL training layer that complements agent harnesses and competes with narrower LLM post-training stacks"
+  - Agentic-RL training layer that complements agent harnesses and competes with narrower LLM post-training stacks
 best_for:
-  - "Training tool-using language agents with environment feedback"
-  - "Running comparable RL experiments across Tinker, Verl, or provider backends"
+  - Training tool-using language agents with environment feedback
+  - Running comparable RL experiments across Tinker, Verl, or provider backends
 avoid_if:
-  - "You lack GPU, sandbox, or external-provider budget for rollout-heavy training"
-  - "You need supervised fine-tuning only without environment trajectories"
-enrichment_notes: "Apache-2.0, rapidly evolving RL stack with substantial backend and sandbox costs. Draft pending review."
+  - You lack GPU, sandbox, or external-provider budget for rollout-heavy training
+  - You need supervised fine-tuning only without environment trajectories
+enrichment_notes: Apache-2.0, rapidly evolving RL stack with substantial backend and sandbox costs. Draft pending review.
 ---
 
 ## Overview

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T21:22:54.218Z",
+    "generated_at": "2026-07-20T11:51:57.115Z",
     "total_projects": 322,
     "total_tools": 214,
     "total_papers": 128,
@@ -3355,7 +3355,7 @@
       "category": "rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -6444,7 +6444,7 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -10855,7 +10855,7 @@
       "category": "tooling",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -13314,7 +13314,7 @@
       "category": "voice-audio",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -14780,7 +14780,7 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -17670,7 +17670,7 @@
       "category": "observability",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {

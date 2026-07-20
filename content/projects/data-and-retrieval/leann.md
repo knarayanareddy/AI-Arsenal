@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "StarTrail-org"
+org_or_maintainer: StarTrail-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 50
+trending_score: 34
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: leann
-name: "LEANN"
+name: LEANN
 artifact_type: library
 category: rag
 subcategory: vector-databases
-description: "A storage-efficient vector index for on-device RAG that reportedly cuts index size by ~97% via graph-based selective recomputation instead of storing all"
+description: A storage-efficient vector index for on-device RAG that reportedly cuts index size by ~97% via graph-based selective recomputation instead of storing all
 github_url: https://github.com/StarTrail-org/LEANN
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "rag"
-  - "embeddings"
-  - "self-hosted"
-  - "llm"
+  - rag
+  - embeddings
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 12664
-last_commit: "2026-07-03"
+github_stars: 12714
+last_commit: '2026-07-19'
 docs_url: https://github.com/StarTrail-org/LEANN
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "research-origin"
+  - actively-maintained
+  - research-origin
 ecosystem_role:
-  - "A low-storage vector index that makes private, on-device RAG practical by avoiding full embedding storage."
+  - A low-storage vector index that makes private, on-device RAG practical by avoiding full embedding storage.
 best_for:
-  - "You need fully local, private RAG on a personal device where storing all embeddings is too large"
-  - "You want to index large personal corpora (files, mail, browser history) with a tiny on-disk footprint"
+  - You need fully local, private RAG on a personal device where storing all embeddings is too large
+  - You want to index large personal corpora (files, mail, browser history) with a tiny on-disk footprint
 avoid_if:
-  - "You need maximum query throughput at datacenter scale, where a full ANN vector database is more appropriate"
-  - "Recomputation latency during search is unacceptable for your workload"
-enrichment_notes: "Repository, MIT license, and 2026-07-03 activity verified via the GitHub API on 2026-07-12. MLSys 2026 paper; storage-savings figures are project-reported."
+  - You need maximum query throughput at datacenter scale, where a full ANN vector database is more appropriate
+  - Recomputation latency during search is unacceptable for your workload
+enrichment_notes: Repository, MIT license, and 2026-07-03 activity verified via the GitHub API on 2026-07-12. MLSys 2026 paper; storage-savings figures are project-reported.
 ---
 
 ## Overview

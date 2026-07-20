@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "index-tts"
+org_or_maintainer: index-tts
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 202
+trending_score: 46
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: index-tts
-name: "IndexTTS"
+name: IndexTTS
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "An industrial-grade controllable zero-shot text-to-speech system from Bilibili, designed for efficient"
+description: An industrial-grade controllable zero-shot text-to-speech system from Bilibili, designed for efficient
 github_url: https://github.com/index-tts/index-tts
-license: "NOASSERTION"
-primary_language: "Python"
+license: NOASSERTION
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
-  - "streaming"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
+  - streaming
 maturity: beta
 cost_model: open-source
-github_stars: 21803
-last_commit: "2026-07-08"
+github_stars: 22005
+last_commit: '2026-07-14'
 docs_url: https://github.com/index-tts/index-tts
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A production-oriented zero-shot TTS system emphasizing stability, efficiency, and character-level pronunciation control for CJK and English."
+  - A production-oriented zero-shot TTS system emphasizing stability, efficiency, and character-level pronunciation control for CJK and English.
 best_for:
-  - "You need stable, efficient zero-shot cloning tuned for Chinese and English with explicit pinyin/pronunciation correction"
-  - "You want an industry-backed open TTS system aimed at deployment rather than a pure research demo"
+  - You need stable, efficient zero-shot cloning tuned for Chinese and English with explicit pinyin/pronunciation correction
+  - You want an industry-backed open TTS system aimed at deployment rather than a pure research demo
 avoid_if:
-  - "You cannot verify the repository's non-standard license terms for commercial use"
-  - "You need broad coverage of many non-CJK languages, where multilingual-first models fit better"
-enrichment_notes: "Repository and 2026-07-08 activity verified via the GitHub API on 2026-07-12. License metadata is NOASSERTION; confirm terms before adoption. Efficiency claims are project-reported."
+  - You cannot verify the repository's non-standard license terms for commercial use
+  - You need broad coverage of many non-CJK languages, where multilingual-first models fit better
+enrichment_notes: Repository and 2026-07-08 activity verified via the GitHub API on 2026-07-12. License metadata is NOASSERTION; confirm terms before adoption. Efficiency claims are project-reported.
 ---
 
 ## Overview

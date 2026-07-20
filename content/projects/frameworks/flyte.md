@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "flyteorg"
+org_or_maintainer: flyteorg
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 10
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: flyte
-name: "Flyte"
+name: Flyte
 artifact_type: platform
 category: data-pipelines
 subcategory: platforms
-description: "A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned"
+description: A Kubernetes-native workflow orchestration platform for data and ML, offering strongly-typed, versioned
 github_url: https://github.com/flyteorg/flyte
-license: "Apache-2.0"
-primary_language: "Go"
+license: Apache-2.0
+primary_language: Go
 tags:
-  - "self-hosted"
-  - "fine-tuning"
+  - self-hosted
+  - fine-tuning
 maturity: production
 cost_model: open-source
-github_stars: 7135
-last_commit: "2026-07-12"
+github_stars: 7145
+last_commit: '2026-07-20'
 docs_url: https://docs.flyte.org/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A Kubernetes-native orchestrator for reproducible, strongly-typed data and ML pipelines at scale."
+  - A Kubernetes-native orchestrator for reproducible, strongly-typed data and ML pipelines at scale.
 best_for:
-  - "You run data/ML pipelines on Kubernetes and want typed, versioned, reproducible workflows with caching"
-  - "You need scalable orchestration with strong lineage and reproducibility for production ML"
+  - You run data/ML pipelines on Kubernetes and want typed, versioned, reproducible workflows with caching
+  - You need scalable orchestration with strong lineage and reproducibility for production ML
 avoid_if:
-  - "You do not have or want a Kubernetes environment to operate"
-  - "You need a lightweight local scheduler rather than a full platform"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Requires Kubernetes and operational investment."
+  - You do not have or want a Kubernetes environment to operate
+  - You need a lightweight local scheduler rather than a full platform
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. Requires Kubernetes and operational investment.
 ---
 
 ## Overview

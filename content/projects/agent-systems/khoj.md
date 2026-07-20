@@ -1,50 +1,66 @@
 ---
 id: khoj
-name: "Khoj"
+name: Khoj
 version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: platforms
-description: "Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs"
-github_url: "https://github.com/khoj-ai/khoj"
-license: "AGPL-3.0"
+description: 'Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs'
+github_url: https://github.com/khoj-ai/khoj
+license: AGPL-3.0
 primary_language: Python
-org_or_maintainer: "Khoj (YC-backed)"
-tags: [agents, rag, self-hosted]
+org_or_maintainer: Khoj (YC-backed)
+tags:
+  - agents
+  - rag
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 35524
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-06-24"
-docs_url: "https://docs.khoj.dev"
+github_stars: 35885
+github_stars_last_30d: 361
+trending_score: 69
+last_commit: '2026-06-24'
+docs_url: https://docs.khoj.dev
 demo_url: null
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The personal-knowledge-first assistant: where document-chat appliances treat files as a corpus, Khoj treats your continuously-updated notes (Obsidian, org-mode, Emacs, WhatsApp) as a second brain, adding custom agents, scheduled automations, and research modes on top."
+  - 'The personal-knowledge-first assistant: where document-chat appliances treat files as a corpus, Khoj treats your continuously-updated notes (Obsidian, org-mode, Emacs, WhatsApp) as a second brain, adding custom agents, scheduled automations, and research modes on top.'
 best_for:
-  - "You live in Obsidian/org-mode/markdown notes and want an assistant that stays in sync with them — first-class editor plugins and incremental indexing are the differentiator"
-  - "You want scheduled/automated AI workflows (daily digests, recurring research) from a self-hosted personal assistant rather than one-off chat sessions"
+  - You live in Obsidian/org-mode/markdown notes and want an assistant that stays in sync with them — first-class editor plugins and incremental indexing are the differentiator
+  - You want scheduled/automated AI workflows (daily digests, recurring research) from a self-hosted personal assistant rather than one-off chat sessions
 avoid_if:
-  - "You need team/multi-user knowledge management with permissions — Khoj is personal-first; Onyx or AnythingLLM's multi-user Docker mode fit organizations better"
-  - "AGPL licensing conflicts with embedding it in your commercial product — the license is deliberately copyleft"
+  - You need team/multi-user knowledge management with permissions — Khoj is personal-first; Onyx or AnythingLLM's multi-user Docker mode fit organizations better
+  - AGPL licensing conflicts with embedding it in your commercial product — the license is deliberately copyleft
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [anythingllm, open-webui]
-integrates_with: [ollama]
+alternatives:
+  - anythingllm
+  - open-webui
+integrates_with:
+  - ollama
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (35,524), primary language, license, and last commit (2026-06-24) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (35,524), primary language, license, and last commit (2026-06-24) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/khoj-ai/khoj", "date": "2026-07-08", "description": "35,524 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/khoj-ai/khoj
+    date: '2026-07-08'
+    description: 35,524 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

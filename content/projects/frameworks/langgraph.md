@@ -6,25 +6,37 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Graph-based framework for building stateful, durable LLM agents and workflows
-github_url: "https://github.com/langchain-ai/langgraph"
+github_url: https://github.com/langchain-ai/langgraph
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, orchestration, graphs, stateful, tool-use]
+tags:
+  - agents
+  - orchestration
+  - graphs
+  - stateful
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 34644
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-06-13"
-docs_url: "https://docs.langchain.com/oss/python/langgraph/"
+github_stars: 37668
+github_stars_last_30d: 3025
+trending_score: 55
+last_commit: '2026-07-19'
+docs_url: https://docs.langchain.com/oss/python/langgraph/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [build-on-top, deploy-as-is]
-health_signals: [org-backed, community-driven, production-proven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - build-on-top
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - community-driven
+  - production-proven
 ecosystem_role:
   - Graph-based orchestration framework for durable, stateful multi-agent workflows, LangChain's production-agent-focused offering
 best_for:
@@ -35,17 +47,23 @@ avoid_if:
   - You want a no-code visual builder or a simpler role-based abstraction — CrewAI's higher-level API trades control for less setup
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [crewai, openai-agents-sdk, google-adk]
+alternatives:
+  - crewai
+  - openai-agents-sdk
+  - google-adk
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: This entry already had solid, non-templated content from the tools-vertical era covering architecture, comparison context, and getting-started detail; enrichment here focuses on adding the new phase/domain/ecosystem-position fields rather than rewriting existing accurate content.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"newsletter","url":"https://docs.langchain.com/oss/python/langgraph/","date":"2026-06-13","description":"LangGraph launch and ecosystem docs"}
+  - source: newsletter
+    url: https://docs.langchain.com/oss/python/langgraph/
+    date: '2026-06-13'
+    description: LangGraph launch and ecosystem docs
 featured: true
 status: active
 ---

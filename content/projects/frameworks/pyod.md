@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "yzhao062"
+org_or_maintainer: yzhao062
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 7
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: pyod
-name: "PyOD"
+name: PyOD
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "A comprehensive Python library for anomaly and outlier detection with 60+ algorithms spanning classical, ensemble"
+description: A comprehensive Python library for anomaly and outlier detection with 60+ algorithms spanning classical, ensemble
 github_url: https://github.com/yzhao062/pyod
-license: "BSD-2-Clause"
-primary_language: "Python"
+license: BSD-2-Clause
+primary_language: Python
 tags:
-  - "self-hosted"
-  - "evaluation"
+  - self-hosted
+  - evaluation
 maturity: production
 cost_model: open-source
-github_stars: 9913
-last_commit: "2026-06-17"
+github_stars: 9920
+last_commit: '2026-07-20'
 docs_url: https://pyod.readthedocs.io/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The standard Python toolkit for outlier/anomaly detection with a scikit-learn-style unified API across many detectors."
+  - The standard Python toolkit for outlier/anomaly detection with a scikit-learn-style unified API across many detectors.
 best_for:
-  - "You need outlier or anomaly detection with many algorithms behind one consistent, scikit-learn-style API"
-  - "You want to benchmark multiple detectors quickly, including deep-learning-based ones, on the same data"
+  - You need outlier or anomaly detection with many algorithms behind one consistent, scikit-learn-style API
+  - You want to benchmark multiple detectors quickly, including deep-learning-based ones, on the same data
 avoid_if:
-  - "Your problem is supervised classification rather than unsupervised anomaly detection"
-  - "You need a managed streaming anomaly-detection service rather than a library"
-enrichment_notes: "Repository, BSD-2-Clause license, and 2026-06-17 activity verified via the GitHub API on 2026-07-12. Detector choice and thresholds require domain validation."
+  - Your problem is supervised classification rather than unsupervised anomaly detection
+  - You need a managed streaming anomaly-detection service rather than a library
+enrichment_notes: Repository, BSD-2-Clause license, and 2026-06-17 activity verified via the GitHub API on 2026-07-12. Detector choice and thresholds require domain validation.
 ---
 
 ## Overview

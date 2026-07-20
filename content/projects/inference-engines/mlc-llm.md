@@ -1,50 +1,66 @@
 ---
 id: mlc-llm
-name: "MLC LLM"
+name: MLC LLM
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: inference-engines
-description: "Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase"
-github_url: "https://github.com/mlc-ai/mlc-llm"
-license: "Apache-2.0"
+description: Machine-learning-compilation stack that runs LLMs natively on iOS, Android, WebGPU, Metal, Vulkan and CUDA from one codebase
+github_url: https://github.com/mlc-ai/mlc-llm
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "MLC (CMU/OctoML lineage)"
-tags: [inference, edge, llm]
+org_or_maintainer: MLC (CMU/OctoML lineage)
+tags:
+  - inference
+  - edge
+  - llm
 maturity: production
 cost_model: open-source
-github_stars: 22917
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-07"
-docs_url: "https://llm.mlc.ai/docs/"
+github_stars: 22974
+github_stars_last_30d: 57
+trending_score: 45
+last_commit: '2026-07-13'
+docs_url: https://llm.mlc.ai/docs/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: inference-engine
-domain: [language, general-purpose]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [research-origin, actively-maintained, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - research-origin
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "The compiler-based answer to on-device inference: where llama.cpp hand-writes kernels per backend, MLC compiles models through TVM to reach iOS, Android, WebGPU and desktop GPUs from a single pipeline — it powered the first credible in-browser and on-phone Llama demos."
+  - 'The compiler-based answer to on-device inference: where llama.cpp hand-writes kernels per backend, MLC compiles models through TVM to reach iOS, Android, WebGPU and desktop GPUs from a single pipeline — it powered the first credible in-browser and on-phone Llama demos.'
 best_for:
-  - "You need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition"
-  - "You are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on-device options"
+  - You need the same model running across phones, browsers (WebLLM/WebGPU), and desktop GPUs — the compilation pipeline targets Metal, Vulkan, CUDA, ROCm and WebGPU from one model definition
+  - You are shipping LLM inference inside a mobile app — the iOS/Android SDKs with quantized weights are among the most mature on-device options
 avoid_if:
-  - "You want maximum server-side throughput on NVIDIA GPUs — vLLM, SGLang, or TensorRT-LLM outperform it for datacenter serving"
-  - "You rely on the newest model architectures immediately — compiler-based stacks lag hand-optimized runtimes when novel attention/MoE variants ship"
+  - You want maximum server-side throughput on NVIDIA GPUs — vLLM, SGLang, or TensorRT-LLM outperform it for datacenter serving
+  - You rely on the newest model architectures immediately — compiler-based stacks lag hand-optimized runtimes when novel attention/MoE variants ship
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [llama-cpp, ollama]
+alternatives:
+  - llama-cpp
+  - ollama
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (22,917), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (22,917), primary language, license, and last commit (2026-07-07) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/mlc-ai/mlc-llm", "date": "2026-07-08", "description": "22,917 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/mlc-ai/mlc-llm
+    date: '2026-07-08'
+    description: 22,917 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

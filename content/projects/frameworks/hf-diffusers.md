@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 71
+trending_score: 36
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: hf-diffusers
-name: "Hugging Face Diffusers"
+name: Hugging Face Diffusers
 artifact_type: library
 category: multimodal
 subcategory: frameworks
-description: "The de facto Python library for diffusion models, providing pipelines, schedulers, and model components for image, video, and audio generation in PyTorch"
+description: The de facto Python library for diffusion models, providing pipelines, schedulers, and model components for image, video, and audio generation in PyTorch
 github_url: https://github.com/huggingface/diffusers
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - fine-tuning
+  - self-hosted
+  - inference
 maturity: production
 cost_model: open-source
-github_stars: 34046
-last_commit: "2026-07-12"
+github_stars: 34117
+last_commit: '2026-07-20'
 docs_url: https://huggingface.co/docs/diffusers
 phase: framework
 domain:
-  - "vision"
-  - "audio"
-  - "multimodal"
+  - vision
+  - audio
+  - multimodal
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "The standard library that packages diffusion models as composable pipelines, schedulers, and modular components."
+  - The standard library that packages diffusion models as composable pipelines, schedulers, and modular components.
 best_for:
-  - "You want to run or fine-tune modern diffusion models (Stable Diffusion, Flux, video) with a consistent Python API"
-  - "You need swappable schedulers and modular components to build custom generation pipelines"
+  - You want to run or fine-tune modern diffusion models (Stable Diffusion, Flux, video) with a consistent Python API
+  - You need swappable schedulers and modular components to build custom generation pipelines
 avoid_if:
-  - "You want a full GUI application rather than a library, where a web UI is more appropriate"
-  - "You need the absolute lowest-latency serving, which may require specialized inference stacks"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. The standard diffusion library; individual model weights carry their own licenses."
+  - You want a full GUI application rather than a library, where a web UI is more appropriate
+  - You need the absolute lowest-latency serving, which may require specialized inference stacks
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-12 activity verified via the GitHub API on 2026-07-12. The standard diffusion library; individual model weights carry their own licenses.
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "zai-org"
+org_or_maintainer: zai-org
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 2
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: glm-ocr
-name: "GLM-OCR"
+name: GLM-OCR
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Compact 0.9B multimodal OCR model from Z.ai (Zhipu) for complex document understanding, built on GLM-V"
+description: Compact 0.9B multimodal OCR model from Z.ai (Zhipu) for complex document understanding, built on GLM-V
 github_url: https://github.com/zai-org/GLM-OCR
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "vision"
-  - "self-hosted"
+  - multimodal
+  - vision
+  - self-hosted
 maturity: beta
 cost_model: open-source
-github_stars: 7177
-last_commit: "2026-04-21"
+github_stars: 7179
+last_commit: '2026-04-21'
 docs_url: https://docs.z.ai/guides/vlm/glm-ocr
 phase: foundation-model
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Competes with document VLMs and PaddleOCR-style pipelines; complementary to vLLM/SGLang/Ollama runtimes"
+  - Competes with document VLMs and PaddleOCR-style pipelines; complementary to vLLM/SGLang/Ollama runtimes
 best_for:
-  - "High-concurrency or edge document OCR where a 0.9B model keeps latency and cost low"
-  - "Extracting tables, formulas, and structured fields from complex real-world layouts"
+  - High-concurrency or edge document OCR where a 0.9B model keeps latency and cost low
+  - Extracting tables, formulas, and structured fields from complex real-world layouts
 avoid_if:
-  - "You need a large general VLM for open-ended visual reasoning beyond documents"
-  - "Your documents are simple enough that a lightweight classical OCR already suffices"
-enrichment_notes: "Verified via GitHub API + README; OmniDocBench V1.5 score self-reported (94.62). Draft pending review."
+  - You need a large general VLM for open-ended visual reasoning beyond documents
+  - Your documents are simple enough that a lightweight classical OCR already suffices
+enrichment_notes: Verified via GitHub API + README; OmniDocBench V1.5 score self-reported (94.62). Draft pending review.
 ---
 
 ## Overview

@@ -6,25 +6,34 @@ artifact_type: framework
 category: agents
 subcategory: frameworks
 description: A Python agent framework built around typed models and structured outputs
-github_url: "https://github.com/pydantic/pydantic-ai"
+github_url: https://github.com/pydantic/pydantic-ai
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, tool-use, structured-output]
+tags:
+  - agents
+  - tool-use
+  - structured-output
 maturity: beta
 cost_model: open-source
-github_stars: 17738
-github_stars_last_30d: 17738
-trending_score: 70
-last_commit: "2026-06-13"
+github_stars: 18668
+github_stars_last_30d: 930
+trending_score: 55
+last_commit: '2026-07-20'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, general-purpose]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+  - general-purpose
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
   - Lightweight Python agent framework from the Pydantic team, treating typed/validated outputs as a first-class design principle
 best_for:
@@ -40,8 +49,8 @@ integrates_with: []
 corresponding_tool_entry: pydantic-ai-tool
 enrichment_status: reviewed
 enrichment_notes: Backed by the Pydantic team (widely used, well-established validation library maintainers), which gives credible org-backing signal even without a large historical production case-study base given the project's relative newness.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

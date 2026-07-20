@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "facebookresearch"
+org_or_maintainer: facebookresearch
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 2
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: omnilingual-asr
-name: "Omnilingual ASR"
+name: Omnilingual ASR
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "Meta's speech recognition family covering more than 1,600 languages, including zero-shot adaptation to languages with few paired examples"
+description: Meta's speech recognition family covering more than 1,600 languages, including zero-shot adaptation to languages with few paired examples
 github_url: https://github.com/facebookresearch/omnilingual-asr
-license: "Other"
-primary_language: "Python"
+license: Other
+primary_language: Python
 tags:
-  - "voice"
-  - "research"
-  - "foundational"
+  - voice
+  - research
+  - foundational
 maturity: beta
 cost_model: open-source
-github_stars: 2851
-last_commit: "2025-12-30"
+github_stars: 2853
+last_commit: '2025-12-30'
 docs_url: https://huggingface.co/spaces/facebook/omniasr-transcriptions
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "study-and-reference"
+  - deploy-as-is
+  - study-and-reference
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "Low-resource and multilingual ASR foundation for 1,600-plus languages"
-  - "Research baseline for zero-shot language expansion"
+  - Low-resource and multilingual ASR foundation for 1,600-plus languages
+  - Research baseline for zero-shot language expansion
 best_for:
-  - "Transcribing underserved languages and dialects"
-  - "Researching low-resource ASR adaptation"
+  - Transcribing underserved languages and dialects
+  - Researching low-resource ASR adaptation
 avoid_if:
-  - "You need mature accuracy guarantees for a narrow high-stakes language"
-  - "Your product cannot test language-specific CER and transcription bias"
-enrichment_notes: "The December 2025 commit is stale relative to this catalog date, so health intentionally omits actively-maintained. License metadata is Other and the project includes research-oriented model families. Draft pending review."
+  - You need mature accuracy guarantees for a narrow high-stakes language
+  - Your product cannot test language-specific CER and transcription bias
+enrichment_notes: The December 2025 commit is stale relative to this catalog date, so health intentionally omits actively-maintained. License metadata is Other and the project includes research-oriented model families. Draft pending review.
 ---
 
 ## Overview

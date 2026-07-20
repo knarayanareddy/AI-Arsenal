@@ -1,50 +1,66 @@
 ---
 id: ms-swift
-name: "ms-swift"
+name: ms-swift
 version_tracked: null
 artifact_type: framework
 category: llms
 subcategory: frameworks
-description: "ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends"
-github_url: "https://github.com/modelscope/ms-swift"
-license: "Apache-2.0"
+description: ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends
+github_url: https://github.com/modelscope/ms-swift
+license: Apache-2.0
 primary_language: Python
-org_or_maintainer: "ModelScope (Alibaba)"
-tags: [fine-tuning, llm, multimodal]
+org_or_maintainer: ModelScope (Alibaba)
+tags:
+  - fine-tuning
+  - llm
+  - multimodal
 maturity: production
 cost_model: open-source
-github_stars: 14751
-github_stars_last_30d: 0
-trending_score: 50
-last_commit: "2026-07-08"
-docs_url: "https://swift.readthedocs.io/en/latest/"
+github_stars: 14863
+github_stars_last_30d: 112
+trending_score: 49
+last_commit: '2026-07-20'
+docs_url: https://swift.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: training-and-alignment
-domain: [language, multimodal]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - multimodal
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Alibaba's answer to LLaMA-Factory: the broadest model-coverage fine-tuning framework, especially strong on Chinese-ecosystem and multimodal models (Qwen-VL, InternVL, DeepSeek-VL) that other trainers support late or not at all."
+  - 'Alibaba''s answer to LLaMA-Factory: the broadest model-coverage fine-tuning framework, especially strong on Chinese-ecosystem and multimodal models (Qwen-VL, InternVL, DeepSeek-VL) that other trainers support late or not at all.'
 best_for:
-  - "You fine-tune Qwen-family or Chinese-ecosystem multimodal models — ms-swift typically has day-one training support because it is maintained by the same org"
-  - "You need one framework spanning SFT, DPO/GRPO, sequence-parallel long-context training, quantized training, and Megatron-backed scale-out without switching stacks"
+  - You fine-tune Qwen-family or Chinese-ecosystem multimodal models — ms-swift typically has day-one training support because it is maintained by the same org
+  - You need one framework spanning SFT, DPO/GRPO, sequence-parallel long-context training, quantized training, and Megatron-backed scale-out without switching stacks
 avoid_if:
-  - "Your models are all Western-ecosystem text LLMs — Axolotl or LLaMA-Factory have larger English-speaking communities and more battle-tested recipes for that slice"
-  - "You want minimal dependency surface — the framework's breadth (ModelScope hub integration, many optional backends) makes for a heavy install and complex failure modes"
+  - Your models are all Western-ecosystem text LLMs — Axolotl or LLaMA-Factory have larger English-speaking communities and more battle-tested recipes for that slice
+  - You want minimal dependency surface — the framework's breadth (ModelScope hub integration, many optional backends) makes for a heavy install and complex failure modes
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [llamafactory, axolotl, unsloth]
-integrates_with: [vllm]
+alternatives:
+  - llamafactory
+  - axolotl
+  - unsloth
+integrates_with:
+  - vllm
 corresponding_tool_entry: null
 enrichment_status: draft
-enrichment_notes: "Star count (14,751), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here."
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+enrichment_notes: Star count (14,751), primary language, license, and last commit (2026-07-08) verified via the GitHub API on 2026-07-08. Architecture and positioning claims are from official docs/README; not yet hands-on verified here.
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
-buzz_sources: [{"source": "github-trending", "url": "https://github.com/modelscope/ms-swift", "date": "2026-07-08", "description": "14,751 stars on GitHub as of 2026-07-08 (GitHub API)"}]
+buzz_sources:
+  - source: github-trending
+    url: https://github.com/modelscope/ms-swift
+    date: '2026-07-08'
+    description: 14,751 stars on GitHub as of 2026-07-08 (GitHub API)
 featured: false
 status: active
 ---

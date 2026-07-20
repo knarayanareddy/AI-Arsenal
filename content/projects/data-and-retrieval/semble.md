@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "minishlab"
+org_or_maintainer: minishlab
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 7
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: semble
-name: "Semble"
+name: Semble
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "MinishLab's CPU code-search library for agents, returning relevant snippets through natural-language retrieval, CLI, MCP, or subagent integrations"
+description: MinishLab's CPU code-search library for agents, returning relevant snippets through natural-language retrieval, CLI, MCP, or subagent integrations
 github_url: https://github.com/minishlab/semble
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "retrieval"
-  - "efficiency"
-  - "agents"
-  - "embeddings"
-  - "tool-use"
+  - retrieval
+  - efficiency
+  - agents
+  - embeddings
+  - tool-use
 maturity: beta
 cost_model: open-source
-github_stars: 5650
-last_commit: "2026-07-13"
+github_stars: 5657
+last_commit: '2026-07-17'
 docs_url: https://minish.ai/packages/semble/introduction/
 phase: data-and-retrieval
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "community-driven"
-  - "actively-maintained"
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "CPU semantic code search for token-efficient coding agents"
-  - "MCP, CLI, and subagent retrieval layer without external services"
+  - CPU semantic code search for token-efficient coding agents
+  - MCP, CLI, and subagent retrieval layer without external services
 best_for:
-  - "Token-efficient repository search for coding agents"
-  - "CPU-only code retrieval without API keys or external services"
+  - Token-efficient repository search for coding agents
+  - CPU-only code retrieval without API keys or external services
 avoid_if:
-  - "You need exhaustive, deterministic matches (e.g. security audits) where ranked semantic results can miss occurrences"
-  - "Your repository is too dynamic for index refreshes or needs exact symbol-level static analysis"
-enrichment_notes: "The README reports approximately 98% fewer tokens than grep-plus-read and benchmark quality near specialized transformers; these are project benchmarks requiring local validation. Draft pending review."
+  - You need exhaustive, deterministic matches (e.g. security audits) where ranked semantic results can miss occurrences
+  - Your repository is too dynamic for index refreshes or needs exact symbol-level static analysis
+enrichment_notes: The README reports approximately 98% fewer tokens than grep-plus-read and benchmark quality near specialized transformers; these are project benchmarks requiring local validation. Draft pending review.
 ---
 
 ## Overview

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "mistralai"
+org_or_maintainer: mistralai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 2
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: mistral-vibe
-name: "Mistral Vibe"
+name: Mistral Vibe
 artifact_type: tool
 category: code-generation
 subcategory: coding-agents
-description: "Mistral's open-source CLI coding assistant with subagents, delegated tasks, skills, and a voice mode"
+description: Mistral's open-source CLI coding assistant with subagents, delegated tasks, skills, and a voice mode
 github_url: https://github.com/mistralai/mistral-vibe
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "code-gen"
-  - "agents"
-  - "orchestration"
-  - "tool-use"
-  - "voice"
+  - code-gen
+  - agents
+  - orchestration
+  - tool-use
+  - voice
 maturity: beta
 cost_model: open-source
-github_stars: 4709
-last_commit: "2026-07-17"
+github_stars: 4711
+last_commit: '2026-07-17'
 docs_url: https://pypi.org/project/mistral-vibe
 phase: agent-system
 domain:
-  - "language"
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Mistral open-source CLI coding assistant with skills and subagents"
-  - "Terminal alternative for delegated repository work and voice interaction"
+  - Mistral open-source CLI coding assistant with skills and subagents
+  - Terminal alternative for delegated repository work and voice interaction
 best_for:
-  - "Terminal coding assistance with delegated subagents"
-  - "Exploring reusable skills for repository work"
+  - Terminal coding assistance with delegated subagents
+  - Exploring reusable skills for repository work
 avoid_if:
-  - "You need a non-interactive CI reviewer with deterministic output"
-  - "Your team cannot permit an agent to read or modify local repositories"
-enrichment_notes: "The CLI is an active open-source project, but coding-agent quality and tool permissions remain model- and repository-dependent. Draft pending review."
+  - You need a non-interactive CI reviewer with deterministic output
+  - Your team cannot permit an agent to read or modify local repositories
+enrichment_notes: The CLI is an active open-source project, but coding-agent quality and tool permissions remain model- and repository-dependent. Draft pending review.
 ---
 
 ## Overview

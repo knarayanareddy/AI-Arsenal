@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "FoundationVision"
+org_or_maintainer: FoundationVision
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 5
+trending_score: 30
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: visual-autoregressive
-name: "VAR (Visual Autoregressive)"
+name: VAR (Visual Autoregressive)
 artifact_type: model
 category: computer-vision
 subcategory: open-source-models
-description: "A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale"
+description: A NeurIPS 2024 best-paper image-generation model that reframes autoregression as next-scale prediction, outperforming diffusion on quality and speed at scale
 github_url: https://github.com/FoundationVision/VAR
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 8704
-last_commit: "2025-11-10"
+github_stars: 8709
+last_commit: '2025-11-10'
 docs_url: https://github.com/FoundationVision/VAR
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "study-and-reference"
-  - "fork-and-adapt"
+  - study-and-reference
+  - fork-and-adapt
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "An image generator that predicts images coarse-to-fine across scales, an autoregressive alternative to diffusion."
+  - An image generator that predicts images coarse-to-fine across scales, an autoregressive alternative to diffusion.
 best_for:
-  - "You are researching autoregressive image generation and want the reference next-scale-prediction implementation"
-  - "You want to study scaling laws for visual generation with a clean, permissive codebase"
+  - You are researching autoregressive image generation and want the reference next-scale-prediction implementation
+  - You want to study scaling laws for visual generation with a clean, permissive codebase
 avoid_if:
-  - "You need a turnkey production image generator with a large ecosystem, where diffusion pipelines are more practical"
-  - "You need broad conditioning/control features (ControlNet-style), which the diffusion ecosystem provides"
-enrichment_notes: "Repository, MIT license, and 2025-11-10 activity verified via the GitHub API on 2026-07-12. NeurIPS 2024 Best Paper; primarily a research reference."
+  - You need a turnkey production image generator with a large ecosystem, where diffusion pipelines are more practical
+  - You need broad conditioning/control features (ControlNet-style), which the diffusion ecosystem provides
+enrichment_notes: Repository, MIT license, and 2025-11-10 activity verified via the GitHub API on 2026-07-12. NeurIPS 2024 Best Paper; primarily a research reference.
 ---
 
 ## Overview

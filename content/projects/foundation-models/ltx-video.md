@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Lightricks"
+org_or_maintainer: Lightricks
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,48 +18,48 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 38
+trending_score: 33
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: ltx-video
-name: "LTX-Video"
+name: LTX-Video
 artifact_type: model
 category: multimodal
 subcategory: open-source-models
-description: "Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU"
+description: Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU
 github_url: https://github.com/Lightricks/LTX-Video
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 10673
-last_commit: "2026-01-05"
+github_stars: 10711
+last_commit: '2026-01-05'
 docs_url: https://ltx.io/model
 phase: foundation-model
 domain:
-  - "vision"
+  - vision
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A speed-optimized diffusion-transformer video generator that produces high-resolution clips faster than real time on a single GPU."
+  - A speed-optimized diffusion-transformer video generator that produces high-resolution clips faster than real time on a single GPU.
 best_for:
-  - "You need fast, self-hostable text-to-video or image-to-video generation on a single modern GPU"
-  - "You want an Apache-2.0 video model to build creative or prototyping tools on"
+  - You need fast, self-hostable text-to-video or image-to-video generation on a single modern GPU
+  - You want an Apache-2.0 video model to build creative or prototyping tools on
 avoid_if:
-  - "You need the highest cinematic quality or long-duration coherence, where larger closed models lead"
-  - "You lack a capable GPU, since video diffusion is memory- and compute-intensive"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-01-05 activity verified via the GitHub API on 2026-07-12. Speed claims are project-reported and hardware-dependent."
+  - You need the highest cinematic quality or long-duration coherence, where larger closed models lead
+  - You lack a capable GPU, since video diffusion is memory- and compute-intensive
+enrichment_notes: Repository, Apache-2.0 license, and 2026-01-05 activity verified via the GitHub API on 2026-07-12. Speed claims are project-reported and hardware-dependent.
 ---
 
 ## Overview

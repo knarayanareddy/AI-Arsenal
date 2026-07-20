@@ -6,18 +6,22 @@ artifact_type: library
 category: rag
 subcategory: frameworks
 description: Evaluation framework for measuring retrieval-augmented generation quality and regressions
-github_url: "https://github.com/vibrantlabsai/ragas"
+github_url: https://github.com/vibrantlabsai/ragas
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [rag, evaluation, retrieval, observability]
+tags:
+  - rag
+  - evaluation
+  - retrieval
+  - observability
 maturity: production
 cost_model: open-source
-github_stars: 14355
-github_stars_last_30d: 0
-trending_score: 30
-last_commit: "2026-02-24"
-docs_url: "https://github.com/vibrantlabsai/ragas"
+github_stars: 14918
+github_stars_last_30d: 563
+trending_score: 55
+last_commit: '2026-02-24'
+docs_url: https://github.com/vibrantlabsai/ragas
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,13 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - The standard open-source evaluation framework specifically for RAG pipeline quality (retrieval and generation) — consolidates the former duplicate ragas.md entry
 best_for:
@@ -45,9 +53,9 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Consolidates the former duplicate ragas.md entry (same repo, now under github.com/vibrantlabsai/ragas after an org rename). Kept as canonical ID per the migration rule: this entry had real inbound content references; ragas.md had none beyond auto-generated indexes."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'Consolidates the former duplicate ragas.md entry (same repo, now under github.com/vibrantlabsai/ragas after an org rename). Kept as canonical ID per the migration rule: this entry had real inbound content references; ragas.md had none beyond auto-generated indexes.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

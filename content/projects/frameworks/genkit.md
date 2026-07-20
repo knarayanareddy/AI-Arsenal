@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 51
+trending_score: 34
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -41,8 +41,8 @@ tags:
   - rag
 maturity: beta
 cost_model: open-source
-github_stars: 6200
-last_commit: '2026-07-09'
+github_stars: 6251
+last_commit: '2026-07-20'
 docs_url: https://genkit.dev/
 phase: framework
 domain:

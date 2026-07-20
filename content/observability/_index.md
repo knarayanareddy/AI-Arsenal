@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [cost usage](./cost-usage/) | 2 entries | 2026-07-19 |
-| [dashboards](./dashboards/) | 0 entries | 2026-07-19 |
-| [evaluation quality](./evaluation-quality/) | 3 entries | 2026-07-19 |
-| [incident response](./incident-response/) | 2 entries | 2026-07-19 |
-| [instrumentation](./instrumentation/) | 3 entries | 2026-07-19 |
-| [monitoring alerting](./monitoring-alerting/) | 3 entries | 2026-07-19 |
-| [privacy governance](./privacy-governance/) | 1 entries | 2026-07-19 |
-| [tracing](./tracing/) | 2 entries | 2026-07-19 |
+| [cost usage](./cost-usage/) | 2 entries | 2026-07-20 |
+| [dashboards](./dashboards/) | 0 entries | 2026-07-20 |
+| [evaluation quality](./evaluation-quality/) | 3 entries | 2026-07-20 |
+| [incident response](./incident-response/) | 2 entries | 2026-07-20 |
+| [instrumentation](./instrumentation/) | 3 entries | 2026-07-20 |
+| [monitoring alerting](./monitoring-alerting/) | 3 entries | 2026-07-20 |
+| [privacy governance](./privacy-governance/) | 1 entries | 2026-07-20 |
+| [tracing](./tracing/) | 2 entries | 2026-07-20 |
 
 ## Recently Added
 

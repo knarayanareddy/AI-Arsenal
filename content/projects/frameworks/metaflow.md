@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "Netflix"
+org_or_maintainer: Netflix
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 23
+trending_score: 32
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: metaflow
-name: "Metaflow"
+name: Metaflow
 artifact_type: framework
 category: data-pipelines
 subcategory: frameworks
-description: "Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud"
+description: Netflix's human-centric framework for building and managing real-life ML/AI systems, structuring workflows as DAGs with versioning, scaling to cloud
 github_url: https://github.com/Netflix/metaflow
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "self-hosted"
-  - "fine-tuning"
+  - self-hosted
+  - fine-tuning
 maturity: production
 cost_model: open-source
-github_stars: 10165
-last_commit: "2026-06-29"
+github_stars: 10188
+last_commit: '2026-07-20'
 docs_url: https://docs.metaflow.org/
 phase: framework
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An ML workflow framework that takes data-science code from laptop prototyping to scaled, scheduled production."
+  - An ML workflow framework that takes data-science code from laptop prototyping to scaled, scheduled production.
 best_for:
-  - "You want to write ML pipelines as Python DAGs and scale the same code from laptop to cloud"
-  - "You need built-in versioning, artifact tracking, and production scheduling for ML workflows"
+  - You want to write ML pipelines as Python DAGs and scale the same code from laptop to cloud
+  - You need built-in versioning, artifact tracking, and production scheduling for ML workflows
 avoid_if:
-  - "You need a general-purpose data-engineering orchestrator beyond ML, where broader schedulers fit"
-  - "Your workflow is a single script that gains nothing from DAG structure and infrastructure"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Cloud scaling relies on configured backends (AWS and others)."
+  - You need a general-purpose data-engineering orchestrator beyond ML, where broader schedulers fit
+  - Your workflow is a single script that gains nothing from DAG structure and infrastructure
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-29 activity verified via the GitHub API on 2026-07-12. Cloud scaling relies on configured backends (AWS and others).
 ---
 
 ## Overview

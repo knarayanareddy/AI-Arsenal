@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "microsoft"
+org_or_maintainer: microsoft
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 7
+trending_score: 31
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: trellis-2
-name: "TRELLIS.2"
+name: TRELLIS.2
 artifact_type: model
 category: computer-vision
 subcategory: open-source-models
-description: "Microsoft's 4B image-to-3D generative model using a field-free sparse-voxel representation and physically based materials"
+description: Microsoft's 4B image-to-3D generative model using a field-free sparse-voxel representation and physically based materials
 github_url: https://github.com/microsoft/TRELLIS.2
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "vision"
-  - "multimodal"
-  - "foundational"
-  - "research"
+  - vision
+  - multimodal
+  - foundational
+  - research
 maturity: beta
 cost_model: open-source
-github_stars: 8800
-last_commit: "2026-06-05"
+github_stars: 8807
+last_commit: '2026-07-10'
 docs_url: https://microsoft.github.io/TRELLIS.2
 phase: foundation-model
 domain:
-  - "vision"
-  - "multimodal"
+  - vision
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "research-origin"
+  - org-backed
+  - research-origin
 ecosystem_role:
-  - "4B image-to-3D model with O-Voxel geometry and PBR material generation"
-  - "Open foundation for synthetic assets and graphics experiments"
+  - 4B image-to-3D model with O-Voxel geometry and PBR material generation
+  - Open foundation for synthetic assets and graphics experiments
 best_for:
-  - "Generating textured 3D assets from reference images"
-  - "Prototyping PBR-aware scene and object reconstruction"
+  - Generating textured 3D assets from reference images
+  - Prototyping PBR-aware scene and object reconstruction
 avoid_if:
-  - "You need lightweight CPU inference or guaranteed topology-ready meshes"
-  - "Your input images lack a clear subject or your pipeline cannot post-process assets"
-enrichment_notes: "The README describes a 4B model and GPU-oriented generation workflow; reported visual quality is research evidence, not a universal production guarantee. Draft pending review."
+  - You need lightweight CPU inference or guaranteed topology-ready meshes
+  - Your input images lack a clear subject or your pipeline cannot post-process assets
+enrichment_notes: The README describes a 4B model and GPU-oriented generation workflow; reported visual quality is research evidence, not a universal production guarantee. Draft pending review.
 ---
 
 ## Overview

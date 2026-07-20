@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "PaddlePaddle"
+org_or_maintainer: PaddlePaddle
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 12
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: paddlex
-name: "PaddleX"
+name: PaddleX
 artifact_type: framework
 category: tooling
 subcategory: frameworks
-description: "PaddlePaddle's all-in-one, low-code development toolkit offering ready model pipelines for OCR, vision, time series"
+description: PaddlePaddle's all-in-one, low-code development toolkit offering ready model pipelines for OCR, vision, time series
 github_url: https://github.com/PaddlePaddle/PaddleX
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "fine-tuning"
-  - "self-hosted"
-  - "inference"
+  - multimodal
+  - fine-tuning
+  - self-hosted
+  - inference
 maturity: beta
 cost_model: open-source
-github_stars: 6191
-last_commit: "2026-06-25"
+github_stars: 6203
+last_commit: '2026-06-25'
 docs_url: https://paddlepaddle.github.io/PaddleX/
 phase: framework
 domain:
-  - "vision"
-  - "language"
-  - "multimodal"
+  - vision
+  - language
+  - multimodal
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A low-code toolkit exposing ready-made model pipelines across OCR, vision, and multimodal tasks in the PaddlePaddle ecosystem."
+  - A low-code toolkit exposing ready-made model pipelines across OCR, vision, and multimodal tasks in the PaddlePaddle ecosystem.
 best_for:
-  - "You want ready-to-run pipelines for OCR, detection, classification, or time series with minimal code"
-  - "You are in the PaddlePaddle ecosystem and want unified training-to-deployment tooling"
+  - You want ready-to-run pipelines for OCR, detection, classification, or time series with minimal code
+  - You are in the PaddlePaddle ecosystem and want unified training-to-deployment tooling
 avoid_if:
-  - "You are standardized on PyTorch and do not want a PaddlePaddle dependency"
-  - "You need to build highly custom architectures rather than use packaged pipelines"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-06-25 activity verified via the GitHub API on 2026-07-12. Tied to the PaddlePaddle framework."
+  - You are standardized on PyTorch and do not want a PaddlePaddle dependency
+  - You need to build highly custom architectures rather than use packaged pipelines
+enrichment_notes: Repository, Apache-2.0 license, and 2026-06-25 activity verified via the GitHub API on 2026-07-12. Tied to the PaddlePaddle framework.
 ---
 
 ## Overview

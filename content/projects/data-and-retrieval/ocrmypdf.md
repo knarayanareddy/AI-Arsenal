@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "ocrmypdf"
+org_or_maintainer: ocrmypdf
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 96
+trending_score: 38
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: ocrmypdf
-name: "OCRmyPDF"
+name: OCRmyPDF
 artifact_type: tool
 category: computer-vision
 subcategory: document-processing
-description: "A command-line tool that adds a searchable OCR text layer to scanned PDFs using Tesseract while preserving the original page images and metadata"
+description: A command-line tool that adds a searchable OCR text layer to scanned PDFs using Tesseract while preserving the original page images and metadata
 github_url: https://github.com/ocrmypdf/OCRmyPDF
-license: "MPL-2.0"
-primary_language: "Python"
+license: MPL-2.0
+primary_language: Python
 tags:
-  - "multimodal"
-  - "self-hosted"
-  - "data"
+  - multimodal
+  - self-hosted
+  - data
 maturity: production
 cost_model: open-source
-github_stars: 34139
-last_commit: "2026-07-03"
+github_stars: 34235
+last_commit: '2026-07-20'
 docs_url: http://ocrmypdf.readthedocs.io/
 phase: data-and-retrieval
 domain:
-  - "vision"
-  - "language"
+  - vision
+  - language
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "actively-maintained"
-  - "community-driven"
+  - actively-maintained
+  - community-driven
 ecosystem_role:
-  - "A production-grade PDF post-processor that overlays a searchable text layer onto scanned documents via Tesseract."
+  - A production-grade PDF post-processor that overlays a searchable text layer onto scanned documents via Tesseract.
 best_for:
-  - "You need to make large archives of scanned PDFs searchable while keeping the original page images intact"
-  - "You want a robust, scriptable CLI for batch PDF OCR with deskew, cleanup, and PDF/A output"
+  - You need to make large archives of scanned PDFs searchable while keeping the original page images intact
+  - You want a robust, scriptable CLI for batch PDF OCR with deskew, cleanup, and PDF/A output
 avoid_if:
-  - "You need structured data extraction (tables, fields) rather than a searchable text overlay"
-  - "Your inputs are images or non-PDF formats needing bespoke recognition rather than PDF-in/PDF-out"
-enrichment_notes: "Repository, MPL-2.0 license, and 2026-07-03 activity verified via the GitHub API on 2026-07-12. Wraps Tesseract; recognition quality follows that engine."
+  - You need structured data extraction (tables, fields) rather than a searchable text overlay
+  - Your inputs are images or non-PDF formats needing bespoke recognition rather than PDF-in/PDF-out
+enrichment_notes: Repository, MPL-2.0 license, and 2026-07-03 activity verified via the GitHub API on 2026-07-12. Wraps Tesseract; recognition quality follows that engine.
 ---
 
 ## Overview

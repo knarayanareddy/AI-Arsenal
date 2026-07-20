@@ -46,16 +46,16 @@ Before selecting a foundation model:
 
 ### Most Popular
 
-- [Whisper](./whisper.md) — ⭐ 104543
-- [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
-- [GPT-SoVITS](./gpt-sovits.md) — ⭐ 59564
-- [Segment Anything (SAM)](./segment-anything.md) — ⭐ 54527
-- [ChatTTS](./chattts.md) — ⭐ 39599
-- [Bark](./bark.md) — ⭐ 39191
-- [OpenVoice](./openvoice.md) — ⭐ 36917
-- [CLIP (OpenAI)](./clip.md) — ⭐ 33936
-- [VoxCPM](./voxcpm.md) — ⭐ 33194
-- [Fish Speech](./fish-speech.md) — ⭐ 31234
+- [Whisper](./whisper.md) — ⭐ 105281
+- [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103956
+- [GPT-SoVITS](./gpt-sovits.md) — ⭐ 59975
+- [Segment Anything (SAM)](./segment-anything.md) — ⭐ 54563
+- [ChatTTS](./chattts.md) — ⭐ 39652
+- [Bark](./bark.md) — ⭐ 39201
+- [OpenVoice](./openvoice.md) — ⭐ 36983
+- [CLIP (OpenAI)](./clip.md) — ⭐ 34036
+- [VoxCPM](./voxcpm.md) — ⭐ 33853
+- [Fish Speech](./fish-speech.md) — ⭐ 31332
 
 ### Browse All
 

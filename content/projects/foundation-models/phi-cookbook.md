@@ -6,25 +6,35 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Microsoft examples and recipes for building with the Phi model family
-github_url: "https://github.com/microsoft/PhiCookBook"
+github_url: https://github.com/microsoft/PhiCookBook
 license: MIT
 primary_language: Python
 org_or_maintainer: null
-tags: [llm, inference, local, reasoning]
+tags:
+  - llm
+  - inference
+  - local
+  - reasoning
 maturity: production
 cost_model: open-source
-github_stars: 3750
-github_stars_last_30d: 3750
-trending_score: 70
-last_commit: "2026-06-09"
+github_stars: 3771
+github_stars_last_30d: 21
+trending_score: 17
+last_commit: '2026-07-16'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [study-and-reference, fork-and-adapt]
-health_signals: [org-backed, actively-maintained, community-driven]
+domain:
+  - language
+relation_to_stack:
+  - study-and-reference
+  - fork-and-adapt
+health_signals:
+  - org-backed
+  - actively-maintained
+  - community-driven
 ecosystem_role:
   - Microsoft's official companion resource of samples and guides for building with the Phi model family
 best_for:
@@ -39,9 +49,9 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "GitHub Actions workflow activity confirmed as recently as January 2026 (PR #454, microsoft/PhiCookBook), and the repo is directly linked from Microsoft's own Phi-4 Hugging Face model card as the recommended fine-tuning cookbook, confirming both recency and official-status as a companion resource rather than an unofficial community fork."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'GitHub Actions workflow activity confirmed as recently as January 2026 (PR #454, microsoft/PhiCookBook), and the repo is directly linked from Microsoft''s own Phi-4 Hugging Face model card as the recommended fine-tuning cookbook, confirming both recency and official-status as a companion resource rather than an unofficial community fork.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "duckdb"
+org_or_maintainer: duckdb
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,47 +18,47 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 249
+trending_score: 50
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: duckdb
-name: "DuckDB"
+name: DuckDB
 artifact_type: library
 category: data-pipelines
 subcategory: libraries
-description: "An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server"
+description: An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server
 github_url: https://github.com/duckdb/duckdb
-license: "MIT"
-primary_language: "C++"
+license: MIT
+primary_language: C++
 tags:
-  - "self-hosted"
-  - "embeddings"
+  - self-hosted
+  - embeddings
 maturity: production
 cost_model: open-source
-github_stars: 39306
-last_commit: "2026-07-10"
+github_stars: 39555
+last_commit: '2026-07-20'
 docs_url: https://duckdb.org/docs/
 phase: data-and-retrieval
 domain:
-  - "general-purpose"
+  - general-purpose
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "An embeddable columnar OLAP engine that powers local data prep and feature engineering for AI pipelines."
+  - An embeddable columnar OLAP engine that powers local data prep and feature engineering for AI pipelines.
 best_for:
-  - "You need fast local analytical queries over Parquet/CSV/Arrow for dataset prep without standing up a warehouse"
-  - "You want an embeddable SQL engine inside a Python/notebook AI workflow with zero server to operate"
+  - You need fast local analytical queries over Parquet/CSV/Arrow for dataset prep without standing up a warehouse
+  - You want an embeddable SQL engine inside a Python/notebook AI workflow with zero server to operate
 avoid_if:
-  - "You need a high-concurrency transactional (OLTP) database serving many writers"
-  - "You need a distributed warehouse for petabyte-scale multi-node queries"
-enrichment_notes: "Repository, MIT license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. OLAP-focused, single-node by design."
+  - You need a high-concurrency transactional (OLTP) database serving many writers
+  - You need a distributed warehouse for petabyte-scale multi-node queries
+enrichment_notes: Repository, MIT license, and 2026-07-10 activity verified via the GitHub API on 2026-07-12. OLAP-focused, single-node by design.
 ---
 
 ## Overview

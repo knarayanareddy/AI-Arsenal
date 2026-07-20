@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 13
+trending_score: 31
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,7 +42,7 @@ tags:
   - edge
 maturity: beta
 cost_model: open-source
-github_stars: 1559
+github_stars: 1572
 last_commit: '2026-06-26'
 docs_url: https://github.com/UbiquitousLearning/mllm
 phase: inference-engine
@@ -55,7 +55,6 @@ relation_to_stack:
 health_signals:
   - actively-maintained
   - community-driven
-
 ecosystem_role:
   - A native multimodal inference candidate for mobile, embedded, and edge hardware with model runners, cache work, and performance benchmarks.
 best_for:

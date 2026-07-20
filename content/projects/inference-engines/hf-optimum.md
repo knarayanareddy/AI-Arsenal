@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "huggingface"
+org_or_maintainer: huggingface
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,50 +18,50 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 9
+trending_score: 31
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: hf-optimum
-name: "Hugging Face Optimum"
+name: Hugging Face Optimum
 artifact_type: library
 category: tooling
 subcategory: libraries
-description: "Hugging Face's extension of Transformers that accelerates training and inference on specialized hardware via ONNX Runtime, TensorRT, OpenVINO"
+description: Hugging Face's extension of Transformers that accelerates training and inference on specialized hardware via ONNX Runtime, TensorRT, OpenVINO
 github_url: https://github.com/huggingface/optimum
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "inference"
-  - "self-hosted"
-  - "fine-tuning"
+  - inference
+  - self-hosted
+  - fine-tuning
 maturity: production
 cost_model: open-source
-github_stars: 3438
-last_commit: "2026-07-07"
+github_stars: 3447
+last_commit: '2026-07-17'
 docs_url: https://huggingface.co/docs/optimum/
 phase: inference-engine
 domain:
-  - "general-purpose"
-  - "language"
-  - "vision"
+  - general-purpose
+  - language
+  - vision
 relation_to_stack:
-  - "build-on-top"
-  - "deploy-as-is"
+  - build-on-top
+  - deploy-as-is
 health_signals:
-  - "actively-maintained"
-  - "org-backed"
+  - actively-maintained
+  - org-backed
 ecosystem_role:
-  - "A bridge that exports and optimizes Transformers models onto hardware-accelerated inference backends."
+  - A bridge that exports and optimizes Transformers models onto hardware-accelerated inference backends.
 best_for:
-  - "You use Hugging Face Transformers and want to export/optimize models to ONNX, TensorRT, or OpenVINO"
-  - "You want a familiar Transformers-style API for quantization and accelerated inference"
+  - You use Hugging Face Transformers and want to export/optimize models to ONNX, TensorRT, or OpenVINO
+  - You want a familiar Transformers-style API for quantization and accelerated inference
 avoid_if:
-  - "You are not in the Transformers ecosystem, where using the backend runtimes directly may be simpler"
-  - "You need a full serving stack rather than an optimization/export bridge"
-enrichment_notes: "Repository, Apache-2.0 license, and 2026-07-07 activity verified via the GitHub API on 2026-07-12. A bridge layer; performance comes from the underlying backends."
+  - You are not in the Transformers ecosystem, where using the backend runtimes directly may be simpler
+  - You need a full serving stack rather than an optimization/export bridge
+enrichment_notes: Repository, Apache-2.0 license, and 2026-07-07 activity verified via the GitHub API on 2026-07-12. A bridge layer; performance comes from the underlying backends.
 ---
 
 ## Overview

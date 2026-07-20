@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "openai"
+org_or_maintainer: openai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,51 +18,51 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-19"
-last_reviewed: "2026-07-19"
+github_stars_last_30d: 4
+trending_score: 30
+added_date: '2026-07-19'
+last_reviewed: '2026-07-19'
 added_by: maintainer
 status: active
 id: gpt-oss
-name: "gpt-oss"
+name: gpt-oss
 artifact_type: model
 category: llms
 subcategory: open-source-models
-description: "OpenAI open-weight language models for reasoning, agentic tasks, and developer applications"
+description: OpenAI open-weight language models for reasoning, agentic tasks, and developer applications
 github_url: https://github.com/openai/gpt-oss
-license: "Apache-2.0"
-primary_language: "Python"
+license: Apache-2.0
+primary_language: Python
 tags:
-  - "llm"
-  - "reasoning"
-  - "tool-use"
-  - "structured-output"
-  - "foundational"
+  - llm
+  - reasoning
+  - tool-use
+  - structured-output
+  - foundational
 maturity: beta
 cost_model: open-source
-github_stars: 20237
-last_commit: "2026-06-09"
+github_stars: 20241
+last_commit: '2026-06-09'
 docs_url: https://gpt-oss.com
 phase: foundation-model
 domain:
-  - "language"
-  - "reasoning"
+  - language
+  - reasoning
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "org-backed"
-  - "actively-maintained"
+  - org-backed
+  - actively-maintained
 ecosystem_role:
-  - "Open-weight reasoning models that compete with hosted frontier APIs while complementing local inference engines"
+  - Open-weight reasoning models that compete with hosted frontier APIs while complementing local inference engines
 best_for:
-  - "Self-hosted reasoning and tool-calling assistants on controlled infrastructure"
-  - "Agent experiments that need inspectable weights and structured outputs"
+  - Self-hosted reasoning and tool-calling assistants on controlled infrastructure
+  - Agent experiments that need inspectable weights and structured outputs
 avoid_if:
-  - "You cannot preserve the required Harmony response format in your serving stack"
-  - "You need a small CPU-only model or a turnkey hosted safety and monitoring layer"
-enrichment_notes: "OpenAI open-weight release; Harmony formatting is mandatory, and MXFP4 and evaluation claims are vendor-reported. Draft pending review."
+  - You cannot preserve the required Harmony response format in your serving stack
+  - You need a small CPU-only model or a turnkey hosted safety and monitoring layer
+enrichment_notes: OpenAI open-weight release; Harmony formatting is mandatory, and MXFP4 and evaluation claims are vendor-reported. Draft pending review.
 ---
 
 ## Overview

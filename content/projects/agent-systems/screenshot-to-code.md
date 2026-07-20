@@ -6,30 +6,39 @@ artifact_type: tool
 category: code-generation
 subcategory: tools
 description: Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
-github_url: "https://github.com/abi/screenshot-to-code"
+github_url: https://github.com/abi/screenshot-to-code
 license: MIT
 primary_language: Python
 org_or_maintainer: abi
-tags: [code-gen, multimodal, vision]
+tags:
+  - code-gen
+  - multimodal
+  - vision
 maturity: production
 cost_model: open-source
-github_stars: 73211
-github_stars_last_30d: 0
-trending_score: 60
-last_commit: "2026-07-07"
-docs_url: "https://github.com/abi/screenshot-to-code#readme"
-demo_url: "https://screenshottocode.com"
+github_stars: 73392
+github_stars_last_30d: 181
+trending_score: 54
+last_commit: '2026-07-17'
+docs_url: https://github.com/abi/screenshot-to-code#readme
+demo_url: https://screenshottocode.com
 paper_url: null
 paper_id: null
 phase: agent-system
-domain: [general-purpose, vision]
-relation_to_stack: [deploy-as-is, study-and-reference]
-health_signals: [community-driven, actively-maintained]
+domain:
+  - general-purpose
+  - vision
+relation_to_stack:
+  - deploy-as-is
+  - study-and-reference
+health_signals:
+  - community-driven
+  - actively-maintained
 ecosystem_role:
-  - "The canonical design-to-code application: the reference open implementation of \"multimodal LLM reads a UI image, emits working frontend code,\" with iterative refinement against rendered output — both a usable tool and the cleanest study object for vision-driven code generation"
+  - 'The canonical design-to-code application: the reference open implementation of "multimodal LLM reads a UI image, emits working frontend code," with iterative refinement against rendered output — both a usable tool and the cleanest study object for vision-driven code generation'
 best_for:
   - Bootstrapping frontend implementations from designs — screenshot or Figma export to a working HTML/Tailwind/React starting point in one pass, then iterate with instructions
-  - "Studying how production multimodal codegen is engineered: prompt construction from images, framework-specific system prompts, and self-revision loops comparing generated renders to the target"
+  - 'Studying how production multimodal codegen is engineered: prompt construction from images, framework-specific system prompts, and self-revision loops comparing generated renders to the target'
 avoid_if:
   - You expect production-grade component architecture — output is page-level scaffolding; state management, accessibility, and design-system integration remain human work
   - Your designs are proprietary and you can't use hosted multimodal APIs — quality depends on frontier vision models; fully-local model results are markedly weaker
@@ -40,12 +49,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Stars (73.2k), MIT, and active maintenance (last push 2026-07-07) verified via the GitHub API on 2026-07-08. Output-quality characterization is qualitative community consensus; no formal benchmark exists for design-to-code fidelity.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/abi/screenshot-to-code","date":"2026-07-08","description":"73.2k stars, one of the most-starred AI codegen applications"}
+  - source: github-trending
+    url: https://github.com/abi/screenshot-to-code
+    date: '2026-07-08'
+    description: 73.2k stars, one of the most-starred AI codegen applications
 featured: false
 status: active
 ---

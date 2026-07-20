@@ -6,25 +6,34 @@ artifact_type: library
 category: observability
 subcategory: evaluation
 description: An open-source evaluation framework for testing LLM applications in CI
-github_url: "https://github.com/confident-ai/deepeval"
+github_url: https://github.com/confident-ai/deepeval
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: null
-tags: [evaluation, llm, observability, monitoring]
+tags:
+  - evaluation
+  - llm
+  - observability
+  - monitoring
 maturity: production
 cost_model: open-source
-github_stars: 16140
-github_stars_last_30d: 16140
-trending_score: 70
-last_commit: "2026-06-13"
+github_stars: 16962
+github_stars_last_30d: 822
+trending_score: 55
+last_commit: '2026-07-20'
 docs_url: null
 demo_url: null
 paper_url: null
 paper_id: null
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [build-on-top]
-health_signals: [org-backed, community-driven, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
+  - actively-maintained
 ecosystem_role:
   - General-purpose open-source LLM evaluation framework designed to run in CI like a unit-test suite
 best_for:
@@ -40,8 +49,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: DeepEval (from Confident AI) is frequently cited alongside Ragas and promptfoo in evaluation-framework comparisons as one of the leading open-source options specifically for CI-integrated LLM testing; org-backing (Confident AI) plus substantial community adoption support the health signals here.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

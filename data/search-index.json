@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-19T21:22:56.945Z",
+  "generated_at": "2026-07-20T11:52:01.142Z",
   "config": {
     "document": {
       "id": "id",
@@ -197,9 +197,9 @@
       "paid": 11
     },
     "status": {
-      "active": 718,
+      "active": 712,
       "deprecated": 1,
-      "archived": 2,
+      "archived": 8,
       "watching": 4,
       "reviewed": 3,
       "draft": 1
@@ -8731,7 +8731,7 @@
       "subcategory": "advanced-rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "data-and-retrieval",
       "audience": null,
       "domain": [
@@ -16625,7 +16625,7 @@
       "subcategory": "coding-agents",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -27916,7 +27916,7 @@
       "subcategory": "frameworks",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -34243,7 +34243,7 @@
       "subcategory": "inference-engines",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "inference-engine",
       "audience": null,
       "domain": [
@@ -38016,7 +38016,7 @@
       "subcategory": "coding-agents",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -45313,7 +45313,7 @@
       "subcategory": "platforms",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [

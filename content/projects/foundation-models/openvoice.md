@@ -8,7 +8,7 @@ benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
-org_or_maintainer: "myshell-ai"
+org_or_maintainer: myshell-ai
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -18,49 +18,49 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
-added_date: "2026-07-12"
-last_reviewed: "2026-07-12"
+github_stars_last_30d: 66
+trending_score: 35
+added_date: '2026-07-12'
+last_reviewed: '2026-07-12'
 added_by: maintainer
 status: active
 id: openvoice
-name: "OpenVoice"
+name: OpenVoice
 artifact_type: model
 category: voice-audio
 subcategory: open-source-models
-description: "An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control"
+description: An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
 github_url: https://github.com/myshell-ai/OpenVoice
-license: "MIT"
-primary_language: "Python"
+license: MIT
+primary_language: Python
 tags:
-  - "voice"
-  - "multimodal"
-  - "self-hosted"
-  - "llm"
+  - voice
+  - multimodal
+  - self-hosted
+  - llm
 maturity: beta
 cost_model: open-source
-github_stars: 36917
-last_commit: "2025-04-19"
+github_stars: 36983
+last_commit: '2025-04-19'
 docs_url: https://research.myshell.ai/open-voice
 phase: foundation-model
 domain:
-  - "audio"
+  - audio
 relation_to_stack:
-  - "deploy-as-is"
-  - "build-on-top"
+  - deploy-as-is
+  - build-on-top
 health_signals:
-  - "research-origin"
-  - "community-driven"
+  - research-origin
+  - community-driven
 ecosystem_role:
-  - "A voice-cloning model that transfers a target speaker's tone color onto a controllable base voice, decoupling identity from style and language."
+  - A voice-cloning model that transfers a target speaker's tone color onto a controllable base voice, decoupling identity from style and language.
 best_for:
-  - "You need MIT-licensed voice cloning that works across languages the reference speaker never spoke"
-  - "You want independent control of emotion, accent, rhythm, and pauses on top of a cloned timbre"
+  - You need MIT-licensed voice cloning that works across languages the reference speaker never spoke
+  - You want independent control of emotion, accent, rhythm, and pauses on top of a cloned timbre
 avoid_if:
-  - "You need a fully end-to-end single model; OpenVoice pairs a base TTS with a tone-color converter and expects that two-stage setup"
-  - "You require the highest raw naturalness of the newest large TTS models, where quality may edge ahead"
-enrichment_notes: "Repository, MIT license, and 2025-04-19 activity verified via the GitHub API on 2026-07-12. V2 weights and some MyShell components may carry separate terms; verify before commercial use."
+  - You need a fully end-to-end single model; OpenVoice pairs a base TTS with a tone-color converter and expects that two-stage setup
+  - You require the highest raw naturalness of the newest large TTS models, where quality may edge ahead
+enrichment_notes: Repository, MIT license, and 2025-04-19 activity verified via the GitHub API on 2026-07-12. V2 weights and some MyShell components may carry separate terms; verify before commercial use.
 ---
 
 ## Overview

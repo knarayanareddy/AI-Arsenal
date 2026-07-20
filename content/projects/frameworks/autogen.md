@@ -6,25 +6,35 @@ artifact_type: framework
 category: agents
 subcategory: agent-frameworks
 description: Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
-github_url: "https://github.com/microsoft/autogen"
+github_url: https://github.com/microsoft/autogen
 license: CC-BY-4.0
 primary_language: Python
 org_or_maintainer: null
-tags: [agents, orchestration, planning, tool-use]
+tags:
+  - agents
+  - orchestration
+  - planning
+  - tool-use
 maturity: production
 cost_model: open-source
-github_stars: 58925
-github_stars_last_30d: 0
-trending_score: 40
-last_commit: "2026-04-15"
-docs_url: "https://microsoft.github.io/autogen/"
+github_stars: 59840
+github_stars_last_30d: 915
+trending_score: 55
+last_commit: '2026-04-15'
+docs_url: https://microsoft.github.io/autogen/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [language, reasoning]
-relation_to_stack: [study-and-reference, build-on-top]
-health_signals: [org-backed, community-driven]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - study-and-reference
+  - build-on-top
+health_signals:
+  - org-backed
+  - community-driven
 ecosystem_role:
   - Microsoft's original multi-agent conversation framework, now in maintenance mode
 best_for:
@@ -35,18 +45,25 @@ avoid_if:
   - You need enterprise Azure integration, A2A orchestration protocol support, or ongoing architectural improvements — those are only landing in Microsoft Agent Framework, not AutoGen
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [microsoft-agent-framework]
+alternatives:
+  - microsoft-agent-framework
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Multiple 2026 sources (Visual Studio Magazine's April 2026 Agent Framework 1.0 launch coverage, community 'Is AutoGen Deprecated' analysis from May 2026) confirm Microsoft has moved AutoGen to maintenance-mode status with Microsoft Agent Framework as the designated successor; the existing entry's own description already reflected this correctly.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/microsoft/autogen/discussions/7066","date":"2026-06-13","description":"AutoGen update discussion"}
-  - {"source":"conference","url":"https://visualstudiomagazine.com/articles/2026/04/06/microsoft-ships-production-ready-agent-framework-1-0-for-net-and-python.aspx","date":"2026-04-06","description":"Visual Studio Magazine reports Microsoft Agent Framework 1.0 as the official successor, with migration guides for existing AutoGen users"}
+  - source: github-trending
+    url: https://github.com/microsoft/autogen/discussions/7066
+    date: '2026-06-13'
+    description: AutoGen update discussion
+  - source: conference
+    url: https://visualstudiomagazine.com/articles/2026/04/06/microsoft-ships-production-ready-agent-framework-1-0-for-net-and-python.aspx
+    date: '2026-04-06'
+    description: Visual Studio Magazine reports Microsoft Agent Framework 1.0 as the official successor, with migration guides for existing AutoGen users
 featured: false
 status: deprecated
 ---

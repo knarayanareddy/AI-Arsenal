@@ -6,25 +6,34 @@ artifact_type: framework
 category: computer-vision
 subcategory: frameworks
 description: Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
-github_url: "https://github.com/facebookresearch/detectron2"
+github_url: https://github.com/facebookresearch/detectron2
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: Meta AI (FAIR)
-tags: [vision, training, self-hosted]
+tags:
+  - vision
+  - training
+  - self-hosted
 maturity: production
 cost_model: open-source
-github_stars: 34599
-github_stars_last_30d: 0
-trending_score: 55
-last_commit: "2026-06-07"
-docs_url: "https://detectron2.readthedocs.io/en/latest/"
+github_stars: 34616
+github_stars_last_30d: 17
+trending_score: 41
+last_commit: '2026-06-07'
+docs_url: https://detectron2.readthedocs.io/en/latest/
 demo_url: null
 paper_url: null
 paper_id: null
 phase: framework
-domain: [vision]
-relation_to_stack: [build-on-top, study-and-reference]
-health_signals: [org-backed, research-origin, production-proven]
+domain:
+  - vision
+relation_to_stack:
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - research-origin
+  - production-proven
 ecosystem_role:
   - The reference detection/segmentation research platform — modular components (backbones, proposal heads, ROI heads) plus a large pretrained model zoo, designed for swapping architectures rather than shipping one fixed detector
 best_for:
@@ -34,18 +43,23 @@ avoid_if:
   - You want the fastest path from dataset to deployed detector — Ultralytics-style train/predict/export workflows are far more streamlined for applied work
   - You need transformer-era open-vocabulary detection as a first-class citizen — Detectron2's zoo centers on the R-CNN lineage; newer approaches live elsewhere
 upstream_dependencies: []
-downstream_consumers: [sam2]
-alternatives: [ultralytics]
+downstream_consumers:
+  - sam2
+alternatives:
+  - ultralytics
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: 34.6k stars, Apache-2.0, last push 2026-06-07 verified via the GitHub API on 2026-07-08. Maintenance is steady but conservative; the model zoo reflects the R-CNN era. Included as the reference vision research framework.
-added_date: "2026-07-08"
-last_reviewed: "2026-07-08"
+added_date: '2026-07-08'
+last_reviewed: '2026-07-08'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"github-trending","url":"https://github.com/trending","date":"2026-07-08","description":"34.6k stars; long-standing reference detection framework"}
+  - source: github-trending
+    url: https://github.com/trending
+    date: '2026-07-08'
+    description: 34.6k stars; long-standing reference detection framework
 featured: false
 status: active
 ---
