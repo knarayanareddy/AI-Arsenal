@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-07-24T06:08:09.766Z",
+  "count": 4,
+  "items": [
+    {
+      "id": "github-trending",
+      "title": "Source Feed: GitHub Trending",
+      "entry_type": "trend",
+      "kind": "source-feed",
+      "status": "reviewed",
+      "as_of": "2026-07-06",
+      "signals_used": [
+        "github-stars-velocity",
+        "github-stars-total",
+        "github-activity"
+      ],
+      "sources": [
+        {
+          "source": "github",
+          "url": "https://github.com/trending",
+          "last_checked": "2026-07-06",
+          "notes": "Primary upstream page for the GitHub Trending signal."
+        }
+      ],
+      "last_reviewed": "2026-07-06",
+      "added_date": "2026-07-06",
+      "added_by": "maintainer",
+      "enrichment_status": "reviewed",
+      "tags": [
+        "trending"
+      ],
+      "path": "content/trending/by-source/github-trending.md",
+      "url": "content/trending/by-source/github-trending",
+      "slug": "github-trending",
+      "section_path": "content/trending/by-source",
+      "display_name": "Source Feed: GitHub Trending",
+      "summary": "",
+      "last_updated": "2026-07-06",
+      "headings": [
+        "Overview",
+        "What this source is",
+        "What signals we extract",
+        "Failure modes / bias",
+        "How it affects the Arsenal",
+        "Sources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 208,
+      "body_html": "<h2>Overview</h2>\n<p>GitHub Trending is the daily and weekly list of repositories gaining stars fastest. It is the primary upstream for the <code>github-stars-velocity</code> signal used across Arsenal trend entries.</p>\n<h2>What this source is</h2>\n<p>A public GitHub page that ranks repositories by star gain over the last day, week, or month. No API token is required to read it, and it is the most accessible real-time popularity signal for OSS AI projects.</p>\n<h2>What signals we extract</h2>\n<ul>\n<li><code>github-stars-velocity</code> — star gain rate over the window.</li>\n<li><code>github-stars-total</code> — cumulative stars (used by the Hall of Fame).</li>\n<li><code>github-activity</code> — commit, release, and contributor movement around trending repos.</li>\n</ul>\n<h2>Failure modes / bias</h2>\n<ul>\n<li><strong>Survivorship and recency bias:</strong> only surfaces repos already on GitHub and favours English-language, open-source, hype-cycle projects.</li>\n<li><strong>Star inflation:</strong> bot or astroturfed stars and \"star farming\" distort velocity.</li>\n<li><strong>Timezone skew:</strong> daily resets favour US-friendly windows, under-weighting activity elsewhere.</li>\n</ul>\n<h2>How it affects the Arsenal</h2>\n<p>Feeds <code>trending_score</code> on project entries (via <code>scripts/calculate-trending.js</code>) and the weekly snapshot. Treat a star spike as a pointer to investigate, never as a verdict — always re-verify against release notes and community signals before publishing.</p>\n<h2>Sources</h2>\n<ul>\n<li><a href=\"https://github.com/trending\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Trending</a> — last_checked 2026-07-06</li>\n</ul>\n",
+      "body_text": "Overview GitHub Trending is the daily and weekly list of repositories gaining stars fastest. It is the primary upstream for the github stars velocity signal used across Arsenal trend entries. What this source is A public GitHub page that ranks repositories by star gain over the last day, week, or month. No API token is required to read it, and it is the most accessible real time popularity signal for OSS AI projects. What signals we extract github stars velocity — star gain rate over the window. github stars total — cumulative stars (used by the Hall of Fame). github activity — commit, release, and contributor movement around trending repos. Failure modes / bias Survivorship and recency bias: only surfaces repos already on GitHub and favours English language, open source, hype cycle projects. Star inflation: bot or astroturfed stars and \"star farming\" distort velocity. Timezone skew: daily resets favour US friendly windows, under weighting activity elsewhere. How it affects the Arsenal Feeds trending score on project entries (via scripts/calculate trending.js) and the weekly snapshot. Treat a star spike as a pointer to investigate, never as a verdict — always re verify against release notes and community signals before publishing. Sources GitHub Trending — last checked 2026 07 06"
+    },
+    {
+      "id": "hall-of-fame",
+      "title": "AI Arsenal Hall of Fame",
+      "entry_type": "trend",
+      "kind": "hall-of-fame",
+      "status": "reviewed",
+      "as_of": "2026-07-06",
+      "signals_used": [
+        "github-stars-total",
+        "github-activity"
+      ],
+      "sources": [
+        {
+          "source": "github",
+          "url": "https://github.com/trending",
+          "last_checked": "2026-07-06",
+          "notes": "Star totals and long-run activity underpin the evergreen ranking."
+        }
+      ],
+      "ranked_entries": [
+        {
+          "rank": 1,
+          "entry_id": "pinecone",
+          "entry_type": "tool",
+          "why_here": "Durable, widely-adopted vector database; foundational to most RAG stacks documented in the Arsenal."
+        },
+        {
+          "rank": 2,
+          "entry_id": "langfuse",
+          "entry_type": "project",
+          "why_here": "De-facto open-source LLM observability/eval layer referenced across evaluation and observability entries."
+        },
+        {
+          "rank": 3,
+          "entry_id": "choose-llm",
+          "entry_type": "architecture",
+          "why_here": "Evergreen decision guide for model selection that routes dozens of downstream entries."
+        }
+      ],
+      "watchlist": [
+        "qdrant"
+      ],
+      "last_reviewed": "2026-07-06",
+      "added_date": "2026-06-13",
+      "added_by": "maintainer",
+      "enrichment_status": "reviewed",
+      "tags": [
+        "trending",
+        "featured",
+        "foundational"
+      ],
+      "path": "content/trending/hall-of-fame.md",
+      "url": "content/trending/hall-of-fame",
+      "slug": "hall-of-fame",
+      "section_path": "content/trending",
+      "display_name": "AI Arsenal Hall of Fame",
+      "summary": "",
+      "last_updated": "2026-07-06",
+      "headings": [
+        "Overview",
+        "What this snapshot covers",
+        "Method (signals + caveats)",
+        "Ranked entries (with why)",
+        "Notable changes to watch",
+        "How to use this (links into the Arsenal)",
+        "Sources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 264,
+      "body_html": "<h2>Overview</h2>\n<p>The AI Arsenal Hall of Fame is an evergreen, slowly-changing list of foundational AI engineering projects, tools, and decision guides that every reader should know. Unlike the weekly snapshot, it deliberately ignores short-term buzz.</p>\n<h2>What this snapshot covers</h2>\n<p>Durable, battle-tested resources ranked by long-run adoption (GitHub stars total + sustained activity), not by what happened this week. These are the entries the rest of the Arsenal links back to.</p>\n<h2>Method (signals + caveats)</h2>\n<p>Signals: <code>github-stars-total</code>, <code>github-activity</code>.</p>\n<p>Caveats: star counts measure popularity, not fitness for a given workload. A high rank here is a <em>starting point</em>, not an endorsement — always evaluate against your own requirements using the linked canonical entry.</p>\n<h2>Ranked entries (with why)</h2>\n<ol>\n<li><a href=\"../tools/data-ingestion/pinecone.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">pinecone</a> — Durable, widely-adopted vector database; foundational to most RAG stacks documented in the Arsenal.</li>\n<li><a href=\"../projects/benchmarks-and-evals/langfuse.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">langfuse</a> — De-facto open-source LLM observability/eval layer referenced across evaluation and observability entries.</li>\n<li><a href=\"../architectures/model-selection/choose-llm.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">choose-llm</a> — Evergreen decision guide for model selection that routes dozens of downstream entries.</li>\n</ol>\n<h2>Notable changes to watch</h2>\n<ul>\n<li>Watchlist: <a href=\"../projects/data-and-retrieval/qdrant.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">qdrant</a> — closing the adoption gap on the leading vector DBs; promote if momentum continues into sustained dominance.</li>\n<li>Demotions happen when a tool is superseded or its maintenance signal weakens; see each canonical entry's status.</li>\n</ul>\n<h2>How to use this (links into the Arsenal)</h2>\n<p>Start here for foundational context, then follow the linked canonical entries. Contrast with <a href=\"./this-week.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">This Week in AI Arsenal</a> for what is moving right now, and with the <a href=\"./by-source/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">by-source feeds</a> for how signals are sourced.</p>\n<h2>Sources</h2>\n<ul>\n<li><a href=\"https://github.com/trending\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Trending</a> — last_checked 2026-07-06</li>\n</ul>\n",
+      "body_text": "Overview The AI Arsenal Hall of Fame is an evergreen, slowly changing list of foundational AI engineering projects, tools, and decision guides that every reader should know. Unlike the weekly snapshot, it deliberately ignores short term buzz. What this snapshot covers Durable, battle tested resources ranked by long run adoption (GitHub stars total + sustained activity), not by what happened this week. These are the entries the rest of the Arsenal links back to. Method (signals + caveats) Signals: github stars total, github activity. Caveats: star counts measure popularity, not fitness for a given workload. A high rank here is a starting point , not an endorsement — always evaluate against your own requirements using the linked canonical entry. Ranked entries (with why) 1. pinecone — Durable, widely adopted vector database; foundational to most RAG stacks documented in the Arsenal. 2. langfuse — De facto open source LLM observability/eval layer referenced across evaluation and observability entries. 3. choose llm — Evergreen decision guide for model selection that routes dozens of downstream entries. Notable changes to watch Watchlist: qdrant — closing the adoption gap on the leading vector DBs; promote if momentum continues into sustained dominance. Demotions happen when a tool is superseded or its maintenance signal weakens; see each canonical entry's status. How to use this (links into the Arsenal) Start here for foundational context, then follow the linked canonical entries. Contrast with This Week in AI Arsenal for what is moving right now, and with the by source feeds for how signals are sourced. Sources GitHub Trending — last checked 2026 07 06"
+    },
+    {
+      "id": "this-week",
+      "title": "This Week in AI Arsenal",
+      "entry_type": "trend",
+      "kind": "weekly-snapshot",
+      "status": "draft",
+      "as_of": "2026-07-06",
+      "window": {
+        "start": "2026-06-29",
+        "end": "2026-07-06"
+      },
+      "signals_used": [
+        "github-stars-velocity",
+        "github-stars-total",
+        "github-activity"
+      ],
+      "sources": [
+        {
+          "source": "github",
+          "url": "https://github.com/trending",
+          "last_checked": "2026-07-06",
+          "notes": "GitHub Trending is the primary star-velocity signal."
+        }
+      ],
+      "ranked_entries": [
+        {
+          "rank": 1,
+          "entry_id": "deepeval",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 2,
+          "entry_id": "dspy",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 3,
+          "entry_id": "gemma",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 4,
+          "entry_id": "langchain",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 5,
+          "entry_id": "phi-cookbook",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 6,
+          "entry_id": "pydantic-ai",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 7,
+          "entry_id": "qwen",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 8,
+          "entry_id": "semantic-kernel",
+          "entry_type": "project",
+          "why_here": "Trending score 70/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 70
+        },
+        {
+          "rank": 9,
+          "entry_id": "surrealdb",
+          "entry_type": "project",
+          "why_here": "Trending score 60/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 60
+        },
+        {
+          "rank": 10,
+          "entry_id": "microsoft-agent-framework",
+          "entry_type": "project",
+          "why_here": "Trending score 50/100 from GitHub star velocity, recency, and buzz sources.",
+          "score_snapshot": 50
+        }
+      ],
+      "last_reviewed": "2026-07-06",
+      "added_date": "2026-07-06",
+      "added_by": "maintainer",
+      "enrichment_status": "draft",
+      "tags": [
+        "trending"
+      ],
+      "path": "content/trending/this-week.md",
+      "url": "content/trending/this-week",
+      "slug": "this-week",
+      "section_path": "content/trending",
+      "display_name": "This Week in AI Arsenal",
+      "summary": "",
+      "last_updated": "2026-07-06",
+      "headings": [
+        "Overview",
+        "What this snapshot covers",
+        "Method (signals + caveats)",
+        "Ranked entries (with why)",
+        "Notable changes to watch",
+        "How to use this (links into the Arsenal)",
+        "Sources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 286,
+      "body_html": "<h2>Overview</h2>\n<p>This weekly draft summarizes notable project movement and ecosystem signals for maintainer review.</p>\n<h2>What this snapshot covers</h2>\n<p>Top projects by trending score (GitHub star velocity, recency, and buzz sources) over the trailing 7-day window (2026-06-29 → 2026-07-06).</p>\n<h2>Method (signals + caveats)</h2>\n<p>Trending scores are computed by <code>scripts/calculate-trending.js</code> from structured project metadata. Star velocity is noisy and community buzz is anecdotal; scores are only as good as source metadata and must be human-verified before publishing.</p>\n<h2>Ranked entries (with why)</h2>\n<ol>\n<li><a href=\"content/projects/benchmarks-and-evals/deepeval\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">DeepEval</a> — An open-source evaluation framework for testing LLM applications in CI</li>\n<li><a href=\"content/projects/frameworks/dspy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">DSPy</a> — A framework for programming and optimizing language model pipelines</li>\n<li><a href=\"content/projects/foundation-models/gemma\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Gemma</a> — Google open model family designed for efficient language and multimodal applications</li>\n<li><a href=\"content/projects/frameworks/langchain\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">LangChain</a> — A framework for composing LLM applications, retrieval flows, tools, and agents</li>\n<li><a href=\"content/projects/foundation-models/phi-cookbook\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Phi Cookbook</a> — Microsoft examples and recipes for building with the Phi model family</li>\n<li><a href=\"content/projects/frameworks/pydantic-ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Pydantic AI</a> — A Python agent framework built around typed models and structured outputs</li>\n<li><a href=\"content/projects/foundation-models/qwen\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Qwen</a> — Alibaba open-weight model family covering language, coding, and multimodal use cases</li>\n<li><a href=\"content/projects/frameworks/semantic-kernel\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Semantic Kernel</a> — An SDK for integrating AI orchestration into production applications</li>\n<li><a href=\"content/projects/data-and-retrieval/surrealdb\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">SurrealDB</a> — Multi-model database combining graph, document, vector, and time-series for AI agents</li>\n<li><a href=\"content/projects/frameworks/microsoft-agent-framework\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Microsoft Agent Framework</a> — Microsoft framework for Python and .NET agents, workflows, and production orchestration</li>\n</ol>\n<h2>Notable changes to watch</h2>\n<ul>\n<li>Re-run <code>pnpm run update:trending</code> and <code>node scripts/draft-trending.js</code> before publishing; verify external buzz sources.</li>\n</ul>\n<h2>How to use this (links into the Arsenal)</h2>\n<p>Link the weekly draft from monthly digests and launch posts once reviewed. Pair with the <a href=\"./hall-of-fame.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Hall of Fame</a> for evergreen context.</p>\n<h2>Sources</h2>\n<ul>\n<li><a href=\"https://github.com/trending\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">GitHub Trending</a> (last_checked: 2026-07-06)</li>\n</ul>\n",
+      "body_text": "Overview This weekly draft summarizes notable project movement and ecosystem signals for maintainer review. What this snapshot covers Top projects by trending score (GitHub star velocity, recency, and buzz sources) over the trailing 7 day window (2026 06 29 → 2026 07 06). Method (signals + caveats) Trending scores are computed by scripts/calculate trending.js from structured project metadata. Star velocity is noisy and community buzz is anecdotal; scores are only as good as source metadata and must be human verified before publishing. Ranked entries (with why) 1. DeepEval — An open source evaluation framework for testing LLM applications in CI 2. DSPy — A framework for programming and optimizing language model pipelines 3. Gemma — Google open model family designed for efficient language and multimodal applications 4. LangChain — A framework for composing LLM applications, retrieval flows, tools, and agents 5. Phi Cookbook — Microsoft examples and recipes for building with the Phi model family 6. Pydantic AI — A Python agent framework built around typed models and structured outputs 7. Qwen — Alibaba open weight model family covering language, coding, and multimodal use cases 8. Semantic Kernel — An SDK for integrating AI orchestration into production applications 9. SurrealDB — Multi model database combining graph, document, vector, and time series for AI agents 10. Microsoft Agent Framework — Microsoft framework for Python and .NET agents, workflows, and production orchestration Notable changes to watch Re run pnpm run update:trending and node scripts/draft trending.js before publishing; verify external buzz sources. How to use this (links into the Arsenal) Link the weekly draft from monthly digests and launch posts once reviewed. Pair with the Hall of Fame for evergreen context. Sources GitHub Trending (last checked: 2026 07 06)"
+    },
+    {
+      "id": "toolradar-techpresso",
+      "title": "Source Feed: ToolRadar / Techpresso",
+      "entry_type": "trend",
+      "kind": "source-feed",
+      "status": "reviewed",
+      "as_of": "2026-07-06",
+      "signals_used": [
+        "newsletter-feature",
+        "community-buzz",
+        "release"
+      ],
+      "sources": [
+        {
+          "source": "toolradar-techpresso",
+          "url": "https://toolradar.com/featured/techpresso",
+          "last_checked": "2026-07-06",
+          "notes": "Techpresso newsletter + ToolRadar ingestion feeds buzz_sources enrichment for project/tool entries."
+        }
+      ],
+      "last_reviewed": "2026-07-06",
+      "added_date": "2026-07-06",
+      "added_by": "maintainer",
+      "enrichment_status": "reviewed",
+      "tags": [
+        "trending"
+      ],
+      "path": "content/trending/by-source/toolradar-techpresso.md",
+      "url": "content/trending/by-source/toolradar-techpresso",
+      "slug": "toolradar-techpresso",
+      "section_path": "content/trending/by-source",
+      "display_name": "Source Feed: ToolRadar / Techpresso",
+      "summary": "",
+      "last_updated": "2026-07-06",
+      "headings": [
+        "Overview",
+        "What this source is",
+        "What signals we extract",
+        "Failure modes / bias",
+        "How it affects the Arsenal",
+        "Sources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 180,
+      "body_html": "<h2>Overview</h2>\n<p>ToolRadar (Techpresso) is a curated newsletter plus an ingestion project that surfaces and ranks new AI engineering tools. It backs the <code>toolradar-techpresso</code> source used for <code>newsletter-feature</code> and <code>community-buzz</code> signals.</p>\n<h2>What this source is</h2>\n<p>A human-curated newsletter (Techpresso) together with the ToolRadar project that ingests and ranks AI tools. It is consumed by <code>scripts/populate-from-toolradar.js</code> and <code>scripts/enrich-with-buzz-sources.js</code> to enrich project and tool entries.</p>\n<h2>What signals we extract</h2>\n<ul>\n<li><code>newsletter-feature</code> — tools highlighted in the newsletter.</li>\n<li><code>community-buzz</code> — mentions across the broader AI-engineering community.</li>\n<li><code>release</code> — new tool launches and major versions.</li>\n</ul>\n<h2>Failure modes / bias</h2>\n<ul>\n<li><strong>Editorial selection bias:</strong> reflects what the curators choose to cover.</li>\n<li><strong>Lag:</strong> newsletter cadence means signals trail real-time events by days.</li>\n<li><strong>Niche focus:</strong> skewed toward developer tooling rather than research or enterprise platforms.</li>\n</ul>\n<h2>How it affects the Arsenal</h2>\n<p>Drives <code>buzz_sources</code> enrichment on project and tool entries and contributes to <code>trending_score</code>. Treat it as a secondary signal and corroborate with GitHub activity before publishing.</p>\n<h2>Sources</h2>\n<ul>\n<li><a href=\"https://toolradar.com/featured/techpresso\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">ToolRadar / Techpresso</a> — last_checked 2026-07-06</li>\n</ul>\n",
+      "body_text": "Overview ToolRadar (Techpresso) is a curated newsletter plus an ingestion project that surfaces and ranks new AI engineering tools. It backs the toolradar techpresso source used for newsletter feature and community buzz signals. What this source is A human curated newsletter (Techpresso) together with the ToolRadar project that ingests and ranks AI tools. It is consumed by scripts/populate from toolradar.js and scripts/enrich with buzz sources.js to enrich project and tool entries. What signals we extract newsletter feature — tools highlighted in the newsletter. community buzz — mentions across the broader AI engineering community. release — new tool launches and major versions. Failure modes / bias Editorial selection bias: reflects what the curators choose to cover. Lag: newsletter cadence means signals trail real time events by days. Niche focus: skewed toward developer tooling rather than research or enterprise platforms. How it affects the Arsenal Drives buzz sources enrichment on project and tool entries and contributes to trending score. Treat it as a secondary signal and corroborate with GitHub activity before publishing. Sources ToolRadar / Techpresso — last checked 2026 07 06"
+    }
+  ]
+}

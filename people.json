@@ -1,0 +1,1051 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-07-24T06:08:09.766Z",
+  "count": 25,
+  "items": [
+    {
+      "id": "andrej-karpathy",
+      "name": "Andrej Karpathy",
+      "role": "AI educator and researcher",
+      "description": "Explains neural networks, transformers, and LLMs with unusually clear engineering intuition",
+      "url": "content/community/people/andrej-karpathy",
+      "tags": [
+        "llm",
+        "transformers",
+        "foundational"
+      ],
+      "channels": [
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@AndrejKarpathy"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/karpathy"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/andrej-karpathy.md",
+      "slug": "andrej-karpathy",
+      "section_path": "content/community/people",
+      "display_name": "Andrej Karpathy",
+      "summary": "Explains neural networks, transformers, and LLMs with unusually clear engineering intuition",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 65,
+      "body_html": "<h2>Overview</h2>\n<p>Andrej Karpathy is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Excellent for builders who want first-principles explanations of transformers, tokenization, and training loops.</p>\n<h2>Notable Work</h2>\n<p>Neural network and GPT-from-scratch educational materials.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://karpathy.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.youtube.com/@AndrejKarpathy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">youtube</a></li>\n<li><a href=\"https://github.com/karpathy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://karpathy.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.youtube.com/@AndrejKarpathy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">youtube</a></li>\n<li><a href=\"https://github.com/karpathy\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Andrej Karpathy is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Excellent for builders who want first principles explanations of transformers, tokenization, and training loops. Notable Work Neural network and GPT from scratch educational materials. Channels Primary profile youtube github Resources Primary profile youtube github Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "andrew-ng",
+      "name": "Andrew Ng",
+      "role": "AI educator and founder",
+      "description": "Popularizes practical AI education and structured learning paths",
+      "url": "content/community/people/andrew-ng",
+      "tags": [
+        "llm",
+        "foundational",
+        "training"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.deeplearning.ai/"
+        },
+        {
+          "type": "youtube",
+          "url": "https://www.youtube.com/@Deeplearningai"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/andrew-ng.md",
+      "slug": "andrew-ng",
+      "section_path": "content/community/people",
+      "display_name": "Andrew Ng",
+      "summary": "Popularizes practical AI education and structured learning paths",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 59,
+      "body_html": "<h2>Overview</h2>\n<p>Andrew Ng is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for structured courses and accessible explanations for broad engineering audiences.</p>\n<h2>Notable Work</h2>\n<p>DeepLearning.AI courses and AI education.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.deeplearning.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.deeplearning.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://www.youtube.com/@Deeplearningai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">youtube</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.deeplearning.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.deeplearning.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://www.youtube.com/@Deeplearningai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">youtube</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Andrew Ng is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for structured courses and accessible explanations for broad engineering audiences. Notable Work DeepLearning.AI courses and AI education. Channels Primary profile website youtube Resources Primary profile website youtube Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "arvind-narayanan",
+      "name": "Arvind Narayanan",
+      "role": "AI accountability researcher",
+      "description": "Writes critically about AI evaluation, policy, risks, and societal impact",
+      "url": "content/community/people/arvind-narayanan",
+      "tags": [
+        "evaluation",
+        "security",
+        "alignment"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.cs.princeton.edu/~arvindn/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/arvind-narayanan.md",
+      "slug": "arvind-narayanan",
+      "section_path": "content/community/people",
+      "display_name": "Arvind Narayanan",
+      "summary": "Writes critically about AI evaluation, policy, risks, and societal impact",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 58,
+      "body_html": "<h2>Overview</h2>\n<p>Arvind Narayanan is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for grounded skepticism and evaluation of AI claims.</p>\n<h2>Notable Work</h2>\n<p>AI Snake Oil and research on AI accountability.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.cs.princeton.edu/~arvindn/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Arvind Narayanan is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for grounded skepticism and evaluation of AI claims. Notable Work AI Snake Oil and research on AI accountability. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "chip-huyen",
+      "name": "Chip Huyen",
+      "role": "ML systems author and engineer",
+      "description": "Writes about ML systems, data, evaluation, and production AI engineering",
+      "url": "content/community/people/chip-huyen",
+      "tags": [
+        "evaluation",
+        "data",
+        "monitoring"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://huyenchip.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/chip-huyen.md",
+      "slug": "chip-huyen",
+      "section_path": "content/community/people",
+      "display_name": "Chip Huyen",
+      "summary": "Writes about ML systems, data, evaluation, and production AI engineering",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 61,
+      "body_html": "<h2>Overview</h2>\n<p>Chip Huyen is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Strong systems perspective for teams moving from prototypes to production ML/AI systems.</p>\n<h2>Notable Work</h2>\n<p>Designing Machine Learning Systems and production ML essays.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://huyenchip.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://huyenchip.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huyenchip.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://huyenchip.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Chip Huyen is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Strong systems perspective for teams moving from prototypes to production ML/AI systems. Notable Work Designing Machine Learning Systems and production ML essays. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "clem-delangue",
+      "name": "Clément Delangue",
+      "role": "Hugging Face cofounder",
+      "description": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
+      "url": "content/community/people/clem-delangue",
+      "tags": [
+        "huggingface",
+        "llm",
+        "data"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://huggingface.co/clem"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/clem-delangue.md",
+      "slug": "clem-delangue",
+      "section_path": "content/community/people",
+      "display_name": "Clément Delangue",
+      "summary": "Tracks open models, datasets, AI policy, and open-source AI ecosystem signals",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 58,
+      "body_html": "<h2>Overview</h2>\n<p>Clément Delangue is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for open-source AI ecosystem and model-release signals.</p>\n<h2>Notable Work</h2>\n<p>Hugging Face platform and open AI advocacy.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://huggingface.co/clem\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://huggingface.co/clem\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/clem\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://huggingface.co/clem\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Clément Delangue is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for open source AI ecosystem and model release signals. Notable Work Hugging Face platform and open AI advocacy. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "dario-amodei",
+      "name": "Dario Amodei",
+      "role": "Anthropic cofounder",
+      "description": "Leads a major AI lab focused on frontier models and AI safety",
+      "url": "content/community/people/dario-amodei",
+      "tags": [
+        "alignment",
+        "security",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.anthropic.com/company"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/dario-amodei.md",
+      "slug": "dario-amodei",
+      "section_path": "content/community/people",
+      "display_name": "Dario Amodei",
+      "summary": "Leads a major AI lab focused on frontier models and AI safety",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 56,
+      "body_html": "<h2>Overview</h2>\n<p>Dario Amodei is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for following frontier-model safety, deployment, and alignment direction.</p>\n<h2>Notable Work</h2>\n<p>Anthropic research and Claude ecosystem.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.anthropic.com/company\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.anthropic.com/company\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.anthropic.com/company\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.anthropic.com/company\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Dario Amodei is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for following frontier model safety, deployment, and alignment direction. Notable Work Anthropic research and Claude ecosystem. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "eugene-yan",
+      "name": "Eugene Yan",
+      "role": "Applied ML engineer and writer",
+      "description": "Writes practical essays on retrieval, recommendation, evaluation, and ML systems",
+      "url": "content/community/people/eugene-yan",
+      "tags": [
+        "rag",
+        "evaluation",
+        "data"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://eugeneyan.com"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/eugeneyan"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/eugene-yan.md",
+      "slug": "eugene-yan",
+      "section_path": "content/community/people",
+      "display_name": "Eugene Yan",
+      "summary": "Writes practical essays on retrieval, recommendation, evaluation, and ML systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 60,
+      "body_html": "<h2>Overview</h2>\n<p>Eugene Yan is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for grounded applied ML and retrieval-system design patterns.</p>\n<h2>Notable Work</h2>\n<p>Applied ML systems writing and curated papers.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://eugeneyan.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://eugeneyan.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/eugeneyan\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://eugeneyan.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://eugeneyan.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/eugeneyan\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Eugene Yan is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for grounded applied ML and retrieval system design patterns. Notable Work Applied ML systems writing and curated papers. Channels Primary profile website github Resources Primary profile website github Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "francois-chollet",
+      "name": "François Chollet",
+      "role": "AI researcher and Keras creator",
+      "description": "Writes about abstraction, intelligence, benchmarks, and deep learning practice",
+      "url": "content/community/people/francois-chollet",
+      "tags": [
+        "llm",
+        "evaluation",
+        "reasoning"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/fchollet"
+        },
+        {
+          "type": "website",
+          "url": "https://fchollet.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/francois-chollet.md",
+      "slug": "francois-chollet",
+      "section_path": "content/community/people",
+      "display_name": "François Chollet",
+      "summary": "Writes about abstraction, intelligence, benchmarks, and deep learning practice",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 64,
+      "body_html": "<h2>Overview</h2>\n<p>François Chollet is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful perspective on evaluation, abstraction, and what model benchmarks do or do not measure.</p>\n<h2>Notable Work</h2>\n<p>Keras, ARC benchmark, and AI reasoning essays.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://fchollet.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/fchollet\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://fchollet.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://fchollet.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/fchollet\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://fchollet.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview François Chollet is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful perspective on evaluation, abstraction, and what model benchmarks do or do not measure. Notable Work Keras, ARC benchmark, and AI reasoning essays. Channels Primary profile github website Resources Primary profile github website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "hamel-husain",
+      "name": "Hamel Husain",
+      "role": "LLM evaluation practitioner",
+      "description": "Focuses on practical LLM evaluation, error analysis, and product-quality workflows",
+      "url": "content/community/people/hamel-husain",
+      "tags": [
+        "evaluation",
+        "llm",
+        "observability"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://hamel.dev"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/hamelsmu"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/hamel-husain.md",
+      "slug": "hamel-husain",
+      "section_path": "content/community/people",
+      "display_name": "Hamel Husain",
+      "summary": "Focuses on practical LLM evaluation, error analysis, and product-quality workflows",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 62,
+      "body_html": "<h2>Overview</h2>\n<p>Hamel Husain is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for teams trying to build evaluation loops that actually improve products.</p>\n<h2>Notable Work</h2>\n<p>Practical LLM eval and error-analysis writing.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://hamel.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://hamel.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/hamelsmu\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://hamel.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://hamel.dev\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/hamelsmu\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Hamel Husain is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for teams trying to build evaluation loops that actually improve products. Notable Work Practical LLM eval and error analysis writing. Channels Primary profile website github Resources Primary profile website github Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "harrison-chase",
+      "name": "Harrison Chase",
+      "role": "LangChain cofounder",
+      "description": "Builder behind LangChain and LangGraph ecosystem for LLM apps and agents",
+      "url": "content/community/people/harrison-chase",
+      "tags": [
+        "agents",
+        "rag",
+        "langchain"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/hwchase17"
+        },
+        {
+          "type": "website",
+          "url": "https://www.langchain.com/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/harrison-chase.md",
+      "slug": "harrison-chase",
+      "section_path": "content/community/people",
+      "display_name": "Harrison Chase",
+      "summary": "Builder behind LangChain and LangGraph ecosystem for LLM apps and agents",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 60,
+      "body_html": "<h2>Overview</h2>\n<p>Harrison Chase is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful to follow for LangChain/LangGraph product direction and agent engineering patterns.</p>\n<h2>Notable Work</h2>\n<p>LangChain, LangGraph, and LangSmith ecosystem work.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://github.com/hwchase17\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/hwchase17\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://www.langchain.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/hwchase17\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/hwchase17\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://www.langchain.com/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Harrison Chase is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful to follow for LangChain/LangGraph product direction and agent engineering patterns. Notable Work LangChain, LangGraph, and LangSmith ecosystem work. Channels Primary profile github website Resources Primary profile github website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "jason-liu",
+      "name": "Jason Liu",
+      "role": "Structured output and eval practitioner",
+      "description": "Works on structured extraction, Instructor, evals, and practical LLM app patterns",
+      "url": "content/community/people/jason-liu",
+      "tags": [
+        "structured-output",
+        "evaluation",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://jxnl.co"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/jxnl"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jason-liu.md",
+      "slug": "jason-liu",
+      "section_path": "content/community/people",
+      "display_name": "Jason Liu",
+      "summary": "Works on structured extraction, Instructor, evals, and practical LLM app patterns",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 63,
+      "body_html": "<h2>Overview</h2>\n<p>Jason Liu is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for builders focused on typed outputs, extraction, and evaluation-driven LLM apps.</p>\n<h2>Notable Work</h2>\n<p>Instructor library and practical LLM engineering writing.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://jxnl.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://jxnl.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/jxnl\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://jxnl.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://jxnl.co\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n<li><a href=\"https://github.com/jxnl\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Jason Liu is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for builders focused on typed outputs, extraction, and evaluation driven LLM apps. Notable Work Instructor library and practical LLM engineering writing. Channels Primary profile website github Resources Primary profile website github Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "jay-alammar",
+      "name": "Jay Alammar",
+      "role": "Visual AI educator",
+      "description": "Creates visual explanations of transformers, embeddings, and language models",
+      "url": "content/community/people/jay-alammar",
+      "tags": [
+        "transformers",
+        "embeddings",
+        "foundational"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://jalammar.github.io"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jay-alammar.md",
+      "slug": "jay-alammar",
+      "section_path": "content/community/people",
+      "display_name": "Jay Alammar",
+      "summary": "Creates visual explanations of transformers, embeddings, and language models",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 58,
+      "body_html": "<h2>Overview</h2>\n<p>Jay Alammar is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Great for visual intuition before diving into papers or code.</p>\n<h2>Notable Work</h2>\n<p>The Illustrated Transformer and related visual explainers.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://jalammar.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://jalammar.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://jalammar.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://jalammar.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Jay Alammar is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Great for visual intuition before diving into papers or code. Notable Work The Illustrated Transformer and related visual explainers. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "jeremy-howard",
+      "name": "Jeremy Howard",
+      "role": "AI educator and fast.ai cofounder",
+      "description": "Teaches practical deep learning and makes AI education accessible to builders",
+      "url": "content/community/people/jeremy-howard",
+      "tags": [
+        "pytorch",
+        "training",
+        "foundational"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.fast.ai/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jeremy-howard.md",
+      "slug": "jeremy-howard",
+      "section_path": "content/community/people",
+      "display_name": "Jeremy Howard",
+      "summary": "Teaches practical deep learning and makes AI education accessible to builders",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 56,
+      "body_html": "<h2>Overview</h2>\n<p>Jeremy Howard is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Excellent starting point for practical deep learning foundations.</p>\n<h2>Notable Work</h2>\n<p>fast.ai courses and practical deep learning education.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.fast.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Jeremy Howard is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Excellent starting point for practical deep learning foundations. Notable Work fast.ai courses and practical deep learning education. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "jerry-liu",
+      "name": "Jerry Liu",
+      "role": "LlamaIndex cofounder",
+      "description": "Builder focused on data frameworks, RAG, document agents, and retrieval workflows",
+      "url": "content/community/people/jerry-liu",
+      "tags": [
+        "rag",
+        "retrieval",
+        "llamaindex"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://www.llamaindex.ai"
+        },
+        {
+          "type": "website",
+          "url": "https://www.llamaindex.ai/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/jerry-liu.md",
+      "slug": "jerry-liu",
+      "section_path": "content/community/people",
+      "display_name": "Jerry Liu",
+      "summary": "Builder focused on data frameworks, RAG, document agents, and retrieval workflows",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 58,
+      "body_html": "<h2>Overview</h2>\n<p>Jerry Liu is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for understanding RAG application patterns and the LlamaIndex ecosystem.</p>\n<h2>Notable Work</h2>\n<p>LlamaIndex and document-agent tooling.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.llamaindex.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.llamaindex.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://www.llamaindex.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.llamaindex.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.llamaindex.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://www.llamaindex.ai/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Jerry Liu is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for understanding RAG application patterns and the LlamaIndex ecosystem. Notable Work LlamaIndex and document agent tooling. Channels Primary profile github website Resources Primary profile github website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "lilian-weng",
+      "name": "Lilian Weng",
+      "role": "AI researcher and technical writer",
+      "description": "Publishes deeply researched explainers on agents, alignment, diffusion, and LLM techniques",
+      "url": "content/community/people/lilian-weng",
+      "tags": [
+        "agents",
+        "alignment",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://lilianweng.github.io"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/lilian-weng.md",
+      "slug": "lilian-weng",
+      "section_path": "content/community/people",
+      "display_name": "Lilian Weng",
+      "summary": "Publishes deeply researched explainers on agents, alignment, diffusion, and LLM techniques",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 65,
+      "body_html": "<h2>Overview</h2>\n<p>Lilian Weng is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Her long-form technical posts are strong context for understanding research areas before implementing systems.</p>\n<h2>Notable Work</h2>\n<p>Blog posts on agents, RLHF, prompt engineering, and alignment.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://lilianweng.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://lilianweng.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://lilianweng.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://lilianweng.github.io\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Lilian Weng is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Her long form technical posts are strong context for understanding research areas before implementing systems. Notable Work Blog posts on agents, RLHF, prompt engineering, and alignment. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "logankilpatrick",
+      "name": "Logan Kilpatrick",
+      "role": "Developer relations and AI builder",
+      "description": "Shares practical AI developer ecosystem updates and product-building context",
+      "url": "content/community/people/logankilpatrick",
+      "tags": [
+        "llm",
+        "agents",
+        "cloud"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/logankilpatrick"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/logankilpatrick.md",
+      "slug": "logankilpatrick",
+      "section_path": "content/community/people",
+      "display_name": "Logan Kilpatrick",
+      "summary": "Shares practical AI developer ecosystem updates and product-building context",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 59,
+      "body_html": "<h2>Overview</h2>\n<p>Logan Kilpatrick is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for developer-facing AI platform updates and practical builder signals.</p>\n<h2>Notable Work</h2>\n<p>Developer education and AI platform ecosystem work.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://github.com/logankilpatrick\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/logankilpatrick\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://github.com/logankilpatrick\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/logankilpatrick\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Logan Kilpatrick is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for developer facing AI platform updates and practical builder signals. Notable Work Developer education and AI platform ecosystem work. Channels Primary profile github Resources Primary profile github Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "melanie-mitchell",
+      "name": "Melanie Mitchell",
+      "role": "AI researcher and author",
+      "description": "Writes about reasoning, analogy, complexity, and limits of AI systems",
+      "url": "content/community/people/melanie-mitchell",
+      "tags": [
+        "reasoning",
+        "evaluation",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://melaniemitchell.me"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/melanie-mitchell.md",
+      "slug": "melanie-mitchell",
+      "section_path": "content/community/people",
+      "display_name": "Melanie Mitchell",
+      "summary": "Writes about reasoning, analogy, complexity, and limits of AI systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 58,
+      "body_html": "<h2>Overview</h2>\n<p>Melanie Mitchell is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for understanding AI reasoning claims and evaluation limitations.</p>\n<h2>Notable Work</h2>\n<p>Books and essays on AI, complexity, and analogy.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://melaniemitchell.me\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://melaniemitchell.me\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://melaniemitchell.me\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://melaniemitchell.me\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Melanie Mitchell is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for understanding AI reasoning claims and evaluation limitations. Notable Work Books and essays on AI, complexity, and analogy. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "nathan-lambert",
+      "name": "Nathan Lambert",
+      "role": "AI researcher and writer",
+      "description": "Writes about RLHF, post-training, open models, and reasoning systems",
+      "url": "content/community/people/nathan-lambert",
+      "tags": [
+        "alignment",
+        "rlhf",
+        "reasoning"
+      ],
+      "channels": [
+        {
+          "type": "newsletter",
+          "url": "https://www.interconnects.ai"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/nathan-lambert.md",
+      "slug": "nathan-lambert",
+      "section_path": "content/community/people",
+      "display_name": "Nathan Lambert",
+      "summary": "Writes about RLHF, post-training, open models, and reasoning systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 57,
+      "body_html": "<h2>Overview</h2>\n<p>Nathan Lambert is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>High-signal writing on post-training and open model development.</p>\n<h2>Notable Work</h2>\n<p>Interconnects newsletter and RLHF/open-model analysis.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.interconnects.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.interconnects.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">newsletter</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.interconnects.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.interconnects.ai\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">newsletter</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Nathan Lambert is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow High signal writing on post training and open model development. Notable Work Interconnects newsletter and RLHF/open model analysis. Channels Primary profile newsletter Resources Primary profile newsletter Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "noam-shazeer",
+      "name": "Noam Shazeer",
+      "role": "AI researcher and model architect",
+      "description": "Influential contributor to Transformers, mixture-of-experts, and large-scale model architecture",
+      "url": "content/community/people/noam-shazeer",
+      "tags": [
+        "transformers",
+        "llm",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://en.wikipedia.org/wiki/Noam_Shazeer"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/noam-shazeer.md",
+      "slug": "noam-shazeer",
+      "section_path": "content/community/people",
+      "display_name": "Noam Shazeer",
+      "summary": "Influential contributor to Transformers, mixture-of-experts, and large-scale model architecture",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 57,
+      "body_html": "<h2>Overview</h2>\n<p>Noam Shazeer is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for understanding model architecture history and scaling ideas.</p>\n<h2>Notable Work</h2>\n<p>Transformer and large-scale model architecture contributions.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Noam_Shazeer\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/Noam_Shazeer\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Noam_Shazeer\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/Noam_Shazeer\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Noam Shazeer is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for understanding model architecture history and scaling ideas. Notable Work Transformer and large scale model architecture contributions. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "sebastian-bubeck",
+      "name": "Sébastien Bubeck",
+      "role": "AI researcher",
+      "description": "Researches reasoning, small models, and theoretical aspects of AI systems",
+      "url": "content/community/people/sebastian-bubeck",
+      "tags": [
+        "reasoning",
+        "llm",
+        "research"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.microsoft.com/en-us/research/people/sebubeck/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/sebastian-bubeck.md",
+      "slug": "sebastian-bubeck",
+      "section_path": "content/community/people",
+      "display_name": "Sébastien Bubeck",
+      "summary": "Researches reasoning, small models, and theoretical aspects of AI systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 60,
+      "body_html": "<h2>Overview</h2>\n<p>Sébastien Bubeck is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for research context around reasoning and model capabilities.</p>\n<h2>Notable Work</h2>\n<p>Microsoft Research work on language model reasoning and small models.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.microsoft.com/en-us/research/people/sebubeck/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.microsoft.com/en-us/research/people/sebubeck/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.microsoft.com/en-us/research/people/sebubeck/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.microsoft.com/en-us/research/people/sebubeck/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Sébastien Bubeck is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for research context around reasoning and model capabilities. Notable Work Microsoft Research work on language model reasoning and small models. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "sebastian-raschka",
+      "name": "Sebastian Raschka",
+      "role": "ML researcher and educator",
+      "description": "Explains machine learning, LLMs, PyTorch, and model training with practical depth",
+      "url": "content/community/people/sebastian-raschka",
+      "tags": [
+        "llm",
+        "pytorch",
+        "training"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/rasbt"
+        },
+        {
+          "type": "website",
+          "url": "https://sebastianraschka.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/sebastian-raschka.md",
+      "slug": "sebastian-raschka",
+      "section_path": "content/community/people",
+      "display_name": "Sebastian Raschka",
+      "summary": "Explains machine learning, LLMs, PyTorch, and model training with practical depth",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 64,
+      "body_html": "<h2>Overview</h2>\n<p>Sebastian Raschka is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Good bridge between ML fundamentals and hands-on implementation for builders.</p>\n<h2>Notable Work</h2>\n<p>Books and tutorials on machine learning, deep learning, and LLMs.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://sebastianraschka.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/rasbt\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://sebastianraschka.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://sebastianraschka.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/rasbt\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://sebastianraschka.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Sebastian Raschka is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Good bridge between ML fundamentals and hands on implementation for builders. Notable Work Books and tutorials on machine learning, deep learning, and LLMs. Channels Primary profile github website Resources Primary profile github website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "shreya-shankar",
+      "name": "Shreya Shankar",
+      "role": "AI systems researcher",
+      "description": "Researches data, evaluation, and reliable systems for ML and LLM applications",
+      "url": "content/community/people/shreya-shankar",
+      "tags": [
+        "evaluation",
+        "data",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://www.sh-reya.com"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/shreya-shankar.md",
+      "slug": "shreya-shankar",
+      "section_path": "content/community/people",
+      "display_name": "Shreya Shankar",
+      "summary": "Researches data, evaluation, and reliable systems for ML and LLM applications",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 59,
+      "body_html": "<h2>Overview</h2>\n<p>Shreya Shankar is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for understanding reliability and data-centric evaluation for AI systems.</p>\n<h2>Notable Work</h2>\n<p>Research and writing on AI engineering systems.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://www.sh-reya.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.sh-reya.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://www.sh-reya.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://www.sh-reya.com\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Shreya Shankar is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for understanding reliability and data centric evaluation for AI systems. Notable Work Research and writing on AI engineering systems. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "simon-willison",
+      "name": "Simon Willison",
+      "role": "Independent AI engineer and writer",
+      "description": "Tracks practical LLM tooling, prompt injection, evals, and developer workflows",
+      "url": "content/community/people/simon-willison",
+      "tags": [
+        "llm",
+        "security",
+        "evaluation"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/simonw"
+        },
+        {
+          "type": "newsletter",
+          "url": "https://simonwillison.net/"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/simon-willison.md",
+      "slug": "simon-willison",
+      "section_path": "content/community/people",
+      "display_name": "Simon Willison",
+      "summary": "Tracks practical LLM tooling, prompt injection, evals, and developer workflows",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 67,
+      "body_html": "<h2>Overview</h2>\n<p>Simon Willison is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>High-signal practical writing about using LLMs in real software, including security and tooling tradeoffs.</p>\n<h2>Notable Work</h2>\n<p>LLM essays, Datasette, llm CLI ecosystem, prompt injection analysis.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://simonwillison.net\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/simonw\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://simonwillison.net/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">newsletter</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://simonwillison.net\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/simonw\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://simonwillison.net/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">newsletter</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Simon Willison is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow High signal practical writing about using LLMs in real software, including security and tooling tradeoffs. Notable Work LLM essays, Datasette, llm CLI ecosystem, prompt injection analysis. Channels Primary profile github newsletter Resources Primary profile github newsletter Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "thomas-wolf",
+      "name": "Thomas Wolf",
+      "role": "Hugging Face cofounder",
+      "description": "Key figure in open-source transformer tooling and model ecosystem development",
+      "url": "content/community/people/thomas-wolf",
+      "tags": [
+        "huggingface",
+        "transformers",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "github",
+          "url": "https://github.com/ThomWolf"
+        },
+        {
+          "type": "website",
+          "url": "https://huggingface.co/Thomwolf"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/thomas-wolf.md",
+      "slug": "thomas-wolf",
+      "section_path": "content/community/people",
+      "display_name": "Thomas Wolf",
+      "summary": "Key figure in open-source transformer tooling and model ecosystem development",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 62,
+      "body_html": "<h2>Overview</h2>\n<p>Thomas Wolf is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for tracking open-source model tooling and Hugging Face ecosystem direction.</p>\n<h2>Notable Work</h2>\n<p>Transformers and Hugging Face open-source ecosystem.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://huggingface.co/Thomwolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/ThomWolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://huggingface.co/Thomwolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://huggingface.co/Thomwolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://github.com/ThomWolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">github</a></li>\n<li><a href=\"https://huggingface.co/Thomwolf\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Thomas Wolf is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for tracking open source model tooling and Hugging Face ecosystem direction. Notable Work Transformers and Hugging Face open source ecosystem. Channels Primary profile github website Resources Primary profile github website Last reviewed: 2026 06 14 by @maintainer"
+    },
+    {
+      "id": "yann-lecun",
+      "name": "Yann LeCun",
+      "role": "AI researcher",
+      "description": "Longtime AI researcher with influential perspective on representation learning and AI systems",
+      "url": "content/community/people/yann-lecun",
+      "tags": [
+        "foundational",
+        "research",
+        "llm"
+      ],
+      "channels": [
+        {
+          "type": "website",
+          "url": "https://en.wikipedia.org/wiki/Yann_LeCun"
+        }
+      ],
+      "added_date": "2026-06-14",
+      "added_by": "maintainer",
+      "last_reviewed": "2026-06-14",
+      "status": "active",
+      "entry_type": "person",
+      "path": "content/community/people/yann-lecun.md",
+      "slug": "yann-lecun",
+      "section_path": "content/community/people",
+      "display_name": "Yann LeCun",
+      "summary": "Longtime AI researcher with influential perspective on representation learning and AI systems",
+      "last_updated": "2026-06-14",
+      "headings": [
+        "Overview",
+        "Why Follow",
+        "Notable Work",
+        "Channels",
+        "Resources"
+      ],
+      "reading_time_minutes": 1,
+      "word_count": 61,
+      "body_html": "<h2>Overview</h2>\n<p>Yann LeCun is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.</p>\n<h2>Why Follow</h2>\n<p>Useful for broader AI research context and critical perspective on current LLM approaches.</p>\n<h2>Notable Work</h2>\n<p>Foundational deep learning and representation-learning work.</p>\n<h2>Channels</h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Yann_LeCun\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/Yann_LeCun\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Yann_LeCun\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Primary profile</a></li>\n<li><a href=\"https://en.wikipedia.org/wiki/Yann_LeCun\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">website</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-06-14 by @maintainer</em></p>\n",
+      "body_text": "Overview Yann LeCun is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems. Why Follow Useful for broader AI research context and critical perspective on current LLM approaches. Notable Work Foundational deep learning and representation learning work. Channels Primary profile website Resources Primary profile website Last reviewed: 2026 06 14 by @maintainer"
+    }
+  ]
+}

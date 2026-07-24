@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-07-19T20:29:05.185Z",
+  "mode": "changed-only",
+  "files_checked": 46,
+  "urls_checked": 50,
+  "max_urls_per_host": 10,
+  "broken_links": [],
+  "warning_links": [
+    {
+      "url": "https://ltx.io/model/ltx-2",
+      "ok": false,
+      "error": "net-error",
+      "soft": true,
+      "category": "transient",
+      "files": [
+        "content/projects/foundation-models/ltx-2.md"
+      ]
+    }
+  ],
+  "summary": {
+    "ok": 49,
+    "ignored": 0,
+    "broken": 0,
+    "warnings": 1,
+    "contacted": 50,
+    "skipped_host_cap": 0,
+    "warnings_by_type": {
+      "host_cap": 0,
+      "http_soft": 0,
+      "redirect": 0,
+      "transient": 1
+    }
+  }
+}
