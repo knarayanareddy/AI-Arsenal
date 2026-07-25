@@ -42,20 +42,21 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 ## Overview
 
-A closed-source collaborative AI workspace where teams describe and build software together without first setting up conventional development tooling.
+Dropstone 3 is a closed-source, freemium collaborative AI workspace where a team describes software in natural language and builds it together without first standing up conventional dev tooling. Built on a TypeScript stack and positioned for early-stage or internal projects, it aims to compress setup so a group can go from description to a running artifact inside one shared environment.
 
 ## Why It's in the Arsenal
 
-Dropstone 3 earns a place in the Arsenal because it directly addresses a recurring decision point: your team wants a collaborative AI workspace to describe and ship software together without setting up dev tooling first. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Dropstone is tracked as a team-coding workspace to compare against Cursor and Continue: the differentiator it claims is shared, description-driven collaboration rather than a single-developer editor, which is worth weighing only if your team lacks an established IDE/CI workflow. See Strengths / Limitations before adopting it.
 
 ## Key Features
 
-- Collaborative, description-driven software building
-- Positioned for early-stage or internal projects
+- Shared, description-driven software building for teams
+- Removes the upfront dev-environment and toolchain setup
+- Freemium and closed-source; TypeScript-based and not self-hostable
 
 ## Architecture / How It Works
 
-Provides a shared workspace where natural-language descriptions drive collaborative software construction, abstracting away individual dev-environment setup.
+Its internals are unpublished. From the description it provides a hosted, multi-user workspace that turns natural-language descriptions into software artifacts, coordinating collaborators in one environment and abstracting the individual dev-environment setup each would otherwise do. The hosted, closed-source model is why it is not self-hostable and why it tends to overlap an existing IDE/CI workflow rather than plug into one.
 
 ## Getting Started
 
@@ -80,11 +81,11 @@ Provides a shared workspace where natural-language descriptions drive collaborat
 - You need an open-source or self-hostable collaborative development environment
 - Your team already has an established IDE/CI workflow that this would duplicate rather than improve
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. Dropstone 3 is a closed-source product surfaced via a curated newsletter; its collaborative-workspace behavior and orchestration placement here come from the vendor's description, not independent production testing. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+Dropstone aims to be the environment rather than a component in one: it centralizes build-and-ship inside its own workspace, so it competes with — rather than integrates into — an existing IDE/CI workflow. With no published API or self-hosting, integration is limited to using it as a standalone collaborative surface for prototyping and internal projects.
 
 ## Resources
 

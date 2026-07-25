@@ -42,20 +42,21 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 ## Overview
 
-A closed-source AI coding assistant positioned around iterative self-improvement of its suggestions across a development session.
+Recursi is a closed-source, freemium AI coding assistant built around iterative self-improvement: rather than treating each completion independently, it carries session-level context and feedback so the model's suggestions adapt as a coding session progresses. It is positioned as an exploratory take on self-improving assistant UX rather than a settled, production-hardened tool.
 
 ## Why It's in the Arsenal
 
-Recursi earns a place in the Arsenal because it directly addresses a recurring decision point: you want an AI coding assistant that improves itself/its suggestions over a session for iterative development. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Recursi is tracked as an early, self-improving coding-assistant experiment: its claimed differentiator — suggestions that get better within a session — is worth evaluating independently, and worth avoiding when you need a stable, well-documented assistant with a real production track record. See Strengths / Limitations before adopting it.
 
 ## Key Features
 
-- Coding suggestions that adapt within a session
-- Positioned as a self-improving assistant UX
+- Session-adaptive coding suggestions that change as you work
+- Self-improving assistant UX as its core positioning
+- Freemium and closed-source; not self-hostable
 
 ## Architecture / How It Works
 
-Maintains session-level context and feedback signals to adjust its suggestion behavior as a coding session progresses, rather than treating each suggestion independently.
+Its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build.
 
 ## Getting Started
 
@@ -80,11 +81,11 @@ Maintains session-level context and feedback signals to adjust its suggestion be
 - You need a stable, well-documented coding assistant with a long production track record
 - You need an open-source or self-hostable option
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. Recursi is a closed-source product surfaced via a curated newsletter; its self-improvement claims and behavior here are the vendor's, not independently verified — evaluate the claims before relying on them. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+Recursi is meant to live inside the coding loop as an interactive assistant rather than a batch component: it augments an editor session with adaptive suggestions, so it composes with a developer's existing workflow but exposes no documented API or self-hosting for embedding its suggestion engine elsewhere. Treat it as a standalone assistant to trial, not a library to wire in.
 
 ## Resources
 

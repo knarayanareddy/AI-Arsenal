@@ -42,20 +42,21 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 ## Overview
 
-A visual, intuitive interface for exploring large datasets interactively, aimed at exploratory data analysis without writing analysis code.
+Google Pomelli 2.0 is a freemium Google Labs preview that puts a visual, no-code interface over large datasets: instead of writing analysis code, you interact with the dataset directly and the tool issues the underlying queries. It is aimed at exploratory data analysis where quick visual iteration matters more than a reproducible, code-based pipeline.
 
 ## Why It's in the Arsenal
 
-Google Pomelli 2.0 earns a place in the Arsenal because it directly addresses a recurring decision point: you want a visual, intuitive interface to explore large datasets without writing analysis code. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Pomelli is tracked as a data-exploration option to weigh against code-first analysis tools: it trades reproducibility for speed of visual iteration, and — as a Google Labs preview — its stability should be verified before any production reliance. See Strengths / Limitations before adopting it.
 
 ## Key Features
 
-- Visual, interactive large-dataset exploration
-- No-code analysis interface
+- Visual, interactive exploration of large datasets
+- No-code analysis surface for exploratory data analysis
+- Freemium Google Labs preview; closed-source and not self-hostable
 
 ## Architecture / How It Works
 
-Connects to a dataset and renders an interactive visual exploration interface, translating user interactions into underlying queries against the data.
+Its internals are not published. From the description it connects to a dataset and renders an interactive visual surface, translating point-and-click interactions into the underlying data queries so the user never writes them by hand. As a hosted Labs preview it runs server-side rather than locally, which is why it is neither open-source nor self-hostable.
 
 ## Getting Started
 
@@ -80,11 +81,11 @@ Connects to a dataset and renders an interactive visual exploration interface, t
 - You need reproducible, code-based analysis pipelines rather than an interactive exploration tool
 - You need an open-source or self-hostable data exploration tool
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. Pomelli is a closed-source Google Labs preview surfaced via a curated newsletter; its category placement (structured-output) and behavior here are best-effort from the description, not independently verified. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+Pomelli fits an exploratory analysis workflow rather than an automated data pipeline: it is a front-end for interactively querying a dataset, so it complements — but does not replace — code-based tools when you need reproducible, version-controlled analysis. Its `avoid_when` explicitly steers reproducible, code-based pipelines elsewhere, so treat it as a discovery surface upstream of your real pipeline.
 
 ## Resources
 

@@ -42,20 +42,21 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 ## Overview
 
-A macOS-native dictation tool with AI-assisted formatting and editing, designed to run locally and privately rather than sending audio to a cloud transcription service.
+Vaani is a closed-source, freemium macOS dictation app that captures speech and transcribes it on-device, then runs an AI formatting pass to clean up and structure the text before it is inserted. Its selling point is being fast, private, and local-first — keeping audio on the machine rather than sending it to a cloud transcription provider.
 
 ## Why It's in the Arsenal
 
-Vaani earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast, private, macOS-native dictation with AI-assisted formatting and editing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Vaani is tracked as a local-first dictation option to compare against Wispr Flow and MacWhisper: it is a fit when macOS-native, private, on-device transcription matters, and a non-starter if you need cross-platform support or an open-source tool. See Strengths / Limitations before adopting it.
 
 ## Key Features
 
-- Local-first, private macOS dictation
-- AI-assisted formatting/editing of transcribed text
+- On-device, private macOS dictation with audio kept local
+- AI formatting and editing pass over the transcribed text
+- Freemium, closed-source, and macOS-only; not self-hostable
 
 ## Architecture / How It Works
 
-Audio is captured and transcribed locally on-device, with an AI formatting pass cleaning up and structuring the resulting text before insertion.
+Its internals are unpublished. From the description it captures microphone audio and runs speech-to-text locally on the Mac, then applies a generative formatting pass — punctuation, structure, light editing — before inserting the result into the active app. Doing transcription on-device is what lets it claim privacy and low latency, at the cost of being macOS-only rather than cross-platform.
 
 ## Getting Started
 
@@ -80,11 +81,11 @@ Audio is captured and transcribed locally on-device, with an AI formatting pass 
 - You're not on macOS
 - You need a cross-platform or open-source dictation solution
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. Vaani is a closed-source, macOS-only product surfaced via a curated newsletter; its on-device and privacy behavior here is taken from the vendor's description, not independently verified. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+Vaani integrates at the OS input layer rather than as a service: it inserts formatted text into whatever macOS app has focus, so it composes with any editor or text field system-wide but offers no documented API, cross-platform client, or self-hostable backend. Integration is therefore local and implicit — it behaves like a smarter keyboard, not a component you wire into a pipeline.
 
 ## Resources
 

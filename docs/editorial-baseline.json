@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 789
+    "count": 745
   },
   "entries": [
     {
@@ -2391,48 +2391,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::repeated-paragraph::5a10e8ede4754e70",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::section-too-short::78b5488890f8f768",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::tool-section-length::1392e37fee66027c",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::tool-section-length::58d32b21fd7c13c4",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::tool-section-length::5eaa91f35f484854",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::tool-section-missing-technical-content::24b2134c89a9d501",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/dropstone-3.md::tool-section-missing-technical-content::f6233efc681cc747",
-      "file": "content/tools/dx-and-tooling/dropstone-3.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/gemini-cli.md::repeated-paragraph::33c202dbb014ffe5",
       "file": "content/tools/dx-and-tooling/gemini-cli.md",
       "rule": "repeated-paragraph",
@@ -2463,54 +2421,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::repeated-paragraph::da588fb5190e037e",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::section-too-short::6b9ca01bb26540b3",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "section-too-short",
-      "finding": "section \"Key Features\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::section-too-short::937c2969be547363",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::tool-section-length::6c7c17d5459ae068",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::tool-section-length::b4fec3ab91d86a5b",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::tool-section-length::d7b601c3d08b8679",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::tool-section-missing-technical-content::180736bbefef40df",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/google-pomelli-2-0.md::tool-section-missing-technical-content::25decc6949166796",
-      "file": "content/tools/dx-and-tooling/google-pomelli-2-0.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/goose.md::repeated-paragraph::daa330990fa40f41",
       "file": "content/tools/dx-and-tooling/goose.md",
       "rule": "repeated-paragraph",
@@ -2527,48 +2437,6 @@
       "file": "content/tools/dx-and-tooling/gradio.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::repeated-paragraph::35873bf62b1f2159",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::section-too-short::5d8d5d3f0bef7107",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::tool-section-length::803ce8740886fc6d",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::tool-section-length::faa0c16466fbf4d3",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::tool-section-missing-technical-content::a95a3dc2a0516d15",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::tool-section-missing-technical-content::c223e1246b5ea446",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/honen.md::tool-section-missing-technical-content::e87c75e27e131700",
-      "file": "content/tools/dx-and-tooling/honen.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/jan.md::repeated-paragraph::906cde5e0ef3023c",
@@ -2751,48 +2619,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::repeated-paragraph::783b51e54ef0ee17",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::section-too-short::13e99cfd15d9ba2a",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::tool-section-length::721fe9ba86fff8f5",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::tool-section-length::e88d631ece829642",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::tool-section-missing-technical-content::427e1eac999b47ea",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::tool-section-missing-technical-content::e1e471eace8ef88d",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/recursi.md::tool-section-missing-technical-content::e4c47e2dff1fef73",
-      "file": "content/tools/dx-and-tooling/recursi.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/repomix.md::repeated-paragraph::933ba2410717bf0e",
       "file": "content/tools/dx-and-tooling/repomix.md",
       "rule": "repeated-paragraph",
@@ -2803,54 +2629,6 @@
       "file": "content/tools/dx-and-tooling/repomix.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::repeated-paragraph::a7757698da9910d1",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::section-too-short::5802dd364b64bf3b",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::tool-section-length::1c710d32785aac5c",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::tool-section-length::6579c47ed4c08c01",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::tool-section-length::be3ed86050024bc3",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::tool-section-missing-technical-content::18a1c06af3bebb99",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::tool-section-missing-technical-content::8e769c1cee8955fa",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/shellmate.md::tool-section-missing-technical-content::ac8bedbd6e1f6349",
-      "file": "content/tools/dx-and-tooling/shellmate.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/streamlit.md::tool-section-length::cb2e66bf7b2d127f",
@@ -2881,48 +2659,6 @@
       "file": "content/tools/dx-and-tooling/tabby-ml.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::repeated-paragraph::65509635f929db6e",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::section-too-short::64a77547601c2ba1",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::tool-section-length::12b1cedd6b6f1d6a",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::tool-section-length::56618bd9a0fce92b",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::tool-section-missing-technical-content::5c01d447e1aea02c",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::tool-section-missing-technical-content::b99290e5a8f694c4",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/vaani.md::tool-section-missing-technical-content::beb4149162a6d25b",
-      "file": "content/tools/dx-and-tooling/vaani.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/windsurf.md::repeated-paragraph::e133d2bbbc7c5a19",
