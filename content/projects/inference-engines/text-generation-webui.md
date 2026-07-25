@@ -64,7 +64,7 @@ Python/Gradio app with a loader abstraction per model format; sampling pipeline 
 
 ## Ecosystem Position
 
-Upstream: llama.cpp, ExLlama-family, and Transformers as loaders. Competing: Ollama/LM Studio (appliance UX), LocalAI (API-first), KoboldCpp (adjacent community tool). Its extension ecosystem and sampler surface remain its moat; production serving was never its lane.
+Upstream: llama.cpp, ExLlama-family, and Transformers as loaders. It competes with Ollama/LM Studio (appliance UX), LocalAI (API-first), and KoboldCpp (adjacent community tool). Its extension ecosystem and sampler surface over these model loaders remain its moat; production serving was never its lane.
 
 ## Getting Started
 

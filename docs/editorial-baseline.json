@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 667
+    "count": 640
   },
   "entries": [
     {
@@ -735,172 +735,10 @@
       "finding": "repeated paragraph shared with: \"this is a framework entry it documents the library sdk you build on top of for a curated shortlist comparing this and ad...\""
     },
     {
-      "fingerprint": "content/projects/inference-engines/candle.md::ecosystem-position-missing-comparison::baf035c2886deb95",
-      "file": "content/projects/inference-engines/candle.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/exllamav2.md::ecosystem-position-missing-comparison::9260aa10bcede207",
-      "file": "content/projects/inference-engines/exllamav2.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/exllamav2.md::repeated-paragraph::c531659489fb616d",
-      "file": "content/projects/inference-engines/exllamav2.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/exo.md::project-section-length::048357f8150b5f47",
-      "file": "content/projects/inference-engines/exo.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Limitations\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/faster-whisper.md::ecosystem-position-missing-comparison::7dc89547a25f0cf4",
-      "file": "content/projects/inference-engines/faster-whisper.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/ktransformers.md::ecosystem-position-missing-comparison::24d4b92046eb1abc",
-      "file": "content/projects/inference-engines/ktransformers.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/litserve.md::project-section-length::053032827dd62b02",
-      "file": "content/projects/inference-engines/litserve.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Limitations\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llama-cpp.md::repeated-paragraph::be795419c7b67b38",
-      "file": "content/projects/inference-engines/llama-cpp.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::project-section-missing-technical-content::b2b57519f1e73495",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::repeated-paragraph::24868287f1becf39",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft architecture production claims above are based on the vendor s own description or limited third ...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/llamafile.md::repeated-paragraph::8cb104b66606adad",
-      "file": "content/projects/inference-engines/llamafile.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/lmdeploy.md::repeated-paragraph::49fbf0928deff200",
-      "file": "content/projects/inference-engines/lmdeploy.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
       "fingerprint": "content/projects/inference-engines/lmdeploy.md::repeated-paragraph::dfd98b7f9c622392",
       "file": "content/projects/inference-engines/lmdeploy.md",
       "rule": "repeated-paragraph",
       "finding": "repeated paragraph shared with: \"enrichment status draft architecture production claims above are based on the vendor s own description or limited third ...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/localai.md::project-section-missing-technical-content::63fed54f0948b83f",
-      "file": "content/projects/inference-engines/localai.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/mlc-llm.md::project-section-missing-technical-content::7e93c62eec09e9ed",
-      "file": "content/projects/inference-engines/mlc-llm.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/mlc-llm.md::repeated-paragraph::4c25e8f223461ada",
-      "file": "content/projects/inference-engines/mlc-llm.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/ollama.md::project-section-length::0d107381b3338a28",
-      "file": "content/projects/inference-engines/ollama.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/ollama.md::repeated-paragraph::2071990336561c52",
-      "file": "content/projects/inference-engines/ollama.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/onnxruntime.md::ecosystem-position-missing-comparison::e4922c033379214e",
-      "file": "content/projects/inference-engines/onnxruntime.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/onnxruntime.md::project-section-missing-technical-content::0b21a8cfa6a3f931",
-      "file": "content/projects/inference-engines/onnxruntime.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/sglang.md::repeated-paragraph::95d2652f72d52797",
-      "file": "content/projects/inference-engines/sglang.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/tensorrt-llm.md::ecosystem-position-missing-comparison::454b2909ac20da16",
-      "file": "content/projects/inference-engines/tensorrt-llm.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/tensorrt-llm.md::repeated-paragraph::08d4653111433761",
-      "file": "content/projects/inference-engines/tensorrt-llm.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-inference.md::ecosystem-position-missing-comparison::2aafc9083a05d4e0",
-      "file": "content/projects/inference-engines/text-generation-inference.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-inference.md::repeated-paragraph::36fd4d1cd91b29f1",
-      "file": "content/projects/inference-engines/text-generation-inference.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/text-generation-webui.md::ecosystem-position-missing-comparison::6e6609668744c59a",
-      "file": "content/projects/inference-engines/text-generation-webui.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/vllm.md::repeated-paragraph::f6d6703ca4c415a4",
-      "file": "content/projects/inference-engines/vllm.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an inference engine entry it documents the serving runtime itself for the model weights it serves see foundation...\""
-    },
-    {
-      "fingerprint": "content/projects/inference-engines/whisperx.md::ecosystem-position-missing-comparison::17da337aab3fefbc",
-      "file": "content/projects/inference-engines/whisperx.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
     },
     {
       "fingerprint": "content/projects/training-and-alignment/alignment-handbook.md::ecosystem-position-missing-comparison::d19b1c6bde8876b8",

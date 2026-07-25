@@ -64,7 +64,7 @@ Core tensor library with pluggable device backends behind one API; kernels via c
 
 ## Ecosystem Position
 
-Upstream: safetensors/GGUF model weights from the HF Hub. Downstream: `text-embeddings-inference`, mistral.rs (Candle-lineage LLM server), and a growing Rust ML crate ecosystem. Competing: burn (pure-Rust, training-oriented), tch-rs (libtorch bindings — Python-free but not lightweight), and staying on PyTorch/ONNX for teams without Rust.
+Upstream: safetensors/GGUF model weights from the HF Hub. Downstream: `text-embeddings-inference`, mistral.rs (Candle-lineage LLM server), and a growing Rust ML crate ecosystem. It competes with burn (pure-Rust, training-oriented), tch-rs (libtorch bindings — Python-free but not lightweight), and staying on PyTorch/ONNX for teams without Rust.
 
 ## Getting Started
 

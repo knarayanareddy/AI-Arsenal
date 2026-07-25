@@ -85,8 +85,8 @@ Upstream: model weights (typically from Hugging Face) and per-device runtimes. D
 
 ## Limitations
 
-- Experimental and network-bound: cross-device latency caps throughput; not for production SLAs
-- No benefit (and added overhead) when a single machine already fits your model
+- Experimental and network-bound: activations pass device-to-device each forward pass, so cross-device latency and the slowest node/link cap throughput — not for production SLAs
+- No benefit, and added coordination overhead, when a single machine already fits your model (quantized or not); distribution only pays off past that point
 
 ## Relation to the Arsenal
 

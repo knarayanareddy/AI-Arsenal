@@ -92,9 +92,9 @@ pip install litserve
 
 ## Limitations
 
-- Not tuned to LLM-specific throughput like vLLM/SGLang
-- A serving layer, not a full deployment/registry platform
-- You still own infrastructure and scaling decisions
+- Not tuned to LLM-specific throughput like vLLM/SGLang — a paged-attention engine wins for single-LLM max-token workloads
+- A serving layer, not a full MLOps platform: no built-in model registry, versioning, or canary rollout
+- You still own the infrastructure and scaling decisions; LitServe handles batching/serving, not cluster provisioning
 
 ## Relation to the Arsenal
 

@@ -75,8 +75,9 @@ Upstream: none of particular note. Downstream: none of particular note as a depe
 ## Getting Started
 
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical install/run command for this specific inference engine.
+# Install and launch an OpenAI-compatible server (see Resources):
+pip install "sglang[all]"
+python -m sglang.launch_server --model-path meta-llama/Llama-3.1-8B-Instruct --port 30000
 ```
 
 ## Key Use Cases
@@ -96,7 +97,7 @@ Upstream: none of particular note. Downstream: none of particular note as a depe
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+SGLang is the prefix-caching serving framework (RadixAttention), the leading alternative to vLLM on shared-prefix and structured-output workloads. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

@@ -63,7 +63,7 @@ Two execution paths: the classic TensorRT engine-compilation flow (graph capture
 
 ## Ecosystem Position
 
-Upstream: CUDA, TensorRT, cuBLAS/cuDNN. Downstream: NVIDIA NIM microservices package TRT-LLM engines; Triton Inference Server is the standard serving frontend. Competing: vLLM (flexibility, ecosystem velocity, hardware breadth) and SGLang (structured/agentic workloads); in practice many teams benchmark TRT-LLM against vLLM per model and pick per-workload.
+Upstream: CUDA, TensorRT, cuBLAS/cuDNN. Downstream: NVIDIA NIM microservices package TRT-LLM engines; Triton Inference Server is the standard serving frontend. It competes with vLLM (flexibility, ecosystem velocity, hardware breadth) and SGLang (structured/agentic workloads); in practice many teams benchmark TRT-LLM against vLLM per model and pick per-workload.
 
 ## Getting Started
 
@@ -90,7 +90,7 @@ python -c "from tensorrt_llm import LLM; llm = LLM(model='TinyLlama/TinyLlama-1.
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+TensorRT-LLM is NVIDIA's peak-throughput serving runtime for Hopper/Blackwell GPUs, trading flexibility for hand-tuned FP8/FP4 kernels and Triton integration. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

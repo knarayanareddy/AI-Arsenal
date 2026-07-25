@@ -70,13 +70,14 @@ A Rust-and-Python serving stack implementing continuous batching, tensor paralle
 
 ## Ecosystem Position
 
-Upstream: integrates with Hugging Face Transformers and the Hugging Face Hub for model loading. Downstream: powers (or historically powered) Hugging Face's own Inference Endpoints product. Competing: vLLM and SGLang, both of which Hugging Face has explicitly stated it is now investing in instead. Superseded by: vLLM and SGLang as Hugging Face's own recommended path per their December 2025 maintenance-mode announcement.
+Upstream: integrates with Hugging Face Transformers and the Hugging Face Hub for model loading. Downstream: powers (or historically powered) Hugging Face's own Inference Endpoints product. It competes with vLLM and SGLang, both of which Hugging Face has explicitly stated it is now investing in instead. Superseded by: vLLM and SGLang as Hugging Face's own recommended path per their December 2025 maintenance-mode announcement.
 
 ## Getting Started
 
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical install/run command for this specific inference engine.
+# Serve a model with the TGI container (maintenance mode; see Resources):
+docker run --gpus all -p 8080:80 ghcr.io/huggingface/text-generation-inference \
+  --model-id HuggingFaceH4/zephyr-7b-beta
 ```
 
 ## Key Use Cases
@@ -96,7 +97,7 @@ Upstream: integrates with Hugging Face Transformers and the Hugging Face Hub for
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+Text Generation Inference is Hugging Face's original production LLM server, now in maintenance mode in favor of vLLM/SGLang. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

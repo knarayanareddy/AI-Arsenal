@@ -64,7 +64,7 @@ Pipeline: Silero/pyannote VAD segments speech → segments batched through faste
 
 ## Ecosystem Position
 
-Upstream: `faster-whisper` (transcription engine), wav2vec2 alignment models, pyannote (diarization — gated HF models requiring token acceptance). Competing: hosted STT APIs with diarization (Deepgram, AssemblyAI) on the buy side; NeMo-based diarization stacks for teams already on NVIDIA tooling.
+Upstream: `faster-whisper` (transcription engine), wav2vec2 alignment models, pyannote (diarization — gated HF models requiring token acceptance). It competes with hosted STT APIs that include diarization (Deepgram, AssemblyAI) on the buy side, and with NeMo-based diarization stacks for teams already on NVIDIA tooling.
 
 ## Getting Started
 

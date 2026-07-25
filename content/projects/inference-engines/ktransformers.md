@@ -64,7 +64,7 @@ A Transformers-compatible frontend with a YAML-driven injection framework: rules
 
 ## Ecosystem Position
 
-Upstream: Transformers model definitions, quantized weight formats (GGUF-family). Competing: llama.cpp's simpler layer-offload (general but activation-agnostic) and pure-GPU engines (vLLM/SGLang) when VRAM suffices. Its niche — giant MoE on one GPU — currently has no serious rival; llama.cpp has since adopted related MoE-offload ideas.
+Upstream: Transformers model definitions, quantized weight formats (GGUF-family). It competes with llama.cpp's simpler layer-offload (general but activation-agnostic) and pure-GPU engines (vLLM/SGLang) when VRAM suffices. Its niche — giant MoE on one GPU — currently has no serious rival; llama.cpp has since adopted related MoE-offload ideas.
 
 ## Getting Started
 
