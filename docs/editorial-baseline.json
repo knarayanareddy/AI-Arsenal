@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 745
+    "count": 723
   },
   "entries": [
     {
@@ -3327,54 +3327,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::repeated-paragraph::4b6e08cd51905550",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::section-too-short::8e0a2ccb5b16b182",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "section-too-short",
-      "finding": "section \"Key Features\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::section-too-short::d80307cda3fa802d",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::tool-section-length::b5a696c5f09b9f0d",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::tool-section-length::e1947468a6b7b799",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::tool-section-length::ecb84a83cad84c14",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::tool-section-missing-technical-content::82f116ca60110102",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/ideogram-ai.md::tool-section-missing-technical-content::eca5a70107e55e95",
-      "file": "content/tools/model-layer/ideogram-ai.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/model-layer/ideogram.md::repeated-paragraph::3eefa1ac63953d25",
       "file": "content/tools/model-layer/ideogram.md",
       "rule": "repeated-paragraph",
@@ -3395,48 +3347,6 @@
     {
       "fingerprint": "content/tools/model-layer/ideogram.md::tool-section-missing-technical-content::287cfbd45464068e",
       "file": "content/tools/model-layer/ideogram.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::repeated-paragraph::32619d1cf525b665",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::section-too-short::8cdd0ad7108c8c55",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
-      "rule": "section-too-short",
-      "finding": "section \"Key Features\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::section-too-short::fe847f3d1e543792",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::tool-section-length::268778c8a698ebe2",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::tool-section-length::4e78fa4c991a4b52",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::tool-section-length::9fb56126448dce2b",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/kimi-k2-5.md::tool-section-missing-technical-content::8a3dc32f276b7f81",
-      "file": "content/tools/model-layer/kimi-k2-5.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
@@ -3919,48 +3829,6 @@
       "file": "content/tools/orchestration/mem0.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::repeated-paragraph::6a42650414944e60",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::section-too-short::78c68794d6b900b0",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "section-too-short",
-      "finding": "section \"Integration Patterns\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::tool-section-length::02288970d5ffdcdd",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::tool-section-length::3bcae4b7f0ee222d",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Architecture / How It Works\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::tool-section-missing-technical-content::53c9674e7d9c66b2",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::tool-section-missing-technical-content::6af6e7cb5058a4f8",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/memoriq.md::tool-section-missing-technical-content::d967cf27d4b8a1e0",
-      "file": "content/tools/orchestration/memoriq.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
     },
     {
       "fingerprint": "content/tools/orchestration/mirascope.md::repeated-paragraph::9dfc7707356630af",
