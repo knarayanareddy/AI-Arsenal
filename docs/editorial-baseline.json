@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 815
+    "count": 789
   },
   "entries": [
     {
@@ -795,84 +795,6 @@
       "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
     },
     {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::ecosystem-position-missing-comparison::aea5f3e4aad9db7c",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::project-section-length::190279e12ea74956",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Architecture\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::project-section-length::a4453775462f95a0",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Ecosystem Position\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::project-section-length::a9af4a6d07b0da65",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::project-section-missing-technical-content::66959a800d91791a",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::project-section-missing-technical-content::985e40644f23a99b",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Architecture\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::project-section-missing-technical-content::9abf2d3dabce408f",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::repeated-paragraph::b7050d394074c36c",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"replace with the specific model checkpoint for this family see resources pipe pipeline text generation model org model c...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::repeated-paragraph::c4db592ffebc78aa",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft architecture production claims above are based on the vendor s own description or limited third ...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::repeated-paragraph::f861cd3c152b3331",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a foundation model entry it documents the weights architecture and ecosystem position of the model itself for gu...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::section-too-short::178a4d0c0e4cd1ec",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "section-too-short",
-      "finding": "section \"Ecosystem Position\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::section-too-short::46079e553f7de058",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "section-too-short",
-      "finding": "section \"Architecture\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/translategemma.md::section-too-short::c805cbbd064047ef",
-      "file": "content/projects/foundation-models/translategemma.md",
-      "rule": "section-too-short",
-      "finding": "section \"Overview\" is too short for a curated entry (# characters)"
-    },
-    {
       "fingerprint": "content/projects/foundation-models/whisper.md::ecosystem-position-missing-comparison::63ccdd82aded72a3",
       "file": "content/projects/foundation-models/whisper.md",
       "rule": "ecosystem-position-missing-comparison",
@@ -883,84 +805,6 @@
       "file": "content/projects/foundation-models/whisper.md",
       "rule": "repeated-paragraph",
       "finding": "repeated paragraph shared with: \"this is a foundation model entry it documents model weights architecture and generational position for hosted managed ac...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::ecosystem-position-missing-comparison::1f72e47c79f4efe0",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::project-section-length::42dc02fad2f51843",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Architecture\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::project-section-length::5360ed9037a26d47",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Ecosystem Position\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::project-section-length::ed679be24743c94b",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Overview\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::project-section-missing-technical-content::b534b68f8d3163d7",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::project-section-missing-technical-content::ced361c66e34162a",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Architecture\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::project-section-missing-technical-content::ed4fa2e01eca20a4",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::repeated-paragraph::5acbd0e3778038ba",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft architecture production claims above are based on the vendor s own description or limited third ...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::repeated-paragraph::89512a4dbe65229c",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"replace with the specific model checkpoint for this family see resources pipe pipeline text generation model org model c...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::repeated-paragraph::999b89be7ab5dcfb",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a foundation model entry it documents the weights architecture and ecosystem position of the model itself for gu...\""
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::section-too-short::a269143e8ef1c2ee",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "section-too-short",
-      "finding": "section \"Overview\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::section-too-short::ad98e6510ea799c3",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "section-too-short",
-      "finding": "section \"Ecosystem Position\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/projects/foundation-models/yi.md::section-too-short::c5c1c781bf59406e",
-      "file": "content/projects/foundation-models/yi.md",
-      "rule": "section-too-short",
-      "finding": "section \"Architecture\" is too short for a curated entry (# characters)"
     },
     {
       "fingerprint": "content/projects/frameworks/autogen.md::ecosystem-position-missing-comparison::091c4f65bd4e2325",

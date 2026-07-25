@@ -57,19 +57,19 @@ status: watching
 
 ## Overview
 
-undefined
+Yi is 01.AI's family of open-weight, decoder-only large language models released during the 2023-2024 open-model wave, published under Apache-2.0 in 6B, 9B, and 34B dense parameter sizes with weights hosted on Hugging Face under the `01-ai` org. The family targets bilingual English/Chinese use and shipped extended long-context variants. As of the last review the `01-ai/Yi` GitHub repository shows only sparse, community-authored activity, so the Arsenal tracks Yi primarily as a 2023-2024 reference point rather than an actively evolving model.
 
 ## Why it's in the Arsenal
 
-01.AI's open-weight model family from the 2023-2024 open-model wave. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're doing comparative research across open-weight models from the 2023-2024 generation and need Yi as a reference point. See Strengths / Limitations below before adopting it.
+Yi is worth keeping as a fixed comparison point: it was one of the stronger bilingual open-weight releases of its generation, so a documented, Apache-2.0 reference checkpoint makes it easier to judge how far newer families have moved. It is included here for comparative research, not as a current production default — see Strengths / Limitations before adopting it.
 
 ## Architecture
 
-undefined
+Yi ships as dense, decoder-only Transformer checkpoints in 6B, 9B, and 34B sizes that load through the standard Hugging Face `transformers` stack, so no bespoke runtime is required. The models are trained for bilingual English/Chinese coverage and were released with long-context variants. The published checkpoints are unquantized (`supports_quantization: false` in this entry's frontmatter), so serving the 34B size for low-latency inference generally means sizing GPU memory accordingly or adding an external quantization/serving layer.
 
 ## Ecosystem Position
 
-undefined
+Within the open-weight LLM landscape Yi sits alongside other 2023-2024 releases such as Llama 2/3, Qwen, and Mistral as a general-purpose bilingual option, but it has since been outpaced: this entry's own frontmatter notes Qwen, Llama 3/4, and Gemma lead it on most public leaderboards. Today it occupies a narrow niche — a reference checkpoint for comparative research rather than a default production model — and, unlike actively maintained families, it receives little upstream maintenance.
 
 ## Getting Started
 
@@ -80,9 +80,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Yi publishes bilingual EN/ZH checkpoints under the 01-ai org (see Resources).
+generate = pipeline("text-generation", model="01-ai/Yi-6B")
+print(generate("用一句话解释检索增强生成（RAG）。", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -100,11 +100,11 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 - You need active vendor support or frequent updates — GitHub issue activity on 01-ai/Yi shows sparse, community-only engagement in 2026 with no clear maintainer response pattern, and 01.AI's public focus has shifted toward newer, less-established projects
 - You want a model with strong current-generation benchmark performance — Yi has been substantially outpaced by Qwen, Llama 3/4, and Gemma on most public leaderboards since its 2023-2024 release
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. Yi's maintenance status and leaderboard positioning here are inferred from 01.AI's own repository signals and this entry's frontmatter, not from independent benchmarking by the Arsenal. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents Yi's weights and positioning, not how to serve it. To run the 6B/9B/34B checkpoints you pair them with an inference/serving stack — see [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); because the weights are unquantized, a quantization-capable runtime is worth evaluating for the 34B size.
 
 ## Resources
 
