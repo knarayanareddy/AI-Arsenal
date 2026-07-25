@@ -67,7 +67,7 @@ The reason this entry exists. Answer directly: what does an engineer DO differen
 
 ## Limitations & Critiques
 
-Honest, evidence-backed. Must address: author-acknowledged limitations, limitations discovered post-publication, known failed replications or challenged results, conditions under which the approach breaks down. Must never be shorter than Key Results. "No known limitations" is never acceptable -- minimum acceptable text: "No post-publication challenges identified as of last_reviewed: {date}. Known author-acknowledged limitations: [X]."
+Honest, evidence-backed. Must address: author-acknowledged limitations, limitations discovered post-publication, known failed replications or challenged results, conditions under which the approach breaks down. Must never be shorter than Key Results. A bare "none" here is never acceptable -- as a starting point (replace before promotion): "No post-publication challenges identified as of last_reviewed: 2026-06-13. Author-acknowledged limitations: [fill in]."
 
 ## Reproductions & Follow-up Work
 

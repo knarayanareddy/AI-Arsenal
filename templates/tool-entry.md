@@ -29,6 +29,13 @@ reviewed_by: null
 verdict: "recommended"
 verdict_rationale: "One sentence why"
 status: "active"
+phase: "evaluation-and-observability"
+audience:
+  - production
+best_when:
+  - "Specific condition when this tool is the right choice — not a feature description"
+avoid_when:
+  - "Specific condition when to avoid this tool — not a feature description"
 ---
 
 ## Overview
