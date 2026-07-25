@@ -57,7 +57,7 @@ status: active
 
 ## Overview
 
-An open-weight small-to-mid-size language model family from the Technology Innovation Institute (TII) in the UAE, offered in several parameter sizes for local and edge deployment.
+An open-weight small-to-mid-size language model family from the Technology Innovation Institute (TII) in the UAE, released as dense decoder-only transformer checkpoints in 1B, 3B, 7B, and 10B sizes for local and edge deployment. It ships under TII's custom Falcon-LLM license and predates TII's newer Falcon-H1 hybrid line, which is now the vendor's recommended path.
 
 ## Why it's in the Arsenal
 
@@ -69,7 +69,7 @@ A dense decoder-only transformer family, documented publicly at the model-card l
 
 ## Ecosystem Position
 
-Upstream: standard transformer research; TII's own earlier Falcon 1/2 generations. Downstream: supported by Hugging Face Transformers, vLLM, and llama.cpp for inference. Competing: Llama 3, Qwen 2.5, and Gemma at similar parameter scales. Complementary/succeeding: TII's own Falcon-H1 family is the direct architectural successor and the vendor's current recommended path.
+Upstream: standard transformer research; TII's own earlier Falcon 1/2 generations. Downstream: supported by Hugging Face Transformers, vLLM, and llama.cpp for inference. It competes with Llama 3, Qwen 2.5, and Gemma models at similar parameter scales, and loads through the same Hugging Face transformers stack. Complementary/succeeding: TII's own Falcon-H1 family is the direct architectural successor and the vendor's current recommended path.
 
 ## Getting Started
 
@@ -80,9 +80,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Falcon 3 checkpoints are published under the tiiuae org on Hugging Face (see Resources).
+generate = pipeline("text-generation", model="tiiuae/Falcon3-7B-Instruct")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -102,7 +102,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the Falcon 3 weights and positioning, not serving. Its small dense checkpoints (1B-10B) suit local/edge use — pair them with an inference stack from [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); expect thinner community tooling than Llama or Qwen.
 
 ## Resources
 

@@ -64,7 +64,7 @@ Text (character sequence) is padded with filler tokens to speech length and conc
 
 ## Ecosystem Position
 
-Predecessors: E2-TTS (the design it stabilizes), autoregressive cloners (XTTS/coqui lineage, now archived upstream). Peers: `kokoro` (small, fast, no cloning), `chatterbox` (production-oriented cloning with watermarking), CosyVoice/Fish-Speech-class systems. Downstream: many community language fine-tunes and self-hosted narration/dubbing stacks.
+Predecessors: E2-TTS (the design it stabilizes), autoregressive cloners (XTTS/coqui lineage, now archived upstream). Compared to peer models, `kokoro` is the small/fast no-cloning alternative, `chatterbox` the production-cloning alternative with watermarking, and CosyVoice/Fish-Speech the multilingual rivals. Downstream: many community language fine-tunes and self-hosted narration/dubbing stacks.
 
 ## Getting Started
 

@@ -70,7 +70,7 @@ A dense (not MoE) decoder-only transformer family across all Llama 3.x sizes, in
 
 ## Ecosystem Position
 
-Upstream: standard transformer architecture, no unusual dependencies. Downstream: the single most broadly supported open-weight family — every major inference engine (vLLM, SGLang, TGI, Ollama, llama.cpp) and fine-tuning framework (Axolotl, LLaMA-Factory, Unsloth) supports it on day one, and it anchors a vast ecosystem of community fine-tunes. Competing: Qwen 2.5/3, Mistral, Gemma at comparable sizes. Superseded by: Llama 4 (Meta's first MoE generation, April 2025) as the vendor's current recommended line, though Llama 3.x remains heavily deployed due to its ecosystem maturity.
+Upstream: standard transformer architecture, no unusual dependencies. Downstream: the single most broadly supported open-weight family — every major inference engine (vLLM, SGLang, TGI, Ollama, llama.cpp) and fine-tuning framework (Axolotl, LLaMA-Factory, Unsloth) supports it on day one, and it anchors a vast ecosystem of community fine-tunes. It competes with Qwen 2.5/3, Mistral, and Gemma models at comparable sizes; compared to those families its defining edge is ecosystem breadth and tooling depth rather than raw benchmark leadership. Superseded by: Llama 4 (Meta's first MoE generation, April 2025) as the vendor's current recommended line, though Llama 3.x remains heavily deployed due to its ecosystem maturity.
 
 ## Getting Started
 
@@ -81,9 +81,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Llama 3.x checkpoints are published under the meta-llama org on Hugging Face (gated; see Resources).
+generate = pipeline("text-generation", model="meta-llama/Llama-3.1-8B-Instruct")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -103,7 +103,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the Llama 3.x weights and positioning, not serving. Its main practical draw is that essentially every inference engine and fine-tuning framework supports these checkpoints — see [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); note the custom license terms before commercial use.
 
 ## Resources
 

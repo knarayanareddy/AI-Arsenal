@@ -68,15 +68,9 @@ Upstream: depends entirely on the Phi model family (phi-4 and predecessors) as i
 ## Getting Started
 
 ```bash
-pip install transformers accelerate
-```
-
-```python
-from transformers import pipeline
-
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# PhiCookBook is a samples/recipes repo, not a model — clone it and open the notebooks (see Resources).
+git clone https://github.com/microsoft/PhiCookBook
+# then follow the fine-tuning, quantization, and deployment notebooks for the Phi model family
 ```
 
 ## Key Use Cases
@@ -96,7 +90,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this catalogs a companion resource rather than weights: it points at Microsoft's official Phi build recipes. Pair it with the phi-4 model entry; for actually serving Phi models see [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

@@ -64,7 +64,7 @@ A vision encoder feeding a Qwen3 language backbone via a vision-language adapter
 
 ## Ecosystem Position
 
-Upstream: Qwen3 text backbones. Downstream: computer-use agents (`skyvern`-class and open computer-use stacks), document-AI pipelines, VLM fine-tunes via `ms-swift`/LLaMA-Factory. Competing: InternVL, Llama-vision variants, and closed frontier VLMs. Serving: first-class support in `vllm`, SGLang, and llama.cpp-ecosystem quantizations.
+Upstream: Qwen3 text backbones. Downstream: computer-use agents (`skyvern`-class and open computer-use stacks), document-AI pipelines, VLM fine-tunes via `ms-swift`/LLaMA-Factory. It competes with InternVL and Llama-vision variants among open VLMs, and compared to closed frontier VLMs (Gemini/GPT-4o-class) trades peak visual reasoning for open weights. Serving: first-class support in `vllm`, SGLang, and llama.cpp-ecosystem quantizations.
 
 ## Getting Started
 

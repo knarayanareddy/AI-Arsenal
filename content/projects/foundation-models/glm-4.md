@@ -91,7 +91,7 @@ curl https://api.z.ai/api/paas/v4/chat/completions -H 'Authorization: Bearer $ZA
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents model weights, architecture, and generational position. For hosted/managed access paths to models, see [tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents GLM-4.5's open weights and MoE architecture, not serving. Its Air variant (106B total/12B active) is the practical self-host target; for hosted access see Z.ai's API and the model-layer entries under [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

@@ -92,9 +92,9 @@ git clone https://github.com/RVC-Boss/GPT-SoVITS
 
 ## Limitations
 
-- No built-in consent/misuse safeguards — legal risk is on you
-- Community-maintained; you operate the GPU pipeline
-- Quality depends heavily on reference/training data hygiene
+- No built-in consent/misuse safeguards — a community cloning toolkit ships no guardrails, so all legal and ethical risk sits with you
+- Community-maintained: you operate the full GPU pipeline (data prep, training, inference) with no vendor support or SLA
+- Cloning quality depends heavily on reference/training-data hygiene, so poor or noisy source audio yields poor voices
 
 ## Relation to the Arsenal
 

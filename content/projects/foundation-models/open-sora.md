@@ -92,9 +92,9 @@ git clone https://github.com/hpcaitech/Open-Sora
 
 ## Limitations
 
-- Output quality/length trails closed frontier models
-- Heavy GPU requirements for inference and training
-- Video generation raises content-provenance concerns
+- Output quality and clip length trail closed frontier models (Sora, Kling, Runway) — this is the open reproduction, not the quality leader
+- Heavy GPU requirements for both inference and fine-tuning; this is not a lightweight model you can run on modest hardware
+- Video generation raises content-provenance concerns, so budget a provenance/watermarking policy before production use
 
 ## Relation to the Arsenal
 

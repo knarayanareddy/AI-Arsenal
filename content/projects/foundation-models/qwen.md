@@ -51,7 +51,7 @@ status: active
 
 ## Overview
 
-Alibaba Cloud's original open-weight large language model family, first released in 2023, predating the more widely adopted Qwen 2.5 and Qwen3 generations.
+Alibaba Cloud's original open-weight large language model family — the Qwen/Qwen2 generation — first released in 2023 as dense decoder-only transformer checkpoints under Apache-2.0. It covers general language, coding, and early multimodal use, but predates (and is now superseded by) the more widely adopted Qwen 2.5 and Qwen3 lines and lacks their MoE and agentic post-training.
 
 ## Why it's in the Arsenal
 
@@ -63,7 +63,7 @@ A dense decoder-only transformer family released across multiple parameter sizes
 
 ## Ecosystem Position
 
-Upstream: standard transformer research. Downstream: supported by early integrations across Hugging Face Transformers and vLLM. Competing: Llama 2 and early Mistral releases from the same era. Superseded by: Qwen 2.5, Qwen3, and Alibaba's actively developed 2026 generation (Qwen3.5/3.6/3.7).
+Upstream: standard transformer research. Downstream: supported by early integrations across Hugging Face Transformers and vLLM for serving these models. It competes with Llama 2 and early Mistral releases from the same era; compared to them it offered strong bilingual (English/Chinese) coverage, and it has since been superseded by Qwen 2.5, Qwen3, and Alibaba's actively developed 2026 generation (Qwen3.5/3.6/3.7).
 
 ## Getting Started
 
@@ -74,9 +74,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# The original Qwen generation is published under the Qwen org on Hugging Face (see Resources).
+generate = pipeline("text-generation", model="Qwen/Qwen-7B")
+print(generate("用一句话解释检索增强生成（RAG）。", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -96,7 +96,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the original Qwen generation's weights and positioning, not serving. To run these dense checkpoints, pair them with an inference stack — see [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); for new work prefer the current Qwen line noted above.
 
 ## Resources
 

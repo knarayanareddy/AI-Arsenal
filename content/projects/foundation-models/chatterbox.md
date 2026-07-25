@@ -64,7 +64,7 @@ A two-stage design: a Llama-architecture autoregressive model generates speech t
 
 ## Ecosystem Position
 
-Vendor lineage: Resemble AI's commercial voice platform (the paid upgrade path). Peers: `f5-tts` (flow-matching research pole), `kokoro` (efficiency pole), CosyVoice/Fish-Speech (multilingual rivals), ElevenLabs (the closed benchmark). Downstream: self-hosted agent/dubbing stacks and a fast-growing fork ecosystem (streaming servers, quantized variants).
+Vendor lineage: Resemble AI's commercial voice platform (the paid upgrade path). It competes with `f5-tts` (the flow-matching research pole), `kokoro` (the efficiency pole), CosyVoice/Fish-Speech (multilingual rivals), and ElevenLabs (the closed benchmark). Downstream: self-hosted agent/dubbing stacks and a fast-growing fork ecosystem (streaming servers, quantized variants).
 
 ## Getting Started
 

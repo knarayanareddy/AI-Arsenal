@@ -60,11 +60,11 @@ When the original Stable Diffusion team shipped FLUX, the open image-generation 
 
 ## Architecture
 
-A rectified-flow (flow-matching) transformer rather than classic DDPM U-Net: a multimodal DiT-style backbone with parallel attention over image latents and text conditioning from dual encoders (CLIP + T5-XXL), trained to straighten probability-flow trajectories — the property that makes [schnell]'s few-step distillation work. Generation runs in a VAE latent space.
+FLUX.1 is a rectified-flow (flow-matching) transformer model rather than a classic DDPM U-Net: a multimodal DiT-style backbone with parallel attention over image latents and text conditioning from dual encoders (CLIP + T5-XXL), trained to straighten probability-flow trajectories — the property that makes [schnell]'s few-step distillation work. Generation runs in a VAE latent space.
 
 ## Ecosystem Position
 
-Predecessor lineage: Stable Diffusion (same core authors; SD3 shares the rectified-flow direction). Competing: SDXL/SD3.5 (Stability), open challengers (HiDream, Qwen-Image-class), and closed APIs (Midjourney, DALL·E, Imagen). Complementary: ComfyUI (the de facto runtime), diffusers integration, LoRA fine-tuning stacks.
+Predecessor lineage: Stable Diffusion (same core authors; SD3 shares the rectified-flow direction). It competes with SDXL/SD3.5 (Stability), open challenger models (HiDream, Qwen-Image-class), and closed API models (Midjourney, DALL·E, Imagen). Complementary: ComfyUI (the de facto runtime), diffusers integration, LoRA fine-tuning stacks.
 
 ## Getting Started
 

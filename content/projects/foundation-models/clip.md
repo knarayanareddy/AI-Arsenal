@@ -64,7 +64,7 @@ Dual encoders — a ViT (or ResNet) for images and a Transformer for text — pr
 
 ## Ecosystem Position
 
-Downstream: LLaVA-class VLMs (vision encoder), Stable Diffusion (text encoder), open_clip (community reproductions at scale, the practical checkpoints), FAISS/vector-DB image search stacks. Successors: SigLIP/SigLIP2 (better loss), EVA-CLIP, and multimodal embedders. The repo itself is a frozen reference; the ideas are anything but.
+Downstream: LLaVA-class VLMs (vision encoder), Stable Diffusion (text encoder), open_clip (community reproductions at scale, the practical checkpoints), FAISS/vector-DB image search stacks. Successors and alternatives: SigLIP/SigLIP2 (better loss), EVA-CLIP, and other multimodal embedders now outperform the original checkpoints on retrieval, so compared to them this repo is best treated as the reference rather than the deployment choice. The repo itself is a frozen reference; the ideas are anything but.
 
 ## Getting Started
 

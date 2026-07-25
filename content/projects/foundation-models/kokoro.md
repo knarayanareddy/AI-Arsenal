@@ -64,7 +64,7 @@ A StyleTTS2-derived non-autoregressive pipeline: phoneme input (espeak-ng G2P vi
 
 ## Ecosystem Position
 
-Lineage: StyleTTS2 (architecture), trained largely on synthetic audio. Peers: `f5-tts` (cloning, flow-matching), `chatterbox` (production cloning), Piper (older edge-TTS standard it largely superseded on quality). Downstream: kokoro-onnx, kokoro-web, FastAPI wrappers, and integrations in open assistant stacks (Open WebUI-class ecosystems).
+Lineage: StyleTTS2 (architecture), trained largely on synthetic audio. It competes with peer models `f5-tts` and `chatterbox` (which add cloning) and Piper (the older edge-TTS standard it largely superseded on quality). Downstream: kokoro-onnx, kokoro-web, FastAPI wrappers, and integrations in open assistant stacks (Open WebUI-class ecosystems).
 
 ## Getting Started
 
