@@ -7,50 +7,59 @@ tags:
 difficulty: "intermediate"
 impact: "high"
 time_to_implement: "30 minutes"
-applies_to: []
+applies_to:
+  - rag
+phase: "rag-and-retrieval"
+effort: "minutes"
+verification_status: "community-reported"
+reversible: true
+gotchas:
+  - "Name a specific, observable failure mode this tip prevents — replace this line before promotion."
 added_date: "2026-06-13"
+last_reviewed: "2026-06-13"
 added_by: "github-username"
 verified_by: null
 source_url: null
 ---
 
-## Overview
+## What & Why
 
-## Why It's in the Arsenal
+State the problem and the mechanism that fixes it. Replace this with a concrete
+description of what breaks without the tip and why this change addresses it.
 
-## Key Features
+## Before / After
 
-- What this improves
-- When to apply it
+**Before:**
 
-## Architecture / How It Works
+```text
+Describe the concrete prior behavior — real config, code, or numbers.
+```
 
-## Getting Started
+**After:**
+
+```text
+Describe the concrete improved behavior — real config, code, or numbers.
+```
+
+## Implementation
+
+Give the minimal steps or code to apply the tip.
 
 ```bash
 # Minimal working example
 ```
 
-## Use Cases
+## Gotchas
 
-1. **Scenario**: When you need X and Y is true
+- Name a specific, observable failure mode and how to detect it — replace this line.
 
-## Strengths
+## When NOT to Apply
 
-- Strength one
+- Name a concrete situation where this tip is the wrong choice — replace this line.
 
-## Limitations / When NOT to Use
+## Verification
 
-- Limitation one
-
-## Integration Patterns
-
-## Resources
-
-- [Source](https://example.com)
-
-## Buzz & Reception
+Describe how to confirm the tip works: a measurement, test, or observable signal.
 
 ---
 *Last reviewed: 2026-06-13 by @github-username*
-
