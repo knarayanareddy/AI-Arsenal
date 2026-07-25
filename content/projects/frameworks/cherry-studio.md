@@ -92,9 +92,9 @@ add provider API keys (or connect a local Ollama/LM Studio), and start chatting.
 
 ## Limitations
 
-- Desktop app, not a multi-user server or an SDK
-- AGPL-3.0 licensing has redistribution implications
-- Local data management/security is the user's responsibility
+- Desktop app, not a multi-user server or an SDK — there is no centralized auth/admin, so it does not fit team-hosted deployments the way LibreChat/Open WebUI do
+- AGPL-3.0 licensing carries redistribution/copyleft implications if you fork or bundle it into a product
+- Local data management and security (API keys, indexed documents, conversation history) are the user's responsibility on each machine
 
 ## Relation to the Arsenal
 

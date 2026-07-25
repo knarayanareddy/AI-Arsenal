@@ -60,7 +60,7 @@ Two mechanisms earn it a place. First, protocol compatibility: by implementing t
 
 ## Architecture
 
-A cascaded pipeline server: voice activity detection segments the input stream, STT transcribes, an OpenAI-compatible LLM produces the response, and TTS renders speech — all streamed over a Realtime-compatible WebSocket (`/v1/realtime`). Modularity is the design center: each stage is a swappable component behind a common interface, so the same server config spans fully-local, fully-hosted, and hybrid deployments.
+A cascaded pipeline server: voice activity detection segments the input stream, an STT model transcribes, an OpenAI-compatible LLM API produces the response, and a TTS model renders speech — all streamed over a Realtime-compatible WebSocket (`/v1/realtime`). Modularity is the design center: each stage is a swappable component behind a common interface, so the same server config spans fully-local, fully-hosted, and hybrid deployments.
 
 ## Ecosystem Position
 

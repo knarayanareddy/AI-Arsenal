@@ -92,11 +92,11 @@ pip install openai-agents-sdk
 - You need to be model-provider-agnostic — this SDK is designed around OpenAI's API and model behavior; a framework like LangGraph or Pydantic AI is more naturally multi-provider
 - You need the deep durability/checkpointing features of a graph-based framework — this SDK's simplicity trades away some of that fine-grained state control
 
-_Enrichment status: draft — claims above are based on limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. The OpenAI Agents SDK's capabilities here are drawn from OpenAI's own docs; independent production case studies were limited. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+The OpenAI Agents SDK is OpenAI's lightweight framework for agents, tools, handoffs, and guardrails. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

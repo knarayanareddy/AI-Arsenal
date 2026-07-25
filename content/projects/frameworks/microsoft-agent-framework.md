@@ -66,7 +66,7 @@ Spans a range of orchestration complexity from simple single agents through grap
 
 ## Ecosystem Position
 
-Upstream: builds directly on top of and unifies AutoGen and Semantic Kernel's prior codebases and design patterns per Microsoft's own framing. Downstream: none of particular note yet given its recent 1.0 release. Competing: Google ADK, LangGraph, CrewAI. Complementary: designed to integrate with the broader Azure AI ecosystem (Azure AI Foundry, Azure OpenAI).
+Upstream: builds directly on top of and unifies AutoGen and Semantic Kernel's prior codebases and design patterns per Microsoft's own framing. Downstream: none of particular note yet given its recent 1.0 release, though migrated AutoGen/Semantic Kernel agents target it. It competes with Google ADK, LangGraph, and CrewAI. Complementary: designed to integrate with the broader Azure AI ecosystem (Azure AI Foundry, Azure OpenAI).
 
 ## Getting Started
 
@@ -75,8 +75,8 @@ pip install microsoft-agent-framework
 ```
 
 ```python
-# See the project's official documentation (Resources below) for a
-# runnable quickstart tailored to this framework's specific API.
+# Create a ChatAgent backed by an Azure/OpenAI chat client, then run it in an
+# AgentThread. See Microsoft Learn (Resources) for the exact API for your provider.
 ```
 
 ## Key Use Cases
@@ -96,7 +96,7 @@ pip install microsoft-agent-framework
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+Microsoft Agent Framework is Microsoft's current, officially-supported agent framework — the convergence point for AutoGen and Semantic Kernel, spanning Python and .NET. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 
