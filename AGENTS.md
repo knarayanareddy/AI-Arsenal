@@ -1,0 +1,15 @@
+# AGENTS.md
+
+This repository (AI Arsenal) is a schema-first, Markdown-native knowledge base. It has no web UI or long-running server: the "application" is a Node.js/pnpm CLI toolchain that validates content, generates the `/data/*.json` API layer, and scaffolds new entries.
+
+For repository routing and content contracts, see `AGENT.md`, `README.md`, `CONTRIBUTING.md`, and `scripts/README.md`. All commands are defined in `package.json` scripts.
+
+## Cursor Cloud specific instructions
+
+- Runtime: Node `>=20` and pnpm `9.x` (pinned via `packageManager: pnpm@9.15.9`). The base VM already has a compatible Node 22 + pnpm 9.15.9, so no version manager juggling is needed. Dependency install is `pnpm install` (fast; ~144 packages, no native build steps).
+- There is no server to run and no ports to expose. Do not look for a `dev server`; `pnpm run dev` (`scripts/watch.js`) is a filesystem validation watcher that runs validation once and then re-validates on content/schema/script/template changes. It runs until Ctrl+C.
+- Core workflows (all pure CLI): `pnpm test` (Node built-in `node:test`, 220 tests), `pnpm run validate:all` (schema/taxonomy/structure/paths/refs/editorial), `pnpm run generate:all` (regenerates `/data/*.json`, registries, `CONTEXT.md`, stats), and `pnpm run ci` (full gate). `check:links`/`update:stars` make outbound network calls and are not needed for basic dev.
+- Generated artifacts are NOT committed per-change. `pnpm run generate:all` (and `generate:toc`/`generate:context`/`generate:stats`) will dirty many files under `data/` and `content/**/_index.md`, plus `CONTEXT.md`. This is expected; the repo refreshes these via batched automation PRs. After running generation locally, revert with `git checkout -- .` unless you are intentionally producing a data-refresh PR.
+- Linting: there is no ESLint config and no `lint` script. `prettier` is a devDependency but is not wired to a script and reports many pre-existing style warnings across existing files — treat the validation pipeline (`validate:all`) as the effective lint/quality gate, not `prettier --check`.
+- The scaffold tool `scripts/scaffold.js` accepts flags for non-interactive use, e.g. `node scripts/scaffold.js --type=tip --name="X" --id="x" --github_username="you"`. Note the tip template it emits is older than the current validators: a freshly scaffolded tip needs extra required frontmatter (`phase`, `effort`, `verification_status`, `reversible`, `gotchas`, `last_reviewed`, non-empty `applies_to`), the newer body sections (`## What & Why`, `## Before / After`, `## Implementation`, `## Gotchas`, `## When NOT to Apply`, `## Verification`), and must live under a phase folder `content/tips-and-tricks/{phase}/{id}.md` (not flat) to pass `validate:paths`. Mirror an existing migrated entry (e.g. `content/tips-and-tricks/agents-and-orchestration/`) rather than the raw template.
+- `--changed-only` validation modes rely on `git diff`, so brand-new untracked files are reported as "0 changed"; use the full validators (`node scripts/validate-schema.js` etc.) to check untracked entries.
