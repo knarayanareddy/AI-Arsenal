@@ -63,7 +63,7 @@ ChatAgent instances wrap models (any provider via a unified backend layer) with 
 
 ## Ecosystem Position
 
-Upstream: all major model providers. Downstream: OWL (its agent system built on top, a strong GAIA benchmark performer), Loong (synthetic reasoning data). Competing: AutoGen/AG2 (conversation-centric), CrewAI (business workflows), MetaGPT (SOP-driven dev agents). Its academic lineage keeps it the reference framework in multi-agent research papers.
+Upstream: all major model providers. Downstream: OWL (its agent system built on top, a strong GAIA benchmark performer), Loong (synthetic reasoning data). It competes with AutoGen/AG2 (conversation-centric), CrewAI (business workflows), and MetaGPT (SOP-driven dev agents). Its academic lineage keeps it the reference framework in multi-agent research papers.
 
 ## Getting Started
 
@@ -92,7 +92,7 @@ session.init_chat()
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+CAMEL is a research-first multi-agent framework (its March 2023 paper predates AutoGen/CrewAI), focused on agent societies and synthetic data. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

@@ -97,11 +97,11 @@ pip install txtai
 - You need to scale to very large vector datasets in a distributed, production-grade vector database — txtai's embedded model is not designed to compete with dedicated systems like Milvus or Qdrant at that scale
 - You want the largest integration ecosystem — txtai has a smaller third-party integration and community footprint than LangChain or LlamaIndex
 
-_Enrichment status: draft — claims above are based on limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. txtai's all-in-one positioning here is drawn from the project's own docs; independent production case studies were limited. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+txtai is an all-in-one embeddings/semantic-search framework — a lighter alternative to assembling a vector DB plus a separate orchestration framework. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

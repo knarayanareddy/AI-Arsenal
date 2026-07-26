@@ -64,7 +64,7 @@ Models are composed from interchangeable parts: a backbone (ResNet/FPN variants)
 
 ## Ecosystem Position
 
-Upstream: PyTorch. Downstream: countless research forks and derived systems — segmentation work like `sam2` comes from the same lab lineage. Competing/complementary: `ultralytics` (streamlined applied YOLO workflows) and MMDetection (the comparable OpenMMLab research platform) occupy the same space.
+Upstream: PyTorch. Downstream: countless research forks and derived model systems — segmentation models like `sam2` come from the same lab lineage. Competing/complementary: `ultralytics` (streamlined applied YOLO workflows) and MMDetection (the comparable OpenMMLab research platform) occupy the same space.
 
 ## Getting Started
 

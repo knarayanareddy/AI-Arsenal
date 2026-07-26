@@ -92,11 +92,11 @@ pip install google-adk
 - You need a cloud-agnostic framework — ADK's deployment and tooling story is most complete within Google Cloud, so a cloud-agnostic choice like LangGraph or CrewAI may fit better outside that ecosystem
 - You want the largest possible existing community and third-party tutorial base — as a comparatively newer entrant, ADK's community resources are smaller than LangChain/LangGraph's
 
-_Enrichment status: draft — claims above are based on limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. Google ADK's Cloud/Vertex-native positioning here is drawn from Google's own docs and sample repos; independent production case studies were limited. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+Google ADK is Google's official, Cloud/Vertex-native agent framework. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

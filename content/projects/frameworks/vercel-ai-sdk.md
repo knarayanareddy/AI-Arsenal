@@ -63,7 +63,7 @@ A layered design: provider adapters normalize each vendor API into a common lang
 
 ## Ecosystem Position
 
-Upstream: every major LLM provider; deep Next.js/Vercel platform integration (but framework-agnostic at core). Competing: LangChain.js (heavier abstraction), Mastra (fuller agent framework, built by ex-Gatsby team on top of similar ideas), raw provider SDKs. Downstream: the default choice in the v0/Next.js template ecosystem; weekly npm downloads in the millions make it the most-adopted TS LLM toolkit.
+Upstream: every major LLM provider; deep Next.js/Vercel platform integration (but framework-agnostic at core). It competes with LangChain.js (heavier abstraction), Mastra (a fuller agent framework built by the ex-Gatsby team on similar ideas), and raw provider SDKs. Downstream: the default choice in the v0/Next.js template ecosystem; weekly npm downloads in the millions make it the most-adopted TS LLM toolkit.
 
 ## Getting Started
 
@@ -92,7 +92,7 @@ const { text } = await generateText({ model: openai('gpt-4.1'), prompt: 'Hello' 
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+The Vercel AI SDK is the standard TypeScript toolkit for AI apps — provider-agnostic generation plus React/Next.js streaming UI. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

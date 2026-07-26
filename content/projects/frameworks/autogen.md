@@ -65,7 +65,7 @@ Agents are modeled as conversational participants that exchange messages in a gr
 
 ## Ecosystem Position
 
-Upstream: none of particular note. Downstream: the community-driven AG2 fork continues independent development of the original codebase. Competing: CrewAI, LangGraph, Google ADK. Superseded by: Microsoft Agent Framework 1.0 (April 2026), which Microsoft explicitly positions as built on top of and replacing both AutoGen and Semantic Kernel for new agent development.
+Upstream: none of particular note. Downstream: the community-driven AG2 fork continues independent development of the original codebase. It competes with CrewAI, LangGraph, and Google ADK. Superseded by: Microsoft Agent Framework 1.0 (April 2026), which Microsoft explicitly positions as built on top of and replacing both AutoGen and Semantic Kernel for new agent development.
 
 ## Getting Started
 
@@ -74,8 +74,11 @@ pip install autogen
 ```
 
 ```python
-# See the project's official documentation (Resources below) for a
-# runnable quickstart tailored to this framework's specific API.
+from autogen import AssistantAgent, UserProxyAgent
+
+assistant = AssistantAgent("assistant", llm_config={"model": "gpt-4o"})
+user = UserProxyAgent("user", human_input_mode="NEVER", code_execution_config=False)
+user.initiate_chat(assistant, message="Draft a 3-step plan.")
 ```
 
 ## Key Use Cases
@@ -95,7 +98,7 @@ pip install autogen
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+AutoGen is Microsoft's original multi-agent conversation framework, now in maintenance mode with Microsoft Agent Framework as its successor. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

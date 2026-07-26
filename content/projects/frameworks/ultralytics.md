@@ -64,7 +64,7 @@ PyTorch training core with task-specific heads sharing a backbone/neck design (v
 
 ## Ecosystem Position
 
-Upstream: PyTorch; labeled datasets (Roboflow ecosystem adjacency). Downstream: `supervision` for annotation/zone logic on its outputs, deployment runtimes (TensorRT, CoreML). Competing: MMDetection (research flexibility over ergonomics), RT-DETR variants (transformer detectors, included in Ultralytics itself), zero-shot detectors for open-vocabulary needs.
+Upstream: PyTorch; labeled datasets (Roboflow ecosystem adjacency). Downstream: `supervision` for annotation/zone logic on its outputs, deployment runtimes (TensorRT, CoreML). It competes with MMDetection (research flexibility over ergonomics), RT-DETR transformer-detector models (included in Ultralytics itself), and zero-shot detectors for open-vocabulary needs.
 
 ## Getting Started
 

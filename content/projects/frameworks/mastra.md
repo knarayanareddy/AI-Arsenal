@@ -92,11 +92,11 @@ pip install mastra
 - Your team is Python-first — the much larger Python agent-framework ecosystem (LangGraph, CrewAI, Pydantic AI) will have more examples, integrations, and community support
 - You need the widest possible third-party integration coverage — as a newer, smaller-ecosystem framework, Mastra has fewer pre-built integrations than the most established Python frameworks
 
-_Enrichment status: draft — claims above are based on limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. Mastra's capabilities here are drawn from the project's own docs; independent production case studies were limited. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+Mastra is a TypeScript agent framework (from the ex-Gatsby team) with workflows, memory, and RAG built in. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

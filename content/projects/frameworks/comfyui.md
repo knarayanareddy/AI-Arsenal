@@ -63,7 +63,7 @@ A Python execution engine with a graph scheduler that caches node outputs and re
 
 ## Ecosystem Position
 
-Upstream: PyTorch, model releases from Stability/BFL/Alibaba/Tencent et al. Downstream: an enormous workflow-sharing community; hosted platforms (ComfyDeploy-class) productionize its graphs; the desktop app broadens access. Competing: Automatic1111/Forge (declining), InvokeAI (polished but narrower), diffusers-in-code. Comfy Org's funding and hiring of key contributors makes it the best-resourced project in the space.
+Upstream: PyTorch, model releases from Stability/BFL/Alibaba/Tencent et al. Downstream: an enormous workflow-sharing community; hosted platforms (ComfyDeploy-class) productionize its graphs; the desktop app broadens access. It competes with Automatic1111/Forge (declining), InvokeAI (polished but narrower), and diffusers-in-code. Comfy Org's funding and hiring of key contributors makes it the best-resourced project in the space.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ python main.py
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+ComfyUI is the node-graph engine that has become the de facto interface for open image/video generation pipelines. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 

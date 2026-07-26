@@ -63,7 +63,7 @@ Applications integrate AI capability through 'plugins' (functions exposed to the
 
 ## Ecosystem Position
 
-Upstream: none of particular note. Downstream: Microsoft Agent Framework builds directly on Semantic Kernel's concepts per Microsoft's own framing. Competing: LangChain, Google ADK. Superseded by: Microsoft Agent Framework 1.0 (April 2026) as Microsoft's current recommended path.
+Upstream: none of particular note. Downstream: Microsoft Agent Framework builds directly on Semantic Kernel's concepts per Microsoft's own framing. It competes with LangChain and Google ADK. Superseded by: Microsoft Agent Framework 1.0 (April 2026) as Microsoft's current recommended path.
 
 ## Getting Started
 
@@ -93,7 +93,7 @@ pip install semantic-kernel
 
 ## Relation to the Arsenal
 
-This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
+Semantic Kernel is Microsoft's earlier orchestration SDK (plugins/planners), now converging into Microsoft Agent Framework. This is a framework entry: it documents the library/SDK you build on top of. For a curated shortlist comparing this and adjacent tools for a specific job, see the relevant [tools/orchestration/](../../tools/orchestration/_index.md) or [tools/by-job/](../../tools/by-job/_index.md) entries.
 
 ## Resources
 
