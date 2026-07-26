@@ -52,19 +52,19 @@ status: active
 
 ## Overview
 
-undefined
+TranslateGemma is an open-weight machine-translation model family built by fine-tuning Google DeepMind's Gemma 3 base for translation across 55 languages, distributed under Apache-2.0 through the `google-deepmind/gemma` project. Rather than a general chat model, it is a task-specialized derivative that inherits Gemma 3's efficient, long-context decoder architecture, which lets it translate longer documents in a single pass instead of chunking them.
 
 ## Why it's in the Arsenal
 
-Specialized translation fine-tune built on the Gemma 3 base architecture. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need an efficient, open-weight machine translation model specifically fine-tuned for 55 languages rather than a general-purpose chat model repurposed for translation. See Strengths / Limitations below before adopting it.
+TranslateGemma earns an entry because it represents a specific, increasingly common design choice: shipping a narrow, open-weight translation model rather than repurposing a general chat model for the job. For teams weighing open translation options against commercial APIs, it is a concrete, Apache-2.0 data point — see Strengths / Limitations before adopting it.
 
 ## Architecture
 
-undefined
+Architecturally TranslateGemma is a supervised translation fine-tune of the Gemma 3 decoder rather than a new base model, so it reuses Gemma 3's tokenizer, parameter shapes, and efficient long-context attention and loads through the same Hugging Face `transformers`/Gemma tooling. Its distinguishing layer is translation-specific training spanning 55 languages; per this entry's notes, those fine-tuning details track Google's Gemma 3 lineage but have not been independently verified against a technical report.
 
 ## Ecosystem Position
 
-undefined
+TranslateGemma occupies the narrow, task-specialized slot in the Gemma ecosystem: it sits below the general-purpose Gemma 3/Gemma 4 base models (use those for chat or reasoning) and competes with dedicated translation systems rather than general LLMs. This entry's frontmatter contrasts it with Cohere's Command A Translate (23 languages, enterprise-positioned) and commercial translation APIs — TranslateGemma trades breadth of quality guarantees for open weights and broader 55-language coverage.
 
 ## Getting Started
 
@@ -75,9 +75,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Point at the TranslateGemma checkpoint from the Gemma project (see Resources).
+translate = pipeline("text-generation", model="<gemma-org>/translategemma-<size>")
+print(translate("Translate English to French: 'Retrieval-augmented generation grounds answers in sources.'", max_new_tokens=128)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -95,11 +95,11 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 - You need general-purpose chat/reasoning capability alongside translation — this is a narrowly specialized derivative, not a general model; use the base Gemma 3 or Gemma 4 for broader tasks
 - You need enterprise translation quality guarantees or the widest language coverage — compare against Cohere's Command A Translate (23 languages, enterprise-positioned) or dedicated commercial translation APIs depending on your quality/language-coverage requirements
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. TranslateGemma's "built on Gemma 3" lineage and 55-language claim here follow Google's Gemma 3 materials and this entry's frontmatter; the translation-specific fine-tuning has not been independently verified against a technical report. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this covers TranslateGemma's weights and lineage, not serving. To deploy it for batch or streaming translation you pair it with an inference/serving stack — see [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); because it shares Gemma 3's runtime shape, existing Gemma serving paths apply.
 
 ## Resources
 
