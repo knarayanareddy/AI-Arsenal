@@ -42,20 +42,21 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 ## Overview
 
-A tool that automatically transforms existing content (documents, articles, video) into structured, interactive AI-generated courses, aimed at educational/onboarding material creation.
+Honen is a closed-source, freemium tool that automatically turns existing material — documents, articles, or video — into structured, interactive AI-generated courses. It targets educational and onboarding content, using generative models to derive a course structure (modules and interactive checks) from source material the author already has, rather than authoring from scratch.
 
 ## Why It's in the Arsenal
 
-Honen earns a place in the Arsenal because it directly addresses a recurring decision point: you want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Honen is tracked as a niche content-to-course option: it is worth evaluating when the goal is to automate course structuring from existing material, and worth skipping when you need fine-grained instructional-design control that an automated generator cannot yet provide. See Strengths / Limitations before adopting it.
 
 ## Key Features
 
-- Automated content-to-course transformation
-- Works from existing documents, articles, or video
+- Automated transformation of docs, articles, or video into courses
+- Generates course structure such as modules and interactive checks
+- Freemium and closed-source; not self-hostable
 
 ## Architecture / How It Works
 
-Source content is analyzed and restructured into a course format (modules, interactive checks) using generative AI to fill in structure and interactivity.
+Its internals are not published. From the description it ingests source content, then uses generative models to segment it into a course structure — modules, ordering, and interactive knowledge checks — that a human can refine. Because it is a hosted, closed-source service, the content processing and model provider run server-side rather than on the author's machine.
 
 ## Getting Started
 
@@ -80,11 +81,11 @@ Source content is analyzed and restructured into a course format (modules, inter
 - You need fine-grained instructional design control that an automated tool can't yet provide
 - You need an open-source or self-hostable course-generation tool
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. Honen is a closed-source niche product surfaced via a curated newsletter; its content-to-course behavior here is taken from the vendor's description, not independent verification. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+Honen sits at the authoring end of a learning workflow: it consumes existing content artifacts (documents, articles, video) and emits a course, so it complements a content pipeline or LMS rather than replacing one. With no published API or self-hosting, integration today is export-oriented — generate the course, then move it into whatever delivery platform you use.
 
 ## Resources
 
