@@ -42,6 +42,7 @@
     "check:links": "node scripts/check-links.js --all",
     "check:stale": "node scripts/check-stale.js",
     "check:duplicates": "node scripts/check-duplicates.js",
+    "report:debt": "node scripts/report-content-debt.js",
     "check:tool-facets": "node scripts/check-tool-facet-guides.js --enforce",
     "check:tools-by-job": "node scripts/check-tools-by-job-tables.js --enforce",
     "migration:progress": "node scripts/check-migration-progress.js",
