@@ -75,8 +75,8 @@ Upstream: none of particular note — deliberately minimal external dependencies
 ## Getting Started
 
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical install/run command for this specific inference engine.
+# Run a GGUF model and serve an OpenAI-compatible endpoint (see Resources):
+llama-server -hf ggml-org/Llama-3.2-1B-Instruct-GGUF   # API on http://localhost:8080
 ```
 
 ## Key Use Cases
@@ -96,7 +96,7 @@ Upstream: none of particular note — deliberately minimal external dependencies
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+llama.cpp is the C/C++ engine most of the local-LLM ecosystem is built on (Ollama, LM Studio, llamafile). This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

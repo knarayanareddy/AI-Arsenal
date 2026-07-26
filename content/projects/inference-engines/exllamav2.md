@@ -63,7 +63,7 @@ Custom CUDA kernels implement fused attention and quantized matmul over EXL2 ten
 
 ## Ecosystem Position
 
-Upstream: PyTorch + custom CUDA extensions. Downstream: TabbyAPI, text-generation-webui, SillyTavern ecosystems standardize on it for GPU-rich local setups. Competing: llama.cpp/GGUF (broader hardware, larger community) and AWQ/GPTQ paths in vLLM (server-side). The EXL2-vs-GGUF choice is the canonical local-inference trade-off: EXL2 for CUDA speed and bitrate precision, GGUF for portability.
+Upstream: PyTorch + custom CUDA extensions. Downstream: TabbyAPI, text-generation-webui, SillyTavern ecosystems standardize on it for GPU-rich local setups. It competes with llama.cpp/GGUF (broader hardware, larger community) and AWQ/GPTQ paths in vLLM (server-side). The EXL2-vs-GGUF choice is the canonical local-inference trade-off: EXL2 for CUDA speed and bitrate precision, GGUF for portability.
 
 ## Getting Started
 
@@ -90,7 +90,7 @@ python examples/chat.py -m <path-to-exl2-model> -mode llama3
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+ExLlamaV2 is the enthusiast quantized-inference engine, using the variable-bitrate EXL2 format to fit large models on consumer VRAM. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

@@ -64,7 +64,7 @@ Whisper weights converted to CTranslate2 format; inference through CTranslate2's
 
 ## Ecosystem Position
 
-Upstream: Whisper model family (including distil-whisper and large-v3-turbo conversions), CTranslate2. Downstream: `whisperx` (alignment/diarization layer), speech-to-text server projects, and countless embedded transcription features. Competing: whisper.cpp (C/C++, edge-focused) and hosted STT APIs on the buy side.
+Upstream: Whisper model family (including distil-whisper and large-v3-turbo conversions), CTranslate2. Downstream: `whisperx` (alignment/diarization layer), speech-to-text server projects, and countless embedded transcription features. It competes with whisper.cpp (C/C++, edge-focused) and hosted STT APIs on the buy side.
 
 ## Getting Started
 

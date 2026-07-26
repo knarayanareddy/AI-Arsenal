@@ -64,7 +64,7 @@ Go API server implementing OpenAI (and Elevenlabs/Anthropic-compatible) routes; 
 
 ## Ecosystem Position
 
-Upstream: the engines it wraps — `llama-cpp` foremost. Competing: Ollama (personal UX), vLLM/SGLang (raw serving performance), hosted APIs on the buy side. Complementary: any OpenAI-client application, LangChain/LlamaIndex apps configured with a custom base URL.
+Upstream: the engines it wraps — `llama-cpp` foremost. It competes with Ollama (personal UX), vLLM/SGLang (raw serving performance), and hosted API models on the buy side. Complementary: any OpenAI-client application, LangChain/LlamaIndex apps configured with a custom base URL.
 
 ## Getting Started
 

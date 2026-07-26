@@ -58,7 +58,7 @@ status: active
 
 ## Overview
 
-A developer tool providing a simple, Docker-like command-line interface and local API for downloading and running open-weight LLMs, built on top of llama.cpp's inference engine.
+A developer tool providing a simple, Docker-like command-line interface and OpenAI-compatible local API for downloading, quantizing, and running open-weight models, built on top of llama.cpp's inference engine and its GGUF format. It abstracts model management — a pull/run registry and Modelfile customization — so a running local model is one command away.
 
 ## Why it's in the Arsenal
 
@@ -75,8 +75,9 @@ Upstream: built directly on llama.cpp for its inference core. Downstream: widely
 ## Getting Started
 
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical install/run command for this specific inference engine.
+# Install from ollama.com, then pull and run a model (see Resources):
+ollama run llama3
+# an OpenAI-compatible API is served at http://localhost:11434
 ```
 
 ## Key Use Cases
@@ -96,7 +97,7 @@ Upstream: built directly on llama.cpp for its inference core. Downstream: widely
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+Ollama is the default local-dev runtime, wrapping llama.cpp with a Docker-like pull/run workflow and an OpenAI-compatible local API. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

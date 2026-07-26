@@ -75,8 +75,9 @@ Upstream: none of particular note. Downstream: extremely widely used as the serv
 ## Getting Started
 
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical install/run command for this specific inference engine.
+# Install and serve an OpenAI-compatible endpoint (see Resources):
+pip install vllm
+vllm serve meta-llama/Llama-3.1-8B-Instruct   # OpenAI-compatible API on :8000
 ```
 
 ## Key Use Cases
@@ -96,7 +97,7 @@ Upstream: none of particular note. Downstream: extremely widely used as the serv
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+vLLM is the de facto default high-throughput serving engine, built on PagedAttention. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

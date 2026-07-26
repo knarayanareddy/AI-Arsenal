@@ -57,7 +57,7 @@ status: active
 
 ## Overview
 
-A Mozilla-backed project (built on top of llama.cpp) that packages an LLM and inference engine together as a single, portable, cross-platform executable file requiring no installation or dependencies.
+A Mozilla-backed project (built on top of llama.cpp) that packages a model and the inference engine together into a single, portable, cross-platform executable file requiring no installation or dependencies.
 
 ## Why it's in the Arsenal
 
@@ -74,8 +74,9 @@ Upstream: built directly on top of llama.cpp for its inference core and Cosmopol
 ## Getting Started
 
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical install/run command for this specific inference engine.
+# Download a .llamafile from Hugging Face, make it executable, and run it (see Resources):
+chmod +x ./model.llamafile
+./model.llamafile        # serves an OpenAI-compatible endpoint at http://localhost:8080
 ```
 
 ## Key Use Cases
@@ -93,11 +94,11 @@ Upstream: built directly on top of llama.cpp for its inference core and Cosmopol
 - You need production-grade serving with high concurrency or GPU cluster support — llamafile targets simplicity and portability for individual use, not production throughput
 - You need frequent model updates or fine-tuning workflows — llamafile's single-executable packaging model is better suited to static distribution than an actively-iterated development loop
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. Llamafile's positioning as a distribution-convenience runtime (rather than a production-serving engine) is drawn from its own description; production evidence is not independently established. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+Llamafile is a distribution-convenience runtime — it bundles a model and llama.cpp into one portable executable rather than a serving fleet. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 

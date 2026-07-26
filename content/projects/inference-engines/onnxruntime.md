@@ -64,7 +64,7 @@ ONNX protobuf graph → graph transformers apply provider-independent then provi
 
 ## Ecosystem Position
 
-Upstream: PyTorch/TF/JAX via ONNX export (torch.onnx, Optimum). Downstream: fastembed, Transformers.js, ML.NET, countless mobile apps. Competing: TensorRT (NVIDIA-only, faster there), OpenVINO (Intel-centric), Core ML (Apple-native), candle/llama.cpp (weights-native, no export step). Its moat is breadth: no other runtime covers server-to-browser from one artifact.
+Upstream: PyTorch/TF/JAX via ONNX export (torch.onnx, Optimum). Downstream: fastembed, Transformers.js, ML.NET, countless mobile apps. It competes with TensorRT (NVIDIA-only, faster there), OpenVINO (Intel-centric), Core ML (Apple-native), and candle/llama.cpp (weights-native models, no export step). Its moat is breadth: no other runtime covers server-to-browser from one artifact.
 
 ## Getting Started
 

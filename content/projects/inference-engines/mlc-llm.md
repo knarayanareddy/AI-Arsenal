@@ -63,7 +63,7 @@ Models are expressed in a Python IR, quantized (3/4-bit grouped quantization), a
 
 ## Ecosystem Position
 
-Upstream: Apache TVM (same research lineage — Tianqi Chen's group). Competing: llama.cpp/Ollama for local desktop inference, ExecuTorch and ONNX Runtime for mobile. Complementary: WebLLM occupies a niche nothing else serves well — production in-browser inference with no server — and MLC's compilation research feeds back into TVM.
+Upstream: Apache TVM (same research lineage — Tianqi Chen's group). It competes with llama.cpp/Ollama for local desktop inference and with ExecuTorch and ONNX Runtime for on-device models. Complementary: WebLLM occupies a niche nothing else serves well — production in-browser inference with no server — and MLC's compilation research feeds back into TVM.
 
 ## Getting Started
 
@@ -89,7 +89,7 @@ mlc_llm chat HF://mlc-ai/Llama-3.2-3B-Instruct-q4f16_1-MLC
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+MLC LLM is the compiler-based runtime, using TVM to target phones, browsers (WebLLM), and desktop GPUs from one model definition. This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
 
 ## Resources
 
