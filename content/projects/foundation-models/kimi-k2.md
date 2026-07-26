@@ -91,7 +91,7 @@ curl <moonshot-api-endpoint>/v1/chat/completions -H 'Authorization: Bearer $MOON
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents model weights, architecture, and generational position. For hosted/managed access paths to models, see [tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents Kimi K2's open weights and agentic-first training, not serving. The 1T MoE needs a multi-GPU node to self-host; for hosted access see Moonshot's platform and the model-layer entries under [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

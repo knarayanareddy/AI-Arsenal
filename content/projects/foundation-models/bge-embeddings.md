@@ -64,7 +64,7 @@ Dense BGE models are XLM-R/BERT-lineage encoders contrastively trained (RetroMAE
 
 ## Ecosystem Position
 
-Serves through sentence-transformers, `text-embeddings-inference`, ONNX/fastembed, and Ollama-ecosystem runtimes; indexes into `milvus`/`qdrant`-class stores (M3's sparse output maps to their hybrid-search APIs). Competing: e5/GTE families, Jina embeddings, nomic-embed on the open side; OpenAI/Cohere/Voyage APIs on the managed side; Qwen3-Embedding-class LLM embedders at the benchmark frontier.
+Serves through sentence-transformers, `text-embeddings-inference`, ONNX/fastembed, and Ollama-ecosystem runtimes; indexes into `milvus`/`qdrant`-class stores (M3's sparse output maps to their hybrid-search APIs). It competes with e5/GTE families, Jina embeddings, and nomic-embed on the open side; the managed alternatives are OpenAI/Cohere/Voyage APIs; and compared to Qwen3-Embedding-class LLM embedders it trails at the benchmark frontier while winning on deployment economics.
 
 ## Getting Started
 

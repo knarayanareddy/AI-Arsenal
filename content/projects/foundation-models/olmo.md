@@ -63,7 +63,7 @@ Decoder-only transformers with the OLMo 2 generation adopting reordered norm pla
 
 ## Ecosystem Position
 
-Upstream: the Dolma open corpus and AI2's OLMo-core training stack. Downstream: a research ecosystem of interpretability, memorization, and data-attribution work builds specifically on OLMo's openness; the Tülu post-training recipes generalize to other base models. Competing: Llama/Qwen/Gemma on capability; Pythia (EleutherAI) as the prior fully-open research suite.
+Upstream: the Dolma open corpus and AI2's OLMo-core training stack. Downstream: a research ecosystem of interpretability, memorization, and data-attribution work builds specifically on OLMo's openness; the Tülu post-training recipes generalize to other base models. It competes with Llama, Qwen, and Gemma models on raw capability, but compared to them its differentiator is total openness rather than benchmark scores; the closest alternative in spirit is Pythia (EleutherAI), the prior fully-open research suite.
 
 ## Getting Started
 
@@ -92,7 +92,7 @@ tok = AutoTokenizer.from_pretrained('allenai/OLMo-2-1124-7B-Instruct')
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents model weights, architecture, and generational position. For hosted/managed access paths to models, see [tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents OLMo's fully-open weights, data, and training artifacts, not serving. Its value is the reproducible training story (Dolma corpus, intermediate checkpoints, ordering) more than deployment; for hosted/managed access paths to models, see [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

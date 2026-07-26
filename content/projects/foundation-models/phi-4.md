@@ -80,9 +80,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Phi-4 weights are published under the microsoft org on Hugging Face (see Resources).
+generate = pipeline("text-generation", model="microsoft/phi-4")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -102,7 +102,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the Phi-4 weights and its synthetic-data training approach, not serving. At 14B dense it runs comfortably on a single modern GPU — pair it with an inference stack from [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); see the phi-cookbook entry for build recipes.
 
 ## Resources
 

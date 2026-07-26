@@ -92,9 +92,9 @@ git clone https://github.com/FunAudioLLM/CosyVoice
 
 ## Limitations
 
-- You operate the GPU serving and scaling yourself
-- Voice cloning raises consent/misuse and legal concerns
-- TTS only — not full-duplex speech-to-speech
+- You operate the GPU serving and scaling yourself — there is no managed SLA, so latency, autoscaling, and uptime are your responsibility
+- Voice cloning raises consent and misuse concerns; you must gate reference audio and document a consent/watermarking policy before deploying
+- TTS only — for simultaneous listen-and-speak (full-duplex) conversation, a speech-to-speech model like Moshi is the better fit
 
 ## Relation to the Arsenal
 

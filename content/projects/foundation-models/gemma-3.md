@@ -70,7 +70,7 @@ A dense decoder-only transformer using Grouped-Query Attention with QK-norm (rep
 
 ## Ecosystem Position
 
-Upstream: built on the Gemma 1/2 architecture lineage and Gemini research. Downstream: day-one support in Ollama, llama.cpp, vLLM, and Hugging Face Transformers; TranslateGemma is a fine-tuned derivative built specifically on Gemma 3. Competing: Llama 3/4, Qwen 2.5/3, Mistral Small/Ministral at comparable sizes. Superseded by: Gemma 4 (April 2026 release).
+Upstream: built on the Gemma 1/2 architecture lineage and Gemini research. Downstream: day-one support in Ollama, llama.cpp, vLLM, and Hugging Face Transformers; TranslateGemma is a fine-tuned derivative built specifically on Gemma 3. It competes with Llama 3/4, Qwen 2.5/3, and Mistral Small/Ministral models at comparable sizes; compared to those, Gemma 3's differentiator is the interleaved local/global attention that makes 128K context memory-feasible on constrained hardware. Superseded by: Gemma 4 (April 2026 release).
 
 ## Getting Started
 
@@ -81,9 +81,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Gemma 3 checkpoints are published under the google org on Hugging Face (gated; see Resources).
+generate = pipeline("text-generation", model="google/gemma-3-4b-it")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -103,7 +103,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the Gemma 3 weights and architecture, not serving. Its interleaved-attention design keeps 128K-context inference feasible on smaller GPUs — pair it with an inference stack from [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

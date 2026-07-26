@@ -69,7 +69,7 @@ Mistral 7B is a dense decoder-only transformer using grouped-query and sliding-w
 
 ## Ecosystem Position
 
-Upstream: standard transformer/MoE research. Downstream: broadly supported by vLLM, TGI, Ollama, and llama.cpp; the Mixtral architecture directly influenced later MoE designs across the open-weight ecosystem. Competing: Llama 3, Qwen at comparable active-parameter counts. Superseded by: Mistral Large 3, Ministral 3, and Devstral 2 (Mistral's current 2025-2026 generation, Apache-2.0).
+Upstream: standard transformer/MoE research. Downstream: broadly supported by vLLM, TGI, Ollama, and llama.cpp; the Mixtral architecture directly influenced later MoE designs across the open-weight ecosystem. It competes with Llama 3 and Qwen models at comparable active-parameter counts; compared to dense peers, the Mixtral MoE variants trade higher total parameter counts for lower active-parameter inference cost. Superseded by: Mistral Large 3, Ministral 3, and Devstral 2 (Mistral's current 2025-2026 generation, Apache-2.0).
 
 ## Getting Started
 
@@ -80,9 +80,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Mistral/Mixtral checkpoints are published under the mistralai org on Hugging Face (see Resources).
+generate = pipeline("text-generation", model="mistralai/Mistral-7B-Instruct-v0.3")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -102,7 +102,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the Mistral 7B / Mixtral weights and positioning, not serving. Running the MoE Mixtral checkpoints needs enough memory for all experts even though only two activate per token — pair with an inference stack from [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

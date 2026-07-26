@@ -92,9 +92,9 @@ It competes with other open VLMs (Qwen-VL, InternVL, Llama-based VLMs) and, at t
 
 ## Limitations
 
-- Compact size caps peak reasoning vs large VLMs
-- On-device quantization costs some accuracy
-- Multimodal serving still heavier than text-only
+- Compact size caps peak visual reasoning versus large VLMs and frontier hosted models — for the hardest multimodal tasks a bigger model wins
+- On-device quantization (GGUF) trades some accuracy for feasibility on constrained hardware
+- Multimodal serving is still heavier than text-only, so for pure-text workloads a text-only LLM is the better fit
 
 ## Relation to the Arsenal
 

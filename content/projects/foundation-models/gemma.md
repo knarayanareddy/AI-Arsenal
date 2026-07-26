@@ -51,7 +51,7 @@ status: active
 
 ## Overview
 
-The first generation of Google DeepMind's open-weight small language model family, released in 2024 as a lighter-weight, locally-deployable counterpart to Gemini.
+The first generation of Google DeepMind's open-weight small language model family (Gemma 1/2), released in 2024 as dense decoder-only transformer checkpoints and positioned as a lighter-weight, locally-deployable counterpart to the closed Gemini models. It shipped in 2B/7B (Gemma 1) and 2B/9B/27B (Gemma 2) sizes under a custom license.
 
 ## Why it's in the Arsenal
 
@@ -63,7 +63,7 @@ A dense decoder-only transformer built from the same research lineage as Gemini,
 
 ## Ecosystem Position
 
-Upstream: shares research lineage with Google's Gemini models. Downstream: broad support across Ollama, llama.cpp, vLLM, and Hugging Face Transformers. Competing: Llama 3, Mistral 7B, Qwen at comparable sizes. Superseded by: Gemma 3 (longer context, multimodal, more efficient attention) and, as of April 2026, Gemma 4.
+Upstream: shares research lineage with Google's Gemini models. Downstream: broad support across Ollama, llama.cpp, vLLM, and Hugging Face Transformers. It competes with Llama 3, Mistral 7B, and Qwen models at comparable sizes; compared to them, Gemma's niche was small, local-friendly Google models. Superseded by: Gemma 3 (longer context, multimodal, more efficient attention) and, as of April 2026, Gemma 4.
 
 ## Getting Started
 
@@ -74,9 +74,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Gemma checkpoints are published under the google org on Hugging Face (gated; see Resources).
+generate = pipeline("text-generation", model="google/gemma-2-9b-it")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -96,7 +96,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the original Gemma 1/2 weights and positioning, not serving. These small dense checkpoints suit local deployment — pair them with an inference stack from [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md); for new work prefer Gemma 3/4.
 
 ## Resources
 

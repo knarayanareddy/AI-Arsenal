@@ -64,7 +64,7 @@ Hiera-based image encoder producing per-frame embeddings (streaming — one pass
 
 ## Ecosystem Position
 
-Upstream: none — it is the foundation layer. Downstream: annotation tools (accelerating labeling for closed-set training — including for YOLO datasets), editing products, robotics stacks, medical-imaging adaptations (MedSAM-style), and `supervision`'s `from_sam` connector. Adjacent: Grounding DINO for text→box prompting, YOLO-seg for label-aware fast paths.
+Upstream: none — it is the foundation layer. Downstream: annotation tools (accelerating labeling for closed-set training — including for YOLO datasets), editing products, robotics stacks, medical-imaging adaptations (MedSAM-style), and `supervision`'s `from_sam` connector. Adjacent alternatives: Grounding DINO for text→box prompting, and YOLO-seg as a faster, label-aware alternative compared to SAM 2 for closed-set edge cases.
 
 ## Getting Started
 

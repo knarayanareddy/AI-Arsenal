@@ -63,7 +63,7 @@ An encoder-decoder transformer over 30-second log-Mel spectrogram windows; multi
 
 ## Ecosystem Position
 
-Upstream: PyTorch. Downstream: faster-whisper (CTranslate2), whisper.cpp (GGML edge inference), WhisperX (alignment+diarization), and distil-whisper are the de facto production deployment layer; voice-agent stacks (including the speech-to-speech entry in frameworks) use it as the STT stage. Competing: NVIDIA Parakeet/Canary (English speed/accuracy leaders on Open ASR), Deepgram-class commercial APIs.
+Upstream: PyTorch. Downstream: faster-whisper (CTranslate2), whisper.cpp (GGML edge inference), WhisperX (alignment+diarization), and distil-whisper are the de facto production deployment layer; voice-agent stacks (including the speech-to-speech entry in frameworks) use it as the STT stage. It competes with NVIDIA Parakeet/Canary (English speed/accuracy leaders on Open ASR) and, compared to Deepgram-class commercial APIs, trades a managed service for open weights and deployment freedom.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ pip install faster-whisper
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents model weights, architecture, and generational position. For hosted/managed access paths to models, see [tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents Whisper's weights and encoder-decoder architecture, not serving. In practice most deployments run it through ecosystem accelerators (faster-whisper, whisper.cpp) rather than the reference repo; for hosted/managed access paths to models, see [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

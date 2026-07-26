@@ -69,7 +69,7 @@ Moshi jointly models two audio streams (user and assistant) as token sequences p
 
 ## Ecosystem Position
 
-It contrasts with pipeline voice stacks (Whisper + LLM + a TTS like CosyVoice) and with closed real-time voice APIs. Its niche is open, low-latency, full-duplex conversation and the reusable Mimi codec.
+Compared to serial pipeline voice stacks (Whisper + LLM + a TTS like CosyVoice) and closed real-time voice APIs, Moshi's alternative is a single full-duplex model; its niche is open, low-latency conversation plus the reusable Mimi codec.
 
 ## Getting Started
 
@@ -92,9 +92,9 @@ pip install moshi   # PyTorch; MLX and Rust backends also provided
 
 ## Limitations
 
-- Research-forward; not a production SLA product
-- Conversational quality/language breadth still maturing
-- Real-time serving has non-trivial compute requirements
+- Research-forward: this is a reference model, not a turnkey product with a production SLA or broad language guarantees
+- Conversational quality and language breadth are still maturing compared to closed real-time voice APIs
+- Real-time full-duplex serving has non-trivial compute requirements; validate latency on your own hardware first
 
 ## Relation to the Arsenal
 

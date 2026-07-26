@@ -70,7 +70,7 @@ A dense decoder-only transformer family (no MoE in the mainline Qwen2.5 sizes) w
 
 ## Ecosystem Position
 
-Upstream: standard transformer research, building on the original Qwen/Qwen2 line. Downstream: very broadly supported — vLLM, SGLang, Ollama, llama.cpp, and virtually every fine-tuning framework (Axolotl, Unsloth, LLaMA-Factory) support it. Competing: Llama 3, Gemma, Mistral at comparable sizes. Superseded by: Qwen3 and Alibaba's 2026 Qwen3.5/3.6/3.7 generation, which introduce sparse MoE and substantially expanded language coverage.
+Upstream: standard transformer research, building on the original Qwen/Qwen2 line. Downstream: very broadly supported — vLLM, SGLang, Ollama, llama.cpp, and virtually every fine-tuning framework (Axolotl, Unsloth, LLaMA-Factory) support it. It competes with Llama 3, Gemma, and Mistral models at comparable sizes; compared to those, Qwen2.5's edge was breadth — dedicated Coder and QwQ reasoning variants across a very wide size range. Superseded by: Qwen3 and Alibaba's 2026 Qwen3.5/3.6/3.7 generation, which introduce sparse MoE and substantially expanded language coverage.
 
 ## Getting Started
 
@@ -81,9 +81,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Qwen2.5 checkpoints (incl. Coder and QwQ variants) live under the Qwen org on Hugging Face (see Resources).
+generate = pipeline("text-generation", model="Qwen/Qwen2.5-7B-Instruct")
+print(generate("用一句话解释检索增强生成（RAG）。", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases

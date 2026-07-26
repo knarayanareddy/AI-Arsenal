@@ -81,9 +81,9 @@ pip install transformers accelerate
 ```python
 from transformers import pipeline
 
-# Replace with the specific model checkpoint for this family (see Resources).
-pipe = pipeline("text-generation", model="<org>/<model-checkpoint>")
-print(pipe("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
+# Full weights and smaller distills live under the deepseek-ai org on Hugging Face (see Resources).
+generate = pipeline("text-generation", model="deepseek-ai/DeepSeek-R1-Distill-Qwen-7B")
+print(generate("Explain retrieval augmented generation in one sentence.", max_new_tokens=64)[0]["generated_text"])
 ```
 
 ## Key Use Cases
@@ -103,7 +103,7 @@ print(pipe("Explain retrieval augmented generation in one sentence.", max_new_to
 
 ## Relation to the Arsenal
 
-This is a foundation-model entry: it documents the weights, architecture, and ecosystem position of the model itself. For guidance on which inference engine or serving tool to use to actually run it in production, see the relevant entries under [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
+As a foundation-model entry this documents the DeepSeek-V3/R1 weights and MoE architecture, not serving. The full 671B model needs multi-GPU serving (vLLM/SGLang handle its MoE efficiently), while the distilled 1.5B-70B variants run on far smaller setups — see [content/tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md) and [content/tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 
