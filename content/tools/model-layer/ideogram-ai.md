@@ -42,20 +42,21 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 ## Overview
 
-A platform offering for Ideogram-style image generation, emphasizing broad style coverage alongside the same reliable text-rendering strength.
+Ideogram AI is a closed-source, freemium image-generation platform accessed as a managed API, notable for broad style coverage and reliable in-image text rendering. It targets teams that want hosted image generation without operating their own diffusion model, trading self-hosting and open weights for a turnkey, provider-run service.
 
 ## Why It's in the Arsenal
 
-Ideogram AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need broad style coverage plus the same reliable text-rendering strength as Ideogram, via a platform offering. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Ideogram AI is tracked as a managed alternative to running your own image stack: it is worth weighing when reliable text-in-image and style breadth matter more than control, and worth skipping when open weights or cost-per-image at scale dominate. Its own notes flag heavy overlap with the standalone Ideogram entry — a future content review should decide whether to merge them.
 
 ## Key Features
 
-- Broad style/preset coverage
-- Reliable in-image text rendering
+- Broad style and preset coverage for image generation
+- Reliable rendering of legible text inside generated images
+- Managed, closed-source API with no self-hosting option
 
 ## Architecture / How It Works
 
-Accessed as a managed API/platform; generation happens on the provider's infrastructure with no self-hosting option.
+Its internals are not published. It is consumed as a managed API: a prompt is sent to Ideogram's hosted diffusion model and the image is returned from the provider's infrastructure, so there is no local model, weights, or GPU to manage. That hosted design is what rules out self-hosting and makes cost-per-image, rather than hardware, the scaling variable.
 
 ## Getting Started
 
@@ -80,11 +81,11 @@ Accessed as a managed API/platform; generation happens on the provider's infrast
 - You need an open-weight, self-hostable image generation stack
 - Cost-per-image at scale is a primary constraint (compare against open-source diffusion models first)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. Ideogram AI is a closed-source platform surfaced via a curated newsletter; its capabilities here follow the vendor's description, and this entry may overlap the standalone Ideogram entry pending a merge review. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
-Reference this entry by ID from guides, stacks, and build examples.
+Ideogram AI integrates as an image-generation provider behind an API call rather than a component you deploy: application code sends a prompt and renders the returned asset, so it drops into a content or creative workflow but couples you to the vendor's endpoint and rate limits. For portability, its own `avoid_when` points at open-source diffusion models when self-hosting or cost control is required.
 
 ## Resources
 
