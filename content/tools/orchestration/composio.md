@@ -81,7 +81,7 @@ pip install composio
 - Strict data-control requirements — tool calls and tokens transit Composio's managed auth layer
 - You only need 1-2 integrations; wiring those APIs directly avoids a platform dependency
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `composio`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

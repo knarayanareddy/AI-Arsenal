@@ -81,7 +81,7 @@ npm install -g flowise && npx flowise start
 - Heavy Python-ecosystem dependencies (custom models, scientific libs) — Langflow fits the Python stack better
 - Large-scale production agents with complex control flow; move to code-first frameworks as complexity grows
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `flowise`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

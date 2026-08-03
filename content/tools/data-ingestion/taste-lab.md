@@ -80,7 +80,7 @@ Analyzes a target site's rendered styles and layout, then outputs a structured s
 - You need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction)
 - You need an open-source or self-hostable option
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `taste-lab`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

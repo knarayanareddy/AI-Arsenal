@@ -80,7 +80,7 @@ Runs as a local macOS application that attaches to an agent's running session, r
 - Your team is not on macOS, or you need cross-platform, team-shared observability
 - You need production-grade tracing and alerting rather than a local interactive HUD
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `conan`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

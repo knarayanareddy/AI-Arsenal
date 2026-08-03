@@ -80,7 +80,7 @@ Logs emitted by individual serverless function invocations are streamed to a cen
 - Your AI workloads run on long-lived servers where standard logging/observability stacks already work well
 - You need an open-source or self-hostable logging platform
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `superlog`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

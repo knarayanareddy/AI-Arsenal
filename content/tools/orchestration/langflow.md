@@ -81,7 +81,7 @@ uv pip install langflow && uv run langflow run
 - Production systems with heavy custom logic — visual graphs become harder to test/review than code past a threshold
 - You've standardized on code-first LangGraph; maintaining both visual and code layers duplicates effort
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `langflow`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

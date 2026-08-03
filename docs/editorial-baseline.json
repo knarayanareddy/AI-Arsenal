@@ -5,7 +5,7 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 602
+    "count": 516
   },
   "entries": [
     {
@@ -1017,12 +1017,6 @@
       "finding": "repeated paragraph shared with: \"last reviewed # # # by maintainer enrichment status draft metadata arxiv id venue year verified against arxiv on #...\""
     },
     {
-      "fingerprint": "content/tools/data-ingestion/agent-browser-shield.md::repeated-paragraph::e9fd5ea56b84d510",
-      "file": "content/tools/data-ingestion/agent-browser-shield.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/agent-browser-shield.md::section-too-short::33782795b193004d",
       "file": "content/tools/data-ingestion/agent-browser-shield.md",
       "rule": "section-too-short",
@@ -1045,12 +1039,6 @@
       "file": "content/tools/data-ingestion/agent-browser-shield.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/airbyte.md::repeated-paragraph::91c0230f3af31d3e",
-      "file": "content/tools/data-ingestion/airbyte.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/data-ingestion/airbyte.md::tool-section-missing-technical-content::2ceaa439a5d73fc6",
@@ -1107,12 +1095,6 @@
       "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/dlt.md::repeated-paragraph::2da73149c2355bd7",
-      "file": "content/tools/data-ingestion/dlt.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/dlt.md::section-too-short::bcdb698c2d58e16b",
       "file": "content/tools/data-ingestion/dlt.md",
       "rule": "section-too-short",
@@ -1125,22 +1107,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/docetl.md::repeated-paragraph::6b5ec0aad0b09949",
-      "file": "content/tools/data-ingestion/docetl.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/docetl.md::tool-section-missing-technical-content::376b83ff253576b2",
       "file": "content/tools/data-ingestion/docetl.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/faiss.md::repeated-paragraph::acb61e1b6dce29a1",
-      "file": "content/tools/data-ingestion/faiss.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/data-ingestion/faiss.md::tool-section-missing-technical-content::4a00a89d84ccd490",
@@ -1159,12 +1129,6 @@
       "file": "content/tools/data-ingestion/firecrawl-tool.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/gitingest.md::repeated-paragraph::d8d2f8cdc9ef17d7",
-      "file": "content/tools/data-ingestion/gitingest.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/data-ingestion/gitingest.md::tool-section-missing-technical-content::e1782243887547c1",
@@ -1233,12 +1197,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/markitdown.md::repeated-paragraph::48c5e23a831e06cc",
-      "file": "content/tools/data-ingestion/markitdown.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/markitdown.md::section-too-short::a3b4ed0030f2161d",
       "file": "content/tools/data-ingestion/markitdown.md",
       "rule": "section-too-short",
@@ -1251,28 +1209,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/marqo.md::repeated-paragraph::2fd4e74f41b10845",
-      "file": "content/tools/data-ingestion/marqo.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/meilisearch.md::repeated-paragraph::05d734c5c4758801",
-      "file": "content/tools/data-ingestion/meilisearch.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/meilisearch.md::tool-section-missing-technical-content::57162384c87339cc",
       "file": "content/tools/data-ingestion/meilisearch.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/mineru.md::repeated-paragraph::69ab505113c87d28",
-      "file": "content/tools/data-ingestion/mineru.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/data-ingestion/mineru.md::section-too-short::b076d69676057d8b",
@@ -1353,12 +1293,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/ragatouille.md::repeated-paragraph::2a58eb24f3a6816c",
-      "file": "content/tools/data-ingestion/ragatouille.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/ragatouille.md::tool-section-missing-technical-content::9a0f06f7d94d50ee",
       "file": "content/tools/data-ingestion/ragatouille.md",
       "rule": "tool-section-missing-technical-content",
@@ -1389,22 +1323,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/scrapegraphai.md::repeated-paragraph::3c1518e3cbfcbecc",
-      "file": "content/tools/data-ingestion/scrapegraphai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/scrapegraphai.md::tool-section-missing-technical-content::8488f9ae510e95aa",
       "file": "content/tools/data-ingestion/scrapegraphai.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/tabstack.md::repeated-paragraph::0bfd86e0e62f38fd",
-      "file": "content/tools/data-ingestion/tabstack.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/data-ingestion/tabstack.md::section-too-short::33dc84ce972877c6",
@@ -1431,12 +1353,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/taste-lab.md::repeated-paragraph::8cd175fc07de8435",
-      "file": "content/tools/data-ingestion/taste-lab.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/taste-lab.md::section-too-short::7fb0f573462f4f9b",
       "file": "content/tools/data-ingestion/taste-lab.md",
       "rule": "section-too-short",
@@ -1461,12 +1377,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/trafilatura.md::repeated-paragraph::5374fe2f2ae3f1cd",
-      "file": "content/tools/data-ingestion/trafilatura.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/trafilatura.md::section-too-short::aebac57e3aa1d838",
       "file": "content/tools/data-ingestion/trafilatura.md",
       "rule": "section-too-short",
@@ -1485,34 +1395,16 @@
       "finding": "tool section \"Overview\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/typesense.md::repeated-paragraph::372a927464c659f8",
-      "file": "content/tools/data-ingestion/typesense.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/typesense.md::tool-section-missing-technical-content::a22e1084bf1bf975",
       "file": "content/tools/data-ingestion/typesense.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/adalflow.md::repeated-paragraph::71b8004305316d61",
-      "file": "content/tools/dx-and-tooling/adalflow.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/adalflow.md::tool-section-missing-technical-content::0614f3edf22569ff",
       "file": "content/tools/dx-and-tooling/adalflow.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/aider.md::repeated-paragraph::d8da512fd36f80d5",
-      "file": "content/tools/dx-and-tooling/aider.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/aider.md::tool-section-missing-technical-content::10c4e59919b5202f",
@@ -1525,18 +1417,6 @@
       "file": "content/tools/dx-and-tooling/aider.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/baml.md::repeated-paragraph::50abc18478a2d9e7",
-      "file": "content/tools/dx-and-tooling/baml.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/basedash.md::repeated-paragraph::6859f0c499f81210",
-      "file": "content/tools/dx-and-tooling/basedash.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/basedash.md::section-too-short::f9c54a0a7baf51c3",
@@ -1575,12 +1455,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/claude-artifact-player.md::repeated-paragraph::9becb9df9251b8cf",
-      "file": "content/tools/dx-and-tooling/claude-artifact-player.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/claude-artifact-player.md::section-too-short::c4beba9fb4c63719",
       "file": "content/tools/dx-and-tooling/claude-artifact-player.md",
       "rule": "section-too-short",
@@ -1599,12 +1473,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/claude-code.md::repeated-paragraph::2d491bb0a3126149",
-      "file": "content/tools/dx-and-tooling/claude-code.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/claude-code.md::section-too-short::8f6f2e604fdd988e",
       "file": "content/tools/dx-and-tooling/claude-code.md",
       "rule": "section-too-short",
@@ -1615,12 +1483,6 @@
       "file": "content/tools/dx-and-tooling/claude-code.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/cline.md::repeated-paragraph::4ee86764dd11b24b",
-      "file": "content/tools/dx-and-tooling/cline.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/cline.md::tool-section-missing-technical-content::03d5625045ae08ab",
@@ -1635,22 +1497,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/continue-dev.md::repeated-paragraph::dc2ece137a66f0f0",
-      "file": "content/tools/dx-and-tooling/continue-dev.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/continue-dev.md::tool-section-missing-technical-content::7e5c249f754b22fe",
       "file": "content/tools/dx-and-tooling/continue-dev.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/cursor.md::repeated-paragraph::f082ca10e6f34b3f",
-      "file": "content/tools/dx-and-tooling/cursor.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/cursor.md::section-too-short::e391a2e33e37035f",
@@ -1665,12 +1515,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/gemini-cli.md::repeated-paragraph::33c202dbb014ffe5",
-      "file": "content/tools/dx-and-tooling/gemini-cli.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/gemini-cli.md::section-too-short::8c4a7e7fbe7a0c04",
       "file": "content/tools/dx-and-tooling/gemini-cli.md",
       "rule": "section-too-short",
@@ -1683,22 +1527,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/github-copilot.md::repeated-paragraph::b7bcb2c3eb751c2d",
-      "file": "content/tools/dx-and-tooling/github-copilot.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/github-copilot.md::tool-section-missing-technical-content::ba7a2fb26fe6169b",
       "file": "content/tools/dx-and-tooling/github-copilot.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/goose.md::repeated-paragraph::daa330990fa40f41",
-      "file": "content/tools/dx-and-tooling/goose.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/goose.md::tool-section-missing-technical-content::1154a8e2ba1eab94",
@@ -1711,12 +1543,6 @@
       "file": "content/tools/dx-and-tooling/gradio.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/jan.md::repeated-paragraph::906cde5e0ef3023c",
-      "file": "content/tools/dx-and-tooling/jan.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/jan.md::section-too-short::3091aae9ef7726fe",
@@ -1773,22 +1599,10 @@
       "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/lm-studio.md::repeated-paragraph::6373b14baffaff8a",
-      "file": "content/tools/dx-and-tooling/lm-studio.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/lm-studio.md::tool-section-missing-technical-content::27d9d44714b90d3a",
       "file": "content/tools/dx-and-tooling/lm-studio.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/marimo.md::repeated-paragraph::0b47031c33907c31",
-      "file": "content/tools/dx-and-tooling/marimo.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/marimo.md::section-too-short::1a313075b6f92f87",
@@ -1815,22 +1629,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/open-webui.md::repeated-paragraph::6df537a941788e1f",
-      "file": "content/tools/dx-and-tooling/open-webui.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/open-webui.md::tool-section-missing-technical-content::0865b5ce15e2533b",
       "file": "content/tools/dx-and-tooling/open-webui.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/openai-codex-cli.md::repeated-paragraph::e6ee5c1179646850",
-      "file": "content/tools/dx-and-tooling/openai-codex-cli.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/openai-codex-cli.md::section-too-short::9a616c2526a3954e",
@@ -1863,12 +1665,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/qursor.md::repeated-paragraph::bac3337dfdedcd9b",
-      "file": "content/tools/dx-and-tooling/qursor.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/qursor.md::section-too-short::c5311cb7c5451c33",
       "file": "content/tools/dx-and-tooling/qursor.md",
       "rule": "section-too-short",
@@ -1891,12 +1687,6 @@
       "file": "content/tools/dx-and-tooling/qursor.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/repomix.md::repeated-paragraph::933ba2410717bf0e",
-      "file": "content/tools/dx-and-tooling/repomix.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/repomix.md::tool-section-missing-technical-content::e2f870220d1ca901",
@@ -1923,22 +1713,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/tabby-ml.md::repeated-paragraph::fea618684ce4482d",
-      "file": "content/tools/dx-and-tooling/tabby-ml.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/tabby-ml.md::tool-section-missing-technical-content::648e594d75bebbfc",
       "file": "content/tools/dx-and-tooling/tabby-ml.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/windsurf.md::repeated-paragraph::e133d2bbbc7c5a19",
-      "file": "content/tools/dx-and-tooling/windsurf.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/dx-and-tooling/windsurf.md::section-too-short::7c9c45d4ae201b1d",
@@ -1953,12 +1731,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/agentops.md::repeated-paragraph::2d76215102e58f2e",
-      "file": "content/tools/evaluation-and-observability/agentops.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/agentops.md::section-too-short::d5fbb17b3560c986",
       "file": "content/tools/evaluation-and-observability/agentops.md",
       "rule": "section-too-short",
@@ -1969,12 +1741,6 @@
       "file": "content/tools/evaluation-and-observability/agentops.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/astra-autonomous-pentest.md::repeated-paragraph::28d1de5788b6b2bb",
-      "file": "content/tools/evaluation-and-observability/astra-autonomous-pentest.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/evaluation-and-observability/astra-autonomous-pentest.md::section-too-short::fd3d57b7535df47d",
@@ -2007,12 +1773,6 @@
       "finding": "tool section \"Overview\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/code-arena.md::repeated-paragraph::9e896059cf8e6158",
-      "file": "content/tools/evaluation-and-observability/code-arena.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/code-arena.md::section-too-short::adc7637758cc3b9f",
       "file": "content/tools/evaluation-and-observability/code-arena.md",
       "rule": "section-too-short",
@@ -2035,12 +1795,6 @@
       "file": "content/tools/evaluation-and-observability/code-arena.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/conan.md::repeated-paragraph::f274c20ba1399e4b",
-      "file": "content/tools/evaluation-and-observability/conan.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/evaluation-and-observability/conan.md::section-too-short::0793616632a171d2",
@@ -2067,12 +1821,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/deepchecks.md::repeated-paragraph::710380c322ce0fbc",
-      "file": "content/tools/evaluation-and-observability/deepchecks.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/deepchecks.md::tool-section-missing-technical-content::9d273d1f1153454b",
       "file": "content/tools/evaluation-and-observability/deepchecks.md",
       "rule": "tool-section-missing-technical-content",
@@ -2083,12 +1831,6 @@
       "file": "content/tools/evaluation-and-observability/deepchecks.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/evidently.md::repeated-paragraph::f4b017cfd7d0191b",
-      "file": "content/tools/evaluation-and-observability/evidently.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/evaluation-and-observability/evidently.md::tool-section-missing-technical-content::9c4e2cba6b0374ed",
@@ -2235,12 +1977,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/monako-glass.md::repeated-paragraph::c5e986da9b1ad8b5",
-      "file": "content/tools/evaluation-and-observability/monako-glass.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/monako-glass.md::section-too-short::5b1afa9ec0877f57",
       "file": "content/tools/evaluation-and-observability/monako-glass.md",
       "rule": "section-too-short",
@@ -2325,12 +2061,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/pyrit.md::repeated-paragraph::eb8f654afbe2b0f5",
-      "file": "content/tools/evaluation-and-observability/pyrit.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/pyrit.md::tool-section-missing-technical-content::658d7d7a8875d4eb",
       "file": "content/tools/evaluation-and-observability/pyrit.md",
       "rule": "tool-section-missing-technical-content",
@@ -2367,12 +2097,6 @@
       "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md::repeated-paragraph::405d317a209a613b",
-      "file": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md::section-too-short::0703cce9956898fe",
       "file": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md",
       "rule": "section-too-short",
@@ -2395,12 +2119,6 @@
       "file": "content/tools/evaluation-and-observability/spotlight-by-backplanes.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/superlog.md::repeated-paragraph::3da08e0144a15042",
-      "file": "content/tools/evaluation-and-observability/superlog.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/evaluation-and-observability/superlog.md::section-too-short::3a34640d5a8f6f64",
@@ -2443,12 +2161,6 @@
       "file": "content/tools/evaluation-and-observability/trulens.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/uptrain.md::repeated-paragraph::3bce9eec42396dee",
-      "file": "content/tools/evaluation-and-observability/uptrain.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/evaluation-and-observability/uptrain.md::tool-section-missing-technical-content::a2d373898071caeb",
@@ -2505,12 +2217,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/cerebras-inference.md::repeated-paragraph::3ccf94ead0042354",
-      "file": "content/tools/model-layer/cerebras-inference.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/cerebras-inference.md::tool-section-missing-technical-content::c2e43a1cb8bdfd9e",
       "file": "content/tools/model-layer/cerebras-inference.md",
       "rule": "tool-section-missing-technical-content",
@@ -2523,22 +2229,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/cohere.md::repeated-paragraph::097e7c5b2e74bbf6",
-      "file": "content/tools/model-layer/cohere.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/cohere.md::tool-section-missing-technical-content::18fc0a4fc7ce0aba",
       "file": "content/tools/model-layer/cohere.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/deepspeed.md::repeated-paragraph::3d8350e31288fcb5",
-      "file": "content/tools/model-layer/deepspeed.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/model-layer/deepspeed.md::section-too-short::4f762db35ac8867e",
@@ -2563,12 +2257,6 @@
       "file": "content/tools/model-layer/dvc.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/groq.md::repeated-paragraph::5d4a8a41f116bfae",
-      "file": "content/tools/model-layer/groq.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/model-layer/groq.md::tool-section-missing-technical-content::3d962b4c1193a156",
@@ -2601,12 +2289,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/ideogram.md::repeated-paragraph::3eefa1ac63953d25",
-      "file": "content/tools/model-layer/ideogram.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/ideogram.md::section-too-short::d40b03b7b9d7cb7e",
       "file": "content/tools/model-layer/ideogram.md",
       "rule": "section-too-short",
@@ -2625,12 +2307,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/liger-kernel.md::repeated-paragraph::ca60c9380b539185",
-      "file": "content/tools/model-layer/liger-kernel.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/liger-kernel.md::tool-section-missing-technical-content::341a8a430b29b366",
       "file": "content/tools/model-layer/liger-kernel.md",
       "rule": "tool-section-missing-technical-content",
@@ -2647,12 +2323,6 @@
       "file": "content/tools/model-layer/llamafactory.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/lm-format-enforcer.md::repeated-paragraph::24cebb8903c78553",
-      "file": "content/tools/model-layer/lm-format-enforcer.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/model-layer/lm-format-enforcer.md::tool-section-missing-technical-content::5dd015b97b18275c",
@@ -2697,12 +2367,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/openrouter.md::repeated-paragraph::10dcfde8c57f08fc",
-      "file": "content/tools/model-layer/openrouter.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/openrouter.md::tool-section-missing-technical-content::f2243dc1ff5c0205",
       "file": "content/tools/model-layer/openrouter.md",
       "rule": "tool-section-missing-technical-content",
@@ -2739,12 +2403,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/qwen-3.md::repeated-paragraph::c7dfda6e4a2c0d72",
-      "file": "content/tools/model-layer/qwen-3.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/qwen-3.md::section-too-short::5b12ed90c13a6b85",
       "file": "content/tools/model-layer/qwen-3.md",
       "rule": "section-too-short",
@@ -2769,22 +2427,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/sentence-transformers.md::repeated-paragraph::aa11cdd2549740f0",
-      "file": "content/tools/model-layer/sentence-transformers.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/sentence-transformers.md::tool-section-missing-technical-content::4aa01cfb51a8fe6f",
       "file": "content/tools/model-layer/sentence-transformers.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/together-ai.md::repeated-paragraph::f2f9d0b2bc412ef6",
-      "file": "content/tools/model-layer/together-ai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/model-layer/together-ai.md::tool-section-missing-technical-content::2872e15b9a6207eb",
@@ -2809,12 +2455,6 @@
       "file": "content/tools/model-layer/torchtune.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/trl.md::repeated-paragraph::417f3b0f3ced93c7",
-      "file": "content/tools/model-layer/trl.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/model-layer/trl.md::tool-section-missing-technical-content::9a4073560ac04fd9",
@@ -2847,12 +2487,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/voyage-ai.md::repeated-paragraph::84c68f5e9e69e91e",
-      "file": "content/tools/model-layer/voyage-ai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/model-layer/voyage-ai.md::tool-section-missing-technical-content::79fc5ca6954e3d97",
       "file": "content/tools/model-layer/voyage-ai.md",
       "rule": "tool-section-missing-technical-content",
@@ -2877,22 +2511,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/agno.md::repeated-paragraph::80bd74cdd3b62b5e",
-      "file": "content/tools/orchestration/agno.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/agno.md::tool-section-missing-technical-content::ccfee456f40bfa13",
       "file": "content/tools/orchestration/agno.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/agnt-hub.md::repeated-paragraph::4019b413edd338ac",
-      "file": "content/tools/orchestration/agnt-hub.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/orchestration/agnt-hub.md::section-too-short::fe4dba85ee35024c",
@@ -2925,18 +2547,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/any-agent.md::repeated-paragraph::aaea02ae59a1dfa5",
-      "file": "content/tools/orchestration/any-agent.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/cloudskill.md::repeated-paragraph::0e7e3cc152d8e329",
-      "file": "content/tools/orchestration/cloudskill.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/cloudskill.md::section-too-short::b25ec6a328eb8032",
       "file": "content/tools/orchestration/cloudskill.md",
       "rule": "section-too-short",
@@ -2953,12 +2563,6 @@
       "file": "content/tools/orchestration/cloudskill.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/composio.md::repeated-paragraph::675bd13828c07505",
-      "file": "content/tools/orchestration/composio.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/orchestration/composio.md::section-too-short::cf8f08f795fb419b",
@@ -2985,22 +2589,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/e2b.md::repeated-paragraph::26b31926d0537c2a",
-      "file": "content/tools/orchestration/e2b.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/e2b.md::tool-section-missing-technical-content::6dd17d6a0adbac7d",
       "file": "content/tools/orchestration/e2b.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/empromptu-ai.md::repeated-paragraph::7b024c386f036f6f",
-      "file": "content/tools/orchestration/empromptu-ai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/orchestration/empromptu-ai.md::section-too-short::968b0ca82117520b",
@@ -3021,12 +2613,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/flowise.md::repeated-paragraph::4c3f90f0d9ebf720",
-      "file": "content/tools/orchestration/flowise.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/flowise.md::tool-section-missing-technical-content::c1edfbef207a9170",
       "file": "content/tools/orchestration/flowise.md",
       "rule": "tool-section-missing-technical-content",
@@ -3037,12 +2623,6 @@
       "file": "content/tools/orchestration/flowise.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/langflow.md::repeated-paragraph::ca6dd2559b14439a",
-      "file": "content/tools/orchestration/langflow.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/orchestration/langflow.md::tool-section-missing-technical-content::f71d89953a44383e",
@@ -3061,12 +2641,6 @@
       "file": "content/tools/orchestration/letta.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/manus.md::repeated-paragraph::63e6be099a093b75",
-      "file": "content/tools/orchestration/manus.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/orchestration/manus.md::section-too-short::f2b77688d454ab42",
@@ -3105,18 +2679,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/mirascope.md::repeated-paragraph::9dfc7707356630af",
-      "file": "content/tools/orchestration/mirascope.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/n8n.md::repeated-paragraph::5549cbeb47418f1a",
-      "file": "content/tools/orchestration/n8n.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/n8n.md::tool-section-missing-technical-content::18956272ec2056a1",
       "file": "content/tools/orchestration/n8n.md",
       "rule": "tool-section-missing-technical-content",
@@ -3127,12 +2689,6 @@
       "file": "content/tools/orchestration/n8n.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/orchestraml.md::repeated-paragraph::1c7a20e269bc35b0",
-      "file": "content/tools/orchestration/orchestraml.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
     },
     {
       "fingerprint": "content/tools/orchestration/orchestraml.md::section-too-short::f4b182fd5515281d",
@@ -3201,12 +2757,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/seaticket.md::repeated-paragraph::086b1e39a30733ca",
-      "file": "content/tools/orchestration/seaticket.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on the vendor s own description not yet confirmed against t...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/seaticket.md::section-too-short::c071dea85f759923",
       "file": "content/tools/orchestration/seaticket.md",
       "rule": "section-too-short",
@@ -3235,18 +2785,6 @@
       "file": "content/tools/orchestration/seaticket.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/strands-agents.md::repeated-paragraph::aa02d4a3e15e5509",
-      "file": "content/tools/orchestration/strands-agents.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/temporal.md::repeated-paragraph::ca8506434b3c1f86",
-      "file": "content/tools/orchestration/temporal.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/orchestration/temporal.md::tool-section-missing-technical-content::982d6dc04319d497",
@@ -3301,12 +2839,6 @@
       "file": "content/tools/serving-and-deployment/bentoml.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/cloudflare-workers-ai.md::repeated-paragraph::2dd4afca9a940b34",
-      "file": "content/tools/serving-and-deployment/cloudflare-workers-ai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/serving-and-deployment/cloudflare-workers-ai.md::tool-section-missing-technical-content::39c44bcc1d0cbbe3",
@@ -3405,22 +2937,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/kserve.md::repeated-paragraph::db022bad8d931cb2",
-      "file": "content/tools/serving-and-deployment/kserve.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/kserve.md::tool-section-missing-technical-content::bb2f7715367a7dd6",
       "file": "content/tools/serving-and-deployment/kserve.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/kubeai.md::repeated-paragraph::56de6e4199ea9b2f",
-      "file": "content/tools/serving-and-deployment/kubeai.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/serving-and-deployment/litellm.md::tool-section-length::521546b2647aa546",
@@ -3447,22 +2967,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/nvidia-nim.md::repeated-paragraph::65cac1010a5a9354",
-      "file": "content/tools/serving-and-deployment/nvidia-nim.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/nvidia-nim.md::tool-section-missing-technical-content::6fb99f2b2c7c0397",
       "file": "content/tools/serving-and-deployment/nvidia-nim.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/openllm.md::repeated-paragraph::ad8302c29c0aa918",
-      "file": "content/tools/serving-and-deployment/openllm.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/serving-and-deployment/openllm.md::section-too-short::11aca33d70c618f8",
@@ -3513,12 +3021,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/ray-serve.md::repeated-paragraph::b833c378ec115640",
-      "file": "content/tools/serving-and-deployment/ray-serve.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/ray-serve.md::tool-section-missing-technical-content::1d3992b72035ef32",
       "file": "content/tools/serving-and-deployment/ray-serve.md",
       "rule": "tool-section-missing-technical-content",
@@ -3549,12 +3051,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/runpod.md::repeated-paragraph::5623fbc5dfb04790",
-      "file": "content/tools/serving-and-deployment/runpod.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/runpod.md::tool-section-missing-technical-content::6e4fe21d6f37e9f5",
       "file": "content/tools/serving-and-deployment/runpod.md",
       "rule": "tool-section-missing-technical-content",
@@ -3567,12 +3063,6 @@
       "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/serving-and-deployment/skypilot.md::repeated-paragraph::4e0390ba2232a945",
-      "file": "content/tools/serving-and-deployment/skypilot.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/serving-and-deployment/skypilot.md::tool-section-missing-technical-content::25f64a958e2cd5ed",
       "file": "content/tools/serving-and-deployment/skypilot.md",
       "rule": "tool-section-missing-technical-content",
@@ -3583,12 +3073,6 @@
       "file": "content/tools/serving-and-deployment/skypilot.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/serving-and-deployment/triton-inference-server.md::repeated-paragraph::bbb469361d76cdfe",
-      "file": "content/tools/serving-and-deployment/triton-inference-server.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/serving-and-deployment/triton-inference-server.md::tool-section-missing-technical-content::2dd5da95a0c1a7f4",

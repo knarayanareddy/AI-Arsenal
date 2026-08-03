@@ -80,7 +80,7 @@ docker run -it --rm -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio
 - Complex agent logic with intricate state — a code-first framework (LangGraph, Mastra) stays maintainable longer
 - You require a strictly OSI open-source license; n8n's fair-code license restricts offering it as a competing SaaS
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `n8n`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

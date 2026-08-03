@@ -81,7 +81,7 @@ marimo edit notebook.py
 - Your workflows depend on the Jupyter ecosystem (extensions, nbconvert, papermill) — migration has real costs
 - Cells with expensive side effects you don't want auto-re-executed (mitigable with lazy mode, but it changes the model)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `marimo`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

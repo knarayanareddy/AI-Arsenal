@@ -80,7 +80,7 @@ Skills are defined once and published to a shared registry; agents subscribe to 
 - You only run a single agent or a small prototype where ad-hoc tool definitions are simpler
 - You need an open-source or self-hostable skill registry
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `cloudskill`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

@@ -85,7 +85,7 @@ pip install adalflow
 - Low-level by design — more assembly than batteries-included frameworks
 - Auto-optimization consumes eval-time LLM calls
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `adalflow`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

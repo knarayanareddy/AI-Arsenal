@@ -80,7 +80,7 @@ docker run --gpus all -p 8000:8000 -e NGC_API_KEY nvcr.io/nim/meta/llama-3.1-8b-
 - You're license-averse: production use requires AI Enterprise per-GPU licensing that can exceed raw compute costs
 - You want maximum engine control/customization — direct vLLM/TensorRT-LLM gives more knobs
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `nvidia-nim`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 
