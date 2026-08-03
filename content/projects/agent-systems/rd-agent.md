@@ -69,7 +69,7 @@ RD-Agent separates idea generation from implementation: the Research component p
 
 ## Ecosystem Position
 
-It contrasts with general coding agents (Aider, OpenHands) and with orchestration frameworks. Its niche is closed-loop, evaluation-driven R&D automation from a major research lab.
+It competes with general coding agents (Aider, OpenHands) and, compared to broad orchestration frameworks, specializes in the closed-loop, evaluation-driven R&D automation of data-science and quant modeling. Its niche is that propose→implement→evaluate research loop, backed by a major research lab, rather than generic software tasks.
 
 ## Getting Started
 
@@ -92,9 +92,9 @@ pip install rdagent
 
 ## Limitations
 
-- Research-forward; expects data-science literacy and compute
-- Narrower than general coding agents by design
-- Running loops can incur significant LLM/compute cost
+- Research-forward: it expects data-science literacy and compute to run its experiment loops, and is not a turnkey product
+- Narrower than general coding agents by design — it targets the R&D loop (quant factor mining, model tuning), not everyday software tasks
+- Running iterative propose→implement→evaluate loops can incur significant LLM and compute cost, so budget per-iteration spend before long runs
 
 ## Relation to the Arsenal
 

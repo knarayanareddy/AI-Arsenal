@@ -63,7 +63,7 @@ Each task is a dedicated efficient transformer model: line-level detection feeds
 
 ## Ecosystem Position
 
-Upstream: PyTorch, Hugging Face model hosting. Downstream: Marker composes Surya models into document conversion; community projects embed the detector/recognizer independently. Competing: PaddleOCR (industrial breadth, permissive license), Tesseract (legacy baseline), docTR. The GPL+commercial-terms licensing mirrors Marker's — fine for internal use, needs review for shipped products.
+Upstream: PyTorch, Hugging Face model hosting. Downstream: Marker composes Surya models into document conversion; community projects embed the detector/recognizer independently. It competes with PaddleOCR (industrial breadth, permissive license), Tesseract (legacy baseline), and docTR. The GPL+commercial-terms licensing mirrors Marker's — fine for internal use, needs review for shipped products.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ surya_table document.png
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+Surya is a transformer-era OCR toolkit (detection, recognition, layout, tables) that also powers Marker. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 

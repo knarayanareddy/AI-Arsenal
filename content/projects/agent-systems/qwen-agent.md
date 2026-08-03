@@ -92,9 +92,9 @@ pip install -U "qwen-agent[gui,rag,code_interpreter]"
 
 ## Limitations
 
-- Qwen-centric; not designed for provider neutrality
-- Smaller integration ecosystem than major frameworks
-- Reference components need hardening for production
+- Qwen-centric: it is tuned to Qwen's function calling and long context, so it is not designed for provider neutrality across many model vendors
+- Smaller integration ecosystem and third-party tooling than major general-purpose agent frameworks like LangGraph or CrewAI
+- Reference components (code interpreter, browser assistant) are example-driven and need hardening before production use
 
 ## Relation to the Arsenal
 

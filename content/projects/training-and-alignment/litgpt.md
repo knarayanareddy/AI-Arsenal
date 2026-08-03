@@ -63,7 +63,7 @@ Each model family (Llama, Gemma, Qwen, Phi, Mistral, and others) is a standalone
 
 ## Ecosystem Position
 
-Upstream: PyTorch and Lightning Fabric. Competing: Axolotl and LLaMA-Factory (config-driven fine-tuning), torchtune (Meta's PyTorch-native recipes). Complementary: checkpoints convert to/from Hugging Face format, and its readable implementations are frequently used as reference code when debugging other stacks — it was also the basis for several open pretraining projects (e.g. TinyLlama).
+Upstream: PyTorch and Lightning Fabric. Competing: Axolotl and LLaMA-Factory (config-driven fine-tuning), torchtune (Meta's PyTorch-native recipes). Complementary: model checkpoints convert to/from Hugging Face format, and its readable implementations are frequently used as reference code when debugging other stacks — it was also the basis for several open pretraining projects (e.g. TinyLlama).
 
 ## Getting Started
 
@@ -90,7 +90,7 @@ litgpt finetune_lora microsoft/phi-2 --data JSON --data.json_path my_data.json
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+LitGPT is Lightning AI's hackable library of from-scratch LLM implementations with pretraining/fine-tuning recipes. This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

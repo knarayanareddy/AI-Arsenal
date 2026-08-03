@@ -64,7 +64,7 @@ A thin `alignment-handbook` package over the HF stack: recipes are YAML configs 
 
 ## Ecosystem Position
 
-Upstream: TRL (trainers), `accelerate` (distribution), `peft` (QLoRA variants). Peers: training frameworks (Axolotl, LLaMA-Factory) that implement methods but don't publish validated recipes; model-specific cookbooks that lack its breadth. Its Zephyr lineage (arXiv:2310.16944) made distilled DPO the default open post-training pattern of its era.
+Upstream: TRL (trainers), `accelerate` (distribution), `peft` (QLoRA variants). It competes with training frameworks (Axolotl, LLaMA-Factory) that implement methods but don't publish validated recipes, and with model-specific cookbooks that lack its breadth. Its Zephyr lineage (arXiv:2310.16944) made distilled DPO the default open post-training pattern of its era.
 
 ## Getting Started
 
