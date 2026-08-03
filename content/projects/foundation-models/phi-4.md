@@ -6,31 +6,43 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
-github_url: "https://huggingface.co/microsoft/phi-4"
+github_url: https://huggingface.co/microsoft/phi-4
 license: MIT
 primary_language: Other
 org_or_maintainer: null
-tags: [llm, reasoning, local, efficiency]
+tags:
+  - llm
+  - reasoning
+  - local
+  - efficiency
 maturity: production
 cost_model: open-source
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://huggingface.co/microsoft/phi-4"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://huggingface.co/microsoft/phi-4
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/microsoft/phi-4"
-model_sizes: [14B]
+hf_url: https://huggingface.co/microsoft/phi-4
+model_sizes:
+  - 14B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language, reasoning]
-relation_to_stack: [deploy-as-is, build-on-top, study-and-reference]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+  - reasoning
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+  - study-and-reference
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Microsoft's synthetic-data-centric small language model, optimized for reasoning-per-parameter rather than raw scale
 best_for:
@@ -46,8 +58,8 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: Architecture and training details (14B dense decoder-only transformer, 4096 default context extended to 16K during midtraining, tiktoken tokenizer with 100,352 vocab, ~10T training tokens with heavy synthetic-data emphasis, full attention rather than phi-3-medium's 2K sliding window) are sourced directly from Microsoft's Phi-4 Technical Report (arXiv 2412.08905), not marketing copy.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

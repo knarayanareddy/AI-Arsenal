@@ -6,31 +6,40 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
-github_url: "https://huggingface.co/CohereForAI/c4ai-command-r-plus"
+github_url: https://huggingface.co/CohereForAI/c4ai-command-r-plus
 license: Custom
 primary_language: Other
 org_or_maintainer: null
-tags: [llm, rag, tool-use, multimodal]
+tags:
+  - llm
+  - rag
+  - tool-use
+  - multimodal
 maturity: production
 cost_model: open-source
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://docs.cohere.com/"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://docs.cohere.com/
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/CohereForAI/c4ai-command-r-plus"
-model_sizes: [104B]
+hf_url: https://huggingface.co/CohereForAI/c4ai-command-r-plus
+model_sizes:
+  - 104B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
 ecosystem_role:
   - Enterprise RAG- and tool-use-optimized chat model, positioned as Cohere's mid-tier open-weight offering
 best_for:
@@ -45,9 +54,9 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "Cohere's own docs (Sept 2025 deprecation notice) confirm command-r/command-r-plus were deprecated for new customers effective Sept 15 2025 and are being phased toward Command A / Command A+; existing users can continue on command-r-plus-08-2024 but it is legacy, not current flagship. Architecture: 104B dense transformer, 128K context, tool-use and RAG-focused post-training per Cohere's model card."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'Cohere''s own docs (Sept 2025 deprecation notice) confirm command-r/command-r-plus were deprecated for new customers effective Sept 15 2025 and are being phased toward Command A / Command A+; existing users can continue on command-r-plus-08-2024 but it is legacy, not current flagship. Architecture: 104B dense transformer, 128K context, tool-use and RAG-focused post-training per Cohere''s model card.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []

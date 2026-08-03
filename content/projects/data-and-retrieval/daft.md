@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 61
+trending_score: 28
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,8 +42,8 @@ tags:
   - efficiency
 maturity: beta
 cost_model: open-source
-github_stars: 5620
-last_commit: '2026-07-10'
+github_stars: 5681
+last_commit: '2026-08-02'
 docs_url: https://github.com/Eventual-Inc/Daft
 phase: data-and-retrieval
 domain:

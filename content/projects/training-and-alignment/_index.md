@@ -43,16 +43,16 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 
 ### Most Popular
 
-- [nanoGPT](./nanogpt.md) — ⭐ 60962
-- [Colossal-AI (HPC-AI Tech)](./colossalai.md) — ⭐ 41407
-- [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26399
-- [verl](./verl.md) — ⭐ 22377
-- [Agent Lightning](./agent-lightning.md) — ⭐ 17381
-- [ms-swift](./ms-swift.md) — ⭐ 14751
-- [LitGPT](./litgpt.md) — ⭐ 13467
-- [SkillOpt](./skillopt.md) — ⭐ 13165
-- [OpenRLHF](./openrlhf.md) — ⭐ 9769
-- [Oumi](./oumi.md) — ⭐ 9342
+- [nanoGPT](./nanogpt.md) — ⭐ 61818
+- [Colossal-AI (HPC-AI Tech)](./colossalai.md) — ⭐ 41430
+- [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26420
+- [verl](./verl.md) — ⭐ 22769
+- [Agent Lightning](./agent-lightning.md) — ⭐ 17441
+- [SkillOpt](./skillopt.md) — ⭐ 15536
+- [ms-swift](./ms-swift.md) — ⭐ 15027
+- [LitGPT](./litgpt.md) — ⭐ 13601
+- [OpenRLHF](./openrlhf.md) — ⭐ 9874
+- [Oumi](./oumi.md) — ⭐ 9368
 
 ### Browse All
 

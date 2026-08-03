@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "engine": "flexsearch",
-  "generated_at": "2026-07-19T21:22:56.945Z",
+  "generated_at": "2026-08-03T12:32:22.242Z",
   "config": {
     "document": {
       "id": "id",
@@ -197,9 +197,9 @@
       "paid": 11
     },
     "status": {
-      "active": 718,
+      "active": 711,
       "deprecated": 1,
-      "archived": 2,
+      "archived": 9,
       "watching": 4,
       "reviewed": 3,
       "draft": 1
@@ -4902,7 +4902,7 @@
       "subcategory": "evaluation",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "benchmark-and-eval",
       "audience": null,
       "domain": [
@@ -8731,7 +8731,7 @@
       "subcategory": "advanced-rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "data-and-retrieval",
       "audience": null,
       "domain": [
@@ -12290,7 +12290,7 @@
       "boost_title": "Dropstone 3",
       "boost_tags": "orchestration agents",
       "boost_description": "Collaborative AI workspace for teams to build, describe, and ship software together",
-      "body": "Dropstone 3 Collaborative AI workspace for teams to build, describe, and ship software together orchestration agents Overview A closed source collaborative AI workspace where teams describe and build software together without first setting up conventional development tooling. Why It's in the Arsenal Dropstone 3 earns a place in the Arsenal because it directly addresses a recurring decision point: your team wants a collaborative AI workspace to describe and ship software together without setting up dev tooling first. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Collaborati…"
+      "body": "Dropstone 3 Collaborative AI workspace for teams to build, describe, and ship software together orchestration agents Overview Dropstone 3 is a closed source, freemium collaborative AI workspace where a team describes software in natural language and builds it together without first standing up conventional dev tooling. Built on a TypeScript stack and positioned for early stage or internal projects, it aims to compress setup so a group can go from description to a running artifact inside one shared environment. Why It's in the Arsenal Dropstone is tracked as a team coding workspace to compare against Cursor and Continue: the differentiator it claims is shared, description driven collaboration rather than a s…"
     },
     {
       "id": "dspy",
@@ -14037,7 +14037,7 @@
       "boost_title": "Falcon 3",
       "boost_tags": "llm inference local efficiency",
       "boost_description": "TII open model family with compact 1B to 10B text-only variants for local deployment",
-      "body": "Falcon 3 TII open model family with compact 1B to 10B text-only variants for local deployment llm inference local efficiency llms open-source-models Overview An open weight small to mid size language model family from the Technology Innovation Institute (TII) in the UAE, offered in several parameter sizes for local and edge deployment. Why it's in the Arsenal UAE backed (TII) open weight small/mid size model family. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want an open weight model backed by a national research institute (TII, UAE) as an alternative to the US/China dominated open weight landscape. See Strengths / Limitations below before adopting it. Architecture A dense decoder only tr…"
+      "body": "Falcon 3 TII open model family with compact 1B to 10B text-only variants for local deployment llm inference local efficiency llms open-source-models Overview An open weight small to mid size language model family from the Technology Innovation Institute (TII) in the UAE, released as dense decoder only transformer checkpoints in 1B, 3B, 7B, and 10B sizes for local and edge deployment. It ships under TII's custom Falcon LLM license and predates TII's newer Falcon H1 hybrid line, which is now the vendor's recommended path. Why it's in the Arsenal UAE backed (TII) open weight small/mid size model family. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want an open weight model backed by a national…"
     },
     {
       "id": "fara",
@@ -15710,7 +15710,7 @@
       "boost_title": "Gemma",
       "boost_tags": "llm inference multimodal local",
       "boost_description": "Google open model family designed for efficient language and multimodal applications",
-      "body": "Gemma Google open model family designed for efficient language and multimodal applications llm inference multimodal local llms open-source-models Overview The first generation of Google DeepMind's open weight small language model family, released in 2024 as a lighter weight, locally deployable counterpart to Gemini. Why it's in the Arsenal Google DeepMind's first generation open weight small model family (Gemma 1/2). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Gemma 1/2 generation for compatibility with existing pipelines or comparative research. See Strengths / Limitations below before adopting it. Architecture A dense decoder only transformer built from…"
+      "body": "Gemma Google open model family designed for efficient language and multimodal applications llm inference multimodal local llms open-source-models Overview The first generation of Google DeepMind's open weight small language model family (Gemma 1/2), released in 2024 as dense decoder only transformer checkpoints and positioned as a lighter weight, locally deployable counterpart to the closed Gemini models. It shipped in 2B/7B (Gemma 1) and 2B/9B/27B (Gemma 2) sizes under a custom license. Why it's in the Arsenal Google DeepMind's first generation open weight small model family (Gemma 1/2). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Gemma 1/2 generation for…"
     },
     {
       "id": "gemma-3",
@@ -16465,7 +16465,7 @@
       "boost_title": "Google Pomelli 2.0",
       "boost_tags": "structured-output",
       "boost_description": "Explore and interact with large datasets through a visual, intuitive interface",
-      "body": "Google Pomelli 2.0 Explore and interact with large datasets through a visual, intuitive interface structured-output Overview A visual, intuitive interface for exploring large datasets interactively, aimed at exploratory data analysis without writing analysis code. Why It's in the Arsenal Google Pomelli 2.0 earns a place in the Arsenal because it directly addresses a recurring decision point: you want a visual, intuitive interface to explore large datasets without writing analysis code. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Visual, interactive large dataset explora…"
+      "body": "Google Pomelli 2.0 Explore and interact with large datasets through a visual, intuitive interface structured-output Overview Google Pomelli 2.0 is a freemium Google Labs preview that puts a visual, no code interface over large datasets: instead of writing analysis code, you interact with the dataset directly and the tool issues the underlying queries. It is aimed at exploratory data analysis where quick visual iteration matters more than a reproducible, code based pipeline. Why It's in the Arsenal Pomelli is tracked as a data exploration option to weigh against code first analysis tools: it trades reproducibility for speed of visual iteration, and — as a Google Labs preview — its stability should be verifi…"
     },
     {
       "id": "google-vertex-ai",
@@ -16625,7 +16625,7 @@
       "subcategory": "coding-agents",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -18616,7 +18616,7 @@
       "boost_title": "Honen",
       "boost_tags": "structured-output",
       "boost_description": "Transform any content into interactive AI-generated courses",
-      "body": "Honen Transform any content into interactive AI-generated courses structured-output Overview A tool that automatically transforms existing content (documents, articles, video) into structured, interactive AI generated courses, aimed at educational/onboarding material creation. Why It's in the Arsenal Honen earns a place in the Arsenal because it directly addresses a recurring decision point: you want to turn existing content (docs, articles, video) into interactive AI generated courses automatically. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Fea…"
+      "body": "Honen Transform any content into interactive AI-generated courses structured-output Overview Honen is a closed source, freemium tool that automatically turns existing material — documents, articles, or video — into structured, interactive AI generated courses. It targets educational and onboarding content, using generative models to derive a course structure (modules and interactive checks) from source material the author already has, rather than authoring from scratch. Why It's in the Arsenal Honen is tracked as a niche content to course option: it is worth evaluating when the goal is to automate course structuring from existing material, and worth skipping when you need fi…"
     },
     {
       "id": "hong-2024-orpo",
@@ -19292,7 +19292,7 @@
       "boost_title": "Ideogram AI",
       "boost_tags": "multimodal",
       "boost_description": "AI image generation platform with reliable text rendering and broad style coverage",
-      "body": "Ideogram AI AI image generation platform with reliable text rendering and broad style coverage multimodal Overview A platform offering for Ideogram style image generation, emphasizing broad style coverage alongside the same reliable text rendering strength. Why It's in the Arsenal Ideogram AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need broad style coverage plus the same reliable text rendering strength as Ideogram, via a platform offering. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Broad style/preset coverag…"
+      "body": "Ideogram AI AI image generation platform with reliable text rendering and broad style coverage multimodal Overview Ideogram AI is a closed source, freemium image generation platform accessed as a managed API, notable for broad style coverage and reliable in image text rendering. It targets teams that want hosted image generation without operating their own diffusion model, trading self hosting and open weights for a turnkey, provider run service. Why It's in the Arsenal Ideogram AI is tracked as a managed alternative to running your own image stack: it is worth weighing when reliable text in image and style breadth matter more than control, and worth skipping when open weights or cost per image a…"
     },
     {
       "id": "ifeval",
@@ -21397,7 +21397,7 @@
       "boost_title": "Kimi K2.5",
       "boost_tags": "llm agents",
       "boost_description": "AI assistant with deep understanding, analysis, and reasoning capabilities",
-      "body": "Kimi K2.5 AI assistant with deep understanding, analysis, and reasoning capabilities llm agents Overview A hosted AI assistant model positioned around deep reasoning, analysis, and long context understanding, accessed as a closed source API. Why It's in the Arsenal Kimi K2.5 earns a place in the Arsenal because it directly addresses a recurring decision point: you need a capable hosted reasoning/analysis assistant and are comfortable with a closed source provider. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Reasoning oriented response generation Long…"
+      "body": "Kimi K2.5 AI assistant with deep understanding, analysis, and reasoning capabilities llm agents Overview Kimi K2.5 is a closed source, hosted assistant model from Moonshot AI, accessed over an API and positioned around deep reasoning, analysis, and long context understanding. It is a provider run option rather than an open weight model, so you consume it through the vendor's endpoint instead of self hosting or fine tuning it. Why It's in the Arsenal Kimi K2.5 is tracked as one closed source model to slot into a multi provider routing strategy: it is worth benchmarking against your incumbent when reasoning quality and long context matter, and a poor fit when you need open weights or thir…"
     },
     {
       "id": "kojima-2022-zero-shot-cot",
@@ -24400,7 +24400,7 @@
       "boost_title": "Llamafile",
       "boost_tags": "llm inference local edge",
       "boost_description": "Mozilla project for distributing and running LLMs as a single executable file",
-      "body": "Llamafile Mozilla project for distributing and running LLMs as a single executable file llm inference local edge llms inference-engines Overview A Mozilla backed project (built on top of llama.cpp) that packages an LLM and inference engine together as a single, portable, cross platform executable file requiring no installation or dependencies. Why it's in the Arsenal Mozilla backed project distributing LLMs as a single portable executable file, built on top of llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute or run a model as a single, dependency free executable file that works across Windows, macOS, and Linux without an install step. See Strengths / L…"
+      "body": "Llamafile Mozilla project for distributing and running LLMs as a single executable file llm inference local edge llms inference-engines Overview A Mozilla backed project (built on top of llama.cpp) that packages a model and the inference engine together into a single, portable, cross platform executable file requiring no installation or dependencies. Why it's in the Arsenal Mozilla backed project distributing LLMs as a single portable executable file, built on top of llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need to distribute or run a model as a single, dependency free executable file that works across Windows, macOS, and Linux without an install step. See Streng…"
     },
     {
       "id": "llamaguard",
@@ -27442,7 +27442,7 @@
       "boost_title": "Memoriq",
       "boost_tags": "memory agents",
       "boost_description": "Private AI memory layer that learns from your conversations and documents",
-      "body": "Memoriq Private AI memory layer that learns from your conversations and documents memory agents Overview A closed source personal AI memory layer that builds a private knowledge base from a user's own conversations and documents, intended for individual rather than multi tenant production use. Why It's in the Arsenal Memoriq earns a place in the Arsenal because it directly addresses a recurring decision point: you want a private, personal memory layer that learns from your own conversations and documents. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features L…"
+      "body": "Memoriq Private AI memory layer that learns from your conversations and documents memory agents Overview Memoriq is a closed source, freemium personal AI memory layer: it ingests a user's own conversations and documents and builds a private knowledge base that an application or agent can query for recall. It is aimed at individual, privacy sensitive use with vendor hosted retrieval, rather than a multi tenant production memory store. Why It's in the Arsenal Memoriq is tracked in a crowded memory layer category: it is worth evaluating when a private, personal memory that learns from your own data matters and a vendor hosted product is acceptable, and worth skipping for multi tenant or se…"
     },
     {
       "id": "memory-management",
@@ -27916,7 +27916,7 @@
       "subcategory": "frameworks",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "framework",
       "audience": null,
       "domain": [
@@ -31074,7 +31074,7 @@
       "boost_title": "Ollama",
       "boost_tags": "llm inference local self-hosted",
       "boost_description": "Local runtime for downloading, running, and serving open-weight models on developer machines",
-      "body": "Ollama Local runtime for downloading, running, and serving open-weight models on developer machines llm inference local self-hosted llms inference-engines Overview A developer tool providing a simple, Docker like command line interface and local API for downloading and running open weight LLMs, built on top of llama.cpp's inference engine. Why it's in the Arsenal The dominant local LLM developer tool, providing a Docker like CLI/API experience for pulling and running open weight models built on llama.cpp. It earns a place in the Arsenal because it directly addresses a recurring decision point: you want the fastest path from zero to a running local LLM with a simple CLI (\"ollama run llama3\") and an OpenAI compatible local API, without hand manag…"
+      "body": "Ollama Local runtime for downloading, running, and serving open-weight models on developer machines llm inference local self-hosted llms inference-engines Overview A developer tool providing a simple, Docker like command line interface and OpenAI compatible local API for downloading, quantizing, and running open weight models, built on top of llama.cpp's inference engine and its GGUF format. It abstracts model management — a pull/run registry and Modelfile customization — so a running local model is one command away. Why it's in the Arsenal The dominant local LLM developer tool, providing a Docker like CLI/API experience for pulling and running open weight models built on llama.cpp. It earns a place in the Arsenal because it directly addresses…"
     },
     {
       "id": "ollama-discord",
@@ -34243,7 +34243,7 @@
       "subcategory": "inference-engines",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "inference-engine",
       "audience": null,
       "domain": [
@@ -36204,7 +36204,7 @@
       "boost_title": "Qwen",
       "boost_tags": "llm inference multimodal code-gen",
       "boost_description": "Alibaba open-weight model family covering language, coding, and multimodal use cases",
-      "body": "Qwen Alibaba open-weight model family covering language, coding, and multimodal use cases llm inference multimodal code-gen llms open-source-models Overview Alibaba Cloud's original open weight large language model family, first released in 2023, predating the more widely adopted Qwen 2.5 and Qwen3 generations. Why it's in the Arsenal Alibaba's original open weight Qwen model family (Qwen 1/2 generation). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need the original Qwen/Qwen2 generation for compatibility with an existing pipeline or as a comparative research baseline. See Strengths / Limitations below before adopting it. Architecture A dense decoder only transformer family r…"
+      "body": "Qwen Alibaba open-weight model family covering language, coding, and multimodal use cases llm inference multimodal code-gen llms open-source-models Overview Alibaba Cloud's original open weight large language model family — the Qwen/Qwen2 generation — first released in 2023 as dense decoder only transformer checkpoints under Apache 2.0. It covers general language, coding, and early multimodal use, but predates (and is now superseded by) the more widely adopted Qwen 2.5 and Qwen3 lines and lacks their MoE and agentic post training. Why it's in the Arsenal Alibaba's original open weight Qwen model family (Qwen 1/2 generation). It earns a place in the Arsenal because it directly addresses a recurring decision point: you specifically need th…"
     },
     {
       "id": "qwen-2-5",
@@ -37763,7 +37763,7 @@
       "boost_title": "Recursi",
       "boost_tags": "agents",
       "boost_description": "Self-improving system for intuitive and efficient AI-assisted coding",
-      "body": "Recursi Self-improving system for intuitive and efficient AI-assisted coding agents Overview A closed source AI coding assistant positioned around iterative self improvement of its suggestions across a development session. Why It's in the Arsenal Recursi earns a place in the Arsenal because it directly addresses a recurring decision point: you want an AI coding assistant that improves itself/its suggestions over a session for iterative development. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Coding suggestions that adapt within a session…"
+      "body": "Recursi Self-improving system for intuitive and efficient AI-assisted coding agents Overview Recursi is a closed source, freemium AI coding assistant built around iterative self improvement: rather than treating each completion independently, it carries session level context and feedback so the model's suggestions adapt as a coding session progresses. It is positioned as an exploratory take on self improving assistant UX rather than a settled, production hardened tool. Why It's in the Arsenal Recursi is tracked as an early, self improving coding assistant experiment: its claimed differentiator — suggestions that get better within a session — is worth evaluating independently…"
     },
     {
       "id": "redact-and-govern-trace-data",
@@ -38016,7 +38016,7 @@
       "subcategory": "coding-agents",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -41519,7 +41519,7 @@
       "boost_title": "ShellMate",
       "boost_tags": "agents",
       "boost_description": "AI-powered terminal assistant that suggests commands and explains outputs",
-      "body": "ShellMate AI-powered terminal assistant that suggests commands and explains outputs agents Overview An AI powered terminal assistant that suggests commands and explains command output inline, aimed at speeding up day to day CLI work and learning new tools. Why It's in the Arsenal ShellMate earns a place in the Arsenal because it directly addresses a recurring decision point: you want an AI powered terminal assistant to suggest commands and explain output during day to day development. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Inline command su…"
+      "body": "ShellMate AI-powered terminal assistant that suggests commands and explains outputs agents Overview ShellMate is a closed source, freemium AI assistant for the command line: it watches the interactive shell session and, on demand, suggests the next command or explains the output of one you just ran. It targets day to day CLI work and learning unfamiliar tools, and — being closed source and cloud backed — forwards session context to a hosted model provider rather than running locally. Why It's in the Arsenal ShellMate is tracked here as a reference point in the terminal assistant category: it is one concrete option to weigh against Warp and Fig when deciding whether an interactive c…"
     },
     {
       "id": "sherpa-onnx",
@@ -45313,7 +45313,7 @@
       "subcategory": "platforms",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "phase": "agent-system",
       "audience": null,
       "domain": [
@@ -46744,7 +46744,7 @@
       "boost_title": "TranslateGemma",
       "boost_tags": "multimodal llm",
       "boost_description": "Open translation model family built on Gemma 3 supporting 55 languages efficiently",
-      "body": "TranslateGemma Open translation model family built on Gemma 3 supporting 55 languages efficiently multimodal llm llms open-source-models Overview undefined Why it's in the Arsenal Specialized translation fine tune built on the Gemma 3 base architecture. It earns a place in the Arsenal because it directly addresses a recurring decision point: you need an efficient, open weight machine translation model specifically fine tuned for 55 languages rather than a general purpose chat model repurposed for translation. See Strengths / Limitations below before adopting it. Architecture undefined Ecosystem Position undefined Getting Started Key Use Cases 1. Scenario : you need an efficient, open weight machine translation model specifical…"
+      "body": "TranslateGemma Open translation model family built on Gemma 3 supporting 55 languages efficiently multimodal llm llms open-source-models Overview TranslateGemma is an open weight machine translation model family built by fine tuning Google DeepMind's Gemma 3 base for translation across 55 languages, distributed under Apache 2.0 through the google deepmind/gemma project. Rather than a general chat model, it is a task specialized derivative that inherits Gemma 3's efficient, long context decoder architecture, which lets it translate longer documents in a single pass instead of chunking them. Why it's in the Arsenal TranslateGemma earns an entry because it represents a specific, increasingly common design choice: shipping a narro…"
     },
     {
       "id": "treat-retrieved-text-as-untrusted",
@@ -48764,7 +48764,7 @@
       "boost_title": "Vaani",
       "boost_tags": "structured-output",
       "boost_description": "Fast, private macOS dictation with AI formatting and editing",
-      "body": "Vaani Fast, private macOS dictation with AI formatting and editing structured-output Overview A macOS native dictation tool with AI assisted formatting and editing, designed to run locally and privately rather than sending audio to a cloud transcription service. Why It's in the Arsenal Vaani earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast, private, macOS native dictation with AI assisted formatting and editing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it. Key Features Local first, private macOS dictat…"
+      "body": "Vaani Fast, private macOS dictation with AI formatting and editing structured-output Overview Vaani is a closed source, freemium macOS dictation app that captures speech and transcribes it on device, then runs an AI formatting pass to clean up and structure the text before it is inserted. Its selling point is being fast, private, and local first — keeping audio on the machine rather than sending it to a cloud transcription provider. Why It's in the Arsenal Vaani is tracked as a local first dictation option to compare against Wispr Flow and MacWhisper: it is a fit when macOS native, private, on device transcription matters, and a non starter if you need cross platform support…"
     },
     {
       "id": "validate-llm-judges-against-human-labels",
@@ -51625,7 +51625,7 @@
       "boost_title": "Yi",
       "boost_tags": "llm inference local multimodal",
       "boost_description": "01.AI open model family with bilingual and long-context variants from small to mid-large sizes",
-      "body": "Yi 01.AI open model family with bilingual and long-context variants from small to mid-large sizes llm inference local multimodal llms open-source-models Overview undefined Why it's in the Arsenal 01.AI's open weight model family from the 2023 2024 open model wave. It earns a place in the Arsenal because it directly addresses a recurring decision point: you're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point. See Strengths / Limitations below before adopting it. Architecture undefined Ecosystem Position undefined Getting Started Key Use Cases 1. Scenario : you're doing comparative research across open weight models from the 2023 2024 generation and need Yi as a reference point…"
+      "body": "Yi 01.AI open model family with bilingual and long-context variants from small to mid-large sizes llm inference local multimodal llms open-source-models Overview Yi is 01.AI's family of open weight, decoder only large language models released during the 2023 2024 open model wave, published under Apache 2.0 in 6B, 9B, and 34B dense parameter sizes with weights hosted on Hugging Face under the 01 ai org. The family targets bilingual English/Chinese use and shipped extended long context variants. As of the last review the 01 ai/Yi GitHub repository shows only sparse, community authored activity, so the Arsenal tracks Yi primarily as a 2023 2024 reference point rather than an actively evolving model. Why it's in the Arsenal Yi is worth keeping as…"
     },
     {
       "id": "yuan-2024-self-rewarding",

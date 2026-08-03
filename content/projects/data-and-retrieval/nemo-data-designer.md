@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 53
+trending_score: 27
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -41,8 +41,8 @@ tags:
   - structured-output
 maturity: beta
 cost_model: open-source
-github_stars: 2088
-last_commit: '2026-07-10'
+github_stars: 2141
+last_commit: '2026-07-31'
 docs_url: https://github.com/NVIDIA-NeMo/DataDesigner
 phase: data-and-retrieval
 domain:

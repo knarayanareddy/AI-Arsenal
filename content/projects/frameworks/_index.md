@@ -46,16 +46,16 @@ Before selecting a framework:
 
 ### Most Popular
 
-- [AutoGPT](./autogpt.md) — ⭐ 184931
-- [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 164197
-- [Dify](./dify.md) — ⭐ 145081
-- [LangChain](./langchain.md) — ⭐ 139206
-- [ComfyUI](./comfyui.md) — ⭐ 119901
-- [OpenHands](./openhands.md) — ⭐ 76854
-- [DeerFlow](./deer-flow.md) — ⭐ 76831
-- [MetaGPT](./metagpt.md) — ⭐ 68769
-- [Ultralytics YOLO](./ultralytics.md) — ⭐ 59255
-- [Ultralytics YOLO](./ultralytics-yolo.md) — ⭐ 59255
+- [AutoGPT](./autogpt.md) — ⭐ 185782
+- [Stable Diffusion WebUI](./stable-diffusion-webui.md) — ⭐ 164372
+- [Dify](./dify.md) — ⭐ 151186
+- [LangChain](./langchain.md) — ⭐ 143310
+- [ComfyUI](./comfyui.md) — ⭐ 123348
+- [OpenHands](./openhands.md) — ⭐ 82977
+- [DeerFlow](./deer-flow.md) — ⭐ 79095
+- [MetaGPT](./metagpt.md) — ⭐ 69645
+- [Context7](./context7.md) — ⭐ 60190
+- [AutoGen](./autogen.md) — ⭐ 60188
 
 ### Browse All
 

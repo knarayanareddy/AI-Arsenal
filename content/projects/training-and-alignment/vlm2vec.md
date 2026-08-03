@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 5
+trending_score: 23
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,8 +42,8 @@ tags:
   - training
 maturity: beta
 cost_model: open-source
-github_stars: 665
-last_commit: '2026-06-24'
+github_stars: 670
+last_commit: '2026-07-24'
 docs_url: https://github.com/TIGER-AI-Lab/VLM2Vec
 phase: training-and-alignment
 domain:

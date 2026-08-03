@@ -18,8 +18,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 67
+trending_score: 28
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -42,7 +42,7 @@ tags:
   - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 59063
+github_stars: 59130
 last_commit: '2026-07-05'
 docs_url: https://github.com/pathwaycom/llm-app
 phase: data-and-retrieval

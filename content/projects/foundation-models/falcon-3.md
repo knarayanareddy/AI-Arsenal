@@ -6,31 +6,43 @@ artifact_type: model
 category: llms
 subcategory: open-source-models
 description: TII open model family with compact 1B to 10B text-only variants for local deployment
-github_url: "https://huggingface.co/tiiuae/Falcon3-7B-Base"
+github_url: https://huggingface.co/tiiuae/Falcon3-7B-Base
 license: TII Falcon-LLM License 2.0
 primary_language: Other
 org_or_maintainer: null
-tags: [llm, inference, local, efficiency]
+tags:
+  - llm
+  - inference
+  - local
+  - efficiency
 maturity: production
 cost_model: open-source
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://falcon-lm.github.io/tutorials/falcon-3/"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://falcon-lm.github.io/tutorials/falcon-3/
 demo_url: null
 paper_url: null
 paper_id: null
-hf_url: "https://huggingface.co/tiiuae"
-model_sizes: [1B, 3B, 7B, 10B]
+hf_url: https://huggingface.co/tiiuae
+model_sizes:
+  - 1B
+  - 3B
+  - 7B
+  - 10B
 benchmark_scores: []
 supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: foundation-model
-domain: [language]
-relation_to_stack: [deploy-as-is, build-on-top]
-health_signals: [org-backed]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+  - build-on-top
+health_signals:
+  - org-backed
 ecosystem_role:
   - UAE-backed (TII) open-weight small/mid-size model family
 best_for:
@@ -45,9 +57,9 @@ alternatives: []
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
-enrichment_notes: "TII has publicly moved its flagship line to Falcon-H1 (hybrid SSM+attention, 0.5B-34B, Apache-2.0) per falcon-lm.github.io and Hugging Face model cards; Falcon-3 remains available but is not TII's current focus. License note: Falcon-3 ships under a TII-custom Falcon-LLM license (Apache-2.0-based with acceptable-use terms), distinct from Falcon-H1 which is plain Apache-2.0."
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+enrichment_notes: 'TII has publicly moved its flagship line to Falcon-H1 (hybrid SSM+attention, 0.5B-34B, Apache-2.0) per falcon-lm.github.io and Hugging Face model cards; Falcon-3 remains available but is not TII''s current focus. License note: Falcon-3 ships under a TII-custom Falcon-LLM license (Apache-2.0-based with acceptable-use terms), distinct from Falcon-H1 which is plain Apache-2.0.'
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
