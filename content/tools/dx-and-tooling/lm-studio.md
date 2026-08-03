@@ -81,7 +81,7 @@ lms get qwen3-8b && lms server start
 - You need open-source software — the app is proprietary (its CLI/SDKs are MIT, the GUI is not)
 - You're serving multiple users or production traffic; use vLLM/llama.cpp server deployments instead
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `lm-studio`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

@@ -80,7 +80,7 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data ghcr.io/open-webui/op
 - You need a strictly OSI-approved license at scale — the branding clause added in 2025 matters to some legal teams
 - You only need a personal desktop runner; LM Studio or Jan are lighter for single-user use
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `open-webui`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

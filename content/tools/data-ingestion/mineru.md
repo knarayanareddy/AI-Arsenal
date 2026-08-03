@@ -81,7 +81,7 @@ mineru -p paper.pdf -o output/
 - AGPL is a problem for your product's licensing posture
 - Simple digital-native PDFs — lighter converters (MarkItDown, pypdf) are much cheaper to run
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `mineru`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

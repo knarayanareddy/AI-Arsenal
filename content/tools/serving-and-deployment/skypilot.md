@@ -81,7 +81,7 @@ sky check && sky launch -c dev --gpus A100:1 -- nvidia-smi
 - You're single-cloud with mature in-house infra automation — the abstraction adds little there
 - Fully serverless developer experience is the goal; Modal-style platforms hide more infrastructure
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `skypilot`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

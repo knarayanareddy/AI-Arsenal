@@ -81,7 +81,7 @@ pip install faiss-cpu
 - You need CRUD, filtering, replication, and multi-tenancy — FAISS is a library, not a database; use Qdrant/Milvus (many are built on or benchmarked against FAISS)
 - Metadata-heavy filtered search; bolting filtering onto FAISS yourself is a solved problem elsewhere
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `faiss`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

@@ -81,7 +81,7 @@ pip install temporalio
 - Simple short-lived LLM calls — durable execution adds infrastructure and a real learning curve you may not need
 - Your team can't invest in the deterministic-workflow programming model (no naive nondeterminism inside workflows)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `temporal`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

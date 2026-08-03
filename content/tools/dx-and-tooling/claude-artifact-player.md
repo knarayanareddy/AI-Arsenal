@@ -80,7 +80,7 @@ Renders and manages a collection of generated artifacts (interactive components/
 - You need a general-purpose app hosting platform rather than an artifact-specific player
 - You need an open-source or self-hostable option
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `claude-artifact-player`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

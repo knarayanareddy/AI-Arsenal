@@ -81,7 +81,7 @@ deepspeed train.py --deepspeed ds_config.json
 - Single-GPU LoRA/QLoRA jobs — PEFT + Unsloth are simpler and faster at that scale
 - You're starting fresh in 2026 and can choose PyTorch-native FSDP2, which covers much of ZeRO's ground with less config
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `deepspeed`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

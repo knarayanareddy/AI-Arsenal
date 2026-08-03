@@ -80,7 +80,7 @@ Models are pitted against shared coding tasks or against each other, with result
 - You need a rigorous, reproducible benchmark suite for a research paper (use established academic coding benchmarks instead)
 - You need an open-source or self-hostable evaluation harness
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `code-arena`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

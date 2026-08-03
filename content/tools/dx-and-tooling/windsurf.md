@@ -81,7 +81,7 @@ Cascade combines a repo index, a trace of your recent editor actions, and tool a
 - You need open-source or self-hostable tooling — Windsurf is proprietary and cloud-bound
 - Your org is sensitive to vendor risk: the company changed hands in 2025 and product direction has shifted
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `windsurf`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 
