@@ -63,7 +63,7 @@ Two-stage OCR: a DB-based text detector localizes regions, then a recognition mo
 
 ## Ecosystem Position
 
-Upstream: PaddlePaddle (Baidu's DL framework). Competing: Tesseract (older, weaker on scene/complex text), EasyOCR, cloud OCR APIs; Marker/MinerU for the PDF-to-markdown slice specifically. Complementary: PaddleOCR text/structure output is a common ingestion front-end for RAG over scanned corpora, and PP-ChatOCR wires it directly to LLMs for extraction tasks.
+Upstream: PaddlePaddle (Baidu's deep-learning framework these models are built on). It competes with Tesseract (older, weaker on scene/complex text), EasyOCR, and cloud OCR APIs; Marker/MinerU for the PDF-to-markdown slice specifically. Complementary: PaddleOCR text/structure output is a common ingestion front-end for RAG over scanned corpora, and PP-ChatOCR wires it directly to LLMs for extraction tasks.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ paddleocr pp_structurev3 -i report.pdf
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+PaddleOCR is Baidu's industrial OCR and document-AI toolkit spanning 80+ languages from server to edge. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 

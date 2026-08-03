@@ -90,7 +90,7 @@ Upstream: LLM providers for planning. Downstream: any web app that embeds it. Co
 
 ## Relation to the Arsenal
 
-This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
+PageAgent is Alibaba's in-page GUI agent — a JavaScript library that drives your own web app's UI from natural language via the live DOM. This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
 
 ## Resources
 

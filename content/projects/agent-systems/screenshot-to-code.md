@@ -64,7 +64,7 @@ FastAPI backend orchestrating multimodal LLM calls: the target image plus a fram
 
 ## Ecosystem Position
 
-Upstream: hosted multimodal LLM APIs (quality tracks frontier vision capability directly). Adjacent: v0 and Bolt-class commercial generators (integrated, closed), IDE agents that accept images (Cursor, Cline) for in-repo workflows. Its niche is the focused, open, self-hostable version of the capability.
+Upstream: hosted multimodal LLM APIs (quality tracks frontier vision capability directly). It competes with v0 and Bolt-class commercial generators (integrated, closed) and IDE agents that accept images (Cursor, Cline) for in-repo workflows; compared to those, its niche is the focused, open, self-hostable version of the capability.
 
 ## Getting Started
 

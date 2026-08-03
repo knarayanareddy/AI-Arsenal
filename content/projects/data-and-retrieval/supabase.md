@@ -58,7 +58,7 @@ Listed as an alternative backend/platform for AI coding agents and AI-native app
 
 ## Architecture
 
-A hosted and self-hostable control plane around a Postgres database, exposing Auth, Storage, Realtime, and Edge Functions, plus a vector/embeddings path via pgvector.
+A hosted and self-hostable control plane around a Postgres database, exposing Auth, Storage, Realtime subscriptions, and Edge Functions behind auto-generated REST and GraphQL interfaces. Vector and embeddings storage is provided by the pgvector extension, so relational rows and vector similarity search live in the same Postgres instance rather than a separate system.
 
 ## Ecosystem Position
 
@@ -84,8 +84,9 @@ npx supabase start
 
 ## Limitations
 
-- Postgres-centric; not a fit if a non-Postgres store is required.
-- Shared tenancy may not meet every single-tenant isolation requirement.
+- Postgres-centric: if your workload needs a non-Postgres datastore (wide-column, native graph, etc.), Supabase is the wrong shape.
+- Shared-tenancy managed instances may not meet strict single-tenant isolation or data-residency requirements without self-hosting.
+- As a stub entry, feature depth and operational limits here have not yet been fully evaluated against the Arsenal's review rubric.
 
 ## Relation to the Arsenal
 

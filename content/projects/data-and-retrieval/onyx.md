@@ -64,7 +64,7 @@ Python backend with connector workers performing scheduled/incremental syncs per
 
 ## Ecosystem Position
 
-Upstream: workplace SaaS APIs (the connector surface), Vespa for retrieval, any LLM provider for generation. Competing: Glean (SaaS incumbent), AnythingLLM/Open WebUI (document-chat, not connector-first). Its Vespa usage makes it a notable production reference for the `vespa` tool entry.
+Upstream: workplace SaaS APIs (the connector surface), Vespa for retrieval, any LLM provider for generation. It competes with Glean (the SaaS incumbent) and with AnythingLLM/Open WebUI (document-chat, not connector-first). Its Vespa usage makes it a notable production reference for the `vespa` tool entry.
 
 ## Getting Started
 
