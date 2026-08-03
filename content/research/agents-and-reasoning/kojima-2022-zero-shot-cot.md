@@ -85,4 +85,4 @@ Companion to `wei-2022-chain-of-thought` (agents-and-reasoning/) — few-shot an
 - [Code](https://github.com/kojima-takeshi188/zero_shot_cot)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `kojima-2022-zero-shot-cot` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

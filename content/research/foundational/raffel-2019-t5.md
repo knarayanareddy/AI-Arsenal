@@ -85,4 +85,4 @@ Sits between `devlin-2018-bert` (foundational/) and `brown-2020-gpt3` (foundatio
 - [JMLR version](https://jmlr.org/papers/v21/20-074.html)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `raffel-2019-t5` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

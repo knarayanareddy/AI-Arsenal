@@ -83,4 +83,4 @@ Directly recalibrates the scaling program initiated by `brown-2020-gpt3` (founda
 - [arXiv](https://arxiv.org/abs/2203.15556)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `hoffmann-2022-chinchilla` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

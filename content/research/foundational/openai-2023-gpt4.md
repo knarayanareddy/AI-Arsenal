@@ -83,4 +83,4 @@ Successor to `brown-2020-gpt3` and `ouyang-2022-instructgpt` (the base-plus-RLHF
 - [arXiv](https://arxiv.org/abs/2303.08774)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `openai-2023-gpt4` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

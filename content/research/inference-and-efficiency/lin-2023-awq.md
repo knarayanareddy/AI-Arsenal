@@ -93,4 +93,4 @@ Direct successor-competitor to `frantar-2022-gptq` (same phase) — the two defi
 - [Venue](https://proceedings.mlsys.org/paper_files/paper/2024/hash/42a452cbafa9dd64e9ba4aa95cc1ef21-Abstract-Conference.html)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `lin-2023-awq` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

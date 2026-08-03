@@ -65,7 +65,7 @@ Two structural moves the field adopted: (1) the factuality/faithfulness bifurcat
 
 ## Methodology
 
-Systematic survey: definitions are fixed first with worked examples per hallucination sub-type; causes are analyzed per lifecycle stage with supporting empirical literature; detection methods are classified by target (fact-checking against external knowledge vs consistency/uncertainty-based internal signals); mitigations are reviewed against the cause taxonomy; open challenges (hallucination in long-form generation, self-verification limits, knowledge boundaries) close the analysis. A maintained companion reading list tracks the area.
+Systematic survey: definitions are fixed first with worked examples per hallucination sub-type; causes are analyzed per lifecycle stage with supporting empirical literature; detection methods and benchmark datasets are classified by target (fact-checking against external knowledge vs consistency/uncertainty-based internal signals); mitigations are reviewed against the cause taxonomy; open challenges (hallucination in long-form generation, self-verification limits, knowledge boundaries) close the analysis. A maintained companion reading list tracks the area.
 
 ## Practical Applicability
 
@@ -91,4 +91,4 @@ Supplies the risk taxonomy behind this catalog's evaluation and guardrails cover
 - [Venue](https://dl.acm.org/doi/10.1145/3703155)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `huang-2023-hallucination-survey` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

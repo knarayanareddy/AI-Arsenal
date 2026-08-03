@@ -50,7 +50,7 @@ LLM RL post-training runs two engines: a fast inference engine (vLLM-style) for 
 
 ## Core Contribution
 
-The conceptual contribution is the diagnosis: existing mismatch corrections (importance weighting and similar) stabilize updates to the *training* policy, silently assuming that improving it improves the *inference* policy — which the probability inconsistency between engines breaks. The paper makes the deployed inference policy the explicit optimization target: MIPI is a policy-optimization objective under which each update is constructed to monotonically improve the inference-engine policy, and MIPU is the two-step RL framework that implements it within the standard two-engine setup.
+The conceptual contribution is the diagnosis: existing mismatch corrections (importance weighting and similar) stabilize updates to the *training* policy model, silently assuming that improving it improves the *inference* policy — which the probability inconsistency between engines breaks. The paper makes the deployed inference policy the explicit optimization target: MIPI is a policy-optimization objective under which each update is constructed to monotonically improve the inference-engine policy, and MIPU is the two-step RL framework that implements it within the standard two-engine setup.
 
 ## Key Results
 

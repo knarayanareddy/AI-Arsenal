@@ -84,4 +84,4 @@ The benchmark counterpart to `yang-2024-swe-agent` (agents-and-reasoning/) and t
 - [Code + harness (SWE-bench/SWE-bench)](https://github.com/SWE-bench/SWE-bench)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `jimenez-2023-swe-bench` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

@@ -46,7 +46,7 @@ A single-author paper, years ahead of its need: Shazeer observed that autoregres
 
 ## Core Contribution
 
-A roofline argument plus an architecture change: incremental decoding's arithmetic intensity is dominated by the memory-to-compute ratio of loading K/V tensors of size n·h·d per step; sharing K/V across heads reduces this by h, removing the dominant term. Quality cost is small because query diversity — not key/value diversity — carries most of multi-head attention's expressive power.
+A roofline argument plus an architecture change: the model's incremental-decoding arithmetic intensity is dominated by the memory-to-compute ratio of loading K/V tensors of size n·h·d per step; sharing K/V across heads reduces this by h, removing the dominant term. Quality cost is small because query diversity — not key/value diversity — carries most of multi-head attention's expressive power.
 
 ## Key Results
 
@@ -80,4 +80,4 @@ Direct ancestor of `ainslie-2023-gqa` and complementary to `kwon-2023-pagedatten
 - [arXiv](https://arxiv.org/abs/1911.02150)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `shazeer-2019-mqa` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

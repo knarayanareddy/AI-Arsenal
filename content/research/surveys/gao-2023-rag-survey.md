@@ -89,4 +89,4 @@ The map for the territory this catalog covers in depth: `lewis-2020-rag` (founda
 - [Code](https://github.com/Tongji-KGLLM/RAG-Survey)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `gao-2023-rag-survey` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

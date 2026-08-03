@@ -86,4 +86,4 @@ The memory pillar of the agent literature: complements the acting/reasoning line
 - [UIST 2023 version](https://dl.acm.org/doi/10.1145/3586183.3606763)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `park-2023-generative-agents` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

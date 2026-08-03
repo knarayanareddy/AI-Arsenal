@@ -60,7 +60,7 @@ The odds-ratio preference term. Standard SFT maximizes the likelihood of chosen 
 
 ## Methodology
 
-Training uses instruction data with (chosen, rejected) response pairs. The loss is the sum of the usual SFT cross-entropy on the chosen response and λ times a log-sigmoid of the log odds ratio between chosen and rejected sequence likelihoods. A single hyperparameter λ balances instruction-following against preference discrimination. Evaluation is on AlpacaEval 2, MT-Bench, and related instruction-following benchmarks.
+Training uses an instruction dataset with (chosen, rejected) response pairs. The loss is the sum of the usual SFT cross-entropy on the chosen response and λ times a log-sigmoid of the log odds ratio between chosen and rejected sequence likelihoods. A single hyperparameter λ balances instruction-following against preference discrimination. Evaluation is on AlpacaEval 2, MT-Bench, and related instruction-following benchmarks.
 
 ## Practical Applicability
 
