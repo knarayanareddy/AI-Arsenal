@@ -64,7 +64,7 @@ Two practical contributions: (1) the grouping interpolation itself, giving a tun
 
 ## Methodology
 
-Query heads are partitioned into G groups, each sharing one KV projection; converted checkpoints initialize each group's KV head as the mean of its constituent MHA heads, followed by brief continued pretraining. Experiments on T5 Large/XXL measure quality (CNN/DM, arXiv, PubMed summarization, WMT, TriviaQA) against inference time per sample, sweeping the number of groups to map the quality/speed frontier.
+Query heads are partitioned into G groups, each sharing one KV projection; converted checkpoints initialize each group's KV head as the mean of its constituent MHA heads, followed by brief continued pretraining of the model. Experiments on T5 Large/XXL measure quality (CNN/DM, arXiv, PubMed summarization, WMT, TriviaQA) against inference time per sample, sweeping the number of groups to map the quality/speed frontier.
 
 ## Practical Applicability
 
@@ -89,4 +89,4 @@ Refines the attention design of `vaswani-2017-attention` (foundational/). Its KV
 - [Venue](https://aclanthology.org/2023.emnlp-main.298/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `ainslie-2023-gqa` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

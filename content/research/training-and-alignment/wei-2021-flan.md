@@ -86,4 +86,4 @@ The first stage of the pipeline completed by `ouyang-2022-instructgpt` (training
 - [Code (google-research/flan)](https://github.com/google-research/flan)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `wei-2021-flan` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

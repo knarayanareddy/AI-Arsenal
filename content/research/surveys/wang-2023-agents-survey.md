@@ -93,4 +93,4 @@ Provides the organizing frame for this catalog's agent coverage: the systems in 
 - [Venue](https://link.springer.com/article/10.1007/s11704-024-40231-1)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `wang-2023-agents-survey` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

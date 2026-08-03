@@ -88,4 +88,4 @@ Builds directly on `vaswani-2017-attention` (foundational/), replacing its sinus
 - [Code](https://github.com/ZhuiyiTechnology/roformer)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `su-2021-rope` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

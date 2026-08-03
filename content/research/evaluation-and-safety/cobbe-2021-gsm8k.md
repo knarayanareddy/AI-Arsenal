@@ -85,4 +85,4 @@ The benchmark half anchors `wei-2022-chain-of-thought` (agents-and-reasoning/) a
 - [Dataset + code (openai/grade-school-math)](https://github.com/openai/grade-school-math)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `cobbe-2021-gsm8k` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

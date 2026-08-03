@@ -49,7 +49,7 @@ SmoothQuant is a post-training quantization method that makes 8-bit activation *
 
 ## Core Contribution
 
-Weight-only quantization (like GPTQ/AWQ) is comparatively easy; quantizing *activations* to 8-bit fails because certain channels have large-magnitude outliers that wreck the quantization range. SmoothQuant's contribution is an equivalence transformation: scale down the outlier-heavy activation channels by a per-channel factor and scale the corresponding weight channels up by its inverse, leaving the math unchanged but redistributing the dynamic range. Since weights quantize cleanly, both W and A can now use simple 8-bit integer quantization — enabling INT8 matmul kernels.
+Weight-only quantization (like GPTQ/AWQ) is comparatively easy; quantizing a model's *activations* to 8-bit fails because certain channels have large-magnitude outliers that wreck the quantization range. SmoothQuant's contribution is an equivalence transformation: scale down the outlier-heavy activation channels by a per-channel factor and scale the corresponding weight channels up by its inverse, leaving the math unchanged but redistributing the dynamic range. Since weights quantize cleanly, both W and A can now use simple 8-bit integer quantization — enabling INT8 matmul kernels.
 
 ## Key Results
 
@@ -58,7 +58,7 @@ Weight-only quantization (like GPTQ/AWQ) is comparatively easy; quantizing *acti
 
 ## Methodology
 
-Offline, compute per-channel activation scales from a small calibration set, fold the inverse scale into the preceding weights (a mathematically equivalent rewrite), then quantize weights and activations to INT8 and run with integer GEMM kernels. No retraining is required.
+Offline, compute per-channel activation scales from a small calibration set, fold the inverse scale into the preceding weights (a mathematically equivalent rewrite), then quantize the model's weights and activations to INT8 and run with integer GEMM kernels. No retraining is required.
 
 ## Practical Applicability
 
