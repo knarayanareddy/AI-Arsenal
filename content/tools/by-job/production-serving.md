@@ -189,6 +189,7 @@ This table is exhaustive for tools tagged with job = production-serving.
 | [NVIDIA Triton Inference Server](../serving-and-deployment/triton-inference-server.md) | serving and deployment | open-source | Yes | Yes | Yes | cpp, python | recommended |
 | [Vercel](../serving-and-deployment/vercel.md) | serving and deployment | freemium | Yes | No | No | typescript | best-in-class |
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | usage-based | Yes | No | No | python, polyglot | recommended |
+| [XiuRouter](../serving-and-deployment/xiurouter.md) | serving and deployment | usage-based | No | No | No | polyglot | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases
