@@ -88,3 +88,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | production-serving, deployment, fine-tuning | usage-based | No | No | No | python, polyglot | solid-choice |
 | [Together AI](../model-layer/together-ai.md) | model layer | production-serving, fine-tuning | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
+| [XiuRouter](../serving-and-deployment/xiurouter.md) | serving and deployment | production-serving, prototyping | usage-based | No | No | No | polyglot | watching |

@@ -187,6 +187,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | solid-choice |
 | [Windsurf](../dx-and-tooling/windsurf.md) | dx and tooling | freemium | Yes | No | No | typescript | solid-choice |
+| [XiuRouter](../serving-and-deployment/xiurouter.md) | serving and deployment | usage-based | No | No | No | polyglot | watching |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases
