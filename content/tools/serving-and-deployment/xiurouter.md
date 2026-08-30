@@ -62,12 +62,13 @@ request formats.
 
 ## Architecture / How It Works
 
-Clients use the base URL that matches their protocol and authenticate with a
-XiuRouter API key. The service routes the request to an available model and
-service group, then records model, token, status, latency, and cost details for
-later review. Model availability, pricing, and protocol support can change, so
-the target model and route should be verified with a small request before a
-production rollout.
+Clients use the base URL that matches their protocol, authenticate with a
+XiuRouter API key, and explicitly select the target model and service group.
+The service forwards the request through that selected route and records model,
+token, status, latency, and cost details for later review. It does not
+automatically switch providers when the selected route fails. Model
+availability, pricing, and protocol support can change, so the target model and
+route should be verified with a small request before a production rollout.
 
 ## Getting Started
 
@@ -99,6 +100,8 @@ request paths; follow the current documentation for each client.
 ## Limitations / When NOT to Use
 
 - It is a hosted, closed-source service and cannot be self-hosted
+- It does not provide automatic provider fallback; clients that require
+  failover must implement and validate that behavior themselves
 - A listed model or route does not guarantee that every model and service group
   supports every protocol
 - Prices and availability are dynamic and should be read from the live catalog
