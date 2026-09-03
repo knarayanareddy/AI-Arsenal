@@ -22,6 +22,7 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `generate-search-index.js` — creates FlexSearch-compatible search documents and facet counts.
 - `generate-toc.js` — regenerates registries and section `_index.md` files.
 - `generate-context.js` — regenerates dense LLM context with top projects, tools, papers, and heuristics.
+- `score-entry-candidates.js` — applies the mechanical gates of `docs/policies/new-project-entry-rubric.md` to a candidate manifest: `node scripts/score-entry-candidates.js --manifest candidates.json` (`--json` for machine output, exit 1 if any candidate fails). Dedupe is catalogue-wide, matching `check-duplicates.js`; scoping it to one vertical accepts ids that CI then rejects.
 - `generate-stats.js` — regenerates repository statistics.
 - `generate-readme-stats.js` — rewrites the marked stats table in `README.md` from `data/stats.json`, so the README count cannot drift from the data layer. Only the block between the `AUTO-GENERATED STATS TABLE` markers is touched.
 - `generate-changelog.js` — builds `CHANGELOG.md` from Git history when available.

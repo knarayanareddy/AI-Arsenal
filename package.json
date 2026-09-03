@@ -48,6 +48,7 @@
     "report:debt": "node scripts/report-content-debt.js",
     "check:tool-facets": "node scripts/check-tool-facet-guides.js --enforce",
     "check:tools-by-job": "node scripts/check-tools-by-job-tables.js --enforce",
+    "score:candidates": "node scripts/score-entry-candidates.js",
     "migration:progress": "node scripts/check-migration-progress.js",
     "migration:enforce": "node scripts/check-migration-progress.js --enforce",
     "migration:projects:progress": "node scripts/check-projects-migration-progress.js",
