@@ -95,7 +95,7 @@ Upstream: integrates with Infinity, InfiniFlow's own AI-native database, as an a
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+RAGFlow is an open-source RAG engine built on deep document understanding for citation-grounded Q&A. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 

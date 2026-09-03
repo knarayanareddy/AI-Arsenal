@@ -63,7 +63,7 @@ Ray orchestrates four model roles (actor, critic, reward, reference) as independ
 
 ## Ecosystem Position
 
-Upstream: vLLM (rollout serving), DeepSpeed (ZeRO sharding), Ray (scheduling). Competing: TRL for single-node/simpler alignment jobs, verl for the ByteDance-flavored RL stack. Complementary: checkpoints export to standard Hugging Face format, so serving and eval stacks downstream are unaffected.
+Upstream: vLLM (rollout serving), DeepSpeed (ZeRO sharding), Ray (scheduling). Competing: TRL for single-node/simpler alignment jobs, verl for the ByteDance-flavored RL stack. Complementary: trained model checkpoints export to standard Hugging Face format, so serving and eval stacks downstream are unaffected.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ python -m openrlhf.cli.train_ppo_ray --pretrain <model> --reward_pretrain <rm> -
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+OpenRLHF is a Ray-based distributed RLHF framework (PPO/GRPO/DPO) that scales rollouts with vLLM. This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

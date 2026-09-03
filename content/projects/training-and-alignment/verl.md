@@ -63,7 +63,7 @@ The hybrid-controller model splits RL into a single-controller dataflow (the alg
 
 ## Ecosystem Position
 
-Upstream: vLLM and SGLang for rollouts; FSDP and Megatron-LM for training parallelism. Competing: OpenRLHF (Ray-centric design) and TRL (single-node simplicity). Downstream: many published open reasoning models and RL recipes (DAPO, multi-turn agent RL) ship as verl configs, making it a reference implementation as much as a tool.
+Upstream: vLLM and SGLang for rollouts; FSDP and Megatron-LM for training parallelism. It competes with OpenRLHF (Ray-centric design) and TRL (single-node simplicity). Downstream: many published open reasoning models and RL recipes (DAPO, multi-turn agent RL) ship as verl configs, making it a reference implementation as much as a tool.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ bash examples/ppo_trainer/run_qwen2-7b_seq_balance.sh
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+verl is ByteDance's HybridFlow RL training library, the substrate behind much of the open GRPO reasoning wave. This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

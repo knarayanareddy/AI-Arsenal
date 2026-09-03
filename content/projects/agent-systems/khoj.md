@@ -63,7 +63,7 @@ A Django-based server indexes content incrementally into embeddings (local sente
 
 ## Ecosystem Position
 
-Upstream: sentence-transformers for local embeddings, any LLM backend. Competing: AnythingLLM and Open WebUI (document/chat appliances), Rewind/commercial personal-AI products. Complementary: editor integrations make it the strongest open option for the PKM (personal knowledge management) community; YC backing plus an active open-source cadence signal sustainability.
+Upstream: sentence-transformers for local embedding models, any LLM backend. It competes with AnythingLLM and Open WebUI (document/chat appliances) and Rewind/commercial personal-AI products. Complementary: editor integrations make it the strongest open option for the PKM (personal knowledge management) community; YC backing plus an active open-source cadence signal sustainability.
 
 ## Getting Started
 
@@ -90,7 +90,7 @@ khoj --anonymous-mode
 
 ## Relation to the Arsenal
 
-This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
+Khoj is a self-hostable AI "second brain" that chats over your notes and documents with custom agents and scheduled automations. This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
 
 ## Resources
 

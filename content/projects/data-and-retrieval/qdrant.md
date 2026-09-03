@@ -93,11 +93,11 @@ Upstream: none of particular note. Downstream: none of particular note as a depe
 - You need the absolute simplest embedded/zero-infrastructure setup for prototyping — Chroma or LanceDB have a lower barrier to entry for that specific use case
 - You're already committed to a different database for other reasons and want to minimize the number of systems you operate — pgvector might let you avoid adding a new dedicated system entirely
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. Qdrant's performance and filtering claims here are drawn from the vendor's own materials; a named-customer production case study was not found. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+Qdrant is a Rust vector database for high-performance similarity search with rich payload filtering. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 

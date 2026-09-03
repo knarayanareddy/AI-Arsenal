@@ -65,7 +65,7 @@ It represents the "graph-RAG made lightweight" point on the retrieval spectrum: 
 
 ## Architecture
 
-Ingestion runs LLM extraction over chunks to produce entities and relationships, deduplicates them into a graph, and stores both graph structure and embeddings. At query time a dual-level retriever combines low-level (entity-centric) and high-level (relationship/theme-centric) matches, assembling context that spans multiple documents rather than a single ranked passage list.
+Ingestion runs LLM extraction over chunks to produce entities and relationships, deduplicates them into a graph, and stores both graph structure and vector embeddings. At query time a dual-level retriever combines low-level (entity-centric) and high-level (relationship/theme-centric) matches, assembling context that spans multiple documents rather than a single ranked passage list.
 
 ## Ecosystem Position
 
@@ -92,9 +92,9 @@ pip install lightrag-hku
 
 ## Limitations
 
-- LLM extraction adds indexing cost and can introduce graph noise
-- Research-origin; operational maturity below managed services
-- Overkill for simple retrieval workloads
+- LLM extraction adds indexing cost and latency, and can introduce graph noise (spurious entities/relationships) that degrades retrieval quality
+- Research-origin: operational maturity and support are below hardened, managed vector-database services
+- Overkill for simple fact-lookup or single-passage retrieval, where plain vector search is cheaper and lower-latency
 
 ## Relation to the Arsenal
 

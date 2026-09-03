@@ -64,7 +64,7 @@ The system layers parallelism dimensions: data parallelism replicates, tensor pa
 
 ## Ecosystem Position
 
-Upstream: PyTorch and CUDA. Downstream: trained/fine-tuned checkpoints. Competing: `deepspeed` (ZeRO-centric) and Megatron-LM (tensor/pipeline parallelism) cover overlapping ground; `accelerate` wraps several backends more thinly. Colossal-AI's pitch is breadth-under-one-API.
+Upstream: PyTorch and CUDA. Downstream: trained/fine-tuned checkpoints. It competes with `deepspeed` (ZeRO-centric) and Megatron-LM (tensor/pipeline parallelism), which cover overlapping ground; `accelerate` wraps several backends more thinly. Colossal-AI's pitch is breadth-under-one-API.
 
 ## Getting Started
 
@@ -85,8 +85,9 @@ Upstream: PyTorch and CUDA. Downstream: trained/fine-tuned checkpoints. Competin
 
 ## Limitations
 
-- Overkill and added complexity for standard single/small-multi-GPU LoRA fine-tuning
-- Heavy overlap with DeepSpeed/Megatron; limited reason to switch an already-working stack
+- Overkill and added complexity for standard single-GPU or small-multi-GPU LoRA fine-tuning — a recipe framework or Accelerate is far simpler there
+- Heavy overlap with DeepSpeed and Megatron-LM; if your stack already works on one of those, switching to Colossal-AI buys little
+- The unified-API breadth is a learning curve of its own — composing tensor/pipeline/ZeRO/offload correctly still requires understanding each dimension
 
 ## Relation to the Arsenal
 

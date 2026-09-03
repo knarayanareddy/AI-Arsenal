@@ -57,7 +57,7 @@ status: active
 
 ## Overview
 
-An open-source document conversion library from IBM Research, specializing in accurately parsing complex document formats (PDF, DOCX, PPTX) into structured representations that preserve tables, figures, and layout information for downstream RAG use.
+An open-source document conversion library from IBM Research that uses layout and table-recognition models to parse complex document formats (PDF, DOCX, PPTX) into structured representations preserving tables, figures, and layout information for downstream RAG use.
 
 ## Why it's in the Arsenal
 
@@ -95,7 +95,7 @@ Upstream: none of particular note. Downstream: none of particular note. Competin
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+Docling is IBM's open-source toolkit for parsing complex documents (PDF, DOCX) into structured, LLM-ready output. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 

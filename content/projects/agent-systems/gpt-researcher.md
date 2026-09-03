@@ -93,7 +93,7 @@ report = await researcher.write_report()
 
 ## Relation to the Arsenal
 
-This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
+GPT-Researcher is an autonomous research agent that plans searches, gathers sources, and writes cited reports. This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
 
 ## Resources
 

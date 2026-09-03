@@ -64,7 +64,7 @@ Single Rust binary/container exposing completion and chat APIs; embedded llama.c
 
 ## Ecosystem Position
 
-Upstream: open code models (StarCoder2, Qwen2.5-Coder, CodeLlama families). Competing: Continue (extension, BYO serving), GitHub Copilot (SaaS incumbent). Its integrated-appliance approach trades the flexibility of composed stacks for operational simplicity — the classic build-vs-appliance decision.
+Upstream: open code models (StarCoder2, Qwen2.5-Coder, CodeLlama families). It competes with Continue (extension, BYO serving) and GitHub Copilot (the SaaS incumbent). Its integrated-appliance approach trades the flexibility of composed stacks for operational simplicity — the classic build-vs-appliance decision.
 
 ## Getting Started
 
