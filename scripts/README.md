@@ -23,6 +23,7 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `generate-toc.js` — regenerates registries and section `_index.md` files.
 - `generate-context.js` — regenerates dense LLM context with top projects, tools, papers, and heuristics.
 - `generate-stats.js` — regenerates repository statistics.
+- `generate-readme-stats.js` — rewrites the marked stats table in `README.md` from `data/stats.json`, so the README count cannot drift from the data layer. Only the block between the `AUTO-GENERATED STATS TABLE` markers is touched.
 - `generate-changelog.js` — builds `CHANGELOG.md` from Git history when available.
 
 ## Freshness and Maintenance
@@ -30,6 +31,7 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `update-star-counts.js` — fetches GitHub metrics, updates project frontmatter, and stores `data/github-cache.json`.
 - `calculate-trending.js` — calculates 0–100 trending scores from star velocity, buzz, recency, and total stars.
 - `check-stale.js` — writes `data/stale-report.json` and optionally fails for stale entries.
+- `create-stale-issues.js` — files GitHub Issues from `data/stale-report.json` (one per stale entry, deduplicated against open issues, capped by `STALE_ENTRY_ISSUE_LIMIT`, default 10). No-ops without `GITHUB_TOKEN`/`GITHUB_REPOSITORY`. This is the implementation behind the stale-content SLA in `GOVERNANCE.md`; run it with `pnpm run file:stale-issues`.
 - `create-link-issues.js` — files GitHub Issues from `data/link-check-report.json` when GitHub token/repo env vars are present.
 - `draft-trending.js` — generates a schema-compliant weekly trending draft.
 - `create-monthly-digest.js` — creates a schema-compliant monthly digest draft.

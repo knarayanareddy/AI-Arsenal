@@ -20,12 +20,22 @@
 - Report issues and stale content.
 - Review others' PRs when helpful.
 
-### Bots
+### Automation
 
-- `schema-validator` blocks invalid PRs.
-- `link-checker` flags broken links.
-- `star-tracker` updates metrics.
-- `stale-bot` flags entries due for review.
+Each item below names the script that actually implements it, so a reader can
+verify the claim instead of trusting a bot name.
+
+- Schema validation blocks invalid PRs — `scripts/validate-schema.js` via `on-pr.yml`.
+- Link checking flags broken URLs and files issues — `scripts/check-links.js` and
+  `scripts/create-link-issues.js` via `weekly.yml`.
+- Star metrics are refreshed — `scripts/update-star-counts.js` via `weekly.yml`.
+- Stale entries are flagged and issues are filed — `scripts/check-stale.js`
+  (writes `data/stale-report.json`) and `scripts/create-stale-issues.js`
+  (`pnpm run file:stale-issues`).
+
+Note: the weekly automation above depends on the repository setting
+"Allow GitHub Actions to create and approve pull requests" being enabled, since
+both the maintenance PR and issue creation are performed by `GITHUB_TOKEN`.
 
 ## Decision Process
 
