@@ -166,3 +166,52 @@ names the five colliding ids explicitly, so the mistake cannot recur silently.
 The lesson is worth keeping in this file: a rubric is only as good as the scope
 of the data it checks. Eighteen of the 32 candidates were rejected on
 uniqueness alone, which is the gate easiest to implement wrongly.
+
+---
+
+## Second pass (2026-09-03): training and evaluation candidates
+
+Aimed at `training-and-alignment` and `benchmarks-and-evals`, on the assumption
+that they were under-populated at 22 and 18 entries. **The assumption was wrong
+and is worth recording.** Those phases are thin only within `content/projects/`;
+the same subject matter is catalogued across verticals by design:
+
+| Subject | Where it actually lives |
+|---|---:|
+| Training / model layer | `tools/model-layer` 33 + `projects/training-and-alignment` 22 |
+| Evaluation | `tools/evaluation-and-observability` 40 + `research/evaluation-and-safety` 23 + `projects/benchmarks-and-evals` 18 |
+
+So "fill the thin phases" would have meant duplicating coverage that already
+exists under a different entry type — and would have failed G1 anyway, since
+`axolotl`, `torchtune`, `trl`, `megatron-lm`, `lm-evaluation-harness`,
+`inspect-ai`, `promptfoo`, `ragas`, and `garak` are all already catalogued.
+**Phase counts are not a gap metric in a multi-vertical catalogue.** Compare
+subject coverage across verticals before treating a folder as under-filled.
+
+30 candidates screened; 11 not in the catalogue at all; 10 scored; **3 added.**
+
+### Added
+
+| Repository | Stars | Licence | Pushed | Entry | Phase |
+|---|---:|---|---|---|---|
+| `SWE-agent/mini-swe-agent` | 6,933 | MIT | 2026-09-03 | `agent-systems/mini-swe-agent.md` | agent-system |
+| `open-compass/opencompass` | 7,392 | Apache-2.0 | 2026-09-03 | `benchmarks-and-evals/opencompass.md` | benchmark-and-eval |
+| `pytorch/torchtitan` | 5,697 | BSD-3-Clause | 2026-09-03 | `training-and-alignment/torchtitan.md` | training-and-alignment |
+
+### Rejected
+
+| Repository | Stars | Failed | Reason |
+|---|---:|---|---|
+| `SWE-agent/SWE-agent` | 20,206 | **J6, J10** | cleared every mechanical gate, but its own README states it is superseded by `mini-swe-agent` and recommends that instead. Cataloguing it as `status: active` would contradict the maintainers; the successor was added in its place. The highest-star rejection in either pass. |
+| `SWE-bench/SWE-bench` | 5,768 | **G1** | already catalogued as `content/benchmarks/code/swe-bench.md` — a benchmark entry, not a project. Caught by the catalogue-wide scan fixed in the first pass. |
+| `NVIDIA/NeMo-Aligner` | 852 | **J1, J2, J3** | `archived: true`, 852 stars, last push 332 days ago. |
+| `instructlab/instructlab` | 1,419 | **J1, J2** | `archived: true`, below the star floor. |
+| `microsoftarchive/promptbench` | 2,819 | **J1, J2, J3** | archived (the `microsoftarchive` org is itself the signal), below the floor, last push 195 days ago. |
+| `openai/simple-evals` | 4,624 | **J2** | 4,624 stars, below the 5,000 floor; also 134 days since last push, which would force `status: watching`. |
+| `google-deepmind/long-form-factuality` | 693 | **J2, J4** | 693 stars, and `NOASSERTION` with no licence named. |
+| `UKGovernmentBEIS/inspect_evals` | 657 | **J2** | 657 stars; the companion `inspect_ai` is already catalogued as a tool. |
+| `berkeley-function-call-leaderboard/bfcl` | — | **J1** | repository not resolvable at that path (moved), so no facts could be verified. |
+
+Five of the ten failed J1 or J3 — archived or stale. That ratio is the point of
+having those gates: star count alone would have admitted three archived
+repositories, including one at 20,206 stars that its maintainers have retired.
