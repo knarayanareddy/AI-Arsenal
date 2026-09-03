@@ -18,7 +18,7 @@ Tools whose primary consumer is the running AI system itself (not the developer)
 
 Before picking a tool in this phase, consider:
 
-- See [Architecture Decision Trees](../../architectures/decision-trees/_index.md) for cross-cutting guidance.
+- See [Architecture Decision Trees](../../architectures/_index.md) for cross-cutting guidance.
 - Key question to ask: Does this tool primarily make the developer faster or the prompt/asset workflow easier, rather than run in production?
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->

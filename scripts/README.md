@@ -11,6 +11,7 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `validate-structure.js` — validates required Markdown body sections.
 - `validate-paths.js` — validates filenames, folder conventions, `_index.md` coverage, and generated JSON syntax.
 - `validate-references.js` — validates/flags ID references such as alternatives, integrations, related entries, and digest references.
+- `validate-internal-links.js` — resolves every relative Markdown link in `content/**/*.md` (including generated `_index.md` / `_registry.md`) against the filesystem and fails on dead targets. Covers the gap between `check-links.js` (absolute `http(s)` URLs only) and `validate-references.js` (frontmatter IDs only). Code fences, inline code, and HTML comments are not link-checked. Supports `--changed-only`; the full scan is what CI runs, because a link rots when its target moves.
 - `validate-data-contract.js` — validates the generated `/data/*.json` API contract, including collection/index/stats/search ID and count parity. The canonical collection list lives in `utils/collections.js`.
 - `check-duplicates.js` — rejects duplicate content IDs.
 - `check-links.js` — concurrent, SSRF-hardened link checker with changed-only/all modes and JSON reporting. The full-mode default supports up to 2,000 unique URLs at current repository scale. Relative redirects are resolved against their source URL. Rate limits (429/403), transient network errors, host-cap skips, and non-404/410 server errors are reported as **soft warnings** (split in the report into `host_cap`, `transient`, `http_soft`, and `redirect` buckets, alongside `contacted`/`skipped_host_cap` coverage counts); only confirmed dead links (404/410), DNS misses, and SSRF rejections are **hard failures** that fail CI / open issues. Retries with backoff; known rate-limited hosts (GitHub, X) get a raised per-host budget. URLs inside HTML comments are skipped.
@@ -21,7 +22,9 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `generate-search-index.js` — creates FlexSearch-compatible search documents and facet counts.
 - `generate-toc.js` — regenerates registries and section `_index.md` files.
 - `generate-context.js` — regenerates dense LLM context with top projects, tools, papers, and heuristics.
+- `score-entry-candidates.js` — applies the mechanical gates of `docs/policies/new-project-entry-rubric.md` to a candidate manifest: `node scripts/score-entry-candidates.js --manifest candidates.json` (`--json` for machine output, exit 1 if any candidate fails). Dedupe is catalogue-wide, matching `check-duplicates.js`; scoping it to one vertical accepts ids that CI then rejects.
 - `generate-stats.js` — regenerates repository statistics.
+- `generate-readme-stats.js` — rewrites the marked stats table in `README.md` from `data/stats.json`, so the README count cannot drift from the data layer. Only the block between the `AUTO-GENERATED STATS TABLE` markers is touched.
 - `generate-changelog.js` — builds `CHANGELOG.md` from Git history when available.
 
 ## Freshness and Maintenance
@@ -29,6 +32,7 @@ For maintainer operations, read [`../docs/maintainer-runbook.md`](../docs/mainta
 - `update-star-counts.js` — fetches GitHub metrics, updates project frontmatter, and stores `data/github-cache.json`.
 - `calculate-trending.js` — calculates 0–100 trending scores from star velocity, buzz, recency, and total stars.
 - `check-stale.js` — writes `data/stale-report.json` and optionally fails for stale entries.
+- `create-stale-issues.js` — files GitHub Issues from `data/stale-report.json` (one per stale entry, deduplicated against open issues, capped by `STALE_ENTRY_ISSUE_LIMIT`, default 10). No-ops without `GITHUB_TOKEN`/`GITHUB_REPOSITORY`. This is the implementation behind the stale-content SLA in `GOVERNANCE.md`; run it with `pnpm run file:stale-issues`.
 - `create-link-issues.js` — files GitHub Issues from `data/link-check-report.json` when GitHub token/repo env vars are present.
 - `draft-trending.js` — generates a schema-compliant weekly trending draft.
 - `create-monthly-digest.js` — creates a schema-compliant monthly digest draft.

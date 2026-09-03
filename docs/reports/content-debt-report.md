@@ -4,51 +4,39 @@
 
 ## 1. Editorial baseline (suppressed full-catalog findings)
 
-Total suppressed findings: **815** (see `docs/editorial-baseline.json`).
+Total suppressed findings: **602** (see `docs/editorial-baseline.json`).
 
 ### By rule (attack the highest-count classes first)
 
 | Rule | Count |
 |---|---:|
-| `repeated-paragraph` | 267 |
-| `tool-section-missing-technical-content` | 223 |
-| `section-too-short` | 99 |
-| `tool-section-length` | 90 |
-| `project-section-missing-technical-content` | 45 |
-| `ecosystem-position-missing-comparison` | 42 |
-| `project-section-length` | 26 |
+| `tool-section-missing-technical-content` | 201 |
+| `repeated-paragraph` | 189 |
+| `section-too-short` | 81 |
+| `tool-section-length` | 67 |
+| `project-section-missing-technical-content` | 24 |
 | `research-section-missing-detail` | 21 |
+| `ecosystem-position-missing-comparison` | 9 |
+| `project-section-length` | 8 |
 | `best-for-avoid-if-scenarios` | 2 |
 
 ### By content vertical
 
 | Vertical | Count |
 |---|---:|
-| tools | 500 |
-| projects | 244 |
+| tools | 434 |
+| projects | 97 |
 | research | 71 |
 
 ### Worst 25 files (most suppressed findings)
 
 | File | Findings |
 |---|---:|
-| `content/projects/foundation-models/translategemma.md` | 13 |
-| `content/projects/foundation-models/yi.md` | 13 |
-| `content/tools/dx-and-tooling/google-pomelli-2-0.md` | 8 |
-| `content/tools/dx-and-tooling/shellmate.md` | 8 |
-| `content/tools/model-layer/ideogram-ai.md` | 8 |
-| `content/tools/dx-and-tooling/dropstone-3.md` | 7 |
-| `content/tools/dx-and-tooling/honen.md` | 7 |
-| `content/tools/dx-and-tooling/recursi.md` | 7 |
-| `content/tools/dx-and-tooling/vaani.md` | 7 |
-| `content/tools/model-layer/kimi-k2-5.md` | 7 |
-| `content/tools/orchestration/memoriq.md` | 7 |
 | `content/projects/frameworks/uiverse-design.md` | 6 |
 | `content/tools/dx-and-tooling/basedash.md` | 6 |
 | `content/tools/evaluation-and-observability/astra-autonomous-pentest.md` | 6 |
 | `content/tools/evaluation-and-observability/superlog.md` | 6 |
 | `content/tools/orchestration/seaticket.md` | 6 |
-| `content/projects/foundation-models/qwen.md` | 5 |
 | `content/tools/data-ingestion/agent-browser-shield.md` | 5 |
 | `content/tools/data-ingestion/jina-reader.md` | 5 |
 | `content/tools/data-ingestion/tabstack.md` | 5 |
@@ -57,14 +45,26 @@ Total suppressed findings: **815** (see `docs/editorial-baseline.json`).
 | `content/tools/dx-and-tooling/qursor.md` | 5 |
 | `content/tools/evaluation-and-observability/code-arena.md` | 5 |
 | `content/tools/evaluation-and-observability/conan.md` | 5 |
+| `content/tools/evaluation-and-observability/monako-glass.md` | 5 |
+| `content/tools/evaluation-and-observability/spotlight-by-backplanes.md` | 5 |
+| `content/tools/model-layer/qwen-3.md` | 5 |
+| `content/tools/orchestration/manus.md` | 5 |
+| `content/projects/benchmarks-and-evals/opik.md` | 4 |
+| `content/tools/data-ingestion/argilla.md` | 4 |
+| `content/tools/data-ingestion/playwright.md` | 4 |
+| `content/tools/data-ingestion/scale-ai.md` | 4 |
+| `content/tools/data-ingestion/trafilatura.md` | 4 |
+| `content/tools/dx-and-tooling/claude-artifact-player.md` | 4 |
+| `content/tools/evaluation-and-observability/langsmith.md` | 4 |
+| `content/tools/evaluation-and-observability/nemo-guardrails.md` | 4 |
 
 ## 2. Enrichment status (verification debt)
 
-Total content entries: **1061** — `draft` share: **69.2%**.
+Total content entries: **1062** — `draft` share: **69.2%**.
 
 | Status | Count | Share |
 |---|---:|---:|
-| draft | 734 | 69.2% |
+| draft | 735 | 69.2% |
 | reviewed | 167 | 15.7% |
 | unset | 156 | 14.7% |
 | verified | 4 | 0.4% |
@@ -74,7 +74,7 @@ Total content entries: **1061** — `draft` share: **69.2%**.
 | Type | Total | Breakdown |
 |---|---:|---|
 | project | 322 | draft: 270, reviewed: 51, verified: 1 |
-| tool | 214 | draft: 143, unset: 71 |
+| tool | 215 | draft: 144, unset: 71 |
 | tip | 171 | draft: 147, reviewed: 24 |
 | paper | 128 | draft: 104, reviewed: 21, verified: 3 |
 | guide | 59 | unset: 59 |

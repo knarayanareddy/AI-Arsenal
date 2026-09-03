@@ -79,7 +79,7 @@ The architecture is extensively reproduced; Stable Diffusion and its many commun
 ## Relation to the Arsenal
 
 - The architecture behind the catalog's image-generation projects and multimodal tooling; the default open text-to-image stack.
-- Pairs with [DDPM](./ho-2020-ddpm.md) (the diffusion recipe it accelerates) and with vision-language work like [CLIP](../foundational/radford-2021-clip.md), whose text encoders commonly supply the conditioning embeddings.
+- Pairs with [DDPM](./ho-2020-ddpm.md) (the diffusion recipe it accelerates) and with vision-language work like [CLIP](./radford-2021-clip.md), whose text encoders commonly supply the conditioning embeddings.
 
 ## Resources
 
