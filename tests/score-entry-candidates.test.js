@@ -207,3 +207,32 @@ test('loadExisting scans the whole catalogue, not just content/projects', async 
   assert.ok(projectEntries.length > 300, `expected the full project vertical, got ${projectEntries.length}`);
   assert.ok(projectEntries.length < existing.ids.size, 'project entries must be a subset of the catalogue, not all of it');
 });
+
+// The manifest's `id` is the author's choice, not a property of the repo. This
+// pass filed modelcontextprotocol/servers as `mcp-servers` and livekit/agents
+// as `livekit-agents`, so a G1 answer computed from a repo-derived id can be
+// clean while the id actually used collides. The scorer must say which one it
+// checked.
+test('G1 flags when the id was derived from the repo name rather than supplied', () => {
+  const supplied = scoreCandidate(candidate(), emptyCatalogue(), NOW);
+  assert.equal(supplied.idSupplied, true);
+  assert.doesNotMatch(supplied.results[0].reason, /derived from the repo name/);
+
+  const { id: _ignored, ...withoutId } = candidate();
+  const derived = scoreCandidate(withoutId, emptyCatalogue(), NOW);
+  assert.equal(derived.idSupplied, false);
+  assert.equal(derived.id, 'thing', 'should still derive a usable id from the repo name');
+  assert.match(derived.results[0].reason, /derived from the repo name/);
+  assert.match(derived.results[0].reason, /confirm the id the entry will actually use/);
+});
+
+test('a derived id that collides still fails G1, and says it was derived', () => {
+  const existing = emptyCatalogue();
+  existing.ids.set('thing', 'content/tools/dx-and-tooling/thing.md');
+  const { id: _ignored, ...withoutId } = candidate();
+  const derived = scoreCandidate(withoutId, existing, NOW);
+  assert.equal(derived.pass, false);
+  assert.deepEqual(derived.failed, [GATES.UNIQUE_ID]);
+  assert.match(derived.results[0].reason, /already catalogued/);
+  assert.match(derived.results[0].reason, /derived from the repo name/);
+});

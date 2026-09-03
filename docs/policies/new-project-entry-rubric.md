@@ -91,6 +91,13 @@ Run with `scripts/score-entry-candidates.js`, which applies G1–G2 and J1–J5,
 J7 mechanically. G3–G15 are enforced afterwards by `pnpm run ci` on the written
 entry, and J6/J8 are the reviewer's call recorded here.
 
+One caveat the scorer states explicitly: an entry's `id` is the author's choice,
+not a property of the repository. This pass filed `modelcontextprotocol/servers`
+as `mcp-servers` and `livekit/agents` as `livekit-agents`. When a manifest omits
+`id`, the scorer derives one from the repo name, answers G1 against that guess,
+and labels the result — a clean G1 on a derived id does not clear the id the
+entry will actually use. Supply `id` in the manifest to make G1 authoritative.
+
 32 candidates scored; **14 cleared the mechanical gates and 8 were added.**
 
 ### Added (8 entries)

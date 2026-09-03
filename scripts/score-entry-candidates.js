@@ -81,8 +81,16 @@ export function scoreCandidate(candidate, existing, now = new Date()) {
   const results = [];
   const add = (gate, pass, reason) => results.push({ gate, pass, reason });
 
+  // The entry's id is what check-duplicates.js will actually test, and it is a
+  // choice the author makes, not a property of the repository: this pass filed
+  // `modelcontextprotocol/servers` as `mcp-servers` and `livekit/agents` as
+  // `livekit-agents`. Deriving an id from the repo name is a guess, so when the
+  // manifest omits one, G1 is answered against the guess and the result is
+  // flagged -- a clean G1 on a derived id does not clear the real one.
+  const idSupplied = Boolean(candidate.id);
   const id = String(candidate.id ?? candidate.repo ?? '').split('/').pop().toLowerCase();
-  add(GATES.UNIQUE_ID, !existing.ids.has(id), existing.ids.has(id) ? `id "${id}" already catalogued at ${existing.ids.get(id)}` : `id "${id}" is unused`);
+  const idNote = idSupplied ? '' : ` (derived from the repo name; confirm the id the entry will actually use)`;
+  add(GATES.UNIQUE_ID, !existing.ids.has(id), (existing.ids.has(id) ? `id "${id}" already catalogued at ${existing.ids.get(id)}` : `id "${id}" is unused`) + idNote);
 
   const url = String(candidate.github_url ?? `https://github.com/${candidate.repo ?? ''}`).replace(/\/+$/, '').toLowerCase();
   add(GATES.UNIQUE_URL, !existing.urls.has(url), existing.urls.has(url) ? `${url} already catalogued` : `${url} is not in the catalogue`);
@@ -106,6 +114,7 @@ export function scoreCandidate(candidate, existing, now = new Date()) {
   return {
     repo: candidate.repo ?? id,
     id,
+    idSupplied,
     pass: failed.length === 0,
     status: recency.pass ? recency.status : null,
     results,
