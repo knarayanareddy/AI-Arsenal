@@ -215,3 +215,46 @@ subject coverage across verticals before treating a folder as under-filled.
 Five of the ten failed J1 or J3 — archived or stale. That ratio is the point of
 having those gates: star count alone would have admitted three archived
 repositories, including one at 20,206 stars that its maintainers have retired.
+
+---
+
+## Third pass (2026-09-03): deferred candidates and untouched phases
+
+Aimed at the candidates the first pass explicitly deferred for re-scoring
+(`letta-ai/letta-code`, the successor to the `letta` landing page) plus the
+phases not yet touched (`inference-engine`, `data-and-retrieval`).
+
+6 scored; **0 added.**
+
+| Repository | Stars | Result | Reason |
+|---|---:|---|---|
+| `getzep/graphiti` | 30,548 | **G1, G2** | already `content/projects/data-and-retrieval/graphiti.md`. Highest-star candidate of this pass, already catalogued. |
+| `kvcache-ai/ktransformers` | 19,456 | **G1, G2** | already `content/projects/inference-engines/ktransformers.md`. |
+| `ai-dynamo/dynamo` | 7,956 | **G1, G2** | already `content/projects/inference-engines/dynamo.md`. |
+| `ollama/ollama-python` | 10,480 | **J6** | cleared every mechanical gate, but is a thin client binding for Ollama, which is already catalogued at `content/projects/inference-engines/ollama.md`. Same shape as the vendor-affine SDKs rejected in the first pass, so it is rejected on the same gate for the same reason. |
+| `letta-ai/letta-code` | 3,193 | **J2** | 3,193 stars, below the 5,000 floor. The re-score the first pass asked for was done; it does not clear. |
+| `vllm-project/production-stack` | 2,554 | **J2** | 2,554 stars, below the floor. |
+
+Three of six were already catalogued, which is the strongest evidence yet that
+the catalogue is close to saturated for well-known projects in these phases: the
+obvious candidates at 7,900–30,500 stars are already in it.
+
+**This pass stops the intake work.** A fourth pass would be reaching for
+candidates below the star floor or duplicating existing coverage, and a rubric
+that keeps admitting entries has stopped filtering. The defensible next
+candidates are the two deferred rows that are close to the threshold
+(`letta-code` at 3,193, `production-stack` at 2,554) — re-score them when they
+cross 5,000, not before.
+
+### Cumulative result across three passes
+
+| Pass | Screened | Scored | Added | Dominant rejection |
+|---|---:|---:|---:|---|
+| 1 — agent/framework pool | 32 | 32 | 8 | G1/G2 uniqueness (18) |
+| 2 — training/evaluation pool | 30 | 10 | 3 | J1/J3 archived or stale (5) |
+| 3 — deferred + untouched phases | 6 | 6 | 0 | G1/G2 already catalogued (3) |
+| **Total** | **68** | **48** | **11** | |
+
+68 repositories screened, 11 entries added — a 16% acceptance rate. The gate
+that did most of the work was uniqueness, and the second pass proved why the
+scope of that check matters more than its logic.
