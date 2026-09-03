@@ -84,4 +84,4 @@ The evaluation layer for the embedding lineage starting at `reimers-2019-sentenc
 - [Code + leaderboard (embeddings-benchmark/mteb)](https://github.com/embeddings-benchmark/mteb)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `muennighoff-2022-mteb` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

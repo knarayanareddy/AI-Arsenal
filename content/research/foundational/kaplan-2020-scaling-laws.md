@@ -83,4 +83,4 @@ Direct ancestor of `brown-2020-gpt3` (foundational/) and the result corrected by
 - [arXiv](https://arxiv.org/abs/2001.08361)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `kaplan-2020-scaling-laws` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

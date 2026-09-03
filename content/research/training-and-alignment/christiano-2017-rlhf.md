@@ -83,4 +83,4 @@ Direct ancestor of `ouyang-2022-instructgpt`, `bai-2022-constitutional-ai`, and 
 - [arXiv](https://arxiv.org/abs/1706.03741)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `christiano-2017-rlhf` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

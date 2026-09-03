@@ -50,7 +50,7 @@ Instruction tuning had transformed text LLMs into assistants, but no visual inst
 
 ## Core Contribution
 
-(1) The visual instruction data pipeline: captions + boxes rendered as text let GPT-4 author conversations, detailed descriptions, and complex-reasoning QA about images it never saw — 158K samples; (2) the architecture: CLIP ViT-L/14 features, linear projection, Vicuna LLM; (3) the two-stage curriculum — projector-only alignment pretraining on image-caption pairs, then end-to-end instruction tuning — that nearly every subsequent VLM adopted.
+(1) The visual instruction data pipeline: captions + boxes rendered as text let GPT-4 author conversations, detailed descriptions, and complex-reasoning QA about images it never saw — a 158K-sample instruction dataset; (2) the architecture: CLIP ViT-L/14 features, linear projection, Vicuna LLM; (3) the two-stage curriculum — projector-only alignment pretraining on image-caption pairs, then end-to-end instruction tuning — that nearly every subsequent VLM adopted.
 
 ## Key Results
 
@@ -85,4 +85,4 @@ Builds on `radford-2021-clip` (architectures/) for its vision tower and `touvron
 - [Code & models](https://github.com/haotian-liu/LLaVA)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `liu-2023-llava` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

@@ -85,4 +85,4 @@ Extends `lewis-2020-rag` (retrieval-and-memory/) with learned control; its groun
 - [Code & checkpoints](https://github.com/AkariAsai/self-rag)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `asai-2023-self-rag` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

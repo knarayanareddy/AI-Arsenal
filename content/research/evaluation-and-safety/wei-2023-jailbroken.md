@@ -83,4 +83,4 @@ Diagnoses the failure modes of the alignment methods documented in `ouyang-2022-
 - [Venue](https://proceedings.neurips.cc/paper_files/paper/2023/hash/fd6613131889a4b656206c50a8bd7790-Abstract-Conference.html)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `wei-2023-jailbroken` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

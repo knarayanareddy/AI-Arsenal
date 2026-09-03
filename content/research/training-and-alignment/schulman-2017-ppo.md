@@ -49,7 +49,7 @@ PPO solves a mundane-sounding problem with outsized consequences: policy-gradien
 
 ## Core Contribution
 
-The clipped surrogate objective: maximize the expected advantage-weighted probability ratio r(θ) = π_θ/π_old, but clip r into [1−ε, 1+ε] and take the minimum with the unclipped term — removing any incentive to move the policy beyond the clip range in a single update. This pessimistic bound permits multiple optimization epochs over each batch of experience (unlike vanilla policy gradient), yielding TRPO-level stability with SGD-level simplicity.
+The clipped surrogate objective: maximize, for the policy model, the expected advantage-weighted probability ratio r(θ) = π_θ/π_old, but clip r into [1−ε, 1+ε] and take the minimum with the unclipped term — removing any incentive to move the policy beyond the clip range in a single update. This pessimistic bound permits multiple optimization epochs over each batch of experience (unlike vanilla policy gradient), yielding TRPO-level stability with SGD-level simplicity.
 
 ## Key Results
 
@@ -59,7 +59,7 @@ The clipped surrogate objective: maximize the expected advantage-weighted probab
 
 ## Methodology
 
-Standard policy-gradient setup with generalized advantage estimation; the experimental contribution is comparative — same environments, same budgets, PPO's clipped objective versus TRPO, A2C, and vanilla PG — plus ablations of the clipping parameter and the alternative KL-penalized variant (which the clipped version generally beats). Evaluation across dozens of MuJoCo and Atari tasks established the robustness claim.
+Standard policy-gradient setup with generalized advantage estimation; the experimental contribution is comparative, reporting results across the same environments and budgets for PPO's clipped objective versus TRPO, A2C, and vanilla PG — plus ablations of the clipping parameter and the alternative KL-penalized variant (which the clipped version generally beats). Evaluation across dozens of MuJoCo and Atari tasks established the robustness claim.
 
 ## Practical Applicability
 
@@ -83,4 +83,4 @@ The algorithmic core of `ouyang-2022-instructgpt` and the alignment pipeline in 
 - [arXiv](https://arxiv.org/abs/1707.06347)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `schulman-2017-ppo` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

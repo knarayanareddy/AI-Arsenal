@@ -48,7 +48,7 @@ ResNet introduced the residual connection: instead of asking a stack of layers t
 
 ## Core Contribution
 
-The paper identified and solved the *degradation problem*: adding more layers to a plain deep network made both training and test error worse, which is not what overfitting predicts — it meant deeper plain networks were harder to *optimize*, not just to generalize. The fix was to change what each block is asked to learn. If the optimal transformation for a block is close to the identity (common in very deep nets), a plain block must laboriously learn to approximate identity through nonlinearities, whereas a residual block only has to drive `F(x)` toward zero, which is far easier for gradient descent. Concretely, a residual block computes `y = F(x, {W_i}) + x`, where the `+ x` shortcut carries the input forward unchanged and provides an uninterrupted path for gradients during backpropagation. This is why extremely deep networks became trainable at all.
+The paper identified and solved the *degradation problem*: adding more layers to a plain deep network model made both training and test error worse, which is not what overfitting predicts — it meant deeper plain networks were harder to *optimize*, not just to generalize. The fix was to change what each block is asked to learn. If the optimal transformation for a block is close to the identity (common in very deep nets), a plain block must laboriously learn to approximate identity through nonlinearities, whereas a residual block only has to drive `F(x)` toward zero, which is far easier for gradient descent. Concretely, a residual block computes `y = F(x, {W_i}) + x`, where the `+ x` shortcut carries the input forward unchanged and provides an uninterrupted path for gradients during backpropagation. This is why extremely deep networks became trainable at all.
 
 ## Key Results
 
@@ -59,7 +59,7 @@ The paper identified and solved the *degradation problem*: adding more layers to
 
 ## Methodology
 
-The authors built plain convolutional baselines and their residual counterparts (identical layer counts, with shortcut connections added) and compared optimization behavior on CIFAR-10 and ImageNet across depths. Shortcuts were parameter-free identity mappings where input and output dimensions matched, with projection shortcuts used to match dimensions when they changed. Bottleneck blocks (1×1 → 3×3 → 1×1 convolutions) were introduced to keep very deep variants computationally feasible. The comparison design isolates the effect of the residual connection itself, since everything else about the plain and residual networks was held constant.
+The authors built plain convolutional baselines and their residual counterparts (identical layer counts, with shortcut connections added) and compared optimization behavior on the CIFAR-10 dataset and the ImageNet benchmark across depths. Shortcuts were parameter-free identity mappings where input and output dimensions matched, with projection shortcuts used to match dimensions when they changed. Bottleneck blocks (1×1 → 3×3 → 1×1 convolutions) were introduced to keep very deep variants computationally feasible. The comparison design isolates the effect of the residual connection itself, since everything else about the plain and residual networks was held constant.
 
 ## Practical Applicability
 

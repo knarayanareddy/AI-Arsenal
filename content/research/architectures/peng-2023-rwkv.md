@@ -58,7 +58,7 @@ Transformers pay quadratic attention cost and store a KV cache that grows with s
 
 ## Methodology
 
-Replace self-attention with a linear, time-mixing recurrence (the WKV operator) plus channel-mixing blocks; express it in a parallel scan form for training and a stepwise recurrent form for generation. Train as a standard autoregressive LM and evaluate on language-modeling and downstream benchmarks.
+Replace self-attention with a linear, time-mixing recurrence (the WKV operator) plus channel-mixing blocks; express it in a parallel scan form for training and a stepwise recurrent form for token generation. Train as a standard autoregressive LM and evaluate on language-modeling and downstream benchmarks.
 
 ## Practical Applicability
 

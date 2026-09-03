@@ -55,7 +55,7 @@ Framing self-improvement as 'verbal RL': the policy update is a natural-language
 
 ## Key Results
 
-- 91% pass@1 on HumanEval with GPT-4 as the base, versus 80% for GPT-4 without reflection (paper Section 4, 2023)
+- 91% pass@1 on the HumanEval benchmark with GPT-4 as the base, versus 80% for GPT-4 without reflection (paper Section 4, 2023)
 - 130/134 ALFWorld tasks solved with reflection versus significantly lower ReAct-only baselines — absolute gains of ~22% (2023)
 - 20% improvement on HotPotQA multi-hop reasoning over strong baselines, with ablations showing episodic reflection memory, not mere retrying, drives the gains (2023)
 
@@ -86,4 +86,4 @@ Builds directly on `yao-2022-react` (same phase) as its actor and on `wei-2022-c
 - [Code](https://github.com/noahshinn/reflexion)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `shinn-2023-reflexion` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

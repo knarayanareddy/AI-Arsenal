@@ -83,4 +83,4 @@ Architectural ancestor of `jiang-2024-mixtral` and `deepseek-ai-2024-deepseek-v3
 - [JMLR version](https://jmlr.org/papers/v23/21-0998.html)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `fedus-2021-switch-transformer` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

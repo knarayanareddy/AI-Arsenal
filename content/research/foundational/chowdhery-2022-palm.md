@@ -87,4 +87,4 @@ The maximal-dense-scaling endpoint read against `hoffmann-2022-chinchilla` (comp
 - [JMLR version](https://jmlr.org/papers/v24/22-1144.html)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `chowdhery-2022-palm` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
