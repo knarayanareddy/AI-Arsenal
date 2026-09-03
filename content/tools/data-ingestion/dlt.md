@@ -81,7 +81,7 @@ dlt init rest_api duckdb && python pipeline.py
 - Non-Python teams needing UI-driven connector setup — Airbyte's catalog and console fit better
 - Massive CDC replication workloads; purpose-built replication tools handle those better
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `dlt`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

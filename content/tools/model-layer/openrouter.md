@@ -81,7 +81,7 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 - Enterprise data agreements with a specific provider are mandatory — an aggregator adds a party to your data path
 - Cost-sensitive high volume on one model: direct provider contracts beat aggregator fees at scale
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `openrouter`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

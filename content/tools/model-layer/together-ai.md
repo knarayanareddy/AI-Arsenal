@@ -81,7 +81,7 @@ pip install together
 - You need proprietary frontier models (GPT/Claude/Gemini) — Together serves the open ecosystem
 - Strict on-prem/self-hosted requirements; Together is a hosted cloud
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `together-ai`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

@@ -80,7 +80,7 @@ An agent issues high-level browsing/search instructions to Tabstack's API, which
 - You need full control and auditability over what the agent does in the browser (regulated or high-stakes use cases)
 - You need an open-source or self-hostable browsing layer
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `tabstack`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

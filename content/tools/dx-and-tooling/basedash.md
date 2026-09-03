@@ -80,7 +80,7 @@ Natural-language queries are translated into underlying data queries against con
 - You need governed, auditable BI with strict data-access controls (evaluate against established BI tools)
 - You need an open-source or self-hostable dashboarding tool
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `basedash`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

@@ -80,7 +80,7 @@ Captures additional structured context about a UI (beyond raw markup) and suppli
 - Your front-end workflow doesn't involve agent-assisted UI generation
 - You need an open-source or self-hostable tool
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `qursor`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

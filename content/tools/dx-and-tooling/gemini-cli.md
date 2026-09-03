@@ -81,7 +81,7 @@ gemini
 - You need the model itself to be open or self-hostable — the CLI is Apache-2.0 but calls hosted Gemini
 - Your benchmark-critical workloads have only been validated on Claude/GPT-family coding models
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `gemini-cli`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

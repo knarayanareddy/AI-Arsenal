@@ -80,7 +80,7 @@ An orchestrating layer of agents executes and chains together ML lifecycle steps
 - You need deterministic, auditable pipeline steps for regulated ML workflows (prefer Airflow/Dagster/Prefect)
 - You need an open-source or self-hostable orchestration platform
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `orchestraml`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

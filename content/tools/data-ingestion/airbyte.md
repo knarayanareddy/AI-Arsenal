@@ -81,7 +81,7 @@ abctl local install
 - Lightweight Python-native pipelines — dlt embeds in your code without running a platform
 - One-off document loads; a document loader (Unstructured, Docling) is the right size
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `airbyte`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

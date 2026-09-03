@@ -81,7 +81,7 @@ pip install ragatouille
 - Production serving at scale — token-level embeddings cost more storage/compute; consider native multi-vector support in Qdrant/Vespa instead
 - You need an actively-released library; RAGatouille's cadence is research-project-like (sparse releases)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `ragatouille`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

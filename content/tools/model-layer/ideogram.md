@@ -80,7 +80,7 @@ A diffusion-based image generation model accessed via a hosted API/app; text-ren
 - You need an open-weight image model you can self-host or fine-tune
 - Photorealism or fine-grained pose control matters more than text rendering for your use case
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `ideogram`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

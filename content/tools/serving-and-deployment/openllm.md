@@ -81,7 +81,7 @@ openllm serve llama3.2:1b
 - You need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer
 - Local laptop experimentation without GPUs; Ollama's quantized-first workflow fits better
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `openllm`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

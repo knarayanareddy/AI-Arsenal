@@ -81,7 +81,7 @@ npx repomix@latest
 - The repo exceeds the model's context even packed — use retrieval or a repo-map approach (aider) instead
 - You need semantic selection of relevant files; Repomix packs mechanically, it doesn't rank
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `repomix`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

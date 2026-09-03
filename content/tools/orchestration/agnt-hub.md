@@ -81,7 +81,7 @@ Acts as a control plane that sits in front of individually deployed agents, medi
 - You are a solo developer or small team building a single agent
 - You need an open-source, self-hostable option for compliance reasons
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `agnt-hub`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 
