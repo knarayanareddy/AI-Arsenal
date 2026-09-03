@@ -23,7 +23,7 @@ Foundation-model entries document the model itself — its architecture, trainin
 Before selecting a foundation model:
 - Key question to ask: does this model's architecture, license, and current-generation status (not a superseded predecessor) actually fit my constraints?
 - If you need usage guidance rather than architectural depth: see [tools/model-layer/](../../tools/model-layer/_index.md) and [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md)
-- See [Choose an LLM](../../architectures/decision-trees/choose-llm.md) for cross-cutting selection guidance
+- See [Choose an LLM](../../architectures/model-selection/choose-llm.md) for cross-cutting selection guidance
 
 ## Projects in this category
 

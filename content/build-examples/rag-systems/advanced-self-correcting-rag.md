@@ -199,7 +199,7 @@ Replace the LLM-based grader with a cheaper, faster classifier (even a smaller m
 
 ## Related Entries
 
-- Decision tree: [RAG vs Fine-Tuning](../../architectures/decision-trees/rag-vs-fine-tuning.md)
+- Decision tree: [RAG vs Fine-Tuning](../../architectures/system-design/rag-vs-fine-tuning.md)
 - Framework: [LangGraph](../../projects/frameworks/langgraph.md)
 - Evaluation: [RAGAS](../../projects/benchmarks-and-evals/ragas-rag-evaluation.md)
 - Tip: [Add a Reranker Before Changing Your Chunking Strategy](../../tips-and-tricks/rag-and-retrieval/prefer-reranking-before-rechunking.md)

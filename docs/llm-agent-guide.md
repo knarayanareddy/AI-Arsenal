@@ -45,7 +45,7 @@ Agent route:
 
 1. `AGENT.md`
 2. `CONTEXT.md`
-3. `content/architectures/decision-trees/rag-vs-fine-tuning.md`
+3. `content/architectures/system-design/rag-vs-fine-tuning.md`
 4. `content/architectures/reference-stacks/production-rag.md`
 5. `data/projects.json` filtered by `rag`, `retrieval`, `self-hosted`
 6. `data/tools.json` filtered by `evaluation`, `tracing`, `vector-search`

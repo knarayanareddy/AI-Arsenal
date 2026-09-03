@@ -103,7 +103,8 @@ Every content entry must:
 3. Use only vocabulary from `TAXONOMY.md`.
 4. Use a unique kebab-case `id` that matches the filename.
 5. Follow the required Markdown body section order.
-6. Pass the editorial-quality gate: `pnpm run validate:editorial`.
+6. Use relative links that resolve from the linking file (`pnpm run validate:internal-links`); a path that only works from the repository root is a dead link on GitHub.
+7. Pass the editorial-quality gate: `pnpm run validate:editorial`.
 
 ## EDITORIAL QUALITY GATE
 

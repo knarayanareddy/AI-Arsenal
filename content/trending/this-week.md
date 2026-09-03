@@ -90,16 +90,16 @@ Trending scores are computed by `scripts/calculate-trending.js` from structured 
 
 ## Ranked entries (with why)
 
-1. [DeepEval](content/projects/benchmarks-and-evals/deepeval) — An open-source evaluation framework for testing LLM applications in CI
-2. [DSPy](content/projects/frameworks/dspy) — A framework for programming and optimizing language model pipelines
-3. [Gemma](content/projects/foundation-models/gemma) — Google open model family designed for efficient language and multimodal applications
-4. [LangChain](content/projects/frameworks/langchain) — A framework for composing LLM applications, retrieval flows, tools, and agents
-5. [Phi Cookbook](content/projects/foundation-models/phi-cookbook) — Microsoft examples and recipes for building with the Phi model family
-6. [Pydantic AI](content/projects/frameworks/pydantic-ai) — A Python agent framework built around typed models and structured outputs
-7. [Qwen](content/projects/foundation-models/qwen) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-8. [Semantic Kernel](content/projects/frameworks/semantic-kernel) — An SDK for integrating AI orchestration into production applications
-9. [SurrealDB](content/projects/data-and-retrieval/surrealdb) — Multi-model database combining graph, document, vector, and time-series for AI agents
-10. [Microsoft Agent Framework](content/projects/frameworks/microsoft-agent-framework) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
+1. [DeepEval](../projects/benchmarks-and-evals/deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
+2. [DSPy](../projects/frameworks/dspy.md) — A framework for programming and optimizing language model pipelines
+3. [Gemma](../projects/foundation-models/gemma.md) — Google open model family designed for efficient language and multimodal applications
+4. [LangChain](../projects/frameworks/langchain.md) — A framework for composing LLM applications, retrieval flows, tools, and agents
+5. [Phi Cookbook](../projects/foundation-models/phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family
+6. [Pydantic AI](../projects/frameworks/pydantic-ai.md) — A Python agent framework built around typed models and structured outputs
+7. [Qwen](../projects/foundation-models/qwen.md) — Alibaba open-weight model family covering language, coding, and multimodal use cases
+8. [Semantic Kernel](../projects/frameworks/semantic-kernel.md) — An SDK for integrating AI orchestration into production applications
+9. [SurrealDB](../projects/data-and-retrieval/surrealdb.md) — Multi-model database combining graph, document, vector, and time-series for AI agents
+10. [Microsoft Agent Framework](../projects/frameworks/microsoft-agent-framework.md) — Microsoft framework for Python and .NET agents, workflows, and production orchestration
 
 ## Notable changes to watch
 

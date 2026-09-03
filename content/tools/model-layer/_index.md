@@ -18,7 +18,7 @@ Hosting/serving infrastructure for those models belongs in Serving & Deployment;
 
 Before picking a tool in this phase, consider:
 
-- See [Architecture Decision Trees](../../architectures/decision-trees/_index.md) for cross-cutting guidance.
+- See [Architecture Decision Trees](../../architectures/_index.md) for cross-cutting guidance.
 - Key question to ask: Is this tool primarily about producing, training, or hosting model weights/outputs, not the pipeline around it?
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->

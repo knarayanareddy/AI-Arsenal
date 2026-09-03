@@ -23,7 +23,7 @@ Framework entries document the library's architecture, ecosystem position, and w
 Before selecting a framework:
 - Key question to ask: am I building WITH this library, or deploying it AS a service? If the latter, check [Agent Systems](../agent-systems/_index.md) instead.
 - If you need usage guidance rather than architectural depth: see [tools/orchestration/](../../tools/orchestration/_index.md)
-- See [Choose an Agent Framework](../../architectures/decision-trees/choose-agent-framework.md) and [RAG vs Fine-Tuning](../../architectures/decision-trees/rag-vs-fine-tuning.md) for cross-cutting selection guidance
+- See [Choose an Agent Framework](../../architectures/model-selection/choose-agent-framework.md) and [RAG vs Fine-Tuning](../../architectures/system-design/rag-vs-fine-tuning.md) for cross-cutting selection guidance
 
 ## Projects in this category
 

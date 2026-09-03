@@ -190,7 +190,7 @@ Utilization line items contain only token counts and boolean/enum flags — no p
 
 ## Relation to the Arsenal
 
-Extends the per-call record defined in [Capture a Structured Event for Every LLM Call](./capture-the-llm-call-event.md) with window-relative fields that the base call event does not compute. Its cost dimension complements [Attribute Every LLM Call's Cost to a Feature](../cost-usage/instrument-cost-per-feature.md), since context bloat is a leading cost driver. Directly supports the tips [Budget Context Before Adding Tools](../../tips-and-tricks/agent-engineering/budget-context-before-adding-tools.md), [Compress Retrieved Context Before Generation](../../tips-and-tricks/cost-and-performance/compress-retrieved-context-before-generation.md), and [Cap Max Output Tokens Per Request](../../tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request.md).
+Extends the per-call record defined in [Capture a Structured Event for Every LLM Call](./capture-the-llm-call-event.md) with window-relative fields that the base call event does not compute. Its cost dimension complements [Attribute Every LLM Call's Cost to a Feature](../cost-usage/instrument-cost-per-feature.md), since context bloat is a leading cost driver. Directly supports the tips [Budget Context Before Adding Tools](../../tips-and-tricks/agents-and-orchestration/budget-context-before-adding-tools.md), [Compress Retrieved Context Before Generation](../../tips-and-tricks/cost-and-performance/compress-retrieved-context-before-generation.md), and [Cap Max Output Tokens Per Request](../../tips-and-tricks/cost-and-performance/cap-max-output-tokens-per-request.md).
 
 ## Resources
 
