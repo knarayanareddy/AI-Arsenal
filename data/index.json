@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T21:22:54.218Z",
+    "generated_at": "2026-09-07T14:58:18.392Z",
     "total_projects": 322,
-    "total_tools": 214,
+    "total_tools": 215,
     "total_papers": 128,
     "total_tips": 171,
     "total_people": 25,
@@ -845,7 +845,7 @@
       "category": "rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -1821,7 +1821,7 @@
       "category": "evaluation",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -3355,7 +3355,7 @@
       "category": "rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -6444,7 +6444,7 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -10855,7 +10855,7 @@
       "category": "tooling",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -13314,7 +13314,7 @@
       "category": "voice-audio",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -14780,7 +14780,7 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -17670,7 +17670,7 @@
       "category": "observability",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -19988,6 +19988,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "xiurouter",
+      "type": "tool",
+      "name": "XiuRouter",
+      "description": "Hosted multi-model API service with OpenAI, Anthropic, and Gemini protocol routes plus scoped keys and usage records",
+      "tags": [
+        "llm",
+        "routing",
+        "inference"
+      ],
+      "path": "content/tools/serving-and-deployment/xiurouter.md",
+      "url": "content/tools/serving-and-deployment/xiurouter",
+      "last_updated": "2026-08-28",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
       "featured": false
     },
     {

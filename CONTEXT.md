@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-19T21:22:58.055Z | Entries: 1061 | Schema version: 1.0.0
+Generated: 2026-09-07T14:58:22.287Z | Entries: 1062 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
 - Projects: 322
-- Tools: 214
+- Tools: 215
 - Papers: 128
 - Tips: 171
 - People: 25
@@ -39,81 +39,81 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Top Projects by Category
 
 ### agents
-- Strix (⭐38354, score:70) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
-- Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
-- Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
-- PageAgent (⭐24812, score:65) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
-- Skyvern (⭐22154, score:60) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
+- Hermes Agent (⭐242926, score:55) — Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes
+- AutoGPT (⭐187178, score:55) — Autonomous agent platform and classic agent project for accessible AI automation
+- Dify (⭐154730, score:55) — Visual platform for building agentic workflows, RAG apps, chatbots, and AI automations
+- Browser Use (⭐112894, score:55) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
+- OpenHands (⭐86432, score:55) — AI software engineering agent platform for coding, terminal work, browser actions, and automation
 
 ### code-generation
-- screenshot-to-code (⭐73211, score:60) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
-- Continue (⭐34744, score:60) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
-- Tabby (⭐33679, score:55) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
-- GPT Engineer (⭐55189, score:0) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
-- Open Code Review (⭐10699, score:0) — Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings
+- screenshot-to-code (⭐78123, score:55) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
+- Continue (⭐35821, score:55) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
+- Open Code Review (⭐22032, score:55) — Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings
+- Mistral Vibe (⭐4926, score:32) — Mistral's open-source CLI coding assistant with subagents, delegated tasks, skills, and a voice mode
+- Tabby (⭐33868, score:30) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
 
 ### computer-vision
-- Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
-- Supervision (⭐47365, score:58) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
-- Detectron2 (Meta) (⭐34599, score:55) — Meta's modular library for detection, segmentation, and visual recognition — the reference research platform behind a decade of detection work
-- SAM 2 (Segment Anything Model 2) (⭐19492, score:55) — Meta's promptable segmentation foundation model unified across images and video — click/box prompts yield masks tracked through time via streaming memory
-- PaddleOCR (⭐85010, score:50) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+- PaddleOCR (⭐89027, score:55) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
+- Tesseract OCR (⭐76384, score:55) — The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend
+- Ultralytics YOLO (⭐61363, score:55) — The most widely used real-time object detection framework: YOLO models for detection, segmentation, pose, and tracking with a three-line API
+- Supervision (⭐49907, score:55) — Roboflow's model-agnostic CV utilities — one Detections API over any detector, plus annotators, zone/line analytics, tracking, and dataset tools
+- OCRmyPDF (⭐34690, score:55) — A command-line tool that adds a searchable OCR text layer to scanned PDFs using Tesseract while preserving the original page images and metadata
 
 ### data-pipelines
-- Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
-- cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
-- DuckDB (⭐39306, score:0) — An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server
-- Polars (⭐38987, score:0) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
-- LangExtract (⭐37100, score:0) — Python library for grounded structured extraction from unstructured text with source spans and visualization
+- DuckDB (⭐41050, score:55) — An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server
+- Polars (⭐39676, score:55) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
+- Marker (⭐39570, score:55) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
+- LangExtract (⭐38546, score:55) — Python library for grounded structured extraction from unstructured text with source spans and visualization
+- Liteparse (⭐12264, score:55) — A fast open-source document parser from LlamaIndex, written in Rust, that converts PDFs and documents into structured, LLM-ready output
 
 ### evaluation
-- MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
-- Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
-- BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
-- lmms-eval (⭐4300, score:0) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
-- LightEval (⭐2473, score:0) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
+- Terminal-Bench (⭐2568, score:26) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
+- lmms-eval (⭐4395, score:23) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
+- MTEB (⭐3419, score:21) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
+- LightEval (⭐2535, score:20) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
+- BigCodeBench (⭐519, score:14) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 
 ### llms
-- LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
-- exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
-- Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
-- Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
-- Phi Cookbook (⭐3750, score:70) — Microsoft examples and recipes for building with the Phi model family
+- Ollama (⭐180383, score:55) — Local runtime for downloading, running, and serving open-weight models on developer machines
+- llama.cpp (⭐127366, score:55) — C and C++ inference engine for running GGUF-quantized LLMs locally and on edge devices
+- DeepSeek-V3 / R1 (⭐104437, score:55) — DeepSeek open-weight MoE and reasoning model family known for strong cost-performance
+- vLLM (⭐91166, score:55) — High-throughput inference and serving engine for LLMs with batching and OpenAI-compatible APIs
+- LobeChat (LobeHub) (⭐82290, score:55) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 
 ### multimodal
-- Qwen3-VL (⭐19555, score:55) — Alibaba's open vision-language model family — image, video, and document understanding with strong OCR and GUI-grounding across sizes from edge to flagship
-- ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
-- FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
-- MiniCPM-V (⭐25801, score:42) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
-- Open-Sora (⭐29172, score:40) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
+- Stable Diffusion WebUI (⭐164851, score:55) — AUTOMATIC1111's browser-based application for local Stable Diffusion image generation with an extensive extension ecosystem for control, upscaling
+- ComfyUI (⭐131911, score:55) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
+- MiniCPM-V (⭐26311, score:55) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
+- Hunyuan3D-2 (⭐14755, score:55) — Tencent's open model for generating high-resolution textured 3D assets from images or text using a two-stage shape-then-texture diffusion pipeline
+- LTX-2 (⭐9365, score:55) — Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API
 
 ### observability
-- DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
-- Langfuse (⭐29021, score:30) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
-- Opik (⭐19609, score:30) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
-- Phoenix (⭐10124, score:30) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
-- OpenLLMetry (⭐7000, score:30) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
+- Langfuse (⭐34296, score:55) — Open-source LLM observability platform for traces, evals, prompts, metrics, and datasets
+- Opik (⭐21853, score:55) — Open-source Comet platform for LLM tracing, evaluation, prompt optimization, and dashboards
+- DeepEval (⭐18145, score:55) — An open-source evaluation framework for testing LLM applications in CI
+- Portkey AI Gateway (⭐12922, score:55) — A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability
+- Phoenix (⭐11358, score:55) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 
 ### rag
-- LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
-- DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
-- AnythingLLM (⭐62924, score:68) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
-- GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
-- Onyx (formerly Danswer) (⭐30772, score:62) — Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
+- Firecrawl (⭐177514, score:55) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
+- LangChain (⭐145867, score:55) — A framework for composing LLM applications, retrieval flows, tools, and agents
+- RAGFlow (⭐90206, score:55) — Open-source RAG engine combining document understanding, retrieval, and agent capabilities
+- Crawl4AI (⭐81879, score:55) — Open-source crawler and scraper designed to produce LLM-friendly web content
+- Docling (⭐66106, score:55) — IBM-origin open-source toolkit for parsing and exporting documents for generative AI
 
 ### tooling
-- Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
-- Cherry Studio (⭐48319, score:46) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
-- Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
-- LitServe (⭐3910, score:32) — Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code
-- Context7 (⭐58934, score:0) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
+- Supabase (⭐108928, score:55) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
+- Context7 (⭐61730, score:55) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
+- Cherry Studio (⭐51544, score:55) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
+- UI-TARS Desktop (⭐38886, score:55) — Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models
+- SillyTavern (⭐33106, score:55) — Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts
 
 ### voice-audio
-- AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
-- Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
-- Chatterbox (Resemble AI) (⭐25426, score:55) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
-- faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
-- WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
+- Whisper (⭐108687, score:55) — OpenAI's open-source speech recognition model: robust multilingual transcription and translation trained on 680k hours of audio
+- GPT-SoVITS (⭐61667, score:55) — Few-shot voice cloning and TTS toolkit that clones a voice from ~1 minute of audio, with WebUI for data prep, training, and inference
+- whisper.cpp (⭐53492, score:55) — A dependency-free C/C++ port of OpenAI's Whisper that runs speech-to-text on CPU and consumer hardware via the ggml/GGUF tensor library
+- OpenVoice (⭐37468, score:55) — An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
+- VoxCPM (⭐36811, score:55) — A tokenizer-free text-to-speech model that generates speech in a continuous acoustic space for multilingual synthesis, creative voice design
 
 ## Top Tools by Job
 

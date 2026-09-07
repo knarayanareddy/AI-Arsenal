@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-19T21:22:54.218Z",
+  "generated_at": "2026-09-07T14:58:18.392Z",
   "tags": [
     {
       "id": "agents",
@@ -1510,10 +1510,10 @@
     {
       "id": "inference",
       "label": "Inference",
-      "count": 185,
+      "count": 186,
       "types": {
         "tip": 31,
-        "tool": 31,
+        "tool": 32,
         "project": 90,
         "paper": 15,
         "architecture": 11,
@@ -1705,6 +1705,7 @@
         "whisper-cpp",
         "whisperx",
         "xiao-2023-streamingllm",
+        "xiurouter",
         "yi"
       ]
     },
@@ -1763,9 +1764,9 @@
     {
       "id": "llm",
       "label": "Llm",
-      "count": 386,
+      "count": 387,
       "types": {
-        "tool": 74,
+        "tool": 75,
         "tip": 52,
         "project": 114,
         "guide": 44,
@@ -2156,6 +2157,7 @@
         "windsurf",
         "wu-2023-autogen",
         "xiao-2022-smoothquant",
+        "xiurouter",
         "xtuner",
         "yann-lecun",
         "yi",
@@ -3300,9 +3302,9 @@
     {
       "id": "routing",
       "label": "Routing",
-      "count": 12,
+      "count": 13,
       "types": {
-        "tool": 4,
+        "tool": 5,
         "project": 4,
         "tip": 4
       },
@@ -3318,7 +3320,8 @@
         "route-easy-requests-to-a-smaller-model-first",
         "route-simple-tasks-to-smaller-models",
         "use-smaller-models-for-classification-steps",
-        "write-tool-descriptions-for-the-model-not-the-codebase"
+        "write-tool-descriptions-for-the-model-not-the-codebase",
+        "xiurouter"
       ]
     },
     {

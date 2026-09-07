@@ -6,18 +6,19 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [by cost](./by-cost/) | 5 entries | 2026-07-19 |
-| [by job](./by-job/) | 14 entries | 2026-07-19 |
-| [by stack](./by-stack/) | 8 entries | 2026-07-19 |
-| [data ingestion](./data-ingestion/) | 37 entries | 2026-07-19 |
-| [dx and tooling](./dx-and-tooling/) | 44 entries | 2026-07-19 |
-| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-07-19 |
-| [model layer](./model-layer/) | 33 entries | 2026-07-19 |
-| [orchestration](./orchestration/) | 26 entries | 2026-07-19 |
-| [serving and deployment](./serving-and-deployment/) | 34 entries | 2026-07-19 |
+| [by cost](./by-cost/) | 5 entries | 2026-09-07 |
+| [by job](./by-job/) | 14 entries | 2026-09-07 |
+| [by stack](./by-stack/) | 8 entries | 2026-09-07 |
+| [data ingestion](./data-ingestion/) | 37 entries | 2026-09-07 |
+| [dx and tooling](./dx-and-tooling/) | 44 entries | 2026-09-07 |
+| [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-09-07 |
+| [model layer](./model-layer/) | 33 entries | 2026-09-07 |
+| [orchestration](./orchestration/) | 26 entries | 2026-09-07 |
+| [serving and deployment](./serving-and-deployment/) | 35 entries | 2026-09-07 |
 
 ## Recently Added
 
+- [XiuRouter](./serving-and-deployment/xiurouter.md)
 - [Agentic Security](./evaluation-and-observability/agentic-security.md)
 - [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md)
 - [AI Infra Guard](./evaluation-and-observability/ai-infra-guard.md)
@@ -27,7 +28,6 @@
 - [FuzzyAI](./evaluation-and-observability/fuzzyai.md)
 - [Inspect Petri](./evaluation-and-observability/inspect-petri.md)
 - [Laminar](./evaluation-and-observability/laminar.md)
-- [MCP Context Forge](./serving-and-deployment/mcp-context-forge.md)
 
 ## Most Popular
 
@@ -275,4 +275,5 @@ _No star-tracked entries yet._
 - [Web Scraping Tools](./by-job/web-scraping.md) — Curated tools for web scraping workflows in AI engineering
 - [Weights & Biases](./model-layer/weights-biases.md) — Experiment tracking and model management platform for ML and AI teams
 - [Windsurf](./dx-and-tooling/windsurf.md) — Agentic AI code editor built around Cascade, a context-aware agent that keeps working across your whole repo
+- [XiuRouter](./serving-and-deployment/xiurouter.md) — Hosted multi-model API service with OpenAI, Anthropic, and Gemini protocol routes plus scoped keys and usage records
 - [Zep](./orchestration/zep.md) — Memory and context engineering platform for AI agents and assistants
