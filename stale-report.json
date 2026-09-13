@@ -1,0 +1,365 @@
+{
+  "generated_at": "2026-09-13T08:25:54.613Z",
+  "threshold_days": 90,
+  "stale_count": 51,
+  "invalid_dates": [],
+  "stale_entries": [
+    {
+      "id": "agent-builder",
+      "type": "guide",
+      "path": "content/skills/learning-paths/agent-builder.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "ai-engineer",
+      "type": "guide",
+      "path": "content/skills/learning-paths/ai-engineer.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "andrej-karpathy",
+      "type": "person",
+      "path": "content/community/people/andrej-karpathy.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "andrew-ng",
+      "type": "person",
+      "path": "content/community/people/andrew-ng.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "arvind-narayanan",
+      "type": "person",
+      "path": "content/community/people/arvind-narayanan.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "chip-huyen",
+      "type": "person",
+      "path": "content/community/people/chip-huyen.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "clem-delangue",
+      "type": "person",
+      "path": "content/community/people/clem-delangue.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "dario-amodei",
+      "type": "person",
+      "path": "content/community/people/dario-amodei.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "data-labeling",
+      "type": "guide",
+      "path": "content/tools/by-job/data-labeling.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "deployment",
+      "type": "guide",
+      "path": "content/tools/by-job/deployment.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "embeddings",
+      "type": "guide",
+      "path": "content/skills/core-concepts/embeddings.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "emerging-techniques",
+      "type": "guide",
+      "path": "content/research/emerging-techniques.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "eugene-yan",
+      "type": "person",
+      "path": "content/community/people/eugene-yan.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "evaluation",
+      "type": "guide",
+      "path": "content/tools/by-job/evaluation.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "fine-tuning",
+      "type": "guide",
+      "path": "content/tools/by-job/fine-tuning.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "francois-chollet",
+      "type": "person",
+      "path": "content/community/people/francois-chollet.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "fundamentals",
+      "type": "guide",
+      "path": "content/skills/prompt-engineering/fundamentals.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "hamel-husain",
+      "type": "person",
+      "path": "content/community/people/hamel-husain.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "harrison-chase",
+      "type": "person",
+      "path": "content/community/people/harrison-chase.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "jason-liu",
+      "type": "person",
+      "path": "content/community/people/jason-liu.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "jay-alammar",
+      "type": "person",
+      "path": "content/community/people/jay-alammar.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "jeremy-howard",
+      "type": "person",
+      "path": "content/community/people/jeremy-howard.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "jerry-liu",
+      "type": "person",
+      "path": "content/community/people/jerry-liu.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "lilian-weng",
+      "type": "person",
+      "path": "content/community/people/lilian-weng.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "llm-researcher",
+      "type": "guide",
+      "path": "content/skills/learning-paths/llm-researcher.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "logankilpatrick",
+      "type": "person",
+      "path": "content/community/people/logankilpatrick.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "melanie-mitchell",
+      "type": "person",
+      "path": "content/community/people/melanie-mitchell.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "memory-management",
+      "type": "guide",
+      "path": "content/tools/by-job/memory-management.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "ml-engineer",
+      "type": "guide",
+      "path": "content/skills/learning-paths/ml-engineer.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "model-registry",
+      "type": "guide",
+      "path": "content/tools/by-job/model-registry.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "must-read-papers",
+      "type": "guide",
+      "path": "content/research/must-read-papers.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "nathan-lambert",
+      "type": "person",
+      "path": "content/community/people/nathan-lambert.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "noam-shazeer",
+      "type": "person",
+      "path": "content/community/people/noam-shazeer.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "orchestration",
+      "type": "guide",
+      "path": "content/tools/by-job/orchestration.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "production-serving",
+      "type": "guide",
+      "path": "content/tools/by-job/production-serving.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "prompt-management",
+      "type": "guide",
+      "path": "content/tools/by-job/prompt-management.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "prompt-patterns-catalog",
+      "type": "guide",
+      "path": "content/skills/prompt-engineering/prompt-patterns-catalog.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "prototyping",
+      "type": "guide",
+      "path": "content/tools/by-job/prototyping.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "sebastian-bubeck",
+      "type": "person",
+      "path": "content/community/people/sebastian-bubeck.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "sebastian-raschka",
+      "type": "person",
+      "path": "content/community/people/sebastian-raschka.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "security-and-guardrails",
+      "type": "guide",
+      "path": "content/tools/by-job/security-and-guardrails.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "shreya-shankar",
+      "type": "person",
+      "path": "content/community/people/shreya-shankar.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "simon-willison",
+      "type": "person",
+      "path": "content/community/people/simon-willison.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "sota-benchmarks",
+      "type": "guide",
+      "path": "content/research/sota-benchmarks.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "structured-output",
+      "type": "guide",
+      "path": "content/tools/by-job/structured-output.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "thomas-wolf",
+      "type": "person",
+      "path": "content/community/people/thomas-wolf.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "transformers",
+      "type": "guide",
+      "path": "content/skills/core-concepts/transformers.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "vector-search",
+      "type": "guide",
+      "path": "content/tools/by-job/vector-search.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "web-scraping",
+      "type": "guide",
+      "path": "content/tools/by-job/web-scraping.md",
+      "last_reviewed": "2026-06-13",
+      "age_days": 92
+    },
+    {
+      "id": "weekly-arxiv-picks",
+      "type": "guide",
+      "path": "content/research/weekly-arxiv-picks.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    },
+    {
+      "id": "yann-lecun",
+      "type": "person",
+      "path": "content/community/people/yann-lecun.md",
+      "last_reviewed": "2026-06-14",
+      "age_days": 91
+    }
+  ]
+}
