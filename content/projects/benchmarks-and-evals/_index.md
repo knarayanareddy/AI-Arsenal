@@ -46,16 +46,16 @@ Before selecting an evaluation/observability platform:
 
 ### Most Popular
 
-- [Langfuse](./langfuse.md) — ⭐ 29021
-- [Opik](./opik.md) — ⭐ 19609
-- [DeepEval](./deepeval.md) — ⭐ 16140
-- [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — ⭐ 14355
-- [Phoenix](./phoenix.md) — ⭐ 10124
-- [OpenLLMetry](./openllmetry.md) — ⭐ 7000
-- [Helicone](./helicone.md) — ⭐ 5809
-- [lmms-eval](./lmms-eval.md) — ⭐ 4300
-- [Agenta](./agenta.md) — ⭐ 3900
-- [MTEB](./mteb.md) — ⭐ 3344
+- [Langfuse](./langfuse.md) — ⭐ 34593
+- [Opik](./opik.md) — ⭐ 22011
+- [DeepEval](./deepeval.md) — ⭐ 18265
+- [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — ⭐ 15726
+- [Phoenix](./phoenix.md) — ⭐ 11457
+- [OpenLLMetry](./openllmetry.md) — ⭐ 7429
+- [Helicone](./helicone.md) — ⭐ 6154
+- [Agenta](./agenta.md) — ⭐ 4752
+- [lmms-eval](./lmms-eval.md) — ⭐ 4404
+- [MTEB](./mteb.md) — ⭐ 3421
 
 ### Browse All
 

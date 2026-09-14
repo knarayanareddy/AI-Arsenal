@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [XiuRouter](./xiurouter.md)
 - [Envoy AI Gateway](./ai-gateway.md)
 - [MCP Context Forge](./mcp-context-forge.md)
 - [RamaLama](./ramalama.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Cloudflare Workers AI](./cloudflare-workers-ai.md)
 - [Cog (Replicate)](./cog.md)
 - [CubeSandbox](./cubesandbox.md)
-- [KServe](./kserve.md)
 
 ### Most Popular
 
@@ -78,3 +78,4 @@ _No star-tracked entries yet._
 - [ToolHive](./toolhive.md) — Enterprise-oriented platform for running, isolating, and managing Model Context Protocol servers
 - [NVIDIA Triton Inference Server](./triton-inference-server.md) — NVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles
 - [Vercel](./vercel.md) — Frontend cloud platform for deploying and scaling Next.js apps with edge functions
+- [XiuRouter](./xiurouter.md) — Hosted multi-model API service with OpenAI, Anthropic, and Gemini protocol routes plus scoped keys and usage records

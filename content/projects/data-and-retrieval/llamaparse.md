@@ -6,18 +6,22 @@ artifact_type: service
 category: rag
 subcategory: document-processing
 description: Managed document parser from LlamaIndex for turning complex files into RAG-ready text
-github_url: "https://www.llamaindex.ai/llamaparse"
+github_url: https://www.llamaindex.ai/llamaparse
 license: Proprietary
 primary_language: Other
 org_or_maintainer: null
-tags: [rag, data, llamaindex, cloud]
+tags:
+  - rag
+  - data
+  - llamaindex
+  - cloud
 maturity: production
 cost_model: freemium
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://docs.cloud.llamaindex.ai/llamaparse/getting_started"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://docs.cloud.llamaindex.ai/llamaparse/getting_started
 demo_url: null
 paper_url: null
 paper_id: null
@@ -28,9 +32,14 @@ supports_quantization: false
 supported_formats: []
 api_compatible: null
 phase: data-and-retrieval
-domain: [language, vision]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, production-proven]
+domain:
+  - language
+  - vision
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - production-proven
 ecosystem_role:
   - LlamaIndex's commercial, managed document-parsing service, specializing in complex PDF/document layouts for RAG ingestion
 best_for:
@@ -46,12 +55,15 @@ integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: reviewed
 enrichment_notes: LlamaParse is referenced in independent production case studies as a component of larger LlamaIndex-based systems (e.g. StackAI's use of LlamaParse for high-accuracy retrieval in enterprise document agents, per LlamaIndex's own case-study blog, corroborating real customer usage beyond marketing claims).
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources:
-  - {"source":"conference","url":"https://www.llamaindex.ai/blog?tag=Llamaindex","date":"2024-09-16","description":"LlamaIndex case study documenting StackAI's production use of LlamaParse to power high-accuracy retrieval for enterprise document agents"}
+  - source: conference
+    url: https://www.llamaindex.ai/blog?tag=Llamaindex
+    date: '2024-09-16'
+    description: LlamaIndex case study documenting StackAI's production use of LlamaParse to power high-accuracy retrieval for enterprise document agents
 featured: false
 status: active
 ---

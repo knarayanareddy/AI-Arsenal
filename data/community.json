@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-07-19T21:22:54.218Z",
-  "count": 32,
+  "generated_at": "2026-09-14T15:50:19.873Z",
+  "count": 33,
   "items": [
     {
       "id": "ai-engineer-worlds-fair",
@@ -119,6 +119,72 @@
       "word_count": 386,
       "body_html": "<h2>Overview</h2>\n<p>AI Tinkerers is a global network of independently-run, city-based meetup chapters focused on hands-on AI building: live demos, hackathons, and workshop-format sessions rather than passive talks.</p>\n<h2>Who it's for</h2>\n<p>Practitioners and founders who want in-person, hands-on AI-building community locally, and beginners looking for a lower-stakes way to see real AI projects built live. Best suited to people near an active chapter city, since programming and cadence vary meaningfully by location.</p>\n<h2>What you'll get</h2>\n<ul>\n<li>Hands-on, build-focused local events (live demos, hackathons, workshop-style sessions) rather than lecture-format talks</li>\n<li>A genuinely global footprint: chapters actively running events were confirmed in Portland, Paris, Seattle, São Paulo, Manchester (NH), Düsseldorf, and Upstate NY as of this review, among many others</li>\n<li>Periodic globally-synchronized events (e.g. a 24-city \"OpenClaw Global Unhackathon\" build day run simultaneously across the network)</li>\n</ul>\n<h2>How to get value fast</h2>\n<p>Find your nearest chapter via <a href=\"https://aitinkerers.org/events\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">aitinkerers.org/events</a> or a chapter-specific subdomain (e.g. <code>portland.aitinkerers.org</code>). Prioritize hands-on \"build\" or \"hackathon\" formatted events over talk-only sessions, since that hands-on format is this network's core differentiator. Watch for newly-launched chapters near you -- new chapters (e.g. a Düsseldorf inaugural meetup) continue to launch.</p>\n<h2>What to avoid</h2>\n<p>Don't assume programming is standardized across chapters -- each is independently organized, and topic focus, cadence, and format vary by local organizer. Check a specific chapter's recent event history before assuming what you'll get.</p>\n<h2>Activity &amp; health</h2>\n<p>A direct fetch of multiple independent chapter pages on 2026-07-06 confirms active, scheduled programming: Portland (events through early 2026), Paris (events scheduled into July and August 2026), Seattle (a \"Dev Tools\" track scheduled for July 13, 2026), São Paulo (events through March 2026 and a December 2025 30-city global hackathon), Manchester NH and Upstate NY (both with July 13-14, 2026 events), and a newly-launching Düsseldorf chapter (inaugural meetup July 14, 2026). This breadth and currency across many independently-run chapters supports <code>activity_level: very-active</code>.</p>\n<h2>Safety &amp; moderation</h2>\n<p>No moderation or trust concerns were found during this review.</p>\n<h2>Relation to the Arsenal</h2>\n<p>Complements <a href=\"../events/ai-engineer-worlds-fair.md\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Engineer World's Fair</a> as a more frequent, local, hands-on counterpart to that larger annual conference.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://aitinkerers.org/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Tinkerers (global)</a></li>\n<li><a href=\"https://paris.aitinkerers.org/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Example chapter page confirming live scheduled events</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-07-06 by @migration-agent</em></p>\n",
       "body_text": "Overview AI Tinkerers is a global network of independently run, city based meetup chapters focused on hands on AI building: live demos, hackathons, and workshop format sessions rather than passive talks. Who it's for Practitioners and founders who want in person, hands on AI building community locally, and beginners looking for a lower stakes way to see real AI projects built live. Best suited to people near an active chapter city, since programming and cadence vary meaningfully by location. What you'll get Hands on, build focused local events (live demos, hackathons, workshop style sessions) rather than lecture format talks A genuinely global footprint: chapters actively running events were confirmed in Portland, Paris, Seattle, São Paulo, Manchester (NH), Düsseldorf, and Upstate NY as of this review, among many others Periodic globally synchronized events (e.g. a 24 city \"OpenClaw Global Unhackathon\" build day run simultaneously across the network) How to get value fast Find your nearest chapter via aitinkerers.org/events or a chapter specific subdomain (e.g. portland.aitinkerers.org). Prioritize hands on \"build\" or \"hackathon\" formatted events over talk only sessions, since that hands on format is this network's core differentiator. Watch for newly launched chapters near you new chapters (e.g. a Düsseldorf inaugural meetup) continue to launch. What to avoid Don't assume programming is standardized across chapters each is independently organized, and topic focus, cadence, and format vary by local organizer. Check a specific chapter's recent event history before assuming what you'll get. Activity & health A direct fetch of multiple independent chapter pages on 2026 07 06 confirms active, scheduled programming: Portland (events through early 2026), Paris (events scheduled into July and August 2026), Seattle (a \"Dev Tools\" track scheduled for July 13, 2026), São Paulo (events through March 2026 and a December 2025 30 city global hackathon), Manchester NH and Upstate NY (both with July 13 14, 2026 events), and a newly launching Düsseldorf chapter (inaugural meetup July 14, 2026). This breadth and currency across many independently run chapters supports activity level: very active. Safety & moderation No moderation or trust concerns were found during this review. Relation to the Arsenal Complements AI Engineer World's Fair as a more frequent, local, hands on counterpart to that larger annual conference. Resources AI Tinkerers (global) Example chapter page confirming live scheduled events Last reviewed: 2026 07 06 by @migration agent"
+    },
+    {
+      "id": "ai-weekly",
+      "title": "AI Weekly",
+      "entry_type": "community",
+      "kind": "newsletter",
+      "url": "content/community/newsletters/ai-weekly",
+      "topics": [
+        "llm-engineering",
+        "agents",
+        "research",
+        "safety",
+        "infra"
+      ],
+      "audience": [
+        "practitioner",
+        "researcher",
+        "founder",
+        "enterprise"
+      ],
+      "access": "public",
+      "activity_level": "very-active",
+      "activity_evidence": "Public archive showed issues dated 2026-09-01, 2026-08-30, 2026-08-24, and 2026-08-20 when checked on 2026-09-05",
+      "last_checked": "2026-09-05",
+      "safety_level": "generally-safe",
+      "how_to_get_value": [
+        "Use the three-times-weekly editions to scan developments surfaced by influential AI experts and organizations",
+        "Open the linked primary sources when a ranked item affects an engineering, research, investment, or policy decision"
+      ],
+      "what_to_avoid": [
+        "Treat rankings and summaries as discovery signals rather than substitutes for reading the cited primary sources"
+      ],
+      "owner_org": "AI Weekly",
+      "cost": "free",
+      "tags": [
+        "llm",
+        "agents",
+        "research",
+        "trending"
+      ],
+      "description": "Ranks and explains AI developments using signals from what influential experts and organizations are reading and sharing",
+      "enrichment_status": "reviewed",
+      "enrichment_notes": "Cadence verified against four recent dates in the public issue archive on 2026-09-05.",
+      "related_communities": [],
+      "last_reviewed": "2026-09-05",
+      "path": "content/community/newsletters/ai-weekly.md",
+      "slug": "ai-weekly",
+      "section_path": "content/community/newsletters",
+      "display_name": "AI Weekly",
+      "summary": "Ranks and explains AI developments using signals from what influential experts and organizations are reading and sharing",
+      "last_updated": "2026-09-05",
+      "headings": [
+        "Overview",
+        "Who it's for",
+        "What you'll get",
+        "How to get value fast",
+        "What to avoid",
+        "Activity & health",
+        "Safety & moderation",
+        "Relation to the Arsenal",
+        "Resources"
+      ],
+      "reading_time_minutes": 2,
+      "word_count": 263,
+      "body_html": "<h2>Overview</h2>\n<p>AI Weekly is a free AI news-intelligence newsletter that tracks what influential AI experts and organizations are reading and sharing, then ranks and explains developments in models, agents, funding, policy, and research.</p>\n<h2>Who it's for</h2>\n<p>Practitioners, researchers, founders, and enterprise teams who need a broad view of current AI developments without monitoring every primary source and expert account independently.</p>\n<h2>What you'll get</h2>\n<ul>\n<li>Three editions per week covering models, agents, companies, research, funding, and policy</li>\n<li>Ranked stories based on attention signals from influential AI people and organizations</li>\n<li>Links to the underlying sources for deeper reading and verification</li>\n</ul>\n<h2>How to get value fast</h2>\n<p>Scan the ranked items for changes that affect your work, then open the linked primary sources for technical or strategic decisions. The public issue archive is also useful for reviewing recent developments without subscribing first.</p>\n<h2>What to avoid</h2>\n<p>Do not treat the rankings or summaries as a replacement for the cited primary source when making high-stakes engineering, research, investment, or policy decisions.</p>\n<h2>Activity &amp; health</h2>\n<p>The public archive showed issues dated 2026-09-01, 2026-08-30, 2026-08-24, and 2026-08-20 when checked on 2026-09-05, supporting a frequent and current publishing cadence.</p>\n<h2>Safety &amp; moderation</h2>\n<p>No interactive-community moderation concerns apply. Readers should still verify consequential claims against the linked primary sources.</p>\n<h2>Relation to the Arsenal</h2>\n<p>Complements the Arsenal's research, tools, projects, and trending sections with a current-awareness layer spanning technical releases, research, companies, funding, safety, and policy.</p>\n<h2>Resources</h2>\n<ul>\n<li><a href=\"https://aiweekly.co/\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">AI Weekly</a></li>\n<li><a href=\"https://aiweekly.co/issues\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">Public issue archive</a></li>\n<li><a href=\"https://aiweekly.co/feed\" rel=\"noopener noreferrer nofollow\" target=\"_blank\">RSS feed</a></li>\n</ul>\n<hr />\n<p><em>Last reviewed: 2026-09-05 by @alexisdufresne</em></p>\n",
+      "body_text": "Overview AI Weekly is a free AI news intelligence newsletter that tracks what influential AI experts and organizations are reading and sharing, then ranks and explains developments in models, agents, funding, policy, and research. Who it's for Practitioners, researchers, founders, and enterprise teams who need a broad view of current AI developments without monitoring every primary source and expert account independently. What you'll get Three editions per week covering models, agents, companies, research, funding, and policy Ranked stories based on attention signals from influential AI people and organizations Links to the underlying sources for deeper reading and verification How to get value fast Scan the ranked items for changes that affect your work, then open the linked primary sources for technical or strategic decisions. The public issue archive is also useful for reviewing recent developments without subscribing first. What to avoid Do not treat the rankings or summaries as a replacement for the cited primary source when making high stakes engineering, research, investment, or policy decisions. Activity & health The public archive showed issues dated 2026 09 01, 2026 08 30, 2026 08 24, and 2026 08 20 when checked on 2026 09 05, supporting a frequent and current publishing cadence. Safety & moderation No interactive community moderation concerns apply. Readers should still verify consequential claims against the linked primary sources. Relation to the Arsenal Complements the Arsenal's research, tools, projects, and trending sections with a current awareness layer spanning technical releases, research, companies, funding, safety, and policy. Resources AI Weekly Public issue archive RSS feed Last reviewed: 2026 09 05 by @alexisdufresne"
     },
     {
       "id": "assemblyai-youtube",

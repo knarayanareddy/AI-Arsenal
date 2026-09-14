@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": "2026-07-19T21:22:54.218Z",
+    "generated_at": "2026-09-14T15:50:19.873Z",
     "total_projects": 322,
-    "total_tools": 214,
+    "total_tools": 215,
     "total_papers": 128,
     "total_tips": 171,
     "total_people": 25,
@@ -11,7 +11,7 @@
     "total_build_examples": 8,
     "total_architectures": 29,
     "total_observability": 16,
-    "total_community": 32,
+    "total_community": 33,
     "total_benchmarks": 52,
     "total_trending": 4,
     "schema_version": "1.0.0"
@@ -710,6 +710,26 @@
       "featured": false
     },
     {
+      "id": "ai-weekly",
+      "type": "community",
+      "name": "AI Weekly",
+      "description": "Ranks and explains AI developments using signals from what influential experts and organizations are reading and sharing",
+      "tags": [
+        "llm",
+        "agents",
+        "research",
+        "trending"
+      ],
+      "path": "content/community/newsletters/ai-weekly.md",
+      "url": "content/community/newsletters/ai-weekly",
+      "last_updated": "2026-09-05",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "aibrix",
       "type": "project",
       "name": "AIBrix",
@@ -845,7 +865,7 @@
       "category": "rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -1821,7 +1841,7 @@
       "category": "evaluation",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -3355,7 +3375,7 @@
       "category": "rag",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -6444,7 +6464,7 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -10855,7 +10875,7 @@
       "category": "tooling",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -11132,7 +11152,7 @@
       "category": "agents",
       "maturity": "alpha",
       "cost_model": "usage-based",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -13314,7 +13334,7 @@
       "category": "voice-audio",
       "maturity": "production",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -14780,7 +14800,7 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -17670,7 +17690,7 @@
       "category": "observability",
       "maturity": "beta",
       "cost_model": "open-source",
-      "status": "active",
+      "status": "archived",
       "featured": false
     },
     {
@@ -19988,6 +20008,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "xiurouter",
+      "type": "tool",
+      "name": "XiuRouter",
+      "description": "Hosted multi-model API service with OpenAI, Anthropic, and Gemini protocol routes plus scoped keys and usage records",
+      "tags": [
+        "llm",
+        "routing",
+        "inference"
+      ],
+      "path": "content/tools/serving-and-deployment/xiurouter.md",
+      "url": "content/tools/serving-and-deployment/xiurouter",
+      "last_updated": "2026-08-28",
+      "category": null,
+      "maturity": "production",
+      "cost_model": "usage-based",
+      "status": "active",
       "featured": false
     },
     {
