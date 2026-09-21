@@ -20,8 +20,8 @@ enrichment_status: draft
 reviewed_by: maintainer
 buzz_sources: []
 featured: false
-github_stars_last_30d: 0
-trending_score: 0
+github_stars_last_30d: 3
+trending_score: 15
 added_date: '2026-07-11'
 last_reviewed: '2026-07-11'
 added_by: maintainer
@@ -44,8 +44,8 @@ tags:
   - multimodal
 maturity: beta
 cost_model: open-source
-github_stars: 5200
-last_commit: '2026-07-09'
+github_stars: 5203
+last_commit: '2026-09-21'
 docs_url: https://github.com/InternLM/xtuner
 phase: training-and-alignment
 domain:

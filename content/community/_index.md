@@ -6,14 +6,14 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [chat](./chat/) | 6 entries | 2026-07-19 |
-| [creators](./creators/) | 9 entries | 2026-07-19 |
-| [datasets](./datasets/) | 3 entries | 2026-07-19 |
-| [events](./events/) | 2 entries | 2026-07-19 |
-| [forums](./forums/) | 5 entries | 2026-07-19 |
-| [meetups](./meetups/) | 1 entries | 2026-07-19 |
-| [newsletters](./newsletters/) | 6 entries | 2026-07-19 |
-| [people](./people/) | 25 entries | 2026-07-19 |
+| [chat](./chat/) | 6 entries | 2026-09-21 |
+| [creators](./creators/) | 9 entries | 2026-09-21 |
+| [datasets](./datasets/) | 3 entries | 2026-09-21 |
+| [events](./events/) | 2 entries | 2026-09-21 |
+| [forums](./forums/) | 5 entries | 2026-09-21 |
+| [meetups](./meetups/) | 1 entries | 2026-09-21 |
+| [newsletters](./newsletters/) | 7 entries | 2026-09-21 |
+| [people](./people/) | 25 entries | 2026-09-21 |
 
 ## Recently Added
 
@@ -36,6 +36,7 @@ _No star-tracked entries yet._
 
 - [AI Engineer World's Fair](./events/ai-engineer-worlds-fair.md) — 
 - [AI Tinkerers](./meetups/ai-tinkerers.md) — 
+- [AI Weekly](./newsletters/ai-weekly.md) — Ranks and explains AI developments using signals from what influential experts and organizations are reading and sharing
 - [Andrej Karpathy](./people/andrej-karpathy.md) — Explains neural networks, transformers, and LLMs with unusually clear engineering intuition
 - [Andrew Ng](./people/andrew-ng.md) — Popularizes practical AI education and structured learning paths
 - [Arvind Narayanan](./people/arvind-narayanan.md) — Writes critically about AI evaluation, policy, risks, and societal impact

@@ -6,13 +6,13 @@
 
 | Sub-section | Count | Last Updated |
 |---|---:|---|
-| [agent systems](./agent-systems/) | 41 entries | 2026-07-19 |
-| [benchmarks and evals](./benchmarks-and-evals/) | 18 entries | 2026-07-19 |
-| [data and retrieval](./data-and-retrieval/) | 65 entries | 2026-07-19 |
-| [foundation models](./foundation-models/) | 68 entries | 2026-07-19 |
-| [frameworks](./frameworks/) | 66 entries | 2026-07-19 |
-| [inference engines](./inference-engines/) | 42 entries | 2026-07-19 |
-| [training and alignment](./training-and-alignment/) | 22 entries | 2026-07-19 |
+| [agent systems](./agent-systems/) | 41 entries | 2026-09-21 |
+| [benchmarks and evals](./benchmarks-and-evals/) | 18 entries | 2026-09-21 |
+| [data and retrieval](./data-and-retrieval/) | 65 entries | 2026-09-21 |
+| [foundation models](./foundation-models/) | 68 entries | 2026-09-21 |
+| [frameworks](./frameworks/) | 66 entries | 2026-09-21 |
+| [inference engines](./inference-engines/) | 42 entries | 2026-09-21 |
+| [training and alignment](./training-and-alignment/) | 22 entries | 2026-09-21 |
 
 ## Recently Added
 
@@ -29,16 +29,16 @@
 
 ## Most Popular
 
-- [Hermes Agent](./agent-systems/hermes-agent.md) — ⭐ 213237
-- [AutoGPT](./frameworks/autogpt.md) — ⭐ 184931
-- [Ollama](./inference-engines/ollama.md) — ⭐ 174059
-- [Stable Diffusion WebUI](./frameworks/stable-diffusion-webui.md) — ⭐ 164197
-- [Dify](./frameworks/dify.md) — ⭐ 145081
-- [LangChain](./frameworks/langchain.md) — ⭐ 139206
-- [Firecrawl](./data-and-retrieval/firecrawl.md) — ⭐ 132342
-- [ComfyUI](./frameworks/comfyui.md) — ⭐ 119901
-- [llama.cpp](./inference-engines/llama-cpp.md) — ⭐ 116399
-- [Whisper](./foundation-models/whisper.md) — ⭐ 104543
+- [Hermes Agent](./agent-systems/hermes-agent.md) — ⭐ 247692
+- [AutoGPT](./frameworks/autogpt.md) — ⭐ 187475
+- [Firecrawl](./data-and-retrieval/firecrawl.md) — ⭐ 182841
+- [Ollama](./inference-engines/ollama.md) — ⭐ 181366
+- [Stable Diffusion WebUI](./frameworks/stable-diffusion-webui.md) — ⭐ 165037
+- [Dify](./frameworks/dify.md) — ⭐ 156736
+- [LangChain](./frameworks/langchain.md) — ⭐ 146793
+- [ComfyUI](./frameworks/comfyui.md) — ⭐ 134265
+- [llama.cpp](./inference-engines/llama-cpp.md) — ⭐ 129066
+- [Browser Use](./agent-systems/browser-use.md) — ⭐ 115729
 
 ## Browse All
 
