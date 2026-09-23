@@ -80,7 +80,7 @@ Incoming support tickets are routed to an agent pipeline that classifies, attemp
 - You need deep, audited control over what an agent is allowed to tell a customer (regulated industries)
 - You need an open-source or self-hostable support-automation platform
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `seaticket`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

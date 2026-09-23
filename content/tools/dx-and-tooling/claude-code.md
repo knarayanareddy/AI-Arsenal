@@ -81,7 +81,7 @@ cd your-repo && claude
 - You need an open-source or self-hostable assistant for compliance — the agent loop and model are closed
 - You want IDE-embedded inline completions rather than a conversational terminal agent
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `claude-code`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

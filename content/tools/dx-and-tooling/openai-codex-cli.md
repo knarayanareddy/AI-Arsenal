@@ -81,7 +81,7 @@ codex
 - You need model choice beyond OpenAI models without adapters
 - You want a mature plugin/skill ecosystem — its extension surface is younger than Claude Code's
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `openai-codex-cli`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

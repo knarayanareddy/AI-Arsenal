@@ -84,7 +84,7 @@ pip install strands-agents strands-agents-tools
 - Younger ecosystem than the most established agent frameworks
 - Multi-agent/complex orchestration patterns still maturing
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `strands-agents`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

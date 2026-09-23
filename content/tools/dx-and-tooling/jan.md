@@ -80,7 +80,7 @@ A Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from
 - You need the fastest support for cutting-edge runtimes/features; Jan trails LM Studio on polish and MLX
 - Team/multi-user deployments — use Open WebUI on a server instead
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `jan`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

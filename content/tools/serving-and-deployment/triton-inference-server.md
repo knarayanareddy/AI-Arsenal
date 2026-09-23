@@ -80,7 +80,7 @@ docker run --gpus=all --rm -p 8000:8000 -v $PWD/models:/models nvcr.io/nvidia/tr
 - LLM-only serving — vLLM/SGLang standalone are simpler and equally fast for that job
 - Non-NVIDIA hardware as your primary target; much of Triton's value assumes the NVIDIA stack
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `triton-inference-server`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

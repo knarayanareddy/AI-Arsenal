@@ -80,7 +80,7 @@ Model outputs are rendered through a visual interface with dynamic overlays ('Pu
 - You need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens)
 - You need an open-source or self-hostable observability tool
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `monako-glass`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

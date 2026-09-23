@@ -82,7 +82,7 @@ Standard transformer-based architecture released as open weights; can be served 
 - You need a model with the deepest English-language-specific RLHF tuning track record (verify on your eval set)
 - You require a hosted-only deployment with no self-hosting (most cloud inference providers support it, but check terms)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `qwen-3`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

@@ -81,7 +81,7 @@ Cursor indexes your repository into embeddings for retrieval, routes completions
 - Strict data-residency or on-prem requirements — code context is processed by Cursor's cloud
 - You are budget-constrained; heavy agent usage on frontier models quickly exceeds the included quota
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `cursor`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

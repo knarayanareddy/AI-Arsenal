@@ -81,7 +81,7 @@ pip install evidently
 - Pure LLM tracing/debugging is the need — trace-first tools (Langfuse, Phoenix) fit the workflow better
 - You want fully managed evals with no code; the library-first design assumes Python fluency
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `evidently`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

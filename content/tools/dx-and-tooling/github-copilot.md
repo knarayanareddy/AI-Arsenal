@@ -81,7 +81,7 @@ code --install-extension GitHub.copilot
 - You want deep model control or local models — Copilot's model menu is curated, not open
 - Editor-native agent workflows matter more to you than platform integration; Cursor/Claude Code iterate faster there
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `github-copilot`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

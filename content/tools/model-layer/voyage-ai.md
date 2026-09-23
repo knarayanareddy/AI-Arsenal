@@ -81,7 +81,7 @@ pip install voyageai
 - Vendor consolidation matters and you're not on MongoDB — it's another API dependency in your critical path
 - Self-hosted requirements; weights are not open (use BGE/GTE family instead)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `voyage-ai`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

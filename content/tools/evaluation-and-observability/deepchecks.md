@@ -81,7 +81,7 @@ pip install deepchecks
 - Your LLM evaluation must be fully open-source — Deepchecks' LLM product is the commercial arm; use Evidently/DeepEval
 - Trace-level agent debugging; this is validation, not observability plumbing
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `deepchecks`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

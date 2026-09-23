@@ -80,7 +80,7 @@ An orchestrating agent breaks the brief into subtasks (planning, scaffolding, co
 - You need fine-grained control over architecture, security review, or code provenance for production software
 - You require an open-source or self-hostable platform
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `manus`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

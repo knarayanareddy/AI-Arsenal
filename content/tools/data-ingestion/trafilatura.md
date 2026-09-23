@@ -81,7 +81,7 @@ trafilatura -u <article-url>
 - JavaScript-rendered pages — trafilatura parses static HTML; pair with a headless browser or use Crawl4AI
 - You want ready-to-use LLM-formatted output with screenshots/actions; that's the newer crawler tools' job
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `trafilatura`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

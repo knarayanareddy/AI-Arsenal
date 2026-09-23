@@ -81,7 +81,7 @@ pip install e2b-code-interpreter
 - Trusted-code workloads — ordinary containers/serverless are cheaper and simpler
 - Hard on-prem requirements without infra appetite: self-hosting the Firecracker stack is nontrivial
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `e2b`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

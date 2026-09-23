@@ -81,7 +81,7 @@ code --install-extension Continue.continue
 - You want maximum out-of-the-box autonomy; Continue is assistant-first, with agent mode newer than Cline's
 - You don't want to spend any time on configuration — its flexibility comes with more knobs than Copilot
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `continue-dev`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

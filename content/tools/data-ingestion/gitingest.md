@@ -81,7 +81,7 @@ gitingest https://github.com/octocat/Hello-World -o digest.txt
 - Private/internal code you shouldn't paste through a third-party service — use the CLI locally or Repomix
 - You need packing controls (compression, secret scanning, token budgets per file); Repomix is more configurable
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `gitingest`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

@@ -81,7 +81,7 @@ npm create cloudflare@latest my-app
 - You need frontier-model quality or large open models — the catalog is curated small/mid-size models
 - Heavy sustained throughput; dedicated GPU serving beats per-neuron pricing at scale
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `cloudflare-workers-ai`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

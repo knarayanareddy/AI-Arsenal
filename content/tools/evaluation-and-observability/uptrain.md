@@ -81,7 +81,7 @@ pip install uptrain
 - You need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024
 - Pytest-style eval-in-CI workflows; DeepEval's testing ergonomics are stronger
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `uptrain`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

@@ -81,7 +81,7 @@ cd your-repo && aider
 - You want a long-horizon autonomous agent — aider is deliberately a supervised pair-programmer, not a task runner
 - You expect IDE UI affordances; aider is terminal-first with optional editor watching
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `aider`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

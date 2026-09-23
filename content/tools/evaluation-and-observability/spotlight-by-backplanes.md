@@ -80,7 +80,7 @@ Instrumented agent sessions report step-by-step activity to Spotlight's backend,
 - You need an open-source or self-hostable observability stack
 - You already have a tracing platform (LangSmith/Langfuse/Phoenix) that covers your agent's framework
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `spotlight-by-backplanes`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

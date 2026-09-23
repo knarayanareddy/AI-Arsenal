@@ -80,7 +80,7 @@ docker run -it --gpus all -p 8080:8080 -v $HOME/.tabby:/data tabbyml/tabby serve
 - You want frontier-model quality — self-hosted completion models still trail hosted Copilot/Cursor noticeably
 - Solo developers without a GPU; hosted free tiers will serve you better
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `tabby-ml`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

@@ -81,7 +81,7 @@ Intercepts content fetched during an agent's browsing session, applies sanitizat
 - Your agents never browse untrusted live web content (the risk this tool addresses doesn't apply)
 - You need an open-source or self-hostable security layer
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+- _Enrichment status: draft. For `agent-browser-shield`, the best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
 
 ## Integration Patterns
 

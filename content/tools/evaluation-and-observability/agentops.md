@@ -81,7 +81,7 @@ pip install agentops
 - You need self-hosted trace storage; the SDK is open but the platform is hosted
 - Your observability is standardized on OTel into an existing backend (Langfuse/Phoenix cover that path)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `agentops`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 

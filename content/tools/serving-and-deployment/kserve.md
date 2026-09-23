@@ -80,7 +80,7 @@ kubectl apply --server-side -f https://github.com/kserve/kserve/releases/latest/
 - No Kubernetes expertise in-house — the operational prerequisite dominates the benefit
 - Latency-critical LLM serving where scale-to-zero cold starts are unacceptable (disable it or serve directly)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Enrichment status: draft. For `kserve`, the best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
 
 ## Integration Patterns
 
