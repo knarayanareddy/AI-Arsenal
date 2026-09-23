@@ -46,7 +46,7 @@ Developers actively building with LlamaIndex (RAG pipelines, document agents, Ll
 
 ## How to get value fast
 
-Join via the invite linked directly from LlamaIndex's own current developer documentation (`discord.com/invite/eN6D2HQ4aX`), confirmed live as of this review. Come with a minimal reproducible example when asking implementation questions -- this community skews toward concrete framework troubleshooting rather than open-ended RAG-strategy debate (for the latter, see this Arsenal's [RAG vs Fine-Tuning](../../architectures/model-selection/rag-vs-fine-tuning.md) and related architecture entries).
+Join via the invite linked directly from LlamaIndex's own current developer documentation (`discord.com/invite/eN6D2HQ4aX`), confirmed live as of this review. Come with a minimal reproducible example when asking implementation questions -- this community skews toward concrete framework troubleshooting rather than open-ended RAG-strategy debate (for the latter, see this Arsenal's [RAG vs Fine-Tuning](../../architectures/system-design/rag-vs-fine-tuning.md) and related architecture entries).
 
 ## What to avoid
 

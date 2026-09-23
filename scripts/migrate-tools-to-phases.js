@@ -216,7 +216,7 @@ ${scope.notBelongs}
 
 Before picking a tool in this phase, consider:
 
-- See [Architecture Decision Trees](../../architectures/decision-trees/_index.md) for cross-cutting guidance.
+- See [Architecture Decision Trees](../../architectures/_index.md) for cross-cutting guidance.
 - Key question to ask: ${scope.question}
 
 ## Tools in this phase

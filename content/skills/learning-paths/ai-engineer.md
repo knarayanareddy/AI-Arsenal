@@ -52,7 +52,7 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 ### Month 5: Production
 
 - Add evaluation, tracing, cost tracking, deployment, and rollback plans.
-- Read: [Observability Overview](../../observability/overview.md) and [Evaluation Pipelines](../../observability/evaluation-pipelines.md).
+- Read: [Observability Overview](../../observability/_index.md) and [Evaluation Pipelines](../../observability/evaluation-quality/_index.md).
 
 ### Month 6: Specialization
 

@@ -40,7 +40,7 @@ AI Arsenal is useful only if builders can turn curated tools and papers into pra
 ### Phase 3: Learn Serving and Inference
 
 - Compare hosted APIs, vLLM, SGLang, Ollama, and llama.cpp.
-- Read: [Choose an LLM](../../architectures/decision-trees/choose-llm.md) and [Choose a Deployment Target](../../architectures/decision-trees/choose-deployment-target.md).
+- Read: [Choose an LLM](../../architectures/model-selection/choose-llm.md) and [Choose a Deployment Target](../../architectures/serving-patterns/choose-deployment-target.md).
 
 ### Phase 4: Learn LLMOps
 

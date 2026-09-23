@@ -198,7 +198,7 @@ Propagation carriers (`traceparent`/`tracestate`, and optional `baggage`) carry 
 
 ## Relation to the Arsenal
 
-Provides the cross-boundary and streaming discipline that [Trace Every Retrieval, Tool Call, and Agent Transition](./trace-every-agent-and-rag-step.md) depends on to actually form a single tree in a multi-service deployment. Its streaming latency fields feed [Alert on Streaming Latency SLOs](../monitoring-alerting/alert-on-streaming-latency-slos.md). Redaction of span attributes is governed by [Redact and Govern Trace Data](../privacy-governance/redact-and-govern-trace-data.md). Supports the tips [Measure First-Token Latency](../../tips-and-tricks/cost-and-performance/measure-first-token-latency.md) and [Log Latency by Pipeline Stage](../../tips-and-tricks/observability/log-latency-by-pipeline-stage.md).
+Provides the cross-boundary and streaming discipline that [Trace Every Retrieval, Tool Call, and Agent Transition](./trace-every-agent-and-rag-step.md) depends on to actually form a single tree in a multi-service deployment. Its streaming latency fields feed [Alert on Streaming Latency SLOs](../monitoring-alerting/alert-on-streaming-latency-slos.md). Redaction of span attributes is governed by [Redact and Govern Trace Data](../privacy-governance/redact-and-govern-trace-data.md). Supports the tips [Measure First-Token Latency](../../tips-and-tricks/cost-and-performance/measure-first-token-latency.md) and [Log Latency by Pipeline Stage](../../tips-and-tricks/debugging-and-observability/log-latency-by-pipeline-stage.md).
 
 ## Resources
 

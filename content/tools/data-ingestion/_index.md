@@ -18,7 +18,7 @@ Model providers and fine-tuning belong in Model Layer; agent memory belongs in O
 
 Before picking a tool in this phase, consider:
 
-- See [Architecture Decision Trees](../../architectures/decision-trees/_index.md) for cross-cutting guidance.
+- See [Architecture Decision Trees](../../architectures/_index.md) for cross-cutting guidance.
 - Key question to ask: Does this tool primarily get data INTO the system, in a form the model layer can use?
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->

@@ -2,6 +2,8 @@
 
 Population follows the depth-first sprint plan: complete one category, validate it, then move to the next. Quality and verifiability are more important than breadth.
 
+> This file is a hand-maintained sprint log, not a live count. For current per-type totals read [`data/stats.json`](./data/stats.json), which the README stats table is generated from.
+
 ## Current Status
 
 | Section | Status | Entries | Quality | Last Updated | Notes |
@@ -16,9 +18,9 @@ Population follows the depth-first sprint plan: complete one category, validate 
 | Research/Papers | ✅ Complete | 25/25 | ⭐⭐⭐⭐☆ | 2026-06-14 | Sprint 8 complete: guide files, benchmark references, emerging techniques, and canonical papers |
 | Tips & Tricks | ✅ Complete | 106/100 | ⭐⭐⭐⭐☆ | 2026-06-14 | Sprint 9 complete: all required categories populated as schema-valid individual tip entries |
 | Build Examples | ✅ Complete | 8/8 | ⭐⭐⭐⭐☆ | 2026-06-14 | Sprint 10 complete: starter, intermediate, and advanced blueprints |
-| Skills | ✅ Complete | 8/8 | ⭐⭐⭐⭐☆ | 2026-06-14 | Sprint 11 complete: learning paths, prompt engineering, and core concepts |
+| Skills | ✅ Complete | 35 files | ⭐⭐⭐⭐☆ | 2026-06-14 | Sprint 11 complete: learning paths, applied skills, core concepts, and by-role guides (typed as `guide` entries, so they are counted inside the Guides total) |
 | Community | ✅ Complete | 31/30 | ⭐⭐⭐⭐☆ | 2026-06-14 | Sprint 12 complete: people, channels, newsletters, podcasts, and community spaces |
-| Trending | ⏳ Queued | 0/3 | — | — | Sprint 13 |
+| Trending | ✅ Complete | 4/4 | ⭐⭐⭐☆☆ | 2026-07-06 | Sprint 13 complete: `this-week`, `hall-of-fame`, and 2 source feeds (`github-trending`, `toolradar-techpresso`) |
 
 ## Sprint 12 — Community
 

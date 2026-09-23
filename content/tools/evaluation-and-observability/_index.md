@@ -18,7 +18,7 @@ Data labeling for training data belongs in Data Ingestion; this phase is about j
 
 Before picking a tool in this phase, consider:
 
-- See [Architecture Decision Trees](../../architectures/decision-trees/_index.md) for cross-cutting guidance.
+- See [Architecture Decision Trees](../../architectures/_index.md) for cross-cutting guidance.
 - Key question to ask: Does this tool tell you whether your AI system is working correctly, safely, or efficiently?
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->

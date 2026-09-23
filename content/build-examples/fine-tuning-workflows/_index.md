@@ -12,7 +12,7 @@ End-to-end blueprints for the full fine-tune-and-ship loop: dataset preparation 
 
 ## What does NOT belong here
 
-A build whose primary artifact is the evaluation harness used to score fine-tuned checkpoints (rather than the training pipeline itself) belongs in `evaluation-pipelines/`. A single tip about learning-rate schedules, LoRA rank selection, or catastrophic-forgetting prevention that doesn't require a full working pipeline belongs in `tips-and-tricks/fine-tuning/`, not here. Choosing whether to fine-tune at all versus using RAG is an architecture decision — see `architectures/decision-trees/rag-vs-fine-tuning.md` — not a build example.
+A build whose primary artifact is the evaluation harness used to score fine-tuned checkpoints (rather than the training pipeline itself) belongs in `evaluation-pipelines/`. A single tip about learning-rate schedules, LoRA rank selection, or catastrophic-forgetting prevention that doesn't require a full working pipeline belongs in `tips-and-tricks/fine-tuning/`, not here. Choosing whether to fine-tune at all versus using RAG is an architecture decision — see `architectures/system-design/rag-vs-fine-tuning.md` — not a build example.
 
 ## Quick-start: highest-signal build examples in this phase
 

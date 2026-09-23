@@ -100,7 +100,7 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ## Resources
 
-- [Research papers folder](papers/)
+- [Research index](./_index.md)
 - [SOTA benchmarks](sota-benchmarks.md)
 - [Emerging techniques](emerging-techniques.md)
 

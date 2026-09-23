@@ -144,7 +144,7 @@ Confidence is `emerging-consensus` because the tradeoff arithmetic tracks model 
 
 ## Related Decisions
 
-[Choosing an Agent Framework](../model-selection/choose-agent-framework.md) is downstream: the single-vs-multi shape constrains which frameworks fit (graph-state engines vs minimal loops vs conversation frameworks). [Choosing an Agent Memory Architecture](../data-strategy/choose-memory-solution.md) interacts directly — shared memory stores are one alternative to conversational hand-offs for coordinating multi-agent state.
+[Choosing an Agent Framework](../model-selection/choose-agent-framework.md) is downstream: the single-vs-multi shape constrains which frameworks fit (graph-state engines vs minimal loops vs conversation frameworks). [Choosing an Agent Memory Architecture](./choose-memory-solution.md) interacts directly — shared memory stores are one alternative to conversational hand-offs for coordinating multi-agent state.
 
 ## Resources
 

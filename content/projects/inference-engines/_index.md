@@ -23,7 +23,7 @@ Inference-engine entries here document the engine's architecture and production-
 Before selecting an inference engine:
 - Key question to ask: is my workload prefix-cache-heavy (favor SGLang), general-purpose high-throughput (favor vLLM), or local/single-machine (favor Ollama or llama.cpp directly)?
 - If you need usage guidance rather than architectural depth: see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md)
-- See [Choose an LLM](../../architectures/decision-trees/choose-llm.md) and [Choose a Deployment Target](../../architectures/decision-trees/choose-deployment-target.md) for cross-cutting guidance
+- See [Choose an LLM](../../architectures/model-selection/choose-llm.md) and [Choose a Deployment Target](../../architectures/serving-patterns/choose-deployment-target.md) for cross-cutting guidance
 
 ## Projects in this category
 

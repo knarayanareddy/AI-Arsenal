@@ -18,7 +18,7 @@ Raw inference serving belongs in Serving & Deployment; data collection belongs i
 
 Before picking a tool in this phase, consider:
 
-- See [Architecture Decision Trees](../../architectures/decision-trees/_index.md) for cross-cutting guidance.
+- See [Architecture Decision Trees](../../architectures/_index.md) for cross-cutting guidance.
 - Key question to ask: Does this tool coordinate multiple steps, tools, or agents toward a goal?
 
 <!-- AUTO-GENERATED REGISTRY BELOW — do not edit -->

@@ -92,7 +92,7 @@ Agent building is a control-systems problem. The learning order is tools → sta
 
 ## Resources
 
-- [Choose an Agent Framework](../../architectures/decision-trees/choose-agent-framework.md)
+- [Choose an Agent Framework](../../architectures/model-selection/choose-agent-framework.md)
 - [LangGraph](../../projects/frameworks/langgraph.md)
 - [CrewAI](../../projects/frameworks/crewai.md)
 - [Agent reliability tips](../../tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)

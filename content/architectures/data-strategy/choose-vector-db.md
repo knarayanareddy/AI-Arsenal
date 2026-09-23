@@ -190,7 +190,7 @@ Confidence is rated `established` because the underlying tradeoffs (operational 
 
 ## Related Decisions
 
-This decision is directly downstream of [RAG vs Fine-Tuning](../system-design/rag-vs-fine-tuning.md) — vector storage only matters once RAG (or the hybrid approach) is chosen. It shares infrastructure concerns with [Choosing an Agent Memory Architecture](./choose-memory-solution.md), since semantic/vector memory uses the same class of storage as RAG retrieval, just with a different data lifecycle.
+This decision is directly downstream of [RAG vs Fine-Tuning](../system-design/rag-vs-fine-tuning.md) — vector storage only matters once RAG (or the hybrid approach) is chosen. It shares infrastructure concerns with [Choosing an Agent Memory Architecture](../system-design/choose-memory-solution.md), since semantic/vector memory uses the same class of storage as RAG retrieval, just with a different data lifecycle.
 
 ## Resources
 

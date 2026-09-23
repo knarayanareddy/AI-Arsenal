@@ -104,7 +104,26 @@ Current generated stats:
 | Digests | 1 |
 | Total content entries | 1061 |
 
-Browse the generated statistics in [`data/stats.json`](./data/stats.json).
+<!-- AUTO-GENERATED STATS TABLE — do not edit; run `pnpm run generate:readme-stats` -->
+| Type | Count |
+|---|---:|
+| Projects | 322 |
+| Tools | 214 |
+| Papers | 128 |
+| Tips | 171 |
+| Guides | 59 |
+| Benchmarks | 52 |
+| People | 25 |
+| Community | 32 |
+| Architectures | 29 |
+| Build examples | 8 |
+| Observability | 16 |
+| Trends | 4 |
+| Digests | 1 |
+| Total content entries | 1061 |
+<!-- /AUTO-GENERATED STATS TABLE -->
+
+Browse the generated statistics in [`data/stats.json`](./data/stats.json). The table above is regenerated from that file by `pnpm run generate:readme-stats`; do not hand-edit it.
 
 ---
 
@@ -307,6 +326,8 @@ The `/data` directory is the generated static API contract.
 | [`data/community.json`](./data/community.json) | Community resources |
 | [`data/benchmarks.json`](./data/benchmarks.json) | Benchmark records |
 | [`data/trending.json`](./data/trending.json) | Trending snapshots and source feeds |
+| [`data/people.json`](./data/people.json) | Community people records |
+| [`data/digests.json`](./data/digests.json) | Monthly digest records |
 | [`data/tags.json`](./data/tags.json) | Tag counts and type distribution |
 | [`data/stats.json`](./data/stats.json) | Repository statistics |
 | [`data/search-index.json`](./data/search-index.json) | FlexSearch-compatible search documents and facets |
@@ -457,7 +478,7 @@ Key workflows:
 |---|---|
 | `.github/workflows/on-pr.yml` | Changed-file validation, global checks, generated data contract, changed-link checks |
 | `.github/workflows/on-merge.yml` | Full post-merge verification without committing generated files |
-| `.github/workflows/data-refresh.yml` | Batched generated-data refresh PR |
+| `.github/workflows/data-refresh.yml` | Daily publish of generated JSON to the orphan `data-release` branch (no PR) |
 | `.github/workflows/weekly.yml` | Weekly metrics, links, and trending PR |
 | `.github/workflows/monthly.yml` | Monthly digest, stale report, and stats PR |
 | `.github/workflows/manual.yml` | Manual maintenance tasks |

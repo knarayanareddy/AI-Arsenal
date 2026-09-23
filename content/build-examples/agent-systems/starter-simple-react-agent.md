@@ -169,7 +169,7 @@ Add a second, different tool and observe how the model chooses between them (thi
 ## Related Entries
 
 - Framework: [LangGraph](../../projects/frameworks/langgraph.md)
-- Decision tree: [Choose Agent Framework](../../architectures/decision-trees/choose-agent-framework.md)
+- Decision tree: [Choose Agent Framework](../../architectures/model-selection/choose-agent-framework.md)
 - Tip: [Validate Tool Arguments Before Execution](../../tips-and-tricks/agents-and-orchestration/validate-tool-arguments-before-execution.md)
 - Tip: [Add a Max Step Budget to Every Agent](../../tips-and-tricks/agents-and-orchestration/add-a-max-step-budget-to-every-agent.md)
 - Extends into: [Multi-Tool Agent](../agent-systems/intermediate-multi-tool-agent.md)

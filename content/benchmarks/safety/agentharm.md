@@ -99,7 +99,7 @@ Does not measure: real exploit success (tools are synthetic), harms outside its 
 
 - [HarmBench](./harmbench.md) – single-response automated red-teaming
 - [StrongREJECT](./strongreject.md) – honest jailbreak-robustness scoring
-- [tau-bench](./tau-bench.md) – tool-agent task completion (capability side)
+- [tau-bench](../agents/tau-bench.md) – tool-agent task completion (capability side)
 
 ## Relation to the Arsenal
 
