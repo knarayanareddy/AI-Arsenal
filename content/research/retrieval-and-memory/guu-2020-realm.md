@@ -85,4 +85,4 @@ Reads as the opening chapter before `karpukhin-2020-dpr` and `lewis-2020-rag` (r
 - [Code](https://github.com/google-research/language/tree/master/language/realm)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `guu-2020-realm` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

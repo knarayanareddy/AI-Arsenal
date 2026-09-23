@@ -85,4 +85,4 @@ The architectural bridge behind the multimodal entries: vision-language projects
 - [Code (openai/CLIP)](https://github.com/openai/CLIP)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `radford-2021-clip` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

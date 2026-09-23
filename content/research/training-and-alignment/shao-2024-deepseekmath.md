@@ -86,4 +86,4 @@ The algorithmic bridge between `schulman-2017-ppo` (the method it simplifies) an
 - [Code + weights (deepseek-ai/DeepSeek-Math)](https://github.com/deepseek-ai/DeepSeek-Math)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `shao-2024-deepseekmath` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

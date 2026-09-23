@@ -85,4 +85,4 @@ The architectural substrate of `deepseek-ai-2025-r1` (training-and-alignment/) a
 - [Code + weights (deepseek-ai/DeepSeek-V3)](https://github.com/deepseek-ai/DeepSeek-V3)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `deepseek-ai-2024-deepseek-v3` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

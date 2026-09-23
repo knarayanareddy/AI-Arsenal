@@ -82,4 +82,4 @@ The architectural counterpoint to `karpukhin-2020-dpr` (same phase): single-vect
 - [Venue](https://dl.acm.org/doi/10.1145/3397271.3401075)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `khattab-2020-colbert` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

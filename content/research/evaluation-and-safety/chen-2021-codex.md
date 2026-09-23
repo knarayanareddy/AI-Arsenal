@@ -84,4 +84,4 @@ The methodological ancestor of `jimenez-2023-swe-bench` (evaluation-and-safety/)
 - [HumanEval harness](https://github.com/openai/human-eval)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `chen-2021-codex` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

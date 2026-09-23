@@ -85,4 +85,4 @@ The evaluation counterweight to the retrieval entries: it motivates the rerankin
 - [Code (nelson-liu/lost-in-the-middle)](https://github.com/nelson-liu/lost-in-the-middle)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `liu-2023-lost-in-the-middle` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

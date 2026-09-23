@@ -94,4 +94,4 @@ Builds on `dao-2022-flashattention` (kernel-level efficiency) and completes the 
 - [Venue](https://dl.acm.org/doi/10.1145/3600006.3613165)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `kwon-2023-pagedattention` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

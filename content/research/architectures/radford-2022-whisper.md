@@ -84,4 +84,4 @@ The ASR component behind the voice entries in projects/ (e.g. `speech-to-speech`
 - [Code + weights (openai/whisper)](https://github.com/openai/whisper)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `radford-2022-whisper` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

@@ -82,4 +82,4 @@ The architectural ancestor of the retrieval stack: `karpukhin-2020-dpr` (retriev
 - [Code (UKPLab/sentence-transformers)](https://github.com/UKPLab/sentence-transformers)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `reimers-2019-sentence-bert` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

@@ -91,4 +91,4 @@ Institutionalizes the human-preference axis that `zheng-2023-llm-as-a-judge` (sa
 - [Venue](https://proceedings.mlr.press/v235/chiang24b.html)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `chiang-2024-chatbot-arena` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

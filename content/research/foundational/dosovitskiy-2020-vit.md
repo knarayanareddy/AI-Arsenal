@@ -53,7 +53,7 @@ CNNs bake in strong image priors (locality, translation equivariance) that were 
 
 ## Key Results
 
-- ViT pretrained on large data matched or exceeded contemporary CNN state of the art on ImageNet and transfer benchmarks at lower pretraining compute (specific numbers should be read from the paper directly)
+- ViT pretrained on large data matched or exceeded contemporary CNN accuracy on the ImageNet benchmark and transfer benchmarks at lower pretraining compute (specific numbers should be read from the paper directly)
 - Made explicit the data-scale threshold: below it CNNs win (their inductive bias helps); above it ViT wins (attention + data generalizes better)
 
 ## Methodology

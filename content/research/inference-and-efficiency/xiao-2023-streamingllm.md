@@ -85,4 +85,4 @@ Complements `kwon-2023-pagedattention` (inference-and-efficiency/) — paging ma
 - [Code](https://github.com/mit-han-lab/streaming-llm)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `xiao-2023-streamingllm` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

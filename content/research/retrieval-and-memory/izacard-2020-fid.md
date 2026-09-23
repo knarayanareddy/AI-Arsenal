@@ -84,4 +84,4 @@ Completes the classical RAG trilogy with `karpukhin-2020-dpr` and `lewis-2020-ra
 - [Code](https://github.com/facebookresearch/FiD)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `izacard-2020-fid` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

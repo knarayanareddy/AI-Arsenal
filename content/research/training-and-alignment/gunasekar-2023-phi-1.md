@@ -84,4 +84,4 @@ The data-quality counterpoint to `kaplan-2020-scaling-laws` and `hoffmann-2022-c
 - [arXiv](https://arxiv.org/abs/2306.11644)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata for `gunasekar-2023-phi-1` (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*

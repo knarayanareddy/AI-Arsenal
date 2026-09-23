@@ -58,7 +58,7 @@ BERT reported results that many read as an architecture ceiling. RoBERTa's contr
 
 ## Methodology
 
-Pretrain the BERT architecture with a masked-language-modeling objective only (no NSP), using dynamic masking regenerated each epoch, an order-of-magnitude more text, larger batches, longer sequences, and longer training. Evaluate by fine-tuning on standard NLU benchmarks.
+Pretrain the BERT model architecture with a masked-language-modeling objective only (no NSP), using dynamic masking regenerated each epoch, an order-of-magnitude more text, larger batches, longer sequences, and longer training. Evaluate by fine-tuning on standard NLU benchmarks.
 
 ## Practical Applicability
 
