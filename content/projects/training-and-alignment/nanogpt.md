@@ -63,7 +63,7 @@ model.py implements a standard pre-norm decoder-only transformer (learned positi
 
 ## Ecosystem Position
 
-Upstream: PyTorch only. Downstream: an entire genre of forks — modded-nanoGPT speedruns (where optimizer research like Muon surfaced), architecture-ablation studies, and countless educational derivatives. Competing: LitGPT for maintained multi-architecture training; Karpathy's own llm.c for the C/CUDA rewrite. It pairs naturally with the Zero To Hero lecture series.
+Upstream: PyTorch only. Downstream: an entire genre of forks — modded-nanoGPT speedruns (where optimizer research like Muon surfaced), architecture-ablation studies, and countless educational derivatives. It competes with LitGPT for maintained multi-architecture training, and with Karpathy's own llm.c (a C/CUDA rewrite). It pairs naturally with the Zero To Hero lecture series.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ python train.py config/train_shakespeare_char.py
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+nanoGPT is Karpathy's minimal ~600-line GPT training repo — the canonical reference for understanding LLM pretraining. This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
 
 ## Resources
 

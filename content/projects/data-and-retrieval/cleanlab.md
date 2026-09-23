@@ -64,7 +64,7 @@ Confident learning estimates the joint distribution between given labels and tru
 
 ## Ecosystem Position
 
-Upstream: any trained classifier's cross-validated predictions. Downstream: cleaned training sets and trustworthy eval sets. Complementary: `great-expectations` validates pipeline data against declared expectations (schema/statistics), while cleanlab finds label-level issues expectations can't express; the hosted Cleanlab platform is the commercial extension.
+Upstream: any trained classifier model's cross-validated predictions. Downstream: cleaned training sets and trustworthy eval sets. Complementary: `great-expectations` validates pipeline data against declared expectations (schema/statistics), while cleanlab finds label-level issues expectations can't express; the hosted Cleanlab platform is the commercial extension.
 
 ## Getting Started
 

@@ -69,7 +69,7 @@ Provides format-specific parsing strategies unified under a common element-based
 
 ## Ecosystem Position
 
-Upstream: none of particular note. Downstream: officially integrated as a document loader in both LangChain and LlamaIndex. Competing: Docling (more specialized layout analysis), LlamaParse (managed-only, LlamaIndex-specific). Complementary: commonly used as the document-ingestion step in a broader RAG pipeline.
+Upstream: none of particular note. Downstream: officially integrated as a document loader in both LangChain and LlamaIndex. It competes with Docling (more specialized layout-analysis models) and LlamaParse (managed-only, LlamaIndex-specific). Complementary: commonly used as the document-ingestion step in a broader RAG pipeline.
 
 ## Getting Started
 
@@ -93,11 +93,11 @@ Upstream: none of particular note. Downstream: officially integrated as a docume
 - You need the highest-fidelity layout preservation for complex tables/figures specifically — Docling's layout-analysis models are more specialized for that particular challenge
 - Your document format needs are narrow and well-defined — a lighter, format-specific parser may be simpler than Unstructured's broader abstraction layer
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Enrichment status: draft. Unstructured's format coverage and integrations here are drawn from the project's own docs; a genuine production case study was not found. Last reviewed: 2026-07-01._
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+Unstructured is an open-source document-ETL library that converts many file formats into structured, LLM-ready elements. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 

@@ -85,8 +85,9 @@ Upstream: `trl` (RL trainers), `accelerate` (distribution), and open base models
 
 ## Limitations
 
-- Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast-moving product
-- Reasoning RL is compute-heavy; not a lightweight fine-tune
+- Cadence has slowed since the initial R1-reproduction sprint; treat it as a reference recipe rather than a fast-moving, actively-supported product
+- Reasoning RL (GRPO with verifiable rewards) is compute-heavy on capable base models; this is training infrastructure, not a lightweight fine-tune
+- It reproduces a specific pipeline (SFT then GRPO); newer RL methods and architectures land in `trl` and other repos first
 
 ## Relation to the Arsenal
 

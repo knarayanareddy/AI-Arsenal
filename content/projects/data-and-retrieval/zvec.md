@@ -60,7 +60,7 @@ In-process vector database that fills a real architectural gap: FAISS gives you 
 
 ## Architecture
 
-zvec is a C++ core with language bindings, linked into your application process. Vectors are stored durably on local disk and indexed with HNSW for approximate nearest-neighbor search; queries combine similarity search with scalar filtering. Because everything runs in-process, there is no network hop, connection pooling, or server lifecycle — the same trade SQLite makes against client-server databases.
+zvec is a C++ core with language bindings, linked into your application process. Vectors are stored durably on local disk and indexed with HNSW for approximate nearest-neighbor search; vector queries combine similarity search with scalar filtering. Because everything runs in-process, there is no network hop, connection pooling, or server lifecycle — the same trade SQLite makes against client-server databases.
 
 ## Ecosystem Position
 

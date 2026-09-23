@@ -58,7 +58,7 @@ status: active
 
 ## Overview
 
-A commercial, managed document-parsing service from the LlamaIndex team, specializing in accurately parsing complex document layouts (tables, multi-column PDFs, embedded images) for RAG ingestion pipelines.
+A commercial, managed document-parsing API service from the LlamaIndex team, using layout-aware parsing models to handle complex document layouts (tables, multi-column PDFs, embedded images) for RAG ingestion pipelines.
 
 ## Why it's in the Arsenal
 
@@ -96,7 +96,7 @@ Upstream: built by the LlamaIndex team, tightly coupled to that framework's inge
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+LlamaParse is LlamaIndex's managed document-parsing service for complex layouts. This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
 
 ## Resources
 
