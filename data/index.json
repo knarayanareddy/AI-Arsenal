@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T13:23:50.922Z",
-    "total_projects": 425,
-    "total_tools": 215,
-    "total_papers": 128,
+    "generated_at": "2026-09-28T18:44:21.255Z",
+    "total_projects": 500,
+    "total_tools": 218,
+    "total_papers": 138,
     "total_tips": 171,
     "total_people": 25,
     "total_digests": 1,
@@ -70,6 +70,24 @@
       "last_updated": "2026-09-28",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "9router",
+      "type": "project",
+      "name": "9router",
+      "description": "Local OpenAI-compatible proxy that tiers provider calls and rewrites tool_result payloads before forwarding them upstream",
+      "tags": [
+        "routing",
+        "efficiency"
+      ],
+      "path": "content/projects/inference-engines/9router.md",
+      "url": "content/projects/inference-engines/9router",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -418,6 +436,25 @@
       "featured": false
     },
     {
+      "id": "agent-memory-techniques",
+      "type": "project",
+      "name": "Agent_Memory_Techniques",
+      "description": "Thirty executable notebooks that rebuild one chat assistant on progressively richer memory backends, then score them against the LoCoMo benchmark",
+      "tags": [
+        "memory",
+        "rag",
+        "graphs"
+      ],
+      "path": "content/projects/frameworks/agent-memory-techniques.md",
+      "url": "content/projects/frameworks/agent-memory-techniques",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agent-reach",
       "type": "tool",
       "name": "Agent Reach",
@@ -433,6 +470,25 @@
       "last_updated": "2026-07-07",
       "category": null,
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agent-rules-books",
+      "type": "project",
+      "name": "agent-rules-books",
+      "description": "AGENTS.md rule sets distilled from Clean Code, Clean Architecture, DDD, and DDIA, each shipped in mini, nano, and full sizes",
+      "tags": [
+        "agents",
+        "code-gen",
+        "structured-output"
+      ],
+      "path": "content/projects/frameworks/agent-rules-books.md",
+      "url": "content/projects/frameworks/agent-rules-books",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -579,6 +635,24 @@
       "featured": false
     },
     {
+      "id": "agenticseek",
+      "type": "project",
+      "name": "agenticSeek",
+      "description": "Self-hosted Python agent that routes browsing, coding and planning work to a local Ollama or LM Studio model through a bundled SearXNG instance",
+      "tags": [
+        "local",
+        "planning"
+      ],
+      "path": "content/projects/agent-systems/agenticseek.md",
+      "url": "content/projects/agent-systems/agenticseek",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "agentops",
       "type": "tool",
       "name": "AgentOps",
@@ -594,6 +668,25 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "agents-best-practices",
+      "type": "project",
+      "name": "agents-best-practices",
+      "description": "A provider-neutral Agent Skill covering harness design, permission ladders, typed tool contracts, and production-readiness audits",
+      "tags": [
+        "agents",
+        "structured-output",
+        "guardrails"
+      ],
+      "path": "content/projects/frameworks/agents-best-practices.md",
+      "url": "content/projects/frameworks/agents-best-practices",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "alpha",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -888,6 +981,24 @@
       "featured": false
     },
     {
+      "id": "aionui",
+      "type": "project",
+      "name": "AionUi",
+      "description": "Electron desktop client that drives dozens of external CLI coding agents plus a bundled Office-document agent behind one visual workspace",
+      "tags": [
+        "agents",
+        "community-favorite"
+      ],
+      "path": "content/projects/agent-systems/aionui.md",
+      "url": "content/projects/agent-systems/aionui",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "airbyte",
       "type": "tool",
       "name": "Airbyte",
@@ -921,6 +1032,43 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "airllm",
+      "type": "project",
+      "name": "airllm",
+      "description": "Runs 70B-plus checkpoints by streaming transformer layers from host RAM into a few GB of VRAM instead of quantizing weights",
+      "tags": [
+        "efficiency",
+        "inference",
+        "training"
+      ],
+      "path": "content/projects/inference-engines/airllm.md",
+      "url": "content/projects/inference-engines/airllm",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "airunner",
+      "type": "project",
+      "name": "airunner",
+      "description": "PySide6 desktop application bundling a local chat companion and a layered image canvas over llama.cpp and whisper.cpp sidecar processes",
+      "tags": [
+        "local",
+        "multimodal"
+      ],
+      "path": "content/projects/agent-systems/airunner.md",
+      "url": "content/projects/agent-systems/airunner",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -964,6 +1112,24 @@
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "watching",
+      "featured": false
+    },
+    {
+      "id": "aisoc",
+      "type": "project",
+      "name": "AiSOC",
+      "description": "A Docker Compose security operations center that normalizes telemetry, runs a rule library, and audits LLM triage step by step",
+      "tags": [
+        "security",
+        "self-hosted"
+      ],
+      "path": "content/projects/benchmarks-and-evals/aisoc.md",
+      "url": "content/projects/benchmarks-and-evals/aisoc",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
+      "status": "active",
       "featured": false
     },
     {
@@ -1221,6 +1387,42 @@
       "featured": false
     },
     {
+      "id": "anthropic-cybersecurity-skills",
+      "type": "project",
+      "name": "Anthropic-Cybersecurity-Skills",
+      "description": "Eight hundred eighteen agent skills across thirty-four security domains, each mapped to the frameworks that apply to its type",
+      "tags": [
+        "agents",
+        "security"
+      ],
+      "path": "content/projects/frameworks/anthropic-cybersecurity-skills.md",
+      "url": "content/projects/frameworks/anthropic-cybersecurity-skills",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "antigravity-sdk-python",
+      "type": "project",
+      "name": "antigravity-sdk-python",
+      "description": "Google's Python SDK that wraps the Antigravity runtime so one Agent object owns binary discovery, tools, hooks, and policy",
+      "tags": [
+        "agents",
+        "llm"
+      ],
+      "path": "content/projects/frameworks/antigravity-sdk-python.md",
+      "url": "content/projects/frameworks/antigravity-sdk-python",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "any-agent",
       "type": "tool",
       "name": "any-agent",
@@ -1255,6 +1457,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "anysearch-mcp-server",
+      "type": "project",
+      "name": "anysearch-mcp-server",
+      "description": "An MCP server exposing general and vertical web search, parallel batch queries, and full-page Markdown extraction over one hosted API",
+      "tags": [
+        "tool-use",
+        "retrieval",
+        "research"
+      ],
+      "path": "content/projects/data-and-retrieval/anysearch-mcp-server.md",
+      "url": "content/projects/data-and-retrieval/anysearch-mcp-server",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -1538,6 +1759,82 @@
       "featured": false
     },
     {
+      "id": "astrbot",
+      "type": "project",
+      "name": "AstrBot",
+      "description": "Python IM-platform bot framework that fronts many LLM providers, a plugin marketplace, MCP servers and a code sandbox behind chat adapters",
+      "tags": [
+        "agents",
+        "security"
+      ],
+      "path": "content/projects/agent-systems/astrbot.md",
+      "url": "content/projects/agent-systems/astrbot",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "atomic-agent",
+      "type": "project",
+      "name": "atomic-agent",
+      "description": "TypeScript terminal agent whose control loop runs on a TurboQuant-patched llama.cpp, with SQLite FTS5 memory and Playwright browser control",
+      "tags": [
+        "local",
+        "inference",
+        "memory"
+      ],
+      "path": "content/projects/agent-systems/atomic-agent.md",
+      "url": "content/projects/agent-systems/atomic-agent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "attackgen",
+      "type": "project",
+      "name": "attackgen",
+      "description": "Generates tailored incident-response exercise scenarios from threat-actor profiles and MITRE ATT&CK or ATLAS technique sets",
+      "tags": [
+        "security",
+        "community-favorite"
+      ],
+      "path": "content/projects/benchmarks-and-evals/attackgen.md",
+      "url": "content/projects/benchmarks-and-evals/attackgen",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "attarde-2026-k9-bench",
+      "type": "paper",
+      "name": "K9-Bench: Evaluating Multimodal LLMs on Canine-Centric Videos",
+      "description": "A 5,000-pair question set over 907 home dog videos, built to test long-horizon reasoning about canine actions and interactions.",
+      "tags": [
+        "evaluation",
+        "multimodal",
+        "benchmark",
+        "research",
+        "memory"
+      ],
+      "path": "content/research/evaluation-and-safety/attarde-2026-k9-bench.md",
+      "url": "content/research/evaluation-and-safety/attarde-2026-k9-bench",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "attention",
       "type": "guide",
       "name": "Attention",
@@ -1573,6 +1870,24 @@
       "category": "voice-audio",
       "maturity": "production",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "autocve",
+      "type": "project",
+      "name": "AutoCVE",
+      "description": "A multi-agent platform that audits source code for reportable vulnerabilities and produces CVE-ready findings with reproduction steps",
+      "tags": [
+        "security",
+        "agents"
+      ],
+      "path": "content/projects/benchmarks-and-evals/autocve.md",
+      "url": "content/projects/benchmarks-and-evals/autocve",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -1649,6 +1964,25 @@
       "url": "content/projects/data-and-retrieval/autorag",
       "last_updated": "2026-07-19",
       "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "awesome-japanese-llm",
+      "type": "project",
+      "name": "awesome-japanese-llm",
+      "description": "Volunteer-maintained catalogue of Japanese LLMs with per-model context length, pretraining corpus and license columns",
+      "tags": [
+        "community-favorite",
+        "research",
+        "security"
+      ],
+      "path": "content/projects/foundation-models/awesome-japanese-llm.md",
+      "url": "content/projects/foundation-models/awesome-japanese-llm",
+      "last_updated": "2026-09-28",
+      "category": "llms",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -1839,6 +2173,24 @@
       "maturity": null,
       "cost_model": null,
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "beaty-2026-agc-bench",
+      "type": "paper",
+      "name": "AGC-Bench: Measuring Artificial General Creativity",
+      "description": "An 78-dataset creativity benchmark paired with AGC-Judge, an open-weight judge calibrated to remove leniency bias.",
+      "tags": [
+        "benchmark",
+        "evaluation"
+      ],
+      "path": "content/research/evaluation-and-safety/beaty-2026-agc-bench.md",
+      "url": "content/research/evaluation-and-safety/beaty-2026-agc-bench",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -2169,6 +2521,24 @@
       "featured": false
     },
     {
+      "id": "browser-harness",
+      "type": "project",
+      "name": "browser-harness",
+      "description": "Python harness that attaches a coding agent to your real Chrome over an editable CDP websocket and lets the agent write reusable helpers",
+      "tags": [
+        "tool-use",
+        "code-gen"
+      ],
+      "path": "content/projects/agent-systems/browser-harness.md",
+      "url": "content/projects/agent-systems/browser-harness",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "browser-use",
       "type": "project",
       "name": "Browser Use",
@@ -2242,6 +2612,25 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "butterbase",
+      "type": "project",
+      "name": "butterbase",
+      "description": "A Postgres-backed backend-as-a-service with auth, storage, functions, an LLM gateway, and an MCP server for agents",
+      "tags": [
+        "data",
+        "tool-use",
+        "routing"
+      ],
+      "path": "content/projects/data-and-retrieval/butterbase.md",
+      "url": "content/projects/data-and-retrieval/butterbase",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -2510,6 +2899,26 @@
       "last_updated": "2026-09-28",
       "category": "evaluation",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "caveman",
+      "type": "project",
+      "name": "caveman",
+      "description": "A prompt-shrinking skill and proxy that rewrites agent output into clipped caveman grammar to cut billed tokens",
+      "tags": [
+        "efficiency",
+        "structured-output",
+        "routing",
+        "agents"
+      ],
+      "path": "content/projects/frameworks/caveman.md",
+      "url": "content/projects/frameworks/caveman",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -3334,6 +3743,25 @@
       "featured": false
     },
     {
+      "id": "claude-video-vision",
+      "type": "project",
+      "name": "claude-video-vision",
+      "description": "Claude Code plugin that gives it ffmpeg-extracted video frames plus timestamped audio transcriptions from Whisper, Gemini or OpenAI",
+      "tags": [
+        "multimodal",
+        "code-gen",
+        "voice"
+      ],
+      "path": "content/projects/agent-systems/claude-video-vision.md",
+      "url": "content/projects/agent-systems/claude-video-vision",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "cleanlab",
       "type": "project",
       "name": "cleanlab",
@@ -3542,6 +3970,45 @@
       "featured": false
     },
     {
+      "id": "codeseek",
+      "type": "project",
+      "name": "codeseek",
+      "description": "A Rust CLI that indexes seven languages with tree-sitter call graphs plus hybrid dense and sparse search, exposed as MCP tools",
+      "tags": [
+        "code-gen",
+        "retrieval",
+        "tool-use",
+        "inference"
+      ],
+      "path": "content/projects/data-and-retrieval/codeseek.md",
+      "url": "content/projects/data-and-retrieval/codeseek",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "codewhale",
+      "type": "project",
+      "name": "Codewhale",
+      "description": "Rust terminal agent that reads a repo, edits files and runs commands on hosted or local models, with fleet mode for multi-agent work",
+      "tags": [
+        "code-gen",
+        "inference",
+        "agents"
+      ],
+      "path": "content/projects/agent-systems/codewhale.md",
+      "url": "content/projects/agent-systems/codewhale",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "codex-plugin-cc",
       "type": "tool",
       "name": "Codex Plugin for Claude Code",
@@ -3557,6 +4024,25 @@
       "category": null,
       "maturity": "beta",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "codexpro",
+      "type": "project",
+      "name": "codexpro",
+      "description": "Local MCP server that hands a ChatGPT session bounded access to repositories you explicitly allow, over a local tunnel",
+      "tags": [
+        "tool-use",
+        "code-gen",
+        "openai"
+      ],
+      "path": "content/projects/agent-systems/codexpro.md",
+      "url": "content/projects/agent-systems/codexpro",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -4092,6 +4578,24 @@
       "featured": false
     },
     {
+      "id": "cowagent",
+      "type": "project",
+      "name": "CowAgent",
+      "description": "Python agent harness with three-tier memory, a knowledge wiki, self-evolution loops and multi-agent teams on any major LLM provider",
+      "tags": [
+        "agents",
+        "memory"
+      ],
+      "path": "content/projects/agent-systems/cowagent.md",
+      "url": "content/projects/agent-systems/cowagent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "crawl4ai",
       "type": "project",
       "name": "Crawl4AI",
@@ -4227,6 +4731,24 @@
       "featured": false
     },
     {
+      "id": "cve-mcp-server",
+      "type": "project",
+      "name": "cve-mcp-server",
+      "description": "A FastMCP server exposing 28 security tools across 24 APIs behind one triage_cve call that computes a composite risk score",
+      "tags": [
+        "tool-use",
+        "security"
+      ],
+      "path": "content/projects/benchmarks-and-evals/cve-mcp-server.md",
+      "url": "content/projects/benchmarks-and-evals/cve-mcp-server",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "d4vinci-scrapling",
       "type": "project",
       "name": "Scrapling",
@@ -4356,6 +4878,26 @@
       "last_updated": "2026-09-28",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "dao-code",
+      "type": "project",
+      "name": "dao-code",
+      "description": "TypeScript terminal coding agent built around DeepSeek V4's prefix cache, keeping the system prefix and tool table byte-stable",
+      "tags": [
+        "code-gen",
+        "llm",
+        "caching",
+        "efficiency"
+      ],
+      "path": "content/projects/agent-systems/dao-code.md",
+      "url": "content/projects/agent-systems/dao-code",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4553,6 +5095,25 @@
       "featured": false
     },
     {
+      "id": "deepcode-cli",
+      "type": "project",
+      "name": "deepcode-cli",
+      "description": "TypeScript terminal assistant tuned specifically for DeepSeek V4, exposing thinking mode, reasoning effort and agent skills",
+      "tags": [
+        "code-gen",
+        "llm",
+        "agents"
+      ],
+      "path": "content/projects/agent-systems/deepcode-cli.md",
+      "url": "content/projects/agent-systems/deepcode-cli",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "deepeval",
       "type": "project",
       "name": "DeepEval",
@@ -4662,6 +5223,26 @@
       "url": "content/projects/foundation-models/deepseek-ocr",
       "last_updated": "2026-07-19",
       "category": "multimodal",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "deepseek-reasonix",
+      "type": "project",
+      "name": "DeepSeek-Reasonix",
+      "description": "Single-binary Go coding agent organised around prefix-cache stability, with plan mode, checkpoints and one engine reachable four ways",
+      "tags": [
+        "code-gen",
+        "llm",
+        "caching",
+        "training"
+      ],
+      "path": "content/projects/agent-systems/deepseek-reasonix.md",
+      "url": "content/projects/agent-systems/deepseek-reasonix",
+      "last_updated": "2026-09-28",
+      "category": "agents",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -5317,6 +5898,25 @@
       "url": "content/projects/data-and-retrieval/easyocr",
       "last_updated": "2026-07-12",
       "category": "computer-vision",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ecc",
+      "type": "project",
+      "name": "ECC",
+      "description": "MIT-licensed harness layer installing 68 agents, 286 skills, hooks, memory and AgentShield scanning into Claude Code, Codex and others",
+      "tags": [
+        "agents",
+        "code-gen",
+        "security"
+      ],
+      "path": "content/projects/agent-systems/ecc.md",
+      "url": "content/projects/agent-systems/ecc",
+      "last_updated": "2026-09-28",
+      "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -6210,6 +6810,26 @@
       "featured": false
     },
     {
+      "id": "finsight-ai",
+      "type": "project",
+      "name": "FinSight-AI",
+      "description": "A Spring Boot equity-research workspace with recoverable workflows, snapshot-bound reports, and hybrid pgvector retrieval",
+      "tags": [
+        "orchestration",
+        "retrieval",
+        "inference",
+        "battle-tested"
+      ],
+      "path": "content/projects/data-and-retrieval/finsight-ai.md",
+      "url": "content/projects/data-and-retrieval/finsight-ai",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "firecrawl",
       "type": "project",
       "name": "Firecrawl",
@@ -6343,6 +6963,26 @@
       "category": null,
       "maturity": "production",
       "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "flue",
+      "type": "project",
+      "name": "flue",
+      "description": "A TypeScript agent harness where an agent is a function that composes its own model, sandbox, skills, tools, and durability",
+      "tags": [
+        "agents",
+        "inference",
+        "security",
+        "stateful"
+      ],
+      "path": "content/projects/frameworks/flue.md",
+      "url": "content/projects/frameworks/flue",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -6772,6 +7412,26 @@
       "featured": false
     },
     {
+      "id": "gini-agent",
+      "type": "project",
+      "name": "gini-agent",
+      "description": "Bun-runtime personal agent whose gateway is the system of record, serving web, CLI, mobile, MCP and messaging clients over one API contract",
+      "tags": [
+        "agents",
+        "routing",
+        "stateful",
+        "inference"
+      ],
+      "path": "content/projects/agent-systems/gini-agent.md",
+      "url": "content/projects/agent-systems/gini-agent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "giskard",
       "type": "tool",
       "name": "Giskard",
@@ -6884,6 +7544,24 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "gllm",
+      "type": "project",
+      "name": "gLLM",
+      "description": "Research-grade serving engine combining paged attention, chunked prefill and composable tensor, expert and pipeline parallelism",
+      "tags": [
+        "inference",
+        "training"
+      ],
+      "path": "content/projects/inference-engines/gllm.md",
+      "url": "content/projects/inference-engines/gllm",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7607,6 +8285,24 @@
       "featured": false
     },
     {
+      "id": "harness-anything",
+      "type": "project",
+      "name": "harness-anything",
+      "description": "Windows-only Python toolset driving WPS, Microsoft Office, Zotero, Illustrator and Photoshop through 47 CLI commands over COM automation",
+      "tags": [
+        "edge",
+        "retrieval"
+      ],
+      "path": "content/projects/agent-systems/harness-anything.md",
+      "url": "content/projects/agent-systems/harness-anything",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "experimental",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "harrison-chase",
       "type": "person",
       "name": "Harrison Chase",
@@ -7661,6 +8357,26 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "headroom",
+      "type": "tool",
+      "name": "headroom",
+      "description": "Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model",
+      "tags": [
+        "efficiency",
+        "memory",
+        "agents",
+        "routing"
+      ],
+      "path": "content/tools/dx-and-tooling/headroom.md",
+      "url": "content/tools/dx-and-tooling/headroom",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -7838,6 +8554,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "hive",
+      "type": "project",
+      "name": "hive",
+      "description": "Python agent harness where a Queen agent loop spawns worker clones coordinated through a shared ledger, with crash-safe park and resume",
+      "tags": [
+        "agents",
+        "orchestration",
+        "stateful"
+      ],
+      "path": "content/projects/agent-systems/hive.md",
+      "url": "content/projects/agent-systems/hive",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -8024,6 +8759,26 @@
       "path": "content/research/evaluation-and-safety/huang-2026-regression-accumulation.md",
       "url": "content/research/evaluation-and-safety/huang-2026-regression-accumulation",
       "last_updated": "2026-07-11",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
+      "id": "hudson-2026-financial-llm-metabench",
+      "type": "paper",
+      "name": "Meta-Benchmarks for Financial-Services LLM Evaluation",
+      "description": "A weighting scheme that scores 288 models on banking work activities by Elo, down-weighting benchmarks that no longer separate leaders.",
+      "tags": [
+        "evaluation",
+        "benchmark",
+        "data",
+        "guardrails"
+      ],
+      "path": "content/research/evaluation-and-safety/hudson-2026-financial-llm-metabench.md",
+      "url": "content/research/evaluation-and-safety/hudson-2026-financial-llm-metabench",
+      "last_updated": "2026-09-28",
       "category": null,
       "maturity": null,
       "cost_model": null,
@@ -8387,6 +9142,26 @@
       "category": "general-llm",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ii-agent",
+      "type": "project",
+      "name": "ii-agent",
+      "description": "Apache-2.0 agent framework and web app for building apps, slides, storybooks and research briefs, out of beta with BYOK model config",
+      "tags": [
+        "agents",
+        "data",
+        "research",
+        "inference"
+      ],
+      "path": "content/projects/agent-systems/ii-agent.md",
+      "url": "content/projects/agent-systems/ii-agent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -9443,6 +10218,27 @@
       "featured": false
     },
     {
+      "id": "kreileder-2026-rag-chunking",
+      "type": "paper",
+      "name": "Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts",
+      "description": "A negative result: cluster-based semantic chunking did not beat fixed-size or recursive chunking on long academic theses.",
+      "tags": [
+        "rag",
+        "chunking",
+        "research",
+        "evaluation",
+        "retrieval"
+      ],
+      "path": "content/research/retrieval-and-memory/kreileder-2026-rag-chunking.md",
+      "url": "content/research/retrieval-and-memory/kreileder-2026-rag-chunking",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "kserve",
       "type": "tool",
       "name": "KServe",
@@ -9477,6 +10273,24 @@
       "category": "llms",
       "maturity": "beta",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "ktx",
+      "type": "project",
+      "name": "ktx",
+      "description": "An executable context layer that ingests warehouse metadata and company docs, then serves approved metrics as read-only SQL to agents",
+      "tags": [
+        "data",
+        "tool-use"
+      ],
+      "path": "content/projects/data-and-retrieval/ktx.md",
+      "url": "content/projects/data-and-retrieval/ktx",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -9905,6 +10719,25 @@
       "featured": false
     },
     {
+      "id": "le-2026-pair-bench",
+      "type": "paper",
+      "name": "Benchmarking Code Improvement with Progressive, Adaptive, and Interactive Feedback",
+      "description": "A repair benchmark that scores feedback-guided code improvement on trajectories rather than a single pass/fail verdict.",
+      "tags": [
+        "code-gen",
+        "benchmark",
+        "evaluation"
+      ],
+      "path": "content/research/evaluation-and-safety/le-2026-pair-bench.md",
+      "url": "content/research/evaluation-and-safety/le-2026-pair-bench",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "lean-mvp",
       "type": "architecture",
       "name": "Lean MVP Stack vs Production RAG Stack: Speed vs Durability Tradeoff",
@@ -9940,6 +10773,25 @@
       "last_updated": "2026-07-12",
       "category": "rag",
       "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "learn-claude-code",
+      "type": "project",
+      "name": "learn-claude-code",
+      "description": "A from-scratch teaching build of a coding-agent harness, arguing that agency comes from training and the harness is the vehicle",
+      "tags": [
+        "community-favorite",
+        "agents",
+        "pytorch"
+      ],
+      "path": "content/projects/frameworks/learn-claude-code.md",
+      "url": "content/projects/frameworks/learn-claude-code",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "experimental",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -10191,6 +11043,26 @@
       "url": "content/tools/model-layer/liger-kernel",
       "last_updated": "2026-07-08",
       "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "lightagent",
+      "type": "project",
+      "name": "LightAgent",
+      "description": "A compact Python agent framework with hooks, durable sessions, graph memory, MCP adapters, and SQLite FTS5 retrieval",
+      "tags": [
+        "agents",
+        "stateful",
+        "tool-use",
+        "pytorch"
+      ],
+      "path": "content/projects/frameworks/lightagent.md",
+      "url": "content/projects/frameworks/lightagent",
+      "last_updated": "2026-09-28",
+      "category": "llms",
       "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
@@ -10673,6 +11545,25 @@
       "featured": false
     },
     {
+      "id": "llava-onevision-2",
+      "type": "project",
+      "name": "LLaVA-OneVision-2",
+      "description": "Open 8B vision-language model releasing data, encoders, training code, checkpoints and logs for image, video and spatial tasks",
+      "tags": [
+        "multimodal",
+        "llm",
+        "data"
+      ],
+      "path": "content/projects/foundation-models/llava-onevision-2.md",
+      "url": "content/projects/foundation-models/llava-onevision-2",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lllyasviel-fooocus",
       "type": "project",
       "name": "Fooocus",
@@ -10824,6 +11715,27 @@
       "category": "skills",
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "llmfit",
+      "type": "tool",
+      "name": "llmfit",
+      "description": "Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use",
+      "tags": [
+        "edge",
+        "quantization",
+        "local",
+        "evaluation",
+        "inference"
+      ],
+      "path": "content/tools/model-layer/llmfit.md",
+      "url": "content/tools/model-layer/llmfit",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -11155,6 +12067,25 @@
       "featured": false
     },
     {
+      "id": "loop-engineering",
+      "type": "project",
+      "name": "loop-engineering",
+      "description": "Pattern library and npx CLI for running recurring agent loops around a codebase, with autonomy levels, cost tiers and a Loop Ready score",
+      "tags": [
+        "orchestration",
+        "community-favorite",
+        "kubernetes"
+      ],
+      "path": "content/projects/agent-systems/loop-engineering.md",
+      "url": "content/projects/agent-systems/loop-engineering",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "lora-diffusion",
       "type": "project",
       "name": "LoRA for Diffusion (cloneofsimo)",
@@ -11288,6 +12219,25 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "maestro",
+      "type": "project",
+      "name": "maestro",
+      "description": "Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL",
+      "tags": [
+        "fine-tuning",
+        "multimodal",
+        "edge"
+      ],
+      "path": "content/projects/training-and-alignment/maestro.md",
+      "url": "content/projects/training-and-alignment/maestro",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -11677,6 +12627,25 @@
       "featured": false
     },
     {
+      "id": "mcpkernel",
+      "type": "project",
+      "name": "mcpkernel",
+      "description": "An MCP and A2A gateway that enforces policy, tracks taint, sandboxes tool calls, and signs audit records with Sigstore attestations",
+      "tags": [
+        "security",
+        "tool-use",
+        "guardrails"
+      ],
+      "path": "content/projects/benchmarks-and-evals/mcpkernel.md",
+      "url": "content/projects/benchmarks-and-evals/mcpkernel",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "experimental",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "measure-first-token-latency",
       "type": "tip",
       "name": "Measure Time-to-First-Token Separately From Total Generation Time",
@@ -11747,6 +12716,43 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "medusa",
+      "type": "project",
+      "name": "medusa",
+      "description": "A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials",
+      "tags": [
+        "security",
+        "community-favorite"
+      ],
+      "path": "content/projects/benchmarks-and-evals/medusa.md",
+      "url": "content/projects/benchmarks-and-evals/medusa",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "meetily",
+      "type": "project",
+      "name": "meetily",
+      "description": "Tauri desktop app that captures meetings, transcribes locally with Parakeet or Whisper and summarises through Ollama or a hosted provider",
+      "tags": [
+        "data",
+        "voice",
+        "security"
+      ],
+      "path": "content/projects/agent-systems/meetily.md",
+      "url": "content/projects/agent-systems/meetily",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -12799,6 +13805,24 @@
       "featured": false
     },
     {
+      "id": "mova",
+      "type": "project",
+      "name": "MOVA",
+      "description": "An OpenMOSS generative model that denoises video and audio jointly through asymmetric towers joined by cross-attention",
+      "tags": [
+        "multimodal",
+        "voice"
+      ],
+      "path": "content/projects/foundation-models/mova.md",
+      "url": "content/projects/foundation-models/mova",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "ms-swift",
       "type": "project",
       "name": "ms-swift",
@@ -13503,6 +14527,26 @@
       "featured": false
     },
     {
+      "id": "omnigent",
+      "type": "project",
+      "name": "omnigent",
+      "description": "Python meta-harness giving one orchestration, policy and sandboxing layer over Claude Code, Codex, Cursor, OpenCode, Hermes and custom agents",
+      "tags": [
+        "orchestration",
+        "guardrails",
+        "security",
+        "agents"
+      ],
+      "path": "content/projects/agent-systems/omnigent.md",
+      "url": "content/projects/agent-systems/omnigent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "alpha",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "omnilingual-asr",
       "type": "project",
       "name": "Omnilingual ASR",
@@ -13636,6 +14680,44 @@
       "category": "code-generation",
       "maturity": "beta",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "open-codex-computer-use",
+      "type": "project",
+      "name": "open-codex-computer-use",
+      "description": "MCP server giving Codex, Claude Code and Gemini CLI non-intrusive desktop control through the OS accessibility API",
+      "tags": [
+        "tool-use",
+        "guardrails"
+      ],
+      "path": "content/projects/agent-systems/open-codex-computer-use.md",
+      "url": "content/projects/agent-systems/open-codex-computer-use",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "open-connector",
+      "type": "project",
+      "name": "open-connector",
+      "description": "A self-hostable connector gateway exposing 1500-plus SaaS providers and 10000-plus actions through SDK, CLI, MCP, and OpenAPI",
+      "tags": [
+        "data",
+        "security",
+        "tool-use",
+        "routing"
+      ],
+      "path": "content/projects/data-and-retrieval/open-connector.md",
+      "url": "content/projects/data-and-retrieval/open-connector",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -13884,6 +14966,25 @@
       "featured": false
     },
     {
+      "id": "opengui",
+      "type": "project",
+      "name": "OpenGUI",
+      "description": "Kotlin backend and Android accessibility client that lets a vision-language agent read and operate real Android app interfaces",
+      "tags": [
+        "edge",
+        "agents",
+        "guardrails"
+      ],
+      "path": "content/projects/agent-systems/opengui.md",
+      "url": "content/projects/agent-systems/opengui",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openhands",
       "type": "project",
       "name": "OpenHands",
@@ -13984,6 +15085,63 @@
       "featured": false
     },
     {
+      "id": "openmontage",
+      "type": "project",
+      "name": "OpenMontage",
+      "description": "AGPL-3.0 agentic video production system driving twelve pipelines, 100+ tools and Remotion composition from a coding assistant",
+      "tags": [
+        "multimodal",
+        "agents",
+        "voice"
+      ],
+      "path": "content/projects/agent-systems/openmontage.md",
+      "url": "content/projects/agent-systems/openmontage",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openosint",
+      "type": "project",
+      "name": "OpenOSINT",
+      "description": "Python OSINT agent wrapping 20 real investigation tools behind a REPL, CLI, MCP server and web UI, with a statement-layer entity graph",
+      "tags": [
+        "security",
+        "tool-use",
+        "data"
+      ],
+      "path": "content/projects/agent-systems/openosint.md",
+      "url": "content/projects/agent-systems/openosint",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "openphone",
+      "type": "project",
+      "name": "OpenPhone",
+      "description": "HKUDS phone-agent models plus PhoneCLI, which exposes Android and iOS app actions as callable commands for mobile agents",
+      "tags": [
+        "agents",
+        "tool-use",
+        "research"
+      ],
+      "path": "content/projects/foundation-models/openphone.md",
+      "url": "content/projects/foundation-models/openphone",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openpipe-art",
       "type": "tool",
       "name": "OpenPipe ART",
@@ -14041,6 +15199,26 @@
       "featured": false
     },
     {
+      "id": "openscience",
+      "type": "project",
+      "name": "openscience",
+      "description": "A local-first research agent with a visible trace, real Python and R kernels, and bundled domain skills across biology and chemistry",
+      "tags": [
+        "agents",
+        "research",
+        "local",
+        "observability"
+      ],
+      "path": "content/projects/frameworks/openscience.md",
+      "url": "content/projects/frameworks/openscience",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "openshell",
       "type": "project",
       "name": "OpenShell",
@@ -14057,6 +15235,25 @@
       "category": "tooling",
       "maturity": "alpha",
       "cost_model": "self-hostable",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "opensquilla",
+      "type": "project",
+      "name": "opensquilla",
+      "description": "Python microkernel agent whose local SquillaRouter picks the cheapest capable model per turn, with tool compression and one shared runtime",
+      "tags": [
+        "routing",
+        "efficiency",
+        "memory"
+      ],
+      "path": "content/projects/agent-systems/opensquilla.md",
+      "url": "content/projects/agent-systems/opensquilla",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -14517,6 +15714,26 @@
       "featured": false
     },
     {
+      "id": "parlor",
+      "type": "project",
+      "name": "parlor",
+      "description": "Python FastAPI voice stack giving a browser full-duplex-feel conversation with Gemma 4 via llama.cpp, Kokoro TTS and smart-turn detection",
+      "tags": [
+        "voice",
+        "local",
+        "multimodal",
+        "streaming"
+      ],
+      "path": "content/projects/agent-systems/parlor.md",
+      "url": "content/projects/agent-systems/parlor",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "experimental",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "pathway-llm-app",
       "type": "project",
       "name": "Pathway LLM App",
@@ -14656,6 +15873,25 @@
       "featured": false
     },
     {
+      "id": "philipp-2026-medqade",
+      "type": "paper",
+      "name": "Clinician-Level Agreement Without Clinical Caution: LLM Evaluator Limits in Medical AI Benchmarking",
+      "description": "A German open-response clinical benchmark showing LLM judges match physician agreement while abstaining far less often.",
+      "tags": [
+        "evaluation",
+        "guardrails",
+        "community-favorite"
+      ],
+      "path": "content/research/evaluation-and-safety/philipp-2026-medqade.md",
+      "url": "content/research/evaluation-and-safety/philipp-2026-medqade",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "phoenix",
       "type": "project",
       "name": "Phoenix",
@@ -14671,6 +15907,26 @@
       "last_updated": "2026-07-01",
       "category": "observability",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "photo-agents",
+      "type": "project",
+      "name": "Photo-agents",
+      "description": "Python package with a perceive-reason-act loop, layered memory and CDP browser control, shipped with Streamlit, PyQt and IM bot clients",
+      "tags": [
+        "memory",
+        "tool-use",
+        "research",
+        "pytorch"
+      ],
+      "path": "content/projects/agent-systems/photo-agents.md",
+      "url": "content/projects/agent-systems/photo-agents",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -14850,6 +16106,26 @@
       "featured": false
     },
     {
+      "id": "pixelrag",
+      "type": "project",
+      "name": "PixelRAG",
+      "description": "Renders documents as screenshot tiles and retrieves over the images, with an 8.28M-page Wikipedia index and a pixelbrowse agent skill",
+      "tags": [
+        "retrieval",
+        "multimodal",
+        "rag",
+        "chunking"
+      ],
+      "path": "content/projects/data-and-retrieval/pixelrag.md",
+      "url": "content/projects/data-and-retrieval/pixelrag",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "alpha",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "pixeltable",
       "type": "project",
       "name": "Pixeltable",
@@ -14884,6 +16160,26 @@
       "url": "content/tools/data-ingestion/playwright",
       "last_updated": "2026-06-30",
       "category": null,
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "pocketflow",
+      "type": "project",
+      "name": "PocketFlow",
+      "description": "A hundred-line Python LLM framework whose Node, Flow, and nested-Flow primitives express multi-agent, RAG, and workflow patterns",
+      "tags": [
+        "agents",
+        "orchestration",
+        "community-favorite",
+        "pytorch"
+      ],
+      "path": "content/projects/frameworks/pocketflow.md",
+      "url": "content/projects/frameworks/pocketflow",
+      "last_updated": "2026-09-28",
+      "category": "llms",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -14925,6 +16221,26 @@
       "featured": false
     },
     {
+      "id": "ponytail",
+      "type": "project",
+      "name": "ponytail",
+      "description": "An agent skill that pushes agents toward the laziest sufficient solution, with a benchmarked code-volume reduction writeup",
+      "tags": [
+        "agents",
+        "community-favorite",
+        "code-gen",
+        "structured-output"
+      ],
+      "path": "content/projects/frameworks/ponytail.md",
+      "url": "content/projects/frameworks/ponytail",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "portkey",
       "type": "tool",
       "name": "Portkey",
@@ -14960,6 +16276,27 @@
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
+      "featured": false
+    },
+    {
+      "id": "potapov-2026-agi-maze",
+      "type": "paper",
+      "name": "AGI Maze as a Benchmark Framework for World-Modeling Agents",
+      "description": "A grid-maze benchmark showing LLMs do not build persistent internal world models, even with message history as memory.",
+      "tags": [
+        "multimodal",
+        "memory",
+        "research",
+        "benchmark",
+        "planning"
+      ],
+      "path": "content/research/agents-and-reasoning/potapov-2026-agi-maze.md",
+      "url": "content/research/agents-and-reasoning/potapov-2026-agi-maze",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
       "featured": false
     },
     {
@@ -15518,6 +16855,25 @@
       "featured": false
     },
     {
+      "id": "pyspur",
+      "type": "project",
+      "name": "pyspur",
+      "description": "A visual playground for agentic workflows with trace capture, evals, RAG tooling, and one-click deployment as an API",
+      "tags": [
+        "agents",
+        "tracing",
+        "evaluation"
+      ],
+      "path": "content/projects/frameworks/pyspur.md",
+      "url": "content/projects/frameworks/pyspur",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "freemium",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "pytorch-audio",
       "type": "project",
       "name": "audio",
@@ -15709,6 +17065,25 @@
       "featured": false
     },
     {
+      "id": "qwen-vl-series-finetune",
+      "type": "project",
+      "name": "Qwen-VL-Series-Finetune",
+      "description": "Single-repo training scripts for Qwen2-VL, Qwen2.5-VL, Qwen3-VL and Qwen3.5 spanning SFT, DPO, GRPO and classification",
+      "tags": [
+        "fine-tuning",
+        "multimodal",
+        "rlhf"
+      ],
+      "path": "content/projects/training-and-alignment/qwen-vl-series-finetune.md",
+      "url": "content/projects/training-and-alignment/qwen-vl-series-finetune",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "qwen3-omni",
       "type": "project",
       "name": "Qwen3-Omni",
@@ -15763,6 +17138,26 @@
       "url": "content/projects/foundation-models/qwen3-vl",
       "last_updated": "2026-07-08",
       "category": "multimodal",
+      "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "qwenpaw",
+      "type": "project",
+      "name": "QwenPaw",
+      "description": "AgentScope-based personal assistant with three-layer memory, kernel sandboxing, sub-agents and channels from DingTalk to Discord",
+      "tags": [
+        "agents",
+        "memory",
+        "security",
+        "voice"
+      ],
+      "path": "content/projects/agent-systems/qwenpaw.md",
+      "url": "content/projects/agent-systems/qwenpaw",
+      "last_updated": "2026-09-28",
+      "category": "agents",
       "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
@@ -16186,6 +17581,24 @@
       "featured": false
     },
     {
+      "id": "re-gent",
+      "type": "project",
+      "name": "re_gent",
+      "description": "Go CLI that version-controls agent activity in .regent/, so any line can be blamed to the prompt that wrote it",
+      "tags": [
+        "observability",
+        "data"
+      ],
+      "path": "content/projects/agent-systems/re-gent.md",
+      "url": "content/projects/agent-systems/re-gent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "read-a-sample-of-production-traces-every-week",
       "type": "tip",
       "name": "Read a Sample of Production Traces Every Week",
@@ -16461,6 +17874,26 @@
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "repoprompt-ce",
+      "type": "project",
+      "name": "repoprompt-ce",
+      "description": "A native macOS app that assembles reviewable CodeMaps, file selections, and Git diffs, then hands that context to agents via MCP",
+      "tags": [
+        "memory",
+        "edge",
+        "tool-use",
+        "code-gen"
+      ],
+      "path": "content/projects/frameworks/repoprompt-ce.md",
+      "url": "content/projects/frameworks/repoprompt-ce",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -16754,6 +18187,24 @@
       "maturity": null,
       "cost_model": null,
       "status": null,
+      "featured": false
+    },
+    {
+      "id": "rtk",
+      "type": "tool",
+      "name": "rtk",
+      "description": "Rust CLI shim that rewrites shell command output into condensed form before a coding agent reads it",
+      "tags": [
+        "efficiency",
+        "inference"
+      ],
+      "path": "content/tools/dx-and-tooling/rtk.md",
+      "url": "content/tools/dx-and-tooling/rtk",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -17271,6 +18722,26 @@
       "category": null,
       "maturity": null,
       "cost_model": null,
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "secure-code-game",
+      "type": "project",
+      "name": "secure-code-game",
+      "description": "A browser-based in-editor game where players secure a simulated AI agent across four self-contained seasons",
+      "tags": [
+        "security",
+        "agents",
+        "guardrails",
+        "community-favorite"
+      ],
+      "path": "content/projects/benchmarks-and-evals/secure-code-game.md",
+      "url": "content/projects/benchmarks-and-evals/secure-code-game",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -18982,6 +20453,27 @@
       "featured": false
     },
     {
+      "id": "sulpovar-2026-contextnest",
+      "type": "paper",
+      "name": "ContextNest: Verifiable Context Governance for Autonomous AI Agent",
+      "description": "A governance spec that adds versioned identities, hash chains and point-in-time reconstruction beneath retrieval.",
+      "tags": [
+        "memory",
+        "data",
+        "rag",
+        "evaluation",
+        "security"
+      ],
+      "path": "content/research/retrieval-and-memory/sulpovar-2026-contextnest.md",
+      "url": "content/research/retrieval-and-memory/sulpovar-2026-contextnest",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "summarize-long-running-agent-state",
       "type": "tip",
       "name": "Summarize Long-Running Agent State Instead of Keeping Full History",
@@ -19612,6 +21104,24 @@
       "featured": false
     },
     {
+      "id": "tewari-2026-ensemble-qsp",
+      "type": "paper",
+      "name": "A hierarchical memory architecture overcomes context limits in long-horizon multi-agent computational modeling",
+      "description": "A multi-agent framework whose capped three-layer memory keeps injected context near 300 tokens over multi-session research work.",
+      "tags": [
+        "memory",
+        "agents"
+      ],
+      "path": "content/research/agents-and-reasoning/tewari-2026-ensemble-qsp.md",
+      "url": "content/research/agents-and-reasoning/tewari-2026-ensemble-qsp",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "text-embeddings-inference",
       "type": "tool",
       "name": "Text Embeddings Inference (TEI)",
@@ -19666,6 +21176,25 @@
       "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "thclaws",
+      "type": "project",
+      "name": "thClaws",
+      "description": "Rust agent harness whose workspace holds several agents side by side, each isolated in its own folder and supervised process",
+      "tags": [
+        "agents",
+        "inference",
+        "security"
+      ],
+      "path": "content/projects/agent-systems/thclaws.md",
+      "url": "content/projects/agent-systems/thclaws",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -19846,6 +21375,25 @@
       "maturity": null,
       "cost_model": null,
       "status": "reviewed",
+      "featured": false
+    },
+    {
+      "id": "toon",
+      "type": "project",
+      "name": "toon",
+      "description": "A compact serialization of the JSON data model using CSV-style tabular rows, with a spec, TypeScript SDK, CLI, and benchmarks",
+      "tags": [
+        "structured-output",
+        "efficiency",
+        "inference"
+      ],
+      "path": "content/projects/frameworks/toon.md",
+      "url": "content/projects/frameworks/toon",
+      "last_updated": "2026-09-28",
+      "category": "llms",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
       "featured": false
     },
     {
@@ -20106,6 +21654,25 @@
       "category": "computer-vision",
       "maturity": "beta",
       "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "trendradar",
+      "type": "project",
+      "name": "TrendRadar",
+      "description": "A self-hosted trend and news aggregator with AI filtering, translation, push delivery to chat platforms, and an MCP server",
+      "tags": [
+        "data",
+        "tool-use",
+        "self-hosted"
+      ],
+      "path": "content/projects/data-and-retrieval/trendradar.md",
+      "url": "content/projects/data-and-retrieval/trendradar",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "production",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -21373,6 +22940,25 @@
       "featured": false
     },
     {
+      "id": "vulnclaw",
+      "type": "project",
+      "name": "VulnClaw",
+      "description": "An autonomous penetration-testing CLI that runs recon, discovery, exploitation, and reporting from natural language with evidence-gated output",
+      "tags": [
+        "security",
+        "tool-use",
+        "orchestration"
+      ],
+      "path": "content/projects/benchmarks-and-evals/vulnclaw.md",
+      "url": "content/projects/benchmarks-and-evals/vulnclaw",
+      "last_updated": "2026-09-28",
+      "category": "evaluation",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "wandb-weave",
       "type": "tool",
       "name": "Weights & Biases Weave",
@@ -21638,6 +23224,45 @@
       "featured": false
     },
     {
+      "id": "wesight",
+      "type": "project",
+      "name": "wesight",
+      "description": "Electron control console for local coding agents, with one-click setup, model routing, IM channels and per-task runtime metrics",
+      "tags": [
+        "agents",
+        "observability",
+        "routing"
+      ],
+      "path": "content/projects/agent-systems/wesight.md",
+      "url": "content/projects/agent-systems/wesight",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "whale",
+      "type": "project",
+      "name": "Whale",
+      "description": "Go terminal coding agent for DeepSeek with a claimed 98% prompt cache hit rate and JavaScript multi-agent workflows",
+      "tags": [
+        "code-gen",
+        "llm",
+        "caching",
+        "orchestration"
+      ],
+      "path": "content/projects/agent-systems/whale.md",
+      "url": "content/projects/agent-systems/whale",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
       "id": "whisper",
       "type": "project",
       "name": "Whisper",
@@ -21773,6 +23398,26 @@
       "featured": false
     },
     {
+      "id": "wu-2026-proactive-memory-agent",
+      "type": "paper",
+      "name": "Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents",
+      "description": "A separate memory agent decides when to inject a reminder into an unchanged action agent, lifting terminal-task pass rates.",
+      "tags": [
+        "memory",
+        "rlhf",
+        "agents",
+        "tool-use"
+      ],
+      "path": "content/research/agents-and-reasoning/wu-2026-proactive-memory-agent.md",
+      "url": "content/research/agents-and-reasoning/wu-2026-proactive-memory-agent",
+      "last_updated": "2026-09-28",
+      "category": null,
+      "maturity": null,
+      "cost_model": null,
+      "status": null,
+      "featured": false
+    },
+    {
       "id": "x-anylabeling",
       "type": "project",
       "name": "X-AnyLabeling",
@@ -21887,6 +23532,25 @@
       "category": null,
       "maturity": "production",
       "cost_model": "usage-based",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "xtreme1",
+      "type": "project",
+      "name": "xtreme1",
+      "description": "An open-source annotation platform for images, 3D LiDAR point clouds, sensor fusion, and LLM preference data with RLHF",
+      "tags": [
+        "vision",
+        "rlhf",
+        "multimodal"
+      ],
+      "path": "content/projects/data-and-retrieval/xtreme1.md",
+      "url": "content/projects/data-and-retrieval/xtreme1",
+      "last_updated": "2026-09-28",
+      "category": "rag",
+      "maturity": "beta",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -22098,6 +23762,25 @@
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
+      "cost_model": "open-source",
+      "status": "active",
+      "featured": false
+    },
+    {
+      "id": "zero-agent",
+      "type": "project",
+      "name": "zero",
+      "description": "Go terminal coding agent supporting 25+ providers, scriptable exec mode, permission policies and durable local sessions",
+      "tags": [
+        "code-gen",
+        "inference",
+        "security"
+      ],
+      "path": "content/projects/agent-systems/zero-agent.md",
+      "url": "content/projects/agent-systems/zero-agent",
+      "last_updated": "2026-09-28",
+      "category": "agents",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false

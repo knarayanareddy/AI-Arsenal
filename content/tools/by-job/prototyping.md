@@ -170,6 +170,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Gradio](../dx-and-tooling/gradio.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
+| [headroom](../dx-and-tooling/headroom.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Jan](../dx-and-tooling/jan.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, rust | solid-choice |
 | [Langflow](../orchestration/langflow.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | solid-choice |
 | [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | freemium | Yes | Yes | No | typescript, cpp | recommended |
@@ -183,6 +184,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Prompty](../dx-and-tooling/prompty.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript, python | solid-choice |
 | [RamaLama](../serving-and-deployment/ramalama.md) | serving and deployment | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Repomix](../dx-and-tooling/repomix.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | recommended |
+| [rtk](../dx-and-tooling/rtk.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Streamlit](../dx-and-tooling/streamlit.md) | dx and tooling | freemium | Yes | Yes | Yes | python | recommended |
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | open-source | Yes | Yes | Yes | polyglot | recommended |
 | [Tabby](../dx-and-tooling/tabby-ml.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | solid-choice |

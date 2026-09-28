@@ -10,14 +10,17 @@
 | [by job](./by-job/) | 14 entries | 2026-09-28 |
 | [by stack](./by-stack/) | 8 entries | 2026-09-28 |
 | [data ingestion](./data-ingestion/) | 37 entries | 2026-09-28 |
-| [dx and tooling](./dx-and-tooling/) | 44 entries | 2026-09-28 |
+| [dx and tooling](./dx-and-tooling/) | 46 entries | 2026-09-28 |
 | [evaluation and observability](./evaluation-and-observability/) | 40 entries | 2026-09-28 |
-| [model layer](./model-layer/) | 33 entries | 2026-09-28 |
+| [model layer](./model-layer/) | 34 entries | 2026-09-28 |
 | [orchestration](./orchestration/) | 26 entries | 2026-09-28 |
 | [serving and deployment](./serving-and-deployment/) | 35 entries | 2026-09-28 |
 
 ## Recently Added
 
+- [headroom](./dx-and-tooling/headroom.md)
+- [llmfit](./model-layer/llmfit.md)
+- [rtk](./dx-and-tooling/rtk.md)
 - [XiuRouter](./serving-and-deployment/xiurouter.md)
 - [Agentic Security](./evaluation-and-observability/agentic-security.md)
 - [Envoy AI Gateway](./serving-and-deployment/ai-gateway.md)
@@ -25,9 +28,6 @@
 - [Hugging Face AI Sheets](./data-ingestion/aisheets.md)
 - [EvalScope](./evaluation-and-observability/evalscope.md)
 - [FastEmbed](./model-layer/fastembed.md)
-- [FuzzyAI](./evaluation-and-observability/fuzzyai.md)
-- [Inspect Petri](./evaluation-and-observability/inspect-petri.md)
-- [Laminar](./evaluation-and-observability/laminar.md)
 
 ## Most Popular
 
@@ -127,6 +127,7 @@ _No star-tracked entries yet._
 - [Groq](./model-layer/groq.md) — Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second
 - [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) — A framework for validating, correcting, and constraining LLM outputs
 - [Guidance](./model-layer/guidance.md) — Microsoft guidance library for controlling and constraining language model generation
+- [headroom](./dx-and-tooling/headroom.md) — Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model
 - [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) — Managed Hugging Face service for deploying models as production inference endpoints
 - [Honen](./dx-and-tooling/honen.md) — Transform any content into interactive AI-generated courses
 - [Hugging Face Hub](./model-layer/hugging-face-hub.md) — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
@@ -154,6 +155,7 @@ _No star-tracked entries yet._
 - [LLaMA-Factory](./model-layer/llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
 - [Llama Guard](./evaluation-and-observability/llamaguard.md) — Meta safety model family for classifying and moderating LLM inputs and outputs
 - [LLM Guard](./evaluation-and-observability/llm-guard.md) — Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more
+- [llmfit](./model-layer/llmfit.md) — Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use
 - [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md) — The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard
 - [LM Format Enforcer](./model-layer/lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [LM Studio](./dx-and-tooling/lm-studio.md) — Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server
@@ -223,6 +225,7 @@ _No star-tracked entries yet._
 - [Reducto](./data-ingestion/reducto.md) — Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines
 - [Replicate](./serving-and-deployment/replicate.md) — A hosted platform for running and deploying machine learning models via API
 - [Repomix](./dx-and-tooling/repomix.md) — CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs
+- [rtk](./dx-and-tooling/rtk.md) — Rust CLI shim that rewrites shell command output into condensed form before a coding agent reads it
 - [RunPod](./serving-and-deployment/runpod.md) — GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints
 - [Scale AI](./data-ingestion/scale-ai.md) — Managed data labeling and data engine platform for enterprise AI datasets
 - [ScrapeGraphAI](./data-ingestion/scrapegraphai.md) — LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors

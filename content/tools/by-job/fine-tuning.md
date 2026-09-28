@@ -177,6 +177,7 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [Liger Kernel](../model-layer/liger-kernel.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [LLaMA-Factory](../model-layer/llamafactory.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
+| [llmfit](../model-layer/llmfit.md) | model layer | open-source | Yes | Yes | Yes | rust | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | open-source | Yes | Yes | Yes | python | solid-choice |
 | [MLX-LM](../model-layer/mlx-lm.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
 | [OpenPipe ART](../model-layer/openpipe-art.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |

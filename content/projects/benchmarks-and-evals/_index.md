@@ -33,16 +33,16 @@ Before selecting an evaluation/observability platform:
 
 ### Recently Added
 
+- [AiSOC](./aisoc.md)
 - [openinference](./arize-ai-openinference.md)
+- [attackgen](./attackgen.md)
+- [AutoCVE](./autocve.md)
+- [cve-mcp-server](./cve-mcp-server.md)
 - [evalplus](./evalplus-evalplus.md)
 - [evaluate](./huggingface-evaluate.md)
-- [SWE-bench](./swe-bench-swe-bench.md)
-- [guidellm](./vllm-project-guidellm.md)
-- [LightEval](./lighteval.md)
-- [lmms-eval](./lmms-eval.md)
-- [Pipelock](./pipelock.md)
-- [BigCodeBench](./bigcodebench.md)
-- [MTEB](./mteb.md)
+- [mcpkernel](./mcpkernel.md)
+- [medusa](./medusa.md)
+- [secure-code-game](./secure-code-game.md)
 
 ### Most Popular
 
@@ -60,9 +60,13 @@ Before selecting an evaluation/observability platform:
 ### Browse All
 
 - [Agenta](./agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [AiSOC](./aisoc.md) — A Docker Compose security operations center that normalizes telemetry, runs a rule library, and audits LLM triage step by step
 - [openinference](./arize-ai-openinference.md) — OpenTelemetry semantic conventions and instrumentors for generative-AI spans, so LLM calls carry standard attributes regardless of which SDK issued them
+- [attackgen](./attackgen.md) — Generates tailored incident-response exercise scenarios from threat-actor profiles and MITRE ATT&CK or ATLAS technique sets
+- [AutoCVE](./autocve.md) — A multi-agent platform that audits source code for reportable vulnerabilities and produces CVE-ready findings with reproduction steps
 - [BigCodeBench](./bigcodebench.md) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
 - [Braintrust](./braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
+- [cve-mcp-server](./cve-mcp-server.md) — A FastMCP server exposing 28 security tools across 24 APIs behind one triage_cve call that computes a composite risk score
 - [DeepEval](./deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
 - [evalplus](./evalplus-evalplus.md) — Hardened successor to HumanEval and MBPP that adds far more test inputs to catch solutions passing weak tests
 - [Helicone](./helicone.md) — Proxy-based LLM observability platform for logs, costs, caching, experiments, and analytics
@@ -72,6 +76,8 @@ Before selecting an evaluation/observability platform:
 - [LightEval](./lighteval.md) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
 - [lmms-eval](./lmms-eval.md) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
 - [Lunary](./lunary.md) — Open-source LLM observability and analytics platform for chatbots, RAG apps, and prompts
+- [mcpkernel](./mcpkernel.md) — An MCP and A2A gateway that enforces policy, tracks taint, sandboxes tool calls, and signs audit records with Sigstore attestations
+- [medusa](./medusa.md) — A single-binary security scanner with over forty thousand patterns targeting AI apps, agents, MCP servers, and leaked credentials
 - [MTEB](./mteb.md) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - [OpenLIT](./openlit.md) — OpenTelemetry-native platform for LLM observability, GPU monitoring, evals, prompts, and guardrails
 - [OpenLLMetry](./openllmetry.md) — OpenTelemetry instrumentation for GenAI and LLM applications from Traceloop
@@ -79,6 +85,8 @@ Before selecting an evaluation/observability platform:
 - [Phoenix](./phoenix.md) — Arize Phoenix open-source observability and evaluation platform for LLM, RAG, and agent systems
 - [Pipelock](./pipelock.md) — AI-agent firewall for MCP, A2A, HTTP, and WebSocket egress with exfiltration and SSRF controls
 - [Ragas for RAG Evaluation](./ragas-rag-evaluation.md) — Evaluation framework for measuring retrieval-augmented generation quality and regressions
+- [secure-code-game](./secure-code-game.md) — A browser-based in-editor game where players secure a simulated AI agent across four self-contained seasons
 - [SWE-bench](./swe-bench-swe-bench.md) — Real GitHub issues paired with hidden fail-to-pass and pass-to-pass test suites, and the harness that turns a patch into a resolution rate
 - [Terminal-Bench](./terminal-bench.md) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - [guidellm](./vllm-project-guidellm.md) — Benchmark driver that sweeps concurrency against a live endpoint and reports the first-token and inter-token latency a real user waits on
+- [VulnClaw](./vulnclaw.md) — An autonomous penetration-testing CLI that runs recon, discovery, exploitation, and reporting from natural language with evidence-gated output

@@ -87,6 +87,7 @@
 | `groq` | [Groq](./model-layer/groq.md) | Ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second |
 | `guardrails-ai` | [Guardrails AI](./evaluation-and-observability/guardrails-ai.md) | A framework for validating, correcting, and constraining LLM outputs |
 | `guidance` | [Guidance](./model-layer/guidance.md) | Microsoft guidance library for controlling and constraining language model generation |
+| `headroom` | [headroom](./dx-and-tooling/headroom.md) | Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model |
 | `hf-inference-endpoints` | [Hugging Face Inference Endpoints](./serving-and-deployment/hf-inference-endpoints.md) | Managed Hugging Face service for deploying models as production inference endpoints |
 | `honen` | [Honen](./dx-and-tooling/honen.md) | Transform any content into interactive AI-generated courses |
 | `hugging-face-hub` | [Hugging Face Hub](./model-layer/hugging-face-hub.md) | Model, dataset, and Space hosting platform for sharing and versioning AI artifacts |
@@ -114,6 +115,7 @@
 | `llamafactory` | [LLaMA-Factory](./model-layer/llamafactory.md) | Unified fine-tuning framework and UI for many LLMs and training methods |
 | `llamaguard` | [Llama Guard](./evaluation-and-observability/llamaguard.md) | Meta safety model family for classifying and moderating LLM inputs and outputs |
 | `llm-guard` | [LLM Guard](./evaluation-and-observability/llm-guard.md) | Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more |
+| `llmfit` | [llmfit](./model-layer/llmfit.md) | Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use |
 | `lm-evaluation-harness` | [LM Evaluation Harness (EleutherAI)](./evaluation-and-observability/lm-evaluation-harness.md) | The de facto standard benchmark harness for language models — hundreds of academic tasks behind one CLI, and the backend of the Open LLM Leaderboard |
 | `lm-format-enforcer` | [LM Format Enforcer](./model-layer/lm-format-enforcer.md) | Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM |
 | `lm-studio` | [LM Studio](./dx-and-tooling/lm-studio.md) | Desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server |
@@ -177,6 +179,7 @@
 | `reducto` | [Reducto](./data-ingestion/reducto.md) | Document ingestion API that parses complex PDFs (tables, figures, multi-column) into clean, structured, chunk-ready output for RAG pipelines |
 | `replicate` | [Replicate](./serving-and-deployment/replicate.md) | A hosted platform for running and deploying machine learning models via API |
 | `repomix` | [Repomix](./dx-and-tooling/repomix.md) | CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs |
+| `rtk` | [rtk](./dx-and-tooling/rtk.md) | Rust CLI shim that rewrites shell command output into condensed form before a coding agent reads it |
 | `runpod` | [RunPod](./serving-and-deployment/runpod.md) | GPU cloud with per-second billing and a serverless tier purpose-built for inference endpoints |
 | `scale-ai` | [Scale AI](./data-ingestion/scale-ai.md) | Managed data labeling and data engine platform for enterprise AI datasets |
 | `scrapegraphai` | [ScrapeGraphAI](./data-ingestion/scrapegraphai.md) | LLM-driven web scraping: describe the data you want in natural language and it builds the extraction pipeline, adapting to page structure vs selectors |

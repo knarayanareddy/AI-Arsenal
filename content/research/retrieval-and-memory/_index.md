@@ -32,6 +32,8 @@ When I am designing a retrieval or memory system for an LLM application, which t
 
 ### Recently Added
 
+- [Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts](./kreileder-2026-rag-chunking.md)
+- [ContextNest: Verifiable Context Governance for Autonomous AI Agent](./sulpovar-2026-contextnest.md)
 - [Managing Procedural Memory in LLM Agents: Control, Adaptation, and Evaluation](./belikova-2026-after.md)
 - [Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](./li-2026-dccd-rag.md)
 - [Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki](./ming-2026-llm-wiki.md)
@@ -40,8 +42,6 @@ When I am designing a retrieval or memory system for an LLM application, which t
 - [REALM: Retrieval-Augmented Language Model Pre-Training](./guu-2020-realm.md)
 - [Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering (Fusion-in-Decoder)](./izacard-2020-fid.md)
 - [Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)](./izacard-2021-contriever.md)
-- [Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents](./ji-2026-mragent.md)
-- [Billion-scale similarity search with GPUs](./johnson-2017-faiss.md)
 
 ### Most Popular
 
@@ -61,6 +61,7 @@ _No star-tracked entries yet._
 - [Billion-scale similarity search with GPUs](./johnson-2017-faiss.md) — The FAISS paper — GPU-accelerated similarity search with product quantization that made billion-vector nearest-neighbor search practical, underpinning large-scale retrieval and vector-store backends
 - [Dense Passage Retrieval for Open-Domain Question Answering](./karpukhin-2020-dpr.md) — Showed a simple dual-encoder trained with in-batch negatives beats BM25 for passage retrieval — the paper that made dense embedding retrieval the default, and the direct ancestor of every embedding model powering today's RAG stacks
 - [ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT](./khattab-2020-colbert.md) — Introduced late interaction: keep one vector per token and score via MaxSim at query time, capturing term-level matching that single-vector retrieval loses — the architecture behind ColBERTv2/PLAID and modern multi-vector rerankers
+- [Evaluating Chunking Strategies for Retrieval-Augmented Generation on Academic Texts](./kreileder-2026-rag-chunking.md) — A negative result: cluster-based semantic chunking did not beat fixed-size or recursive chunking on long academic theses.
 - [Dual-Confidence Contrastive Decoding for Retrieval-Augmented Generation](./li-2026-dccd-rag.md) — Uses document- and token-level confidence to suppress conflicting retrieved evidence during training-free RAG decoding.
 - [Lost in the Middle: How Language Models Use Long Contexts](./liu-2023-lost-in-the-middle.md) — Documented the U-shaped curve: LLMs use information at the beginning and end of long contexts far better than the middle — sometimes scoring worse with relevant context mid-prompt than with no context at all — the finding that shaped RAG context-ordering practice
 - [Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs](./malkov-2016-hnsw.md) — Introduced the HNSW graph index for approximate nearest-neighbor search — the algorithm powering most production vector databases and the retrieval step of essentially every RAG system
@@ -69,3 +70,4 @@ _No star-tracked entries yet._
 - [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](./reimers-2019-sentence-bert.md) — Sentence-BERT: fine-tune BERT in a siamese architecture so sentences map to independently comparable embeddings — turning O(n²) cross-encoder comparison into O(n) encoding + vector similarity, and spawning the sentence-transformers library that underpins semantic search and RAG
 - [GrepSeek: Training Search Agents for Direct Corpus Interaction](./salemi-2026-grepseek.md) — Trains a compact search agent to find evidence by issuing shell commands (grep-style) directly against the corpus instead of querying a vector index -- validates the index-free retrieval pattern coding agents already use, and shows how to train for it
 - [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](./sarthi-2024-raptor.md) — Showed recursively clustering and summarizing chunks into a multi-level tree lets retrieval pull both fine details and high-level themes -- reach for RAPTOR when queries need cross-document synthesis, not simple fact lookup
+- [ContextNest: Verifiable Context Governance for Autonomous AI Agent](./sulpovar-2026-contextnest.md) — A governance spec that adds versioned identities, hash chains and point-in-time reconstruction beneath retrieval.

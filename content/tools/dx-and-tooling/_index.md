@@ -27,6 +27,8 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [headroom](./headroom.md)
+- [rtk](./rtk.md)
 - [Prompty](./prompty.md)
 - [AdalFlow](./adalflow.md)
 - [Agent Skills (Addy Osmani)](./addyosmani-agent-skills.md)
@@ -35,8 +37,6 @@ Before picking a tool in this phase, consider:
 - [Claude Code](./claude-code.md)
 - [Cline](./cline.md)
 - [Codex Plugin for Claude Code](./codex-plugin-cc.md)
-- [Continue](./continue-dev.md)
-- [Cursor](./cursor.md)
 
 ### Most Popular
 
@@ -64,6 +64,7 @@ _No star-tracked entries yet._
 - [Google Pomelli 2.0](./google-pomelli-2-0.md) — Explore and interact with large datasets through a visual, intuitive interface
 - [Goose](./goose.md) — Block's open-source, extensible local AI agent that automates engineering tasks end-to-end via MCP extensions
 - [Gradio](./gradio.md) — A Python library for building and sharing machine learning demos quickly
+- [headroom](./headroom.md) — Local compression layer for agent context that shrinks tool output, logs, files and RAG chunks before they hit the model
 - [Honen](./honen.md) — Transform any content into interactive AI-generated courses
 - [Instructor](./instructor.md) — A library for extracting typed structured outputs from language models
 - [Jan](./jan.md) — Open-source, offline-first ChatGPT alternative desktop app powered by llama.cpp
@@ -80,6 +81,7 @@ _No star-tracked entries yet._
 - [Qursor](./qursor.md) — AI-powered UI context for faster front-end development with agents
 - [Recursi](./recursi.md) — Self-improving system for intuitive and efficient AI-assisted coding
 - [Repomix](./repomix.md) — CLI that packs an entire repository into a single AI-friendly file for feeding codebases to LLMs
+- [rtk](./rtk.md) — Rust CLI shim that rewrites shell command output into condensed form before a coding agent reads it
 - [ShellMate](./shellmate.md) — AI-powered terminal assistant that suggests commands and explains outputs
 - [Streamlit](./streamlit.md) — A Python framework for building data and AI apps with minimal frontend code
 - [Superpowers](./superpowers.md) — Composable agent-skills framework encoding a full software development methodology (spec, plan, TDD, subagent-driven implementation) for coding agents

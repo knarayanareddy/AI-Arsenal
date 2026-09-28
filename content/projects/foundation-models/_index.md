@@ -33,16 +33,16 @@ Before selecting a foundation model:
 
 ### Recently Added
 
+- [awesome-japanese-llm](./awesome-japanese-llm.md)
 - [RWKV-LM](./blinkdl-rwkv-lm.md)
 - [spleeter](./deezer-spleeter.md)
 - [dinov2](./facebookresearch-dinov2.md)
 - [sentence-transformers](./huggingface-sentence-transformers.md)
 - [InternLM](./internlm-internlm.md)
+- [LLaVA-OneVision-2](./llava-onevision-2.md)
+- [MOVA](./mova.md)
 - [Isaac-GR00T](./nvidia-isaac-gr00t.md)
-- [ColBERT](./stanford-futuredata-colbert.md)
-- [DeepSeek-OCR](./deepseek-ocr.md)
-- [Fara](./fara.md)
-- [GLM-5](./glm-5.md)
+- [OpenPhone](./openphone.md)
 
 ### Most Popular
 
@@ -60,6 +60,7 @@ Before selecting a foundation model:
 ### Browse All
 
 - [AudioCraft (Meta)](./audiocraft.md) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
+- [awesome-japanese-llm](./awesome-japanese-llm.md) — Volunteer-maintained catalogue of Japanese LLMs with per-model context length, pretraining corpus and license columns
 - [Bark](./bark.md) — A transformer text-to-audio model from Suno that generates speech, non-speech sounds, music, and sound effects from text prompts via GPT-style audio tokens and
 - [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md) — BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG
 - [RWKV-LM](./blinkdl-rwkv-lm.md) — RNN-architecture language model that trains in parallel and decodes one token at a time with no KV cache
@@ -98,6 +99,7 @@ Before selecting a foundation model:
 - [Kimi K2](./kimi-k2.md) — Moonshot AI's trillion-parameter open-weights MoE model optimized for agentic tool use and coding, with 32B active parameters
 - [Kokoro TTS](./kokoro.md) — 82M-parameter open TTS that punches far above its size — Apache-2.0 weights, near-instant CPU-capable synthesis, and browser/edge deployment via ONNX
 - [Llama 3.x](./llama-3.md) — Meta open-weight Llama 3 family for general, multilingual, code, and multimodal applications
+- [LLaVA-OneVision-2](./llava-onevision-2.md) — Open 8B vision-language model releasing data, encoders, training code, checkpoints and logs for image, video and spatial tasks
 - [LTX-2](./ltx-2.md) — Lightricks' DiT-based synchronized audio-and-video foundation model, released with open weights, a Python package, LoRA training, and an API
 - [LTX-Video](./ltx-video.md) — Lightricks' open DiT-based video-generation model optimized for real-time, high-resolution text-to-video and image-to-video synthesis on a single GPU
 - [Magenta RealTime 2](./magenta-realtime.md) — Google Magenta open-weight model for real-time and offline live-music generation
@@ -106,10 +108,12 @@ Before selecting a foundation model:
 - [MLX Audio](./mlx-audio.md) — Speech library for Apple Silicon built on MLX, providing text-to-speech, speech-to-text, and speech-to-speech inference optimized for on-device use
 - [Moshi](./moshi.md) — Full-duplex speech-to-speech foundation model from Kyutai that listens and speaks simultaneously with low latency, no explicit ASR/TTS pipeline
 - [MOSS-TTS](./moss-tts.md) — Open-source speech and sound generation model family for expressive, long-form, multi-speaker, and streaming audio
+- [MOVA](./mova.md) — An OpenMOSS generative model that denoises video and audio jointly through asymmetric towers joined by cross-attention
 - [Isaac-GR00T](./nvidia-isaac-gr00t.md) — Generalist robot foundation model pairing a vision-language-action backbone with synthetic data in Isaac
 - [OLMo](./olmo.md) — AI2's fully-open language model family: weights, training data, code, and checkpoints all released — the reference for reproducible LLM science
 - [Omnilingual ASR](./omnilingual-asr.md) — Meta's speech recognition family covering more than 1,600 languages, including zero-shot adaptation to languages with few paired examples
 - [Open-Sora](./open-sora.md) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
+- [OpenPhone](./openphone.md) — HKUDS phone-agent models plus PhoneCLI, which exposes Android and iOS app actions as callable commands for mobile agents
 - [OpenVoice](./openvoice.md) — An instant voice-cloning model from MIT and MyShell that separates tone color from a base speaker, enabling cross-lingual cloning and style control
 - [Phi-4](./phi-4.md) — Microsoft small language model family optimized for efficient reasoning and local-friendly deployment
 - [Phi Cookbook](./phi-cookbook.md) — Microsoft examples and recipes for building with the Phi model family

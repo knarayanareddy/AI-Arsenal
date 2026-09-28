@@ -31,16 +31,16 @@ When I am deciding how to evaluate a model or a RAG/agent pipeline, which evalua
 
 ### Recently Added
 
+- [K9-Bench: Evaluating Multimodal LLMs on Canine-Centric Videos](./attarde-2026-k9-bench.md)
+- [AGC-Bench: Measuring Artificial General Creativity](./beaty-2026-agc-bench.md)
+- [Meta-Benchmarks for Financial-Services LLM Evaluation](./hudson-2026-financial-llm-metabench.md)
+- [Benchmarking Code Improvement with Progressive, Adaptive, and Interactive Feedback](./le-2026-pair-bench.md)
+- [Clinician-Level Agreement Without Clinical Caution: LLM Evaluator Limits in Medical AI Benchmarking](./philipp-2026-medqade.md)
 - [Holistic Evaluation of Language Models](./helm.md)
 - [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./chen-2026-uniclawbench.md)
 - [Regression Accumulation in Multi-Turn LLM Programming Conversations](./huang-2026-regression-accumulation.md)
 - [Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution](./leung-2026-citation-verifier.md)
 - [ADR: An Agentic Detection System for Enterprise Agentic AI Security](./li-2026-adr-agentic-security.md)
-- [From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes](./liu-2026-mcp-execution-control.md)
-- [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](./mazaheri-2026-agentatlas.md)
-- [Validity of LLMs as Data Annotators: AMALIA on Authority](./pita-2026-amalia-authority.md)
-- [GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents](./ren-2026-gatemem.md)
-- [Agent Planning Benchmark: A Diagnostic Framework for Planning Capabilities in LLM Agents](./sun-2026-agent-planning-benchmark.md)
 
 ### Most Popular
 
@@ -48,6 +48,8 @@ _No star-tracked entries yet._
 
 ### Browse All
 
+- [K9-Bench: Evaluating Multimodal LLMs on Canine-Centric Videos](./attarde-2026-k9-bench.md) — A 5,000-pair question set over 907 home dog videos, built to test long-horizon reasoning about canine actions and interactions.
+- [AGC-Bench: Measuring Artificial General Creativity](./beaty-2026-agc-bench.md) — An 78-dataset creativity benchmark paired with AGC-Judge, an open-weight judge calibrated to remove leniency bias.
 - [Evaluating Large Language Models Trained on Code (Codex / HumanEval)](./chen-2021-codex.md) — Introduced Codex (the model behind GitHub Copilot) and HumanEval with the pass@k metric — establishing execution-based functional correctness, not text similarity, as the way to evaluate code generation
 - [UniClawBench: A Universal Benchmark for Proactive Agents on Real-World Tasks](./chen-2026-uniclawbench.md) — Evaluates proactive agents on 400 bilingual real-world tasks in live Docker environments using capability-specific checkpoints and hidden closed-loop supervision.
 - [Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference](./chiang-2024-chatbot-arena.md) — Formalized the crowdsourced pairwise-battle leaderboard: anonymous side-by-side model comparisons on live user prompts, ranked with Bradley-Terry statistics — the methodology behind LMArena, the de facto public preference ranking for frontier models
@@ -56,13 +58,16 @@ _No star-tracked entries yet._
 - [Holistic Evaluation of Language Models](./helm.md) — HELM established a reproducible evaluation framework that compares language models across scenarios and multiple quality, robustness, fairness, and efficiency metrics rather than relying on one accuracy leaderboard.
 - [Measuring Massive Multitask Language Understanding](./hendrycks-2020-mmlu.md) — Introduced MMLU: 57-subject multiple-choice knowledge exam that became the field's default capability number for half a decade — now saturated and largely superseded (MMLU-Pro, GPQA), but still the single most-cited benchmark score in model cards
 - [Regression Accumulation in Multi-Turn LLM Programming Conversations](./huang-2026-regression-accumulation.md) — Shows that later coding-agent turns can break earlier requirements and evaluates a verification gate that retests prior behavior before accepting a change.
+- [Meta-Benchmarks for Financial-Services LLM Evaluation](./hudson-2026-financial-llm-metabench.md) — A weighting scheme that scores 288 models on banking work activities by Elo, down-weighting benchmarks that no longer separate leaders.
 - [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](./jimenez-2023-swe-bench.md) — SWE-bench: 2,294 real GitHub issues from 12 Python repos, graded by running the repos' own tests against model-generated patches — the benchmark that replaced toy coding problems and became the scoreboard of the coding-agent era
+- [Benchmarking Code Improvement with Progressive, Adaptive, and Interactive Feedback](./le-2026-pair-bench.md) — A repair benchmark that scores feedback-guided code improvement on trajectories rather than a single pass/fail verdict.
 - [Do You Need a Frontier Model as a Citation Verifier? Benchmarking Rubric LLMs for Deep-Research Source Attribution](./leung-2026-citation-verifier.md) — Compares eight LLM judges on deep-research citation attribution and shows why aggregate F1 is insufficient for controlling verifier bias.
 - [ADR: An Agentic Detection System for Enterprise Agentic AI Security](./li-2026-adr-agentic-security.md) — Describes an enterprise agent-security detection and response system combining high-fidelity telemetry, red-team exploration, and two-tier online detection.
 - [TruthfulQA: Measuring How Models Mimic Human Falsehoods](./lin-2021-truthfulqa.md) — A benchmark of questions engineered to trigger common human misconceptions, revealing that larger models can be *less* truthful because they better imitate popular false beliefs in their training data -- truthfulness is not a free byproduct of scale
 - [From Tool Connection to Execution Control: Benchmarking Security Invariants in MCP-Style Agent Runtimes](./liu-2026-mcp-execution-control.md) — Argues that MCP-style connection conventions need an explicit execution-control layer with principals, capabilities, data-flow checks, and deny-path audit.
 - [AgentAtlas: Beyond Outcome Leaderboards for LLM Agents](./mazaheri-2026-agentatlas.md) — Provides a diagnostic vocabulary for separating agent outcomes, control decisions, trajectory failures, and benchmark coverage instead of relying on one success score.
 - [MTEB: Massive Text Embedding Benchmark](./muennighoff-2022-mteb.md) — MTEB: 8 embedding task families across 58 datasets and 112 languages, with a public leaderboard — the benchmark that made embedding models comparable and whose central finding still holds: no single model wins everywhere
+- [Clinician-Level Agreement Without Clinical Caution: LLM Evaluator Limits in Medical AI Benchmarking](./philipp-2026-medqade.md) — A German open-response clinical benchmark showing LLM judges match physician agreement while abstaining far less often.
 - [Validity of LLMs as Data Annotators: AMALIA on Authority](./pita-2026-amalia-authority.md) — Tests whether agreement between the Portuguese AMALIA model and human authority annotations reflects valid construct reasoning or surface-correlated shortcuts.
 - [GateMem: Benchmarking Memory Governance in Multi-Principal Shared-Memory Agents](./ren-2026-gatemem.md) — Tests whether shared agent memory can provide useful long-horizon assistance without crossing principal boundaries or retaining explicitly deleted information.
 - [Agent Planning Benchmark: A Diagnostic Framework for Planning Capabilities in LLM Agents](./sun-2026-agent-planning-benchmark.md) — Separates planning from execution with 4,209 multimodal cases covering feedback, tool noise, broken tools, and unsolvable tasks, then tests whether planning diagnostics improve execution.

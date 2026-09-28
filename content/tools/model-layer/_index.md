@@ -27,6 +27,7 @@ Before picking a tool in this phase, consider:
 
 ### Recently Added
 
+- [llmfit](./llmfit.md)
 - [FastEmbed](./fastembed.md)
 - [Hugging Face Accelerate](./accelerate.md)
 - [Cerebras Inference](./cerebras-inference.md)
@@ -36,7 +37,6 @@ Before picking a tool in this phase, consider:
 - [Groq](./groq.md)
 - [Liger Kernel](./liger-kernel.md)
 - [LM Format Enforcer](./lm-format-enforcer.md)
-- [Megatron-LM](./megatron-lm.md)
 
 ### Most Popular
 
@@ -60,6 +60,7 @@ _No star-tracked entries yet._
 - [Kimi K2.5](./kimi-k2-5.md) — AI assistant with deep understanding, analysis, and reasoning capabilities
 - [Liger Kernel](./liger-kernel.md) — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
 - [LLaMA-Factory](./llamafactory.md) — Unified fine-tuning framework and UI for many LLMs and training methods
+- [llmfit](./llmfit.md) — Rust CLI and TUI that profiles your hardware and ranks open-weight models by fit, speed and context for local use
 - [LM Format Enforcer](./lm-format-enforcer.md) — Token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM
 - [Megatron-LM](./megatron-lm.md) — NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism
 - [MLflow](./mlflow.md) — Open-source platform for experiment tracking, model registry, and ML lifecycle management

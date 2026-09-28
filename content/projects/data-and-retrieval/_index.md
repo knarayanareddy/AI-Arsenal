@@ -34,15 +34,15 @@ Before selecting a data/retrieval component:
 ### Recently Added
 
 - [dolma](./allenai-dolma.md)
+- [anysearch-mcp-server](./anysearch-mcp-server.md)
+- [butterbase](./butterbase.md)
 - [ClickHouse](./clickhouse-clickhouse.md)
+- [codeseek](./codeseek.md)
 - [cvat](./cvat-ai-cvat.md)
 - [Scrapling](./d4vinci-scrapling.md)
 - [DB-GPT](./eosphoros-ai-db-gpt.md)
 - [feast](./feast-dev-feast.md)
-- [datasets](./huggingface-datasets.md)
-- [huggingface_hub](./huggingface-huggingface-hub.md)
-- [colpali](./illuin-tech-colpali.md)
-- [infinity](./infiniflow-infinity.md)
+- [FinSight-AI](./finsight-ai.md)
 
 ### Most Popular
 
@@ -54,20 +54,23 @@ Before selecting a data/retrieval component:
 - [Supabase](./supabase.md) — ⭐ 74300
 - [Crawl4AI](./crawl4ai.md) — ⭐ 68406
 - [AnythingLLM](./anything-llm.md) — ⭐ 62924
+- [TrendRadar](./trendradar.md) — ⭐ 62598
 - [Docling](./docling.md) — ⭐ 61495
-- [Pathway LLM App](./pathway-llm-app.md) — ⭐ 59063
 
 ### Browse All
 
 - [Airweave](./airweave.md) — Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs
 - [dolma](./allenai-dolma.md) — Toolkit for generating, annotating, and inspecting OLMo pretraining data, with stage-wise tools and a decontamination pass
+- [anysearch-mcp-server](./anysearch-mcp-server.md) — An MCP server exposing general and vertical web search, parallel batch queries, and full-page Markdown extraction over one hosted API
 - [AnythingLLM](./anything-llm.md) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
 - [Apache Arrow](./apache-arrow.md) — A universal columnar in-memory format and multi-language toolbox that enables zero-copy data interchange between analytics and ML tools across process and
 - [AutoRAG](./autorag.md) — AutoML-style framework for evaluating and optimizing retrieval-augmented-generation pipelines
+- [butterbase](./butterbase.md) — A Postgres-backed backend-as-a-service with auth, storage, functions, an LLM gateway, and an MCP server for agents
 - [Chandra](./chandra-ocr.md) — An OCR model from Datalab that handles complex tables, forms, and handwriting with full layout understanding, output as structured Markdown/HTML/JSON
 - [Chroma](./chroma.md) — Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG
 - [cleanlab](./cleanlab.md) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
 - [ClickHouse](./clickhouse-clickhouse.md) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
+- [codeseek](./codeseek.md) — A Rust CLI that indexes seven languages with tree-sitter call graphs plus hybrid dense and sparse search, exposed as MCP tools
 - [Cognee](./cognee.md) — Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations
 - [Cognita](./cognita.md) — A modular, production-oriented RAG framework from TrueFoundry that organizes ingestion, embedding, retrieval, and serving into configurable
 - [Crawl4AI](./crawl4ai.md) — Open-source crawler and scraper designed to produce LLM-friendly web content
@@ -84,6 +87,7 @@ Before selecting a data/retrieval component:
 - [DB-GPT](./eosphoros-ai-db-gpt.md) — Agentic data platform connecting LLMs to enterprise databases via text-to-SQL, RAG, and multi-agent roles
 - [FastGPT](./fastgpt.md) — Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data
 - [feast](./feast-dev-feast.md) — Declarative feature definitions in a registry, materialized offline for training and materialized online for low-latency serving reads
+- [FinSight-AI](./finsight-ai.md) — A Spring Boot equity-research workspace with recoverable workflows, snapshot-bound reports, and hybrid pgvector retrieval
 - [Firecrawl](./firecrawl.md) — Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data
 - [FlashRAG](./flashrag.md) — Python toolkit for modular RAG research with retrievers, rerankers, generators, datasets, and benchmark pipelines
 - [Graphiti](./graphiti.md) — Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents
@@ -93,6 +97,7 @@ Before selecting a data/retrieval component:
 - [huggingface_hub](./huggingface-huggingface-hub.md) — Official Python client and CLI for the Hugging Face Hub, covering download, upload, cache management, and repo operations
 - [colpali](./illuin-tech-colpali.md) — Vision-language retrieval models that index document page images directly with one embedding per image patch instead of OCR text
 - [infinity](./infiniflow-infinity.md) — C++ database that runs dense, sparse, tensor, and full-text search plus relational filtering in a single engine over one table
+- [ktx](./ktx.md) — An executable context layer that ingests warehouse metadata and company docs, then serves approved metrics as read-only SQL to agents
 - [LanceDB](./lancedb.md) — Developer-friendly embedded and serverless vector database for multimodal AI retrieval
 - [LangExtract](./langextract.md) — Python library for grounded structured extraction from unstructured text with source spans and visualization
 - [LaTeX-OCR (pix2tex)](./latex-ocr.md) — A vision-transformer model that converts images of mathematical equations into LaTeX code, with CLI, GUI, and API interfaces
@@ -108,6 +113,7 @@ Before selecting a data/retrieval component:
 - [hnswlib](./nmslib-hnswlib.md) — Header-only C++ HNSW implementation with Python bindings, tunable memory versus recall, and no server or daemon
 - [OCRmyPDF](./ocrmypdf.md) — A command-line tool that adds a searchable OCR text layer to scanned PDFs using Tesseract while preserving the original page images and metadata
 - [Onyx (formerly Danswer)](./onyx.md) — Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
+- [open-connector](./open-connector.md) — A self-hostable connector gateway exposing 1500-plus SaaS providers and 10000-plus actions through SDK, CLI, MCP, and OpenAPI
 - [opendataloader-pdf](./opendataloader-project-opendataloader-pdf.md) — Apache-2.0 Java PDF parser producing tagged, structured output for LLM ingestion while also repairing PDFs for accessibility
 - [Orama](./orama.md) — A tiny TypeScript search engine and RAG pipeline that runs full-text, vector, and hybrid search in the browser, on the server
 - [PaddleOCR](./paddleocr.md) — Baidu's industrial OCR and document-AI toolkit: 80+ language text recognition, layout parsing, and lightweight models that run from server to edge
@@ -115,6 +121,7 @@ Before selecting a data/retrieval component:
 - [Pathway LLM App](./pathway-llm-app.md) — Ready-to-run RAG and AI pipeline templates that stay synchronized with live enterprise data sources
 - [pgvector](./pgvector.md) — PostgreSQL extension for vector similarity search inside an existing relational database
 - [Pinecone](./pinecone-vector-db.md) — Managed vector database service for production semantic search and RAG applications
+- [PixelRAG](./pixelrag.md) — Renders documents as screenshot tiles and retrieves over the images, with an 8.28M-page Wikipedia index and a pixelbrowse agent skill
 - [Pixeltable](./pixeltable.md) — Unified multimodal backend for AI data apps with tables, computed columns, media, and model functions
 - [Polars](./polars.md) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
 - [PyMuPDF](./pymupdf.md) — A high-performance Python library binding the MuPDF engine for fast text, image, and table extraction and manipulation of PDFs and other document formats
@@ -132,11 +139,13 @@ Before selecting a data/retrieval component:
 - [Tesseract OCR](./tesseract-ocr.md) — The long-standing open-source OCR engine that recognizes text in 100+ languages using an LSTM line recognizer, widely used as the default OCR backend
 - [tiktoken](./tiktoken.md) — OpenAI's fast BPE tokenizer library for counting and encoding tokens for OpenAI models, essential for context-window budgeting and cost estimation
 - [RedPajama-Data](./togethercomputer-redpajama-data.md) — Preparation pipeline and filter configurations for assembling open web-scale pretraining corpora, released alongside the RedPajama V1 and V2 datasets
+- [TrendRadar](./trendradar.md) — A self-hosted trend and news aggregator with AI filtering, translation, push delivery to chat platforms, and an MCP server
 - [UltraRAG](./ultrarag.md) — Low-code MCP framework for building, evaluating, and deploying complex RAG pipelines
 - [Unstructured](./unstructured.md) — Open-source document ETL for converting complex files into structured data for LLM pipelines
 - [Vortex](./vortex.md) — Extensible columnar file format and compression framework in Rust, designed for fast random access and zero-copy reads of large analytical and ML datasets
 - [Weaviate](./weaviate.md) — Open-source vector database combining object storage, vector search, filtering, and hybrid retrieval
 - [X-AnyLabeling](./x-anylabeling.md) — An AI-assisted data-labeling tool that uses models like Segment Anything and detectors to auto-annotate images and video for computer-vision dataset creation
+- [xtreme1](./xtreme1.md) — An open-source annotation platform for images, 3D LiDAR point clouds, sensor fusion, and LLM preference data with RLHF
 - [Zerox OCR](./zerox.md) — A document-extraction library that renders each page to an image and asks a vision LLM to return clean Markdown, handling complex layouts model-agnostically
 - [zvec](./zvec.md) — Lightweight, in-process vector database from Alibaba for local RAG and agent memory
 - [private-gpt](./zylon-ai-private-gpt.md) — Apache-2.0 self-hosted API layer bundling RAG, tools, agent skills, MCP, and text-to-SQL over any OpenAI-compatible server

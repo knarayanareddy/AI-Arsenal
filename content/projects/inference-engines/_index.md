@@ -33,16 +33,16 @@ Before selecting an inference engine:
 
 ### Recently Added
 
+- [9router](./9router.md)
+- [airllm](./airllm.md)
 - [tvm](./apache-tvm.md)
 - [Handy](./cjpais-handy.md)
 - [flash-attention](./dao-ailab-flash-attention.md)
 - [flashinfer](./flashinfer-ai-flashinfer.md)
 - [ggml](./ggml-org-ggml.md)
+- [gLLM](./gllm.md)
 - [mediapipe](./google-ai-edge-mediapipe.md)
 - [alphafold3](./google-deepmind-alphafold3.md)
-- [transformers.js](./huggingface-transformers-js.md)
-- [FastChat](./lm-sys-fastchat.md)
-- [doctr](./mindee-doctr.md)
 
 ### Most Popular
 
@@ -59,7 +59,9 @@ Before selecting an inference engine:
 
 ### Browse All
 
+- [9router](./9router.md) — Local OpenAI-compatible proxy that tiers provider calls and rewrites tool_result payloads before forwarding them upstream
 - [AIBrix](./aibrix.md) — Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference
+- [airllm](./airllm.md) — Runs 70B-plus checkpoints by streaming transformer layers from host RAM into a few GB of VRAM instead of quantizing weights
 - [tvm](./apache-tvm.md) — Compiler stack that lowers deep-learning graphs through tensor IR to code for CPUs, GPUs, and accelerators
 - [Candle](./candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
 - [candle-vllm](./candle-vllm.md) — Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API
@@ -72,6 +74,7 @@ Before selecting an inference engine:
 - [FastVideo](./fastvideo.md) — A unified inference and post-training framework for accelerating video-generation models via techniques like sliding-tile attention and distillation
 - [flashinfer](./flashinfer-ai-flashinfer.md) — JIT-compiled CUDA kernels for attention, sampling, and quantization, dispatched to by high-throughput LLM serving engines
 - [ggml](./ggml-org-ggml.md) — C tensor library with a build-graph execution model, providing quantized matmul kernels for local inference
+- [gLLM](./gllm.md) — Research-grade serving engine combining paged attention, chunked prefill and composable tensor, expert and pipeline parallelism
 - [mediapipe](./google-ai-edge-mediapipe.md) — Apache-2.0 cross-platform pipeline for live media shipping ready-made face, hand, pose, and segmentation graphs that run on-device
 - [alphafold3](./google-deepmind-alphafold3.md) — AlphaFold 3 inference pipeline for biomolecular complex structure and interaction prediction
 - [GPTCache](./gptcache.md) — A semantic cache for LLM applications that stores past query embeddings and responses to serve similar future queries from cache, cutting API cost and latency

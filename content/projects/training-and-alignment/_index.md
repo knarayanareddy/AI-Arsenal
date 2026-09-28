@@ -34,12 +34,12 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [lerobot](./huggingface-lerobot.md)
 - [minimind](./jingyaogong-minimind.md)
 - [nanochat](./karpathy-nanochat.md)
+- [maestro](./maestro.md)
 - [Speech](./nvidia-nemo-speech.md)
 - [optuna](./optuna-optuna.md)
+- [Qwen-VL-Series-Finetune](./qwen-vl-series-finetune.md)
 - [s3prl](./s3prl-s3prl.md)
 - [DeepSpec](./deepspec.md)
-- [mlx-tune](./mlx-tune.md)
-- [OpenEnv](./openenv.md)
 
 ### Most Popular
 
@@ -68,6 +68,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [nanochat](./karpathy-nanochat.md) — MIT-licensed single-GPU recipe that pretrains, midtrains, and instruction-tunes a small chat model end to end in one repository
 - [LitGPT](./litgpt.md) — Lightning AI's hackable library of 20+ LLM implementations with recipes to pretrain, fine-tune and deploy at scale
 - [LoRA for Diffusion (cloneofsimo)](./lora-diffusion.md) — An early, influential implementation of Low-Rank Adaptation for quickly fine-tuning Stable Diffusion, popularizing lightweight, composable diffusion adapters
+- [maestro](./maestro.md) — Roboflow's fine-tuning toolkit that packages config, data loading and training loops for Florence-2, PaliGemma 2 and Qwen2.5-VL
 - [mlx-tune](./mlx-tune.md) — Apple Silicon MLX fine-tuning toolkit for language, vision, audio, OCR, embedding, SFT, DPO, and GRPO workflows
 - [ms-swift](./ms-swift.md) — ModelScope's one-stop fine-tuning framework supporting 600+ LLMs and 300+ multimodal models with SFT, DPO, GRPO and Megatron backends
 - [nanoGPT](./nanogpt.md) — Karpathy's minimal ~600-line GPT training repository — the canonical starting point for understanding LLM pretraining
@@ -77,6 +78,7 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [OpenRLHF](./openrlhf.md) — High-performance RLHF/RL training framework built on Ray, vLLM and DeepSpeed for PPO, GRPO and DPO at scale
 - [optuna](./optuna-optuna.md) — Define-by-run hyperparameter optimization with pruning, distributed trials, and a study-based API
 - [Oumi](./oumi.md) — An end-to-end open platform to fine-tune, evaluate, and deploy foundation LLMs and VLMs, spanning data prep, training, evaluation
+- [Qwen-VL-Series-Finetune](./qwen-vl-series-finetune.md) — Single-repo training scripts for Qwen2-VL, Qwen2.5-VL, Qwen3-VL and Qwen3.5 spanning SFT, DPO, GRPO and classification
 - [rLLM](./rllm.md) — Reinforcement-learning framework for training language agents across model backends, sandboxes, rollouts, and benchmarks
 - [s3prl](./s3prl-s3prl.md) — Research toolkit that wraps dozens of self-supervised speech pretraining methods behind one hidden-state interface, so comparisons run through a single call
 - [SkillOpt](./skillopt.md) — Microsoft's text-space optimizer for improving reusable natural-language agent skills from trajectory feedback while keeping the underlying LLM frozen
