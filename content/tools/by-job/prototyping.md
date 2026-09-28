@@ -164,7 +164,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | freemium | Yes | No | No | typescript | recommended |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
-| [Flowise](../orchestration/flowise.md) | orchestration | freemium | Yes | Yes | Yes | typescript | solid-choice |
+| [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | solid-choice |
 | [Gemini CLI](../dx-and-tooling/gemini-cli.md) | dx and tooling | freemium | Yes | No | Yes | typescript | recommended |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
@@ -177,7 +177,7 @@ This table is exhaustive for tools tagged with job = prototyping.
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
 | [marimo](../dx-and-tooling/marimo.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
 | [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | open-source | Yes | Yes | Yes | python | recommended |
-| [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
+| [n8n](../orchestration/n8n.md) | orchestration | self-hostable | Yes | Yes | Yes | typescript | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | usage-based | No | No | Yes | rust | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | usage-based | Yes | No | No | typescript, python, polyglot | recommended |

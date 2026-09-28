@@ -5,63 +5,9 @@
     "generate": "pnpm run editorial:baseline",
     "prune": "pnpm run editorial:baseline:prune",
     "warning": "Do not edit by hand. CI fails on findings not listed here and on stale (resolved) entries.",
-    "count": 602
+    "count": 499
   },
   "entries": [
-    {
-      "fingerprint": "content/projects/agent-systems/anythingllm.md::repeated-paragraph::49a1f834c0344982",
-      "file": "content/projects/agent-systems/anythingllm.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/browser-use.md::repeated-paragraph::614cbe069a3a6945",
-      "file": "content/projects/agent-systems/browser-use.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/gpt-researcher.md::repeated-paragraph::b30aeb7f6558da45",
-      "file": "content/projects/agent-systems/gpt-researcher.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/insforge.md::repeated-paragraph::9326138341422bcf",
-      "file": "content/projects/agent-systems/insforge.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/khoj.md::project-section-missing-technical-content::6a0616597d8f4931",
-      "file": "content/projects/agent-systems/khoj.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/khoj.md::repeated-paragraph::cff73397bd8deab4",
-      "file": "content/projects/agent-systems/khoj.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/librechat.md::repeated-paragraph::11d78c79dd65573d",
-      "file": "content/projects/agent-systems/librechat.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/page-agent.md::repeated-paragraph::9528d69a506a3227",
-      "file": "content/projects/agent-systems/page-agent.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/qwen-agent.md::project-section-length::5e13582ba6515f79",
-      "file": "content/projects/agent-systems/qwen-agent.md",
-      "rule": "project-section-length",
-      "finding": "project section \"Limitations\" needs at least # characters of bespoke analysis"
-    },
     {
       "fingerprint": "content/projects/agent-systems/rd-agent.md::ecosystem-position-missing-comparison::87235cb7d3a878ef",
       "file": "content/projects/agent-systems/rd-agent.md",
@@ -87,56 +33,8 @@
       "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
     },
     {
-      "fingerprint": "content/projects/agent-systems/stagehand.md::repeated-paragraph::a807b1ed8a60d67b",
-      "file": "content/projects/agent-systems/stagehand.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/strix.md::repeated-paragraph::1788e932fb8240d8",
-      "file": "content/projects/agent-systems/strix.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is an agent system entry it documents a standalone deployable system rather than a library you import for a library...\""
-    },
-    {
-      "fingerprint": "content/projects/agent-systems/tabby.md::ecosystem-position-missing-comparison::f26b737b50cebd16",
-      "file": "content/projects/agent-systems/tabby.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/agenta.md::repeated-paragraph::34149166a5f69474",
-      "file": "content/projects/benchmarks-and-evals/agenta.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a benchmark and eval entry it documents an evaluation tracing or observability platform for job based tool compa...\""
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/agenta.md::repeated-paragraph::4072efeba32f8d80",
-      "file": "content/projects/benchmarks-and-evals/agenta.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft architecture production claims above are based on the vendor s own description or limited third ...\""
-    },
-    {
       "fingerprint": "content/projects/benchmarks-and-evals/bigcodebench.md::repeated-paragraph::15e7ad43928b1ec9",
       "file": "content/projects/benchmarks-and-evals/bigcodebench.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a benchmark and eval entry it documents an evaluation tracing or observability platform for job based tool compa...\""
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/braintrust.md::project-section-missing-technical-content::13bdd8b75f528411",
-      "file": "content/projects/benchmarks-and-evals/braintrust.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/braintrust.md::repeated-paragraph::3685fe9bafc4584c",
-      "file": "content/projects/benchmarks-and-evals/braintrust.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft architecture production claims above are based on the vendor s own description or limited third ...\""
-    },
-    {
-      "fingerprint": "content/projects/benchmarks-and-evals/braintrust.md::repeated-paragraph::a0aeac25608f1e15",
-      "file": "content/projects/benchmarks-and-evals/braintrust.md",
       "rule": "repeated-paragraph",
       "finding": "repeated paragraph shared with: \"this is a benchmark and eval entry it documents an evaluation tracing or observability platform for job based tool compa...\""
     },
@@ -285,48 +183,6 @@
       "finding": "repeated paragraph shared with: \"this is a benchmark and eval entry it documents an evaluation tracing or observability platform for job based tool compa...\""
     },
     {
-      "fingerprint": "content/projects/data-and-retrieval/chroma.md::repeated-paragraph::1c622416b6daefc5",
-      "file": "content/projects/data-and-retrieval/chroma.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/cleanlab.md::project-section-missing-technical-content::79a40aea25b5f635",
-      "file": "content/projects/data-and-retrieval/cleanlab.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Ecosystem Position\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/cognee.md::repeated-paragraph::62b0c9937f77493c",
-      "file": "content/projects/data-and-retrieval/cognee.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/docling.md::project-section-missing-technical-content::ea58e27d2b55af60",
-      "file": "content/projects/data-and-retrieval/docling.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/docling.md::repeated-paragraph::851691ff40b2b133",
-      "file": "content/projects/data-and-retrieval/docling.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/graphiti.md::repeated-paragraph::29b5f0388aef95b0",
-      "file": "content/projects/data-and-retrieval/graphiti.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/lancedb.md::repeated-paragraph::289158ee090fd012",
-      "file": "content/projects/data-and-retrieval/lancedb.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
       "fingerprint": "content/projects/data-and-retrieval/lightrag.md::project-section-length::3e9042013190b42f",
       "file": "content/projects/data-and-retrieval/lightrag.md",
       "rule": "project-section-length",
@@ -339,34 +195,10 @@
       "finding": "project section \"Architecture\" lacks named technical content"
     },
     {
-      "fingerprint": "content/projects/data-and-retrieval/llamaparse.md::project-section-missing-technical-content::59f42b515552bd96",
-      "file": "content/projects/data-and-retrieval/llamaparse.md",
-      "rule": "project-section-missing-technical-content",
-      "finding": "project section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/llamaparse.md::repeated-paragraph::62a33c80bc307822",
-      "file": "content/projects/data-and-retrieval/llamaparse.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
       "fingerprint": "content/projects/data-and-retrieval/marker.md::repeated-paragraph::3517db14c77f3116",
       "file": "content/projects/data-and-retrieval/marker.md",
       "rule": "repeated-paragraph",
       "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/milvus.md::repeated-paragraph::a7c89f4f915103c5",
-      "file": "content/projects/data-and-retrieval/milvus.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/onyx.md::ecosystem-position-missing-comparison::518549629b5c922f",
-      "file": "content/projects/data-and-retrieval/onyx.md",
-      "rule": "ecosystem-position-missing-comparison",
-      "finding": "Ecosystem Position must state a comparison, boundary, or relationship to alternatives"
     },
     {
       "fingerprint": "content/projects/data-and-retrieval/paddleocr.md::project-section-missing-technical-content::dd0036046967889f",
@@ -383,12 +215,6 @@
     {
       "fingerprint": "content/projects/data-and-retrieval/pgvector.md::repeated-paragraph::a7ad5fa3c0c835fb",
       "file": "content/projects/data-and-retrieval/pgvector.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
-    },
-    {
-      "fingerprint": "content/projects/data-and-retrieval/pinecone-vector-db.md::repeated-paragraph::5a9993cb5aac3585",
-      "file": "content/projects/data-and-retrieval/pinecone-vector-db.md",
       "rule": "repeated-paragraph",
       "finding": "repeated paragraph shared with: \"this is a data and retrieval entry it documents a vector database document processing tool or rag platform for job based...\""
     },
@@ -1047,144 +873,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/data-ingestion/airbyte.md::repeated-paragraph::91c0230f3af31d3e",
-      "file": "content/tools/data-ingestion/airbyte.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/airbyte.md::tool-section-missing-technical-content::2ceaa439a5d73fc6",
-      "file": "content/tools/data-ingestion/airbyte.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/argilla.md::section-too-short::03ccfc672e4423fd",
-      "file": "content/tools/data-ingestion/argilla.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/argilla.md::tool-section-missing-technical-content::429c36dc7fc7f47f",
-      "file": "content/tools/data-ingestion/argilla.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/argilla.md::tool-section-missing-technical-content::bc9dc970c4a9e8d4",
-      "file": "content/tools/data-ingestion/argilla.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/argilla.md::tool-section-missing-technical-content::e9fa7b1e38428b57",
-      "file": "content/tools/data-ingestion/argilla.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/browserbase.md::tool-section-length::20b4b74ae5a9a9cf",
-      "file": "content/tools/data-ingestion/browserbase.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/crawl4ai-tool.md::section-too-short::067d422f8b6a6370",
-      "file": "content/tools/data-ingestion/crawl4ai-tool.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/crawl4ai-tool.md::tool-section-missing-technical-content::34195dd6de302bbe",
-      "file": "content/tools/data-ingestion/crawl4ai-tool.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/crawl4ai-tool.md::tool-section-missing-technical-content::dd5ebc11d3e43808",
-      "file": "content/tools/data-ingestion/crawl4ai-tool.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/dlt.md::repeated-paragraph::2da73149c2355bd7",
-      "file": "content/tools/data-ingestion/dlt.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/dlt.md::section-too-short::bcdb698c2d58e16b",
-      "file": "content/tools/data-ingestion/dlt.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/dlt.md::tool-section-missing-technical-content::66d3e0a3af960e04",
-      "file": "content/tools/data-ingestion/dlt.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/docetl.md::repeated-paragraph::6b5ec0aad0b09949",
-      "file": "content/tools/data-ingestion/docetl.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/docetl.md::tool-section-missing-technical-content::376b83ff253576b2",
-      "file": "content/tools/data-ingestion/docetl.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/faiss.md::repeated-paragraph::acb61e1b6dce29a1",
-      "file": "content/tools/data-ingestion/faiss.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/faiss.md::tool-section-missing-technical-content::4a00a89d84ccd490",
-      "file": "content/tools/data-ingestion/faiss.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/firecrawl-tool.md::section-too-short::cb9815fee59fed0e",
-      "file": "content/tools/data-ingestion/firecrawl-tool.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/firecrawl-tool.md::tool-section-missing-technical-content::6e717bf1846cfc59",
-      "file": "content/tools/data-ingestion/firecrawl-tool.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/gitingest.md::repeated-paragraph::d8d2f8cdc9ef17d7",
-      "file": "content/tools/data-ingestion/gitingest.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/gitingest.md::tool-section-missing-technical-content::e1782243887547c1",
-      "file": "content/tools/data-ingestion/gitingest.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/great-expectations.md::tool-section-length::fb0122d746ae1482",
-      "file": "content/tools/data-ingestion/great-expectations.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Integration Patterns\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/great-expectations.md::tool-section-missing-technical-content::92ce9fde6fca096a",
-      "file": "content/tools/data-ingestion/great-expectations.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/data-ingestion/jina-reader.md::section-too-short::bd28ad08ae7b1d54",
       "file": "content/tools/data-ingestion/jina-reader.md",
       "rule": "section-too-short",
@@ -1249,12 +937,6 @@
       "file": "content/tools/data-ingestion/markitdown.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/data-ingestion/marqo.md::repeated-paragraph::2fd4e74f41b10845",
-      "file": "content/tools/data-ingestion/marqo.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/data-ingestion/meilisearch.md::repeated-paragraph::05d734c5c4758801",
@@ -1497,36 +1179,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/adalflow.md::repeated-paragraph::71b8004305316d61",
-      "file": "content/tools/dx-and-tooling/adalflow.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/adalflow.md::tool-section-missing-technical-content::0614f3edf22569ff",
-      "file": "content/tools/dx-and-tooling/adalflow.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/aider.md::repeated-paragraph::d8da512fd36f80d5",
-      "file": "content/tools/dx-and-tooling/aider.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/aider.md::tool-section-missing-technical-content::10c4e59919b5202f",
-      "file": "content/tools/dx-and-tooling/aider.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/aider.md::tool-section-missing-technical-content::a63fc38e0c68a7c1",
-      "file": "content/tools/dx-and-tooling/aider.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Overview\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/baml.md::repeated-paragraph::50abc18478a2d9e7",
       "file": "content/tools/dx-and-tooling/baml.md",
       "rule": "repeated-paragraph",
@@ -1569,12 +1221,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/dx-and-tooling/chainlit.md::tool-section-missing-technical-content::72584ab8fa30e2bb",
-      "file": "content/tools/dx-and-tooling/chainlit.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/dx-and-tooling/claude-artifact-player.md::repeated-paragraph::9becb9df9251b8cf",
       "file": "content/tools/dx-and-tooling/claude-artifact-player.md",
       "rule": "repeated-paragraph",
@@ -1595,36 +1241,6 @@
     {
       "fingerprint": "content/tools/dx-and-tooling/claude-artifact-player.md::tool-section-missing-technical-content::e520c59917729c58",
       "file": "content/tools/dx-and-tooling/claude-artifact-player.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/claude-code.md::repeated-paragraph::2d491bb0a3126149",
-      "file": "content/tools/dx-and-tooling/claude-code.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/claude-code.md::section-too-short::8f6f2e604fdd988e",
-      "file": "content/tools/dx-and-tooling/claude-code.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/claude-code.md::tool-section-missing-technical-content::1e4a180c6053999a",
-      "file": "content/tools/dx-and-tooling/claude-code.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/cline.md::repeated-paragraph::4ee86764dd11b24b",
-      "file": "content/tools/dx-and-tooling/cline.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/dx-and-tooling/cline.md::tool-section-missing-technical-content::03d5625045ae08ab",
-      "file": "content/tools/dx-and-tooling/cline.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
@@ -1949,24 +1565,6 @@
     {
       "fingerprint": "content/tools/dx-and-tooling/windsurf.md::tool-section-missing-technical-content::5ebdf2c59e892636",
       "file": "content/tools/dx-and-tooling/windsurf.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/agentops.md::repeated-paragraph::2d76215102e58f2e",
-      "file": "content/tools/evaluation-and-observability/agentops.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/agentops.md::section-too-short::d5fbb17b3560c986",
-      "file": "content/tools/evaluation-and-observability/agentops.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/evaluation-and-observability/agentops.md::tool-section-missing-technical-content::4127e42d07f4b72a",
-      "file": "content/tools/evaluation-and-observability/agentops.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
@@ -2481,12 +2079,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/model-layer/accelerate.md::tool-section-missing-technical-content::fef9b6b9b2c6944e",
-      "file": "content/tools/model-layer/accelerate.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/model-layer/axolotl.md::section-too-short::1f649f6426fcb20b",
       "file": "content/tools/model-layer/axolotl.md",
       "rule": "section-too-short",
@@ -2513,12 +2105,6 @@
     {
       "fingerprint": "content/tools/model-layer/cerebras-inference.md::tool-section-missing-technical-content::c2e43a1cb8bdfd9e",
       "file": "content/tools/model-layer/cerebras-inference.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/model-layer/clearml.md::tool-section-missing-technical-content::a606e437e5617a92",
-      "file": "content/tools/model-layer/clearml.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
@@ -2877,18 +2463,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/agno.md::repeated-paragraph::80bd74cdd3b62b5e",
-      "file": "content/tools/orchestration/agno.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/agno.md::tool-section-missing-technical-content::ccfee456f40bfa13",
-      "file": "content/tools/orchestration/agno.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/orchestration/agnt-hub.md::repeated-paragraph::4019b413edd338ac",
       "file": "content/tools/orchestration/agnt-hub.md",
       "rule": "repeated-paragraph",
@@ -2911,24 +2485,6 @@
       "file": "content/tools/orchestration/agnt-hub.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/airflow.md::section-too-short::cad27ea00a5c43f6",
-      "file": "content/tools/orchestration/airflow.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/airflow.md::tool-section-missing-technical-content::3aa3e75bbcef6766",
-      "file": "content/tools/orchestration/airflow.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/any-agent.md::repeated-paragraph::aaea02ae59a1dfa5",
-      "file": "content/tools/orchestration/any-agent.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
     },
     {
       "fingerprint": "content/tools/orchestration/cloudskill.md::repeated-paragraph::0e7e3cc152d8e329",
@@ -2955,46 +2511,10 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/composio.md::repeated-paragraph::675bd13828c07505",
-      "file": "content/tools/orchestration/composio.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/composio.md::section-too-short::cf8f08f795fb419b",
-      "file": "content/tools/orchestration/composio.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/dagster.md::section-too-short::0f3dffd336dcbbb1",
-      "file": "content/tools/orchestration/dagster.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
       "fingerprint": "content/tools/orchestration/dagster.md::tool-section-missing-technical-content::998ac00ed9a1ccdb",
       "file": "content/tools/orchestration/dagster.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/dagster.md::tool-section-missing-technical-content::e121c1ac722e312e",
-      "file": "content/tools/orchestration/dagster.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/e2b.md::repeated-paragraph::26b31926d0537c2a",
-      "file": "content/tools/orchestration/e2b.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/e2b.md::tool-section-missing-technical-content::6dd17d6a0adbac7d",
-      "file": "content/tools/orchestration/e2b.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
       "fingerprint": "content/tools/orchestration/empromptu-ai.md::repeated-paragraph::7b024c386f036f6f",
@@ -3021,44 +2541,8 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/flowise.md::repeated-paragraph::4c3f90f0d9ebf720",
-      "file": "content/tools/orchestration/flowise.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/flowise.md::tool-section-missing-technical-content::c1edfbef207a9170",
-      "file": "content/tools/orchestration/flowise.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/flowise.md::tool-section-missing-technical-content::ed2990621f1ed105",
-      "file": "content/tools/orchestration/flowise.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/langflow.md::repeated-paragraph::ca6dd2559b14439a",
-      "file": "content/tools/orchestration/langflow.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
       "fingerprint": "content/tools/orchestration/langflow.md::tool-section-missing-technical-content::f71d89953a44383e",
       "file": "content/tools/orchestration/langflow.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/letta.md::section-too-short::fafdaae9d50d8181",
-      "file": "content/tools/orchestration/letta.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/letta.md::tool-section-missing-technical-content::006d054f6118c3d4",
-      "file": "content/tools/orchestration/letta.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
@@ -3093,42 +2577,6 @@
       "finding": "tool section \"Overview\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/mem0.md::section-too-short::6f22ef4a51ebbdae",
-      "file": "content/tools/orchestration/mem0.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/mem0.md::tool-section-missing-technical-content::1975732f4e59a2ee",
-      "file": "content/tools/orchestration/mem0.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/mirascope.md::repeated-paragraph::9dfc7707356630af",
-      "file": "content/tools/orchestration/mirascope.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/n8n.md::repeated-paragraph::5549cbeb47418f1a",
-      "file": "content/tools/orchestration/n8n.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/n8n.md::tool-section-missing-technical-content::18956272ec2056a1",
-      "file": "content/tools/orchestration/n8n.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Architecture / How It Works\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/n8n.md::tool-section-missing-technical-content::73acb179aaf3b51b",
-      "file": "content/tools/orchestration/n8n.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/orchestration/orchestraml.md::repeated-paragraph::1c7a20e269bc35b0",
       "file": "content/tools/orchestration/orchestraml.md",
       "rule": "repeated-paragraph",
@@ -3153,18 +2601,6 @@
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
     {
-      "fingerprint": "content/tools/orchestration/prefect.md::section-too-short::3b11e977010602f4",
-      "file": "content/tools/orchestration/prefect.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/prefect.md::tool-section-missing-technical-content::cc72a3f348d02560",
-      "file": "content/tools/orchestration/prefect.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
       "fingerprint": "content/tools/orchestration/promptflow.md::tool-section-length::2e44bcbd8a0a421f",
       "file": "content/tools/orchestration/promptflow.md",
       "rule": "tool-section-length",
@@ -3173,30 +2609,6 @@
     {
       "fingerprint": "content/tools/orchestration/promptflow.md::tool-section-missing-technical-content::b5a74cf64dbf4fed",
       "file": "content/tools/orchestration/promptflow.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/pydantic-ai-tool.md::section-too-short::96000b3e509790c1",
-      "file": "content/tools/orchestration/pydantic-ai-tool.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/pydantic-ai-tool.md::tool-section-length::e6180ab658959841",
-      "file": "content/tools/orchestration/pydantic-ai-tool.md",
-      "rule": "tool-section-length",
-      "finding": "tool section \"Limitations / When NOT to Use\" needs at least # characters of bespoke analysis"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/redis-memory.md::section-too-short::6edc49d230b7d94f",
-      "file": "content/tools/orchestration/redis-memory.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/redis-memory.md::tool-section-missing-technical-content::ca8936132b8f0b10",
-      "file": "content/tools/orchestration/redis-memory.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },
@@ -3233,36 +2645,6 @@
     {
       "fingerprint": "content/tools/orchestration/seaticket.md::tool-section-missing-technical-content::c0395e4dfc5be842",
       "file": "content/tools/orchestration/seaticket.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/strands-agents.md::repeated-paragraph::aa02d4a3e15e5509",
-      "file": "content/tools/orchestration/strands-agents.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/temporal.md::repeated-paragraph::ca8506434b3c1f86",
-      "file": "content/tools/orchestration/temporal.md",
-      "rule": "repeated-paragraph",
-      "finding": "repeated paragraph shared with: \"enrichment status draft best when avoid when above are based on official documentation and public reception not yet conf...\""
-    },
-    {
-      "fingerprint": "content/tools/orchestration/temporal.md::tool-section-missing-technical-content::982d6dc04319d497",
-      "file": "content/tools/orchestration/temporal.md",
-      "rule": "tool-section-missing-technical-content",
-      "finding": "tool section \"Integration Patterns\" lacks named technical content"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/zep.md::section-too-short::77e8bbdf2664ed18",
-      "file": "content/tools/orchestration/zep.md",
-      "rule": "section-too-short",
-      "finding": "section \"Getting Started\" is too short for a curated entry (# characters)"
-    },
-    {
-      "fingerprint": "content/tools/orchestration/zep.md::tool-section-missing-technical-content::35832b03a5f551ea",
-      "file": "content/tools/orchestration/zep.md",
       "rule": "tool-section-missing-technical-content",
       "finding": "tool section \"Integration Patterns\" lacks named technical content"
     },

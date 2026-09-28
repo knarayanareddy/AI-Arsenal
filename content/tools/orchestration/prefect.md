@@ -3,11 +3,11 @@ id: prefect
 name: Prefect
 type: tool
 job: [orchestration]
-description: Python workflow orchestration framework useful for AI data, eval, and batch jobs
+description: "Python workflow framework where @flow and @task decorators add scheduling, caching and retries to plain scripts"
 url: "https://github.com/PrefectHQ/prefect"
-cost_model: open-source
+cost_model: freemium
 pricing_detail: Open source or free to start
-tags: [data, orchestration, cloud]
+tags: [orchestration, observability]
 maturity: production
 stack: [python]
 free_tier: true
@@ -15,7 +15,7 @@ free_tier_limits: Free/open-source use or free tier; verify current limits befor
 self_hostable: true
 open_source: true
 source_url: "https://github.com/PrefectHQ/prefect"
-docs_url: "https://github.com/PrefectHQ/prefect"
+docs_url: "https://docs.prefect.io"
 github_url: "https://github.com/PrefectHQ/prefect"
 alternatives: [dagster]
 integrates_with: []
@@ -25,80 +25,68 @@ added_by: maintainer
 reviewed_by: maintainer
 phase: orchestration
 audience: [prototype, production]
-best_when:
-  - You want Python-native orchestration with lower ceremony than Airflow, especially for smaller AI/data teams
-  - You need dynamic, code-first workflows (loops, conditionals) that are awkward to express as static DAGs
-  - You want a managed cloud control plane (Prefect Cloud) without giving up self-hosted workers
-avoid_when:
-  - Your org has deep existing Airflow tooling, operators, and institutional knowledge
-  - You need the largest possible ecosystem of pre-built third-party connectors
+best_when: ["You have Python scripts that already work and need retries, scheduling and observability added this week rather than after a rewrite into a workflow DSL.", "You want event-driven automation, so a flow can trigger on an arrival rather than only on a cron or sensor schedule.", "You would rather run the orchestrator yourself and can accept a self-hosted Prefect server instead of a vendor-hosted dashboard."]
+avoid_when: ["You want asset-level lineage as the primary model, because that is Dagster's design choice and Prefect's unit is the flow and task.", "You need container-per-step isolation and a catalog-driven authoring model, which points at Flyte rather than a decorator-based Python framework.", "You cannot accept any server component, because Prefect Cloud is optional but the self-hosted path still runs a Prefect server for the dashboard and run history."]
 version_tracked: null
 verdict: recommended
 verdict_rationale: Useful option when it matches your stack, cost, and operational constraints
 status: active
+enrichment_status: draft
 ---
-
-> **TL;DR:** Python workflow orchestration framework useful for AI data, eval, and batch jobs. Open source or free to start. Best for AI batch workflows and pipelines.
 
 ## Overview
 
-A Python-native workflow orchestration framework designed to feel lighter-weight than Airflow, with dynamic, code-first workflow definitions and a managed cloud control plane option.
+Prefect wraps plain Python in two decorators: @task for a unit of work with retries, caching and result persistence, and @flow for an orchestrated function that composes tasks and can be deployed. The README's smallest example fetches a GitHub star count inside a task inside a flow, which is the whole pitch: the same code runs locally as a script and as a scheduled production workflow. Flows handle retries, dependencies and branching, and activity is tracked in either a self-hosted Prefect server or the hosted Prefect Cloud dashboard.
 
 ## Why It's in the Arsenal
 
-Prefect earns a place in the Arsenal because it directly addresses a recurring decision point: you want Python-native orchestration with lower ceremony than Airflow, especially for smaller AI/data teams. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The recurring decision is how much of a framework you must accept before your script becomes a workflow. Prefect's answer is nearly none: decorate, and you get persistence, retries, caching and a run history without a YAML file or a container per step. That means an existing notebook-grade script can be promoted to something with an SLA this afternoon, which is not true of most orchestrators that want their authoring model adopted first.
 
 ## Key Features
 
-- Code-first, dynamic workflows (not just static DAGs)
-- Local-to-cloud deployment path via Prefect Cloud
-- Built-in retries, caching, and observability
+- Lowest adoption cost in the category: decorators on code you already have, no DSL and no container requirement per step.
+- Retries, caching and dependency tracking come for free from the decorator rather than from configuration.
+- Self-hostable Prefect server keeps run history on your infrastructure, with a hosted tier available when you do not want to operate it.
+- Python 3.10+ support with both pip and uv documented paths.
 
 ## Architecture / How It Works
 
-Flows and tasks are plain Python functions decorated to register with Prefect's engine, which tracks state and orchestrates execution across local processes or remote workers.
+A flow is a function whose calls are recorded as a run; tasks inside it execute with Prefect-managed retries, caching rules and state, so a cached task can return a prior result without re-running its body. Dependencies come from the Python call graph inside the flow rather than a separate declaration, and branching uses ordinary Python control flow. A scheduler or event trigger initiates runs against either the local ephemeral server used in development or a persistent self-hosted server or Prefect Cloud.
 
 ## Getting Started
 
+Install from PyPI and decorate a function; Python 3.10 or newer is required:
+
 ```bash
-pip install prefect
+pip install -U prefect
 ```
+
+Then import flow and task, wrap the fetch in a task decorator and the script in a flow decorator, and run it. `uv add prefect` is the documented alternative.
 
 ## Use Cases
 
-1. **Scenario**: you want Python-native orchestration with lower ceremony than Airflow, especially for smaller AI/data teams
-2. **Scenario**: you need dynamic, code-first workflows (loops, conditionals) that are awkward to express as static DAGs
-3. **Scenario**: you want a managed cloud control plane (Prefect Cloud) without giving up self-hosted workers
-4. **Scenario where this is NOT the right fit**: your org has deep existing Airflow tooling, operators, and institutional knowledge — evaluate an alternative instead
+1. Promoting a working ETL script: add a task decorator for the flaky API call, a flow decorator for the script, and you have retries plus a run history without a rewrite.
+2. Event-driven automation triggered by a webhook or an arrival rather than a cron schedule.
+3. Cached expensive stages so a rerun of the flow replays cached task results instead of re-calling a model or a paid API.
 
 ## Strengths
 
-- You want Python-native orchestration with lower ceremony than Airflow, especially for smaller AI/data teams
-- You need dynamic, code-first workflows (loops, conditionals) that are awkward to express as static DAGs
-- You want a managed cloud control plane (Prefect Cloud) without giving up self-hosted workers
+It competes with Dagster, Airflow and Flyte in orchestration, and the sharpest distinction is with Dagster: Prefect keeps the task and flow as the unit and infers dependencies from calls, while Dagster makes the data asset with parameter-derived lineage the unit. It overlaps with content/projects/frameworks/metaflow for the small-team experiment-tracking crowd. Compared with Airflow, Prefect requires no separate DAG-definition file, and it complements the serving entries rather than competing with them.
 
 ## Limitations / When NOT to Use
 
-- Your org has deep existing Airflow tooling, operators, and institutional knowledge
-- You need the largest possible ecosystem of pre-built third-party connectors
+Call-graph-derived dependencies mean you cannot express a DAG the Python call graph does not contain, which matters when a step is conditionally skipped or externally triggered. The in-process model gives you no real isolation between steps, so one task crashing the interpreter takes the run with it. Running the self-hosted server and its backing store is infrastructure a small team has to own, and the hosted tier moves your run history and state to a vendor. Dynamic Python control flow is powerful and also makes the shape of a run harder to read at a glance than a declarative definition.
 
 ## Integration Patterns
 
-- Compare against [Dagster](./dagster.md) before adopting — they solve the same job in this phase.
-- Link this tool from job guides using its canonical ID `prefect`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
-
+This is the flow-based orchestrator in content/tools/orchestration, sitting beside dagster and flyte as the three engineering decisions you are choosing between. Pair it with content/tools/model-layer entries when a task wraps a model call whose cost you want cached, and with content/tools/data-ingestion entries such as dlt where ingestion becomes a task inside the flow. Its run-history model lines up with the observability tools in content/tools/evaluation-and-observability.
 
 ## Resources
 
-- [Primary site](https://github.com/PrefectHQ/prefect)
-- [Documentation](https://github.com/PrefectHQ/prefect)
-- [Source](https://github.com/PrefectHQ/prefect)
+- [GitHub — PrefectHQ/prefect](https://github.com/PrefectHQ/prefect)
+- [Docs — docs.prefect.io](https://docs.prefect.io)
+- [Prefect Cloud](https://docs.prefect.io/cloud)
 
 ## Buzz & Reception
 
-- Included because this tool appears in current AI engineering tool comparisons for orchestration.
-
----
-*Last reviewed: 2026-06-30 by @maintainer*
-
+Wrapping existing functions in decorators turns a script into a retryable, cacheable, observable flow without forcing a DSL or a container image per step.

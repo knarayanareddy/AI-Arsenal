@@ -193,10 +193,10 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 | Tool | Phase | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|
-| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | self-hostable | Yes | Yes | Yes | java | solid-choice |
+| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | freemium | Yes | Yes | Yes | java | solid-choice |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
 | [FastEmbed](../model-layer/fastembed.md) | model layer | open-source | Yes | Yes | Yes | python | recommended |
-| [Marqo](../data-ingestion/marqo.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Marqo](../data-ingestion/marqo.md) | data ingestion | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | freemium | Yes | Yes | Yes | rust | recommended |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | freemium | Yes | No | No | python, typescript | recommended |
 | [RAGatouille](../data-ingestion/ragatouille.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |

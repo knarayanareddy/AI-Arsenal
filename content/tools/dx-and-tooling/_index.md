@@ -44,16 +44,16 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [AdalFlow](./adalflow.md) — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
-- [Agent Skills (Addy Osmani)](./addyosmani-agent-skills.md) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
-- [Aider](./aider.md) — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
+- [AdalFlow](./adalflow.md) — PyTorch-style library that makes LLM prompts differentiable parameters so RAG and agent pipelines can be auto-optimised rather than hand-prompted
+- [Agent Skills (Addy Osmani)](./addyosmani-agent-skills.md) — Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents
+- [Aider](./aider.md) — Terminal pair-programming tool that maps your codebase, edits files in place and auto-commits each change so you can diff and undo with git
 - [BAML](./baml.md) — DSL for LLM functions: define typed prompts/schemas in .baml files and generate type-safe clients with parsing that repairs malformed model output
 - [Basedash](./basedash.md) — AI-native platform for generating dashboards, reports, and insights from natural-language queries
-- [Chainlit](./chainlit.md) — A framework for building conversational AI interfaces and debugging LLM apps
-- [Chrome DevTools MCP](./chrome-devtools-mcp.md) — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
+- [Chainlit](./chainlit.md) — Python framework for building chat and agent front ends, with decorators for steps, tool calls and message handlers over a bundled React UI
+- [Chrome DevTools MCP](./chrome-devtools-mcp.md) — Google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input
 - [Claude Artifact Player](./claude-artifact-player.md) — Interact with and manage AI-generated artifacts from Claude and similar models
-- [Claude Code](./claude-code.md) — Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories
-- [Cline](./cline.md) — Open-source autonomous coding agent for VS Code with plan/act modes and human-in-the-loop approval of every action
+- [Claude Code](./claude-code.md) — Anthropic's terminal coding agent, distributed as a CLI that reads a repository, edits files, runs commands and handles git work from natural language
+- [Cline](./cline.md) — Apache-2.0 coding agent published simultaneously as a CLI, a Tauri desktop app, VS Code and JetBrains extensions and an embeddable Node SDK
 - [Codebase Memory MCP](./codebase-memory-mcp.md) — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
 - [Codex Plugin for Claude Code](./codex-plugin-cc.md) — Official OpenAI plugin that runs Codex from inside Claude Code for second-opinion code reviews and background task delegation
 - [Continue](./continue-dev.md) — Open-source IDE extension (VS Code/JetBrains) for building custom AI coding assistants with any model

@@ -3,11 +3,11 @@ id: langflow
 name: "Langflow"
 type: tool
 job: [orchestration, prototyping]
-description: "Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers"
+description: "Python visual builder for agent and RAG workflows that also serves them as REST endpoints and MCP servers"
 url: "https://www.langflow.org"
 cost_model: open-source
 pricing_detail: "MIT open source; free self-hosted (DataStax-backed hosted options exist)"
-tags: [orchestration, agents, rag]
+tags: [rag, orchestration]
 maturity: production
 stack: [python, typescript]
 free_tier: true
@@ -25,12 +25,8 @@ added_by: maintainer
 reviewed_by: maintainer
 phase: orchestration
 audience: [prototype]
-best_when:
-  - "You want to prototype agent/RAG architectures visually and hand stakeholders a running demo the same day"
-  - "You want each flow instantly exposed as an API endpoint or MCP server without writing serving code"
-avoid_when:
-  - "Production systems with heavy custom logic — visual graphs become harder to test/review than code past a threshold"
-  - "You've standardized on code-first LangGraph; maintaining both visual and code layers duplicates effort"
+best_when: ["You want to hand a non-engineer a canvas for prototyping an agent while keeping an escape hatch to the Python source of any component.", "You need to publish one authored flow two ways, as an HTTP endpoint for your application and as an MCP server tool for an agent client, without rebuilding the graph.", "You are in the eval loop and want step-by-step control in the playground to see which node produced a wrong answer before you change the prompt."]
+avoid_when: ["You need the graph to live in version control as reviewable Python, because the canonical artefact is a flow document and the canvas is the primary editing surface.", "You cannot run Python 3.10 through 3.14 environments, because that is the stated support window for the package install path.", "You are deploying to a locked-down Kubernetes cluster with no egress, because Langflow pulls model providers, vector stores and MCP clients at runtime rather than bundling them."]
 version_tracked: null
 enrichment_status: draft
 enrichment_notes: "Star count (151,361), license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
@@ -42,62 +38,58 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/langflow
 
 ## Overview
 
-A visual IDE for LLM applications: drag components (models, prompts, retrievers, tools, agents) onto a canvas, wire them into flows, test interactively in a playground, and serve each flow as a REST API or MCP server — with Python-level customization of any component.
+Langflow is a visual authoring environment plus serving layer. Flows are drawn from component nodes covering major LLM providers, vector databases and a growing AI tool library, tested in an interactive playground with per-step control, and then deployed as an API, exported as JSON for embedding in Python apps, or served as an MCP server so clients can call the flow as a tool. Multi-agent orchestration with conversation management and retrieval is a first-class feature, and observability hooks into LangSmith and Langfuse. Langflow Desktop bundles every dependency for Windows and macOS.
 
 ## Why It's in the Arsenal
 
-Langflow earns a place in the Arsenal because it directly addresses a recurring decision point: you want to prototype agent/RAG architectures visually and hand stakeholders a running demo the same day. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The decision it removes is the gap between a prototype and something callable. Most visual builders stop at the canvas, so a flow that works cannot be reached from an application without a rewrite into code. Langflow keeps the serving surface in the box, which means the same flow that a stakeholder edited on the canvas is the one your service calls over HTTP or an MCP client invokes as a tool, and the playground's step-level inspection tells you which node to fix.
 
 ## Key Features
 
-- Drag-and-drop canvas over LangChain-ecosystem components
-- Every flow becomes an API endpoint or MCP server
-- Interactive playground with step-through of intermediate outputs
+- One authored artefact, three consumption modes: playground, REST API and MCP server tool.
+- Components are Python, so a node that does not exist yet is a class you write rather than a feature request.
+- Langflow Desktop removes environment management entirely for a first evaluation on Windows or macOS.
+- MIT licensed and actively released, which is the practical contrast with the archived Flowise entry in this catalog.
 
 ## Architecture / How It Works
 
-Flows are stored as JSON graphs; the FastAPI backend instantiates each node (largely LangChain objects) and executes the DAG per request. Custom components are Python classes, so the escape hatch from visual to code is native.
+A React-Flow frontend renders the graph and stores it as a flow document; the Python backend instantiates each node from Langflow's component library and executes them in dependency order. Components are Python classes, so any node can be opened and customised, which is how provider-specific integrations get added. A FastAPI layer exposes the flow over HTTP and an MCP server mode re-publishes the same flow as tools, and tracing events forward to LangSmith or Langfuse for observability.
 
 ## Getting Started
 
+The recommended local path uses uv, with Langflow on port 7860:
+
 ```bash
-uv pip install langflow && uv run langflow run
-# open localhost:7860 in a browser
+uv pip install langflow -U
+uv run langflow run
 ```
+
+Docker is the container route: `docker run -p 7860:7860 langflowai/langflow:latest`. Requires Python 3.10-3.14; `make run_cli` runs it from a source clone.
 
 ## Use Cases
 
-1. **Scenario**: you want to prototype agent/RAG architectures visually and hand stakeholders a running demo the same day
-2. **Scenario**: you want each flow instantly exposed as an API endpoint or MCP server without writing serving code
-3. **Scenario where this is NOT the right fit**: production systems with heavy custom logic — visual graphs become harder to test/review than code past a threshold — evaluate an alternative instead
+1. Rapid RAG prototyping: connect a vector store and a retriever node, iterate on chunking and prompt in the playground, then publish the flow as an endpoint.
+2. Multi-agent demos where conversation management and retrieval are configured as nodes instead of written as orchestration code.
+3. MCP tool publication: expose an authored flow to an agent client so a research or triage workflow becomes a callable tool.
 
 ## Strengths
 
-- You want to prototype agent/RAG architectures visually and hand stakeholders a running demo the same day
-- You want each flow instantly exposed as an API endpoint or MCP server without writing serving code
+It competes with Flowise and Dify in the visual LLM-app builder category, and with n8n in broader workflow automation; compared with Flowise, which is now archived, Langflow is the maintained option, and compared with Dify it is more Python-native and ships an MCP server path. It complements content/projects/frameworks entries such as LangChain because it composes LangChain-style components rather than replacing the runtime, and it overlaps with content/tools/serving-and-deployment entries when the flow itself becomes a production endpoint.
 
 ## Limitations / When NOT to Use
 
-- Production systems with heavy custom logic — visual graphs become harder to test/review than code past a threshold
-- You've standardized on code-first LangGraph; maintaining both visual and code layers duplicates effort
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+The canonical artefact is a flow document rather than reviewable source, so changes still want a version-control story you have to build, for example by exporting JSON and diffing it. Runtime component resolution pulls providers on demand, which complicates air-gapped or restricted-network deployments. A long-lived server process holding provider credentials in its config needs the same hardening as any credential store. And for a team that already codes agent graphs in Python, the canvas is an extra layer to debug between the editor and the execution trace.
 
 ## Integration Patterns
 
-- Compare against `flowise`, `n8n`, `dify` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `langflow`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+This is the current visual-builder entry in content/tools/orchestration, replacing the archived Flowise slot next to it. It sits alongside the code-first framework entries in content/projects/frameworks and overlaps with the serving entries in content/tools/serving-and-deployment once a flow becomes a production endpoint. Its observability integrations line up with the tracing tools in content/tools/evaluation-and-observability.
 
 ## Resources
 
-- [Official Site](https://www.langflow.org)
-- [Documentation](https://docs.langflow.org)
-- [GitHub](https://github.com/langflow-ai/langflow)
+- [GitHub — langflow-ai/langflow](https://github.com/langflow-ai/langflow)
+- [Docs — docs.langflow.org](https://docs.langflow.org)
+- [Deployment guides](https://docs.langflow.org/deployment)
 
 ## Buzz & Reception
 
-- 151,361 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
-
----
-*Last reviewed: 2026-07-08 by @maintainer*
+Lets you draw a flow on a React-Flow canvas, iterate on it in the built-in playground, then export the same graph as JSON, a REST API or an MCP server.

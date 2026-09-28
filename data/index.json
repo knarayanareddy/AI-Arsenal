@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-09-28T18:44:21.255Z",
+    "generated_at": "2026-09-28T21:43:51.807Z",
     "total_projects": 500,
     "total_tools": 218,
     "total_papers": 138,
@@ -117,11 +117,10 @@
       "id": "accelerate",
       "type": "tool",
       "name": "Hugging Face Accelerate",
-      "description": "Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes",
+      "description": "Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision",
       "tags": [
-        "training",
-        "fine-tuning",
-        "pytorch"
+        "pytorch",
+        "llm"
       ],
       "path": "content/tools/model-layer/accelerate.md",
       "url": "content/tools/model-layer/accelerate",
@@ -136,17 +135,16 @@
       "id": "adalflow",
       "type": "tool",
       "name": "AdalFlow",
-      "description": "PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric",
+      "description": "PyTorch-style library that makes LLM prompts differentiable parameters so RAG and agent pipelines can be auto-optimised rather than hand-prompted",
       "tags": [
-        "llm",
-        "orchestration",
-        "evaluation"
+        "rag",
+        "pytorch"
       ],
       "path": "content/tools/dx-and-tooling/adalflow.md",
       "url": "content/tools/dx-and-tooling/adalflow",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "alpha",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -284,17 +282,16 @@
       "id": "addyosmani-agent-skills",
       "type": "tool",
       "name": "Agent Skills (Addy Osmani)",
-      "description": "Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle",
+      "description": "Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents",
       "tags": [
         "agents",
-        "code-gen",
-        "planning"
+        "observability"
       ],
       "path": "content/tools/dx-and-tooling/addyosmani-agent-skills.md",
       "url": "content/tools/dx-and-tooling/addyosmani-agent-skills",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -419,12 +416,10 @@
       "id": "agent-lightning",
       "type": "project",
       "name": "Agent Lightning",
-      "description": "A Microsoft framework for training and optimizing AI agents, including reinforcement learning, that decouples the training loop from any existing agent",
+      "description": "Microsoft's roughly 3,500-line agentic RL framework that inserts a proxy between your agent and its model so a real harness can be trained without modification",
       "tags": [
         "agents",
-        "fine-tuning",
-        "llm",
-        "self-hosted"
+        "llm"
       ],
       "path": "content/projects/training-and-alignment/agent-lightning.md",
       "url": "content/projects/training-and-alignment/agent-lightning",
@@ -458,18 +453,16 @@
       "id": "agent-reach",
       "type": "tool",
       "name": "Agent Reach",
-      "description": "Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web",
+      "description": "Open-source CLI that gives an agent read and search access to Twitter, Reddit, YouTube, Bilibili, Xiaohongshu and GitHub without paid APIs or per-site",
       "tags": [
-        "agents",
-        "data",
         "retrieval",
-        "tool-use"
+        "agents"
       ],
       "path": "content/tools/data-ingestion/agent-reach.md",
       "url": "content/tools/data-ingestion/agent-reach",
       "last_updated": "2026-07-07",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -535,19 +528,17 @@
       "id": "agenta",
       "type": "project",
       "name": "Agenta",
-      "description": "Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds",
+      "description": "Self-hostable workspace where you build agents by chatting with them, then share them with a team and run them in the background on schedules or events",
       "tags": [
-        "observability",
-        "evaluation",
-        "tracing",
-        "cloud"
+        "self-hosted",
+        "agents"
       ],
       "path": "content/projects/benchmarks-and-evals/agenta.md",
       "url": "content/projects/benchmarks-and-evals/agenta",
       "last_updated": "2026-07-01",
       "category": "observability",
-      "maturity": "production",
-      "cost_model": "freemium",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -617,19 +608,16 @@
       "id": "agentic-security",
       "type": "tool",
       "name": "Agentic Security",
-      "description": "Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications",
+      "description": "Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites",
       "tags": [
-        "security",
-        "guardrails",
         "agents",
-        "tool-use",
-        "evaluation"
+        "llm"
       ],
       "path": "content/tools/evaluation-and-observability/agentic-security.md",
       "url": "content/tools/evaluation-and-observability/agentic-security",
       "last_updated": "2026-07-19",
       "category": null,
-      "maturity": "beta",
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -656,17 +644,17 @@
       "id": "agentops",
       "type": "tool",
       "name": "AgentOps",
-      "description": "Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing",
+      "description": "Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK",
       "tags": [
         "observability",
-        "agents",
-        "tracing"
+        "tracing",
+        "agents"
       ],
       "path": "content/tools/evaluation-and-observability/agentops.md",
       "url": "content/tools/evaluation-and-observability/agentops",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
       "featured": false
@@ -694,20 +682,16 @@
       "id": "agentscope",
       "type": "project",
       "name": "AgentScope",
-      "description": "Python framework for building observable, multi-agent, and multimodal agent systems",
+      "description": "Apache-2.0 agent framework pairing composable SDK building blocks with a batteries-included FastAPI agent service, web UI, channels and scheduling",
       "tags": [
-        "agents",
-        "orchestration",
-        "tool-use",
-        "multimodal",
-        "tracing",
-        "stateful"
+        "retrieval",
+        "agents"
       ],
       "path": "content/projects/frameworks/agentscope.md",
       "url": "content/projects/frameworks/agentscope",
       "last_updated": "2026-07-11",
       "category": "agents",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -716,17 +700,17 @@
       "id": "agno",
       "type": "tool",
       "name": "Agno",
-      "description": "High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime",
+      "description": "Python SDK plus AgentOS runtime for building, serving and operating self-hosted agent platforms",
       "tags": [
         "agents",
-        "orchestration",
-        "memory"
+        "security",
+        "orchestration"
       ],
       "path": "content/tools/orchestration/agno.md",
       "url": "content/tools/orchestration/agno",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -808,19 +792,16 @@
       "id": "ai-gateway",
       "type": "tool",
       "name": "Envoy AI Gateway",
-      "description": "An Envoy Gateway extension for routing and governing traffic to generative AI services",
+      "description": "Envoy Gateway-based control plane giving every model and tool one OpenAI-compatible endpoint, with credentials, routing, quotas and failover held centrally",
       "tags": [
-        "inference",
-        "routing",
-        "cloud",
         "kubernetes",
-        "self-hosted"
+        "agents"
       ],
       "path": "content/tools/serving-and-deployment/ai-gateway.md",
       "url": "content/tools/serving-and-deployment/ai-gateway",
       "last_updated": "2026-07-19",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -829,19 +810,16 @@
       "id": "ai-infra-guard",
       "type": "tool",
       "name": "AI Infra Guard",
-      "description": "Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure",
+      "description": "Tencent Zhuque Lab's full-stack red-teaming platform covering agent, skill, MCP, AI-infrastructure and jailbreak scanning in one deployable product",
       "tags": [
-        "security",
-        "guardrails",
-        "evaluation",
-        "agents",
-        "tool-use"
+        "embeddings",
+        "agents"
       ],
       "path": "content/tools/evaluation-and-observability/ai-infra-guard.md",
       "url": "content/tools/evaluation-and-observability/ai-infra-guard",
       "last_updated": "2026-07-19",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -885,20 +863,16 @@
       "id": "aibrix",
       "type": "project",
       "name": "AIBrix",
-      "description": "Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference",
+      "description": "Cloud-native control plane from the vLLM project for deploying, routing, autoscaling and serving LLM inference on Kubernetes",
       "tags": [
-        "inference",
-        "routing",
-        "batching",
-        "caching",
         "kubernetes",
-        "self-hosted"
+        "llm"
       ],
       "path": "content/projects/inference-engines/aibrix.md",
       "url": "content/projects/inference-engines/aibrix",
       "last_updated": "2026-07-11",
       "category": "tooling",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -907,10 +881,9 @@
       "id": "aider",
       "type": "tool",
       "name": "Aider",
-      "description": "Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes",
+      "description": "Terminal pair-programming tool that maps your codebase, edits files in place and auto-commits each change so you can diff and undo with git",
       "tags": [
         "code-gen",
-        "agents",
         "llm"
       ],
       "path": "content/tools/dx-and-tooling/aider.md",
@@ -1002,18 +975,17 @@
       "id": "airbyte",
       "type": "tool",
       "name": "Airbyte",
-      "description": "Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines",
+      "description": "Open-source ELT platform with a 600+ connector catalogue for moving data from APIs, databases, files and warehouses into destinations",
       "tags": [
-        "data",
-        "rag",
-        "cloud"
+        "agents",
+        "embeddings"
       ],
       "path": "content/tools/data-ingestion/airbyte.md",
       "url": "content/tools/data-ingestion/airbyte",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -1021,11 +993,10 @@
       "id": "airflow",
       "type": "tool",
       "name": "Apache Airflow",
-      "description": "Mature workflow scheduler for batch data, ML, and AI pipeline orchestration",
+      "description": "Batch DAG orchestrator that schedules Python workflows, retries failed tasks and records lineage across data platforms",
       "tags": [
-        "data",
         "orchestration",
-        "cloud"
+        "retrieval"
       ],
       "path": "content/tools/orchestration/airflow.md",
       "url": "content/tools/orchestration/airflow",
@@ -1077,13 +1048,10 @@
       "id": "airweave",
       "type": "project",
       "name": "Airweave",
-      "description": "Open-source context retrieval layer that makes application data searchable by AI agents through connectors and APIs",
+      "description": "Archived context-retrieval layer that continuously syncs apps and databases behind one LLM-friendly search API",
       "tags": [
         "rag",
-        "retrieval",
-        "embeddings",
-        "self-hosted",
-        "data"
+        "retrieval"
       ],
       "path": "content/projects/data-and-retrieval/airweave.md",
       "url": "content/projects/data-and-retrieval/airweave",
@@ -1098,12 +1066,10 @@
       "id": "aisheets",
       "type": "tool",
       "name": "Hugging Face AI Sheets",
-      "description": "Hugging Face open-source no-code tool for generating and enriching datasets with AI models",
+      "description": "Spreadsheet-style web app for building, enriching and transforming datasets with LLM columns, deployable from Docker or pnpm against Hub or local models",
       "tags": [
-        "data",
         "llm",
-        "huggingface",
-        "batching"
+        "data"
       ],
       "path": "content/tools/data-ingestion/aisheets.md",
       "url": "content/tools/data-ingestion/aisheets",
@@ -1426,11 +1392,10 @@
       "id": "any-agent",
       "type": "tool",
       "name": "any-agent",
-      "description": "One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation",
+      "description": "Mozilla AI's thin adapter layer that runs one agent interface across six different agent frameworks",
       "tags": [
-        "agents",
-        "orchestration",
-        "evaluation"
+        "evaluation",
+        "orchestration"
       ],
       "path": "content/tools/orchestration/any-agent.md",
       "url": "content/tools/orchestration/any-agent",
@@ -1483,11 +1448,10 @@
       "id": "anything-llm",
       "type": "project",
       "name": "AnythingLLM",
-      "description": "All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required",
+      "description": "All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction",
       "tags": [
-        "rag",
         "self-hosted",
-        "llm"
+        "agents"
       ],
       "path": "content/projects/data-and-retrieval/anything-llm.md",
       "url": "content/projects/data-and-retrieval/anything-llm",
@@ -1502,11 +1466,11 @@
       "id": "anythingllm",
       "type": "project",
       "name": "AnythingLLM",
-      "description": "All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup",
+      "description": "All-in-one desktop and Docker chat workspace bundling document RAG, agents and multi-user access",
       "tags": [
         "rag",
-        "agents",
-        "self-hosted"
+        "self-hosted",
+        "local"
       ],
       "path": "content/projects/agent-systems/anythingllm.md",
       "url": "content/projects/agent-systems/anythingllm",
@@ -1521,10 +1485,10 @@
       "id": "apache-arrow",
       "type": "project",
       "name": "Apache Arrow",
-      "description": "A universal columnar in-memory format and multi-language toolbox that enables zero-copy data interchange between analytics and ML tools across process and",
+      "description": "Apache Software Foundation columnar format, IPC serialization and Flight RPC underpinning in-memory data exchange",
       "tags": [
-        "self-hosted",
-        "embeddings"
+        "memory",
+        "retrieval"
       ],
       "path": "content/projects/data-and-retrieval/apache-arrow.md",
       "url": "content/projects/data-and-retrieval/apache-arrow",
@@ -1595,11 +1559,12 @@
       "id": "argilla",
       "type": "tool",
       "name": "Argilla",
-      "description": "Open-source platform for human and AI feedback, data curation, and evaluation datasets",
+      "description": "Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows",
       "tags": [
         "data",
         "evaluation",
-        "llm"
+        "huggingface",
+        "local"
       ],
       "path": "content/tools/data-ingestion/argilla.md",
       "url": "content/tools/data-ingestion/argilla",
@@ -1952,13 +1917,11 @@
       "id": "autorag",
       "type": "project",
       "name": "AutoRAG",
-      "description": "AutoML-style framework for evaluating and optimizing retrieval-augmented-generation pipelines",
+      "description": "AutoRAG 2.0 self-evolving librarian agent that searches across retrieval methods, opens sources to verify, and curates cited answers",
       "tags": [
         "rag",
-        "retrieval",
-        "evaluation",
-        "benchmark",
-        "research"
+        "agents",
+        "retrieval"
       ],
       "path": "content/projects/data-and-retrieval/autorag.md",
       "url": "content/projects/data-and-retrieval/autorag",
@@ -2389,13 +2352,10 @@
       "id": "bisheng",
       "type": "project",
       "name": "BISHENG",
-      "description": "An open enterprise LLMOps platform combining visual GenAI workflow building, RAG, agents, model management, evaluation",
+      "description": "Enterprise LLM devops platform pairing a flowchart workflow canvas with RAG pipelines, agent tools and model management in one console",
       "tags": [
-        "agents",
         "rag",
-        "llm",
-        "self-hosted",
-        "observability"
+        "retrieval"
       ],
       "path": "content/projects/agent-systems/bisheng.md",
       "url": "content/projects/agent-systems/bisheng",
@@ -2466,19 +2426,19 @@
       "id": "braintrust",
       "type": "project",
       "name": "Braintrust",
-      "description": "Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates",
+      "description": "TypeScript SDK that emits traces, runs scored evals and wraps OpenAI, LangChain, OpenTelemetry and Temporal code for the Braintrust platform",
       "tags": [
-        "observability",
         "evaluation",
         "tracing",
-        "cloud"
+        "observability",
+        "llm"
       ],
       "path": "content/projects/benchmarks-and-evals/braintrust.md",
       "url": "content/projects/benchmarks-and-evals/braintrust",
       "last_updated": "2026-07-01",
       "category": "observability",
-      "maturity": "production",
-      "cost_model": "freemium",
+      "maturity": "beta",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -2542,17 +2502,16 @@
       "id": "browser-use",
       "type": "project",
       "name": "Browser Use",
-      "description": "The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously",
+      "description": "Open-source browser agent that drives Chrome for LLM, available as a Python library, a CLI, or hosted cloud browsers",
       "tags": [
         "agents",
-        "tool-use",
-        "orchestration"
+        "embeddings"
       ],
       "path": "content/projects/agent-systems/browser-use.md",
       "url": "content/projects/agent-systems/browser-use",
       "last_updated": "2026-07-08",
       "category": "agents",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -2561,18 +2520,17 @@
       "id": "browserbase",
       "type": "tool",
       "name": "Browserbase",
-      "description": "Hosted cloud browser platform for AI agents and automated browser workflows",
+      "description": "Stagehand browser SDK with observe, act and extract primitives plus CUA models, MIT licensed and multi-language",
       "tags": [
         "agents",
-        "cloud",
-        "tool-use"
+        "llm"
       ],
       "path": "content/tools/data-ingestion/browserbase.md",
       "url": "content/tools/data-ingestion/browserbase",
       "last_updated": "2026-07-06",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -2731,11 +2689,12 @@
       "id": "camel-ai",
       "type": "project",
       "name": "CAMEL",
-      "description": "Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation",
+      "description": "Apache-2.0 multi-agent research framework with ChatAgent, agent societies, synthetic data generation and benchmark suites for studying agent behaviour at scale",
       "tags": [
         "agents",
         "orchestration",
-        "research"
+        "research",
+        "llm"
       ],
       "path": "content/projects/frameworks/camel-ai.md",
       "url": "content/projects/frameworks/camel-ai",
@@ -2750,11 +2709,12 @@
       "id": "candle",
       "type": "project",
       "name": "Candle",
-      "description": "Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference",
+      "description": "Rust machine-learning framework from Hugging Face built around a small Tensor type with CPU, CUDA, Metal and WASM backends and safetensors-native weight loading",
       "tags": [
         "inference",
+        "huggingface",
         "efficiency",
-        "llm"
+        "edge"
       ],
       "path": "content/projects/inference-engines/candle.md",
       "url": "content/projects/inference-engines/candle",
@@ -2769,18 +2729,18 @@
       "id": "candle-vllm",
       "type": "project",
       "name": "candle-vllm",
-      "description": "Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API",
+      "description": "Rust LLM serving engine on Hugging Face's candle, with an OpenAI-compatible API, Web UI, PagedAttention, continuous batching and TurboQuant KV compression",
       "tags": [
-        "llm",
         "inference",
-        "self-hosted",
-        "efficiency"
+        "quantization",
+        "caching",
+        "batching"
       ],
       "path": "content/projects/inference-engines/candle-vllm.md",
       "url": "content/projects/inference-engines/candle-vllm",
       "last_updated": "2026-07-19",
       "category": "llms",
-      "maturity": "alpha",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -2946,17 +2906,18 @@
       "id": "chainlit",
       "type": "tool",
       "name": "Chainlit",
-      "description": "A framework for building conversational AI interfaces and debugging LLM apps",
+      "description": "Python framework for building chat and agent front ends, with decorators for steps, tool calls and message handlers over a bundled React UI",
       "tags": [
         "llm",
-        "tracing",
-        "agents"
+        "tool-use",
+        "streaming",
+        "battle-tested"
       ],
       "path": "content/tools/dx-and-tooling/chainlit.md",
       "url": "content/tools/dx-and-tooling/chainlit",
       "last_updated": "2026-06-30",
       "category": null,
-      "maturity": "production",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -2965,19 +2926,18 @@
       "id": "chandra-ocr",
       "type": "project",
       "name": "Chandra",
-      "description": "An OCR model from Datalab that handles complex tables, forms, and handwriting with full layout understanding, output as structured Markdown/HTML/JSON",
+      "description": "Document OCR model from Datalab that renders pages to HTML, Markdown or JSON with layout, and runs locally on Hugging Face or against a vLLM server",
       "tags": [
         "multimodal",
-        "self-hosted",
-        "inference",
-        "data"
+        "data",
+        "self-hosted"
       ],
       "path": "content/projects/data-and-retrieval/chandra-ocr.md",
       "url": "content/projects/data-and-retrieval/chandra-ocr",
       "last_updated": "2026-07-12",
       "category": "computer-vision",
-      "maturity": "beta",
-      "cost_model": "open-source",
+      "maturity": "production",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -3004,11 +2964,12 @@
       "id": "chatterbox",
       "type": "project",
       "name": "Chatterbox (Resemble AI)",
-      "description": "Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default",
+      "description": "Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3",
       "tags": [
-        "self-hosted",
+        "voice",
         "multimodal",
-        "inference"
+        "edge",
+        "local"
       ],
       "path": "content/projects/foundation-models/chatterbox.md",
       "url": "content/projects/foundation-models/chatterbox",
@@ -3023,13 +2984,12 @@
       "id": "chattts",
       "type": "project",
       "name": "ChatTTS",
-      "description": "A generative speech model tuned for natural conversational dialogue in English and Chinese, with fine-grained prosody and laughter control tokens",
+      "description": "AGPL-3.0 dialogue-oriented TTS from 2noise with token-level prosody control, zero-shot speaker sampling and a streaming audio path",
       "tags": [
         "voice",
         "multimodal",
-        "self-hosted",
-        "llm",
-        "streaming"
+        "streaming",
+        "research"
       ],
       "path": "content/projects/foundation-models/chattts.md",
       "url": "content/projects/foundation-models/chattts",
@@ -3124,12 +3084,12 @@
       "id": "cherry-studio",
       "type": "project",
       "name": "Cherry Studio",
-      "description": "Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app",
+      "description": "AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier",
       "tags": [
         "llm",
         "agents",
-        "rag",
-        "self-hosted"
+        "local",
+        "tool-use"
       ],
       "path": "content/projects/frameworks/cherry-studio.md",
       "url": "content/projects/frameworks/cherry-studio",
@@ -3635,19 +3595,18 @@
       "id": "chroma",
       "type": "project",
       "name": "Chroma",
-      "description": "Developer-friendly embeddings database for local AI apps, prototypes, and lightweight RAG",
+      "description": "Developer-focused vector database with a four-function core API, automatic embedding and indexing, and a hosted cloud tier",
       "tags": [
-        "rag",
         "embeddings",
         "retrieval",
-        "local"
+        "rag"
       ],
       "path": "content/projects/data-and-retrieval/chroma.md",
       "url": "content/projects/data-and-retrieval/chroma",
       "last_updated": "2026-07-01",
       "category": "rag",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -3655,11 +3614,12 @@
       "id": "chrome-devtools-mcp",
       "type": "tool",
       "name": "Chrome DevTools MCP",
-      "description": "Official MCP server exposing Chrome DevTools to coding agents for live browser debugging",
+      "description": "Google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input",
       "tags": [
-        "agents",
         "tool-use",
-        "code-gen"
+        "observability",
+        "monitoring",
+        "battle-tested"
       ],
       "path": "content/tools/dx-and-tooling/chrome-devtools-mcp.md",
       "url": "content/tools/dx-and-tooling/chrome-devtools-mcp",
@@ -3726,10 +3686,10 @@
       "id": "claude-code",
       "type": "tool",
       "name": "Claude Code",
-      "description": "Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories",
+      "description": "Anthropic's terminal coding agent, distributed as a CLI that reads a repository, edits files, runs commands and handles git work from natural language",
       "tags": [
-        "code-gen",
         "agents",
+        "code-gen",
         "tool-use",
         "anthropic"
       ],
@@ -3765,11 +3725,10 @@
       "id": "cleanlab",
       "type": "project",
       "name": "cleanlab",
-      "description": "Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions",
+      "description": "Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions",
       "tags": [
-        "data",
-        "evaluation",
-        "self-hosted"
+        "embeddings",
+        "llm"
       ],
       "path": "content/projects/data-and-retrieval/cleanlab.md",
       "url": "content/projects/data-and-retrieval/cleanlab",
@@ -3784,11 +3743,12 @@
       "id": "clearml",
       "type": "tool",
       "name": "ClearML",
-      "description": "Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration",
+      "description": "Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs",
       "tags": [
+        "observability",
         "training",
-        "monitoring",
-        "self-hosted"
+        "kubernetes",
+        "battle-tested"
       ],
       "path": "content/tools/model-layer/clearml.md",
       "url": "content/tools/model-layer/clearml",
@@ -3841,11 +3801,12 @@
       "id": "cline",
       "type": "tool",
       "name": "Cline",
-      "description": "Open-source autonomous coding agent for VS Code with plan/act modes and human-in-the-loop approval of every action",
+      "description": "Apache-2.0 coding agent published simultaneously as a CLI, a Tauri desktop app, VS Code and JetBrains extensions and an embeddable Node SDK",
       "tags": [
-        "code-gen",
         "agents",
-        "tool-use"
+        "code-gen",
+        "tool-use",
+        "battle-tested"
       ],
       "path": "content/tools/dx-and-tooling/cline.md",
       "url": "content/tools/dx-and-tooling/cline",
@@ -3860,11 +3821,12 @@
       "id": "clip",
       "type": "project",
       "name": "CLIP (OpenAI)",
-      "description": "OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs",
+      "description": "OpenAI's Contrastive Language-Image Pre-training model, MIT-licensed, aligning image and text encoders into one embedding space for zero-shot classification",
       "tags": [
-        "embeddings",
         "multimodal",
-        "llm"
+        "embeddings",
+        "vision",
+        "foundational"
       ],
       "path": "content/projects/foundation-models/clip.md",
       "url": "content/projects/foundation-models/clip",
@@ -4069,17 +4031,18 @@
       "id": "cognee",
       "type": "project",
       "name": "Cognee",
-      "description": "Memory engine that replaces naive RAG with ECL pipelines combining knowledge graphs and embeddings over documents and conversations",
+      "description": "Memory platform that turns documents, code and conversations into a self-hosted knowledge graph agents can query",
       "tags": [
         "memory",
-        "rag",
-        "agents"
+        "retrieval",
+        "graphs",
+        "local"
       ],
       "path": "content/projects/data-and-retrieval/cognee.md",
       "url": "content/projects/data-and-retrieval/cognee",
       "last_updated": "2026-07-08",
       "category": "rag",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4088,18 +4051,16 @@
       "id": "cognita",
       "type": "project",
       "name": "Cognita",
-      "description": "A modular, production-oriented RAG framework from TrueFoundry that organizes ingestion, embedding, retrieval, and serving into configurable",
+      "description": "Archived RAG platform from TrueFoundry that wraps LangChain and LlamaIndex into a modular, API-driven, UI-configurable production structure",
       "tags": [
         "rag",
-        "embeddings",
-        "llm",
-        "self-hosted"
+        "langchain"
       ],
       "path": "content/projects/data-and-retrieval/cognita.md",
       "url": "content/projects/data-and-retrieval/cognita",
       "last_updated": "2026-07-12",
       "category": "rag",
-      "maturity": "beta",
+      "maturity": "experimental",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -4240,17 +4201,16 @@
       "id": "composio",
       "type": "tool",
       "name": "Composio",
-      "description": "Integration platform providing 250+ managed, authenticated tools (Gmail, Slack, GitHub...) to any AI agent framework",
+      "description": "Hosted tool layer supplying agents with pre-authenticated OAuth sessions for more than a thousand apps",
       "tags": [
         "tool-use",
-        "agents",
-        "orchestration"
+        "security"
       ],
       "path": "content/tools/orchestration/composio.md",
       "url": "content/tools/orchestration/composio",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "freemium",
       "status": "active",
       "featured": false
@@ -4372,11 +4332,10 @@
       "id": "continue",
       "type": "project",
       "name": "Continue",
-      "description": "Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local",
+      "description": "Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release",
       "tags": [
-        "code-gen",
         "agents",
-        "self-hosted"
+        "chunking"
       ],
       "path": "content/projects/agent-systems/continue.md",
       "url": "content/projects/agent-systems/continue",
@@ -4599,18 +4558,17 @@
       "id": "crawl4ai",
       "type": "project",
       "name": "Crawl4AI",
-      "description": "Open-source crawler and scraper designed to produce LLM-friendly web content",
+      "description": "Open-source crawler that turns any page into LLM-ready Markdown, runnable locally or through a hosted API with MCP",
       "tags": [
         "rag",
-        "data",
-        "local"
+        "retrieval"
       ],
       "path": "content/projects/data-and-retrieval/crawl4ai.md",
       "url": "content/projects/data-and-retrieval/crawl4ai",
       "last_updated": "2026-07-01",
       "category": "rag",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -4618,11 +4576,11 @@
       "id": "crawl4ai-tool",
       "type": "tool",
       "name": "Crawl4AI",
-      "description": "Python crawler and scraper designed for LLM-friendly web content extraction",
+      "description": "Open-source crawler that returns LLM-ready Markdown from any page, with a paid cloud tier behind the same API",
       "tags": [
-        "rag",
         "data",
-        "local"
+        "retrieval",
+        "tool-use"
       ],
       "path": "content/tools/data-ingestion/crawl4ai-tool.md",
       "url": "content/tools/data-ingestion/crawl4ai-tool",
@@ -4770,14 +4728,10 @@
       "id": "daft",
       "type": "project",
       "name": "Daft",
-      "description": "High-performance data engine for AI and multimodal workloads across images, audio, video, and structured data",
+      "description": "Python-native distributed data engine in Rust that processes images, audio, video and structured data together with LLM and embedding operations",
       "tags": [
-        "data",
         "multimodal",
-        "embeddings",
-        "batching",
-        "streaming",
-        "efficiency"
+        "embeddings"
       ],
       "path": "content/projects/data-and-retrieval/daft.md",
       "url": "content/projects/data-and-retrieval/daft",
@@ -4792,18 +4746,17 @@
       "id": "dagster",
       "type": "tool",
       "name": "Dagster",
-      "description": "Data orchestration platform for assets, pipelines, schedules, and observability",
+      "description": "Asset-oriented Python orchestrator where data assets are typed functions with parameter-derived lineage",
       "tags": [
-        "data",
         "orchestration",
-        "monitoring"
+        "llm"
       ],
       "path": "content/tools/orchestration/dagster.md",
       "url": "content/tools/orchestration/dagster",
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -4961,21 +4914,17 @@
       "id": "datachain",
       "type": "project",
       "name": "DataChain",
-      "description": "Typed and versioned context layer for unstructured data across S3, GCS, and Azure",
+      "description": "Versioned, typed dataset layer over S3, GCS and Azure with local query and an agent-facing knowledge base",
       "tags": [
-        "data",
-        "rag",
         "retrieval",
-        "multimodal",
-        "self-hosted",
-        "embeddings"
+        "agents"
       ],
       "path": "content/projects/data-and-retrieval/datachain.md",
       "url": "content/projects/data-and-retrieval/datachain",
       "last_updated": "2026-07-11",
       "category": "data-pipelines",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -5038,12 +4987,12 @@
       "id": "deep-searcher",
       "type": "project",
       "name": "DeepSearcher",
-      "description": "An open deep-research framework from Zilliz that reasons over private data by iteratively planning sub-queries, searching a vector store",
+      "description": "Deep research agent that searches a private corpus in Milvus and writes a cited report from the retrieved evidence",
       "tags": [
         "rag",
-        "agents",
-        "llm",
-        "self-hosted"
+        "retrieval",
+        "data",
+        "agents"
       ],
       "path": "content/projects/data-and-retrieval/deep-searcher.md",
       "url": "content/projects/data-and-retrieval/deep-searcher",
@@ -5058,19 +5007,16 @@
       "id": "deepanalyze",
       "type": "project",
       "name": "DeepAnalyze",
-      "description": "RUC DataLab's DeepAnalyze-8B agentic LLM and framework for autonomous data preparation, analysis, modeling, visualization, and report generation",
+      "description": "Agentic LLM research system that runs the full data-science pipeline and writes analyst-grade reports",
       "tags": [
-        "agents",
-        "reasoning",
         "data",
-        "tool-use",
         "research"
       ],
       "path": "content/projects/agent-systems/deepanalyze.md",
       "url": "content/projects/agent-systems/deepanalyze",
       "last_updated": "2026-07-19",
       "category": "agents",
-      "maturity": "alpha",
+      "maturity": "beta",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -5137,21 +5083,17 @@
       "id": "deeplake",
       "type": "project",
       "name": "Deep Lake",
-      "description": "AI data runtime with multimodal storage, retrieval, training, and agent-oriented data access",
+      "description": "Storage format and database for AI holding embeddings, media, text and annotations with vector search, versioning and lineage",
       "tags": [
-        "rag",
-        "retrieval",
-        "data",
         "multimodal",
-        "embeddings",
-        "self-hosted"
+        "embeddings"
       ],
       "path": "content/projects/data-and-retrieval/deeplake.md",
       "url": "content/projects/data-and-retrieval/deeplake",
       "last_updated": "2026-07-11",
       "category": "rag",
-      "maturity": "beta",
-      "cost_model": "open-source",
+      "maturity": "production",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -5564,11 +5506,10 @@
       "id": "dlt",
       "type": "tool",
       "name": "dlt",
-      "description": "Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows",
+      "description": "Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference",
       "tags": [
-        "data",
-        "llm",
-        "cloud"
+        "agents",
+        "inference"
       ],
       "path": "content/tools/data-ingestion/dlt.md",
       "url": "content/tools/data-ingestion/dlt",
@@ -5638,18 +5579,19 @@
       "id": "docetl",
       "type": "tool",
       "name": "DocETL",
-      "description": "LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)",
+      "description": "Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema",
       "tags": [
         "data",
-        "llm",
-        "orchestration"
+        "structured-output",
+        "efficiency",
+        "agents"
       ],
       "path": "content/tools/data-ingestion/docetl.md",
       "url": "content/tools/data-ingestion/docetl",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "alpha",
-      "cost_model": "open-source",
+      "maturity": "beta",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -5657,13 +5599,10 @@
       "id": "docext",
       "type": "project",
       "name": "docext",
-      "description": "On-premises vision-language document extraction, Markdown conversion, and benchmarking toolkit from Nanonets",
+      "description": "On-premises document toolkit using vision-language models for image-to-markdown conversion, key information extraction, and IDP benchmarking",
       "tags": [
-        "vision",
-        "multimodal",
-        "data",
-        "benchmark",
-        "self-hosted"
+        "llm",
+        "training"
       ],
       "path": "content/projects/data-and-retrieval/docext.md",
       "url": "content/projects/data-and-retrieval/docext",
@@ -5678,11 +5617,10 @@
       "id": "docling",
       "type": "project",
       "name": "Docling",
-      "description": "IBM-origin open-source toolkit for parsing and exporting documents for generative AI",
+      "description": "IBM-originated document parser producing a unified DoclingDocument with layout, tables, formulas and OCR",
       "tags": [
-        "rag",
-        "data",
-        "retrieval"
+        "vision",
+        "chunking"
       ],
       "path": "content/projects/data-and-retrieval/docling.md",
       "url": "content/projects/data-and-retrieval/docling",
@@ -5810,10 +5748,12 @@
       "id": "duckdb",
       "type": "project",
       "name": "DuckDB",
-      "description": "An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server",
+      "description": "In-process analytical SQL engine that queries Parquet and CSV files directly from the FROM clause",
       "tags": [
+        "data",
         "self-hosted",
-        "embeddings"
+        "efficiency",
+        "local"
       ],
       "path": "content/projects/data-and-retrieval/duckdb.md",
       "url": "content/projects/data-and-retrieval/duckdb",
@@ -5868,18 +5808,17 @@
       "id": "e2b",
       "type": "tool",
       "name": "E2B",
-      "description": "Open-source cloud sandboxes purpose-built for running AI-generated code securely at scale",
+      "description": "Firecracker-microVM sandboxes for running model-generated code, plus code-interpreter and desktop-control SDKs for agents",
       "tags": [
         "agents",
-        "security",
-        "code-gen"
+        "llm"
       ],
       "path": "content/tools/orchestration/e2b.md",
       "url": "content/tools/orchestration/e2b",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -5887,12 +5826,10 @@
       "id": "easyocr",
       "type": "project",
       "name": "EasyOCR",
-      "description": "A ready-to-use Python OCR library supporting 80+ languages with a CRAFT text detector and a CRNN recognizer, requiring no training to run",
+      "description": "Ready-to-use Python OCR package with 80-plus supported languages, a Gradio web demo, and a simple reader API",
       "tags": [
-        "multimodal",
-        "self-hosted",
-        "inference",
-        "data"
+        "llm",
+        "evaluation"
       ],
       "path": "content/projects/data-and-retrieval/easyocr.md",
       "url": "content/projects/data-and-retrieval/easyocr",
@@ -5944,19 +5881,17 @@
       "id": "elasticsearch",
       "type": "tool",
       "name": "Elasticsearch",
-      "description": "Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads",
+      "description": "Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing",
       "tags": [
         "retrieval",
-        "rag",
-        "self-hosted",
-        "monitoring"
+        "data"
       ],
       "path": "content/tools/data-ingestion/elasticsearch.md",
       "url": "content/tools/data-ingestion/elasticsearch",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "self-hostable",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -6398,18 +6333,18 @@
       "id": "exa",
       "type": "tool",
       "name": "Exa",
-      "description": "Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity (\"find similar pages\") endpoints",
+      "description": "Hosted MCP server exposing Exa web search and page fetch as two default tools for any MCP client",
       "tags": [
-        "retrieval",
-        "embeddings",
-        "rag"
+        "data",
+        "tool-use",
+        "retrieval"
       ],
       "path": "content/tools/data-ingestion/exa.md",
       "url": "content/tools/data-ingestion/exa",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -6528,11 +6463,10 @@
       "id": "faiss",
       "type": "tool",
       "name": "FAISS",
-      "description": "Meta's foundational library for efficient similarity search over billions of dense vectors",
+      "description": "C++ similarity search and clustering library for dense vectors with full Python and numpy wrappers and GPU implementations of key indexes",
       "tags": [
-        "retrieval",
-        "embeddings",
-        "efficiency"
+        "llm",
+        "evaluation"
       ],
       "path": "content/tools/data-ingestion/faiss.md",
       "url": "content/tools/data-ingestion/faiss",
@@ -6683,21 +6617,17 @@
       "id": "fastgpt",
       "type": "project",
       "name": "FastGPT",
-      "description": "Open-source knowledge-base and RAG platform with visual workflow orchestration for building question-answering and agent applications over your own data",
+      "description": "Knowledge-base and visual workflow platform for LLM apps with RAG retrieval, data processing and Flow orchestration",
       "tags": [
-        "rag",
-        "retrieval",
-        "chunking",
-        "orchestration",
-        "agents",
-        "self-hosted"
+        "self-hosted",
+        "retrieval"
       ],
       "path": "content/projects/data-and-retrieval/fastgpt.md",
       "url": "content/projects/data-and-retrieval/fastgpt",
       "last_updated": "2026-07-12",
       "category": "rag",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -6833,11 +6763,11 @@
       "id": "firecrawl",
       "type": "project",
       "name": "Firecrawl",
-      "description": "Open-source and hosted web scraping API that turns websites into LLM-ready markdown/data",
+      "description": "Web data API with search, scrape, crawl and map endpoints, AGPL-licensed and also sold as a hosted service",
       "tags": [
-        "rag",
         "data",
-        "cloud"
+        "retrieval",
+        "tool-use"
       ],
       "path": "content/projects/data-and-retrieval/firecrawl.md",
       "url": "content/projects/data-and-retrieval/firecrawl",
@@ -6852,11 +6782,10 @@
       "id": "firecrawl-tool",
       "type": "tool",
       "name": "Firecrawl",
-      "description": "API and open-source project for scraping and crawling websites into LLM-ready Markdown",
+      "description": "Web data API and open-source scraper returning clean markdown, structured JSON, screenshots, and interaction actions for agent use",
       "tags": [
-        "rag",
-        "data",
-        "cloud"
+        "agents",
+        "retrieval"
       ],
       "path": "content/tools/data-ingestion/firecrawl-tool.md",
       "url": "content/tools/data-ingestion/firecrawl-tool",
@@ -6951,18 +6880,17 @@
       "id": "flowise",
       "type": "tool",
       "name": "Flowise",
-      "description": "Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack",
+      "description": "Archived Node.js visual builder for LangChain-style agent graphs, now superseded by the Flowise successor",
       "tags": [
         "orchestration",
-        "agents",
-        "rag"
+        "langchain"
       ],
       "path": "content/tools/orchestration/flowise.md",
       "url": "content/tools/orchestration/flowise",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -7512,17 +7440,18 @@
       "id": "gitingest",
       "type": "tool",
       "name": "Gitingest",
-      "description": "Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL",
+      "description": "Turns a Git repository into a prompt-friendly text digest with file tree, size and token count",
       "tags": [
         "code-gen",
         "data",
-        "llm"
+        "local",
+        "tool-use"
       ],
       "path": "content/tools/data-ingestion/gitingest.md",
       "url": "content/tools/data-ingestion/gitingest",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -7815,17 +7744,17 @@
       "id": "gpt-engineer",
       "type": "project",
       "name": "GPT Engineer",
-      "description": "An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern",
+      "description": "Archived Python CLI that specified software in natural language and let a model write and execute it",
       "tags": [
-        "agents",
-        "llm",
-        "self-hosted"
+        "code-gen",
+        "tool-use",
+        "research"
       ],
       "path": "content/projects/agent-systems/gpt-engineer.md",
       "url": "content/projects/agent-systems/gpt-engineer",
       "last_updated": "2026-07-12",
       "category": "code-generation",
-      "maturity": "beta",
+      "maturity": "experimental",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -7874,11 +7803,10 @@
       "id": "gpt-researcher",
       "type": "project",
       "name": "GPT Researcher",
-      "description": "Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports",
+      "description": "Autonomous research agent that plans questions, fans out parallel scrapers, and publishes a cited report from web or local sources",
       "tags": [
         "agents",
-        "rag",
-        "orchestration"
+        "retrieval"
       ],
       "path": "content/projects/agent-systems/gpt-researcher.md",
       "url": "content/projects/agent-systems/gpt-researcher",
@@ -7982,17 +7910,16 @@
       "id": "graphiti",
       "type": "project",
       "name": "Graphiti",
-      "description": "Framework for building real-time, temporally-aware knowledge graphs that serve as queryable memory for agents",
+      "description": "Framework for temporal knowledge graphs that track how facts change over time with provenance, incremental updates and hybrid retrieval",
       "tags": [
-        "memory",
-        "rag",
+        "retrieval",
         "agents"
       ],
       "path": "content/projects/data-and-retrieval/graphiti.md",
       "url": "content/projects/data-and-retrieval/graphiti",
       "last_updated": "2026-07-08",
       "category": "rag",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -8020,11 +7947,12 @@
       "id": "great-expectations",
       "type": "tool",
       "name": "Great Expectations (GX Core)",
-      "description": "The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on",
+      "description": "Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI",
       "tags": [
         "data",
         "evaluation",
-        "self-hosted"
+        "local",
+        "benchmark"
       ],
       "path": "content/tools/data-ingestion/great-expectations.md",
       "url": "content/tools/data-ingestion/great-expectations",
@@ -8443,13 +8371,10 @@
       "id": "hermes-agent",
       "type": "project",
       "name": "Hermes Agent",
-      "description": "Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes",
+      "description": "Nous Research's self-improving personal agent with a TUI, messaging gateway, skill authoring and seven terminal backends",
       "tags": [
         "agents",
-        "orchestration",
-        "memory",
-        "tool-use",
-        "planning"
+        "llm"
       ],
       "path": "content/projects/agent-systems/hermes-agent.md",
       "url": "content/projects/agent-systems/hermes-agent",
@@ -9263,17 +9188,18 @@
       "id": "insforge",
       "type": "project",
       "name": "InsForge",
-      "description": "Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway",
+      "description": "Backend-as-a-service that exposes Postgres, auth, storage and edge functions to coding agents over MCP",
       "tags": [
-        "agents",
-        "orchestration"
+        "cloud",
+        "code-gen",
+        "data"
       ],
       "path": "content/projects/agent-systems/insforge.md",
       "url": "content/projects/agent-systems/insforge",
       "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -10089,18 +10015,17 @@
       "id": "khoj",
       "type": "project",
       "name": "Khoj",
-      "description": "Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs",
+      "description": "Self-hostable personal AI that searches your documents and the web, answers with citations, and runs scheduled automations from any surface",
       "tags": [
-        "agents",
-        "rag",
-        "self-hosted"
+        "self-hosted",
+        "rag"
       ],
       "path": "content/projects/agent-systems/khoj.md",
       "url": "content/projects/agent-systems/khoj",
       "last_updated": "2026-07-08",
       "category": "agents",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -10391,12 +10316,12 @@
       "id": "lancedb",
       "type": "project",
       "name": "LanceDB",
-      "description": "Developer-friendly embedded and serverless vector database for multimodal AI retrieval",
+      "description": "Embedded multimodal lakehouse on the Lance columnar format, with vector, full-text and SQL search in one engine",
       "tags": [
-        "rag",
-        "embeddings",
         "retrieval",
-        "multimodal"
+        "data",
+        "self-hosted",
+        "efficiency"
       ],
       "path": "content/projects/data-and-retrieval/lancedb.md",
       "url": "content/projects/data-and-retrieval/lancedb",
@@ -10501,11 +10426,10 @@
       "id": "langflow",
       "type": "tool",
       "name": "Langflow",
-      "description": "Open-source visual builder for AI agents and RAG flows, exportable as APIs or MCP servers",
+      "description": "Python visual builder for agent and RAG workflows that also serves them as REST endpoints and MCP servers",
       "tags": [
-        "orchestration",
-        "agents",
-        "rag"
+        "rag",
+        "orchestration"
       ],
       "path": "content/tools/orchestration/langflow.md",
       "url": "content/tools/orchestration/langflow",
@@ -10761,12 +10685,12 @@
       "id": "leann",
       "type": "project",
       "name": "LEANN",
-      "description": "A storage-efficient vector index for on-device RAG that reportedly cuts index size by ~97% via graph-based selective recomputation instead of storing all",
+      "description": "Vector index that recomputes embeddings on demand, claiming 97 percent storage savings without accuracy loss",
       "tags": [
-        "rag",
-        "embeddings",
-        "self-hosted",
-        "llm"
+        "retrieval",
+        "local",
+        "efficiency",
+        "self-hosted"
       ],
       "path": "content/projects/data-and-retrieval/leann.md",
       "url": "content/projects/data-and-retrieval/leann",
@@ -10819,17 +10743,17 @@
       "id": "leon",
       "type": "project",
       "name": "Leon",
-      "description": "An open-source, self-hosted personal assistant with a modular skill system, on-device speech, and a privacy-first design that runs entirely on your own server",
+      "description": "TypeScript and Python personal assistant with native skills, layered memory and progressive computer use",
       "tags": [
         "agents",
-        "self-hosted",
-        "multimodal"
+        "local",
+        "tool-use"
       ],
       "path": "content/projects/agent-systems/leon.md",
       "url": "content/projects/agent-systems/leon",
       "last_updated": "2026-07-12",
       "category": "agents",
-      "maturity": "beta",
+      "maturity": "alpha",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -10856,11 +10780,10 @@
       "id": "letta",
       "type": "tool",
       "name": "Letta",
-      "description": "Stateful agent framework and memory system formerly known as MemGPT",
+      "description": "Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK",
       "tags": [
-        "memory",
-        "agents",
-        "stateful"
+        "self-hosted",
+        "agents"
       ],
       "path": "content/tools/orchestration/letta.md",
       "url": "content/tools/orchestration/letta",
@@ -11014,18 +10937,17 @@
       "id": "librechat",
       "type": "project",
       "name": "LibreChat",
-      "description": "Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth",
+      "description": "Self-hostable ChatGPT-style web client with multi-user auth, agents, MCP, skills and a sandboxed code interpreter",
       "tags": [
         "agents",
-        "self-hosted",
-        "llm"
+        "self-hosted"
       ],
       "path": "content/projects/agent-systems/librechat.md",
       "url": "content/projects/agent-systems/librechat",
       "last_updated": "2026-07-08",
       "category": "agents",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -11528,19 +11450,18 @@
       "id": "llamaparse",
       "type": "project",
       "name": "LlamaParse",
-      "description": "Managed document parser from LlamaIndex for turning complex files into RAG-ready text",
+      "description": "Deprecated SDK repository for LlamaParse, the managed document-parsing and knowledge-agent service",
       "tags": [
-        "rag",
         "data",
-        "llamaindex",
-        "cloud"
+        "cloud",
+        "featured"
       ],
       "path": "content/projects/data-and-retrieval/llamaparse.md",
       "url": "content/projects/data-and-retrieval/llamaparse",
       "last_updated": "2026-07-01",
       "category": "rag",
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "paid",
       "status": "active",
       "featured": false
     },
@@ -11862,18 +11783,18 @@
       "id": "lobe-chat",
       "type": "project",
       "name": "LobeChat (LobeHub)",
-      "description": "Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment",
+      "description": "Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents",
       "tags": [
-        "llm",
-        "self-hosted",
-        "agents"
+        "agents",
+        "orchestration",
+        "self-hosted"
       ],
       "path": "content/projects/agent-systems/lobe-chat.md",
       "url": "content/projects/agent-systems/lobe-chat",
       "last_updated": "2026-07-08",
       "category": "llms",
       "maturity": "production",
-      "cost_model": "self-hostable",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -12394,18 +12315,19 @@
       "id": "marqo",
       "type": "tool",
       "name": "Marqo",
-      "description": "Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline",
+      "description": "Deprecated open-source ecommerce search engine; the product now lives at marqo.ai",
       "tags": [
         "retrieval",
-        "embeddings",
-        "rag"
+        "cloud",
+        "data",
+        "featured"
       ],
       "path": "content/tools/data-ingestion/marqo.md",
       "url": "content/tools/data-ingestion/marqo",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
-      "cost_model": "open-source",
+      "maturity": "experimental",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -12547,21 +12469,17 @@
       "id": "maxkb",
       "type": "project",
       "name": "MaxKB",
-      "description": "Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration",
+      "description": "Open-source knowledge-base agent platform with built-in RAG chunking, a workflow engine and MCP tool use in one Docker image",
       "tags": [
-        "agents",
         "rag",
-        "retrieval",
-        "orchestration",
-        "self-hosted",
-        "tool-use"
+        "self-hosted"
       ],
       "path": "content/projects/agent-systems/maxkb.md",
       "url": "content/projects/agent-systems/maxkb",
       "last_updated": "2026-07-12",
       "category": "tooling",
-      "maturity": "production",
-      "cost_model": "open-source",
+      "maturity": "beta",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -12817,18 +12735,17 @@
       "id": "mem0",
       "type": "tool",
       "name": "Mem0",
-      "description": "Memory layer for AI agents and assistants with long-term user and session memory",
+      "description": "Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval",
       "tags": [
-        "memory",
-        "agents",
-        "rag"
+        "retrieval",
+        "embeddings"
       ],
       "path": "content/tools/orchestration/mem0.md",
       "url": "content/tools/orchestration/mem0",
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -12893,14 +12810,11 @@
       "id": "mempalace",
       "type": "project",
       "name": "MemPalace",
-      "description": "Open-source AI memory system for persistent agent context, recall, and memory-tool integrations",
+      "description": "Local-first memory system that stores conversation history verbatim and retrieves it with scoped semantic search",
       "tags": [
-        "agents",
         "memory",
         "retrieval",
-        "evaluation",
-        "tool-use",
-        "orchestration"
+        "local"
       ],
       "path": "content/projects/agent-systems/mempalace.md",
       "url": "content/projects/agent-systems/mempalace",
@@ -12915,12 +12829,10 @@
       "id": "memvid",
       "type": "project",
       "name": "Memvid",
-      "description": "A serverless, single-file memory layer for AI agents that encodes a knowledge base into a compact video-file format for fast semantic retrieval without a",
+      "description": "Single-file memory layer for agents that packs content, embeddings and search structure into an append-only sequence of Smart Frames",
       "tags": [
-        "agents",
-        "rag",
-        "embeddings",
-        "self-hosted"
+        "retrieval",
+        "embeddings"
       ],
       "path": "content/projects/agent-systems/memvid.md",
       "url": "content/projects/agent-systems/memvid",
@@ -13089,12 +13001,12 @@
       "id": "milvus",
       "type": "project",
       "name": "Milvus",
-      "description": "Cloud-native vector database for large-scale ANN search and production vector workloads",
+      "description": "Distributed vector database in Go and C++ with HNSW and DiskANN indexes plus a single-binary Lite mode",
       "tags": [
-        "rag",
-        "embeddings",
         "retrieval",
-        "kubernetes"
+        "data",
+        "kubernetes",
+        "self-hosted"
       ],
       "path": "content/projects/data-and-retrieval/milvus.md",
       "url": "content/projects/data-and-retrieval/milvus",
@@ -13207,9 +13119,8 @@
       "id": "mirascope",
       "type": "tool",
       "name": "Mirascope",
-      "description": "Lightweight Pythonic LLM toolkit: decorate normal functions into typed, provider-agnostic LLM calls with structured output, staying close to plain Python",
+      "description": "Decorator-based LLM interface with typed provider/model strings, Pydantic structured output and resumable tool loops",
       "tags": [
-        "orchestration",
         "structured-output",
         "llm"
       ],
@@ -13217,7 +13128,7 @@
       "url": "content/tools/orchestration/mirascope",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -13265,20 +13176,17 @@
       "id": "mistral-vibe",
       "type": "project",
       "name": "Mistral Vibe",
-      "description": "Mistral's open-source CLI coding assistant with subagents, delegated tasks, skills, and a voice mode",
+      "description": "Mistral's open-source terminal coding agent with subagent delegation, a trust-folder model and MCP support",
       "tags": [
         "code-gen",
-        "agents",
-        "orchestration",
-        "tool-use",
-        "voice"
+        "agents"
       ],
       "path": "content/projects/agent-systems/mistral-vibe.md",
       "url": "content/projects/agent-systems/mistral-vibe",
       "last_updated": "2026-07-19",
       "category": "code-generation",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -13362,20 +13270,17 @@
       "id": "ml-intern",
       "type": "project",
       "name": "ml-intern",
-      "description": "Hugging Face's autonomous ML engineer agent that reads papers and docs, trains models, and ships them through Inference Providers and the Hub",
+      "description": "Retired Hugging Face agent that researched, wrote and shipped ML code, now archived with its CLI and hosted app shut down",
       "tags": [
-        "agents",
-        "training",
-        "tool-use",
-        "research",
-        "huggingface"
+        "huggingface",
+        "agents"
       ],
       "path": "content/projects/agent-systems/ml-intern.md",
       "url": "content/projects/agent-systems/ml-intern",
       "last_updated": "2026-07-19",
       "category": "agents",
-      "maturity": "alpha",
-      "cost_model": "usage-based",
+      "maturity": "experimental",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -13644,14 +13549,10 @@
       "id": "mobileagent",
       "type": "project",
       "name": "Mobile-Agent",
-      "description": "Research family of multimodal mobile GUI agents that operate Android apps from screenshots using vision-language perception and planning",
+      "description": "Alibaba Tongyi Lab's GUI agent family pairing Mobile-Agent orchestration with GUI-Owl vision-language models",
       "tags": [
-        "agents",
         "multimodal",
-        "vision",
-        "planning",
-        "tool-use",
-        "research"
+        "agents"
       ],
       "path": "content/projects/agent-systems/mobileagent.md",
       "url": "content/projects/agent-systems/mobileagent",
@@ -13962,18 +13863,18 @@
       "id": "n8n",
       "type": "tool",
       "name": "n8n",
-      "description": "Source-available visual workflow automation platform with first-class AI-agent nodes and 400+ integrations",
+      "description": "Fair-code workflow automation canvas with AI nodes, custom code steps and 1500+ integrations",
       "tags": [
         "orchestration",
         "agents",
-        "tool-use"
+        "self-hosted"
       ],
       "path": "content/tools/orchestration/n8n.md",
       "url": "content/tools/orchestration/n8n",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -14018,20 +13919,17 @@
       "id": "nanobot",
       "type": "project",
       "name": "nanobot",
-      "description": "HKU Data Intelligence Lab's lightweight open-source agent for tool use, chats, and workflows, distributed as the nanobot-ai PyPI package",
+      "description": "Lightweight self-hosted Python agent runtime with WebUI, chat channels, MCP tools, memory and an OpenAI-compatible API in one small core",
       "tags": [
-        "agents",
-        "tool-use",
-        "orchestration",
-        "memory",
-        "community-favorite"
+        "self-hosted",
+        "agents"
       ],
       "path": "content/projects/agent-systems/nanobot.md",
       "url": "content/projects/agent-systems/nanobot",
       "last_updated": "2026-07-19",
       "category": "agents",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -14225,18 +14123,19 @@
       "id": "nomic-atlas",
       "type": "tool",
       "name": "Nomic Atlas",
-      "description": "Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation",
+      "description": "Python client for a hosted platform that maps, labels and searches embeddings interactively in a browser",
       "tags": [
         "embeddings",
         "data",
-        "multimodal"
+        "cloud",
+        "benchmark"
       ],
       "path": "content/tools/data-ingestion/nomic-atlas.md",
       "url": "content/tools/data-ingestion/nomic-atlas",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "production",
-      "cost_model": "freemium",
+      "maturity": "beta",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -14244,14 +14143,10 @@
       "id": "nono",
       "type": "project",
       "name": "nono",
-      "description": "Rust sandbox for isolating AI-agent execution with zero-setup positioning",
+      "description": "Rust sandbox from the Sigstore team that confines coding agents with least-privilege policy and no daemon or container",
       "tags": [
         "security",
-        "guardrails",
-        "agents",
-        "self-hosted",
-        "local",
-        "docker"
+        "agents"
       ],
       "path": "content/projects/agent-systems/nono.md",
       "url": "content/projects/agent-systems/nono",
@@ -14606,11 +14501,12 @@
       "id": "onyx",
       "type": "project",
       "name": "Onyx (formerly Danswer)",
-      "description": "Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval",
+      "description": "Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved",
       "tags": [
-        "rag",
+        "retrieval",
         "self-hosted",
-        "retrieval"
+        "agents",
+        "security"
       ],
       "path": "content/projects/data-and-retrieval/onyx.md",
       "url": "content/projects/data-and-retrieval/onyx",
@@ -14666,20 +14562,17 @@
       "id": "open-code-review",
       "type": "project",
       "name": "Open Code Review",
-      "description": "Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings",
+      "description": "Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments",
       "tags": [
-        "code-gen",
         "agents",
-        "evaluation",
-        "benchmark",
-        "battle-tested"
+        "llm"
       ],
       "path": "content/projects/agent-systems/open-code-review.md",
       "url": "content/projects/agent-systems/open-code-review",
       "last_updated": "2026-07-19",
       "category": "code-generation",
-      "maturity": "beta",
-      "cost_model": "usage-based",
+      "maturity": "production",
+      "cost_model": "open-source",
       "status": "active",
       "featured": false
     },
@@ -14895,11 +14788,10 @@
       "id": "openai-swarm",
       "type": "project",
       "name": "OpenAI Swarm",
-      "description": "An educational, lightweight framework from OpenAI exploring ergonomic multi-agent orchestration through simple agents and handoffs, precursor to the Agents SDK",
+      "description": "OpenAI's educational Python framework built on two primitives: an Agent and a handoff to another agent",
       "tags": [
         "agents",
-        "llm",
-        "self-hosted"
+        "llm"
       ],
       "path": "content/projects/agent-systems/openai-swarm.md",
       "url": "content/projects/agent-systems/openai-swarm",
@@ -16027,19 +15919,19 @@
       "id": "pinecone-vector-db",
       "type": "project",
       "name": "Pinecone",
-      "description": "Managed vector database service for production semantic search and RAG applications",
+      "description": "Official Python client for the Pinecone managed vector database, with a schema-declared document index as the current API",
       "tags": [
-        "rag",
-        "embeddings",
         "retrieval",
-        "cloud"
+        "cloud",
+        "data",
+        "rag"
       ],
       "path": "content/projects/data-and-retrieval/pinecone-vector-db.md",
       "url": "content/projects/data-and-retrieval/pinecone-vector-db",
       "last_updated": "2026-07-01",
       "category": "rag",
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -16263,18 +16155,17 @@
       "id": "portkey-gateway",
       "type": "project",
       "name": "Portkey AI Gateway",
-      "description": "A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability",
+      "description": "Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing",
       "tags": [
-        "observability",
-        "llm",
-        "self-hosted"
+        "routing",
+        "guardrails"
       ],
       "path": "content/projects/agent-systems/portkey-gateway.md",
       "url": "content/projects/agent-systems/portkey-gateway",
       "last_updated": "2026-07-12",
       "category": "observability",
-      "maturity": "production",
-      "cost_model": "open-source",
+      "maturity": "beta",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -16358,18 +16249,17 @@
       "id": "prefect",
       "type": "tool",
       "name": "Prefect",
-      "description": "Python workflow orchestration framework useful for AI data, eval, and batch jobs",
+      "description": "Python workflow framework where @flow and @task decorators add scheduling, caching and retries to plain scripts",
       "tags": [
-        "data",
         "orchestration",
-        "cloud"
+        "observability"
       ],
       "path": "content/tools/orchestration/prefect.md",
       "url": "content/tools/orchestration/prefect",
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -16783,11 +16673,10 @@
       "id": "pydantic-ai-tool",
       "type": "tool",
       "name": "Pydantic AI",
-      "description": "Pydantic agent framework focused on typed outputs, tools, and production Python apps",
+      "description": "Typed Python AI SDK with an agent loop, dependency injection, model swapping by string id, and a harness for long-running work",
       "tags": [
         "structured-output",
-        "agents",
-        "tool-use"
+        "embeddings"
       ],
       "path": "content/tools/orchestration/pydantic-ai-tool.md",
       "url": "content/tools/orchestration/pydantic-ai-tool",
@@ -17049,17 +16938,16 @@
       "id": "qwen-agent",
       "type": "project",
       "name": "Qwen-Agent",
-      "description": "Agent framework from the Qwen team for building tool-using, code-executing, and RAG agents that exploit Qwen's function calling and long context",
+      "description": "Alibaba's agent framework for Qwen models with RAG, code interpreter, MCP and a Gradio demo application",
       "tags": [
-        "agents",
-        "llm",
-        "rag"
+        "rag",
+        "retrieval"
       ],
       "path": "content/projects/agent-systems/qwen-agent.md",
       "url": "content/projects/agent-systems/qwen-agent",
       "last_updated": "2026-07-08",
       "category": "agents",
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -17727,18 +17615,17 @@
       "id": "redis-memory",
       "type": "tool",
       "name": "Redis",
-      "description": "In-memory data store commonly used for caching, session memory, queues, and vector search",
+      "description": "In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage",
       "tags": [
-        "memory",
-        "caching",
-        "retrieval"
+        "retrieval",
+        "llm"
       ],
       "path": "content/tools/orchestration/redis-memory.md",
       "url": "content/tools/orchestration/redis-memory",
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -17765,17 +17652,16 @@
       "id": "refact",
       "type": "project",
       "name": "Refact.ai",
-      "description": "An open-source AI coding agent that plans and executes engineering tasks end-to-end, integrating with developer tools and supporting self-hosted models",
+      "description": "Archived Rust coding agent that planned, executed and iterated on engineering tasks inside the IDE",
       "tags": [
-        "agents",
-        "llm",
-        "self-hosted"
+        "retrieval",
+        "agents"
       ],
       "path": "content/projects/agent-systems/refact.md",
       "url": "content/projects/agent-systems/refact",
       "last_updated": "2026-07-12",
       "category": "code-generation",
-      "maturity": "beta",
+      "maturity": "experimental",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -19413,14 +19299,10 @@
       "id": "sillytavern",
       "type": "project",
       "name": "SillyTavern",
-      "description": "Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts",
+      "description": "Local LLM front end unifying text, image and TTS backends with lorebooks, Visual Novel mode and a large extension ecosystem",
       "tags": [
-        "llm",
-        "local",
-        "self-hosted",
-        "memory",
-        "tool-use",
-        "community-favorite"
+        "multimodal",
+        "llm"
       ],
       "path": "content/projects/agent-systems/sillytavern.md",
       "url": "content/projects/agent-systems/sillytavern",
@@ -19574,18 +19456,17 @@
       "id": "skyvern",
       "type": "project",
       "name": "Skyvern",
-      "description": "LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors",
+      "description": "Vision-LLM browser automation with a Playwright-compatible SDK and a no-code workflow builder",
       "tags": [
         "agents",
-        "tool-use",
-        "vision"
+        "llm"
       ],
       "path": "content/projects/agent-systems/skyvern.md",
       "url": "content/projects/agent-systems/skyvern",
       "last_updated": "2026-07-08",
       "category": "agents",
       "maturity": "production",
-      "cost_model": "self-hostable",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -19988,17 +19869,19 @@
       "id": "stagehand",
       "type": "project",
       "name": "Stagehand",
-      "description": "Open-source browser-AI framework for reliable AI agent web interactions",
+      "description": "Browser agent SDK whose observe() returns real CSS selectors so credentials never reach the model",
       "tags": [
+        "tool-use",
+        "data",
         "agents",
-        "orchestration"
+        "local"
       ],
       "path": "content/projects/agent-systems/stagehand.md",
       "url": "content/projects/agent-systems/stagehand",
       "last_updated": "2026-07-01",
       "category": "agents",
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -20266,17 +20149,16 @@
       "id": "strands-agents",
       "type": "tool",
       "name": "Strands Agents SDK",
-      "description": "Open-source model-driven agent SDK from AWS: build agents from a model + tools + prompt with a native agentic loop, MCP support, and provider-agnostic models",
+      "description": "Model-driven agent SDK in Python and TypeScript that runs in your process with lifecycle limits, hooks, memory and tracing built in",
       "tags": [
         "agents",
-        "orchestration",
-        "tool-use"
+        "llm"
       ],
       "path": "content/tools/orchestration/strands-agents.md",
       "url": "content/tools/orchestration/strands-agents",
       "last_updated": "2026-07-08",
       "category": null,
-      "maturity": "beta",
+      "maturity": "production",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -20342,18 +20224,17 @@
       "id": "strix",
       "type": "project",
       "name": "Strix",
-      "description": "Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities",
+      "description": "Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits",
       "tags": [
         "agents",
-        "security",
-        "tool-use"
+        "security"
       ],
       "path": "content/projects/agent-systems/strix.md",
       "url": "content/projects/agent-systems/strix",
       "last_updated": "2026-07-07",
       "category": "agents",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "freemium",
       "status": "active",
       "featured": false
     },
@@ -20555,11 +20436,12 @@
       "id": "superagi",
       "type": "project",
       "name": "SuperAGI",
-      "description": "A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory",
+      "description": "Dev-first autonomous agent platform with a GUI, action console, toolkit marketplace and vector-backed memory",
       "tags": [
         "agents",
-        "llm",
-        "self-hosted"
+        "tool-use",
+        "self-hosted",
+        "docker"
       ],
       "path": "content/projects/agent-systems/superagi.md",
       "url": "content/projects/agent-systems/superagi",
@@ -20746,18 +20628,16 @@
       "id": "symphony",
       "type": "project",
       "name": "Symphony",
-      "description": "OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board",
+      "description": "OpenAI engineering preview that monitors a work tracker and spawns isolated agent runs that deliver pull requests with proof of work",
       "tags": [
         "agents",
-        "orchestration",
-        "planning",
-        "code-gen"
+        "observability"
       ],
       "path": "content/projects/agent-systems/symphony.md",
       "url": "content/projects/agent-systems/symphony",
       "last_updated": "2026-07-19",
       "category": "agents",
-      "maturity": "alpha",
+      "maturity": "experimental",
       "cost_model": "open-source",
       "status": "active",
       "featured": false
@@ -20766,11 +20646,10 @@
       "id": "tabby",
       "type": "project",
       "name": "Tabby",
-      "description": "Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations",
+      "description": "Self-hosted coding assistant that runs completion and chat on your own GPU with no DBMS or cloud dependency",
       "tags": [
-        "code-gen",
         "self-hosted",
-        "inference"
+        "agents"
       ],
       "path": "content/projects/agent-systems/tabby.md",
       "url": "content/projects/agent-systems/tabby",
@@ -20918,18 +20797,19 @@
       "id": "temporal",
       "type": "tool",
       "name": "Temporal",
-      "description": "Durable-execution platform that guarantees workflow completion — increasingly the reliability backbone under production AI agents",
+      "description": "Durable execution server that replays workflow history so long-running processes survive crashes",
       "tags": [
         "orchestration",
+        "self-hosted",
         "stateful",
-        "agents"
+        "docker"
       ],
       "path": "content/tools/orchestration/temporal.md",
       "url": "content/tools/orchestration/temporal",
       "last_updated": "2026-07-08",
       "category": null,
       "maturity": "production",
-      "cost_model": "freemium",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -20992,19 +20872,17 @@
       "id": "tensorzero",
       "type": "project",
       "name": "TensorZero",
-      "description": "An open-source LLMOps platform in Rust unifying an LLM gateway, observability, evaluation, and data-driven optimization into a feedback loop for improving LLM",
+      "description": "Rust LLMOps platform unifying a unified LLM gateway, observability, evaluation, optimization and experimentation in one deployment",
       "tags": [
         "observability",
-        "llm",
-        "evaluation",
-        "self-hosted"
+        "embeddings"
       ],
       "path": "content/projects/agent-systems/tensorzero.md",
       "url": "content/projects/agent-systems/tensorzero",
       "last_updated": "2026-07-12",
       "category": "observability",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "self-hostable",
       "status": "active",
       "featured": false
     },
@@ -21721,14 +21599,10 @@
       "id": "trpc-agent-go",
       "type": "project",
       "name": "trpc-agent-go",
-      "description": "Go framework for production agent systems with graph workflows, tools, memory, MCP, A2A, AG-UI, evaluation, and observability",
+      "description": "Go-native agent framework with graph workflows, session memory, A2A, AG-UI, MCP and OpenTelemetry built in",
       "tags": [
-        "agents",
-        "graphs",
-        "memory",
-        "tool-use",
-        "orchestration",
-        "observability"
+        "retrieval",
+        "agents"
       ],
       "path": "content/projects/agent-systems/trpc-agent-go.md",
       "url": "content/projects/agent-systems/trpc-agent-go",
@@ -21853,21 +21727,18 @@
       "id": "ui-tars-desktop",
       "type": "project",
       "name": "UI-TARS Desktop",
-      "description": "Open-source desktop application and agent stack for computer-use and browser automation driven by vision-language GUI-grounding models",
+      "description": "ByteDance multimodal agent stack shipping an MCP-based CLI and a native GUI agent for desktop control",
       "tags": [
         "agents",
-        "multimodal",
         "vision",
-        "tool-use",
-        "planning",
-        "local"
+        "tool-use"
       ],
       "path": "content/projects/agent-systems/ui-tars-desktop.md",
       "url": "content/projects/agent-systems/ui-tars-desktop",
       "last_updated": "2026-07-12",
       "category": "tooling",
       "maturity": "beta",
-      "cost_model": "open-source",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },
@@ -22031,11 +21902,10 @@
       "id": "upsonic",
       "type": "project",
       "name": "Upsonic",
-      "description": "A Python framework for building reliable autonomous agents with typed tasks, structured outputs, tool integration, and reliability-focused verification layers",
+      "description": "Python framework for autonomous and traditional agents with workspace-confined file and shell access plus a layered OCR interface",
       "tags": [
         "agents",
-        "llm",
-        "self-hosted"
+        "llm"
       ],
       "path": "content/projects/agent-systems/upsonic.md",
       "url": "content/projects/agent-systems/upsonic",
@@ -23751,18 +23621,17 @@
       "id": "zep",
       "type": "tool",
       "name": "Zep",
-      "description": "Memory and context engineering platform for AI agents and assistants",
+      "description": "Zep Cloud's examples and integration packages for temporal knowledge-graph agent memory, with the OSS engine in Graphiti",
       "tags": [
-        "memory",
         "agents",
-        "retrieval"
+        "evaluation"
       ],
       "path": "content/tools/orchestration/zep.md",
       "url": "content/tools/orchestration/zep",
       "last_updated": "2026-06-30",
       "category": null,
       "maturity": "production",
-      "cost_model": "open-source",
+      "cost_model": "usage-based",
       "status": "active",
       "featured": false
     },

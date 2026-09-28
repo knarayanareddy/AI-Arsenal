@@ -3,11 +3,11 @@ id: flowise
 name: "Flowise"
 type: tool
 job: [orchestration, prototyping]
-description: "Open-source drag-and-drop builder for chatbots, RAG, and multi-agent workflows on the JavaScript stack"
+description: "Archived Node.js visual builder for LangChain-style agent graphs, now superseded by the Flowise successor"
 url: "https://flowiseai.com"
-cost_model: freemium
+cost_model: open-source
 pricing_detail: "Apache-2.0 self-hosted free; Flowise Cloud from ~$35/mo"
-tags: [orchestration, agents, rag]
+tags: [orchestration, langchain]
 maturity: production
 stack: [typescript]
 free_tier: true
@@ -25,12 +25,8 @@ added_by: maintainer
 reviewed_by: maintainer
 phase: orchestration
 audience: [prototype]
-best_when:
-  - "Your team is Node.js-native and wants a visual agent/RAG builder that embeds easily into JS products"
-  - "You want prebuilt chat widgets/embeds so a working assistant can go into an app or site in hours"
-avoid_when:
-  - "Heavy Python-ecosystem dependencies (custom models, scientific libs) — Langflow fits the Python stack better"
-  - "Large-scale production agents with complex control flow; move to code-first frameworks as complexity grows"
+best_when: ["You are maintaining an existing Flowise installation and need the documented npm and Docker paths to keep patching the JSON flow definitions in place.", "You want a visual agent builder whose output is inspectable JSON and a swagger-documented Express API rather than an opaque hosted canvas.", "You are migrating off the archived repo and need to know which LangChain node patterns you have to rebuild elsewhere before the old container stops receiving fixes."]
+avoid_when: ["You are starting something new, because the README opens with a notice that Flowise has been archived and points to a separate Future of Flowise destination.", "You need ongoing features or upstream LangChain compatibility, because an archived repo means no new releases and no node updates for breaking library changes.", "You want a typed, testable definition of your agent graph, because a canvas-authored JSON flow gives you no unit-test surface and no static typing on the node contracts."]
 version_tracked: null
 enrichment_status: draft
 enrichment_notes: "Star count (54,424), license, and last push (2026-07-06) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
@@ -42,62 +38,58 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/FlowiseA
 
 ## Overview
 
-A visual LLM-app builder on Node.js: three builder modes (assistants, simple chatflows, and multi-agent agentflows) over LangChain.js components, with embeddable chat widgets, REST APIs, and self-hosting — a favorite for shipping customer-facing bots quickly.
+Flowise was a TypeScript visual builder for LLM applications: a React canvas where nodes covering LangChain primitives, vector stores, chat models and tools are wired into a DAG, persisted as JSON and served through an Express backend with swagger-ui API docs generated from the routes. The monorepo splits into server, ui, components (third-party node integrations) and api-documentation. It shipped as an npm global package, a Docker Compose stack and a single Docker image, with the Docker route needing a .env copied from .env.example.
 
 ## Why It's in the Arsenal
 
-Flowise earns a place in the Arsenal because it directly addresses a recurring decision point: your team is Node.js-native and wants a visual agent/RAG builder that embeds easily into JS products. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The decision it addressed was whether non-specialists could assemble a RAG or agent pipeline without writing Python. Dragging a retriever and a chain node onto a canvas removed the packaging and import boilerplate that stopped people at hello-world. That same choice is now the liability: the graph lives in a JSON document edited through a GUI, so it cannot be reviewed in a pull request, unit-tested, or refactored with the tools a team already uses.
 
 ## Key Features
 
-- Assistant, Chatflow, and Agentflow visual builders
-- Embeddable chat widget + REST/SDK access to every flow
-- 100+ integrations (vector stores, models, tools) via LangChain.js
+- Extremely low barrier to a first working pipeline for teams without a Python or LangChain background.
+- Flow definitions persist as JSON and expose an HTTP API, so a canvas build can be embedded without a Python host.
+- Docker Compose and single-image paths cover both developer laptops and shared internal deployments.
+- The monorepo separates node integrations into their own package, which kept the connector surface navigable at its size.
 
 ## Architecture / How It Works
 
-Flows serialize to JSON and execute on an Express backend instantiating LangChain.js components per node; agentflows add supervisor/worker orchestration, and the embed script drops a configurable chat UI onto any page pointing at your flow's endpoint.
+The React frontend renders the node graph and serialises it to JSON; the Express server loads that document, resolves each node's component from the components package, and executes the chain through LangChain.js primitives. Model, vector store and tool credentials arrive through environment variables defined in .env. Development required pnpm install followed by pnpm build, and the README warns that a Node heap out of memory error during build needs NODE_OPTIONS=--max-old-space-size=4096 before retrying.
 
 ## Getting Started
 
+The archived README still documents the full path. Global npm install is the shortest route:
+
 ```bash
-npm install -g flowise && npx flowise start
-# open localhost:3000 in a browser
+npm install -g flowise
+npx flowise start
 ```
+
+Docker Compose from the repo's docker directory with .env copied from .env.example, or a single container: `docker run -d --name flowise -p 3000:3000 flowise`.
 
 ## Use Cases
 
-1. **Scenario**: your team is Node.js-native and wants a visual agent/RAG builder that embeds easily into JS products
-2. **Scenario**: you want prebuilt chat widgets/embeds so a working assistant can go into an app or site in hours
-3. **Scenario where this is NOT the right fit**: heavy Python-ecosystem dependencies (custom models, scientific libs) — Langflow fits the Python stack better — evaluate an alternative instead
+1. Standing up an internal chatbot prototype where product or support staff assemble the flow themselves without a Python environment.
+2. Inspecting and hand-editing an existing canvas-authored flow JSON during a migration off the archived project.
+3. Serving a stable flow through the Express API for an embeddable widget, using the auto-generated swagger docs as the contract.
 
 ## Strengths
 
-- Your team is Node.js-native and wants a visual agent/RAG builder that embeds easily into JS products
-- You want prebuilt chat widgets/embeds so a working assistant can go into an app or site in hours
+It competed with Langflow and Dify in the visual LLM-app builder category, and with n8n in general workflow automation, and Flowise's differentiator was the tightest LangChain node coverage of the three. It overlaps with LangChain itself as the library whose primitives it composes rather than reimplements. Compared with Dify, Flowise leaned harder on a canvas-and-export model and less on an application runtime with its own database, which is a large part of why an archive notice landed where it did.
 
 ## Limitations / When NOT to Use
 
-- Heavy Python-ecosystem dependencies (custom models, scientific libs) — Langflow fits the Python stack better
-- Large-scale production agents with complex control flow; move to code-first frameworks as complexity grows
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+The repository is archived, which is the defining constraint: no new features, no security cadence you can rely on, and no node updates when LangChain.js makes breaking changes. The GitHub license field reports NOASSERTION, so redistribution terms need to be confirmed from the repository's own LICENSE text before any commercial embedding. Node 20.0.0 is the floor, and building from source in the monorepo needs an explicit heap-size bump, which is an early signal of how heavy the build is. A JSON graph authored in a GUI also gives you no diffs, no tests, and no compile-time checking on node contracts.
 
 ## Integration Patterns
 
-- Compare against `langflow`, `n8n`, `dify` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `flowise`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+This entry sits in content/tools/orchestration next to langflow, which is the live successor in the same visual-builder category, and near the agent frameworks in content/projects/frameworks whose primitives it composed. If you are still running it, the migration path runs through langflow or a code-first framework; use this entry to understand what your existing flows do, not as a recommendation to adopt it.
 
 ## Resources
 
-- [Official Site](https://flowiseai.com)
-- [Documentation](https://docs.flowiseai.com)
-- [GitHub](https://github.com/FlowiseAI/Flowise)
+- [GitHub — FlowiseAI/Flowise (archived)](https://github.com/FlowiseAI/Flowise)
+- [Docs — docs.flowiseai.com](https://docs.flowiseai.com)
+- [Future of Flowise announcement](https://github.com/FlowiseAI/Flowise/blob/main/docs/Future%20of%20Flowise.md)
 
 ## Buzz & Reception
 
-- 54,424 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
-
----
-*Last reviewed: 2026-07-08 by @maintainer*
+Gave non-Python teams a drag-and-drop canvas for RAG and agent chains that exported to JSON and served an Express API, before the project was archived.

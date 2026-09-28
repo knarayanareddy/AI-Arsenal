@@ -50,10 +50,10 @@ Before selecting a foundation model:
 - [DeepSeek-V3 / R1](./deepseek-v3-r1.md) — ⭐ 103749
 - [GPT-SoVITS](./gpt-sovits.md) — ⭐ 59564
 - [Segment Anything (SAM)](./segment-anything.md) — ⭐ 54527
-- [ChatTTS](./chattts.md) — ⭐ 39599
+- [ChatTTS](./chattts.md) — ⭐ 39874
 - [Bark](./bark.md) — ⭐ 39191
 - [OpenVoice](./openvoice.md) — ⭐ 36917
-- [CLIP (OpenAI)](./clip.md) — ⭐ 33936
+- [CLIP (OpenAI)](./clip.md) — ⭐ 34382
 - [VoxCPM](./voxcpm.md) — ⭐ 33194
 - [Fish Speech](./fish-speech.md) — ⭐ 31234
 
@@ -64,9 +64,9 @@ Before selecting a foundation model:
 - [Bark](./bark.md) — A transformer text-to-audio model from Suno that generates speech, non-speech sounds, music, and sound effects from text prompts via GPT-style audio tokens and
 - [BGE / FlagEmbedding (BAAI)](./bge-embeddings.md) — BAAI's open embedding and reranker family — BGE-M3's dense+sparse+multi-vector retrieval made it the default self-hosted choice for multilingual RAG
 - [RWKV-LM](./blinkdl-rwkv-lm.md) — RNN-architecture language model that trains in parallel and decodes one token at a time with no KV cache
-- [Chatterbox (Resemble AI)](./chatterbox.md) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
-- [ChatTTS](./chattts.md) — A generative speech model tuned for natural conversational dialogue in English and Chinese, with fine-grained prosody and laughter control tokens
-- [CLIP (OpenAI)](./clip.md) — OpenAI's contrastive image-text model — the shared embedding space that underlies zero-shot classification, image search, and the vision encoders of most VLMs
+- [Chatterbox (Resemble AI)](./chatterbox.md) — Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3
+- [ChatTTS](./chattts.md) — AGPL-3.0 dialogue-oriented TTS from 2noise with token-level prosody control, zero-shot speaker sampling and a streaming audio path
+- [CLIP (OpenAI)](./clip.md) — OpenAI's Contrastive Language-Image Pre-training model, MIT-licensed, aligning image and text encoders into one embedding space for zero-shot classification
 - [Command R+](./command-r-plus.md) — Cohere model family oriented toward enterprise RAG, tool use, and multilingual workflows
 - [CosyVoice](./cosyvoice.md) — Multilingual text-to-speech model family from Alibaba with zero-shot voice cloning, cross-lingual synthesis, and streaming generation
 - [DeepSeek-OCR](./deepseek-ocr.md) — DeepSeek vision-language OCR model studying optical context compression by encoding long text as compact vision tokens

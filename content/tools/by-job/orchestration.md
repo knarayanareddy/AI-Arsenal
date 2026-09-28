@@ -116,12 +116,12 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [ClearML](../model-layer/clearml.md) | model layer | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Cloudskill](../orchestration/cloudskill.md) | orchestration | paid | No | No | No | python | watching |
 | [Composio](../orchestration/composio.md) | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
-| [Dagster](../orchestration/dagster.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
-| [DocETL](../data-ingestion/docetl.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
+| [Dagster](../orchestration/dagster.md) | orchestration | freemium | Yes | Yes | Yes | python | recommended |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | usage-based | Yes | Yes | Yes | python | watching |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
-| [E2B](../orchestration/e2b.md) | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [E2B](../orchestration/e2b.md) | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Flowise](../orchestration/flowise.md) | orchestration | freemium | Yes | Yes | Yes | typescript | solid-choice |
+| [Flowise](../orchestration/flowise.md) | orchestration | open-source | Yes | Yes | Yes | typescript | solid-choice |
 | [Goose](../dx-and-tooling/goose.md) | dx and tooling | open-source | Yes | Yes | Yes | rust | recommended |
 | [Great Expectations (GX Core)](../data-ingestion/great-expectations.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
 | [Kimi K2.5](../model-layer/kimi-k2-5.md) | model layer | freemium | Yes | No | No | python | watching |
@@ -129,17 +129,17 @@ This table is exhaustive for tools tagged with job = orchestration.
 | [Manus](../orchestration/manus.md) | orchestration | paid | No | No | No | python | watching |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [Mirascope](../orchestration/mirascope.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
-| [n8n](../orchestration/n8n.md) | orchestration | freemium | Yes | Yes | Yes | typescript | recommended |
+| [n8n](../orchestration/n8n.md) | orchestration | self-hostable | Yes | Yes | Yes | typescript | recommended |
 | [Orca](../dx-and-tooling/orca.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Prefect](../orchestration/prefect.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Prefect](../orchestration/prefect.md) | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Pydantic AI](../orchestration/pydantic-ai-tool.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | freemium | Yes | No | No | typescript | watching |
 | [Ray](../serving-and-deployment/ray.md) | serving and deployment | open-source | Yes | Yes | Yes | python | recommended |
 | [SeaTicket](../orchestration/seaticket.md) | orchestration | freemium | Yes | No | No | python | watching |
 | [Strands Agents SDK](../orchestration/strands-agents.md) | orchestration | open-source | Yes | Yes | Yes | python | watching |
-| [Temporal](../orchestration/temporal.md) | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |
+| [Temporal](../orchestration/temporal.md) | orchestration | self-hostable | Yes | Yes | Yes | go, polyglot | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

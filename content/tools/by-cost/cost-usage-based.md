@@ -74,12 +74,16 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Claude Code](../dx-and-tooling/claude-code.md) | dx and tooling | prototyping | usage-based | No | No | No | typescript | best-in-class |
 | [Cloudflare Workers AI](../serving-and-deployment/cloudflare-workers-ai.md) | serving and deployment | production-serving | usage-based | Yes | No | No | typescript | solid-choice |
 | [Cohere](../model-layer/cohere.md) | model layer | production-serving | usage-based | Yes | Yes | No | python, polyglot | solid-choice |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | orchestration | usage-based | Yes | Yes | Yes | python | watching |
+| [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
+| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | usage-based | Yes | No | No | python | recommended |
 | [Fireworks AI](../serving-and-deployment/fireworks-ai.md) | serving and deployment | production-serving | usage-based | No | No | No | python, typescript | solid-choice |
 | [Fly.io](../serving-and-deployment/fly-io.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
 | [Google Vertex AI](../serving-and-deployment/google-vertex-ai.md) | serving and deployment | deployment | usage-based | Yes | No | No | polyglot | recommended |
 | [Groq](../model-layer/groq.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Hugging Face Inference Endpoints](../serving-and-deployment/hf-inference-endpoints.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python, typescript | recommended |
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | deployment, production-serving | usage-based | No | No | No | python | recommended |
+| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | usage-based | Yes | No | No | python | solid-choice |
 | [OpenAI Codex CLI](../dx-and-tooling/openai-codex-cli.md) | dx and tooling | prototyping | usage-based | No | No | Yes | rust | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
@@ -89,3 +93,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Together AI](../model-layer/together-ai.md) | model layer | production-serving, fine-tuning | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [XiuRouter](../serving-and-deployment/xiurouter.md) | serving and deployment | production-serving, prototyping | usage-based | No | No | No | polyglot | watching |
+| [Zep](../orchestration/zep.md) | orchestration | memory-management | usage-based | Yes | Yes | Yes | python, typescript | recommended |

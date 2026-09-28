@@ -51,12 +51,12 @@ Before adding an entry here, apply the Frame Decision gate from the projects-ver
 - [lerobot](./huggingface-lerobot.md) — ⭐ 27825
 - [Open R1 (Hugging Face)](./open-r1.md) — ⭐ 26399
 - [verl](./verl.md) — ⭐ 22377
+- [Agent Lightning](./agent-lightning.md) — ⭐ 18521
 - [Speech](./nvidia-nemo-speech.md) — ⭐ 18518
-- [Agent Lightning](./agent-lightning.md) — ⭐ 17381
 
 ### Browse All
 
-- [Agent Lightning](./agent-lightning.md) — A Microsoft framework for training and optimizing AI agents, including reinforcement learning, that decouples the training loop from any existing agent
+- [Agent Lightning](./agent-lightning.md) — Microsoft's roughly 3,500-line agentic RL framework that inserts a proxy between your agent and its model so a real harness can be trained without modification
 - [The Alignment Handbook (Hugging Face)](./alignment-handbook.md) — Hugging Face's reproducible post-training recipes — the exact configs and scripts behind Zephyr-class models for SFT, DPO, and ORPO on open weights
 - [Colossal-AI (HPC-AI Tech)](./colossalai.md) — Large-model training system bundling tensor, pipeline, and sequence parallelism plus ZeRO/offload behind one API for training past single-GPU memory
 - [DeepSpec](./deepspec.md) — DeepSeek's full-stack codebase for preparing data, training draft models, and evaluating speculative-decoding acceptance rates

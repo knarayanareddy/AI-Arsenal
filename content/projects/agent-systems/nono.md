@@ -29,22 +29,16 @@ name: nono
 artifact_type: platform
 category: tooling
 subcategory: platforms
-description: Rust sandbox for isolating AI-agent execution with zero-setup positioning
-github_url: https://github.com/nolabs-ai/nono
+description: "Rust sandbox from the Sigstore team that confines coding agents with least-privilege policy and no daemon or container"
+github_url: "https://github.com/nolabs-ai/nono"
 license: Apache-2.0
 primary_language: Rust
-tags:
-  - security
-  - guardrails
-  - agents
-  - self-hosted
-  - local
-  - docker
+tags: [security, agents]
 maturity: beta
 cost_model: open-source
-github_stars: 2975
-last_commit: '2026-07-10'
-docs_url: https://github.com/nolabs-ai/nono
+github_stars: 4262
+last_commit: "2026-09-28"
+docs_url: "https://nono.sh"
 phase: agent-system
 domain:
   - language
@@ -57,55 +51,60 @@ health_signals:
   - community-driven
 ecosystem_role:
   - A process and syscall sandbox candidate for constraining agent-created commands, files, network connections, and descendants.
-best_for:
-  - You need a local execution boundary around an agent’s shell, code, or tool process.
-  - You can test the sandbox on the target operating systems and define explicit allowed paths, commands, and network destinations.
-avoid_if:
-  - You need a cloud multi-tenant isolation guarantee without validating the host kernel and deployment mode.
-  - You cannot tolerate platform-specific behavior when a process daemonizes, uses seccomp, or accesses credentials.
+best_for: ["You run Claude Code, Codex, Pi, Copilot, Hermes or OpenCode on a workstation and want the agent's shell confined without paying a container image build.", "You need per-command policies plus scoped credential handling for an agent that will run against a real repository with real secrets.", "You want to publish a hardened agent profile to your team through the nono registry instead of maintaining a bespoke sandbox image."]
+avoid_if: ["You need a pre-1.0 stable API surface, because the README notes the project is stabilising APIs ahead of 1.0 and changes may still occur.", "Your automation already runs agents inside hardened containers and you would rather not maintain two isolation layers.", "You are still referencing packs under the always-further namespace, because the official registry namespace has moved to nolabs-ai and the old one will be retired."]
 enrichment_notes: Official repository, Apache-2.0 license, Rust implementation, and 2026-07-10 activity were reviewed on 2026-07-11. Isolation guarantees remain draft pending hands-on threat-model testing.
 ---
 
 ## Overview
 
-nono is a Rust sandbox for running AI-agent workloads with constrained process, filesystem, and network behavior. Its purpose is to put a policy boundary around code and commands that an agent wants to execute, rather than asking the model to decide whether its own tool call is safe.
+nono is a Rust agent sandbox from the team behind Sigstore, the attestation standard used by PyPI, npm, Homebrew and Maven Central. It enforces a least-privilege sandbox around an agent's shell with no daemon, no container, no VM and no disk footprint, on macOS, Linux and Windows under WSL2. The model is fork the config, adjust it, then share it through the nono registry as a pack, which is how team-wide policies propagate. Agents named in the README include Claude Code, Codex, Pi, CoPilot, Hermes, OpenCode and OpenClaw, and the cited production users are Datadog and Okta engineers.
 
 ## Why it's in the Arsenal
 
-Agent isolation is a separate problem from prompt injection detection. A model may be manipulated into requesting a dangerous command even when the command looks ordinary, so the host needs a second control point. nono is worth evaluating as a local sandbox, while its “zero setup” positioning should not be confused with a universal container or kernel isolation guarantee.
+The decision it removes is whether letting a coding agent run shell commands on your machine is acceptable. Every local coding agent has the credentials of the user running it, and a prompt-injected command can read a cloud config file or an SSH key. nono makes confinement a launch-time property rather than a code-review promise, with per-command policy so the agent can read the repo and nothing else, without the cold-start tax of a container.
 
 ## Architecture
 
-The Rust implementation uses operating-system process and syscall mechanisms, including supervisor behavior and seccomp-notify paths on supported systems, to mediate commands and descendants. The boundary can cover executable paths, filesystem access, network operations, and selected process behavior. The hard cases are the important ones: a child can daemonize or reparent, a permitted binary can access more than expected, and policy behavior differs by OS and kernel. Test these paths directly rather than validating only a successful shell command.
+The sandbox intercepts process execution and enforces a declarative allowlist keyed on the command, so a shell command that does not match policy fails before it runs rather than being caught afterwards. Credential handling is scoped: an agent can be given specific secrets without inheriting the ambient environment of the user. Because enforcement is done through the OS layer with no supervising daemon, startup is measured in seconds and there is no image to build or disk state to clean up. Packs distribute policy plus theming through the nono registry.
 
 ## Ecosystem Position
 
-nono sits below coding agents and tool runners as an execution boundary. It complements an agent framework, MCP gateway, or application-level policy engine, and competes with containers, sandboxed runners, and OS-specific isolation tools. The comparison should include escape resistance, startup cost, policy expressiveness, observability, and the consequence of a denied syscall.
+It competes with container and microVM agent sandboxes such as E2B and Docker-based agent runners, and the pitch is explicitly anti-container: zero latency to start and zero disk usage, where a sandboxed-execution service bills per session. It overlaps with content/projects/agent-systems entries whose threat model is agent code execution, and it complements the MCP and tool-serving entries in content/tools/serving-and-deployment by constraining what a served tool can reach. Compared with a CI-only containment story, nono is the local workstation layer, not a hosted service.
 
 ## Getting Started
 
-Run a harmless command, then test denied file, network, process, and credential paths in a disposable environment. Exercise child processes, backgrounding, symlinks, shell expansion, and cleanup. Record the kernel/OS, policy, supervisor logs, and actual process tree before granting access to real repositories or secrets.
+The install is a single script, or a Homebrew formula:
+
+```bash
+curl -fsSL https://nono.sh/install.sh | sh
+```
+
+Or `brew install nono`. Migrating off the retired namespace is `nono remove always-further/claude` followed by `nono pull nolabs-ai/claude`.
 
 ## Key Use Cases
 
-- Local coding-agent and tool execution with explicit filesystem and network constraints.
-- Testing whether an agent can operate inside a smaller, reviewable permission boundary.
+1. Untrusted repo triage: point a coding agent at a repository you just cloned and let it read code without exposing your shell credentials.
+2. Team policy distribution: publish a hardened pack to the registry so every engineer launches the agent under the same allowlist.
+3. CI-adjacent agent review: run an agent that proposes patches under a policy that permits edits in the worktree but blocks network egress and secret reads.
 
 ## Strengths
 
-- Places enforcement below model-generated tool decisions.
-- Rust implementation, Apache-2.0 licensing, and active security-focused development make the boundary inspectable.
+- Starts in seconds with no daemon, container, VM or disk footprint, so it does not slow down the interactive loop.
+- Per-command policy is granular enough to permit repo reads while denying credential paths, which a blunt container boundary cannot express.
+- Built by the Sigstore maintainers, so the team's day job is software supply-chain attestation rather than agent tooling.
+- Apache-2.0 with packs shareable through a registry rather than only as local config files.
 
 ## Limitations
 
-- Sandbox strength is platform- and configuration-dependent; a successful local test is not a multi-tenant security proof.
-- Restrictive policies can break legitimate toolchains, background processes, or model runtimes.
-- The operator still needs secret isolation, audit logging, patching, and a response plan for sandbox violations.
+APIs are still moving ahead of 1.0, and the README is explicit that changes may still occur, which is a real cost for a security control you intend to pin in CI. The registry namespace has already migrated once from always-further to nolabs-ai, so scripts and CI references need auditing and the old namespace will be retired. Being a local confinement layer, it does not by itself bound model spend, and its enforcement is local to the OS it supports, so Windows coverage is limited to WSL2. The credential-management story is the part that most needs your own review before you trust it with production keys.
 
 ## Relation to the Arsenal
 
-nono is an agent-system security component, not an agent framework. Pair it with least-privilege tool policy, MCP governance, and adversarial tests that assume the model may issue malicious or confused commands.
+This belongs in content/projects/agent-systems as the security boundary every other agent entry in this catalog implicitly assumes. Read it alongside the coding agents in content/tools/dx-and-tooling such as cline, openai-codex-cli and goose, and alongside hermes-agent if you run an always-on agent with shell access. It complements the MCP and tool-serving entries in content/tools/serving-and-deployment by constraining what a served tool can reach.
 
 ## Resources
 
-- [Official source](https://github.com/nolabs-ai/nono)
+- [GitHub — nolabs-ai/nono](https://github.com/nolabs-ai/nono)
+- [Site — nono.sh](https://nono.sh)
+- [Registry packs and profiles](https://nono.sh)

@@ -132,11 +132,11 @@ This table is exhaustive for tools tagged with job = memory-management.
 |---|---|---|---|---|---|---|---|
 | [Codebase Memory MCP](../dx-and-tooling/codebase-memory-mcp.md) | dx and tooling | open-source | Yes | Yes | Yes | cpp | use-with-caution |
 | [Letta](../orchestration/letta.md) | orchestration | open-source | Yes | Yes | Yes | python | recommended |
-| [Mem0](../orchestration/mem0.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | freemium | Yes | No | No | python | watching |
-| [Redis](../orchestration/redis-memory.md) | orchestration | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Redis](../orchestration/redis-memory.md) | orchestration | self-hostable | Yes | Yes | Yes | polyglot | recommended |
 | [TencentDB Agent Memory](../dx-and-tooling/tencentdb-agent-memory.md) | dx and tooling | open-source | Yes | Yes | Yes | typescript | watching |
-| [Zep](../orchestration/zep.md) | orchestration | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Zep](../orchestration/zep.md) | orchestration | usage-based | Yes | Yes | Yes | python, typescript | recommended |
 <!-- AUTO-GENERATED MATCHING TOOLS ABOVE — do not edit -->
 
 ## Use Cases

@@ -79,11 +79,11 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Jina AI Reader](../data-ingestion/jina-reader.md) | data ingestion | web-scraping | freemium | Yes | No | No | polyglot | recommended |
 | [OpenRouter](../model-layer/openrouter.md) | model layer | production-serving, prototyping | usage-based | Yes | No | No | typescript, python, polyglot | recommended |
 | [Railway](../serving-and-deployment/railway.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | polyglot | recommended |
-| [Redis](../orchestration/redis-memory.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | polyglot | recommended |
+| [Redis](../orchestration/redis-memory.md) | orchestration | memory-management | self-hostable | Yes | Yes | Yes | polyglot | recommended |
 | [RunPod](../serving-and-deployment/runpod.md) | serving and deployment | production-serving, deployment, fine-tuning | usage-based | No | No | No | python, polyglot | solid-choice |
 | [Scale AI](../data-ingestion/scale-ai.md) | data ingestion | data-labeling | paid | Yes | No | No | polyglot | recommended |
 | [Superpowers](../dx-and-tooling/superpowers.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | polyglot | recommended |
-| [Temporal](../orchestration/temporal.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |
+| [Temporal](../orchestration/temporal.md) | orchestration | orchestration | self-hostable | Yes | Yes | Yes | go, polyglot | recommended |
 | [Together AI](../model-layer/together-ai.md) | model layer | production-serving, fine-tuning | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [XiuRouter](../serving-and-deployment/xiurouter.md) | serving and deployment | production-serving, prototyping | usage-based | No | No | No | polyglot | watching |

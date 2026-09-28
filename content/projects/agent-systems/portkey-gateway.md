@@ -29,19 +29,16 @@ name: "Portkey AI Gateway"
 artifact_type: platform
 category: observability
 subcategory: platforms
-description: "A fast open-source AI gateway that routes requests to 1,600+ LLMs behind one API, with built-in guardrails, retries, fallbacks, caching, and observability"
-github_url: https://github.com/Portkey-AI/gateway
-license: "MIT"
-primary_language: "TypeScript"
-tags:
-  - "observability"
-  - "llm"
-  - "self-hosted"
-maturity: production
-cost_model: open-source
-github_stars: 12403
+description: "Open-source AI gateway routing to 1,600+ language, vision, audio and image models with retries, fallbacks, guardrails and load balancing"
+github_url: "https://github.com/Portkey-AI/gateway"
+license: MIT
+primary_language: TypeScript
+tags: [routing, guardrails]
+maturity: beta
+cost_model: freemium
+github_stars: 13098
 last_commit: "2026-05-25"
-docs_url: https://portkey.ai/docs
+docs_url: "https://portkey.wiki/gh-1"
 phase: agent-system
 domain:
   - "language"
@@ -53,52 +50,61 @@ health_signals:
   - "org-backed"
 ecosystem_role:
   - "A unified LLM gateway that routes across many providers with reliability and guardrail features."
-best_for:
-  - "You want one API over many LLM providers with fallbacks, retries, caching, and load balancing"
-  - "You need integrated guardrails and observability at the gateway layer for production LLM traffic"
-avoid_if:
-  - "You call a single provider and need no routing, guardrails, or fallback logic"
-  - "You want a full LLMOps optimization loop rather than a routing/reliability gateway"
+best_for: ["You are integrating a first model provider in minutes and you want a single base URL with a provider-neutral request shape, because the quickstart is a single npx command and a two-minute integration claim.", "You need automatic retries, fallbacks and conditional routing so a provider outage or rate limit does not surface as an application error.", "You want guardrails in the request path, because the project ships a guardrail catalogue alongside routing and an MCP gateway for tool servers."]
+avoid_if: ["You need the current enterprise feature set in the open-source build, because the README says the core enterprise gateway is merging into open source with a 2.0 release and points at a pre-release branch for that.", "You want an open-source license for a commercial product without conditions, because the repository is MIT but the hosted gateway and enterprise features are separately commercial.", "You are serving a single provider on a single workload where a direct SDK call would do, because a gateway is a hop and a dependency you now have to operate."]
 enrichment_notes: "Repository, MIT license, and 2026-05-25 activity verified via the GitHub API on 2026-07-12. Adds a hop in the request path; account for its latency and availability."
 ---
 
 ## Overview
 
-Portkey AI Gateway is a fast, open-source gateway that fronts many LLM providers, over 1,600 models, behind a single unified API. It adds production reliability and control at the routing layer: automatic retries, fallbacks and load balancing across providers, semantic and simple caching, integrated guardrails, and request-level observability, so applications get resilience and governance without provider-specific code.
+The Portkey AI Gateway is an open-source, enterprise-ready routing layer for language, vision, audio and image models, described as reaching 1,600+ models through one API with an integration path of under two minutes. Its functional set covers automatic retries and fallbacks to prevent downtime, load balancing and conditional routing to scale applications, guardrails to protect deployments, multi-modal support beyond text, agentic workflow integrations, and an MCP Gateway that manages MCP servers with enterprise auth and observability. The quickstart runs the gateway locally with npx, after which the API is served on a local port with a separate console surface. A pre-release 2.0 branch is where the previously closed-source enterprise gateway core is being merged into the open repository.
 
 ## Why it's in the Arsenal
 
-As soon as an app depends on external LLMs, routing, fallback, caching, and guardrails become production necessities, and Portkey is a leading open gateway delivering them, making it a valuable observability/serving entry.
+The decision it removes is how many places your application has to know about model providers. Without a gateway, every provider difference in request shape, error taxonomy, retry semantics and streaming behaviour is code in your service, and adding a fallback provider is an afternoon of new branches. A gateway makes those policies declarative: retries, fallbacks, load balancing and conditional routing become configuration, and a provider outage becomes a routing event rather than a page. The guardrail catalogue is the second decision, since input and output checks are otherwise a separate service in the request path.
 
 ## Architecture
 
-The gateway is a lightweight TypeScript service (deployable at the edge) that accepts an OpenAI-style request, applies a configurable routing policy, retries, provider fallbacks, weighted load balancing, then forwards to the chosen provider through a unified schema. It layers a caching store, a guardrails pipeline that can validate or transform inputs/outputs, and logging/metrics for each request, exposing observability while keeping the hot path fast.
+The gateway is a TypeScript service that terminates a single OpenAI-compatible API on one port and fans requests out to the configured provider based on routing rules. Around the proxy sit the policy layers: automatic retries absorb transient provider errors, fallbacks move traffic to a secondary model when the primary fails, load balancing distributes across endpoints, and conditional routing selects a model on request attributes. Guardrails evaluate requests and responses inline, and the MCP Gateway component proxies tool servers with auth and observability attached, which is what lets a tool call inherit the same routing and logging as a model call. A console is served alongside the API for inspecting traffic and configuration. The 2.0 architecture moves the enterprise core, including its proxy and caching layers, into the open repository on a pre-release branch, so the current main branch and the 2.0 branch are not the same product.
 
 ## Ecosystem Position
 
-Portkey competes with LiteLLM, Cloudflare AI Gateway, and TensorZero, differentiating on breadth of providers plus integrated guardrails and edge deployability. Compared with a bare proxy it adds reliability and governance features, and compared with a full optimization platform it focuses on routing, guardrails, and observability rather than a training/optimization loop, so it complements evaluation tools.
+The gateway space has several credible occupants and the README's own framing is the axis: Portkey ships 1,600+ models with a guardrail catalogue, LiteLLM's proxy offers a similarly broad routing layer, and the TensorZero entry in this same batch leads with a single self-hosted unified API and sub-millisecond overhead. It competes most directly with those proxies and overlaps with the agent frameworks in content/projects/framework only where they route model calls. The MCP Gateway component is the overlap that matters with the MCP-related entries, since a gateway that terminates tool traffic sits between your agent and its tool servers. Compared with calling a provider SDK directly, a gateway costs a network hop and a service to operate, which is the trade the routing policies are paying for.
 
 ## Getting Started
 
-Run the gateway (npm, Docker, or edge deploy), point your OpenAI-compatible client at it with provider keys and a routing config specifying fallbacks/retries/caching, then view request logs and metrics; guardrails are configured per route.
+Run the gateway from npm and point any OpenAI-compatible client at the local endpoint:
+
+```bash
+# needs Node.js and npm
+npx @portkey-ai/gateway
+```
+
+The API then answers on `http://localhost:8787/v1` and a console is available under the console path on the same host. Add a provider key and a routing rule through the console or config, and the 2.0 pre-release branch is where the enterprise core currently lives if you need it.
 
 ## Key Use Cases
 
-Unified multi-provider LLM access; fallbacks and retries for reliability; caching to cut cost/latency; gateway-level guardrails and request observability.
+1. Provider failover: configure a fallback chain so a primary model rate-limits or goes down and requests continue against a secondary with retries in between.
+2. Multi-provider rollout: route by model or by request attribute so a new provider gets a percentage of traffic while the old one drains.
+3. Governed MCP tool access: front your MCP servers with the gateway so tool calls inherit auth, logging and the same observability as model calls.
 
 ## Strengths
 
-Broad provider coverage, reliability features (retries, fallbacks, load balancing), caching, integrated guardrails, request observability, edge deployability, and an MIT license.
+- Very broad model catalogue behind one provider-neutral API, so integration really is close to a two-minute job for a first provider.
+- Retries, fallbacks, load balancing and conditional routing are configuration, which moves reliability policy out of application code.
+- Guardrails live in the request path rather than beside it, so a policy check is not another service to wire up.
+- MIT-licensed core with a console for inspecting traffic, and a documented path for the enterprise gateway to merge into open source.
 
 ## Limitations
 
-It introduces a hop whose latency and availability must be managed, it focuses on routing/reliability rather than a full optimization loop, and guardrail effectiveness depends on configuration.
+The repository is mid-merge: the README is explicit that the core enterprise gateway is shipping as a pre-release 2.0 branch, so the open main branch and the branch most users are pointed at are not the same feature set, and pinning to main may mean missing capabilities you expect from the marketing. Hosted gateway and enterprise features are commercial, so the open-source artifact is the routing core rather than the managed product. Routing through a gateway adds latency and another failure domain, and provider-specific features that do not map onto the unified API shape are necessarily flattened or lost. Model catalogue breadth is a maintenance liability: provider APIs change, and the catalogue is only as good as the team's ability to track them.
 
 ## Relation to the Arsenal
 
-It is a reliability-focused gateway alongside the other gateway and observability entries in the catalog.
+This is the routing entry for content/projects/agent-systems and the component that sits in front of whichever inference backend you choose from content/projects/inference-engines. Compare it directly with the tensorzero entry in this batch, since both solve provider routing and differ in emphasis: catalogue breadth plus guardrails here, a single self-hosted unified API plus a data-driven optimization loop there. Its MCP Gateway overlaps with the MCP-protocol entries in the same phase, which you would otherwise run separately. The observability and guardrail surface also meets the eval and tracing entries in content/projects/evaluation-and-observability, which is where you would measure whether the routing policies helped.
 
 ## Resources
 
-- [GitHub repository](https://github.com/Portkey-AI/gateway)
-- [Documentation](https://portkey.ai/docs)
+- [GitHub — Portkey-AI/gateway](https://github.com/Portkey-AI/gateway)
+- [Documentation — portkey.wiki](https://portkey.wiki/gh-1)
+- [AI Gateway product page](https://portkey.ai/features/ai-gateway)

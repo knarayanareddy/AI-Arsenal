@@ -66,6 +66,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | freemium | Yes | Yes | Yes | java, python | solid-choice |
-| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | self-hostable | Yes | Yes | Yes | java | solid-choice |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | open-source | Yes | Yes | Yes | java, python | solid-choice |
+| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | java | solid-choice |
 | [Vespa](../data-ingestion/vespa.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | java, cpp | solid-choice |

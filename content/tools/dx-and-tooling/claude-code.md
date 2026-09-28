@@ -3,11 +3,11 @@ id: claude-code
 name: "Claude Code"
 type: tool
 job: [prototyping]
-description: "Anthropic's terminal-based agentic coding assistant that edits files, runs commands, and works across whole repositories"
+description: "Anthropic's terminal coding agent, distributed as a CLI that reads a repository, edits files, runs commands and handles git work from natural language"
 url: "https://code.claude.com/docs"
 cost_model: usage-based
 pricing_detail: "Requires a Claude subscription (Pro/Max) or Anthropic API key; billed by usage"
-tags: [code-gen, agents, tool-use, anthropic]
+tags: [agents, code-gen, tool-use, anthropic]
 maturity: production
 stack: [typescript]
 free_tier: false
@@ -15,7 +15,7 @@ free_tier_limits: null
 self_hostable: false
 open_source: false
 source_url: "https://github.com/anthropics/claude-code"
-docs_url: "https://code.claude.com/docs"
+docs_url: "https://code.claude.com/docs/en/overview"
 github_url: "https://github.com/anthropics/claude-code"
 alternatives: [aider, openai-codex-cli, gemini-cli]
 integrates_with: []
@@ -25,12 +25,8 @@ added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
 audience: [prototype, production]
-best_when:
-  - "You want a terminal-native agentic coding loop (read repo, edit files, run tests, iterate) with strong multi-file reasoning"
-  - "Your team already pays for Claude and wants deep integrations: MCP servers, hooks, subagents, and reusable skills"
-avoid_when:
-  - "You need an open-source or self-hostable assistant for compliance — the agent loop and model are closed"
-  - "You want IDE-embedded inline completions rather than a conversational terminal agent"
+best_when: ["You want repository-wide changes with real tool access and you would rather start from a vendor's own agent than assemble a harness around a raw model API.", "You are standardising on one coding agent across a team and you want plugins for custom commands, subagents and hooks distributed from a documented directory rather than per-developer shell aliases.", "You want to report or triage issues from inside the session, because the /bug command submits feedback without leaving the terminal."]
+avoid_when: ["You need an open-source agent you can fork and audit, because this repository carries no licence file and the API is a commercial product rather than source you can modify.", "You cannot send your code to a hosted model, because the tool is built around Anthropic's API and the README describes collecting usage data, conversation data and /bug feedback.", "You are scripting the agent as a library inside your own service, because the published surface is a CLI plus plugins, with no embeddable engine."]
 version_tracked: null
 enrichment_status: draft
 enrichment_notes: "Star count (136,859), license, and last push (2026-07-08) verified via the GitHub API on 2026-07-08. Feature claims are from official docs; not yet hands-on verified here."
@@ -42,62 +38,59 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/anthropi
 
 ## Overview
 
-A command-line agentic coding tool from Anthropic: you converse with it in the terminal, and it plans, edits files, runs shell commands and tests, and iterates until the task is done, with permissions gating each capability.
+Claude Code is Anthropic's agentic coding tool, distributed as the `@anthropic-ai/claude-code` package and a native installer, written in TypeScript and run from a terminal with IDE integration. The repository is deliberately thin: install instructions for macOS and Linux via a shell installer, a Homebrew cask, Windows via PowerShell and WinGet, a plugins directory documented separately, issue reporting through the `/bug` slash command or GitHub issues, and a data-collection section describing what feedback is captured. Node.js 18+ is the stated floor. The npm path is now marked deprecated in favour of the installer, which is the clearest signal that the distribution model is still moving. Functionally the tool covers the standard loop the README describes: understanding a codebase, executing routine tasks, explaining complex code, and handling git workflows through natural-language commands.
 
 ## Why It's in the Arsenal
 
-Claude Code earns a place in the Arsenal because it directly addresses a recurring decision point: you want a terminal-native agentic coding loop (read repo, edit files, run tests, iterate) with strong multi-file reasoning. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The decision it removes is whether a coding agent is a product or a weekend project. The engineering here is the boring part that is hard to reproduce: deciding when to read rather than write, keeping an edit set reviewable, recovering from a bad command, and translating an intent into a git operation. The tradeoff is control and openness. You get a maintained agent with a plugin surface, and in exchange the loop is not yours, the licence is not permissive, and the model calls are metered.
 
 ## Key Features
 
-- Agentic loop with file edits, shell execution, and test-driven iteration
-- Extensible via MCP servers, hooks, subagents, and agent skills
-- Repository-scale context management (CLAUDE.md project memory)
+- The loop, the tool set and the model are maintained together, so there is no harness assembly step before the first useful run.
+- Works across terminal and IDE surfaces for the same session, so context is not lost when you move from a shell to an editor.
+- A documented plugins directory for custom commands, subagents and hooks, which is a supported extension point rather than a prompt convention.
+- In-session issue reporting through /bug, so a bug found while working is captured with the session rather than reconstructed later.
 
 ## Architecture / How It Works
 
-Runs an agent loop against Anthropic models: the model receives repo context and tool schemas (file read/write, bash, search), proposes tool calls, and the CLI executes them under a user-approval permission model. Project conventions persist in CLAUDE.md; skills and MCP servers extend the toolset.
+The published artefact is a client, not a framework, so the internal loop is not open. What is documented is the distribution and extension shape: a native installer or the npm package provides the `claude` binary, plugins under the repository's `plugins/` directory extend it with custom commands and agents, and `/bug` opens a feedback path that carries session context. The tool runs in your terminal and can be driven from an IDE, and it invokes git as an external process rather than reimplementing version control. There is no published server component or library entry point in this repository, which is why everything else in this phase that wraps a loop has to bring its own.
 
 ## Getting Started
 
+Use the native installer rather than npm, which the README marks deprecated, then run `claude` in a project directory:
+
 ```bash
-npm install -g @anthropic-ai/claude-code
-cd your-repo && claude
+curl -fsSL https://claude.ai/install.sh | bash
+# macOS alternative: brew install --cask claude-code
+cd /path/to/your/project && claude
 ```
+
+Windows uses `irm https://claude.ai/install.ps1 | iex` or `winget install Anthropic.ClaudeCode`.
 
 ## Use Cases
 
-1. **Scenario**: you want a terminal-native agentic coding loop (read repo, edit files, run tests, iterate) with strong multi-file reasoning
-2. **Scenario**: your team already pays for Claude and wants deep integrations: MCP servers, hooks, subagents, and reusable skills
-3. **Scenario where this is NOT the right fit**: you need an open-source or self-hostable assistant for compliance — the agent loop and model are closed — evaluate an alternative instead
+1. Repository-scoped refactor: describe a change that spans files and let the agent read the relevant code, edit it and run the build or tests, then review the diff in the terminal.
+2. Git workflow chores: ask for a branch, a commit message derived from the actual diff, or a rebase, without leaving the session you are working in.
+3. Codebase explanation: point it at an unfamiliar module and get an account of how the pieces connect, which is the cheapest use of the tool and the one that needs no setup.
 
 ## Strengths
 
-- You want a terminal-native agentic coding loop (read repo, edit files, run tests, iterate) with strong multi-file reasoning
-- Your team already pays for Claude and wants deep integrations: MCP servers, hooks, subagents, and reusable skills
+Claude Code is the reference implementation other coding agents in content/tools/dx-and-tooling are measured against, and it is a direct competitor to Cline, Codex and the provider-neutral terminal agents in content/projects/agent-systems, differing on the axis of who owns the loop and the model bill. It is an alternative to the MCP servers in the same phase, which contribute browser or DevTools capability to someone else's loop rather than being one, and to the agent frameworks in content/projects/frameworks, which you call from Python rather than run as a product. It complements content/projects/inference-engines only in the sense that a local model cannot serve it; if you need local inference for coding work, the harnesses in content/projects/agent-systems are the ones built for that.
 
 ## Limitations / When NOT to Use
 
-- You need an open-source or self-hostable assistant for compliance — the agent loop and model are closed
-- You want IDE-embedded inline completions rather than a conversational terminal agent
-
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+This repository is not the tool. It contains install instructions, a plugins folder, a bug-report path and a data-collection notice, so the agent's behaviour, prompt construction and tool policy are not inspectable or forkable, and the absence of a licence file means you cannot redistribute or modify it. It is a closed product on a metered API, which makes cost predictable only if you watch the session and awkward for anything batch or unattended. Data handling is a real consideration: the README states usage data, associated conversation data and /bug feedback are collected, and points to commercial terms and privacy policies for the detail, so code-sensitive work needs a deliberate decision rather than a default. The npm install path is already deprecated, and the plugin surface is the documented way to extend, which means anything you need beyond that is unsupported.
 
 ## Integration Patterns
 
-- Compare against `aider`, `openai-codex-cli`, `gemini-cli` before adopting — they compete for the same job in this phase.
-- Link this tool from job guides using its canonical ID `claude-code`.
-- Record pricing, hosting, and data-retention assumptions before production adoption.
+This is the anchor entry in content/tools/dx-and-tooling and the loop that the other tools in the same phase extend: chrome-devtools-mcp contributes browser instrumentation, and the MCP servers you register with it are the extension surface. Read it beside the open-source harnesses in content/projects/agent-systems when the question is whether to accept a vendor loop or run your own, and beside the frameworks in content/projects/frameworks when the question is whether you need a programmable agent rather than an interactive one. Model choice itself belongs to content/projects/foundation-models, and nothing in this phase makes local inference available to this particular tool.
 
 ## Resources
 
-- [Official Site](https://code.claude.com/docs)
-- [Documentation](https://code.claude.com/docs)
-- [GitHub](https://github.com/anthropics/claude-code)
+- [GitHub — anthropics/claude-code](https://github.com/anthropics/claude-code)
+- [Official documentation — code.claude.com](https://code.claude.com/docs/en/overview)
+- [Plugins directory documentation](https://github.com/anthropics/claude-code/blob/main/plugins/README.md)
 
 ## Buzz & Reception
 
-- 136,859 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
-
----
-*Last reviewed: 2026-07-08 by @maintainer*
+Supplies the loop most coding-agent entries in this phase wrap: repository-aware edits, command execution and git work in one binary with the model already chosen.

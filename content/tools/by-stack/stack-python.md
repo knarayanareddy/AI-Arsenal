@@ -76,7 +76,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [AGNT.Hub](../orchestration/agnt-hub.md) | orchestration | orchestration, security-and-guardrails | paid | No | No | No | python | watching |
 | [AI Infra Guard](../evaluation-and-observability/ai-infra-guard.md) | evaluation and observability | security-and-guardrails, evaluation | open-source | Yes | Yes | Yes | python | use-with-caution |
 | [Aider](../dx-and-tooling/aider.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | freemium | Yes | Yes | Yes | java, python | solid-choice |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | open-source | Yes | Yes | Yes | java, python | solid-choice |
 | [Apache Airflow](../orchestration/airflow.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
 | [any-agent](../orchestration/any-agent.md) | orchestration | orchestration, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Anyscale](../serving-and-deployment/anyscale.md) | serving and deployment | deployment, production-serving | usage-based | Yes | No | No | python | solid-choice |
@@ -96,17 +96,17 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Composio](../orchestration/composio.md) | orchestration | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
 | [Conan](../evaluation-and-observability/conan.md) | evaluation and observability | monitoring, tracing | paid | No | No | No | python | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | python | recommended |
-| [Dagster](../orchestration/dagster.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Dagster](../orchestration/dagster.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Deepchecks](../evaluation-and-observability/deepchecks.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | solid-choice |
 | [DeepSpeed](../model-layer/deepspeed.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python, cpp | recommended |
 | [dlt](../data-ingestion/dlt.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
-| [DocETL](../data-ingestion/docetl.md) | data ingestion | orchestration | open-source | Yes | Yes | Yes | python | watching |
+| [DocETL](../data-ingestion/docetl.md) | data ingestion | orchestration | usage-based | Yes | Yes | Yes | python | watching |
 | [DVC](../model-layer/dvc.md) | model layer | model-registry | open-source | Yes | Yes | Yes | python | recommended |
-| [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [E2B](../orchestration/e2b.md) | orchestration | orchestration | usage-based | Yes | Yes | Yes | typescript, python, go | recommended |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | orchestration, deployment | freemium | Yes | No | No | python | watching |
 | [EvalScope](../evaluation-and-observability/evalscope.md) | evaluation and observability | evaluation | open-source | Yes | Yes | Yes | python | recommended |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | recommended |
-| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | freemium | Yes | No | No | python | recommended |
+| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | usage-based | Yes | No | No | python | recommended |
 | [FAISS](../data-ingestion/faiss.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | cpp, python | best-in-class |
 | [FastAPI](../serving-and-deployment/fastapi.md) | serving and deployment | prototyping, production-serving | open-source | Yes | Yes | Yes | python | recommended |
 | [FastEmbed](../model-layer/fastembed.md) | model layer | vector-search | open-source | Yes | Yes | Yes | python | recommended |
@@ -154,10 +154,10 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Manus](../orchestration/manus.md) | orchestration | prototyping, orchestration | paid | No | No | No | python | watching |
 | [marimo](../dx-and-tooling/marimo.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [MarkItDown](../data-ingestion/markitdown.md) | data ingestion | web-scraping, data-labeling | open-source | Yes | Yes | Yes | python | solid-choice |
-| [Marqo](../data-ingestion/marqo.md) | data ingestion | vector-search | open-source | Yes | Yes | Yes | python | solid-choice |
+| [Marqo](../data-ingestion/marqo.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | python | solid-choice |
 | [MCP Context Forge](../serving-and-deployment/mcp-context-forge.md) | serving and deployment | production-serving, orchestration, monitoring, security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
 | [Megatron-LM](../model-layer/megatron-lm.md) | model layer | fine-tuning | open-source | Yes | Yes | Yes | python | solid-choice |
-| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | memory-management | freemium | Yes | No | No | python | watching |
 | [Mesop](../dx-and-tooling/mesop.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python | recommended |
 | [MinerU](../data-ingestion/mineru.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
@@ -167,7 +167,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Modal](../serving-and-deployment/modal.md) | serving and deployment | deployment, production-serving | usage-based | No | No | No | python | recommended |
 | [Monako Glass](../evaluation-and-observability/monako-glass.md) | evaluation and observability | monitoring, evaluation | paid | No | No | No | python | watching |
 | [NeMo Guardrails](../evaluation-and-observability/nemo-guardrails.md) | evaluation and observability | security-and-guardrails | open-source | Yes | Yes | Yes | python | recommended |
-| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | freemium | Yes | No | No | python | solid-choice |
+| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | usage-based | Yes | No | No | python | solid-choice |
 | [NVIDIA NIM](../serving-and-deployment/nvidia-nim.md) | serving and deployment | production-serving, deployment | paid | Yes | Yes | No | python, cpp | solid-choice |
 | [olmOCR](../data-ingestion/olmocr.md) | data ingestion | data-labeling | open-source | Yes | Yes | Yes | python | recommended |
 | [Open WebUI](../dx-and-tooling/open-webui.md) | dx and tooling | prototyping | open-source | Yes | Yes | Yes | python, typescript | best-in-class |
@@ -182,7 +182,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | vector-search | freemium | Yes | No | No | python, typescript | recommended |
 | [Playwright](../data-ingestion/playwright.md) | data ingestion | web-scraping | open-source | Yes | Yes | Yes | typescript, python | recommended |
 | [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | prompt-management, monitoring | freemium | Yes | No | No | python, typescript | recommended |
-| [Prefect](../orchestration/prefect.md) | orchestration | orchestration | open-source | Yes | Yes | Yes | python | recommended |
+| [Prefect](../orchestration/prefect.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Prodigy](../data-ingestion/prodigy.md) | data ingestion | data-labeling | paid | Yes | No | No | python | recommended |
 | [Prompt flow (Microsoft)](../orchestration/promptflow.md) | orchestration | orchestration, evaluation | open-source | Yes | Yes | Yes | python | solid-choice |
 | [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
@@ -227,4 +227,4 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Voyage AI](../model-layer/voyage-ai.md) | model layer | production-serving | usage-based | Yes | No | No | python, polyglot | recommended |
 | [Weights & Biases Weave](../evaluation-and-observability/wandb-weave.md) | evaluation and observability | tracing, evaluation | freemium | Yes | No | No | python | solid-choice |
 | [Weights & Biases](../model-layer/weights-biases.md) | model layer | model-registry, evaluation | freemium | Yes | No | No | python | recommended |
-| [Zep](../orchestration/zep.md) | orchestration | memory-management | open-source | Yes | Yes | Yes | python, typescript | recommended |
+| [Zep](../orchestration/zep.md) | orchestration | memory-management | usage-based | Yes | Yes | Yes | python, typescript | recommended |

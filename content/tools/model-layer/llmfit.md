@@ -11,6 +11,7 @@ tags: [edge, quantization, local, evaluation, inference]
 maturity: beta
 stack: [rust]
 free_tier: true
+free_tier_limits: "Free while in beta; no hosted seat cap."
 self_hostable: true
 open_source: true
 docs_url: "https://github.com/AlexsJones/llmfit"

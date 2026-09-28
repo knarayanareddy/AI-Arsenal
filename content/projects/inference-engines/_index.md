@@ -60,11 +60,11 @@ Before selecting an inference engine:
 ### Browse All
 
 - [9router](./9router.md) — Local OpenAI-compatible proxy that tiers provider calls and rewrites tool_result payloads before forwarding them upstream
-- [AIBrix](./aibrix.md) — Composable open-source infrastructure for self-hosted and cloud-scale generative AI inference
+- [AIBrix](./aibrix.md) — Cloud-native control plane from the vLLM project for deploying, routing, autoscaling and serving LLM inference on Kubernetes
 - [airllm](./airllm.md) — Runs 70B-plus checkpoints by streaming transformer layers from host RAM into a few GB of VRAM instead of quantizing weights
 - [tvm](./apache-tvm.md) — Compiler stack that lowers deep-learning graphs through tensor IR to code for CPUs, GPUs, and accelerators
-- [Candle](./candle.md) — Hugging Face's minimalist Rust ML framework — PyTorch-like tensor API compiling to small, Python-free binaries for serverless and embedded inference
-- [candle-vllm](./candle-vllm.md) — Rust-native local LLM inference and serving platform built on Hugging Face Candle with an OpenAI-compatible API
+- [Candle](./candle.md) — Rust machine-learning framework from Hugging Face built around a small Tensor type with CPU, CUDA, Metal and WASM backends and safetensors-native weight loading
+- [candle-vllm](./candle-vllm.md) — Rust LLM serving engine on Hugging Face's candle, with an OpenAI-compatible API, Web UI, PagedAttention, continuous batching and TurboQuant KV compression
 - [Handy](./cjpais-handy.md) — MIT-licensed Rust desktop app for fully offline Whisper-family speech-to-text, built as a Tauri v2 native client
 - [flash-attention](./dao-ailab-flash-attention.md) — BSD-3-Clause exact-attention kernels that avoid materializing the attention matrix, cutting memory and speeding up sequence length
 - [NVIDIA Dynamo](./dynamo.md) — Datacenter-scale distributed inference serving framework for large language and multimodal models

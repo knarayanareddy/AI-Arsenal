@@ -5,19 +5,19 @@ version_tracked: null
 artifact_type: platform
 category: rag
 subcategory: platforms
-description: Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
+description: "Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved"
 github_url: "https://github.com/onyx-dot-app/onyx"
-license: "MIT (core) with enterprise-licensed directory"
+license: NOASSERTION
 primary_language: Python
 org_or_maintainer: onyx-dot-app
-tags: [rag, self-hosted, retrieval]
+tags: [retrieval, self-hosted, agents, security]
 maturity: production
 cost_model: self-hostable
-github_stars: 30772
+github_stars: 32271
 github_stars_last_30d: 0
 trending_score: 62
-last_commit: "2026-07-08"
-docs_url: "https://docs.onyx.app/welcome"
+last_commit: "2026-09-28"
+docs_url: "https://onyx.app"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -27,12 +27,8 @@ relation_to_stack: [deploy-as-is, study-and-reference]
 health_signals: [actively-maintained, org-backed, production-proven]
 ecosystem_role:
   - "The leading open-source answer to Glean-style enterprise search: connector-first RAG where the hard problems are sync, document permissions, and freshness across dozens of workplace tools — not the chat layer"
-best_for:
-  - Your knowledge lives across Slack, Google Drive, Confluence, Jira, GitHub etc. and answers must respect per-user document permissions — Onyx's connector + permission-mirroring layer is the differentiator no chat-first RAG app has
-  - You want self-hosted "company brain" search with hybrid retrieval and citations without paying per-seat for a Glean-class SaaS
-avoid_if:
-  - Your corpus is a folder of files rather than SaaS tools — connector-first architecture is overhead there; AnythingLLM-style apps are simpler
-  - "You need every capability open-source: multi-tenancy and some enterprise auth features live in the enterprise-licensed directory"
+best_for: ["You need an assistant over the tools your team already uses, because Onyx connects to more than fifty applications and ingests data along with its metadata and permissions.", "You are an enterprise team that must self-host, because data sovereignty is the framing of the product and the deploy path is a single shell command.", "You want an agent to act in external systems rather than only read, since external actions and MCP are supported alongside a secure sandbox for code execution."]
+avoid_if: ["You need an OSI-approved licence for a self-hosted internal deployment, because the API reports the licence status as unasserted and that needs checking against the source before you commit.", "You are indexing one small corpus, because a fifty-connector platform with web search, sandboxes and artifacts is a lot of surface for a single document set.", "You want a retrieval engine rather than an application, because Onyx bundles the index, the agent harness, the chat surface and the integrations into one product."]
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: [anything-llm, open-webui]
@@ -52,48 +48,57 @@ status: active
 
 ## Overview
 
-Onyx (renamed from Danswer) is self-hosted enterprise search and chat: 40+ connectors continuously sync content from workplace tools into a hybrid search index, retrieval respects the source systems' document permissions per user, and a chat UI answers with citations. The pitch is Glean without the SaaS — your data, your infrastructure, open core.
+Onyx is positioned as the context layer for a team and for its AI agents. It connects to the applications an organisation already uses - more than fifty of them - pulls data along with metadata and permissions, and ingests it into a representation that can be queried. The architectural argument in the README is worth stating precisely: rather than having an agent coordinate dozens of MCP search calls and burn thousands of tokens iterating, Onyx fetches context from its internal representation in one pass and filters to the relevant ground-truth documents. The product surface is broader than search: agentic RAG on a hybrid index, a multi-step deep research flow, custom agents scoped to knowledge subsets with their own instructions and the ability to take actions, live web search through several providers plus an in-house crawler, a secure sandbox for code execution, downloadable artifacts, and voice mode. Any major LLM provider works, self-hosted or proprietary.
 
 ## Why it's in the Arsenal
 
-Enterprise RAG's actual hard problems are connectors, permission fidelity, and index freshness — not prompt chains — and Onyx is the most complete open-source implementation of that unglamorous layer (30k+ stars, active company backing). It's in the Arsenal as the deploy-as-is option for workplace search and as the reference for how permission-aware retrieval is engineered.
+The decision it addresses is permission-aware internal retrieval. A company assistant that reads everything is a compliance problem before it is a usefulness problem, so the ingestion layer has to carry the source system's access model rather than flattening it. Onyx makes permissions part of ingestion and claims that changes the retrieval story: a hybrid index plus a retrieval-tuned agent harness can answer from a prepared representation in one pass, which is both faster and far cheaper than an agent looping over search tools. The cost is consolidation - you are committing to one platform's index and its own agent harness rather than assembling retrieval from parts.
 
 ## Architecture
 
-Python backend with connector workers performing scheduled/incremental syncs per source; documents chunked and indexed into Vespa for hybrid (vector + keyword) retrieval; permission metadata mirrored from sources and enforced as retrieval-time filters per requesting user; chat layer with configurable LLM providers and assistants; deployed via Docker Compose or Kubernetes.
+Ingestion is the load-bearing component: connectors read from each source and carry metadata and permissions into a shared representation, which is what makes a single query layer able to enforce access. Retrieval is hybrid index plus a custom agent harness tuned for information retrieval rather than a generic agent loop, and the README's argument is that this single-pass fetch replaces iterative tool-calling search. Around that sit the agent surface with per-agent knowledge subsets and instructions, an action layer for external applications exposed through MCP, a sandbox for code and intermediate artefacts, and artifact generation. The model layer is provider-neutral, covering self-hosted endpoints and proprietary APIs alike, and deployment is a single command against your own infrastructure.
 
 ## Ecosystem Position
 
-Upstream: workplace SaaS APIs (the connector surface), Vespa for retrieval, any LLM provider for generation. Competing: Glean (SaaS incumbent), AnythingLLM/Open WebUI (document-chat, not connector-first). Its Vespa usage makes it a notable production reference for the `vespa` tool entry.
+Onyx competes directly with AnythingLLM, the other self-hosted workspace application in this batch, and the difference is scope: AnythingLLM is a workspace around documents you upload, while Onyx is a connector layer around systems you already run. It overlaps with the enterprise search products built on Elasticsearch-style indexes, but the agent harness and action layer are its own contribution. Compared with building a RAG stack from the vector stores in content/projects/data-and-retrieval plus a framework from content/projects/frameworks, Onyx is the integrated product and those are the components. It complements rather than replaces the MCP server tooling in content/tools/developer-experience, and its web search sits alongside the crawl4ai and Firecrawl entries in the ingestion phase.
 
 ## Getting Started
 
 ```bash
-git clone https://github.com/onyx-dot-app/onyx.git
-cd onyx/deployment/docker_compose
-docker compose -f docker-compose.dev.yml up -d
+# Docker is the supported path for a local run
+docker compose up -d
+
+# or run the backend and frontend directly from a checkout
+# backend
+python -m uvicorn backend.server.main:app --host 0.0.0.0 --port 3000
+# frontend
+npm run dev
 ```
+The compose file starts PostgreSQL, Redis, and the index, so budget for a few GB of RAM before you point it at a large corpus.
 
 ## Key Use Cases
 
-1. **Scenario**: company-wide question answering over Slack + Drive + Confluence + Jira where a support engineer must not retrieve documents HR restricted — permission mirroring is the requirement, not a nice-to-have
-2. **Scenario**: studying production RAG architecture — connector sync, hybrid indexing, and permission filtering as implemented by a system deployed at real enterprises
+1. Self-hosting an internal search and chat surface where documents must stay inside your network, using the indexed connectors rather than a third-party search SaaS.
+2. Answering questions with access control, where document-level permissions carry through indexing instead of being applied after retrieval.
+3. Keeping an index fresh as shared drives change, which the connector layer is built to handle without a manual re-upload.
 
 ## Strengths
 
-- Permission-aware retrieval across 40+ live connectors — the capability that separates enterprise search from document chat, and the hardest part to build in-house
-- Hybrid retrieval on Vespa with continuous incremental sync; open-core MIT with an actively-funded company behind maintenance
+- Self-hosted end to end, so a corpus that cannot go to a vendor never leaves the building.
+- Permissions are a first-class concern, carried from connector metadata into retrieval rather than bolted on afterwards.
+- Connector-driven ingestion means a new source is configuration, not a bespoke crawler.
+- The Docker path makes a first run cheap, which matters for a stack this size.
 
 ## Limitations
 
-- Operationally heavy: Vespa, Postgres, connector workers, and background sync jobs are a real platform to run — expect infrastructure investment, not a desktop app
-- Multi-tenancy and parts of enterprise auth sit behind the enterprise license; permission fidelity is only as good as each connector's mirroring implementation — verify per source before trusting it for sensitive data
+Running this properly wants real memory: self-hosted search over a large document set plus a database and a container runtime, which is why the quickstart leans on Docker. Connector coverage is the usual self-hosted tax, so a source without a maintained connector needs custom ingestion work before search sees it at all. Onyx competes directly with AnythingLLM in this catalog, and the two make different bets: Onyx spends its effort on permissions and document-level freshness, AnythingLLM on local-model chat over a folder. It is an application rather than a library, so there is nothing to import and every change goes through the UI or its API.
 
 ## Relation to the Arsenal
 
-The connector-first pole of the RAG-application spectrum — contrast `anything-llm` (document-first). Its retrieval layer is a production case study for the `vespa` entry in [tools/data-ingestion](../../tools/data-ingestion/_index.md), and the monitoring guidance in observability/ applies to its sync/freshness failure modes.
+This is a data-and-retrieval phase entry and the enterprise-integrated option in the folder, sitting next to anythingllm and mempalace in content/projects/agent-systems. Its retrieval is the hybrid index rather than a bare vector store, so read it against qdrant and milvus in the same folder if you are comparing the index layer itself. The agent harness makes the frameworks in content/projects/frameworks a comparison rather than a dependency. Upstream are the connectors to the systems it indexes; downstream sit the eval tooling in content/projects/benchmark-and-eval, because a permission-aware index still needs its answers measured on real questions.
 
 ## Resources
 
-- [GitHub](https://github.com/onyx-dot-app/onyx)
-- [Documentation](https://docs.onyx.app/welcome)
+- [GitHub - onyx-dot-app/onyx](https://github.com/onyx-dot-app/onyx)
+- [Project site](https://onyx.app)
+- [Deployment docs linked from the README](https://docs.onyx.app)

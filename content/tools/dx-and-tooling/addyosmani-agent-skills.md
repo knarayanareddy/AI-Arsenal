@@ -3,19 +3,19 @@ id: addyosmani-agent-skills
 name: Agent Skills (Addy Osmani)
 type: tool
 job: [prototyping]
-description: Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
+description: "Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents"
 url: "https://github.com/addyosmani/agent-skills"
 cost_model: open-source
 pricing_detail: Free and open source (MIT)
-tags: [agents, code-gen, planning]
-maturity: beta
+tags: [agents, observability]
+maturity: production
 stack: [polyglot]
 free_tier: true
 free_tier_limits: Fully free; no paid tier exists
 self_hostable: true
 open_source: true
 source_url: "https://github.com/addyosmani/agent-skills"
-docs_url: "https://github.com/addyosmani/agent-skills#readme"
+docs_url: "https://github.com/addyosmani/agent-skills/blob/main/docs/getting-started.md"
 github_url: "https://github.com/addyosmani/agent-skills"
 alternatives: []
 integrates_with: []
@@ -25,12 +25,8 @@ added_by: maintainer
 reviewed_by: maintainer
 phase: dx-and-tooling
 audience: [prototype, production]
-best_when:
-  - You want lifecycle discipline for a coding agent but with explicit, per-stage control — each of the 8 slash commands (/spec, /plan, /build, /test, /review, /webperf, /code-simplify, /ship) activates only the skills for that stage, so you invoke exactly the rigor you need
-  - You want a skills pack curated by one senior engineer with a consistent editorial voice, rather than a sprawling community collection of uneven quality
-avoid_when:
-  - You want the methodology to trigger automatically without per-stage commands — an auto-triggering framework fits that workflow better
-  - Your work is not web/software-product development — several skills (e.g. /webperf) assume that domain
+best_when: ["You want the same spec-first, test-driven, review-gated process in every coding agent you use, and you would rather check process into the repo than re-explain it per tool.", "Your team keeps re-teaching an agent that tests are the proof, that changes should be small, and that review happens before merge, and you want those rules enforced consistently across contributors.", "You are evaluating agent process packs and want a documented side-by-side against Superpowers and Matt Pocock's skills before adopting one, which the repository ships as docs/comparison.md."]
+avoid_when: ["You want runtime control, because these are plain Markdown instructions and nothing here executes, validates or blocks a step on your behalf.", "You plan to install a single skill through the per-skill command, because the README warns that path skips the repository-level references directory and leaves supplementary shared checklists unreachable.", "You are on an agent with no documented integration, because Cursor, Copilot and OpenCode each need manual placement of skill files and rule files in their own directories rather than a plugin install."]
 version_tracked: null
 enrichment_status: draft
 enrichment_notes: Star count (73.2k), MIT license, and active development (last push 2026-07-07) verified via the GitHub API on 2026-07-08; on GitHub daily trending the same day. Repo created 2026-02 by Addy Osmani (Google Chrome engineering lead). Skill content quality assessed from the README's documented command structure, not independently exercised here.
@@ -41,59 +37,60 @@ buzz_sources:
   - {"source":"github-trending","url":"https://github.com/trending?since=daily","date":"2026-07-08","description":"On GitHub daily and weekly trending; 73.2k stars"}
 ---
 
-> **TL;DR:** Addy Osmani's curated skills pack for coding agents: 8 slash commands mapping to the development lifecycle (spec → plan → build → test → review → ship, plus /webperf and /code-simplify), each activating the right skills and quality gates for that stage. MIT. Best when you want explicit per-stage control; pick an auto-triggering framework if you want zero-command methodology enforcement.
-
 ## Overview
 
-A collection of production-grade engineering skills for AI coding agents, packaged behind 8 lifecycle slash commands. Each command encodes the workflows and quality gates a senior engineer applies at that stage — spec before code, small atomic tasks, tests as proof, code-health review before merge — so the agent follows them consistently. An optional `/build auto` mode runs the whole plan autonomously after one human approval, pausing on failures.
+This repository packages engineering process as agent-readable skills. Each skill is a directory containing a SKILL.md with concrete steps, verification gates and what the author calls anti-rationalisation tables - patterns for the excuses an agent reaches for when it wants to skip a step. The catalogue follows the delivery lifecycle: defining work through interview-me, idea-refine and spec-driven-development; planning with planning-and-task-breakdown; building with incremental-implementation, test-driven-development, context-engineering, source-driven-development, doubt-driven-development, frontend-ui-engineering and api-and-interface-design; verifying with browser-testing-with-devtools and debugging-and-error-recovery; reviewing with code-review-and-quality, code-simplification, security-and-hardening and performance-optimization; and shipping with git-workflow-and-versioning, ci-cd-and-automation, deprecation-and-migration, documentation-and-adrs, observability-and-instrumentation and shipping-and-launch. A meta-skill maps incoming work to the right workflow, and separate agent personas for code review, test engineering and security auditing apply the same content from a different stance.
 
 ## Why It's in the Arsenal
 
-Skill packs vary wildly in quality; this one earns a place through mechanism and curation. The mechanism is per-stage activation: instead of loading one giant methodology, each slash command loads only the skills relevant to its lifecycle stage, keeping context lean and the agent's behavior predictable. The curation is a single senior engineer (Chrome engineering lead) with a consistent quality bar — the opposite failure mode from sprawling community collections. It's a primary reference in the [agent-skills ecosystem guide](../../skills/agent-skills/agent-skills-ecosystem.md).
+The decision it resolves is how you make an agent's process consistent rather than dependent on which engineer is prompting it. Two people on one codebase get different quality from the same model because their instructions differ, and prompt files scattered across personal config directories are not reviewable. Putting the process in the repository as Markdown makes it a code-review artefact: a change to the test gate is a diff anyone can see. The tradeoff is that this is pure instruction, so it works only as far as the underlying model follows it, and it competes for the same context window as the code you are asking about.
 
 ## Key Features
 
-- 8 lifecycle commands: `/spec`, `/plan`, `/build`, `/test`, `/review`, `/webperf`, `/code-simplify`, `/ship`
-- Each command activates stage-appropriate skills and quality gates automatically
-- `/build auto`: approve the plan once, then autonomous task-by-task execution — every task still test-driven and committed individually, pausing on failures or risky steps
-- Web-specific depth: performance auditing (`/webperf`) grounded in measure-before-optimize practice
+- Zero runtime: it is Markdown, so there is nothing to deploy, version-pin or keep alive.
+- Two dozen skills map onto a real delivery lifecycle rather than a grab-bag of prompts, and each carries verification gates rather than vague advice.
+- Works across the major harnesses through a single npx installer plus native plugin paths for the most-used ones.
+- MIT licensed and explicitly reusable, with a documented comparison against the two main alternatives.
 
 ## Architecture / How It Works
 
-Skills are Markdown documents grouped by lifecycle stage; the slash commands are thin routers that load the relevant group into the agent's context. Quality gates are encoded as explicit checks within each stage's skills (e.g., tests must pass before `/review`, review before `/ship`), so the discipline lives in the loaded instructions rather than in the harness.
+There is no executable core. Each skill is a Markdown document under skills/ with front matter that names it and describes when to use it, and the harness decides when to load one - either because the user invoked a slash command or because the described task matches. A using-agent-skills meta-skill sits above the rest and maps a request to the correct workflow, which is how activation works without every skill sitting in the prompt at once. Alongside them, agents/ holds persona definitions that shift stance rather than procedure: a senior staff engineer for review, a QA specialist for test strategy, a security engineer for threat modelling. Installation is either a native plugin per harness - a marketplace manifest for Claude Code, a plugin.json path for Codex, agy plugin install for Antigravity, gemini skills install for the Gemini CLI - or a generic npx skills add that writes into a target agent's skills directory. Native installs carry the repository's references/ directory; the single-skill path does not.
 
 ## Getting Started
 
+The generic installer covers seventy-plus agents in one command; browse before you commit to the full set:
+
 ```bash
-# See the repository README (Resources below) for the current
-# per-harness installation instructions.
+npx skills add addyosmani/agent-skills --list
+npx skills add addyosmani/agent-skills
 ```
+
+On Claude Code the native marketplace path is `/plugin marketplace add addyosmani/agent-skills` followed by `/plugin install agent-skills@addy-agent-skills`; if the marketplace clone fails over SSH, add your key or pass the full HTTPS URL to force HTTPS cloning.
 
 ## Use Cases
 
-1. **Scenario**: feature development where you drive stage transitions yourself — `/spec` a feature, `/plan` it, then `/build auto` to execute the approved plan autonomously
-2. **Scenario**: a web-performance pass on an existing app via `/webperf`, with the agent measuring before proposing optimizations
+1. Standardise a team workflow: install the lifecycle pack into every contributor's agent so everyone gets the same spec, test and review gates from a checked-in file.
+2. Fix a specific failure mode: pull just the one skill that addresses it, such as debugging-and-error-recovery for a flaky suite or code-simplification for a module nobody can maintain.
+3. Run a review pass with a persona: invoke the code-reviewer or security-auditor agent definition so the same checklist is applied with the appropriate seniority framing.
 
 ## Strengths
 
-- Per-stage skill activation keeps context small and behavior predictable — you always know which rigor is in force
-- Fast, broad adoption (73.2k stars as of 2026-07-08, ~5 months after creation) with a single accountable curator
+It competes with Superpowers and with Matt Pocock's skills, and the repository is candid enough to ship a side-by-side comparison of all three rather than claiming a monopoly. It also overlaps with the ad-hoc prompt-file and rules-file conventions every coding agent already supports: this is the same mechanism as a .cursorrules file or a CLAUDE.md, formalised and made large. Compared with content/projects/frameworks entries such as langgraph or crewai, this is not a framework at all - it supplies no loop, no tool interface and no state, only the written workflow a harness you already run will follow. It complements the coding-agent tools in content/tools/dx-and-tooling, including aider and the agenta workspace, by setting expectations for how they should be driven.
 
 ## Limitations / When NOT to Use
 
-- Command-driven: nothing enforces the methodology if you skip the commands — auto-triggering frameworks close that gap
-- Web/product-development slant; less applicable to ML pipelines, infra, or research code
+The fundamental limitation is that instructions are not enforcement. Nothing here stops an agent from skipping a gate, and a weaker model will follow the workflow less reliably than a stronger one, so quality gains vary with the model you pair it with. Token cost is real: each activated skill occupies context, and the full lifecycle pack is not something to load into every conversation. The portability gap the README documents is the sharpest practical problem - a per-skill install omits the repository-level references directory, so shared checklists become unreachable and a skill degrades rather than fails loudly. Each agent also has a slightly different install shape, so maintaining an installation across a mixed fleet is a recurring chore. And because the content is a snapshot of one engineer's process, adopting it wholesale means adopting their opinions about change size, commit granularity and review standards.
 
 ## Integration Patterns
 
-- Use standalone as your agent's lifecycle discipline, or borrow individual stage skills into an existing setup
-- Compare with [Superpowers](./superpowers.md): auto-triggering whole methodology vs. this pack's explicit per-stage commands — the choice is control granularity
+This sits in content/tools/dx-and-tooling as the process layer rather than a tool with a binary. It is the natural companion to the coding agents in the same phase, and to agenta in particular, whose permission tiers and background agents supply the runtime these skills assume exists. For the agent frameworks in content/projects/frameworks, contrast a written workflow against a programmatic orchestration graph; for anything you then need to serve, the serving layer lives in content/projects/inference-engines.
 
 ## Resources
 
-- [GitHub](https://github.com/addyosmani/agent-skills)
-- [Documentation](https://github.com/addyosmani/agent-skills#readme)
+- [GitHub — addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
+- [Comparison against Superpowers and Matt Pocock's skills](https://github.com/addyosmani/agent-skills/blob/main/docs/comparison.md)
+- [Adoption guide for greenfield and existing codebases](https://github.com/addyosmani/agent-skills/blob/main/docs/adoption-guide.md)
 
 ## Buzz & Reception
 
-On GitHub daily and weekly trending with 73.2k stars as of 2026-07-08; one of the fastest-growing agent-skills repositories since its February 2026 creation, amplified by the author's large developer-education following.
+Turns an engineer's quality process into version-controlled markdown any coding agent loads on demand, so the workflow travels with the repository instead of living in one person's habits.

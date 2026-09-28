@@ -66,4 +66,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 <!-- AUTO-GENERATED TOOL TABLE BELOW — do not edit -->
 | Tool | Phase | Jobs | Cost model | Free tier | Self-hostable | Open source | Stack | Verdict |
 |---|---|---|---|---|---|---|---|---|
-| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | self-hostable | Yes | Yes | Yes | java | solid-choice |
+| [n8n](../orchestration/n8n.md) | orchestration | orchestration, prototyping | self-hostable | Yes | Yes | Yes | typescript | recommended |
+| [Redis](../orchestration/redis-memory.md) | orchestration | memory-management | self-hostable | Yes | Yes | Yes | polyglot | recommended |
+| [Temporal](../orchestration/temporal.md) | orchestration | orchestration | self-hostable | Yes | Yes | Yes | go, polyglot | recommended |

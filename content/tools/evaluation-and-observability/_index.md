@@ -44,9 +44,9 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [Agentic Security](./agentic-security.md) — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
-- [AgentOps](./agentops.md) — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
-- [AI Infra Guard](./ai-infra-guard.md) — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
+- [Agentic Security](./agentic-security.md) — Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites
+- [AgentOps](./agentops.md) — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
+- [AI Infra Guard](./ai-infra-guard.md) — Tencent Zhuque Lab's full-stack red-teaming platform covering agent, skill, MCP, AI-infrastructure and jailbreak scanning in one deployable product
 - [Astra Autonomous Pentest](./astra-autonomous-pentest.md) — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 - [Code Arena](./code-arena.md) — Benchmark and compare AI models in a competitive coding environment
 - [Conan](./conan.md) — Live HUD for monitoring and interacting with AI agent sessions on macOS

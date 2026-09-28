@@ -29,22 +29,16 @@ name: "trpc-agent-go"
 artifact_type: framework
 category: agents
 subcategory: agent-frameworks
-description: "Go framework for production agent systems with graph workflows, tools, memory, MCP, A2A, AG-UI, evaluation, and observability"
-github_url: https://github.com/trpc-group/trpc-agent-go
-license: "Apache-2.0"
-primary_language: "Go"
-tags:
-  - "agents"
-  - "graphs"
-  - "memory"
-  - "tool-use"
-  - "orchestration"
-  - "observability"
+description: "Go-native agent framework with graph workflows, session memory, A2A, AG-UI, MCP and OpenTelemetry built in"
+github_url: "https://github.com/trpc-group/trpc-agent-go"
+license: Apache-2.0
+primary_language: Go
+tags: [retrieval, agents]
 maturity: beta
 cost_model: open-source
-github_stars: 1562
-last_commit: "2026-07-19"
-docs_url: https://trpc-group.github.io/trpc-agent-go/
+github_stars: 1829
+last_commit: "2026-09-28"
+docs_url: "https://trpc-group.github.io/trpc-agent-go/"
 phase: agent-system
 domain:
   - "language"
@@ -56,52 +50,64 @@ health_signals:
   - "actively-maintained"
 ecosystem_role:
   - "Go alternative to Python agent frameworks, spanning graph orchestration, protocols, evaluation, and observability"
-best_for:
-  - "Building a typed Go service with tool-calling and graph workflows"
-  - "Connecting agents to MCP, A2A, or AG-UI protocols in a production backend"
-avoid_if:
-  - "Your team is committed to Python-only model and evaluation libraries"
-  - "You need a stable narrow API rather than a rapidly expanding protocol surface"
+best_for: ["You run a Go service and want agent capability inside it, with streaming runners and context cancellation that fit your existing concurrency model.", "You need a graph runtime in Go with multi-conditional routing, because GraphAgent is positioned as the Go equivalent of LangGraph.", "You want agent-to-agent interoperability and a frontend protocol already wired, since A2A, AG-UI and MCP support are in the stack rather than add-ons."]
+avoid_if: ["Your agent ecosystem is Python, because the ecosystem of retrievers, tools and tutorials in this space is overwhelmingly Python-first.", "You need the newest framework features on day one, because at roughly 1.8k stars the surface is still consolidating.", "You need to pin prompt-cache savings in your budget, because the caching claim is about a specific automatic behaviour you should measure rather than trust."]
 enrichment_notes: "Apache-2.0 framework with broad, fast-moving features; interoperability and persistence require validation. Draft pending review."
 ---
 
 ## Overview
 
-trpc-agent-go is a Go framework for assembling production-oriented agents from graph workflows, tools, memory, and model providers. Its scope extends beyond a chat loop: the repository includes MCP, A2A, AG-UI, evaluation, and observability integrations so a Go service can keep orchestration and operations in one language.
+tRPC-Agent-Go is Tencent's Go framework for agent systems, bundling LLM agents, graph workflows, tool calling, session and memory state, knowledge retrieval, agent self-evolution, evaluation and OpenTelemetry observability. GraphAgent provides type-safe graph workflows with multi-conditional routing, and multi-agent composition supports chain, parallel and cycle patterns. Tools include function tools, MCP tools, web search and code execution. The README also lists reusable SKILL.md agent skills, Hermes-style session reviews that extract and gate reusable skills, automatic prompt caching, eval sets with metrics, and protocol integrations for AG-UI, A2A and MCP.
 
 ## Why it's in the Arsenal
 
-It earns an Arsenal entry because Go teams otherwise have to bridge into Python to obtain modern agent protocols and workflow primitives. The project offers a typed, service-friendly alternative with enough breadth to prototype real tool systems while keeping deployment aligned with Go infrastructure.
+The decision it removes is the polyglot agent tax. If your services are Go, the alternative is a Python agent microservice with its own deployment, its own types and a network hop on every tool call, plus a translation layer between Go structs and Python payloads. Putting the loop in Go keeps cancellation, tracing and error handling in the language your team already operates, and lets agent state live in the same database connection as the rest of the application.
 
 ## Architecture
 
-The framework models agent execution as graph workflows with nodes for model calls, tools, memory, and control flow. Provider adapters produce messages and tool calls, MCP exposes external capabilities, and A2A/AG-UI connect the runtime to neighboring agent interfaces; evaluation and tracing hooks observe the resulting trajectories.
+An agent implements a common interface consumed by streaming runners that respect context cancellation. GraphAgent wires nodes and edges with multi-conditional routing to make control flow explicit, and chain, parallel and cycle combinators assemble multiple agents. Session state, memory, artifacts and knowledge retrieval sit behind persistent stores, MCP registers external tools, and OpenTelemetry spans cover each step. Skill authoring reuses the SKILL.md convention, with session reviews extracting candidate skills through a gate before they are published.
 
 ## Ecosystem Position
 
-trpc-agent-go competes with Python graph frameworks such as LangGraph and complements model gateways, MCP servers, and Go service infrastructure. Its broad protocol surface is an alternative for Go teams, but also means compatibility and persistence behavior must be tested rather than inferred from type definitions.
+It competes with LangGraph in graph-based agent orchestration and, notably, the README positions GraphAgent as functionally equivalent to LangGraph for Go, which makes it the Go answer rather than a different design. It overlaps with content/projects/frameworks/langgraph on control-flow semantics while sitting in a different language ecosystem, and it complements the Go serving entries in content/tools/serving-and-deployment. Compared with AutoGen and CrewAI, which are Python role-team abstractions, its unit of composition is the graph and the runner.
 
 ## Getting Started
 
-Add the Go module from `trpc.group/trpc-go/trpc-agent-go`, follow the documentation quickstart, configure a model provider, and run the example workflow. Start with one tool and an in-memory graph, then enable MCP, persistence, or observability integrations individually.
+It is a Go module, so the dependency is fetched with go get and the README example composes agents with the chain combinator:
+
+```bash
+go get trpc.group/trpc-go/trpc-agent-go
+```
+
+```go
+pipeline := chainagent.New("pipeline", chainagent.WithSubAgents([]agent.Agent{analyzer, processor, reporter}))
+```
+
+Docs are built with MkDocs and published at trpc-group.github.io.
 
 ## Key Use Cases
 
-Use it for customer-support agents embedded in Go services, graph-based business workflows, protocol-connected tool agents, and evaluation of multi-step trajectories. It is also a reasonable foundation for teams standardizing agent infrastructure around Go.
+1. Adding agent capability to an existing Go service without introducing a Python runtime and a cross-language payload contract.
+2. Explicit graph control flow where conditional routing and cycles must be auditable, rather than inferred by a planner.
+3. Skill accumulation from real sessions: review past runs, extract a SKILL.md workflow, gate it, and publish it for reuse.
 
 ## Strengths
 
-Go-native deployment, graph workflows, memory, tool use, MCP/A2A/AG-UI support, and built-in evaluation/observability give the framework a notably broad systems boundary.
+- Native Go concurrency with streaming runners and context cancellation, which is what a Go service already expects.
+- Explicit graph routing makes multi-branch agent logic reviewable instead of emergent.
+- Protocol coverage in the box: A2A for agent interoperability, AG-UI for frontends, MCP for tools.
+- Observability and evaluation are part of the stack, so an agent ships with spans and an eval set rather than as an afterthought.
 
 ## Limitations
 
-The breadth is still evolving, and adapters may differ in feature completeness. Persistence semantics, protocol interoperability, cancellation, retries, and trace durability need validation under production concurrency rather than only example workloads.
+The Go agent ecosystem is young: at roughly 1.8k stars the API surface is still moving, so expect churn that a Python framework with ten times the usage does not have. Fewer third-party integrations exist, and anything not written in Go has to be bridged. The README claims prompt caching with a 90% saving on cached content, which is a workload-dependent number that needs measurement on your own traffic rather than adoption as a budget assumption. Self-evolution features that write skills are powerful and require the same review discipline you would apply to any agent that edits its own instructions.
 
 ## Relation to the Arsenal
 
-It complements the Arsenal's agent systems and observability entries while competing with Python-first orchestration frameworks. Unlike a model entry, it is the workflow and protocol layer that drives models, tools, and memory together.
+This is the Go framework entry in content/projects/agent-systems and the language counterpart to content/projects/frameworks/langgraph, which it explicitly emulates in graph semantics. Its A2A and MCP support means it interoperates with the MCP tooling in content/tools/serving-and-deployment, and its OpenTelemetry story connects to the tracing entries in content/tools/evaluation-and-observability. The SKILL.md convention matches what hermes-agent and qwen-agent tooling in this catalog also read.
 
 ## Resources
 
-- [GitHub](https://github.com/trpc-group/trpc-agent-go)
-- [Documentation](https://trpc-group.github.io/trpc-agent-go/)
+- [GitHub — trpc-group/trpc-agent-go](https://github.com/trpc-group/trpc-agent-go)
+- [Docs — trpc-group.github.io/trpc-agent-go](https://trpc-group.github.io/trpc-agent-go/)
+- [Go reference — pkg.go.dev](https://pkg.go.dev/trpc.group/trpc-go/trpc-agent-go)

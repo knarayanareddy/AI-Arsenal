@@ -1,6 +1,6 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-09-28T18:44:24.515Z | Entries: 1254 | Schema version: 1.0.0
+Generated: 2026-09-28T21:43:55.012Z | Entries: 1254 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
@@ -39,18 +39,18 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ## Top Projects by Category
 
 ### agents
-- Strix (⭐38354, score:70) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
+- Strix (⭐65378, score:70) — Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits
 - Semantic Kernel (⭐28114, score:70) — An SDK for integrating AI orchestration into production applications
 - Pydantic AI (⭐17738, score:70) — A Python agent framework built around typed models and structured outputs
 - PageAgent (⭐24812, score:65) — JavaScript in-page GUI agent from Alibaba that controls web interfaces with natural language
-- Skyvern (⭐22154, score:60) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
+- Skyvern (⭐23090, score:60) — Vision-LLM browser automation with a Playwright-compatible SDK and a no-code workflow builder
 
 ### code-generation
 - screenshot-to-code (⭐73211, score:60) — Converts screenshots, mockups, and Figma designs into working frontend code (HTML/Tailwind, React, Vue) using multimodal LLMs — with video-to-prototype support
-- Continue (⭐34744, score:60) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
-- Tabby (⭐33679, score:55) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
-- GPT Engineer (⭐55189, score:0) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
-- Open Code Review (⭐10699, score:0) — Alibaba's Go/Node-distributed AI code-review CLI combining deterministic file pipelines with an LLM agent for line-level findings
+- Continue (⭐36053, score:60) — Open-source coding agent shipped as a CLI, VS Code extension and JetBrains plugin, now frozen at a final 2.0.0 release
+- Tabby (⭐33890, score:55) — Self-hosted coding assistant that runs completion and chat on your own GPU with no DBMS or cloud dependency
+- GPT Engineer (⭐55073, score:0) — Archived Python CLI that specified software in natural language and let a model write and execute it
+- Open Code Review (⭐42251, score:0) — Alibaba's open-sourced code review CLI that pairs deterministic rules pipelines with an LLM agent emitting line-level review comments
 
 ### computer-vision
 - Ultralytics YOLO (⭐59255, score:62) — The YOLO family framework — train, validate, and deploy real-time detection, segmentation, pose, and classification models with a three-line API
@@ -61,7 +61,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
-- cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
+- cleanlab (⭐11682, score:50) — Data-centric AI library that finds label errors, duplicates and outliers using your own trained model's predictions
 - Scrapling (⭐84212, score:39) — BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
 - ClickHouse (⭐50123, score:38) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
 - datasets (⭐22014, score:35) — Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets
@@ -74,7 +74,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - xgboost (⭐28801, score:36) — Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
 
 ### llms
-- LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
+- LobeChat (LobeHub) (⭐82874, score:72) — Self-hostable chat and agent workspace that hires, schedules and reports on a fleet of configured agents
 - exo (exo-explore) (⭐46087, score:72) — Clusters your everyday devices — phones, laptops, desktops — into one inference pool, sharding a model too big for any single machine
 - Qwen (⭐21281, score:70) — Alibaba open-weight model family covering language, coding, and multimodal use cases
 - Gemma (⭐5410, score:70) — Google open model family designed for efficient language and multimodal applications
@@ -97,13 +97,13 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### rag
 - LangChain (⭐139206, score:70) — A framework for composing LLM applications, retrieval flows, tools, and agents
 - DSPy (⭐35010, score:70) — A framework for programming and optimizing language model pipelines
-- AnythingLLM (⭐62924, score:68) — All-in-one desktop and server RAG application — drop in documents, pick any LLM and vector DB, chat with citations, no code required
+- AnythingLLM (⭐66555, score:68) — All-in-one local AI workspace for chatting with documents, running agents, and multi-user setups with minimal setup friction
 - GraphRAG (⭐34257, score:65) — Microsoft's knowledge-graph RAG — LLM-extracted entity graphs with hierarchical community summaries that answer global questions vector RAG can't
-- Onyx (formerly Danswer) (⭐30772, score:62) — Self-hosted enterprise search and chat over 40+ workplace connectors (Slack, Drive, Confluence, Jira...) with permissions-aware retrieval
+- Onyx (formerly Danswer) (⭐32271, score:62) — Self-hostable enterprise context layer that indexes 50-plus connected apps with permissions preserved
 
 ### tooling
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
-- Cherry Studio (⭐48319, score:46) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
+- Cherry Studio (⭐52215, score:46) — AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
 - kestra (⭐28401, score:36) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
 - spaCy (⭐33927, score:35) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
@@ -111,17 +111,17 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### voice-audio
 - AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
 - Speech To Speech (⭐5654, score:60) — Hugging Face's modular open-source voice-agent pipeline (VAD→STT→LLM→TTS) exposed via an OpenAI Realtime-compatible WebSocket API
-- Chatterbox (Resemble AI) (⭐25426, score:55) — Resemble AI's MIT-licensed production TTS — zero-shot cloning with emotion-exaggeration control, multilingual coverage, and watermarked outputs by default
+- Chatterbox (Resemble AI) (⭐26600, score:55) — Resemble AI's open-source zero-shot TTS family in sizes from 110M to 500M, covering CPU-real-time Nano, one-step Turbo and 23-language Multilingual V3
 - faster-whisper (⭐24114, score:55) — Whisper reimplemented on CTranslate2 — up to 4x faster transcription than openai/whisper at equal accuracy, with int8 quantization for CPU and modest GPUs
 - WhisperX (⭐22968, score:55) — Whisper transcription with accurate word-level timestamps (forced phoneme alignment) and speaker diarization, at 70x-realtime batched throughput
 
 ## Top Tools by Job
 
 ### data-labeling
-- Airbyte — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
-- Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
-- dlt — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
-- Hugging Face AI Sheets — Hugging Face open-source no-code tool for generating and enriching datasets with AI models
+- Airbyte — Open-source ELT platform with a 600+ connector catalogue for moving data from APIs, databases, files and warehouses into destinations
+- Argilla — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
+- dlt — Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference
+- Hugging Face AI Sheets — Spreadsheet-style web app for building, enriching and transforming datasets with LLM columns, deployable from Docker or pnpm against Hub or local models
 - Label Studio — An open-source data labeling platform for ML and AI datasets
 
 ### deployment
@@ -132,46 +132,46 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - BentoML — A framework for packaging, deploying, and scaling AI model services
 
 ### evaluation
-- Agentic Security — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
-- AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
-- AI Infra Guard — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
-- any-agent — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
-- Argilla — Open-source platform for human and AI feedback, data curation, and evaluation datasets
+- Agentic Security — Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites
+- AgentOps — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
+- AI Infra Guard — Tencent Zhuque Lab's full-stack red-teaming platform covering agent, skill, MCP, AI-infrastructure and jailbreak scanning in one deployable product
+- any-agent — Mozilla AI's thin adapter layer that runs one agent interface across six different agent frameworks
+- Argilla — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
 
 ### fine-tuning
 - Axolotl — Configuration-driven fine-tuning framework for many open-weight LLM families
 - DeepSpeed — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
-- Hugging Face Accelerate — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
+- Hugging Face Accelerate — Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision
 - Liger Kernel — Fused Triton kernels for LLM training (RMSNorm, RoPE, SwiGLU, fused cross-entropy) that cut memory and raise throughput as near drop-in layer replacements
 - LLaMA-Factory — Unified fine-tuning framework and UI for many LLMs and training methods
 
 ### memory-management
 - Codebase Memory MCP — MCP server that indexes codebases into a persistent knowledge graph for fast agent code intelligence
-- Letta — Stateful agent framework and memory system formerly known as MemGPT
-- Mem0 — Memory layer for AI agents and assistants with long-term user and session memory
+- Letta — Stateful agent runtime that gives agents persistent memory and identity, distributed today as a letta-code CLI, App Server and SDK
+- Mem0 — Memory layer for agents using add-only fact extraction with entity linking and fused multi-signal retrieval
 - Memoriq — Private AI memory layer that learns from your conversations and documents
-- Redis — In-memory data store commonly used for caching, session memory, queues, and vector search
+- Redis — In-memory data structure server with multiple eviction policies, TTL expiry, and document and vector query engines on top of key-value storage
 
 ### model-registry
-- ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
+- ClearML — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 - DVC — Open-source data and model versioning tool for ML projects and pipelines
 - Hugging Face Hub — Model, dataset, and Space hosting platform for sharing and versioning AI artifacts
 - MLflow — Open-source platform for experiment tracking, model registry, and ML lifecycle management
 - Weights & Biases — Experiment tracking and model management platform for ML and AI teams
 
 ### monitoring
-- AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
+- AgentOps — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - Deepchecks — Testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality
 - Evidently — Open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge
 - Galileo — Commercial LLM evaluation and observability platform with research-backed, label-free metrics for hallucination, factuality, and guardrails
 
 ### orchestration
-- Agno — High-performance Python framework (formerly Phidata) for building multi-agent systems with memory, knowledge, and its own runtime
+- Agno — Python SDK plus AgentOS runtime for building, serving and operating self-hosted agent platforms
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
-- any-agent — One Python abstraction over many agent frameworks (LangChain, OpenAI Agents, Google ADK, smolagents) plus framework-agnostic tracing and evaluation
-- Apache Airflow — Mature workflow scheduler for batch data, ML, and AI pipeline orchestration
-- ClearML — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
+- any-agent — Mozilla AI's thin adapter layer that runs one agent interface across six different agent frameworks
+- Apache Airflow — Batch DAG orchestrator that schedules Python workflows, retries failed tasks and records lineage across data platforms
+- ClearML — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 
 ### production-serving
 - Anyscale — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
@@ -181,24 +181,24 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Cloudflare Workers AI — Serverless GPU inference on Cloudflare's global edge network, billed per request with zero infrastructure
 
 ### prompt-management
-- AdalFlow — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
+- AdalFlow — PyTorch-style library that makes LLM prompts differentiable parameters so RAG and agent pipelines can be auto-optimised rather than hand-prompted
 - Cloudskill — Manage, govern, and distribute skills for AI agents across teams
 - Humanloop — A platform for prompt management, evaluation, and product feedback workflows
 - Langfuse Prompts — Prompt management and versioning workflows inside the Langfuse observability platform
 - LangSmith Hub — LangSmith prompt and dataset workflows for LangChain and LangGraph applications
 
 ### prototyping
-- AdalFlow — PyTorch-inspired library to build and auto-optimize LLM apps: model-agnostic components plus a trainer that tunes prompts and few-shot demos against a metric
-- Agent Skills (Addy Osmani) — Production-grade engineering skills for AI coding agents, organized as 8 slash commands mapping to the development lifecycle
-- Aider — Open-source AI pair-programming CLI that edits your local git repo with any LLM and auto-commits changes
-- Chainlit — A framework for building conversational AI interfaces and debugging LLM apps
-- Chrome DevTools MCP — Official MCP server exposing Chrome DevTools to coding agents for live browser debugging
+- AdalFlow — PyTorch-style library that makes LLM prompts differentiable parameters so RAG and agent pipelines can be auto-optimised rather than hand-prompted
+- Agent Skills (Addy Osmani) — Collection of roughly two dozen markdown SKILL.md workflows and slash commands that install process gates into Claude Code, Cursor, Codex and 70 other agents
+- Aider — Terminal pair-programming tool that maps your codebase, edits files in place and auto-commits each change so you can diff and undo with git
+- Chainlit — Python framework for building chat and agent front ends, with decorators for steps, tool calls and message handlers over a bundled React UI
+- Chrome DevTools MCP — Google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input
 
 ### security-and-guardrails
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
-- Agentic Security — Open-source red-team toolkit for finding vulnerabilities in agentic LLM applications
+- Agentic Security — Open-source scanner and fuzzer that probes LLM endpoints with multimodal, multi-step jailbreak and reinforcement-learning attack suites
 - AGNT.Hub — Build and manage secure, private AI agents with custom skills and policies
-- AI Infra Guard — Tencent full-stack red-team platform for models, agents, skills, MCP, and AI infrastructure
+- AI Infra Guard — Tencent Zhuque Lab's full-stack red-teaming platform covering agent, skill, MCP, AI-infrastructure and jailbreak scanning in one deployable product
 - Astra Autonomous Pentest — Continuous AI-powered penetration testing for applications, APIs, and cloud infrastructure
 
 ### structured-output
@@ -209,25 +209,25 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Guardrails AI — A framework for validating, correcting, and constraining LLM outputs
 
 ### tracing
-- AgentOps — Observability and debugging platform purpose-built for AI agents: session replays, cost tracking, and multi-framework tracing
+- AgentOps — Python SDK and MIT-licensed dashboard for tracing agent runs, LLM cost, session replays and evals across CrewAI, LangGraph, Autogen and the OpenAI Agents SDK
 - Conan — Live HUD for monitoring and interacting with AI agent sessions on macOS
 - Laminar — OpenTelemetry-based tracing, evaluation, datasets, and monitoring for LLM and agent applications
 - LangSmith — A managed platform for tracing, evaluating, and monitoring LangChain applications
 - LangWatch — Open-source LLM observability and evaluation platform — OpenTelemetry-based tracing plus online/offline evals and datasets, self-hostable or cloud
 
 ### vector-search
-- Elasticsearch — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
-- FAISS — Meta's foundational library for efficient similarity search over billions of dense vectors
+- Elasticsearch — Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing
+- FAISS — C++ similarity search and clustering library for dense vectors with full Python and numpy wrappers and GPU implementations of key indexes
 - FastEmbed — A lightweight ONNX Runtime library for embedding and reranking without PyTorch
-- Marqo — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
+- Marqo — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - Meilisearch — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 
 ### web-scraping
 - Agent Browser Shield — Secure AI web browsing by cleaning content and masking PII during agent runs
-- Agent Reach — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
-- Airbyte — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
-- Browserbase — Hosted cloud browser platform for AI agents and automated browser workflows
-- Crawl4AI — Python crawler and scraper designed for LLM-friendly web content extraction
+- Agent Reach — Open-source CLI that gives an agent read and search access to Twitter, Reddit, YouTube, Bilibili, Xiaohongshu and GitHub without paid APIs or per-site
+- Airbyte — Open-source ELT platform with a 600+ connector catalogue for moving data from APIs, databases, files and warehouses into destinations
+- Browserbase — Stagehand browser SDK with observe, act and extract primitives plus CUA models, MIT licensed and multi-language
+- Crawl4AI — Open-source crawler that returns LLM-ready Markdown from any page, with a paid cloud tier behind the same API
 
 ## Architecture Quick Refs
 

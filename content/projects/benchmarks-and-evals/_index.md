@@ -54,18 +54,18 @@ Before selecting an evaluation/observability platform:
 - [OpenLLMetry](./openllmetry.md) — ⭐ 7000
 - [SWE-bench](./swe-bench-swe-bench.md) — ⭐ 5928
 - [Helicone](./helicone.md) — ⭐ 5809
+- [Agenta](./agenta.md) — ⭐ 4787
 - [lmms-eval](./lmms-eval.md) — ⭐ 4300
-- [Agenta](./agenta.md) — ⭐ 3900
 
 ### Browse All
 
-- [Agenta](./agenta.md) — Open-source LLMOps platform for prompt management, evaluation, observability, and playgrounds
+- [Agenta](./agenta.md) — Self-hostable workspace where you build agents by chatting with them, then share them with a team and run them in the background on schedules or events
 - [AiSOC](./aisoc.md) — A Docker Compose security operations center that normalizes telemetry, runs a rule library, and audits LLM triage step by step
 - [openinference](./arize-ai-openinference.md) — OpenTelemetry semantic conventions and instrumentors for generative-AI spans, so LLM calls carry standard attributes regardless of which SDK issued them
 - [attackgen](./attackgen.md) — Generates tailored incident-response exercise scenarios from threat-actor profiles and MITRE ATT&CK or ATLAS technique sets
 - [AutoCVE](./autocve.md) — A multi-agent platform that audits source code for reportable vulnerabilities and produces CVE-ready findings with reproduction steps
 - [BigCodeBench](./bigcodebench.md) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
-- [Braintrust](./braintrust.md) — Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
+- [Braintrust](./braintrust.md) — TypeScript SDK that emits traces, runs scored evals and wraps OpenAI, LangChain, OpenTelemetry and Temporal code for the Braintrust platform
 - [cve-mcp-server](./cve-mcp-server.md) — A FastMCP server exposing 28 security tools across 24 APIs behind one triage_cve call that computes a composite risk score
 - [DeepEval](./deepeval.md) — An open-source evaluation framework for testing LLM applications in CI
 - [evalplus](./evalplus-evalplus.md) — Hardened successor to HumanEval and MBPP that adds far more test inputs to catch solutions passing weak tests

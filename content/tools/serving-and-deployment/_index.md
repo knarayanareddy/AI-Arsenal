@@ -44,7 +44,7 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [Envoy AI Gateway](./ai-gateway.md) — An Envoy Gateway extension for routing and governing traffic to generative AI services
+- [Envoy AI Gateway](./ai-gateway.md) — Envoy Gateway-based control plane giving every model and tool one OpenAI-compatible endpoint, with credentials, routing, quotas and failover held centrally
 - [Anyscale](./anyscale.md) — Managed platform from the creators of Ray for running distributed AI workloads — training, batch inference, and serving — on autoscaling Ray clusters
 - [AWS Bedrock](./aws-bedrock.md) — AWS managed service for accessing foundation models and building generative AI apps
 - [Azure AI Studio](./azure-ai-studio.md) — Microsoft Azure platform for building, evaluating, and deploying AI applications

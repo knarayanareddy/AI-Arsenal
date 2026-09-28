@@ -153,10 +153,10 @@ This table is exhaustive for tools tagged with job = web-scraping.
 |---|---|---|---|---|---|---|---|
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | freemium | Yes | No | No | python | watching |
 | [Agent Reach](../data-ingestion/agent-reach.md) | data ingestion | open-source | Yes | Yes | Yes | python | watching |
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | freemium | Yes | Yes | Yes | java, python | solid-choice |
-| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | freemium | Yes | No | No | typescript | watching |
+| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | open-source | Yes | Yes | Yes | java, python | solid-choice |
+| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | open-source | Yes | No | No | typescript | watching |
 | [Crawl4AI](../data-ingestion/crawl4ai-tool.md) | data ingestion | open-source | Yes | Yes | Yes | python | recommended |
-| [Exa](../data-ingestion/exa.md) | data ingestion | freemium | Yes | No | No | python | recommended |
+| [Exa](../data-ingestion/exa.md) | data ingestion | usage-based | Yes | No | No | python | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Gitingest](../data-ingestion/gitingest.md) | data ingestion | open-source | Yes | Yes | Yes | python | solid-choice |
 | [Jina AI Reader](../data-ingestion/jina-reader.md) | data ingestion | freemium | Yes | No | No | polyglot | recommended |

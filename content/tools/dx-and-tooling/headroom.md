@@ -11,6 +11,7 @@ tags: [efficiency, memory, agents, routing]
 maturity: beta
 stack: [python]
 free_tier: true
+free_tier_limits: "Free while in beta; no hosted seat cap."
 self_hostable: true
 open_source: true
 docs_url: "https://docs.headroomlabs.ai/docs"

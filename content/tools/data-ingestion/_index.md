@@ -45,27 +45,27 @@ _No star-tracked entries yet._
 ### Browse All
 
 - [Agent Browser Shield](./agent-browser-shield.md) — Secure AI web browsing by cleaning content and masking PII during agent runs
-- [Agent Reach](./agent-reach.md) — Toolkit giving AI agents read and search access to Twitter/X, Reddit, YouTube, GitHub, and the wider web
-- [Airbyte](./airbyte.md) — Open-source data-integration platform with 600+ connectors, increasingly used to feed context into LLM/RAG pipelines
-- [Hugging Face AI Sheets](./aisheets.md) — Hugging Face open-source no-code tool for generating and enriching datasets with AI models
-- [Argilla](./argilla.md) — Open-source platform for human and AI feedback, data curation, and evaluation datasets
-- [Browserbase](./browserbase.md) — Hosted cloud browser platform for AI agents and automated browser workflows
-- [Crawl4AI](./crawl4ai-tool.md) — Python crawler and scraper designed for LLM-friendly web content extraction
-- [dlt](./dlt.md) — Python-native ELT library: declarative, schema-evolving data pipelines as code, popular with AI/agent workflows
-- [DocETL](./docetl.md) — LLM-powered document-processing framework with map/reduce-style operators and an optimizer that rewrites LLM steps for accuracy (UC Berkeley EPIC lab)
-- [Elasticsearch](./elasticsearch.md) — Distributed search and analytics engine with mature BM25, dense-vector kNN, and hybrid retrieval for RAG workloads
-- [Exa](./exa.md) — Neural search API for AI apps — embeddings-based web search that matches on meaning, plus content retrieval and similarity ("find similar pages") endpoints
-- [FAISS](./faiss.md) — Meta's foundational library for efficient similarity search over billions of dense vectors
-- [Firecrawl](./firecrawl-tool.md) — API and open-source project for scraping and crawling websites into LLM-ready Markdown
-- [Gitingest](./gitingest.md) — Turn any Git repository into a prompt-ready text digest — replace 'hub' with 'ingest' in a GitHub URL
-- [Great Expectations (GX Core)](./great-expectations.md) — The standard open data-quality framework — declarative Expectations validate pipeline data, guarding the datasets your models train and retrieve on
+- [Agent Reach](./agent-reach.md) — Open-source CLI that gives an agent read and search access to Twitter, Reddit, YouTube, Bilibili, Xiaohongshu and GitHub without paid APIs or per-site
+- [Airbyte](./airbyte.md) — Open-source ELT platform with a 600+ connector catalogue for moving data from APIs, databases, files and warehouses into destinations
+- [Hugging Face AI Sheets](./aisheets.md) — Spreadsheet-style web app for building, enriching and transforming datasets with LLM columns, deployable from Docker or pnpm against Hub or local models
+- [Argilla](./argilla.md) — Human feedback and dataset curation UI in maintenance mode, with script-defined annotation and evaluation workflows
+- [Browserbase](./browserbase.md) — Stagehand browser SDK with observe, act and extract primitives plus CUA models, MIT licensed and multi-language
+- [Crawl4AI](./crawl4ai-tool.md) — Open-source crawler that returns LLM-ready Markdown from any page, with a paid cloud tier behind the same API
+- [dlt](./dlt.md) — Python ELT library that turns APIs, files and databases into declarative pipelines with schema inference
+- [DocETL](./docetl.md) — Declarative map-reduce framework where each pipeline step is a natural-language operation with a typed output schema
+- [Elasticsearch](./elasticsearch.md) — Distributed search and analytics engine with a vector database, full-text search and near-real-time indexing
+- [Exa](./exa.md) — Hosted MCP server exposing Exa web search and page fetch as two default tools for any MCP client
+- [FAISS](./faiss.md) — C++ similarity search and clustering library for dense vectors with full Python and numpy wrappers and GPU implementations of key indexes
+- [Firecrawl](./firecrawl-tool.md) — Web data API and open-source scraper returning clean markdown, structured JSON, screenshots, and interaction actions for agent use
+- [Gitingest](./gitingest.md) — Turns a Git repository into a prompt-friendly text digest with file tree, size and token count
+- [Great Expectations (GX Core)](./great-expectations.md) — Data quality library where Expectations are unit tests for datasets, runnable in a pipeline or in CI
 - [Jina AI Reader](./jina-reader.md) — Reader endpoint for converting web pages into LLM-friendly text and Markdown
 - [Label Studio](./label-studio.md) — An open-source data labeling platform for ML and AI datasets
 - [MarkItDown](./markitdown.md) — Microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown
-- [Marqo](./marqo.md) — Vector search engine that bundles embedding inference with storage, so you send raw text/images and queries instead of running your own embed pipeline
+- [Marqo](./marqo.md) — Deprecated open-source ecommerce search engine; the product now lives at marqo.ai
 - [Meilisearch](./meilisearch.md) — Lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance
 - [MinerU](./mineru.md) — OpenDataLab's high-fidelity PDF-to-Markdown/JSON extraction tool built on layout, formula, and table recognition models
-- [Nomic Atlas](./nomic-atlas.md) — Platform to embed, visualize, and explore large text/image datasets on an interactive map — surfacing clusters, duplicates, and outliers for dataset curation
+- [Nomic Atlas](./nomic-atlas.md) — Python client for a hosted platform that maps, labels and searches embeddings interactively in a browser
 - [olmOCR](./olmocr.md) — Open toolkit from AI2 that linearizes PDFs into clean text for LLM datasets and RAG ingestion
 - [Pinecone](./pinecone.md) — A managed vector database for production semantic search applications
 - [Playwright](./playwright.md) — Browser automation framework for reliable end-to-end tests and web scraping workflows

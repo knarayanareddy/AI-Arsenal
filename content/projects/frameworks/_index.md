@@ -64,7 +64,7 @@ Before selecting a framework:
 - [Agent_Memory_Techniques](./agent-memory-techniques.md) — Thirty executable notebooks that rebuild one chat assistant on progressively richer memory backends, then score them against the LoCoMo benchmark
 - [agent-rules-books](./agent-rules-books.md) — AGENTS.md rule sets distilled from Clean Code, Clean Architecture, DDD, and DDIA, each shipped in mini, nano, and full sizes
 - [agents-best-practices](./agents-best-practices.md) — A provider-neutral Agent Skill covering harness design, permission ladders, typed tool contracts, and production-readiness audits
-- [AgentScope](./agentscope.md) — Python framework for building observable, multi-agent, and multimodal agent systems
+- [AgentScope](./agentscope.md) — Apache-2.0 agent framework pairing composable SDK building blocks with a batteries-included FastAPI agent service, web UI, channels and scheduling
 - [aim](./aimhubio-aim.md) — Self-hostable experiment tracker with a fast comparison UI, a terminal client for diffing runs, and RocksDB-backed metric storage
 - [Amphion](./amphion.md) — An open toolkit for audio, music, and speech generation that gathers reproducible implementations of TTS, singing-voice, vocoder, and audio-generation models
 - [Anthropic-Cybersecurity-Skills](./anthropic-cybersecurity-skills.md) — Eight hundred eighteen agent skills across thirty-four security domains, each mapped to the frameworks that apply to its type
@@ -73,10 +73,10 @@ Before selecting a framework:
 - [AutoGen](./autogen.md) — Microsoft multi-agent framework now maintained as legacy after Agent Framework convergence
 - [autogluon](./autogluon-autogluon.md) — AutoML that fits, tunes, and ensembles models behind a few lines and returns a fitted predictor
 - [AutoGPT](./autogpt.md) — Autonomous agent platform and classic agent project for accessible AI automation
-- [CAMEL](./camel-ai.md) — Research-first multi-agent framework from the earliest agent paper lineage, focused on studying agent societies at scale and synthetic data generation
+- [CAMEL](./camel-ai.md) — Apache-2.0 multi-agent research framework with ChatAgent, agent societies, synthetic data generation and benchmark suites for studying agent behaviour at scale
 - [catboost](./catboost-catboost.md) — Gradient-boosting library with native categorical features and ordered target statistics
 - [caveman](./caveman.md) — A prompt-shrinking skill and proxy that rewrites agent output into clipped caveman grammar to cut billed tokens
-- [Cherry Studio](./cherry-studio.md) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
+- [Cherry Studio](./cherry-studio.md) — AGPL-3.0 Electron desktop client for many LLM providers, with 300+ preset assistants, local Ollama and LM Studio support, MCP and an enterprise tier
 - [ComfyUI](./comfy-org-comfyui.md) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
 - [ComfyUI](./comfyui.md) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - [Context7](./context7.md) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access

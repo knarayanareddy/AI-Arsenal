@@ -68,9 +68,7 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 |---|---|---|---|---|---|---|---|---|
 | [Agent Browser Shield](../data-ingestion/agent-browser-shield.md) | data ingestion | security-and-guardrails, web-scraping | freemium | Yes | No | No | python | watching |
 | [AgentOps](../evaluation-and-observability/agentops.md) | evaluation and observability | tracing, monitoring, evaluation | freemium | Yes | No | Yes | python | watching |
-| [Airbyte](../data-ingestion/airbyte.md) | data ingestion | data-labeling, web-scraping | freemium | Yes | Yes | Yes | java, python | solid-choice |
 | [BentoML](../serving-and-deployment/bentoml.md) | serving and deployment | deployment, production-serving | freemium | Yes | Yes | Yes | python | recommended |
-| [Browserbase](../data-ingestion/browserbase.md) | data ingestion | web-scraping | freemium | Yes | No | No | typescript | watching |
 | [Claude Artifact Player](../dx-and-tooling/claude-artifact-player.md) | dx and tooling | structured-output | freemium | Yes | No | No | typescript | watching |
 | [ClearML](../model-layer/clearml.md) | model layer | model-registry, orchestration | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Code Arena](../evaluation-and-observability/code-arena.md) | evaluation and observability | evaluation | freemium | Yes | No | No | python | watching |
@@ -78,14 +76,13 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Composio](../orchestration/composio.md) | orchestration | orchestration | freemium | Yes | No | Yes | python, typescript | watching |
 | [Continue](../dx-and-tooling/continue-dev.md) | dx and tooling | prototyping | freemium | Yes | Yes | Yes | typescript | recommended |
 | [Cursor](../dx-and-tooling/cursor.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript | recommended |
+| [Dagster](../orchestration/dagster.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [Deepchecks](../evaluation-and-observability/deepchecks.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Dropstone 3](../dx-and-tooling/dropstone-3.md) | dx and tooling | orchestration, prototyping | freemium | Yes | No | No | typescript | watching |
-| [E2B](../orchestration/e2b.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | typescript, python, go | recommended |
+| [Elasticsearch](../data-ingestion/elasticsearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | java | solid-choice |
 | [Empromptu AI](../orchestration/empromptu-ai.md) | orchestration | orchestration, deployment | freemium | Yes | No | No | python | watching |
 | [Evidently](../evaluation-and-observability/evidently.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | Yes | Yes | python | recommended |
-| [Exa](../data-ingestion/exa.md) | data ingestion | web-scraping | freemium | Yes | No | No | python | recommended |
 | [Firecrawl](../data-ingestion/firecrawl-tool.md) | data ingestion | web-scraping | freemium | Yes | Yes | Yes | typescript | recommended |
-| [Flowise](../orchestration/flowise.md) | orchestration | orchestration, prototyping | freemium | Yes | Yes | Yes | typescript | solid-choice |
 | [Galileo](../evaluation-and-observability/galileo.md) | evaluation and observability | evaluation, monitoring | freemium | Yes | No | No | python | solid-choice |
 | [Gemini CLI](../dx-and-tooling/gemini-cli.md) | dx and tooling | prototyping | freemium | Yes | No | Yes | typescript | recommended |
 | [GitHub Copilot](../dx-and-tooling/github-copilot.md) | dx and tooling | prototyping | freemium | Yes | No | No | typescript, python, polyglot | solid-choice |
@@ -102,13 +99,14 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [LangSmith](../evaluation-and-observability/langsmith.md) | evaluation and observability | evaluation, tracing, monitoring | freemium | Yes | No | No | python, typescript | recommended |
 | [LangSmith Hub](../dx-and-tooling/langsmith-hub.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
 | [LM Studio](../dx-and-tooling/lm-studio.md) | dx and tooling | prototyping | freemium | Yes | Yes | No | typescript, cpp | recommended |
+| [Marqo](../data-ingestion/marqo.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | python | solid-choice |
 | [Meilisearch](../data-ingestion/meilisearch.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | rust | recommended |
+| [Mem0](../orchestration/mem0.md) | orchestration | memory-management | freemium | Yes | Yes | Yes | python, typescript | recommended |
 | [Memoriq](../orchestration/memoriq.md) | orchestration | memory-management | freemium | Yes | No | No | python | watching |
-| [n8n](../orchestration/n8n.md) | orchestration | orchestration, prototyping | freemium | Yes | Yes | Yes | typescript | recommended |
-| [Nomic Atlas](../data-ingestion/nomic-atlas.md) | data ingestion | data-labeling | freemium | Yes | No | No | python | solid-choice |
 | [OrchestraML](../orchestration/orchestraml.md) | orchestration | orchestration, fine-tuning | freemium | Yes | No | No | python | watching |
 | [Pinecone](../data-ingestion/pinecone.md) | data ingestion | vector-search | freemium | Yes | No | No | python, typescript | recommended |
 | [Portkey](../serving-and-deployment/portkey.md) | serving and deployment | prompt-management, monitoring | freemium | Yes | No | No | python, typescript | recommended |
+| [Prefect](../orchestration/prefect.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | python | recommended |
 | [PromptLayer](../dx-and-tooling/promptlayer.md) | dx and tooling | prompt-management | freemium | Yes | No | No | python, typescript | recommended |
 | [Qursor](../dx-and-tooling/qursor.md) | dx and tooling | orchestration, structured-output | freemium | Yes | No | No | typescript | watching |
 | [Qwen 3](../model-layer/qwen-3.md) | model layer | production-serving | freemium | Yes | No | No | python | watching |
@@ -121,7 +119,6 @@ This page is a maintained routing surface; the tool table below is auto-refreshe
 | [Tabstack](../data-ingestion/tabstack.md) | data ingestion | web-scraping | freemium | Yes | No | No | typescript | watching |
 | [Taste Lab](../data-ingestion/taste-lab.md) | data ingestion | web-scraping | freemium | Yes | No | No | python | watching |
 | [Tavily](../data-ingestion/tavily.md) | data ingestion | web-scraping | freemium | Yes | No | No | python | recommended |
-| [Temporal](../orchestration/temporal.md) | orchestration | orchestration | freemium | Yes | Yes | Yes | go, polyglot | recommended |
 | [Typesense](../data-ingestion/typesense.md) | data ingestion | vector-search | freemium | Yes | Yes | Yes | cpp | solid-choice |
 | [Vaani](../dx-and-tooling/vaani.md) | dx and tooling | structured-output | freemium | Yes | No | No | python | watching |
 | [Vellum](../dx-and-tooling/vellum.md) | dx and tooling | prompt-management, evaluation | freemium | Yes | No | No | python | solid-choice |

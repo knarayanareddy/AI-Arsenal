@@ -5,19 +5,19 @@ version_tracked: null
 artifact_type: platform
 category: agents
 subcategory: autonomous
-description: Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
+description: "Autonomous multi-agent penetration tester that runs your code dynamically and validates findings with working exploits"
 github_url: "https://github.com/usestrix/strix"
 license: Apache-2.0
 primary_language: Python
 org_or_maintainer: usestrix
-tags: [agents, security, tool-use]
+tags: [agents, security]
 maturity: beta
-cost_model: open-source
-github_stars: 38354
+cost_model: freemium
+github_stars: 65378
 github_stars_last_30d: 0
 trending_score: 70
-last_commit: "2026-07-07"
-docs_url: "https://strix.ai"
+last_commit: "2026-09-28"
+docs_url: "https://docs.strix.ai"
 demo_url: null
 paper_url: null
 paper_id: null
@@ -27,12 +27,8 @@ relation_to_stack: [deploy-as-is, study-and-reference]
 health_signals: [community-driven, actively-maintained]
 ecosystem_role:
   - Autonomous offensive-security agent that runs real exploitation attempts (in sandboxed environments) against your own applications, rather than static scanning — one of the most visible examples of agents applied to security testing
-best_for:
-  - You want continuous, agent-driven penetration testing of your own applications that goes beyond pattern-matching SAST/DAST — Strix agents actually attempt exploitation to validate findings and cut false positives
-  - You want to study how an agentic loop (recon, exploitation, validation, reporting) is engineered for a high-stakes domain with sandboxing and scope controls
-avoid_if:
-  - You need compliance-grade pentest reports signed off by humans — autonomous agent output still requires expert review and does not replace a certified assessment
-  - You cannot run it in an isolated environment against systems you own — pointing offensive agents at third-party systems is unsafe and illegal
+best_for: ["You want application security testing on every pull request without scheduling a human pentester, and a CI job is the delivery mechanism.", "You are tired of static-analysis false positives and need each reported issue demonstrated with a working exploit against a running instance.", "You need remediation guidance rather than a scanner output, so the same run produces a patch proposal and a report you can hand to an auditor."]
+avoid_if: ["You are not authorised to run offensive tooling against a system, because this is built to execute exploits and testing without written authorisation is both illegal and contractually fraught.", "You need a certified penetration test report, because an autonomous run is evidence gathering, not a compliance deliverable with a human signature.", "You need deterministic results for regression gating, because agent behaviour varies between runs and findings need triage before they block a merge."]
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -52,47 +48,54 @@ status: active
 
 ## Overview
 
-An open-source autonomous penetration-testing agent: given a target application you own, Strix agents perform reconnaissance, attempt real (sandboxed) exploitation of candidate vulnerabilities, validate what is actually exploitable, and produce findings — positioning itself as a dynamic, agentic alternative to static scanners.
+Strix ships autonomous AI penetration-testing agents that run application code dynamically, discover vulnerabilities and validate them with actual proofs of concept rather than static heuristics. The feature set covers a full reconnaissance, exploitation and validation toolkit, multi-agent orchestration where teams of AI pentesters collaborate and scale, a developer-first CLI with actionable findings and remediation guidance, and automatic patch generation plus compliance-ready reports. Recent additions include GitHub Actions integration so a pull request can be scanned and insecure code blocked before it reaches production, alongside a hosted Strix Cloud and an enterprise tier.
 
 ## Why it's in the Arsenal
 
-Autonomous offensive-security agent that runs real exploitation attempts against your own applications rather than pattern-matching. It earns a place in the Arsenal both as a usable defensive tool (continuous self-testing of your apps) and as a reference for engineering agent loops in a high-stakes domain: scope enforcement, sandboxing, and validation-before-reporting are exactly the guardrail patterns covered in the [agents-and-orchestration tips](../../tips-and-tricks/agents-and-orchestration/_index.md). See Strengths / Limitations below before adopting it.
+The recurring security-engineering decision is whether a finding is worth an engineer's afternoon. Static analysers produce a volume of plausible issues that triage cannot clear, so teams learn to ignore the tool; a dynamic agent that actually runs the payload either reproduces the bug or does not, which converts a hypothesis into evidence. The cost moves from triage time to agent runtime and to the governance work of letting autonomous software execute attack techniques inside your environment.
 
 ## Architecture
 
-Strix runs LLM-driven agents equipped with security tooling (HTTP clients, browsers, code analysis) inside sandboxed environments. The loop is recon → hypothesis → exploitation attempt → validation → report: findings are only reported after an actual exploitation attempt succeeds, which is the project's core mechanism for reducing the false-positive rate that plagues static scanners. Scope and target configuration constrain what the agents may touch.
+A team of specialised agents runs the engagement: reconnaissance maps the target surface, exploitation agents attempt to chain attacks, and validation agents execute the candidate exploit against the running application to confirm it. Findings that reproduce come with a proof of concept, and the reporting stage turns confirmed issues into remediation guidance and a generated patch. Orchestration across the agent team is what allows parallel workstreams to scale an engagement, and the CLI plus GitHub Actions integration are the delivery surfaces for developer workflows.
 
 ## Ecosystem Position
 
-Upstream: LLM providers for agent reasoning. Downstream: findings feed security review and ticketing workflows. Competing: traditional DAST/SAST scanners and commercial pentest-automation platforms; complementary to guardrail scanners that test the AI system itself rather than using AI to test applications (see [security-and-guardrails tools](../../tools/by-job/security-and-guardrails.md)).
+It competes with traditional scanners and static analysis suites, and it sits alongside the LLM safety-probing tools such as garak in content/tools/evaluation-and-observability, where the target is a model rather than an application. It complements the runtime isolation entries such as content/projects/agent-systems/nono, since an exploit-executing agent needs the same containment a coding agent needs. Compared with manual pentesting it trades scenario depth and contractual credibility for speed and repeatability.
 
 ## Getting Started
 
+The package is published on PyPI as strix-agent, and the CLI is the documented entry point:
+
 ```bash
-# See the project's official documentation (Resources below) for the
-# canonical deployment command for this specific agent system.
+pip install strix-agent
+strix --target https://your-app.example.com
 ```
+
+GitHub Actions integration is available from the hosted onboarding path at app.strix.ai, which the README describes as requiring no setup beyond adding the workflow.
 
 ## Key Use Cases
 
-1. **Scenario**: you want continuous, agent-driven penetration testing of your own applications, with findings validated by actual exploitation attempts rather than pattern matching
-2. **Scenario**: you want a reference implementation of an agent loop engineered for a high-stakes domain — sandboxing, scope control, validation before reporting
+1. Pre-merge security gate: run Strix in GitHub Actions on each pull request so a demonstrated exploit blocks the change rather than a static-analysis warning.
+2. Continuous validation: point an agent at a staging deployment nightly to catch authorisation and injection flaws that a code scanner cannot see.
+3. Triage replacement: receive confirmed issues with proof of concept, remediation steps and a proposed patch instead of a ranked list of suspects.
 
 ## Strengths
 
-- Validation-by-exploitation cuts false positives relative to static scanning — a mechanism, not a heuristic
-- Fully open-source (Apache-2.0) and very actively developed, with a large community (38k+ stars as of 2026-07-07)
+- Validates by execution, so a finding arrives as a working proof of concept and the false-positive load drops sharply.
+- Multi-agent orchestration parallelises reconnaissance and exploitation across workstreams.
+- Developer-first output: a CLI, remediation guidance, patch generation and a report rather than a raw scanner dump.
+- Apache-2.0 licensed, which matters more than usual because security tooling is often embedded in internal pipelines.
 
 ## Limitations
 
-- Autonomous output still requires expert review; it does not replace a certified human pentest for compliance purposes
-- Must only be run against systems you own, in isolated environments — misuse is both unsafe and illegal
+Autonomous exploitation against systems you do not own or have written authorisation to test is a legal problem the tool cannot solve for you. Running real attack techniques against a live application can damage it, so staging discipline and blast-radius limits are your responsibility. Findings vary between runs, which makes it a poor deterministic gate without a triage step, and the false-negative risk of an agent that fails to find a bug is invisible in the output. The hosted tiers are where the orchestration features are polished, and the open-source build needs its own runtime and containment.
 
 ## Relation to the Arsenal
 
-This is an agent-system entry: it documents a standalone, deployable system rather than a library you import. For a library/SDK to build your own agent with, see [Frameworks](../frameworks/_index.md). For job-based tool comparisons, see [tools/by-job/](../../tools/by-job/_index.md).
+This entry in content/projects/agent-systems is the offensive-security member of the agent family. Its nearest cousins in this catalog are the LLM red-teaming tools in content/tools/evaluation-and-observability such as garak, and its containment story points at content/projects/agent-systems/nono. If you are building the defensive pipeline around it, the CI and workflow orchestration entries in content/tools/orchestration are where the gating logic would live.
 
 ## Resources
 
-- [GitHub](https://github.com/usestrix/strix)
-- [Documentation](https://strix.ai)
+- [GitHub — usestrix/strix](https://github.com/usestrix/strix)
+- [Docs — docs.strix.ai](https://docs.strix.ai)
+- [PyPI — strix-agent](https://pypi.org/project/strix-agent/)

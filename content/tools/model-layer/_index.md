@@ -44,10 +44,10 @@ _No star-tracked entries yet._
 
 ### Browse All
 
-- [Hugging Face Accelerate](./accelerate.md) — Device-agnostic PyTorch training launcher — the same script runs on CPU, one GPU, multi-GPU, TPU, DeepSpeed, or FSDP via config, not code changes
+- [Hugging Face Accelerate](./accelerate.md) — Thin PyTorch wrapper that runs an existing training loop on CPU, TPU, or single and multi-GPU with fp8, fp16 and bf16 mixed precision
 - [Axolotl](./axolotl.md) — Configuration-driven fine-tuning framework for many open-weight LLM families
 - [Cerebras Inference](./cerebras-inference.md) — Wafer-scale-engine inference API claiming the fastest open-model token rates available
-- [ClearML](./clearml.md) — Open-source, self-hostable MLOps suite covering experiment tracking, data versioning, pipelines, and orchestration
+- [ClearML](./clearml.md) — Open-source MLOps suite bundling experiment tracking, dataset versioning, remote execution, pipelines, orchestration, Triton-backed serving and fractional GPUs
 - [Cohere](./cohere.md) — Enterprise AI platform: Command models plus best-in-class Embed and Rerank APIs for search and RAG
 - [DeepSpeed](./deepspeed.md) — Microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory
 - [DVC](./dvc.md) — Open-source data and model versioning tool for ML projects and pipelines
