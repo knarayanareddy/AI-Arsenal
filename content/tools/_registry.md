@@ -217,4 +217,5 @@
 | `wandb-weave` | [Weights & Biases Weave](./evaluation-and-observability/wandb-weave.md) | An observability and evaluation toolkit for AI applications from Weights & Biases |
 | `weights-biases` | [Weights & Biases](./model-layer/weights-biases.md) | Experiment tracking and model management platform for ML and AI teams |
 | `windsurf` | [Windsurf](./dx-and-tooling/windsurf.md) | Agentic AI code editor built around Cascade, a context-aware agent that keeps working across your whole repo |
+| `xiurouter` | [XiuRouter](./serving-and-deployment/xiurouter.md) | Hosted multi-model API service with OpenAI, Anthropic, and Gemini protocol routes plus scoped keys and usage records |
 | `zep` | [Zep](./orchestration/zep.md) | Memory and context engineering platform for AI agents and assistants |

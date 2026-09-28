@@ -1,13 +1,13 @@
 # AI Arsenal — Dense Context Summary
 
-Generated: 2026-07-19T21:22:58.055Z | Entries: 1061 | Schema version: 1.0.0
+Generated: 2026-09-28T13:23:54.022Z | Entries: 1166 | Schema version: 1.0.0
 
 AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineering. It is designed for humans browsing GitHub, LLMs ingesting context, autonomous agents routing to files, and future UI/API consumers.
 
 ## Counts
 
-- Projects: 322
-- Tools: 214
+- Projects: 425
+- Tools: 215
 - Papers: 128
 - Tips: 171
 - People: 25
@@ -16,7 +16,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Build examples: 8
 - Architectures: 29
 - Observability: 16
-- Community: 32
+- Community: 33
 - Benchmarks: 52
 - Trending: 4
 
@@ -62,16 +62,16 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 ### data-pipelines
 - Marker (⭐37280, score:50) — Deep-learning PDF-to-markdown converter that handles tables, equations, and layout with optional LLM-assisted accuracy boosts
 - cleanlab (⭐11562, score:50) — Data-centric AI library that finds label errors, outliers, and low-quality examples in any dataset via confident-learning statistics on predictions
-- DuckDB (⭐39306, score:0) — An in-process analytical SQL database that runs fast columnar OLAP queries directly on files (Parquet, CSV, Arrow) without a server
-- Polars (⭐38987, score:0) — A fast, multi-threaded DataFrame library in Rust with a lazy query optimizer and Arrow memory model, a high-performance alternative to pandas for AI/ML data
-- LangExtract (⭐37100, score:0) — Python library for grounded structured extraction from unstructured text with source spans and visualization
+- Scrapling (⭐84212, score:39) — BSD-3-Clause adaptive scraping framework that detects blocking, escalates to a stealth browser, and re-locates selectors when markup shifts
+- ClickHouse (⭐50123, score:38) — Apache-2.0 columnar OLAP engine with vectorized execution, MergeTree storage, and sub-second scans over event and trace data
+- datasets (⭐22014, score:35) — Loads, caches, and streams Hugging Face Hub corpora as Arrow-backed map-style or iterable datasets
 
 ### evaluation
 - MTEB (⭐3344, score:50) — The Massive Text Embedding Benchmark — the standard evaluation suite and leaderboard for embedding and reranker models across 1000+ tasks
 - Terminal-Bench (⭐2427, score:50) — Benchmark measuring AI agents on real end-to-end tasks in a sandboxed terminal environment, from compiling code to training models
 - BigCodeBench (⭐513, score:50) — Code-generation benchmark testing diverse function calls and complex instructions across 139 libraries — the harder successor to HumanEval
-- lmms-eval (⭐4300, score:0) — Multimodal evaluation toolkit spanning text, image, video, and audio tasks and model adapters
-- LightEval (⭐2473, score:0) — Hugging Face's all-in-one LLM evaluation toolkit for running benchmarks across multiple inference backends with reproducible
+- scikit-learn (⭐67407, score:38) — BSD-3-Clause classical ML library defining the estimator, transformer, and Pipeline contracts that tabular and structured stages still use
+- xgboost (⭐28801, score:36) — Apache-2.0 gradient-boosted decision tree library with a scikit-learn API, GPU support, and distributed training
 
 ### llms
 - LobeChat (LobeHub) (⭐79620, score:72) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
@@ -85,7 +85,7 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - ComfyUI (⭐119901, score:50) — Node-graph engine for visual generative AI: the standard open-source interface for building diffusion and video-generation pipelines
 - FLUX (Black Forest Labs) (⭐25700, score:45) — Black Forest Labs' rectified-flow image generation family — FLUX.1 [dev]/[schnell] set the open-weights quality bar after Stable Diffusion's momentum stalled
 - MiniCPM-V (⭐25801, score:42) — Efficient open vision-language model series from OpenBMB that runs strong image/video/OCR understanding on-device, including phones
-- Open-Sora (⭐29172, score:40) — Open-source text/image-to-video generation model and training pipeline from HPC-AI Tech, aiming for an accessible reproduction of Sora-style video synthesis
+- ComfyUI (⭐135314, score:41) — GPL-3.0 node-graph engine for diffusion and video models where a saved workflow is a JSON graph other tools can replay
 
 ### observability
 - DeepEval (⭐16140, score:70) — An open-source evaluation framework for testing LLM applications in CI
@@ -105,8 +105,8 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - Supabase (⭐74300, score:50) — Open-source backend platform: Postgres database, auth, storage, and realtime APIs
 - Cherry Studio (⭐48319, score:46) — Cross-platform desktop LLM client supporting many cloud and local providers, with assistants, knowledge bases, MCP tools, and artifacts in one app
 - Uiverse Design (⭐11000, score:40) — Open-source library of community-made CSS/Tailwind UI elements for faster front-end development
-- LitServe (⭐3910, score:32) — Lightning-built serving engine for AI models on top of FastAPI, adding batching, streaming, GPU autoscaling, and multi-model workers with minimal code
-- Context7 (⭐58934, score:0) — Up-to-date code documentation platform for LLMs and AI coding editors through retrieval and MCP access
+- kestra (⭐28401, score:36) — Apache-2.0 Java orchestration platform with event-driven triggers, durable execution, and a UI for data and AI pipelines
+- spaCy (⭐33927, score:35) — MIT-licensed industrial NLP library with Cython pipelines for tokenization, tagging, NER, parsing, and entity linking
 
 ### voice-audio
 - AudioCraft (Meta) (⭐23456, score:60) — Meta's audio-generation library and open models — MusicGen for text-conditioned music, AudioGen for sound effects, built on the EnCodec codec
@@ -346,11 +346,11 @@ AI Arsenal is a Markdown-first, schema-enforced knowledge base for AI engineerin
 - AI Tinkerers
 
 ### newsletter
+- AI Weekly — Ranks and explains AI developments using signals from what influential experts and organizations are reading and sharing
 - Import AI (Jack Clark)
 - Interconnects (Nathan Lambert)
 - Last Week in AI
 - Latent Space (Newsletter)
-- The Batch (DeepLearning.AI)
 
 ## Benchmark Catalog
 

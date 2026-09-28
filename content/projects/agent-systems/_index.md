@@ -32,44 +32,53 @@ Before selecting an agent system:
 
 ### Recently Added
 
-- [DeepAnalyze](./deepanalyze.md)
-- [Mistral Vibe](./mistral-vibe.md)
-- [ml-intern](./ml-intern.md)
-- [nanobot](./nanobot.md)
-- [Open-AutoGLM](./open-autoglm.md)
-- [Open Code Review](./open-code-review.md)
-- [Symphony](./symphony.md)
-- [trpc-agent-go](./trpc-agent-go.md)
-- [BISHENG](./bisheng.md)
-- [GPT Engineer](./gpt-engineer.md)
+- [goose](./aaif-goose-goose.md)
+- [opencode](./anomalyco-opencode.md)
+- [conductor](./conductor-oss-conductor.md)
+- [big-AGI](./enricoros-big-agi.md)
+- [huginn](./huginn-huginn.md)
+- [InvokeAI](./invoke-ai-invokeai.md)
+- [kagent](./kagent-dev-kagent.md)
+- [browser](./lightpanda-io-browser.md)
+- [Fooocus](./lllyasviel-fooocus.md)
+- [storm](./stanford-oval-storm.md)
 
 ### Most Popular
 
 - [Hermes Agent](./hermes-agent.md) — ⭐ 213237
+- [opencode](./anomalyco-opencode.md) — ⭐ 210538
 - [Browser Use](./browser-use.md) — ⭐ 103506
 - [LobeChat (LobeHub)](./lobe-chat.md) — ⭐ 79620
 - [screenshot-to-code](./screenshot-to-code.md) — ⭐ 73211
 - [AnythingLLM](./anythingllm.md) — ⭐ 62914
 - [MemPalace](./mempalace.md) — ⭐ 57230
 - [GPT Engineer](./gpt-engineer.md) — ⭐ 55189
-- [nanobot](./nanobot.md) — ⭐ 45890
-- [LibreChat](./librechat.md) — ⭐ 40447
-- [Strix](./strix.md) — ⭐ 38354
+- [goose](./aaif-goose-goose.md) — ⭐ 54732
+- [Fooocus](./lllyasviel-fooocus.md) — ⭐ 53209
 
 ### Browse All
 
+- [goose](./aaif-goose-goose.md) — Apache-2.0 Rust agent that installs dependencies, edits files, and runs commands locally, extended through provider-agnostic MCP tools
+- [opencode](./anomalyco-opencode.md) — MIT-licensed terminal coding agent in TypeScript that edits files, runs shell commands, and exposes a client/server session protocol
 - [AnythingLLM](./anythingllm.md) — All-in-one desktop and self-hosted AI application: private document chat, RAG, and agents over any LLM with no-code setup
 - [BISHENG](./bisheng.md) — An open enterprise LLMOps platform combining visual GenAI workflow building, RAG, agents, model management, evaluation
 - [Browser Use](./browser-use.md) — The most-starred open-source browser agent: connects LLMs to a real browser so agents can navigate, fill forms and complete web tasks autonomously
+- [conductor](./conductor-oss-conductor.md) — Apache-2.0 Java workflow engine giving long-running agent and microservice tasks durable retries, timers, and human steps
 - [Continue](./continue.md) — Open-source AI coding assistant for VS Code and JetBrains — chat, autocomplete, edit, and agent modes over any model, including fully local
 - [DeepAnalyze](./deepanalyze.md) — RUC DataLab's DeepAnalyze-8B agentic LLM and framework for autonomous data preparation, analysis, modeling, visualization, and report generation
+- [big-AGI](./enricoros-big-agi.md) — Browser-and-server AI workbench bundling multi-provider chat, personas, image generation, voice, and sandboxed code execution behind one local interface
 - [GPT Engineer](./gpt-engineer.md) — An early, influential CLI that generates and iterates on entire codebases from a natural-language spec, pioneering the prompt-to-project coding-agent pattern
 - [GPT Researcher](./gpt-researcher.md) — Autonomous deep-research agent that plans queries, scrapes and cross-validates 20+ sources, and writes cited research reports
 - [Hermes Agent](./hermes-agent.md) — Open-source personal agent platform with tools, memory, skills, subagents, and multi-channel runtimes
+- [huginn](./huginn-huginn.md) — MIT-licensed Ruby event-driven platform where agents watch sites, feeds, files, and webhooks and react on a schedule
 - [InsForge](./insforge.md) — Open-source backend platform giving AI coding agents database, auth, storage, and AI gateway
+- [InvokeAI](./invoke-ai-invokeai.md) — Apache-2.0 creative engine for Stable Diffusion with a managed asset database, board, and metadata stored per generation
+- [kagent](./kagent-dev-kagent.md) — Kubernetes-native platform that runs AI agents as cluster workloads with declared tools, scheduled tasks, and event-driven triggers
 - [Khoj](./khoj.md) — Self-hostable AI second brain: chat over your notes and documents, custom agents, scheduled automations, and deep research across local or hosted LLMs
 - [Leon](./leon.md) — An open-source, self-hosted personal assistant with a modular skill system, on-device speech, and a privacy-first design that runs entirely on your own server
 - [LibreChat](./librechat.md) — Self-hosted ChatGPT-style interface unifying OpenAI, Anthropic, Google, and local models with agents, code interpreter, and multi-user auth
+- [browser](./lightpanda-io-browser.md) — AGPL-3.0 headless browser written in Zig that speaks CDP for fast agent navigation without a full rendering engine
+- [Fooocus](./lllyasviel-fooocus.md) — GPL-3.0 minimal UI over SDXL and Flux that reduces image generation to prompt, style, aspect ratio, and advanced knobs
 - [LobeChat (LobeHub)](./lobe-chat.md) — Self-hostable, multi-provider AI chat platform with plugins, agents marketplace, knowledge base, and one-click deployment
 - [MaxKB](./maxkb.md) — Open-source platform for building enterprise-grade knowledge-base agents, pairing RAG over documents with workflow and tool orchestration
 - [MemPalace](./mempalace.md) — Open-source AI memory system for persistent agent context, recall, and memory-tool integrations
@@ -91,8 +100,11 @@ Before selecting an agent system:
 - [SillyTavern](./sillytavern.md) — Self-hosted, extensible chat frontend for local and hosted LLMs, focused on character personas, long conversations, and power-user control over prompts
 - [Skyvern](./skyvern.md) — LLM + computer-vision browser automation that operates websites from natural-language goals instead of brittle DOM selectors
 - [Stagehand](./stagehand.md) — Open-source browser-AI framework for reliable AI agent web interactions
+- [storm](./stanford-oval-storm.md) — MIT-licensed research system that researches a topic through perspective-guided questioning and writes a cited, Wikipedia-style article
+- [harness-sdk](./strands-agents-harness-sdk.md) — Agent harness SDK that owns the control loop, session state, and tool routing for agents in Python and TypeScript
 - [Strix](./strix.md) — Open-source autonomous AI penetration-testing agent that finds and validates application vulnerabilities
 - [SuperAGI](./superagi.md) — A dev-first open framework for building, managing, and running autonomous agents, with a GUI, tool marketplace, concurrent agents, and persistent memory
+- [SWE-agent](./swe-agent-swe-agent.md) — Agent harness that attempts a real fix for a GitHub issue using a chosen LM inside a shell sandbox
 - [Symphony](./symphony.md) — OpenAI's engineering-preview specification and Elixir reference system for spawning autonomous Codex agents from a work board
 - [Tabby](./tabby.md) — Self-hosted AI coding assistant server in Rust — an on-prem Copilot alternative bundling its own model serving, code RAG, and IDE integrations
 - [TensorZero](./tensorzero.md) — An open-source LLMOps platform in Rust unifying an LLM gateway, observability, evaluation, and data-driven optimization into a feedback loop for improving LLM
