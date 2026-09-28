@@ -80,6 +80,23 @@ const GENERIC_FRONTMATTER_PATTERNS = [
 
 const TECHNICAL_TERMS = /\b(?:API|MCP|Python|TypeScript|Rust|Go|Kubernetes|Docker|GPU|models?|checkpoint|dataset|retrieval|embedding|vector|cache|gateway|provider|workflow|sandbox|prompt|adapter|benchmark|ablation|trajectory|judge|baseline|latency|tokens?|authorization|deletion|confidence|decoder|test suite|rollback|streaming|batching|storage|agents?|rubric|citation|support|false-positive|task|turn|instance|multimodal|vision|robotics|corpus|construct|cases?|domains?|settings?|telemetry|detector|explorer|F1|scores?|accuracy|results?)\b/i;
 const COMPARISON_TERMS = /\b(?:overlaps?|compete\w*|compare|alternative|between|above|below|alongside|complement\w*|rather than|not a)\b/i;
+
+// Generic-praise / vibes prose, checked per section. An entry that describes a
+// project in superlatives with no named noun anywhere near the claim carries no
+// information, which is the Failure Mode 2 the community check already guards
+// for community entries. Same idea, applied to every entry kind.
+//
+// Deliberately excludes words that are ordinary technical usage: "robust",
+// "powerful", "first-class", "seamless", and "impressive" all appear in real
+// engineering prose ("a robust parser", "first-class support"), so including
+// them produced false positives on specific, well-written entries.
+const VIBE_ADJECTIVES = '(?:amazing|awesome|excellent|fantastic|wonderful|incredible|game[- ]changing|revolutionary|unparalleled|unmatched|unbeatable)';
+// A concrete-signal word that shows the praise is attached to something real.
+const CONCRETE_SIGNAL = /\b(?:\d[\d,.kKmM]*|v?\d+\.\d+|\b(?:19|20)\d{2}\b|active|release|stars?|issue[s]?|commit|benchmark|measured?|documented|install|pip|npm|docker|kubectl|api|sdk)\b/i;
+const SECTION_VIBES_PATTERN = new RegExp(
+  `\\b${VIBE_ADJECTIVES}\\b[^.!?\\n]{0,160}\\b${VIBE_ADJECTIVES}\\b`,
+  'gi'
+);
 const BAD_INTERPOLATION = /\babout\s+(?:a|an|the\s+)?(?:defines|introduces|combines|builds|presents|evaluates|provides|uses|is)\b/i;
 
 function normalize(text) {
@@ -120,11 +137,30 @@ function listValues(value) {
   return Array.isArray(value) ? value.join(' ') : String(value ?? '');
 }
 
+// Flags a body section that is a near-copy of a frontmatter field.
+//
+// The previous guard was `sectionText.length <= fieldText.length * 1.6`, which
+// was inverted: it only fired when the section was SHORTER than the field, so
+// pasting the description three or ten times made the copy invisible. Any
+// section that is mostly a restatement of a frontmatter field is the failure
+// mode regardless of how much padding surrounds it, so the overlap test alone
+// is the right signal. A genuinely written section that merely restates a few
+// domain nouns scores far below the threshold.
 function isNearCopy(section, field) {
   const sectionText = normalize(section);
   const fieldText = normalize(field);
   if (!sectionText || !fieldText) return false;
-  return tokenOverlap(section, field) > 0.88 && sectionText.length <= fieldText.length * 1.6;
+  if (tokenOverlap(section, field) <= 0.88) return false;
+  // A length ratio is the wrong guard here: padding a copy to 3x the field
+  // used to make it invisible. What actually distinguishes a restatement from
+  // real writing is whether the section introduces any vocabulary the field
+  // did not have. Genuine analysis names modules, mechanisms, and trade-offs
+  // that the one-line description never mentions; a padded copy adds no new
+  // words at all, however long it is.
+  const sectionTokens = tokens(sectionText);
+  const fieldTokens = tokens(fieldText);
+  const novel = [...sectionTokens].filter((token) => !fieldTokens.has(token));
+  return novel.length / Math.max(sectionTokens.size, 1) < 0.15;
 }
 
 function entryKind(file, data) {
@@ -152,6 +188,7 @@ export const EDITORIAL_RULES = {
   REJECTED_BOILERPLATE: 'rejected-boilerplate',
   GENERIC_FRONTMATTER: 'generic-frontmatter',
   BAD_INTERPOLATION: 'bad-interpolation',
+  SECTION_VIBES: 'section-generic-praise',
   OVERVIEW_COPIED: 'overview-copied-from-frontmatter',
   PROJECT_SECTION_LENGTH: 'project-section-length',
   PROJECT_SECTION_TECH: 'project-section-missing-technical-content',
@@ -190,6 +227,35 @@ export function inspectEntry({ file, data, content }) {
     if (pattern.test(frontmatterText)) addIssue(issues, file, EDITORIAL_RULES.GENERIC_FRONTMATTER, `contains generic frontmatter judgment: ${pattern}`);
   }
   if (BAD_INTERPOLATION.test(bodyText)) addIssue(issues, file, EDITORIAL_RULES.BAD_INTERPOLATION, 'contains a likely grammatical interpolation error around "about"');
+
+  // Vibes-only prose, checked per section across every entry kind. Two praise
+  // adjectives close together with no concrete signal between them is the
+  // tell: real writing attaches superlatives to something named and dated.
+  for (const [heading, sectionBody] of sections) {
+    const text = String(sectionBody ?? '');
+    if (text.length < 80) continue;
+    const vibes = [...text.matchAll(new RegExp(SECTION_VIBES_PATTERN.source, 'gi'))];
+    if (vibes.length === 0) continue;
+    // Require the praise run to be *unbacked*: strip the praise sentences out
+    // and require real substance to remain. Testing the whole section for any
+    // single technical noun was too weak — one word like "support" anywhere in
+    // a puff piece was enough to excuse an entirely generic section.
+    const stripped = text
+      .split(/(?<=[.!?])\s+|\n/)
+      .filter((sentence) => !new RegExp(SECTION_VIBES_PATTERN.source, 'i').test(sentence))
+      .join(' ')
+      .trim();
+    const backedByNouns = (stripped.match(new RegExp(TECHNICAL_TERMS.source, 'gi')) ?? []).length >= 3;
+    const backedBySignal = CONCRETE_SIGNAL.test(stripped);
+    if (!backedByNouns && !backedBySignal) {
+      addIssue(
+        issues,
+        file,
+        EDITORIAL_RULES.SECTION_VIBES,
+        `section "${heading}" is generic praise with no named technical or concrete signal`
+      );
+    }
+  }
 
   if (kind === 'project') {
     if (isNearCopy(sections.get('Overview') ?? '', data.description)) {
