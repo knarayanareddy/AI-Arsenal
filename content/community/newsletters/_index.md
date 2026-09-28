@@ -10,6 +10,7 @@
 
 ## Recently Added
 
+- [AI Weekly](./ai-weekly.md)
 - [Import AI (Jack Clark)](./import-ai.md)
 - [Interconnects (Nathan Lambert)](./interconnects.md)
 - [Last Week in AI](./last-week-in-ai.md)
@@ -23,6 +24,7 @@ _No star-tracked entries yet._
 
 ## Browse All
 
+- [AI Weekly](./ai-weekly.md) — Ranks and explains AI developments using signals from what influential experts and organizations are reading and sharing
 - [Import AI (Jack Clark)](./import-ai.md) — 
 - [Interconnects (Nathan Lambert)](./interconnects.md) — 
 - [Last Week in AI](./last-week-in-ai.md) — 

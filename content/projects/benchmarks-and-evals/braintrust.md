@@ -6,18 +6,22 @@ artifact_type: service
 category: observability
 subcategory: tracing
 description: Managed eval-first platform for LLM traces, datasets, scorers, prompt experiments, and CI gates
-github_url: "https://www.braintrust.dev/"
+github_url: https://www.braintrust.dev/
 license: Proprietary
 primary_language: Other
 org_or_maintainer: null
-tags: [observability, evaluation, tracing, cloud]
+tags:
+  - observability
+  - evaluation
+  - tracing
+  - cloud
 maturity: production
 cost_model: freemium
 github_stars: 0
 github_stars_last_30d: 0
-trending_score: 15
-last_commit: "2026-06-13"
-docs_url: "https://www.braintrust.dev/docs"
+trending_score: 0
+last_commit: '2026-06-13'
+docs_url: https://www.braintrust.dev/docs
 demo_url: null
 paper_url: null
 paper_id: null
@@ -29,9 +33,13 @@ supported_formats: []
 api_compatible: null
 approach: platform
 phase: benchmark-and-eval
-domain: [language]
-relation_to_stack: [deploy-as-is]
-health_signals: [org-backed, actively-maintained]
+domain:
+  - language
+relation_to_stack:
+  - deploy-as-is
+health_signals:
+  - org-backed
+  - actively-maintained
 ecosystem_role:
   - Managed evaluation and observability platform, positioned around rigorous, data-driven LLM evaluation workflows
 best_for:
@@ -42,13 +50,17 @@ avoid_if:
   - Your primary need is basic tracing/logging rather than structured evaluation workflows — a lighter tracing tool may be simpler to adopt
 upstream_dependencies: []
 downstream_consumers: []
-alternatives: [langfuse, langsmith-platform, phoenix, helicone]
+alternatives:
+  - langfuse
+  - langsmith-platform
+  - phoenix
+  - helicone
 integrates_with: []
 corresponding_tool_entry: null
 enrichment_status: draft
 enrichment_notes: Limited independent third-party production case studies found beyond the project's own marketing site; as a closed-source managed service, internal architecture details are not independently verifiable from a public repository.
-added_date: "2026-06-13"
-last_reviewed: "2026-07-01"
+added_date: '2026-06-13'
+last_reviewed: '2026-07-01'
 added_by: maintainer
 reviewed_by: maintainer
 buzz_sources: []
