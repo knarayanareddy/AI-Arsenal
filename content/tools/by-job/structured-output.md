@@ -24,13 +24,13 @@ Parsing model output is a correctness boundary, and the difference between const
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Constrained decoding and validate-and-retry are listed as distinct options with different guarantees and latency costs.
+- Every entry states whether it guarantees syntactic validity only, which is the boundary most users over-read.
+- Schema-evolution behaviour is stated per entry, since that is the case implementations break on quietly.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the structured-output and model-layer facets on each tool entry. The comparison axis is the guarantee level — syntactic validity, schema adherence, or validated output — because those are different products and the latency cost differs with them.
 
 ## Getting Started
 

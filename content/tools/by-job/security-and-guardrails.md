@@ -24,13 +24,13 @@ Untrusted input reaches the model at several points, and each entry point needs 
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Input and output filtering are listed separately, because a jailbreak and a harmful completion need different mechanisms.
+- Every entry states its false-positive cost, since blocking legitimate traffic is an outage of its own.
+- None of these are presented as a substitute for access control at the API boundary.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the guardrail and safety facets on each tool entry. The comparison axis is where the check happens relative to the model call, because input filtering, output filtering and tool-argument validation are three different layers rather than three vendors.
 
 ## Getting Started
 

@@ -24,13 +24,13 @@ Prompts drift across services, and the drift is invisible until a regression rea
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Version control, templating and A/B testing are listed as separate categories, because they have different failure modes.
+- Every entry states its evaluation dependency, since a prompt registry without tests is a change log.
+- Operational concerns are included, which is where most prompt tooling stops.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the prompt-management and evaluation facets on each tool entry. The comparison axis is whether the tool can be evaluated against a real metric, since a registry without a test set records changes without learning anything from them.
 
 ## Getting Started
 

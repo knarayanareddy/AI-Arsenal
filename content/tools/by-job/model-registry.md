@@ -24,13 +24,13 @@ Reproducibility is a versioned-artefact problem: the weights, the preprocessor a
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry records what identity it captures — weights, preprocessor, prompt — because that is what reproducibility requires.
+- Registry infrastructure and experiment tracking are listed separately, since they are frequently bought together and used as two things.
+- Self-hosted options state what you take on, which is the real cost of the free licence.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the registry and experiment-tracking facets on each tool entry. The comparison axis is what identity is captured, since a registry that records weights but not the preprocessor or prompt reproduces nothing useful.
 
 ## Getting Started
 

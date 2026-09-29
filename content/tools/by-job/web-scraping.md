@@ -24,13 +24,13 @@ Ingestion is where a project first discovers that its data is not what it assume
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Hosted readers, headless browsers and crawlers are listed separately, because they fail in categorically different ways.
+- Every entry states whether it handles JavaScript rendering and authentication, which is where cheap tools stop working.
+- Legal and terms-of-service exposure is kept separate from the technical comparison.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the web-scraping and data-ingestion facets on each tool entry. The comparison axis is how the page is obtained — an HTTP fetch, a headless browser, or a crawler — since that single choice determines the failure modes you will debug in production.
 
 ## Getting Started
 

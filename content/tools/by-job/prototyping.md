@@ -24,13 +24,13 @@ A prototype is a tool for testing a hypothesis cheaply, and the failure is carry
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry states what the free or managed path costs at production volume, not just at demo scale.
+- Reversibility is called out per entry, because a prototype dependency carried forward is the expensive mistake.
+- The distinction between demo behaviour and quality on your own data is stated, which is what prototypes most often blur.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the prototype-audience and cost facets on each tool entry. The comparison axis is reversibility: which of these choices is cheap to undo when the prototype becomes a product, which is the question that determines whether the demo cost was real.
 
 ## Getting Started
 

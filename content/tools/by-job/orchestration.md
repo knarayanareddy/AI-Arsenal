@@ -24,13 +24,13 @@ When one call is not enough, the hard part is not the framework but representing
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Entries are grouped by execution model, because sequential, parallel and event-driven graphs fail in different ways.
+- Checkpointing and human-in-the-loop support are listed explicitly, since they decide whether a long workflow can resume.
+- Observability requirements are stated, because debugging a graph without per-step traces is guesswork.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the orchestration and agent-framework facets on each tool entry. The comparison axis is the execution model and how failure is represented, since a graph you cannot resume from a checkpoint is a graph you will debug by hand.
 
 ## Getting Started
 

@@ -24,13 +24,13 @@ Retrieval quality is decided by a chain — chunking, embeddings, index, ranking
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Entries are grouped by deployment model first, because that constrains everything else about the choice.
+- Hybrid versus pure-vector search is called out, since it is a real architecture decision rather than a tuning knob.
+- Every entry states that recall figures are not transferable to your corpus without re-measuring.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the vector-search and retrieval facets on each tool entry. The comparison axis is where the index and the embedding model are split, because that boundary determines what a re-embedding or a model swap actually costs you.
 
 ## Getting Started
 

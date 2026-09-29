@@ -24,13 +24,13 @@ Human judgement data is the bottleneck in most applied work, and the tooling is 
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry states the labelling unit and its price, because per-item and per-hour economics change the budget by an order of magnitude at small volumes.
+- Agreement and adjudication are treated as part of the cost rather than as an optional quality step.
+- Data-handling mode is stated per entry, since a self-hosted interface is often the only compliant option.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the labelling-related frontmatter facets on each tool entry, so a tool that changes its pricing model or hosting mode is reflected here without a separate edit. The comparison axis is the unit you pay in and who bears the data-residency risk, because those two facts eliminate most candidates before feature comparison begins.
 
 ## Getting Started
 

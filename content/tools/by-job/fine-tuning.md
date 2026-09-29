@@ -24,13 +24,13 @@ Fine-tuning is reached for when prompting has plateaued, and it is easy to reach
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry records the VRAM and time cost, because that constraint usually decides the method before quality does.
+- Parameter-efficient and alignment methods are listed together, since the practical choice is often between them.
+- Each entry distinguishes behaviour on a demonstrated distribution from general capability, which the demos blur.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the training and model-layer facets on each tool entry. The comparison axis is the resource cost and the method's interaction with your model and dataset size, since a benchmark delta is not the constraint that decides this choice in practice.
 
 ## Getting Started
 

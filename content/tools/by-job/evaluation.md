@@ -24,13 +24,13 @@ Every model, prompt and agent change is a hypothesis, and without an offline sig
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Entries are grouped by what they measure: offline suites, runtime tracing, and online metrics answer different questions and are not substitutes.
+- LLM-as-judge entries are included with their known bias profile rather than presented as neutral scoring.
+- Every entry states whether it needs a task-specific scorer set, since a generic benchmark measures the tool rather than your product.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the evaluation and observability facets on each tool entry. The comparison axis is what gets measured rather than which tool is larger: an offline suite, a runtime trace and an online metric can all be green while the product is broken, so they are listed as distinct categories rather than one ranking.
 
 ## Getting Started
 

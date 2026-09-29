@@ -24,13 +24,13 @@ A model becomes a deployment through packaging, and the packaging choice is the 
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry records what the packaging actually pins: environment, weights, GPU and secrets, so the artefact is reviewable rather than implied.
+- Managed platforms and self-hosted targets are listed together, because most models pass through both.
+- The platform-lock-in cost is stated per entry, which the feature list does not show.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the deployment and packaging facets on each tool entry. The comparison axis is what the artefact pins and what the target owns: a bundle you review in git is a review mechanism, while a managed platform removes the cluster work and the configuration options together.
 
 ## Getting Started
 

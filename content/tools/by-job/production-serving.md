@@ -24,13 +24,13 @@ The gap between a working model and a working service is where most projects spe
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every entry states the deployment model rather than the feature list, since that is the commitment you are making.
+- Cold start and idle capacity are listed as first-class costs, which per-request pricing hides.
+- Packaging tools appear alongside managed endpoints, because a model usually needs one of each.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the serving and deployment facets on each tool entry. The comparison axis is the deployment model, because the operational commitment differs far more between a managed endpoint and your own cluster than the feature lists suggest.
 
 ## Getting Started
 

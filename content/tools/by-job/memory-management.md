@@ -24,13 +24,13 @@ An agent that forgets is a support ticket, and one that recalls the wrong fact i
 
 ## Key Features
 
-- Job-focused shortlist
-- Links to canonical entries instead of duplicating long-form content
-- Scannable TL;DR cards for each tool
+- Every option is framed as a retrieval system, because that is where its failure modes come from: stale entries, irrelevant recall, unbounded growth.
+- Eviction and deletion are listed as requirements, not refinements.
+- In-context window management is distinguished from external memory, since they trade off differently.
 
 ## Architecture / How It Works
 
-Choose the job first, then compare tools by cost, open-source status, self-hostability, stack, and operational complexity.
+The shortlist is derived from the memory and agent-framework facets on each tool entry. The comparison axis is where state lives and who evicts it, because an unbounded memory store is a production incident rather than a tuning decision.
 
 ## Getting Started
 
