@@ -43,7 +43,7 @@ A flexible, open-source labeling tool supporting many data types (text, image, a
 
 ## Why It's in the Arsenal
 
-Label Studio earns a place in the Arsenal because it directly addresses a recurring decision point: you need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Label Studio is An open-source data labeling platform for ML and AI datasets. Read it beside `argilla`, `prodigy`, `scale-ai`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Projects define a labeling interface and task data source; annotators work throu
 
 ## Use Cases
 
-1. **Scenario**: you need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets
-2. **Scenario**: you want to self-host your annotation tooling for data-control or cost reasons
-3. **Scenario where this is NOT the right fit**: you need fully managed annotation workforce operations rather than just the tool (consider Scale AI) — evaluate an alternative instead
+1. **Where it fits**: You need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets.
+2. **Adoption checkpoint**: compare Label Studio against `argilla`, `prodigy`, `scale-ai` on the same `data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need a flexible, open-source labeling UI supporting many data types (text, image, audio, video) for ML/AI datasets
-- You want to self-host your annotation tooling for data-control or cost reasons
+- The distinguishing implementation detail for Label Studio is worth reading before adopting: projects define a labeling interface and task data source; annotators work through a queue of tasks in the UI, with results exportable in standard formats.
+- Weighing Label Studio against `argilla`, `prodigy`, `scale-ai` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- Label Studio is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- What this entry does not give you is behaviour under your load: measure Label Studio's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You need fully managed annotation workforce operations rather than just the tool (consider Scale AI)
-- Your annotation task is NLP-specific and would benefit from Prodigy's scripted, model-in-the-loop workflow
+- There is no self-hosted path to Label Studio, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Label Studio describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

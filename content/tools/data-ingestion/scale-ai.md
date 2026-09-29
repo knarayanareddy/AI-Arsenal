@@ -45,7 +45,7 @@ A managed enterprise data-labeling and data-engine platform providing outsourced
 
 ## Why It's in the Arsenal
 
-Scale AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need a managed annotation workforce and data engine for enterprise-scale AI training datasets. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Scale AI is catalogued as a managed data labeling and data engine platform for enterprise AI datasets, which is the specific claim the rest of the entry has to support. Read it beside `argilla`, `label-studio`, `prodigy`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://scale.com/ for the authentication a
 
 ## Use Cases
 
-1. **Scenario**: you need a managed annotation workforce and data engine for enterprise-scale AI training datasets
-2. **Scenario**: you want an end-to-end data pipeline (collection, labeling, QA) rather than just a labeling tool
-3. **Scenario where this is NOT the right fit**: budget or data-sensitivity requires an in-house, self-hosted labeling tool instead of an outsourced platform — evaluate an alternative instead
+1. **Where it fits**: You need a managed annotation workforce and data engine for enterprise-scale AI training datasets.
+2. **Adoption checkpoint**: compare Scale AI against `argilla`, `label-studio`, `prodigy` on the same `data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need a managed annotation workforce and data engine for enterprise-scale AI training datasets
-- You want an end-to-end data pipeline (collection, labeling, QA) rather than just a labeling tool
+- The distinguishing implementation detail for Scale AI is worth reading before adopting: customers submit data and labeling requirements; Scale AI's workforce and pipeline manage annotation, quality assurance, and delivery of the finished dataset.
+- Scale AI overlaps `argilla`, `label-studio`, `prodigy` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- Scale AI is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Scale AI, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Budget or data-sensitivity requires an in-house, self-hosted labeling tool instead of an outsourced platform
-- Your annotation volume is small enough that a self-serve tool (Label Studio/Argilla) is more cost-effective
+- Depending on Scale AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Scale AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

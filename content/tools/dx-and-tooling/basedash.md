@@ -46,7 +46,7 @@ An AI-native platform for generating dashboards, reports, and insights from natu
 
 ## Why It's in the Arsenal
 
-Basedash earns a place in the Arsenal because it directly addresses a recurring decision point: you want to generate dashboards and reports from natural-language queries without building BI infrastructure. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Basedash is catalogued as a aI-native platform for generating dashboards, reports, and insights from natural-language queries, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -66,21 +66,20 @@ Natural-language queries are translated into underlying data queries against con
 
 ## Use Cases
 
-1. **Scenario**: you want to generate dashboards and reports from natural-language queries without building BI infrastructure
-2. **Scenario**: non-technical stakeholders need to explore data without writing SQL
-3. **Scenario where this is NOT the right fit**: you need governed, auditable BI with strict data-access controls (evaluate against established BI tools) — evaluate an alternative instead
+1. **Where it fits**: You want to generate dashboards and reports from natural-language queries without building BI infrastructure.
+2. **Adoption checkpoint**: validate Basedash on your own data for the `structured-output` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want to generate dashboards and reports from natural-language queries without building BI infrastructure
-- Non-technical stakeholders need to explore data without writing SQL
+- In concrete terms, Basedash is an aI-native platform for generating dashboards, reports, and insights from natural-language queries — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Basedash has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- Basedash is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Basedash, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need governed, auditable BI with strict data-access controls (evaluate against established BI tools)
-- You need an open-source or self-hostable dashboarding tool
-
-_Verified for Basedash: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Basedash means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Basedash's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

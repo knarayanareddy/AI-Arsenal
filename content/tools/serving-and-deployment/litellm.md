@@ -43,7 +43,7 @@ An open-source proxy and SDK that exposes a single OpenAI-compatible interface f
 
 ## Why It's in the Arsenal
 
-LiteLLM earns a place in the Arsenal because it directly addresses a recurring decision point: you want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because LiteLLM is A proxy and SDK for routing requests across many LLM providers. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Requests are made against LiteLLM's unified API; it translates them into the tar
 
 ## Use Cases
 
-1. **Scenario**: you want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing
-2. **Scenario**: you need to swap or route between model providers without rewriting application code
-3. **Scenario where this is NOT the right fit**: you only ever call one provider's API directly and don't need a routing/abstraction layer — evaluate an alternative instead
+1. **Where it fits**: You want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing.
+2. **Adoption checkpoint**: validate LiteLLM on your own data for the `production-serving, prompt-management` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing
-- You need to swap or route between model providers without rewriting application code
+- In concrete terms, LiteLLM is a proxy and SDK for routing requests across many LLM providers — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- LiteLLM has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- Depending on LiteLLM means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- Capability is documented; behaviour is not. For LiteLLM, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You only ever call one provider's API directly and don't need a routing/abstraction layer
-- You need deep, provider-specific features that an abstraction layer would otherwise mask
+- There is no self-hosted path to LiteLLM, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LiteLLM describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

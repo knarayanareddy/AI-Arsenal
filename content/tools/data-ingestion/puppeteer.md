@@ -45,7 +45,7 @@ A Node.js library for controlling Chrome/Chromium specifically, commonly used fo
 
 ## Why It's in the Arsenal
 
-Puppeteer earns a place in the Arsenal because it directly addresses a recurring decision point: your stack is Node.js and you specifically need Chrome/Chromium automation without multi-browser support. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Puppeteer is a node.js browser automation library for Chrome and Chromium workflows. Read it beside `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -68,19 +68,20 @@ Follow the official documentation at https://github.com/puppeteer/puppeteer for 
 
 ## Use Cases
 
-1. **Scenario**: your stack is Node.js and you specifically need Chrome/Chromium automation without multi-browser support
-2. **Scenario**: you have existing Puppeteer scripts or team expertise and don't need Playwright's cross-browser API
-3. **Scenario where this is NOT the right fit**: you need first-class cross-browser (Firefox/WebKit) support or a non-Node primary language (Playwright is the better default) — evaluate an alternative instead
+1. **Where it fits**: Your stack is Node.js and you specifically need Chrome/Chromium automation without multi-browser support.
+2. **Adoption checkpoint**: compare Puppeteer against `crawl4ai-tool`, `firecrawl-tool`, `jina-reader` on the same `web-scraping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Your stack is Node.js and you specifically need Chrome/Chromium automation without multi-browser support
-- You have existing Puppeteer scripts or team expertise and don't need Playwright's cross-browser API
+- Beyond the feature list, Puppeteer's own implementation notes give the specifics — communicates with a Chrome/Chromium instance via the DevTools Protocol, letting scripts navigate pages, execute JavaScript in-page, and extract rendered content — which is where a capability claim either holds or does not for your workload.
+- Puppeteer overlaps `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, `playwright` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- Puppeteer is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Puppeteer, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need first-class cross-browser (Firefox/WebKit) support or a non-Node primary language (Playwright is the better default)
-- You just need to extract page text into Markdown for RAG (a dedicated scraper/reader tool is simpler)
+- Depending on Puppeteer means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Puppeteer describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

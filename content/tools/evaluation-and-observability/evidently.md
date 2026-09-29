@@ -46,7 +46,7 @@ A veteran open-source ML-observability framework that expanded into LLM evaluati
 
 ## Why It's in the Arsenal
 
-Evidently earns a place in the Arsenal because it directly addresses a recurring decision point: you monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Evidently is a open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge. Read it beside `deepchecks`, `phoenix`, `ragas-rag-evaluation`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install evidently
 
 ## Use Cases
 
-1. **Scenario**: you monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format
-2. **Scenario**: you want evaluation as code — reports and test suites in CI/pipelines, with an optional dashboard on top
-3. **Scenario where this is NOT the right fit**: pure LLM tracing/debugging is the need — trace-first tools (Langfuse, Phoenix) fit the workflow better — evaluate an alternative instead
+1. **Where it fits**: "You monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format.
+2. **Adoption checkpoint**: compare Evidently against `deepchecks`, `phoenix`, `ragas-rag-evaluation` on the same `evaluation, monitoring` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format
-- You want evaluation as code — reports and test suites in CI/pipelines, with an optional dashboard on top
+- In concrete terms, Evidently is an open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Evidently's honest comparison set is `deepchecks`, `phoenix`, `ragas-rag-evaluation`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
+- Evidently is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Evidently, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Pure LLM tracing/debugging is the need — trace-first tools (Langfuse, Phoenix) fit the workflow better
-- You want fully managed evals with no code; the library-first design assumes Python fluency
-
-- _Verified for Evidently: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Evidently means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Evidently describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ Prompt versioning and management built into the open-source Langfuse observabili
 
 ## Why It's in the Arsenal
 
-Langfuse Prompts earns a place in the Arsenal because it directly addresses a recurring decision point: you want prompt versioning tightly linked to traces, datasets, and evaluations in an open-source, self-hostable platform. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Langfuse Prompts is a prompt management and versioning workflows inside the Langfuse observability platform. Read it beside `langsmith-hub`, `promptlayer`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -70,19 +70,20 @@ Follow the official documentation at https://langfuse.com/docs/prompts for the a
 
 ## Use Cases
 
-1. **Scenario**: you want prompt versioning tightly linked to traces, datasets, and evaluations in an open-source, self-hostable platform
-2. **Scenario**: you're already using Langfuse for observability and want prompt management in the same system
-3. **Scenario where this is NOT the right fit**: you don't use Langfuse for tracing and only need standalone prompt versioning (a simpler dedicated tool may suffice) — evaluate an alternative instead
+1. **Where it fits**: You want prompt versioning tightly linked to traces, datasets, and evaluations in an open-source, self-hostable platform.
+2. **Adoption checkpoint**: compare Langfuse Prompts against `langsmith-hub`, `promptlayer` on the same `prompt-management` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want prompt versioning tightly linked to traces, datasets, and evaluations in an open-source, self-hostable platform
-- You're already using Langfuse for observability and want prompt management in the same system
+- The distinguishing implementation detail for Langfuse Prompts is worth reading before adopting: prompts are stored as versioned records inside Langfuse; when a prompt version is used in production, the resulting traces and eval scores are linked back to that specific version.
+- Weighing Langfuse Prompts against `langsmith-hub`, `promptlayer` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- Langfuse Prompts is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Langfuse Prompts all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You don't use Langfuse for tracing and only need standalone prompt versioning (a simpler dedicated tool may suffice)
-- You need a no-code, non-engineer-friendly prompt editor as the primary interface (evaluate the UI against your team's needs first)
+- There is no self-hosted path to Langfuse Prompts, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Langfuse Prompts describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

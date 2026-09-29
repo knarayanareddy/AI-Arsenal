@@ -43,7 +43,7 @@ Chrome DevTools MCP is a Google-maintained Model Context Protocol server, Apache
 
 ## Why It's in the Arsenal
 
-The decision it settles is whether an agent should be allowed to look at the browser's internals. Most browser automation gives an agent a click-and-type surface and no telemetry, so when a page is slow or a listener is leaking, the agent is guessing. Wiring DevTools itself into the tool set changes the economics: the same trace, console message and heap graph a senior engineer would open become three tool calls. The cost is a much larger blast radius than a click library, because every tool here can read and modify anything in the browser instance, and because two default-on behaviours send data outward.
+The entry exists because Chrome DevTools MCP is a google's MCP server that gives a coding agent Chrome DevTools itself: trace recording, network and console inspection, heap snapshots and Puppeteer-driven input. Read it beside `playwright`, `puppeteer`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -75,17 +75,21 @@ Run the server through npx, or use the bundled CLI directly for scripted inspect
 
 ## Use Cases
 
-1. Performance regression triage: have the agent record a trace while reproducing the interaction, then read the analysis instead of describing a hunch about a slow render.
-2. Leak hunting: take a baseline heap snapshot, exercise the suspect code path, take a second, then let compare_heapsnapshots and the dominator and retainer tools narrow it to the growing allocation.
-3. Flaky interaction repair: drive the flow with fill_form and click against snapshot uids, then read console messages with source-mapped stack traces to find the handler that throws.
+1. **Where it fits**: You are debugging a front-end defect and you want the agent to record a real performance trace and read the network waterfall and console stack traces.
+2. **Second workload**: not speculate about them.
+8. **Adoption checkpoint**: compare Chrome DevTools MCP against `playwright`, `puppeteer` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-This is the browser-side counterpart to the MCP servers in content/tools/dx-and-tooling that are application-specific, and it competes with Playwright MCP and Puppeteer MCP for the automation slot while being the only one of the three that also exposes DevTools traces, network, console and heap data. It overlaps with browser-use and Stagehand in content/projects/agent-systems, but those are Python libraries that own a browser instance and reason over accessibility snapshots, whereas this is a TypeScript MCP server that hands the harness a diagnostic instrument. Compared with the desktop-control entries in that same phase, this is browser-scoped rather than OS-scoped. It complements rather than duplicates the coding agents: Claude Code, Cline and Codex in content/tools/dx-and-tooling are the harnesses that call these tools.
+- The distinguishing implementation detail for Chrome DevTools MCP is worth reading before adopting: the server is an npm package launched over stdio by an MCP client, with puppeteer driving the actions and the Chrome DevTools frontend supplying traces, network, console and memory data. Input tools address elements by uid from a page content snapshot rather than by selector or coordinates, which is what makes the calls stable across DOM changes; click_at exists as a coordinate escape hatch behind --experimentalVision. Navigation is multi-tab and new_page accepts an isolatedContext so a test can get clean cookies and storage. Performance flows in three steps, start a trace, interact, stop and analyse, and performance_analyze_insight can optionally consult the CrUX API for field data. Memory is a separate loop of take-heapsnapshot, query objects, read dominators and retainers, then compare two snapshots. Requirements are Node.js LTS, a current stable Chrome or newer, and npm; update checks poll the npm registry unless CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS is set.
+- Chrome DevTools MCP's honest comparison set is `playwright`, `puppeteer`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
+- Chrome DevTools MCP is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- What this entry does not give you is behaviour under your load: measure Chrome DevTools MCP's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-The README's own disclaimer is the biggest operational fact: this server exposes the content of the browser instance, so anything the agent inspects leaves into the model context, and you should not point it at a profile with sensitive sessions. Chrome-only support is a hard boundary, with other Chromium browsers explicitly unsupported. Two defaults work against a locked-down deployment, since usage statistics are on unless you pass a flag and performance analysis can send trace URLs to the CrUX API for field data. The tool count is itself a cost, because roughly sixty tools across nine categories inflate the tool schema every MCP client has to carry and can crowd out the context a coding agent needs. Data freshness matters too: `@latest` in the config means a DevTools release can change tool behaviour without you changing anything.
+- There is no self-hosted path to Chrome DevTools MCP, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Chrome DevTools MCP describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

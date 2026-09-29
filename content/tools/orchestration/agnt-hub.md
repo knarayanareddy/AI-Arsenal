@@ -46,7 +46,7 @@ A platform for centrally governing AI agents across a team or company: defining 
 
 ## Why It's in the Arsenal
 
-AGNT.Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you need centralized policy and skill governance across many internal AI agents in a regulated org. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because AGNT.Hub is a build and manage secure, private AI agents with custom skills and policies. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Acts as a control plane that sits in front of individually deployed agents, medi
 
 ## Use Cases
 
-1. **Scenario**: you need centralized policy and skill governance across many internal AI agents in a regulated org
-2. **Scenario**: multiple teams are building agents independently and you need a shared skill/permission registry
-3. **Scenario where this is NOT the right fit**: you are a solo developer or small team building a single agent — evaluate an alternative instead
+1. **Where it fits**: You need centralized policy and skill governance across many internal AI agents in a regulated org.
+2. **Adoption checkpoint**: validate AGNT.Hub on your own data for the `orchestration, security-and-guardrails` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You need centralized policy and skill governance across many internal AI agents in a regulated org
-- Multiple teams are building agents independently and you need a shared skill/permission registry
+- Beyond the feature list, AGNT.Hub's own implementation notes give the specifics — acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy — which is where a capability claim either holds or does not for your workload.
+- AGNT.Hub has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- AGNT.Hub is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Maturity here is beta, so treat AGNT.Hub's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- You are a solo developer or small team building a single agent
-- You need an open-source, self-hostable option for compliance reasons
-
-_Verified for AGNT.Hub: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- There is no self-hosted path to AGNT.Hub, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- AGNT.Hub's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- AGNT.Hub is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

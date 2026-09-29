@@ -43,7 +43,7 @@ An open-source framework for packaging a model plus its pre/post-processing code
 
 ## Why It's in the Arsenal
 
-BentoML earns a place in the Arsenal because it directly addresses a recurring decision point: you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because BentoML is A framework for packaging, deploying, and scaling AI model services. Read it beside `fly-io`, `modal`, `railway`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ A Bento bundles model weights, a Python service definition, and dependencies int
 
 ## Use Cases
 
-1. **Scenario**: you need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact
-2. **Scenario**: you want a serving framework that's cloud-agnostic and can target Kubernetes, Docker, or BentoCloud
-3. **Scenario where this is NOT the right fit**: you only need a quick hosted endpoint for a single off-the-shelf open model (Replicate or HF Inference Endpoints may be faster to set up) — evaluate an alternative instead
+1. **Where it fits**: You need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact.
+2. **Adoption checkpoint**: compare BentoML against `fly-io`, `modal`, `railway` on the same `deployment, production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact
-- You want a serving framework that's cloud-agnostic and can target Kubernetes, Docker, or BentoCloud
+- In concrete terms, BentoML is a framework for packaging, deploying, and scaling AI model services — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `fly-io`, `modal`, `railway`, `replicate`, the comparison that decides this is deployment model and operational cost rather than the feature list; BentoML sits at the hosted-or-embedded end of that axis.
+- Depending on BentoML means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- What this entry does not give you is behaviour under your load: measure BentoML's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You only need a quick hosted endpoint for a single off-the-shelf open model (Replicate or HF Inference Endpoints may be faster to set up)
-- Your workload is purely serverless function calls without a custom inference pipeline
+- There is no self-hosted path to BentoML, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for BentoML describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

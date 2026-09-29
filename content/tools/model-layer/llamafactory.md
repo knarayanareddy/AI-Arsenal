@@ -45,7 +45,7 @@ A unified fine-tuning framework with both a web UI and CLI, supporting a very br
 
 ## Why It's in the Arsenal
 
-LLaMA-Factory earns a place in the Arsenal because it directly addresses a recurring decision point: you want a unified UI plus CLI to fine-tune a very wide range of open models without writing custom training code. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because LLaMA-Factory is a unified fine-tuning framework and UI for many LLMs and training methods. Read it beside `axolotl`, `mlx-lm`, `peft`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://github.com/hiyouga/LLaMA-Factory fo
 
 ## Use Cases
 
-1. **Scenario**: you want a unified UI plus CLI to fine-tune a very wide range of open models without writing custom training code
-2. **Scenario**: you're prototyping and want to compare fine-tuning methods (LoRA, full, RLHF-style) quickly via the web UI
-3. **Scenario where this is NOT the right fit**: you need a minimal, scriptable, CI-friendly fine-tuning pipeline (the broad UI surface adds overhead) — evaluate an alternative instead
+1. **Where it fits**: You want a unified UI plus CLI to fine-tune a very wide range of open models without writing custom training code.
+2. **Adoption checkpoint**: compare LLaMA-Factory against `axolotl`, `mlx-lm`, `peft` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want a unified UI plus CLI to fine-tune a very wide range of open models without writing custom training code
-- You're prototyping and want to compare fine-tuning methods (LoRA, full, RLHF-style) quickly via the web UI
+- In concrete terms, LLaMA-Factory is an unified fine-tuning framework and UI for many LLMs and training methods — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `axolotl`, `mlx-lm`, `peft`, `torchtune`, the comparison that decides this is deployment model and operational cost rather than the feature list; LLaMA-Factory sits at the hosted-or-embedded end of that axis.
+- LLaMA-Factory is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Capability is documented; behaviour is not. For LLaMA-Factory, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a minimal, scriptable, CI-friendly fine-tuning pipeline (the broad UI surface adds overhead)
-- You require long-term, narrowly-scoped production training infra rather than a general-purpose toolkit
+- Depending on LLaMA-Factory means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LLaMA-Factory describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

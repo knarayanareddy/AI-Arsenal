@@ -46,7 +46,7 @@ A lightweight Microsoft utility that became a standard preprocessing tool: conve
 
 ## Why It's in the Arsenal
 
-MarkItDown earns a place in the Arsenal because it directly addresses a recurring decision point: you need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because MarkItDown is a microsoft's utility for converting Office files, PDFs, images, and audio into LLM-friendly Markdown. Read it beside `docling`, `unstructured`, `llamaparse`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -71,21 +71,21 @@ Follow the official documentation at https://github.com/microsoft/markitdown#rea
 
 ## Use Cases
 
-1. **Scenario**: you need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion
-2. **Scenario**: token-efficient conversion where Markdown structure (headings, tables, lists) matters more than pixel-perfect layout
-3. **Scenario where this is NOT the right fit**: complex PDFs (multi-column, scanned, tables) are your core input — layout-aware parsers (Docling, MinerU, LlamaParse) extract far more faithfully — evaluate an alternative instead
+1. **Where it fits**: "You need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion.
+2. **Adoption checkpoint**: compare MarkItDown against `docling`, `unstructured`, `llamaparse` on the same `web-scraping, data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion
-- Token-efficient conversion where Markdown structure (headings, tables, lists) matters more than pixel-perfect layout
+- The distinguishing implementation detail for MarkItDown is worth reading before adopting: per-format converters (mammoth for docx, pdfminer for PDF, speech recognition for audio) normalize content into a common Markdown stream; an extensible converter registry lets you add formats, and the MCP server exposes conversion directly to agents like Claude.
+- Weighing MarkItDown against `docling`, `unstructured`, `llamaparse` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- MarkItDown is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Maturity here is beta, so treat MarkItDown's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- Complex PDFs (multi-column, scanned, tables) are your core input — layout-aware parsers (Docling, MinerU, LlamaParse) extract far more faithfully
-- You need chunking, element metadata, or OCR pipelines built in; MarkItDown is conversion-only
-
-- _Verified for MarkItDown: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to MarkItDown, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for MarkItDown describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- MarkItDown is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

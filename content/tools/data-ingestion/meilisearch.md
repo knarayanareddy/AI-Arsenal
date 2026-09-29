@@ -46,7 +46,7 @@ A Rust search engine designed around instant, forgiving search-as-you-type: sche
 
 ## Why It's in the Arsenal
 
-Meilisearch earns a place in the Arsenal because it directly addresses a recurring decision point: you want instant-search UX (sub-50ms, typo-tolerant, faceted) plus vector/hybrid search from one small binary. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Meilisearch is a lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance. Read it beside `typesense`, `qdrant`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ curl -L https://install.meilisearch.com | sh && ./meilisearch
 
 ## Use Cases
 
-1. **Scenario**: you want instant-search UX (sub-50ms, typo-tolerant, faceted) plus vector/hybrid search from one small binary
-2. **Scenario**: app search + RAG retrieval in one engine for products that don't need a dedicated vector-DB cluster
-3. **Scenario where this is NOT the right fit**: billion-scale vector collections or heavy filtering on vectors — dedicated vector DBs (Qdrant, Milvus) scale further — evaluate an alternative instead
+1. **Where it fits**: "You want instant-search UX (sub-50ms, typo-tolerant, faceted) plus vector/hybrid search from one small binary.
+2. **Adoption checkpoint**: compare Meilisearch against `typesense`, `qdrant` on the same `vector-search` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want instant-search UX (sub-50ms, typo-tolerant, faceted) plus vector/hybrid search from one small binary
-- App search + RAG retrieval in one engine for products that don't need a dedicated vector-DB cluster
+- In concrete terms, Meilisearch is a lightning-fast open-source search engine with built-in hybrid keyword+vector search and typo tolerance — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Meilisearch overlaps `typesense`, `qdrant` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- The documented integration path for Meilisearch runs through `langchain`, `llamaindex`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
+- Capability is documented; behaviour is not. For Meilisearch, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Billion-scale vector collections or heavy filtering on vectors — dedicated vector DBs (Qdrant, Milvus) scale further
-- Log analytics/aggregation workloads; that's Elasticsearch/OpenSearch territory
-
-- _Verified for Meilisearch: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Meilisearch, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Meilisearch describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

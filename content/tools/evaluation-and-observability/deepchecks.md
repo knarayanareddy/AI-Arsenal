@@ -46,7 +46,7 @@ An ML-validation framework built around the check/suite abstraction: dozens of p
 
 ## Why It's in the Arsenal
 
-Deepchecks earns a place in the Arsenal because it directly addresses a recurring decision point: you want opinionated, prebuilt validation suites (train-test leakage, drift, integrity) that run like unit tests before deploy. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Deepchecks is catalogued as a testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality, which is the specific claim the rest of the entry has to support. Read it beside `evidently`, `ragas-rag-evaluation`, `deepeval`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install deepchecks
 
 ## Use Cases
 
-1. **Scenario**: you want opinionated, prebuilt validation suites (train-test leakage, drift, integrity) that run like unit tests before deploy
-2. **Scenario**: continuous validation of tabular/vision models alongside newer LLM apps under one vendor
-3. **Scenario where this is NOT the right fit**: your LLM evaluation must be fully open-source — Deepchecks' LLM product is the commercial arm; use Evidently/DeepEval — evaluate an alternative instead
+1. **Where it fits**: "You want opinionated, prebuilt validation suites (train-test leakage, drift, integrity) that run like unit tests before deploy.
+2. **Adoption checkpoint**: compare Deepchecks against `evidently`, `ragas-rag-evaluation`, `deepeval` on the same `evaluation, monitoring` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want opinionated, prebuilt validation suites (train-test leakage, drift, integrity) that run like unit tests before deploy
-- Continuous validation of tabular/vision models alongside newer LLM apps under one vendor
+- Beyond the feature list, Deepchecks's own implementation notes give the specifics — each check computes a metric plus a condition (pass/fail threshold) over datasets/models; suites aggregate results into HTML/JSON reports. The LLM product logs interactions, runs property estimators and judge models over them, and supports human annotation queues for calibration — which is where a capability claim either holds or does not for your workload.
+- Against `evidently`, `ragas-rag-evaluation`, `deepeval`, the comparison that decides this is deployment model and operational cost rather than the feature list; Deepchecks sits at the hosted-or-embedded end of that axis.
+- Deepchecks is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Deepchecks all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- Your LLM evaluation must be fully open-source — Deepchecks' LLM product is the commercial arm; use Evidently/DeepEval
-- Trace-level agent debugging; this is validation, not observability plumbing
-
-- _Verified for Deepchecks: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Deepchecks, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Deepchecks describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

@@ -43,7 +43,7 @@ An open-source CLI and platform for regression-testing prompts and LLM outputs, 
 
 ## Why It's in the Arsenal
 
-promptfoo earns a place in the Arsenal because it directly addresses a recurring decision point: you want CLI-driven, CI-friendly regression testing for prompts and LLM outputs. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because promptfoo is An open-source CLI and platform for prompt and LLM regression testing. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Test cases (prompt + assertions) are defined in config files; the CLI runs them 
 
 ## Use Cases
 
-1. **Scenario**: you want CLI-driven, CI-friendly regression testing for prompts and LLM outputs
-2. **Scenario**: you need to red-team prompts for jailbreaks/injection as part of your evaluation suite
-3. **Scenario where this is NOT the right fit**: you need deep RAG-pipeline-specific metrics (faithfulness, retrieval precision) — pair with RAGAS or DeepEval — evaluate an alternative instead
+1. **Where it fits**: You want CLI-driven, CI-friendly regression testing for prompts and LLM outputs.
+2. **Adoption checkpoint**: validate promptfoo on your own data for the `evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want CLI-driven, CI-friendly regression testing for prompts and LLM outputs
-- You need to red-team prompts for jailbreaks/injection as part of your evaluation suite
+- Beyond the feature list, promptfoo's own implementation notes give the specifics — test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating — which is where a capability claim either holds or does not for your workload.
+- Nothing else in this phase is catalogued against promptfoo, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
+- promptfoo is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for promptfoo all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You need deep RAG-pipeline-specific metrics (faithfulness, retrieval precision) — pair with RAGAS or DeepEval
-- You want a fully managed, hosted-only experience with no local CLI workflow
+- Depending on promptfoo means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for promptfoo describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

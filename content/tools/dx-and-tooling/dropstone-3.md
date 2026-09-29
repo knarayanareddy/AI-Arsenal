@@ -46,7 +46,7 @@ Dropstone 3 is a closed-source, freemium collaborative AI workspace where a team
 
 ## Why It's in the Arsenal
 
-Dropstone is tracked as a team-coding workspace to compare against Cursor and Continue: the differentiator it claims is shared, description-driven collaboration rather than a single-developer editor, which is worth weighing only if your team lacks an established IDE/CI workflow. See Strengths / Limitations before adopting it.
+The entry exists because Dropstone 3 is a collaborative AI workspace for teams to build, describe, and ship software together. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals are unpublished. From the description it provides a hosted, multi-
 
 ## Use Cases
 
-1. **Scenario**: your team wants a collaborative AI workspace to describe and ship software together without setting up dev tooling first
-2. **Scenario**: you're exploring AI-assisted software collaboration for early-stage or internal projects
-3. **Scenario where this is NOT the right fit**: you need an open-source or self-hostable collaborative development environment — evaluate an alternative instead
+1. **Where it fits**: Your team wants a collaborative AI workspace to describe and ship software together without setting up dev tooling first.
+2. **Adoption checkpoint**: validate Dropstone 3 on your own data for the `orchestration, prototyping` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- Your team wants a collaborative AI workspace to describe and ship software together without setting up dev tooling first
-- You're exploring AI-assisted software collaboration for early-stage or internal projects
+- The distinguishing implementation detail for Dropstone 3 is worth reading before adopting: its internals are unpublished. From the description it provides a hosted, multi-user workspace that turns natural-language descriptions into software artifacts, coordinating collaborators in one environment and abstracting the individual dev-environment setup each would otherwise do. The hosted, closed-source model is why it is not self-hostable and why it tends to overlap an existing IDE/CI workflow rather than plug into one.
+- No direct sibling is catalogued for Dropstone 3 in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Dropstone 3 means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- Marked beta, so the capability is real but Dropstone 3's interface may still move; pin the version you build against instead of tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need an open-source or self-hostable collaborative development environment
-- Your team already has an established IDE/CI workflow that this would duplicate rather than improve
-
-- _Enrichment status: draft. Dropstone 3 is a closed-source product surfaced via a curated newsletter; its collaborative-workspace behavior and orchestration placement here come from the vendor's description, not independent production testing. Last reviewed: 2026-06-30._
+- Depending on Dropstone 3 means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Dropstone 3 describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Dropstone 3 is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

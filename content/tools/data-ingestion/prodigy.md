@@ -45,7 +45,7 @@ A scriptable, model-in-the-loop annotation tool for NLP tasks, where small Pytho
 
 ## Why It's in the Arsenal
 
-Prodigy earns a place in the Arsenal because it directly addresses a recurring decision point: you want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Prodigy is catalogued as a scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows, which is the specific claim the rest of the entry has to support. Read it beside `argilla`, `label-studio`, `scale-ai`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://prodi.gy/docs/ for the authenticati
 
 ## Use Cases
 
-1. **Scenario**: you want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks
-2. **Scenario**: you're comfortable writing small Python recipes to customize the annotation workflow
-3. **Scenario where this is NOT the right fit**: you need a free, open-source tool (Prodigy is a paid, one-time-license product) — evaluate an alternative instead
+1. **Where it fits**: You want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks.
+2. **Adoption checkpoint**: compare Prodigy against `argilla`, `label-studio`, `scale-ai` on the same `data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks
-- You're comfortable writing small Python recipes to customize the annotation workflow
+- In concrete terms, Prodigy is a scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `argilla`, `label-studio`, `scale-ai`, the comparison that decides this is deployment model and operational cost rather than the feature list; Prodigy sits at the hosted-or-embedded end of that axis.
+- Prodigy is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Prodigy all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You need a free, open-source tool (Prodigy is a paid, one-time-license product)
-- You need multi-modal (image/video/audio) labeling beyond Prodigy's primary NLP focus
+- There is no self-hosted path to Prodigy, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Prodigy's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

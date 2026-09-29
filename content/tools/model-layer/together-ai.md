@@ -46,7 +46,7 @@ One of the leading open-model clouds: serverless per-token inference across 200+
 
 ## Why It's in the Arsenal
 
-Together AI earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast, cheap hosted inference for open models (Llama, Qwen, DeepSeek) with an OpenAI-compatible API. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Together AI is a inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints. Read it beside `fireworks-ai`, `openrouter`, `replicate`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install together
 
 ## Use Cases
 
-1. **Scenario**: you want fast, cheap hosted inference for open models (Llama, Qwen, DeepSeek) with an OpenAI-compatible API
-2. **Scenario**: you need LoRA/full fine-tuning of open models with serving of the result on the same platform
-3. **Scenario where this is NOT the right fit**: you need proprietary frontier models (GPT/Claude/Gemini) — Together serves the open ecosystem — evaluate an alternative instead
+1. **Where it fits**: "You want fast, cheap hosted inference for open models (Llama, Qwen, DeepSeek) with an OpenAI-compatible API.
+2. **Adoption checkpoint**: compare Together AI against `fireworks-ai`, `openrouter`, `replicate` on the same `production-serving, fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want fast, cheap hosted inference for open models (Llama, Qwen, DeepSeek) with an OpenAI-compatible API
-- You need LoRA/full fine-tuning of open models with serving of the result on the same platform
+- In concrete terms, Together AI is an inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `fireworks-ai`, `openrouter`, `replicate`, the comparison that decides this is deployment model and operational cost rather than the feature list; Together AI sits at the hosted-or-embedded end of that axis.
+- Together AI is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Together AI all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You need proprietary frontier models (GPT/Claude/Gemini) — Together serves the open ecosystem
-- Strict on-prem/self-hosted requirements; Together is a hosted cloud
-
-- _Verified for Together AI: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Together AI, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Together AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

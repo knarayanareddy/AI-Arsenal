@@ -46,7 +46,7 @@ A dedicated tool for interacting with and managing interactive artifacts generat
 
 ## Why It's in the Arsenal
 
-Claude Artifact Player earns a place in the Arsenal because it directly addresses a recurring decision point: you generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Claude Artifact Player is a interact with and manage AI-generated artifacts from Claude and similar models. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -66,21 +66,21 @@ Renders and manages a collection of generated artifacts (interactive components/
 
 ## Use Cases
 
-1. **Scenario**: you generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them
-2. **Scenario**: you're building demos or internal tools around AI-generated interactive content
-3. **Scenario where this is NOT the right fit**: you need a general-purpose app hosting platform rather than an artifact-specific player — evaluate an alternative instead
+1. **Where it fits**: You generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them.
+2. **Adoption checkpoint**: validate Claude Artifact Player on your own data for the `structured-output` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You generate interactive artifacts with Claude (or similar models) and want a dedicated player/manager for them
-- You're building demos or internal tools around AI-generated interactive content
+- Beyond the feature list, Claude Artifact Player's own implementation notes give the specifics — renders and manages a collection of generated artifacts (interactive components/apps produced by a model) outside of the original chat interface they were created in — which is where a capability claim either holds or does not for your workload.
+- Claude Artifact Player has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- Claude Artifact Player is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Claude Artifact Player is beta, which means the interface is expected to churn: read the changelog before an upgrade, not after one breaks you.
 
 ## Limitations / When NOT to Use
 
-- You need a general-purpose app hosting platform rather than an artifact-specific player
-- You need an open-source or self-hostable option
-
-_Verified for Claude Artifact Player: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- There is no self-hosted path to Claude Artifact Player, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Claude Artifact Player describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Claude Artifact Player is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A usability layer over ColBERT from Answer.AI (Benjamin Clavié): index, search,
 
 ## Why It's in the Arsenal
 
-RAGatouille earns a place in the Arsenal because it directly addresses a recurring decision point: you want to test whether late-interaction (ColBERT) beats dense embeddings on your corpus — often true for out-of-domain retrieval. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+RAGatouille is a library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines. Read it beside `sentence-transformers`, `cohere`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ pip install ragatouille
 
 ## Use Cases
 
-1. **Scenario**: you want to test whether late-interaction (ColBERT) beats dense embeddings on your corpus — often true for out-of-domain retrieval
-2. **Scenario**: training/fine-tuning your own ColBERT model on domain data with a sane API
-3. **Scenario where this is NOT the right fit**: production serving at scale — token-level embeddings cost more storage/compute; consider native multi-vector support in Qdrant/Vespa instead — evaluate an alternative instead
+1. **Where it fits**: "You want to test whether late-interaction (ColBERT) beats dense embeddings on your corpus — often true for out-of-domain retrieval.
+2. **Adoption checkpoint**: compare RAGatouille against `sentence-transformers`, `cohere` on the same `vector-search` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want to test whether late-interaction (ColBERT) beats dense embeddings on your corpus — often true for out-of-domain retrieval
-- Training/fine-tuning your own ColBERT model on domain data with a sane API
+- In concrete terms, RAGatouille is a library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- RAGatouille overlaps `sentence-transformers`, `cohere` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- The documented integration path for RAGatouille runs through `llamaindex`, `langchain`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
+- Marked beta, so the capability is real but RAGatouille's interface may still move; pin the version you build against instead of tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Production serving at scale — token-level embeddings cost more storage/compute; consider native multi-vector support in Qdrant/Vespa instead
-- You need an actively-released library; RAGatouille's cadence is research-project-like (sparse releases)
-
-- _Verified for RAGatouille: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on RAGatouille means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for RAGatouille describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- RAGatouille is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A platform that uses autonomous AI agents to triage, route, and resolve customer
 
 ## Why It's in the Arsenal
 
-SeaTicket earns a place in the Arsenal because it directly addresses a recurring decision point: you want autonomous agents to triage and resolve customer-support tickets without building that pipeline yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because SeaTicket is a unify and resolve customer-support issues with autonomous AI agents. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -66,21 +66,21 @@ Incoming support tickets are routed to an agent pipeline that classifies, attemp
 
 ## Use Cases
 
-1. **Scenario**: you want autonomous agents to triage and resolve customer-support tickets without building that pipeline yourself
-2. **Scenario**: you are testing whether agentic automation can reduce support ticket backlog before committing to a custom build
-3. **Scenario where this is NOT the right fit**: you need deep, audited control over what an agent is allowed to tell a customer (regulated industries) — evaluate an alternative instead
+1. **Where it fits**: You want autonomous agents to triage and resolve customer-support tickets without building that pipeline yourself.
+2. **Adoption checkpoint**: validate SeaTicket on your own data for the `orchestration` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want autonomous agents to triage and resolve customer-support tickets without building that pipeline yourself
-- You are testing whether agentic automation can reduce support ticket backlog before committing to a custom build
+- The distinguishing implementation detail for SeaTicket is worth reading before adopting: incoming support tickets are routed to an agent pipeline that classifies, attempts resolution, and escalates to humans when confidence is low.
+- No direct sibling is catalogued for SeaTicket in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on SeaTicket means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- Maturity here is beta, so treat SeaTicket's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- You need deep, audited control over what an agent is allowed to tell a customer (regulated industries)
-- You need an open-source or self-hostable support-automation platform
-
-_Verified for SeaTicket: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- There is no self-hosted path to SeaTicket, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for SeaTicket describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- SeaTicket is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ Ray's serving library: define deployments as Python classes, compose them into i
 
 ## Why It's in the Arsenal
 
-Ray Serve earns a place in the Arsenal because it directly addresses a recurring decision point: your inference is a Python pipeline (preprocess → embed → LLM → postprocess) you want to scale as one autoscaling app. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Ray Serve is a scalable model-serving library on Ray for composing multi-model inference graphs in pure Python. Read it beside `triton-inference-server`, `bentoml`, `kserve`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install 'ray[serve]'
 
 ## Use Cases
 
-1. **Scenario**: your inference is a Python pipeline (preprocess → embed → LLM → postprocess) you want to scale as one autoscaling app
-2. **Scenario**: you already run Ray for data/training and want serving on the same cluster substrate
-3. **Scenario where this is NOT the right fit**: single-model LLM serving — a dedicated engine (vLLM) alone is simpler than adding a Ray cluster — evaluate an alternative instead
+1. **Where it fits**: "Your inference is a Python pipeline (preprocess → embed → LLM → postprocess) you want to scale as one autoscaling app.
+2. **Adoption checkpoint**: compare Ray Serve against `triton-inference-server`, `bentoml`, `kserve` on the same `production-serving, deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Your inference is a Python pipeline (preprocess → embed → LLM → postprocess) you want to scale as one autoscaling app
-- You already run Ray for data/training and want serving on the same cluster substrate
+- In concrete terms, Ray Serve is a scalable model-serving library on Ray for composing multi-model inference graphs in pure Python — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `triton-inference-server`, `bentoml`, `kserve`, the comparison that decides this is deployment model and operational cost rather than the feature list; Ray Serve sits at the hosted-or-embedded end of that axis.
+- Ray Serve documents a client surface through `vllm`, `fastapi`, which fixes the expected request and response contract so you are not inferring it from examples.
+- Capability is documented; behaviour is not. For Ray Serve, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Single-model LLM serving — a dedicated engine (vLLM) alone is simpler than adding a Ray cluster
-- Teams without Ray experience; cluster operations are a real cost you must want to pay
-
-- _Verified for Ray Serve: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Ray Serve means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Ray Serve describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

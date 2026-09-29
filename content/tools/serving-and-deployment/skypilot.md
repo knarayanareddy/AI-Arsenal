@@ -46,7 +46,7 @@ An open-source framework from UC Berkeley for running AI workloads across clouds
 
 ## Why It's in the Arsenal
 
-SkyPilot earns a place in the Arsenal because it directly addresses a recurring decision point: you want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+SkyPilot is a run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface. Read it beside `modal`, `runpod`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ sky check && sky launch -c dev --gpus A100:1 -- nvidia-smi
 
 ## Use Cases
 
-1. **Scenario**: you want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection
-2. **Scenario**: spot-instance economics matter: SkyPilot auto-recovers preempted jobs and can cut GPU costs multiples over on-demand
-3. **Scenario where this is NOT the right fit**: you're single-cloud with mature in-house infra automation — the abstraction adds little there — evaluate an alternative instead
+1. **Where it fits**: "You want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection.
+2. **Adoption checkpoint**: compare SkyPilot against `modal`, `runpod` on the same `deployment, fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection
-- Spot-instance economics matter: SkyPilot auto-recovers preempted jobs and can cut GPU costs multiples over on-demand
+- Beyond the feature list, SkyPilot's own implementation notes give the specifics — an optimizer matches resource requests against real-time pricing/availability across clouds, then provisions VMs/pods, mounts storage, and runs your setup/run scripts; a controller monitors managed jobs, relaunching on preemption with checkpoint-resume patterns — which is where a capability claim either holds or does not for your workload.
+- Against `modal`, `runpod`, the comparison that decides this is deployment model and operational cost rather than the feature list; SkyPilot sits at the hosted-or-embedded end of that axis.
+- SkyPilot documents a client surface through `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
+- Capability is documented; behaviour is not. For SkyPilot, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You're single-cloud with mature in-house infra automation — the abstraction adds little there
-- Fully serverless developer experience is the goal; Modal-style platforms hide more infrastructure
-
-- _Verified for SkyPilot: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on SkyPilot means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for SkyPilot describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

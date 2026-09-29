@@ -46,7 +46,7 @@ An AI platform that takes a natural-language brief and autonomously scaffolds, w
 
 ## Why It's in the Arsenal
 
-Manus earns a place in the Arsenal because it directly addresses a recurring decision point: you want an autonomous agent to scaffold and ship a full-stack web app from a natural-language brief. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Manus is a aI-powered platform for building full-stack web applications and automating tasks. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -66,21 +66,20 @@ An orchestrating agent breaks the brief into subtasks (planning, scaffolding, co
 
 ## Use Cases
 
-1. **Scenario**: you want an autonomous agent to scaffold and ship a full-stack web app from a natural-language brief
-2. **Scenario**: you are exploring agentic software generation for internal tools or demos
-3. **Scenario where this is NOT the right fit**: you need fine-grained control over architecture, security review, or code provenance for production software — evaluate an alternative instead
+1. **Where it fits**: You want an autonomous agent to scaffold and ship a full-stack web app from a natural-language brief.
+2. **Adoption checkpoint**: validate Manus on your own data for the `prototyping, orchestration` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want an autonomous agent to scaffold and ship a full-stack web app from a natural-language brief
-- You are exploring agentic software generation for internal tools or demos
+- The distinguishing implementation detail for Manus is worth reading before adopting: an orchestrating agent breaks the brief into subtasks (planning, scaffolding, coding, deploying) and executes them largely autonomously with periodic checkpoints.
+- No direct sibling is catalogued for Manus in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Manus is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- What this entry does not give you is behaviour under your load: measure Manus's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You need fine-grained control over architecture, security review, or code provenance for production software
-- You require an open-source or self-hostable platform
-
-_Verified for Manus: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Manus means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Manus's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

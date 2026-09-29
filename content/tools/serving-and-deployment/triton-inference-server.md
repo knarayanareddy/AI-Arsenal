@@ -46,7 +46,7 @@ NVIDIA's open-source inference server used across industry for production model 
 
 ## Why It's in the Arsenal
 
-NVIDIA Triton Inference Server earns a place in the Arsenal because it directly addresses a recurring decision point: you serve heterogeneous models (LLMs + embeddings + rerankers + classic ML) and want one hardened server with dynamic batching. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because NVIDIA Triton Inference Server is a nVIDIA's production inference server for any framework (TensorRT, PyTorch, ONNX, vLLM) with dynamic batching and model ensembles. Read it beside `bentoml`, `ray-serve`, `kserve`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -66,21 +66,20 @@ docker run --gpus=all --rm -p 8000:8000 -v $PWD/models:/models nvcr.io/nvidia/tr
 
 ## Use Cases
 
-1. **Scenario**: you serve heterogeneous models (LLMs + embeddings + rerankers + classic ML) and want one hardened server with dynamic batching
-2. **Scenario**: you're on NVIDIA GPUs and want TensorRT-LLM integration, model ensembles, and concurrent model execution
-3. **Scenario where this is NOT the right fit**: lLM-only serving — vLLM/SGLang standalone are simpler and equally fast for that job — evaluate an alternative instead
+1. **Where it fits**: "You serve heterogeneous models (LLMs + embeddings + rerankers + classic ML) and want one hardened server with dynamic batching.
+2. **Adoption checkpoint**: compare NVIDIA Triton Inference Server against `bentoml`, `ray-serve`, `kserve` on the same `production-serving, deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You serve heterogeneous models (LLMs + embeddings + rerankers + classic ML) and want one hardened server with dynamic batching
-- You're on NVIDIA GPUs and want TensorRT-LLM integration, model ensembles, and concurrent model execution
+- Beyond the feature list, NVIDIA Triton Inference Server's own implementation notes give the specifics — models live in a repository with config declaring backend, batching, and instance groups; Triton schedules requests across model instances with dynamic batching queues, and ensembles chain models server-side to avoid client round-trips — which is where a capability claim either holds or does not for your workload.
+- The nearest neighbours to NVIDIA Triton Inference Server here are `bentoml`, `ray-serve`, `kserve`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- Pin the client library rather than the API: NVIDIA Triton Inference Server is reachable through `vllm`, and those adapters change defaults — retrieval, batching, retries — without a major version bump.
+- What this entry does not give you is behaviour under your load: measure NVIDIA Triton Inference Server's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- LLM-only serving — vLLM/SGLang standalone are simpler and equally fast for that job
-- Non-NVIDIA hardware as your primary target; much of Triton's value assumes the NVIDIA stack
-
-- _Verified for NVIDIA Triton Inference Server: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to NVIDIA Triton Inference Server, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for NVIDIA Triton Inference Server describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

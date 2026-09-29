@@ -46,7 +46,7 @@ Cerebras applies its wafer-scale engine (a single dinner-plate-sized chip with 4
 
 ## Why It's in the Arsenal
 
-Cerebras Inference earns a place in the Arsenal because it directly addresses a recurring decision point: you're chasing maximum tokens/sec for reasoning models where long chains-of-thought make speed a quality feature. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Cerebras Inference is a wafer-scale-engine inference API claiming the fastest open-model token rates available. Read it beside `groq`, `together-ai`, `fireworks-ai`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install cerebras_cloud_sdk
 
 ## Use Cases
 
-1. **Scenario**: you're chasing maximum tokens/sec for reasoning models where long chains-of-thought make speed a quality feature
-2. **Scenario**: groq-style latency but on models Groq doesn't carry (catalogs differ; check both)
-3. **Scenario where this is NOT the right fit**: broad model choice matters — the catalog is even narrower than Groq's — evaluate an alternative instead
+1. **Where it fits**: "You're chasing maximum tokens/sec for reasoning models where long chains-of-thought make speed a quality feature.
+2. **Adoption checkpoint**: compare Cerebras Inference against `groq`, `together-ai`, `fireworks-ai` on the same `production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You're chasing maximum tokens/sec for reasoning models where long chains-of-thought make speed a quality feature
-- Groq-style latency but on models Groq doesn't carry (catalogs differ; check both)
+- The distinguishing implementation detail for Cerebras Inference is worth reading before adopting: the WSE keeps model weights in massive on-chip SRAM with orders-of-magnitude higher memory bandwidth than HBM GPUs, so autoregressive decoding runs at extreme speed; models are compiled specifically for the wafer, constraining the catalog.
+- Against `groq`, `together-ai`, `fireworks-ai`, the comparison that decides this is deployment model and operational cost rather than the feature list; Cerebras Inference sits at the hosted-or-embedded end of that axis.
+- Cerebras Inference is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Capability is documented; behaviour is not. For Cerebras Inference, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Broad model choice matters — the catalog is even narrower than Groq's
-- You need mature enterprise ecosystem/integrations; the platform is younger than GPU-cloud rivals
-
-- _Verified for Cerebras Inference: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Cerebras Inference, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Cerebras Inference's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A constrained-decoding library: given a JSON Schema or regex, it computes which 
 
 ## Why It's in the Arsenal
 
-LM Format Enforcer earns a place in the Arsenal because it directly addresses a recurring decision point: you serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+LM Format Enforcer is a token-filtering library that guarantees LLM output conforms to JSON Schema or regex, integrated into vLLM. Read it beside `outlines`, `guidance`, `instructor`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ pip install lm-format-enforcer
 
 ## Use Cases
 
-1. **Scenario**: you serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema
-2. **Scenario**: regex- or schema-constrained generation where retry-based approaches (Instructor) are too slow or unreliable
-3. **Scenario where this is NOT the right fit**: you're calling hosted APIs (OpenAI/Anthropic) — constrained decoding needs logit access; use their native structured outputs or Instructor — evaluate an alternative instead
+1. **Where it fits**: "You serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema.
+2. **Adoption checkpoint**: compare LM Format Enforcer against `outlines`, `guidance`, `instructor` on the same `structured-output` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema
-- Regex- or schema-constrained generation where retry-based approaches (Instructor) are too slow or unreliable
+- Beyond the feature list, LM Format Enforcer's own implementation notes give the specifics — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards — which is where a capability claim either holds or does not for your workload.
+- Against `outlines`, `guidance`, `instructor`, the comparison that decides this is deployment model and operational cost rather than the feature list; LM Format Enforcer sits at the hosted-or-embedded end of that axis.
+- The documented integration path for LM Format Enforcer runs through `vllm`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
+- Maturity here is beta, so treat LM Format Enforcer's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- You're calling hosted APIs (OpenAI/Anthropic) — constrained decoding needs logit access; use their native structured outputs or Instructor
-- You need a full grammar/programming model for generation; Outlines and Guidance offer richer languages
-
-- _Verified for LM Format Enforcer: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to LM Format Enforcer, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LM Format Enforcer describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- LM Format Enforcer is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

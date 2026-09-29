@@ -45,7 +45,7 @@ A lightweight reader API that converts a single URL into LLM-friendly text by pr
 
 ## Why It's in the Arsenal
 
-Jina AI Reader earns a place in the Arsenal because it directly addresses a recurring decision point: you need a quick, no-setup way to convert a single URL into LLM-friendly text via a simple API call. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Jina AI Reader is a reader endpoint for converting web pages into LLM-friendly text and Markdown. Read it beside `crawl4ai-tool`, `firecrawl-tool`, `playwright`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -68,19 +68,20 @@ Follow the official documentation at https://jina.ai/reader/ for the authenticat
 
 ## Use Cases
 
-1. **Scenario**: you need a quick, no-setup way to convert a single URL into LLM-friendly text via a simple API call
-2. **Scenario**: you're prototyping retrieval and want minimal scraping infrastructure
-3. **Scenario where this is NOT the right fit**: you need to crawl an entire site or handle complex pagination/auth flows (use Firecrawl or Crawl4AI instead) — evaluate an alternative instead
+1. **Where it fits**: You need a quick, no-setup way to convert a single URL into LLM-friendly text via a simple API call.
+2. **Adoption checkpoint**: compare Jina AI Reader against `crawl4ai-tool`, `firecrawl-tool`, `playwright` on the same `web-scraping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need a quick, no-setup way to convert a single URL into LLM-friendly text via a simple API call
-- You're prototyping retrieval and want minimal scraping infrastructure
+- In concrete terms, Jina AI Reader is a reader endpoint for converting web pages into LLM-friendly text and Markdown — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Jina AI Reader overlaps `crawl4ai-tool`, `firecrawl-tool`, `playwright`, `puppeteer` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- Jina AI Reader is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Jina AI Reader, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need to crawl an entire site or handle complex pagination/auth flows (use Firecrawl or Crawl4AI instead)
-- You need guaranteed self-hosting for data-residency reasons
+- Depending on Jina AI Reader means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Jina AI Reader describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

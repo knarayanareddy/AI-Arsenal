@@ -46,7 +46,7 @@ Memoriq is a closed-source, freemium personal AI memory layer: it ingests a user
 
 ## Why It's in the Arsenal
 
-Memoriq is tracked in a crowded memory-layer category: it is worth evaluating when a private, personal memory that learns from your own data matters and a vendor-hosted product is acceptable, and worth skipping for multi-tenant or self-hosted needs. Compare it against Mem0 before adopting.
+Memoriq is a private AI memory layer that learns from your conversations and documents. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals are not published. From the description it runs as a hosted memory
 
 ## Use Cases
 
-1. **Scenario**: you want a private, personal memory layer that learns from your own conversations and documents
-2. **Scenario**: privacy of the memory store is a primary requirement and a closed, vendor-hosted product is acceptable
-3. **Scenario where this is NOT the right fit**: you need an open-source or self-hostable memory layer for a multi-tenant production system — evaluate an alternative instead
+1. **Where it fits**: You want a private, personal memory layer that learns from your own conversations and documents.
+2. **Adoption checkpoint**: validate Memoriq on your own data for the `memory-management` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want a private, personal memory layer that learns from your own conversations and documents
-- Privacy of the memory store is a primary requirement and a closed, vendor-hosted product is acceptable
+- The distinguishing implementation detail for Memoriq is worth reading before adopting: its internals are not published. From the description it runs as a hosted memory service: it ingests a user's documents and chat history, indexes them (typically embedding-based retrieval) into a private store, and exposes recall so an application or agent can fetch relevant context at query time. Being vendor-hosted and closed-source, it is single-tenant/personal by design and offers no self-hostable backend.
+- Memoriq has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- Memoriq is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Marked beta, so the capability is real but Memoriq's interface may still move; pin the version you build against instead of tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need an open-source or self-hostable memory layer for a multi-tenant production system
-- You need integration guarantees with a specific agent framework (verify compatibility first)
-
-- _Enrichment status: draft. Memoriq is a closed-source memory product surfaced via a curated newsletter; its behavior and privacy posture here follow the vendor's description, not independent verification — compare against Mem0 before relying on it. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Memoriq, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Memoriq describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Memoriq is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

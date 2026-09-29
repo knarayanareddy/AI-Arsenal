@@ -43,7 +43,7 @@ An open-source framework for writing and running custom evaluation suites agains
 
 ## Why It's in the Arsenal
 
-OpenAI Evals earns a place in the Arsenal because it directly addresses a recurring decision point: you want a free, open-source framework to write and run custom evaluation suites against any model behavior. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+OpenAI Evals is An open-source framework for evaluating language model behavior. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Evaluations are defined as Python code specifying inputs, expected behavior, and
 
 ## Use Cases
 
-1. **Scenario**: you want a free, open-source framework to write and run custom evaluation suites against any model behavior
-2. **Scenario**: you're comfortable writing eval logic in code rather than using a managed no-code UI
-3. **Scenario where this is NOT the right fit**: you want a managed dashboard with built-in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop) — evaluate an alternative instead
+1. **Where it fits**: You want a free, open-source framework to write and run custom evaluation suites against any model behavior.
+2. **Adoption checkpoint**: validate OpenAI Evals on your own data for the `evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want a free, open-source framework to write and run custom evaluation suites against any model behavior
-- You're comfortable writing eval logic in code rather than using a managed no-code UI
+- The distinguishing implementation detail for OpenAI Evals is worth reading before adopting: evaluations are defined as Python code specifying inputs, expected behavior, and grading logic; the framework runs the target model against the eval set and reports pass/fail or scored results.
+- Nothing else in this phase is catalogued against OpenAI Evals, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
+- OpenAI Evals is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for OpenAI Evals all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You want a managed dashboard with built-in dataset management and team collaboration (consider LangSmith, Braintrust, or Humanloop)
-- You need RAG-specific evaluation metrics out of the box (use RAGAS or DeepEval instead)
+- There is no self-hosted path to OpenAI Evals, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for OpenAI Evals describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

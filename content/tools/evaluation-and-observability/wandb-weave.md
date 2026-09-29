@@ -43,7 +43,7 @@ Weights & Biases' LLM observability and evaluation toolkit, extending their clas
 
 ## Why It's in the Arsenal
 
-Weights & Biases Weave earns a place in the Arsenal because it directly addresses a recurring decision point: you're already using Weights & Biases for experiment tracking and want LLM observability/eval in the same ecosystem. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Weights & Biases Weave is catalogued as An observability and evaluation toolkit for AI applications from Weights & Biases, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Application calls are instrumented to log traces and evaluation results to the W
 
 ## Use Cases
 
-1. **Scenario**: you're already using Weights & Biases for experiment tracking and want LLM observability/eval in the same ecosystem
-2. **Scenario**: you need to trace and evaluate AI applications alongside classic ML training runs in one tool
-3. **Scenario where this is NOT the right fit**: you need a fully open-source, self-hostable observability stack (consider Langfuse or Phoenix) — evaluate an alternative instead
+1. **Where it fits**: You're already using Weights & Biases for experiment tracking and want LLM observability/eval in the same ecosystem.
+2. **Adoption checkpoint**: validate Weights & Biases Weave on your own data for the `tracing, evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You're already using Weights & Biases for experiment tracking and want LLM observability/eval in the same ecosystem
-- You need to trace and evaluate AI applications alongside classic ML training runs in one tool
+- The distinguishing implementation detail for Weights & Biases Weave is worth reading before adopting: application calls are instrumented to log traces and evaluation results to the W&B backend, where they appear alongside conventional training-run dashboards.
+- Nothing else in this phase is catalogued against Weights & Biases Weave, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
+- Weights & Biases Weave is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- What this entry does not give you is behaviour under your load: measure Weights & Biases Weave's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You need a fully open-source, self-hostable observability stack (consider Langfuse or Phoenix)
-- You're not already invested in the W&B ecosystem and a lighter dedicated tool would be simpler
+- Depending on Weights & Biases Weave means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Weights & Biases Weave describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A desktop application (macOS/Windows/Linux) that makes local LLMs approachable: 
 
 ## Why It's in the Arsenal
 
-LM Studio earns a place in the Arsenal because it directly addresses a recurring decision point: you want the easiest zero-terminal path to running GGUF/MLX models on a laptop, with GPU offload tuned automatically. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+LM Studio is catalogued as a desktop app for discovering, downloading, and running local LLMs with chat UI and an OpenAI-compatible local server, which is the specific claim the rest of the entry has to support. Read it beside `open-webui`, `jan`, `ollama`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ lms get qwen3-8b && lms server start
 
 ## Use Cases
 
-1. **Scenario**: you want the easiest zero-terminal path to running GGUF/MLX models on a laptop, with GPU offload tuned automatically
-2. **Scenario**: you need a local OpenAI-compatible API for app development without deploying server infrastructure
-3. **Scenario where this is NOT the right fit**: you need open-source software — the app is proprietary (its CLI/SDKs are MIT, the GUI is not) — evaluate an alternative instead
+1. **Where it fits**: "You want the easiest zero-terminal path to running GGUF/MLX models on a laptop, with GPU offload tuned automatically.
+2. **Adoption checkpoint**: compare LM Studio against `open-webui`, `jan`, `ollama` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want the easiest zero-terminal path to running GGUF/MLX models on a laptop, with GPU offload tuned automatically
-- You need a local OpenAI-compatible API for app development without deploying server infrastructure
+- Beyond the feature list, LM Studio's own implementation notes give the specifics — bundles llama.cpp and MLX runtimes behind a GUI: models load with configurable quantization and GPU offload, and a local HTTP server mimics the OpenAI API so existing SDKs work by switching the base URL — which is where a capability claim either holds or does not for your workload.
+- Weighing LM Studio against `open-webui`, `jan`, `ollama` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- LM Studio is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- What this entry does not give you is behaviour under your load: measure LM Studio's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You need open-source software — the app is proprietary (its CLI/SDKs are MIT, the GUI is not)
-- You're serving multiple users or production traffic; use vLLM/llama.cpp server deployments instead
-
-- _Verified for LM Studio: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on LM Studio means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LM Studio describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

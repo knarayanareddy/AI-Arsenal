@@ -43,7 +43,7 @@ A Python library for turning a model or function into a shareable web demo in mi
 
 ## Why It's in the Arsenal
 
-Gradio earns a place in the Arsenal because it directly addresses a recurring decision point: you want to demo a model or pipeline with a shareable web UI in minutes, using only Python. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Gradio is A Python library for building and sharing machine learning demos quickly. Read it beside `chainlit`, `fastapi`, `mesop`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ A Python function is wrapped with declared input/output component types; Gradio 
 
 ## Use Cases
 
-1. **Scenario**: you want to demo a model or pipeline with a shareable web UI in minutes, using only Python
-2. **Scenario**: you're prototyping and need quick stakeholder feedback on a model's behavior
-3. **Scenario where this is NOT the right fit**: you need a production-grade, highly customized UI/UX (use a proper frontend framework instead) — evaluate an alternative instead
+1. **Where it fits**: You want to demo a model or pipeline with a shareable web UI in minutes, using only Python.
+2. **Adoption checkpoint**: compare Gradio against `chainlit`, `fastapi`, `mesop` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want to demo a model or pipeline with a shareable web UI in minutes, using only Python
-- You're prototyping and need quick stakeholder feedback on a model's behavior
+- In concrete terms, Gradio is a Python library for building and sharing machine learning demos quickly — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- The nearest neighbours to Gradio here are `chainlit`, `fastapi`, `mesop`, `streamlit`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- Depending on Gradio means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Gradio all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You need a production-grade, highly customized UI/UX (use a proper frontend framework instead)
-- Your app needs complex multi-page navigation or state beyond a single demo interface
+- Depending on Gradio means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Gradio describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

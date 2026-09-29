@@ -46,7 +46,7 @@ Kimi K2.5 is a closed-source, hosted assistant model from Moonshot AI, accessed 
 
 ## Why It's in the Arsenal
 
-Kimi K2.5 is tracked as one closed-source model to slot into a multi-provider routing strategy: it is worth benchmarking against your incumbent when reasoning quality and long context matter, and a poor fit when you need open weights or third-party-verified long-term API stability. Compare it on benchmarks before adoption.
+The entry exists because Kimi K2.5 is a aI assistant with deep understanding, analysis, and reasoning capabilities. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ Its internals and weights are not published. Kimi K2.5 is consumed as a hosted A
 
 ## Use Cases
 
-1. **Scenario**: you need a capable hosted reasoning/analysis assistant and are comfortable with a closed-source provider
-2. **Scenario**: you want to evaluate Kimi's reasoning quality as one option in a multi-provider routing strategy
-3. **Scenario where this is NOT the right fit**: you require an open-weight model you can self-host or fine-tune — evaluate an alternative instead
+1. **Where it fits**: You need a capable hosted reasoning/analysis assistant and are comfortable with a closed-source provider.
+2. **Adoption checkpoint**: validate Kimi K2.5 on your own data for the `production-serving, orchestration` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You need a capable hosted reasoning/analysis assistant and are comfortable with a closed-source provider
-- You want to evaluate Kimi's reasoning quality as one option in a multi-provider routing strategy
+- The distinguishing implementation detail for Kimi K2.5 is worth reading before adopting: its internals and weights are not published. Kimi K2.5 is consumed as a hosted API: a prompt (optionally a long context window) is sent to Moonshot AI's infrastructure, inference runs on the provider's side, and tokens are returned — there is no local model or GPU footprint. This is why it cannot be self-hosted or fine-tuned and why availability tracks the vendor's API.
+- Nothing else in this phase is catalogued against Kimi K2.5, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
+- Kimi K2.5 is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Kimi K2.5 all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You require an open-weight model you can self-host or fine-tune
-- You need long-term API stability guarantees verified by extensive third-party production use
-
-- _Enrichment status: draft. Kimi K2.5 is a closed-source hosted model (Moonshot AI) surfaced via a curated newsletter; its reasoning and stability characterizations here are the vendor's, not independently benchmarked. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Kimi K2.5, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Kimi K2.5 describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

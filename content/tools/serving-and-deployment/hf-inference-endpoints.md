@@ -45,7 +45,7 @@ A managed service from Hugging Face for deploying any model already hosted on th
 
 ## Why It's in the Arsenal
 
-Hugging Face Inference Endpoints earns a place in the Arsenal because it directly addresses a recurring decision point: you want to deploy a model already hosted on the Hugging Face Hub as a managed API in a few clicks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Hugging Face Inference Endpoints is a managed Hugging Face service for deploying models as production inference endpoints. Read it beside `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://huggingface.co/docs/inference-endpo
 
 ## Use Cases
 
-1. **Scenario**: you want to deploy a model already hosted on the Hugging Face Hub as a managed API in a few clicks
-2. **Scenario**: you want autoscaling and pay-per-use hosting without managing servers yourself
-3. **Scenario where this is NOT the right fit**: you need a fully custom inference pipeline with non-trivial pre/post-processing (consider BentoML or a custom server) — evaluate an alternative instead
+1. **Where it fits**: You want to deploy a model already hosted on the Hugging Face Hub as a managed API in a few clicks.
+2. **Adoption checkpoint**: compare Hugging Face Inference Endpoints against `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai` on the same `deployment, production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want to deploy a model already hosted on the Hugging Face Hub as a managed API in a few clicks
-- You want autoscaling and pay-per-use hosting without managing servers yourself
+- In concrete terms, Hugging Face Inference Endpoints is a managed Hugging Face service for deploying models as production inference endpoints — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Weighing Hugging Face Inference Endpoints against `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`, `modal` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- Hugging Face Inference Endpoints is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Hugging Face Inference Endpoints, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a fully custom inference pipeline with non-trivial pre/post-processing (consider BentoML or a custom server)
-- You need the lowest possible per-token cost at very high, sustained volume (self-hosted vLLM/SGLang may be cheaper at scale)
+- Depending on Hugging Face Inference Endpoints means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Hugging Face Inference Endpoints's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

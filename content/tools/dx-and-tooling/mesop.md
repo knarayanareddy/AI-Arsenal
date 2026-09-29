@@ -45,7 +45,7 @@ Google's Python UI framework for building internal tools and AI prototypes with 
 
 ## Why It's in the Arsenal
 
-Mesop earns a place in the Arsenal because it directly addresses a recurring decision point: you want to build an internal AI tool UI in pure Python with a component model closer to a real web framework than Gradio/Streamlit. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Mesop is a google Python UI framework for building web apps and AI prototypes. Read it beside `chainlit`, `fastapi`, `gradio`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://github.com/google/mesop for the aut
 
 ## Use Cases
 
-1. **Scenario**: you want to build an internal AI tool UI in pure Python with a component model closer to a real web framework than Gradio/Streamlit
-2. **Scenario**: you're inside the Google/GCP ecosystem and want a Google-backed Python UI option
-3. **Scenario where this is NOT the right fit**: you need the largest community, plugin ecosystem, and Stack Overflow coverage (Streamlit/Gradio are more mature) — evaluate an alternative instead
+1. **Where it fits**: You want to build an internal AI tool UI in pure Python with a component model closer to a real web framework than Gradio/Streamlit.
+2. **Adoption checkpoint**: compare Mesop against `chainlit`, `fastapi`, `gradio` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want to build an internal AI tool UI in pure Python with a component model closer to a real web framework than Gradio/Streamlit
-- You're inside the Google/GCP ecosystem and want a Google-backed Python UI option
+- In concrete terms, Mesop is a google Python UI framework for building web apps and AI prototypes — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `chainlit`, `fastapi`, `gradio`, `streamlit`, the comparison that decides this is deployment model and operational cost rather than the feature list; Mesop sits at the hosted-or-embedded end of that axis.
+- Mesop is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- What this entry does not give you is behaviour under your load: measure Mesop's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You need the largest community, plugin ecosystem, and Stack Overflow coverage (Streamlit/Gradio are more mature)
-- You need a fully customizable production frontend rather than an internal tool
+- There is no self-hosted path to Mesop, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Mesop describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

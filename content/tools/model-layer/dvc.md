@@ -45,7 +45,7 @@ An open-source tool that brings Git-like version control to datasets and model a
 
 ## Why It's in the Arsenal
 
-DVC earns a place in the Arsenal because it directly addresses a recurring decision point: you want Git-like versioning for datasets and model artifacts without paying for large binary storage in Git itself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because DVC is a open-source data and model versioning tool for ML projects and pipelines. Read it beside `hugging-face-hub`, `mlflow`, `weights-biases`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://github.com/iterative/dvc for the au
 
 ## Use Cases
 
-1. **Scenario**: you want Git-like versioning for datasets and model artifacts without paying for large binary storage in Git itself
-2. **Scenario**: you need reproducible ML pipelines tied to your existing Git workflow
-3. **Scenario where this is NOT the right fit**: you need a full model registry with stage promotion (staging/production) and serving integration (use MLflow or Hugging Face Hub for that) — evaluate an alternative instead
+1. **Where it fits**: You want Git-like versioning for datasets and model artifacts without paying for large binary storage in Git itself.
+2. **Adoption checkpoint**: compare DVC against `hugging-face-hub`, `mlflow`, `weights-biases` on the same `model-registry` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want Git-like versioning for datasets and model artifacts without paying for large binary storage in Git itself
-- You need reproducible ML pipelines tied to your existing Git workflow
+- The distinguishing implementation detail for DVC is worth reading before adopting: large files are stored in configured remote storage and referenced from Git via small pointer files; DVC pipelines declare stages with explicit inputs/outputs to make runs reproducible and cacheable.
+- The nearest neighbours to DVC here are `hugging-face-hub`, `mlflow`, `weights-biases`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- DVC is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Capability is documented; behaviour is not. For DVC, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a full model registry with stage promotion (staging/production) and serving integration (use MLflow or Hugging Face Hub for that)
-- Your team wants a managed UI-first experience rather than a CLI/Git-centric workflow
+- There is no self-hosted path to DVC, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for DVC describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

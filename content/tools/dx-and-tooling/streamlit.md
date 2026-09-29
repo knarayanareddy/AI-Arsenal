@@ -43,7 +43,7 @@ The most widely adopted Python framework for building data and AI app UIs quickl
 
 ## Why It's in the Arsenal
 
-Streamlit earns a place in the Arsenal because it directly addresses a recurring decision point: you want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Streamlit is A Python framework for building data and AI apps with minimal frontend code. Read it beside `chainlit`, `fastapi`, `gradio`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ The entire script reruns top-to-bottom on each user interaction, with Streamlit'
 
 ## Use Cases
 
-1. **Scenario**: you want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools
-2. **Scenario**: you need built-in widgets for displaying dataframes, charts, and AI outputs together
-3. **Scenario where this is NOT the right fit**: you need fine-grained UI control or non-rerun-based interactivity (Streamlit reruns the whole script on each interaction) — evaluate an alternative instead
+1. **Where it fits**: You want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools.
+2. **Adoption checkpoint**: compare Streamlit against `chainlit`, `fastapi`, `gradio` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools
-- You need built-in widgets for displaying dataframes, charts, and AI outputs together
+- Beyond the feature list, Streamlit's own implementation notes give the specifics — the entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily — which is where a capability claim either holds or does not for your workload.
+- The nearest neighbours to Streamlit here are `chainlit`, `fastapi`, `gradio`, `mesop`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- Streamlit is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Streamlit, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need fine-grained UI control or non-rerun-based interactivity (Streamlit reruns the whole script on each interaction)
-- You need a production-grade, highly customized public-facing product UI
+- Depending on Streamlit means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Streamlit describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

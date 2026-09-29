@@ -45,7 +45,7 @@ Hugging Face's library of parameter-efficient fine-tuning methods (LoRA, QLoRA, 
 
 ## Why It's in the Arsenal
 
-PEFT earns a place in the Arsenal because it directly addresses a recurring decision point: you need a well-maintained, low-level Hugging Face library for parameter-efficient methods like LoRA/QLoRA/IA3 inside an existing training script. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because PEFT is a hugging Face library for parameter-efficient fine-tuning methods. Read it beside `axolotl`, `llamafactory`, `mlx-lm`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://github.com/huggingface/peft for the
 
 ## Use Cases
 
-1. **Scenario**: you need a well-maintained, low-level Hugging Face library for parameter-efficient methods like LoRA/QLoRA/IA3 inside an existing training script
-2. **Scenario**: you want fine-grained control to compose PEFT methods directly into a custom training loop
-3. **Scenario where this is NOT the right fit**: you want an opinionated end-to-end fine-tuning pipeline with sane defaults out of the box (use Axolotl or LLaMA-Factory on top of it instead) — evaluate an alternative instead
+1. **Where it fits**: You need a well-maintained, low-level Hugging Face library for parameter-efficient methods like LoRA/QLoRA/IA3 inside an existing training script.
+2. **Adoption checkpoint**: compare PEFT against `axolotl`, `llamafactory`, `mlx-lm` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need a well-maintained, low-level Hugging Face library for parameter-efficient methods like LoRA/QLoRA/IA3 inside an existing training script
-- You want fine-grained control to compose PEFT methods directly into a custom training loop
+- The distinguishing implementation detail for PEFT is worth reading before adopting: wraps a base model with small trainable adapter layers (e.g. low-rank matrices for LoRA) while freezing the original weights, drastically reducing the number of trainable parameters.
+- Weighing PEFT against `axolotl`, `llamafactory`, `mlx-lm`, `torchtune` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- Depending on PEFT means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- Capability is documented; behaviour is not. For PEFT, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want an opinionated end-to-end fine-tuning pipeline with sane defaults out of the box (use Axolotl or LLaMA-Factory on top of it instead)
-- You're not already in the Hugging Face Transformers ecosystem
+- There is no self-hosted path to PEFT, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for PEFT describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

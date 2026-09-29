@@ -43,7 +43,7 @@ An open-source library for constrained generation, guaranteeing that an LLM's ou
 
 ## Why It's in the Arsenal
 
-Outlines earns a place in the Arsenal because it directly addresses a recurring decision point: you need to guarantee an LLM's output matches a JSON schema, regex, or grammar at generation time (not just via prompting). It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Outlines is A library for constrained generation and structured outputs with LLMs. Read it beside `guidance`, `instructor`, `pydantic-ai-tool`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Outlines builds a finite-state machine (or equivalent) from the target schema/gr
 
 ## Use Cases
 
-1. **Scenario**: you need to guarantee an LLM's output matches a JSON schema, regex, or grammar at generation time (not just via prompting)
-2. **Scenario**: you're using an open-weight model locally and want constrained decoding integrated into the generation loop
-3. **Scenario where this is NOT the right fit**: you're calling a hosted API that already supports native structured output / JSON mode (often simpler than client-side constrained decoding) — evaluate an alternative instead
+1. **Where it fits**: You need to guarantee an LLM's output matches a JSON schema, regex, or grammar at generation time (not just via prompting).
+2. **Adoption checkpoint**: compare Outlines against `guidance`, `instructor`, `pydantic-ai-tool` on the same `structured-output` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need to guarantee an LLM's output matches a JSON schema, regex, or grammar at generation time (not just via prompting)
-- You're using an open-weight model locally and want constrained decoding integrated into the generation loop
+- The distinguishing implementation detail for Outlines is worth reading before adopting: outlines builds a finite-state machine (or equivalent) from the target schema/grammar and masks the model's logits at each generation step so only valid next tokens can be sampled.
+- Outlines overlaps `guidance`, `instructor`, `pydantic-ai-tool` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- Outlines is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Outlines all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You're calling a hosted API that already supports native structured output / JSON mode (often simpler than client-side constrained decoding)
-- Your structured-output needs are simple enough that a parsing/retry library like Instructor is sufficient
+- Depending on Outlines means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Outlines describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

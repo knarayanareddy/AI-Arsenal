@@ -44,7 +44,7 @@ A lightweight Python library for extracting typed, Pydantic-validated structured
 
 ## Why It's in the Arsenal
 
-Instructor earns a place in the Arsenal because it directly addresses a recurring decision point: you want typed, Pydantic-validated structured output from an LLM with automatic retry-on-validation-failure. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Instructor is A library for extracting typed structured outputs from language models. Read it beside `guidance`, `outlines`, `pydantic-ai-tool`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -65,19 +65,20 @@ Wraps a standard LLM API call, asking the model to produce output matching a Pyd
 
 ## Use Cases
 
-1. **Scenario**: you want typed, Pydantic-validated structured output from an LLM with automatic retry-on-validation-failure
-2. **Scenario**: you're calling a hosted API (OpenAI, Anthropic, etc.) and want the simplest path to reliable structured data, not constrained decoding
-3. **Scenario where this is NOT the right fit**: you need hard guarantees (not just retries) that output matches a schema/grammar — use Outlines for constrained decoding on open-weight models — evaluate an alternative instead
+1. **Where it fits**: You want typed, Pydantic-validated structured output from an LLM with automatic retry-on-validation-failure.
+2. **Adoption checkpoint**: compare Instructor against `guidance`, `outlines`, `pydantic-ai-tool` on the same `structured-output` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want typed, Pydantic-validated structured output from an LLM with automatic retry-on-validation-failure
-- You're calling a hosted API (OpenAI, Anthropic, etc.) and want the simplest path to reliable structured data, not constrained decoding
+- Beyond the feature list, Instructor's own implementation notes give the specifics — wraps a standard LLM API call, asking the model to produce output matching a Pydantic model's schema, validating the response, and re-prompting automatically on validation errors — which is where a capability claim either holds or does not for your workload.
+- Weighing Instructor against `guidance`, `outlines`, `pydantic-ai-tool` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- Instructor is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Instructor, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need hard guarantees (not just retries) that output matches a schema/grammar — use Outlines for constrained decoding on open-weight models
-- You don't use Python/Pydantic-style typed models in your stack
+- Depending on Instructor means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Instructor describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

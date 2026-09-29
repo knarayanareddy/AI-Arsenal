@@ -46,7 +46,7 @@ A macOS-only live HUD for monitoring and interacting with AI agent sessions in r
 
 ## Why It's in the Arsenal
 
-Conan earns a place in the Arsenal because it directly addresses a recurring decision point: you're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Conan is a live HUD for monitoring and interacting with AI agent sessions on macOS. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -66,21 +66,21 @@ Runs as a local macOS application that attaches to an agent's running session, r
 
 ## Use Cases
 
-1. **Scenario**: you're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time
-2. **Scenario**: you want lightweight, local-first agent observability for personal/small-team development
-3. **Scenario where this is NOT the right fit**: your team is not on macOS, or you need cross-platform, team-shared observability — evaluate an alternative instead
+1. **Where it fits**: You're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time.
+2. **Adoption checkpoint**: validate Conan on your own data for the `monitoring, tracing` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time
-- You want lightweight, local-first agent observability for personal/small-team development
+- The distinguishing implementation detail for Conan is worth reading before adopting: runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes.
+- No direct sibling is catalogued for Conan in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Conan is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Maturity here is beta, so treat Conan's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- Your team is not on macOS, or you need cross-platform, team-shared observability
-- You need production-grade tracing and alerting rather than a local interactive HUD
-
-_Verified for Conan: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Conan means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Conan's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Conan is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

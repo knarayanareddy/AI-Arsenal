@@ -46,7 +46,7 @@ A closed-source tool for visually inspecting and understanding model output patt
 
 ## Why It's in the Arsenal
 
-Monako Glass earns a place in the Arsenal because it directly addresses a recurring decision point: you want a visual way to inspect and understand model output patterns rather than reading raw logs. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Monako Glass is a visualize and understand AI model outputs with dynamic Pulse Rings and overlays. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -66,21 +66,21 @@ Model outputs are rendered through a visual interface with dynamic overlays ('Pu
 
 ## Use Cases
 
-1. **Scenario**: you want a visual way to inspect and understand model output patterns rather than reading raw logs
-2. **Scenario**: you're debugging qualitative output drift and a visual overlay tool would speed up investigation
-3. **Scenario where this is NOT the right fit**: you need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens) — evaluate an alternative instead
+1. **Where it fits**: You want a visual way to inspect and understand model output patterns rather than reading raw logs.
+2. **Adoption checkpoint**: validate Monako Glass on your own data for the `monitoring, evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want a visual way to inspect and understand model output patterns rather than reading raw logs
-- You're debugging qualitative output drift and a visual overlay tool would speed up investigation
+- Beyond the feature list, Monako Glass's own implementation notes give the specifics — model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure — which is where a capability claim either holds or does not for your workload.
+- Nothing else in this phase is catalogued against Monako Glass, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
+- Monako Glass is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Maturity here is beta, so treat Monako Glass's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- You need quantitative, automated evaluation metrics rather than visual inspection (pair with RAGAS/DeepEval/TruLens)
-- You need an open-source or self-hostable observability tool
-
-_Verified for Monako Glass: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Monako Glass means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Monako Glass's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Monako Glass is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A model marketplace/gateway: one OpenAI-compatible API fronts hundreds of models
 
 ## Why It's in the Arsenal
 
-OpenRouter earns a place in the Arsenal because it directly addresses a recurring decision point: you want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because OpenRouter is a unified API over 400+ models from all major providers with automatic fallbacks and pass-through pricing. Read it beside `litellm`, `portkey`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 
 ## Use Cases
 
-1. **Scenario**: you want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases
-2. **Scenario**: you need provider redundancy: automatic routing/fallback across providers hosting the same open model
-3. **Scenario where this is NOT the right fit**: enterprise data agreements with a specific provider are mandatory — an aggregator adds a party to your data path — evaluate an alternative instead
+1. **Where it fits**: "You want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases.
+2. **Adoption checkpoint**: compare OpenRouter against `litellm`, `portkey` on the same `production-serving, prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases
-- You need provider redundancy: automatic routing/fallback across providers hosting the same open model
+- The distinguishing implementation detail for OpenRouter is worth reading before adopting: requests hit OpenRouter's edge, which normalizes them to each provider's API, selects a provider per your routing preferences (or its default ranking), streams the response back, and meters usage against prepaid credits — abstracting provider-specific auth, formats, and outages.
+- OpenRouter overlaps `litellm`, `portkey` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- Pin the client library rather than the API: OpenRouter is reachable through `litellm`, and those adapters change defaults — retrieval, batching, retries — without a major version bump.
+- Capability is documented; behaviour is not. For OpenRouter, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Enterprise data agreements with a specific provider are mandatory — an aggregator adds a party to your data path
-- Cost-sensitive high volume on one model: direct provider contracts beat aggregator fees at scale
-
-- _Verified for OpenRouter: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to OpenRouter, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- OpenRouter's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

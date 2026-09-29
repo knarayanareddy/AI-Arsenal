@@ -45,7 +45,7 @@ The largest community platform for hosting, discovering, and versioning open mod
 
 ## Why It's in the Arsenal
 
-Hugging Face Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you need to discover, host, or version open models, datasets, or demo Spaces with the largest community in the ecosystem. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Hugging Face Hub is a model, dataset, and Space hosting platform for sharing and versioning AI artifacts. Read it beside `dvc`, `mlflow`, `weights-biases`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://huggingface.co/docs/hub/ for the au
 
 ## Use Cases
 
-1. **Scenario**: you need to discover, host, or version open models, datasets, or demo Spaces with the largest community in the ecosystem
-2. **Scenario**: you want easy public or private model/dataset hosting with built-in versioning
-3. **Scenario where this is NOT the right fit**: you need enterprise-grade access controls and stage-based promotion workflows tightly integrated with experiment tracking (pair with MLflow or W&B) — evaluate an alternative instead
+1. **Where it fits**: You need to discover, host, or version open models, datasets, or demo Spaces with the largest community in the ecosystem.
+2. **Adoption checkpoint**: compare Hugging Face Hub against `dvc`, `mlflow`, `weights-biases` on the same `model-registry` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need to discover, host, or version open models, datasets, or demo Spaces with the largest community in the ecosystem
-- You want easy public or private model/dataset hosting with built-in versioning
+- In concrete terms, Hugging Face Hub is a model, dataset, and Space hosting platform for sharing and versioning AI artifacts — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Hugging Face Hub's honest comparison set is `dvc`, `mlflow`, `weights-biases`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
+- Depending on Hugging Face Hub means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Hugging Face Hub all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You need enterprise-grade access controls and stage-based promotion workflows tightly integrated with experiment tracking (pair with MLflow or W&B)
-- Data residency requirements prohibit hosting artifacts outside your own infrastructure
+- There is no self-hosted path to Hugging Face Hub, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Hugging Face Hub describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

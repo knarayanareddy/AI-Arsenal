@@ -46,7 +46,7 @@ ShellMate is a closed-source, freemium AI assistant for the command line: it wat
 
 ## Why It's in the Arsenal
 
-ShellMate is tracked here as a reference point in the terminal-assistant category: it is one concrete option to weigh against Warp and Fig when deciding whether an interactive command suggester earns a place in a developer's shell. See Strengths / Limitations before adopting it.
+ShellMate is catalogued as a aI-powered terminal assistant that suggests commands and explains outputs, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals are not published. From the description it behaves as a wrapper ar
 
 ## Use Cases
 
-1. **Scenario**: you want an AI-powered terminal assistant to suggest commands and explain output during day-to-day development
-2. **Scenario**: you're learning a new CLI tool or environment and want inline explanations
-3. **Scenario where this is NOT the right fit**: you need a fully scriptable, auditable command-generation pipeline for production automation (a custom script is safer than an interactive suggestion tool) — evaluate an alternative instead
+1. **Where it fits**: You want an AI-powered terminal assistant to suggest commands and explain output during day-to-day development.
+2. **Adoption checkpoint**: validate ShellMate on your own data for the `production-serving` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want an AI-powered terminal assistant to suggest commands and explain output during day-to-day development
-- You're learning a new CLI tool or environment and want inline explanations
+- The distinguishing implementation detail for ShellMate is worth reading before adopting: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments.
+- No direct sibling is catalogued for ShellMate in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- ShellMate is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Marked beta, so the capability is real but ShellMate's interface may still move; pin the version you build against instead of tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need a fully scriptable, auditable command-generation pipeline for production automation (a custom script is safer than an interactive suggestion tool)
-- You need an open-source or self-hostable assistant
-
-- _Enrichment status: draft. ShellMate is a closed-source product surfaced via a curated newsletter; its capabilities and terminal-assistant positioning here are taken from the vendor's description, not independent testing. Last reviewed: 2026-06-30._
+- Depending on ShellMate means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for ShellMate describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- ShellMate is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

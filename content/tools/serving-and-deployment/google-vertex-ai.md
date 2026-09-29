@@ -45,7 +45,7 @@ Google Cloud's platform for training, evaluating, and deploying AI models, tight
 
 ## Why It's in the Arsenal
 
-Google Vertex AI earns a place in the Arsenal because it directly addresses a recurring decision point: your org is standardized on Google Cloud and wants model training, evaluation, and deployment in one platform. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Google Vertex AI is a google Cloud platform for model APIs, training, evaluation, and AI application deployment. Read it beside `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://cloud.google.com/vertex-ai/docs for
 
 ## Use Cases
 
-1. **Scenario**: your org is standardized on Google Cloud and wants model training, evaluation, and deployment in one platform
-2. **Scenario**: you need tight integration with BigQuery and other GCP data services for AI pipelines
-3. **Scenario where this is NOT the right fit**: you want a cloud-agnostic or lightweight deployment path — evaluate an alternative instead
+1. **Where it fits**: Your org is standardized on Google Cloud and wants model training, evaluation, and deployment in one platform.
+2. **Adoption checkpoint**: compare Google Vertex AI against `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints` on the same `deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Your org is standardized on Google Cloud and wants model training, evaluation, and deployment in one platform
-- You need tight integration with BigQuery and other GCP data services for AI pipelines
+- Beyond the feature list, Google Vertex AI's own implementation notes give the specifics — provides managed endpoints and pipelines on top of GCP infrastructure, letting teams move from data in BigQuery through training to a served model endpoint within one platform — which is where a capability claim either holds or does not for your workload.
+- The nearest neighbours to Google Vertex AI here are `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`, `modal`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- Google Vertex AI is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Google Vertex AI all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You want a cloud-agnostic or lightweight deployment path
-- Your team is not already operating in GCP and the platform's learning curve would be net-new overhead
+- There is no self-hosted path to Google Vertex AI, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Google Vertex AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

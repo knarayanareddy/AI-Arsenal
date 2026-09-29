@@ -46,7 +46,7 @@ NVIDIA's packaging of optimized inference as microservices: each NIM is a contai
 
 ## Why It's in the Arsenal
 
-NVIDIA NIM earns a place in the Arsenal because it directly addresses a recurring decision point: enterprises that want vendor-supported, pre-optimized LLM containers (TensorRT-LLM under the hood) deployable on-prem in minutes. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs. Read it beside `vllm`, `text-generation-inference`, `triton-inference-server`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -66,21 +66,20 @@ docker run --gpus all -p 8000:8000 -e NGC_API_KEY nvcr.io/nim/meta/llama-3.1-8b-
 
 ## Use Cases
 
-1. **Scenario**: enterprises that want vendor-supported, pre-optimized LLM containers (TensorRT-LLM under the hood) deployable on-prem in minutes
-2. **Scenario**: you need contractual support and security patching on the serving stack, not just open-source best effort
-3. **Scenario where this is NOT the right fit**: you're license-averse: production use requires AI Enterprise per-GPU licensing that can exceed raw compute costs — evaluate an alternative instead
+1. **Where it fits**: "Enterprises that want vendor-supported, pre-optimized LLM containers (TensorRT-LLM under the hood) deployable on-prem in minutes.
+2. **Adoption checkpoint**: compare NVIDIA NIM against `vllm`, `text-generation-inference`, `triton-inference-server` on the same `production-serving, deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Enterprises that want vendor-supported, pre-optimized LLM containers (TensorRT-LLM under the hood) deployable on-prem in minutes
-- You need contractual support and security patching on the serving stack, not just open-source best effort
+- In concrete terms, NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- NVIDIA NIM overlaps `vllm`, `text-generation-inference`, `triton-inference-server` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
+- Depending on NVIDIA NIM means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- What this entry does not give you is behaviour under your load: measure NVIDIA NIM's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You're license-averse: production use requires AI Enterprise per-GPU licensing that can exceed raw compute costs
-- You want maximum engine control/customization — direct vLLM/TensorRT-LLM gives more knobs
-
-- _Verified for NVIDIA NIM: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on NVIDIA NIM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- NVIDIA NIM's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

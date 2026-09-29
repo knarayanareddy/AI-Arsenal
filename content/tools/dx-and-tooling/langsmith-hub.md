@@ -45,7 +45,7 @@ LangSmith's prompt and dataset management surface for LangChain/LangGraph applic
 
 ## Why It's in the Arsenal
 
-LangSmith Hub earns a place in the Arsenal because it directly addresses a recurring decision point: you're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications. Read it beside `langfuse-prompts`, `promptlayer`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -68,19 +68,20 @@ Follow the official documentation at https://docs.smith.langchain.com/ for the a
 
 ## Use Cases
 
-1. **Scenario**: you're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing
-2. **Scenario**: you want to share and version prompts across a team already standardized on LangSmith
-3. **Scenario where this is NOT the right fit**: you're not using LangChain/LangGraph (the hub's value is tightly coupled to that ecosystem) — evaluate an alternative instead
+1. **Where it fits**: You're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing.
+2. **Adoption checkpoint**: compare LangSmith Hub against `langfuse-prompts`, `promptlayer` on the same `prompt-management` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing
-- You want to share and version prompts across a team already standardized on LangSmith
+- In concrete terms, LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Weighing LangSmith Hub against `langfuse-prompts`, `promptlayer` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- LangSmith Hub is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for LangSmith Hub all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You're not using LangChain/LangGraph (the hub's value is tightly coupled to that ecosystem)
-- You need a fully open-source, self-hostable prompt registry (consider Langfuse Prompts instead)
+- There is no self-hosted path to LangSmith Hub, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LangSmith Hub describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

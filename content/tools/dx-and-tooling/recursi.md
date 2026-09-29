@@ -46,7 +46,7 @@ Recursi is a closed-source, freemium AI coding assistant built around iterative 
 
 ## Why It's in the Arsenal
 
-Recursi is tracked as an early, self-improving coding-assistant experiment: its claimed differentiator — suggestions that get better within a session — is worth evaluating independently, and worth avoiding when you need a stable, well-documented assistant with a real production track record. See Strengths / Limitations before adopting it.
+Recursi is a self-improving system for intuitive and efficient AI-assisted coding. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals are unpublished. From the description it maintains session-level c
 
 ## Use Cases
 
-1. **Scenario**: you want an AI coding assistant that improves itself/its suggestions over a session for iterative development
-2. **Scenario**: you're exploring self-improving coding-assistant UX patterns
-3. **Scenario where this is NOT the right fit**: you need a stable, well-documented coding assistant with a long production track record — evaluate an alternative instead
+1. **Where it fits**: You want an AI coding assistant that improves itself/its suggestions over a session for iterative development.
+2. **Adoption checkpoint**: validate Recursi on your own data for the `production-serving` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want an AI coding assistant that improves itself/its suggestions over a session for iterative development
-- You're exploring self-improving coding-assistant UX patterns
+- Beyond the feature list, Recursi's own implementation notes give the specifics — its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build — which is where a capability claim either holds or does not for your workload.
+- Recursi has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
+- Recursi is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Recursi is beta, which means the interface is expected to churn: read the changelog before an upgrade, not after one breaks you.
 
 ## Limitations / When NOT to Use
 
-- You need a stable, well-documented coding assistant with a long production track record
-- You need an open-source or self-hostable option
-
-- _Enrichment status: draft. Recursi is a closed-source product surfaced via a curated newsletter; its self-improvement claims and behavior here are the vendor's, not independently verified — evaluate the claims before relying on them. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Recursi, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Recursi describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Recursi is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

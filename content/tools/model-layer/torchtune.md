@@ -45,7 +45,7 @@ A native PyTorch fine-tuning library with readable, hackable training recipes, a
 
 ## Why It's in the Arsenal
 
-torchtune earns a place in the Arsenal because it directly addresses a recurring decision point: you want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+torchtune is a pyTorch-native library for fine-tuning and experimenting with LLMs. Read it beside `axolotl`, `llamafactory`, `mlx-lm`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://github.com/pytorch/torchtune for th
 
 ## Use Cases
 
-1. **Scenario**: you want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework
-2. **Scenario**: you need tight control over training internals for research experimentation
-3. **Scenario where this is NOT the right fit**: you want the broadest model-family coverage and a config-only workflow (Axolotl/LLaMA-Factory cover more out of the box) — evaluate an alternative instead
+1. **Where it fits**: You want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework.
+2. **Adoption checkpoint**: compare torchtune against `axolotl`, `llamafactory`, `mlx-lm` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework
-- You need tight control over training internals for research experimentation
+- The distinguishing implementation detail for torchtune is worth reading before adopting: recipes are plain PyTorch scripts composed of explicit, swappable components (model, optimizer, dataset, scheduler), making it straightforward to read and modify training behavior directly.
+- Weighing torchtune against `axolotl`, `llamafactory`, `mlx-lm`, `peft` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- torchtune is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- What this entry does not give you is behaviour under your load: measure torchtune's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You want the broadest model-family coverage and a config-only workflow (Axolotl/LLaMA-Factory cover more out of the box)
-- Your team prefers not to read and modify PyTorch training code directly
+- Depending on torchtune means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for torchtune describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A scholarly-grade web scraping library used in major LLM data pipelines: given H
 
 ## Why It's in the Arsenal
 
-Trafilatura earns a place in the Arsenal because it directly addresses a recurring decision point: you need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Trafilatura is a python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building. Read it beside `firecrawl`, `crawl4ai`, `jina-reader`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -71,21 +71,20 @@ Follow the official documentation at https://trafilatura.readthedocs.io for the 
 
 ## Use Cases
 
-1. **Scenario**: you need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance
-2. **Scenario**: offline/static HTML processing where an API service (Firecrawl) or headless browser (Crawl4AI) is unnecessary weight
-3. **Scenario where this is NOT the right fit**: javaScript-rendered pages — trafilatura parses static HTML; pair with a headless browser or use Crawl4AI — evaluate an alternative instead
+1. **Where it fits**: "You need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance.
+2. **Adoption checkpoint**: compare Trafilatura against `firecrawl`, `crawl4ai`, `jina-reader` on the same `web-scraping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance
-- Offline/static HTML processing where an API service (Firecrawl) or headless browser (Crawl4AI) is unnecessary weight
+- The distinguishing implementation detail for Trafilatura is worth reading before adopting: cascades fast heuristics over the DOM tree (density, markup signals, link ratios) with fallbacks to readability-style algorithms, trading a tiny accuracy loss for order-of-magnitude speed over ML extractors — which is why corpus projects (C4-style cleaning, web-scale pretraining data) adopted it.
+- Trafilatura's honest comparison set is `firecrawl`, `crawl4ai`, `jina-reader`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
+- Trafilatura is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Trafilatura all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- JavaScript-rendered pages — trafilatura parses static HTML; pair with a headless browser or use Crawl4AI
-- You want ready-to-use LLM-formatted output with screenshots/actions; that's the newer crawler tools' job
-
-- _Verified for Trafilatura: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Trafilatura means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Trafilatura describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

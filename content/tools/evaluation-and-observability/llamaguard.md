@@ -45,7 +45,7 @@ Meta's open-weight safety classifier model family for moderating LLM inputs and 
 
 ## Why It's in the Arsenal
 
-Llama Guard earns a place in the Arsenal because it directly addresses a recurring decision point: you need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Llama Guard is a meta safety model family for classifying and moderating LLM inputs and outputs. Read it beside `guardrails-ai`, `nemo-guardrails`, `rebuff`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://www.llama.com/docs/model-cards-and-
 
 ## Use Cases
 
-1. **Scenario**: you need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model
-2. **Scenario**: you want a model-based moderation layer rather than only keyword/regex filtering
-3. **Scenario where this is NOT the right fit**: you need a fully managed moderation API with no self-hosting (most major model providers offer one) — evaluate an alternative instead
+1. **Where it fits**: You need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model.
+2. **Adoption checkpoint**: compare Llama Guard against `guardrails-ai`, `nemo-guardrails`, `rebuff` on the same `security-and-guardrails` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model
-- You want a model-based moderation layer rather than only keyword/regex filtering
+- In concrete terms, Llama Guard is a meta safety model family for classifying and moderating LLM inputs and outputs — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Against `guardrails-ai`, `nemo-guardrails`, `rebuff`, the comparison that decides this is deployment model and operational cost rather than the feature list; Llama Guard sits at the hosted-or-embedded end of that axis.
+- Llama Guard is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- What this entry does not give you is behaviour under your load: measure Llama Guard's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
 
 ## Limitations / When NOT to Use
 
-- You need a fully managed moderation API with no self-hosting (most major model providers offer one)
-- Your latency budget can't absorb running an additional classifier model per request without optimization
+- Depending on Llama Guard means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Llama Guard describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

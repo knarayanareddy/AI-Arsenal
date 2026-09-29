@@ -46,7 +46,7 @@ A specialist embeddings company (founded by Stanford's Tengyu Ma, acquired by Mo
 
 ## Why It's in the Arsenal
 
-Voyage AI earns a place in the Arsenal because it directly addresses a recurring decision point: retrieval quality is your bottleneck — voyage-3 family models outrank OpenAI/Cohere embeddings on many domain benchmarks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Voyage AI is a embedding and reranking models that consistently top retrieval benchmarks, now part of MongoDB. Read it beside `cohere`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install voyageai
 
 ## Use Cases
 
-1. **Scenario**: retrieval quality is your bottleneck — voyage-3 family models outrank OpenAI/Cohere embeddings on many domain benchmarks
-2. **Scenario**: you need domain-specialized embeddings (code, finance, law) or multimodal embeddings without training your own
-3. **Scenario where this is NOT the right fit**: vendor consolidation matters and you're not on MongoDB — it's another API dependency in your critical path — evaluate an alternative instead
+1. **Where it fits**: "Retrieval quality is your bottleneck — voyage-3 family models outrank OpenAI/Cohere embeddings on many domain benchmarks.
+2. **Adoption checkpoint**: compare Voyage AI against `cohere` on the same `production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Retrieval quality is your bottleneck — voyage-3 family models outrank OpenAI/Cohere embeddings on many domain benchmarks
-- You need domain-specialized embeddings (code, finance, law) or multimodal embeddings without training your own
+- The distinguishing implementation detail for Voyage AI is worth reading before adopting: contrastively trained embedding models with Matryoshka dimensionality and quantization options let you trade storage vs accuracy; rerankers apply cross-attention scoring on shortlists. APIs mirror the standard embed/rerank patterns so they slot into existing RAG pipelines.
+- Voyage AI's honest comparison set is `cohere`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
+- Pin the client library rather than the API: Voyage AI is reachable through `langchain`, `llamaindex`, `pinecone`, and those adapters change defaults — retrieval, batching, retries — without a major version bump.
+- Capability is documented; behaviour is not. For Voyage AI, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Vendor consolidation matters and you're not on MongoDB — it's another API dependency in your critical path
-- Self-hosted requirements; weights are not open (use BGE/GTE family instead)
-
-- _Verified for Voyage AI: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Voyage AI, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Voyage AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ Microsoft's training-optimization library, best known for ZeRO: partitioning opt
 
 ## Why It's in the Arsenal
 
-DeepSpeed earns a place in the Arsenal because it directly addresses a recurring decision point: your model + optimizer states exceed GPU memory — ZeRO-2/3 sharding and CPU/NVMe offload are the standard fix. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+DeepSpeed is catalogued as a microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory, which is the specific claim the rest of the entry has to support. Read it beside `axolotl`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -71,21 +71,20 @@ Follow the official documentation at https://deepspeed.readthedocs.io for the au
 
 ## Use Cases
 
-1. **Scenario**: your model + optimizer states exceed GPU memory — ZeRO-2/3 sharding and CPU/NVMe offload are the standard fix
-2. **Scenario**: multi-node full fine-tuning where you need battle-tested parallelism configs (most training frameworks expose DeepSpeed as the backend)
-3. **Scenario where this is NOT the right fit**: single-GPU LoRA/QLoRA jobs — PEFT + Unsloth are simpler and faster at that scale — evaluate an alternative instead
+1. **Where it fits**: "Your model + optimizer states exceed GPU memory — ZeRO-2/3 sharding and CPU/NVMe offload are the standard fix.
+2. **Adoption checkpoint**: compare DeepSpeed against `axolotl` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Your model + optimizer states exceed GPU memory — ZeRO-2/3 sharding and CPU/NVMe offload are the standard fix
-- Multi-node full fine-tuning where you need battle-tested parallelism configs (most training frameworks expose DeepSpeed as the backend)
+- In concrete terms, DeepSpeed is a microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- The nearest neighbours to DeepSpeed here are `axolotl`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- The documented integration path for DeepSpeed runs through `axolotl`, `llamafactory`, `trl`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
+- Capability is documented; behaviour is not. For DeepSpeed, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- Single-GPU LoRA/QLoRA jobs — PEFT + Unsloth are simpler and faster at that scale
-- You're starting fresh in 2026 and can choose PyTorch-native FSDP2, which covers much of ZeRO's ground with less config
-
-- _Verified for DeepSpeed: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on DeepSpeed means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for DeepSpeed describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

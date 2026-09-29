@@ -46,7 +46,7 @@ Honen is a closed-source, freemium tool that automatically turns existing materi
 
 ## Why It's in the Arsenal
 
-Honen is tracked as a niche content-to-course option: it is worth evaluating when the goal is to automate course structuring from existing material, and worth skipping when you need fine-grained instructional-design control that an automated generator cannot yet provide. See Strengths / Limitations before adopting it.
+Honen is a transform any content into interactive AI-generated courses. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ Its internals are not published. From the description it ingests source content,
 
 ## Use Cases
 
-1. **Scenario**: you want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically
-2. **Scenario**: you're building educational or onboarding material and want to automate course structuring
-3. **Scenario where this is NOT the right fit**: you need fine-grained instructional design control that an automated tool can't yet provide — evaluate an alternative instead
+1. **Where it fits**: You want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically.
+2. **Adoption checkpoint**: validate Honen on your own data for the `structured-output` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically
-- You're building educational or onboarding material and want to automate course structuring
+- The distinguishing implementation detail for Honen is worth reading before adopting: its internals are not published. From the description it ingests source content, then uses generative models to segment it into a course structure — modules, ordering, and interactive knowledge checks — that a human can refine. Because it is a hosted, closed-source service, the content processing and model provider run server-side rather than on the author's machine.
+- Nothing else in this phase is catalogued against Honen, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
+- Honen is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Maturity here is beta, so treat Honen's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- You need fine-grained instructional design control that an automated tool can't yet provide
-- You need an open-source or self-hostable course-generation tool
-
-- _Enrichment status: draft. Honen is a closed-source niche product surfaced via a curated newsletter; its content-to-course behavior here is taken from the vendor's description, not independent verification. Last reviewed: 2026-06-30._
+- Depending on Honen means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Honen describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Honen is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

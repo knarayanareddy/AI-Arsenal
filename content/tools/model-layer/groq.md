@@ -46,7 +46,7 @@ An inference provider running open models (Llama, Qwen, Whisper, and others) on 
 
 ## Why It's in the Arsenal
 
-Groq earns a place in the Arsenal because it directly addresses a recurring decision point: interactive UX where tokens-per-second dominates: voice agents, live copilots, rapid agent loops. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Groq is catalogued as a ultra-low-latency inference on custom LPU hardware, serving open models at hundreds of tokens per second, which is the specific claim the rest of the entry has to support. Read it beside `together-ai`, `fireworks-ai`, `cerebras-inference`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -67,21 +67,20 @@ pip install groq
 
 ## Use Cases
 
-1. **Scenario**: interactive UX where tokens-per-second dominates: voice agents, live copilots, rapid agent loops
-2. **Scenario**: you want the cheapest way to give users near-instant open-model responses without your own GPUs
-3. **Scenario where this is NOT the right fit**: you need the newest/biggest models immediately — the catalog is curated and hardware-constrained — evaluate an alternative instead
+1. **Where it fits**: "Interactive UX where tokens-per-second dominates: voice agents, live copilots, rapid agent loops.
+2. **Adoption checkpoint**: compare Groq against `together-ai`, `fireworks-ai`, `cerebras-inference` on the same `production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- Interactive UX where tokens-per-second dominates: voice agents, live copilots, rapid agent loops
-- You want the cheapest way to give users near-instant open-model responses without your own GPUs
+- The distinguishing implementation detail for Groq is worth reading before adopting: lPUs execute models with statically scheduled dataflow and on-chip SRAM instead of HBM-bound GPUs, removing memory-bandwidth bottlenecks for autoregressive decoding; Groq compiles supported models to this architecture, which is why the catalog is curated rather than open-ended.
+- The nearest neighbours to Groq here are `together-ai`, `fireworks-ai`, `cerebras-inference`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- Groq is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Groq all need testing on your own traffic shape.
 
 ## Limitations / When NOT to Use
 
-- You need the newest/biggest models immediately — the catalog is curated and hardware-constrained
-- Long-context heavy workloads; LPU memory architecture limits context economics vs GPU providers
-
-- _Verified for Groq: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Groq means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Groq's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A real-time log aggregation platform purpose-built for serverless AI workloads, 
 
 ## Why It's in the Arsenal
 
-Superlog earns a place in the Arsenal because it directly addresses a recurring decision point: you run serverless AI workloads and need real-time log aggregation purpose-built for that debugging model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Superlog is a real-time log aggregation platform designed for serverless debugging. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -66,21 +66,21 @@ Logs emitted by individual serverless function invocations are streamed to a cen
 
 ## Use Cases
 
-1. **Scenario**: you run serverless AI workloads and need real-time log aggregation purpose-built for that debugging model
-2. **Scenario**: cold-start, distributed serverless logs are hard to correlate with your current tooling
-3. **Scenario where this is NOT the right fit**: your AI workloads run on long-lived servers where standard logging/observability stacks already work well — evaluate an alternative instead
+1. **Where it fits**: You run serverless AI workloads and need real-time log aggregation purpose-built for that debugging model.
+2. **Adoption checkpoint**: validate Superlog on your own data for the `monitoring, tracing` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You run serverless AI workloads and need real-time log aggregation purpose-built for that debugging model
-- Cold-start, distributed serverless logs are hard to correlate with your current tooling
+- In concrete terms, Superlog is a real-time log aggregation platform designed for serverless debugging — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- No direct sibling is catalogued for Superlog in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Superlog is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
+- Maturity here is beta, so treat Superlog's API surface as something to pin and test rather than something to track.
 
 ## Limitations / When NOT to Use
 
-- Your AI workloads run on long-lived servers where standard logging/observability stacks already work well
-- You need an open-source or self-hostable logging platform
-
-_Verified for Superlog: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Superlog means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Superlog describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Superlog is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

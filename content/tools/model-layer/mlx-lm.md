@@ -45,7 +45,7 @@ Apple's MLX-based library for running and fine-tuning LLMs natively on Apple Sil
 
 ## Why It's in the Arsenal
 
-MLX-LM earns a place in the Arsenal because it directly addresses a recurring decision point: you're developing or fine-tuning LLMs locally on Apple Silicon (M-series) hardware and want native performance. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because MLX-LM is a apple MLX library for running and fine-tuning LLMs on Apple Silicon. Read it beside `axolotl`, `llamafactory`, `peft`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -69,19 +69,20 @@ Follow the official documentation at https://github.com/ml-explore/mlx-lm for th
 
 ## Use Cases
 
-1. **Scenario**: you're developing or fine-tuning LLMs locally on Apple Silicon (M-series) hardware and want native performance
-2. **Scenario**: you want fast local iteration without needing a CUDA GPU or cloud spend
-3. **Scenario where this is NOT the right fit**: you need to deploy or fine-tune at scale on NVIDIA GPU clusters (use Axolotl/Unsloth/torchtune there instead) — evaluate an alternative instead
+1. **Where it fits**: You're developing or fine-tuning LLMs locally on Apple Silicon (M-series) hardware and want native performance.
+2. **Adoption checkpoint**: compare MLX-LM against `axolotl`, `llamafactory`, `peft` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You're developing or fine-tuning LLMs locally on Apple Silicon (M-series) hardware and want native performance
-- You want fast local iteration without needing a CUDA GPU or cloud spend
+- In concrete terms, MLX-LM is an apple MLX library for running and fine-tuning LLMs on Apple Silicon — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- The nearest neighbours to MLX-LM here are `axolotl`, `llamafactory`, `peft`, `torchtune`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
+- Depending on MLX-LM means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- Capability is documented; behaviour is not. For MLX-LM, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need to deploy or fine-tune at scale on NVIDIA GPU clusters (use Axolotl/Unsloth/torchtune there instead)
-- Your team's hardware is not Apple Silicon
+- Depending on MLX-LM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for MLX-LM describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
 
 ## Integration Patterns
 

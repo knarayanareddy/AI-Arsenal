@@ -43,7 +43,7 @@ A managed inference platform specializing in fast serving of open-weight models,
 
 ## Why It's in the Arsenal
 
-Fireworks AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need fast, managed inference for open-weight models without operating your own GPU fleet. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The entry exists because Fireworks AI is A managed platform for fast inference and fine-tuning of open models. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Models are served on Fireworks-operated GPU infrastructure behind an API compati
 
 ## Use Cases
 
-1. **Scenario**: you need fast, managed inference for open-weight models without operating your own GPU fleet
-2. **Scenario**: you also want managed fine-tuning of open models in the same platform
-3. **Scenario where this is NOT the right fit**: you need full control over serving internals (batching, quantization strategy) — self-host with vLLM/SGLang instead — evaluate an alternative instead
+1. **Where it fits**: You need fast, managed inference for open-weight models without operating your own GPU fleet.
+2. **Adoption checkpoint**: validate Fireworks AI on your own data for the `production-serving` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
 
 ## Strengths
 
-- You need fast, managed inference for open-weight models without operating your own GPU fleet
-- You also want managed fine-tuning of open models in the same platform
+- The distinguishing implementation detail for Fireworks AI is worth reading before adopting: models are served on Fireworks-operated GPU infrastructure behind an API compatible with common client conventions, with fine-tuning jobs submitted and tracked through the same platform.
+- No direct sibling is catalogued for Fireworks AI in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Fireworks AI is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
+- Capability is documented; behaviour is not. For Fireworks AI, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need full control over serving internals (batching, quantization strategy) — self-host with vLLM/SGLang instead
-- Strict data-residency requirements rule out a third-party inference provider
+- Depending on Fireworks AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Fireworks AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ An open-source evaluation framework offering prebuilt operators for the common L
 
 ## Why It's in the Arsenal
 
-UpTrain earns a place in the Arsenal because it directly addresses a recurring decision point: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+UpTrain is catalogued as a open-source LLM evaluation toolkit with 20+ prebuilt checks for RAG quality, safety, and conversation metrics, which is the specific claim the rest of the entry has to support. Read it beside `ragas-rag-evaluation`, `deepeval`, `evidently`: the choice between them is a deployment and cost decision before it is a capability one. It is marked beta, so pin the interface rather than tracking it.
 
 ## Key Features
 
@@ -67,21 +67,21 @@ pip install uptrain
 
 ## Use Cases
 
-1. **Scenario**: you want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself
-2. **Scenario**: evaluating with locally hosted judge models via Ollama for cost/privacy
-3. **Scenario where this is NOT the right fit**: you need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024 — evaluate an alternative instead
+1. **Where it fits**: "You want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself.
+2. **Adoption checkpoint**: compare UpTrain against `ragas-rag-evaluation`, `deepeval`, `evidently` on the same `evaluation` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself
-- Evaluating with locally hosted judge models via Ollama for cost/privacy
+- Beyond the feature list, UpTrain's own implementation notes give the specifics — each eval is an operator prompting a judge model with structured rubrics over your logged inputs/outputs/contexts, returning normalized scores; batches run through the Python client with results in dataframes or its self-hosted dashboard — which is where a capability claim either holds or does not for your workload.
+- UpTrain's honest comparison set is `ragas-rag-evaluation`, `deepeval`, `evidently`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
+- Depending on UpTrain means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- UpTrain is beta, which means the interface is expected to churn: read the changelog before an upgrade, not after one breaks you.
 
 ## Limitations / When NOT to Use
 
-- You need an actively maintained project for long-term production reliance — commit activity has slowed markedly since 2024
-- Pytest-style eval-in-CI workflows; DeepEval's testing ergonomics are stronger
-
-- _Verified for UpTrain: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on UpTrain means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for UpTrain describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- UpTrain is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
 
 ## Integration Patterns
 

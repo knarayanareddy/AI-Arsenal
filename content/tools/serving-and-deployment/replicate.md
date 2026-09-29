@@ -43,7 +43,7 @@ A hosted platform for running community-published open-source machine learning m
 
 ## Why It's in the Arsenal
 
-Replicate earns a place in the Arsenal because it directly addresses a recurring decision point: you want to call or deploy open-source models via a simple API without managing GPUs yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Replicate is catalogued as A hosted platform for running and deploying machine learning models via API, which is the specific claim the rest of the entry has to support. Read it beside `aws-bedrock`, `azure-ai-studio`, `bentoml`: the choice between them is a deployment and cost decision before it is a capability one.
 
 ## Key Features
 
@@ -64,19 +64,20 @@ Each model is packaged with a standard interface (via Cog); Replicate provisions
 
 ## Use Cases
 
-1. **Scenario**: you want to call or deploy open-source models via a simple API without managing GPUs yourself
-2. **Scenario**: you're prototyping with a variety of community-published models and want pay-per-second billing
-3. **Scenario where this is NOT the right fit**: you need the lowest cost per inference at sustained high volume (self-hosted serving is usually cheaper there) — evaluate an alternative instead
+1. **Where it fits**: You want to call or deploy open-source models via a simple API without managing GPUs yourself.
+2. **Adoption checkpoint**: compare Replicate against `aws-bedrock`, `azure-ai-studio`, `bentoml` on the same `deployment, production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
 
 ## Strengths
 
-- You want to call or deploy open-source models via a simple API without managing GPUs yourself
-- You're prototyping with a variety of community-published models and want pay-per-second billing
+- In concrete terms, Replicate is a hosted platform for running and deploying machine learning models via API — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Weighing Replicate against `aws-bedrock`, `azure-ai-studio`, `bentoml`, `fly-io` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
+- Depending on Replicate means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
+- Capability is documented; behaviour is not. For Replicate, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need the lowest cost per inference at sustained high volume (self-hosted serving is usually cheaper there)
-- You need fine-grained control over batching, quantization, and serving internals
+- Depending on Replicate means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Replicate's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
 
 ## Integration Patterns
 
