@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Lilian Weng is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Writes long, citation-dense surveys of one subfield at a time, on a schedule, covering agents, self-critique, hallucination, reward modelling, and LLM internals.
 
 ## Why Follow
 
-Her long-form technical posts are strong context for understanding research areas before implementing systems.
+Useful as the best single-document entry point into a subfield you are entering: each essay is a careful walk through the literature with the open problems left explicitly open rather than smoothed over.
 
 ## Notable Work
 
-Blog posts on agents, RLHF, prompt engineering, and alignment.
+“Large Language Model's Friendly Intro”; “Self-Critique”; “Hallucination”; “Agent”; “Why Do Large Language Models Hallucinate”; and the recurring series on LLMs' internal mechanisms and tool use.
 
 ## Channels
 
@@ -36,9 +36,7 @@ Blog posts on agents, RLHF, prompt engineering, and alignment.
 
 ## Resources
 
-- [Primary profile](https://lilianweng.github.io)
-- [website](https://lilianweng.github.io)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Large Language Model's Friendly Intro](https://lilianweng.github.io/posts/2023-06-01-intro/)
+- [Self-Critique](https://lilianweng.github.io/posts/2023-11-07-self-critique/)
+- [Hallucination](https://lilianweng.github.io/posts/2024-02-20-hallucination/)
 

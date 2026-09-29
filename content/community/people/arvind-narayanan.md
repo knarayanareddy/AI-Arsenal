@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Arvind Narayanan is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Writes about AI as an economics and measurement problem rather than a technique problem. The recurring argument is that capability claims, benchmark numbers and deployment reality are three different things, and that the gap between them is where most bad AI decisions are made.
 
 ## Why Follow
 
-Useful for grounded skepticism and evaluation of AI claims.
+Useful as a corrective when you are making decisions off benchmark and vendor numbers, and for the clearest public writing on why an eval is a diagnostic instrument rather than a scorecard.
 
 ## Notable Work
 
-AI Snake Oil and research on AI accountability.
+“Evals are a tool, not a scorecard” and related essays on AI measurement; the cost, capital and infrastructure side of the LLM discourse; work on the practical economics of running models at scale.
 
 ## Channels
 
@@ -36,9 +36,6 @@ AI Snake Oil and research on AI accountability.
 
 ## Resources
 
-- [Primary profile](https://www.cs.princeton.edu/~arvindn/)
-- [website](https://www.cs.princeton.edu/~arvindn/)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Applied ML — essays and papers](https://arvindn.github.io/)
+- [Interconnected AI](https://www.interconnected.ai/)
 

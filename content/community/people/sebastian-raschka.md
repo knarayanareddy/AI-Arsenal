@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-Sebastian Raschka is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Writes the most systematic public treatment of modern LLM architecture and post-training that exists as a book, working through implementation rather than survey.
 
 ## Why Follow
 
-Good bridge between ML fundamentals and hands-on implementation for builders.
+Useful if you want attention variants, pretraining, LoRA, DPO and quantization understood at the implementation level, and the chapter-by-chapter repo is runnable code rather than diagrams.
 
 ## Notable Work
 
-Books and tutorials on machine learning, deep learning, and LLMs.
+“LLMs from Scratch” (Murphy, 2025) and its chapter-by-chapter companion repo; the Ahead of AI newsletter and Ahead of AI Weekly; the Explainable AI and machine-learning-with-python repositories.
 
 ## Channels
 
@@ -39,10 +39,7 @@ Books and tutorials on machine learning, deep learning, and LLMs.
 
 ## Resources
 
-- [Primary profile](https://sebastianraschka.com)
-- [github](https://github.com/rasbt)
-- [website](https://sebastianraschka.com)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)
+- [Ahead of AI](https://magazine.sebastianraschka.com/)
+- [machine-learning-with-python](https://github.com/rasbt/machine-learning-with-python)
 

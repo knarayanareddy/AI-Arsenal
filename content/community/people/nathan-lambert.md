@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Nathan Lambert is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Works on open-model evaluation and release policy, writing about what a benchmark release does and does not reveal about a model.
 
 ## Why Follow
 
-High-signal writing on post-training and open model development.
+Useful as a corrective to launch-day score reporting, and for the clearest public argument about model openness and distribution as policy questions rather than purely technical ones.
 
 ## Notable Work
 
-Interconnects newsletter and RLHF/open-model analysis.
+Ai2's open-model releases (OLMo, OLMo 2) and their evaluation write-ups; the Interconnected AI newsletter on model openness, benchmarks, and policy.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Interconnects newsletter and RLHF/open-model analysis.
 
 ## Resources
 
-- [Primary profile](https://www.interconnects.ai)
-- [newsletter](https://www.interconnects.ai)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Ai2 open models (OLMo)](https://allenai.org/olmo)
+- [Interconnected AI](https://www.interconnected.ai/)
 

@@ -21,15 +21,15 @@ status: "active"
 
 ## Overview
 
-François Chollet is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Argues that intelligence is not a model-training outcome, and that benchmark progress has been conflated with capability. Built ARC-AGI to reward generalisation over memorisation, and designed Keras.
 
 ## Why Follow
 
-Useful perspective on evaluation, abstraction, and what model benchmarks do or do not measure.
+Useful for the strongest published dissent on the current approach, and for the reference point to bring when someone cites benchmark improvement as evidence of a capability jump.
 
 ## Notable Work
 
-Keras, ARC benchmark, and AI reasoning essays.
+“On the Measure of Intelligence” (the ARC paper); the ARC-AGI benchmark and its deliberately non-learnable task design; Keras's design and authorship; essays distinguishing skill-acquisition from general intelligence.
 
 ## Channels
 
@@ -39,10 +39,7 @@ Keras, ARC benchmark, and AI reasoning essays.
 
 ## Resources
 
-- [Primary profile](https://fchollet.com)
-- [github](https://github.com/fchollet)
-- [website](https://fchollet.com)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [On the Measure of Intelligence](https://arxiv.org/abs/1911.01547)
+- [ARC-AGI benchmark](https://arcprize.org/)
+- [Keras](https://keras.io/)
 

@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Sébastien Bubeck is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Works on model evaluation and responsible release from the Hugging Face side, including the tooling for model cards and open leaderboards.
 
 ## Why Follow
 
-Useful for research context around reasoning and model capabilities.
+Useful for applied work on evaluating and shipping open models responsibly, and for the evaluation-dataset and leaderboard infrastructure behind public model comparisons.
 
 ## Notable Work
 
-Microsoft Research work on language model reasoning and small models.
+Open LLM Leaderboard v2; model cards and the Hugging Face model-card tooling; contributions to open model release practice.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Microsoft Research work on language model reasoning and small models.
 
 ## Resources
 
-- [Primary profile](https://www.microsoft.com/en-us/research/people/sebubeck/)
-- [website](https://www.microsoft.com/en-us/research/people/sebubeck/)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Open LLM Leaderboard v2](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
+- [Model cards guide](https://huggingface.co/docs/hub/model-cards)
 

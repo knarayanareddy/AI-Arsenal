@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Noam Shazeer is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Author on the original Transformer and on much of the scaling and multimodal work that followed it, at Google.
 
 ## Why Follow
 
-Useful for understanding model architecture history and scaling ideas.
+Useful as a primary reference for the model-architecture lineage itself — context handling, scaling, and multimodal integration as they were actually done rather than as they are summarised later.
 
 ## Notable Work
 
-Transformer and large-scale model architecture contributions.
+Attention Is All You Need; Gopher; PaLM; Flamingo and the interleaved multimodal approach; TensorFlow and the LLM APIs at Google.
 
 ## Channels
 
@@ -36,9 +36,7 @@ Transformer and large-scale model architecture contributions.
 
 ## Resources
 
-- [Primary profile](https://en.wikipedia.org/wiki/Noam_Shazeer)
-- [website](https://en.wikipedia.org/wiki/Noam_Shazeer)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Gopher](https://arxiv.org/abs/2112.11446)
+- [PaLM](https://arxiv.org/abs/2204.02311)
 

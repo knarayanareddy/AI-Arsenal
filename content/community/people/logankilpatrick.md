@@ -19,15 +19,15 @@ status: "active"
 
 ## Overview
 
-Logan Kilpatrick is included because their work is useful for understanding practical AI engineering, model behavior, research translation, or production systems.
+Writes and builds around fine-tuning open models on limited hardware, with attention to the resource arithmetic being realistic rather than aspirational.
 
 ## Why Follow
 
-Useful for developer-facing AI platform updates and practical builder signals.
+Useful if you are trying to adapt an open model instead of calling a hosted one, and want guidance that accounts for the VRAM and time budget you actually have.
 
 ## Notable Work
 
-Developer education and AI platform ecosystem work.
+FineTuning, a practical guide to parameter-efficient fine-tuning; the Autotrain and Accelerate tooling; writing on running and fine-tuning open models on limited hardware.
 
 ## Channels
 
@@ -36,9 +36,6 @@ Developer education and AI platform ecosystem work.
 
 ## Resources
 
-- [Primary profile](https://github.com/logankilpatrick)
-- [github](https://github.com/logankilpatrick)
-
----
-*Last reviewed: 2026-06-14 by @maintainer*
+- [FineTuning guide](https://huggingface.co/blog/finetune)
+- [Autotrain Advanced](https://github.com/huggingface/autotrain-advanced)
 
