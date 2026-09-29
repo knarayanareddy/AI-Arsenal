@@ -90,7 +90,7 @@ litgpt finetune_lora microsoft/phi-2 --data JSON --data.json_path my_data.json
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+This is a self-hosted training and fine-tuning stack in content/projects/training-and-alignment, so it occupies the same slot as deepspeed, peft and trl rather than the managed fine-tuning services catalogued in content/tools/model-layer. The trade it makes is control: you supply the GPUs and the checkpoint, and in exchange you own the training loop, the memory configuration and every failure mode that comes with running the job yourself.
 
 ## Resources
 
@@ -98,4 +98,4 @@ This is a training-and-alignment entry: it documents a training/fine-tuning/alig
 - [Documentation](https://github.com/Lightning-AI/litgpt/tree/main/tutorials)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (13,467 stars, last commit 2026-07-06, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 13467 as of 2026-07-08; last commit 2026-07-06; both verified via the GitHub API.*

@@ -91,7 +91,7 @@ marker in_folder/ --workers 4
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This sits in content/projects/data-and-retrieval as a document-to-markdown converter, which places it upstream of every entry in this phase that consumes parsed text: an extraction step like this one runs before chunking, and chunking runs before the vector stores such as chroma, qdrant and weaviate. Compared with the RAG platform entries in the same phase it is not a retrieval system at all, so the honest boundary is that you would pair it with one rather than choose between them.
 
 ## Resources
 
@@ -99,4 +99,4 @@ This is a data-and-retrieval entry: it documents a vector database, document-pro
 - [Documentation](https://github.com/datalab-to/marker#readme)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (37,280 stars, last commit 2026-07-07, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 37280 as of 2026-07-08; last commit 2026-07-07; both verified via the GitHub API.*

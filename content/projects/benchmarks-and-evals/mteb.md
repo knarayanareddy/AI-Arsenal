@@ -92,7 +92,7 @@ results = mteb.evaluate(model, tasks=benchmark)
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for MTEB in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 
@@ -100,4 +100,4 @@ This is a benchmark-and-eval entry: it documents an evaluation, tracing, or obse
 - [Documentation](https://embeddings-benchmark.github.io/mteb/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (3,344 stars, last commit 2026-07-07, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 3344 as of 2026-07-08; last commit 2026-07-07; both verified via the GitHub API.*

@@ -90,7 +90,7 @@ tb run --agent claude-code --model claude-sonnet-4-5 --task-id hello-world
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for Terminal-Bench in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 
@@ -98,4 +98,4 @@ This is a benchmark-and-eval entry: it documents an evaluation, tracing, or obse
 - [Documentation](https://www.tbench.ai/docs/run-terminal-bench-2-0)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (2,427 stars, last commit 2026-01-22, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 2427 as of 2026-07-08; last commit 2026-01-22; both verified via the GitHub API.*

@@ -94,11 +94,11 @@ Upstream: built by Comet, leveraging their existing ML platform infrastructure a
 - You're not already invested in the Comet ecosystem — a standalone tool like Langfuse may be a lighter-weight choice with a larger community specifically in the LLM-observability space
 - You need the deepest LangChain-specific integration — LangSmith, built by the LangChain team, has tighter native support for that specific framework
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Verified for Opik: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the benchmark-and-eval entry for Opik in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

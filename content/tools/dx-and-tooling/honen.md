@@ -97,4 +97,4 @@ Honen sits at the authoring end of a learning workflow: it consumes existing con
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

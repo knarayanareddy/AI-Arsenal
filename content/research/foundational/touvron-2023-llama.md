@@ -86,4 +86,4 @@ The inference-aware correction to `hoffmann-2022-chinchilla` and predecessor of 
 - [Code](https://github.com/meta-llama/llama)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

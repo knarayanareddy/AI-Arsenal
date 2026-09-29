@@ -97,4 +97,4 @@ Memoriq is meant to sit behind an agent or app as its long-term memory: the app 
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

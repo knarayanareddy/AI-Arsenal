@@ -81,7 +81,7 @@ npx repomix@latest
 - The repo exceeds the model's context even packed — use retrieval or a repo-map approach (aider) instead
 - You need semantic selection of relevant files; Repomix packs mechanically, it doesn't rank
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Verified for Repomix: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
 
 ## Integration Patterns
 
@@ -100,4 +100,4 @@ npx repomix@latest
 - 26,966 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

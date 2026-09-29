@@ -93,11 +93,11 @@ Upstream: none of particular note. Downstream: officially integrated as a docume
 - You need the highest-fidelity layout preservation for complex tables/figures specifically — Docling's layout-analysis models are more specialized for that particular challenge
 - Your document format needs are narrow and well-defined — a lighter, format-specific parser may be simpler than Unstructured's broader abstraction layer
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Verified for Unstructured: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This is the data-and-retrieval entry for Unstructured in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

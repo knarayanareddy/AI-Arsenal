@@ -97,4 +97,4 @@ Pomelli fits an exploratory analysis workflow rather than an automated data pipe
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

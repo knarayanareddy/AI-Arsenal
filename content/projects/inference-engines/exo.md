@@ -90,7 +90,7 @@ Upstream: model weights (typically from Hugging Face) and per-device runtimes. D
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: a runtime for serving weights. For the model weights themselves see [Foundation Models](../foundation-models/_index.md); for single-machine local runtimes see `llama-cpp` and `ollama`.
+exo occupies the distributed-single-machine slot in content/projects/inference-engines: it takes the llama.cpp-style GGUF runtime and spreads it across the consumer GPUs and Apple silicon in one machine rather than a datacentre. That places it between `llama-cpp` and `ollama`, which stay on one device or one host, and the fleet-oriented schedulers in the same phase, which expect a cluster with a real serving API in front of it.
 
 ## Resources
 

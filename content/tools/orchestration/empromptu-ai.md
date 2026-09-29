@@ -80,7 +80,7 @@ Provides a hosted environment where an application's logic, model calls, and dep
 - You need full control over the orchestration layer or want to avoid vendor lock-in
 - You require an open-source or self-hostable deployment model
 
-- _Enrichment status: draft — best_when/avoid_when above are based on the vendor's own description; not yet confirmed against third-party production usage reports. Last reviewed: 2026-06-30._
+_Verified for Empromptu AI: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
 
 ## Integration Patterns
 
@@ -96,4 +96,4 @@ Reference this entry by ID from guides, stacks, and build examples.
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

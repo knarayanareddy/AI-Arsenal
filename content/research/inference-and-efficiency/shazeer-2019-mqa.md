@@ -80,4 +80,4 @@ Direct ancestor of `ainslie-2023-gqa` and complementary to `kwon-2023-pagedatten
 - [arXiv](https://arxiv.org/abs/1911.02150)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

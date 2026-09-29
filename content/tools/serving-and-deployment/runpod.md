@@ -82,7 +82,7 @@ pip install runpod
 - Strict compliance/enterprise SLAs on every workload — community-cloud tiers trade guarantees for price
 - You prefer code-native serverless (decorate a Python function) — Modal's DX is stronger there
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Verified for RunPod: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
 
 ## Integration Patterns
 
@@ -101,4 +101,4 @@ pip install runpod
 Reception should be updated with verified sources during regular content reviews.
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

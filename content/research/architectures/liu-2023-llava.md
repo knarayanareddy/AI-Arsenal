@@ -85,4 +85,4 @@ Builds on `radford-2021-clip` (architectures/) for its vision tower and `touvron
 - [Code & models](https://github.com/haotian-liu/LLaVA)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

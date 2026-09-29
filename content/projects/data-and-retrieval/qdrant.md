@@ -93,11 +93,11 @@ Upstream: none of particular note. Downstream: none of particular note as a depe
 - You need the absolute simplest embedded/zero-infrastructure setup for prototyping — Chroma or LanceDB have a lower barrier to entry for that specific use case
 - You're already committed to a different database for other reasons and want to minimize the number of systems you operate — pgvector might let you avoid adding a new dedicated system entirely
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Verified for Qdrant: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
 
 ## Relation to the Arsenal
 
-This is a data-and-retrieval entry: it documents a vector database, document-processing tool, or RAG platform. For job-based tool comparisons (e.g. web-scraping, vector-search), see [tools/data-ingestion/](../../tools/data-ingestion/_index.md).
+This is the data-and-retrieval entry for Qdrant in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 

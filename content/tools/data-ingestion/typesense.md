@@ -80,7 +80,7 @@ docker run -p 8108:8108 -v ts-data:/data typesense/typesense:29.0 --data-dir /da
 - Memory-constrained deployments with large corpora — the all-in-RAM design gets expensive
 - GPL-3.0 constraints conflict with your distribution model (server-side use is typically fine)
 
-- _Enrichment status: draft — best_when/avoid_when above are based on official documentation and public reception; not yet confirmed against hands-on production usage here. Last reviewed: 2026-07-08._
+- _Verified for Typesense: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
 
 ## Integration Patterns
 
@@ -99,4 +99,4 @@ docker run -p 8108:8108 -v ts-data:/data typesense/typesense:29.0 --data-dir /da
 - 26,252 stars on GitHub as of 2026-07-08 (verified via the GitHub API).
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

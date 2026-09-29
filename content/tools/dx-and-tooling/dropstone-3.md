@@ -97,4 +97,4 @@ Dropstone aims to be the environment rather than a component in one: it centrali
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

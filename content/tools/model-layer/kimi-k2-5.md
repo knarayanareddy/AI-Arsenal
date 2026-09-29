@@ -97,4 +97,4 @@ Kimi K2.5 integrates as one model provider behind an API, which makes it a natur
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

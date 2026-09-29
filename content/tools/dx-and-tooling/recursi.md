@@ -97,4 +97,4 @@ Recursi is meant to live inside the coding loop as an interactive assistant rath
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._

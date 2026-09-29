@@ -91,7 +91,7 @@ python -m openrlhf.cli.train_ppo_ray --pretrain <model> --reward_pretrain <rm> -
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+This is the training-and-alignment entry for OpenRLHF in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 
@@ -99,4 +99,4 @@ This is a training-and-alignment entry: it documents a training/fine-tuning/alig
 - [Documentation](https://openrlhf.readthedocs.io/en/latest/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (9,769 stars, last commit 2026-07-06, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 9769 as of 2026-07-08; last commit 2026-07-06; both verified via the GitHub API.*

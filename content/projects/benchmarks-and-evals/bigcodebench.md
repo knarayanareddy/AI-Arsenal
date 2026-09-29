@@ -90,7 +90,7 @@ bigcodebench.evaluate --split complete --subset hard --samples <generated>.jsonl
 
 ## Relation to the Arsenal
 
-This is a benchmark-and-eval entry: it documents an evaluation, tracing, or observability platform. For job-based tool comparisons (evaluation, tracing, monitoring), see [tools/evaluation-and-observability/](../../tools/evaluation-and-observability/_index.md).
+This is the practical-coding benchmark in content/projects/benchmarks-and-evals, and the number to read it alongside is HumanEval for self-contained single-function tasks and SWE-Bench for repository-scale work: the unit of evaluation here is a generated function graded by executing it against unit tests, not a merged patch. Where you want to grade your own product instead of a public model, the evaluation tooling in content/tools/evaluation-and-observability is the place to look.
 
 ## Resources
 
@@ -98,4 +98,4 @@ This is a benchmark-and-eval entry: it documents an evaluation, tracing, or obse
 - [Documentation](https://bigcode-bench.github.io/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (513 stars, last commit 2026-01-03, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 513 as of 2026-07-08; last commit 2026-01-03; both verified via the GitHub API.*

@@ -93,11 +93,11 @@ Upstream: none of particular note. Downstream: none of particular note. Competin
 - You need the largest community and broadest model-family support — vLLM and SGLang have substantially larger adoption and community integration coverage across model families
 - You want the most actively-innovating serving engine for cutting-edge model architectures — LMDeploy's development pace and community size are smaller than vLLM/SGLang's
 
-_Enrichment status: draft — architecture/production claims above are based on the vendor's own description or limited third-party sourcing; not yet independently verified. Last reviewed: 2026-07-01._
+_Verified for LMDeploy: repository metadata was checked through the GitHub API as of 2026-07-01. The architecture and production-behaviour claims above come from the vendor's own description or limited third-party sourcing and are not independently verified, so the operational characteristics described here remain unconfirmed._
 
 ## Relation to the Arsenal
 
-This is an inference-engine entry: it documents the serving runtime itself. For the model weights it serves, see [Foundation Models](../foundation-models/_index.md). For hosted/managed serving alternatives, see [tools/serving-and-deployment/](../../tools/serving-and-deployment/_index.md).
+LMDeploy is the TurboMind runtime from the InternLM group, and it sits in content/projects/inference-engines between the general-purpose schedulers and the single-machine runtimes. Where vllm and sglang compete on continuous-batching throughput for a serving fleet, LMDeploy's pitch is the PyTorch-native path with a tuned small-model deployment profile, which makes it the entry to read when your workload is many small models on a fixed GPU budget rather than a few large ones with long prompts.
 
 ## Resources
 

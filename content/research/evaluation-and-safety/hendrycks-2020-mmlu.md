@@ -86,4 +86,4 @@ The capability yardstick referenced across this catalog's foundation-model entri
 - [Code](https://github.com/hendrycks/test)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

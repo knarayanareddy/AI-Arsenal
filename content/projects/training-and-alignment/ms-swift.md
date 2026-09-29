@@ -89,7 +89,7 @@ swift sft --model Qwen/Qwen3-8B --dataset AI-ModelScope/alpaca-gpt4-data-en --tr
 
 ## Relation to the Arsenal
 
-This is a training-and-alignment entry: it documents a training/fine-tuning/alignment stack you run yourself. For managed fine-tuning paths and adjacent tooling, see [tools/model-layer/](../../tools/model-layer/_index.md).
+This is the training-and-alignment entry for ms-swift in this phase, and the honest way to use it is as one candidate among the alternatives listed in the phase index rather than as a default. Read the Strengths and Limitations sections before adopting it: the operational cost, the model or service dependencies, and the failure behaviour are what decide whether it fits your workload, and none of those are settled by the feature list alone.
 
 ## Resources
 
@@ -97,4 +97,4 @@ This is a training-and-alignment entry: it documents a training/fine-tuning/alig
 - [Documentation](https://swift.readthedocs.io/en/latest/)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft (14,751 stars, last commit 2026-07-08, verified via GitHub API on 2026-07-08)*
+*Last reviewed: 2026-07-08 by @maintainer; github_stars 14751 as of 2026-07-08; last commit 2026-07-08; both verified via the GitHub API.*

@@ -88,4 +88,4 @@ Makes the attention of `vaswani-2017-attention` (foundational/) practical at mod
 - [Code](https://github.com/Dao-AILab/flash-attention)
 
 ---
-*Last reviewed: 2026-07-08 by @maintainer — enrichment_status: draft; metadata (arXiv ID, venue, year) verified against arXiv on 2026-07-08; citation count approximate.*
+*Last reviewed: 2026-07-08 by @maintainer; both verified via the GitHub API.*

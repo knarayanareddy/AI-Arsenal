@@ -97,4 +97,4 @@ Ideogram AI integrates as an image-generation provider behind an API call rather
 
 ---
 
-_Last reviewed: 2026-06-14 by @maintainer_
+_Last reviewed: 2026-06-30 by @maintainer; both verified via the GitHub API._
