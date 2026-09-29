@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Google Cloud platform for model APIs, training, evaluation, and AI application deployment. Google Cloud usage-based pricing. Best for Google Cloud AI deployment.
+> **TL;DR:** Google Vertex AI, for the deployment job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://cloud.google.com/vertex-ai/docs for
 
 ## Use Cases
 
-1. **Where it fits**: Your org is standardized on Google Cloud and wants model training, evaluation, and deployment in one platform.
-2. **Adoption checkpoint**: compare Google Vertex AI against `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints` on the same `deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the deployment leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Google Vertex AI can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Google Vertex AI is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Google Vertex AI's comparison set is `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, Google Vertex AI's own implementation notes give the specifics — provides managed endpoints and pipelines on top of GCP infrastructure, letting teams move from data in BigQuery through training to a served model endpoint within one platform — which is where a capability claim either holds or does not for your workload.
-- The nearest neighbours to Google Vertex AI here are `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`, `modal`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- Google Vertex AI is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Google Vertex AI all need testing on your own traffic shape.
+- The implementation detail worth reading before adopting Google Vertex AI is specific — provides managed endpoints and pipelines on top of GCP infrastructure, letting teams move from data in BigQuery through training to a served model endpoint within one platform — and that is where a capability claim either survives contact with your data or does not.
+- Weighing Google Vertex AI against `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`, `modal` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Depending on Google Vertex AI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Google Vertex AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Google Vertex AI, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Google Vertex AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Depending on Google Vertex AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Google Vertex AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Google Vertex AI overlaps `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

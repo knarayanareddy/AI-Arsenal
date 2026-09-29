@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Testing platform for evaluating and scanning ML and LLM applications. Open source or free to start. Best for LLM app testing and risk scanning.
+> **TL;DR:** Giskard covers the evaluation, security-and-guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -45,7 +45,7 @@ An open-source testing framework for scanning ML and LLM applications for vulner
 
 ## Why It's in the Arsenal
 
-Giskard earns a place in the Arsenal because it directly addresses a recurring decision point: you need to scan an ML or LLM application for vulnerabilities (bias, hallucination, injection) before shipping. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Giskard is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -69,19 +69,21 @@ Follow the official documentation at https://github.com/Giskard-AI/giskard for t
 
 ## Use Cases
 
-1. **Scenario**: you need to scan an ML or LLM application for vulnerabilities (bias, hallucination, injection) before shipping
-2. **Scenario**: you want an open-source testing framework that integrates with existing CI pipelines
-3. **Scenario where this is NOT the right fit**: you need RAG-specific metric scoring (faithfulness, context precision) as your primary need — RAGAS or DeepEval are more specialized there — evaluate an alternative instead
+1. **What it does in a system**: Giskard sits on the evaluation, security-and-guardrails leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Giskard is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Giskard here, so the honest first step is confirming the evaluation, security-and-guardrails job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need to scan an ML or LLM application for vulnerabilities (bias, hallucination, injection) before shipping
-- You want an open-source testing framework that integrates with existing CI pipelines
+- What Giskard gives you that its headline description does not: giskard wraps a target model/application with a suite of adversarial and statistical test cases, producing a vulnerability report that can gate deployment in CI, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for Giskard in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Giskard means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Giskard's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need RAG-specific metric scoring (faithfulness, context precision) as your primary need — RAGAS or DeepEval are more specialized there
-- You need a fully managed, zero-setup evaluation platform
+- Depending on Giskard means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Giskard describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

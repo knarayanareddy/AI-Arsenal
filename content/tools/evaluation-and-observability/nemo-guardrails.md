@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** NVIDIA framework for adding programmable guardrails to LLM applications. Open source or free to start. Best for programmable LLM guardrails.
+> **TL;DR:** NeMo Guardrails covers the security-and-guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -45,7 +45,7 @@ NVIDIA's open-source framework for adding programmable conversational rails (top
 
 ## Why It's in the Arsenal
 
-NeMo Guardrails earns a place in the Arsenal because it directly addresses a recurring decision point: you need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for NeMo Guardrails rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://github.com/NVIDIA/NeMo-Guardrails f
 
 ## Use Cases
 
-1. **Scenario**: you need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application
-2. **Scenario**: you want NVIDIA-backed tooling with Colang-based rule definitions for conversational flow control
-3. **Scenario where this is NOT the right fit**: your guardrail needs are simple output validation rather than conversational flow control (Guardrails AI may be simpler) — evaluate an alternative instead
+1. **Integrating NeMo Guardrails**: the security-and-guardrails call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on NeMo Guardrails.
+3. **Choosing between candidates**: NeMo Guardrails's comparison set is `guardrails-ai`, `llamaguard`, `rebuff`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need a programmable rails/policy layer (topical, safety, jailbreak rails) wrapped around an LLM application
-- You want NVIDIA-backed tooling with Colang-based rule definitions for conversational flow control
+- Beyond the marketing, NeMo Guardrails's own notes are the useful part: conversation flow is defined as a set of Colang rules describing allowed/disallowed topics and responses; the runtime intercepts the conversation and enforces these rails alongside the underlying LLM.
+- Weighing NeMo Guardrails against `guardrails-ai`, `llamaguard`, `rebuff` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Depending on NeMo Guardrails means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure NeMo Guardrails's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Your guardrail needs are simple output validation rather than conversational flow control (Guardrails AI may be simpler)
-- Your team doesn't want to learn a new DSL (Colang) for defining rails
+- Depending on NeMo Guardrails means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for NeMo Guardrails describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where NeMo Guardrails overlaps `guardrails-ai`, `llamaguard`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

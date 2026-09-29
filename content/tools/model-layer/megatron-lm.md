@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** NVIDIA's reference framework for training transformers at scale — tensor, pipeline, and sequence parallelism. The machinery behind many frontier training stacks; overkill below multi-node scale.
+> **TL;DR:** the fine-tuning entry for Megatron-LM. NVIDIA's reference framework for training transformer models at scale with tensor, pipeline, and sequence parallelism — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -68,21 +68,22 @@ git clone https://github.com/NVIDIA/Megatron-LM
 
 ## Use Cases
 
-1. **Scenario**: pretraining a multi-billion-parameter model across multiple nodes of NVIDIA GPUs
-2. **Scenario**: continued-pretraining on domain data where throughput per GPU-hour dominates cost
-3. **Scenario where this is NOT the right fit**: LoRA fine-tuning a 8B model on one node — use Axolotl/torchtune/Unsloth instead
+1. **Where it sits**: on the fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Megatron-LM can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Megatron-LM.
+3. **Choosing between candidates**: Megatron-LM's comparison set is `torchtune`, `axolotl`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Best-documented and most-imitated large-scale parallelism implementation on NVIDIA hardware
-- Continuously updated by NVIDIA against new GPU generations (FP8, Blackwell)
-- The conceptual reference: understanding Megatron's TP/PP/SP is transferable to every other training stack
+- The implementation detail worth reading before adopting Megatron-LM is specific — model layers are sharded across GPUs (tensor parallelism), layer groups across pipeline stages (pipeline parallelism), and sequence activations across ranks (sequence parallelism), with communication scheduled to overlap compute. Megatron-Core exposes these as composable library primitives that other frameworks embed — and that is where a capability claim either survives contact with your data or does not.
+- Weighing Megatron-LM against `torchtune`, `axolotl` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Pin the client library rather than the API: Megatron-LM is reachable through `pytorch`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure Megatron-LM's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Steep operational complexity: cluster setup, container discipline, and parallelism-config tuning are prerequisites
-- NVIDIA-centric; portability to other accelerators is not a goal
-- Non-standard license (not OSI-listed Apache/MIT) — review terms for commercial redistribution
+- Depending on Megatron-LM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Megatron-LM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Megatron-LM overlaps `torchtune`, `axolotl`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -67,21 +67,22 @@ pip install uptrain
 
 ## Use Cases
 
-1. **Where it fits**: "You want a quick, broad battery of RAG/response checks (context relevance, factual accuracy, tone, jailbreak) without building judges yourself.
-2. **Adoption checkpoint**: compare UpTrain against `ragas-rag-evaluation`, `deepeval`, `evidently` on the same `evaluation` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so UpTrain can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on UpTrain.
+3. **Choosing between candidates**: UpTrain's comparison set is `ragas-rag-evaluation`, `deepeval`, `evidently`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, UpTrain's own implementation notes give the specifics — each eval is an operator prompting a judge model with structured rubrics over your logged inputs/outputs/contexts, returning normalized scores; batches run through the Python client with results in dataframes or its self-hosted dashboard — which is where a capability claim either holds or does not for your workload.
-- UpTrain's honest comparison set is `ragas-rag-evaluation`, `deepeval`, `evidently`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
-- Depending on UpTrain means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- UpTrain is beta, which means the interface is expected to churn: read the changelog before an upgrade, not after one breaks you.
+- The implementation detail worth reading before adopting UpTrain is specific — each eval is an operator prompting a judge model with structured rubrics over your logged inputs/outputs/contexts, returning normalized scores; batches run through the Python client with results in dataframes or its self-hosted dashboard — and that is where a capability claim either survives contact with your data or does not.
+- Against `ragas-rag-evaluation`, `deepeval`, `evidently`, the difference that decides this is deployment model and cost rather than the feature list, and UpTrain sits at the hosted end of that axis.
+- Depending on UpTrain means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so UpTrain's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Depending on UpTrain means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for UpTrain describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- UpTrain is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- There is no self-hosted path to UpTrain, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for UpTrain describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- UpTrain is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

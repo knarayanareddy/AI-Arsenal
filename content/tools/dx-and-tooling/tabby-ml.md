@@ -46,7 +46,7 @@ A self-hosted AI coding assistant server written in Rust: Tabby serves code comp
 
 ## Why It's in the Arsenal
 
-Tabby earns a place in the Arsenal because it directly addresses a recurring decision point: air-gapped or compliance-bound teams that need Copilot-style completions with zero code leaving the network. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Tabby is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ docker run -it --gpus all -p 8080:8080 -v $HOME/.tabby:/data tabbyml/tabby serve
 
 ## Use Cases
 
-1. **Scenario**: air-gapped or compliance-bound teams that need Copilot-style completions with zero code leaving the network
-2. **Scenario**: you have a spare GPU and want a turnkey server (Docker) plus IDE plugins rather than assembling vLLM + Continue yourself
-3. **Scenario where this is NOT the right fit**: you want frontier-model quality — self-hosted completion models still trail hosted Copilot/Cursor noticeably — evaluate an alternative instead
+1. **What it does in a system**: Tabby sits on the prototyping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Tabby.
+3. **Choosing between candidates**: Tabby's comparison set is `continue-dev`, `github-copilot`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Air-gapped or compliance-bound teams that need Copilot-style completions with zero code leaving the network
-- You have a spare GPU and want a turnkey server (Docker) plus IDE plugins rather than assembling vLLM + Continue yourself
+- What Tabby gives you that its headline description does not: a single binary/container runs model serving (llama.cpp-based), a code-index pipeline over your repos, and the API that IDE plugins consume; teams administer models, users, and analytics from a web console, which is the part to check against your own pipeline before trusting the feature list.
+- Against `continue-dev`, `github-copilot`, the difference that decides this is deployment model and cost rather than the feature list, and Tabby sits at the hosted end of that axis.
+- Depending on Tabby means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Tabby's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want frontier-model quality — self-hosted completion models still trail hosted Copilot/Cursor noticeably
-- Solo developers without a GPU; hosted free tiers will serve you better
-
-- _Verified for Tabby: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Tabby, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Tabby describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Tabby overlaps `continue-dev`, `github-copilot`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

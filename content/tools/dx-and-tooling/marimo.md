@@ -46,7 +46,7 @@ A reactive Python notebook: marimo models the notebook as a dataflow graph, so c
 
 ## Why It's in the Arsenal
 
-marimo earns a place in the Arsenal because it directly addresses a recurring decision point: you're tired of Jupyter's hidden-state bugs — marimo re-runs dependent cells automatically so notebooks can't lie. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+marimo appears here as a reference point for the prototyping job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://docs.marimo.io for the authenticati
 
 ## Use Cases
 
-1. **Scenario**: you're tired of Jupyter's hidden-state bugs — marimo re-runs dependent cells automatically so notebooks can't lie
-2. **Scenario**: you want notebooks that are git-diffable .py files, executable as scripts, and shareable as interactive web apps
-3. **Scenario where this is NOT the right fit**: your workflows depend on the Jupyter ecosystem (extensions, nbconvert, papermill) — migration has real costs — evaluate an alternative instead
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so marimo can be swapped without touching callers.
+2. **Validating the choice**: put marimo and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: marimo's comparison set is `streamlit`, `gradio`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You're tired of Jupyter's hidden-state bugs — marimo re-runs dependent cells automatically so notebooks can't lie
-- You want notebooks that are git-diffable .py files, executable as scripts, and shareable as interactive web apps
+- The implementation detail worth reading before adopting marimo is specific — marimo statically parses each cell's variable definitions/references to build a DAG; edits trigger recomputation of downstream cells only. The file format is Python with cells as decorated functions, which makes imports, testing, and CI natural — and that is where a capability claim either survives contact with your data or does not.
+- Weighing marimo against `streamlit`, `gradio` comes down to one question: who runs the process when it breaks — you or the vendor.
+- marimo is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure marimo's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Your workflows depend on the Jupyter ecosystem (extensions, nbconvert, papermill) — migration has real costs
-- Cells with expensive side effects you don't want auto-re-executed (mitigable with lazy mode, but it changes the model)
-
-- _Verified for marimo: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on marimo means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for marimo describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where marimo overlaps `streamlit`, `gradio`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

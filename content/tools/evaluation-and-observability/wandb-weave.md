@@ -64,20 +64,21 @@ Application calls are instrumented to log traces and evaluation results to the W
 
 ## Use Cases
 
-1. **Where it fits**: You're already using Weights & Biases for experiment tracking and want LLM observability/eval in the same ecosystem.
-2. **Adoption checkpoint**: validate Weights & Biases Weave on your own data for the `tracing, evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **What it does in a system**: Weights & Biases Weave sits on the tracing, evaluation leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Weights & Biases Weave is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Weights & Biases Weave here, so the honest first step is confirming the tracing, evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Weights & Biases Weave is worth reading before adopting: application calls are instrumented to log traces and evaluation results to the W&B backend, where they appear alongside conventional training-run dashboards.
-- Nothing else in this phase is catalogued against Weights & Biases Weave, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
-- Weights & Biases Weave is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- What this entry does not give you is behaviour under your load: measure Weights & Biases Weave's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- What Weights & Biases Weave gives you that its headline description does not: application calls are instrumented to log traces and evaluation results to the W&B backend, where they appear alongside conventional training-run dashboards, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for Weights & Biases Weave in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Weights & Biases Weave is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Weights & Biases Weave's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Weights & Biases Weave means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Weights & Biases Weave describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Weights & Biases Weave, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Weights & Biases Weave describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

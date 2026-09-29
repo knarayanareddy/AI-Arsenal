@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Node.js browser automation library for Chrome and Chromium workflows. Open source or free to start. Best for Chrome automation in Node.
+> **TL;DR:** Puppeteer, for the web-scraping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -68,20 +68,22 @@ Follow the official documentation at https://github.com/puppeteer/puppeteer for 
 
 ## Use Cases
 
-1. **Where it fits**: Your stack is Node.js and you specifically need Chrome/Chromium automation without multi-browser support.
-2. **Adoption checkpoint**: compare Puppeteer against `crawl4ai-tool`, `firecrawl-tool`, `jina-reader` on the same `web-scraping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating Puppeteer**: the web-scraping call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Puppeteer.
+3. **Choosing between candidates**: Puppeteer's comparison set is `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, Puppeteer's own implementation notes give the specifics — communicates with a Chrome/Chromium instance via the DevTools Protocol, letting scripts navigate pages, execute JavaScript in-page, and extract rendered content — which is where a capability claim either holds or does not for your workload.
-- Puppeteer overlaps `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, `playwright` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- Puppeteer is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Puppeteer, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- Beyond the marketing, Puppeteer's own notes are the useful part: communicates with a Chrome/Chromium instance via the DevTools Protocol, letting scripts navigate pages, execute JavaScript in-page, and extract rendered content.
+- Against `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, `playwright`, the difference that decides this is deployment model and cost rather than the feature list, and Puppeteer sits at the hosted end of that axis.
+- Puppeteer is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Puppeteer's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Puppeteer means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Puppeteer describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for Puppeteer describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Puppeteer overlaps `crawl4ai-tool`, `firecrawl-tool`, `jina-reader`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

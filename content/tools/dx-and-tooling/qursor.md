@@ -46,7 +46,7 @@ A tool that gives AI coding agents richer UI context — beyond raw DOM/code —
 
 ## Why It's in the Arsenal
 
-Qursor earns a place in the Arsenal because it directly addresses a recurring decision point: you want AI agents to have better UI context for faster front-end development tasks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Qursor is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ Captures additional structured context about a UI (beyond raw markup) and suppli
 
 ## Use Cases
 
-1. **Scenario**: you want AI agents to have better UI context for faster front-end development tasks
-2. **Scenario**: you're building agent-assisted UI code generation and need richer context than raw DOM/code alone
-3. **Scenario where this is NOT the right fit**: your front-end workflow doesn't involve agent-assisted UI generation — evaluate an alternative instead
+1. **Where it sits**: on the orchestration, structured-output leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Qursor can be swapped without touching callers.
+2. **Validating the choice**: put Qursor and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Qursor here, so the honest first step is confirming the orchestration, structured-output job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want AI agents to have better UI context for faster front-end development tasks
-- You're building agent-assisted UI code generation and need richer context than raw DOM/code alone
+- The implementation detail worth reading before adopting Qursor is specific — captures additional structured context about a UI (beyond raw markup) and supplies it to an agent's prompt/tool-call context during front-end development tasks — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Qursor in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Qursor is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Qursor's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Your front-end workflow doesn't involve agent-assisted UI generation
-- You need an open-source or self-hostable tool
-
-_Verified for Qursor: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Qursor means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Qursor describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Qursor is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

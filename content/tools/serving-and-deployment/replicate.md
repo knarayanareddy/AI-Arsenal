@@ -64,20 +64,22 @@ Each model is packaged with a standard interface (via Cog); Replicate provisions
 
 ## Use Cases
 
-1. **Where it fits**: You want to call or deploy open-source models via a simple API without managing GPUs yourself.
-2. **Adoption checkpoint**: compare Replicate against `aws-bedrock`, `azure-ai-studio`, `bentoml` on the same `deployment, production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the deployment, production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Replicate can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Replicate is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Replicate's comparison set is `aws-bedrock`, `azure-ai-studio`, `bentoml`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Replicate is a hosted platform for running and deploying machine learning models via API — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Weighing Replicate against `aws-bedrock`, `azure-ai-studio`, `bentoml`, `fly-io` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- Depending on Replicate means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- Capability is documented; behaviour is not. For Replicate, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting Replicate is specific — each model is packaged with a standard interface (via Cog); Replicate provisions GPU containers on demand to run inference requests against that packaged model — and that is where a capability claim either survives contact with your data or does not.
+- Replicate's honest comparison set is `aws-bedrock`, `azure-ai-studio`, `bentoml`, `fly-io`; what separates them is rarely capability, it is what you must operate.
+- Depending on Replicate means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Replicate's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Replicate means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Replicate's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Replicate's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Replicate overlaps `aws-bedrock`, `azure-ai-studio`, `bentoml`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

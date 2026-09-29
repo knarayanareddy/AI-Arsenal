@@ -67,20 +67,22 @@ sky check && sky launch -c dev --gpus A100:1 -- nvidia-smi
 
 ## Use Cases
 
-1. **Where it fits**: "You want GPU workloads (training, batch inference, serving) portable across AWS/GCP/Azure/K8s/neoclouds with automatic cheapest-region selection.
-2. **Adoption checkpoint**: compare SkyPilot against `modal`, `runpod` on the same `deployment, fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the deployment, fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so SkyPilot can be swapped without touching callers.
+2. **Validating the choice**: put SkyPilot and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: SkyPilot's comparison set is `modal`, `runpod`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, SkyPilot's own implementation notes give the specifics — an optimizer matches resource requests against real-time pricing/availability across clouds, then provisions VMs/pods, mounts storage, and runs your setup/run scripts; a controller monitors managed jobs, relaunching on preemption with checkpoint-resume patterns — which is where a capability claim either holds or does not for your workload.
-- Against `modal`, `runpod`, the comparison that decides this is deployment model and operational cost rather than the feature list; SkyPilot sits at the hosted-or-embedded end of that axis.
-- SkyPilot documents a client surface through `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
-- Capability is documented; behaviour is not. For SkyPilot, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting SkyPilot is specific — an optimizer matches resource requests against real-time pricing/availability across clouds, then provisions VMs/pods, mounts storage, and runs your setup/run scripts; a controller monitors managed jobs, relaunching on preemption with checkpoint-resume patterns — and that is where a capability claim either survives contact with your data or does not.
+- SkyPilot's honest comparison set is `modal`, `runpod`; what separates them is rarely capability, it is what you must operate.
+- The documented path into SkyPilot runs through `vllm`, so the contract to test is the one those adapters expose.
+- What this entry cannot give you is measured behaviour: measure SkyPilot's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on SkyPilot means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for SkyPilot describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for SkyPilot describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where SkyPilot overlaps `modal`, `runpod`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

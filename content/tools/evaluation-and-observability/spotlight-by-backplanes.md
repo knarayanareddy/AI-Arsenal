@@ -46,7 +46,7 @@ A closed-source observability tool for understanding and tracking AI agent sessi
 
 ## Why It's in the Arsenal
 
-Spotlight by Backplanes earns a place in the Arsenal because it directly addresses a recurring decision point: you need to understand and track AI agent sessions in production with dedicated observability tooling. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Spotlight by Backplanes rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ Instrumented agent sessions report step-by-step activity to Spotlight's backend,
 
 ## Use Cases
 
-1. **Scenario**: you need to understand and track AI agent sessions in production with dedicated observability tooling
-2. **Scenario**: you're debugging multi-step agent runs and need session-level visibility rather than just request-level logs
-3. **Scenario where this is NOT the right fit**: you need an open-source or self-hostable observability stack — evaluate an alternative instead
+1. **Where it sits**: on the tracing, monitoring leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Spotlight by Backplanes can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Spotlight by Backplanes is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Spotlight by Backplanes here, so the honest first step is confirming the tracing, monitoring job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need to understand and track AI agent sessions in production with dedicated observability tooling
-- You're debugging multi-step agent runs and need session-level visibility rather than just request-level logs
+- The implementation detail worth reading before adopting Spotlight by Backplanes is specific — instrumented agent sessions report step-by-step activity to Spotlight's backend, which reconstructs and visualizes the full session for debugging — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Spotlight by Backplanes in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Spotlight by Backplanes is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Spotlight by Backplanes's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need an open-source or self-hostable observability stack
-- You already have a tracing platform (LangSmith/Langfuse/Phoenix) that covers your agent's framework
-
-_Verified for Spotlight by Backplanes: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- There is no self-hosted path to Spotlight by Backplanes, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Spotlight by Backplanes describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Spotlight by Backplanes is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

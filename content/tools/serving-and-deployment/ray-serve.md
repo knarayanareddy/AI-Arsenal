@@ -67,20 +67,22 @@ pip install 'ray[serve]'
 
 ## Use Cases
 
-1. **Where it fits**: "Your inference is a Python pipeline (preprocess → embed → LLM → postprocess) you want to scale as one autoscaling app.
-2. **Adoption checkpoint**: compare Ray Serve against `triton-inference-server`, `bentoml`, `kserve` on the same `production-serving, deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the production-serving, deployment leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Ray Serve can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Ray Serve is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Ray Serve's comparison set is `triton-inference-server`, `bentoml`, `kserve`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Ray Serve is a scalable model-serving library on Ray for composing multi-model inference graphs in pure Python — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Against `triton-inference-server`, `bentoml`, `kserve`, the comparison that decides this is deployment model and operational cost rather than the feature list; Ray Serve sits at the hosted-or-embedded end of that axis.
-- Ray Serve documents a client surface through `vllm`, `fastapi`, which fixes the expected request and response contract so you are not inferring it from examples.
-- Capability is documented; behaviour is not. For Ray Serve, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting Ray Serve is specific — each deployment becomes actor replicas on a Ray cluster; an HTTP proxy routes requests through the deployment graph with backpressure-aware queuing, and the autoscaler adjusts replica counts from queue metrics. LLM-specific APIs wrap vLLM engines as deployments — and that is where a capability claim either survives contact with your data or does not.
+- Weighing Ray Serve against `triton-inference-server`, `bentoml`, `kserve` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Pin the client library rather than the API: Ray Serve is reachable through `vllm`, `fastapi`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure Ray Serve's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Ray Serve means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Ray Serve describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Ray Serve, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Ray Serve describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Ray Serve overlaps `triton-inference-server`, `bentoml`, `kserve`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

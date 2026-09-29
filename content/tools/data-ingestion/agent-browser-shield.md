@@ -46,7 +46,7 @@ A security tool that sits between an autonomous agent and the live web, sanitizi
 
 ## Why It's in the Arsenal
 
-Agent Browser Shield earns a place in the Arsenal because it directly addresses a recurring decision point: your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Agent Browser Shield is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ Intercepts content fetched during an agent's browsing session, applies sanitizat
 
 ## Use Cases
 
-1. **Scenario**: your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model
-2. **Scenario**: you need a defensive layer against prompt-injection-via-webpage attacks during agentic browsing
-3. **Scenario where this is NOT the right fit**: your agents never browse untrusted live web content (the risk this tool addresses doesn't apply) — evaluate an alternative instead
+1. **Where it sits**: on the security-and-guardrails, web-scraping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Agent Browser Shield can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Agent Browser Shield.
+3. **Deciding at all**: nothing is catalogued against Agent Browser Shield here, so the honest first step is confirming the security-and-guardrails, web-scraping job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Your agents browse the web autonomously and you need to mask PII and sanitize content before it reaches the model
-- You need a defensive layer against prompt-injection-via-webpage attacks during agentic browsing
+- The implementation detail worth reading before adopting Agent Browser Shield is specific — intercepts content fetched during an agent's browsing session, applies sanitization/masking rules, and passes only the cleaned result into the agent's context — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Agent Browser Shield in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Agent Browser Shield is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Agent Browser Shield's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Your agents never browse untrusted live web content (the risk this tool addresses doesn't apply)
-- You need an open-source or self-hostable security layer
-
-_Verified for Agent Browser Shield: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Agent Browser Shield means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Agent Browser Shield describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Agent Browser Shield is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

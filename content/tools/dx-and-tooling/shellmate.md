@@ -67,21 +67,22 @@ Its internals are not published. From the description it behaves as a wrapper ar
 
 ## Use Cases
 
-1. **Where it fits**: You want an AI-powered terminal assistant to suggest commands and explain output during day-to-day development.
-2. **Adoption checkpoint**: validate ShellMate on your own data for the `production-serving` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **What it does in a system**: ShellMate sits on the production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on ShellMate.
+3. **Deciding at all**: nothing is catalogued against ShellMate here, so the honest first step is confirming the production-serving job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for ShellMate is worth reading before adopting: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments.
+- What ShellMate gives you that its headline description does not: its internals are not published. From the description it behaves as a wrapper around the user's shell that captures recent commands and output as context, forwards that prompt to a hosted LLM provider, and renders the returned suggestion or explanation inline. That cloud round-trip is also why it is not self-hostable and why command context leaves the machine — a real consideration for sensitive environments, which is the part to check against your own pipeline before trusting the feature list.
 - No direct sibling is catalogued for ShellMate in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- ShellMate is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Marked beta, so the capability is real but ShellMate's interface may still move; pin the version you build against instead of tracking latest.
+- ShellMate is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so ShellMate's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Depending on ShellMate means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for ShellMate describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- ShellMate is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- There is no self-hosted path to ShellMate, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for ShellMate describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- ShellMate is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

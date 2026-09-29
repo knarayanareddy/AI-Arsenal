@@ -64,20 +64,21 @@ Models are served on Fireworks-operated GPU infrastructure behind an API compati
 
 ## Use Cases
 
-1. **Where it fits**: You need fast, managed inference for open-weight models without operating your own GPU fleet.
-2. **Adoption checkpoint**: validate Fireworks AI on your own data for the `production-serving` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Fireworks AI can be swapped without touching callers.
+2. **Validating the choice**: put Fireworks AI and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Fireworks AI here, so the honest first step is confirming the production-serving job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Fireworks AI is worth reading before adopting: models are served on Fireworks-operated GPU infrastructure behind an API compatible with common client conventions, with fine-tuning jobs submitted and tracked through the same platform.
+- The implementation detail worth reading before adopting Fireworks AI is specific — models are served on Fireworks-operated GPU infrastructure behind an API compatible with common client conventions, with fine-tuning jobs submitted and tracked through the same platform — and that is where a capability claim either survives contact with your data or does not.
 - No direct sibling is catalogued for Fireworks AI in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Fireworks AI is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Fireworks AI, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- Depending on Fireworks AI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Fireworks AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Fireworks AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Fireworks AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Fireworks AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
 
 ## Integration Patterns
 

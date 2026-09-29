@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** Open-source, self-hostable scanner pipeline for LLM inputs and outputs — prompt injection, PII anonymization, secrets, toxicity, ban-topics. Composable; each scanner costs latency.
+> **TL;DR:** the security-and-guardrails entry for LLM Guard. Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://protectai.github.io/llm-guard/ for 
 
 ## Use Cases
 
-1. **Scenario**: anonymizing PII in user prompts before they reach a third-party model, restoring entities in the response
-2. **Scenario**: scanning RAG context and user input for injection patterns before prompt assembly
-3. **Scenario where this is NOT the right fit**: conversation-policy enforcement ("never discuss competitors") — use NeMo Guardrails' flow rules instead
+1. **What it does in a system**: LLM Guard sits on the security-and-guardrails leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put LLM Guard and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: LLM Guard's comparison set is `nemo-guardrails`, `guardrails-ai`, `rebuff`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Breadth: one dependency covers injection, PII, secrets, toxicity, and topic bans
-- Fully local operation satisfies data-residency and privacy constraints
-- Per-scanner risk scores integrate cleanly into tracing and alerting
+- What LLM Guard gives you that its headline description does not: each scanner takes the prompt (or output), returns a sanitized version plus a validity flag and risk score; scanners chain sequentially into a pipeline. ML-based scanners load Hugging Face models locally at startup, so detection quality and latency are controlled by which scanners you enable, which is the part to check against your own pipeline before trusting the feature list.
+- LLM Guard overlaps `nemo-guardrails`, `guardrails-ai`, `rebuff` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Pin the client library rather than the API: LLM Guard is reachable through `langchain`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure LLM Guard's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Every enabled ML scanner adds per-request inference latency — measure with your real scanner set
-- Detection is probabilistic: injection scanners reduce, not eliminate, attack surface (layer with least-privilege tool design)
-- Maintenance cadence has slowed relative to the fast-moving attack landscape; review scanner model freshness
+- Depending on LLM Guard means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LLM Guard describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where LLM Guard overlaps `nemo-guardrails`, `guardrails-ai`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -71,20 +71,22 @@ Follow the official documentation at https://trafilatura.readthedocs.io for the 
 
 ## Use Cases
 
-1. **Where it fits**: "You need boilerplate-free main-text extraction from HTML at corpus scale — it wins independent benchmarks on precision/recall balance.
-2. **Adoption checkpoint**: compare Trafilatura against `firecrawl`, `crawl4ai`, `jina-reader` on the same `web-scraping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the web-scraping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Trafilatura can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Trafilatura.
+3. **Choosing between candidates**: Trafilatura's comparison set is `firecrawl`, `crawl4ai`, `jina-reader`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for Trafilatura is worth reading before adopting: cascades fast heuristics over the DOM tree (density, markup signals, link ratios) with fallbacks to readability-style algorithms, trading a tiny accuracy loss for order-of-magnitude speed over ML extractors — which is why corpus projects (C4-style cleaning, web-scale pretraining data) adopted it.
-- Trafilatura's honest comparison set is `firecrawl`, `crawl4ai`, `jina-reader`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
-- Trafilatura is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Trafilatura all need testing on your own traffic shape.
+- The implementation detail worth reading before adopting Trafilatura is specific — cascades fast heuristics over the DOM tree (density, markup signals, link ratios) with fallbacks to readability-style algorithms, trading a tiny accuracy loss for order-of-magnitude speed over ML extractors — which is why corpus projects (C4-style cleaning, web-scale pretraining data) adopted it — and that is where a capability claim either survives contact with your data or does not.
+- Against `firecrawl`, `crawl4ai`, `jina-reader`, the difference that decides this is deployment model and cost rather than the feature list, and Trafilatura sits at the hosted end of that axis.
+- Depending on Trafilatura means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Trafilatura's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Trafilatura means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Trafilatura describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for Trafilatura describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Trafilatura overlaps `firecrawl`, `crawl4ai`, `jina-reader`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

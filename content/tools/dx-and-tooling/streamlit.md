@@ -64,20 +64,22 @@ The entire script reruns top-to-bottom on each user interaction, with Streamlit'
 
 ## Use Cases
 
-1. **Where it fits**: You want to build a data/AI app UI quickly in Python with the largest community and widest plugin ecosystem of the Python UI tools.
-2. **Adoption checkpoint**: compare Streamlit against `chainlit`, `fastapi`, `gradio` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Streamlit can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Streamlit.
+3. **Choosing between candidates**: Streamlit's comparison set is `chainlit`, `fastapi`, `gradio`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, Streamlit's own implementation notes give the specifics — the entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily — which is where a capability claim either holds or does not for your workload.
-- The nearest neighbours to Streamlit here are `chainlit`, `fastapi`, `gradio`, `mesop`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- Streamlit is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Streamlit, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting Streamlit is specific — the entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily — and that is where a capability claim either survives contact with your data or does not.
+- Streamlit's honest comparison set is `chainlit`, `fastapi`, `gradio`, `mesop`; what separates them is rarely capability, it is what you must operate.
+- Streamlit is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Streamlit's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Streamlit means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Streamlit describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for Streamlit describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Streamlit overlaps `chainlit`, `fastapi`, `gradio`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

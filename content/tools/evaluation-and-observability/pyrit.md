@@ -46,7 +46,7 @@ A red-teaming framework from Microsoft's AI Red Team: composable orchestrators r
 
 ## Why It's in the Arsenal
 
-PyRIT earns a place in the Arsenal because it directly addresses a recurring decision point: you're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for PyRIT rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ pip install pyrit-ai
 
 ## Use Cases
 
-1. **Scenario**: you're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives
-2. **Scenario**: you want the framework Microsoft's own AI Red Team battle-tested on 100+ products, including automated attacker LLMs
-3. **Scenario where this is NOT the right fit**: you want a one-command scan with built-in reporting — garak is turnkey where PyRIT is a framework you program — evaluate an alternative instead
+1. **Integrating PyRIT**: the security-and-guardrails, evaluation call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on PyRIT.
+3. **Choosing between candidates**: PyRIT's comparison set is `garak`, `promptfoo`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You're red-teaming a full application (not just a model): multi-turn attack orchestration, converters, and custom objectives
-- You want the framework Microsoft's own AI Red Team battle-tested on 100+ products, including automated attacker LLMs
+- Beyond the marketing, PyRIT's own notes are the useful part: an attack combines a target (the system under test), converters that transform seed prompts, an optional adversarial LLM that adapts across turns toward an objective, and scorers that judge success; all interactions persist to memory for analysis — making red-team campaigns reproducible experiments.
+- PyRIT overlaps `garak`, `promptfoo` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- PyRIT is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so PyRIT's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You want a one-command scan with built-in reporting — garak is turnkey where PyRIT is a framework you program
-- Non-Python security teams; the orchestration model assumes engineering investment
-
-- _Verified for PyRIT: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on PyRIT means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for PyRIT describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- PyRIT is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

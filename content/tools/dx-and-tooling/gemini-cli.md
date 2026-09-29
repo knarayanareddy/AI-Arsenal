@@ -46,7 +46,7 @@ An open-source (Apache-2.0) AI agent for the terminal from Google: a Gemini-powe
 
 ## Why It's in the Arsenal
 
-Gemini CLI earns a place in the Arsenal because it directly addresses a recurring decision point: you want a free-tier agentic coding CLI to evaluate the workflow before committing to a paid tool. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Gemini CLI appears here as a reference point for the prototyping job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://google-gemini.github.io/gemini-cli/
 
 ## Use Cases
 
-1. **Scenario**: you want a free-tier agentic coding CLI to evaluate the workflow before committing to a paid tool
-2. **Scenario**: you are on the Google/Gemini stack and want MCP support plus built-in web search grounding in the terminal
-3. **Scenario where this is NOT the right fit**: you need the model itself to be open or self-hostable — the CLI is Apache-2.0 but calls hosted Gemini — evaluate an alternative instead
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Gemini CLI can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Gemini CLI.
+3. **Choosing between candidates**: Gemini CLI's comparison set is `claude-code`, `aider`, `openai-codex-cli`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want a free-tier agentic coding CLI to evaluate the workflow before committing to a paid tool
-- You are on the Google/Gemini stack and want MCP support plus built-in web search grounding in the terminal
+- The implementation detail worth reading before adopting Gemini CLI is specific — a Node.js CLI that streams a ReAct-style loop against Gemini models: built-in tools (grep, file edit, terminal, web fetch/search) plus user-configured MCP servers are exposed to the model, with user confirmation before mutating actions — and that is where a capability claim either survives contact with your data or does not.
+- Gemini CLI overlaps `claude-code`, `aider`, `openai-codex-cli` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Gemini CLI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Gemini CLI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need the model itself to be open or self-hostable — the CLI is Apache-2.0 but calls hosted Gemini
-- Your benchmark-critical workloads have only been validated on Claude/GPT-family coding models
-
-- _Verified for Gemini CLI: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Gemini CLI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Gemini CLI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Gemini CLI overlaps `claude-code`, `aider`, `openai-codex-cli`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

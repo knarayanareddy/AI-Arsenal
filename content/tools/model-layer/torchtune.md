@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** PyTorch-native library for fine-tuning and experimenting with LLMs. Open source or free to start. Best for PyTorch-native fine-tuning.
+> **TL;DR:** torchtune covers the fine-tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://github.com/pytorch/torchtune for th
 
 ## Use Cases
 
-1. **Where it fits**: You want a native PyTorch fine-tuning library with hackable, readable recipes rather than a high-abstraction framework.
-2. **Adoption checkpoint**: compare torchtune against `axolotl`, `llamafactory`, `mlx-lm` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: torchtune sits on the fine-tuning leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since torchtune is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: torchtune's comparison set is `axolotl`, `llamafactory`, `mlx-lm`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for torchtune is worth reading before adopting: recipes are plain PyTorch scripts composed of explicit, swappable components (model, optimizer, dataset, scheduler), making it straightforward to read and modify training behavior directly.
-- Weighing torchtune against `axolotl`, `llamafactory`, `mlx-lm`, `peft` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- torchtune is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- What this entry does not give you is behaviour under your load: measure torchtune's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- What torchtune gives you that its headline description does not: recipes are plain PyTorch scripts composed of explicit, swappable components (model, optimizer, dataset, scheduler), making it straightforward to read and modify training behavior directly, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing torchtune against `axolotl`, `llamafactory`, `mlx-lm`, `peft` comes down to one question: who runs the process when it breaks — you or the vendor.
+- torchtune is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure torchtune's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on torchtune means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for torchtune describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to torchtune, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for torchtune describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where torchtune overlaps `axolotl`, `llamafactory`, `mlx-lm`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -71,21 +71,22 @@ Follow the official documentation at https://github.com/microsoft/markitdown#rea
 
 ## Use Cases
 
-1. **Where it fits**: "You need one dependency that converts the whole Office zoo (docx/xlsx/pptx), PDFs, HTML, and even audio into Markdown for LLM ingestion.
-2. **Adoption checkpoint**: compare MarkItDown against `docling`, `unstructured`, `llamaparse` on the same `web-scraping, data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: MarkItDown sits on the web-scraping, data-labeling leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put MarkItDown and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: MarkItDown's comparison set is `docling`, `unstructured`, `llamaparse`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for MarkItDown is worth reading before adopting: per-format converters (mammoth for docx, pdfminer for PDF, speech recognition for audio) normalize content into a common Markdown stream; an extensible converter registry lets you add formats, and the MCP server exposes conversion directly to agents like Claude.
-- Weighing MarkItDown against `docling`, `unstructured`, `llamaparse` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- MarkItDown is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Maturity here is beta, so treat MarkItDown's API surface as something to pin and test rather than something to track.
+- What MarkItDown gives you that its headline description does not: per-format converters (mammoth for docx, pdfminer for PDF, speech recognition for audio) normalize content into a common Markdown stream; an extensible converter registry lets you add formats, and the MCP server exposes conversion directly to agents like Claude, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing MarkItDown against `docling`, `unstructured`, `llamaparse` comes down to one question: who runs the process when it breaks — you or the vendor.
+- MarkItDown is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so MarkItDown's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to MarkItDown, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for MarkItDown describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- MarkItDown is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Depending on MarkItDown means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for MarkItDown describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- MarkItDown is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

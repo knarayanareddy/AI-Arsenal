@@ -67,20 +67,22 @@ Requests hit OpenRouter's edge, which normalizes them to each provider's API, se
 
 ## Use Cases
 
-1. **Where it fits**: "You want one API key and one OpenAI-compatible endpoint for every frontier and open model, with instant access to new releases.
-2. **Adoption checkpoint**: compare OpenRouter against `litellm`, `portkey` on the same `production-serving, prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the production-serving, prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so OpenRouter can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on OpenRouter.
+3. **Choosing between candidates**: OpenRouter's comparison set is `litellm`, `portkey`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for OpenRouter is worth reading before adopting: requests hit OpenRouter's edge, which normalizes them to each provider's API, selects a provider per your routing preferences (or its default ranking), streams the response back, and meters usage against prepaid credits — abstracting provider-specific auth, formats, and outages.
-- OpenRouter overlaps `litellm`, `portkey` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- Pin the client library rather than the API: OpenRouter is reachable through `litellm`, and those adapters change defaults — retrieval, batching, retries — without a major version bump.
-- Capability is documented; behaviour is not. For OpenRouter, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting OpenRouter is specific — requests hit OpenRouter's edge, which normalizes them to each provider's API, selects a provider per your routing preferences (or its default ranking), streams the response back, and meters usage against prepaid credits — abstracting provider-specific auth, formats, and outages — and that is where a capability claim either survives contact with your data or does not.
+- OpenRouter overlaps `litellm`, `portkey` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Pin the client library rather than the API: OpenRouter is reachable through `litellm`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure OpenRouter's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to OpenRouter, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- OpenRouter's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- There is no self-hosted path to OpenRouter, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- OpenRouter's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where OpenRouter overlaps `litellm`, `portkey`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

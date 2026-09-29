@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Model, dataset, and Space hosting platform for sharing and versioning AI artifacts. Free public hosting plus paid private/enterprise options. Best for model and dataset distribution.
+> **TL;DR:** Hugging Face Hub, for the model-registry job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://huggingface.co/docs/hub/ for the au
 
 ## Use Cases
 
-1. **Where it fits**: You need to discover, host, or version open models, datasets, or demo Spaces with the largest community in the ecosystem.
-2. **Adoption checkpoint**: compare Hugging Face Hub against `dvc`, `mlflow`, `weights-biases` on the same `model-registry` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: Hugging Face Hub sits on the model-registry leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Hugging Face Hub and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Hugging Face Hub's comparison set is `dvc`, `mlflow`, `weights-biases`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Hugging Face Hub is a model, dataset, and Space hosting platform for sharing and versioning AI artifacts — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Hugging Face Hub's honest comparison set is `dvc`, `mlflow`, `weights-biases`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
-- Depending on Hugging Face Hub means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Hugging Face Hub all need testing on your own traffic shape.
+- What Hugging Face Hub gives you that its headline description does not: each model/dataset/Space is a Git repository with associated metadata (model card, license, tags); the Hub serves these over an API and web UI, with client libraries for programmatic access, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing Hugging Face Hub against `dvc`, `mlflow`, `weights-biases` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Hugging Face Hub is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Hugging Face Hub's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Hugging Face Hub, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for Hugging Face Hub describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Hugging Face Hub, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Hugging Face Hub describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Hugging Face Hub overlaps `dvc`, `mlflow`, `weights-biases`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

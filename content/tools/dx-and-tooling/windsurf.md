@@ -46,7 +46,7 @@ A proprietary AI-native editor whose core is Cascade: an agent that maintains aw
 
 ## Why It's in the Arsenal
 
-Windsurf earns a place in the Arsenal because it directly addresses a recurring decision point: you want an agent-first editor at a lower per-seat price point than Cursor. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Windsurf is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://docs.windsurf.com/windsurf/getting-
 
 ## Use Cases
 
-1. **Scenario**: you want an agent-first editor at a lower per-seat price point than Cursor
-2. **Scenario**: you value Cascade's automatic context tracking — it follows your recent edits without manual context curation
-3. **Scenario where this is NOT the right fit**: you need open-source or self-hostable tooling — Windsurf is proprietary and cloud-bound — evaluate an alternative instead
+1. **What it does in a system**: Windsurf sits on the prototyping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Windsurf and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Windsurf's comparison set is `cursor`, `github-copilot`, `cline`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want an agent-first editor at a lower per-seat price point than Cursor
-- You value Cascade's automatic context tracking — it follows your recent edits without manual context curation
+- What Windsurf gives you that its headline description does not: cascade combines a repo index, a trace of your recent editor actions, and tool access (terminal, browser preview, MCP) so the agent can continue multi-step work with less prompt engineering; edits stream as reviewable diffs, which is the part to check against your own pipeline before trusting the feature list.
+- Windsurf's honest comparison set is `cursor`, `github-copilot`, `cline`; what separates them is rarely capability, it is what you must operate.
+- Windsurf is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Windsurf's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need open-source or self-hostable tooling — Windsurf is proprietary and cloud-bound
-- Your org is sensitive to vendor risk: the company changed hands in 2025 and product direction has shifted
-
-- _Verified for Windsurf: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Windsurf means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Windsurf describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Windsurf overlaps `cursor`, `github-copilot`, `cline`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ The most popular self-hosted AI chat interface: a Docker-deployable web app that
 
 ## Why It's in the Arsenal
 
-Open WebUI earns a place in the Arsenal because it directly addresses a recurring decision point: you want a ChatGPT-grade UI over your own models (Ollama, vLLM, any OpenAI-compatible endpoint), fully offline-capable. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Open WebUI is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ docker run -d -p 3000:8080 -v open-webui:/app/backend/data ghcr.io/open-webui/op
 
 ## Use Cases
 
-1. **Scenario**: you want a ChatGPT-grade UI over your own models (Ollama, vLLM, any OpenAI-compatible endpoint), fully offline-capable
-2. **Scenario**: you need multi-user chat with RBAC, document RAG, and tool calling for an internal team deployment
-3. **Scenario where this is NOT the right fit**: you need a strictly OSI-approved license at scale — the branding clause added in 2025 matters to some legal teams — evaluate an alternative instead
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Open WebUI can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Open WebUI.
+3. **Choosing between candidates**: Open WebUI's comparison set is `lm-studio`, `jan`, `chainlit`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want a ChatGPT-grade UI over your own models (Ollama, vLLM, any OpenAI-compatible endpoint), fully offline-capable
-- You need multi-user chat with RBAC, document RAG, and tool calling for an internal team deployment
+- The implementation detail worth reading before adopting Open WebUI is specific — a FastAPI + Svelte application that proxies chat to configured backends, stores conversations and embeddings locally (SQLite/Postgres + vector store), and executes pipelines/tools server-side so any connected model gains RAG and tool use — and that is where a capability claim either survives contact with your data or does not.
+- Weighing Open WebUI against `lm-studio`, `jan`, `chainlit` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The documented path into Open WebUI runs through `ollama`, `litellm`, so the contract to test is the one those adapters expose.
+- What this entry cannot give you is measured behaviour: measure Open WebUI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a strictly OSI-approved license at scale — the branding clause added in 2025 matters to some legal teams
-- You only need a personal desktop runner; LM Studio or Jan are lighter for single-user use
-
-- _Verified for Open WebUI: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Open WebUI, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Open WebUI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Open WebUI overlaps `lm-studio`, `jan`, `chainlit`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

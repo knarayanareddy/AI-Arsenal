@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Managed data labeling and data engine platform for enterprise AI datasets. Enterprise pricing. Best for managed enterprise labeling.
+> **TL;DR:** Scale AI covers the data-labeling leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://scale.com/ for the authentication a
 
 ## Use Cases
 
-1. **Where it fits**: You need a managed annotation workforce and data engine for enterprise-scale AI training datasets.
-2. **Adoption checkpoint**: compare Scale AI against `argilla`, `label-studio`, `prodigy` on the same `data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: Scale AI sits on the data-labeling leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Scale AI.
+3. **Choosing between candidates**: Scale AI's comparison set is `argilla`, `label-studio`, `prodigy`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for Scale AI is worth reading before adopting: customers submit data and labeling requirements; Scale AI's workforce and pipeline manage annotation, quality assurance, and delivery of the finished dataset.
-- Scale AI overlaps `argilla`, `label-studio`, `prodigy` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- Scale AI is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Scale AI, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- What Scale AI gives you that its headline description does not: customers submit data and labeling requirements; Scale AI's workforce and pipeline manage annotation, quality assurance, and delivery of the finished dataset, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing Scale AI against `argilla`, `label-studio`, `prodigy` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Scale AI is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Scale AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Scale AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Scale AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- There is no self-hosted path to Scale AI, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Scale AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Scale AI overlaps `argilla`, `label-studio`, `prodigy`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

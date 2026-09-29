@@ -46,7 +46,7 @@ The Hugging Face post-training library: trainers for supervised fine-tuning (SFT
 
 ## Why It's in the Arsenal
 
-TRL earns a place in the Arsenal because it directly addresses a recurring decision point: you're implementing preference optimization (DPO/GRPO/PPO) and want the reference implementations the papers themselves cite. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+TRL appears here as a reference point for the fine-tuning job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ pip install trl
 
 ## Use Cases
 
-1. **Scenario**: you're implementing preference optimization (DPO/GRPO/PPO) and want the reference implementations the papers themselves cite
-2. **Scenario**: you want post-training that composes natively with Transformers, PEFT, and Accelerate rather than a separate stack
-3. **Scenario where this is NOT the right fit**: you want config-file-driven training without writing Python — Axolotl/LlamaFactory wrap this better — evaluate an alternative instead
+1. **Where it sits**: on the fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so TRL can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on TRL.
+3. **Choosing between candidates**: TRL's comparison set is `axolotl`, `llamafactory`, `unsloth`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You're implementing preference optimization (DPO/GRPO/PPO) and want the reference implementations the papers themselves cite
-- You want post-training that composes natively with Transformers, PEFT, and Accelerate rather than a separate stack
+- The implementation detail worth reading before adopting TRL is specific — each algorithm is a Trainer subclass handling its loss and data collation (e.g. DPO's chosen/rejected pairs, GRPO's grouped rollouts with reward functions); models remain standard Transformers modules, so PEFT adapters, quantized bases, and distributed launchers work unchanged — and that is where a capability claim either survives contact with your data or does not.
+- Weighing TRL against `axolotl`, `llamafactory`, `unsloth` comes down to one question: who runs the process when it breaks — you or the vendor.
+- TRL documents a client surface through `peft`, `unsloth`, which fixes the expected request and response contract so you are not inferring it from examples.
+- What this entry cannot give you is measured behaviour: measure TRL's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want config-file-driven training without writing Python — Axolotl/LlamaFactory wrap this better
-- Maximum single-GPU throughput on a budget; Unsloth's fused kernels are faster for QLoRA-style runs
-
-- _Verified for TRL: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on TRL means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for TRL describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where TRL overlaps `axolotl`, `llamafactory`, `unsloth`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

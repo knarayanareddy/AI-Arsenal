@@ -71,20 +71,22 @@ Follow the official documentation at https://deepspeed.readthedocs.io for the au
 
 ## Use Cases
 
-1. **Where it fits**: "Your model + optimizer states exceed GPU memory — ZeRO-2/3 sharding and CPU/NVMe offload are the standard fix.
-2. **Adoption checkpoint**: compare DeepSpeed against `axolotl` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: DeepSpeed sits on the fine-tuning leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since DeepSpeed is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: DeepSpeed's comparison set is `axolotl`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, DeepSpeed is a microsoft's distributed-training library: ZeRO sharding, offloading, and pipeline parallelism for training beyond single-GPU memory — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- The nearest neighbours to DeepSpeed here are `axolotl`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- The documented integration path for DeepSpeed runs through `axolotl`, `llamafactory`, `trl`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
-- Capability is documented; behaviour is not. For DeepSpeed, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- What DeepSpeed gives you that its headline description does not: zeRO shards training state across ranks and gathers parameters just-in-time per layer (stage 3), trading communication for memory; offload extends sharding to host RAM/NVMe. A JSON config selects stages, precision, and optimizers without changing model code, which is the part to check against your own pipeline before trusting the feature list.
+- Against `axolotl`, the difference that decides this is deployment model and cost rather than the feature list, and DeepSpeed sits at the hosted end of that axis.
+- The documented path into DeepSpeed runs through `axolotl`, `llamafactory`, `trl`, so the contract to test is the one those adapters expose.
+- What this entry cannot give you is measured behaviour: measure DeepSpeed's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on DeepSpeed means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for DeepSpeed describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for DeepSpeed describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where DeepSpeed overlaps `axolotl`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

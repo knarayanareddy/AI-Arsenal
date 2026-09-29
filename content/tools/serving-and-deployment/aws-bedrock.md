@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** AWS managed service for accessing foundation models and building generative AI apps. Usage-based AWS pricing. Best for AWS-native managed model access.
+> **TL;DR:** AWS Bedrock, for the deployment job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -45,7 +45,7 @@ AWS's managed service for calling and building applications on top of multiple f
 
 ## Why It's in the Arsenal
 
-AWS Bedrock earns a place in the Arsenal because it directly addresses a recurring decision point: you're already deep in the AWS ecosystem and want foundation-model access with IAM, VPC, and billing integration. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+AWS Bedrock appears here as a reference point for the deployment job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://docs.aws.amazon.com/bedrock/ for th
 
 ## Use Cases
 
-1. **Scenario**: you're already deep in the AWS ecosystem and want foundation-model access with IAM, VPC, and billing integration
-2. **Scenario**: you need a managed, enterprise-compliant way to call multiple model providers without managing your own GPU infra
-3. **Scenario where this is NOT the right fit**: you want a model-agnostic gateway that isn't tied to one cloud's IAM and networking model (consider LiteLLM/Portkey) — evaluate an alternative instead
+1. **Integrating AWS Bedrock**: the deployment call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since AWS Bedrock is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: AWS Bedrock's comparison set is `azure-ai-studio`, `google-vertex-ai`, `hf-inference-endpoints`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You're already deep in the AWS ecosystem and want foundation-model access with IAM, VPC, and billing integration
-- You need a managed, enterprise-compliant way to call multiple model providers without managing your own GPU infra
+- Beyond the marketing, AWS Bedrock's own notes are the useful part: bedrock proxies requests to foundation models hosted by AWS or its partners, applying AWS-native access control and logging without requiring you to manage GPU infrastructure.
+- AWS Bedrock's honest comparison set is `azure-ai-studio`, `google-vertex-ai`, `hf-inference-endpoints`, `modal`; what separates them is rarely capability, it is what you must operate.
+- AWS Bedrock is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure AWS Bedrock's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want a model-agnostic gateway that isn't tied to one cloud's IAM and networking model (consider LiteLLM/Portkey)
-- You need the absolute lowest-latency or cheapest-per-token option (compare against direct provider APIs and self-hosted serving)
+- Depending on AWS Bedrock means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- AWS Bedrock's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where AWS Bedrock overlaps `azure-ai-studio`, `google-vertex-ai`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

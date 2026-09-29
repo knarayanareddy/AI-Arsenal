@@ -67,21 +67,22 @@ Acts as a control plane that sits in front of individually deployed agents, medi
 
 ## Use Cases
 
-1. **Where it fits**: You need centralized policy and skill governance across many internal AI agents in a regulated org.
-2. **Adoption checkpoint**: validate AGNT.Hub on your own data for the `orchestration, security-and-guardrails` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **What it does in a system**: AGNT.Hub sits on the orchestration, security-and-guardrails leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since AGNT.Hub is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against AGNT.Hub here, so the honest first step is confirming the orchestration, security-and-guardrails job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Beyond the feature list, AGNT.Hub's own implementation notes give the specifics — acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy — which is where a capability claim either holds or does not for your workload.
-- AGNT.Hub has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
-- AGNT.Hub is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Maturity here is beta, so treat AGNT.Hub's API surface as something to pin and test rather than something to track.
+- What AGNT.Hub gives you that its headline description does not: acts as a control plane that sits in front of individually deployed agents, mediating which skills/tools each agent is allowed to invoke based on configured policy, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for AGNT.Hub in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- AGNT.Hub is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so AGNT.Hub's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to AGNT.Hub, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- AGNT.Hub's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
-- AGNT.Hub is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Depending on AGNT.Hub means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- AGNT.Hub's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- AGNT.Hub is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

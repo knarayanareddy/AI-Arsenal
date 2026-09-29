@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Hugging Face library for parameter-efficient fine-tuning methods. Open source or free to start. Best for LoRA and adapter-based fine-tuning.
+> **TL;DR:** PEFT, for the fine-tuning job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://github.com/huggingface/peft for the
 
 ## Use Cases
 
-1. **Where it fits**: You need a well-maintained, low-level Hugging Face library for parameter-efficient methods like LoRA/QLoRA/IA3 inside an existing training script.
-2. **Adoption checkpoint**: compare PEFT against `axolotl`, `llamafactory`, `mlx-lm` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so PEFT can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on PEFT.
+3. **Choosing between candidates**: PEFT's comparison set is `axolotl`, `llamafactory`, `mlx-lm`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for PEFT is worth reading before adopting: wraps a base model with small trainable adapter layers (e.g. low-rank matrices for LoRA) while freezing the original weights, drastically reducing the number of trainable parameters.
-- Weighing PEFT against `axolotl`, `llamafactory`, `mlx-lm`, `torchtune` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- Depending on PEFT means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- Capability is documented; behaviour is not. For PEFT, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting PEFT is specific — wraps a base model with small trainable adapter layers (e.g. low-rank matrices for LoRA) while freezing the original weights, drastically reducing the number of trainable parameters — and that is where a capability claim either survives contact with your data or does not.
+- PEFT's honest comparison set is `axolotl`, `llamafactory`, `mlx-lm`, `torchtune`; what separates them is rarely capability, it is what you must operate.
+- PEFT is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure PEFT's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to PEFT, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for PEFT describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Depending on PEFT means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for PEFT describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where PEFT overlaps `axolotl`, `llamafactory`, `mlx-lm`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

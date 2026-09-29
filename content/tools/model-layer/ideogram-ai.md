@@ -67,21 +67,21 @@ Its internals are not published. It is consumed as a managed API: a prompt is se
 
 ## Use Cases
 
-1. **Scenario**: you need broad style coverage plus the same reliable text-rendering strength as Ideogram, via a platform offering
-2. **Scenario**: you want a managed image-generation API rather than self-hosting a diffusion model
-3. **Scenario where this is NOT the right fit**: you need an open-weight, self-hostable image generation stack — evaluate an alternative instead
+1. **Integrating Ideogram AI**: the production-serving call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Ideogram AI.
+3. **Deciding at all**: nothing is catalogued against Ideogram AI here, so the honest first step is confirming the production-serving job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need broad style coverage plus the same reliable text-rendering strength as Ideogram, via a platform offering
-- You want a managed image-generation API rather than self-hosting a diffusion model
+- Beyond the marketing, Ideogram AI's own notes are the useful part: its internals are not published. It is consumed as a managed API: a prompt is sent to Ideogram's hosted diffusion model and the image is returned from the provider's infrastructure, so there is no local model, weights, or GPU to manage. That hosted design is what rules out self-hosting and makes cost-per-image, rather than hardware, the scaling variable.
+- No direct sibling is catalogued for Ideogram AI in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Ideogram AI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Ideogram AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need an open-weight, self-hostable image generation stack
-- Cost-per-image at scale is a primary constraint (compare against open-source diffusion models first)
-
-- _Enrichment status: draft. Ideogram AI is a closed-source platform surfaced via a curated newsletter; its capabilities here follow the vendor's description, and this entry may overlap the standalone Ideogram entry pending a merge review. Last reviewed: 2026-06-30._
+- There is no self-hosted path to Ideogram AI, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Ideogram AI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

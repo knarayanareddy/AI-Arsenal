@@ -47,7 +47,7 @@ Alibaba's open-weight model family spanning multiple sizes, with dedicated multi
 
 ## Why It's in the Arsenal
 
-Qwen 3 earns a place in the Arsenal because it directly addresses a recurring decision point: you want a strong open-weight model family with multimodal and coding variants you can self-host. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Qwen 3 rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -68,21 +68,21 @@ Standard transformer-based architecture released as open weights; can be served 
 
 ## Use Cases
 
-1. **Scenario**: you want a strong open-weight model family with multimodal and coding variants you can self-host
-2. **Scenario**: you need a range of model sizes to trade off cost and quality within one consistent family
-3. **Scenario where this is NOT the right fit**: you need a model with the deepest English-language-specific RLHF tuning track record (verify on your eval set) — evaluate an alternative instead
+1. **Where it sits**: on the production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Qwen 3 can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Qwen 3.
+3. **Deciding at all**: nothing is catalogued against Qwen 3 here, so the honest first step is confirming the production-serving job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want a strong open-weight model family with multimodal and coding variants you can self-host
-- You need a range of model sizes to trade off cost and quality within one consistent family
+- The implementation detail worth reading before adopting Qwen 3 is specific — standard transformer-based architecture released as open weights; can be served through engines like vLLM, SGLang, or Ollama, or fine-tuned with standard PEFT/Axolotl-style tooling — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Qwen 3 in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Qwen 3 means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Qwen 3's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a model with the deepest English-language-specific RLHF tuning track record (verify on your eval set)
-- You require a hosted-only deployment with no self-hosting (most cloud inference providers support it, but check terms)
-
-_Verified for Qwen 3: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Qwen 3 means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Qwen 3 describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

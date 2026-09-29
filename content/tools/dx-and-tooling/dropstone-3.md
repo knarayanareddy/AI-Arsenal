@@ -67,21 +67,22 @@ Its internals are unpublished. From the description it provides a hosted, multi-
 
 ## Use Cases
 
-1. **Where it fits**: Your team wants a collaborative AI workspace to describe and ship software together without setting up dev tooling first.
-2. **Adoption checkpoint**: validate Dropstone 3 on your own data for the `orchestration, prototyping` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the orchestration, prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Dropstone 3 can be swapped without touching callers.
+2. **Validating the choice**: put Dropstone 3 and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Dropstone 3 here, so the honest first step is confirming the orchestration, prototyping job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Dropstone 3 is worth reading before adopting: its internals are unpublished. From the description it provides a hosted, multi-user workspace that turns natural-language descriptions into software artifacts, coordinating collaborators in one environment and abstracting the individual dev-environment setup each would otherwise do. The hosted, closed-source model is why it is not self-hostable and why it tends to overlap an existing IDE/CI workflow rather than plug into one.
+- The implementation detail worth reading before adopting Dropstone 3 is specific — its internals are unpublished. From the description it provides a hosted, multi-user workspace that turns natural-language descriptions into software artifacts, coordinating collaborators in one environment and abstracting the individual dev-environment setup each would otherwise do. The hosted, closed-source model is why it is not self-hostable and why it tends to overlap an existing IDE/CI workflow rather than plug into one — and that is where a capability claim either survives contact with your data or does not.
 - No direct sibling is catalogued for Dropstone 3 in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Depending on Dropstone 3 means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- Marked beta, so the capability is real but Dropstone 3's interface may still move; pin the version you build against instead of tracking latest.
+- Dropstone 3 is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Dropstone 3's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
 - Depending on Dropstone 3 means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Dropstone 3 describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- Dropstone 3 is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Documentation for Dropstone 3 describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Dropstone 3 is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

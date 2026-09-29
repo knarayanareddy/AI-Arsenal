@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Prompt injection detection and guardrail toolkit for LLM applications. Open source or free to start. Best for prompt injection experiments.
+> **TL;DR:** Rebuff covers the security-and-guardrails leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A lightweight, open-source toolkit specifically focused on detecting prompt inje
 
 ## Why It's in the Arsenal
 
-Rebuff earns a place in the Arsenal because it directly addresses a recurring decision point: you need a dedicated, lightweight toolkit specifically for detecting prompt injection attacks. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Rebuff is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -68,19 +68,22 @@ Follow the official documentation at https://github.com/protectai/rebuff for the
 
 ## Use Cases
 
-1. **Scenario**: you need a dedicated, lightweight toolkit specifically for detecting prompt injection attacks
-2. **Scenario**: you want to layer injection detection on top of an existing LLM application with minimal integration
-3. **Scenario where this is NOT the right fit**: you need a broader guardrails framework covering many safety dimensions, not just injection (consider Guardrails AI or NeMo Guardrails) — evaluate an alternative instead
+1. **What it does in a system**: Rebuff sits on the security-and-guardrails leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Rebuff and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Rebuff's comparison set is `guardrails-ai`, `llamaguard`, `nemo-guardrails`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need a dedicated, lightweight toolkit specifically for detecting prompt injection attacks
-- You want to layer injection detection on top of an existing LLM application with minimal integration
+- What Rebuff gives you that its headline description does not: incoming prompts/content are scored against injection-detection heuristics and/or a classifier before being passed to the underlying LLM, flagging suspicious inputs, which is the part to check against your own pipeline before trusting the feature list.
+- Rebuff overlaps `guardrails-ai`, `llamaguard`, `nemo-guardrails` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Rebuff is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Rebuff's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a broader guardrails framework covering many safety dimensions, not just injection (consider Guardrails AI or NeMo Guardrails)
-- You require active, frequent maintenance guarantees — verify recent commit activity before adopting
+- There is no self-hosted path to Rebuff, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Rebuff describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Rebuff overlaps `guardrails-ai`, `llamaguard`, `nemo-guardrails`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -67,20 +67,22 @@ pip install together
 
 ## Use Cases
 
-1. **Where it fits**: "You want fast, cheap hosted inference for open models (Llama, Qwen, DeepSeek) with an OpenAI-compatible API.
-2. **Adoption checkpoint**: compare Together AI against `fireworks-ai`, `openrouter`, `replicate` on the same `production-serving, fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the production-serving, fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Together AI can be swapped without touching callers.
+2. **Validating the choice**: put Together AI and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Together AI's comparison set is `fireworks-ai`, `openrouter`, `replicate`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Together AI is an inference and fine-tuning cloud for 200+ open-source models with strong price/performance and dedicated endpoints — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Against `fireworks-ai`, `openrouter`, `replicate`, the comparison that decides this is deployment model and operational cost rather than the feature list; Together AI sits at the hosted-or-embedded end of that axis.
-- Together AI is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Together AI all need testing on your own traffic shape.
+- The implementation detail worth reading before adopting Together AI is specific — together runs its own optimized inference kernels and scheduling across large GPU fleets; serverless requests share pooled capacity per model, while dedicated endpoints pin models to reserved GPUs. Fine-tunes produce hosted checkpoints servable via the same API — and that is where a capability claim either survives contact with your data or does not.
+- Together AI's honest comparison set is `fireworks-ai`, `openrouter`, `replicate`; what separates them is rarely capability, it is what you must operate.
+- Depending on Together AI means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Together AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Together AI, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Together AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Depending on Together AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Together AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Together AI overlaps `fireworks-ai`, `openrouter`, `replicate`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

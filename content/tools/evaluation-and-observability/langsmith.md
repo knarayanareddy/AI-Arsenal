@@ -64,20 +64,21 @@ LangChain/LangGraph applications emit trace data automatically via the integrati
 
 ## Use Cases
 
-1. **Where it fits**: You're building with LangChain or LangGraph and want first-party tracing, evaluation, and monitoring with minimal integration work.
-2. **Adoption checkpoint**: validate LangSmith on your own data for the `evaluation, tracing, monitoring` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Integrating LangSmith**: the evaluation, tracing, monitoring call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on LangSmith.
+3. **Deciding at all**: nothing is catalogued against LangSmith here, so the honest first step is confirming the evaluation, tracing, monitoring job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for LangSmith is worth reading before adopting: langChain/LangGraph applications emit trace data automatically via the integration; LangSmith's backend stores and renders these traces alongside evaluation runs and monitoring dashboards.
+- Beyond the marketing, LangSmith's own notes are the useful part: langChain/LangGraph applications emit trace data automatically via the integration; LangSmith's backend stores and renders these traces alongside evaluation runs and monitoring dashboards.
 - No direct sibling is catalogued for LangSmith in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- LangSmith is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for LangSmith all need testing on your own traffic shape.
+- Depending on LangSmith means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure LangSmith's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LangSmith, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for LangSmith describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Depending on LangSmith means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LangSmith describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A platform for building, deploying, and iterating on custom AI applications with
 
 ## Why It's in the Arsenal
 
-Empromptu AI earns a place in the Arsenal because it directly addresses a recurring decision point: you want to spin up a custom AI application quickly without assembling infrastructure yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Empromptu AI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ Provides a hosted environment where an application's logic, model calls, and dep
 
 ## Use Cases
 
-1. **Scenario**: you want to spin up a custom AI application quickly without assembling infrastructure yourself
-2. **Scenario**: you are validating a product idea and value speed over long-term portability
-3. **Scenario where this is NOT the right fit**: you need full control over the orchestration layer or want to avoid vendor lock-in — evaluate an alternative instead
+1. **Integrating Empromptu AI**: the orchestration, deployment call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Empromptu AI is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Empromptu AI here, so the honest first step is confirming the orchestration, deployment job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want to spin up a custom AI application quickly without assembling infrastructure yourself
-- You are validating a product idea and value speed over long-term portability
+- Beyond the marketing, Empromptu AI's own notes are the useful part: provides a hosted environment where an application's logic, model calls, and deployment are managed together rather than as separate services you wire up yourself.
+- No direct sibling is catalogued for Empromptu AI in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Empromptu AI is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Empromptu AI's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need full control over the orchestration layer or want to avoid vendor lock-in
-- You require an open-source or self-hostable deployment model
-
-_Verified for Empromptu AI: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Empromptu AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Empromptu AI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Empromptu AI is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

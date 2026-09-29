@@ -46,7 +46,7 @@ The most widely deployed AI coding assistant: inline completions and chat in eve
 
 ## Why It's in the Arsenal
 
-GitHub Copilot earns a place in the Arsenal because it directly addresses a recurring decision point: your code already lives on GitHub and you want AI woven into PRs, issues, and the coding agent assigning itself work. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+GitHub Copilot appears here as a reference point for the prototyping job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ code --install-extension GitHub.copilot
 
 ## Use Cases
 
-1. **Scenario**: your code already lives on GitHub and you want AI woven into PRs, issues, and the coding agent assigning itself work
-2. **Scenario**: you need enterprise procurement boxes ticked: IP indemnity, policy controls, org-wide license management
-3. **Scenario where this is NOT the right fit**: you want deep model control or local models — Copilot's model menu is curated, not open — evaluate an alternative instead
+1. **What it does in a system**: GitHub Copilot sits on the prototyping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put GitHub Copilot and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: GitHub Copilot's comparison set is `cursor`, `continue-dev`, `tabby-ml`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Your code already lives on GitHub and you want AI woven into PRs, issues, and the coding agent assigning itself work
-- You need enterprise procurement boxes ticked: IP indemnity, policy controls, org-wide license management
+- What GitHub Copilot gives you that its headline description does not: copilot routes completions to fast custom models and chat/agent tasks to a selectable frontier-model pool; the coding agent runs in GitHub Actions-backed sandboxes, making changes on branches and opening PRs that follow branch protections, which is the part to check against your own pipeline before trusting the feature list.
+- Against `cursor`, `continue-dev`, `tabby-ml`, the difference that decides this is deployment model and cost rather than the feature list, and GitHub Copilot sits at the hosted end of that axis.
+- GitHub Copilot is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure GitHub Copilot's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want deep model control or local models — Copilot's model menu is curated, not open
-- Editor-native agent workflows matter more to you than platform integration; Cursor/Claude Code iterate faster there
-
-- _Verified for GitHub Copilot: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on GitHub Copilot means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for GitHub Copilot describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where GitHub Copilot overlaps `cursor`, `continue-dev`, `tabby-ml`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

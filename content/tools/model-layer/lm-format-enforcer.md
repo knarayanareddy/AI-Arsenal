@@ -67,21 +67,22 @@ pip install lm-format-enforcer
 
 ## Use Cases
 
-1. **Where it fits**: "You serve open models via vLLM/TGI and need hard structural guarantees with minimal quality distortion — it lets the model control whitespace/field order within the schema.
-2. **Adoption checkpoint**: compare LM Format Enforcer against `outlines`, `guidance`, `instructor` on the same `structured-output` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the structured-output leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so LM Format Enforcer can be swapped without touching callers.
+2. **Validating the choice**: put LM Format Enforcer and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: LM Format Enforcer's comparison set is `outlines`, `guidance`, `instructor`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, LM Format Enforcer's own implementation notes give the specifics — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards — which is where a capability claim either holds or does not for your workload.
-- Against `outlines`, `guidance`, `instructor`, the comparison that decides this is deployment model and operational cost rather than the feature list; LM Format Enforcer sits at the hosted-or-embedded end of that axis.
-- The documented integration path for LM Format Enforcer runs through `vllm`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
-- Maturity here is beta, so treat LM Format Enforcer's API surface as something to pin and test rather than something to track.
+- The implementation detail worth reading before adopting LM Format Enforcer is specific — builds a character-level automaton from the schema/regex, maps it onto the tokenizer's vocabulary to produce per-step allowed-token sets, and applies them as logit masks during sampling — so invalid continuations are never sampled rather than repaired afterwards — and that is where a capability claim either survives contact with your data or does not.
+- Weighing LM Format Enforcer against `outlines`, `guidance`, `instructor` comes down to one question: who runs the process when it breaks — you or the vendor.
+- The documented path into LM Format Enforcer runs through `vllm`, so the contract to test is the one those adapters expose.
+- Marked beta, so LM Format Enforcer's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LM Format Enforcer, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for LM Format Enforcer describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- LM Format Enforcer is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- There is no self-hosted path to LM Format Enforcer, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LM Format Enforcer describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- LM Format Enforcer is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

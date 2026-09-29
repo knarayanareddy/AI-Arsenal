@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Managed Hugging Face service for deploying models as production inference endpoints. Usage-based managed inference pricing. Best for managed HF model deployment.
+> **TL;DR:** Hugging Face Inference Endpoints covers the deployment, production-serving leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://huggingface.co/docs/inference-endpo
 
 ## Use Cases
 
-1. **Where it fits**: You want to deploy a model already hosted on the Hugging Face Hub as a managed API in a few clicks.
-2. **Adoption checkpoint**: compare Hugging Face Inference Endpoints against `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai` on the same `deployment, production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating Hugging Face Inference Endpoints**: the deployment, production-serving call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Hugging Face Inference Endpoints is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Hugging Face Inference Endpoints's comparison set is `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Hugging Face Inference Endpoints is a managed Hugging Face service for deploying models as production inference endpoints — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Weighing Hugging Face Inference Endpoints against `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`, `modal` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- Hugging Face Inference Endpoints is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Hugging Face Inference Endpoints, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- Beyond the marketing, Hugging Face Inference Endpoints's own notes are the useful part: selects a model repository from the Hugging Face Hub and provisions a managed inference container behind an HTTPS endpoint, scaling instances up or down based on traffic.
+- Hugging Face Inference Endpoints overlaps `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`, `modal` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Depending on Hugging Face Inference Endpoints means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Hugging Face Inference Endpoints's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Hugging Face Inference Endpoints means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Hugging Face Inference Endpoints's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Hugging Face Inference Endpoints's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Hugging Face Inference Endpoints overlaps `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

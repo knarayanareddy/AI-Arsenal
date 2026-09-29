@@ -46,7 +46,7 @@ A GPU cloud focused on AI workloads: rent pods (full GPU machines) by the second
 
 ## Why It's in the Arsenal
 
-RunPod earns a place in the Arsenal because it directly addresses a recurring decision point: you want cheap on-demand GPUs (community + secure cloud tiers) for experiments, fine-tuning, or bursty inference. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+RunPod is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -68,21 +68,22 @@ pip install runpod
 
 ## Use Cases
 
-1. **Scenario**: you want cheap on-demand GPUs (community + secure cloud tiers) for experiments, fine-tuning, or bursty inference
-2. **Scenario**: you need serverless GPU endpoints with scale-to-zero and fast cold starts (FlashBoot) without managing clusters
-3. **Scenario where this is NOT the right fit**: strict compliance/enterprise SLAs on every workload — community-cloud tiers trade guarantees for price — evaluate an alternative instead
+1. **What it does in a system**: RunPod sits on the production-serving, deployment, fine-tuning leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since RunPod is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: RunPod's comparison set is `modal`, `replicate`, `fireworks-ai`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want cheap on-demand GPUs (community + secure cloud tiers) for experiments, fine-tuning, or bursty inference
-- You need serverless GPU endpoints with scale-to-zero and fast cold starts (FlashBoot) without managing clusters
+- What RunPod gives you that its headline description does not: pods are containers on dedicated GPUs in RunPod's secure or community (vetted third-party) datacenters; serverless packages your handler in a worker image that the platform autoscales per queue depth, billing only active seconds, which is the part to check against your own pipeline before trusting the feature list.
+- Against `modal`, `replicate`, `fireworks-ai`, the difference that decides this is deployment model and cost rather than the feature list, and RunPod sits at the hosted end of that axis.
+- RunPod documents a client surface through `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
+- What this entry cannot give you is measured behaviour: measure RunPod's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Strict compliance/enterprise SLAs on every workload — community-cloud tiers trade guarantees for price
-- You prefer code-native serverless (decorate a Python function) — Modal's DX is stronger there
-
-- _Verified for RunPod: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on RunPod means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- RunPod's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where RunPod overlaps `modal`, `replicate`, `fireworks-ai`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

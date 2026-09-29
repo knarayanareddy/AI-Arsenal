@@ -64,20 +64,21 @@ Evaluations are defined as Python code specifying inputs, expected behavior, and
 
 ## Use Cases
 
-1. **Where it fits**: You want a free, open-source framework to write and run custom evaluation suites against any model behavior.
-2. **Adoption checkpoint**: validate OpenAI Evals on your own data for the `evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Integrating OpenAI Evals**: the evaluation call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put OpenAI Evals and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against OpenAI Evals here, so the honest first step is confirming the evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for OpenAI Evals is worth reading before adopting: evaluations are defined as Python code specifying inputs, expected behavior, and grading logic; the framework runs the target model against the eval set and reports pass/fail or scored results.
-- Nothing else in this phase is catalogued against OpenAI Evals, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
-- OpenAI Evals is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for OpenAI Evals all need testing on your own traffic shape.
+- Beyond the marketing, OpenAI Evals's own notes are the useful part: evaluations are defined as Python code specifying inputs, expected behavior, and grading logic; the framework runs the target model against the eval set and reports pass/fail or scored results.
+- No direct sibling is catalogued for OpenAI Evals in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- OpenAI Evals is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure OpenAI Evals's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to OpenAI Evals, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for OpenAI Evals describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to OpenAI Evals, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for OpenAI Evals describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

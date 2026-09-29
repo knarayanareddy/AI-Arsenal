@@ -43,7 +43,7 @@ A fully managed vector database designed for production semantic search and retr
 
 ## Why It's in the Arsenal
 
-Pinecone earns a place in the Arsenal because it directly addresses a recurring decision point: you need a fully managed vector database that scales without operating your own infrastructure. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Pinecone rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -64,19 +64,21 @@ Vectors and associated metadata are upserted into managed indexes; queries combi
 
 ## Use Cases
 
-1. **Scenario**: you need a fully managed vector database that scales without operating your own infrastructure
-2. **Scenario**: you want strong production reliability guarantees and don't want to manage indexing/sharding yourself
-3. **Scenario where this is NOT the right fit**: you need a self-hostable or fully open-source vector store for cost or data-residency reasons (consider Qdrant, Milvus, or pgvector) — evaluate an alternative instead
+1. **Integrating Pinecone**: the vector-search call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Pinecone and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Pinecone here, so the honest first step is confirming the vector-search job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You need a fully managed vector database that scales without operating your own infrastructure
-- You want strong production reliability guarantees and don't want to manage indexing/sharding yourself
+- Beyond the marketing, Pinecone's own notes are the useful part: vectors and associated metadata are upserted into managed indexes; queries combine approximate nearest-neighbor search with metadata filters, served from Pinecone-operated infrastructure.
+- No direct sibling is catalogued for Pinecone in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Pinecone is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Pinecone's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need a self-hostable or fully open-source vector store for cost or data-residency reasons (consider Qdrant, Milvus, or pgvector)
-- Your scale is small enough that an embedded vector store (Chroma, LanceDB) is simpler and cheaper
+- Depending on Pinecone means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Pinecone describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

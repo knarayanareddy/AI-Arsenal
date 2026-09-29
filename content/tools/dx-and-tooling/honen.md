@@ -67,21 +67,22 @@ Its internals are not published. From the description it ingests source content,
 
 ## Use Cases
 
-1. **Where it fits**: You want to turn existing content (docs, articles, video) into interactive AI-generated courses automatically.
-2. **Adoption checkpoint**: validate Honen on your own data for the `structured-output` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Integrating Honen**: the structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Honen and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Honen here, so the honest first step is confirming the structured-output job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Honen is worth reading before adopting: its internals are not published. From the description it ingests source content, then uses generative models to segment it into a course structure — modules, ordering, and interactive knowledge checks — that a human can refine. Because it is a hosted, closed-source service, the content processing and model provider run server-side rather than on the author's machine.
-- Nothing else in this phase is catalogued against Honen, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
-- Honen is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Maturity here is beta, so treat Honen's API surface as something to pin and test rather than something to track.
+- Beyond the marketing, Honen's own notes are the useful part: its internals are not published. From the description it ingests source content, then uses generative models to segment it into a course structure — modules, ordering, and interactive knowledge checks — that a human can refine. Because it is a hosted, closed-source service, the content processing and model provider run server-side rather than on the author's machine.
+- No direct sibling is catalogued for Honen in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Honen is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Honen's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
 - Depending on Honen means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Honen describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- Honen is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Documentation for Honen describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Honen is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

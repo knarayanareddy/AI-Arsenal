@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Open-source platform for experiment tracking, model registry, and ML lifecycle management. Open source or free to start. Best for model registry and experiment tracking.
+> **TL;DR:** MLflow covers the model-registry leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -45,7 +45,7 @@ An open-source platform for tracking ML experiments and managing a model registr
 
 ## Why It's in the Arsenal
 
-MLflow earns a place in the Arsenal because it directly addresses a recurring decision point: you need open-source experiment tracking plus a model registry with stage transitions (staging → production). It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+MLflow is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://github.com/mlflow/mlflow for the au
 
 ## Use Cases
 
-1. **Scenario**: you need open-source experiment tracking plus a model registry with stage transitions (staging → production)
-2. **Scenario**: you want to self-host the entire ML lifecycle tracking system rather than depend on a SaaS vendor
-3. **Scenario where this is NOT the right fit**: you want the most polished collaborative dashboards and team reporting (Weights & Biases is generally stronger there) — evaluate an alternative instead
+1. **Where it sits**: on the model-registry leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so MLflow can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on MLflow.
+3. **Choosing between candidates**: MLflow's comparison set is `dvc`, `hugging-face-hub`, `weights-biases`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need open-source experiment tracking plus a model registry with stage transitions (staging → production)
-- You want to self-host the entire ML lifecycle tracking system rather than depend on a SaaS vendor
+- The implementation detail worth reading before adopting MLflow is specific — a tracking server records runs (parameters, metrics, artifacts) logged from training code; the model registry layer tracks named model versions and their lifecycle stage independently of the raw run history — and that is where a capability claim either survives contact with your data or does not.
+- Against `dvc`, `hugging-face-hub`, `weights-biases`, the difference that decides this is deployment model and cost rather than the feature list, and MLflow sits at the hosted end of that axis.
+- MLflow is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure MLflow's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want the most polished collaborative dashboards and team reporting (Weights & Biases is generally stronger there)
-- You need LLM-specific tracing/evaluation rather than classic ML experiment tracking (pair with LangSmith/Langfuse/TruLens)
+- There is no self-hosted path to MLflow, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for MLflow describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where MLflow overlaps `dvc`, `hugging-face-hub`, `weights-biases`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

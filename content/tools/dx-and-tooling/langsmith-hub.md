@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** LangSmith prompt and dataset workflows for LangChain and LangGraph applications. Free tier plus paid LangSmith plans. Best for LangChain prompt workflows.
+> **TL;DR:** LangSmith Hub covers the prompt-management leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -68,20 +68,22 @@ Follow the official documentation at https://docs.smith.langchain.com/ for the a
 
 ## Use Cases
 
-1. **Where it fits**: You're building with LangChain/LangGraph and want prompt and dataset management in the same platform as your tracing.
-2. **Adoption checkpoint**: compare LangSmith Hub against `langfuse-prompts`, `promptlayer` on the same `prompt-management` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating LangSmith Hub**: the prompt-management call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put LangSmith Hub and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: LangSmith Hub's comparison set is `langfuse-prompts`, `promptlayer`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, LangSmith Hub is a langSmith prompt and dataset workflows for LangChain and LangGraph applications — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Weighing LangSmith Hub against `langfuse-prompts`, `promptlayer` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- LangSmith Hub is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for LangSmith Hub all need testing on your own traffic shape.
+- Beyond the marketing, LangSmith Hub's own notes are the useful part: prompts and datasets are stored in the LangSmith platform and referenced from LangChain/LangGraph code, with usage automatically tied back to tracing data.
+- LangSmith Hub overlaps `langfuse-prompts`, `promptlayer` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Depending on LangSmith Hub means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure LangSmith Hub's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LangSmith Hub, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for LangSmith Hub describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to LangSmith Hub, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LangSmith Hub describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where LangSmith Hub overlaps `langfuse-prompts`, `promptlayer`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

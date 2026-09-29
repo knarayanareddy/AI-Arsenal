@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Unified fine-tuning framework and UI for many LLMs and training methods. Open source or free to start. Best for fine-tuning with UI and many model recipes.
+> **TL;DR:** the fine-tuning entry for LLaMA-Factory. Unified fine-tuning framework and UI for many LLMs and training methods — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://github.com/hiyouga/LLaMA-Factory fo
 
 ## Use Cases
 
-1. **Where it fits**: You want a unified UI plus CLI to fine-tune a very wide range of open models without writing custom training code.
-2. **Adoption checkpoint**: compare LLaMA-Factory against `axolotl`, `mlx-lm`, `peft` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating LLaMA-Factory**: the fine-tuning call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put LLaMA-Factory and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: LLaMA-Factory's comparison set is `axolotl`, `mlx-lm`, `peft`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, LLaMA-Factory is an unified fine-tuning framework and UI for many LLMs and training methods — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Against `axolotl`, `mlx-lm`, `peft`, `torchtune`, the comparison that decides this is deployment model and operational cost rather than the feature list; LLaMA-Factory sits at the hosted-or-embedded end of that axis.
-- LLaMA-Factory is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Capability is documented; behaviour is not. For LLaMA-Factory, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- Beyond the marketing, LLaMA-Factory's own notes are the useful part: training jobs are configured through the UI or CLI and dispatched to underlying Transformers/PEFT/DeepSpeed training loops, with results exportable as merged or adapter checkpoints.
+- Against `axolotl`, `mlx-lm`, `peft`, `torchtune`, the difference that decides this is deployment model and cost rather than the feature list, and LLaMA-Factory sits at the hosted end of that axis.
+- LLaMA-Factory is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure LLaMA-Factory's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on LLaMA-Factory means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for LLaMA-Factory describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to LLaMA-Factory, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for LLaMA-Factory describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where LLaMA-Factory overlaps `axolotl`, `mlx-lm`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

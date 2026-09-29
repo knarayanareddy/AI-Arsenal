@@ -46,7 +46,7 @@ A CNCF model-serving platform for Kubernetes: models deploy as InferenceService 
 
 ## Why It's in the Arsenal
 
-KServe earns a place in the Arsenal because it directly addresses a recurring decision point: your platform team runs Kubernetes and wants models served as CRDs with scale-to-zero, canary rollouts, and GitOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+KServe is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ kubectl apply --server-side -f https://github.com/kserve/kserve/releases/latest/
 
 ## Use Cases
 
-1. **Scenario**: your platform team runs Kubernetes and wants models served as CRDs with scale-to-zero, canary rollouts, and GitOps
-2. **Scenario**: you need one serving contract (Open Inference Protocol) across sklearn, XGBoost, PyTorch, and LLM runtimes
-3. **Scenario where this is NOT the right fit**: no Kubernetes expertise in-house — the operational prerequisite dominates the benefit — evaluate an alternative instead
+1. **What it does in a system**: KServe sits on the production-serving, deployment leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put KServe and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: KServe's comparison set is `ray-serve`, `triton-inference-server`, `bentoml`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Your platform team runs Kubernetes and wants models served as CRDs with scale-to-zero, canary rollouts, and GitOps
-- You need one serving contract (Open Inference Protocol) across sklearn, XGBoost, PyTorch, and LLM runtimes
+- What KServe gives you that its headline description does not: a controller reconciles InferenceService resources into Knative services (or raw deployments): each service wraps a model runtime container plus optional transformer/explainer sidecars, and an ingress gateway handles routing, revisions, and traffic splitting, which is the part to check against your own pipeline before trusting the feature list.
+- KServe overlaps `ray-serve`, `triton-inference-server`, `bentoml` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- The documented path into KServe runs through `vllm`, so the contract to test is the one those adapters expose.
+- What this entry cannot give you is measured behaviour: measure KServe's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- No Kubernetes expertise in-house — the operational prerequisite dominates the benefit
-- Latency-critical LLM serving where scale-to-zero cold starts are unacceptable (disable it or serve directly)
-
-- _Verified for KServe: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on KServe means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for KServe describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where KServe overlaps `ray-serve`, `triton-inference-server`, `bentoml`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Microsoft Azure platform for building, evaluating, and deploying AI applications. Azure usage-based pricing. Best for Azure enterprise AI development.
+> **TL;DR:** Azure AI Studio, for the deployment job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -45,7 +45,7 @@ Microsoft's platform for building, evaluating, and deploying AI applications wit
 
 ## Why It's in the Arsenal
 
-Azure AI Studio earns a place in the Arsenal because it directly addresses a recurring decision point: your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Azure AI Studio is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://learn.microsoft.com/en-us/azure/ai-
 
 ## Use Cases
 
-1. **Scenario**: your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console
-2. **Scenario**: you need enterprise governance (RBAC, content filters, compliance certifications) tied to existing Azure AD
-3. **Scenario where this is NOT the right fit**: you want a lightweight, cloud-agnostic deployment path — evaluate an alternative instead
+1. **Where it sits**: on the deployment leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Azure AI Studio can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Azure AI Studio.
+3. **Choosing between candidates**: Azure AI Studio's comparison set is `aws-bedrock`, `google-vertex-ai`, `hf-inference-endpoints`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Your org is standardized on Microsoft Azure and needs AI app building, evaluation, and deployment in one console
-- You need enterprise governance (RBAC, content filters, compliance certifications) tied to existing Azure AD
+- The implementation detail worth reading before adopting Azure AI Studio is specific — provides a managed workspace where model endpoints, evaluation pipelines, and deployment targets are all configured and monitored through a single Azure-native control plane — and that is where a capability claim either survives contact with your data or does not.
+- Azure AI Studio overlaps `aws-bedrock`, `google-vertex-ai`, `hf-inference-endpoints`, `modal` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Depending on Azure AI Studio means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Azure AI Studio's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want a lightweight, cloud-agnostic deployment path
-- Your team is not already operating in Azure and the platform's surface area would be net-new overhead
+- Depending on Azure AI Studio means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Azure AI Studio's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Azure AI Studio overlaps `aws-bedrock`, `google-vertex-ai`, `hf-inference-endpoints`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

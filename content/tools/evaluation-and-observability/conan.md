@@ -66,21 +66,22 @@ Runs as a local macOS application that attaches to an agent's running session, r
 
 ## Use Cases
 
-1. **Where it fits**: You're developing AI agents on macOS and want a live, local HUD to watch and interact with agent sessions in real time.
-2. **Adoption checkpoint**: validate Conan on your own data for the `monitoring, tracing` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the monitoring, tracing leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Conan can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Conan is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Conan here, so the honest first step is confirming the monitoring, tracing job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Conan is worth reading before adopting: runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes.
+- The implementation detail worth reading before adopting Conan is specific — runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes — and that is where a capability claim either survives contact with your data or does not.
 - No direct sibling is catalogued for Conan in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Conan is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Maturity here is beta, so treat Conan's API surface as something to pin and test rather than something to track.
+- Depending on Conan means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Conan's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
 - Depending on Conan means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Conan's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
-- Conan is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Conan's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Conan is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

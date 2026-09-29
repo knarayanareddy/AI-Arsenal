@@ -46,7 +46,7 @@ A managed API that gives AI agents autonomous web-browsing and search capability
 
 ## Why It's in the Arsenal
 
-Tabstack earns a place in the Arsenal because it directly addresses a recurring decision point: you want to give an agent autonomous web-browsing/search capability via a managed API rather than building it yourself. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Tabstack rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -66,21 +66,21 @@ An agent issues high-level browsing/search instructions to Tabstack's API, which
 
 ## Use Cases
 
-1. **Scenario**: you want to give an agent autonomous web-browsing/search capability via a managed API rather than building it yourself
-2. **Scenario**: you're prototyping an agent that needs to interact with arbitrary websites without operating browser infrastructure
-3. **Scenario where this is NOT the right fit**: you need full control and auditability over what the agent does in the browser (regulated or high-stakes use cases) — evaluate an alternative instead
+1. **What it does in a system**: Tabstack sits on the web-scraping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Tabstack and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Tabstack here, so the honest first step is confirming the web-scraping job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want to give an agent autonomous web-browsing/search capability via a managed API rather than building it yourself
-- You're prototyping an agent that needs to interact with arbitrary websites without operating browser infrastructure
+- What Tabstack gives you that its headline description does not: an agent issues high-level browsing/search instructions to Tabstack's API, which executes the underlying browser automation and returns extracted results, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for Tabstack in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Tabstack is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Tabstack's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need full control and auditability over what the agent does in the browser (regulated or high-stakes use cases)
-- You need an open-source or self-hostable browsing layer
-
-_Verified for Tabstack: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Tabstack means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Tabstack describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

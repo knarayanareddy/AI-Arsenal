@@ -46,7 +46,7 @@ A proprietary AI-first fork of VS Code: Cursor layers predictive multi-line Tab 
 
 ## Why It's in the Arsenal
 
-Cursor earns a place in the Arsenal because it directly addresses a recurring decision point: you want the most polished AI-editor experience: Tab predictions, background agents, and codebase-aware chat in one product. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Cursor rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://cursor.com/docs for the authenticat
 
 ## Use Cases
 
-1. **Scenario**: you want the most polished AI-editor experience: Tab predictions, background agents, and codebase-aware chat in one product
-2. **Scenario**: your team is willing to pay per-seat for measurable coding-velocity gains and doesn't need self-hosting
-3. **Scenario where this is NOT the right fit**: strict data-residency or on-prem requirements — code context is processed by Cursor's cloud — evaluate an alternative instead
+1. **Integrating Cursor**: the prototyping call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Cursor and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Cursor's comparison set is `windsurf`, `github-copilot`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want the most polished AI-editor experience: Tab predictions, background agents, and codebase-aware chat in one product
-- Your team is willing to pay per-seat for measurable coding-velocity gains and doesn't need self-hosting
+- Beyond the marketing, Cursor's own notes are the useful part: cursor indexes your repository into embeddings for retrieval, routes completions to its custom Tab model and chat/agent requests to selected frontier models, and executes agent plans with editor-native diffs; privacy mode can disable code retention.
+- Cursor overlaps `windsurf`, `github-copilot` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Cursor is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Cursor's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Strict data-residency or on-prem requirements — code context is processed by Cursor's cloud
-- You are budget-constrained; heavy agent usage on frontier models quickly exceeds the included quota
-
-- _Verified for Cursor: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to Cursor, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Cursor describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Cursor overlaps `windsurf`, `github-copilot`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

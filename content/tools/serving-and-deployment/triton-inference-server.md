@@ -66,20 +66,22 @@ docker run --gpus=all --rm -p 8000:8000 -v $PWD/models:/models nvcr.io/nvidia/tr
 
 ## Use Cases
 
-1. **Where it fits**: "You serve heterogeneous models (LLMs + embeddings + rerankers + classic ML) and want one hardened server with dynamic batching.
-2. **Adoption checkpoint**: compare NVIDIA Triton Inference Server against `bentoml`, `ray-serve`, `kserve` on the same `production-serving, deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating NVIDIA Triton Inference Server**: the production-serving, deployment call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put NVIDIA Triton Inference Server and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: NVIDIA Triton Inference Server's comparison set is `bentoml`, `ray-serve`, `kserve`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, NVIDIA Triton Inference Server's own implementation notes give the specifics — models live in a repository with config declaring backend, batching, and instance groups; Triton schedules requests across model instances with dynamic batching queues, and ensembles chain models server-side to avoid client round-trips — which is where a capability claim either holds or does not for your workload.
-- The nearest neighbours to NVIDIA Triton Inference Server here are `bentoml`, `ray-serve`, `kserve`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- Pin the client library rather than the API: NVIDIA Triton Inference Server is reachable through `vllm`, and those adapters change defaults — retrieval, batching, retries — without a major version bump.
-- What this entry does not give you is behaviour under your load: measure NVIDIA Triton Inference Server's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- Beyond the marketing, NVIDIA Triton Inference Server's own notes are the useful part: models live in a repository with config declaring backend, batching, and instance groups; Triton schedules requests across model instances with dynamic batching queues, and ensembles chain models server-side to avoid client round-trips.
+- Against `bentoml`, `ray-serve`, `kserve`, the difference that decides this is deployment model and cost rather than the feature list, and NVIDIA Triton Inference Server sits at the hosted end of that axis.
+- Pin the client library rather than the API: NVIDIA Triton Inference Server is reachable through `vllm`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure NVIDIA Triton Inference Server's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to NVIDIA Triton Inference Server, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for NVIDIA Triton Inference Server describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to NVIDIA Triton Inference Server, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for NVIDIA Triton Inference Server describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where NVIDIA Triton Inference Server overlaps `bentoml`, `ray-serve`, `kserve`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

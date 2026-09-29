@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Experiment tracking and model management platform for ML and AI teams. Free and paid hosted plans. Best for experiment tracking and model registry.
+> **TL;DR:** Weights & Biases covers the model-registry, evaluation leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A managed experiment tracking and model management platform known for polished c
 
 ## Why It's in the Arsenal
 
-Weights & Biases earns a place in the Arsenal because it directly addresses a recurring decision point: you need best-in-class experiment tracking visualizations and team collaboration dashboards. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Weights & Biases rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://docs.wandb.ai/ for the authenticati
 
 ## Use Cases
 
-1. **Scenario**: you need best-in-class experiment tracking visualizations and team collaboration dashboards
-2. **Scenario**: you're running many training runs/sweeps and need hyperparameter search tooling built in
-3. **Scenario where this is NOT the right fit**: budget or data-residency constraints rule out a primarily SaaS, paid platform — evaluate an alternative instead
+1. **Where it sits**: on the model-registry, evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Weights & Biases can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Weights & Biases.
+3. **Choosing between candidates**: Weights & Biases's comparison set is `dvc`, `hugging-face-hub`, `mlflow`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need best-in-class experiment tracking visualizations and team collaboration dashboards
-- You're running many training runs/sweeps and need hyperparameter search tooling built in
+- The implementation detail worth reading before adopting Weights & Biases is specific — training code logs metrics/artifacts to a hosted (or self-hosted) backend via a lightweight client library; the web UI then renders comparisons, sweeps, and reports across runs and teams — and that is where a capability claim either survives contact with your data or does not.
+- Weights & Biases's honest comparison set is `dvc`, `hugging-face-hub`, `mlflow`; what separates them is rarely capability, it is what you must operate.
+- Weights & Biases is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Weights & Biases's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Budget or data-residency constraints rule out a primarily SaaS, paid platform
-- You only need basic open-source tracking and a registry (MLflow may suffice at lower cost)
+- There is no self-hosted path to Weights & Biases, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Weights & Biases describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Weights & Biases overlaps `dvc`, `hugging-face-hub`, `mlflow`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

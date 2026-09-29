@@ -46,7 +46,7 @@ A niche tool that extracts a website's visual/design system — colors, typograp
 
 ## Why It's in the Arsenal
 
-Taste Lab earns a place in the Arsenal because it directly addresses a recurring decision point: you want to extract a website's visual/design system programmatically for an agent to reuse or reference. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Taste Lab rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ Analyzes a target site's rendered styles and layout, then outputs a structured s
 
 ## Use Cases
 
-1. **Scenario**: you want to extract a website's visual/design system programmatically for an agent to reuse or reference
-2. **Scenario**: you're building a design-aware agent and need structured 'design DNA' rather than raw screenshots
-3. **Scenario where this is NOT the right fit**: you need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction) — evaluate an alternative instead
+1. **Where it sits**: on the web-scraping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Taste Lab can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Taste Lab.
+3. **Deciding at all**: nothing is catalogued against Taste Lab here, so the honest first step is confirming the web-scraping job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want to extract a website's visual/design system programmatically for an agent to reuse or reference
-- You're building a design-aware agent and need structured 'design DNA' rather than raw screenshots
+- The implementation detail worth reading before adopting Taste Lab is specific — analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Taste Lab in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Taste Lab means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Taste Lab's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need general-purpose web scraping/crawling (this tool is narrowly scoped to design extraction)
-- You need an open-source or self-hostable option
-
-_Verified for Taste Lab: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- There is no self-hosted path to Taste Lab, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Taste Lab describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Taste Lab is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

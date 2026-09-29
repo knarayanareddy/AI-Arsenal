@@ -66,20 +66,22 @@ docker run --gpus all -p 8000:8000 -e NGC_API_KEY nvcr.io/nim/meta/llama-3.1-8b-
 
 ## Use Cases
 
-1. **Where it fits**: "Enterprises that want vendor-supported, pre-optimized LLM containers (TensorRT-LLM under the hood) deployable on-prem in minutes.
-2. **Adoption checkpoint**: compare NVIDIA NIM against `vllm`, `text-generation-inference`, `triton-inference-server` on the same `production-serving, deployment` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the production-serving, deployment leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so NVIDIA NIM can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on NVIDIA NIM.
+3. **Choosing between candidates**: NVIDIA NIM's comparison set is `vllm`, `text-generation-inference`, `triton-inference-server`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, NVIDIA NIM is a prebuilt, optimized inference microservices: enterprise models packaged as containers with OpenAI-compatible APIs — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- NVIDIA NIM overlaps `vllm`, `text-generation-inference`, `triton-inference-server` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- Depending on NVIDIA NIM means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- What this entry does not give you is behaviour under your load: measure NVIDIA NIM's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- The implementation detail worth reading before adopting NVIDIA NIM is specific — on startup a NIM detects the GPU and selects a matching optimized engine profile (TensorRT-LLM builds where available, falling back to vLLM), then serves the bundled model behind standard APIs; the catalog spans LLMs, embeddings, rerankers, and domain models — and that is where a capability claim either survives contact with your data or does not.
+- NVIDIA NIM overlaps `vllm`, `text-generation-inference`, `triton-inference-server` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Depending on NVIDIA NIM means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure NVIDIA NIM's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on NVIDIA NIM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- NVIDIA NIM's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- NVIDIA NIM's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where NVIDIA NIM overlaps `vllm`, `text-generation-inference`, `triton-inference-server`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -67,21 +67,22 @@ Its internals are not published. From the description it runs as a hosted memory
 
 ## Use Cases
 
-1. **Where it fits**: You want a private, personal memory layer that learns from your own conversations and documents.
-2. **Adoption checkpoint**: validate Memoriq on your own data for the `memory-management` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the memory-management leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Memoriq can be swapped without touching callers.
+2. **Validating the choice**: put Memoriq and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Memoriq here, so the honest first step is confirming the memory-management job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Memoriq is worth reading before adopting: its internals are not published. From the description it runs as a hosted memory service: it ingests a user's documents and chat history, indexes them (typically embedding-based retrieval) into a private store, and exposes recall so an application or agent can fetch relevant context at query time. Being vendor-hosted and closed-source, it is single-tenant/personal by design and offers no self-hostable backend.
-- Memoriq has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
-- Memoriq is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Marked beta, so the capability is real but Memoriq's interface may still move; pin the version you build against instead of tracking latest.
+- The implementation detail worth reading before adopting Memoriq is specific — its internals are not published. From the description it runs as a hosted memory service: it ingests a user's documents and chat history, indexes them (typically embedding-based retrieval) into a private store, and exposes recall so an application or agent can fetch relevant context at query time. Being vendor-hosted and closed-source, it is single-tenant/personal by design and offers no self-hostable backend — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Memoriq in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Memoriq is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Memoriq's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Memoriq, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for Memoriq describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- Memoriq is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Depending on Memoriq means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Memoriq describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Memoriq is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

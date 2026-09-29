@@ -67,21 +67,22 @@ pip install ragatouille
 
 ## Use Cases
 
-1. **Where it fits**: "You want to test whether late-interaction (ColBERT) beats dense embeddings on your corpus — often true for out-of-domain retrieval.
-2. **Adoption checkpoint**: compare RAGatouille against `sentence-transformers`, `cohere` on the same `vector-search` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating RAGatouille**: the vector-search call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since RAGatouille is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: RAGatouille's comparison set is `sentence-transformers`, `cohere`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, RAGatouille is a library that makes ColBERT late-interaction retrieval usable in any RAG pipeline in a few lines — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- RAGatouille overlaps `sentence-transformers`, `cohere` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- The documented integration path for RAGatouille runs through `llamaindex`, `langchain`, so the contract to test against is the one those adapters expose rather than the raw HTTP shape.
-- Marked beta, so the capability is real but RAGatouille's interface may still move; pin the version you build against instead of tracking latest.
+- Beyond the marketing, RAGatouille's own notes are the useful part: documents encode into per-token vector matrices stored in a compressed PLAID index; queries encode likewise and score via MaxSim (sum of per-query-token max similarities), preserving token-level matching that single-vector cosine loses — RAGatouille wraps indexing, search, and training loops around this.
+- Weighing RAGatouille against `sentence-transformers`, `cohere` comes down to one question: who runs the process when it breaks — you or the vendor.
+- RAGatouille documents a client surface through `llamaindex`, `langchain`, which fixes the expected request and response contract so you are not inferring it from examples.
+- Marked beta, so RAGatouille's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Depending on RAGatouille means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for RAGatouille describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- RAGatouille is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- There is no self-hosted path to RAGatouille, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for RAGatouille describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- RAGatouille is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

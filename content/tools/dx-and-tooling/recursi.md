@@ -67,21 +67,22 @@ Its internals are unpublished. From the description it maintains session-level c
 
 ## Use Cases
 
-1. **Where it fits**: You want an AI coding assistant that improves itself/its suggestions over a session for iterative development.
-2. **Adoption checkpoint**: validate Recursi on your own data for the `production-serving` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **What it does in a system**: Recursi sits on the production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Recursi.
+3. **Deciding at all**: nothing is catalogued against Recursi here, so the honest first step is confirming the production-serving job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Beyond the feature list, Recursi's own implementation notes give the specifics — its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build — which is where a capability claim either holds or does not for your workload.
-- Recursi has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
-- Recursi is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Recursi is beta, which means the interface is expected to churn: read the changelog before an upgrade, not after one breaks you.
+- What Recursi gives you that its headline description does not: its internals are unpublished. From the description it maintains session-level context and feedback signals and feeds them back into the model that produces completions, so behavior shifts across a session instead of each prompt being independent. As a closed-source, cloud-backed assistant the model provider runs server-side, which is also why there is no open-source or self-hostable build, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for Recursi in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Depending on Recursi means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Recursi's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Recursi, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for Recursi describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- Recursi is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Depending on Recursi means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Recursi describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Recursi is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

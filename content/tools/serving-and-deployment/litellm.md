@@ -64,20 +64,21 @@ Requests are made against LiteLLM's unified API; it translates them into the tar
 
 ## Use Cases
 
-1. **Where it fits**: You want a single OpenAI-compatible interface to call dozens of LLM providers, with built-in fallback and load balancing.
-2. **Adoption checkpoint**: validate LiteLLM on your own data for the `production-serving, prompt-management` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **What it does in a system**: LiteLLM sits on the production-serving, prompt-management leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put LiteLLM and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against LiteLLM here, so the honest first step is confirming the production-serving, prompt-management job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- In concrete terms, LiteLLM is a proxy and SDK for routing requests across many LLM providers — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- LiteLLM has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
-- Depending on LiteLLM means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- Capability is documented; behaviour is not. For LiteLLM, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- What LiteLLM gives you that its headline description does not: requests are made against LiteLLM's unified API; it translates them into the target provider's native format and can route, retry, or fall back across multiple configured providers, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for LiteLLM in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- LiteLLM is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure LiteLLM's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to LiteLLM, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for LiteLLM describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Depending on LiteLLM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for LiteLLM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

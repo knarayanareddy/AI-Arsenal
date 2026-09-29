@@ -46,7 +46,7 @@ A platform for benchmarking and comparing AI models' coding ability head-to-head
 
 ## Why It's in the Arsenal
 
-Code Arena earns a place in the Arsenal because it directly addresses a recurring decision point: you want to benchmark and compare AI models' coding ability head-to-head in a competitive format. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Code Arena rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ Models are pitted against shared coding tasks or against each other, with result
 
 ## Use Cases
 
-1. **Scenario**: you want to benchmark and compare AI models' coding ability head-to-head in a competitive format
-2. **Scenario**: you're choosing a code-generation model and want comparative signal beyond static leaderboards
-3. **Scenario where this is NOT the right fit**: you need a rigorous, reproducible benchmark suite for a research paper (use established academic coding benchmarks instead) — evaluate an alternative instead
+1. **What it does in a system**: Code Arena sits on the evaluation leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Code Arena and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Code Arena here, so the honest first step is confirming the evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want to benchmark and compare AI models' coding ability head-to-head in a competitive format
-- You're choosing a code-generation model and want comparative signal beyond static leaderboards
+- What Code Arena gives you that its headline description does not: models are pitted against shared coding tasks or against each other, with results aggregated into comparative rankings, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for Code Arena in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Code Arena is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so Code Arena's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need a rigorous, reproducible benchmark suite for a research paper (use established academic coding benchmarks instead)
-- You need an open-source or self-hostable evaluation harness
-
-_Verified for Code Arena: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- Depending on Code Arena means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Code Arena describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Code Arena is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

@@ -66,20 +66,21 @@ An orchestrating agent breaks the brief into subtasks (planning, scaffolding, co
 
 ## Use Cases
 
-1. **Where it fits**: You want an autonomous agent to scaffold and ship a full-stack web app from a natural-language brief.
-2. **Adoption checkpoint**: validate Manus on your own data for the `prototyping, orchestration` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the prototyping, orchestration leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Manus can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Manus is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Manus here, so the honest first step is confirming the prototyping, orchestration job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Manus is worth reading before adopting: an orchestrating agent breaks the brief into subtasks (planning, scaffolding, coding, deploying) and executes them largely autonomously with periodic checkpoints.
+- The implementation detail worth reading before adopting Manus is specific — an orchestrating agent breaks the brief into subtasks (planning, scaffolding, coding, deploying) and executes them largely autonomously with periodic checkpoints — and that is where a capability claim either survives contact with your data or does not.
 - No direct sibling is catalogued for Manus in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Manus is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- What this entry does not give you is behaviour under your load: measure Manus's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- Manus is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Manus's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Manus means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Manus's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- There is no self-hosted path to Manus, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Manus's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
 
 ## Integration Patterns
 

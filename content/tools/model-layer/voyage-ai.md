@@ -67,20 +67,22 @@ pip install voyageai
 
 ## Use Cases
 
-1. **Where it fits**: "Retrieval quality is your bottleneck — voyage-3 family models outrank OpenAI/Cohere embeddings on many domain benchmarks.
-2. **Adoption checkpoint**: compare Voyage AI against `cohere` on the same `production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: Voyage AI sits on the production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Voyage AI and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Voyage AI's comparison set is `cohere`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for Voyage AI is worth reading before adopting: contrastively trained embedding models with Matryoshka dimensionality and quantization options let you trade storage vs accuracy; rerankers apply cross-attention scoring on shortlists. APIs mirror the standard embed/rerank patterns so they slot into existing RAG pipelines.
-- Voyage AI's honest comparison set is `cohere`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
-- Pin the client library rather than the API: Voyage AI is reachable through `langchain`, `llamaindex`, `pinecone`, and those adapters change defaults — retrieval, batching, retries — without a major version bump.
-- Capability is documented; behaviour is not. For Voyage AI, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- What Voyage AI gives you that its headline description does not: contrastively trained embedding models with Matryoshka dimensionality and quantization options let you trade storage vs accuracy; rerankers apply cross-attention scoring on shortlists. APIs mirror the standard embed/rerank patterns so they slot into existing RAG pipelines, which is the part to check against your own pipeline before trusting the feature list.
+- Against `cohere`, the difference that decides this is deployment model and cost rather than the feature list, and Voyage AI sits at the hosted end of that axis.
+- Voyage AI documents a client surface through `langchain`, `llamaindex`, `pinecone`, which fixes the expected request and response contract so you are not inferring it from examples.
+- What this entry cannot give you is measured behaviour: measure Voyage AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Voyage AI, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Voyage AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Depending on Voyage AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Voyage AI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Voyage AI overlaps `cohere`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -39,7 +39,7 @@ verdict_rationale: A focused, fast-moving open-source library that makes RL fine
 status: active
 ---
 
-> **TL;DR:** ART (Agent Reinforcement Trainer) is an open-source library for RL fine-tuning of multi-step LLM agents using GRPO, with a "RULER" LLM-judge reward that removes most hand-built reward engineering — so you train on task outcomes, not labeled steps. Apache-2.0; recommended for outcome-measurable agent tasks.
+> **TL;DR:** OpenPipe ART covers the fine-tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -71,20 +71,22 @@ pip install openpipe-art
 
 ## Use Cases
 
-1. **Scenario**: improving a tool-using agent on a benchmark where success is checkable (task completed / not), using outcome reward instead of labeled steps
-2. **Scenario**: bootstrapping a reward from an LLM judge (RULER) when writing a precise reward function for a fuzzy task would be impractical
+1. **Integrating OpenPipe ART**: the fine-tuning call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put OpenPipe ART and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: OpenPipe ART's comparison set is `trl`, `unsloth`, `llamafactory`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Makes RL fine-tuning of agents approachable by cutting the biggest cost — reward engineering — via an LLM judge
-- Optimizes real task outcomes over trajectories, which SFT cannot directly do
-- Open source (Apache-2.0), actively developed, with a hosted option for scaling
+- Beyond the marketing, OpenPipe ART's own notes are the useful part: you define an agent task and let it roll out trajectories; ART groups sampled trajectories and applies GRPO to update the policy toward higher-reward behavior. Rather than requiring a numeric reward function, RULER prompts an LLM judge to rank/score trajectories against the task goal, and that signal drives the RL update — turning "did the agent succeed?" into a usable training reward.
+- OpenPipe ART overlaps `trl`, `unsloth`, `llamafactory` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- OpenPipe ART documents a client surface through `trl`, which fixes the expected request and response contract so you are not inferring it from examples.
+- Marked beta, so OpenPipe ART's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- RL fine-tuning is complex and compute-hungry — unjustified for single-turn tasks solvable by prompting or SFT
-- Reward quality is everything: a weak or gameable LLM judge will steer the model toward reward hacking
-- Fast-moving beta: APIs and best practices change, so pin versions and expect iteration
+- Depending on OpenPipe ART means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for OpenPipe ART describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- OpenPipe ART is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

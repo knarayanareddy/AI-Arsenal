@@ -67,20 +67,22 @@ pip install deepchecks
 
 ## Use Cases
 
-1. **Where it fits**: "You want opinionated, prebuilt validation suites (train-test leakage, drift, integrity) that run like unit tests before deploy.
-2. **Adoption checkpoint**: compare Deepchecks against `evidently`, `ragas-rag-evaluation`, `deepeval` on the same `evaluation, monitoring` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: Deepchecks sits on the evaluation, monitoring leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Deepchecks.
+3. **Choosing between candidates**: Deepchecks's comparison set is `evidently`, `ragas-rag-evaluation`, `deepeval`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Beyond the feature list, Deepchecks's own implementation notes give the specifics — each check computes a metric plus a condition (pass/fail threshold) over datasets/models; suites aggregate results into HTML/JSON reports. The LLM product logs interactions, runs property estimators and judge models over them, and supports human annotation queues for calibration — which is where a capability claim either holds or does not for your workload.
-- Against `evidently`, `ragas-rag-evaluation`, `deepeval`, the comparison that decides this is deployment model and operational cost rather than the feature list; Deepchecks sits at the hosted-or-embedded end of that axis.
-- Deepchecks is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Deepchecks all need testing on your own traffic shape.
+- What Deepchecks gives you that its headline description does not: each check computes a metric plus a condition (pass/fail threshold) over datasets/models; suites aggregate results into HTML/JSON reports. The LLM product logs interactions, runs property estimators and judge models over them, and supports human annotation queues for calibration, which is the part to check against your own pipeline before trusting the feature list.
+- Deepchecks overlaps `evidently`, `ragas-rag-evaluation`, `deepeval` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Depending on Deepchecks means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Deepchecks's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Deepchecks, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for Deepchecks describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Depending on Deepchecks means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Deepchecks describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Deepchecks overlaps `evidently`, `ragas-rag-evaluation`, `deepeval`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

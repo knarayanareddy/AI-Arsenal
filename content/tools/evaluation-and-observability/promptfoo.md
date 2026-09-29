@@ -64,20 +64,21 @@ Test cases (prompt + assertions) are defined in config files; the CLI runs them 
 
 ## Use Cases
 
-1. **Where it fits**: You want CLI-driven, CI-friendly regression testing for prompts and LLM outputs.
-2. **Adoption checkpoint**: validate promptfoo on your own data for the `evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **What it does in a system**: promptfoo sits on the evaluation leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on promptfoo.
+3. **Deciding at all**: nothing is catalogued against promptfoo here, so the honest first step is confirming the evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Beyond the feature list, promptfoo's own implementation notes give the specifics — test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating — which is where a capability claim either holds or does not for your workload.
-- Nothing else in this phase is catalogued against promptfoo, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
-- promptfoo is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for promptfoo all need testing on your own traffic shape.
+- What promptfoo gives you that its headline description does not: test cases (prompt + assertions) are defined in config files; the CLI runs them against one or more target models and reports pass/fail results suitable for CI gating, which is the part to check against your own pipeline before trusting the feature list.
+- No direct sibling is catalogued for promptfoo in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- promptfoo is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure promptfoo's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on promptfoo means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for promptfoo describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for promptfoo describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

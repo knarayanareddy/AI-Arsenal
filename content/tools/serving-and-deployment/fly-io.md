@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Application hosting platform with global machines and GPU options for AI services. Usage-based hosting pricing. Best for small globally deployed AI APIs.
+> **TL;DR:** Fly.io, for the deployment, production-serving job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -45,7 +45,7 @@ An application hosting platform that runs apps as lightweight VMs ('Fly Machines
 
 ## Why It's in the Arsenal
 
-Fly.io earns a place in the Arsenal because it directly addresses a recurring decision point: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Fly.io rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://fly.io/docs/ for the authentication
 
 ## Use Cases
 
-1. **Scenario**: you want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps
-2. **Scenario**: you need GPU machines for moderate workloads without managing a full Kubernetes cluster
-3. **Scenario where this is NOT the right fit**: you need large-scale, multi-GPU distributed training or serving (purpose-built ML platforms scale better there) — evaluate an alternative instead
+1. **What it does in a system**: Fly.io sits on the deployment, production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Fly.io and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Fly.io's comparison set is `bentoml`, `modal`, `railway`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want fast global deployment of an app or lightweight inference service close to users, with minimal DevOps
-- You need GPU machines for moderate workloads without managing a full Kubernetes cluster
+- What Fly.io gives you that its headline description does not: applications are packaged (often via Dockerfile) and run as Firecracker microVMs distributed across Fly's edge regions, with automatic routing to the nearest healthy instance, which is the part to check against your own pipeline before trusting the feature list.
+- Fly.io overlaps `bentoml`, `modal`, `railway`, `replicate` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Fly.io is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Fly.io's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need large-scale, multi-GPU distributed training or serving (purpose-built ML platforms scale better there)
-- You require deep enterprise compliance certifications that a smaller cloud provider may not yet offer
+- Depending on Fly.io means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Fly.io's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Fly.io overlaps `bentoml`, `modal`, `railway`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

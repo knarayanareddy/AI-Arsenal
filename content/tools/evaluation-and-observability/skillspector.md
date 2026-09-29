@@ -41,7 +41,7 @@ buzz_sources:
   - {"source":"github-trending","url":"https://github.com/trending?since=monthly","date":"2026-07-07","description":"On GitHub monthly trending; 12.2k stars"}
 ---
 
-> **TL;DR:** NVIDIA's open-source scanner for AI agent skills — detects prompt-injection payloads, malicious instructions, and dangerous script patterns in skill packs before you install them. Free, Apache-2.0. Best as a CI gate on third-party skills; not a substitute for reading them.
+> **TL;DR:** SkillSpector, for the security-and-guardrails job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -71,18 +71,22 @@ SkillSpector parses a skill package (instruction Markdown plus any bundled scrip
 
 ## Use Cases
 
-1. **Scenario**: before installing a community skill pack from a marketplace, scan it and review flagged files instead of trusting the README
-2. **Scenario**: an internal skill library gets a CI job that scans every skill PR, the same way dependency scanners gate package updates
+1. **Where it sits**: on the security-and-guardrails leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so SkillSpector can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since SkillSpector is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against SkillSpector here, so the honest first step is confirming the security-and-guardrails job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Addresses a genuinely new, genuinely dangerous surface — skills execute with the agent's (your) permissions
-- Org-backed (NVIDIA), open-source, and actively developed (12.2k stars as of 2026-07-07)
+- The implementation detail worth reading before adopting SkillSpector is specific — skillSpector parses a skill package (instruction Markdown plus any bundled scripts/resources) and runs detection passes over both layers: content analysis for instruction-level attacks (injections, deceptive directives) and static analysis for script-level risks. Findings are reported per file with the matched pattern, so a human can adjudicate rather than trusting a binary verdict — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for SkillSpector in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- SkillSpector is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so SkillSpector's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Pattern-based detection has unknown false-negative rates against novel attacks; it complements, not replaces, reading third-party skills
-- Young project — coverage claims are the project's own and unbenchmarked by third parties so far
+- There is no self-hosted path to SkillSpector, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for SkillSpector describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- SkillSpector is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

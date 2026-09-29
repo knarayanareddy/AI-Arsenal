@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Meta safety model family for classifying and moderating LLM inputs and outputs. Open source or free to start. Best for LLM safety classification.
+> **TL;DR:** the security-and-guardrails entry for Llama Guard. Meta safety model family for classifying and moderating LLM inputs and outputs — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://www.llama.com/docs/model-cards-and-
 
 ## Use Cases
 
-1. **Where it fits**: You need an open-weight safety classifier to moderate LLM inputs/outputs and can self-host the model.
-2. **Adoption checkpoint**: compare Llama Guard against `guardrails-ai`, `nemo-guardrails`, `rebuff` on the same `security-and-guardrails` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating Llama Guard**: the security-and-guardrails call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Llama Guard and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Llama Guard's comparison set is `guardrails-ai`, `nemo-guardrails`, `rebuff`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Llama Guard is a meta safety model family for classifying and moderating LLM inputs and outputs — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Against `guardrails-ai`, `nemo-guardrails`, `rebuff`, the comparison that decides this is deployment model and operational cost rather than the feature list; Llama Guard sits at the hosted-or-embedded end of that axis.
-- Llama Guard is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- What this entry does not give you is behaviour under your load: measure Llama Guard's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- Beyond the marketing, Llama Guard's own notes are the useful part: runs as a separate classifier model alongside the primary LLM; inputs and/or outputs are passed through Llama Guard before being accepted, flagging or blocking unsafe content.
+- Llama Guard's honest comparison set is `guardrails-ai`, `nemo-guardrails`, `rebuff`; what separates them is rarely capability, it is what you must operate.
+- Depending on Llama Guard means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Llama Guard's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Llama Guard means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Llama Guard describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Llama Guard, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Llama Guard describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Llama Guard overlaps `guardrails-ai`, `nemo-guardrails`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -66,21 +66,22 @@ Logs emitted by individual serverless function invocations are streamed to a cen
 
 ## Use Cases
 
-1. **Where it fits**: You run serverless AI workloads and need real-time log aggregation purpose-built for that debugging model.
-2. **Adoption checkpoint**: validate Superlog on your own data for the `monitoring, tracing` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Integrating Superlog**: the monitoring, tracing call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Superlog and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Superlog here, so the honest first step is confirming the monitoring, tracing job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- In concrete terms, Superlog is a real-time log aggregation platform designed for serverless debugging — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
+- Beyond the marketing, Superlog's own notes are the useful part: logs emitted by individual serverless function invocations are streamed to a central aggregation backend that correlates them by request/session for unified viewing.
 - No direct sibling is catalogued for Superlog in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Superlog is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Maturity here is beta, so treat Superlog's API surface as something to pin and test rather than something to track.
+- Depending on Superlog means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- Marked beta, so Superlog's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Depending on Superlog means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Superlog describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- Superlog is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- There is no self-hosted path to Superlog, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Superlog describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Superlog is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

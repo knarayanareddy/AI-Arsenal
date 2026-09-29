@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Reader endpoint for converting web pages into LLM-friendly text and Markdown. Free to start; check current Jina pricing/limits. Best for quick webpage-to-text conversion.
+> **TL;DR:** Jina AI Reader, for the web-scraping job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -68,20 +68,22 @@ Follow the official documentation at https://jina.ai/reader/ for the authenticat
 
 ## Use Cases
 
-1. **Where it fits**: You need a quick, no-setup way to convert a single URL into LLM-friendly text via a simple API call.
-2. **Adoption checkpoint**: compare Jina AI Reader against `crawl4ai-tool`, `firecrawl-tool`, `playwright` on the same `web-scraping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: Jina AI Reader sits on the web-scraping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Jina AI Reader and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Jina AI Reader's comparison set is `crawl4ai-tool`, `firecrawl-tool`, `playwright`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Jina AI Reader is a reader endpoint for converting web pages into LLM-friendly text and Markdown — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Jina AI Reader overlaps `crawl4ai-tool`, `firecrawl-tool`, `playwright`, `puppeteer` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- Jina AI Reader is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Jina AI Reader, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- What Jina AI Reader gives you that its headline description does not: a request to r.jina.ai/{url} triggers server-side fetching and content extraction, returning cleaned text/Markdown directly in the response, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing Jina AI Reader against `crawl4ai-tool`, `firecrawl-tool`, `playwright`, `puppeteer` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Jina AI Reader is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Jina AI Reader's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Jina AI Reader means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Jina AI Reader describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- Documentation for Jina AI Reader describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Jina AI Reader overlaps `crawl4ai-tool`, `firecrawl-tool`, `playwright`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

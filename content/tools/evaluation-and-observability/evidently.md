@@ -67,20 +67,22 @@ pip install evidently
 
 ## Use Cases
 
-1. **Where it fits**: "You monitor both classic ML (drift, data quality) and LLM outputs (judges, RAG metrics) and want one framework/report format.
-2. **Adoption checkpoint**: compare Evidently against `deepchecks`, `phoenix`, `ragas-rag-evaluation` on the same `evaluation, monitoring` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the evaluation, monitoring leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Evidently can be swapped without touching callers.
+2. **Validating the choice**: put Evidently and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Evidently's comparison set is `deepchecks`, `phoenix`, `ragas-rag-evaluation`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Evidently is an open-source evaluation and monitoring for ML and LLM systems: 100+ metrics from data drift to LLM-as-judge — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Evidently's honest comparison set is `deepchecks`, `phoenix`, `ragas-rag-evaluation`. What separates them is rarely the feature list — it is what you must operate, and what happens when that dependency is unavailable.
-- Evidently is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Evidently, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting Evidently is specific — metrics compute over pandas-friendly datasets (reference vs current for drift); LLM descriptors run per-row evaluators including judge prompts; results serialize as JSON/HTML reports or pass/fail test suites, making evaluation a pipeline artifact rather than a dashboard-only activity — and that is where a capability claim either survives contact with your data or does not.
+- Against `deepchecks`, `phoenix`, `ragas-rag-evaluation`, the difference that decides this is deployment model and cost rather than the feature list, and Evidently sits at the hosted end of that axis.
+- Depending on Evidently means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Evidently's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Evidently means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Evidently describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Evidently, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Evidently describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Evidently overlaps `deepchecks`, `phoenix`, `ragas-rag-evaluation`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

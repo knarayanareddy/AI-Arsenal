@@ -64,20 +64,22 @@ Outlines builds a finite-state machine (or equivalent) from the target schema/gr
 
 ## Use Cases
 
-1. **Where it fits**: You need to guarantee an LLM's output matches a JSON schema, regex, or grammar at generation time (not just via prompting).
-2. **Adoption checkpoint**: compare Outlines against `guidance`, `instructor`, `pydantic-ai-tool` on the same `structured-output` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: Outlines sits on the structured-output leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Outlines is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Outlines's comparison set is `guidance`, `instructor`, `pydantic-ai-tool`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for Outlines is worth reading before adopting: outlines builds a finite-state machine (or equivalent) from the target schema/grammar and masks the model's logits at each generation step so only valid next tokens can be sampled.
-- Outlines overlaps `guidance`, `instructor`, `pydantic-ai-tool` in this phase. Read the alternatives' entries before choosing: the feature comparison is usually closer than the deployment and cost comparison, and the latter is what you inherit.
-- Outlines is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Outlines all need testing on your own traffic shape.
+- What Outlines gives you that its headline description does not: outlines builds a finite-state machine (or equivalent) from the target schema/grammar and masks the model's logits at each generation step so only valid next tokens can be sampled, which is the part to check against your own pipeline before trusting the feature list.
+- Against `guidance`, `instructor`, `pydantic-ai-tool`, the difference that decides this is deployment model and cost rather than the feature list, and Outlines sits at the hosted end of that axis.
+- Outlines is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Outlines's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Outlines means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Outlines describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Outlines, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Outlines describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Outlines overlaps `guidance`, `instructor`, `pydantic-ai-tool`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

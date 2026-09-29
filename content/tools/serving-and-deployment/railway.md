@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes. Usage-based cloud pricing. Best for quick AI app deployment.
+> **TL;DR:** the deployment, production-serving entry for Railway. Developer-friendly cloud deployment platform for apps, workers, databases, and prototypes — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A developer-friendly cloud platform for deploying apps, background workers, and 
 
 ## Why It's in the Arsenal
 
-Railway earns a place in the Arsenal because it directly addresses a recurring decision point: you want a Heroku-like developer experience to deploy an app, worker, and database together with minimal config. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Railway is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://railway.app for the authentication 
 
 ## Use Cases
 
-1. **Scenario**: you want a Heroku-like developer experience to deploy an app, worker, and database together with minimal config
-2. **Scenario**: you're shipping a small-to-medium production service and value speed of setup over fine-grained infra control
-3. **Scenario where this is NOT the right fit**: you need large-scale GPU training or serving infrastructure (use Modal, BentoML, or a cloud ML platform instead) — evaluate an alternative instead
+1. **What it does in a system**: Railway sits on the deployment, production-serving leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Railway.
+3. **Choosing between candidates**: Railway's comparison set is `bentoml`, `fly-io`, `modal`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want a Heroku-like developer experience to deploy an app, worker, and database together with minimal config
-- You're shipping a small-to-medium production service and value speed of setup over fine-grained infra control
+- What Railway gives you that its headline description does not: connects to a Git repository (or Docker image) and builds/deploys it automatically, provisioning any declared databases or services alongside it in the same project, which is the part to check against your own pipeline before trusting the feature list.
+- Against `bentoml`, `fly-io`, `modal`, `replicate`, the difference that decides this is deployment model and cost rather than the feature list, and Railway sits at the hosted end of that axis.
+- Railway is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Railway's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need large-scale GPU training or serving infrastructure (use Modal, BentoML, or a cloud ML platform instead)
-- You require multi-region, enterprise-grade SLAs that smaller PaaS providers may not yet guarantee
+- Depending on Railway means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Railway's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Railway overlaps `bentoml`, `fly-io`, `modal`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

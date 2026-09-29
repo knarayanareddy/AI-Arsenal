@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows. Paid commercial license. Best for scriptable expert annotation.
+> **TL;DR:** the data-labeling entry for Prodigy. Scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://prodi.gy/docs/ for the authenticati
 
 ## Use Cases
 
-1. **Where it fits**: You want a scriptable, model-in-the-loop annotation tool to actively improve labeling efficiency for NLP tasks.
-2. **Adoption checkpoint**: compare Prodigy against `argilla`, `label-studio`, `scale-ai` on the same `data-labeling` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the data-labeling leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Prodigy can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Prodigy.
+3. **Choosing between candidates**: Prodigy's comparison set is `argilla`, `label-studio`, `scale-ai`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Prodigy is a scriptable annotation tool for NLP, data labeling, and model-in-the-loop workflows — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Against `argilla`, `label-studio`, `scale-ai`, the comparison that decides this is deployment model and operational cost rather than the feature list; Prodigy sits at the hosted-or-embedded end of that axis.
-- Prodigy is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Prodigy all need testing on your own traffic shape.
+- The implementation detail worth reading before adopting Prodigy is specific — a recipe script controls what's shown to the annotator next (often guided by a model's uncertainty), and annotated examples can be fed back to retrain that model iteratively — and that is where a capability claim either survives contact with your data or does not.
+- Against `argilla`, `label-studio`, `scale-ai`, the difference that decides this is deployment model and cost rather than the feature list, and Prodigy sits at the hosted end of that axis.
+- Prodigy is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Prodigy's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Prodigy, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Prodigy's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- There is no self-hosted path to Prodigy, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Prodigy's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Prodigy overlaps `argilla`, `label-studio`, `scale-ai`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ A model-serving convenience tool from the BentoML team: one command starts a cur
 
 ## Why It's in the Arsenal
 
-OpenLLM earns a place in the Arsenal because it directly addresses a recurring decision point: you want `openllm serve <model>` simplicity with production-grade vLLM serving underneath. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+OpenLLM is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://github.com/bentoml/OpenLLM#readme f
 
 ## Use Cases
 
-1. **Scenario**: you want `openllm serve <model>` simplicity with production-grade vLLM serving underneath
-2. **Scenario**: you're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service
-3. **Scenario where this is NOT the right fit**: you need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer — evaluate an alternative instead
+1. **Where it sits**: on the production-serving leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so OpenLLM can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since OpenLLM is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: OpenLLM's comparison set is `vllm`, `ollama`, `text-generation-inference`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want `openllm serve <model>` simplicity with production-grade vLLM serving underneath
-- You're standardizing on the BentoML ecosystem and want LLMs deployable like any other Bento service
+- The implementation detail worth reading before adopting OpenLLM is specific — openLLM maintains a repo of model recipes (engine config, quantization, prompts); openllm serve pulls the recipe, launches a vLLM-backed BentoML service, and exposes OpenAI-style routes so existing clients work unchanged — and that is where a capability claim either survives contact with your data or does not.
+- Weighing OpenLLM against `vllm`, `ollama`, `text-generation-inference` comes down to one question: who runs the process when it breaks — you or the vendor.
+- OpenLLM documents a client surface through `bentoml`, `vllm`, which fixes the expected request and response contract so you are not inferring it from examples.
+- Marked beta, so OpenLLM's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need bleeding-edge engine features immediately — using vLLM directly removes a wrapper layer
-- Local laptop experimentation without GPUs; Ollama's quantized-first workflow fits better
-
-- _Verified for OpenLLM: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- There is no self-hosted path to OpenLLM, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for OpenLLM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- OpenLLM is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

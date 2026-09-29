@@ -46,7 +46,7 @@ An open-source alternative to GitHub Copilot for VS Code and JetBrains: chat, ta
 
 ## Why It's in the Arsenal
 
-Continue earns a place in the Arsenal because it directly addresses a recurring decision point: you want chat, autocomplete, and edit-in-place in the IDE with full control over which models power each. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Continue rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ code --install-extension Continue.continue
 
 ## Use Cases
 
-1. **Scenario**: you want chat, autocomplete, and edit-in-place in the IDE with full control over which models power each
-2. **Scenario**: you need local/self-hosted models (Ollama, vLLM) behind the same UX as hosted ones — e.g. for air-gapped teams
-3. **Scenario where this is NOT the right fit**: you want maximum out-of-the-box autonomy; Continue is assistant-first, with agent mode newer than Cline's — evaluate an alternative instead
+1. **What it does in a system**: Continue sits on the prototyping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Continue is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Continue's comparison set is `cline`, `github-copilot`, `tabby-ml`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want chat, autocomplete, and edit-in-place in the IDE with full control over which models power each
-- You need local/self-hosted models (Ollama, vLLM) behind the same UX as hosted ones — e.g. for air-gapped teams
+- What Continue gives you that its headline description does not: continue routes each mode (autocomplete vs chat vs edit) to independently configured models, assembles context from providers (files, docs, terminal, codebase index), and applies edits as diffs in the editor; a local index powers codebase-wide retrieval, which is the part to check against your own pipeline before trusting the feature list.
+- Continue's honest comparison set is `cline`, `github-copilot`, `tabby-ml`; what separates them is rarely capability, it is what you must operate.
+- Continue is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure Continue's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You want maximum out-of-the-box autonomy; Continue is assistant-first, with agent mode newer than Cline's
-- You don't want to spend any time on configuration — its flexibility comes with more knobs than Copilot
-
-- _Verified for Continue: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Continue means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Continue describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Continue overlaps `cline`, `github-copilot`, `tabby-ml`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

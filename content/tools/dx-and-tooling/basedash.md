@@ -66,20 +66,21 @@ Natural-language queries are translated into underlying data queries against con
 
 ## Use Cases
 
-1. **Where it fits**: You want to generate dashboards and reports from natural-language queries without building BI infrastructure.
-2. **Adoption checkpoint**: validate Basedash on your own data for the `structured-output` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the structured-output leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Basedash can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Basedash is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Basedash here, so the honest first step is confirming the structured-output job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- In concrete terms, Basedash is an aI-native platform for generating dashboards, reports, and insights from natural-language queries — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Basedash has no catalogued alternative in this phase, which makes it the reference point for the job rather than a comparison — verify the gap is real before treating it as a single option.
-- Basedash is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- Capability is documented; behaviour is not. For Basedash, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting Basedash is specific — natural-language queries are translated into underlying data queries against connected sources, with results rendered as dashboards or reports automatically — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Basedash in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Basedash is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Basedash's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
 - Depending on Basedash means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Basedash's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Basedash's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
 
 ## Integration Patterns
 

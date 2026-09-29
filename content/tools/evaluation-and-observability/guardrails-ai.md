@@ -43,7 +43,7 @@ An open-source framework for validating, correcting, or constraining LLM outputs
 
 ## Why It's in the Arsenal
 
-Guardrails AI earns a place in the Arsenal because it directly addresses a recurring decision point: you need to validate, correct, or constrain LLM outputs against custom rules (PII, format, toxicity) before they reach users. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for Guardrails AI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -64,19 +64,22 @@ A 'guard' wraps an LLM call with a configured set of validators; failing outputs
 
 ## Use Cases
 
-1. **Scenario**: you need to validate, correct, or constrain LLM outputs against custom rules (PII, format, toxicity) before they reach users
-2. **Scenario**: you want an open-source, composable validator framework rather than building checks from scratch
-3. **Scenario where this is NOT the right fit**: your structured-output need is purely schema validation with retries (Instructor/Outlines may be simpler and faster) — evaluate an alternative instead
+1. **Integrating Guardrails AI**: the security-and-guardrails, structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Guardrails AI.
+3. **Choosing between candidates**: Guardrails AI's comparison set is `llamaguard`, `nemo-guardrails`, `rebuff`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You need to validate, correct, or constrain LLM outputs against custom rules (PII, format, toxicity) before they reach users
-- You want an open-source, composable validator framework rather than building checks from scratch
+- Beyond the marketing, Guardrails AI's own notes are the useful part: a 'guard' wraps an LLM call with a configured set of validators; failing outputs can be rejected, corrected via re-prompting, or flagged depending on configuration.
+- Weighing Guardrails AI against `llamaguard`, `nemo-guardrails`, `rebuff` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Guardrails AI is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Guardrails AI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Your structured-output need is purely schema validation with retries (Instructor/Outlines may be simpler and faster)
-- You need guardrails enforced at the infrastructure/gateway level across many apps (consider NeMo Guardrails or a gateway like Portkey)
+- Depending on Guardrails AI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Guardrails AI describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Guardrails AI overlaps `llamaguard`, `nemo-guardrails`, `rebuff`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

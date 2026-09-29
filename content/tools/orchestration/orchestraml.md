@@ -46,7 +46,7 @@ A platform that uses AI agents to automate steps of a classic ML workflow — da
 
 ## Why It's in the Arsenal
 
-OrchestraML earns a place in the Arsenal because it directly addresses a recurring decision point: you want AI agents to automate routine ML pipeline steps (data prep through deployment) end to end. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+OrchestraML appears here as a reference point for the orchestration, fine-tuning job. The useful question is what it would cost you to operate, which the sections below try to answer.
 
 ## Key Features
 
@@ -66,21 +66,22 @@ An orchestrating layer of agents executes and chains together ML lifecycle steps
 
 ## Use Cases
 
-1. **Scenario**: you want AI agents to automate routine ML pipeline steps (data prep through deployment) end to end
-2. **Scenario**: you are exploring agent-driven AutoML-style workflows rather than hand-coding each pipeline stage
-3. **Scenario where this is NOT the right fit**: you need deterministic, auditable pipeline steps for regulated ML workflows (prefer Airflow/Dagster/Prefect) — evaluate an alternative instead
+1. **Where it sits**: on the orchestration, fine-tuning leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so OrchestraML can be swapped without touching callers.
+2. **Validating the choice**: put OrchestraML and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against OrchestraML here, so the honest first step is confirming the orchestration, fine-tuning job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- You want AI agents to automate routine ML pipeline steps (data prep through deployment) end to end
-- You are exploring agent-driven AutoML-style workflows rather than hand-coding each pipeline stage
+- The implementation detail worth reading before adopting OrchestraML is specific — an orchestrating layer of agents executes and chains together ML lifecycle steps (data prep, training, evaluation, deployment) based on a higher-level goal description — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for OrchestraML in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- OrchestraML is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so OrchestraML's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You need deterministic, auditable pipeline steps for regulated ML workflows (prefer Airflow/Dagster/Prefect)
-- You need an open-source or self-hostable orchestration platform
-
-_Verified for OrchestraML: stars, license and last-commit come from the GitHub API as of 2026-06-30. The best_when/avoid_when judgement above rests on the vendor's own description and has not been corroborated against third-party production usage reports, so the adoption advice should be treated as unconfirmed until you exercise it yourself._
+- There is no self-hosted path to OrchestraML, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for OrchestraML describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- OrchestraML is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

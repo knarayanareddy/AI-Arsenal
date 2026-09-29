@@ -66,21 +66,22 @@ Model outputs are rendered through a visual interface with dynamic overlays ('Pu
 
 ## Use Cases
 
-1. **Where it fits**: You want a visual way to inspect and understand model output patterns rather than reading raw logs.
-2. **Adoption checkpoint**: validate Monako Glass on your own data for the `monitoring, evaluation` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the monitoring, evaluation leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Monako Glass can be swapped without touching callers.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Monako Glass is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Deciding at all**: nothing is catalogued against Monako Glass here, so the honest first step is confirming the monitoring, evaluation job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- Beyond the feature list, Monako Glass's own implementation notes give the specifics — model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure — which is where a capability claim either holds or does not for your workload.
-- Nothing else in this phase is catalogued against Monako Glass, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
-- Monako Glass is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Maturity here is beta, so treat Monako Glass's API surface as something to pin and test rather than something to track.
+- The implementation detail worth reading before adopting Monako Glass is specific — model outputs are rendered through a visual interface with dynamic overlays ('Pulse Rings') intended to surface patterns that raw logs would obscure — and that is where a capability claim either survives contact with your data or does not.
+- No direct sibling is catalogued for Monako Glass in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Monako Glass is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so Monako Glass's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
 - Depending on Monako Glass means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Monako Glass's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
-- Monako Glass is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- Monako Glass's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Monako Glass is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

@@ -46,7 +46,7 @@ OpenAI's terminal coding agent: a Rust CLI that plans and applies code changes w
 
 ## Why It's in the Arsenal
 
-OpenAI Codex CLI earns a place in the Arsenal because it directly addresses a recurring decision point: you are on ChatGPT/OpenAI plans and want a terminal agent whose usage is covered by your existing subscription. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+The case for OpenAI Codex CLI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://developers.openai.com/codex/cli for
 
 ## Use Cases
 
-1. **Scenario**: you are on ChatGPT/OpenAI plans and want a terminal agent whose usage is covered by your existing subscription
-2. **Scenario**: you want OS-level sandboxing of agent actions (seatbelt/landlock) rather than approval prompts alone
-3. **Scenario where this is NOT the right fit**: you need model choice beyond OpenAI models without adapters — evaluate an alternative instead
+1. **What it does in a system**: OpenAI Codex CLI sits on the prototyping leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put OpenAI Codex CLI and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: OpenAI Codex CLI's comparison set is `claude-code`, `gemini-cli`, `aider`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You are on ChatGPT/OpenAI plans and want a terminal agent whose usage is covered by your existing subscription
-- You want OS-level sandboxing of agent actions (seatbelt/landlock) rather than approval prompts alone
+- What OpenAI Codex CLI gives you that its headline description does not: the CLI drives an agent loop against OpenAI models; proposed shell commands and patches execute inside a sandbox with network disabled by default, and the autonomy level controls which actions require human approval, which is the part to check against your own pipeline before trusting the feature list.
+- OpenAI Codex CLI's honest comparison set is `claude-code`, `gemini-cli`, `aider`; what separates them is rarely capability, it is what you must operate.
+- OpenAI Codex CLI is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure OpenAI Codex CLI's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You need model choice beyond OpenAI models without adapters
-- You want a mature plugin/skill ecosystem — its extension surface is younger than Claude Code's
-
-- _Verified for OpenAI Codex CLI: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on OpenAI Codex CLI means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- OpenAI Codex CLI's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where OpenAI Codex CLI overlaps `claude-code`, `gemini-cli`, `aider`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

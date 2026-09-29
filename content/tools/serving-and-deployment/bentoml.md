@@ -64,20 +64,22 @@ A Bento bundles model weights, a Python service definition, and dependencies int
 
 ## Use Cases
 
-1. **Where it fits**: You need to package a model plus its preprocessing/postprocessing code into a single deployable, versioned artifact.
-2. **Adoption checkpoint**: compare BentoML against `fly-io`, `modal`, `railway` on the same `deployment, production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating BentoML**: the deployment, production-serving call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put BentoML and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: BentoML's comparison set is `fly-io`, `modal`, `railway`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, BentoML is a framework for packaging, deploying, and scaling AI model services — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- Against `fly-io`, `modal`, `railway`, `replicate`, the comparison that decides this is deployment model and operational cost rather than the feature list; BentoML sits at the hosted-or-embedded end of that axis.
-- Depending on BentoML means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- What this entry does not give you is behaviour under your load: measure BentoML's end-to-end latency and its error rate when the upstream dependency is degraded before you trust it in production.
+- Beyond the marketing, BentoML's own notes are the useful part: a Bento bundles model weights, a Python service definition, and dependencies into a reproducible build; BentoML then containerizes and serves that build behind a standard inference API.
+- BentoML overlaps `fly-io`, `modal`, `railway`, `replicate` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- BentoML is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- What this entry cannot give you is measured behaviour: measure BentoML's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to BentoML, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for BentoML describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to BentoML, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for BentoML describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where BentoML overlaps `fly-io`, `modal`, `railway`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

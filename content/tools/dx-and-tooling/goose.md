@@ -46,7 +46,7 @@ An open-source AI agent from Block (Square) that runs locally as a CLI or deskto
 
 ## Why It's in the Arsenal
 
-Goose earns a place in the Arsenal because it directly addresses a recurring decision point: you want an open-source agent that treats MCP as the native extension mechanism — every capability is an MCP server. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Goose is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -67,21 +67,22 @@ goose configure && goose session
 
 ## Use Cases
 
-1. **Scenario**: you want an open-source agent that treats MCP as the native extension mechanism — every capability is an MCP server
-2. **Scenario**: you need both CLI and desktop-app form factors over the same agent, with any LLM provider
-3. **Scenario where this is NOT the right fit**: you want the most battle-tested coding-specific loop; Claude Code and aider have deeper coding refinement — evaluate an alternative instead
+1. **What it does in a system**: Goose sits on the prototyping, orchestration leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Goose.
+3. **Choosing between candidates**: Goose's comparison set is `claude-code`, `aider`, `openai-codex-cli`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want an open-source agent that treats MCP as the native extension mechanism — every capability is an MCP server
-- You need both CLI and desktop-app form factors over the same agent, with any LLM provider
+- What Goose gives you that its headline description does not: a Rust agent core maintains the task loop and tool registry; extensions are MCP servers (developer tools, browser, memory, custom APIs), and the same core powers the CLI and the desktop app so workflows transfer between them, which is the part to check against your own pipeline before trusting the feature list.
+- Goose overlaps `claude-code`, `aider`, `openai-codex-cli` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Goose is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so Goose's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- You want the most battle-tested coding-specific loop; Claude Code and aider have deeper coding refinement
-- Environments where running an agent with broad local permissions is unacceptable without extra sandboxing
-
-- _Verified for Goose: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on Goose means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for Goose describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Goose is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

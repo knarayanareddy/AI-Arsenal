@@ -67,20 +67,21 @@ Its internals and weights are not published. Kimi K2.5 is consumed as a hosted A
 
 ## Use Cases
 
-1. **Where it fits**: You need a capable hosted reasoning/analysis assistant and are comfortable with a closed-source provider.
-2. **Adoption checkpoint**: validate Kimi K2.5 on your own data for the `production-serving, orchestration` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Integrating Kimi K2.5**: the production-serving, orchestration call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Kimi K2.5 and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Deciding at all**: nothing is catalogued against Kimi K2.5 here, so the honest first step is confirming the production-serving, orchestration job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for Kimi K2.5 is worth reading before adopting: its internals and weights are not published. Kimi K2.5 is consumed as a hosted API: a prompt (optionally a long context window) is sent to Moonshot AI's infrastructure, inference runs on the provider's side, and tokens are returned — there is no local model or GPU footprint. This is why it cannot be self-hosted or fine-tuned and why availability tracks the vendor's API.
-- Nothing else in this phase is catalogued against Kimi K2.5, so the honest framing is that this is the entry to read first for the job, and that the absence of an alternative is a gap in the catalog rather than a verdict on the tool.
-- Kimi K2.5 is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Kimi K2.5 all need testing on your own traffic shape.
+- Beyond the marketing, Kimi K2.5's own notes are the useful part: its internals and weights are not published. Kimi K2.5 is consumed as a hosted API: a prompt (optionally a long context window) is sent to Moonshot AI's infrastructure, inference runs on the provider's side, and tokens are returned — there is no local model or GPU footprint. This is why it cannot be self-hosted or fine-tuned and why availability tracks the vendor's API.
+- No direct sibling is catalogued for Kimi K2.5 in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
+- Kimi K2.5 is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Kimi K2.5's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Kimi K2.5, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for Kimi K2.5 describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Kimi K2.5, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Kimi K2.5 describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
 
 ## Integration Patterns
 

@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Microsoft guidance library for controlling and constraining language model generation. Open source or free to start. Best for constrained generation experiments.
+> **TL;DR:** the structured-output entry for Guidance. Microsoft guidance library for controlling and constraining language model generation — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -45,7 +45,7 @@ A library for fine-grained, token-level control over LLM generation, letting you
 
 ## Why It's in the Arsenal
 
-Guidance earns a place in the Arsenal because it directly addresses a recurring decision point: you want fine-grained, token-level control over generation structure (interleaving control flow with model output). It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+Guidance is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -69,19 +69,22 @@ Follow the official documentation at https://github.com/guidance-ai/guidance for
 
 ## Use Cases
 
-1. **Scenario**: you want fine-grained, token-level control over generation structure (interleaving control flow with model output)
-2. **Scenario**: you're building advanced prompting patterns that need more control than a templating library offers
-3. **Scenario where this is NOT the right fit**: you just need typed structured output extraction with retries (Instructor is simpler for that) — evaluate an alternative instead
+1. **Integrating Guidance**: the structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Guidance and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Guidance's comparison set is `instructor`, `outlines`, `pydantic-ai-tool`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- You want fine-grained, token-level control over generation structure (interleaving control flow with model output)
-- You're building advanced prompting patterns that need more control than a templating library offers
+- Beyond the marketing, Guidance's own notes are the useful part: generation is expressed as a program mixing literal text, control flow, and model-generated spans; the library drives the underlying model step by step according to that program.
+- Against `instructor`, `outlines`, `pydantic-ai-tool`, the difference that decides this is deployment model and cost rather than the feature list, and Guidance sits at the hosted end of that axis.
+- Depending on Guidance means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Guidance's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- You just need typed structured output extraction with retries (Instructor is simpler for that)
-- You need a small, stable dependency surface — Guidance's API has changed significantly across versions, so pin carefully
+- There is no self-hosted path to Guidance, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Guidance describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Guidance overlaps `instructor`, `outlines`, `pydantic-ai-tool`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

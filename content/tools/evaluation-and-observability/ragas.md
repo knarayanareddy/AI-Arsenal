@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** Open-source RAG evaluation framework — reference-free, LLM-judged metrics like faithfulness and context precision, plus synthetic test-set generation. Directional scores, not ground truth.
+> **TL;DR:** the evaluation entry for Ragas. Open-source evaluation framework for LLM applications with reference-free metrics for RAG pipelines — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://docs.ragas.io/ for the authenticati
 
 ## Use Cases
 
-1. **Scenario**: scoring a RAG pipeline's faithfulness and context precision across an eval set to localize whether failures are retrieval- or generation-side
-2. **Scenario**: bootstrapping an eval dataset from a document corpus before any production traffic exists
-3. **Scenario where this is NOT the right fit**: compliance-grade evaluation requiring reproducible, auditable scores — LLM-judge variance makes Ragas directional
+1. **What it does in a system**: Ragas sits on the evaluation leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Validating the choice**: put Ragas and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Ragas's comparison set is `deepeval`, `promptfoo`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Metrics match the actual causal structure of RAG failures (retrieval vs. grounding)
-- Reference-free operation removes the biggest eval-set bottleneck (hand-written gold answers)
-- Large community and integration surface; scores flow into Langfuse/Phoenix dashboards
+- What Ragas gives you that its headline description does not: each metric is a structured LLM-judge prompt pipeline: e.g. faithfulness decomposes an answer into claims and verifies each against the retrieved context, producing a ratio rather than a single holistic judgment. Judges and embeddings are pluggable, so scores can run against any provider or local model, which is the part to check against your own pipeline before trusting the feature list.
+- Weighing Ragas against `deepeval`, `promptfoo` comes down to one question: who runs the process when it breaks — you or the vendor.
+- Pin the client library rather than the API: Ragas is reachable through `langchain`, `llamaindex`, and those adapters change defaults without a major version bump.
+- What this entry cannot give you is measured behaviour: measure Ragas's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- LLM-judged metrics inherit judge bias, cost, and run-to-run variance — validate against human labels before trusting deltas
-- Synthetic test sets skew toward questions the generator finds easy to ask; supplement with real traffic
-- API churn between versions has been a recurring community complaint; pin versions
+- There is no self-hosted path to Ragas, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Ragas describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Ragas overlaps `deepeval`, `promptfoo`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

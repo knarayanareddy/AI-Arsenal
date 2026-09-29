@@ -64,20 +64,22 @@ A Python function is wrapped with declared input/output component types; Gradio 
 
 ## Use Cases
 
-1. **Where it fits**: You want to demo a model or pipeline with a shareable web UI in minutes, using only Python.
-2. **Adoption checkpoint**: compare Gradio against `chainlit`, `fastapi`, `mesop` on the same `prototyping` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the prototyping leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so Gradio can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on Gradio.
+3. **Choosing between candidates**: Gradio's comparison set is `chainlit`, `fastapi`, `mesop`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, Gradio is a Python library for building and sharing machine learning demos quickly — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- The nearest neighbours to Gradio here are `chainlit`, `fastapi`, `mesop`, `streamlit`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- Depending on Gradio means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Gradio all need testing on your own traffic shape.
+- The implementation detail worth reading before adopting Gradio is specific — a Python function is wrapped with declared input/output component types; Gradio auto-generates a web UI around that function and can expose it via a temporary public URL — and that is where a capability claim either survives contact with your data or does not.
+- Gradio overlaps `chainlit`, `fastapi`, `mesop`, `streamlit` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Gradio is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure Gradio's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on Gradio means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for Gradio describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Gradio, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Gradio describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Gradio overlaps `chainlit`, `fastapi`, `mesop`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

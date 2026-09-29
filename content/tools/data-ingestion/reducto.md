@@ -39,7 +39,7 @@ verdict_rationale: A strong managed option specifically for high-fidelity parsin
 status: active
 ---
 
-> **TL;DR:** A hosted document-ingestion API focused on high-fidelity parsing of complex PDFs — tables, multi-column layouts, figures — into clean, layout-aware, chunk-ready output for RAG. Usage-based; a solid choice when parsing quality is your retrieval bottleneck.
+> **TL;DR:** Reducto, for the structured-output job. Read Strengths and Limitations together: this entry states what it claims to do, and what adopting it would commit you to operating.
 
 ## Overview
 
@@ -73,20 +73,22 @@ You submit a document to the API; Reducto performs layout analysis and OCR/parsi
 
 ## Use Cases
 
-1. **Scenario**: a finance RAG app ingesting 10-K filings whose tables must be extracted faithfully or answers become wrong
-2. **Scenario**: a scientific-paper assistant that needs multi-column text and figure captions parsed in correct reading order before chunking
+1. **Integrating Reducto**: the structured-output call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Reducto and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Reducto's comparison set is `unstructured`, `llamaparse`, `mineru`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Targets the highest-leverage RAG failure (bad parsing) rather than adding another orchestration layer
-- Preserves tables and reading order, which flat PDF-to-text extraction routinely destroys
-- Managed service removes the burden of maintaining OCR/layout models
+- Beyond the marketing, Reducto's own notes are the useful part: you submit a document to the API; Reducto performs layout analysis and OCR/parsing server-side, reconstructs reading order and table structure, and returns structured blocks (with tables preserved) plus optional chunking. The value is that layout understanding and table reconstruction — the parts that are hard to build and maintain — are handled as a service.
+- Reducto overlaps `unstructured`, `llamaparse`, `mineru` in this phase. Read those entries before choosing: the feature comparison is usually closer than the deployment comparison, and the latter is what you inherit.
+- Reducto is a service call, so its failure surface is timeouts, quotas and key expiry rather than anything you can patch.
+- Marked beta, so Reducto's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- Paid and hosted-only: overkill for simple born-digital documents and unusable where data cannot leave your environment
-- No public open-source implementation to inspect or self-host
-- Accuracy claims are vendor-reported; real-world quality varies by document type, so benchmark on your own corpus
+- Depending on Reducto means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Reducto's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Reducto is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

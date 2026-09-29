@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Open-source data and model versioning tool for ML projects and pipelines. Open source or free to start. Best for data/model versioning in Git workflows.
+> **TL;DR:** the model-registry entry for DVC. Open-source data and model versioning tool for ML projects and pipelines — the deciding factor is operational cost and what you have to run, not the feature list.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://github.com/iterative/dvc for the au
 
 ## Use Cases
 
-1. **Where it fits**: You want Git-like versioning for datasets and model artifacts without paying for large binary storage in Git itself.
-2. **Adoption checkpoint**: compare DVC against `hugging-face-hub`, `mlflow`, `weights-biases` on the same `model-registry` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Where it sits**: on the model-registry leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so DVC can be swapped without touching callers.
+2. **Validating the choice**: put DVC and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: DVC's comparison set is `hugging-face-hub`, `mlflow`, `weights-biases`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for DVC is worth reading before adopting: large files are stored in configured remote storage and referenced from Git via small pointer files; DVC pipelines declare stages with explicit inputs/outputs to make runs reproducible and cacheable.
-- The nearest neighbours to DVC here are `hugging-face-hub`, `mlflow`, `weights-biases`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- DVC is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Capability is documented; behaviour is not. For DVC, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- The implementation detail worth reading before adopting DVC is specific — large files are stored in configured remote storage and referenced from Git via small pointer files; DVC pipelines declare stages with explicit inputs/outputs to make runs reproducible and cacheable — and that is where a capability claim either survives contact with your data or does not.
+- Against `hugging-face-hub`, `mlflow`, `weights-biases`, the difference that decides this is deployment model and cost rather than the feature list, and DVC sits at the hosted end of that axis.
+- Depending on DVC means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure DVC's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to DVC, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for DVC describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to DVC, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for DVC describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where DVC overlaps `hugging-face-hub`, `mlflow`, `weights-biases`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

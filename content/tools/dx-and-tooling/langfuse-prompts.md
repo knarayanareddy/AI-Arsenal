@@ -38,7 +38,7 @@ status: active
 corresponding_project_entry: langfuse
 ---
 
-> **TL;DR:** Prompt management and versioning workflows inside the Langfuse observability platform. Free/open-source plus paid cloud/enterprise options. Best for prompt management with traces.
+> **TL;DR:** Langfuse Prompts covers the prompt-management leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -70,20 +70,22 @@ Follow the official documentation at https://langfuse.com/docs/prompts for the a
 
 ## Use Cases
 
-1. **Where it fits**: You want prompt versioning tightly linked to traces, datasets, and evaluations in an open-source, self-hostable platform.
-2. **Adoption checkpoint**: compare Langfuse Prompts against `langsmith-hub`, `promptlayer` on the same `prompt-management` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating Langfuse Prompts**: the prompt-management call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Validating the choice**: put Langfuse Prompts and its named alternatives on the same task with the same data, and record the number that would make you switch — that criterion, not the feature list, is the decision.
+3. **Choosing between candidates**: Langfuse Prompts's comparison set is `langsmith-hub`, `promptlayer`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for Langfuse Prompts is worth reading before adopting: prompts are stored as versioned records inside Langfuse; when a prompt version is used in production, the resulting traces and eval scores are linked back to that specific version.
-- Weighing Langfuse Prompts against `langsmith-hub`, `promptlayer` comes down to one question you should answer first: who runs the process when it breaks, you or the vendor.
-- Langfuse Prompts is a service call rather than a dependency you vendor, so nothing about its failure mode is yours to fix: timeouts, quotas and key expiry are the failure surface you design around.
-- The gap this entry cannot close for you is measured behaviour: latency, concurrency limits and degraded-dependency handling for Langfuse Prompts all need testing on your own traffic shape.
+- Beyond the marketing, Langfuse Prompts's own notes are the useful part: prompts are stored as versioned records inside Langfuse; when a prompt version is used in production, the resulting traces and eval scores are linked back to that specific version.
+- Against `langsmith-hub`, `promptlayer`, the difference that decides this is deployment model and cost rather than the feature list, and Langfuse Prompts sits at the hosted end of that axis.
+- Depending on Langfuse Prompts means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Langfuse Prompts's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Langfuse Prompts, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for Langfuse Prompts describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to Langfuse Prompts, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for Langfuse Prompts describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where Langfuse Prompts overlaps `langsmith-hub`, `promptlayer`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

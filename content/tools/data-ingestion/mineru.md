@@ -46,7 +46,7 @@ A document-extraction pipeline from Shanghai AI Lab's OpenDataLab: purpose-built
 
 ## Why It's in the Arsenal
 
-MinerU earns a place in the Arsenal because it directly addresses a recurring decision point: scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi-column layouts must survive extraction. It is included as a comparison point against the other tools in its phase, not as an unconditional recommendation — see Strengths / Limitations below before adopting it.
+MinerU is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.
 
 ## Key Features
 
@@ -71,21 +71,22 @@ Follow the official documentation at https://opendatalab.github.io/MinerU/ for t
 
 ## Use Cases
 
-1. **Scenario**: scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi-column layouts must survive extraction
-2. **Scenario**: corpus-scale document processing on your own GPUs with a permissively usable pipeline (model weights are open)
-3. **Scenario where this is NOT the right fit**: aGPL is a problem for your product's licensing posture — evaluate an alternative instead
+1. **Where it sits**: on the data-labeling leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so MinerU can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on MinerU.
+3. **Choosing between candidates**: MinerU's comparison set is `docling`, `llamaparse`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- Scientific/technical PDFs where formulas (to LaTeX), tables (to HTML), and multi-column layouts must survive extraction
-- Corpus-scale document processing on your own GPUs with a permissively usable pipeline (model weights are open)
+- The implementation detail worth reading before adopting MinerU is specific — a cascade of detection models segments each page (text, titles, figures, tables, formulas), specialized recognizers process each region, and a reading-order model reassembles results into linear Markdown — with the VLM-backed 2.x pipeline consolidating steps into a single multimodal model — and that is where a capability claim either survives contact with your data or does not.
+- Against `docling`, `llamaparse`, the difference that decides this is deployment model and cost rather than the feature list, and MinerU sits at the hosted end of that axis.
+- Depending on MinerU means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure MinerU's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- AGPL is a problem for your product's licensing posture
-- Simple digital-native PDFs — lighter converters (MarkItDown, pypdf) are much cheaper to run
-
-- _Verified for MinerU: stars, license and last-commit come from the GitHub API as of 2026-07-08; the feature list and integration surface are read from the project's own documentation. The best_when/avoid_when judgement above is documentation-derived and has not been re-confirmed against hands-on production use in this environment, so treat the cost, limits and failure modes as claims to check against your workload._
+- Depending on MinerU means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Documentation for MinerU describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where MinerU overlaps `docling`, `llamaparse`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

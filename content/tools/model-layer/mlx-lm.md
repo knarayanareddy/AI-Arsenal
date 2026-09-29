@@ -37,7 +37,7 @@ verdict_rationale: Useful option when it matches your stack, cost, and operation
 status: active
 ---
 
-> **TL;DR:** Apple MLX library for running and fine-tuning LLMs on Apple Silicon. Open source or free to start. Best for Apple Silicon local fine-tuning.
+> **TL;DR:** MLX-LM covers the fine-tuning leg. The capability is documented; the behaviour at your load is not, so measure latency and degraded-mode handling yourself before adopting it.
 
 ## Overview
 
@@ -69,20 +69,22 @@ Follow the official documentation at https://github.com/ml-explore/mlx-lm for th
 
 ## Use Cases
 
-1. **Where it fits**: You're developing or fine-tuning LLMs locally on Apple Silicon (M-series) hardware and want native performance.
-2. **Adoption checkpoint**: compare MLX-LM against `axolotl`, `llamafactory`, `peft` on the same `fine-tuning` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **What it does in a system**: MLX-LM sits on the fine-tuning leg of the pipeline, so the work is deciding its timeout, retry and degraded-mode behaviour and putting it behind an interface that lets you replace it without a rewrite.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since MLX-LM is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: MLX-LM's comparison set is `axolotl`, `llamafactory`, `peft`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- In concrete terms, MLX-LM is an apple MLX library for running and fine-tuning LLMs on Apple Silicon — the mechanism named in this entry's architecture is what to check against your own pipeline, because that is where the behaviour actually lives.
-- The nearest neighbours to MLX-LM here are `axolotl`, `llamafactory`, `peft`, `torchtune`; if your deciding factor is latency, cost or data residency, the difference between them is larger than their documentation suggests.
-- Depending on MLX-LM means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- Capability is documented; behaviour is not. For MLX-LM, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- What MLX-LM gives you that its headline description does not: built on Apple's MLX array framework, which is designed around unified memory, so the same machine's memory is shared between CPU and GPU/Neural Engine compute without explicit data transfer, which is the part to check against your own pipeline before trusting the feature list.
+- MLX-LM's honest comparison set is `axolotl`, `llamafactory`, `peft`, `torchtune`; what separates them is rarely capability, it is what you must operate.
+- MLX-LM is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- What this entry cannot give you is measured behaviour: measure MLX-LM's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- Depending on MLX-LM means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
-- Documentation for MLX-LM describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
+- There is no self-hosted path to MLX-LM, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for MLX-LM describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- Where MLX-LM overlaps `axolotl`, `llamafactory`, `peft`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 

@@ -66,21 +66,22 @@ Incoming support tickets are routed to an agent pipeline that classifies, attemp
 
 ## Use Cases
 
-1. **Where it fits**: You want autonomous agents to triage and resolve customer-support tickets without building that pipeline yourself.
-2. **Adoption checkpoint**: validate SeaTicket on your own data for the `orchestration` job before committing, measuring end-to-end latency at your real request shape rather than at a single-request quickstart.
+1. **Where it sits**: on the orchestration leg, which means the decisions that matter are timeout, retry and degraded-mode behaviour, plus an interface boundary so SeaTicket can be swapped without touching callers.
+2. **Measuring it**: the two numbers this entry does not give you are end-to-end latency at your real request shape and the error rate when the upstream is degraded; both are worth recording before you depend on SeaTicket.
+3. **Deciding at all**: nothing is catalogued against SeaTicket here, so the honest first step is confirming the orchestration job needs a dedicated tool rather than the simpler approach you already have.
 
 ## Strengths
 
-- The distinguishing implementation detail for SeaTicket is worth reading before adopting: incoming support tickets are routed to an agent pipeline that classifies, attempts resolution, and escalates to humans when confidence is low.
+- The implementation detail worth reading before adopting SeaTicket is specific — incoming support tickets are routed to an agent pipeline that classifies, attempts resolution, and escalates to humans when confidence is low — and that is where a capability claim either survives contact with your data or does not.
 - No direct sibling is catalogued for SeaTicket in this phase, so it is the reference point for the job here; treat the absence as a gap in the catalog rather than as evidence that nothing else fits.
-- Depending on SeaTicket means depending on a service rather than a package, which makes substitution a client change — and also means you inherit someone else's rate limits and outage schedule.
-- Maturity here is beta, so treat SeaTicket's API surface as something to pin and test rather than something to track.
+- SeaTicket is reached over an API rather than vendored, so replacing it is a client swap; the offset is that its availability and pricing are the vendor's to change.
+- Marked beta, so SeaTicket's interface may still move; pin the version you build against rather than tracking latest.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to SeaTicket, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Documentation for SeaTicket describes capability rather than behaviour at your request shape, so latency, concurrency and failure handling are the parts you have to measure yourself.
-- SeaTicket is marked beta, which means interface churn is expected; budget for reading changelogs before upgrades rather than after breakage.
+- There is no self-hosted path to SeaTicket, so quota and rate-limit changes are the vendor's to make and yours to absorb.
+- Documentation for SeaTicket describes capability, not behaviour at your request shape; latency, concurrency and failure handling are the parts you must measure yourself.
+- SeaTicket is beta, so interface churn is expected; read the changelog before an upgrade rather than after one breaks you.
 
 ## Integration Patterns
 

@@ -67,20 +67,22 @@ pip install cerebras_cloud_sdk
 
 ## Use Cases
 
-1. **Where it fits**: "You're chasing maximum tokens/sec for reasoning models where long chains-of-thought make speed a quality feature.
-2. **Adoption checkpoint**: compare Cerebras Inference against `groq`, `together-ai`, `fireworks-ai` on the same `production-serving` task and the same traffic shape, and measure the two numbers this entry does not give you — end-to-end latency and the error rate when the dependency is degraded.
+1. **Integrating Cerebras Inference**: the production-serving call is a dependency with its own failure modes, not a library call — settle timeout, retry and what happens when it is unavailable before the first request goes through.
+2. **Knowing when it has failed you**: the failure mode to test for is degraded rather than absent, since Cerebras Inference is most likely to be slow or rate-limited in production rather than simply gone.
+3. **Choosing between candidates**: Cerebras Inference's comparison set is `groq`, `together-ai`, `fireworks-ai`; the axis that separates them is what you operate, so answer that before reading the feature lists.
 
 ## Strengths
 
-- The distinguishing implementation detail for Cerebras Inference is worth reading before adopting: the WSE keeps model weights in massive on-chip SRAM with orders-of-magnitude higher memory bandwidth than HBM GPUs, so autoregressive decoding runs at extreme speed; models are compiled specifically for the wafer, constraining the catalog.
-- Against `groq`, `together-ai`, `fireworks-ai`, the comparison that decides this is deployment model and operational cost rather than the feature list; Cerebras Inference sits at the hosted-or-embedded end of that axis.
-- Cerebras Inference is reached over an API rather than vendored as a library, so replacing it later is a client swap; the offset is that its availability, rate limits and pricing are the vendor's to change.
-- Capability is documented; behaviour is not. For Cerebras Inference, measure end-to-end latency and the error rate under a degraded upstream before this reaches production traffic.
+- Beyond the marketing, Cerebras Inference's own notes are the useful part: the WSE keeps model weights in massive on-chip SRAM with orders-of-magnitude higher memory bandwidth than HBM GPUs, so autoregressive decoding runs at extreme speed; models are compiled specifically for the wafer, constraining the catalog.
+- Against `groq`, `together-ai`, `fireworks-ai`, the difference that decides this is deployment model and cost rather than the feature list, and Cerebras Inference sits at the hosted end of that axis.
+- Depending on Cerebras Inference means depending on a service rather than a package, which makes substitution easy and outage handling someone else's.
+- What this entry cannot give you is measured behaviour: measure Cerebras Inference's latency and its error rate under a degraded upstream before it carries production traffic.
 
 ## Limitations / When NOT to Use
 
-- There is no self-hosted path to Cerebras Inference, so availability, quota and rate-limit changes are the vendor's to make and yours to absorb.
-- Cerebras Inference's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point determines which optimisations are worth building.
+- Depending on Cerebras Inference means depending on someone else's availability and pricing, and the exit cost rises with how deeply it is wired into your call sites.
+- Cerebras Inference's billing makes your workload an input: retries, verbose prompts and agent loops multiply spend quietly, so the metering point decides which optimisations are worth building.
+- Where Cerebras Inference overlaps `groq`, `together-ai`, `fireworks-ai`, choosing on feature lists alone is the mistake; the deciding axis is operational.
 
 ## Integration Patterns
 
