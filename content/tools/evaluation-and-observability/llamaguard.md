@@ -59,9 +59,13 @@ Runs as a separate classifier model alongside the primary LLM; inputs and/or out
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Llama Guard into anything else. The command below runs against the `security-and-guardrails` job and returns a result you can inspect directly.
+
 ```bash
 # See PurpleLlama model cards and examples
 ```
+
+Follow the official documentation at https://www.llama.com/docs/model-cards-and-prompt-formats/llama-guard-3/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

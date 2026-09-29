@@ -59,9 +59,13 @@ Built on Apple's MLX array framework, which is designed around unified memory, s
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring MLX-LM into anything else. The command below runs against the `fine-tuning` job and returns a result you can inspect directly.
+
 ```bash
 pip install mlx-lm
 ```
+
+Follow the official documentation at https://github.com/ml-explore/mlx-lm for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

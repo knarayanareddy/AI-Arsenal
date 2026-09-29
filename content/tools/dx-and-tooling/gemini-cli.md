@@ -60,10 +60,14 @@ A Node.js CLI that streams a ReAct-style loop against Gemini models: built-in to
 
 ## Getting Started
 
+Install the npm package, then make one call to confirm the credentials, network path and configuration are reachable before wiring Gemini CLI into anything else. The command below calls the hosted service against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 npm install -g @google/gemini-cli
 gemini
 ```
+
+Follow the official documentation at https://google-gemini.github.io/gemini-cli/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

@@ -60,9 +60,13 @@ A Tauri (Rust + web) desktop app embedding llama.cpp: models are downloaded from
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Jan into anything else. The command below runs against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 # Download from https://jan.ai (macOS / Windows / Linux)
 ```
+
+Follow the official documentation at https://jan.ai/docs for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

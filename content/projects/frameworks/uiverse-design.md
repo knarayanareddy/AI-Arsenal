@@ -65,9 +65,13 @@ Upstream: none of particular note. Downstream: none of particular note. Competin
 
 ## Getting Started
 
+Install the client for your language, or call the service directly, then make one call to confirm the credentials, network path and configuration are reachable before wiring Uiverse Design into anything else. The command below runs against the `the documented task` job and returns a result you can inspect directly.
+
 ```bash
 git clone https://github.com/uiverse-io/galaxy
 ```
+
+Follow the official documentation at null for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Key Use Cases
 

@@ -60,10 +60,14 @@ Cascades fast heuristics over the DOM tree (density, markup signals, link ratios
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Trafilatura into anything else. The command below runs against the `web-scraping` job and returns a result you can inspect directly.
+
 ```bash
 pip install trafilatura
 trafilatura -u <article-url>
 ```
+
+Follow the official documentation at https://trafilatura.readthedocs.io for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

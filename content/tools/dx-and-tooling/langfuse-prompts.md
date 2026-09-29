@@ -60,9 +60,13 @@ Prompts are stored as versioned records inside Langfuse; when a prompt version i
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Langfuse Prompts into anything else. The command below calls the hosted service against the `prompt-management` job and returns a result you can inspect directly.
+
 ```bash
 pip install langfuse
 ```
+
+Follow the official documentation at https://langfuse.com/docs/prompts for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

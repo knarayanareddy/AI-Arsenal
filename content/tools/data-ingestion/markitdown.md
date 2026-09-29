@@ -60,10 +60,14 @@ Per-format converters (mammoth for docx, pdfminer for PDF, speech recognition fo
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring MarkItDown into anything else. The command below runs against the `web-scraping, data-labeling` job and returns a result you can inspect directly.
+
 ```bash
 pip install 'markitdown[all]'
 markitdown report.pdf > report.md
 ```
+
+Follow the official documentation at https://github.com/microsoft/markitdown#readme for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

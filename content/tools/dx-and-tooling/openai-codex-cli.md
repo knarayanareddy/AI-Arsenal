@@ -60,10 +60,14 @@ The CLI drives an agent loop against OpenAI models; proposed shell commands and 
 
 ## Getting Started
 
+Add the crate to your project, then make one call to confirm the credentials, network path and configuration are reachable before wiring OpenAI Codex CLI into anything else. The command below calls the hosted service against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 npm install -g @openai/codex
 codex
 ```
+
+Follow the official documentation at https://developers.openai.com/codex/cli for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

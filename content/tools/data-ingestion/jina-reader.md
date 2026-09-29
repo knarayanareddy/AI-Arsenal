@@ -58,9 +58,13 @@ A request to `r.jina.ai/{url}` triggers server-side fetching and content extract
 
 ## Getting Started
 
+Install the client for your language, or call the service directly, then make one call to confirm the credentials, network path and configuration are reachable before wiring Jina AI Reader into anything else. The command below calls the hosted service against the `web-scraping` job and returns a result you can inspect directly.
+
 ```bash
 curl https://r.jina.ai/http://example.com
 ```
+
+Follow the official documentation at https://jina.ai/reader/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

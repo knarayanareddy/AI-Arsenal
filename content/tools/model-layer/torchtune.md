@@ -59,9 +59,13 @@ Recipes are plain PyTorch scripts composed of explicit, swappable components (mo
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring torchtune into anything else. The command below runs against the `fine-tuning` job and returns a result you can inspect directly.
+
 ```bash
 pip install torchtune
 ```
+
+Follow the official documentation at https://github.com/pytorch/torchtune for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

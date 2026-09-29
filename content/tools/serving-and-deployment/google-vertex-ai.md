@@ -59,9 +59,13 @@ Provides managed endpoints and pipelines on top of GCP infrastructure, letting t
 
 ## Getting Started
 
+Install the client for your language, or call the service directly, then make one call to confirm the credentials, network path and configuration are reachable before wiring Google Vertex AI into anything else. The command below calls the hosted service against the `deployment` job and returns a result you can inspect directly.
+
 ```bash
 # Configure through Google Cloud Console or SDK
 ```
+
+Follow the official documentation at https://cloud.google.com/vertex-ai/docs for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

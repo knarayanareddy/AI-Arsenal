@@ -60,10 +60,14 @@ Cascade combines a repo index, a trace of your recent editor actions, and tool a
 
 ## Getting Started
 
+Install the npm package, then make one call to confirm the credentials, network path and configuration are reachable before wiring Windsurf into anything else. The command below calls the hosted service against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 # Download the editor and sign in:
 # https://windsurf.com/download
 ```
+
+Follow the official documentation at https://docs.windsurf.com/windsurf/getting-started for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

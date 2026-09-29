@@ -59,9 +59,13 @@ Endpoints are defined as typed Python functions; FastAPI generates request valid
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring FastAPI into anything else. The command below runs against the `prototyping, production-serving` job and returns a result you can inspect directly.
+
 ```bash
 pip install fastapi uvicorn
 ```
+
+Follow the official documentation at https://github.com/fastapi/fastapi for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

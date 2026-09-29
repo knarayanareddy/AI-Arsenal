@@ -59,9 +59,13 @@ Each model/dataset/Space is a Git repository with associated metadata (model car
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Hugging Face Hub into anything else. The command below calls the hosted service against the `model-registry` job and returns a result you can inspect directly.
+
 ```bash
 pip install huggingface_hub
 ```
+
+Follow the official documentation at https://huggingface.co/docs/hub/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

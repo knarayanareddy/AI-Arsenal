@@ -59,9 +59,13 @@ UIs are built from composable Python components that render to a web frontend; s
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Mesop into anything else. The command below runs against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 pip install mesop
 ```
+
+Follow the official documentation at https://github.com/google/mesop for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

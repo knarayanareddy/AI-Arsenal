@@ -58,9 +58,13 @@ Incoming prompts/content are scored against injection-detection heuristics and/o
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Rebuff into anything else. The command below runs against the `security-and-guardrails` job and returns a result you can inspect directly.
+
 ```bash
 pip install rebuff
 ```
+
+Follow the official documentation at https://github.com/protectai/rebuff for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

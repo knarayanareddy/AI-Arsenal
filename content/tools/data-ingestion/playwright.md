@@ -61,9 +61,13 @@ Drives real browser instances via each browser's native automation protocol, exe
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Playwright into anything else. The command below runs against the `web-scraping` job and returns a result you can inspect directly.
+
 ```bash
 pip install playwright && playwright install
 ```
+
+Follow the official documentation at https://github.com/microsoft/playwright for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

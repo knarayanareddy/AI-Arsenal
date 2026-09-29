@@ -58,9 +58,13 @@ Communicates with a Chrome/Chromium instance via the DevTools Protocol, letting 
 
 ## Getting Started
 
+Install the npm package, then make one call to confirm the credentials, network path and configuration are reachable before wiring Puppeteer into anything else. The command below runs against the `web-scraping` job and returns a result you can inspect directly.
+
 ```bash
 npm install puppeteer
 ```
+
+Follow the official documentation at https://github.com/puppeteer/puppeteer for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

@@ -60,10 +60,14 @@ Cursor indexes your repository into embeddings for retrieval, routes completions
 
 ## Getting Started
 
+Install the npm package, then make one call to confirm the credentials, network path and configuration are reachable before wiring Cursor into anything else. The command below calls the hosted service against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 # Download the editor and sign in:
 # https://cursor.com/download
 ```
+
+Follow the official documentation at https://cursor.com/docs for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

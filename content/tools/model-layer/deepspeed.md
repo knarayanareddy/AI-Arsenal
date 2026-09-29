@@ -60,10 +60,14 @@ ZeRO shards training state across ranks and gathers parameters just-in-time per 
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring DeepSpeed into anything else. The command below runs against the `fine-tuning` job and returns a result you can inspect directly.
+
 ```bash
 pip install deepspeed
 deepspeed train.py --deepspeed ds_config.json
 ```
+
+Follow the official documentation at https://deepspeed.readthedocs.io for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

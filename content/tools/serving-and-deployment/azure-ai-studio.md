@@ -59,9 +59,13 @@ Provides a managed workspace where model endpoints, evaluation pipelines, and de
 
 ## Getting Started
 
+Install the client for your language, or call the service directly, then make one call to confirm the credentials, network path and configuration are reachable before wiring Azure AI Studio into anything else. The command below calls the hosted service against the `deployment` job and returns a result you can inspect directly.
+
 ```bash
 # Configure through Azure AI Studio
 ```
+
+Follow the official documentation at https://learn.microsoft.com/en-us/azure/ai-studio/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

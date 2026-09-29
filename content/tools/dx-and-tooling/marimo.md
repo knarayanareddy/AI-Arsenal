@@ -60,10 +60,14 @@ marimo statically parses each cell's variable definitions/references to build a 
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring marimo into anything else. The command below runs against the `prototyping` job and returns a result you can inspect directly.
+
 ```bash
 pip install marimo && marimo tutorial intro
 marimo edit notebook.py
 ```
+
+Follow the official documentation at https://docs.marimo.io for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

@@ -59,9 +59,13 @@ A recipe script controls what's shown to the annotator next (often guided by a m
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Prodigy into anything else. The command below calls the hosted service against the `data-labeling` job and returns a result you can inspect directly.
+
 ```bash
 # Install via paid Prodigy license instructions
 ```
+
+Follow the official documentation at https://prodi.gy/docs/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

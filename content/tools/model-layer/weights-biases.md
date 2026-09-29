@@ -59,9 +59,13 @@ Training code logs metrics/artifacts to a hosted (or self-hosted) backend via a 
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Weights & Biases into anything else. The command below calls the hosted service against the `model-registry, evaluation` job and returns a result you can inspect directly.
+
 ```bash
 pip install wandb
 ```
+
+Follow the official documentation at https://docs.wandb.ai/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

@@ -61,9 +61,13 @@ Each scanner takes the prompt (or output), returns a sanitized version plus a va
 
 ## Getting Started
 
+Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring LLM Guard into anything else. The command below runs against the `security-and-guardrails` job and returns a result you can inspect directly.
+
 ```bash
 pip install llm-guard
 ```
+
+Follow the official documentation at https://protectai.github.io/llm-guard/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

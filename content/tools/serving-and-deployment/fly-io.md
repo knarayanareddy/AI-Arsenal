@@ -59,9 +59,13 @@ Applications are packaged (often via Dockerfile) and run as Firecracker microVMs
 
 ## Getting Started
 
+Install the client for your language, or call the service directly, then make one call to confirm the credentials, network path and configuration are reachable before wiring Fly.io into anything else. The command below calls the hosted service against the `deployment, production-serving` job and returns a result you can inspect directly.
+
 ```bash
 fly launch
 ```
+
+Follow the official documentation at https://fly.io/docs/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 

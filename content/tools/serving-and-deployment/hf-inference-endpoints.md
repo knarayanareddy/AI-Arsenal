@@ -59,9 +59,13 @@ Selects a model repository from the Hugging Face Hub and provisions a managed in
 
 ## Getting Started
 
+Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Hugging Face Inference Endpoints into anything else. The command below calls the hosted service against the `deployment, production-serving` job and returns a result you can inspect directly.
+
 ```bash
 # Create endpoint in Hugging Face UI or API
 ```
+
+Follow the official documentation at https://huggingface.co/docs/inference-endpoints/ for the authentication and configuration options, because the defaults in the quickstart are the ones most likely to need changing for real traffic.
 
 ## Use Cases
 
