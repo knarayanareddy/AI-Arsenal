@@ -43,6 +43,8 @@ status: active
 
 A managed service from Hugging Face for deploying any model already hosted on the Hub as an autoscaling, pay-per-use production API endpoint in a few clicks.
 
+Hugging Face Inference Endpoints is reached over a documented surface unlike `aws-bedrock`, `azure-ai-studio`; on the deployment, production-serving path; under a usage-based cost model; with `hf-inference-endpoints`, `name`, `hugging`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 The entry exists because Hugging Face Inference Endpoints is a managed Hugging Face service for deploying models as production inference endpoints. Read it beside `aws-bedrock`, `azure-ai-studio`, `google-vertex-ai`: the choice between them is a deployment and cost decision before it is a capability one.

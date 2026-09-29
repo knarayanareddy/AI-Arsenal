@@ -28,9 +28,13 @@ health_signals: [community-driven]
 ecosystem_role:
   - "Community-sourced CSS/Tailwind UI component library, used as a front-end asset source rather than an AI-specific building block"
 best_for:
-  - "You're building an AI product's front-end and want a library of ready-made, community-contributed UI components (buttons, loaders, form elements) rather than designing every element from scratch"
+  - "You are building a front end for an AI product and want ready-made, community-contributed components (buttons, loaders, form elements) rather than designing each element from scratch"
+  - "You need a design system that is easy to restyle per theme or brand token, and you would rather inherit someone else's component inventory than build it"
+  - "You are prototyping a chat or streaming interface and want loading, empty and error states already handled rather than designed for each surface"
 avoid_if:
-  - "You're looking for an AI-specific project (this is a general front-end CSS component library with no AI functionality of its own) — it was included in the original population sprint's broad newsletter sweep and its fit for an AI-focused catalog is questionable"
+  - "You are looking for an AI-specific project: this is a general front-end CSS component library with no AI functionality of its own, and its fit for an AI-focused catalog is questionable"
+  - "You need accessible, tested behaviour with a support commitment, because a community component library is adopted on its own terms and moves when its maintainers move"
+  - "You have a strict bundle budget or a rendering target this library does not support, since it is a drop-in component set rather than a size-optimised primitive layer"
 upstream_dependencies: []
 downstream_consumers: []
 alternatives: []
@@ -51,6 +55,8 @@ status: watching
 
 An open-source, community-sourced library of CSS and Tailwind UI components (buttons, loaders, form elements, and similar building blocks), included in this catalog's front-end tooling coverage rather than because it has any AI-specific functionality.
 
+Read Uiverse Design against the operational facts rather than the feature list in the framework phase; under a open-source cost model; with `uiverse-design`, `name`, `uiverse`. What matters is the data path it introduces, the state it keeps, and what a degraded dependency does — the parts a capability claim does not cover.
+
 ## Why it's in the Arsenal
 
 This entry earns a place in the Arsenal only as a front-end asset resource for building the UI layer of AI products — it has no AI functionality of its own. It was added during a broad newsletter-driven population sprint rather than a deliberate AI-project research pass; a maintainer should review whether it belongs in an AI-focused catalog at all.
@@ -59,9 +65,13 @@ This entry earns a place in the Arsenal only as a front-end asset resource for b
 
 A community-contributed collection of standalone CSS/Tailwind snippets and components, browsable and copyable individually rather than distributed as a single importable package with an internal architecture of its own.
 
+Concretely, Uiverse Design is judged here on what it costs to operate rather than on what it claims in the framework phase; under a open-source cost model; with `uiverse-design`, `name`, `uiverse`: the resource profile at your data volume, the dependency failure behaviour, and the upgrade path when the interface moves are the three things that decide adoption.
+
 ## Ecosystem Position
 
 Upstream: none of particular note. Downstream: none of particular note. Competing: any general-purpose UI component library or design system (shadcn/ui, DaisyUI) — none of these are AI-specific, so "competing" here is in the general front-end tooling space, not the AI ecosystem. Complementary: can be used alongside any AI product's front-end regardless of the AI stack underneath it.
+
+Compared with in the framework phase; under a open-source cost model; with `uiverse-design`, `name`, `uiverse`, Uiverse Design overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
 
 ## Getting Started
 

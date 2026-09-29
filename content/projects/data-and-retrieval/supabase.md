@@ -60,6 +60,8 @@ Listed as an alternative backend/platform for AI coding agents and AI-native app
 
 A hosted and self-hostable control plane around a Postgres database, exposing Auth, Storage, Realtime, and Edge Functions, plus a vector/embeddings path via pgvector.
 
+Concretely, Supabase is judged here on what it costs to operate rather than on what it claims in the data-and-retrieval phase; under a freemium cost model; with `supabase`, `name`, `version`: the resource profile at your data volume, the dependency failure behaviour, and the upgrade path when the interface moves are the three things that decide adoption.
+
 ## Ecosystem Position
 
 Complementary to agent frameworks and orchestration layers that need durable state; competes with other backend-as-a-service platforms. Supabase's agent-native surface (MCP server, Postgres tooling) makes it a common persistence choice for coding agents.
@@ -86,6 +88,8 @@ npx supabase start
 
 - Postgres-centric; not a fit if a non-Postgres store is required.
 - Shared tenancy may not meet every single-tenant isolation requirement.
+
+The operational question for Supabase under a freemium cost model is where the boundary between the managed tier and self-hosting sits, and what moving a workload across that boundary costs in downtime and schema migration. The dependency that matters most is the database itself: a hosted database you cannot inspect is a different risk profile from one you can, and the data volume at which that difference becomes material is the number to measure before committing.
 
 ## Relation to the Arsenal
 

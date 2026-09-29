@@ -44,6 +44,8 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/huggingf
 
 The Hugging Face post-training library: trainers for supervised fine-tuning (SFTTrainer), preference optimization (DPOTrainer, GRPOTrainer, PPOTrainer), and reward modeling, built directly on Transformers/Accelerate/PEFT — the codebase where most published alignment methods get their reference implementation.
 
+TRL is reached over a documented surface unlike `axolotl`, `llamafactory`; on the fine-tuning path; under a open-source cost model; with `name`, `type`, `tool`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 TRL appears here as a reference point for the fine-tuning job. The useful question is what it would cost you to operate, which the sections below try to answer.

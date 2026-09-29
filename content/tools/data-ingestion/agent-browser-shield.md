@@ -58,6 +58,8 @@ Agent Browser Shield is catalogued here on the strength of its own documentation
 
 Intercepts content fetched during an agent's browsing session, applies sanitization/masking rules, and passes only the cleaned result into the agent's context.
 
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. The execution model matters more than the feature surface for Agent Browser Shield on the security-and-guardrails, web-scraping path; under a freemium cost model; with `agent-browser-shield`, `name`, `agent`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 ```bash

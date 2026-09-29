@@ -52,6 +52,8 @@ Instruction tuning had transformed text LLMs into assistants, but no visual inst
 
 (1) The visual instruction data pipeline: captions + boxes rendered as text let GPT-4 author conversations, detailed descriptions, and complex-reasoning QA about images it never saw — 158K samples; (2) the architecture: CLIP ViT-L/14 features, linear projection, Vicuna LLM; (3) the two-stage curriculum — projector-only alignment pretraining on image-caption pairs, then end-to-end instruction tuning — that nearly every subsequent VLM adopted.
 
+What liu-2023-llava contributes is a method change rather than a scale change in the architectures phase; with `liu-2023-llava`, `title`, `visual`, so the evidence that matters is the ablation: which component carries the gain, and whether the comparison baseline was held fixed.
+
 ## Key Results
 
 - 85.1% relative to GPT-4 on the paper's GPT-4-judged multimodal conversation benchmark; SOTA 92.53% on ScienceQA when ensembled with GPT-4 (2023)

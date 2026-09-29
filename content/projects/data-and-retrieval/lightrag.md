@@ -67,6 +67,8 @@ It represents the "graph-RAG made lightweight" point on the retrieval spectrum: 
 
 Ingestion runs LLM extraction over chunks to produce entities and relationships, deduplicates them into a graph, and stores both graph structure and embeddings. At query time a dual-level retriever combines low-level (entity-centric) and high-level (relationship/theme-centric) matches, assembling context that spans multiple documents rather than a single ranked passage list.
 
+Concretely, LightRAG is judged here on what it costs to operate rather than on what it claims in the data-and-retrieval phase; under a open-source cost model; with `lightrag`, `name`, `version`: the resource profile at your data volume, the dependency failure behaviour, and the upgrade path when the interface moves are the three things that decide adoption.
+
 ## Ecosystem Position
 
 It sits between plain vector RAG (cheaper, simpler, weaker at multi-hop) and Microsoft GraphRAG (deeper community summaries, heavier and costlier to index). Choose LightRAG when you want graph benefits with incremental updates and a smaller footprint.
@@ -95,6 +97,8 @@ pip install lightrag-hku
 - LLM extraction adds indexing cost and can introduce graph noise
 - Research-origin; operational maturity below managed services
 - Overkill for simple retrieval workloads
+
+The engineering question with LightRAG is not whether it works but what it commits you to in the data-and-retrieval phase; under a open-source cost model; with `lightrag`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
 
 ## Relation to the Arsenal
 

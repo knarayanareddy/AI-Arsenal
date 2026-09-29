@@ -60,6 +60,8 @@ Ray earns a place because it is the substrate underneath much of production AI i
 
 A head node coordinates worker nodes; each node runs a raylet scheduler and shares a Plasma-based distributed object store. Tasks and actors are scheduled onto resources (including fractional GPUs and custom resources), with object references passed by handle rather than copied. The AI libraries build on this core, so training, data, and serving workloads can share one cluster.
 
+Weights are loaded once and reused across requests, so the cost is memory and warm-up rather than a per-call fee, and cold-start latency is the first thing to measure after deployment. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `modal`, `bentoml`; on the production-serving, orchestration path; under a open-source cost model; with `name`, `type`, `tool`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash

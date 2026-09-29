@@ -56,6 +56,8 @@ Rebuff is catalogued here on the strength of its own documentation and public re
 
 Incoming prompts/content are scored against injection-detection heuristics and/or a classifier before being passed to the underlying LLM, flagging suspicious inputs.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. The execution model matters more than the feature surface for Rebuff unlike `guardrails-ai`, `llamaguard`; on the security-and-guardrails path; under a open-source cost model; with `rebuff`, `name`, `type`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring Rebuff into anything else. The command below runs against the `security-and-guardrails` job and returns a result you can inspect directly.

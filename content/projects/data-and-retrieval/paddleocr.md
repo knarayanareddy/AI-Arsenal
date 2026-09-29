@@ -65,6 +65,8 @@ Two-stage OCR: a DB-based text detector localizes regions, then a recognition mo
 
 Upstream: PaddlePaddle (Baidu's DL framework). Competing: Tesseract (older, weaker on scene/complex text), EasyOCR, cloud OCR APIs; Marker/MinerU for the PDF-to-markdown slice specifically. Complementary: PaddleOCR text/structure output is a common ingestion front-end for RAG over scanned corpora, and PP-ChatOCR wires it directly to LLMs for extraction tasks.
 
+Compared with unlike `marker`, `mineru`; in the data-and-retrieval phase; under a open-source cost model; with `paddleocr`, `name`, `version`, PaddleOCR overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash

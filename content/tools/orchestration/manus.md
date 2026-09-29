@@ -44,6 +44,8 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 An AI platform that takes a natural-language brief and autonomously scaffolds, writes, and ships a working full-stack web application, aimed at non-engineers or rapid internal tooling.
 
+Manus is reached over a documented surface on the prototyping, orchestration path; under a paid cost model; with `manus`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 Manus is a aI-powered platform for building full-stack web applications and automating tasks. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.

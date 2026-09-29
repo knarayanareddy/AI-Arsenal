@@ -52,6 +52,8 @@ LLM RL post-training runs two engines: a fast inference engine (vLLM-style) for 
 
 The conceptual contribution is the diagnosis: existing mismatch corrections (importance weighting and similar) stabilize updates to the *training* policy, silently assuming that improving it improves the *inference* policy — which the probability inconsistency between engines breaks. The paper makes the deployed inference policy the explicit optimization target: MIPI is a policy-optimization objective under which each update is constructed to monotonically improve the inference-engine policy, and MIPU is the two-step RL framework that implements it within the standard two-engine setup.
 
+What liang-2026-mipi contributes is a method change rather than a scale change in the training-and-alignment phase; with `liang-2026-mipi`, `title`, `mirage`, so the evidence that matters is the ablation: which component carries the gain, and whether the comparison baseline was held fixed.
+
 ## Key Results
 
 - Demonstrates that trajectory probabilities from training and inference engines diverge even with synchronized parameters — the empirical footing for the objective-misalignment claim (a phenomenon independently documented in the community's numerics work on rollout-training mismatch)

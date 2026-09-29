@@ -57,6 +57,8 @@ The case for Taste Lab rests on its documentation and observed adoption rather t
 
 Analyzes a target site's rendered styles and layout, then outputs a structured summary of its design system for downstream use by a design-aware agent.
 
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. Data crosses a boundary you do not control on the web-scraping path; under a freemium cost model; with `taste-lab`, `name`, `taste`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 ```bash

@@ -65,6 +65,8 @@ Ray orchestrates four model roles (actor, critic, reward, reference) as independ
 
 Upstream: vLLM (rollout serving), DeepSpeed (ZeRO sharding), Ray (scheduling). Competing: TRL for single-node/simpler alignment jobs, verl for the ByteDance-flavored RL stack. Complementary: checkpoints export to standard Hugging Face format, so serving and eval stacks downstream are unaffected.
 
+Read OpenRLHF beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `trl`; in the training-and-alignment phase; under a open-source cost model; with `openrlhf`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash

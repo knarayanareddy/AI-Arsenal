@@ -43,6 +43,8 @@ status: active
 
 Hugging Face's library of parameter-efficient fine-tuning methods (LoRA, QLoRA, IA3, prefix tuning, and others), used as a low-level building block inside custom or higher-level training pipelines.
 
+The integration surface is an API rather than a vendored library unlike `axolotl`, `llamafactory`; on the fine-tuning path; under a open-source cost model; with `peft`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 The entry exists because PEFT is a hugging Face library for parameter-efficient fine-tuning methods. Read it beside `axolotl`, `llamafactory`, `mlx-lm`: the choice between them is a deployment and cost decision before it is a capability one.

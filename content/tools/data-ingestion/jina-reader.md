@@ -43,6 +43,8 @@ status: active
 
 A lightweight reader API that converts a single URL into LLM-friendly text by prefixing the target URL with Jina's reader endpoint, with no setup required.
 
+Jina AI Reader is reached over a documented surface unlike `crawl4ai-tool`, `firecrawl-tool`; on the web-scraping path; under a freemium cost model; with `jina-reader`, `name`, `jina`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 Jina AI Reader is a reader endpoint for converting web pages into LLM-friendly text and Markdown. Read it beside `crawl4ai-tool`, `firecrawl-tool`, `playwright`: the choice between them is a deployment and cost decision before it is a capability one.
@@ -55,6 +57,8 @@ Jina AI Reader is a reader endpoint for converting web pages into LLM-friendly t
 ## Architecture / How It Works
 
 A request to `r.jina.ai/{url}` triggers server-side fetching and content extraction, returning cleaned text/Markdown directly in the response.
+
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. Data crosses a boundary you do not control unlike `crawl4ai-tool`, `firecrawl-tool`; on the web-scraping path; under a freemium cost model; with `jina-reader`, `name`, `jina`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
 
 ## Getting Started
 

@@ -58,6 +58,8 @@ RunPod is catalogued here on the strength of its own documentation and public re
 
 Pods are containers on dedicated GPUs in RunPod's secure or community (vetted third-party) datacenters; serverless packages your handler in a worker image that the platform autoscales per queue depth, billing only active seconds.
 
+Weights are loaded once and reused across requests, so the cost is memory and warm-up rather than a per-call fee, and cold-start latency is the first thing to measure after deployment. Data crosses a boundary you do not control unlike `modal`, `replicate`; on the production-serving, deployment path; under a usage-based cost model; with `runpod`, `name`, `type`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 ```bash

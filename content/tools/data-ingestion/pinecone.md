@@ -55,6 +55,8 @@ The case for Pinecone rests on its documentation and observed adoption rather th
 
 Vectors and associated metadata are upserted into managed indexes; queries combine approximate nearest-neighbor search with metadata filters, served from Pinecone-operated infrastructure.
 
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse on the vector-search path; under a freemium cost model; with `pinecone`, `name`, `type`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash

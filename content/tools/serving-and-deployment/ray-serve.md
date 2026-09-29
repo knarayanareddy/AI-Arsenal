@@ -58,6 +58,8 @@ The entry exists because Ray Serve is a scalable model-serving library on Ray fo
 
 Each deployment becomes actor replicas on a Ray cluster; an HTTP proxy routes requests through the deployment graph with backpressure-aware queuing, and the autoscaler adjusts replica counts from queue metrics. LLM-specific APIs wrap vLLM engines as deployments.
 
+Weights are loaded once and reused across requests, so the cost is memory and warm-up rather than a per-call fee, and cold-start latency is the first thing to measure after deployment. Data crosses a boundary you do not control unlike `triton-inference-server`, `bentoml`; on the production-serving, deployment path; under a open-source cost model; with `ray-serve`, `name`, `serve`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 ```bash

@@ -45,6 +45,8 @@ status: active
 
 Anyscale is the commercial platform built by the team behind Ray, the open-source distributed-computing framework. It provides a managed control plane for Ray clusters: autoscaling, cluster lifecycle, observability, and governance, so teams can run distributed training, batch inference, and Ray Serve deployments without operating Ray infrastructure themselves.
 
+The integration surface is an API rather than a vendored library unlike `ray-serve`, `modal`; on the deployment, production-serving path; under a usage-based cost model; with `anyscale`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 Ray is a common backbone for distributed AI (Ray Data, Train, Serve), but running production Ray clusters is an ops burden. Anyscale earns a serving-and-deployment entry as the managed answer to that, distinct from single-model serving platforms: its value shows up specifically when workloads are distributed across many nodes, which is exactly where lighter serving tools stop scaling.

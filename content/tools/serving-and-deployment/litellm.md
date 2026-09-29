@@ -41,6 +41,8 @@ status: active
 
 An open-source proxy and SDK that exposes a single OpenAI-compatible interface for calling dozens of different LLM providers, with built-in fallback and load-balancing logic.
 
+LiteLLM is reached over a documented surface on the production-serving, prompt-management path; under a open-source cost model; with `litellm`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 The entry exists because LiteLLM is A proxy and SDK for routing requests across many LLM providers. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.

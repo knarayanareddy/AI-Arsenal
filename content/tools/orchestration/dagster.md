@@ -53,6 +53,8 @@ The engineering decision it removes is how to declare dependencies when the thin
 
 Assets are materialised by the execution engine, which resolves the graph from parameter annotations, then runs each node with resources bound through a context object. Partitions slice the graph so the same code materialises per-day or per-entity without duplication, and sensors or schedules trigger runs on the outside. Metadata about every run flows into the Dagster web UI and its backing store, which is where lineage, freshness and observability views are rendered. Because assets are ordinary functions, the same code path is exercised by a unit test, a local run, and a production run.
 
+Work is a graph of steps where one step's output is the next step's input, so a schema change propagates downstream and a retry needs idempotency or you pay for the same tool call twice. The execution model matters more than the feature surface for Dagster unlike `prefect`; on the orchestration path; under a freemium cost model; with `dagster`, `name`, `type`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 Install from PyPI and start the local UI, then declare assets as functions:

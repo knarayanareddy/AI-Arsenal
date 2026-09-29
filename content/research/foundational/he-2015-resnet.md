@@ -50,6 +50,8 @@ ResNet introduced the residual connection: instead of asking a stack of layers t
 
 The paper identified and solved the *degradation problem*: adding more layers to a plain deep network made both training and test error worse, which is not what overfitting predicts — it meant deeper plain networks were harder to *optimize*, not just to generalize. The fix was to change what each block is asked to learn. If the optimal transformation for a block is close to the identity (common in very deep nets), a plain block must laboriously learn to approximate identity through nonlinearities, whereas a residual block only has to drive `F(x)` toward zero, which is far easier for gradient descent. Concretely, a residual block computes `y = F(x, {W_i}) + x`, where the `+ x` shortcut carries the input forward unchanged and provides an uninterrupted path for gradients during backpropagation. This is why extremely deep networks became trainable at all.
 
+What he-2015-resnet contributes is a method change rather than a scale change in the foundational phase; with `he-2015-resnet`, `title`, `deep`, so the evidence that matters is the ablation: which component carries the gain, and whether the comparison baseline was held fixed.
+
 ## Key Results
 
 - Trained networks up to 152 layers on ImageNet — roughly 8× deeper than the previous VGG networks — while remaining easier to optimize than shallower plain counterparts
@@ -60,6 +62,8 @@ The paper identified and solved the *degradation problem*: adding more layers to
 ## Methodology
 
 The authors built plain convolutional baselines and their residual counterparts (identical layer counts, with shortcut connections added) and compared optimization behavior on CIFAR-10 and ImageNet across depths. Shortcuts were parameter-free identity mappings where input and output dimensions matched, with projection shortcuts used to match dimensions when they changed. Bottleneck blocks (1×1 → 3×3 → 1×1 convolutions) were introduced to keep very deep variants computationally feasible. The comparison design isolates the effect of the residual connection itself, since everything else about the plain and residual networks was held constant.
+
+The methodology is the part to read for transferability: the dataset, the baseline, the evaluation protocol and the compute budget behind the reported number in the foundational phase; with `he-2015-resnet`, `title`, `deep`. A method strong on one benchmark and untested on another tells you about the benchmark, so check which of those four are documented and which are assumed.
 
 ## Practical Applicability
 

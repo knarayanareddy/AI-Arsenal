@@ -48,6 +48,8 @@ A single-author paper, years ahead of its need: Shazeer observed that autoregres
 
 A roofline argument plus an architecture change: incremental decoding's arithmetic intensity is dominated by the memory-to-compute ratio of loading K/V tensors of size n·h·d per step; sharing K/V across heads reduces this by h, removing the dominant term. Quality cost is small because query diversity — not key/value diversity — carries most of multi-head attention's expressive power.
 
+What shazeer-2019-mqa contributes is a method change rather than a scale change in the inference-and-efficiency phase; with `shazeer-2019-mqa`, `title`, `fast`, so the evidence that matters is the ablation: which component carries the gain, and whether the comparison baseline was held fixed.
+
 ## Key Results
 
 - Decoder inference time cut by an order of magnitude in the incremental setting (e.g. 46μs → 3.8μs per token per layer in the paper's TPU benchmark) with only ~0.1–0.15 BLEU/perplexity degradation on WMT14 En-De and language modeling (2019)

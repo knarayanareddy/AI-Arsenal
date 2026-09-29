@@ -41,6 +41,8 @@ status: active
 
 An open-source framework for writing and running custom evaluation suites against any model's behavior, code-first rather than UI-driven.
 
+Treat OpenAI Evals as a service with a schema, not as code you own on the evaluation path; under a open-source cost model; with `openai-evals`, `name`, `openai`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
 OpenAI Evals is An open-source framework for evaluating language model behavior. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.

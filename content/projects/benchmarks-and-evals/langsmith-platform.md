@@ -61,6 +61,8 @@ status: active
 
 LangChain's managed platform for tracing, evaluating, and monitoring applications, with first-party integration for LangChain and LangGraph specifically, requiring minimal setup for applications already built on those frameworks.
 
+The engineering question with LangSmith is not whether it works but what it commits you to unlike `langfuse`, `phoenix`; in the benchmark-and-eval phase; under a freemium cost model; with `langsmith-platform`, `name`, `langsmith`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+
 ## Why it's in the Arsenal
 
 LangSmith appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
@@ -72,6 +74,8 @@ LangChain/LangGraph applications emit trace data automatically via the integrati
 ## Ecosystem Position
 
 Upstream: tightly coupled to LangChain/LangGraph's instrumentation hooks. Downstream: none of particular note. Competing: Langfuse (open-source, framework-agnostic alternative), Braintrust, Helicone. Complementary: the natural pairing for any LangChain or LangGraph-based application, as documented in the frameworks-phase langchain.md and langgraph.md entries.
+
+Compared with unlike `langfuse`, `phoenix`; in the benchmark-and-eval phase; under a freemium cost model; with `langsmith-platform`, `name`, `langsmith`, LangSmith overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
 
 ## Getting Started
 

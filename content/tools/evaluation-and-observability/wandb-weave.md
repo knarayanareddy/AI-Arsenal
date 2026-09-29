@@ -41,6 +41,8 @@ status: active
 
 Weights & Biases' LLM observability and evaluation toolkit, extending their classic ML experiment tracking into tracing and evaluation for LLM-based applications.
 
+Weights & Biases Weave is reached over a documented surface on the tracing, evaluation path; under a freemium cost model; with `wandb-weave`, `name`, `weights`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 Weights & Biases Weave is catalogued as An observability and evaluation toolkit for AI applications from Weights & Biases, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
@@ -54,6 +56,8 @@ Weights & Biases Weave is catalogued as An observability and evaluation toolkit 
 ## Architecture / How It Works
 
 Application calls are instrumented to log traces and evaluation results to the W&B backend, where they appear alongside conventional training-run dashboards.
+
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. The execution model matters more than the feature surface for Weights & Biases Weave on the tracing, evaluation path; under a freemium cost model; with `wandb-weave`, `name`, `weights`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
 
 ## Getting Started
 

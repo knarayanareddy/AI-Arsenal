@@ -65,6 +65,8 @@ model.py implements a standard pre-norm decoder-only transformer (learned positi
 
 Upstream: PyTorch only. Downstream: an entire genre of forks — modded-nanoGPT speedruns (where optimizer research like Muon surfaced), architecture-ablation studies, and countless educational derivatives. Competing: LitGPT for maintained multi-architecture training; Karpathy's own llm.c for the C/CUDA rewrite. It pairs naturally with the Zero To Hero lecture series.
 
+Read nanoGPT beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `litgpt`; in the training-and-alignment phase; under a open-source cost model; with `nanogpt`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash

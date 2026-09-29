@@ -53,6 +53,8 @@ status: active
 
 An open-source evaluation framework for testing LLM applications, designed to integrate with standard testing tools (pytest) and CI pipelines so LLM output quality can be checked automatically like conventional unit tests.
 
+The engineering question with DeepEval is not whether it works but what it commits you to in the benchmark-and-eval phase; under a open-source cost model; with `deepeval`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+
 ## Why it's in the Arsenal
 
 The case for DeepEval rests on its documentation and observed adoption rather than on a controlled comparison here, so the sections below state what it claims to do and what adopting it would commit you to.

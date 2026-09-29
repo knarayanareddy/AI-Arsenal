@@ -59,6 +59,8 @@ The case for Qwen 3 rests on its documentation and observed adoption rather than
 
 Standard transformer-based architecture released as open weights; can be served through engines like vLLM, SGLang, or Ollama, or fine-tuned with standard PEFT/Axolotl-style tooling.
 
+A request is transformed into the exact payload the provider expects — messages, parameters, an API key — and returned as a normalised response, which is why the risk is a provider changing its schema or deprecating a model id without a version bump. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse on the production-serving path; under a freemium cost model; with `qwen-3`, `name`, `qwen`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash

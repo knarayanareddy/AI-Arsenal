@@ -66,6 +66,8 @@ FastAPI backend orchestrating multimodal LLM calls: the target image plus a fram
 
 Upstream: hosted multimodal LLM APIs (quality tracks frontier vision capability directly). Adjacent: v0 and Bolt-class commercial generators (integrated, closed), IDE agents that accept images (Cursor, Cline) for in-repo workflows. Its niche is the focused, open, self-hostable version of the capability.
 
+Read screenshot-to-code beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains in the agent-system phase; under a open-source cost model; with `screenshot-to-code`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash

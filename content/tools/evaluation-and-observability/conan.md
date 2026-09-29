@@ -57,6 +57,8 @@ The entry exists because Conan is a live HUD for monitoring and interacting with
 
 Runs as a local macOS application that attaches to an agent's running session, rendering its state and activity live as the agent executes.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse on the monitoring, tracing path; under a paid cost model; with `conan`, `name`, `type`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash

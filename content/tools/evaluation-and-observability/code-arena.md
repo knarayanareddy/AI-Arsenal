@@ -57,6 +57,8 @@ The case for Code Arena rests on its documentation and observed adoption rather 
 
 Models are pitted against shared coding tasks or against each other, with results aggregated into comparative rankings.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse on the evaluation path; under a freemium cost model; with `code-arena`, `name`, `code`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash

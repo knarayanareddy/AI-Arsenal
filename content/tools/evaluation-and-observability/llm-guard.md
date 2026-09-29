@@ -38,7 +38,7 @@ status: active
 enrichment_status: draft
 ---
 
-> **TL;DR:** the security-and-guardrails entry for LLM Guard. Open-source security toolkit of input/output scanners for LLM interactions — prompt injection, PII, toxicity, and more — the deciding factor is operational cost and what you have to run, not the feature list.
+> **TL;DR:** LLM Guard is the catalogued option for the security-and-guardrails job. The capability is documented; the false-positive rate on your own traffic is not, so measure it before routing production input through it. Read Strengths and Limitations together — this entry states what it claims to do and what depending on it would commit you to operating.
 
 ## Overview
 

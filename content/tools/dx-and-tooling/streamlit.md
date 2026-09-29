@@ -55,6 +55,8 @@ Streamlit is A Python framework for building data and AI apps with minimal front
 
 The entire script reruns top-to-bottom on each user interaction, with Streamlit's caching layer used to avoid recomputing expensive steps unnecessarily.
 
+The integration happens in the developer's loop rather than at runtime, through a config file, a CLI or an editor extension, so the failure mode is a broken or ambiguous configuration rather than an outage in a request path. The execution model matters more than the feature surface for Streamlit unlike `chainlit`, `fastapi`; on the prototyping path; under a freemium cost model; with `streamlit`, `name`, `type`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 ```bash

@@ -88,6 +88,8 @@ Upstream: `trl` (RL trainers), `accelerate` (distribution), and open base models
 - Cadence has slowed since the initial reproduction sprint; treat as a reference recipe, not a fast-moving product
 - Reasoning RL is compute-heavy; not a lightweight fine-tune
 
+The engineering question with Open R1 (Hugging Face) is not whether it works but what it commits you to unlike `alignment-handbook`, `verl`; in the training-and-alignment phase; under a open-source cost model; with `open-r1`, `name`, `open`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+
 ## Relation to the Arsenal
 
 This is a training-and-alignment entry: infrastructure for producing models. For served reasoning models see [Foundation Models](../foundation-models/_index.md); for the underlying RL library see `trl`.

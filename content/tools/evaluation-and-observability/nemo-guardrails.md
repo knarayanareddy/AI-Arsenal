@@ -43,6 +43,8 @@ status: active
 
 NVIDIA's open-source framework for adding programmable conversational rails (topical, safety, jailbreak) to LLM applications, defined using a custom DSL called Colang.
 
+Treat NeMo Guardrails as a service with a schema, not as code you own unlike `guardrails-ai`, `llamaguard`; on the security-and-guardrails path; under a open-source cost model; with `nemo-guardrails`, `name`, `nemo`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
 The case for NeMo Guardrails rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
@@ -56,6 +58,8 @@ The case for NeMo Guardrails rests on its documentation and observed adoption ra
 ## Architecture / How It Works
 
 Conversation flow is defined as a set of Colang rules describing allowed/disallowed topics and responses; the runtime intercepts the conversation and enforces these rails alongside the underlying LLM.
+
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `guardrails-ai`, `llamaguard`; on the security-and-guardrails path; under a open-source cost model; with `nemo-guardrails`, `name`, `nemo`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
 
 ## Getting Started
 

@@ -266,6 +266,21 @@ function isGeneratedCard(paragraph) {
     || /^\*\*Avoid if:\*\*/.test(paragraph);
 }
 
+// Paragraphs that are structured data rather than prose: bullet lists, tables,
+// and link lists. The repeated-paragraph rule exists to catch duplicated
+// *writing*; a metrics list or a comparison table is parallel data that is
+// legitimately identical across sibling entries (two code-generation
+// benchmarks genuinely use the same pass@1/pass@10 definitions).
+function isStructuredData(paragraph) {
+  const lines = paragraph.split('\n').map((l) => l.trim()).filter(Boolean);
+  if (lines.length < 2) return false;
+  // A bullet list: every line starts with a marker.
+  if (lines.every((l) => /^[-*+]\s+/.test(l))) return true;
+  // A markdown table: every line is a row.
+  if (lines.every((l) => l.startsWith('|'))) return true;
+  return false;
+}
+
 export function inspectEntry({ file, data, content }) {
   const issues = [];
   const kind = entryKind(file, data);
@@ -483,7 +498,7 @@ export async function validateEditorialQuality({ mode = 'changed', date = null, 
   // paragraph checks. This is what closes the 398-entry validation gap.
   for (const entry of [...selected, ...catalogWide]) {
     issues.push(...inspectEntry(entry));
-    for (const paragraph of entry.content.split(/\n\s*\n/).map((value) => value.trim()).filter((value) => value.length >= 120 && !value.startsWith('- [') && !value.startsWith('```') && !isGeneratedCard(value))) {
+    for (const paragraph of entry.content.split(/\n\s*\n/).map((value) => value.trim()).filter((value) => value.length >= 120 && !value.startsWith('- [') && !value.startsWith('```') && !isGeneratedCard(value) && !isStructuredData(value))) {
       const normalized = normalize(paragraph);
       if (!paragraphs.has(normalized)) paragraphs.set(normalized, []);
       paragraphs.get(normalized).push(entry.file);

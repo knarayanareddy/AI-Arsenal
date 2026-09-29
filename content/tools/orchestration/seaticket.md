@@ -44,6 +44,8 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 A platform that uses autonomous AI agents to triage, route, and resolve customer-support tickets, intended to reduce manual support workload.
 
+The integration surface is an API rather than a vendored library on the orchestration path; under a freemium cost model; with `seaticket`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 The entry exists because SeaTicket is a unify and resolve customer-support issues with autonomous AI agents. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
@@ -56,6 +58,8 @@ The entry exists because SeaTicket is a unify and resolve customer-support issue
 ## Architecture / How It Works
 
 Incoming support tickets are routed to an agent pipeline that classifies, attempts resolution, and escalates to humans when confidence is low.
+
+Work is a graph of steps where one step's output is the next step's input, so a schema change propagates downstream and a retry needs idempotency or you pay for the same tool call twice. Data crosses a boundary you do not control on the orchestration path; under a freemium cost model; with `seaticket`, `name`, `type`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
 
 ## Getting Started
 

@@ -57,6 +57,8 @@ The case for Spotlight by Backplanes rests on its documentation and observed ado
 
 Instrumented agent sessions report step-by-step activity to Spotlight's backend, which reconstructs and visualizes the full session for debugging.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Data crosses a boundary you do not control on the tracing, monitoring path; under a freemium cost model; with `spotlight-by-backplanes`, `name`, `spotlight`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 ```bash

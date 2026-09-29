@@ -41,6 +41,8 @@ status: active
 
 LangChain's managed platform for tracing, evaluating, and monitoring applications built with LangChain or LangGraph, with first-party integration requiring minimal setup.
 
+Treat LangSmith as a service with a schema, not as code you own on the evaluation, tracing path; under a freemium cost model; with `langsmith`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
 LangSmith is catalogued as A managed platform for tracing, evaluating, and monitoring LangChain applications, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
@@ -54,6 +56,8 @@ LangSmith is catalogued as A managed platform for tracing, evaluating, and monit
 ## Architecture / How It Works
 
 LangChain/LangGraph applications emit trace data automatically via the integration; LangSmith's backend stores and renders these traces alongside evaluation runs and monitoring dashboards.
+
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. The execution model matters more than the feature surface for LangSmith on the evaluation, tracing path; under a freemium cost model; with `langsmith`, `name`, `type`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
 
 ## Getting Started
 

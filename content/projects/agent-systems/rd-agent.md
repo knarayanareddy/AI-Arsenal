@@ -71,6 +71,8 @@ RD-Agent separates idea generation from implementation: the Research component p
 
 It contrasts with general coding agents (Aider, OpenHands) and with orchestration frameworks. Its niche is closed-loop, evaluation-driven R&D automation from a major research lab.
 
+Read RD-Agent beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains in the agent-system phase; under a open-source cost model; with `rd-agent`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash
@@ -95,6 +97,8 @@ pip install rdagent
 - Research-forward; expects data-science literacy and compute
 - Narrower than general coding agents by design
 - Running loops can incur significant LLM/compute cost
+
+The engineering question with RD-Agent is not whether it works but what it commits you to in the agent-system phase; under a open-source cost model; with `rd-agent`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
 
 ## Relation to the Arsenal
 

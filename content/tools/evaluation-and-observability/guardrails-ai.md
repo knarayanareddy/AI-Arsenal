@@ -41,6 +41,8 @@ status: active
 
 An open-source framework for validating, correcting, or constraining LLM outputs against custom rules (PII, format, toxicity) before they reach end users, composable from reusable validators.
 
+The integration surface is an API rather than a vendored library unlike `llamaguard`, `nemo-guardrails`; on the security-and-guardrails, structured-output path; under a freemium cost model; with `guardrails-ai`, `name`, `guardrails`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 The case for Guardrails AI rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
@@ -54,6 +56,8 @@ The case for Guardrails AI rests on its documentation and observed adoption rath
 ## Architecture / How It Works
 
 A 'guard' wraps an LLM call with a configured set of validators; failing outputs can be rejected, corrected via re-prompting, or flagged depending on configuration.
+
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `llamaguard`, `nemo-guardrails`; on the security-and-guardrails, structured-output path; under a freemium cost model; with `guardrails-ai`, `name`, `guardrails`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
 
 ## Getting Started
 

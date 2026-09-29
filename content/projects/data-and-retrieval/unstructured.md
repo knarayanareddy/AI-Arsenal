@@ -71,6 +71,8 @@ Provides format-specific parsing strategies unified under a common element-based
 
 Upstream: none of particular note. Downstream: officially integrated as a document loader in both LangChain and LlamaIndex. Competing: Docling (more specialized layout analysis), LlamaParse (managed-only, LlamaIndex-specific). Complementary: commonly used as the document-ingestion step in a broader RAG pipeline.
 
+Compared with in the data-and-retrieval phase; under a open-source cost model; with `unstructured`, `name`, `version`, Unstructured overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash

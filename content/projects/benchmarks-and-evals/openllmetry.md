@@ -72,6 +72,8 @@ Provides auto-instrumentation packages following OpenTelemetry semantic conventi
 
 Upstream: built on the OpenTelemetry SDK and semantic conventions. Downstream: powers Traceloop's own commercial observability platform. Competing: OpenLIT occupies a very similar OTel-native niche. Complementary: exports to any OTel-compatible backend, including Langfuse, Grafana, or Traceloop's hosted platform.
 
+Read OpenLLMetry beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `openllmetry`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash

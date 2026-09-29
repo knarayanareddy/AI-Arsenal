@@ -65,6 +65,8 @@ The hybrid-controller model splits RL into a single-controller dataflow (the alg
 
 Upstream: vLLM and SGLang for rollouts; FSDP and Megatron-LM for training parallelism. Competing: OpenRLHF (Ray-centric design) and TRL (single-node simplicity). Downstream: many published open reasoning models and RL recipes (DAPO, multi-turn agent RL) ship as verl configs, making it a reference implementation as much as a tool.
 
+Compared with unlike `openrlhf`, `trl`; in the training-and-alignment phase; under a open-source cost model; with `verl`, `name`, `version`, verl overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash

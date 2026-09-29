@@ -41,6 +41,8 @@ status: active
 
 An AI gateway that sits in front of multiple LLM providers, combining routing, caching, guardrails, and centralized observability into one layer.
 
+The integration surface is an API rather than a vendored library on the prompt-management, monitoring path; under a freemium cost model; with `portkey`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 Portkey appears here as a reference point for the prompt-management, monitoring job. The useful question is what it would cost you to operate, which the sections below try to answer.

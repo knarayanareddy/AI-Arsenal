@@ -57,6 +57,8 @@ The case for Weights & Biases rests on its documentation and observed adoption r
 
 Training code logs metrics/artifacts to a hosted (or self-hosted) backend via a lightweight client library; the web UI then renders comparisons, sweeps, and reports across runs and teams.
 
+A request is transformed into the exact payload the provider expects — messages, parameters, an API key — and returned as a normalised response, which is why the risk is a provider changing its schema or deprecating a model id without a version bump. The execution model matters more than the feature surface for Weights & Biases unlike `dvc`, `hugging-face-hub`; on the model-registry, evaluation path; under a freemium cost model; with `weights-biases`, `name`, `weights`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
+
 ## Getting Started
 
 Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Weights & Biases into anything else. The command below calls the hosted service against the `model-registry, evaluation` job and returns a result you can inspect directly.

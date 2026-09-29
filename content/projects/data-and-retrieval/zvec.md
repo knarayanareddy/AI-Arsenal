@@ -56,11 +56,13 @@ An open-source, in-process vector database from Alibaba: instead of running a se
 
 ## Why it's in the Arsenal
 
-In-process vector database that fills a real architectural gap: FAISS gives you a raw index with no database ergonomics, while Qdrant/Weaviate give you a server you must operate. zvec earns a place in the Arsenal because local-first agents and embedded RAG (a growing deployment shape — see the [local-first reference stack](../../architectures/reference-stacks/local-first.md)) need exactly this middle option: durable, queryable vector storage with zero infrastructure. See Strengths / Limitations below before adopting it.
+zvec is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so read the sections below as what the project states about itself. What it would cost to adopt — operationally, in spend and on-call — is the question those sections are there to inform.
 
 ## Architecture
 
 zvec is a C++ core with language bindings, linked into your application process. Vectors are stored durably on local disk and indexed with HNSW for approximate nearest-neighbor search; queries combine similarity search with scalar filtering. Because everything runs in-process, there is no network hop, connection pooling, or server lifecycle — the same trade SQLite makes against client-server databases.
+
+Read zvec against the operational facts rather than the feature list unlike `qdrant`; in the data-and-retrieval phase; under a open-source cost model; with `zvec`, `name`, `version`. What matters is the data path it introduces, the state it keeps, and what a degraded dependency does — the parts a capability claim does not cover.
 
 ## Ecosystem Position
 

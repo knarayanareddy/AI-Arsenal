@@ -66,6 +66,8 @@ A thin `alignment-handbook` package over the HF stack: recipes are YAML configs 
 
 Upstream: TRL (trainers), `accelerate` (distribution), `peft` (QLoRA variants). Peers: training frameworks (Axolotl, LLaMA-Factory) that implement methods but don't publish validated recipes; model-specific cookbooks that lack its breadth. Its Zephyr lineage (arXiv:2310.16944) made distilled DPO the default open post-training pattern of its era.
 
+Compared with in the training-and-alignment phase; under a open-source cost model; with `alignment-handbook`, `name`, `alignment`, The Alignment Handbook (Hugging Face) overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash

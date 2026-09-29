@@ -43,6 +43,8 @@ status: active
 
 Google Cloud's platform for training, evaluating, and deploying AI models, tightly integrated with BigQuery and other GCP data services.
 
+The integration surface is an API rather than a vendored library unlike `aws-bedrock`, `azure-ai-studio`; on the deployment path; under a usage-based cost model; with `google-vertex-ai`, `name`, `google`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 The entry exists because Google Vertex AI is a google Cloud platform for model APIs, training, evaluation, and AI application deployment. Read it beside `aws-bedrock`, `azure-ai-studio`, `hf-inference-endpoints`: the choice between them is a deployment and cost decision before it is a capability one.

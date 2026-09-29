@@ -51,6 +51,8 @@ SmoothQuant is a post-training quantization method that makes 8-bit activation *
 
 Weight-only quantization (like GPTQ/AWQ) is comparatively easy; quantizing *activations* to 8-bit fails because certain channels have large-magnitude outliers that wreck the quantization range. SmoothQuant's contribution is an equivalence transformation: scale down the outlier-heavy activation channels by a per-channel factor and scale the corresponding weight channels up by its inverse, leaving the math unchanged but redistributing the dynamic range. Since weights quantize cleanly, both W and A can now use simple 8-bit integer quantization — enabling INT8 matmul kernels.
 
+The contribution is a specific change to how xiao-2022-smoothquant is trained or evaluated in the inference-and-efficiency phase; with `xiao-2022-smoothquant`, `title`, `smoothquant`, and the claim to check is whether the reported gain survives the baseline it is compared against. Reproducing the headline number on the stated dataset and protocol is the test of whether this is a real result or a measurement artefact.
+
 ## Key Results
 
 - Achieved near-lossless W8A8 quantization on large models (e.g. OPT/BLOOM/LLaMA-scale), with measured latency and memory reductions from integer inference (see the paper for accuracy/throughput tables)
@@ -59,6 +61,8 @@ Weight-only quantization (like GPTQ/AWQ) is comparatively easy; quantizing *acti
 ## Methodology
 
 Offline, compute per-channel activation scales from a small calibration set, fold the inverse scale into the preceding weights (a mathematically equivalent rewrite), then quantize weights and activations to INT8 and run with integer GEMM kernels. No retraining is required.
+
+The methodology is the part to read for transferability: the dataset, the baseline, the evaluation protocol and the compute budget behind the reported number in the inference-and-efficiency phase; with `xiao-2022-smoothquant`, `title`, `smoothquant`. A method strong on one benchmark and untested on another tells you about the benchmark, so check which of those four are documented and which are assumed.
 
 ## Practical Applicability
 

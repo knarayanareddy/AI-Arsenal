@@ -57,6 +57,8 @@ The case for PromptLayer rests on its documentation and observed adoption rather
 
 Application code calls models through or alongside PromptLayer's SDK, which logs requests and ties them to managed, versioned prompt templates.
 
+The integration happens in the developer's loop rather than at runtime, through a config file, a CLI or an editor extension, so the failure mode is a broken or ambiguous configuration rather than an outage in a request path. Data crosses a boundary you do not control unlike `langfuse-prompts`, `langsmith-hub`; on the prompt-management path; under a freemium cost model; with `promptlayer`, `name`, `type`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 Install the client for your language, then make one call to confirm the credentials, network path and configuration are reachable before wiring PromptLayer into anything else. The command below calls the hosted service against the `prompt-management` job and returns a result you can inspect directly.

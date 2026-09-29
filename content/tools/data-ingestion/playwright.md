@@ -45,6 +45,8 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 A cross-browser automation framework (Chromium, Firefox, WebKit) used both for reliable end-to-end testing and for scraping/interacting with JavaScript-heavy websites that simple HTTP scraping can't handle.
 
+Treat Playwright as a service with a schema, not as code you own unlike `crawl4ai-tool`, `firecrawl-tool`; on the web-scraping path; under a open-source cost model; with `playwright`, `name`, `type`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
 The case for Playwright rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.
@@ -58,6 +60,8 @@ The case for Playwright rests on its documentation and observed adoption rather 
 ## Architecture / How It Works
 
 Drives real browser instances via each browser's native automation protocol, executing scripted actions (navigation, clicks, form fills) and exposing the resulting DOM/network state to the caller.
+
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `crawl4ai-tool`, `firecrawl-tool`; on the web-scraping path; under a open-source cost model; with `playwright`, `name`, `type`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
 
 ## Getting Started
 

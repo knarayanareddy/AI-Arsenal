@@ -72,6 +72,8 @@ Built on OpenTelemetry for tracing instrumentation, with a strong notebook-first
 
 Upstream: built on OpenTelemetry conventions. Downstream: none of particular note. Competing: Langfuse, LangSmith, Opik. Complementary: shares Arize's broader ML observability expertise and can integrate with Arize's commercial platform for teams that outgrow the open-source tool alone.
 
+Read Phoenix beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `phoenix`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash

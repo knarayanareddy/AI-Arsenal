@@ -44,6 +44,8 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/adbar/tr
 
 A scholarly-grade web scraping library used in major LLM data pipelines: given HTML, it extracts the main content (dropping navigation, ads, boilerplate), preserves structure, pulls metadata (author, date, sitename), and outputs text, Markdown, CSV, JSON, or XML-TEI — with crawling, sitemap, and feed utilities included.
 
+Trafilatura is reached over a documented surface unlike `firecrawl`, `crawl4ai`; on the web-scraping path; under a open-source cost model; with `trafilatura`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 The entry exists because Trafilatura is a python library for fast, accurate extraction of main text and metadata from web pages — the standard for LLM corpus building. Read it beside `firecrawl`, `crawl4ai`, `jina-reader`: the choice between them is a deployment and cost decision before it is a capability one.

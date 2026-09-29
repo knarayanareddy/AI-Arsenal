@@ -57,6 +57,8 @@ Unsloth is catalogued here on the strength of its own documentation and public r
 
 Replaces parts of the standard training path with optimized, hand-written kernels and memory-management tricks, reducing both step time and peak memory without changing the training math.
 
+A request is transformed into the exact payload the provider expects — messages, parameters, an API key — and returned as a normalised response, which is why the risk is a provider changing its schema or deprecating a model id without a version bump. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `axolotl`, `llamafactory`; on the fine-tuning path; under a open-source cost model; with `unsloth`, `name`, `type`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 Install the Python package and its runtime dependencies first, then make one call to confirm the credentials, network path and configuration are reachable before wiring Unsloth into anything else. The command below runs against the `fine-tuning` job and returns a result you can inspect directly.

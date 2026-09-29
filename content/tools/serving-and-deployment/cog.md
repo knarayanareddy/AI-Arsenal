@@ -56,6 +56,8 @@ The gap between "model works in my notebook" and "model runs as a reliable GPU s
 
 `cog.yaml` + `predict.py` are the contract: at build, Cog composes a layered image with the declared environment and a web server wrapping your `Predictor`; `setup()` loads weights once at boot, `predict()` handles each request with type-checked inputs, and a queue worker enables async/batched serving — the standard shape Replicate's infrastructure expects.
 
+Weights are loaded once and reused across requests, so the cost is memory and warm-up rather than a per-call fee, and cold-start latency is the first thing to measure after deployment. Internally the work is request to normalisation to result: the input is transformed into the shape the backend expects and returned in a form your code can parse unlike `bentoml`, `modal`; on the deployment path; under a open-source cost model; with `name`, `replicate`, `type`. That intermediate representation is the thing to log when the output is wrong, because a silent transformation is the usual reason a result cannot be reproduced.
+
 ## Getting Started
 
 ```bash

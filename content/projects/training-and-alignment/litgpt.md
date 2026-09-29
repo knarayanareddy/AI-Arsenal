@@ -65,6 +65,8 @@ Each model family (Llama, Gemma, Qwen, Phi, Mistral, and others) is a standalone
 
 Upstream: PyTorch and Lightning Fabric. Competing: Axolotl and LLaMA-Factory (config-driven fine-tuning), torchtune (Meta's PyTorch-native recipes). Complementary: checkpoints convert to/from Hugging Face format, and its readable implementations are frequently used as reference code when debugging other stacks — it was also the basis for several open pretraining projects (e.g. TinyLlama).
 
+Compared with unlike `axolotl`, `llamafactory`; in the training-and-alignment phase; under a open-source cost model; with `litgpt`, `name`, `version`, LitGPT overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash

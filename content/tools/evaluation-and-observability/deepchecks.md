@@ -44,6 +44,8 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/deepchec
 
 An ML-validation framework built around the check/suite abstraction: dozens of prebuilt checks (label leakage, feature drift, weak segments, conflicting labels) compose into suites run at train/eval/production time, extended by a commercial LLM-evaluation product scoring properties like groundedness and toxicity on traced interactions.
 
+The integration surface is an API rather than a vendored library unlike `evidently`, `ragas-rag-evaluation`; on the evaluation, monitoring path; under a freemium cost model; with `deepchecks`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 Deepchecks is catalogued as a testing-first validation for ML models and LLM apps: prebuilt check suites from data integrity to LLM quality, which is the specific claim the rest of the entry has to support. Read it beside `evidently`, `ragas-rag-evaluation`, `deepeval`: the choice between them is a deployment and cost decision before it is a capability one.

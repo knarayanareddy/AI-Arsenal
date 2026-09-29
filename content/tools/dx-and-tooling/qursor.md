@@ -44,6 +44,8 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 A tool that gives AI coding agents richer UI context — beyond raw DOM/code — to speed up agent-assisted front-end development tasks.
 
+Qursor is reached over a documented surface on the orchestration, structured-output path; under a freemium cost model; with `qursor`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 Qursor is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.

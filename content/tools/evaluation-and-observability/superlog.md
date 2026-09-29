@@ -44,6 +44,8 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 A real-time log aggregation platform purpose-built for serverless AI workloads, addressing the difficulty of correlating logs across short-lived, distributed serverless invocations.
 
+Superlog is reached over a documented surface on the monitoring, tracing path; under a freemium cost model; with `superlog`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 The entry exists because Superlog is a real-time log aggregation platform designed for serverless debugging. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness. It is marked beta, so pin the interface rather than tracking it.
@@ -56,6 +58,8 @@ The entry exists because Superlog is a real-time log aggregation platform design
 ## Architecture / How It Works
 
 Logs emitted by individual serverless function invocations are streamed to a central aggregation backend that correlates them by request/session for unified viewing.
+
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Data crosses a boundary you do not control on the monitoring, tracing path; under a freemium cost model; with `superlog`, `name`, `type`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
 
 ## Getting Started
 

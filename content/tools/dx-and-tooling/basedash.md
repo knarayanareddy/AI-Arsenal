@@ -44,6 +44,8 @@ buzz_sources: [{"source":"newsletter","url":"https://toolradar.com/featured/tech
 
 An AI-native platform for generating dashboards, reports, and insights from natural-language queries over your data, aimed at letting non-technical users explore data without writing SQL.
 
+Basedash is reached over a documented surface on the structured-output path; under a paid cost model; with `basedash`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 Basedash is catalogued as a aI-native platform for generating dashboards, reports, and insights from natural-language queries, which is the specific claim the rest of the entry has to support. No direct sibling is catalogued in this phase, which makes this the reference point for the job rather than evidence of uniqueness.
@@ -56,6 +58,8 @@ Basedash is catalogued as a aI-native platform for generating dashboards, report
 ## Architecture / How It Works
 
 Natural-language queries are translated into underlying data queries against connected sources, with results rendered as dashboards or reports automatically.
+
+The integration happens in the developer's loop rather than at runtime, through a config file, a CLI or an editor extension, so the failure mode is a broken or ambiguous configuration rather than an outage in a request path. The execution model matters more than the feature surface for Basedash on the structured-output path; under a paid cost model; with `basedash`, `name`, `type`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
 
 ## Getting Started
 

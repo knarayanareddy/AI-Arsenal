@@ -62,6 +62,8 @@ The odds-ratio preference term. Standard SFT maximizes the likelihood of chosen 
 
 Training uses instruction data with (chosen, rejected) response pairs. The loss is the sum of the usual SFT cross-entropy on the chosen response and λ times a log-sigmoid of the log odds ratio between chosen and rejected sequence likelihoods. A single hyperparameter λ balances instruction-following against preference discrimination. Evaluation is on AlpacaEval 2, MT-Bench, and related instruction-following benchmarks.
 
+The methodology is the part to read for transferability: the dataset, the baseline, the evaluation protocol and the compute budget behind the reported number in the training-and-alignment phase; with `hong-2024-orpo`, `title`, `orpo`. A method strong on one benchmark and untested on another tells you about the benchmark, so check which of those four are documented and which are assumed.
+
 ## Practical Applicability
 
 ORPO is directly useful when you want aligned behavior straight from a base model without standing up a two-phase pipeline: it is supported in TRL and LLaMA-Factory, so you can swap it for SFT+DPO and often match quality with less orchestration and memory (no reference model). It is especially attractive for rapid iteration and for smaller teams. Tune λ carefully — too high harms fluency, too low leaves the model under-aligned.

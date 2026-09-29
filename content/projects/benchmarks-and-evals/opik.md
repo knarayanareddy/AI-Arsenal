@@ -68,9 +68,13 @@ Opik appears in this catalog as a reference point for the benchmark-and-eval pha
 
 Provides tracing instrumentation for LLM application calls, an evaluation framework with both heuristic and LLM-graded metrics, and a dashboard shared conceptually with Comet's broader ML experiment-tracking platform, available as both open-source self-hosted and managed cloud offerings.
 
+The engineering question with Opik is not whether it works but what it commits you to unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `opik`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+
 ## Ecosystem Position
 
 Upstream: built by Comet, leveraging their existing ML platform infrastructure and experience. Downstream: none of particular note. Competing: Langfuse, LangSmith, Braintrust. Complementary: shares an ecosystem with Comet's classic ML experiment tracking for teams already using that product.
+
+Compared with unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `opik`, `name`, `version`, Opik overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
 
 ## Getting Started
 

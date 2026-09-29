@@ -41,6 +41,8 @@ status: active
 
 A flexible, open-source labeling tool supporting many data types (text, image, audio, video) for building training and evaluation datasets, designed to be self-hosted.
 
+Treat Label Studio as a service with a schema, not as code you own unlike `argilla`, `prodigy`; on the data-labeling path; under a freemium cost model; with `label-studio`, `name`, `label`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
 The entry exists because Label Studio is An open-source data labeling platform for ML and AI datasets. Read it beside `argilla`, `prodigy`, `scale-ai`: the choice between them is a deployment and cost decision before it is a capability one.
@@ -54,6 +56,8 @@ The entry exists because Label Studio is An open-source data labeling platform f
 ## Architecture / How It Works
 
 Projects define a labeling interface and task data source; annotators work through a queue of tasks in the UI, with results exportable in standard formats.
+
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. The execution model matters more than the feature surface for Label Studio unlike `argilla`, `prodigy`; on the data-labeling path; under a freemium cost model; with `label-studio`, `name`, `label`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
 
 ## Getting Started
 

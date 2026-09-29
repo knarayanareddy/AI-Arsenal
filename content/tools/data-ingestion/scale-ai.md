@@ -43,6 +43,8 @@ status: active
 
 A managed enterprise data-labeling and data-engine platform providing outsourced annotation workforce and pipeline operations for large-scale AI training datasets.
 
+Treat Scale AI as a service with a schema, not as code you own unlike `argilla`, `label-studio`; on the data-labeling path; under a paid cost model; with `scale-ai`, `name`, `scale`. The cache, the retry policy and an explicit timeout are your responsibilities at this boundary, and getting them wrong presents as a provider problem when it is a client one.
+
 ## Why It's in the Arsenal
 
 Scale AI is catalogued as a managed data labeling and data engine platform for enterprise AI datasets, which is the specific claim the rest of the entry has to support. Read it beside `argilla`, `label-studio`, `prodigy`: the choice between them is a deployment and cost decision before it is a capability one.
@@ -56,6 +58,8 @@ Scale AI is catalogued as a managed data labeling and data engine platform for e
 ## Architecture / How It Works
 
 Customers submit data and labeling requirements; Scale AI's workforce and pipeline manage annotation, quality assurance, and delivery of the finished dataset.
+
+The pipeline is fetch to parse to normalise, and each stage drops information; the stage that drops the most is usually the one that matters for your corpus. Inspect the normalised output at each boundary, because a parser that silently loses a table looks exactly like one that worked on clean input. The execution model matters more than the feature surface for Scale AI unlike `argilla`, `label-studio`; on the data-labeling path; under a paid cost model; with `scale-ai`, `name`, `scale`. A call either returns, times out, or is rate-limited, and which of those you get under load is what separates a working integration from a demo.
 
 ## Getting Started
 

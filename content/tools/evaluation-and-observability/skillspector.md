@@ -62,6 +62,8 @@ Agent skills are instructions an agent will *follow with your permissions*, maki
 
 SkillSpector parses a skill package (instruction Markdown plus any bundled scripts/resources) and runs detection passes over both layers: content analysis for instruction-level attacks (injections, deceptive directives) and static analysis for script-level risks. Findings are reported per file with the matched pattern, so a human can adjudicate rather than trusting a binary verdict.
 
+The flow is request to span to aggregate: spans are written asynchronously, so a dashboard can lag the request that produced it, and any sampling or batching setting changes what the aggregate score represents. Data crosses a boundary you do not control on the security-and-guardrails path; under a open-source cost model; with `skillspector`, `name`, `type`, which makes the failure modes specific: timeouts, exhausted quotas and expired credentials. Decide what your system does in each case before the first request, because a dependency that is slow and one that is absent need different handling.
+
 ## Getting Started
 
 ```bash

@@ -44,6 +44,8 @@ buzz_sources: [{"source": "github-trending", "url": "https://github.com/skypilot
 
 An open-source framework from UC Berkeley for running AI workloads across clouds: describe a job's resources in YAML (GPUs, disk, setup, run commands) and SkyPilot finds the cheapest available capacity across your enabled clouds/K8s clusters, provisions it, syncs your code, handles spot preemptions, and tears down when done.
 
+The integration surface is an API rather than a vendored library unlike `modal`, `runpod`; on the deployment, fine-tuning path; under a open-source cost model; with `skypilot`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 SkyPilot is a run AI workloads on any cloud or Kubernetes with automatic cheapest-GPU selection, spot handling, and one YAML interface. Read it beside `modal`, `runpod`: the choice between them is a deployment and cost decision before it is a capability one.

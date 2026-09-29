@@ -44,6 +44,8 @@ status: active
 
 An open-source, configuration-driven fine-tuning framework that lets you fine-tune a wide range of open-weight LLMs by editing a YAML file rather than writing custom training code.
 
+Axolotl is reached over a documented surface unlike `llamafactory`, `mlx-lm`; on the fine-tuning path; under a open-source cost model; with `axolotl`, `name`, `type`, which means the things to measure are end-to-end latency at your real request shape, the error rate when the upstream is degraded, and what your system does when the call times out — none of which the feature list tells you.
+
 ## Why It's in the Arsenal
 
 The case for Axolotl rests on its documentation and observed adoption rather than a controlled comparison here; the sections below state what it claims and what depending on it would commit you to.

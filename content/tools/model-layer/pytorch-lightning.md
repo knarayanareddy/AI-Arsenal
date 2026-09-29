@@ -45,7 +45,7 @@ PyTorch Lightning splits training code into a LightningModule (your model, losse
 
 ## Why It's in the Arsenal
 
-Not every model-layer job is an LLM fine-tune: teams training encoders, diffusion models, rankers, and bespoke architectures need training infrastructure, and Lightning is that category's long-standing default (31k stars, a decade of production use). It anchors the general-training end of the phase, complementing the LLM-recipe frameworks. See Strengths / Limitations below before adopting it.
+PyTorch Lightning is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so read the sections below as what the project states about itself. What it would cost to adopt — operationally, in spend and on-call — is the question those sections are there to inform.
 
 ## Key Features
 

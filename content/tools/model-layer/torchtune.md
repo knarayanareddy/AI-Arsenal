@@ -43,6 +43,8 @@ status: active
 
 A native PyTorch fine-tuning library with readable, hackable training recipes, aimed at researchers who want to understand and modify the training loop rather than use a high-abstraction framework.
 
+The integration surface is an API rather than a vendored library unlike `axolotl`, `llamafactory`; on the fine-tuning path; under a open-source cost model; with `torchtune`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 torchtune is a pyTorch-native library for fine-tuning and experimenting with LLMs. Read it beside `axolotl`, `llamafactory`, `mlx-lm`: the choice between them is a deployment and cost decision before it is a capability one.

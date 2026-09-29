@@ -60,6 +60,8 @@ status: active
 
 An open-source observability toolkit for LLM applications built natively on OpenTelemetry, allowing LLM traces and metrics to integrate directly into existing OTel-based observability infrastructure rather than requiring a separate proprietary platform.
 
+The engineering question with OpenLIT is not whether it works but what it commits you to unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `openlit`, `name`, `version`: hardware or spend, a version to track, and a failure mode to handle. Those three are usually absent from the documentation and present in production.
+
 ## Why it's in the Arsenal
 
 OpenLIT appears in this catalog as a reference point for the benchmark-and-eval phase; the useful question is whether the number it produces would change a decision you are actually facing. The sections below state what it claims to do and what adopting it would commit you to.
@@ -71,6 +73,8 @@ Instruments LLM calls, vector database operations, and GPU metrics using standar
 ## Ecosystem Position
 
 Upstream: built on the OpenTelemetry standard and its SDKs. Downstream: none of particular note. Competing: OpenLLMetry (also OTel-native, from Traceloop) occupies a very similar niche. Complementary: exports data compatible with any OTel-consuming backend, including Langfuse and other platforms that accept OTel-formatted traces.
+
+Read OpenLIT beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a open-source cost model; with `openlit`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
 
 ## Getting Started
 

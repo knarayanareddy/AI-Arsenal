@@ -65,6 +65,8 @@ Each task is a dedicated efficient transformer model: line-level detection feeds
 
 Upstream: PyTorch, Hugging Face model hosting. Downstream: Marker composes Surya models into document conversion; community projects embed the detector/recognizer independently. Competing: PaddleOCR (industrial breadth, permissive license), Tesseract (legacy baseline), docTR. The GPL+commercial-terms licensing mirrors Marker's — fine for internal use, needs review for shipped products.
 
+Compared with unlike `paddleocr`; in the data-and-retrieval phase; under a open-source cost model; with `surya`, `name`, `version`, Surya overlaps on what it does and diverges on how it is run. A feature comparison between the two will understate the difference; a deployment and cost comparison will not, and that is the comparison that should decide it.
+
 ## Getting Started
 
 ```bash

@@ -43,6 +43,8 @@ status: active
 
 A developer-friendly cloud platform for deploying apps, background workers, and databases together with minimal configuration, similar in spirit to the original Heroku experience.
 
+The integration surface is an API rather than a vendored library unlike `bentoml`, `fly-io`; on the deployment, production-serving path; under a usage-based cost model; with `railway`, `name`, `type`. What you actually depend on is the request and response schema and the authentication scheme, so keep the call behind your own adapter: that boundary is what makes a provider change a config change rather than a refactor of every call site.
+
 ## Why It's in the Arsenal
 
 Railway is catalogued here on the strength of its own documentation and public record rather than an independent measurement, so treat the claims below as what the project states about itself until you have run it.

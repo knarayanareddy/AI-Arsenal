@@ -72,6 +72,8 @@ Provides SDK-based instrumentation for capturing traces and analytics from LLM a
 
 Upstream: none of particular note. Downstream: none of particular note. Competing: Langfuse, Helicone, LangSmith — all in the same observability-platform category with more established community presence. Complementary: framework-agnostic.
 
+Read Lunary beside the entries it overlaps in this phase rather than alone: the meaningful comparison is what each option asks you to operate, not what its feature list contains unlike `langfuse`, `langsmith-platform`; in the benchmark-and-eval phase; under a freemium cost model; with `lunary`, `name`, `version`. Where capability is similar, the deciding axis is deployment model, cost structure and the failure behaviour you inherit rather than fix.
+
 ## Getting Started
 
 ```bash
