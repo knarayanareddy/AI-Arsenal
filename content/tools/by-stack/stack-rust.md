@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Rust. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a Rust codebase, filtered to what avoids a Python runtime in the process. The defining trade is binary size and startup against the loss of an ecosystem you would otherwise reuse for free, plus the fact that an absent Rust implementation means a port rather than an install.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Not running a Python interpreter in the process is the reason to choose Rust here, and it is a real operational benefit: smaller binaries, faster starts, no second runtime to patch. Grouping by stack makes the corresponding cost visible too, which is that an absent Rust implementation is a port you own.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry avoids a Python runtime in the process, which is the defining argument for this stack.
+- Backend feature flags are named, since a CUDA or Metal build is a different artefact from a CPU build.
+- Where no Rust implementation exists, that is stated as a port you would own rather than an install.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records its backend feature flags and whether it is a crate or a service, because in Rust those determine what you link and what you operate. The page is generated from the stack facet, and the build detail lives in the tool entry where it can be specific to the project.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Rust" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are embedding inference or ML-adjacent work in a Rust service and need options that do not require a Python runtime.
+2. **Scenario**: you are choosing between a Rust crate and a sidecar service and want the operational difference for a compiled binary.
+3. **Scenario**: you are targeting an edge or WASM runtime and need to know which options compile for that target.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to what avoids a Python runtime, which is the defining constraint for this stack in an ML context.
+- Makes backend feature flags visible, since a CUDA build and a CPU build are different artefacts.
+- Acknowledges that absence of a Rust implementation means a port rather than an install.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Rust removes the Python runtime from the process, which is the whole argument, and also removes the Python ecosystem you would otherwise reuse for free.
+- Compile-time feature flags select the backend, so a CUDA or Metal build is a different artefact from a CPU build and the difference is invisible until link time.
+- Ecosystem coverage is the constraint: an option with no Rust implementation means a port, not an install.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a Rust-native option here from inference-engine and edge entries, where removing the Python runtime is the deciding argument.
+- When a crate's feature flags change, check the deployment guidance in every entry that depends on it.
 
 ## Resources
 

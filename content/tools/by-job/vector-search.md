@@ -208,23 +208,26 @@ This table is exhaustive for tools tagged with job = vector-search.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `vector-search` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need to pick a vector store and want the shortlist narrowed by deployment model before you benchmark anything.
+2. **Scenario**: your RAG retrieval quality is poor and you need to know whether the index, the embeddings or the chunking is the actual bottleneck.
+3. **Scenario**: you are deciding whether hybrid keyword-plus-vector search is worth the extra index over pure vector search for your corpus.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Groups candidates by deployment model first, because that decision constrains everything else about the choice.
+- Makes the self-hosted versus managed distinction explicit rather than leaving it to the individual entries.
+- States plainly that recall figures are not transferable, which removes the most common misuse of the benchmark tables.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Benchmark results here are not transferable: recall depends on your embedding model, dimensionality, chunk size and corpus, so a number from another corpus says little about yours.
+- Most entries here are self-hostable, which means "fast" in a benchmark becomes "fast on the instance you can afford".
+- This page lists candidates, not a decision. Recall and latency on your own data are the only measurements that settle it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a store here from a RAG build example so the retrieval leg has a concrete candidate behind it.
+- When a build example changes its store, update the recommendation here so the two do not disagree.
 
 ## Resources
 

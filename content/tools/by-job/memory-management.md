@@ -141,23 +141,26 @@ This table is exhaustive for tools tagged with job = memory-management.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `memory-management` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: your agent loses context across a long task and you need to decide between truncation, summarisation and external memory.
+2. **Scenario**: you are adding memory to an agent and need to know which failure modes retrieval introduces.
+3. **Scenario**: you are deciding what an agent should remember across sessions and what it must not, given your data retention constraints.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Frames every option as a retrieval system with retrieval's failure modes, which is the framing that actually predicts bugs.
+- Covers the eviction and deletion problem, which is a production requirement and not an optional extra.
+- Distinguishes in-context window management from external memory, because they trade off differently.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Memory is a retrieval system, so it inherits retrieval's failure modes: stale entries, irrelevant recall and unbounded growth.
+- More memory is not better; an agent that recalls the wrong fact is harder to debug than one that recalls nothing.
+- Every option here needs an eviction policy and a deletion path, and neither is automatic.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a memory tool here from any agent entry that claims multi-turn or cross-session continuity.
+- When a build example implements memory, link the entry here so its retention and deletion behaviour is documented in one place.
 
 ## Resources
 

@@ -144,23 +144,26 @@ This table is exhaustive for tools tagged with job = prompt-management.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `prompt-management` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: prompts are duplicated across services and drifting, and you need versioning and rollout rather than another shared constants file.
+2. **Scenario**: you need to A/B a prompt change against a real metric rather than opinion.
+3. **Scenario**: you are debugging why production behaviour differs from the prompt you tested locally.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Separates version control, templating, and A/B testing, which are usually conflated and have different failure modes.
+- Emphasises the evaluation dependency, since a prompt registry without tests is a change log.
+- Includes the operational concerns, where most prompt tooling stops talking.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Prompt versioning only helps if evaluation runs against the same version, and that is a separate piece of infrastructure most teams have to build.
+- Template and parameterisation tools tend to obscure the final prompt, which makes production debugging harder rather than easier.
+- The tooling here does not make prompts correct; it makes changes to them reviewable and revertible.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a prompt-management tool here from a framework entry's caching or version-control feature so the boundary is explicit.
+- When an entry ships a default prompt, note it here so the pattern and the artefact stay discoverable together.
 
 ## Resources
 

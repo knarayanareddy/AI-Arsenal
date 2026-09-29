@@ -54,25 +54,26 @@ flowchart TD
 
 ## Use Cases
 
-1. **Scenario**: You need a fast research reading path for AI engineering decisions
-2. **Scenario**: You want to map papers to practical architecture and evaluation choices
+1. **Scenario**: a technique is trending in research and you need to decide whether it changes any architecture, cost or latency choice you have already made.
+2. **Scenario**: you are planning a quarter's work and want to know which subfields are moving fast enough to be worth a prototype now.
+3. **Scenario**: you have read a paper referenced by a tool entry and want to know whether it is load-bearing for that tool's design or incidental.
 
 ## Strengths
 
-- Organizes research by engineering relevance rather than publication date alone
-- Links canonical paper entries where available
-- Keeps benchmark and technique tracking separate from implementation guides
+- Filters technique families by whether they change an architecture, cost, latency, reliability or evaluation decision, rather than by publication venue.
+- Keeps a technique and its benchmark separate, so a promising result is not read as a settled capability.
+- Is explicit that presence on the list is not a recommendation, which is the failure mode most technique roundups have.
 
 ## Limitations / When NOT to Use
 
-- Does not replace reading the original papers
-- Benchmark leaderboards change frequently and should be verified before claims
+- Entries are technique families, not settled results: a listed technique may still be research-only, and the maturity of each is not implied by its presence here.
+- The list tracks direction rather than availability, so "emerging" here can mean a technique with no usable implementation yet.
+- Being listed is not a recommendation; the engineering-lens filter is applied but the judgement is still a judgement.
 
 ## Integration Patterns
 
-- Use paper entries as background context for architecture decisions.
-- Link papers from projects, tools, tips, and reference stacks only when the connection is direct.
-- Convert repeated research takeaways into tips or decision-tree updates.
+- Link a technique here from a decision-tree node when the technique is one of the options being weighed, so the reader can see why it is on the list.
+- When a technique graduates from emerging to a shipped tool, create the tool entry and cross-link rather than expanding this page.
 
 ## Resources
 

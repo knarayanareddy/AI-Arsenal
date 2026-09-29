@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose cost facet is Freemium. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist of tooling with a free tier, grouped because the free tier is usually the first thing a team evaluates and the least reliable thing to plan around. Entries here are grouped by what the free tier actually gets you, and by the point at which the free-to-paid step becomes expensive enough to reconsider the architecture.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Free tiers are the most common first contact with a tool and the least reliable basis for a plan, because the limits are rarely contractual and the migration off them is rarely graceful. Grouping by cost model makes the free-to-paid step explicit, which is the point at which a prototype architecture starts costing more than the tool did.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry documents what the free tier includes, because the limit that matters is rarely the headline number.
+- The point at which the free-to-paid step is large enough to change your architecture is called out per entry.
+- Data retention and handling on the free tier are treated as adoption blockers, not as footnotes.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records what the free tier includes and where the free-to-paid step lands, because those two facts are what determine whether the tier is a trial or an operating model. The page is generated from the cost-model and free-tier frontmatter facets, so the limit information is as current as the tool entries themselves.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a cost fit of "Freemium" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you want to prototype on a free tier and need to know which limits you will actually hit first.
+2. **Scenario**: you are deciding whether a free tier is a viable long-term operating model or only a trial.
+3. **Scenario**: you need to know whether a free tier's data handling and retention meet your compliance requirements.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Separates the trial benefit from a sustainable operating model, which are different things with the same price.
+- Makes retention and data handling a first-class consideration, since a free tier often fails compliance before it fails on cost.
+- Notes where the free-to-paid step is large, which is where free-tier-led architecture decisions go wrong.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Free-tier limits change without notice and are rarely documented as a contract, so a plan built on one is a plan with an external dependency.
+- The jump from free to paid is often a large price step, so the free tier may not lead to the paid tier at a useful point.
+- Free tiers frequently differ in more than price — retention, rate limits, feature gating — and the differences are what break the migration.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a free-tier tool here from an entry whose free limits affect the design, particularly where rate limits shape the architecture.
+- Keep the free-tier limits current: they change without notice and stale limits here become stale assumptions in product design.
 
 ## Resources
 

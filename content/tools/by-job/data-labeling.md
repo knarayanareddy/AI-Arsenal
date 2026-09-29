@@ -145,23 +145,26 @@ This table is exhaustive for tools tagged with job = data-labeling.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `data-labeling` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need human-labelled data and want to know whether an open-source interface, a managed service or an LLM-assisted pipeline fits your budget and privacy constraints.
+2. **Scenario**: labelling quality is your bottleneck and you need to know which agreement and adjudication measures to instrument.
+3. **Scenario**: you are comparing the unit economics of per-item managed labelling against reviewer time you already have.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Splits open-source interfaces from managed services, which also splits who bears the data-residency risk.
+- Treats LLM-assisted pre-labelling as a distinct mode with its own review economics, rather than as cheaper human labelling.
+- Surfaces agreement and adjudication as part of the cost, since a labelling budget without them underestimates by a wide margin.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Labelling platforms price per item and per annotator, so the real cost includes reviewer onboarding, qualification and the adjudication you will need anyway.
+- Agreement metrics are easy to compute and easy to over-read: high inter-annotator agreement can mean the guidelines are too vague to discriminate.
+- Data sensitivity decides this choice more than features do; a self-hosted option is often the only compliant one.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a labelling tool here from a dataset, fine-tuning or evaluation entry that depends on human judgement data.
+- When a project entry claims a data-quality result, point at the labelling and agreement method used to get it.
 
 ## Resources
 

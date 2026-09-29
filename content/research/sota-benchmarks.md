@@ -56,25 +56,26 @@ Benchmark use should follow this order:
 
 ## Use Cases
 
-1. **Scenario**: You need a fast research reading path for AI engineering decisions
-2. **Scenario**: You want to map papers to practical architecture and evaluation choices
+1. **Scenario**: a model-selection decision needs a current leaderboard rather than a benchmark number quoted from a launch post.
+2. **Scenario**: you want to know which benchmarks are close to saturated and therefore no longer able to separate candidates.
+3. **Scenario**: a vendor claims a score improvement and you need the benchmark definition to check whether the comparison was like-for-like.
 
 ## Strengths
 
-- Organizes research by engineering relevance rather than publication date alone
-- Links canonical paper entries where available
-- Keeps benchmark and technique tracking separate from implementation guides
+- Records benchmark definitions alongside scores, which is what makes a comparison checkable rather than decorative.
+- Flags near-saturated benchmarks, so a reader knows when a number has stopped discriminating between candidates.
+- Distinguishes the leaderboard value from the claim it can support, which is the distinction vendor posts omit.
 
 ## Limitations / When NOT to Use
 
-- Does not replace reading the original papers
-- Benchmark leaderboards change frequently and should be verified before claims
+- Leaderboard entries are point-in-time and change without notice; a number recorded here may be several model generations old.
+- Benchmark comparability is the hard part: different harnesses, prompts and few-shot settings make cross-row comparison unreliable even when a table looks uniform.
+- SOTA on a public leaderboard is evidence about a benchmark, not about your workload.
 
 ## Integration Patterns
 
-- Use paper entries as background context for architecture decisions.
-- Link papers from projects, tools, tips, and reference stacks only when the connection is direct.
-- Convert repeated research takeaways into tips or decision-tree updates.
+- Link a benchmark from a model-selection decision and state the harness and prompt conditions, since a score without its protocol is not comparable.
+- When a benchmark is deprecated, remove it from selection advice rather than leaving a stale row to be quoted.
 
 ## Resources
 

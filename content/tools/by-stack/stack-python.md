@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Python. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a Python codebase, filtered to options that install into an existing Python environment. The defining constraint is the dependency tree rather than capability: two packages that are individually good can conflict transitively, and you find out at install time.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+The language of your codebase eliminates most candidates before any feature comparison happens, and what survives has to survive the dependency tree as well. Grouping by stack makes that first elimination visible, and keeps the compiled-extension versus pure-Python distinction from being discovered at deploy time.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry is installable in an existing Python environment, with the install channel named.
+- Dependency-tree risk is stated per entry, since it is the failure mode that surfaces at deploy time.
+- Pure-Python and compiled-extension options are distinguished, because they upgrade differently.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records its install channel and whether it ships compiled extensions, because those two facts determine deployment and upgrade behaviour in a Python service. The page is generated from the stack frontmatter facet, so a tool that changes its supported Python versions is reflected once, in its own entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Python" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are picking tooling for a Python service and need the shortlist filtered to packages you can actually depend on.
+2. **Scenario**: you are choosing between a library and a hosted API and want the deployment difference stated for a Python codebase specifically.
+3. **Scenario**: you are consolidating several Python tools and need to know which ones share a dependency tree you can maintain.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to options installable in an existing Python environment, which is the constraint that actually eliminates candidates.
+- Surfaces the dependency-tree risk, since two individually good packages can conflict transitively.
+- Distinguishes pure-Python from compiled-extension options, which have different deployment and upgrade behaviour.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Python's package ecosystem means the dependency tree is the real risk: two tools that are fine alone can conflict transitively, and the conflict surfaces at install time rather than at design time.
+- GIL-bound CPU work in a Python service constrains concurrency architecture, which makes some frameworks a better fit than others for the same job.
+- A library that is pure Python and one that ships compiled extensions have very different deployment and upgrade characteristics.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a stack-specific tool here from a build example in that language so the example's dependencies stay traceable.
+- When a package drops a Python version, update this page and the affected entries together.
 
 ## Resources
 

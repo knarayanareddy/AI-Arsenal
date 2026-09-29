@@ -144,23 +144,26 @@ This table is exhaustive for tools tagged with job = orchestration.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `orchestration` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have a multi-step workflow with retries and human checkpoints and need a runtime that represents that explicitly.
+2. **Scenario**: a single agent call is not enough for your task and you need to decide how much structure to add before it becomes unmaintainable.
+3. **Scenario**: you are debugging a workflow where a late step failed and you need per-step observability to find where.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Groups by execution model, because sequential, parallel and event-driven graphs fail in different ways.
+- Includes the checkpointing and human-in-the-loop options that decide whether a long workflow can be resumed.
+- Keeps the observability requirement visible, since debugging a graph without per-step traces is guesswork.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Orchestration frameworks differ mostly in how they represent failure, and the choice matters more than the feature list.
+- Every added node is a place state can be persisted incorrectly, so a simpler graph you understand beats a sophisticated one you do not.
+- The debugging story depends on your tracing stack as much as on the orchestrator.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link an orchestrator here from any agent-framework entry so the comparison is one hop away.
+- When a build example uses a graph, reference the runtime here so the state-handling trade is documented with the code.
 
 ## Resources
 

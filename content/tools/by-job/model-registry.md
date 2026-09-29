@@ -139,23 +139,26 @@ This table is exhaustive for tools tagged with job = model-registry.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `model-registry` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need to track which weights, prompt and preprocessor version produced a given output, and reproduce it later.
+2. **Scenario**: a staging model needs to be promoted to production with an audit trail.
+3. **Scenario**: your serving layer needs a stable contract for model identity independent of the filesystem layout behind it.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Treats model identity as a versioned artefact including preprocessor and prompt, which is what reproducibility actually requires.
+- Separates registry infrastructure from experiment tracking, which are often bought as one thing and used as two.
+- Makes the self-hosted cost explicit, since a registry is a service you now operate.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- A registry records identity; it does not record the data, so reproducing an output still depends on the training corpus being versioned too.
+- The metadata schema you choose early is expensive to change, because downstream validation tends to encode it.
+- Self-hosted options here are infrastructure you own, which is the trade: control against the cost of running it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a registry here from every serving and fine-tuning entry, since the registry is what makes those reproducible.
+- When a build example promotes a model, note the registry step so the promotion is auditable.
 
 ## Resources
 

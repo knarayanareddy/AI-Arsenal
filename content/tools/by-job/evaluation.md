@@ -213,23 +213,26 @@ This table is exhaustive for tools tagged with job = evaluation.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `evaluation` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need to know whether a prompt or model change improved anything, and you have no reliable offline test set.
+2. **Scenario**: an agent ships a regression and you need eval tooling that catches it before your users do.
+3. **Scenario**: you are choosing between scoring approaches and need to know which failure modes each one can and cannot see.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Separates the tooling categories that get conflated: offline eval suites, runtime tracing, and online metrics answer different questions.
+- Includes the LLM-as-judge family with its known bias profile rather than presenting it as neutral scoring.
+- Notes that a metric without a task-specific scorer set measures the tool, not the product.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- LLM-as-judge scores correlate with human preference but not perfectly, and the gap widens on the subjective tasks most likely to matter to you.
+- Every tool here needs a task-specific scorer set; a generic benchmark tells you about the tool, not about your product.
+- Eval tooling measures what you choose to measure, so a green suite is evidence about coverage rather than about quality.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link an eval tool here from the model-layer and orchestration entries, since those are where a regression is usually introduced.
+- When a build example adds a gate, reference the tool it uses here so the pattern and the tool stay linked.
 
 ## Resources
 

@@ -18,42 +18,17 @@ status: "active"
 
 ## Overview
 
-This is a project-first path for builders who want to ship tool-using agents. It prioritizes reliability, tool safety, state, observability, and human approval over autonomous-agent hype.
+A path for building agents that call tools: the failure modes to design against first, the patterns that address them, and the evaluation step most self-taught builders skip. The sequence deliberately front-loads what to prevent before what to add, because agent failures are cheaper to design out than to debug.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+Agent failures are mostly predictable, and the reason they are not avoided is that the failure modes are learned one incident at a time. Front-loading them converts that into a design input, and pairing each with the pattern that addresses it turns a catalogue of techniques into a sequence you can follow.
 
 ## Key Features
 
-### Stage 1: Tool Calling Basics
-
-- Build one agent with one read-only tool.
-- Validate tool arguments before execution.
-
-### Stage 2: ReAct and State
-
-- Build a ReAct-style loop with max steps, retries, and trace logs.
-- Use [Simple ReAct Agent](../../build-examples/agent-systems/starter-simple-react-agent.md).
-
-### Stage 3: Multi-Tool Agent
-
-- Add multiple tools, typed outputs, and failure handling.
-- Build [Multi-Tool Agent](../../build-examples/agent-systems/intermediate-multi-tool-agent.md).
-
-### Stage 4: Memory and Long-Running State
-
-- Add Redis/session state first.
-- Add Mem0/Zep/Letta only when long-term memory has clear user value.
-
-### Stage 5: Multi-Agent Systems
-
-- Add planner, executor, reviewer, and human approval roles.
-- Build [Multi-Agent Research System](../../build-examples/agent-systems/advanced-multi-agent-research.md).
-
-### Stage 6: Production Reliability
-
-- Add observability, evals, cost budgets, and kill switches.
+- Front-loads failure modes, because agent bugs are cheaper to design out than to debug in production.
+- Marks which parts of agent building are settled and which churn, so effort is allocated accordingly.
+- Ends at evaluation, the step most self-taught builders skip and later need urgently.
 
 ## Architecture / How It Works
 
@@ -68,27 +43,26 @@ Agent building is a control-systems problem. The learning order is tools → sta
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: you are building an agent that calls tools and you need to know which failure modes to design against before the first one costs you an incident.
+2. **Scenario**: your prototype works in a demo and fails on real input, and you need to know which of the standard agent failure classes you are hitting.
+3. **Scenario**: you are deciding whether your problem needs an agent at all rather than a single call with better prompting.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Sequences the failure modes before the techniques, so the reader learns what to prevent before what to add.
+- Marks which parts of agent building are settled and which churn, which changes how much effort each topic deserves.
+- Ends at evaluation, because that is the step most self-taught builders skip and later need.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- Agent building is the least settled area in this catalog: patterns churn faster than the underlying model APIs, so treat ordering as current rather than durable.
+- The examples lean toward tool-calling and retrieval agents; multi-agent coordination and computer-use agents are under-covered.
+- Much of the practical difficulty is in evaluation, and there is no reliable offline benchmark for your specific agent, so progress is hard to measure.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Link a topic here from any agent-framework or tool-use entry, so the pattern library is reachable from the point of use.
+- When a pattern here is superseded by a framework feature, note the replacement rather than leaving two ways to do the same thing.
 
 ## Resources
 

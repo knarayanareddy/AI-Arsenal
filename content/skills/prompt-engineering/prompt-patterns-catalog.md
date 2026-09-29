@@ -17,47 +17,17 @@ status: "active"
 
 ## Overview
 
-This catalog lists reusable prompt patterns and when to use them. Each pattern should be tested against your own eval set before production use.
+Named patterns indexed by the failure they address, so a pattern can be looked up from an observed symptom rather than from a category. Entries are treated as unverified until run on your own data, which is the honest posture for a catalogue of this kind.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+A pattern is useful when you can get from a symptom to a candidate technique, which means the index has to be keyed on the failure rather than the technique name. Maintaining that index across model generations is the ongoing work, and keeping superseded patterns annotated rather than deleted is what preserves the history.
 
 ## Key Features
 
-### Pattern: Delimited Context
-
-Use XML or clear markers around retrieved context.
-
-```text
-<context>
-...
-</context>
-```
-
-### Pattern: Few-Shot Format Locking
-
-Give 2-5 examples of the exact output format.
-
-### Pattern: Ask Before Guessing
-
-Tell the model to ask a clarifying question when required fields are missing.
-
-### Pattern: Tool-Use Contract
-
-Describe tools as typed contracts with when-to-use and when-not-to-use rules.
-
-### Pattern: Critique Then Revise
-
-Use for drafts, not for irreversible actions.
-
-### Pattern: Refusal Boundary
-
-Define concrete refusal conditions and safe alternatives.
-
-### Pattern: JSON Schema Output
-
-Use when a parser consumes the model output and validation errors can be handled.
+- Indexed by the failure a pattern addresses, so lookup starts from a symptom.
+- Kept separate from the fundamentals guide so reference and method do not compete.
+- Entries are unverified until run locally, which is the honest posture for a pattern list.
 
 ## Architecture / How It Works
 
@@ -72,27 +42,26 @@ Prompt patterns are reusable interface designs. The same pattern can work across
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: you need a named pattern for a specific failure you have observed, rather than general advice.
+2. **Scenario**: you are documenting your team's prompt conventions and want a shared reference to point at.
+3. **Scenario**: you are reviewing a prompt and want to check whether a known pattern would address the failure you are seeing.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Names patterns by the failure they address, so you can look one up from an observed symptom.
+- Keeps the catalogue separate from the fundamentals guide, so reference and method do not compete.
+- Treats entries as unverified until run locally, which is the honest posture for a pattern list.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- A catalogue is a lookup table, not a method: recognising a pattern does not tell you whether it suits your task or your model.
+- Patterns are stated in terms of intent, and two patterns often address the same observed failure from different angles.
+- New patterns appear faster than old ones are retired, so treat any single entry as unverified until you have run it on your own data.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Link a pattern from a framework entry's documented prompt technique, so the catalogue index stays complete.
+- When a pattern stops working across model versions, annotate it rather than deleting the entry and losing the history.
 
 ## Resources
 

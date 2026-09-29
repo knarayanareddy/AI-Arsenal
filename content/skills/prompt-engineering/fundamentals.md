@@ -17,31 +17,17 @@ status: "active"
 
 ## Overview
 
-Prompt engineering is not magic wording. It is the practice of specifying task, context, constraints, examples, output format, and evaluation criteria clearly enough that behavior can be tested and maintained.
+What each part of a prompt is doing, why techniques interact unpredictably rather than stacking cleanly, and how to tell a prompt problem from a capability problem. The operational concerns — versioning, regression testing, latency — are included, because that is where prompt work becomes engineering.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+Prompt advice is usually a recipe list that transfers badly, because it does not say what each part is doing. Explaining the structure is what makes the techniques portable across models and tasks, and separating prompt problems from capability problems is what stops effort being spent on the wrong one.
 
 ## Key Features
 
-### Core Prompt Structure
-
-1. Role or task identity
-2. Goal and success criteria
-3. Inputs and context
-4. Constraints and policies
-5. Examples or counterexamples
-6. Output schema or format
-7. Fallback behavior
-
-### Production Rules
-
-- Keep system, developer, retrieved context, and user input separate.
-- Version prompts like code.
-- Test prompts with golden examples and adversarial inputs.
-- Use structured outputs only when a parser actually needs them.
-- Track prompt version in every trace.
+- Gives each part of a prompt a job, so the guidance transfers instead of being a recipe list.
+- Separates prompt problems from capability problems, which stops wasted effort on the wrong one.
+- Covers versioning and regression testing, where prompt work actually becomes engineering.
 
 ## Architecture / How It Works
 
@@ -60,27 +46,26 @@ Prompts are interfaces between product intent and probabilistic model behavior. 
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: your prompts work in testing and fail on real input, and you need the structural reasons why rather than more examples.
+2. **Scenario**: you are standardising prompts across a team and need a shared vocabulary for what each part of a prompt is doing.
+3. **Scenario**: you need to decide whether a problem is a prompt problem or a capability problem before investing more in prompt work.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Explains what each part of a prompt is doing, which is what makes the advice transferable rather than a recipe list.
+- Separates prompt problems from capability problems, the distinction that stops wasted effort.
+- Acknowledges that techniques interact unpredictably instead of implying a reliable order.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- Prompting advice ages with the models it was written for, and some of it was always folklore rather than finding.
+- Techniques interact unpredictably: few-shot examples and chain-of-thought can each help or hurt depending on the task, so there is no reliable stacking order.
+- Most guidance stops before the operational concerns — versioning, regression testing, latency — which is where prompt work actually becomes engineering.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Link a specific technique here from a tool or framework entry's prompt guidance, so the pattern is documented once with its limits.
+- When a model release invalidates advice here, mark it rather than silently leaving stale guidance.
 
 ## Resources
 

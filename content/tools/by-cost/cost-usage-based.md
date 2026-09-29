@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose cost facet is Usage Based. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist of usage-billed tooling, grouped because metering makes your workload an input to your bill. Retries, verbose prompts, long context and agent loops all multiply cost quietly, so the metering point is the fact that decides which optimisations are worth building.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Usage pricing makes your workload an input to your bill, so the metering point decides which optimisations are worth building. Grouping by cost model keeps that visible during selection, at the point where caching and routing decisions are still cheap to make differently.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry states where metering happens, which is what determines which optimisation reduces the bill.
+- Multipliers on spend — retries, long context, agent loops — are called out because they are where unexpected cost originates.
+- Hard caps are described as service-level controls rather than cost controls, since they stop traffic to stop spend.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records where metering happens, which is what determines which optimisation reduces the bill. The page is generated from the cost-model and pricing frontmatter facets, and the metering notes live in the tool entries so they are updated where the behaviour is described.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a cost fit of "Usage Based" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: your spend scales with usage and you need to model the bill before committing to an architecture.
+2. **Scenario**: you want to know which usage-based options have a floor, a cap, or an egress charge that surprises people.
+3. **Scenario**: you are designing for cost control and need to know where metering happens so you can reduce it.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Makes the metering point visible, since that is what determines which optimisations reduce the bill.
+- Treats retries and agent loops as cost multipliers, which is where unexpected spend comes from.
+- Notes the bluntness of hard caps, which stop service rather than cost.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Usage-based pricing makes your workload an input to your bill: retries, verbose prompts and agent loops all multiply cost quietly.
+- Metering granularity differs per provider, so equivalent architectures can cost very different amounts.
+- A hard spend cap is a blunt instrument: it stops spend by stopping service, which is rarely the behaviour you want in production.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a usage-based tool here from any entry whose request volume is user-driven rather than fixed.
+- When a build example adds caching or routing for cost reasons, cross-reference the cost page so the rationale is recorded.
 
 ## Resources
 

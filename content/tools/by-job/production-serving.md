@@ -194,23 +194,26 @@ This table is exhaustive for tools tagged with job = production-serving.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `production-serving` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have a working model and need to decide between a managed endpoint, a self-hosted server and a packaged container.
+2. **Scenario**: your current serving stack does not hit its latency target under concurrency and you need to know which knob actually moves it.
+3. **Scenario**: you are estimating the infrastructure cost of a serving choice before committing to it, including the parts that are not per-request.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Organises by deployment model rather than by feature, because the operational commitment differs more than the capability does.
+- Surfaces cold start and idle capacity as first-class costs, which per-request pricing hides.
+- Includes the packaging tools alongside the managed endpoints, since a model often passes through both.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Published throughput figures are almost always best-case on dedicated hardware; your load will be bursty and your hardware shared.
+- The dominant cost at low volume is cold start and idle capacity, which inverts the usual assumption that per-token price is what matters.
+- Every option here trades flexibility for speed somewhere specific, and that trade is a code-level commitment once you have built on it.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a serving option here from any project entry that claims production readiness, so the claim points at a real deployment path.
+- When a serving choice is documented in a build example, cross-reference it rather than restating the configuration.
 
 ## Resources
 

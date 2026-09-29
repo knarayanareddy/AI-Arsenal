@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Typescript. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a TypeScript or Node codebase, filtered to what runs in the same runtime as your service. The defining constraint is that the calling language is fixed, which rules out Python-native tooling and makes edge and serverless limits part of the decision.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Sharing a runtime with the service is usually worth more than a feature difference, because it removes a process boundary and a deployment artefact. Grouping by stack surfaces the constraint honestly, including the edge and serverless limits that rule out options a normal Node deployment would accept.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry runs in the same runtime as a Node service, so no second language enters the build.
+- Edge and serverless compatibility is stated, since bundle-size and duration limits exclude options a normal deploy accepts.
+- Client-library upgrade behaviour is flagged where an upstream API change can land in your application code unnoticed.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records the runtime it requires and its edge compatibility, because those constraints eliminate options before any feature comparison. The page is generated from the stack and audience frontmatter facets, so a tool that changes runtime support is reflected in its entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Typescript" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are building a TypeScript service and need tooling that shares the runtime rather than crossing a process boundary.
+2. **Scenario**: you are choosing between an npm library and a Python sidecar and want the operational difference for a Node deployment.
+3. **Scenario**: you need streaming in a web or edge runtime and need to know which options are compatible with edge constraints.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to what runs in the same runtime as a Node service, avoiding a sidecar you did not ask for.
+- Makes edge and serverless constraints visible, since bundle-size and duration limits rule out options a normal deploy accepts.
+- Notes that provider type errors only surface at build time if the SDK tracks the change.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- TypeScript tooling runs wherever Node runs, which is the main argument for it and also the main constraint: native addons and CPU-bound work are awkward.
+- Edge and serverless runtimes impose bundle-size and duration limits that quietly rule out options a normal Node deployment would accept.
+- Types are generated at build time, so an API change in an upstream provider surfaces as a type error only if the SDK tracks it; otherwise it surfaces at runtime.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a TypeScript-native option here from any entry where the JS client is the documented path.
+- When an SDK changes its streaming contract, flag it here as well as in the tool entry, because the upgrade lands in application code.
 
 ## Resources
 

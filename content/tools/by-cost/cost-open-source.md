@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose cost facet is Open Source. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist of tooling you can adopt without a licence fee or a per-seat charge, filtered so every entry is installable, self-hostable or permissively licensed. The point of grouping by cost is that it forces the comparison to include what replaces the fee: the hosting, the on-call, and the patching that a licence does not charge you for.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+A licence fee is the easiest cost to see and the least important one. Grouping by cost model forces the harder question into the open: what does adopting this cost once the licence is free, and who absorbs that. It is also where the copyleft question gets asked early, because an AGPL dependency discovered after you have built on it is expensive to unwind.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry here is permissively licensed or self-hostable, with the specific licence named in the entry rather than assumed.
+- Adoption cost is stated as infrastructure plus maintenance time, because that is what replaces the zero licence fee.
+- Copyleft options are separated from permissive ones, since the obligations differ sharply and AGPL reaches network-served use.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records the licence explicitly rather than inferring it from a repository badge, because permissive and copyleft obligations differ sharply and AGPL reaches network-served use. The page is regenerated from the tool frontmatter facets, so a new tool with a permissive licence appears here without anyone editing this text.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a cost fit of "Open Source" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you want tooling with no licence cost or seat count and need to know what operating cost replaces it.
+2. **Scenario**: you are comparing a permissive-licence option against a paid one and need to know where the hidden cost lands.
+3. **Scenario**: you are deciding whether a permissive licence is compatible with your product's distribution model.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Groups by licence family rather than by price, because the obligations are what actually constrain a product.
+- Surfaces the operating cost that replaces the licence fee, which is the comparison people skip.
+- Makes the single-maintainer risk visible, since a permissive licence says nothing about durability.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- Licence cost is not total cost: a permissive project you must host, secure, patch and upgrade can exceed a paid service over its lifetime.
+- "Open source" covers permissive and copyleft; the obligations differ sharply, and AGPL in particular reaches network-served use.
+- Maintenance risk is real and unevenly distributed: a permissively licensed project with one maintainer is a dependency with a bus factor of one.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a permissively licensed tool here from an entry that ships inside a commercial product, so the obligation is checked at the point of adoption.
+- When a licence changes (a re-licence to AGPL, for instance), update this page and every entry affected.
 
 ## Resources
 

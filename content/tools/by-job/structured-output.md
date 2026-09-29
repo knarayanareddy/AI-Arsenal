@@ -149,23 +149,26 @@ This table is exhaustive for tools tagged with job = structured-output.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `structured-output` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need a model to emit JSON that your code can parse without a repair loop, and you are choosing how to constrain it.
+2. **Scenario**: schema-following fails on nested or long outputs and you need to know which constraint technique handles that case.
+3. **Scenario**: you are deciding whether to constrain generation or validate and retry, and what each costs in latency.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Separates constrained decoding from validate-and-retry, which differ in guarantee, latency cost and failure mode.
+- Makes the schema-evolution gap explicit, since it is the case most implementations break on silently.
+- Distinguishes syntactic validity from semantic correctness, which is the mistake that produces a runtime bug rather than a parse error.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Grammar-constrained decoding guarantees syntactic validity, not semantic correctness; a valid JSON object can still be wrong.
+- Retry-on-validation costs latency multiplied by the failure rate, which is worse than it looks when schema complexity is high.
+- Schema evolution is the unhandled case: most of these assume a fixed shape, and a drifting schema breaks the guarantee quietly.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a structured-output tool here from any entry that parses model output, including eval tooling with a judge schema.
+- When a framework entry advertises structured output, cross-reference the mechanism it uses so the guarantee level is visible.
 
 ## Resources
 

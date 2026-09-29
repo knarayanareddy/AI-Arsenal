@@ -194,23 +194,26 @@ This table is exhaustive for tools tagged with job = prototyping.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `prototyping` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you are validating an idea before committing engineering time and need the fastest path to a working demo.
+2. **Scenario**: you need a component you can swap out later and want to know which prototype choices are cheap to reverse.
+3. **Scenario**: you are comparing managed versus self-hosted options and want the prototype-stage trade-off, which is not the production trade-off.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Optimises for the prototype stage explicitly, including which defaults are wrong for production.
+- Flags the reversibility question, since a prototype dependency carried forward is the expensive mistake.
+- Distinguishes demo-behaviour from quality-on-your-data, which is where prototypes most often mislead.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Prototype tooling optimises for time-to-first-result, which usually means hosted services and permissive defaults; both are wrong for production at scale.
+- The main risk is carrying prototype architecture forward: a client library that is convenient in a notebook can be expensive to remove later.
+- A prototype that skips evaluation is a demo, and demo behaviour is a poor predictor of quality on your own data.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a prototyping tool here from build examples and from any entry marked prototype audience.
+- When a prototype graduates to production, move the entry and update the guidance here so the page reflects current practice.
 
 ## Resources
 

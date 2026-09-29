@@ -17,29 +17,17 @@ status: "active"
 
 ## Overview
 
-Embeddings are vector representations of text, images, code, or other data. In AI engineering, they are most often used for retrieval, semantic search, clustering, recommendation, deduplication, and memory.
+The embedding layer as an engineering decision rather than a model choice: what similarity means, why the metric is a correctness question, and why changing the encoder means re-embedding everything. The published retrieval scores are treated as conditional on their own chunking and pooling choices.
 
 ## Why It's in the Arsenal
 
-AI Arsenal is useful only if builders can turn curated tools and papers into practical skill development. This guide explains what to learn, what to build, and where to go next.
+The embedding model is chosen once and paid for on every query afterwards, and the decisions that determine whether it suits a corpus — metric, dimensionality, pooling, chunking — are made once and rarely revisited. Stating them as engineering decisions rather than model choices is the contribution, because the failure is a silent quality loss rather than an error.
 
 ## Key Features
 
-### Core Concepts
-
-- Similar items should be close in vector space.
-- Embedding model choice affects retrieval quality as much as vector database choice.
-- Chunking changes what the embedding represents.
-- Metadata filters often matter more than small embedding-model differences.
-- Evaluation should measure whether retrieved context contains the answer.
-
-### Practical Workflow
-
-1. Build a small labeled retrieval set.
-2. Compare two embedding models.
-3. Compare chunk sizes.
-4. Add metadata filters.
-5. Add reranking only after recall is acceptable.
+- Treats the similarity metric as a correctness question, since the wrong one degrades results silently.
+- Makes re-embedding cost explicit, because it dominates the decision to change encoder.
+- Conditions published scores on their chunking and pooling choices, so they are not transferred blindly.
 
 ## Architecture / How It Works
 
@@ -55,27 +43,26 @@ results = vector_db.search(query_vector, top_k=8)
 
 ## Use Cases
 
-1. **Scenario**: You want a structured learning path instead of a random list of links
-2. **Scenario**: You are using AI Arsenal with an LLM to plan study, projects, or hiring loops
-3. **Scenario**: You need to map skills to concrete projects and production practices
+1. **Scenario**: you are choosing an embedding model and need to know which properties actually transfer to your domain.
+2. **Scenario**: your retrieval quality is poor and you need to work out whether the embeddings, the chunking or the index is at fault.
+3. **Scenario**: you are reducing embedding dimensionality or changing model and need to know what that costs you.
 
 ## Strengths
 
-- Turns broad AI topics into sequenced milestones
-- Prioritizes free and primary-source resources where possible
-- Connects learning to Arsenal projects, tools, decision trees, and build examples
+- Explains similarity choices as a correctness question, not a tuning detail, because the wrong metric degrades results silently.
+- Makes re-embedding cost explicit, since it dominates the decision to change encoder.
+- Notes that published retrieval scores depend on their own chunking and pooling, so the numbers do not transfer automatically.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on building and evaluation
-- Resource quality and availability can change over time
-- Paid resources should be treated as optional unless explicitly required by your team
+- Benchmark scores for embedding models come from retrieval suites with their own chunking and pooling choices, so transferring a number to your pipeline is an assumption.
+- Similarity means different things per model: cosine, dot product and normalised inner product are not interchangeable, and getting this wrong degrades results silently.
+- Changing the encoder means re-embedding the entire corpus, which is the dominant cost of the decision and is usually underestimated.
 
 ## Integration Patterns
 
-- Use the learning path as an LLM prompt context when planning a study schedule.
-- Convert each milestone into one portfolio artifact or internal project.
-- Pair every conceptual topic with one build example and one evaluation checklist.
+- Link this concept from every vector-store and RAG entry, since the store cannot compensate for an embedding-side problem.
+- When a build example changes its embedding model, note the re-index requirement rather than only the model name.
 
 ## Resources
 

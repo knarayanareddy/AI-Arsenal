@@ -154,23 +154,26 @@ This table is exhaustive for tools tagged with job = security-and-guardrails.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `security-and-guardrails` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you need to block specific prompt or output patterns and you need to know whether the mechanism is a classifier, a filter or a model.
+2. **Scenario**: your guardrail has false positives on legitimate traffic and you need to understand the precision/recall trade you are making.
+3. **Scenario**: you are deciding whether a hosted guardrail service is acceptable given your data sensitivity, or whether you must run it in-process.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Separates input from output filtering, because a jailbreak and a harmful completion are different problems needing different mechanisms.
+- Includes the false-positive cost explicitly, since a guardrail that blocks legitimate traffic is an outage of its own.
+- Notes that these are layers over access control rather than substitutes for it.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Guardrails are classifiers, so they have a false-positive rate you are choosing to accept; the question is what that rate costs you, not whether it is zero.
+- Input and output filtering catch different things: a jailbreak in the prompt and a harmful completion need different mechanisms.
+- None of these substitute for access control and rate limiting at the API boundary, which address a different threat entirely.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a guardrail here from any entry handling untrusted input, including scraping and agent tool-use entries where prompt injection is the live risk.
+- When a security-and-observability entry describes redaction, cross-reference it so trace handling and input filtering stay consistent.
 
 ## Resources
 

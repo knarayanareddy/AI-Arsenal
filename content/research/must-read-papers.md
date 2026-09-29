@@ -78,25 +78,26 @@ A good engineering reading list should explain what a paper introduced, not just
 
 ## Use Cases
 
-1. **Scenario**: You need a fast research reading path for AI engineering decisions
-2. **Scenario**: You want to map papers to practical architecture and evaluation choices
+1. **Scenario**: you need the small set of papers that actually justify the architecture you are running, rather than a reading list assembled by recency.
+2. **Scenario**: a design review is coming and you want the primary sources for the claims being made about attention, retrieval or alignment.
+3. **Scenario**: you are onboarding someone who keeps citing results whose original paper you want to check before accepting the claim.
 
 ## Strengths
 
-- Organizes research by engineering relevance rather than publication date alone
-- Links canonical paper entries where available
-- Keeps benchmark and technique tracking separate from implementation guides
+- Selects by engineering relevance, so a short list is genuinely short and each entry has a reason to be there.
+- Links to canonical paper entries where one exists, rather than duplicating an abstract that will drift.
+- Separates the foundational papers from the recent ones, which is the distinction most reading lists collapse.
 
 ## Limitations / When NOT to Use
 
-- Does not replace reading the original papers
-- Benchmark leaderboards change frequently and should be verified before claims
+- A reading list ages faster than any tool entry: a paper superseded this year will still be listed until someone revisits the page.
+- "Must-read" is a curation judgement, not a citation count, and it reflects one reading of the field rather than consensus.
+- This does not substitute for reading the original work when you are building on a specific result.
 
 ## Integration Patterns
 
-- Use paper entries as background context for architecture decisions.
-- Link papers from projects, tools, tips, and reference stacks only when the connection is direct.
-- Convert repeated research takeaways into tips or decision-tree updates.
+- Cite a paper here as background in an architecture decision, and link the paper entry from the decision rather than restating the result.
+- When a paper's finding is superseded, update the decision that depends on it instead of leaving the citation in place.
 
 ## Resources
 

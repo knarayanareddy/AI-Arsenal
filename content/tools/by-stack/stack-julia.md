@@ -15,21 +15,21 @@ status: "active"
 
 ## Overview
 
-This routing page lists every tool in the Arsenal whose stack facet is Julia. It is generated and maintained from each tool's frontmatter, so it stays exhaustive as the catalog grows.
+The shortlist for a Julia codebase, filtered to what keeps the hot path out of Python. The defining constraint is ecosystem maturity: for many workloads the honest comparison is Julia-native against a Python sidecar you operate, and precompilation behaviour is a production concern.
 
 ## Why It's in the Arsenal
 
-Tool-by-facet pages let builders shortlist options along the two axes that matter most for adoption cost and integration fit, without browsing the entire repository.
+Keeping the hot path out of Python is the defining concern in a Julia codebase, and the ecosystem's relative youth is the honest counterweight. Grouping by stack makes the native-versus-sidecar comparison explicit instead of leaving it implied by whichever option was found first.
 
 ## Key Features
 
-- Exhaustive: every matching tool, derived from frontmatter
-- Auto-updating: regenerated whenever tool facets change
-- Links to canonical tool entries instead of duplicating long-form content
+- Every entry keeps the request path out of Python, which is the defining concern in this stack.
+- Precompilation and load-time behaviour are stated, because they are production concerns rather than developer inconveniences.
+- Interop options are named honestly, including when the pragmatic answer is a Python sidecar.
 
 ## Architecture / How It Works
 
-The table below is produced by scripts/generate-tool-facet-guides.js from the cost_model and stack facets on each tool. Adding or editing a tool updates the relevant facet pages on the next generation.
+Each entry records its precompilation and load-time behaviour, since that is a production concern rather than a developer inconvenience. The page is generated from the stack facet, with the package detail in the tool entry.
 
 ## Getting Started
 
@@ -37,23 +37,26 @@ Pick a tool from the table below and validate it with a small proof of concept b
 
 ## Use Cases
 
-1. **Scenario**: you need a stack fit of "Julia" and want the full shortlist fast
-2. **Scenario**: comparing options before a production or prototyping decision
+1. **Scenario**: you are in a scientific computing codebase and need ML tooling that fits a Julia workflow rather than crossing into Python.
+2. **Scenario**: you are weighing whether a Julia-native option is mature enough for your production use.
+3. **Scenario**: you are choosing between a Julia-native package and calling a Python service from Julia, and want the trade stated.
 
 ## Strengths
 
-- Fast, exhaustive shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Filters to what avoids crossing into Python at the hot path, which is the defining concern in this stack.
+- Is honest that the ecosystem is young, so the honest comparison is often native versus a Python sidecar.
+- Notes that precompilation behaviour is a production concern, not a developer inconvenience.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Pricing, hosting, and integration details change; verify before production
+- The Julia ML ecosystem is young relative to Python's, so the realistic comparison for many workloads is Julia-native versus a Python sidecar you operate.
+- Package maturity and precompilation behaviour are the practical constraints: a package that recompiles on load does not belong on a request path.
+- Interop with Python is available and often the pragmatic answer, which makes "do we need a Julia-native option" the real question.
 
 ## Integration Patterns
 
-- Link to canonical tool IDs from architecture docs and decision trees
-- Pair with the By-Job and By-Phase routing pages for cross-cutting views
+- Link a Julia-native option here from any scientific-computing entry where interop would otherwise be assumed.
+- When a package's precompilation or compatibility status changes, this page and the tool entry both need updating.
 
 ## Resources
 

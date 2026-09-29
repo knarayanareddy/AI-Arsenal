@@ -196,23 +196,26 @@ This table is exhaustive for tools tagged with job = fine-tuning.
 
 ## Use Cases
 
-1. **Scenario**: Selecting tools for `fine-tuning` in a new AI application
-2. **Scenario**: Comparing open-source and managed options before a production decision
+1. **Scenario**: you have prompt-based performance problems and need to know whether fine-tuning is the right lever or a premature one.
+2. **Scenario**: you are comparing parameter-efficient methods and need to know which one your model size and dataset size actually support.
+3. **Scenario**: you are budgeting a fine-tuning run and need to know what the VRAM and time costs are before requesting the hardware.
 
 ## Strengths
 
-- Fast shortlist for humans and LLM agents
-- Avoids duplicate long-form tool descriptions
+- Distinguishes parameter-efficient methods by what they actually change, which is more useful than a leaderboard of benchmark deltas.
+- Puts the VRAM and time cost up front, since that is the constraint that usually decides the method.
+- Includes the alignment methods alongside classic fine-tuning, because the practical choice is often between them.
 
 ## Limitations / When NOT to Use
 
-- Does not replace hands-on evaluation
-- Tool pricing and support policies must be verified before adoption
+- Fine-tuning improves behaviour on a distribution you can demonstrate, not general capability, and the demos rarely make that boundary visible.
+- Method choice interacts with model size and dataset size in ways the comparison tables flatten; small models with small datasets are a different regime.
+- Every framework here has a specific failure mode around memory, and your sequence length is the variable that decides which.
 
 ## Integration Patterns
 
-- Link to canonical project/tool IDs in architecture docs
-- Pair production tools with observability and evaluation
+- Link a fine-tuning entry here from a project entry that offers training, and from a model entry whose published recipe uses one of these methods.
+- When a build example fine-tunes a model, reference the method here so the resource claims can be checked against the same numbers.
 
 ## Resources
 
